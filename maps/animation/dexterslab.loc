@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<fed2-map title='Dexters Lab' version='1.00' editor='standard' from='457' to='Animation.Animation Space.456'>
+
+   <location num='387'>
+      <name>Dexter&apos;s room</name>
+      <desc>  This room is filled mostly with scientific equipment - flasks, chemistry bulbs, and tubing connecting them.  There is also a bed in the far corner of the room.  There are doors leading east, and out to the south.</desc>
+      <exits e='388' s='451' out='451' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='388'>
+      <name>Laboratory</name>
+      <desc>  This room is full of scientific laboratory equipment.  Glass flasks, bulbs, and tubing are filled with liquids of various colors, with small bubbles visibly flowing through them.  A few cages contain small animals.  There are also several machines, including robots, in varying stages of assembly.  Doors leaving the lab go west and south.  The one south is locked to the outside, but you can open it from this side.</desc>
+      <exits s='452' w='387' out='452' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='389'>
+      <name>Bedroom</name>
+      <desc>  This is a large bedroom, featuring a large king-sized bed.  A clear transparent window gives a view of the barren landscape outside.  The window does offer a view of the building widening out northward off to the west.  A door goes out to the south.</desc>
+      <exits s='453' out='453' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='390' flags='t'>
+      <name>Lab clinic</name>
+      <desc>  Upon walking in, you are greeted by a tall, blond-haired adult man wearing glasses and a white lab coat.  &quot;Well well, what do we have here?&quot;, he asks.  Pulling out an ophthalmoscope, he looks into your eyes, and checks your ears with an otoscope.  &quot;Looking pretty normal to me,&quot; he says.  &quot;Then again, I just look for anything obvious.  For anything more serious than a cough or sniffle, you&apos;d need the doctors in a real hospital.  I just handle the small stuff,&quot; he says.</desc>
+      <desc>  The walls are a sterile white, and the room has a sterile smell.  The lone counter has a container of cotton balls, one of cotton swabs, a bottle of hydrogen peroxide, and a bottle of rubbing alcohol - just enough to treat minor cuts and scrapes.  The door is in the south wall.</desc>
+      <exits s='454' out='454' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='451'>
+      <name>Hallway end</name>
+      <desc>  A bright white hallway stretching off to the east ends here.  Doors are recessed into the north and south walls.  The door to the north has signs all over it, including &quot;Dexter&apos;s room - KEEP OUT. Especially Deedee.&quot;</desc>
+      <exits n='387' e='452' s='515' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='452'>
+      <name>Hallway</name>
+      <desc>  The bright white hallway runs east and west.  Closed doors sit in the north and south walls.</desc>
+      <exits e='453' w='451' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='453'>
+      <name>Hallway</name>
+      <desc>  You are in a completely white hallway stretching from east to west.  The hallway opens up at the east end, and there are doors in the north and south walls.</desc>
+      <exits n='389' e='454' s='517' w='452' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='454' flags='t'>
+      <name>Laboratory entrance</name>
+      <desc>  A rather young adult cartoon woman with red hair and wearing rubber gloves sits behind an arc-shaped table.  Seeing you, she presses the communicator just below her left shoulder and cheerfully says into it, &quot;Dexter, you&apos;ve got a guest here.&quot;  You are able to hear a serious voice reply via the communicator &quot;OK, Mom.&quot;  She smiles and tells you that you can go ahead down the hall three doors on your right to find Dexter, or if you&apos;re hungry, they have a replicator just to the south, or if you feel you need to be checked out, a medical station to the north.</desc>
+      <exits n='390' e='455' s='518' w='453' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='455'>
+      <name>Airlock</name>
+      <desc>  Sensors detect your presence and a disembodied masculine voice says, &quot;Prepare for decontamination.&quot;  Within seconds a gaseous green cloud fills the chamber and envelops you.  After about fifteen seconds the cloud dissipates, you hear a soft chime, and a disembodied feminine voice says, &quot;Decontamination complete.&quot;  Green lights on sensors next to iris portals at both the east and west ends blink, as if waiting for you to move one way or the other. A sign by the inner iris indicates oxygen levels are normal inside.</desc>
+      <exits e='456' w='454' in='454' out='456' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='456'>
+      <name>Building entrance</name>
+      <desc>  You are at the entrance to a sizeable whitewashed building.  As you approach, a large iris portal opens up in the wall to your west, allowing you entrance.  The shuttle pad lies off to the east.</desc>
+      <exits e='457' w='455' in='455' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='457' flags='yr'>
+      <name>Shuttle pad</name>
+      <desc>  This is an area clear of rocks bigger than your fist (or equivalent).  A few shuttles rest here waiting for their owners to return.  A small shed standing next to a large warehouse sits immediately east, while a large building sits off to the west.</desc>
+      <exits  e='458' w='456' in='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='e'>
+      <name>Trading exchange</name>
+      <desc>  Eight trading terminals have been placed at the end points of two tables shaped like a plus sign or X, depending on how you look at them.  There is also a prototype robot standing at the back of the room.  A sign next to it informs you that it is voice-activated to take and fill your orders, and was built by none other than Dexter himself.  The exit is west.</desc>
+      <exits w='457' out='457' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='515'>
+      <name>Bathroom</name>
+      <desc>  This room has a toilet, sink, and combination of bathtub and shower.  The door is north.</desc>
+      <exits n='451' out='451' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='517'>
+      <name>Bedroom</name>
+      <desc>  This is a small bedroom with walls painted pink and a twin size bed adorned with a fluffy pink quilt, hair barettes, and girl clothes draped over the ends.  Numerous dolls sit and lie around the room.  A clear, transparent window gives a view out over the southern barren landscape of the asteroid, and a door leads out to the north.</desc>
+      <exits n='453' out='453' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='518' flags='bt'>
+      <name>Replicator room</name>
+      <desc>  A large machine fills the southern wall, ready to produce any known food or drink in the universe, for the nominal price of a few groats.  A voice input panel listens for you to say what you want, and a large, cubical space is where each order materializes.  The way back is north.</desc>
+      <exits n='454' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>

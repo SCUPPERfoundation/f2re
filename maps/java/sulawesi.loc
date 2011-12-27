@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<fed2-map title='Sulawesi' version='8' editor='standard' from='267' to='Java.Java Space.330'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>whatever this is all about</desc>
+   </location>
+
+   <location num='79'>
+      <name>Loft Roof</name>
+      <desc>From here you have a 360 degree view of the planet, your breathe is taken away by the beauty you are witnessing.</desc>
+      <exits down='201'/>
+   </location>
+
+   <location num='82'>
+      <name>Jacuzzi</name>
+      <desc>Almost every spot on your body is blasted with Hot water jets.  You begin to feel very relaxed.</desc>
+      <exits out='202'/>
+   </location>
+
+   <location num='201' flags='b'>
+      <name>Joe&apos;s Loft</name>
+      <desc>Prestine hardwood white oak flooring echoes underfoot, unbroken by rugs or carpeting, in this penthouse style loft.  A black leather couch sits in the middle of the living area, facing a large screen recessed into a bare, red rustic brick wall that divides off the sleeping area from the rest of the room.  A large, neatly made, bed, a rather large closet and cherry dresser are tucked behind the wall.  A commercial style kitchen sprawls across the far corner, with stainless steel appliances including a commercial sized range, large refrigerator, microwave, and sink. The cabinets are made from fine Cherry wood inset with frosted glass, the countertop made of solid black granite.</desc>
+      <desc>French doors, uncurtained, lead out to the balcony to the east, while a hidden staircase leads down to the offices.</desc>
+      <exits e='202' up='79' down='327' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='202' flags='b'>
+      <name>Balcony</name>
+      <desc>You are on a large balcony that overlooks the incredible cityscape of Sulawesi.  Lined with slate flooring the Balcony is large enough to hold a rather large Party, with a manned open Bar tucked off to the side.  There are several trees planted strung with intricate white lights giving off an interesting shimmer to the area.  There are several different types of outdoor furniture inviting you to sit back, relax &amp; enjoy the view.</desc>
+      <exits w='201' in='82' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='203' flags='hib'>
+      <name>Hospital w/ Bar</name>
+      <desc>Yes, you read it right, you can even get a drink here in the hospital.  You gotta have some sort of pain medication.</desc>
+      <exits s='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='204' flags='yrb'>
+      <name>Shipyard</name>
+      <desc>Buy a ship and have a drink!</desc>
+      <exits sw='267' no-exit='nomove.number.2'/>
+   </location>
+
+   <location num='259' flags='b'>
+      <name>Empty Office</name>
+      <desc>All you see is a vacant office, which is decorated quite nicely for noone being here.</desc>
+      <desc>There is a sign that says:</desc>
+      <desc>&quot;Please see the Leasing office for information on leasing one of our fine offices.&quot;</desc>
+      <exits se='324' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='260' flags='b'>
+      <name>Empty Office</name>
+      <desc>All you see is a vacant office, which is decorated quite nicely for noone being here.</desc>
+      <desc>There is a sign that says:</desc>
+      <desc>&quot;Please see the Leasing office for information on leasing one of our fine offices.&quot;</desc>
+      <exits s='324' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='263' flags='b'>
+      <name>Pity The Fool, L.L.C. Office</name>
+      <desc>As you enter the room, you notice that most of the furniture in the room is dark cherry wood and there is a large desk in front of you. The office is quite spacious with enough space for having meetings with clients. There are pictures hung on the wall of the planets in which Pity The Fool has factories. You notice that the company has already started plans to build a planet in the upcoming months.</desc>
+      <exits se='328' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='264' flags='b'>
+      <name>Veridian Horizons, Inc. - Sulawesi Branch</name>
+      <desc>cluttered the desk is from long days and nights of pouring over reports and analyses of the company&apos;s various factories.  A plaque on the wall explains how the name was derived.  It comes from the words &quot;verdant&quot;, meaning green and growing, and &quot;veritas&quot;, or truth.  To your left is a book shelf filled with trade magazines and books, including such titles as &quot;Networking Made EZ&quot; and &quot;Supply Chain Management: The Future is Now.&quot;  You wonder how such a person can absorb himself in the workings of a company.  There is a full bar with any drink you can imagine available in the far corner and a full wall window with a picturesque view of the planet&apos;s Landing Pad and Exchange.  There is a humidor full of a variety of cigars from around the Galaxy, (legal and otherwise).  On Rhys&apos; desk under the pile of papers is a picture of his family at their home on Earth.</desc>
+      <exits s='328' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='265' flags='b'>
+      <name>Leasing Office</name>
+      <desc>Please let us know if you would like to have an office here on Sulawesi, offices are available.  Thank you.</desc>
+      <exits s='329' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='266' flags='b'>
+      <name>Outside Office Building</name>
+      <desc>The beautiful Architectural Masterpiece was designed by our very own Master Architect Joe!</desc>
+      <desc>The Grand Entrance Facade is to the SW.  The path to the EAST leads to the LP.</desc>
+      <exits e='267' sw='329' no-exit='nomove.number.2'/>
+   </location>
+
+   <location num='267' flags='rb'>
+      <name>Landing Pad/Fly-Thru Liquor Store</name>
+      <desc>Home of the &quot;One and Only&quot; Fly-Thru Liquor Store</desc>
+      <desc>N - Hospital &amp; Bar</desc>
+      <desc>NE - Shipyard &amp; Bar</desc>
+      <desc>E - Exchange &amp; Bar</desc>
+      <desc>S - Construction &amp; Bar</desc>
+      <desc>W -Administrative Building &amp; Bar</desc>
+      <exits n='203' ne='204' e='268' s='331' w='266' no-exit='nomove.number.2'/>
+   </location>
+
+   <location num='268' flags='eb'>
+      <name>Exchange &amp; Trader&apos;s Bar</name>
+      <desc>As you look around you see nothing but Investors drinking away buying and selling.  Wow they must love their jobs.</desc>
+      <desc>Pull up and have a seat at the bar by sitting DOWN.</desc>
+      <exits w='267' down='269' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='269' flags='b'>
+      <name>Seated at the Bar</name>
+      <desc>Now you are seated at the bar.  You see a screen in front of you that allows you to plug in your com unit and study your Exchange activity (as long as you have the necessary upgrades).  To go back to the Exchange get UP from your seat.</desc>
+      <exits up='268'/>
+   </location>
+
+   <location num='323' flags='b'>
+      <name>Empty Office</name>
+      <desc>All you see is a vacant office, which is decorated quite nicely for noone being here.</desc>
+      <desc>There is a sign that says:</desc>
+      <desc>&quot;Please see the Leasing office for information on leasing one of our fine offices.&quot;</desc>
+      <exits e='324' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='324' flags='b'>
+      <name>2nd Floor Foyer</name>
+      <desc>S -    Vacant Office</desc>
+      <desc>SW - Vacant Office</desc>
+      <desc>W -   Vacant Office</desc>
+      <desc>NW - Vacant Office</desc>
+      <desc>N - Vacant Office</desc>
+      <exits n='260' s='388' sw='387' w='323' nw='259' down='328' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='326' flags='b'>
+      <name>Conference Room</name>
+      <desc>There is a large conference table with executive chairs neatly set up around it.  This appears to be where the important decisions are made.</desc>
+      <exits e='327' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>***Trader Joe&apos;s***</name>
+      <desc>This beautiful office is lined with spectacular works from the Master Architect Joe.  you see to the right side of the office is a silver tray with bottles of Joe&apos;s Favorite Scotch &quot;The Macallan&quot;....please pour yourself a glass and enjoy.</desc>
+      <exits e='328' w='326' up='201' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>Grand Foyer</name>
+      <desc>You are in a Mesmerising Curved Foyer with doors to several offices.  the most significant one seems to be the one straight ahead to the west with huge glass double doors...that must be Joe&apos;s office.</desc>
+      <desc>There is also a staircase leading to the second level offices.</desc>
+      <desc>S -    ***Q&apos;s Kayaks***</desc>
+      <desc>SW - ***Aleut&apos;s Office***</desc>
+      <desc>W -   ***Trader Joe&apos;s***</desc>
+      <desc>NW - ***Inuit&apos;s Tuiliqs***</desc>
+      <desc>N -    ***Veridian Horizons, Inc. - Sulawesi Branch***</desc>
+      <exits n='264' s='392' sw='391' w='327' nw='263' up='324' down='329' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>Office Lobby</name>
+      <desc>This is the Lobby. There is a bar on the South wall where you can get a drink while you wait.</desc>
+      <desc>There is an &quot;Awe Inspiring&quot; staircase leading to the Offices.</desc>
+      <desc>There is a door to the NORTH with a sign ***Leasing Office***</desc>
+      <exits n='265' ne='266' up='328' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='331' flags='b'>
+      <name>Under Construction</name>
+      <desc>The road is blockaded here to prevent unwanted individuals from getting hurt in the CONSTRUCTION ZONE.  there is a streetside vender here selling drinks.</desc>
+      <exits n='267' no-exit='nomove.number.2'/>
+   </location>
+
+   <location num='387' flags='b'>
+      <name>Empty Office</name>
+      <desc>All you see is a vacant office, which is decorated quite nicely for noone being here.</desc>
+      <desc>There is a sign that says:</desc>
+      <desc>&quot;Please see the Leasing office for information on leasing one of our fine offices.&quot;</desc>
+      <exits ne='324' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='388' flags='b'>
+      <name>Empty Office</name>
+      <desc>All you see is a vacant office, which is decorated quite nicely for noone being here.</desc>
+      <desc>There is a sign that says:</desc>
+      <desc>&quot;Please see the Leasing office for information on leasing one of our fine offices.&quot;</desc>
+      <exits n='324' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='391' flags='b'>
+      <name>Aleutian Paddle Makers Inc.</name>
+      <desc>Aleut&apos;s Office</desc>
+      <exits ne='328' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+   <location num='392' flags='b'>
+      <name>The Offices of Q&apos;s Kayaks &amp; Inuit&apos;s Tuiliqs</name>
+      <desc>Qajaq&apos;s and Inuit&apos;s joint offices... Here for all you Financier needs.</desc>
+      <exits n='328' out='267' no-exit='nomove.number.1'/>
+   </location>
+
+</fed2-map>
+

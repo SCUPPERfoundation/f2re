@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<fed2-map title='Spiral' version='15' editor='standard' from='2142' to='Merit.Merit Space.2078'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>This room is set aside for the events and objects Dagny plans to use when she promotes.</desc>
+   </location>
+
+   <location num='1820'>
+      <name>Economics Studies</name>
+      <desc>The Department offers a full range of analytical and theoretical rigor and a concern for real world problems.  Programs include macroeconomics, microeconomics, social economics and mathematical modeling.  Many of Federation&apos;s policy makers graduate from this field.  Exits are EAST and SW.</desc>
+      <exits e='1821' sw='1883'/>
+   </location>
+
+   <location num='1821'>
+      <name>Molecular Biology and Genetics Institute</name>
+      <desc>You admire the state of the art laboratories and core research facilities.  Students tackle problems in molecular biology, genetics, genomics, cell biology, biochemistry and macromolecular structure.  Students are expected to carry out independent research projects and contribute to the field before receiving a diploma.  Exits are E or W.</desc>
+      <exits e='1822' w='1820'/>
+   </location>
+
+   <location num='1822'>
+      <name>Romance Studies</name>
+      <desc>The assorted buildings making up this department have the allure of a village, a central park area in the middle of carefully landscaped grounds.  Merepoule helped endow this department in a gesture of friendship to Dagny.  Students here explore the complexities of Francophone, Italian and Hispanic literature, cultures, political systems as well as intense language immersion.  Study abroad programs are encouraged, especially with institutions in Gaul.  Exits E and W.</desc>
+      <exits e='1823' w='1821'/>
+   </location>
+
+   <location num='1823'>
+      <name>The Amalfi Institute of Physics</name>
+      <desc>Physics forms the intellectual core of the physical sciences, providing insight into the fundamental building blocks of nature.  All areas are explored in a constantly changing field, ranging from nanoscience and high energy physics to string theory.  You notice many of the students here have a faraway look in their eyes, although their strides are purposeful.  Exits E or W.</desc>
+      <exits e='1824' w='1822'/>
+   </location>
+
+   <location num='1824'>
+      <name>Anthropology Department</name>
+      <desc>The study of man - spanning evolution, the development of heterogeneity, human history and the diversity of cultures past and present.  Fortunately, the theory of evolution is not disputed on Spiral, a planet founded on rational thought and education, so no time is wasted dispelling myths.  A museum is housed within an adjoining building, with thousands of ethnographic and archaeological objects.  Exits are E or W.</desc>
+      <exits e='1825' w='1823'/>
+   </location>
+
+   <location num='1825'>
+      <name>Department of Classics</name>
+      <desc>Dagny included this department in Spiral University because she strongly believes the quotation by Santayana, &quot;Those who cannot remember the past are condemned to repeat it.&quot;  Ancient writings, ancient sculptures, ancient coins are assembled here reverently to celebrate man&apos;s early civilized history.  Special emphasis is placed on linguistics and early literature.  The College of Arts and Sciences is Westerly.  SE is a grav portal.</desc>
+      <exits se='1890' w='1824'/>
+   </location>
+
+   <location num='1883'>
+      <name>PsychoHistory Department</name>
+      <desc>You are in a translucent central hub from which several moving walkways direct students to classrooms and experiment venues.  Psychohistorians attempt to predict how different policies will affect societies as a whole, through expertise in psychology, sociology and history.  Through case studies and experimental scenarios, students investigate how people feel, think and act in group situations under a whole range of circumstances.  More of Arts and Sciences are to the NE, or you can go back SW to the grav portal.</desc>
+      <exits ne='1820' sw='1946'/>
+   </location>
+
+   <location num='1890'>
+      <name>Level 6 and Grav Portal</name>
+      <desc>The College of Agriculture and Life Sciences is on this level. The College&apos;s mission is to educate students and disseminate knowledge about agriculture, food science and veterinary medicine.  You see rows of enormous greenhouses stretching into the distance.  Animals graze in fields scattered around this district and modern facilities house the animals, keeping them healthy and productive.  At the very end of this district, you will find Dagny&apos;s residence and offices.  NW is the College of Arts and Sciences.  Go SE to explore the College of Agriculture and Life Sciences.  You can go UP or DOWN in the grav portal or go OUT to the LP.</desc>
+      <exits se='1955' nw='1825' up='1946' down='2148' out='2142'/>
+   </location>
+
+   <location num='1946'>
+      <name>Level 5 and Grav Portal</name>
+      <desc>Welcome to the College of Arts and Sciences which takes up this entire level.  The faculty draws on leaders in their respective disciplines to provide courses in liberal arts.  Spiral University offers only technical degrees, but considers it important to include worthwhile liberal arts studies to supplement its students&apos; education.  Exits are NE and SW, or you can take the grav portal UP or DOWN or OUT to the LP.</desc>
+      <exits ne='1883' sw='2009' up='2331' down='1890' out='2142'/>
+   </location>
+
+   <location num='1949'>
+      <name>Applied Physics</name>
+      <desc>You are impressed with the intelligence and motivation readily apparent in the eyes of each student you pass.  Research here focuses on nanoscience and nanobiotechnology, condensed matter physics, astrophysics, plasma physics, and atomic, molecular and chemical physics.  These students must be fluent in the language of physic, namely mathematics.  The grav portal is SW.  EAST is Mechanical and Aerospace Engineering.</desc>
+      <exits e='1950' sw='2012'/>
+   </location>
+
+   <location num='1950'>
+      <name>Mechanical and Aerospace Engineering</name>
+      <desc>Here students apply their principles to develop robotic arms for space applications.  They apply their research on the mechanics of bone tissue and the functional adaptation of the skeleton.  DNA is being manipulated by light.  Nano and micro scale systems are studied from every angle.  Applied Physics is West.  Go EAST for Planet and Atmospheric Sciences.</desc>
+      <exits e='1951' w='1949'/>
+   </location>
+
+   <location num='1951'>
+      <name>Planet and Atmospheric Sciences</name>
+      <desc>The faculty teaches ways to increase energy supplies and energy options.  Students learn how to forecast earthquakes, ionosphere activity, volcanic eruptions and weather events.  The history of life is used to better understand the impacts of ongoing environmental stressors on biodiversity.  West is Mechanical and Aerospace Engineering.  To the EAST is civil and environmental engineering.</desc>
+      <exits e='1952' w='1950'/>
+   </location>
+
+   <location num='1952'>
+      <name>Civil and Environmental Engineering</name>
+      <desc>The three broad areas of study here include civil infrastructure, environmental processes and engineering systems management.  These break down into areas such as geotechnical engineering, fluid mechanics and hydrology, and terraforming.  Bioengineering lies to the SE, or you can return West.</desc>
+      <exits se='2017' w='1951'/>
+   </location>
+
+   <location num='1955'>
+      <name>The Farmers</name>
+      <desc>The students nickname themselves the Farmers, but their courses of study require dedication and intelligence.  A directory in this high rise building summarizes the disciplines students must master.  Crop and Soil Sciences, Biological Statistics and Computational Biology, Entomology, Horticulture, Plant breeding and Genetics, Plant Pathology and Plant Microbe-Biology, as well as Landscape Architecture.  Your eyes begin to glaze over and you decide to move on.  Exits SE or NW.</desc>
+      <exits se='2020' nw='1890'/>
+   </location>
+
+   <location num='2009' flags='b'>
+      <name>Steam Complex</name>
+      <desc>Nicknamed the Steam Complex, this is a collection of buildings where students and faculty gather to blow off steam.  Whether it&apos;s a breakdance club, campus cinema or amateur music groups playing, the student union is lively except during exam weeks.   Human chess on the arts quad is a popular attraction, and all manner of tapas and beverages are available.</desc>
+      <exits ne='1946' s='2073'/>
+   </location>
+
+   <location num='2012'>
+      <name>Level 2 and the Grav Portal</name>
+      <desc>Spiral University is the largest and most elite educational institution in Federation.  Students come from far and wide to learn from the foremost experts in their fields.  The University is divided into colleges, each with its own curriculum, housing and internships.  The College of Engineering begins here.  Go back UP for food, down to Level 3 for the Faculty of Human Ecology and to Level 4 for the Faculty of Computing and Information Science.  The College of Arts and Sciences begins at Level 5 and the College of Agriculture and Life Sciences is on Level 6.  The Museum District is back to the SW.  NW to Biomedical Engineering.  The grav portal also leads out to the LP.</desc>
+      <exits ne='1949' sw='2075' up='2208' down='2337' out='2142'/>
+   </location>
+
+   <location num='2017'>
+      <name>Biomedical Engineering</name>
+      <desc>The faculty has developed cutting edge programs creating a quantitative understanding of the human body that can be used  as a foundation for the rational design of therapies, molecules, devices and diagnostic procedures to improve human health.  Return NW or continue to Biomolecular Engineering to the SE.</desc>
+      <exits se='2082' nw='1952'/>
+   </location>
+
+   <location num='2020'>
+      <name>Animal Science and Management</name>
+      <desc>Veterinary Medicine, Animal Science and Applied Economics and Management are the principal areas of study here.  The biggest challenge is learning which animals thrive on which planets and in what ecological setting.  Domestic animals are studied as well as insects and animals in the wild.  The grav portal is to the NW.  You may find Dagny to the SOUTH.</desc>
+      <exits s='2084' nw='1955'/>
+   </location>
+
+   <location num='2073'>
+      <name>Computer Science</name>
+      <desc>Seven years of dedication is required to receive a degree in this rapidly expanding field.  Students learn the theory of computing, algorithms, logic and the like.  They explore artificial learning such as robotics, operating systems and networking.  Scientific computing, which includes computational geometry, numerical analysis and physically based animation are challenging.  Also taught is graphics - interactive rendering, image based modeling, global illumination and the like.  Return SOUTH or go NORTH to visit the steam complex.</desc>
+      <exits n='2009' s='2137'/>
+   </location>
+
+   <location num='2075'>
+      <name>Museum District</name>
+      <desc>The museums on Spiral enjoy a sharing arrangement of their collections with the many fine museums in Gaul, as a result of the close friendship between Merepoule and Dagny.  Some of the galleries feature works from the new artists learning their craft in the university here.  The Sculpture Museum houses a collection of rare masterpieces from throughout the ages, some of which were brought here at great personal expense to Dagny, her favorite one entitled &quot;The Lovers.&quot;   SOUTH to the Cultural District.  Level 2 and the Grav Portal are NE.</desc>
+      <exits ne='2012' s='2139'/>
+   </location>
+
+   <location num='2079'>
+      <name>Processing and Orientation</name>
+      <desc>Rows of individual kiosks with body-conforming chairs before them await the newcomer to Spiral.  You learn there are grav portals which can convey you to different sections of the spiral so you can skip individual areas.  The grav portals will also take you back OUT to the LP.  Matriculating students and new faculty members can register here and then be directed to their appropriate housing and academic orientation sessions.  Visitors can arrange for their hotels, restaurants and tourist activities for their entire stay from these kiosks as well.  The LP is SW.  Level 1 begins to the SE.</desc>
+      <exits se='2144' sw='2142'/>
+   </location>
+
+   <location num='2082'>
+      <name>Biomolecular Engineering</name>
+      <desc>Students emerging from this graduate program are greatly sought after.  Expert in phototonics and material processing as well as medical and industrial biotechnology, graduates work in areas ranging from remediation of oil spills to treatment of disease.  Return NW or proceed SOUTH to Operations Research.</desc>
+      <exits s='2146' nw='2017'/>
+   </location>
+
+   <location num='2084'>
+      <name>Dagny&apos;s Headquarters</name>
+      <desc>You see an imposing gold plated doorway nearly 5 meters high, flanked by wrought iron fencing enveloping an elaborate garden.  You can ring the bell and announce yourself on the intercom.  After a moment, you hear a click.  The heavy door swings open and you enter into an enormous reception area.  A member of Dagny&apos;s staff approaches you.  If you have an appointment, show your credentials and then proceed SOUTH to Dagny&apos;s offices.  Otherwise, return NORTH.</desc>
+      <exits n='2020' s='2148'/>
+   </location>
+
+   <location num='2137'>
+      <name>Computing in the Arts</name>
+      <desc>Here students learn to consider new computer-influenced paradigms and metaphors for the experiences of making  and appreciating art.  Students are provided opportunities to create art via computer and to study the perception of artistic phenomena.  Gripping and often dramatic examples of their works are on display in screens throughout the hallways and in reception areas.  Exits are S and N.</desc>
+      <exits n='2073' s='2201'/>
+   </location>
+
+   <location num='2139'>
+      <name>Cultural District</name>
+      <desc>Operas, ballets, and symphonies are performed in auditoriums expressly designed for them acoustically and visually.  Opera productions are not hampered by inadequate thought to set changes.  New scenes seamlessly replace previous ones with computerized precision.  Translations of the lyrics are customized for each spectator&apos;s needs and appear in transparent letters before them.  The ballet theaters have gravity free zones where dance transforms into graceful flight.  Some venues cater to small intimate musical presentations, such as string quartets, and others accomodate thousands of spectators, each seat designed to maximize acoustic perfection.  The perfection of the facilities draws the finest artists.  The Theater District is SE.  Museums are NORTH.</desc>
+      <exits n='2075' se='2204'/>
+   </location>
+
+   <location num='2141' flags='eb'>
+      <name>Spiral Exchange</name>
+      <desc>State-of-the-Art technology reigns in this exchange, where traders can obtain data expressly formatted to their preference at the touch of a screen.  Spiral&apos;s main industry is education, but its inhabitants are productive and competent, creating a thriving economy and many commodities to trade.  You can order a pick-me-up from the automatic espresso bar in the corner.  The LP is back to the EAST.</desc>
+      <exits e='2142'/>
+   </location>
+
+   <location num='2142' flags='yrb'>
+      <name>Spiral Landing Pad</name>
+      <desc>A pleasant breeze refreshes you as you look around at the striking architecture surrounding you, interspersed with  great open plazas of greenery.  Broad, flower-lined walkways lead to the gracefully arched entrances of gleaming semi-transparent buildings.  People have a purposeful look, leaning forward as they walk briskly to their destinations.  Spiral is primarily a hub for specialized education and draws deserving students from throughout the Federation.  Processing and Orientation is NE, the Exchange is WEST.</desc>
+      <exits ne='2079' w='2141'/>
+   </location>
+
+   <location num='2144'>
+      <name>Level 1 Hotel District</name>
+      <desc>Here are lodgings to suit every taste.  To the right you see some boutique hotels specializing in exquisite service in elegant surroundings.  These vie with a multitude of glitzy skyscrapers, their lavish lobbies beckoning visitors.  To the left are grouped the family-friendly hotels featuring distractions for children.  Charming bed and breakfast inns noted for their warmth and homey atmospheres are also scattered here and there.  The LP is back to the NW, and tourist amenties continue SOUTH.</desc>
+      <exits s='2208' nw='2079'/>
+   </location>
+
+   <location num='2146'>
+      <name>Operations Research</name>
+      <desc>This department works collaboratively with businesses and industry in fields such as health care, logistics and finance.  Whether it&apos;s determining optimal inventory levels or identifying best product placement in retail environments, operations research expertise increases productivity.  Technology, computing, and information science all leverage  the faculty&apos;s current intellectual thought to enhance practical application. Return North or go SOUTH for School of Medicine.</desc>
+      <exits n='2082' s='2210'/>
+   </location>
+
+   <location num='2148'>
+      <name>Dagny&apos;s Offices</name>
+      <desc>A labyrinth of offices confronts you.  You see a floor plan illuminated on a large viewscreen and try to orient yourself.  You notice thick carpeting cushioning your feet and soft music permeates this lobby.  People speak in hushed tones as they tend to their responsibilities.  Dagny takes great pride in the running of her planet and rewards competent personnel handsomely.  Her staff is loyal, her citizens appreciative and content.  You wonder if Dagny is in her residence.  You have heard it is impressive and are curious to see it and perhaps meet her.  Do you dare go SOUTH?  Other exits are NORTH or UP.</desc>
+      <exits n='2084' s='2212' up='1890'/>
+   </location>
+
+   <location num='2201'>
+      <name>Computational Biology</name>
+      <desc>Data-analytical and theoretical methods, mathematical modeling, and computational simulation techniques are developed and applied here to the study of biological systems.  Genomic databases, protein data banks, MRI images of the human brain and remote sensing data on landscapes contain enormous amounts of detailed information that continues to transform biology.  This is a fast-developing field, venturing into population genetics and biomechanics.  Exit SE or NORTH.</desc>
+      <exits n='2137' se='2266'/>
+   </location>
+
+   <location num='2204'>
+      <name>Theater District</name>
+      <desc>Some tourists visit Spiral strictly for the theater experience.  Universities in Spiral graduate gifted playwrights, set designers, costumers and actors who premiere their first professional works in these theaters.  Avant-garde productions are the order of the day although some classic plays are performed as well.  Plays that are received well by these discerning audiences are those that go on to be performed across Federation.  SE is the Nightlife District.  The Cultural District is NW.</desc>
+      <exits se='2269' nw='2139'/>
+   </location>
+
+   <location num='2208' flags='b'>
+      <name>Food and Grav Portal</name>
+      <desc>The food choices here cater to all pocketbooks and palates.  You can feast on the finest of culinary delicacies, explore a wide variety of ethnic restaurants, or just fill up with comfort food.  Whichever you select, you can depend on the establishment to be clean and competently run.  Dagny&apos;s officials inspect food establishments regularly, and the keen competition guarantees that only restauranteurs offering tasty food and efficient service will survive.  More tourist amenities are to the SW.  Back NORTH to the Hotel District.  The Grav Portal can take you DOWN to Level 2 or back OUT to the LP..</desc>
+      <exits n='2144' sw='2271' down='2012' out='2142'/>
+   </location>
+
+   <location num='2210'>
+      <name>School of Medicine</name>
+      <desc>Considered the most competitive medical school in Federation, once accepted, the med students work 7 day weeks, 18 hours a day, assimilating the gargantuan body of knowledge and learning how to apply it.  Neuroscience, pharmacology, bionics, radiology and histology are just some of the demanding courses.  Gross anatomy classes still use actual cadavers, because no simulated body can accurately mimic the complexity and diversity of actual humans.  Dorms are SOUTH or you can return NORTH.</desc>
+      <exits n='2146' s='2274'/>
+   </location>
+
+   <location num='2212' flags='b'>
+      <name>Dagny&apos;s Manor</name>
+      <desc>The manor house is set on a knoll, somewhat above the Spiral administrative offices.  You enter into the parlor, noting the comfortable seating and classic furnishings.  A large oil painting of Dagny and Amalfi dominates one wall.  In the center of the room is an expansive circular rug, woven to depict the spiral of this planet, giving the illusion that it is three-dimensional.  A modest bar is set in a corner, vintage wines and whiskey bottles on display.  The room is simple but elegant, and you realize that everything in it has a designated function.  The seating is arranged to encourage exchange of ideas.  You hear a dog barking from another room.  You also hear a woman&apos;s dulcet voice laughing in harmony with a man&apos;s baritone.  You take a seat, and hope to meet the designer of Spiral.  If the wait is too long, you can go OUT to the LP or back N.</desc>
+      <exits n='2148' out='2142'/>
+   </location>
+
+   <location num='2266'>
+      <name>Department of Statistical Science</name>
+      <desc>Statistical inference and probabilistic modeling are central to all the pure and applied sciences today.  Statistical thinking and quantitative reasoning has become pervasive in economics, law, government, as well as the sciences.  Visual graphing of statistical data is produced holographically, a useful tool for sharing information in group settings.  The grav portal is SE, Computational Biology is NW.</desc>
+      <exits se='2331' nw='2201'/>
+   </location>
+
+   <location num='2269' flags='b'>
+      <name>Nightlife District</name>
+      <desc>There are no shortage of nightspots here, flashing signs on every side inviting you to make merry.  The Spiral Helix is a popular mixed drink, concocted from 100 proof alcohol and juice from a mildly hallucinogenic native fruit. Tourists drift from one club to the next, comparing the showgirls, the lavish accoutrements, the musical groups and the laser shows.  Most agree they get their money&apos;s worth.  East is the Sports Venue, NW is the Theater District.</desc>
+      <exits e='2270' nw='2204'/>
+   </location>
+
+   <location num='2270' flags='b'>
+      <name>Sport Venue</name>
+      <desc>Dedicated for months on end to working hard in their chosen fields, many of Spiral&apos;s tourists also like to play hard, and Dagny has provided for them.  For the more tame, there are some stunning golf courses here, tennis courts, and a magnificent sparkling blue lake for water skiing, parasailing and sailing.  For thrill seekers, there are anti-grav jumps, white water rafting, cliff climbing and even adventure specialists who custom design your thrill for a hefty price.  Back E is the Amusement District and onward towards the LP.  Go WEST for some nightlife.</desc>
+      <exits e='2271' w='2269'/>
+   </location>
+
+   <location num='2271' flags='b'>
+      <name>Family Amusements District</name>
+      <desc>Dagny encourages development of family amusement establishments here through zoning and business friendly regulations, in the hopes of promoting tourism and the ensuing groat income for Spiral.  There are animatronics theme parks, water parks and thrill rides.  Live entertainment featuring talented singers and dancers, magicians and comics who delight visitors.  Moving sidewalks whisk you to your chosen pleasure.  The LP is Northeasterly as is food, although you can grab a snack here.  The Sports Venue lies to the WEST.</desc>
+      <exits ne='2208' w='2270'/>
+   </location>
+
+   <location num='2274' flags='b'>
+      <name>Student Housing Complex</name>
+      <desc>This campus contains residence halls with many alternative living arrangements.  There are suites with kitchens and relaxation areas.  All offer resources to maximize the student&apos;s educational experience, ranging from research hubs to opportunities to apply learning into the larger community.  There are cooperative housing units with shared facilities and meal plans are also available for students who prefer to devote more time to study.  Scholarships offered to deserving students help defray the costs of housing and tuition.  These are strictly offered on a merit basis, not need based.  Food and beverages are available here.  Return NORTH or go SW to Level 3 and a Grav Portal.</desc>
+      <exits n='2210' sw='2337'/>
+   </location>
+
+   <location num='2331'>
+      <name>Level 4 and Grav Portal</name>
+      <desc>You&apos;ve arrived at the Faculty for Computing and Information Science.  The majority of students taking courses here are specializing in other fields such as aerospace engineering, astronomy, mathematics and digital arts.  The buildings here are a little chilly, the climate control lowered because of the warmth of the computers and peripherals.  Go NW to Statistical Science.  The Medical Center and Activity Center are SE.  The Grav Portal will take you up or down a level or back OUT to the LP.</desc>
+      <exits se='2396' nw='2266' up='2337' down='1946' out='2142'/>
+   </location>
+
+   <location num='2337'>
+      <name>Level 3 and Grav Portal</name>
+      <desc>This section harbors the Faculty of Human Ecology, which explores the relationship between people and the world around them.  It strives to shape that world for the better through academics, outreach and research.  Return NE, or continue to the Faculty departments SW.  You can take the grav portal up or down, or use it to go back OUT to the LP.</desc>
+      <exits ne='2274' sw='2400' up='2012' down='2331' out='2142'/>
+   </location>
+
+   <location num='2396' flags='hib'>
+      <name>Student/Faculty Activity Center and Medical Center</name>
+      <desc>Students and Faculty cannot live by academics alone.  Not just the mind, but the body, general health and spirit must also be nurtured.  This complex provides a wide array of state of the art fitness centers and health facilities.  There are gathering places for students and faculties who belong to clubs and hobby groups, from amateur campus broadcasting to cooking classes, all in inviting, spacious structures.  EAST are the Human Ecology Departments.  Go NW to Level 4 and the Grav Portal.</desc>
+      <exits e='2397' nw='2331'/>
+   </location>
+
+   <location num='2397'>
+      <name>Department of Human Development</name>
+      <desc>This faculty addresses the biological, emotional cognitive and social factors that shape human behavioral development.  The study of cognition includes attention, memory, intelligence, reasoning, decision-making, language development, causal understanding and categorization.  The rapidly growing field of behavioral neuroscience is a strong focus.  Return EAST or WEST to Student/Faculty Activity Center and Medical Center.</desc>
+      <exits e='2398' w='2396'/>
+   </location>
+
+   <location num='2398'>
+      <name>Department of Policy Analysis and Management</name>
+      <desc>Here students benefit from the faculty&apos;s profound knowledge and experience in the multi-disciplinary problems associated with formulating, implementing, managing and evaluating public sector programs.  Research centers on applying economics, demography and political science to social issues.  Exit EAST or WEST.</desc>
+      <exits e='2399' w='2397'/>
+   </location>
+
+   <location num='2399'>
+      <name>Division of Fiber Science and Apparel Design</name>
+      <desc>It&apos;s not just wool and cotton anymore, and synthetic fibers provide desirable properties natural fibers cannot.  Students learn the basics of fiber chemistry.  Coupled with engineering and physics, the knowledge can be applied to nanotechnology, sustainable materials, biomedical materials and more.  Included in the studies are the applications of design to optimize both functionality and fashion.</desc>
+      <exits e='2400' w='2398'/>
+   </location>
+
+   <location num='2400'>
+      <name>Division of Nutritional Sciences</name>
+      <desc>The scholarly activities here seek to integrate knowledge from the physical, biological and social sciences in the areas of molecular, human, and interplanetary nutrition.  Programs include nutritional genomics, obesity and chronic disease and maternal and child nutrition.  The grav portal is back NE or you can go WEST.</desc>
+      <exits ne='2337' w='2399'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<fed2-map title='Modoki Space' version='8' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>Store Room</name>
+      <desc>   A storeroom that never gets used... well at least for now.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='sp'>
+      <name>In Orbit Around Planet Soel</name>
+      <desc>   Below you shines a small red jewel spinning silently against the black of space. Soel, an Earth-like planet save for its red hue, is home to the White Mokonas, a race of short, white bipedal creatures that look similar to bunny rabbits except for the way their head and body seem to be fused together into one unit. A trace element in the atmosphere of Soel gives it the reddish tinge that you see on your view screen. Soel is also one half of a binary planetary system as it orbits in tandom with its companion planet, Larg.</desc>
+      <desc>   To the East of your orbital location is the Interplanetary Link. You can choose to head back there now, or Board your shuttle and land on Soel&apos;s surface.</desc>
+      <exits e='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Modoki Interstellar Link</name>
+      <desc>   The white dodecahedron of the Interstellar Link looms nearby as it seems to hover between the binary planets, Larg and Soel. Situated at the barycenter of the binary system, the Interstellar Link emits a bright blue pulse as it automatically connects to your wireless navigational array. Perched silently to your East is the planet Larg the governmental seat of the Modoki System. At the same time, its companion Soel spins quietly to your West. If you wish to leave the Modoki system, of course, you may jump away from here.</desc>
+      <exits e='461' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>In Orbit Above Planet Larg</name>
+      <desc>   Below you shines a small blue jewel spinning silently against the black of space. Larg, an Earth-like planet save for its relatively small amount of land compared to its vast oceans, is home to the Black Mokonas, a race of short, black bipedal creatures that look similar to bunny rabbits except for the way their head and body seem to be fused together into one unit. Larg is also one half of a binary planetary system as it orbits in tandom with its companion planet, Soel.</desc>
+      <desc>   To the West of your orbital location is the Interplanetary Link. You can choose to head back there now, or Board your shuttle and land on Larg. Of course, the landing trajectory being broadcast from the surface of Larg traces your path directly into the ocean itself. Where are you supposed to land?</desc>
+      <exits w='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<event-list version='4' editor='Version 1.46'>
+   <category name='move'>
+      <section name='sunglasses'>
+
+      <event num='1'>
+         <comment>vivid sunglasses move from lp</comment>
+         <message type='single' where='com' who='individual' lo='moves.sunglasses.1'/>
+         <move what='player' who='individual' loc='196'/>
+      </event>
+
+      </section>
+   </category>
+</event-list>
+

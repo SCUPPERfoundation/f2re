@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='8'>
+
+   <object type='static' start='2078' visibility='100' size='1' weight='1' flags='i'>
+      <name>brochure</name>
+      <id>obj_brochure</id>
+      <desc>A brochure instructing visitors on the use and cost of the filtering device.</desc>
+      <vocab cmd='ex' event='objects.brochure.1'></vocab>
+      <vocab cmd='examine' event='objects.brochure.1'></vocab>
+      <vocab cmd='get' event='objects.brochure.1'></vocab>
+      <vocab cmd='read' event='objects.brochure.1'></vocab>
+   </object>
+
+   <object type='static' start='2078' visibility='100' size='1' weight='1'>
+      <name>NENA9000</name>
+      <id>obj_2nena</id>
+      <desc>This is a small filter designed to remove certain toxins from the air.  It is surprisingly small and does not look nearly as ridiculous as one would expect. It costs 99 groats.</desc>
+      <vocab cmd='buy' event='objects.nena.1'></vocab>
+      <vocab cmd='get' event='objects.nena.1'></vocab>
+      <vocab cmd='take' event='objects.nena.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>NENA9000</name>
+      <id>obj_nena</id>
+      <desc>This is a small filter designed to remove certain toxins from the air.  It is surprisingly small and does not look nearly as ridiculous as one would expect.</desc>
+   </object>
+
+</object-list>

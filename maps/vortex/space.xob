@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<object-list version='12' editor='Version 1.40'>
+   <object type='static' start='593' visibility='100' size='1' weight='1' flags='i'>
+      <name>Rayler</name>
+      <id>Rayler_mobile</id>
+      <desc>The Pirate Ship Rayler looms here, searching for ships to destroy.  The docking port is open and may Enter Rayler.</desc>
+      <vocab cmd='in' event='rayler.enter.1'></vocab>
+      <vocab cmd='enter' event='rayler.enter.1'></vocab>
+      <movement speed='4' low='396' high='915'></movement>
+   </object>
+
+   <object type='static' start='66' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>micro_relay_sign</id>
+      <desc>Northwest - Vortex System Relay
+     East - Pharynx Station
+    South - Leucothea</desc>
+      <vocab cmd='ex' event='relay.sign.1'></vocab>
+      <vocab cmd='examine' event='relay.sign.1'></vocab>
+      <vocab cmd='read' event='relay.sign.1'></vocab>
+      <vocab cmd='check' event='relay.sign.1'></vocab>
+      <vocab cmd='get' event='relay.sign.1'></vocab>
+      <vocab cmd='take' event='relay.sign.1'></vocab>
+      <vocab cmd='inspect' event='relay.sign.1'></vocab>
+   </object>
+
+</object-list>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Relax Space' version='1.00' editor='standard'>
+
+   <location num='272' flags='slp'>
+      <name>Relax System</name>
+      <desc>You can glide your ship into the lighthouse below.  Enjoy the oceans, or the great facilities.</desc>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Stick' version='31' editor='standard' from='526' to='Shadow.Shadow Space.2000'>
+
+   <location num='0'>
+      <name>Planet Store Room</name>
+      <desc>No way out.</desc>
+   </location>
+
+   <location num='525' flags='e'>
+      <name>Stick Exchange</name>
+      <desc>Capitalism thrives on Stick.  Buy and sell all you can haul. East leads back to the LP.</desc>
+      <exits e='526'/>
+   </location>
+
+   <location num='526' flags='yrhib'>
+      <name>Stick Landing Pad</name>
+      <desc>Exchange is West.  Observing Platform is Up the stairs.  All other services can be found here at the LP.  We appreciate your patience while planetary construction is continues.  Board your shuttle to return to your ship.</desc>
+      <exits w='525' up='527'/>
+   </location>
+
+   <location num='527' flags='b'>
+      <name>Observing Platform</name>
+      <desc>The night sky of Stick is filled with stars of Cartel Darkness.  The nearest and brightest star is Gaul, home of the beautiful planet Provence.  Tables and chairs are provided for those who wish to stay a while.  Stairs lead Down to the LP.</desc>
+      <exits down='526'/>
+   </location>
+
+</fed2-map>

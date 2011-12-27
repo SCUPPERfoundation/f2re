@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<fed2-map title='Havefun Space' version='36' editor='standard'>
+
+   <location num='520' flags='slp'>
+      <name>Link</name>
+      <desc>You have entered the System of Havefun. Bourbon invites you to come and trade, or explore, the various planets in the system.  To the South are both the original planet Whiskey Map, and the bio planet ProjectM. To the SW is Bourbonballs.  Please enjoy yourself, but remember, Any builds done without prior approval are subject to immediate removal.</desc>
+      <exits s='584' sw='583'/>
+   </location>
+
+   <location num='583' flags='sp'>
+      <name>Bourbonballs orbit</name>
+      <desc>   You are in orbit around a most delicious world. Rotating in space like a giant piece of hard candy, it looks quite good enough to eat.</desc>
+      <desc>   As you move closer, you start to see the features of the planet - big mountains with a sprinkling of sugary-white on the peaks; bubbling seas like fizzy drinks; rolling plains that could have been made from green marzipan... your mouth begins to water!</desc>
+      <desc>      Only a small section of the planet has been terraformed to sustain a colony, and as your ship approaches you can see the buildings clustered around the landing pad area. You can go NE back to the link, E to get to Whiskey Map, or SE to ProjectM.</desc>
+      <exits ne='520' e='584' se='648' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='584' flags='sp'>
+      <name>Whiskey Map orbit</name>
+      <desc>Simply BOARD to get to Whiskey Map.  To get back to the Link, go North, or go W to visit Bourbonballs. Continuing South will take you to ProjectM.</desc>
+      <exits n='520' s='648' w='583'/>
+   </location>
+
+   <location num='648' flags='sp'>
+      <name>Orbit for planet Project M</name>
+      <desc>This is the planet Project M.  It is the bio planet of the system.  Board will take you to the LP.  To the NW is the path to Bourbonballs.  To the North will take you back to Whiskey Map and further North to the link.</desc>
+      <exits n='584' nw='583'/>
+   </location>
+
+</fed2-map>

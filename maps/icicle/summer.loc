@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<fed2-map title='Summer' version='8' editor='standard' from='457' to='Icicle.Icicle Space.392'>
+
+   <location num='202'>
+      <name>Icey&apos;s Main Office</name>
+      <desc>This is the main office on summer for Icey there is many different ways to go it just depends on which way you would like to go and where on the planet you would like to go. Down leads you to the main shuttle bays</desc>
+      <exits up='522' down='457'/>
+   </location>
+
+   <location num='266'>
+      <name>Lobby</name>
+      <desc>Here is the lobby for the main office. There is only one way to go up into the main office or down back to the shuttle bays.</desc>
+      <exits up='202' down='457'/>
+   </location>
+
+   <location num='457'>
+      <name>Shuttle bays for the Planet</name>
+      <desc>You see a dreary little shuttle bay with hardly any newness to it. You begin to wonder if this planet is as new as it appears. The ice on the walls suggest that this planet has been around for a very long time. You begin to wonder if this planet one time was just as nice as freeze or had it just been named this way to keep away all travelers till now. You see many different ways to different parts of the planet.</desc>
+      <exits s='521' up='266' down='522'/>
+   </location>
+
+   <location num='521'>
+      <name>This is the path way to the Common areas</name>
+      <desc>You look at the glass walls and notice that there is a major grouping of ice outside the walls and wonder if this planet is nothing but a ice planet or if truely a horrible winter.South is the only way to go unless you want to head back North to the shuttle bays.</desc>
+      <exits n='457' s='585'/>
+   </location>
+
+   <location num='522' flags='eb'>
+      <name>Planetary Exchange</name>
+      <desc>This is the place where all the outsiders can find there goods they need for travel back to there homeworlds. There is a sign holding back up to you saying SouthEast for the main areas or Out for a quicker departure.</desc>
+      <exits sw='585'/>
+   </location>
+
+   <location num='584' flags='b'>
+      <name>Cafe of the Trader</name>
+      <desc>There is a wait droid in the corner half froze over from the lack of work. It has a sticker on it that says freeze or bust. You begin to wonder if this droid needs or wants to goto freeze. You also notice a glass wall where it shows the frozen planet outside the walls. The other bulkhead walls indicate some sorta white or ice feeling to them. You just keep wondering if this planet was ever hospitalable to a adveradge person.</desc>
+      <exits e='585'/>
+   </location>
+
+   <location num='585'>
+      <name>Main Area</name>
+      <desc>There is alot of traders walking around looking for different commods and different foods for the families. Most you see are wearing heavy jackets and are holding heavy gloves for outside of the dome. There is many different exits in all directions and you wonder how many different things there could be.</desc>
+      <exits n='521' ne='522' e='586' se='650' s='649' w='584'/>
+   </location>
+
+   <location num='586' flags='yr'>
+      <name>Shipyards</name>
+      <desc>You can get your own ship here. There is a messy desk with clutter everywhere. The back areas looks to be off limits and has a huge junk area where you can see other broken ships that people have sold off in the past</desc>
+      <exits w='585'/>
+   </location>
+
+   <location num='649'>
+      <name>Pathway to Observation Area</name>
+      <desc>This is a glass pathway showing the outside frozen environment. There are two exits north and south.</desc>
+      <exits n='585' s='713'/>
+   </location>
+
+   <location num='650'>
+      <name>Main lobby</name>
+      <desc>This is the main lobby for the hospital on summer the nurse tells you to sit a moment the Doctor is working on someone right now. There seems to be a door to the Southeast.</desc>
+      <exits se='715' nw='585'/>
+   </location>
+
+   <location num='713'>
+      <name>Obersvation Area</name>
+      <desc>This area shows the planets from on top of the mountain. There is snow as far as the eye can see. You can barely see a valley that might show a small amount of green on the planet and you see a teleport pad that allows you to go down to it and have a look around</desc>
+      <exits n='649' down='905'/>
+   </location>
+
+   <location num='715' flags='hi'>
+      <name>Doctors Office</name>
+      <desc>The Doctor says to make things better you can insure yourself here as well as sit and rest a moment in one of the beds.</desc>
+      <exits nw='650'/>
+   </location>
+
+   <location num='905'>
+      <name>Small Obersvation Area</name>
+      <desc>This is a closed in area that shows a small view to the huge domes above. This dome is very old and shows lots of weathered ageing to it. There is two exits the first one is the pad your standing on going back up the main dome. The other is south. The is one emergency button which shows a stright back to the shuttle bays. The button reads DO NOT pull this button OUT, it will cause the planet to stop.</desc>
+      <exits s='969' up='713'/>
+   </location>
+
+   <location num='968'>
+      <name>Weathern Beaten Dome</name>
+      <desc>There is exits in many different locations. There is a glass wall which shows the outside frozen world.</desc>
+      <exits e='969' se='1033' s='1032'/>
+   </location>
+
+   <location num='969'>
+      <name>Opening to the Beaten Dome</name>
+      <desc>This area shows signs of moment in just about every location you can think about. The dorm has overgrown vegatation. There is a clearning a ways off and you wonder what it could be.</desc>
+      <exits n='905' e='970' s='1033' w='968'/>
+   </location>
+
+   <location num='970'>
+      <name>Weathern Beaten Dome</name>
+      <desc>This is the farest eastern side of the dome. You are up against the frozen glass of the dome which is very cold to the touch.</desc>
+      <exits s='1034' sw='1033' w='969'/>
+   </location>
+
+   <location num='1032'>
+      <name>Weather Beaten Dome</name>
+      <desc>From here you see the blistering cold out side of the dorm and way too much overgrown vegation. You begin to wonder who the gardner was and why they havent cleaned this mess up.</desc>
+      <exits n='968' e='1033' se='1097' s='1096'/>
+   </location>
+
+   <location num='1033'>
+      <name>Middle of the dome</name>
+      <desc>You see a man sitting near a small fountain crying. He mumbles something about how the people of this world have poluted this planet so horrible. He goes on to tell you this all use to be a beautiful little garden and he just got way to old to keep on fixing it up. He also explains to you he came from the planet freeze many years ago and that he plans to return there one day when he can get this dome back to the beautiful garden in his dreams.</desc>
+      <exits n='969' ne='970' e='1034' se='1098' s='1097' sw='1096' w='1032' nw='968'/>
+   </location>
+
+   <location num='1034'>
+      <name>Weathern Beaten Dome</name>
+      <desc>There is a lot of overgrown vegatation here. You do happen to see a clearing in the center of the dome and still wonder what it could be.</desc>
+      <exits n='970' s='1098' w='1033'/>
+   </location>
+
+   <location num='1096'>
+      <name>Far End Of the Dome</name>
+      <desc>From here you are on a slight hill looking over the edges of the dorm. You wonder why there is a small clearing in the middle of this dorm.</desc>
+      <exits n='1032' ne='1033' e='1097'/>
+   </location>
+
+   <location num='1097'>
+      <name>End of the dome</name>
+      <desc>Wild vegatation grows here with all the rest of the wild life that might have lived here at one point. The gardner left some tools and you wonder if there was a emergency at one point and they just never came back.</desc>
+      <exits n='1033' e='1098' w='1096' nw='1032'/>
+   </location>
+
+   <location num='1098'>
+      <name>Weather Beaten Dome</name>
+      <desc>You see way too much vegeatation and begin to wonder who was crazy enough to let this old dome.</desc>
+      <exits n='1034' w='1097' nw='1033'/>
+   </location>
+
+</fed2-map>

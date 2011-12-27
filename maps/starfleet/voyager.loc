@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<fed2-map title='Voyager' version='6' editor='standard' from='330' to='Starfleet.Starfleet Space.329'>
+
+   <location num='0' flags='t'>
+      <name>Store Room</name>
+      <desc>xxx</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='204'>
+      <name>Bottom Level of the Lift</name>
+      <desc>Here you are, inside the lift...thank goodness there&apos;s no elevator music! The exit is to the east.</desc>
+      <exits e='205' up='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='205'>
+      <name>Main Engineering</name>
+      <desc>   You exit into the main engineering secion of the ship. Panels are blinking, bleeping, and breaking. The engineering staff runs around psychotically, bouncing from one station to another, attempting to keep all the ships systems operating and peak efficiency!</desc>
+      <desc>   You think it&apos;s best to avoid going in further and risk compromising any of the ship&apos;s systems. The exit is west.</desc>
+      <exits w='204' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='259'>
+      <name>Briefing Room</name>
+      <desc>   With windows that look into space, comfortable chairs, and every type of display system imaginable from holograms to dry erase boards, this room is comfortably professional. Obviously, whomever designed this ship knew what they were doing. Talk about Feng Shui!</desc>
+      <desc>   The exit is south</desc>
+      <exits s='323' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264' flags='hi'>
+      <name>Medical Bay</name>
+      <desc>Here you see a very advanced medical bay. You see everything from Rigellian leeches to laser scalpels and bio-somethingorothers. The Doctor appears to be working on his next mind blowing paper and does not seem to be at all interested in assisting you. Here, you can purchase insurance. The exit is to the east.</desc>
+      <exits e='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Corridor Ending In A Bulkhead</name>
+      <desc>Looking around, you accidentally smack your face into a bulkhead. &quot;Who put that there,&quot; you think angrily. Turning around grouchily you see that you can only go back in the direction you came, or go off to the west into an unmarked room.</desc>
+      <exits s='329' w='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='323'>
+      <name>Main Bridge</name>
+      <desc>   You exit the lift at the upper level of the main bridge. This is truly a remarkably technological vessel. You can see the helm, tactical, operations, as well as many science stations from your vantage point. The crew is very busy, however, and pays you no mind.</desc>
+      <desc>   The Captain looks up at you from her chair, gives you a brief nod, and returns to her diagnostic.</desc>
+      <desc>   You can see her office to the south, and a briefing room to the north.</desc>
+      <exits n='259' e='324' s='387' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='324'>
+      <name>Upper Limits of the Lift</name>
+      <desc>Here you have two options. You can either exit the lift to the East, or you may return Down.</desc>
+      <exits w='323' down='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Dimly Lit Corridor</name>
+      <desc>As you exit the shuttle bay, you find yourself in a corridor that runs off to the north and south. Well, that&apos;s what you&apos;d like to think anyways...starships normally don&apos;t have cardinal directions. You may also return to the shuttle bay to the east if you find yourself too intimidated.</desc>
+      <exits n='265' e='330' s='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330' flags='yr'>
+      <name>Shuttle Bay</name>
+      <desc>   Your shuttle has successfully entered the vast shuttle bay aboard this massive vessel. As you disembark, you see the exit to the west of you.</desc>
+      <desc>   Tempted as you may be, shouting, &quot;Echo!&quot; is frowned upon severely.</desc>
+      <exits w='329' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='387' flags='b'>
+      <name>Captain&apos;s Office</name>
+      <desc>The doors close behind you with a swoosh as you look around. The office is sparsely decorated, obviously used more for respite from the day-to-day grind of being a starship captain than a permanant sanctuary. The desk is carved mahogony, with a personal display device with which the captain is able to continue her work, away from the hustle and bustle. The exit is north.</desc>
+      <exits n='323' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392'>
+      <name>Lift</name>
+      <desc>This lift seems to be a little outdated. Normally, you would be able to speak your destination and the lift would take you there. However, in this instance, all you can say is up and down...who knows where you will go!</desc>
+      <exits e='393' up='324' down='204' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>The Corridor Continues...</name>
+      <desc>West of you, there is a lift of some sort, to take you to other levels of the ship. To the south, you hear quite a bit of commotion.</desc>
+      <exits n='329' s='457' w='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='456' flags='b'>
+      <name>Mess Hall</name>
+      <desc>Here&apos;s what you&apos;ve been looking for! Finally, something to eat! The food dispensors have a very wide arrange of beverages, yet a very sparse assortment of foodstuffs. The exit is to the east, but what&apos;s the hurry! Sit with the crew, socialize and have fun!</desc>
+      <exits e='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='457'>
+      <name>The End Of The Corridor</name>
+      <desc>The corridor ends here...at least, it seems to. Force Fields are in place to prevent unauthorized individuals from going into restricted areas. There is quite the rucus to the east and west.</desc>
+      <exits n='393' e='458' w='456' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='eb'>
+      <name>Cargo Bay</name>
+      <desc>As you enter, you are overwhelmed with claustrophobia. Members of every species imaginable walk around, trading with one another and viewing the ships surpluses and demands. Apparantly, this is the exchange. You can buy and sell your commodities here, under the watchful eye of a certain pointy eared security officer. The exit is to the west.</desc>
+      <exits w='457' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

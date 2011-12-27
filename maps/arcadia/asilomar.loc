@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<fed2-map title='Asilomar' version='1.00' editor='standard' from='2138' to='Arcadia.Arcadia Space.1823'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>The mythical storeroom contains many a thing. It has no entrances and no exits. Just rows and rows of shelves and bins. A droid races up and down the aisles making sure nothing is out of place. If you have found yourself here, you should contact game staff.</desc>
+      <exits no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1' flags='hi'>
+      <name>Medical Facilities - Somewhere in Asilomar Resort Hotel</name>
+      <desc>   This room has recently been dry walled, but has not yet been painted. The room is dusty, in both appearance and smell. The black tile floor here is in the process of being ripped out, most of the tile on the east side of the room is completely gone, while a good portion of the other half is broken or loose. An old gurney rest against the wall, along with antique medical instruments. A new insurance machine is still partially in its crate against the northern wall, but useable. A new style medical droid is still missing limbs, while an old droid stumbles about the room, lurching precariously towards the other droid with a needle.</desc>
+      <desc>   Stenciled onto the seat of a wheelchair is the word &quot;Out.&quot;</desc>
+      <exits out='2137' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2135' flags='b'>
+      <name>Lobby Bar - Asilomar Resort Hotel</name>
+      <desc>   The walls have been lined with full length mirrors which reflect reflections of reflections. In the center of the room is a circular bar, manned by an eight arm bartending droid. Two arms hang limp at its side and a third is frozen above its head.</desc>
+      <desc>   Encircling the bartending droid is a stainless steel bar with plush vinyl stools.</desc>
+      <exits se='2200' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2137'>
+      <name>Front Entrance - Lobby - Asilomar Resort Hotel</name>
+      <desc>   Large scaffolding scales the building&apos;s interior, stretching up three floors along luxurious marble columns and across the stunning ornately carved wood walls. Much of the floor is covered in canvas sheets, as are unidentifiable pieces of furniture. The view here, from the northwest corner of the lobby is visually stunning. The room appears enormous, and despite easily being able to host a party for hundreds, the lobby is currently unsuitable for such an event. The noise and commotion of a busy restoration crew, nearly drowns out the elegant melody coming from the southwest and surely does not allow pleasant conversation.  A dusty granite counter stretches south along the eastern wall.</desc>
+      <desc>   A revolving door to the east leads back out to the damaged landing pad.</desc>
+      <exits e='2138' s='2201' sw='2200' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2138'>
+      <name>Asilomar Resort Hotel&apos;s Derelict Landing Pad</name>
+      <desc>   Shuttles arrive on a mostly level piece of the resort&apos;s concrete landing pad, which spans at least one hundred feet across. The thick gray surface, aged without noticeable repair, has given way to rambling cracks filled with flourishing weeds. Near the center a giant oak has emerged from beneath the surface, its roots breaking apart and lifting giant slabs around it, creating a ring of stone pieces bowing to the trunk of the oak.</desc>
+      <desc>   The imposing tree however fails to dwarf the building of the Asilomar Resort Hotel; a stone monolith rising 200 feet above the tallest tree. The hotel succeeds in blocking much of the western sky.</desc>
+      <desc>   To the east a dangerous looking ravine, no doubt deadly, provides a quick route to the medical facilities. South from there a badly charred building stands. Hanging above the door, between two redwood trees, is a vinyl banner reading &quot;Economic Exchange: Now Open.&quot;</desc>
+      <exits se='2203' w='2137' no-exit='moves.noexit.1'/>
+      <events enter='landing_pad.variable.2'/>
+   </location>
+
+   <location num='2141'>
+      <name>Security Check Point - Asilomar Resort Hotel Grounds</name>
+      <desc>   Armed men and women stand here with laser sighted weapons. A small bridge goes over the ravine and on the other side of the rope bridge are dirty men and women holding signs of protest. Both sides have large blades pointed toward the fragile fibers supporting the bridge. A small patrol ship rests on a grassy knoll not far away. Several officers and a man in a business suit analyze maps laid out on its hood.</desc>
+      <exits sw='2204' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2199'>
+      <name>Copper Pipe Organ - Lobby - Asilomar Resort Hotel</name>
+      <desc>   The oak organ stands on a raised platform, with three carpeted steps up to the keys. The keys are covered in a thick layer of dust and the wood has begun to crack and split. The black and red knobs and switches are mostly still present, but some seem to be missing. The ones that remain have had their labels worn off. Above the organ are their ornate pipes, an oxidized copper, but still beautiful.</desc>
+      <desc>   Sounds of a well-tuned piano come in from the east.</desc>
+      <exits e='2200' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2200'>
+      <name>Grand Piano - Lobby - Asilomar Resort Hotel</name>
+      <desc>   An ornate piano in pristine condition sits uncovered in the middle of the lobby, its iron packing crate in pieces around it. The piano plays itself, selecting tunes from Old Earth as well as modern ballads. Behind the piano, copper organ pipes, oxidized a dull green, stretch up the western wall towards the ceiling. Furniture surrounding the piano appears to be couches, perhaps comfortable despite the canvas cover.</desc>
+      <exits ne='2137' e='2201' se='2265' sw='2263' w='2199' nw='2135' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2201'>
+      <name>Front Desk - Lobby - Asilomar Resort Hotel</name>
+      <desc>   A granite counter stretches from here to the south. Every few feet an ornate stained-glass lamp sits, its light off and its color obscured by a thick layer of dust. The third lamp down is missing its shade and another one is badly cracked.</desc>
+      <desc>   Behind the counter is a broken down droid, a panel on its front has been opened. A furry creature seems to have moved into the machine&apos;s bowels.</desc>
+      <desc>   A large glass tube descends from the ceiling, the center of the tube is large enough for a small family, or a large one depending on the scale of the creatures using it. However a piece of plywood blocks the entrance, making the question irrelevant.</desc>
+      <exits n='2137' s='2265' w='2200' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2203'>
+      <name>Pathway - Asilomar Resort Hotel Grounds</name>
+      <desc>   A cinderblock wall of a small building is to the south, in the center of the wall is a archway leading inside. The building lacks a roof and seems to have become fertile ground for native plants. Vines cover much of the exterior wall leaving the occasional splash of color with tiny blooms.</desc>
+      <desc>   A trail seems to continue to the east, alongside a large ravine to the north. The ravine could easily be deadly if anyone were to fall.</desc>
+      <exits e='2204' s='2267' nw='2138' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2204'>
+      <name>Trail - Asilomar Resort Hotel Grounds</name>
+      <desc>   The wind rustles the branches along the trail that winds between large trees and thick underbrush.</desc>
+      <exits ne='2141' w='2203' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2263'>
+      <name>Security Office - Asilomar Resort Hotel</name>
+      <desc>   The office has been stripped of drywall, left to its bare steel and wood framing. The elegant black tile floor has cracked and the grout is frequently missing. An iron desk sitting in the center of the room is covered with blueprints of the hotel, construction plans and labor contracts. Secured to the floor is a large safe, with three locks.</desc>
+      <desc>   A sign on the safe reads, &quot;Asilomar Resort Hotel Security Office&quot; and beneath it in smaller print, &quot;Please see Concierge to deposit or retrieve items from the safe.&quot;</desc>
+      <exits ne='2200' no-exit='moves.noexit.2'/>
+      <events enter='extras.security.1'/>
+   </location>
+
+   <location num='2265'>
+      <name>Concierge&apos;s Desk - Lobby - Asilomar Resort Hotel</name>
+      <desc>   The work station at this section of the granite counter stretching in from the north is empty.</desc>
+      <exits n='2201' nw='2200' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2267' flags='e'>
+      <name>Economic Exchange - Asilomar Resort Hotel</name>
+      <desc>   The soot covered cinderblock frame is all that remains of this circular building. The ceiling has burnt through and has created a thick layer of muddy ash on the ground. In the center of the floor, outlined by a round ridge of ash, is a circular metal door. The door itself has a nasty burn mark and the metal has melted and warped forming a significant crater in the center.</desc>
+      <desc>   Beside the damaged door stands a pristine black plastic trading kiosk, the crate it was delivered in lays open behind it. Next to the empty crate are two more unopened crates of matching dimensions.</desc>
+      <exits n='2203' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

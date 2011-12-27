@@ -1,0 +1,49 @@
+#/usr/bin/python
+
+import time
+now = time.time()
+utc = time.gmtime(now)
+today = "%d%02d%02d" % utc[0:3]
+src = "/var/opt/fed2/log/"
+dest = "/var/opt/fed2/backup/logs/"
+
+import os
+import sys
+import shutil
+
+if os.access(dest + "fed2.log." + today,os.F_OK):
+	sys.exit()
+else:
+	file_names = ["fed2.log", "err.log", "usage.log"]
+	for x in file_names:
+		shutil.move(src + x,dest + x + "." + today)
+
+	shutil.copy("/var/opt/fed2/data/avatars.dat","/var/opt/fed2/backup/avatars/avatars.dat." + today);
+	shutil.copy("/var/opt/fed2/data/companies.dat","/var/opt/fed2/backup/data/companies.dat." + today);
+	shutil.copy("/var/opt/fed2/data/variables_table.dat","/var/opt/fed2/backup/data/variables_table.dat." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/brass.inf","/var/opt/fed2/backup/data/brass.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/castillo.inf","/var/opt/fed2/backup/data/castillo.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/doris.inf","/var/opt/fed2/backup/data/doris.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/earth.inf","/var/opt/fed2/backup/data/earth.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/hilbert.inf","/var/opt/fed2/backup/data/hilbert.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/horsell.inf","/var/opt/fed2/backup/data/horsell.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/lattice.inf","/var/opt/fed2/backup/data/lattice.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/magellan.inf","/var/opt/fed2/backup/data/magellan.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/magrathea.inf","/var/opt/fed2/backup/data/magrathea.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/mars.inf","/var/opt/fed2/backup/data/mars.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/mercury.inf","/var/opt/fed2/backup/data/mercury.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/moon.inf","/var/opt/fed2/backup/data/moon.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/paradise.inf","/var/opt/fed2/backup/data/paradise.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/pearl.inf","/var/opt/fed2/backup/data/pearl.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/phobos.inf","/var/opt/fed2/backup/data/phobos.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/rhea.inf","/var/opt/fed2/backup/data/rhea.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/snark.inf","/var/opt/fed2/backup/data/snark.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/space.inf","/var/opt/fed2/backup/data/space.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/starbase1.inf","/var/opt/fed2/backup/data/starbase1.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/sumatra.inf","/var/opt/fed2/backup/data/sumatra.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/system.inf","/var/opt/fed2/backup/data/system.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/titan.inf","/var/opt/fed2/backup/data/titan.inf." + today);
+	shutil.copy("/var/opt/fed2/maps/sol/venus.inf","/var/opt/fed2/backup/data/venus.inf." + today);
+
+	shutil.rmtree("/var/opt/fed2/backup/maps",1);
+	shutil.copytree("/var/opt/fed2/maps","/var/opt/fed2/backup/maps");

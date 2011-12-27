@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<fed2-map title='Othala' version='1.00' editor='standard' from='331' to='Valhalla.Valhalla Space.263'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='273'>
+      <name>Male High Fashion</name>
+      <desc>Going to a black tie affair?  Get outfitted here for that big gala.</desc>
+      <exits s='337'/>
+   </location>
+
+   <location num='274'>
+      <name>Clarice&apos;s Diamond Shop</name>
+      <desc>Don&apos;t bother with cash.  Put it on your Clarice&apos;s card.  She will love it but don&apos;t tell her what you paid!</desc>
+      <exits s='338'/>
+   </location>
+
+   <location num='331'>
+      <name>Othala Landing Pad</name>
+      <desc>As you descend thru the clouds, you are taken aback by the nature of the buildings in Othala&apos;s main city.  The many peaks and spires within the complex alerts you to the idea that you could get lost here rather easily.  To the southwest you see mechanics working on many different craft while a walkway extends to the southeast.</desc>
+      <exits se='396' sw='394'/>
+   </location>
+
+   <location num='334'>
+      <name>Thor&apos;s Hat Shop</name>
+      <desc>Hat&apos;s off all kinds and all sizes adorn the walls.  It&apos;s a large shop to accomodate all of the different species who shop here.</desc>
+      <exits s='398'/>
+   </location>
+
+   <location num='335'>
+      <name>Racy&apos;s Secret</name>
+      <desc>Lingerie of the finest quality can be purchased here.  Buy something for the Mrs...of for the Mister for that matter.</desc>
+      <exits s='399'/>
+   </location>
+
+   <location num='336'>
+      <name>Knick Knack Paddy Whack</name>
+      <desc>Give the dog a bone.  Accoutements for you pet are to be had.</desc>
+      <exits s='400'/>
+   </location>
+
+   <location num='337'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits n='273' e='338' sw='400'/>
+   </location>
+
+   <location num='338'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits n='274' se='403' w='337'/>
+   </location>
+
+   <location num='340'>
+      <name>Outside Toys</name>
+      <desc>Bikes, scooters, jet rockets.  You name it, we have it.</desc>
+      <exits s='404'/>
+   </location>
+
+   <location num='394' flags='y'>
+      <name>Hodr&apos;s Shipbuilders and Repair Yard</name>
+      <desc>Hodr is the chief mechanic here on Othalla.  You can have an Asgard ship built (known to be the most advanced in the galaxy) or have repairs made.</desc>
+      <exits ne='331'/>
+   </location>
+
+   <location num='396'>
+      <name>Walkway</name>
+      <desc>Aliens of every species are walking to and from the landing platforms to the northwest.  The walkway continues to the south and to the east.</desc>
+      <exits e='397' s='460' nw='331'/>
+   </location>
+
+   <location num='397'>
+      <name>Entrance to the Great Hall</name>
+      <desc>The city begins here.  Much of it is still under contruction so be careful where you walk.</desc>
+      <exits e='398' w='396'/>
+   </location>
+
+   <location num='398'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits n='334' e='399' s='462' w='397'/>
+   </location>
+
+   <location num='399'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits n='335' e='400' s='463' w='398'/>
+   </location>
+
+   <location num='400'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits n='336' ne='337' se='465' s='464' w='399'/>
+   </location>
+
+   <location num='401'>
+      <name>Fountain</name>
+      <desc>Ack!  The water is cold.  You better get out before you are caught by security!</desc>
+      <exits out='402'/>
+   </location>
+
+   <location num='402'>
+      <name>Observation Ledge</name>
+      <desc>Below you is an incredible fountain display.  The fountiains at Bellagio in Las Vegas pale by compare (actually they were copied on a smaller scale from this grand display).  If you go in for a swim, make sure security isn&apos;t looking.</desc>
+      <exits down='403' in='401'/>
+   </location>
+
+   <location num='403'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.  The observation ledge to see the fountain is up from here.</desc>
+      <exits e='404' sw='466' nw='338' up='402'/>
+   </location>
+
+   <location num='404'>
+      <name>Toys for Tots</name>
+      <desc>xxx</desc>
+      <exits n='340' s='468' w='403'/>
+   </location>
+
+   <location num='460' flags='e'>
+      <name>Ida Exchange</name>
+      <desc>Named after the ancient galaxy which was the origin of the Asgard, the Ida Exchange is the commerce hub of the city.  Traders, Merchants, Captains of Industry and Rulers of other Worlds come here for the finest in pricing of goods bought and sold.  You can take a break from your commerical routines to the south or exit the exchange to the north.</desc>
+      <exits n='396' s='524'/>
+   </location>
+
+   <location num='462' flags='b'>
+      <name>Frigg&apos;s Sweet Shop</name>
+      <desc>Frigg has opened her main shop here.  Tasty treats are made fresh daily in Frigg&apos;s kitchens.  Known galaxywide, Frigg&apos;s Figs and Tasty Treats make great Christmas stocking stuffers!</desc>
+      <exits n='398'/>
+   </location>
+
+   <location num='463'>
+      <name>Valet Service</name>
+      <desc>You can drop off purchases here.  Valets will make sure they get on board your ship before leaving.</desc>
+      <exits n='399'/>
+   </location>
+
+   <location num='464'>
+      <name>Security Office</name>
+      <desc>I hope you are just visiting and haven&apos;t been detained!!</desc>
+      <exits n='400'/>
+   </location>
+
+   <location num='465'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits e='466' s='529' nw='400'/>
+   </location>
+
+   <location num='466'>
+      <name>Grand Promenade</name>
+      <desc>This is the shopping district of Othalla.  Stores of every kind can be seen in on both sides of the promenade.  Don&apos;t worry if you aren&apos;t Asgard, they carry textiles and fashions from all over the galaxy.</desc>
+      <exits ne='403' s='530' w='465'/>
+   </location>
+
+   <location num='468'>
+      <name>Inside Toys</name>
+      <desc>Board games, action figures, trading cards.  They are all laid out on display.</desc>
+      <exits n='404'/>
+   </location>
+
+   <location num='524' flags='b'>
+      <name>Trader&apos;s Edge Restaurant</name>
+      <desc>This 5 star restaurant will serve up a meal fit for a King.  It&apos;s a 5 star restaurant because foods are imported from 5 differnet systems across the galaxy.  The exit is to the north.</desc>
+      <exits n='460'/>
+   </location>
+
+   <location num='529'>
+      <name>Private Residence Elevator</name>
+      <desc>Unless you have an apartment in the city, you shouldn&apos;t go up to that level</desc>
+      <exits n='465' up='593'/>
+   </location>
+
+   <location num='530'>
+      <name>Haute Coutre Dress Shop</name>
+      <desc>The finest designers throughout the galaxy bring there wares here first for sale.  Watch out for ads for the next designers show!</desc>
+      <exits n='466'/>
+   </location>
+
+   <location num='593'>
+      <name>Security Desk</name>
+      <desc>Habitants with ID can pass.  Otherwise make you exit down the elevator.</desc>
+      <exits sw='656' down='529'/>
+   </location>
+
+   <location num='653'>
+      <name>Hallway</name>
+      <desc>This area is under construction.</desc>
+      <exits e='654'/>
+   </location>
+
+   <location num='654'>
+      <name>Hallway</name>
+      <desc>This area is under construction.</desc>
+      <exits e='655' w='653'/>
+   </location>
+
+   <location num='655'>
+      <name>Hallway</name>
+      <desc>This area is under construction.</desc>
+      <exits e='656' s='719' w='654'/>
+   </location>
+
+   <location num='656'>
+      <name>Hallway</name>
+      <desc>Windows on either side give you a lovely view of the countryside.</desc>
+      <exits ne='593' e='657' w='655'/>
+   </location>
+
+   <location num='657'>
+      <name>Hallway</name>
+      <desc>This area is under construction.</desc>
+      <exits e='658' w='656'/>
+   </location>
+
+   <location num='658'>
+      <name>Hallway</name>
+      <desc>This area is under construction.</desc>
+      <exits w='657'/>
+   </location>
+
+   <location num='719'>
+      <name>Odin&apos;s Condo</name>
+      <desc>This is where Odin can be found when he isn&apos;t out managing the economy of Othalla.</desc>
+      <exits n='655'/>
+   </location>
+
+</fed2-map>

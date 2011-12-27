@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Volleyball Space' version='12' editor='standard'>
+
+   <location num='462' flags='slp'>
+      <name>Volleyball Space Interstellar Link and Wilson Orbit</name>
+      <desc>Welcome to Volleyball!  While there&apos;s not much to look at out in space, you can see the tri-color planet Wilson spinning slowly beneath you.  It appears to be teeming with sandy beaches and crystal blue waters.  You can only imagine the fun and frivolity that awaits you, so bring your surfBOARD and head on down.  Or, head to newly opened Zeerox to the East.  Molten, the biological planetoid, has recently been re-opened by the GA, and is located DOWN.</desc>
+      <exits e='463' down='590'/>
+   </location>
+
+   <location num='463' flags='sp'>
+      <name>Zeerox Orbit</name>
+      <desc>While there&apos;s not much to look at out in space, you can see the tri-color planet Zeerox spinning slowly beneath you.  It appears to be teeming with sandy beaches and crystal blue waters.  You can only imagine the fun and frivolity that awaits you, so bring your surfBOARD and head on down.  Or, head back to Wilson and the Insterstellar Link to the West.</desc>
+      <exits w='462' in='590'/>
+   </location>
+
+   <location num='590' flags='sp'>
+      <name>Molten Orbit</name>
+      <desc>Welcome to Molten!  The biological planetoid appears to shimmer beneath the cloud of (just slightly toxic) gases surrounding the atmospheric bubble.  You can return to the Interstellar Link by going UP, or head to Zeerox by going OUT.</desc>
+      <exits up='462' out='463'/>
+   </location>
+
+</fed2-map>

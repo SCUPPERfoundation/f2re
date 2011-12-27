@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<fed2-map title='Reason' version='33' editor='standard' from='1818' to='Wit.Wit Space.2337'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Events and Mobiles</desc>
+   </location>
+
+   <location num='1478'>
+      <name>Patterns Community</name>
+      <desc>From this elevated viewpoint, you can see a planned community where the Institute members and their families reside.  Amenities such as medical services, shopping and schools are interspersed with the charming houses.  From above, it&apos;s clear the road and buildings form a tessellated pattern, the alternating blocks white in the winter and green in summer.  Access to the community is by round the clock shuttles from the Institute or snowpod.  Exits are SE or South.</desc>
+      <exits se='1543' s='1542'/>
+   </location>
+
+   <location num='1482' flags='hib'>
+      <name>Vitruvia Hospital</name>
+      <desc>Named for Da Vinci&apos;s famed Vitruvian man, Reasoners are grateful to have such a superb medical facility.  Experimental techniques are encouraged philosophically and financially, so patients benefit from cutting edge therapies and treatments.  If you&apos;ve been revived from death, don&apos;t forget to reinsure.  Exits are South or SW, or you can take the shuttle DOWN to Contemplation Park.</desc>
+      <exits s='1546' sw='1545' down='1486'/>
+   </location>
+
+   <location num='1486'>
+      <name>Logic - Contemplation Park</name>
+      <desc>Contemplation Park is a long, straight mall bordered on one side by a river and on the other side by tall evergreens that provide shelter from the wind.  The walkways are heated from underground, and every once in a while, when the weather is cold, you come to a heating station where you can stand or sit on a bench and warm up.  Built by Gabrielle as a sanctuary from the stresses and demands of daily life, Reasoners use the park to restore themselves, re-energize their minds and seek inspiration by means of solitary thought.  Here, nobody is expected to acknowledge passersby they may know, and people are generally silent, other than an occasional hummer.  This section of the park, Logic, is named after the modern style sculpture before you, surrounded by representations of logic&apos;s components:  ethics, epistemology, symbols and mathematics.  Exits are South, or you go DOWN the ramp for the N Shuttle or UP the ramp for the M shuttle and the Hospital.</desc>
+      <exits s='1550' up='1482' down='1490'/>
+   </location>
+
+   <location num='1490'>
+      <name>Brainiacs Center</name>
+      <desc>Science fairs are held here monthly to encourage Reason&apos;s young people to apply the knowledge they acquire in practical, informative ways.  Each month, Gabrielle personally awards a prize of a month long fully paid trip for the student and student&apos;s family to another planet within the Merit system.  Needless to say, participation at the science fairs is strong.  The most popular choice of planet to visit by the winners is Humor.  Exits are South, SE, or you can go DOWN the ramp for the shuttle to Contemplation Park.</desc>
+      <exits se='1555' s='1554' up='1486'/>
+   </location>
+
+   <location num='1494'>
+      <name>The Polymath</name>
+      <desc>Whatever their actual careers, Reasoners have a reputation of being multitaskers.  The Polymath is a megastore featuring equipment and information needed to pursue a whole array of amateur hobbies.  Those who wish to acquire more knowledge in anything from rocketry to electronics, antigrav to astronomy can find all they require here.  Exit South or go DOWN the ramp to the D shuttle.</desc>
+      <exits s='1558' down='1497'/>
+   </location>
+
+   <location num='1497' flags='b'>
+      <name>A Sound Mind</name>
+      <desc>Although known for its ever changing menu of delicious food, this restaurant takes great care in preparing healthy, nutritious meals free of preservatives, saturated fats or too much salt.  The chefs are three siblings, one primarily a pastry and bread chef, another best suited for management and procurement, and the third who focuses on designing the main courses.  Their biggest challenge is in procuring fresh raw materials on a planet with such a small growing season.  The maitre&apos;d will be pleased to seat you at one of the white linen covered tables.  Exits East or South, or you can go UP the ramp to the N Shuttle.</desc>
+      <exits e='1498' s='1561' up='1494'/>
+   </location>
+
+   <location num='1498'>
+      <name>Mind Games</name>
+      <desc>Continuing along the slide way you come to Mind Games.  The brain, like every organ in our body, needs exercise.  Based on the principles of neuroplasty, Mind Games sells activities to increase the brain power for young, old and everyone in between.  The goal is to improve alertness and awareness and increase concentration.  There are games of hierglyphics, memory games, face recognition games, mazes and brain matches.  For example, what do these things all have in common:  olfactory, optic, trigeminal, hypoglossal, oculomotor, vagus and glossopharyngeal.  (Answer, they are all cranial nerves).  Exits SE or West.</desc>
+      <exits se='1563' w='1497'/>
+   </location>
+
+   <location num='1542'>
+      <name>The Debunking Center</name>
+      <desc>Conforming to the general white or off white exterior of most buildings at the Institute, this building houses research labs, video production facilities and conference rooms of various sizes.  Many members of the Institute have pet peeves about false concepts believed to be true in the general population, which they consider harmful to the progress of mankind.  They develop programs that are distributed across the Federation to combat ignorance, debunking what they term false knowledge.  They have disproven faith healing, psychic ability, and UFO abductions.  Currently, teams are creating programs to debunk astrology and general held religious beliefs that include such false concepts as an afterlife.  Exits are North or South.</desc>
+      <exits n='1478' s='1606'/>
+   </location>
+
+   <location num='1543' flags='b'>
+      <name>Relevance Food Court</name>
+      <desc>A typical trait of intellectually talented people is that they neglect their creature needs. The Relevance Food Court provides a way for Institute members to get a nourishing meal quickly, with minimal interruption to their projects.  The food is appetizing and the menu varies.  The eatery was named Relevance in a nod to the cognitive science of Relevance Theory which emphasizes the importance of relevance decisions in reasoning.  Exits are SE or NW.</desc>
+      <exits se='1608' nw='1478'/>
+   </location>
+
+   <location num='1545' flags='b'>
+      <name>Inferences Lodge</name>
+      <desc>Inferences Lodge is a rustic building with an exterior of logs painted white.  As you enter you see several stone fireplaces ablaze, upholstered chairs and couches in groupings around the spacious room.  Warm beverages such as hot chocolate, tea, coffee and hot toddies are available.  Members visit here when they wish to reflect in a relaxed setting, or perhaps bounce some of their ideas around with other members.  The lodge is so named because it is through inferences resulting from multiple observations that results in inductive reasoning.  Additionally, deductive reasoning also results from inferences.  Exits are NE or SW.</desc>
+      <exits ne='1482' sw='1608'/>
+   </location>
+
+   <location num='1546'>
+      <name>Theories Building</name>
+      <desc>You come to an esthetically pleasing mirrored 15 story building, reflecting the white snow surrounding it.  This is where Institute members, having cogitated and drawn inspiration eventually develop theories.  Graduate fellows assist them to refine the theories, conducting tests and mathematical proofs or whatever is necessary.  Modern laboratories are equipped for every discipline, from earthquake studies to nano technology.  This is where vague dreams begin to take shape.  Exits North or South.</desc>
+      <exits n='1482' s='1610'/>
+   </location>
+
+   <location num='1550'>
+      <name>Memory - Contemplation Park</name>
+      <desc>Continuing down through the park, you come to a flat area, the snow glistening everywhere in the daylight, and decide to rest on one of the the several stone benches lined up facing the river.  This section is called memory, and is purposely devoid of distractions so that visitors can stare into the water and conjure up memories.  Thinking about past experiences, events and people helps reorganize the mind, brings comfort and often inspiration follows.  Exits North or South.</desc>
+      <exits n='1486' s='1614'/>
+   </location>
+
+   <location num='1554'>
+      <name>Museum of Mythology - Historical Wing</name>
+      <desc>Like most devotees of reason and logic, Gabrielle abhors the harm that has been done over the ages to mankind from the hundreds of religions people cling to.  She established this museum which has two sections.  The first depicts in great detail the billions who have been exterminated and have suffered in the name of religion, from the Crusades, the inquisitions, witch burnings and the holocaust.  You see photos of women stoned to death by men guilty of the same crimes, prevented from learning or ever leading productive fulfilling lives.  You read about how Galileo had to recant his brilliant findings and found the courage facing death for heresy to say &quot;and still it turns.&quot;  You see presentations and galleries filled with the results of the horrors of religious wars.  The Dawkins Wing is South or you can go North.</desc>
+      <exits n='1490' s='1618'/>
+   </location>
+
+   <location num='1555'>
+      <name>Out of Our Minds </name>
+      <desc>You&apos;ve come to an enterprising business for Reasoners who wish to create personal digital videos.   Video experts here provide technical expertise, actors, costumes and sets so that an amateur can create a professional looking video.  More than one amateur has had a video made here become viral, and eventually develop a professional career.  Some use the service to produce last messages to loved ones destined to be shown after death.  Others make videos as surprise gifts.  Exits are SE or NW.</desc>
+      <exits se='1620' nw='1490'/>
+   </location>
+
+   <location num='1558' flags='b'>
+      <name>Brain Freeze Parlor</name>
+      <desc>Frozen treats are popular on Reason, despite the long, cold winters.  What is unique here is that the frozen offerings are usually coupled with hot beverages to offset the cold.  Fruit ices, ice creams, and sorbets are served cheerfully with steaming cups of mulled cider or herbal teas.  Exits are North or South.</desc>
+      <exits n='1494' s='1622'/>
+   </location>
+
+   <location num='1561'>
+      <name>Curiosities</name>
+      <desc>Another shop along the enclosed slideway, Curiosities, focuses on great minds throughout history, selling everything connected with such individuals.  The collectibles are available in sections organized by century and planet. You can buy authentic signed documents by such luminaries as Einstein and Witten, sketches and manuscripts from DaVinci, manuscripts of the original interrogations of Galileo, sheet music from Mozart and much much more.  Exits North and South.</desc>
+      <exits n='1497' s='1625'/>
+   </location>
+
+   <location num='1563'>
+      <name>The Prodigy</name>
+      <desc>Further along the enclosed slideway you see an educational toy store designed to instill a joy in learning, the Prodigy.  As you look around, you find yourself wishing you were a child again, to experience the thrill of discovering science, the joy of building something complex.  There are rock and mineral kits, mini planetariums and ant farms.  There are weather kits and magnifiers, counting and sorting farms for the younger set and construction sets galore.</desc>
+      <desc>Exits are SE and NW.</desc>
+      <exits se='1628' nw='1498'/>
+   </location>
+
+   <location num='1606'>
+      <name>The Hall of Evidence</name>
+      <desc>You arrive at a large domed building housing a tall central gallery and two wings of exhibit rooms.  This building is devoted to emphasizing the importance of evidence as a foundation for rational thought and as basis for furthering knowledge.  Evidence is the means by which a theory can be proven reliable or false.  Evidence also helps refine established theories and concepts.  The largest exhibits here display the solid proofs underlying the Theory of Evolution and the Big Bang Theory.  Exits North and South.</desc>
+      <exits n='1542' s='1670'/>
+   </location>
+
+   <location num='1608'>
+      <name>Critical Thinking Convention Hall</name>
+      <desc>Before you is an enormous geodesic shaped field house.  Twice a year, competitors convene from all over Merit in the Thought Olympics.  Teams in age divisions ranging from age eight to adult, compete at local levels, the winners eventually gaining the right to compete here on Reason.  The problems they solve fall into two categories.  Long term problems are engineering and creativity challenges, such as building balsa wood structures that will support the most weight.  Short term problems are presented to them which they must spontaneously solve with no preparation, such as meeting a challenge which requires team cooperation but where talking is forbidden.  At each competition, one person is awarded the DaVinci Creativity awarded and is automatically inducted as a member into the Institute.  Exits NE or NW.</desc>
+      <exits ne='1545' nw='1543'/>
+   </location>
+
+   <location num='1610'>
+      <name>Reasonable Doubt Center</name>
+      <desc>Built to look like a courthouse, the center was established to help their creative members test ideas and theories in demanding circumstances.  First developed as a joke between a few members, the Institute recognized the usefulness of professionally confronting proposals with incisive questions under a spotlight.  This speeds up the process of discarding erroneous ideas, chasing after windmills so to speak, and is welcomed by the Institute members themselves, who appreciate having other minds focused on their projects.  Exits are North or South.</desc>
+      <exits n='1546' s='1674'/>
+   </location>
+
+   <location num='1614'>
+      <name>Perception- Contemplation Park</name>
+      <desc>Here, besides the river where you walk, wooden poles have been placed at regular intervals from which hang wind chimes ringing in every timber and note.   Towards the tree line is a small zoo where a few cold loving animals live.  You walk slowly and watch the hares romping in their enclosure and see some owls perched in the trees.  There&apos;s also a skulk of white foxes watching you.  You see your breath before you when you exhale, then inhale and smell the animals as well as a faint hint of the river.  This is a place to passively take in the sensory information around you.  Exits are North and South.</desc>
+      <exits n='1550' s='1678'/>
+   </location>
+
+   <location num='1618'>
+      <name>Museum of Mythology - Dawkins Wing</name>
+      <desc>Named after a prominent critic of religion, the Dawkins Wing presents evidence that religion is a man-made contrivance which controls the masses and brings false comfort to those who cannot accept the concept of death.  Religion is incompatible with science, and the hundreds of exhibits here provide incontrovertible evidence of the fundamental falsehoods in every religion, from the Greek gods, to the Aztek Sun God, through every manifestation of religious sects.  Gabrielle feels it&apos;s essential that mankind learn not to base its hopes on lies.  Exits North or South.</desc>
+      <exits n='1554' s='1682'/>
+   </location>
+
+   <location num='1620'>
+      <name>Thinking Out Loud</name>
+      <desc>An audio equipment store, the owner is a retired acoustical engineer who immigrated to Reason after years of frustration living with what she termed &quot;nitwits.&quot;  She stocks everything including microphones, speakers, amplifiers and receivers, also players, loudspeakers and mixing consoles.  If she doesn&apos;t carry what you need, she will custom design it if you&apos;re willing to pay a reasonable price.  Exits are SE or NW.</desc>
+      <exits se='1685' nw='1555'/>
+   </location>
+
+   <location num='1622'>
+      <name>Gifted</name>
+      <desc>A beautiful little boutique, this is a good place to purchase a gift for someone who has everything.  You smile at the choice of unique items.   You see an LED faucet light, which can change the color of the water to bright orange or electric blue.  There&apos;s a virtual butler, that connects all your electronics, which addresses you through a mirror.  The stress reliever works through biofeedback and uses an infrared fingertip sensor.  There are even unusual pet gifts such as a dog peek, a convex piece of plexiglass you insert into a fence so your dog can look at what&apos;s happening next door.  Exits are North or South.</desc>
+      <exits n='1558' s='1686'/>
+   </location>
+
+   <location num='1625'>
+      <name>The Mental Case</name>
+      <desc>Stepping off the slideway, you see a store specializing mainly in luggage, briefcases and knapsacks.  Although traditional looking in rich leathers, sturdy fabrics and polished brass, all are equipped with antigrav functions which negates their weight.  The more expensive samples also have homers, devices which allow them to follow you as you move without your having to even hold them.  All are secured by personal voice recognition devices.  Exits are North or South.</desc>
+      <exits n='1561' s='1689'/>
+   </location>
+
+   <location num='1628' flags='b'>
+      <name>The IQ</name>
+      <desc>Glancing outside at the heavy snowstorm, you appreciate Reason&apos;s enclosed slideway through its commercial district.  You enter the IQ, known for its convivial atmosphere, good tapas and generous mixed drinks.  Its specialty is called The Bright Idea, a mixture of Reason&apos;s own distilled vodka blended with canteloupe and bananas, both considered brain food.  Exits are South or NW.</desc>
+      <exits s='1692' nw='1563'/>
+   </location>
+
+   <location num='1670'>
+      <name>The Ivory Tower</name>
+      <desc>The tall off white building before you tapers steadily as it rises until its narrow topmost observation floor.  It looks as much like a monument as a building.  The view of Reason from the observation level draws many visitors.  Here the greatest minds of the ages are honored, those people who made enormous contributions to the progress of mankind.  One gallery is devoted completely to the Institute&apos;s namesake, Leonardo DaVinci.  His works and achievements are chronicled here, evidence attesting to his polymath genius.  He was a cartographer, anatomist, botanist, geologist, inventor, mathematician and engineer, not to mention his artistic abilities.  Exits are North and South.</desc>
+      <exits n='1606' s='1734'/>
+   </location>
+
+   <location num='1674'>
+      <name>Breakthrough Center</name>
+      <desc>You see a huge building that almost looks like a launch pad hangar.  Once an important concept has been developed, Institute members come here to write their final papers, build prototypes and develop ways to communicate their particular addition to the sum of human knowledge.  You see people walking quickly with intent looks on their faces.  Exits are North or South.</desc>
+      <exits n='1610' s='1738'/>
+   </location>
+
+   <location num='1678'>
+      <name>Imagination - Contemplation Park</name>
+      <desc>This section of the park is whimsical and interesting, reawakening your mind that has been silently contemplating.  Topiary has transformed the holly shrubs into interesting geometric shapes and forms.  Nearly every day, a retired artist comes to this spot and creates a new ice sculpture, never the same one twice.  Looking towards the river, you see a fish ladder in the pool built in the weir tradition, and you can see the fish jumping up the ladder, leaping from one box up to the next box, their struggle a magnificent sight.  This is a good place to jump start the thought process.  Exits South or North.</desc>
+      <exits n='1614' s='1742'/>
+   </location>
+
+   <location num='1682'>
+      <name>Second Thoughts Ltd.</name>
+      <desc>You arrive in a pleasant office with vidscreens depicting people working.  The receptionist welcomes you, explaining that Second Thoughts is a career counseling service.  &quot;Intelligent people are often so good at everything, that they choose a career path and then realize they&apos;d be happier in another field,&quot; she tells you.  The counselors here help their clients zero in on exactly what would fulfill them, and then outline what educational and professional steps might be required to switch careers.  They also provide guidance on what employment is available in what locations.</desc>
+      <desc>Exits are North or South.</desc>
+      <exits n='1618' s='1746'/>
+   </location>
+
+   <location num='1685'>
+      <name>Smart Aleck</name>
+      <desc>A popular unisex clothing store, Smart Aleck keeps up with the latest fashion trends in Merit and offers expert alterations.  An entire section is devoted to fur apparel, from coats to jackets to hats.  Faux fur does not keep a person warm as does genuine fur, and being rational, most Reasoners see no moral difference between fur apparel, leather shoes or a grilled steak.  Exits are East and NW.</desc>
+      <exits e='1686' nw='1620'/>
+   </location>
+
+   <location num='1686'>
+      <name>Mind Your Manners</name>
+      <desc>Good day.  With so many planets in Federation, it&apos;s hard to keep up with what&apos;s considered polite in what society.  This unusual business offers lessons in courtesy to Reasoners who need to travel offplanet frequently.  What is stressed is that although there are many rules of etiquette in polite society, manners boils down to showing consideration to other people.  If you consistently demonstrate consideration for others, the details are less important and deviations in behavior will be forgiven.  Thank You.  You may please exit North, South or West.</desc>
+      <exits n='1622' s='1750' w='1685'/>
+   </location>
+
+   <location num='1689'>
+      <name>The Late Bloomer</name>
+      <desc>As you navigate around Reason, you realize there are slideways enclosed in wide plexiglass tunnels that permit you to travel from place to place sheltered from the biting cold of Reason&apos;s long winters.  Although the months of snow-whitened landscapes are beautiful, Reasoners surround themselves with plants, small trees and flowers that do well indoors.  Many homes even have small greenhouses attached to them.  Exquisite arrangements of flowers along the slidewalk entice you to look through the shop.  You see a large selection of greenery and are particularly delighted by the fragrance and beauty of a large display of oleander, its blossoms ranging from pink and white to yellow and red.  Exits North and South.</desc>
+      <exits n='1625' s='1753'/>
+   </location>
+
+   <location num='1692' flags='b'>
+      <name>The Teaser</name>
+      <desc>You enter a comedy club spawned from some of Humor&apos;s best establishments, where many of the comics are amateurs simply looking to share their brand of humor with others as a hobby.  Small tables encircle the stage, and the comedians appear in a steady stream, discussing the world with biting wit.  In between acts, they join members of the audience, sharing drinks and having fun.  A relaxed, unpretentious club, it is a gathering place for some of Reason&apos;s finest minds.  Exits North and SW.</desc>
+      <exits n='1628' sw='1755'/>
+   </location>
+
+   <location num='1734' flags='b'>
+      <name>Brainstorming Center</name>
+      <desc>This building is two stories high and sprawls over several acres.  It is designed to look like a gigantic igloo, with all white block walls.  All buildings in the Institute are connected by covered slideways, although you see snowpods zipping all around the large campus, being driven with obvious exhuberance.  This building is used for meeting with others, and there are comfortable rooms that seat as few as six or as many as 50.  In the center of the first floor is a pleasant restaurant for those who prefer to consult over a meal.  The food is well-prepared, reasonably priced and the wait staff serves with minimal conversation, hesitant to interrupt important conversations.  Exit North or South.</desc>
+      <exits n='1670' s='1798'/>
+   </location>
+
+   <location num='1738'>
+      <name>Peer Review Hall</name>
+      <desc>One of the more modest buildings at the Institute, you enter an elegantly decorated foyer.  Two enormous double doors are before you, and this is where members enter with their finalized work and submit themselves to peer review.  Although advances have been scrutinized to a certain degree before this point, the Institute conducts a final intense review of anything about to be published or presented before granting the Institute&apos;s certification of excellence and reliabillity.  Although a nerve wracking experience, worthy intellects welcome searching questions and investigation by peers because they seek true knowledge.  Exits North or South.</desc>
+      <exits n='1674' s='1802'/>
+   </location>
+
+   <location num='1742'>
+      <name>Reflection - Contemplation Park</name>
+      <desc>A circular ice rink lays before you, and today a solitary male skater is making lazy figures on the ice.  Benches surround the rink, which in warmer weather becomes a perfectly clear reflecting pool.  The scraping of the skates and occasional bird calls are all that disrupt the quiet.  People come here to think deep thoughts, reaching into themselves for fresh ideas.  Exits are North or South.</desc>
+      <exits n='1678' s='1806'/>
+   </location>
+
+   <location num='1746' flags='b'>
+      <name>The State of Mind Spa</name>
+      <desc>This is where Reasoners come when they want to give the brain a rest and simply relax and luxuriate.  Saunas, body wraps, massages and yoga all contribute to reducing tension and letting your mind drift aimlessly.  You can be pampered with pedicures and manicures and aromatherapy.  White wine and herbal teas are served to further relax you.  If you can bear to tear yourself away, exits are North or South.</desc>
+      <exits n='1682' s='1810'/>
+   </location>
+
+   <location num='1750'>
+      <name>The Mind&apos;s Eye</name>
+      <desc>You enter a sparkling clean combination office and store which sells customized eyewear.  Opthamologists are available for consultations should your needs be visual rather than fashion.  The specialty here is special effects contact lenses.  You can buy some that glow in the dark, are heart shaped, give you cat eyes or look like stars, not to mention every color in the rainbow.  Some also adjust to light, darkening in bright sunlight, an especially useful trait when you&apos;re out in Reason&apos;s snowy landscape.  Exits are North or South.</desc>
+      <exits n='1686' s='1814'/>
+   </location>
+
+   <location num='1753'>
+      <name>The Speculator Building</name>
+      <desc>Reached via a suspended walkway which shelters one from the cold, the Speculator houses the biggest hedge funds and speculative investors in the system.  Expert in the futures and currency markets, these firms also put together financing for mergers and acquisitions.  The main lobby is vast and impressive, expensive woods, fabrics and artwork in prominent display.  Access to the other floors of this building is granted only to employees with key fobs and visitors with appointments officially registered at the reception desk.  Exits are North or South.</desc>
+      <exits n='1689' s='1817'/>
+   </location>
+
+   <location num='1755'>
+      <name>Common Sense</name>
+      <desc>The enclosed slideway widens here as you approach the LP.  Named after the pamphlet published by Thomas Paine centuries ago, Common Sense is a private club for those interested in politics, government and planetary economics.  Membership requires being sponsored by three other members, but diverse political viewpoints are welcome.  The main criterion for membership is possession of a reputation for analyzing through reason, not via feelings or the parroting of others&apos; opinions.  A sign over the archway which leads to the club&apos;s private areas is a quote from Thomas Paine, &quot;The most formidable weapon against errors of every kind is reason.&quot;   Exits are NE or SW to the Launch Pad.</desc>
+      <exits ne='1692' sw='1818'/>
+   </location>
+
+   <location num='1798'>
+      <name>Da Vinci Institute</name>
+      <desc>Gabrielle decided that Reason was the perfect location for a think tank.  She established the DaVinci Institute and provided considerable seed money to launch it and attract the caliber of minds she was seeking.  The institute primarily aims for interdisciplinary and quantitative problem solving using theoretical concepts from economics and science, into novel applications in other areas.   Generous salaries, considerable amenities and most importantly total freedom of thought uncorrupted by pressures from special interests - all these draw the experts.  You may take the shuttle to go back DOWN to the LP.  You may also go through the sheltered slideway North.</desc>
+      <exits n='1734' down='1818'/>
+   </location>
+
+   <location num='1802'>
+      <name>Advocacy Center</name>
+      <desc>Looking more like a media studio than a research building, the Advocacy Center is staffed by experts in communications, public relations, sociology and governmental affairs.  It is from this center that new developments coming from the minds in this think tank are disseminated.  Knowledge serves no purpose if it is not communicated clearly and made available.  Media personnel know how to package sometimes difficult concepts into more easily understood formats, thus contributing to their potential implementation.  Exit North or you can take the Shuttle OUT to the LP.</desc>
+      <exits n='1738' out='1818'/>
+   </location>
+
+   <location num='1806'>
+      <name>Cogitation - Contemplation Park</name>
+      <desc>Somehow, Gabrielle managed to find and acquire one of the many sculptures made by Rodin of &quot;The Thinker,&quot; and here it sits somewhat sheltered in a tall gazebo.  The land here is hilly, and the walkways are punctuated with stone steps going up and down.  Those visiting the park for contemplation and inspiration often finish in this section, walking the pathways and steps, accelerating their pace as their thoughts excite and motivate them.  You may return to the park entrance to the North, or take the river shuttle OUT to the LP.</desc>
+      <exits n='1742' out='1818'/>
+   </location>
+
+   <location num='1810' flags='b'>
+      <name>Savant&apos;s Fine Dining</name>
+      <desc>Upscale and elegant, the experience here is worth every groat you&apos;ll pay.  Talented chefs bring a taste of Lutece to Reason.  Friendly, competent servers help you order knowledgeably and anticipate your needs without being intrusive.  Over 400 types of the finest wines are in Savant&apos;s cellar.  Gabrielle dines here whenever she is in Reason.  Her favorites are the lobster sausage in an emulsion of tarragon and anise, lamb rubbed with sariette herb, and a mirabelle plum tarte.  Exit North or take the shuttle OUT directly to the LP.</desc>
+      <exits n='1746' out='1818'/>
+   </location>
+
+   <location num='1814' flags='b'>
+      <name>For Technical Reasons</name>
+      <desc>This is a dance club decorated in cyber style, playing techno music all night long.  Dramatic vidscreens adorn all the walls, lasers are shooting colors in every direction, and the dance floor is crowded.  Two long bars are on opposite sides of the club and although alcoholic refreshments are popular, most people are smart enough to have tall glasses of water on the side.  Exit North.</desc>
+      <exits n='1750'/>
+   </location>
+
+   <location num='1817' flags='eb'>
+      <name>Reason Exchange</name>
+      <desc>The traders on Reason require up to the minute data, provided by an information technology system without rival.  Eyes are glued on the multiple data screens.  Local traders welcome those offworlders who make trades based on hunches and rumors.  They enjoy making large profits off of their unreasoned decisions.  A sleek eatery is off in a corner to service traders who wish to remain in the exchange.  On one wall you see a sign, part warning, part humorous which reads, &quot;A fool and his money are soon parted.&quot;  A shuttle can return you EAST to the Launch Pad, or you may explore North.</desc>
+      <exits n='1753' e='1818'/>
+   </location>
+
+   <location num='1818' flags='yrb'>
+      <name>Reason Launch Pad</name>
+      <desc>The launch pad here appears highly organized and functional.  Shuttles are circulating between this facility and space at a quick pace, discharging passengers directly into ground shuttles bound for their immediate destinations.  The air outside is frigid, but travelers are comfortable within their climatized shuttles.  You see a light snow falling, which quickly melts on the massive landing space set aside for shuttles, thanks to below ground heating coils.  Shuttles go WEST to the Exchange, NE or UP to the DaVinci Institute.</desc>
+      <exits ne='1755' w='1817' up='1798'/>
+   </location>
+
+</fed2-map>

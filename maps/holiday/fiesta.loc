@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<fed2-map title='Fiesta' version='6' editor='standard' from='396' to='Holiday.Holiday Space.460'>
+
+   <location num='332' flags='syrhib'>
+      <name>Sunburn clinic</name>
+      <desc>The sign informs you that this is the Sunburn clinic, but you have to wonder how anyone could have gotten a sunburn when it always seems to be cloudy and raining!</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='syrb'>
+      <name>Slithy Cloning Facility</name>
+      <desc>A number of scientists sit around a well equiped and modern laboratory.  They ask you not to remind the planet owner that all slithies are kept on earth and they are not going to be able to clone a slithy using just the ownership certificates.  They seem nervous that if the planet owner ever figures this out they will be out of their well paying jobs.</desc>
+      <exits e='396'/>
+   </location>
+
+   <location num='396' flags='syrb'>
+      <name>Fiesta Landing strip</name>
+      <desc>     A sign welcomes you to Fiesta, &quot;The ultimate vacation destination&quot;</desc>
+      <desc>     The sky is full of dark and ominous clouds and a hard rain is falling.  Everyone seems to have gone inside to get out of the rain</desc>
+      <exits n='332' e='397' se='461' sw='459' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='seyrb'>
+      <name>Sandy exchange</name>
+      <desc>   The thick stone walls keep the rain out, which prevents the trading machinery - and the some of the traders themselves - from short circuiting. The floor is covered with wet sand and you wonder why it doesn&apos;t get into the equipment and cause problems.</desc>
+      <desc>   The full range of commodities are bought and sold here, despite the planet being for vacationers. Obviously some people can&apos;t relax properly without a trading console nearby.</desc>
+      <desc>   When you&apos;ve had enough work and want to head to the bar, you can exit by going through the west door.</desc>
+      <exits w='396' in='464' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='401' flags='syrb'>
+      <name>Paul&apos;s Office</name>
+      <desc>A large wooden desk dominates the room.  The walls are covered with display screens which are all presently turned off.</desc>
+      <exits s='465' out='396'/>
+   </location>
+
+   <location num='459' flags='syrb'>
+      <name>Sunshine bar</name>
+      <desc>      A large crowd is gathered in the bar looking out at the pouring rain.  You hear several couples complaining about the constant rain that is ruining their vacations.</desc>
+      <desc>      On one wall a display informs you that it has now been raining for 14 straight years while another wall displays ads for the sunny beaches on this resort planet.</desc>
+      <desc>   Small booths in each corner used to sell tourist goods such as sunhats and snorkels, electronic equipment and weapons. Most of the booths are now used for storage since there is has been no market for swiming gear.</desc>
+      <desc>   The door in the northeast wall leads back to the landing strip.</desc>
+      <exits ne='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='syrb'>
+      <name>White Sands beach</name>
+      <desc>The cold rain is pouring even harder here.  Wind whips up monster sized waves which pound at the shoreline.  Most of the sand has been washed away but as you watch automated droids arrive with a load of sand dreged from offshore and use it to restore the beach again.</desc>
+      <desc>   The way back to the landing-pad is northwest.</desc>
+      <exits e='462' s='525' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='syrb'>
+      <name>Cove</name>
+      <desc>   Eroded into the side of a rocky hill by the waves, this secluded cove is being pounded by massive waves.  The cliffs block most of the rain but you decide this is not a place you want to be!</desc>
+      <exits w='461' down='526' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='464' flags='syrb'>
+      <name>Entry way</name>
+      <desc>As you enter an automated system goes to work blowing hot dry air over you causing all the rain water to dry almost instantly.  It also drys you out and you suddenly feel an overwhelming need for something to drink.</desc>
+      <exits e='465' out='396'/>
+   </location>
+
+   <location num='465' flags='syrb'>
+      <name>Paul&apos;s Home</name>
+      <desc>You are standing in a nicely decorated living room.  Feel free to relax!</desc>
+      <exits n='401' s='529' w='464' out='396'/>
+   </location>
+
+   <location num='525' flags='syrb'>
+      <name>Shore</name>
+      <desc>   Massive waves break on the shore, their white tops collapsing into frothy bubbles that race up the beach towards you then drain back again. The sand under your feet is wet and cool. Every tenth wave is stronger than the rest, and the water surges far enough to splash against your legs.  The cold rain continues to pour down over you making you uncomfortable.</desc>
+      <desc>   You can go south into the water for a swim, or north back to the beach.</desc>
+      <exits n='461' s='589' in='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526' flags='syrb'>
+      <name>Crystal pool</name>
+      <desc>   You float on the surface of the crystal pool, feeling at peace with yourself and with the rest of the Universe.</desc>
+      <desc>   You see shoals of little silver fishes flitting around the pool, searching for food among the brightly coloured seaplants that waft on the rocks. A large crab scuttles across the base of the pool, then buries himself in the sand.</desc>
+      <desc>   Eventually, you have to return by climbing out of the pool. But for now, you just float.</desc>
+      <exits up='462' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='529' flags='syrb'>
+      <name>Paul&apos;s Bedroom</name>
+      <desc>This is really not an area that is open to the public, you should go back north to the living room!</desc>
+      <exits n='465' e='530' in='530' out='396'/>
+   </location>
+
+   <location num='530' flags='syrb'>
+      <name>Walk In Closet</name>
+      <desc>You see a large walk-in closet.  It is completely empty.</desc>
+      <exits w='529' out='529'/>
+   </location>
+
+   <location num='589' flags='syrb'>
+      <name>In the water</name>
+      <desc>   You can&apos;t really swim here, nor can you stand up in the water. The waves are big enough that they keep knocking you off balance and pulling you around. It&apos;s the most exhilarating feeling, and you feel the cares and stresses of your working life drain away as the water washes over and around you.</desc>
+      <desc>   Now you can see why this planet is considered the ultimate in holiday destinations.</desc>
+      <exits n='525' out='525' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

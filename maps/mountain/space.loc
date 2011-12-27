@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Mountain Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   Your ship is floating next to a small space habitat- it serves as a fueling depot and stopover for miners and explorers.</desc>
+      <desc>   Far below you there is an inhabited planet, but its climate is not suitable for general habitation.  Goods are produced and consumed in specialty domes and transferred here so that traders don't have to enter the harsh atmosphere.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

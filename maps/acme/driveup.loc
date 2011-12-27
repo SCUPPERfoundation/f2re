@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<fed2-map title='Driveup' version='9' editor='standard' from='136' to='Acme.Acme Space.657'>
+
+   <location num='136'>
+      <name>Driveup warehouse loading dock</name>
+      <desc>This is the driveup warehouse loading dock and where you will find your shuttle. You can go to different parts of the warehouse by going East, South, and SouthEast. The Exchange is South.</desc>
+      <exits e='137' se='201' s='200' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='137'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits e='138' se='202' s='201' sw='200' w='136' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='138'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits e='139' se='203' s='202' sw='201' w='137' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='139'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits e='140' se='204' s='203' sw='202' w='138' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='140'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits s='204' sw='203' w='139' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='200' flags='e'>
+      <name>Warehouse Exchange</name>
+      <desc>Strange that a warehouse would have a commodities exchange it is just a sneaky exchange. You can go North, East, South, SouthEast, NorthEast</desc>
+      <exits n='136' ne='137' e='201' s='264' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='201'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='137' ne='138' e='202' se='266' s='265' sw='264' w='200' nw='136' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='202'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='138' ne='139' e='203' se='267' s='266' sw='265' w='201' nw='137' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='203'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='139' ne='140' e='204' se='268' s='267' sw='266' w='202' nw='138' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='204'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='140' s='268' sw='267' w='203' nw='139' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='264' flags='b'>
+      <name>Warehouse Break Room</name>
+      <desc>Breakroon bleak but has a pizza machine and a drink machine. Movement available are North, South, NorthEast, East and SouthEast.</desc>
+      <exits n='200' ne='201' e='265' se='329' s='328' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='201' ne='202' e='266' se='330' s='329' sw='328' w='264' nw='200' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='266'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='202' ne='203' e='267' se='331' s='330' sw='329' w='265' nw='201' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='267'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='203' ne='204' e='268' se='332' s='331' sw='330' w='266' nw='202' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='268'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='204' s='332' w='267' nw='203' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='328' flags='yr'>
+      <name>Forklift Shop</name>
+      <desc>Shop get your forklift repaired or replace. Movement is North, East and NorthEast.</desc>
+      <exits n='264' ne='265' e='329' s='392' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='265' ne='266' e='330' se='394' s='393' sw='392' w='328' nw='264' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='266' ne='267' e='331' se='395' s='394' sw='393' w='329' nw='265' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='331'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='267' ne='268' e='332' se='396' s='395' sw='394' w='330' nw='266' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='332'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='268' s='396' sw='395' w='331' nw='267' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='392' flags='hi'>
+      <name>First Aid Room</name>
+      <desc>Get Fixed fixed up here after you hurt yourself. Movement North, East and NorthEast.</desc>
+      <exits n='328' ne='329' e='393' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='329' e='394' w='392' nw='328' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='330' ne='331' e='395' w='393' nw='329' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='331' ne='332' e='396' w='394' nw='330' no-exit='warehouse.moves.1'/>
+   </location>
+
+   <location num='396'>
+      <name>Warehouse</name>
+      <desc>In a vast warehouse.</desc>
+      <exits n='332' w='395' nw='331' no-exit='warehouse.moves.1'/>
+   </location>
+
+</fed2-map>

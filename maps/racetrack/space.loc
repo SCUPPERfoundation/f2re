@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Racetrack Space' version='8' editor='standard'>
+
+   <location num='266' flags='s'>
+      <name>Gasoline Alley</name>
+      <desc>   Below you is a ball of rock, devoid of any natural life. There&apos;s no atmosphere, no water except deep underground. It&apos;s one of the most inhospitable worlds in the Galaxy, to all forms of life - plant-life brought from other planets withers and dies. Nobody knows why.</desc>
+      <desc>   Only a small patch of the planet has been terraformed so that it is habitable, but even so workers on the planet are limited to three-month tours of duties. If they stay any longer, they too start to sicken.</desc>
+      <desc>The link is to the SouthWes</desc>
+      <exits sw='329'/>
+   </location>
+
+   <location num='329' flags='slp'>
+      <name>Racetrack Link and Pit Road</name>
+      <desc>     As you enter through the other side of the link a flashing set of white holographic beacons in the form of divider lines appear in front of you, and head to the east with the planet of Grandstand in the distance.</desc>
+      <desc>     A noncorporeal voice comes over the ships speakers.  &quot;Welcome to the Racetrack system.  We hope you will enjoy the amenities and hospitalities of the planet.  FO&apos;s wishing to install factories must seek the permission of the PO first.  You may head East when ready and please dont stray from the yellow divider lines.</desc>
+      <desc>    As you start to follow the lines holographic concrete barriers appear on both sides and also fork to the left.  Welcome to Pit Road</desc>
+      <desc>                                                                    East-----&gt;Grandstand</desc>
+      <desc>                                                                    NE-------&gt;Gasoline Alley</desc>
+      <exits ne='266' e='330' no-exit='grandstand.space.1'/>
+   </location>
+
+   <location num='330' flags='sp'>
+      <name>Grandstand Orbit</name>
+      <desc>All racers shall observe the following codes of conduct:</desc>
+      <desc>     I. The driver shall keep 2 wheels on the track and while we recognize accidents will happen, cutting corners intentionally will be dealt severely, with a stop and go penalty.</desc>
+      <desc>     II. Posted speed limits shall be adhered to at ALL TIMES.  Under a caution, cars will not enter pit road until the pace car has picked up the field and the pit official is waving the green flag.</desc>
+      <desc>    III. Intentionally crashing into, &quot;nerfing&quot; or other rough driving will be reviewed by race officials and if warranted a penalty will be assessed.  If the incident occurs at the end of a race the driver will be disqualified.</desc>
+      <desc>    IV. Penalties may be appealed up to 1 week after the infraction is assessed.  The judgment of the review board is final and enforceable.</desc>
+      <desc>     V. Drivers who engage in post race fighting and arguing will be issued a warning, then suspension of the next race.</desc>
+      <desc>                  You may LAND or go West</desc>
+      <exits w='329' no-exit='grandstand.space.1'/>
+   </location>
+
+</fed2-map>

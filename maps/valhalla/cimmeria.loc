@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<fed2-map title='Cimmeria' version='1.00' editor='standard' from='330' to='Valhalla.Valhalla Space.584'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>Empty</desc>
+   </location>
+
+   <location num='265' flags='et'>
+      <name>Cimmeria Exchange</name>
+      <desc>The Asgard use the terminals in this exchange to place orders for necesary materials for research and building.  As a welcome guest, you are able to utilize them as well.  The exit is southeast.</desc>
+      <exits se='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='267' flags='bt'>
+      <name>Cimmeria Cantina</name>
+      <desc>Workers and researchers alike use the Cantina for their breaks and meal periods.  The exit is to the southwest.</desc>
+      <exits sw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Landing Pad</name>
+      <desc>This is the landing pad for the Cimmeria, the biological outpost for the Valhalla system.  The Asgard use cloning techniques to advance their species.  Research for that effort occurs here in highly secured laboratories.</desc>
+      <exits ne='267' se='395' sw='393' nw='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393' flags='yrt'>
+      <name>Cimmeria Repair Shop</name>
+      <desc>Minor repiars as well as new orders can be placed for ships here.  The exit is to the northeast.</desc>
+      <exits ne='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='hit'>
+      <name>Cimmeria Health Stop</name>
+      <desc>Minor injuries can be repaired here.  The exit is to the northwest.  A door leads to the east.</desc>
+      <exits e='396' nw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='t'>
+      <name>Entry to Research Facilities</name>
+      <desc>Several armed Aasgard bar your way further into the facility.</desc>
+      <exits w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

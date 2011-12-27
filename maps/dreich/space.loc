@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<fed2-map title='Dreich Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>SpaceStoreroom</name>
+      <desc>Just a room to hold objects</desc>
+   </location>
+
+   <location num='848' flags='sl'>
+      <name>Dreich Interstellar Link</name>
+      <desc>You are at the Dreich Interstellar Link. The beacon that denotes the location of the link is of the latest model, but for some reason severely battered and dented, and appears to have been patched together.</desc>
+      <desc>   Not all the buoys are working but you can make out that the space lane to Scotia is to the east.</desc>
+      <exits e='849' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='849' flags='s'>
+      <name>Scotia Orbit</name>
+      <desc>You are in orbit around a small, Earth-like, planet. With you in orbit is a small, burnt-out, satellite on which you see the remnants of a beam weapon; You can still just about make out the label reading &quot;Z-BarCom&quot; on it.</desc>
+      <desc>   The planetary information buoy broadcasts a message welcoming you to Scotia, wishing you a pleasant stay or a pleasant flight, and reminds visitors to the planet to wear something it calls wellingtons.</desc>
+      <desc>   You can get to the interstellar link by following the buoys that lead to the west or you can get into your shuttle and fly to the planet&apos;s surface.</desc>
+      <exits w='848' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

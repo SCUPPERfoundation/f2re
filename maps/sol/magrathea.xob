@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='20'>
+
+   <object type='static' start='589' visibility='100' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>obj_button</id>
+      <desc>The button is large and red, the kind of button that is obviously meant to be pressed.</desc>
+      <vocab cmd='press' event='objects.button.1'></vocab>
+      <vocab cmd='push' event='objects.button.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>certificate</name>
+      <id>obj_certificate</id>
+      <desc>This is a copy of a certificate awarded to Slarti for his 'artistic endeavour' in creating the concept of the fjord.</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='dynamic' start='717' visibility='100' size='1' weight='1' flags='it'>
+      <name>spider</name>
+      <id>obj_spider</id>
+      <desc>This small alien creature has twelve legs, but it spins elaborate webs, so spider is as good a name for it as any. It is furry and quite cute, but has sharp pointy teeth.</desc>
+      <vocab cmd='get' event='objects.spider.4'></vocab>
+      <vocab cmd='take' event='objects.spider.4'></vocab>
+      <vocab cmd='drop' event='objects.spider.7'></vocab>
+      <vocab cmd='squish' event='objects.spider.10'></vocab>
+      <vocab cmd='squash' event='objects.spider.10'></vocab>
+      <vocab cmd='kill' event='objects.spider.10'></vocab>
+   </object>
+
+   <object type='static' start='717' visibility='0' size='1' weight='1'>
+      <name>control</name>
+      <id>obj_control</id>
+      <desc>I can't find anything called control in the vicinity!</desc>
+   </object>
+
+</object-list>

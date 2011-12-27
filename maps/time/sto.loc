@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Sto' version='74' editor='standard' from='1886' to='Time.Time Space.1936'>
+
+   <location num='0'>
+      <name>Planet Store Room</name>
+      <desc>No way out.</desc>
+   </location>
+
+   <location num='1822' flags='b'>
+      <name>Observation Platform</name>
+      <desc>Astrid Peth is often seen here, gazing at the stars. Out leads to the Landing Pad.</desc>
+      <exits out='1886'/>
+   </location>
+
+   <location num='1885' flags='eyrb'>
+      <name>Sto Exchange</name>
+      <desc>Trading is encouraged on Sto.  The Landing Pad is East.</desc>
+      <exits e='1886'/>
+   </location>
+
+   <location num='1886' flags='yrhib'>
+      <name>Sto Landing Pad</name>
+      <desc>Welcome to Sto, Astrid Peth&apos;s homeworld.  The Exchange is West.  All other services are found here on the Landing Pad.</desc>
+      <exits w='1885' in='1822'/>
+   </location>
+
+</fed2-map>

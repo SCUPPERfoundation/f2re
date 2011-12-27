@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Nasa Space' version='8' editor='standard'>
+
+   <location num='460' flags='sl'>
+      <name>NASA System Interstellar Link &amp; Apollo Orbit</name>
+      <desc>This link was discovered in the 22nd century and named in honor of Earth&apos;s NASA. Albeit archaic, NASA was the precursor of our modern space travel.</desc>
+      <desc>Through the haze below you can faintly make out the Launch Pad of the planet Apollo. Apollo stands as a real-time space museum with many artifacts from NASA&apos;s glory days on Earth.</desc>
+   </location>
+
+</fed2-map>
+

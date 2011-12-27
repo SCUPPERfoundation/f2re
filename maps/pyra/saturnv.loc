@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Saturn V' version='3' editor='standard' from='2079' to='Pyra.Pyra Space.1952'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='2015'>
+      <name>Apollo 11 memorial garden</name>
+      <desc>The moon-bound Apollo program was the work of a large number of people, and this inviting place memorializes those efforts. There are statues here of Wernher von Braun, the designer of the Saturn V rocket, and the members of the Apollo 11 crew, first to land on the moon: Edwin &quot;Buzz&quot; Aldrin, Neil Armstrong, and Michael Collins. The landing pad is south.</desc>
+      <exits s='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2016' flags='b'>
+      <name>Seafood of Tranquility</name>
+      <desc>This restaurant features &quot;out-of-this-world&quot; dishes, for enterprising tastes. The landing pad is southwest.</desc>
+      <exits sw='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2079'>
+      <name>Launch pad 39</name>
+      <desc>The exchange is east, a restaurant northeast, and a garden north.</desc>
+      <exits n='2015' ne='2016' e='2080' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2080' flags='e'>
+      <name>Eagle exchange</name>
+      <desc>The landing pad is west.</desc>
+      <exits w='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

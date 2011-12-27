@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Starlight Space' version='17' editor='standard'>
+
+   <location num='459' flags='sp'>
+      <name>Jenna Orbit</name>
+      <desc>You are in a tight orbit around a small moon. You notice that it has a atmosphere. It has a yellow brown look to it with a white glow. Your Comm unit receives a tight beam message from the moons surface. Attention ! you are clear to BOARD or return EAST to the interstellar link.</desc>
+      <exits e='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Jenna 5 Orbit and Interstellar Link</name>
+      <desc>   You are in a tight orbit around a crystal blue planet with white clouds. It has an aura about it that makes you feel at ease. The planet is mostly covered with water but there are several land masses. There is an orbital habitat space station coming into view to the east.And a small moon to the west You may BOARD to Jenna 5 surface or continue EAST to Jennabug or go WEST to Jenna.</desc>
+      <exits e='461' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>Jennabug Orbit and Approach</name>
+      <desc>Just above the planet Jenna 5 is the orbital space station and habitat. Its massive dome stretches thousands of feet. Its outer wings are docking bays and it floats against the background of Jenna 5 clouds is breath taking. You may BOARD the orbital habitat or return to the link to the WEST.</desc>
+      <exits w='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

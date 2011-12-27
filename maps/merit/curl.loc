@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<fed2-map title='Curl' version='4' editor='standard' from='2334' to='Merit.Merit Space.2206'>
+
+   <location num='0'>
+      <name>Storeroom </name>
+      <desc>Future objects and mobiles</desc>
+   </location>
+
+   <location num='2080'>
+      <name>Boat rentals</name>
+      <desc>The ocean is calm most days around Crimp, so tourists enjoy renting boats for the day.  Equipped with GPS and back up power and communications, the boats for hire are simple to control and safe to navigate.  However, renters who pilot the boats are subjected to alcohol tests both before renting and upon their return, to insure the boat owners that those renting will be responsible.  Sailboats are the most popular here because of the reliable breezes around Crimp.  Ocean Way is SE.</desc>
+      <exits se='2145'/>
+   </location>
+
+   <location num='2082' flags='b'>
+      <name>The Mariner Hotel</name>
+      <desc>The largest hotel in Crimp, The Mariner is partly built on a pier so that guests get the impression of being out to sea.  Luxurious in every way, The Mariner prides itself on excellent service and its array of amenities.  A large central atrium filled with greenery and flowers imparts a festive mood.  There are several bars and restaurants to choose from, as well as spas, shopping and entertainment.  The concierge is most pleased to arrange excursions.  Ocean Way is SW.</desc>
+      <exits sw='2145'/>
+   </location>
+
+   <location num='2145'>
+      <name>Ocean Way</name>
+      <desc>You have arrived at the broad avenue that encircles Crimp along the ocean.  As you peer out to the water, gentle waves stretching to the horizon, you see enormous freighters and tankers as well as pleasure craft of every description.  A small port on one side seems to cater to personal boats.  In the far distance, you see  the commercial port, towering cranes loading and unloading the ships.  Hotels and restaurants are NE and SW, or you can go SE.  Boat rentals are NW.</desc>
+      <exits ne='2082' se='2210' sw='2208' nw='2080'/>
+   </location>
+
+   <location num='2203'>
+      <name>La Bourse</name>
+      <desc>An elegantly dressed hostess greets you and inquires if you wish a private dining room or prefer seating in one of the several exquisite small dining rooms, each of which has four tables.  White linen, weighty silverware and pure crystal enhance the experience.  The menu is sophisticated and enticing, featuring multi-course menu fixe choices.  Since Curl is an ocean world, its seafood is celebrated, and the chef here is a master at preparing it.  Your glance at the pastry cart convinces you to leave room for some dessert.  The exit is down the stairs.</desc>
+      <exits down='2268'/>
+   </location>
+
+   <location num='2208' flags='b'>
+      <name>The Windjammer Cafe</name>
+      <desc>Specializing in seafood, overlooking the ocean but sheltered from the breeze, this restaurant is listed in every travel guide to Crimp.  Island music is being played on steel drums for atmosphere, the seafood is fresh and appealing, prepared simply but deliciously.  Shellfish unique to Curl are most popular, their sweet succulent flavor brought out with garlic and butter.  Ocean Way is NE.</desc>
+      <exits ne='2145'/>
+   </location>
+
+   <location num='2210'>
+      <name>Crimp</name>
+      <desc>Curl&apos;s capital looks like a charming seaside resort, different only in its several Grecian style government buildings in its center.  There seems to be a dichotomy in apparel as well.  The tourists are easily picked out by their casual attire, whereas government workers are formally dressed, the men mainly in white or pastel suits with ties.  The water taxi is DOWN the ramp, or you can explore Crimp to the NW.</desc>
+      <exits nw='2145' down='2336'/>
+   </location>
+
+   <location num='2268'>
+      <name>Derivatives Market</name>
+      <desc>Managing financial risk is the purpose of the derivatives market.  Both over the counter and exchange traded derivatives help banks and other large financial institutions mitigate their investment risks.  The people who trade here are sophisticated, mathematically inclined and wealthy.  A fine dining establishment is UP the wide marble stairway.  The Exchange is back through the arch SE.</desc>
+      <exits se='2333' up='2203'/>
+   </location>
+
+   <location num='2269'>
+      <name>Bond Market</name>
+      <desc>Financing for major projects on Merit, both private and governmental, is achieved through the bonds sold in this exchange.  The traders here are consummate professionals.  Dagny keeps a close watch to safeguard the financial integrity of the cartel.  The Exchange is through the arch to the South.</desc>
+      <exits s='2333'/>
+   </location>
+
+   <location num='2332'>
+      <name>Insurance Center</name>
+      <desc>Insurance is an important aspect of planetary economies and financial wellbeing.  Natural disasters, manmade catastrophes and unforeseen events are difficult to predict, but statistically feasible to protect against.  Statisticians and other insurance professionals pool their information and attempt to protect citizens, companies and governments against misfortune.  This center houses headquarters for all the major insurance companies on Merit.  The Exchange is through the arch to the East.</desc>
+      <exits e='2333'/>
+   </location>
+
+   <location num='2333' flags='e'>
+      <name>Curl Exchange</name>
+      <desc>You have reached the main exchange floor of Curl.  There are several archways leading to other parts of the financial district.  Trading here is fast and furious, with fortunes made and lost on a daily basis.  Vidscreens abound with the latest prices and although most transactions are conducted by etablet, you can hear the raised voices of traders exchanging tips and advice.  The LP is East, or you can go through the archways to the North, NW, West, SW, and South.</desc>
+      <exits n='2269' e='2334' s='2397' sw='2396' w='2332' nw='2268'/>
+   </location>
+
+   <location num='2334' flags='yrb'>
+      <name>Curl Launch Pad</name>
+      <desc>Reknown principally as a financial center, Curl accommodates offworlders with hospitality and convenience.  The noise here is deafening as shuttles land and depart every minute.  The air is foggy and humid, though not overly warm, and you can smell the briny aroma of the ocean.  The financial district and exchange are West.   The remainder of Curl can be accessed by taking the UP ramp to the water taxi.</desc>
+      <exits w='2333' up='2336'/>
+   </location>
+
+   <location num='2336'>
+      <name>Water Taxi</name>
+      <desc>Curl is largely a water world, with islands scattered around the globe.  The water taxis are actually jet powered hovercraft that ferry passengers and freight quickly to hubs of population.  This one takes you UP to Curl&apos;s capital city, Crimp.  The LP is back DOWN the ramp.</desc>
+      <exits up='2210' down='2334'/>
+   </location>
+
+   <location num='2396'>
+      <name>Merit Capital Corporation</name>
+      <desc>A series of very modern glass buildings reflect the surrounding ocean, giving the outer walls an undulating appearance.  Stark but expensively furnished lobbies give way to the conference rooms where money is put together to transform ideas into nuts and bolts projects and businesses.  This being Merit, businesspeople look for competent management, solid numbers and workable ideas when financing, not nepotism or favoritism.  Go through the NE arch to the Exchange.</desc>
+      <exits ne='2333'/>
+   </location>
+
+   <location num='2397'>
+      <name>Customs Offices</name>
+      <desc>Dagny has learned to manipulate customs rates to her advantage.  Encouraging trade, but taking advantage of import/export tariffs has made Merit Cartel wealthy indeed, and its inhabitants prosperous as a result.  These offices house the experts who advise Dagny on a day to day basis on adjusting customs rates and inspecting imports.  The Exchange is through the archway North.</desc>
+      <exits n='2333'/>
+   </location>
+
+</fed2-map>

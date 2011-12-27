@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<fed2-map title='Maroon' version='1.00' editor='standard' from='1312' to='Leporidae.Leporidae Space.325'>
+
+   <location num='0' flags='kt'>
+      <name>Storage room</name>
+      <desc>This should not be accessible.</desc>
+      <exits no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='607'>
+      <name>Dead End</name>
+      <desc>  The road and tunnel come to an end after quite a distance.  Small lights on the walls of the tunnel provide illumination as the tunnel curves.  Where the pavement ends, there is a big red curtain.  Parting the fabric, you only see a wall behind it.  Curious that this tunnel seemingly goes nowhere but back, to what is now southeast.</desc>
+      <exits se='736' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='736'>
+      <name>Tunnel entrance</name>
+      <desc>  The road here starts entering a tunnel to the north, and the rails running down the middle of the road to the south curve off the road here.  There is a tile above the tunnel picturing the face of a black and white cat from two different angles.  Other than that, there is no clue to where it leads.  The road also leads back to the south.</desc>
+      <exits n='607' s='800' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='799'>
+      <name>Maroon Studio Lot</name>
+      <desc>  The studio lot is a wide open paved area with buildings surrounding it.  Several of the "actors" who work here move from building to building.  An animated ostrich climbs up the steps leading into a building on the west side of the lot, looks at a piece of paper in the hands of a man coming out, lets out a dismissive "Hmph!", and aims its beak up into the air before going in.  A cartoon pelican carrying a mailbag rides a bicycle across the lot, but seems to be having trouble keeping its balance.  And a group of small creatures carrying pointed tridents ambles by together.  A guard keeps an eye out for any trouble and pays you no heed.</desc>
+      <desc>  The exit from the lot is through the archway to the east.</desc>
+      <exits e='800' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='800'>
+      <name>Main road</name>
+      <desc>  The road and rails run north and south past the wall of a large building occupying the block on the east side, while to the west there is an arched entrance reading &quot;Maroon Cartoons&quot;, with a large open area visible behind it.</desc>
+      <exits n='736' s='864' w='799' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='864'>
+      <name>Main road</name>
+      <desc>  The road runs north-south here, crossing another street south of here.  The walls of large buildings run along the sides of the street, with no ways in here.  A spark crackles from the wire above the tracks as a red car rolls by.</desc>
+      <exits n='800' s='928' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='865'>
+      <name>The Acme Factory</name>
+      <desc>  The inside of this building is, quite simply, cavernous.  The lighting is considerably dimmer than outside, but you can see all kinds of novelty items.  Long slender boxes labeled "Singing Sword"; small, flat boxes reading "Portable Hole"; boxes of joy buzzers; crates filled with marbles painted like eyes; a net filled with bricks and a paper sign saying "Bricks - 1 ton" that looks as if it fell to the floor where it lays; super-magnets; cans of super-glue; crates of squeaky shoes; and much more.  Imagine it, and it's probably here.</desc>
+      <desc>  There is also a large, strange looking contraption with musical instruments.  Inspecting it, you see there is a panel with buttons to select certain songs.  It doesn't seem operational at the moment.  The doors back outside are in the southern wall.</desc>
+      <exits s='929' out='929' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='927'>
+      <name>Narrow road</name>
+      <desc>  This street runs east and west past the walls of buildings on the north and south sides.  You can see the street meets up with another road further west, but a large truck has tipped over on the road, blocking the way, and police on the scene aren&apos;t letting anyone else approach.</desc>
+      <exits e='928' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='928'>
+      <name>Intersection</name>
+      <desc>  Two roads intersect here, one going north and south, the other east and west.</desc>
+      <exits n='864' e='929' s='992' w='927' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='929'>
+      <name>Outside Acme Factory</name>
+      <desc>  A small street runs east and west past a building on the south side and a large brick building on the north side.  There aren&apos;t any doors into the building on the south side, but the building to the north bears a large red neon sign with the legend &quot;If It&apos;s Acme, It&apos;s a Gasser&quot;.  Large doors lead into it.  The east end of the street is blocked off with construction barricades.</desc>
+      <exits n='865' w='928' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='991' flags='b'>
+      <name>The Terminal Station Bar</name>
+      <desc>  Coming through the door, there is nothing but a staircase up to your right.  When you climb the stairs you come up into a dimly-lit bar.  Several patrons sit at small, tall, round tables about a yard in diameter, as well as along a long oak bar near the far side of the room, holding and sipping their drinks.  Every so often as a red car rolls by on the tracks out on the street, the lights flicker and everything shakes for several seconds before settling down again.  A record player sitting on the corner of the bar sits silent.  Looking at it, you can see a record on the turntable - "The Merry-Go-Round Broke Down".</desc>
+      <desc>  A glamourous woman with a low-cut top and a name tag reading "Dolores" tends the cash register behind the bar, taking orders and dispensing drinks, and occasionally food.  A chalk board on the wall behind the bar reads, "Special of the Day: French Dip, 10 ig".</desc>
+      <exits s='992' down='992' out='992' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='992'>
+      <name>Main road</name>
+      <desc>  You are on the southern side of an intersection.  The road continues north and south here, intersecting an east-west cross street.  On the east corner there is a building which looks like it contains some business offices, and near the west corner you can see a neon sign which occasionally flickers and reads &quot;The Terminal Station Bar&quot;.  The tracks for the red cars run right down the middle of the street.  In fact, there is one waiting here, getting ready to leave.  You can catch it and get in if you hurry.</desc>
+      <exits n='928' e='993' s='1056' w='991' in='1184' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='993'>
+      <name>Office building</name>
+      <desc>  You are in the lobby of an office building.  A door with &quot;Trumble, Cruikshank &amp; Bone&quot; is stenciled on a door to the east, and there is a staircase on the south side going up to a second floor, making a U-turn half way up.</desc>
+      <exits  e='994' s='1059' w='992' up='1059' out='992' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='994' flags='e'>
+      <name>Trumble, Cruikshank &amp; Bone</name>
+      <desc>  Who would have guessed that Trumble, Cruikshank &amp; Bone would have set up a branch office here?  But here they are, complete with scrolling commodity quotes and trading terminals in the office enabling their clients (and prospective future clients) to buy and sell both physicals and futures.  The way back out is west.</desc>
+      <exits  w='993' out='993' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='995'>
+      <name>Valiant &amp; Galaxy</name>
+      <desc>  Entering the office, you can see a large desk covered with papers and investigatory tools over by the windows on the west and north sides.  Two chairs sit facing each other on opposite sides of the desk.  A large Murphy bed has been lowered from the eastern side of the room with a door near it.  The door back out is south.</desc>
+      <exits  e='996' s='1059' out='1059' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='996'>
+      <name>Closet</name>
+      <desc>  You have entered a storage closet.  Clothes hang from hangers, and a few boxes sit on a shelf above.  Peeking into them briefly, there's nothing of interest.  The door out is to the west.</desc>
+      <exits w='995' out='995' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1055'>
+      <name>Butcher shop</name>
+      <desc>  A small bell attached to the top of the eastern door gives off a "ding-a-ling" as you open it and come in.  A display case holds freshly cut steaks, chops, ribs, ground hamburger, and other, more exotic varieties of meat.  A man dressed all in white - overalls, apron, and paper hat - stands behind the counter, ready to sell whatever you want.</desc>
+      <exits e='1056' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1056'>
+      <name>Main drag</name>
+      <desc>  The main drag through town runs north-south, intersecting another street to the north.  The street is lined with shops on the east and west sides, with the shop on the east side displaying numerous open crates of produce along the sidewalk.</desc>
+      <exits n='992' e='1057' s='1120' w='1055' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1057'>
+      <name>Green Grocer</name>
+      <desc>  Crates of apples, oranges, bananas, lettuce, and tomatoes line the storefront along the sidewalk, which runs north and south along the street.  Deeper inside under the awnings sit bins of other fruits and vegetables - kiwis, grapes, kumquats, melons, squash, cucumbers, broccoli, corn, peas, beans, and pretty much any other fruit or vegetable you can think of.  Nuts and legumes, too.  If it grows and gets picked, it&apos;s probably here.  Clerks in green aprons wander through the store, ready to help customers locate what they want.</desc>
+      <exits n='992' s='1120' w='1056' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1059'>
+      <name>Second floor offices</name>
+      <desc>  You come to the top of the stairs and see right in front of you a door with the words &quot;Valiant &amp; Galaxy&quot; stenciled on the frosted glass window.  The door seems to be unlocked.  From behind one of the closed doors at the ends of the hall, it sounds like someone is practicing singing lessons.  The stairs lead back down to the south, making a U-turn half way down.</desc>
+      <exits n='995' s='993' down='993' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1119'>
+      <name>Bakery</name>
+      <desc>  The aromas permeating the air in here are enough to set your mouth watering!  Fresh-baked bread, cakes, and pastries all smell absolutely delicious.  A large man in white who looks like he has sampled many of the goods made here, presumably the proprietor, stands behind the counter, eager to sell all the goodies anyone wants to buy.  Doors lead out to the east and south.</desc>
+      <exits e='1120' s='1183' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1120'>
+      <name>Main road</name>
+      <desc>  The main drag runs past several shops on the east and west sides of the road, and continuing north and south.</desc>
+      <exits n='1056' e='1121' s='1184' w='1119' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1121'>
+      <name>Liquor store</name>
+      <desc>  Shelves full of bottles line the wall behind a counter that divides the shop in two.  A customer in the shop tells a woman behind the counter what he wants, and an old, balding man in glasses goes and gets it off the shelf, puts it in a plain brown paper bag, takes payment for it, and hands it to the customer.  The door is west.</desc>
+      <exits w='1120' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1182' flags='yr'>
+      <name>Wrong Brothers Aviation</name>
+      <desc>  You've heard of the Wright Brothers.  Here are the Wrong Brothers, aviation specialists.  They make their living building and repairing anything that flies.  Given their name, one certainly hopes they know what they are doing, but from what you can see in their work area, they do seem at least competent.</desc>
+      <exits e='1183' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1183'>
+      <name>Quiet road</name>
+      <desc>  There is a distinct lack of traffic on this street running past the wall of the terminal building on the south side and a building with delicious aromas coming out of it to the north.  The street runs east and west, and a door leads into the building on the north side.</desc>
+      <exits n='1119' e='1184' w='1182' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1184'>
+      <name>T-junction</name>
+      <desc>  The road from the north ends here, intersecting with an east-west road running across the front of a building on the south side.  Automated doors open as someone approaches them, then close several seconds later.  A set of rails with metal wire above runs down the middle of the road going north from here, and you can see a red-painted rail car carrying several people sitting on the tracks, with a man in a black uniform and cap, whom you take to be the conductor, standing at its door.  You can get in and ride the car into town if you wish.</desc>
+      <exits n='1120' e='1185' s='1248' w='1183' in='992' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1185'>
+      <name>Quiet road</name>
+      <desc>  This is a small road going east and west past the terminal building on the south side.  An ambulance is parked outside a large institution at the east end of the road, and a window on the building on the north side gives a view into a place that seems to sell liquor.</desc>
+      <exits e='1186' w='1184' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1186'>
+      <name>Hospital</name>
+      <desc>  You have entered the foyer of the hospital, where several patients sit in stuffed chairs while waiting to see a doctor.  Several magazines, months or even a year old, lie around the room where other patients have left them.  A sign reading "Recovery room" points down a corridor leading away to the southeast.  Closed and controlled doors block off other ways in.  A sliding automatic door leads out to the west.</desc>
+      <exits se='1251' w='1185' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1248'>
+      <name>Terminal</name>
+      <desc>  You are in a terminal building with several rows of seats to accommodate those waiting for a flight.  Of course, with your own shuttle there&apos;s no waiting for you.  You can just go out the door to the south where you see your shuttle among those parked outside.  Or you can head out the north exit to head to town.</desc>
+      <exits n='1184' s='1312' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1251' flags='hi'>
+      <name>Recovery room</name>
+      <desc>  A doctor in a white coat and wearing the seemingly obligatory stethoscope passes the time here looking over charts and talking into his communicator.  He does spring into action when the occasional need to clone someone arises, but otherwise finds ways to fend off boredom.  The doctor also reminds newly cloned patients about life insurance, how it guards against death being fatal, and assures he will do the paperwork for renewing policies here.</desc>
+      <exits nw='1186' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1312'>
+      <name>Airport</name>
+      <desc>  You see several shuttles parked in a long row, along with several large machines with propellors that you understand from what you remember about them to be airplanes.  Several uniformed men patrol the surrounding open areas, and there is a large building to the north with an open door.  There is a man wearing a headset and a green jacket like those worn by Armstrong Cuthbert agents sitting in a booth near the door.</desc>
+      <exits n='1248' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

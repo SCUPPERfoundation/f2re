@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fed2-map title='Terrebonne Space' version='1.00' editor='standard'>
+
+   <location num='459' flags='slp'>
+      <name>Terrebonne Link</name>
+      <desc> Welcome to the Terrebonne Star System, home of Brazos. We hope your stay here is a lucrative one. Continue east to orbital position.</desc>
+      <exits e='460'/>
+   </location>
+
+   <location num='460' flags='sp'>
+      <name>Brazos Orbit</name>
+      <desc>   Welcome to Brazos. Enjoy your stay here and remember, buy low, and sell high. West will take you back to the link.</desc>
+      <exits w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

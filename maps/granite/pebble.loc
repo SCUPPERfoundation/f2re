@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<fed2-map title='Pebble' version='2' editor='standard' from='266' to='Granite.Granite Space.132'>
+
+   <location num='0'>
+      <name>closet</name>
+      <desc>Full of flotsam and jetsam</desc>
+   </location>
+
+   <location num='266' flags='yr'>
+      <name>Shuttle pad</name>
+      <desc>Small space shuttles and cargo pods are parked about the fused rock landing field. Rock grinders and grading machines are lined up ready for the next shift of workers. A rough roadway leads south.</desc>
+      <exits s='330'/>
+   </location>
+
+   <location num='269'>
+      <name>Administration</name>
+      <desc>The sign by the front door of the currogated plazsteel building reads, &quot;AUTHORIZED PERSONNEL ONLY&quot;. The ground is littered with crushed empty coffee bulbs. Huge terraforming machines are parked around the front and side yards.</desc>
+      <exits sw='332'/>
+   </location>
+
+   <location num='330'>
+      <name>Hole in the road</name>
+      <desc>Vehicles veer to either side here to avoid a massive hole in the center of the road. Several workers stand by a protective barrier, staring down into the pit. The road turns from the Shuttle pad in the north to a more or less level surface eastward. To the south and southwest are prefabricated plazsteel buildings.</desc>
+      <exits n='266' e='331' s='394' sw='393'/>
+   </location>
+
+   <location num='331'>
+      <name>Under Construction</name>
+      <desc>Grading machines are parked on either side of the roadway which runs from the west to east. You gaze out over unterraformed rock fields to the north and south and imagine that one day they will be luxurious green lawns and flower gardens. Wild unrealistic optimism has always fueled the GA&apos;s space colonization program. Traders and cargo sleds stream in and out of a small prefab plazsteel office and warehouse complex to the south.</desc>
+      <exits e='332' s='395' w='330'/>
+   </location>
+
+   <location num='332'>
+      <name>Detour</name>
+      <desc>The roughly graded rock roadway turns from the west to the south here by a large DETOUR sign. To the east and northeast are small pathways in the rubble.</desc>
+      <exits ne='269' e='333' s='396' w='331'/>
+   </location>
+
+   <location num='333'>
+      <name>Dead End</name>
+      <desc>A large sign announces: END OF THE ROAD. Gravel bulldozed into a minor mountain bars your way.</desc>
+      <exits w='332'/>
+   </location>
+
+   <location num='393' flags='b'>
+      <name>Peche a la Frog</name>
+      <desc>A waiter comes to your table with a big silver tray. He&apos;s got this huge peach on it, which is covered in boiling liqueur, and he slices it open to reveal about two thousand little black tadpoles squiggling about. It&apos;s one of the most disgusting sights you&apos;ve ever seen. Doesn&apos;t taste too bad, though. Workers around you seem to be eating more usual meals of pizza and burgers.</desc>
+      <exits ne='330'/>
+   </location>
+
+   <location num='394' flags='hi'>
+      <name>Precious Metals Memorial Hospital</name>
+      <desc>This prefabricated field hospital offers the expected full facilities of health care and cloning insurance specified by Galactic Administration Executive Order 31429.</desc>
+      <exits n='330'/>
+   </location>
+
+   <location num='395' flags='e'>
+      <name>Exchange</name>
+      <desc>Holoscreens displaying commodity supplies and prices hang from large hooks sunk into the bare plazsteel walls of the Exchange building. Radiant heaters set up in the corners are working overtime and the large room has achieved a level of heat uncomfortable to all known beings except the Xiphosaurans of Silk. Traders and merchants shuffle about peering at holoscreens, shouting orders, and wiping sweat from their faces.</desc>
+      <exits n='331'/>
+   </location>
+
+   <location num='396'>
+      <name>Gravel road</name>
+      <desc>The roadway has been scraped from the rocky surface. Construction equipment constantly traveling over it has left it covered with a layer of roughly ground rock dust.</desc>
+      <exits n='332' s='460'/>
+   </location>
+
+   <location num='459'>
+      <name>Construction site</name>
+      <desc>Huge machines are parked about the site. Mountains of rubble surround a bare area where the rock surface has been scraped and ground flat. Sheets of plazsteel are stacked beside a low foundation wall.</desc>
+      <exits e='460'/>
+   </location>
+
+   <location num='460'>
+      <name>Gravel Road</name>
+      <desc>Clouds of rock dust and grit swirl up and settle again as heavy construction machines pass by. You can see a construction site to the west.</desc>
+      <exits n='396' s='524' w='459'/>
+   </location>
+
+   <location num='462'>
+      <name>Excavation site</name>
+      <desc>Mountains of rubble surround a deep pit. A few workers are scattered about the site leaning on huge parked rock grinding machines, sipping on coffee bulbs and chatting. Occasionally someone saunters over to the pit, looks down and nods, then walks back to the construction trailer to the southwest.</desc>
+      <exits sw='525'/>
+   </location>
+
+   <location num='523'>
+      <name>Dead End</name>
+      <desc>A large sign announces: END OF THE ROAD. Gravel bulldozed into a minor mountain bars your way.</desc>
+      <exits e='524'/>
+   </location>
+
+   <location num='524'>
+      <name>Roundabout</name>
+      <desc>One day this will be the central axis of a magnificent transportation system. At the moment it&apos;s under construction and workers are engaged in grading the rocky surface. Modeled after the legendary Chiswick Roundabout of ancient Earth,  six soon-to-be-constructed mighty highways will meet here. However, right now the workers are all on tea break and seem to be lounging by the trailer to the east.</desc>
+      <exits n='460' e='525' w='523'/>
+   </location>
+
+   <location num='525' flags='b'>
+      <name>Construction trailer</name>
+      <desc>A double wide construction trailer is parked here. A wide shaded overhang shelters workers relaxing outside on their break. The windows of the trailer are slightly misty from the fierce climate control inside. A sign on the door says Scargill Excavation and Terraforming, Inc. and below in large red block letters, &quot;WORKERS ONLY&quot;. A small path leads northeast.</desc>
+      <exits ne='462' w='524'/>
+   </location>
+
+</fed2-map>

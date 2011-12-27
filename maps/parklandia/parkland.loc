@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Parkland' version='5' editor='standard' from='655' to='Parklandia.Parklandia Space.717'>
+
+   <location num='64'>
+      <name>Storeroom</name>
+      <desc>Nothing to see here</desc>
+   </location>
+
+   <location num='591' flags='hi'>
+      <name>First Aid Clinic</name>
+      <desc>The Clinic is far from state of the art, but it will do in repairing any injury you may have been unfortunate enough to sustain while visiting the Safety Zone.  The doctor nods at you as she goes about sterilizing her equipment, which she has to do quite often due to the settling dust from the shuttles landing and taking off, knocking up a cloud of surrounding soil and pine needles.</desc>
+      <exits s='655'/>
+   </location>
+
+   <location num='655'>
+      <name>Parkland Safe Zone Shuttle Pad</name>
+      <desc>The Parkland Reclamation Force has cleared out a small section of Parkland away from the robots who control the old landing pad.  Here you can safely go about your commerce free from being torn limb from limb by the rampant robots that occupy the rest of the planet.</desc>
+      <desc>Surrounding the Shuttle Pad are a few accomodations:  To the EAST is the Exchange, NORTH is the First Aid Station and to the SOUTH a makeshift bar in a oversized tent.  Please stay to these locations as the guards will not allow you to wander further into the deep forest beyond.</desc>
+      <exits n='591' e='656' s='719'/>
+   </location>
+
+   <location num='656' flags='eyr'>
+      <name>Parkland Temporary Exchange</name>
+      <desc>A hastily constructed building made of logs cleared from the safety zone houses the Temporary Exchange.  It is filled with all the machines available for you to conduct your business, including all matters of commerce and ship orders and repairs.  The soft hum of the generator in the back of the building is rather soothing.</desc>
+      <exits w='655'/>
+   </location>
+
+   <location num='719' flags='b'>
+      <name>Rustic Bar</name>
+      <desc>Pull a barrel up to the bar and order yourself a drink in this makeshift bar erected especially for the brave souls who have come back to Parkland to visit and conduct their business.  The bartender seems to have a rather nasty scar on his face from forehead to chin running left to right from an injury that looks to have happened not to long ago.  He is dusting his glasses and nods to you as you enter.  It may not seem like much, but he is well versed in all manner of libations from across the dataspace.</desc>
+      <exits n='655'/>
+   </location>
+
+</fed2-map>

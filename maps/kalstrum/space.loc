@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Kalstrum Space' version='4' editor='standard'>
+
+   <location num='266' flags='slp'>
+      <name>Kalstrum System, Avridos Orbit</name>
+      <desc>   An interstellar link beacon is adrift half a kilometer on the stern side.  Far to the east Kalstrum&apos;s white dwarf sun is peaking from behind the dusty globe of Avridos.  Vast deserts are discernable on the planet as there are few clouds in the sky.  Areas of vegetation are clumped around the few large bodies of water on the sandy rock, but beyond that all appears to be vast open deserts.  The main city on Avridos sits like an open metallic sore in a large basin near one of those large lakes.</desc>
+      <desc>   Your communications screen comes to life and a text only message scrolls out, &quot;Welcome to the Kalstrum System, you are granted permission to land upon Avridos.  Please help contribute to the safety and well-being of all Avridonian citizens during your stay.&quot;  The message then repeats itself.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

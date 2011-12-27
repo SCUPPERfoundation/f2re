@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Kiddo Space' version='4' editor='standard'>
+
+   <location num='2203' flags='sl'>
+      <name>Kiddo Interstellar Link And Katana Orbit</name>
+      <desc>From space, Katana appears to be a fertile planet, rich blues and greens covering its modest sized surface.  Known for self sufficiency, its residents are prosperous but live simply, enjoying nature and honing their personal skills.  Visitors who come to learn are welcome.  Visitors who come with trouble in mind, will find that as well.  The planet of Tanto lies to the South and Tachi is SE.</desc>
+      <exits s='2267' sw='2266'/>
+   </location>
+
+   <location num='2266' flags='s'>
+      <name>Tachi Orbit</name>
+      <desc>You have arrived at Tachi, a hot, arid planet.  It&apos;s the divorce center of Merit, where separations are expertly arranged in a permanent manner.  The amenities are few, but the trading is vigorous if you decide to visit.  Tanto&apos;s orbit is to the East.  The Link and Katana&apos;s orbit is NW.</desc>
+      <exits ne='2203' e='2267'/>
+   </location>
+
+   <location num='2267' flags='s'>
+      <name>Tanto Orbit</name>
+      <desc>Almost completely obscured by clouds, the diminutive planet of Tanto lies below you, its mysteries shrouded in white.  The Kiddo Link and Katana Orbit can be reached by following the space lane North.  Tachi&apos;s orbit is West.</desc>
+      <exits n='2203' w='2266'/>
+   </location>
+
+</fed2-map>

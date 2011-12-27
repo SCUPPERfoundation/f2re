@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<fed2-map title='Bourbon' version='6' editor='standard' from='267' to='Liquor.Liquor Space.136'>
+
+   <location num='0' flags='t'>
+      <name>drop box</name>
+      <desc>For toys!</desc>
+   </location>
+
+   <location num='147' flags='t'>
+      <name>Entrance to a cave</name>
+      <desc>You notice some glass and copper tubing at the entrance to a cave to the northeast. Unfortunately there appears to be some sort of force field stopping you from investigating further.</desc>
+      <exits s='211'/>
+   </location>
+
+   <location num='203' flags='hib'>
+      <name>Bourbon Hospital</name>
+      <desc>Get patched up if you need it, but I wouldn&apos;t have any major surgery here. You notice a liquor cabinet in each wall!</desc>
+      <desc>The way out is south.</desc>
+      <exits s='267'/>
+   </location>
+
+   <location num='204'>
+      <name>Cement pad</name>
+      <desc>You hear the hum of Enviro-machines through the walls to the south, keeping the exchange dust free and temperature comfortable. You can go southeast to the back door of the exchange or southwest to the LP.</desc>
+      <exits se='269' sw='267'/>
+   </location>
+
+   <location num='207'>
+      <name>Northwest corner of the cornfield</name>
+      <desc>You are in the corner of a fenced area. Corn grows south and east of this location.</desc>
+      <exits e='208' se='272' s='271' sw='270'/>
+   </location>
+
+   <location num='208'>
+      <name>North Fence</name>
+      <desc>The fence stops you from moving north here.</desc>
+      <exits e='209' se='273' s='272' sw='271' w='207'/>
+   </location>
+
+   <location num='209'>
+      <name>North side</name>
+      <desc>The fence to the north prevents you from moving in that direction.</desc>
+      <exits e='210' se='274' s='273' sw='272' w='208'/>
+   </location>
+
+   <location num='210'>
+      <name>North side</name>
+      <desc>There is a fence to the north of here. Corn stands all around you in any other direction.</desc>
+      <exits e='211' se='275' s='274' sw='273' w='209'/>
+   </location>
+
+   <location num='211'>
+      <name>North side</name>
+      <desc>You see a fence to the north of you and corn stretching out in every other direction.  Looking closer at the fence you notice one panel of it is loose, it seems you can squeeze through here to the north. Footsteps lead to the southwest.</desc>
+      <exits n='147' e='212' se='276' s='275' sw='274' w='210'/>
+   </location>
+
+   <location num='212'>
+      <name>Northeast corner</name>
+      <desc>A fence stretches off in to the distance west and south from here.</desc>
+      <exits s='276' sw='275' w='211'/>
+   </location>
+
+   <location num='266' flags='yrb'>
+      <name>Ship Yard</name>
+      <desc>Buy a ship, sell a ship, repair a ship! The way out is east.</desc>
+      <exits e='267'/>
+   </location>
+
+   <location num='267'>
+      <name>Welcome to Bourbon!</name>
+      <desc>Rows and rows of corn stretch to the horizon in every direction. In the distance to the west you see a yellow road. If you are wondering where Dorothy is, she&apos;s back in Kansas!</desc>
+      <desc>The Exchange is east, there is a hospital to the north, a bar to the south, and a shipyard to the west. What else do you need?</desc>
+      <exits n='203' ne='204' e='268' se='332' s='331' w='266'/>
+   </location>
+
+   <location num='268' flags='eb'>
+      <name>Bourbon Exchange</name>
+      <desc>Enjoy a Mint Julep as you trade. The exit is west, there is  a door to the east.</desc>
+      <exits e='269' w='267'/>
+   </location>
+
+   <location num='269'>
+      <name>The Back Door</name>
+      <desc>You slip out the back door of the exchange and smell garbage from a nearby dumpster. Whew it&apos;s ripe! Beyond the cement pad that curves around the building back to the Exchange,  you see acres and acres of corn as far as your eye can see. The door is behind you to the west or you can go down the stairs.</desc>
+      <exits sw='332' w='268' nw='204' down='270'/>
+   </location>
+
+   <location num='270'>
+      <name>Corn rows</name>
+      <desc>Corn stretches before you. It&apos;s so tall you can only see a few feet into it. But it seems there is a path to the southeast. The stair leading up to the back of the exchange is to the west.</desc>
+      <exits ne='207' e='271' se='335' w='269' up='269'/>
+   </location>
+
+   <location num='271'>
+      <name>Cornfield</name>
+      <desc>You notice some footsteps moving east from here. Corn stretches off to the north, east, and south of you while you can make out a fence through the corn to the west.</desc>
+      <exits n='207' ne='208' e='272' se='336' s='335' w='270'/>
+   </location>
+
+   <location num='272'>
+      <name>Middle of the cornfield</name>
+      <desc>Corn surrounds you, disorienting and hampering your view. Squinting at the sun you decide you know which direction you need to move in.</desc>
+      <exits n='208' ne='209' e='273' se='337' s='336' sw='335' w='271' nw='207'/>
+   </location>
+
+   <location num='273'>
+      <name>middle of the cornfield</name>
+      <desc>Corn surrounds you, disorienting and hampering your view. Squinting at the sun you decide you know which direction you need to move in.</desc>
+      <exits n='209' ne='210' e='274' se='338' s='337' sw='336' w='272' nw='208'/>
+   </location>
+
+   <location num='274'>
+      <name>Middle of the cornfield</name>
+      <desc>Corn obscures your view in every direction. A set of footsteps leads south and northeast here.</desc>
+      <exits n='210' ne='211' e='275' se='339' s='338' sw='337' w='273' nw='209'/>
+   </location>
+
+   <location num='275'>
+      <name>Middle of the corn field</name>
+      <desc>Corn surrounds you, disorienting and hampering your view. Squinting at the sun you decide you know which direction you need to move in.</desc>
+      <exits n='211' ne='212' e='276' se='340' s='339' sw='338' w='274' nw='210'/>
+   </location>
+
+   <location num='276'>
+      <name>East Side</name>
+      <desc>A fence prevents you from moving east here.</desc>
+      <exits n='212' s='340' sw='339' w='275' nw='211'/>
+   </location>
+
+   <location num='331' flags='b'>
+      <name>The Bourbon Bar</name>
+      <desc>Enjoy a highball while you relax. The exit is north</desc>
+      <exits n='267'/>
+   </location>
+
+   <location num='332'>
+      <name>Cement pad</name>
+      <desc>The dings can barely be heard here throught the walls of the exchange to the north. The LP is northwest and the back door of the exchange is northeast from here.</desc>
+      <exits ne='269' nw='267'/>
+   </location>
+
+   <location num='335'>
+      <name>Cornfield</name>
+      <desc>You are in the a cornfield. Corn stretches to the north east and south of you. West is a fence and to the northwest you can make out a concrete pad through the high stalks. A path seems to lead the southeast from here.</desc>
+      <exits n='271' ne='272' e='336' se='400' s='399' nw='270'/>
+   </location>
+
+   <location num='336'>
+      <name>Middle of the cornfield</name>
+      <desc>Corn stretches out in every direction here.</desc>
+      <exits n='272' ne='273' e='337' se='401' s='400' sw='399' w='335' nw='271'/>
+   </location>
+
+   <location num='337'>
+      <name>middle of the cornfield</name>
+      <desc>Corn surrounds you, disorienting and hampering your view. Squinting at the sun you decide you know which direction you need to move in.</desc>
+      <exits n='273' ne='274' e='338' se='402' s='401' sw='400' w='336' nw='272'/>
+   </location>
+
+   <location num='338'>
+      <name>Middle of the cornfield</name>
+      <desc>Corn corn and more corn! In every direction, stalks block your view. Looking down at the ground you see a set of footsteps leading southwest and north from here.</desc>
+      <exits n='274' ne='275' e='339' se='403' s='402' sw='401' w='337' nw='273'/>
+   </location>
+
+   <location num='339'>
+      <name>Middle of the corn field</name>
+      <desc>Corn surrounds you, disorienting and hampering your view. Squinting at the sun you decide you know which direction you need to move in.</desc>
+      <exits n='275' ne='276' e='340' se='404' s='403' sw='402' w='338' nw='274'/>
+   </location>
+
+   <location num='340'>
+      <name>East side</name>
+      <desc>A fence prevents you from moving east here.</desc>
+      <exits n='276' s='404' sw='403' w='339' nw='275'/>
+   </location>
+
+   <location num='399'>
+      <name>Cornfield</name>
+      <desc>Corn stretches out the east and north. South and west are fences preventing you from moving in those directions.</desc>
+      <exits n='335' ne='336' e='400'/>
+   </location>
+
+   <location num='400'>
+      <name>Cornfield</name>
+      <desc>Corn stretches out in every direction but south, where a fence stops you from moving in that direction. A faint path can be seen if you look close. It seems to move northwest and east from here.</desc>
+      <exits n='336' ne='337' e='401' w='399' nw='335'/>
+   </location>
+
+   <location num='401'>
+      <name>Cornfield</name>
+      <desc>There is a fence to the south, but corn pretty much obscures your view in every other direction. Looking closely, you discern a path to the northeast.</desc>
+      <exits n='337' ne='338' e='402' w='400' nw='336'/>
+   </location>
+
+   <location num='402'>
+      <name>South side of the field</name>
+      <desc>A fence prevents you from moving south here.</desc>
+      <exits n='338' ne='339' e='403' w='401' nw='337'/>
+   </location>
+
+   <location num='403'>
+      <name>South side</name>
+      <desc>A fence prevents you from moving south here.</desc>
+      <exits n='339' ne='340' e='404' w='402' nw='338'/>
+   </location>
+
+   <location num='404'>
+      <name>Southeast corner</name>
+      <desc>A fence stretches west and north from here.</desc>
+      <exits n='340' w='403' nw='339'/>
+   </location>
+
+</fed2-map>

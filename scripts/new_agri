@@ -1,0 +1,53 @@
+#!/usr/bin/python
+
+# Set up a new agri planet for fed2
+
+import os
+import shutil
+import sys
+
+if len(sys.argv) < 4:
+	print 'usage is new_agri system_filename planet_filename owner_name'
+	sys.exit(1)
+
+src = '/home/alan/fed2d/'
+maps = src + 'maps/' + sys.argv[1]
+dest = '/var/opt/fed2/maps/'+ sys.argv[1];
+
+# move the new files into the maps directory
+print "setting up source files"
+os.chdir(src + 'maps')
+os.system("mv " + src + "space.* " + maps)
+os.system("mv " + src + sys.argv[2] +".* " + maps)
+
+# Update Makefile
+print "Updating Makefile"
+os.chdir(maps)
+fd = os.open("./Makefile",os.O_RDWR);
+os.lseek(fd,-1,os.SEEK_END);
+os.write(fd," $(DEST)/" + sys.argv[2] + ".* ");
+os.close(fd);
+
+# misc activities and copy to destination, 
+# then set permissions on dest files
+print "Setting permissions"
+os.system("chmod g+w *")
+os.system("cp " + sys.argv[2] + ".* " + dest)
+os.system("cp space.* " + dest)
+os.chdir(dest)
+
+# creat .inf file for new planet
+print "Creating .inf file for new planet"
+planet_file = file("./" + sys.argv[2] + ".inf","w+")
+planet_file.write('<?xml version="1.0"?>\n')
+planet_file.write("<infrastructure owner='" + sys.argv[3] +"' economy='Agricultural' closed='false'>\n")
+planet_file.write("</infrastructure>\n")
+planet_file.close()
+
+os.system("chmod g+w *")
+os.system("chgrp fed2 *")
+
+print "new agri planet set up: completed"
+os.system("pwd")
+os.system("ls -l")
+

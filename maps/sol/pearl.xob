@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='87'>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='dst'>
+      <name>tabi</name>
+      <id>obj_tabi</id>
+      <desc>You see a pair of thick, white cotton socks.</desc>
+      <vocab cmd='wear' event='objects.tabi.1'></vocab>
+      <vocab cmd='drop' event='objects.tabi.4'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>string</name>
+      <id>obj_string</id>
+      <desc>It's a length of red silk string, considered a lucky token on The Pearl.</desc>
+      <vocab cmd='drop' event='objects.string.1'></vocab>
+   </object>
+
+   <object type='static' start='199' visibility='100' size='1' weight='1'>
+      <name>Madame Kiko</name>
+      <id>obj_kiko</id>
+      <desc>Madame Kiko is a short, sturdy woman in a dark blue kimono with embroidered black and white obi. Her long hair hangs in a single plait. She wields a black fan with resistless eloquence.</desc>
+   </object>
+
+   <object type='static' start='199' visibility='0' size='1' weight='1'>
+      <name>to Madame Kiko</name>
+      <id>obj_kiko1</id>
+      <desc>You see a short, sturdy woman in a dark blue kimono with embroidered black and white obi. Her long hair hangs in a single plait. She wields a black fan with resistless eloquence.</desc>
+      <vocab cmd='bow' event='people.kiko.1'></vocab>
+   </object>
+
+   <object type='static' start='199' visibility='0' size='1' weight='1'>
+      <name>for directions</name>
+      <id>obj_kiko2</id>
+      <desc>I can't find anything called for directions in the vicinity!</desc>
+      <vocab cmd='ask' event='people.kiko.2'></vocab>
+   </object>
+
+   <object type='static' start='206' visibility='100' size='1' weight='1'>
+      <name>Madame Mitzu</name>
+      <id>obj_mitzu</id>
+      <desc>Madame Mitzu is a Tral, native to Romarth. Her pale pink kimono doesn't detract from her authority as Armstrong Cuthbert's senior sector agent. Tral vocalizations are outside human range; a comm unit and freezing stare serve well.</desc>
+   </object>
+
+   <object type='static' start='204' visibility='100' size='1' weight='1' flags='i'>
+      <name>globe</name>
+      <id>obj_globe</id>
+      <desc>You examine the globe of the celestial armamentarium and indeed the small crystal planetarium seems to hold all of space; within it float stars and planets, all the bodies of the Solar System.</desc>
+   </object>
+
+   <object type='static' start='206' visibility='0' size='1' weight='1'>
+      <name>to Madame Mitzu</name>
+      <id>obj_mitzu1</id>
+      <desc>Madame Mitzu is a Tral, native to Romarth. Her pale pink kimono doesn't detract from her authority as Armstrong Cuthbert's senior sector agent. Tral vocalizations are outside human range; a comm unit and freezing stare serve well.</desc>
+      <vocab cmd='bow' event='people.mitzu.1'></vocab>
+   </object>
+
+   <object type='static' start='214' visibility='100' size='1' weight='1'>
+      <name>Dr. Tarutani</name>
+      <id>obj_tarutani1</id>
+      <desc>Dr. Tarutani is a tall, willowy woman. Her brown kimono is appliqued with little, yellow, satin butterflies that match her obi. She is Head of the solar dynamics lab and proudly wears the silver starburst of Gunma University.</desc>
+   </object>
+
+   <object type='static' start='206' visibility='0' size='1' weight='1'>
+      <name>about romarth</name>
+      <id>obj_mitzu2</id>
+      <desc>I can't find anything called about romarth in the vicinity!</desc>
+      <vocab cmd='ask' event='people.mitzu.2'></vocab>
+   </object>
+
+   <object type='static' start='206' visibility='0' size='1' weight='1'>
+      <name>about her life</name>
+      <id>obj_mitzu3</id>
+      <desc>I can't find anything called about her life in the vicinity!</desc>
+      <vocab cmd='ask' event='people.mitzu.3'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='100' size='1' weight='1' flags='i'>
+      <name>Eames Lounge Chair</name>
+      <id>obj_chair1</id>
+      <desc>The Eames' many experiments in molding plywood led to the development of furniture that comfortably fits the contours of the human form. Still an icon of modern design after more than 500 years.</desc>
+   </object>
+
+   <object type='static' start='145' visibility='100' size='1' weight='1' flags='i'>
+      <name>Go chair</name>
+      <id>obj_chair2</id>
+      <desc>The chair is made of magnesium, incredibly strong and the lightest of all structural metals. A curvaceous, streamlined and sculptural construction, it has achieved the purest manner of successful organic design.</desc>
+   </object>
+
+   <object type='static' start='145' visibility='100' size='1' weight='1' flags='i'>
+      <name>Ero/S/ swivel chair</name>
+      <id>obj_chair3</id>
+      <desc>With its captivating egg shape, the Ero/S/ (pronounced "ero ess") is an inviting armchair, a combination of light and comfort, color and transparency, made from transparent polycarbonate with a lightweight aluminum base.</desc>
+   </object>
+
+   <object type='static' start='206' visibility='0' size='1' weight='1'>
+      <name>about Madame Mitzu's life</name>
+      <id>obj_mitzu3</id>
+      <desc>I can't find anything called about her life in the vicinity!</desc>
+      <vocab cmd='ask' event='people.mitzu.3'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='100' size='1' weight='1' flags='i'>
+      <name>Twizzle frame</name>
+      <id>obj_chair4</id>
+      <desc>At once childlike in its use of color and a boldly sophisticated take on X-form seating. Made of steel-wire rods capped with painted maple balls. Ideally comfortable seating for avian and serpentes species.</desc>
+   </object>
+
+   <object type='static' start='145' visibility='100' size='1' weight='1' flags='i'>
+      <name>Noguchi freeform</name>
+      <id>obj_chair5</id>
+      <desc>Noguchi's sculptural idiom is evident in the form of this piece. The graceful, freeform shape suggests flat river stones. The comfortable cushions and low legs suit many invertebrate x-beings.</desc>
+   </object>
+
+   <object type='static' start='275' visibility='100' size='1' weight='1' flags='i'>
+      <name>particle necklace</name>
+      <id>obj_necklace</id>
+      <desc>Held together solely by its own magnetic force, the particle necklace consists of individual spherical magnets. Made of rare earth magnets, their incredible strength serves as an innovative linking mechanism.</desc>
+   </object>
+
+   <object type='static' start='206' visibility='100' size='1' weight='1' flags='i'>
+      <name>kitten</name>
+      <id>obj_kitten</id>
+      <desc>Blackice of Wiskaway is a Bombay kitten. Intelligent and affectionate, the copper-eyed black kitten is a descendant of the black leopards of India. He is the only male resident of The Pearl.</desc>
+      <vocab cmd='pet' event='objects.kitten.3'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='100' size='1' weight='1' flags='i'>
+      <name>golden dragon tea pot</name>
+      <id>obj_teapot</id>
+      <desc>Yixing tea pots such as this one are prized by tea connoisseurs because of the clay's special characteristics. With repeated usage, the pot acquires its own unique flavor and increased luster and coloring.</desc>
+   </object>
+
+   <object type='static' start='214' visibility='0' size='1' weight='1'>
+      <name>to Dr. Tarutani</name>
+      <id>obj_tarutani1</id>
+      <desc>Dr. Tarutani is a tall, willowy woman. Her brown kimono is appliqued with little, yellow, satin butterflies that match her obi. She is Head of the solar dynamics lab and proudly wears the silver starburst of Gunma University.</desc>
+      <vocab cmd='bow' event='people.tarutani.1'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='0' size='1' weight='1'>
+      <name>in Eames Lounge Chair</name>
+      <id>obj_chair1a</id>
+      <desc>The Eames' many experiments in molding plywood led to the development of furniture that comfortably fits the contours of the human form.Still an icon of modern design after more than 500 years.</desc>
+      <vocab cmd='sit' event='objects.chairs.1'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='0' size='1' weight='1'>
+      <name>in Go chair</name>
+      <id>obj_chair2a</id>
+      <desc>The chair is made of magnesium, incredibly strong and the lightest of all structural metals. A curvaceous, streamlined and sculptural construction, it has achieved the purest manner of successful organic design.</desc>
+      <vocab cmd='sit' event='objects.chairs.2'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='0' size='1' weight='1'>
+      <name>in Ero/S/ swivel chair</name>
+      <id>obj_chair3a</id>
+      <desc>With its captivating egg shape, the Ero/S/ (pronounced "ero ess") is an inviting armchair, a combination of light and comfort, color and transparency, is made from transparent polycarbonate with a lightweight aluminum base.</desc>
+      <vocab cmd='sit' event='objects.chairs.3'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='0' size='1' weight='1'>
+      <name>in Twizzle frame</name>
+      <id>obj_chair4a</id>
+      <desc>At once childlike in its use of color and a boldly sophisticated take on X-form seating. Made of steel-wire rods capped with painted maple balls. Ideally comfortable seating for avian and serpentes species.</desc>
+      <vocab cmd='sit' event='objects.chairs.4'></vocab>
+   </object>
+
+   <object type='static' start='145' visibility='0' size='1' weight='1'>
+      <name>in Noguchi freeform</name>
+      <id>obj_chair5a</id>
+      <desc>Noguchi's sculptural idiom is evident in the form of this piece. The graceful, freeform shape suggests flat river stones. The comfortable cushions and low legs suit many invertebrate x-beings.</desc>
+      <vocab cmd='sit' event='objects.chairs.5'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>As well as tea, the food here is small snacks of smoked trout mousse.</desc>
+      <vocab cmd='buy' event='food.teahouse.1'></vocab>
+   </object>
+
+</object-list>

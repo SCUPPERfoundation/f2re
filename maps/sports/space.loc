@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<fed2-map title='Sports Space' version='9' editor='standard'>
+
+   <location num='130' flags='sl'>
+      <name>The Link  </name>
+      <desc>Welcome to Sports System, Baseball&apos;s link is to the South.</desc>
+      <exits s='194' no-exit='space.baseball.1'/>
+   </location>
+
+   <location num='194' flags='s'>
+      <name>Space</name>
+      <desc>Looking out you ships windows, Billboards on both sides of your ship advertise; &quot;Good Tickets Still Available for our next Home Game.&quot;</desc>
+      <desc>South takes you to Baseball Link.</desc>
+      <exits n='130' s='258' no-exit='space.baseball.1'/>
+   </location>
+
+   <location num='258' flags='s'>
+      <name>Orbit Of Baseball</name>
+      <desc>The bowling planet Baseball. The link is to the North.</desc>
+      <exits n='194' no-exit='space.baseball.1'/>
+   </location>
+
+</fed2-map>

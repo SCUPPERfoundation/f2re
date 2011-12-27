@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<fed2-map title='Inferno' version='1.00' editor='standard' from='331' to='Divine.Divine Space.523'>
+
+   <location num='65'>
+      <name>Storeroom</name>
+      <desc>Hiding place for mobiles, etc.</desc>
+   </location>
+
+   <location num='205' flags='b'>
+      <name>Back Deck</name>
+      <desc>The door leads out onto a large deck area. Potted ferns and other large plants sit along the railing, overlooking the barren red surface of the planet. Comfortable lounge chairs dot the deck, along with a huge brick roasting pit, good for any kind of barbeque. An ice chest sits to one side, filled with anything you might want. A long table sits along the wall, covered in some of Ferreri&apos;s famous party trays. The smooth sounds of Fed Radio come from a small speaker in the corner of the deck, almost hidden by a fern. The exit is to the south.</desc>
+      <exits s='269' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='206' flags='b'>
+      <name>Robius and Jessecka&apos;s Bedroom</name>
+      <desc>Standing tall and magestic in the middle of the room is a large four poster bed, covered in golden satin sheets and fluffy pillows. Mirrors line the ceiling, casting shadows on the walls. There is also a small twin-sized bed set against the wall just for DarkAngel when he decides to crash in this bedroom. The faint smell of lavender pervades the air. Stairs lead down to the foyer.</desc>
+      <exits down='269' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='266' flags='hi'>
+      <name>Burnt Alive Infirmary</name>
+      <desc>The walls around this room are an ordinary shade of grey, much like the rest of the planet. In one corner of the room lies a gurney in case an emergency of some sort occurs during a visit. The other corner is occupied by a desk for the secretary, whose job it is to keep records of who died and to collect insurance premiums. The rest of the room is empty with the exception of a single chair sitting beside the door out to the landing pad in the southeast corner of the building.</desc>
+      <exits se='331' out='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='267' flags='e'>
+      <name>Flamer&apos;s Exchange</name>
+      <desc>A small room completely empty except for the trading modules in the corner that keep displaying the prices of various commodities available on Inferno. A sign in the corner displays the motto of Inferno saying, &quot;Buy Low, Sell High&quot; and a comm unit bings with a message thanking everyone for stopping by and inviting them back at any time. Feel free to exit to the landing pad by going out or to the south.</desc>
+      <exits s='331' out='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='268' flags='b'>
+      <name>Party Central Divine</name>
+      <desc>Wow!!! What a bar, all around are people dancing and jiving to the music of the 1980&apos;s. Up against the wall is a bar made of solid mohagony wood serving any and every drink someone could ever possibly want. In the corner is a sign reading, &quot;Welcome to the Party Central Divine, have a great time drinking and partying and always remember, HAVE FUN!!&quot; A door stands open to the southwest leading towards the Landing Pad.</desc>
+      <exits sw='331' out='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='269' flags='b'>
+      <name>Jessecka&apos;s Summer Home</name>
+      <desc>You walk into the foyer of a small underground summer home. Wedding pictures on the rocky wall show a happy smiling couple with a grinning demon standing in a bride&apos;s maid dress beside them. Along the wall, beside the wedding pictures, are photos of various other persons, and animals...cats, mice and even a space herpe. The foyer itself is quite small, and doors lead off to the north and east, while you see a narrow stairwell leading up.</desc>
+      <exits n='205' e='270' s='333' up='206' out='333' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='270' flags='b'>
+      <name>Library</name>
+      <desc>Warm leather chairs sit in a circle around a stand alone fireplace, in which a cheery little fire burns. Rows and rows of books line the walls, containing some of the classics from old earth. A large vid screen sits in the corner of the room, showing old holos of a long gone sport called football. The main players in the vid are in crimson and white uniforms. A silent droid stands to one side waiting on your drink order. You can exit back to the foyer to the west.</desc>
+      <exits w='269' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='331' flags='yr'>
+      <name>Inferno Landing Pad</name>
+      <desc>Welcome to planet Inferno, all around is a very ordinary Landing Pad not much different from the ones in the Solar System. On the edge of the Landing Pad, there is a little shack made out of concrete blocks that serves as the center for all purchases for a spaceship. Feel free to walk around and explore, starting with either the Burnt Alive Infirmary to the Northwest, the Flamer&apos;s Exchange to the North, Party Central Divine to the Northeast, or the simple path leading to the East.</desc>
+      <exits n='267' ne='268' e='332' nw='266' down='394' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='332'>
+      <name>Simple Path</name>
+      <desc>A simple path leading east to west is crowded with people wondering where the shuttle station is located at. Most of the people think it is located somewhere west, while others demand that it is located in the eastern direction.</desc>
+      <exits e='333' w='331' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='333'>
+      <name>Simple Path</name>
+      <desc>A simple path made of gravel is here crowded with more of the same types of people. Some are shuffling west back towards the Landing Pad, others are making their way south towards Ferreri&apos;s Bar, and yet others seem to be falling down and just vanishing. If none of those options appeal to one&apos;s senses, they can always head north into a hidden cave and check out the Summer Home of Jessecka.</desc>
+      <exits n='269' s='397' w='332' down='334' in='269' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='334' flags='b'>
+      <name>Monodefuego&apos;s Private Place</name>
+      <desc>The inside of this room is completely burned out. The walls, chairs and tables are blackened and carbon-scored. Small fires are lit in random locations, and provide sufficient light to see that there are a few people milling about being served by crispier than average waitdroids. In a flash of realization you recognize that this is a replica of the Lounge on Earth, but completely seared and containing a large oven on one wall with something looking like a totally burned out bed. With the marriage of comfort and insanity you&apos;re left wondering whether you&apos;re welcome here or not. If you do not feel welcomed here, you better leave the room the way you came before the owner comes back to find you.</desc>
+      <exits up='333' out='333' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='393' flags='bt'>
+      <name>Boiling Pit of Despair</name>
+      <desc>Boiling with fiery red bubbles, the boiling pit of despair is nothing more than a hot tub which maintains the perfect temperature of 104 degrees while soaking in it. You can hear Fed Radio blasting over the surroud sound setup within the area. If you should need anything, just order a round from the droid attending the pit, or if he can not help you, call for DarkAngel and all your worries will vanish into thin air. You can either remain here and soak or go back out to the Private Party Lounge.</desc>
+      <exits out='394' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='394' flags='bt'>
+      <name>Inferno&apos;s Private Party Lounge</name>
+      <desc>Running into the Private Party Lounge, you notice large photos of the DarkAngel himself all over the walls, along with photos of his best friends; Jessecka, Robius, Ferreri, Monodefuego, Squeeky, Reepicheep, Catspaws, Dunavant, Sage, Nomad, and Kella. All around are people having a great time jamming to the tunes playing at the jukebox and drinking their worries away at the bar. There is also a hottub in the center of the lounge, feel free to go into it, or if you wish, you can go back up to the Landing Pad.</desc>
+      <exits up='331' in='393' out='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>Ferreri&apos;s Bar</name>
+      <desc>Entering this bar, one immediately notices the oaken paneling is darkened by years of smoking. All the waitresses walk about in short white ruffled skirts carrying huge steins of beer and giggling over the guys. All around the bar, everyone is eating pizza and enjoying their favorite drink. Looking around, someone notices a door located to the east.</desc>
+      <exits n='333' e='398' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='398' flags='b'>
+      <name>Ferreri&apos;s Backroom</name>
+      <desc>A huge 4 poster bed is centered in the room. It is covered in quilts and feather pillows. A fireplace in the corner is burning brightly and there are glasses of scotch sitting on the table with 3 chairs by the fire. Anyone who needs a place to lay down for a while is welcome to get in bed and take a nap.</desc>
+      <exits w='397' in='399' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='399' flags='b'>
+      <name>Ferreri&apos;s Bed</name>
+      <desc>Everyone is snuggled under the covers, watching the fire and drinking scotch. One wonders why someone would ever leave such a wonderful place but realizes that they can not spend all their life in bed. Eventually, everyone will have to get out of bed.</desc>
+      <exits out='398' no-exit='moves.noexit.7'/>
+   </location>
+
+</fed2-map>

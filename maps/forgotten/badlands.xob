@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<object-list version='16' editor='Version 1.37'>
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>cattle prod</name>
+      <id>cattleprod1</id>
+      <desc>A long metal pole with 2 electroids sticking out one end and controls at the other.</desc>
+      <vocab cmd='drop' event='item.prod.1'></vocab>
+      <vocab cmd='destroy' event='item.prod.2'></vocab>
+      <vocab cmd='use' event='item.prod.3'></vocab>
+      <vocab cmd='beat' event='item.prod.4'></vocab>
+      <vocab cmd='poke' event='item.prod.5'></vocab>
+      <vocab cmd='probe' event='item.prod.6'></vocab>
+      <vocab cmd='zap' event='item.prod.3'></vocab>
+      <vocab cmd='angel' event='item.prod.7'></vocab>
+      <vocab cmd='gizmo' event='item.prod.8'></vocab>
+      <vocab cmd='gizmo2' event='item.prod.9'></vocab>
+      <vocab cmd='squeeky' event='item.prod.13'></vocab>
+      <vocab cmd='nomad' event='item.prod.10'></vocab>
+      <vocab cmd='list' event='item.prod.14'></vocab>
+   </object>
+
+   <object type='static' start='267' visibility='0' size='1' weight='1' flags='i'>
+      <name>cattle prod</name>
+      <id>cattleprod_buy1</id>
+      <desc>A long metal pole with 2 electroids sticking out the end.</desc>
+      <vocab cmd='buy' event='store.prod.1'></vocab>
+      <vocab cmd='ex' event='store.prod.6'></vocab>
+      <vocab cmd='examine' event='store.prod.6'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>dohicky</name>
+      <id>dohicky1</id>
+      <desc>A small electronic device attached to your com unit</desc>
+      <vocab cmd='drop' event='item.dohicky.1'></vocab>
+      <vocab cmd='destroy' event='item.dohicky.2'></vocab>
+      <vocab cmd='give' event='item.dohicky.3'></vocab>
+      <vocab cmd='remove' event='item.dohicky.4'></vocab>
+   </object>
+
+   <object type='static' start='267' visibility='0' size='1' weight='1' flags='i'>
+      <name>dohicky</name>
+      <id>dohicky_buy</id>
+      <desc>A small electronic device attached to your com unit</desc>
+      <vocab cmd='buy' event='store.dohick.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>replicon</name>
+      <id>replicon1</id>
+      <desc>A control unit with a lot of buttons.</desc>
+      <vocab cmd='drop' event='item.replicon.1'></vocab>
+      <vocab cmd='yak42s' event='item.replicon.2'></vocab>
+      <vocab cmd='cattle' event='item.replicon.3'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='i'>
+      <name>tdx</name>
+      <id>tdx_buy</id>
+      <desc>Looking at the display a warning has been stencilled on it in big, red letters: WARNING - HIGH EXPLOSIVE. It is full of TDX.
+
+
+
+
+
+</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>tdx</name>
+      <id>tdx_pack</id>
+      <desc>The packet has a warning stencilled on it in big, red letters: WARNING - HIGH EXPLOSIVE. You need to handle this stuff carefully or something drastic will happen.
+
+
+
+
+
+</desc>
+   </object>
+
+   <object type='static' start='267' visibility='0' size='1' weight='1' flags='i'>
+      <name>yak 42s</name>
+      <id>yak42_buy1</id>
+      <desc>Yak 42s</desc>
+      <vocab cmd='buy' event='store.yak.1'></vocab>
+      <vocab cmd='ex' event='store.yak.6'></vocab>
+      <vocab cmd='examine' event='store.yak.6'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>yak 42s</name>
+      <id>yak42_pack</id>
+      <desc>A pack of Yak 42s wrapped in a clear air tight, resealable plastic case</desc>
+      <vocab cmd='smoke' event='item.yak.4'></vocab>
+      <vocab cmd='get' event='item.yak.3'></vocab>
+      <vocab cmd='destroy' event='item.yak.1'></vocab>
+      <vocab cmd='drop' event='item.yak.2'></vocab>
+      <vocab cmd='list' event='item.yak.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>yak 42</name>
+      <id>yak42_single</id>
+      <desc>A long slender cigarette with a self-ignition patch at the end.</desc>
+      <vocab cmd='smoke' event='item.yak.10'></vocab>
+      <vocab cmd='drop' event='item.yak.9'></vocab>
+      <vocab cmd='destroy' event='item.yak.8'></vocab>
+      <vocab cmd='use' event='item.yak.10'></vocab>
+      <vocab cmd='list' event='item.yak.15'></vocab>
+      <vocab cmd='light' event='item.yak.10'></vocab>
+      <vocab cmd='replicon' event='item.yak.16'></vocab>
+   </object>
+
+</object-list>
+

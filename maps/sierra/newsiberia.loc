@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<fed2-map title='New Siberia' version='1.00' editor='standard' from='329' to='Sierra.Sierra Space.199'>
+
+   <location num='72'>
+      <name>Old Capital Building</name>
+      <desc>       While once the seat of terran government in New Siberia, the old capitol building has been transformed into a museum of the sector&apos;s history. The stairs from the street lead into a long corridor, with a number of smaller rooms leading off in all directions. Immediately opposite the doors to the exterior of the building is a pair of large mahogany doors that lead into the old legislative chamber. The smaller rooms off the main corridor have been turned into local history exhibits, with the room to the immediate left of the door to the outside containing information regarding the founding of the sector, and continuing on around the main corridor until arriving back at the door to the right of the main entrance which seems to contain material from just before the outbreak of the war. The legislative chamber itself has been left intact, with its neatly aligned rows of seats before an imposing dais at the front of the auditorium-style room.</desc>
+      <exits s='136'/>
+   </location>
+
+   <location num='73' flags='b'>
+      <name>Bulls And Bears</name>
+      <desc>        Located at the terminus of Commerce Avenue, Bulls and Bears has been the premier after-work establishment for Siberia&apos;s business elite for centuries. The bar itself runs along the back wall, being solidly composed of a dark local wood and kept polished well enough it could almost be used as a mirror. Behind it sit shelves full of various liquors from throughout confederation space, with a mural of the city&apos;s skyline behind the shelving barely visible through gaps between the bottles. The walls her are wood paneled, made of the same material as the bar and kept in equally immaculate shape. Scattered throughout the remaining space are a series of circular wooden tables, surrounded by wooden chairs with luxurious red leather cushions. Each table has a laser-carved detail of either a bull or a bear in the top, with the bull tables outnumbering bear tables by exactly one. Set off into one corner of the establishment are a dartboard and a pair of pool tables.</desc>
+      <exits s='137'/>
+   </location>
+
+   <location num='74'>
+      <name>Progress Hotel</name>
+      <desc>       In its latest incarnation, the Progress Hotel is an imposing glass and steel structure towering more than two thousand feet above the surface of New Siberia. The ground floor lobby is a model of modern elegance, themed in black and gold. Golden posts with a black velvet rope threaded between them form lines leading up to the reception desk, itself an imposing onyx structure with the hotel&apos;s check-in terminals set into it. Situated centrally in the lobby is a cluster of lifts leading up to the various floors of the hotel. The remainder of the space is occupied by a scattering of soft black chairs and onyx tables with data terminals set into the tops. A small cafe has also been set up, serving a score of variations on the theme of &apos;coffee&apos;. The entire north wall is dominated by a large mural depicting this section of the city as it has changed over time... and the six different incarnations this hotel has gone through, growing with the city around it. Progress indeed.</desc>
+      <exits s='138'/>
+   </location>
+
+   <location num='136'>
+      <name>Adam Smith Boulevard</name>
+      <desc>        Cutting though the heart of New Siberia&apos;s old government district, Adam Smith Boulevard provides a spacious escape from the glass and steel valley to the west. The buildings here are lower slung, made from a dark grey native stone, and accessed by broad stairways that lead up to second floor entrances. Much of the purplish-blue sky is visible here, and trees line the pedestrian walkways on either side of the road to provide a more civilized feel. Two large domed buildings situated directly across from each other draw the majority of the pedestrian traffic through the area: The larger of the two, located to the north, is the old capitol building. The smaller, to the south, is the Siberia Museum of Art. Along the pedestrian walkways a number of vendors have set up small hovercarts, selling everything from food to cheap souvenirs.</desc>
+      <exits n='72' e='137' s='200'/>
+   </location>
+
+   <location num='137'>
+      <name>Commerce Avenue North</name>
+      <desc>        Running through the heart of downtown New Siberia, Commerce Avenue once served as the dividing line between the governmental and commercial districts. With the transfer of the capitol off-world, however, the flavor of the commercial district has slowly begun to creep over into the old governmental areas, leaving the contrast less marked than it once was. From street-level, the impression is almost one of standing in a glass and durasteel valley, with structures rising into the hundreds of stories above, leaving only a line of the purplish-blue sky visible directly above. The air here is constantly alive with the soft whine of engines provided by the hovercars constantly zipping from building to building above. Reaching the center of the downtown district, the road here dead-ends against a solid wall of buildings, turning off to either side to form Adam Smith Boulevard and Market Street, two of Siberia&apos;s other main thoroughfares.</desc>
+      <exits n='73' e='138' s='201' w='136'/>
+   </location>
+
+   <location num='138'>
+      <name>Market Street</name>
+      <desc>        Travel down Market Street is a descent further into the glass and steel valley that is New Siberia&apos;s commercial district. Buildings under 200 stories are a rarity here, leaving only a thin strip of sky visible above, the view occluded often by the myriad of hovercars that race to and fro between the skyscrapers. The pedestrian walkways are narrow here, and usually just as crowded as the skies above as people go about their business. The dim light from the blocked sky above is compensated for by the garish neon signs along the various buildings, leaving whole sections of the street bathed in brilliant reds, blues, yellows, and greens.</desc>
+      <exits n='74' s='202' w='137'/>
+   </location>
+
+   <location num='200'>
+      <name>Museum of Art</name>
+      <desc>       A small entranceway is located at the top of the stone stairs that lead back to the street here, just large enough to contain a ticket booth and a red velvet rope that snakes between golden posts to form visitors into an orderly line for admission. The main building itself is circular, with a single long corridor through the North-South axis of the building bisecting concentric rings that form the exhibits. The outermost, and hence largest, rings are dedicated to modern works of art, with many holographic pieces floating above the floor, and digital images that rapidly shift and warp on their display terminals. As one moves further in, however, these displays give way to more physical media... stone, canvas, wood, and metal. The innermost ring contains a handful of paintings brought from Earth, some up to a millennium in age, the centerpiece of the museum&apos;s collection.</desc>
+      <exits n='136'/>
+   </location>
+
+   <location num='201'>
+      <name>Commerce Avenue South</name>
+      <desc>         Running through the heart of downtown New Siberia, Commerce Avenue once served as the dividing line between the governmental and commercial districts. With the transfer of the capitol off-world, however, the flavor of the commercial district has slowly begun to creep over into the old governmental areas, leaving the contrast less marked than it once was. From street-level, the impression is almost one of standing in a glass and durasteel valley, with structures rising into the hundreds of stories above, leaving only a line of the purplish-blue sky visible directly above. The air here is constantly alive with the soft whine of engines provided by the hovercars constantly zipping from building to building above, and interrupted occasionally by the loud rumble of a transport&apos;s departure from the spaceport to the south.</desc>
+      <exits n='137' s='265'/>
+   </location>
+
+   <location num='202'>
+      <name>Shopping Center</name>
+      <desc>       One of the many shopping centers located in downtown New Siberia, this beacon of consumerism occupies nearly all of one of the massive towers that rise up from the street. The ground floor is little more than a lobby area, with large display screens posted near the multitude of elevators leading upwards to show the themes of various floors and sections of the building. Nearly anything for personal use can be found here, from clothing to sports equipment to firearms, and with several floors generally dedicated to shops housing a particular type of product, the variety available here is likely unmatched short of the home systems. Despite the massive size of the structure, the corridors are frequently crowded with shoppers, a testament to the free flow of money in this section of town. Milling about through the crowds is a handful of armed security guards in the black uniforms of the center&apos;s private security firm.</desc>
+      <exits n='138'/>
+   </location>
+
+   <location num='265'>
+      <name>SpacePort Terminal </name>
+      <desc>        Located on the outskirts of town, New Siberia&apos;s starport terminal is only one section of the large duracrete doughnut that comprises the starport complex. The terminal is constantly full of commotion, with passengers going about the busy work of off-planet travel hurrying back and forth to their various destinations. Holographic displays float in the air spaced evenly around the terminal complex, showing the status of commercial arrivals and departures, interrupted periodically as a busy or oblivious traveler barrels through the projection. As the building curves around to the east, a smaller door labeled Commodity Exchange seems to attract a higher-class crowd, dressed mostly in suits.</desc>
+      <exits n='201' s='329' sw='328'/>
+   </location>
+
+   <location num='328' flags='e'>
+      <name>Commodity Exchange</name>
+      <desc>        This large room is a continuation of the spaceport complex as it wraps around the landing pad, and seems to have originally been some sort of hangar space, judging from the blue lines on the floor. It has, however, been converted to a commodity warehouse for imports and exports, with racks of crates towering over the people walking below, and hover-lifts maneuvering the cargo into the various assigned sections. Located in a circular cluster along the floor are a set of market terminals for automated transactions, though the area is frequently full of businessmen who wish to conduct matters in a more personal manner as well. As with the hangars, the room is bathed in a harsh white light from the strips in the ceiling above.</desc>
+      <exits ne='265' e='329'/>
+   </location>
+
+   <location num='329' flags='yrhi'>
+      <name>Siberia Landing Pad</name>
+      <desc>        The vast dimensions of New Siberia&apos;s spaceport are perhaps best appreciated from standing on the landing pad, surrounded entirely by the duracrete doughnut of the spaceport complex, with the only break from grey being the purplish-blue sky above. Various doors lead off into the complex, several small human-sized ones along a slice to the north leading into the terminal building, and large durasteel doors sized for starships around the rest of the complex leading into hangar complexes. Many of the hangar doors bear the insignia of the Siberian Trading Corporation, some even sporting armed security guards. The landing pad itself is dominated by a set of five lighted rings, marking places for spacecraft actually arriving and departing, with lighted pathways marking taxi directions to the outer perimeter and the hangars that line it.</desc>
+      <exits n='265' w='328'/>
+   </location>
+
+</fed2-map>
+
+

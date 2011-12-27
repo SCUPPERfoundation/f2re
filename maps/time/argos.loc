@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Argos' version='70' editor='standard' from='1886' to='Time.Time Space.2064'>
+
+   <location num='0'>
+      <name>Planet Store Room</name>
+      <desc>No way out.</desc>
+   </location>
+
+   <location num='1822' flags='b'>
+      <name>Monitoring Station</name>
+      <desc>From this location you are able to monitor the inhabitants and any visitors to Argos. Out leads to the Landing Pad.</desc>
+      <exits out='1886'/>
+   </location>
+
+   <location num='1885' flags='eyrb'>
+      <name>Argos Trading Exchange</name>
+      <desc>Trading is encouraged on Argos.  The Landing Pad is East.</desc>
+      <exits e='1886'/>
+   </location>
+
+   <location num='1886' flags='yrhib'>
+      <name>Argos Landing Pad</name>
+      <desc>Welcome to planet Argos.  The Exchange is West.  All other services are found here on the Landing Pad.</desc>
+      <exits w='1885' in='1822'/>
+   </location>
+
+</fed2-map>

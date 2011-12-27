@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<fed2-map title='Erg Space' version='1.00' editor='standard'>
+
+   <location num='135' flags='s'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='136'/>
+   </location>
+
+   <location num='136' flags='s'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='137' w='135'/>
+   </location>
+
+   <location num='137' flags='s'>
+      <name>Space</name>
+      <desc>Nothing...absolutely nothing, that&apos;s why it&apos;s called space</desc>
+      <exits e='138' s='201' w='136'/>
+   </location>
+
+   <location num='138' flags='sp'>
+      <name>Almein Orbit</name>
+      <desc>After trekking through space you have finally arrived at Almein</desc>
+      <exits w='137'/>
+   </location>
+
+   <location num='201' flags='s'>
+      <name>Space</name>
+      <desc>Ahh...empty, devoid space</desc>
+      <exits n='137' s='265'/>
+   </location>
+
+   <location num='265' flags='slp'>
+      <name>Link</name>
+      <desc>Welcome to Almein Space</desc>
+      <exits n='201'/>
+   </location>
+
+</fed2-map>

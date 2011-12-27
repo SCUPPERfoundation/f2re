@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<fed2-map title='The Rift Space' version='29' editor='standard'>
+
+   <location num='136' flags='sl'>
+      <name>Outside The Rift</name>
+      <desc>Your viewscreen shows an enormous ribbon of multi-hued brightness stretching across this area of space. It resembles a massive rent in the black fabric of the void that allows light to pour through from some other dimension. However, sensors show it to be a dense nebulous cloud of particulate matter and radioactive gases circling a star system.  This vast ring appears as a ribbon from your edge-on position.  Unseen, within the cloud but registered by your ship&apos;s instruments, massive asteroids tumble in eccentric orbits around a small yellow star. The relative proximity of a white dwarf with the last vestiges of a planetary nebula seeping slowly into space may explain how some of this energy and material ended up trapped  on the periphery of the otherwise uninteresting system.</desc>
+      <desc>   The Link Beacon winks balefully at you and transmits a message telling you that you are cleared to either jump to a less hazardous region of space or risk heading in-system through the Rift.</desc>
+      <exits se='201' s='200' sw='199' no-exit='space.space.1'/>
+   </location>
+
+   <location num='199' flags='s'>
+      <name>The Rift Space</name>
+      <desc>The blue-white planet of Ritual lies to the east of your present position. You&apos;re dangerously close to the gas clouds and tumbling asteroids that ring the system.  A trio of asteroids shows on your scanners as being somehow connected to one another. A close inspection reveals that the smooth spokes connecting the three rocks could not be of natural origin.</desc>
+      <exits ne='136' e='200'/>
+   </location>
+
+   <location num='200' flags='s'>
+      <name>Inside The Rift, Ritual Orbit</name>
+      <desc>Below you lies the blue-white marbled surface of Ritual. Great hurricane spirals spin across the oceans, almost totally unimpeded by land and it&apos;s hard to imagine what the surface conditions might be beneath those massive storms. Sensors show gravity to be slightly less than Earth Standard and a breathable atmosphere.</desc>
+      <desc>	An orbiting satellite sends out an automated message with the coordinates for a landing site on one of the few small islands outside the major storm tracts and warns you that anyone visiting Ritual must report to the medical center upon arrival.  The coordinates given appear to be right in the center of a hurricane. There is a very weak signal coming from the link to the North and outside The Rift.</desc>
+      <exits n='136' e='201' w='199' no-exit='space.space.1'/>
+   </location>
+
+   <location num='201' flags='s'>
+      <name>Alongside the Wreckage of DSS Liberty</name>
+      <desc>The battered remnants of a star cruiser lies off your port bow.  Great chunks of hull are missing or dented beyond recognition. The ship configuration is not one you recognize immediately and the ship registration number does not appear in any Federation records that you can access.</desc>
+      <desc>A crackling distress call plays over and over on your ship to ship communicator system. &quot;Mayday, Mayday.. This is DSS Liberty. We have been severely damaged, star drive is inoperable, life support failing.  A radiation leak is forcing us to abandon ship to the planet below.  Look for us at... &quot; the message cuts out and, after a few minutes of static, begins again. The section of hull where the shuttle bay sits looks more or less intact.</desc>
+      <desc>The radiation levels are far lower than one would expect from a recent accident.</desc>
+      <desc>To the west is the blue-white world, Ritual.  The passage out of the Rift lies to the North West.</desc>
+      <exits w='200' nw='136'/>
+   </location>
+
+</fed2-map>

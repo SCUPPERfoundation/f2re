@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<fed2-map title='Eriez Space' version='4' editor='standard'>
+
+   <location num='202' flags='sl'>
+      <name>Edinboro Orbit and link</name>
+      <desc>Your comm unit buzzes with a tight beam transmission, &quot;Welcome to Eriez Space. This is Edinboro Space Command.  You may take your shuttle to the surface when your are ready.  The people of Edinboro welcome you.  Please enjoy your stay, all trading with planet Dorm please proceed to the south.&quot;</desc>
+      <exits s='266' no-exit='messages.noexit.1'/>
+   </location>
+
+   <location num='266' flags='s'>
+      <name>Dorm Orbit</name>
+      <desc>Your comm unit buzzes with a tight beam transmission, &quot;Welcome to Eriez Space. This is Dorm Space Command. Please land when you are ready, or if you wish return north to the link.&quot;</desc>
+      <exits n='202'/>
+   </location>
+
+</fed2-map>

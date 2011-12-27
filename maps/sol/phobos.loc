@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<fed2-map title='Phobos' version='4' editor='standard' from='152' to='Sol.Sol Space.659'>
+
+   <location num='0'>
+      <name>Phobos storage</name>
+      <desc>   All the mobiles that will inhabit Phobos once mobiles are implemented, are currently stored here as flat, 2-D models propped up against the walls.</desc>
+   </location>
+
+   <location num='152'>
+      <name>Phobos shuttle pad</name>
+      <desc>   Phobos doesn&apos;t get many visitors; apart from scientists, the only people to be interested in visiting this small, insignificant moon are traders who will go anywhere they can buy and sell goods. This pad is where their shuttles are docked while they conduct their business. The surface here has been treated with a metal coating, so shuttles can use magnetics to hold themselves in place - there&apos;s no gravity on such a small body of rock.</desc>
+      <desc>   To the southwest looms the huge geodesic dome that houses the moon&apos;s Visitors Center. Neon lights on the outside of the dome proclaim it to be the property of The Phobos Pharmaceuticals Cooperative. Everything you could need will be found inside.</desc>
+      <desc>   Southeast, you can see some parked buggies.</desc>
+      <exits se='217' sw='215' in='215'/>
+   </location>
+
+   <location num='215'>
+      <name>Airlock</name>
+      <desc>   This airlock provides entrance - and exit - to the Phobos Visitors Center. The southwest door, which leads in, has a large red sign that warns you that artificial gravity is in operation inside the dome, and an arrow indicates which way is &quot;down&quot; so you can make sure your feet are pointing in the right direction.</desc>
+      <desc>   The northeast door leads out to the landing pad.</desc>
+      <exits ne='152' sw='278' in='278' out='152'/>
+   </location>
+
+   <location num='217'>
+      <name>Buggy park</name>
+      <desc>   The various domes on Phobos have been built some distance apart - after all, when dealing with potentially hazardous biological materials, it makes sense to minimize the chance of contamination. Magnetic tracks have been laid to link the domes, and small buggies following the tracks transport people and goods.</desc>
+      <desc>   There are several unused buggies here. If you want to visit one of the other domes, just climb in.</desc>
+      <exits nw='152' in='218'/>
+   </location>
+
+   <location num='218' flags='t'>
+      <name>Buggy</name>
+      <desc>   This is a single-seater buggy designed to move one person between the various domes on Phobos, by following the magnetic tracks which have been laid down on the surface. The buggy is automated so no skill is required to operate it. The control panel has four buttons on it which are labelled with a destination - just press the button and the buggy will take you there.</desc>
+      <desc>   Button 1 is labelled &quot;Shuttle Pad&quot;. Button 2 takes you to &quot;Alpha Dome&quot;. Button 3 is for &quot;Beta Dome&quot; and button 4, &quot;Gamma Dome&quot;.</desc>
+      <desc>   If you don&apos;t want to go anywhere, just get out of the buggy.</desc>
+      <exits out='217'/>
+      <events enter='buggy.enter.1'/>
+   </location>
+
+   <location num='277' flags='e'>
+      <name>Trading exchange</name>
+      <desc>   Clusters of traders gather around the screens, watching avidly as the prices change moment by moment. Occasionally one of them exclaims in excitement, or sighs and groans in despair, as fortunes are made or lost.</desc>
+      <desc>   Around the room are large tubs containing brightly colored flowers. A strange sight to find on a small airless moon, you would think! But one of the by-products of the Phobos scientists&apos; biological research has been fertilizers and other compounds that allow plants to be grown with ease in the most inhospitable conditions - something that has been a great help to humanity&apos;s efforts to colonize the Solar System and beyond.</desc>
+      <desc>   The dome continues south, east and southeast.</desc>
+      <exits e='278' se='342' s='341'/>
+   </location>
+
+   <location num='278'>
+      <name>Visitors Center</name>
+      <desc>   The Phobos Visitors Center is a large dome, and this entrance hall is impressive in scale. It is dominated by a huge sculpture hanging in mid-air with no visible support, which turns very slowly. At first it looks like a piece of abstract art - then you realize that it&apos;s a DNA spiral. What an appropriate symbol for a world that specializes in the biological sciences.</desc>
+      <desc>   The floor has been covered with the newly-developed live astro-turf, one of the great successes of the cooperative&apos;s scientists.</desc>
+      <desc>   Looking west, you can see that part of the dome has been kitted out with the equipment needed by traders, while south, Armstrong Cuthbert personnel have claimed an area for themselves. Southwest, a receptionist will help you if you need anything else.</desc>
+      <exits ne='215' s='342' sw='341' w='277' out='215'/>
+   </location>
+
+   <location num='340' flags='b'>
+      <name>Morph Bar</name>
+      <desc>   This bar doesn&apos;t get used by any of the personnel who live and work on Phobos - they have their own recreational facilities. It provides refreshment for visitors, that&apos;s all. Still, the effect of the work done on this moon can be found here, as in other areas of the dome. The walls shimmer and shine, and very slowly change color - the texture alters, too, from smooth to rough, soft to hard. When you comment on this, the bartender explains that the walls are coated with a genetically engineered fungus - sounds icky, but the effect is pretty and rather soothing. Although when combined with large quantities of alcohol you imagine it would be pretty disorienting, too!</desc>
+      <desc>   The exit out of the bar is east.</desc>
+      <exits e='341' out='341'/>
+   </location>
+
+   <location num='341' flags='a'>
+      <name>Help desk</name>
+      <desc>   A gum-chewing receptionist looks up as you approach and says in a monotone, &quot;Welcome-to-Phobos-my-name-is-Tracey-how-may-I-help-you.&quot; Oh dear. While most of the personnel on Phobos are of higher than average quality, this one is a real dim bulb. You&apos;d better not have anything really complicated to ask her. In fact, all that she is good for is to sort out accommodation for overnight visitors, to point you in the right direction, or to give authorization to use a buggy.</desc>
+      <desc>   When queried, she tells you that the dormitory is south, a bar is west, Armstrong Cuthbert east and the exchange north. The dome exit is northeast.</desc>
+      <desc>   If you want to use one of the buggies, ask Tracey for authorization.</desc>
+      <exits n='277' ne='278' e='342' s='405' w='340'/>
+      <events in-room='newbod.message.1'/>
+   </location>
+
+   <location num='342' flags='c'>
+      <name>Armstrong Cuthbert</name>
+      <desc>   Phobos may be a small moon that doesn&apos;t get many visitors, but despite that, Armstrong Cuthbert has a presence here. You can see several workers laboring over communicators and screens with intense and dedicated industry.</desc>
+      <desc>   Actually, a posting to Phobos is considered something of a plum position for AC personnel. After all, being on the cutting edge of research, the inhabitants are the first to experience the benefits of the new discoveries in things biological. An example is the organic technology that has created living computers, in use in AC&apos;s office as part of the testing process. A hybrid of living creature and machine, these devices are no more intelligent than the usual mechanical computers and droids, but they are capable of things hitherto the sole preserve of living beings: they have emotions and empathy.</desc>
+      <desc>   The dome continues west, northwest and north.</desc>
+      <exits n='278' w='341' nw='277'/>
+   </location>
+
+   <location num='405' flags='a'>
+      <name>Guest dorms</name>
+      <desc>   Sometimes visitors to Phobos have a need to stay overnight. The scientists&apos; living quarters can house guests, but when it&apos;s more convenient for them to remain in the main dome, they can bed down for the night in here.</desc>
+      <desc>   More astroturf carpets the dormitories, providing a wonderfully soft feel underfoot for those getting ready for bed. Privacy is provided by curtains, which can be pulled around the individual beds. They, too, seem to be made of some kind of living thing - thick woven vines of some kind.</desc>
+      <desc>   The beds have fur coverings for sleepers to snuggle under. The fur is long and silky, and each one has different markings. Nothing remarkable there, you think... until you reach out and touch one of them. It starts to purr, and rubs itself against you. It&apos;s a living fur!</desc>
+      <desc>   The dorm exit is north.</desc>
+      <exits n='341' out='341'/>
+   </location>
+
+   <location num='472' flags='t'>
+      <name>Alice and Bob&apos;s pad</name>
+      <desc>   Professor Alice Smith and Professor Bob Smith were an important part of the negotiations which led to Phobos Pharmaceuticals Cooperative being set up, when the base was under threat of closure by its previous owners. They married soon after, and have been together ever since.</desc>
+      <desc>   They specialize in deciphering and altering the genetic code of various species, in order to create new variants. In fact, they are fascinated by codes in general, and adore crosswords and other puzzles. The walls of their room are covered with puzzles which they delight in setting for each other.</desc>
+      <exits s='536' out='536'/>
+   </location>
+
+   <location num='522' flags='t'>
+      <name>Small dining room</name>
+      <desc>   These small rooms can be used by groups or couples who want a bit of privacy when they eat - whether for business meals, or personal get-togethers. This room was recently in use for a meeting of some kind. Eight places were set, and next to each is a pile of discarded notes. A quick glance shows them to be agendas, minutes, proposals and other business documents, all discussing a project in scientific terms so convoluted you can&apos;t make head nor tail of it.</desc>
+      <desc>   A small cleaning droid is rolling around the table picking up the plates and utensils. It piles them in a stack so high, you are sure it won&apos;t get them back to the kitchen without mishap!</desc>
+      <desc>   The door in the south wall leads back to the main canteen area.</desc>
+      <exits s='586' out='586'/>
+   </location>
+
+   <location num='523' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Feeding the large population of Phobos needs a mass of supplies. The biological sciences of the moon does result in a small amount of edible items, both plant and animal, but because it&apos;s an experimental facility they are not geared up to grow large quantities of food. Therefore, much of the colony&apos;s sustenance comes from imported ingredients.</desc>
+      <desc>   This storeroom is where those ingredients are stored until they are needed. Huge crates and drums contain... well, you can&apos;t tell exactly what they contain, because there are no visible labels. Presumably the cooks know what&apos;s where, though, otherwise preparing meals would be somewhat haphazard.</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='587' out='587'/>
+   </location>
+
+   <location num='534' flags='t'>
+      <name>Elbow</name>
+      <desc>   Corridors Alpha-A and Alpha-B join here at this bend, going south and east respectively.</desc>
+      <exits e='535' s='598'/>
+   </location>
+
+   <location num='535' flags='t'>
+      <name>Alpha-B</name>
+      <desc>   The walls of this east-west corridor are covered in shiny white plastic. The plastic has in turn been covered with writing, most of it incomprehensible equations, in a variety of colors. Presumably it means something to the scientists who wrote it!</desc>
+      <desc>   A maintenance bot trundles slowly along the corridor. When it gets to a patch with writing on it, with a flash-click-whirr it takes a photo of the wall, before wiping it clean so it can be used by the next passing biologist who gets hit by inspiration when away from his computer!</desc>
+      <exits e='536' w='534'/>
+   </location>
+
+   <location num='536' flags='t'>
+      <name>Confluence</name>
+      <desc>   Corridor Alpha-F heads south towards the dome center. It forms a t-junction with corridor Alpha-B, which runs east and west.</desc>
+      <desc>   North is an open door, labelled Alpha-B-7. The picture shows a crossword puzzle.</desc>
+      <exits n='472' e='537' s='600' w='535'/>
+   </location>
+
+   <location num='537' flags='t'>
+      <name>Alpha-B</name>
+      <desc>   There are no doors on the northern side of this east-west corridor, and the southern wall just has one door, numbered Alpha-B-10. The picture is a still from a very old movie. It shows a young girl, wearing red sparkly shoes, clutching a small dog.</desc>
+      <exits e='538' s='601' w='536'/>
+   </location>
+
+   <location num='538' flags='t'>
+      <name>Elbow</name>
+      <desc>   Trust biological scientists to use a body-part to describe a bend in a corridor... here, corridor Alpha-B goes west, while Alpha-C will take you south.</desc>
+      <exits s='602' w='537'/>
+   </location>
+
+   <location num='586' flags='bt'>
+      <name>Noshery</name>
+      <desc>   Scientists work hard and keep very odd hours, and many of them have neither the time nor inclination to prepare their own meals. This large canteen - nick-named the Noshery by the residents - is in operation round the clock, offering hot and cold food suitable for whatever mealtime you happen to think it is. The tables are covered with paper cloths, upon which the diners scribble notes and equations which occur to them while they eat, tearing the relevant parts off to take away.</desc>
+      <desc>   You have walked in during a quiet period; there are only a few diners here now. A quick glance at their plates proves the variety of food the kitchen can provide - you can see a bowl of porridge, a plate of salad, a meat-n-2-veg meal and some kind of sloppy, sticky dessert being eaten by different people.</desc>
+      <desc>   Along the north wall are doors leading to smaller dining rooms. One of the doors is open.</desc>
+      <desc>   The sound of rattling pots and pans comes from the kitchen to the east. The exit is south.</desc>
+      <exits n='522' e='587' s='650' out='650'/>
+   </location>
+
+   <location num='587' flags='ta'>
+      <name>Kitchen</name>
+      <desc>   This huge industrial kitchen is a constant whirlwind of activity that never stops. The challenge of providing food on demand at all hours of the day and night is a daunting one, but the head chef takes it all in his stride. He stands in the center of the room, bellowing orders to his helpers - both human and droid. He does no cooking himself, just tells everyone else what to do, occasionally tasting and approving dishes, or barking out commands such as, &quot;More salt!&quot; &quot;Add some more nutmeg!&quot; &quot;This needs some brillig to give it an edge.&quot;</desc>
+      <desc>   The chef must be some kind of miracle-worker, because from out of this mayhem, some great food appears, and it&apos;s always available when it&apos;s needed.</desc>
+      <desc>   The west door leads to the canteen, while north is a storeroom.</desc>
+      <exits n='523' w='586' out='586'/>
+   </location>
+
+   <location num='597' flags='ta'>
+      <name>Flanario&apos;s room</name>
+      <desc>   This single occupancy room is home to Technician Flanario Jaspirioligicon. His task is to keep the cooperative&apos;s computers running smoothly, a job which gives him plenty of sleepless nights. Despite the long hours he spends working away from this small room, he has gone to some efforts to personalize it, to help him pursue his hobby.</desc>
+      <desc>   In his few off-duty hours, Flanario collects people. That&apos;s how he refers to his activities, anyway. He aims to become intimate with as many of the personnel on Phobos as possible - young or old, male or female, he is not in the least bit concerned. To this end, his tiny room has been kitted out as a love-nest. Living fur coats all the surfaces, so that simply standing on the carpet is a sybaritic experience.</desc>
+      <desc>   Flanario isn&apos;t here right now, but I am sure he&apos;d love to get to know you if you want to wait...</desc>
+      <exits e='598' out='598'/>
+   </location>
+
+   <location num='598' flags='t'>
+      <name>Alpha-A</name>
+      <desc>   Corridor Alpha-A leads north and south past the usual locked doors. Well, you wouldn&apos;t expect to be able to just walk into people&apos;s private residences, would you?</desc>
+      <desc>   Well, actually, the door to the private residence to your west is open, and on the door, underneath the number Alpha-A-3, is written the word &quot;Welcome&quot; in big red letters.</desc>
+      <exits n='534' s='662' w='597'/>
+   </location>
+
+   <location num='600' flags='t'>
+      <name>Alpha-F</name>
+      <desc>   All the doors in the north-south corridor are locked. The pictures on the doors include such things as a candle, dripping wax down the door to the bottom; a bottle of Jaxarian 7-star brandy; and an old-Earth sailing ship.</desc>
+      <exits n='536' s='664'/>
+   </location>
+
+   <location num='601' flags='ta'>
+      <name>Home to Basil and his buddies</name>
+      <desc>   Basil, or Professor Hackenburg as he is known to the Solar System&apos;s scientific community at large, shares this large family unit with what he calls his buddies. Like other family units, the internal walls of the dwelling can be adjusted to change the number, and size, of the rooms. Basil has chosen to remove most of the walls to make one big communal space, containing the largest bed you have ever seen.</desc>
+      <desc>   At the moment, judging by the separate sets of clothing being stored in various parts of the room, Basil has 7 buddies.</desc>
+      <exits n='537' out='537'/>
+   </location>
+
+   <location num='602' flags='t'>
+      <name>Alpha-C</name>
+      <desc>   Corridor Alpha-C stretches north and south, past doors numbered from Alpha-C-1 to Alpha-C-7. These doors all bear pictures which supposedly have some connection to the inhabitants, but you can&apos;t make any sense of what they mean. What could a picture of an elephant signify? Or a pogo stick?</desc>
+      <desc>   Door Alpha-C-4 has a square of live astroturf stuck to it. The door opens onto a room on the east of the corridor.</desc>
+      <exits n='538' e='603' s='666'/>
+   </location>
+
+   <location num='603' flags='t'>
+      <name>Residence of Martha and family</name>
+      <desc>   Professor Martha Philpott works in the team that was responsible for developing the live astroturf which has done so much to ensure the financial success of the cooperative. Her floor is covered with the stuff, as you would expect.</desc>
+      <desc>   On the wall are pictures of various places around the Solar System where the astroturf is used. You don&apos;t recognize any of them!</desc>
+      <desc>   Martha has six children, and because of that she occupies one of the largest family units in the dome. A door in the south wall leads to another part of the large residence.</desc>
+      <exits s='667' w='602' out='602'/>
+   </location>
+
+   <location num='649' flags='t'>
+      <name>Conversation pit</name>
+      <desc>   This room is furnished with lots of comfy chairs and sofas, which can be moved around easily to allow any number of people to form a group. The purpose of the room is discussion, debate and conversation, in a relaxed surrounding. Many of the coop&apos;s most profitable inventions have been developed following a session in this room of throwing around wild ideas at random.</desc>
+      <desc>   There are no rules about what can and cannot be talked about - the only rule is that you can talk about anything!</desc>
+      <desc>   The exit is east. South, a door leads to the media room.</desc>
+      <exits e='650' s='713' out='650'/>
+   </location>
+
+   <location num='650' flags='t'>
+      <name>Alpha Kernal</name>
+      <desc>   The upper level of the Alpha Kernal gives access to the various communal areas in this residential dome. From the smell, you can tell that food is being prepared or eaten to the north. The other rooms are south, east and west, but from here there is no indication of what the rooms are used for.</desc>
+      <desc>   A huge spiral of DNA forms a staircase down to the lower level.</desc>
+      <exits n='586' e='651' s='714' w='649' down='664'/>
+   </location>
+
+   <location num='651' flags='t'>
+      <name>Quiet room</name>
+      <desc>   This room is intended for relaxation and meditation. It is completely white, the walls are made of some soft substance, and the floor is covered with big squishy cushions that invite you to fall into them.</desc>
+      <desc>   Technology has been used to make sure the room remains completely quiet, no matter how many people are in it. Any sound that is created in the room is captured by microphones in the ceiling and fed into a synthesizer, which analyzes it, creates a negative image of it, and plays it back. This happens so fast it is actually played over the original sound, and it has the effect of blanking it out completely.</desc>
+      <desc>   This doesn&apos;t mean you can&apos;t talk in this room - the synthesizer won&apos;t tamper with sound sent via your comm unit. However, although the room is unoccupied now, it would be very bad manners for you to talk or send messages when somebody is relaxing here!</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='650' out='650'/>
+   </location>
+
+   <location num='662' flags='t'>
+      <name>Confluence</name>
+      <desc>   Ordinary people might call this a junction; scientists prefer longer words, so a meeting of three corridors is called a confluence. Here the three corridors are Alpha-A, which heads north and south, and Alpha-E, heading east to the center of the dome.</desc>
+      <exits n='598' e='663' s='726'/>
+   </location>
+
+   <location num='663' flags='t'>
+      <name>Alpha-E</name>
+      <desc>   This east-west corridor crosses the dome, joining the outside corridors to the center of the dome, called the Alpha Kernal.</desc>
+      <exits e='664' w='662'/>
+   </location>
+
+   <location num='664' flags='t'>
+      <name>Alpha Kernal</name>
+      <desc>   The center of the dome is called the Kernal. A very apt pun for biologists! Four corridors meet here. Alpha-F goes north and south, while Alpha-E runs east and west.</desc>
+      <desc>   The space formed by the meeting of four corridors is taken up by a spiral staircase. You realize that it is shaped almost exactly like the huge sculpture suspended in the Visitors Center dome - it&apos;s a DNA spiral. You can climb up to reach the communal areas of the residential dome.</desc>
+      <exits n='600' e='665' s='728' w='663' up='650'/>
+   </location>
+
+   <location num='665' flags='t'>
+      <name>Alpha-E</name>
+      <desc>   This cross-corridor runs east, to the outside edge of the dome, and west, to the middle of the dome. There you will be able to access the upper level.</desc>
+      <exits e='666' w='664'/>
+   </location>
+
+   <location num='666' flags='t'>
+      <name>Confluence</name>
+      <desc>   Corridor Alpha-C stretches north and south, while Alpha-E goes west towards the middle of the dome.</desc>
+      <exits n='602' s='730' w='665'/>
+   </location>
+
+   <location num='667' flags='t'>
+      <name>Martha&apos;s nursery</name>
+      <desc>   When Martha decided it was time to take part in the procreation of the species, she wasn&apos;t in the least half-hearted about it. She had all six of her children incubated and decanted at the same time! They are currently seven months old, and all are asleep in cots in this nursery. Tinkling, spinning mobiles hang from the ceiling above each cot. Closer inspection shows that each one is made up of short stretches of DNA spiral.</desc>
+      <desc>   Two nanny-bots are in constant attendance, checking the sleeping children for damp patches, picking them up and cuddling them if they wake up, and generally seeing to their welfare.</desc>
+      <desc>   Better leave before you make a noise and wake the babies...</desc>
+      <exits n='603' out='603'/>
+   </location>
+
+   <location num='713' flags='t'>
+      <name>Media room</name>
+      <desc>   With similar chairs to the conversation pit, this room is designed for those who want to watch holos and vids or listen to music, either alone or communally. The room is dominated by a huge holo screen which is usually set to display the SSN news channel. Right now, it&apos;s showing a report on the rise in numbers of injuries to teenage boys from using flammarian roods, and discussing whether they should be banned.</desc>
+      <desc>   Each chair is equipped with its own viewscreen and earphones for those that want something different.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='649' out='649'/>
+   </location>
+
+   <location num='714' flags='t'>
+      <name>Rec room</name>
+      <desc>   This room is for general leisure activities - whatever the inhabitants of Phobos feel like doing, which cannot be done in their own rooms. A glance around shows a wide range of activities must take place in here. You would kind of expect there to be a dartboard - and this one has a picture of a Galactic Administration bureaucrat pinned to it - and a pool table, but you can also see an old-fashioned spinning wheel in one corner.</desc>
+      <desc>   The room is filled with small worktables, and each one bears a vase containing brightly-colored flowers. The flowers give off a strong scent; each time you sniff at a different flower, it evokes a different emotion in you. These are mood flowers, one of the innovations of the Phobos labs.</desc>
+      <desc>   Doors lead east and south into different leisure areas, and north leads back to the kernal.</desc>
+      <exits n='650' e='715' s='778' out='650'/>
+   </location>
+
+   <location num='715' flags='t'>
+      <name>Zero-gravity room</name>
+      <desc>   The artificial gravity has been turned off in this room, allowing a range of zero-g activities. Right now, the sport that&apos;s all the rage is zero-g ping-pong, and a table is suspended in the middle of the room. Two young men are batting a ball backwards and forwards over the net, which isn&apos;t as easy as it looks because each time they strike the ball, the reaction makes them float backwards!</desc>
+      <desc>   The exit is west. Make sure your feet are pointing downwards, and are close to the floor, before you go through it!</desc>
+      <exits w='714' out='714'/>
+   </location>
+
+   <location num='726' flags='t'>
+      <name>Alpha-A</name>
+      <desc>   The north-south corridor leads past locked doors, all with numeric designations that act as addresses. Some of the locked doors also have pictures on them, which presumably give some clue as to the likes of the occupants. You can see a door bearing images of fruit, and one with a picture of an elderly man, which may be the occupant.</desc>
+      <desc>   The only open door, which is to the east, has no picture at all.</desc>
+      <exits n='662' e='727' s='790'/>
+   </location>
+
+   <location num='727' flags='t'>
+      <name>Single occupancy unit</name>
+      <desc>   This room is unoccupied at the moment, so there are no personal effects to disguise its small size. Designed for a single man, woman or herm who wishes to live alone, all it contains is a bed, a cubby for storing clothes, and a bathroom area with sink, toilet and shower. The walls are made of gray plastic, and they make the room look extremely dull.</desc>
+      <exits w='726' out='726'/>
+   </location>
+
+   <location num='728' flags='t'>
+      <name>Alpha-F</name>
+      <desc>   The southern section of corridor Alpha-F leads to the dome entrance, while north is the exact center of the dome. That&apos;s the way you should go if you want to visit the communal areas on the upper level.</desc>
+      <exits n='664' s='792'/>
+   </location>
+
+   <location num='729' flags='t'>
+      <name>Cathy&apos;s Castle</name>
+      <desc>   This small room is occupied by Professor Catherine Shoemaker, a famous bio-technologist. She has a formidable brain and was head of the team responsible for developing the new organic technology used for experimental living computers. Despite her stature in the community, her single-occupancy room is no bigger than anybody else&apos;s. And despite her intelligence, she has a wide streak of frivolity, as evidenced by the way she has decorated the room to resemble the inside of a stone castle!</desc>
+      <exits s='793' out='793'/>
+   </location>
+
+   <location num='730' flags='t'>
+      <name>Alpha-C</name>
+      <desc>   This north-south corridor looks very strange. The walls have been treated by a substance which makes them stretch and bulge, so that they look like the surface of boiling water. It&apos;s very strange and somehow disturbing. Perhaps that&apos;s why none of the rooms here seem to be occupied.</desc>
+      <desc>   There is one open door to the east; you cannot read the number because the door, too, continually flexes and changes shape.</desc>
+      <exits n='666' e='731' s='794'/>
+   </location>
+
+   <location num='731' flags='t'>
+      <name>Dual occupancy unit</name>
+      <desc>   This room is intended to be shared by a couple. It is a little larger than the single occupancy units - there is room for a larger bed, and there is also a separate seating area with several chairs. The furniture is also suffering from whatever afflicts the walls outside - it is continually changing shape. It certainly doesn&apos;t seem safe to sit on the chairs!</desc>
+      <exits w='730' out='730'/>
+   </location>
+
+   <location num='778' flags='t'>
+      <name>Hi-gravity room</name>
+      <desc>   To aid those that are concerned about getting, and staying, fit, the gravity in this room can be varied. It will go up to a whopping 10 g, but right now is set at a more tolerable 2 g.</desc>
+      <desc>   Dotted around the room are various types of keep-fit equipment, including weights, a treadmill and a rowing machine. Nobody is using any of the equipment right now - in fact, much of it looks as if it&apos;s hardly ever used! Scientists clearly have more important things to worry about than keeping their bodies in shape.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='714' out='714'/>
+   </location>
+
+   <location num='790' flags='t'>
+      <name>Elbow</name>
+      <desc>   Two corridors join here, forming what the scientists call an elbow. Corridor Alpha-A leads north, and Alpha-D east.</desc>
+      <exits n='726' e='791'/>
+   </location>
+
+   <location num='791' flags='t'>
+      <name>Alpha-D</name>
+      <desc>   The east-west corridor designated Alpha-D has doors on either side, labelled Alpha-D-1 and Alpha-D-2. This numbering system allows anyone who understands it to find their way around, but it is very confusing for first-time visitors, as well as being somewhat impersonal. To address this, most of the inhabitants of the dome have taken to displaying pictures on their doors which give some idea of their achievements or their interests. One of these doors bears a picture of a table-tennis bat; the other, a black top hat. Both doors are locked.</desc>
+      <exits e='792' w='790'/>
+   </location>
+
+   <location num='792' flags='t'>
+      <name>Alpha Dome entrance</name>
+      <desc>   From the outside, Alpha Dome looked like any other dome. Here in the main entrance, the curve of the outer walls is not visible, with straight corridors running off in all directions. There are no signposts to help you find your way around - the residents assume that anyone coming here, already knows where they are going! However, the corridors are labelled with their names.</desc>
+      <desc>   The corridor which runs east and west is Alpha-D, while north is Alpha-F.</desc>
+      <exits n='728' e='793' s='856' w='791'/>
+   </location>
+
+   <location num='793' flags='t'>
+      <name>Alpha-D</name>
+      <desc>   The corridor runs from the east to the west, past locked doors labelled such things as Alpha-D-8 and other similar numbers. One door stands open, to the north. Its number is Alpha-D-11, but it displays some signs of individuality - somebody has pinned a picture of a medieval castle to the door!</desc>
+      <exits n='729' e='794' w='792'/>
+   </location>
+
+   <location num='794' flags='t'>
+      <name>Elbow</name>
+      <desc>   This corner of the dome (yes, even a round dome can have corners when it&apos;s laid out like this) is where western corridor Alpha-D meets northern corridor Alpha-C.</desc>
+      <exits n='730' w='793'/>
+   </location>
+
+   <location num='856' flags='t'>
+      <name>Airlock</name>
+      <desc>   The airlock leads north into the dome, and south onto the surface of the moon. The usual large red arrow reminds those entering the dome that artificial gravity is in use, so that up and down matter - down being where the arrow is pointing.</desc>
+      <exits n='792' s='920' in='792' out='920'/>
+   </location>
+
+   <location num='919' flags='t'>
+      <name>Buggy</name>
+      <desc>   This is a single-seater buggy designed to move one person between the various domes on Phobos, by following the magnetic tracks which have been laid down on the surface. The buggy is automated so no skill is required to operate it. The control panel has four buttons on it which are labelled with a destination - just press the button and the buggy will take you there.</desc>
+      <desc>   Button 1 is labelled &quot;Shuttle Pad&quot;. Button 2 takes you to &quot;Alpha Dome&quot;. Button 3 is for &quot;Beta Dome&quot; and button 4, &quot;Gamma Dome&quot;.</desc>
+      <desc>   If you don&apos;t want to go anywhere, just get out of the buggy.</desc>
+      <exits out='920'/>
+   </location>
+
+   <location num='920' flags='t'>
+      <name>Outside Alpha Dome</name>
+      <desc>   Some kind of phosphorescent substance, applied to the outside of the dome, flashes and sparkles in huge letters, telling you that this is Alpha Dome - the residential dome for scientists and other personnel who are members of the Phobos cooperative. The airlock giving access to the dome is to the north.</desc>
+      <desc>   Looking up, you can see the huge red ball of Mars dominating the sky.</desc>
+      <desc>   There are some buggies parked outside the dome. Get in to visit another dome.</desc>
+      <exits n='856' in='919'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,795 @@
+<?xml version="1.0"?>
+
+<event-list version='54'>
+
+ <category name='event'>
+
+  <section name='book'>
+
+   <event num='1'>
+    <comment>open book -check locked status</comment>
+    <checkvariable name='karnakbook' key='locked' value='unlocked' equals='event.book.20' not-equal='event.book.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>merchant conversation when enter</comment>
+    <checkvariable name='karnakpuzz' key='status' value='complete' equals='stop'/>
+    <message type='text' where='com' who='individual'>You hear the merchant discussing with another customer the problems with a shrine on Pantheon.</message>
+    <setvariable name='karnakpuzz' key='discussion' value='first' temporary='true'/>
+   </event>
+
+   <event num='3'>
+    <comment>locked book try to open</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.1'/>
+   </event>
+
+   <event num='4'>
+    <comment>drop book</comment>
+    <destroyobject where='inventory' map='home' id-name='book'/>
+    <message type='single' where='com' who='individual' lo='msg.book.8'/>
+    <checkinventory map='home' id-name='book' found='stop'/>
+    <clearvariable name='karnakbook'/>
+    <clearvariable name='karnakpage'/>
+   </event>
+
+   <event num='5'>
+    <comment>book creation event</comment>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_book'/>
+    <message type='single' where='com' who='individual' lo='msg.book.9'/>
+    <changestat who='individual' money='-42' change='add' cur-max='current'/>
+    <setvariable name='karnakbook' key='locked' value='locked'/>
+   </event>
+
+   <event num='6'>
+    <comment>read book</comment>
+    <checkvariable name='karnakbook' key='open' value='open' not-equal='event.book.25'/>
+    <checkvariable name='karnakpage' key='bookmark' value='fifth' equals='event.book.7'/>
+    <checkvariable name='karnakpage' key='bookmark' value='fourth' equals='event.book.8'/>
+    <checkvariable name='karnakpage' key='bookmark' value='third' equals='event.book.9'/>
+    <checkvariable name='karnakpage' key='bookmark' value='second' equals='event.book.10'/>
+    <checkvariable name='karnakpage' key='bookmark' value='first' equals='event.book.11'/>
+   </event>
+
+   <event num='7'>
+    <comment>read fifth page</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.15'/>
+    <setvariable name='karnakbook' key='open' value='closed'/>
+    <clearvariable name='karnakpage'/>
+   </event>
+
+   <event num='8'>
+    <comment>read fourth page</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.6'/>
+    <setvariable name='karnakpage' key='bookmark' value='fifth'/>
+   </event>
+
+   <event num='9'>
+    <comment>read third page</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.5'/>
+    <setvariable name='karnakpage' key='bookmark' value='fourth'/>
+   </event>
+
+   <event num='10'>
+    <comment>read second page</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.4'/>
+    <setvariable name='karnakpage' key='bookmark' value='third'/>
+   </event>
+
+   <event num='11'>
+    <comment>read first page</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.3'/>
+    <setvariable name='karnakpage' key='bookmark' value='second'/>
+   </event>
+
+   <event num='12'>
+    <comment>steal book from merchant</comment>
+    <checkvariable name='karnaksteal' key='thief' value='yes' equals='event.book.13' not-equal='event.book.14'/>
+   </event>
+
+   <event num='13'>
+    <comment>has been caught</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.12'/>
+    <message type='single' where='com' who='individual' lo='msg.book.15'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+   </event>
+
+   <event num='14'>
+    <comment>has not been caught before</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.12'/>
+    <message type='single' where='com' who='individual' lo='msg.book.13'/>
+    <message type='single' where='com' who='individual' lo='msg.book.14'/>
+    <setvariable name='karnaksteal' key='thief' value='yes'/>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_book'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <setvariable name='karnakbook' key='locked' value='locked'/>
+   </event>
+
+   <event num='15'>
+    <comment>buy book</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.16'/>
+   </event>
+
+   <event num='16'>
+    <comment>sell book</comment>
+    <checkvariable name='karnakbook' key='locked' value='locked' equals='event.book.17' not-equal='event.book.18'/>
+   </event>
+
+   <event num='17'>
+    <comment>book is locked, try to sell</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.17'/>
+   </event>
+
+   <event num='18'>
+    <comment>sell unlocked book-check for location</comment>
+    <checkmap map='kaos/karnak'  pass='event.book.23' fail='event.book.24' loc='2087'/>
+   </event>
+
+   <event num='19'>
+    <comment>clear vars on return book</comment>
+    <destroyobject where='inventory' map='home' id-name='book'/>
+    <message type='text' where='com' who='individual'>You return the book to the merchant, who takes it from you gratefully.</message>
+    <checkinventory map='home' id-name='book' found='stop'/>
+    <message type='text' where='com' who='individual'>Your name is cleared from the list of known thieves. And all previous records of your stay on Karnak have been erased.</message>
+    <clearvariable name='karnakbook'/>
+    <clearvariable name='karnakpuzz'/>
+    <clearvariable name='karnakpage'/>
+    <clearvariable name='karnaksteal'/>
+   </event>
+
+   <event num='20'>
+    <comment>open book -check if open already</comment>
+    <checkvariable name='karnakbook' key='open' value='open' equals='event.book.22' not-equal='event.book.21'/>
+   </event>
+
+   <event num='21'>
+    <comment>if closed, then open book</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.2'/>
+    <setvariable name='karnakbook' key='open' value='open' temporary='true'/>
+    <setvariable name='karnakpage' key='bookmark' value='first' temporary='true'/>
+   </event>
+
+   <event num='22'>
+    <comment>if open cannot open again</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.17'/>
+   </event>
+
+   <event num='23'>
+    <comment>succeed with sell book</comment>
+    <message type='single' where='com' who='individual' lo='msg.book.18'/>
+    <destroyobject where='inventory' map='home' id-name='book'/>
+    <changestat who='individual' money='15' change='add' cur-max='current'/>
+    <clearvariable name='karnakbook'/>
+    <clearvariable name='karnakpage'/>
+   </event>
+
+   <event num='24'>
+    <comment>not in right loc to sell book</comment>
+    <message type='text' where='com' who='individual'>You can&apos;t find anyone that is willing to buy books here!</message>
+   </event>
+
+   <event num='25'>
+    <comment>try to read a closed book</comment>
+    <message type='text' where='com' who='individual'>You cannot read a closed book!</message>
+   </event>
+
+  </section>
+
+  <section name='checkmap'>
+
+   <event num='1'>
+    <comment>check map for event 1</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.1' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='2'>
+    <comment>check map for event 2</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.2' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='3'>
+    <comment>check map for event 3</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.3' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='4'>
+    <comment>check map for event 4</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.4' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='5'>
+    <comment>check map for event 5</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.5' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='6'>
+    <comment>check map for event 6</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.6' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='7'>
+    <comment>check map for event 7</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.7' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='8'>
+    <comment>check map for event 8</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.8' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='9'>
+    <comment>check map for event 9</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.9' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='10'>
+    <comment>check map for event 10</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.10' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='11'>
+    <comment>check map for event 11</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.11' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='12'>
+    <comment>check map for event 12</comment>
+    <checkmap map='kaos/karnak'  pass='event.teleport.12' fail='event.checkmap.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>fail message for checkmap</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.6'/>
+   </event>
+
+  </section>
+
+  <section name='desert'>
+
+   <event num='1'>
+    <comment>randomized call for desert message</comment>
+    <call event='event.desert.random[2-10]'/>
+   </event>
+
+   <event num='2'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.6'/>
+   </event>
+
+   <event num='8'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.7'/>
+   </event>
+
+   <event num='9'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.8'/>
+   </event>
+
+   <event num='10'>
+    <comment>random desert message</comment>
+    <message type='single' where='com' who='individual' lo='msg.desert.9'/>
+   </event>
+
+  </section>
+
+  <section name='general'>
+
+   <event num='1'>
+    <comment>object not found error</comment>
+    <message type='single' where='com' who='individual' lo='msg.general.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>on enter merch stall if have not solved puzz.</comment>
+    <checkvariable name='karnakpuzz' key='status' value='complete' equals='stop'/>
+    <message type='text' where='com' who='individual'>As you enter the merchant&apos;s stall you over hear him talking with a customer about the troubles at the shrine on Pantheon. It seems the feather of Ma&apos;at is missing from her sacred shrine.</message>
+   </event>
+
+   <event num='3'>
+    <comment>cannot afford that</comment>
+    <message type='text' where='com' who='individual'>You can&apos;t afford that!</message>
+   </event>
+
+  </section>
+
+  <section name='sapphire'>
+
+   <event num='1'>
+    <comment>pluck or get eye or sapphire</comment>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.1'/>
+    <freeze />
+    <delayevent delay='8' event='event.sapphire.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>second death</comment>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.2'/>
+    <delayevent delay='8' event='event.sapphire.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>third death</comment>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.3'/>
+    <delayevent delay='8' event='event.sapphire.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>fourth death</comment>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.4'/>
+    <delayevent delay='8' event='event.sapphire.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>check inventory for book</comment>
+    <move what='player' who='individual' loc='2014'/>
+    <checkinventory map='home' id-name='book' found='event.sapphire.6' not-found='event.sapphire.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>if has book check var unlocked</comment>
+    <checkvariable name='karnakbook' key='locked' value='unlocked' equals='event.sapphire.8' not-equal='event.sapphire.9'/>
+   </event>
+
+   <event num='7'>
+    <comment>if no book, hospital</comment>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.6'/>
+    <release />
+   </event>
+
+   <event num='8'>
+    <comment>unlocked book at hospital</comment>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.5'/>
+    <message type='single' where='com' who='individual' lo='msg.sapphire.10'/>
+    <release />
+    <setvariable name='karnakpuzz' key='dead' value='dead'/>
+   </event>
+
+   <event num='9'>
+    <comment>locked book at hospital</comment>
+    <message type='multi' where='com' who='individual' lo='msg.sapphire.9' hi='msg.sapphire.8'/>
+    <release />
+   </event>
+
+  </section>
+
+  <section name='scarab'>
+
+   <event num='1'>
+    <comment>steal take get scarab from merchant</comment>
+    <message type='single' where='com' who='individual' lo='msg.scarab.2'/>
+    <changestat who='individual' stamina='-5' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>buy scarab-check money</comment>
+    <checkstat who='individual' money='13' higher='event.scarab.9' equals='event.scarab.9' lower='event.general.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>toss throw drop scarab</comment>
+    <message type='single' where='com' who='individual' lo='msg.scarab.1'/>
+    <destroyobject where='inventory' map='home' id-name='scarab'/>
+   </event>
+
+   <event num='4'>
+    <comment>use insert scarab</comment>
+    <checkinventory map='home' id-name='book' found='event.scarab.6' not-found='event.scarab.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>use scarab but no book found</comment>
+    <message type='single' where='com' who='individual' lo='msg.general.2'/>
+   </event>
+
+   <event num='6'>
+    <comment>have book, check if unlocked</comment>
+    <checkvariable name='karnakbook' key='locked' value='unlocked' equals='event.scarab.7' not-equal='event.scarab.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>have book but already unlocked</comment>
+    <message type='single' where='com' who='individual' lo='msg.scarab.5'/>
+   </event>
+
+   <event num='8'>
+    <comment>have locked book so unlock with scarab</comment>
+    <message type='single' where='com' who='individual' lo='msg.scarab.4'/>
+    <destroyobject where='inventory' map='home' id-name='scarab'/>
+    <setvariable name='karnakbook' key='locked' value='unlocked' temporary='true'/>
+   </event>
+
+   <event num='9'>
+    <comment>buy scarab</comment>
+    <changestat who='individual' money='-13' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='msg.scarab.3'/>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_2scarab'/>
+   </event>
+
+  </section>
+
+  <section name='teleport'>
+
+   <event num='1'>
+    <comment>move to exchange</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='2015'/>
+   </event>
+
+   <event num='2'>
+    <comment>move to tent</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1692'/>
+   </event>
+
+   <event num='3'>
+    <comment>move to base of Pyramid</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1950'/>
+   </event>
+
+   <event num='4'>
+    <comment>Move to desert location nearest LP</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1952'/>
+   </event>
+
+   <event num='5'>
+    <comment>Move event to Desert Oasis</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='2087'/>
+   </event>
+
+   <event num='6'>
+    <comment>Move to Seth&apos;s desert location</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='2146'/>
+   </event>
+
+   <event num='7'>
+    <comment>move to pharoah tomb</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1752'/>
+   </event>
+
+   <event num='8'>
+    <comment>to the tomb where the player will be &apos;burried&apos;</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='2263'/>
+   </event>
+
+   <event num='9'>
+    <comment>move to location where &apos;scales&apos; are</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1356'/>
+   </event>
+
+   <event num='10'>
+    <comment>move to top of the pyramid</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1050'/>
+   </event>
+
+   <event num='11'>
+    <comment>move to begining of tent city</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1887'/>
+   </event>
+
+   <event num='12'>
+    <comment>move to queens chamber</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.4'/>
+    <message type='single' where='com' who='room_ex' lo='msg.watch.5'/>
+    <move what='player' who='individual' loc='1944'/>
+   </event>
+
+  </section>
+
+  <section name='tomb'>
+
+   <event num='1'>
+    <comment>locked book at hospital</comment>
+    <checkvariable name='karnakpuzz' key='dead' value='yes' equals='stop'/>
+    <message type='single' where='com' who='individual' lo='msg.tomb.1'/>
+    <move what='player' who='individual' loc='2201'/>
+   </event>
+
+   <event num='2'>
+    <comment>on enter queens tomb</comment>
+    <checkinventory map='home' id-name='book' found='stop'/>
+    <message type='text' where='com' who='individual'>As you enter the room you realize that you cannot possibly decipher the meanings of the writings on the wall without a reference of some kind to help you translate. Dejected, you turn and leave.</message>
+    <move what='player' who='individual' loc='2009'/>
+   </event>
+
+   <event num='3'>
+    <comment>look at heiroglyph</comment>
+    <message type='text' where='com' who='individual'>There are so many depictions of daily life displayed that you pick one at random.</message>
+    <call event='msg.tomb.random[2-7]'/>
+   </event>
+
+   <event num='4'>
+    <comment>on enter common tomb, not dead</comment>
+    <checkvariable name='karnakpuzz' key='dead' value='yes' equals='stop'/>
+    <move what='player' who='individual' loc='2146'/>
+   </event>
+
+   <event num='5'>
+    <comment>random get jar event</comment>
+    <call event='event.tomb.random[6-9]'/>
+   </event>
+
+   <event num='6'>
+    <comment>heart for get jar event</comment>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_heart'/>
+    <message type='text' where='com' who='individual'>You select one of the jars at random and read the label. This one is labeled: Heart</message>
+   </event>
+
+   <event num='7'>
+    <comment>guts for get jar event</comment>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_guts'/>
+    <message type='text' where='com' who='individual'>You select one of the jars at random and read the label. This one is labeled: Intestines</message>
+   </event>
+
+   <event num='8'>
+    <comment>on enter common tomb, not dead</comment>
+    <checkvariable name='karnakpuzz' key='dead' value='dead' equals='stop'/>
+    <move what='player' who='individual' loc='2146'/>
+   </event>
+
+   <event num='9'>
+    <comment>brain for get jar event</comment>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_brain'/>
+    <message type='text' where='com' who='individual'>You select one of the jars at random and read the label. This one is labeled: brain</message>
+   </event>
+
+   <event num='10'>
+    <comment>drop jar</comment>
+    <checkmap map='kaos/karnak'  pass='event.tomb.11' fail='event.tomb.12' loc='2263'/>
+   </event>
+
+   <event num='11'>
+    <comment>drop jar inside tomb</comment>
+    <message type='text' where='com' who='individual'>You gently set the heavy jar back in its place.</message>
+   </event>
+
+   <event num='12'>
+    <comment>drop jar outside of tomb</comment>
+    <message type='text' where='com' who='individual'>As you drop the heavy jar, its contents splatter all over the place making quite a mess!</message>
+   </event>
+
+   <event num='13'>
+    <comment>get in line</comment>
+    <message type='text' where='com' who='individual'>You find a place in line and wait...</message>
+    <delayevent delay='8' event='event.tomb.19'/>
+    <freeze />
+   </event>
+
+   <event num='14'>
+    <comment>checkinv for jars</comment>
+    <checkinventory map='home' id-name='heart' found='event.tomb.15'/>
+    <checkinventory map='home' id-name='liver' found='event.tomb.16'/>
+    <checkinventory map='home' id-name='guts' found='event.tomb.17'/>
+    <checkinventory map='home' id-name='brain' found='event.tomb.18'/>
+   </event>
+
+   <event num='15'>
+    <comment>return heart to mummy</comment>
+    <destroyobject where='inventory' map='home' id-name='heart'/>
+    <message type='text' where='com' who='individual'>You return the jar containing the heart to its proper place.</message>
+   </event>
+
+   <event num='16'>
+    <comment>return liver to mummy</comment>
+    <destroyobject where='inventory' map='home' id-name='liver'/>
+    <message type='text' where='com' who='individual'>You return the jar containing the liver to its mummy.</message>
+   </event>
+
+   <event num='17'>
+    <comment>return guts to mummy</comment>
+    <destroyobject where='inventory' map='home' id-name='guts'/>
+    <message type='text' where='com' who='individual'>You return the jar containing the intestines to its mummy.</message>
+   </event>
+
+   <event num='18'>
+    <comment>return brain to mummy</comment>
+    <destroyobject where='inventory' map='home' id-name='brain'/>
+    <message type='text' where='com' who='individual'>You return the jar containing the brain to its mummy.</message>
+   </event>
+
+   <event num='19'>
+    <comment>weigh heart after wait in line</comment>
+    <message type='text' where='com' who='individual'>After waiting in line for that seems like an unbearably long time, it is finally your turn to step up to the scales. You watch as your heart is weighed against the feather of Ma&apos;at. The scale tips first one way and then the next before settling just barely in your favor.</message>
+    <message type='text' where='com' who='individual'>You are then given permission to enter the afterlife with the hope that you will be reincarnated soon as you are obviously deserving of future lives.</message>
+    <move what='player' who='individual' loc='1050'/>
+    <release />
+    <createobject where='inventory' home-map='kaos/karnak' id='feather'/>
+    <delayevent delay='5' event='event.tomb.20'/>
+   </event>
+
+   <event num='20'>
+    <comment>give feather of ma&apos;at to player</comment>
+    <message type='text' where='com' who='individual'>You suddenly find that you are holding the feather of Ma&apos;at in your hand!</message>
+    <clearvariable name='karnakpuzz'/>
+    <setvariable name='karnakpuzz' key='status' value='partial' temporary='true'/>
+   </event>
+
+  </section>
+
+  <section name='watch'>
+
+   <event num='1'>
+    <comment>Location 2015 check to see if Owner</comment>
+    <checkforowner owner='event.watch.2' visitor='event.watch.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Yes is owner, create watch</comment>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_watch'/>
+    <message type='single' where='com' who='individual' lo='msg.watch.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>No, is not owner cannot get watch</comment>
+    <message type='single' where='com' who='individual' lo='msg.watch.2'/>
+    <move what='player' who='individual' loc='2015'/>
+   </event>
+
+   <event num='4'>
+    <comment>on drop watch</comment>
+    <destroyobject where='inventory' map='home' id-name='watch'/>
+    <message type='single' where='com' who='individual' lo='msg.watch.3'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food_event'>
+
+  <section name='lemonade'>
+
+   <event num='1'>
+    <comment>to create lemonade to drink free</comment>
+    <createobject where='inventory' home-map='kaos/karnak' id='obj_2lemonade'/>
+    <message type='single' where='com' who='individual' lo='msg.lemonade.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>on consumption of lemonade</comment>
+    <changestat who='individual' stamina='99' change='add' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='lemonade'/>
+    <message type='single' where='com' who='individual' lo='msg.lemonade.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>on drop lemonade</comment>
+    <destroyobject where='inventory' map='home' id-name='lemonade'/>
+    <message type='single' where='com' who='individual' lo='msg.lemonade.3'/>
+   </event>
+
+  </section>
+
+  <section name='round'>
+
+   <event num='1'>
+    <comment>buy round of cider</comment>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>You buy an ice cold pint of hard apple cider for everyone at the bar.</message>
+    <message type='text' where='com' who='room_ex'>%s has bought you an ice cold pint of hard apple cider.</message>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>if cannot afford round</comment>
+    <message type='text' where='com' who='individual'>You cannot afford to do that!</message>
+   </event>
+
+   <event num='3'>
+    <comment>check if player has money to buy round</comment>
+    <checkstat who='individual' money='5' higher='food_event.round.1' lower='food_event.round.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='mobile'>
+
+  <section name='merchant'>
+
+   <event num='1'>
+    <comment>on merchant hello</comment>
+    <match phrase='hello' id-name='merchant' lo='mobile.merchant.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='msg'>
+
+  <section name='tomb'>
+
+   <event num='1'>
+    <comment>look at heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>random heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>random heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>random heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>random heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>random heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>random heiroglyph</comment>
+    <message type='single' where='com' who='individual' lo='msg.tomb.7'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+

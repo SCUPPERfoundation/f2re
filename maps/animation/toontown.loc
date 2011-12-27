@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<fed2-map title='Toontown' version='1.00' editor='standard' from='130' to='Animation.Animation Space.390'>
+
+   <location num='130' flags='yr'>
+      <name>Shuttle pad</name>
+      <desc>  You are on the shuttle pad for Toontown.  It&apos;s a broad platform high above the ground on top of one of those impossibly tall buildings so common in cartoons.  Along one edge of the platform is a sign proclaiming &quot;Jarrow&apos;s Ship Yard, Toontown Branch&quot;.  A friendly looking old cartoon man with a white moustache and white jumpsuit with a &quot;Spaceley&apos;s Sprockets&quot; patch on it stands over there, ready to sell you a new ship or service the one you&apos;ve got.  A sexy-looking cartoon woman wears the characteristic green coverall of an Armstrong Cuthbert agent on the opposite edge in a glass booth which muffles the noise of the shuttle pad.  Invisible force fields around the edges of the platform keep anyone without the ability to fly from falling over the edges.  A loud &quot;ding!&quot; announces the arrival of an elevator.  The door opens, and a small, droopy-eared, white dog wearing a red bellhop&apos;s uniform with gold trim announces, &quot;Going down, sir,&quot; without apparent joy in his voice.</desc>
+      <exits down='1489' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1043'>
+      <name>Scream Therapy</name>
+      <desc>  Your eardrums are assaulted by loud screams as you enter, the sound of patients releasing their frustrations through screaming and letting it all out.  All the seating in here is occupied by toons, most of whom seem to be on the verge of nervous breakdowns, many of them with visible nervous twitches or tics.  Not that that&apos;s unusual around here.  From this side, you can see the big, heavy door leading out to the south is also heavily padded to keep noise from escaping the room.  With all the loud screaming you&apos;re hearing in here, perhaps a hasty retreat is in order before you start going deaf.</desc>
+      <exits  s='1107' out='1107' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1106'>
+      <name>Ladies&apos; room</name>
+      <desc>  You have entered the ladies&apos; room.  It doesn&apos;t appear much different from women&apos;s restrooms on planets first colonized by humans, except for several facilities that are noticeably smaller, for smaller characters.  A scent of some kind of powder permeates the air, making it smell quite pleasant.  A swinging door leading out is to the east.</desc>
+      <exits  e='1107' out='1107' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='1107'>
+      <name>Upstairs landing</name>
+      <desc>  Stairs from the floor below end at a landing here, while a solid, heavy-looking door with the word &quot;Therapy&quot; stenciled on it sits recessed in the north wall.  Push doors on the east and west sides are labelled &quot;Men&quot; and &quot;Women&quot;.  Neither one has an &quot;Out of Order&quot; sign on it.</desc>
+      <exits n='1043' e='1108' w='1106' down='1363' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1108'>
+      <name>Men&apos;s room</name>
+      <desc>  You have entered a restroom which, perhaps surprisingly, doesn&apos;t look all that different from men&apos;s rooms in places first colonized by humans, aside from some facilities for considerably smaller creatures.  A sterile scent permeates the room, probably the doing of some kind of air freshener.  A swinging door leading out is west.</desc>
+      <exits  w='1107' out='1107' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='1296'>
+      <name>Cul-de-sac</name>
+      <desc>  The road comes to an end here in a cul-de-sac.  Vacant lots covered in dirt surround the cul-de-sac in all directions except south, where the road goes.</desc>
+      <exits s='1360' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1299'>
+      <name>Law Offices</name>
+      <desc>  The lobby of this office looks dignified enough, with artwork hanging on the walls, and also a poster reading, &quot;Forget the rest, we&apos;re the best!  Law Offices of Howard, Fine, and Howard, specializing in personal injury cases.&quot;  A secretary sits at a desk and asks if she can help you.  Suddenly the glass door on the west side flies open and out runs a fat character with hair like sandpaper, chased by an angry looking character with a hairstyle that looks like a bowl was put over his head, and everything that showed got trimmed.  &quot;You imbecile, I&apos;ll murder you!&quot; he shouts, chasing the fat man around the secretary&apos;s desk.  Finally he catches up and clunks him on the head with a wrench.  The fat man whimpers a bit, then points to the wrench and says, &quot;Oh look!&quot;  The wrench is seriously deformed from the blow!  And suddenly, &quot;specializing in personal injury cases&quot; seems to have a new meaning.  The exit is south.</desc>
+      <exits s='1363' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1300'>
+      <name>Construction zone</name>
+      <desc>  The road from the south ends here, where several toon construction vehicles are slowly working on building the road and a building on the east side.  One of them sees you and honks its horn, prompting all the others to turn and take notice of you, too.  The tough expressions on their faces do not suggest that they are even going to let you approach them.</desc>
+      <exits s='1364' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1301'>
+      <name>Cellar of Schultz&apos;s Delicatessen</name>
+      <desc>  You have come down into a storage cellar.  The air in here is chilled, as one might expect for food storage.  Crates and barrels occupy various positions on the floor, and chubbs of salami, bologna, and various other meats hang from hooks on the ceiling.  A wooden staircase leads up into brighter light.</desc>
+      <exits up='1365' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1359'>
+      <name>Mayor&apos;s office</name>
+      <desc>  A short, round cartoon man resembling Lou Costello sits behind a desk answering one call after another.  Occasionally he finishes all the calls and sighs plaintively, &quot;Who do they think I am?  Don&apos;t they know I&apos;m just the mayor?&quot; or calls out frustratedly, &quot;Heyyyyyy, Abbooooooott!&quot; and a tall, skinny cartoon figure races in to talk to him.  The mayor looks quite busy indeed, and doesn&apos;t look like he&apos;s going to be available any time soon.  Exits from the office go east and south.</desc>
+      <exits e='1360' s='1423' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1360'>
+      <name>Gingerbread Lane</name>
+      <desc>  The lane stretches off to the north and south, where it crosses another street, and then seems to end.  On the western side of the street is some kind of official-looking building, while on the east side is a building with the word &quot;Cinema&quot; in twinkling lights surrounded by a marquee that seems to rotate from the light pattern.</desc>
+      <exits n='1296' e='1361' s='1424' w='1359' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1361'>
+      <name>Cinema</name>
+      <desc>  A clear, transparent booth with a toon woman inside sits out in front of doors leading into the theater, facing out towards the corner, and selling admission tickets to the movies.  Perhaps not surprisingly, they are all cartoons here.  Some of the features star Bugs Bunny, others Woody Woodpecker, and there are also longer, &quot;half-hour&quot; cartoons such as Top Cat, The Flintstones, and The Jetsons.  A large gorilla in uniform stands at the entrance door, making sure only those with tickets get inside.</desc>
+      <exits s='1425' w='1360' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1362'>
+      <name>Toon Inn</name>
+      <desc>  This is the lobby of the local inn.  A huge Christmas tree fills the center of the room, and the furniture is arranged around it mostly facing it.  A couple exceptions are a couple of love seats facing a fireplace with a roaring fire going, which supplements the low lights.  There are even a few stockings hung over the fireplace, along with bells and candles on the mantle, and a mirror with artificial frost around the edges above that.  What&apos;s more, the decor is up at this time of year.  Romantic and cozy, I&apos;m sure, when the weather&apos;s cold.  But during the heat of summer, when it&apos;s so hot that the tongue sandwiches in the window of Schultz&apos;s Delicatessen start panting, one can only hope that they turn on some air conditioning.</desc>
+      <exits s='1426' out='1426' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1363'>
+      <name>Office complex</name>
+      <desc>  You have walked up the stairs into an office building.  A drinking fountain is mounted on the eastern wall of the lobby while a decorative fountain rung with benches takes up the middle of the room.  A door leads into an office on the north side, and a staircase leads up to another floor.  There is also the exit to the south.</desc>
+      <exits n='1299' s='1427' up='1107' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1364'>
+      <name>Street</name>
+      <desc>  This narrow street runs from the north to an intersection south of here.  Some kind of building on the west side only shows a few small windows and offers no entrances from here.  But there is a sandwich shop on the east side you can enter.</desc>
+      <exits n='1300' e='1365' s='1428' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1365' flags='b'>
+      <name>Schultz&apos;s Delicatessen</name>
+      <desc> You are in a deli, which features a sign advertising a running special - any sandwich for 10 IG.  A man with a bushy black mustache and a straw hat stands behind the counter, running the place.  That must be Schultz.  Doors lead out to the south and west.  You also notice a wooden stairway in the northwest corner of the room leading down.</desc>
+      <exits s='1429' w='1364' down='1301' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1420'>
+      <name>Waiting room</name>
+      <desc> You are in a room with a few people waiting.  In fact, all the people here seem to be males.  Some of them pace the floor anxiously.  Pictures showing the faces of babies, some of them being held by nurses, cover the walls.  A cartoon tom cat enters, practically floating on air with a dreamy look in his eyes, and carrying a bouquet of flowers.  &quot;Excuse me,&quot; he asks, &quot;is this where all the pretty nurses come down?&quot;</desc>
+      <desc> &quot;I... I guess so,&quot; one of the men replies distractedly.</desc>
+      <desc>  The cat looks observantly around the room, seeing another man pacing the floor back and forth, others sitting apprehensively.  Someone looks a bit out of place here.  If you&apos;re feeling that way, the door is southeast.</desc>
+      <exits se='1485' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1423'>
+      <name>Broadway</name>
+      <desc>  The road labelled Broadway enters a tunnel to the west and the sidewalks end at the tunnel mouth.  The dual faces of comedy and tragedy are portrayed on the round face of a black and white cat above the tunnel, one looking like he&apos;s laughing hard, the other looking sad and worried.  Toon cars, trucks, taxis, and other vehicles zip into and out of it, some beeping the notes to &quot;Shave and a haircut&quot; while inside the tunnel, others beeping back with the &quot;two bits&quot; notes.  In fact, you&apos;re hearing that melody very frequently here.  Every so often an ambulance comes racing out of the lot or careens into the lot on the south side of the road, which also holds a large institutional building.  Some kind of public building sits on the northern corner, while the road stretches off to the east.</desc>
+      <exits n='1359' e='1424' s='1487' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1424'>
+      <name>Crossroads</name>
+      <desc>  The road from the east and west crosses one running north and south.  A signpost on the corner labels the east-west road as Broadway, and the north-south road as Gingerbread Lane.  Movement catches your eye, and overhead you can see a small white pigeon briefly pull out a bugle and blow the notes to &quot;Charge!&quot; on it as it quickly flies along.  Following several seconds behind comes some bulky flying machine carrying some cartoon men who seem to have a keen interest in that pigeon.</desc>
+      <exits n='1360' e='1425' s='1488' w='1423' in='1487' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1425'>
+      <name>Road</name>
+      <desc>  The road runs east and west between tall buildings all along the road.  To the west it intersects with another road.  The building on the south side has large windows offering a view into some kind of shop, while the north side has a sign reading &quot;Cinema&quot; in twinkling lights.</desc>
+      <exits n='1361' e='1426' w='1424' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1426'>
+      <name>Road</name>
+      <desc>  This is a rather busy street in town running between tall buildings on both sides.  The north side has a building with a sign reading &quot;Toon Inn&quot; in convexly distorted block letters, with the O&apos;s made to look like a pair of eyes.  An alley heads between two tall buildings on the south side of the road, which runs east and west.</desc>
+      <exits n='1362' e='1427' s='1490' w='1425' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1427'>
+      <name>Road</name>
+      <desc>  You are on the sidewalk of a rather busy road.  Tall buildings line both sides of the road.  Cartoon cars, taxis, and trucks zoom along the road, leaving breezes in their wakes, occasionally beeping their horns.  One car lumbers along slowly, prompting those following to honk their horns.  Some of them try to pass, but the slow car extends its axles, widening itself enough to block passing.  You could almost swear you also heard the car &quot;oink&quot; as it did so.  It soon dawns on you what that car is - a road hog!  Steps lead up into a building on the north side, while a building on the south side gives no indication to what it is from here.</desc>
+      <exits n='1363' e='1428' w='1426' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1428'>
+      <name>Intersection</name>
+      <desc>  The busy east-west road crosses a quieter road running north and south.  A signpost on the corner labels the east-west road as Broadway, and the north-south one as Yasser Street.</desc>
+      <desc>  Overhead the sound of a roaring engine catches your attention.  Looking skyward, you can see a small white dog wearing aviator&apos;s goggles flying on top of a red flying doghouse.  The sound of machine gun fire prompts him to duck (to say nothing of you).  The dog grits his teeth and makes motions like he&apos;s firing back while flying his doghouse.  You aren&apos;t able to see anything else flying in the vicinity, so who or what this dog seems to be fighting is unclear.</desc>
+      <exits n='1364' e='1429' s='1492' w='1427' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1429'>
+      <name>Road</name>
+      <desc>  You are following a busy east-west road through town. A corner shop on the north side of the street features a protruding awning with the word &quot;Schultz&quot; in golden script possible to make out against the background if you look long and hard enough.  There also seems to be a diner of some sort on the south corner.  The word &quot;Roughhouse&apos;s&quot; is painted on the inside of the large window.</desc>
+      <exits n='1365' e='1430' s='1493' w='1428' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1430'>
+      <name>Tunnel entrance</name>
+      <desc>  This busy east-west street goes into a dark tunnel to the east.  The masonry around the tunnel is painted to look just like a giant mouth that&apos;s open wide, including teeth and the thing that looks like a little punching bag.  You can hear the refrains of &quot;Shave and a haircut, two bits&quot; echoing out from inside the tunnel in various keys as toon automobiles toot their horns to that rhythm.  The cars that go in quickly disappear into darkness, and those zooming out appear very suddenly.  Very few seem to be shining any headlights to provide visibility for you, and you notice that the sidewalk ends at the mouth of the tunnel.</desc>
+      <exits  w='1429' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1485'>
+      <name>Hospital corridor</name>
+      <desc>  The corridor makes a turn here, from the east to the south.  The left door of a pair of double doors stands open in the northwest corner, revealing a large room behind the solid closed one, which has the words &quot;Waiting Room&quot; stenciled on it.</desc>
+      <exits e='1486' s='1549' nw='1420' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1486'>
+      <name>Hospital corridor</name>
+      <desc>  You are in an east-west hospital corridor, with black and white checkerboard linoleum flooring.  A door on the north side is securely locked.</desc>
+      <exits e='1487' w='1485' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1487'>
+      <name>Hospital Entrance</name>
+      <desc>  This is the entrance to the hospital building.  The reception desk occupies the southwest corner, staffed by a humanoid cartoon woman, complete with white outfit and nurse&apos;s cap.  Corridors run past the desk to the west and south.  Doors head out to the north and east.  Over the public address system come the words, &quot;Calling Doctor Howard, Doctor Fine, Doctor Howard...&quot;</desc>
+      <exits n='1423' e='1488' s='1551' w='1486' out='1424' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1488'>
+      <name>Gingerbread Lane</name>
+      <desc>  The lane becomes noticeably quieter away from the busy intersection to the north and ends in a cul-de-sac here.  The east side is occupied by a tall building with no entrances and no windows on this side, therefore giving no clue to what it is.  The west side of the lane, however, has a large building surrounded by grass and paved lots.  The lane also continues north.</desc>
+      <exits n='1424' w='1487' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1489'>
+      <name>Gift Shop</name>
+      <desc>  You have come into the planet&apos;s gift shop.  Pretty much any possible souvenir you could think of is for sale here.  Mounted on display behind one counter is a shirt reading, &quot;My parents went to Toontown and all I got was this lousy T-shirt&quot;, while a sign on a tie rack with silk scarves and ties claims that the founder buys his scarves here.  A door exits the shop to the east, and a &quot;ding&quot; announces the arrival of an elevator.  &quot;Going up, sir,&quot; says the small, droopy-eared dog operating the elevator.</desc>
+      <exits e='1490' up='130' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1490'>
+      <name>Alleyway</name>
+      <desc>  This is a rather dark alleyway between a couple of tall buildings.  Doors do lead into the buildings to the east and west, and the alley heads north, where it appears to lead to a more open area, and south towards a door in another building.</desc>
+      <exits n='1426' e='1491' s='1554' w='1489' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1491' flags='e'>
+      <name>Toontown Exchange</name>
+      <desc>  You have entered Toontown&apos;s trading exchange.  Traders mill about on the floor, exchanging goods for cash and cash for goods.  The north wall is filled with a big board showing up-to-the-second quotes for all the commodities, both cash and futures.  The eastern wall greets those who enter with a large poster of a cartoon cat standing on hind legs with orange-brown fur, four long, black whiskers, a white silk scarf, and charming smile.  Underneath the picture are the words, &quot;Fancy-Fancy welcomes you to Toontown.&quot;</desc>
+      <desc>  The way out is west.</desc>
+      <exits w='1490' out='1490' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1492'>
+      <name>Street</name>
+      <desc>  A quiet street running north and south comes to a busy intersection to the north.  A large brick building occupies the west side, offering no way in from here, but there is some kind of diner to the east.  A large glass window with the word &quot;Roughhouse&apos;s&quot; painted on it seems to indicate its name.</desc>
+      <exits n='1428' e='1493' s='1556' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1493' flags='b'>
+      <name>Roughhouse&apos;s</name>
+      <desc> This place is a narrow diner with a service bar running almost down the middle, separating the customer area from the grill area.  Looking as if he last shaved a couple days ago, a burly, tough-looking man wearing a white chef&apos;s hat that poofs out at the top occupies the area behind the bar, cooking and serving up the customers&apos; orders, and of course taking payment.  A short, fat man wearing a derby hat sits on a stool a little more than halfway down the bar, offering to pay Tuesday for a hamburger today.  Doors exit to the north and west.</desc>
+      <exits n='1429' w='1492' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1549'>
+      <name>Hospital corridor</name>
+      <desc>  The corridor goes north-south past several large windows on the west side, giving a view into a room filled with cribs.  A three-foot tall white toon rabbit with ears that add about 18 inches to his height, and a tall, red-haired, sexily dressed toon woman with their backs to you peer into one of the cribs inside.  Several seconds later, smoke rings actually rise up out of that crib, and a little hand holds up a cigar high enough for you to see it. Not long after, the woman reaches over to a nearby cart and picks up and opens a diaper, and reaches into the crib with it.  The rabbit also reaches in, apparently to assist with the operation.  Once you&apos;ve watched all you want, you move on.</desc>
+      <exits n='1485' s='1613' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1551'>
+      <name>Hospital corridor</name>
+      <desc>  A wide corridor covered with black and white checkerboard linoleum flooring goes from north to south past an opening on the east side.  The sounds of dishes clinking and clattering, like when they get picked up, emanates from that room along with the sound of voices, indistinguishable from out here.</desc>
+      <exits n='1487' e='1552' s='1615' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1552' flags='b'>
+      <name>Cafeteria</name>
+      <desc> This is the hospital cafeteria, and it occurs to you that this is where all the hospital meals probably get prepared.  A chalkboard lists a few daily specials, stating &quot;English cuisine&quot;, but the entrees are written in French with English translations in parentheses after them.  Such things as &quot;Puree du detonation (Bangers and mash)&quot;, &quot;Crapaud dans la cavite (Toad in the hole)&quot;, and &quot;Richard tachete (Spotted Dick)&quot; on the menu don&apos;t exactly reassure you, especially noticing that the cafeteria is located right next to the emergency room.  Even so, you&apos;re not hearing any complaints from the diners here, of which there are several.  Some of them even look as if they&apos;re enjoying the food.  You wonder how many of them are ready for the asylum if they actually like it.</desc>
+      <exits w='1551' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1554'>
+      <name>Alleyway end</name>
+      <desc>  The narrow alley comes to an end here at a heavy-looking door with a small window in it.  You see someone facing the door as the small window is slid open, and hear him say &quot;Walt sent me.&quot;  The small window slides shut again and a few seconds later, someone inside opens the door to let him in, then closes it again once the person is inside.  You approach the door and knock on it.  The small window opens up, allowing you to see a couple of large eyes staring out at you and a coarse, gravelly voice asks, &quot;Got the password?&quot;  You can say what you heard and enter to the south, or head back out to the north.</desc>
+      <exits n='1490' s='1618' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1556'>
+      <name>Country lane</name>
+      <desc>  The paved road from the north becomes a dirt road here, little more than a country lane.  The surrounding area has become noticeably more open, and looks mostly like fields. To the west you see green foliage sticking up out of the ground in rows and rows, while to the east you see trees that look as if they are growing apples. Barbed-wire fences running parallel to the road prevent anyone from coming too close, but apparently not anyone already inside the barrier. As you look, out of a hole in the ground in the western field pops a gray-furred rabbit who reaches over, plucks a carrot out of the ground, sees you, and munching on the carrot asks in a familiar voice, &quot;Ehhh, what&apos;s up doc?&quot;  He quickly ducks back down into his hole.</desc>
+      <exits n='1492' s='1620' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1613'>
+      <name>Hospital corridor</name>
+      <desc>  The corridor turns a corner here, bending from north to east.  Two doors are recessed into the west and south walls.  The one in the west wall has &quot;Employees Only&quot; stenciled on it, and a card reader by the knob.  The door in the south wall is labeled &quot;Supplies&quot;.  That one seems to be unlocked.</desc>
+      <desc>  Noises catch your attention, and looking down the corridor you see two patients in hospital gowns come speeding down the straightaway on gurneys.  Whooping things up, they turn the corner, right towards a doctor.  With quick reflexes the doctor grabs them each by one ear, pulls them off the gurneys, and says, &quot;All right, back to your rooms, you two,&quot; leading them away by the ears.</desc>
+      <exits n='1549' e='1614' s='1677' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1614'>
+      <name>Hospital corridor</name>
+      <desc>  The corridor goes east-west here, with a pair of glass double doors on the south side leading outside.  You can see benches, trees, and other vegetation out there.  Perhaps it&apos;s a place where the patients can relax freely.</desc>
+      <exits e='1615' s='1678' w='1613' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1615'>
+      <name>Hospital corridor</name>
+      <desc>The corridor makes a turn from west to north here.  A door stands ajar in the southeast corner.</desc>
+      <exits n='1551' se='1680' w='1614' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1618' flags='b'>
+      <name>Ink &amp; Paint Club</name>
+      <desc> As you enter, the first thing that strikes you is that this place is immense!  Cavernous wooden walls house the whole club.  A cartoon octopus tends a long oak bar along the wall next to the door, dispensing drinks and taking payments. Small cartoon penguin waiters dressed in their natural tuxedos roam the floor, bringing diners their food and drinks to order.  One of them has what looks like Scotch on the rocks -- real rocks.</desc>
+      <desc> Up on a stage occupying the south side of the room are two ducks, one black, one white, playing duelling pianos, and entertaining the audience with the familiar Hungarian rhapsody. </desc>
+      <desc> A voice in the crowd catches your attention, but because of its shrillness, not because she&apos;s talking to you -- &quot;Work&apos;s been kind of slow since cartoons went to color, but I&apos;ve still got it, Eddie.  Boop Boop be doop, Boop!&quot;</desc>
+      <desc> &quot;Yeah, you&apos;ve still got it,&quot; a man in a hat at a nearby table replies.</desc>
+      <desc> The exit, when you&apos;re ready to leave, is north.</desc>
+      <exits n='1554' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1620'>
+      <name>Barnyard</name>
+      <desc>  The road comes to an end at a farm.  Cartoon chickens, ducks, and other birds scratch and peck away at the ground in this open area.  A short pig wearing blue overalls and a straw hat greets you and welcomes you to his farm with a stutter that&apos;s impossible to miss, and tosses some seed to the birds, which continue pecking away. A farmhouse sits on the west side of the yard.  A large toon dog sleeps on the porch in front of the door, while cats sleep on a porch swing as well as on the roof of the porch.  The door to a large barn stands open to the south, while wooden rails fence off pastures on the east side, where some large bulls graze.  A road leads away to the north.</desc>
+      <exits n='1556' s='1684' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1677'>
+      <name>Storage room</name>
+      <desc>   You are in a supply closet.  Boxes of rubber gloves, disposable thermometer covers, hospital gowns, blue paper surgery masks, syringes, spools of stitching thread, laxatives, and tongue depressors, among other things, fill the shelves.  Nothing really interesting or useful there.  The way out is north.</desc>
+      <exits n='1613' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1678'>
+      <name>Commons</name>
+      <desc>  Stepping out the doors, you are greeted with the sounds of a jungle.  The sun up in the sky seems to see you and with a mischievous smile shines a bit more warmly on you, even though it&apos;s already feeling hotter than comfortable.  Several pairs of eyes open up, looking at you from deep shade.  Making your way to the south side, the vegetation thins out and you can see vast fields and pastures on the other side of a chain link fence.  Looking up, you see the fence actually encloses the whole area around you, and the only way you can go is back inside to the north.</desc>
+      <exits n='1614' in='1614' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1680' flags='hi'>
+      <name>Recovery room</name>
+      <desc> You are in a care ward, part of which looks as if it has been recently used.  A pink-furred feline nurse in a white uniform with a badge reading &quot;La Rue&quot; is doing a little bit of housekeeping here, making the bed and disposing of used supplies.  She also carries a clipboard with the paperwork to renew life insurance if needed.  Windows on both the north and east sides give a view across open areas and into town.</desc>
+      <desc> The decor inside the room is rather unusual for a hospital.  Aside from the usual bed, a six-foot tall Douglas fir tree decorated with ornaments sits in a corner of the room with colorfully wrapped packages lying underneath it!  Also, you notice a sprig of mistletoe is taped to the headboard of the far bed.  Hmm, wonder who that lucky patient might have been.  The exit is northwest.</desc>
+      <exits nw='1615' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1684'>
+      <name>Barn</name>
+      <desc>  A wide aisle separates the barn into sections.  Chickens cluck away contentedly in nests on the east side.  A conveyor belt runs underneath them, collecting all the eggs they lay, which come rolling down chutes under each nest, and dumps the eggs into cartons at the end of the belt.  Stalls on the west side house cows, which milk themselves here, along with a few horses, idly munching on hay.  The farmer seems to have things quite easy here with all the automation.  The barn door lies open to the north.</desc>
+      <exits n='1620' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<fed2-map title='Jenna 5' version='9' editor='standard' from='396' to='Starlight.Starlight Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Spare sand is kept here. Well you never know, they might run out one day!</desc>
+   </location>
+
+   <location num='143' flags='b'>
+      <name>Office of Jeffro Overloard of Jenna 5</name>
+      <desc>You are in the office of the man himself. There is a bar on the western wall with a waiter droid waiting to serve your every need. There are clear balloon like couches that seem to just float in mid air, and a solid marble desk, infront of them. A door to the South leads the way OUT.</desc>
+      <exits s='207' in='397' out='396'/>
+   </location>
+
+   <location num='144' flags='b'>
+      <name>Office of Scottric Overlord of Quaoar</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are golden balloon like couches that seem to just float in mid air, and a solid Gold desk imported from Earth, in front of them. A door to the South leads the way OUT.</desc>
+      <exits s='208' in='397' out='396'/>
+   </location>
+
+   <location num='145' flags='b'>
+      <name>Office of Katelyn</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are red balloon like couches that seem to just float in mid air, and a solid Garnet desk imported from Earth, in front of them. A picture of Scottric sits on her desk. A door to the South leads the way OUT.</desc>
+      <exits s='209' in='397' out='396'/>
+   </location>
+
+   <location num='206'>
+      <name>Hallway</name>
+      <desc>You are at the western end of a east to west hallway,</desc>
+      <exits e='207' down='397'/>
+   </location>
+
+   <location num='207'>
+      <name>Hallway</name>
+      <desc>you are in a east to west hallway. there are doors to the north and south.</desc>
+      <exits n='143' e='208' s='271' w='206'/>
+   </location>
+
+   <location num='208'>
+      <name>Hallway</name>
+      <desc>you are in a east to west hallway. there are doors to the north and south.</desc>
+      <exits n='144' e='209' s='272' w='207'/>
+   </location>
+
+   <location num='209'>
+      <name>Hallway</name>
+      <desc>you are at the eastern end of a east to west hallway. There are doors to the north and south.</desc>
+      <exits n='145' s='273' w='208'/>
+   </location>
+
+   <location num='271' flags='b'>
+      <name>Office of Von Overlord of Augusta</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are white balloon like couches that seem to just float in mid air, and a solid pearlized desk imported from Earth, in front of them. A door to the North leads the way OUT.</desc>
+      <exits n='207' in='397' out='396'/>
+   </location>
+
+   <location num='272' flags='b'>
+      <name>Office of Anna</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are red balloon like couches that seem to just float in mid air, and a solid ruby desk imported from Earth, in front of them. A picture of Von sits on her desk. A door to the North leads the way OUT.</desc>
+      <exits n='208' in='397' out='396'/>
+   </location>
+
+   <location num='273' flags='b'>
+      <name>Office of Jennabug</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are clear balloon like couches that seem to just float in mid air, and a solid crystal desk imported from Earth, in front of them. A picture of Scottric sits on her desk. A door to the North leads the way OUT.</desc>
+      <exits n='209' in='397' out='396'/>
+   </location>
+
+   <location num='330' flags='yrb'>
+      <name>Jenna 5 Macros Room</name>
+      <desc>Your in a Padded room with plush carpet.a bar along the eastern wall will serve all yout food and drink needs.From here you can go IN to the exchange or DOWN to the Lp.you can also go OUT to the Jena 5 Rack and Grill. There is a large screen on the western wall that you can post or read the board.</desc>
+      <exits down='396' in='397' out='459'/>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Sunburn clinic</name>
+      <desc>   Caring nurses stand by to rub soothing lotion into the skin of those who have been out in the sun a little too long.</desc>
+      <desc>   Peeping behind a screen you see doctors battling to save the life of someone who drowned. An insurance agent wrings his hands in despair, saying, &apos;Why didn&apos;t he get himself insured? What a tragic waste.&apos; You hope he&apos;s talking about the life, not the money.</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='b'>
+      <name>Industrial Development office</name>
+      <desc>This is a small office with only a desk and two chairs in it. The droid behind the desk points to a screen hanging on the eastern wall that reads This is a Factory Owner Friendly planet. No need to aks permission. Authorization approved automatic, by order of the Overloard Jeffro.</desc>
+      <exits s='397'/>
+   </location>
+
+   <location num='388'>
+      <name>Teleporter Room</name>
+      <desc>You have entered a Glowing room with alot of high tech gadgets and energy sources contained in glass that gives the room a bright glow. There are 3 glowing doors, The door to the north is labeled LP. The door in the West is labeled Exchange and the door to the East is labeled Bar. there is a crack in the wall to the South.</desc>
+      <exits n='396' e='459' s='452' w='397'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Jenna 5 Landing strip</name>
+      <desc>   The sky is deep blue with a few fluffy white clouds. A cooling sea breeze keeps the temperature to a perfect level. The sun is hot and you look forward to basking on the beach.</desc>
+      <desc>   Young men and women with stunningly attractive, deeply tanned bodies throng around the landing pad, welcoming visitors and directing them to the beach to the Southeast, and to white stone buildings North, East and Southwest.There is a glowing circular pad on the ground South of you.</desc>
+      <exits n='332' e='397' se='461' s='388' sw='459' up='330' down='453' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='eb'>
+      <name>Jenna 5 exchange</name>
+      <desc>   The thick stone walls of the building keep it cool, which prevents the trading machinery - and the traders themselves - from overheating. The floor is covered with sand and you wonder why it doesn&apos;t get into the equipment and cause problems.</desc>
+      <desc>   The full range of commodities are bought and sold here, despite the planet being for vacationers. Obviously some people can&apos;t relax properly without a trading console nearby.</desc>
+      <desc>   When you&apos;ve had enough work and want to head to the beach, you can exit by going through the WEST door.There is a Glowing door in the Eastern wall.and a small office to the NORTH.</desc>
+      <exits n='333' e='388' w='396' up='206' in='330' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='452'>
+      <name>Crack in the wall</name>
+      <desc>You barely squeeze through and it seems a long way . but your determined to continue North. you look back South at the way you came but your determined to push forward.</desc>
+      <exits n='388' s='516'/>
+   </location>
+
+   <location num='453'>
+      <name>Rock cavern below the LP</name>
+      <desc>you are in a solid rock cavern running from the NE to the SW. You can go up to the LP from here.</desc>
+      <exits sw='516' up='396'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>Sunshine bar</name>
+      <desc>   &quot;Welcome, one and all, to the bar where the best cocktails in the whole Galaxy are served,&quot; cries the tanned young bartender. He tosses a cocktail shaker high in the air and catches it behind his back.</desc>
+      <desc>   Small booths in each corner sell tourist goods such as sunhats and snorkels, electronic equipment and weapons. Anyone who forgot their costume (and isn&apos;t lucky enough to have a nano-chameleon suit) can buy one here, from the skimpiest thong to the most demure all-in-one suit.</desc>
+      <desc>   The door in the NORTHEAST wall leads back to the landing strip.and there is a Glowing door in the Western wall.</desc>
+      <exits ne='396' w='388' in='330' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>White Sands beach</name>
+      <desc>  Perfection! The sand is so soft you can&apos;t wait to stretch yourself out and soak up some rays. The beach stretches off into the distance for miles, and you&apos;re sure to find yourself somewhere secluded to rest.</desc>
+      <desc>   If you get too hot, there&apos;s shade to the east in a small rocky cove, or you can head south down to the shore where gently rolling waves break onto the sand.</desc>
+      <desc>   The way back to the landing-pad is northwest.</desc>
+      <exits e='462' s='525' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Cove</name>
+      <desc>   Eroded into the side of a rocky hill by the waves, this secluded cove provides shade from the sun if you need it. The waves surge up the rocks, flinging droplets of spray over you as their foaming white heads break and fall back again.</desc>
+      <desc>   As the waves retreat, they leave pools of water between the rocks. Most are small, but there&apos;s one that is deep enough for you to climb down into the crystal clear water.</desc>
+      <exits w='461' down='526' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='516'>
+      <name>Cavern trail</name>
+      <desc>you are in a NE to SW  cavern trail, there is a crack in the wall to the North and from here you can go NE back to the LP or continue to the SW.</desc>
+      <exits n='452' ne='453' sw='579'/>
+   </location>
+
+   <location num='525'>
+      <name>Shore</name>
+      <desc>   Gently rolling waves break on the shore, their white tops collapsing into frothy bubbles that race up the beach towards you then drain back again. The sand under your feet is wet and cool. Every tenth wave is stronger than the rest, and the water surges far enough to splash against your legs.</desc>
+      <desc>   You can go south into the water for a swim, or north back to the beach.</desc>
+      <exits n='461' s='589' in='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name>Crystal pool</name>
+      <desc>   You float on the surface of the crystal pool, feeling at peace with yourself and with the rest of the Universe.</desc>
+      <desc>   You see shoals of little silver fishes flitting around the pool, searching for food among the brightly coloured seaplants that waft on the rocks. A large crab scuttles across the base of the pool, then buries himself in the sand.</desc>
+      <desc>   Eventually, you have to return by climbing out of the pool. But for now, you just float.</desc>
+      <exits up='462' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='576'>
+      <name>Empty office</name>
+      <desc>This office is for sale. there is a way OUT to the LP from here.there is a door to the east</desc>
+      <exits e='577' out='396'/>
+   </location>
+
+   <location num='577'>
+      <name>Section Under Construction</name>
+      <desc>The cavern trail ends here. there are doors to the West and East. or you can go back to the SE from wich you came.</desc>
+      <exits e='578' se='642' w='576'/>
+   </location>
+
+   <location num='578'>
+      <name>empty office</name>
+      <desc>This office is for sale. There is a way OUT to the LP.and the door is to the west</desc>
+      <exits w='577' out='396'/>
+   </location>
+
+   <location num='579'>
+      <name>Cavern trail</name>
+      <desc>You are on a NE to SW trail. a arrow carved into the rock point NE and says LP.the ceiling is tapering down and you wonder if the end of this trail is near.</desc>
+      <exits ne='516' sw='642'/>
+   </location>
+
+   <location num='589'>
+      <name>In the water</name>
+      <desc>   You can&apos;t really swim here, nor can you stand up in the water. The waves are big enough that they keep knocking you off balance and pulling you around. It&apos;s the most exhilarating feeling, and you feel the cares and stresses of your working life drain away as the water washes over and around you.</desc>
+      <desc>   Now you can see why this planet is considered the ultimate in holiday destinations.</desc>
+      <exits n='525' out='525' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='642'>
+      <name>Cavern trail</name>
+      <desc>the trail curves from the SE to the NW. the ceiling has leved out and you have to bend your head a little to proceed. A arrow scratched in the wall points NE and says LP.</desc>
+      <exits ne='579' nw='577'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+
+<event-list version='71'>
+
+ <category name='death'>
+
+  <section name='nuke'>
+
+   <event num='1'>
+    <comment>Death loc - Transuranic - loc 969</comment>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+    <announce type='single' loc='905' lo='death.nuke.1'/>
+    <message type='single' where='com' who='individual' lo='death.nuke.4'/>
+   </event>
+
+   <event num='2'>
+    <comment>Death loc - Uranium - loc 970</comment>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+    <announce type='single' loc='905' lo='death.nuke.2'/>
+    <message type='single' where='com' who='individual' lo='death.nuke.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>Death loc - Thorium - loc 906</comment>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+    <announce type='single' loc='905' lo='death.nuke.3'/>
+    <message type='single' where='com' who='individual' lo='death.nuke.6'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='canteen'>
+
+   <event num='1'>
+    <comment>Buy food - Canteen - 837</comment>
+    <checkstat who='individual' money='10' higher='food.canteen.2' equals='food.canteen.2' lower='food.canteen.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.canteen.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.canteen.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='bar'>
+
+   <event num='1'>
+    <comment>Enter event - apres ski bar 1123 - check which way player has come from</comment>
+    <checklastloc loc='1223' fail='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.bar.1'/>
+    <move what='player' who='individual' loc='1223'/>
+   </event>
+
+   <event num='2'>
+    <comment>In room - Apres ski 1124 - remove skis</comment>
+    <checkinventory map='home' id-name='skis' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.bar.2'/>
+    <destroyobject where='inventory' map='home' id-name='skis'/>
+   </event>
+
+  </section>
+
+  <section name='chairlift'>
+
+   <event num='1'>
+    <comment>Examine chairlift - loc 1352</comment>
+    <message type='multi' where='com' who='individual' lo='moves.chairlift.1' hi='moves.chairlift.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Use chairlift</comment>
+    <message type='multi' where='com' who='individual' lo='moves.chairlift.3' hi='moves.chairlift.4'/>
+    <message type='single' where='com' who='room_ex' lo='moves.chairlift.5'/>
+    <announce type='single' loc='1364' lo='moves.chairlift.6'/>
+    <move what='player' who='individual' loc='1364'/>
+   </event>
+
+  </section>
+
+  <section name='hopper'>
+
+   <event num='1'>
+    <comment>Hopper - 654 - touch screen</comment>
+    <message type='single' where='com' who='individual' lo='moves.hopper.1'/>
+    <announce type='single' loc='653' lo='moves.hopper.2'/>
+    <announce type='single' loc='1159' lo='moves.hopper.3'/>
+    <move what='player' who='individual' loc='1159'/>
+   </event>
+
+   <event num='2'>
+    <comment>Hopper - 1160 - touch screen</comment>
+    <message type='single' where='com' who='individual' lo='moves.hopper.4'/>
+    <announce type='single' loc='1159' lo='moves.hopper.5'/>
+    <announce type='single' loc='653' lo='moves.hopper.6'/>
+    <move what='player' who='individual' loc='653'/>
+   </event>
+
+  </section>
+
+  <section name='secure'>
+
+   <event num='1'>
+    <comment>522 - touch scanner</comment>
+    <message type='single' where='com' who='individual' lo='moves.secure.1'/>
+    <message type='single' where='com' who='room_ex' lo='moves.secure.2'/>
+    <announce type='single' loc='458' lo='moves.secure.3'/>
+    <changelink loc='522' exit='north' action='add' new-loc='458'/>
+    <changelink loc='458' exit='south' action='add' new-loc='522'/>
+    <delayevent delay='30' event='moves.secure.2' logoff='moves.secure.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>The door closes again after a delay</comment>
+    <announce type='single' loc='522' lo='moves.secure.4'/>
+    <announce type='single' loc='458' lo='moves.secure.5'/>
+    <changelink loc='522' exit='north' action='remove' />
+    <changelink loc='458' exit='south' action='remove' />
+   </event>
+
+   <event num='3'>
+    <comment>458 - press button</comment>
+    <message type='single' where='com' who='individual' lo='moves.secure.6'/>
+    <message type='single' where='com' who='room_ex' lo='moves.secure.3'/>
+    <announce type='single' loc='522' lo='moves.secure.2'/>
+    <changelink loc='522' exit='north' action='add' new-loc='458'/>
+    <changelink loc='458' exit='south' action='add' new-loc='522'/>
+    <delayevent delay='30' event='moves.secure.2' logoff='moves.secure.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='magnet'>
+
+   <event num='1'>
+    <comment>Player wants to &apos;get&apos; a magnet</comment>
+    <checkinventory map='home' id-name='magnet' found='newbod.magnet.2' not-found='newbod.magnet.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player already has a magnet (add rant later)</comment>
+    <message type='text' where='com' who='individual'>You try to lever a magnet off one of the doors. While you are so engaged one of the locals comes into the lobby and demands to know what you think you are doing. You hastily desist and make some placating noises.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Player gets a fridge magnet</comment>
+    <createobject where='inventory' home-map='sol/titan' id='obj_newbodmagnet'/>
+    <message type='text' where='com' who='individual'>Moving quickly you find a magnet that seems a little less secure. Prising it off, you slip the magnet into your pocket.</message>
+   </event>
+
+   <event num='4'>
+    <comment>player drops the magnet</comment>
+    <destroyobject where='inventory' map='home' id-name='magnet'/>
+    <message type='text' where='com' who='individual'>There is a CLANG!! as the magnet sticks to the nearest piece of metal and slides down, vanishing from sight.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='fountain'>
+
+   <event num='1'>
+    <comment>Examine fountain - object in loc 778</comment>
+    <message type='multi' where='com' who='individual' lo='objects.fountain.1' hi='objects.fountain.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Get in fountain - loc 778</comment>
+    <message type='single' where='com' who='individual' lo='objects.fountain.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.fountain.6'/>
+   </event>
+
+   <event num='3'>
+    <comment>Paddle in fountain</comment>
+    <message type='single' where='com' who='individual' lo='objects.fountain.5'/>
+    <message type='single' where='com' who='room_ex' lo='objects.fountain.7'/>
+   </event>
+
+  </section>
+
+  <section name='lever'>
+
+   <event num='1'>
+    <comment>Announcements for various locs</comment>
+    <message type='single' where='com' who='individual' lo='objects.lever.1'/>
+    <message type='single' where='com' who='room_ex' lo='objects.lever.2'/>
+    <announce type='single' loc='326' lo='objects.lever.3'/>
+    <announce type='single' loc='328' lo='objects.lever.3'/>
+    <announce type='single' loc='390' lo='objects.lever.3'/>
+    <announce type='multi' loc='454' lo='objects.lever.4' hi='objects.lever.6'/>
+    <delayevent delay='2' event='objects.lever.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Machinery resumes</comment>
+    <announce type='single' loc='326' lo='objects.lever.7'/>
+    <announce type='single' loc='328' lo='objects.lever.7'/>
+    <announce type='single' loc='390' lo='objects.lever.7'/>
+    <announce type='single' loc='327' lo='objects.lever.7'/>
+   </event>
+
+  </section>
+
+  <section name='marsrat'>
+
+   <event num='1'>
+    <comment>Spot marsrat event on small park 778</comment>
+    <checkinventory map='sol/mars' id-name='marsrat' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='objects.marsrat.1'/>
+   </event>
+
+  </section>
+
+  <section name='poster'>
+
+   <event num='1'>
+    <comment>Read poster - object in loc 456 - call&apos;s random</comment>
+    <call event='objects.poster.random[2-7]'/>
+   </event>
+
+   <event num='2'>
+    <comment>Call poster message 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.poster.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Call poster message 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.poster.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Call poster message 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.poster.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Call poster message 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.poster.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Call poster message 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.poster.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Call poster message 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.poster.6'/>
+   </event>
+
+  </section>
+
+  <section name='skis'>
+
+   <event num='1'>
+    <comment>Get skis - loc 1301 - check if already got some</comment>
+    <checkinventory map='home' id-name='skis' found='objects.skis.2' not-found='objects.skis.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got skis</comment>
+    <message type='single' where='com' who='individual' lo='objects.skis.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got skis some create some</comment>
+    <message type='single' where='com' who='individual' lo='objects.skis.2'/>
+    <createobject where='inventory' home-map='sol/titan' id='obj_skis'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop skis</comment>
+    <message type='single' where='com' who='individual' lo='objects.skis.3'/>
+    <destroyobject where='inventory' map='home' id-name='skis'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use skis</comment>
+    <message type='single' where='com' who='individual' lo='objects.skis.4'/>
+   </event>
+
+  </section>
+
+  <section name='snowglobe'>
+
+   <event num='1'>
+    <comment>Use/shake snowglobe</comment>
+    <message type='single' where='com' who='individual' lo='objects.snowglobe.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Drop snowglobe</comment>
+    <message type='single' where='com' who='individual' lo='objects.snowglobe.2'/>
+    <destroyobject where='inventory' map='home' id-name='snowglobe'/>
+   </event>
+
+  </section>
+
+  <section name='tdx'>
+
+   <event num='1'>
+    <comment>458 - get tdx - check if already got some</comment>
+    <checkinventory map='home' id-name='tdx' found='objects.tdx.2' not-found='objects.tdx.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got some</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got some so create TDX</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.tdx.3'/>
+    <createobject where='inventory' home-map='home' id='obj_tdx'/>
+    <setvariable name='titan' key='tdx' value='ticks' temporary='true'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop TDX</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.tdx.5'/>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='tdx'/>
+    <setvariable name='titan' key='tdx' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='5'>
+    <comment>Examine TDX</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.6'/>
+    <checkvariable name='titan' key='tdx' value='ticks' not-equal='objects.tdx.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player is not already getting the ticks, so start them up</comment>
+    <setvariable name='titan' key='tdx' value='ticks' temporary='true'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='7'>
+    <comment>Replace tdx - check if player is in secure dome</comment>
+    <checkmap map='home'  pass='objects.tdx.8' fail='objects.tdx.9' loc='458'/>
+   </event>
+
+   <event num='8'>
+    <comment>In secure dome</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.7'/>
+    <message type='single' where='com' who='room_ex' lo='objects.tdx.8'/>
+    <destroyobject where='inventory' map='home' id-name='tdx'/>
+    <setvariable name='titan' key='tdx' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='9'>
+    <comment>Elsewhere...</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.9'/>
+   </event>
+
+   <event num='10'>
+    <comment>throw TDX</comment>
+    <message type='multi' where='com' who='individual' lo='objects.tdx.10' hi='objects.tdx.11'/>
+    <message type='multi' where='com' who='room_ex' lo='objects.tdx.12' hi='objects.tdx.13'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='tdx'/>
+    <setvariable name='titan' key='tdx' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='11'>
+    <comment>Tick effects - check if player is still carrying TDX</comment>
+    <checkinventory map='home' id-name='tdx' found='objects.tdx.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>Player is carrying TDX so delay...</comment>
+    <delayevent delay='600' event='objects.tdx.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>After delay, call random effect</comment>
+    <call event='objects.tdx.random[14-20]'/>
+   </event>
+
+   <event num='14'>
+    <comment>Tick effect - option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.14'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='15'>
+    <comment>Tick effect - option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.15'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='16'>
+    <comment>Tick effect - option 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.16'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='17'>
+    <comment>Tick effect - option 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.17'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='18'>
+    <comment>Tick effect - option 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.18'/>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='19'>
+    <comment>Tick effect - option 5 (nothing happens...)</comment>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='20'>
+    <comment>Tick effect - option 5 (nothing happens...)</comment>
+    <call event='objects.tdx.11'/>
+   </event>
+
+   <event num='21'>
+    <comment>Juggle tdx</comment>
+    <message type='single' where='com' who='individual' lo='objects.tdx.19'/>
+    <message type='single' where='com' who='room_ex' lo='objects.tdx.20'/>
+   </event>
+
+  </section>
+
+  <section name='weeble'>
+
+   <event num='1'>
+    <comment>Get weeble</comment>
+    <message type='single' where='com' who='individual' lo='objects.weeble.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Kiss weeble</comment>
+    <message type='single' where='com' who='individual' lo='objects.weeble.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Hug weeble</comment>
+    <message type='single' where='com' who='individual' lo='objects.weeble.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>Push weeble</comment>
+    <message type='single' where='com' who='individual' lo='objects.weeble.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.weeble.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Weeble conversation</comment>
+    <match phrase='hello' id-name='obj_weeble' lo='objects.weeble.6'/>
+    <match phrase='bye' id-name='obj_weeble' lo='objects.weeble.7'/>
+    <match phrase='who' id-name='obj_weeble' lo='objects.weeble.8'/>
+    <match phrase='weeble' id-name='obj_weeble' lo='objects.weeble.9'/>
+    <match phrase='spica' id-name='obj_weeble' lo='objects.weeble.10' hi='objects.weeble.11'/>
+    <match phrase='job' id-name='obj_weeble' lo='objects.weeble.12'/>
+    <match phrase='profession' id-name='obj_weeble' lo='objects.weeble.12'/>
+    <match phrase='titan' id-name='obj_weeble' lo='objects.weeble.13' hi='objects.weeble.14'/>
+    <match phrase='home' id-name='obj_weeble' lo='objects.weeble.15' hi='objects.weeble.17'/>
+    <match phrase='cuisine' id-name='obj_weeble' lo='objects.weeble.19' hi='objects.weeble.21'/>
+    <match phrase='food' id-name='obj_weeble' lo='objects.weeble.19' hi='objects.weeble.21'/>
+    <match phrase='earth' id-name='obj_weeble' lo='objects.weeble.18'/>
+    <match phrase='galactic admin' id-name='obj_weeble' lo='objects.weeble.22' hi='objects.weeble.23'/>
+    <match phrase='ming' id-name='obj_weeble' lo='objects.weeble.24' hi='objects.weeble.25'/>
+    <match phrase='martians' id-name='obj_weeble' lo='objects.weeble.26' hi='objects.weeble.27'/>
+    <match phrase='pun' id-name='obj_weeble' lo='objects.weeble.31'/>
+    <match phrase='mars' id-name='obj_weeble' lo='objects.weeble.28' hi='objects.weeble.29'/>
+    <match phrase='chez diesel' id-name='obj_weeble' lo='objects.weeble.34'/>
+    <match phrase='diesel' id-name='obj_weeble' lo='objects.weeble.32' hi='objects.weeble.33'/>
+    <match phrase='alien' id-name='obj_weeble' lo='objects.weeble.35'/>
+    <match phrase='constant' id-name='obj_weeble' lo='objects.weeble.36'/>
+    <match phrase='catastrophe' id-name='obj_weeble' lo='objects.weeble.36'/>
+    <match phrase='interregnum' id-name='obj_weeble' lo='objects.weeble.36'/>
+    <match phrase='sequestration' id-name='obj_weeble' lo='objects.weeble.37' hi='objects.weeble.38'/>
+    <match phrase='sol first' id-name='obj_weeble' lo='objects.weeble.39' hi='objects.weeble.41'/>
+    <match phrase='phil' id-name='obj_weeble' lo='objects.weeble.30'/>
+    <match phrase='pianist' id-name='obj_weeble' lo='objects.weeble.30'/>
+    <nomatch id-name='obj_weeble' lo='objects.weeble.42'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='ski'>
+
+  <section name='black'>
+
+   <event num='1'>
+    <comment>Skiing down black run - loc 1299 - push off - check for skis</comment>
+    <checkinventory map='home' id-name='skis' found='ski.black.3' not-found='ski.black.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>No skis</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Got skis - check if skied nursery slope before</comment>
+    <checkvariable name='titan' key='skiing' value='unknown' equals='ski.black.4' not-equal='ski.black.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Not skied before</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Have skied before, so off they go...</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.3'/>
+    <message type='single' where='com' who='room_ex' lo='ski.black.4'/>
+    <move what='player' who='individual' loc='1298'/>
+    <freeze />
+    <delayevent delay='8' event='ski.black.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Black run - 2</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.5'/>
+    <delayevent delay='12' event='ski.black.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Black run - 3</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.6'/>
+    <delayevent delay='12' event='ski.black.8'/>
+   </event>
+
+   <event num='8'>
+    <comment>Black run - 4</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.7'/>
+    <delayevent delay='12' event='ski.black.9'/>
+   </event>
+
+   <event num='9'>
+    <comment>Check whether they have done black run before</comment>
+    <checkvariable name='titan' key='skiing' value='average' equals='ski.black.10' not-equal='ski.black.12'/>
+   </event>
+
+   <event num='10'>
+    <comment>Black run - 5 - first time</comment>
+    <message type='multi' where='com' who='individual' lo='ski.black.8' hi='ski.black.9'/>
+    <delayevent delay='12' event='ski.black.11'/>
+   </event>
+
+   <event num='11'>
+    <comment>Black run - finish - first time</comment>
+    <announce type='single' loc='1225' lo='ski.black.10'/>
+    <move what='player' who='individual' loc='1225'/>
+    <release />
+    <announce type='single' loc='1224' lo='ski.black.11'/>
+    <setvariable name='titan' key='skiing' value='expert'/>
+   </event>
+
+   <event num='12'>
+    <comment>Black run - 5 - expert</comment>
+    <message type='single' where='com' who='individual' lo='ski.black.12'/>
+    <delayevent delay='12' event='ski.black.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>Black run - finish - expert</comment>
+    <announce type='single' loc='1225' lo='ski.black.13'/>
+    <move what='player' who='individual' loc='1225'/>
+    <release />
+    <announce type='single' loc='1224' lo='ski.black.14'/>
+    <createobject where='inventory' home-map='sol/titan' id='obj_snowglobe'/>
+   </event>
+
+  </section>
+
+  <section name='nursery'>
+
+   <event num='1'>
+    <comment>Skiing down nursery slope - loc 1235 - push off - check for skis</comment>
+    <checkinventory map='home' id-name='skis' found='ski.nursery.3' not-found='ski.nursery.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>No skis</comment>
+    <message type='single' where='com' who='individual' lo='ski.nursery.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Got skis, so off they go...</comment>
+    <message type='single' where='com' who='individual' lo='ski.nursery.2'/>
+    <message type='single' where='com' who='room_ex' lo='ski.nursery.3'/>
+    <move what='player' who='individual' loc='1170'/>
+    <freeze />
+    <delayevent delay='8' event='ski.nursery.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Nursery slope - 1</comment>
+    <message type='single' where='com' who='individual' lo='ski.nursery.4'/>
+    <delayevent delay='12' event='ski.nursery.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Nursery slope - 2</comment>
+    <message type='single' where='com' who='individual' lo='ski.nursery.5'/>
+    <delayevent delay='12' event='ski.nursery.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Nursery slope - 3</comment>
+    <message type='single' where='com' who='individual' lo='ski.nursery.6'/>
+    <delayevent delay='12' event='ski.nursery.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Nursery slope - finish</comment>
+    <announce type='single' loc='1225' lo='ski.nursery.7'/>
+    <move what='player' who='individual' loc='1225'/>
+    <release />
+    <setvariable name='titan' key='skiing' value='average'/>
+    <announce type='single' loc='1224' lo='ski.nursery.8'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<object-list version='6' editor='Version 1.40a'>
+   <object type='static' start='1172' visibility='0' size='1' weight='1'>
+      <name>atm</name>
+      <id>obj_atm</id>
+      <desc>The ATM is designed to be operated from within your spaceship.</desc>
+      <vocab cmd='use' event='objects.atm.1'></vocab>
+      <vocab cmd='get' event='objects.atm.3'></vocab>
+   </object>
+
+   <object type='static' start='1172' visibility='0' size='1' weight='1'>
+      <name>groats</name>
+      <id>obj_groats</id>
+      <desc>You can&apos;t see any groats here - they are all safely locked away inside the ATM.</desc>
+      <vocab cmd='get' event='objects.atm.1'></vocab>
+   </object>
+
+   <object type='static' start='1172' visibility='0' size='1' weight='1'>
+      <name>money</name>
+      <id>obj_money</id>
+      <desc>You can&apos;t see any money here - it is all safely locked away inside the ATM.</desc>
+      <vocab cmd='get' event='objects.atm.1'></vocab>
+   </object>
+
+   <object type='static' start='1172' visibility='0' size='1' weight='1'>
+      <name>pin</name>
+      <id>obj_pin</id>
+      <desc>You don&apos;t expect the PIN to be written on a post-it on the side of the ATM, do you?</desc>
+      <vocab cmd='enter' event='objects.atm.2'></vocab>
+      <vocab cmd='type' event='objects.atm.2'></vocab>
+      <vocab cmd='get' event='objects.atm.4'></vocab>
+   </object>
+
+   <object type='static' start='722' visibility='100' size='1' weight='1' flags='d'>
+      <name>pirate</name>
+      <id>pirate_mob</id>
+      <desc>The sinister black ship has a large skull and crossbones painted on the hull. The Captain obviously wants to be as scary as the famous Monty Pirate from back in the days of Ming. It&apos;s a shame that the Imperial Navy doesn&apos;t allow ships to fire on each other in Sol!</desc>
+      <movement speed='2' low='523' high='1109'></movement>
+   </object>
+
+</object-list>
+

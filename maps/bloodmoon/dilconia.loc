@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<fed2-map title='Dilconia' version='32' editor='standard' from='200' to='Bloodmoon.Bloodmoon Space.133'>
+
+   <location num='200'>
+      <name>Dilconia Spaceport</name>
+      <desc>As you disembark from your shuttle you notice the holograph sign welcoming you to the Dilconia Empire.  The exit to commercial district is to the southeast.</desc>
+      <exits se='265' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='201' flags='hi'>
+      <name>Immortal Hospital</name>
+      <desc>You see a fairly average hospital. In the corner is a skinny stick of a man who is, you assume, the Insurance Agent.</desc>
+      <desc>The Exit is south.</desc>
+      <exits s='265' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='202' flags='yr'>
+      <name>Vampyre Kiss Shipyard</name>
+      <desc>This Shipyard produces and repairs all of the ships in the Dilconian Space Fleet. Ships are available here in all makes shapes and sizes and variations. You can either upgrade to a new ship or repair the one you have. Exit is southwest.</desc>
+      <exits sw='265' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='207'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits s='271'/>
+   </location>
+
+   <location num='264'>
+      <name>Office of Station Security</name>
+      <desc>The Security office for the entire station.  Several of the Dilconian Imperial Guard stand ready to assist where needed.</desc>
+      <exits e='265' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Station Hub</name>
+      <desc>This is the main hub of the Station.</desc>
+      <desc>You notice a holograph map that shows where each tunnel leads to:</desc>
+      <desc>Northwest   --&gt; Space Port</desc>
+      <desc>North          --&gt; Immortal Hospital</desc>
+      <desc>Northeast    --&gt; Vampire Kiss Shipyard</desc>
+      <desc>East           --&gt; Dilconian Blood Works Exchange</desc>
+      <desc>Southeast   --&gt; Office of Tourist Affairs</desc>
+      <desc>South         --&gt; the Blood Bank</desc>
+      <desc>Southwest  --&gt; Office of Factory Affair</desc>
+      <desc>West          --&gt; Office of Station Security</desc>
+      <exits n='201' ne='202' e='266' se='330' s='329' sw='328' w='264' nw='200' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='266' flags='e'>
+      <name>Dilconian Blood Works Exchange</name>
+      <desc>Dilconian Blood Works welcomes you to the exchange and reminds you to buy low and sell somewhere else. The exit is west.</desc>
+      <exits w='265' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='270'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='271'/>
+   </location>
+
+   <location num='271'>
+      <name>Third floor</name>
+      <desc>This is the Third floor. There are four rooms on this floor they are</desc>
+      <desc>North -- empty</desc>
+      <desc>East -- empty</desc>
+      <desc>West -- empty</desc>
+      <desc>South -- empty</desc>
+      <desc>To the second floor go down to the first floor and Down, Down to the lobby. If you would like an apartment please tight beam Furgas and ask for one.</desc>
+      <exits n='207' e='272' s='335' w='270' down='402'/>
+   </location>
+
+   <location num='272'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits w='271'/>
+   </location>
+
+   <location num='328'>
+      <name>Office of Factory Affairs</name>
+      <desc>Welcome to the office that handles all factory related issues. We ask that you please still inform the planetary council by either Tight Beaming Furgas or sending an email to dilconia@hotmail.com; this will avoid your Factories/Depots from disappearing. There is a computer on a desk in middle of the room with an official of the planetary government. The exit is northeast.</desc>
+      <exits ne='265' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>The Blood Bank</name>
+      <desc>Welcome to the World Famous Blood Bank Bar. We are proud to serve a variety of foods available around the galaxy. The Bar&apos;s features the galaxy famous Dilconia Blood Wine, both with and without blood. The exit is North.</desc>
+      <exits n='265' up='788' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Office of Tourist Affairs</name>
+      <desc>Welcome to the Office for Tourist Affairs. If you&apos;re having a problem please do not hesitate to email the planetary council at dilconia@hotmail.com. The empire of Dilconia wishes to welcome you to Dilconia, the crown jewel of the empire.To arrange a shuttle to the surface for all simply type down and a personal shuttle will shot you to the surface. The exit is Northwest.</desc>
+      <exits nw='265' down='392' no-exit='nomove.station.1'/>
+   </location>
+
+   <location num='335'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='271'/>
+   </location>
+
+   <location num='338'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits s='402' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='389'>
+      <name>Residence district</name>
+      <desc>A large home is to the south. To the far east of is the personal shuttle pad.</desc>
+      <exits e='390' s='453' in='453' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='390'>
+      <name>Residential district</name>
+      <desc>You stand on a wide lane where there are a houses lined to the southeast and southwest. Hitman&apos;s and Roselie&apos;s home is back to the east then south.</desc>
+      <exits e='391' w='389' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='391'>
+      <name>Residential District</name>
+      <desc>To the west is a large house, the shuttle pad is to the east</desc>
+      <exits e='392' w='390' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='392'>
+      <name>Personal Shuttle Landing Pad</name>
+      <desc>As you emerge from the shuttle, you notice several nice homes to the west and a high rise to the east. The entrance to the Blood Temple is south. To get back to your ship and the commerical district please go up.</desc>
+      <exits e='393' s='456' w='391' up='330' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Road</name>
+      <desc>Your stand before a large high rise the entryway is to the east while the shuttle pad is to the west. A mountain pass leads to the south east.</desc>
+      <exits e='394' se='458' w='392' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Lobby of the Dilconian Sands </name>
+      <desc>This is a expensive apartment building/business complex. I hope you belong here as I would hate to see what they do to riff-raff. The elevator to the floors is to the east while the road is to the west.</desc>
+      <exits e='395' w='393' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Dilconian Sands Elevator</name>
+      <desc>This is the elevator to all the floors of the Sands apartment/business complex its for residents and guests only. To go to the first floor please hit UP</desc>
+      <exits w='394' up='461' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='397'>
+      <name>Lusifer&apos;s Home/Office</name>
+      <desc>This is a one bedroom apartment that his master allowed to him for his business and personal use. there is a simple single bed in the corner and a desk that takes up most of the room so that lusifer can work on his multimega groat company. The door is to the south</desc>
+      <exits s='461' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='401'>
+      <name>Freaky&apos;s Joint</name>
+      <desc>At one end of this west facing room lies a king size bed with bedside tables Decorated in similar colors to AusAme pub colors, Emerald Metallic Green and Gold. The walls carry the same as the pub walls and on the roof as you look up lies the Southern Cross flag in all her glory. As you look round you see a mini bar fridge and a desk with a computer and printer sitting there. Quite a cozy room for just a single person or a group.</desc>
+      <exits e='402' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='402'>
+      <name>Second Floor</name>
+      <desc>This is the Second floor.there are four rooms on this floor they are</desc>
+      <desc>North -- empty</desc>
+      <desc>East -- AusAme Pub</desc>
+      <desc>West -- Freakys Joint</desc>
+      <desc>South -- empty</desc>
+      <desc>Go up to the third floor, Down  to the first floor and Down Down  to the lobby. If you would like a apartment please tight beam Furgas and ask for one.</desc>
+      <exits n='338' e='403' s='466' w='401' up='271' down='461' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='403' flags='b'>
+      <name>AusAme Pub</name>
+      <desc>In one corner is a row of slot machines tinkling and jingling with customers. In the center of the room lies a pool and snooker table both waiting on the players to rack em up. Just near the door, is the juke box playing Old Man Emu. Scattered round are tables and chairs for all the patrons and the bar is lined with the most famous of all aussie beers Fosters. The wall is painted emerald metallic green and gold and on wall sits the aussie emblem of a kangaroo boxing an emu in the head with boxing gloves on.</desc>
+      <exits w='402' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='453'>
+      <name>Front Yard</name>
+      <desc>A modest home with clean simple lines stands just inside a garden gate.  A stone path winds through a vibrant garden.  Tucked here and there among the plants are tags that identify each species of plant identifying its name and planet of origin. Exotic species from across the galaxy seem to be combined here.  A cool breeze brushes your cheek as it makes its way through the garden.  The air is filled with the heady scent of flowers combined with a touch of wood smoke rising from the chimney. The sound of silence and peace surrounds you the traffic on the road to the north fading as the birds sing and the bees go about their business.</desc>
+      <exits n='389' s='517' in='517' out='389' no-exit='nomove.dannae.1'/>
+   </location>
+
+   <location num='456'>
+      <name>The Blood Temple of Dilconia</name>
+      <desc>The noise of the outside world is muted to nonexistence as the calm of the temple surrounds you. Worshippers&apos; foot steps are muted and the air is filled with the fragrant scent of sweet incense. Tall columns reach up to the ceiling and rows of candles add a gentle illumination to the room. Tapestries line the walls depicting many of the historic moments in Dilconian history. A few of them have carefully mended tears in them.  The reception room is to the east and the preparations room is to the southeast.  The Altar room itself is to South.  North leads back out to the street.</desc>
+      <exits n='392' e='457' se='521' s='520' out='392'/>
+   </location>
+
+   <location num='457'>
+      <name>Reception </name>
+      <desc>This room is intended for receiving guests after the ceremonies have been completed.  Long banquet tables line the walls ready to be filled with everything that is good to eat and drink.  Sparkling chandeliers hang from the high ceiling lit with hundreds of candles casting tiny rainbows through the room.  The banners from each of the ruling houses of Dilconia and from each planet of the empire hang along the top edge of the ceiling.  One seems to be missing.</desc>
+      <exits w='456' out='456'/>
+   </location>
+
+   <location num='458'>
+      <name>Base of the mountain </name>
+      <desc>Far up the mountain sits a large castle. The path leads North West back to the main road.</desc>
+      <exits nw='393' up='523'/>
+   </location>
+
+   <location num='460'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='461' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='461'>
+      <name>First Floor</name>
+      <desc>This is the first floor. There are four rooms on this floor they are</desc>
+      <desc>North -- Lusifer&apos;s Home/Office</desc>
+      <desc>East -- Siberian Trading Corporation</desc>
+      <desc>West -- empty</desc>
+      <desc>South -- Desperados Corporation</desc>
+      <desc>Go Up to the second floor or Down to the lobby. If you would like a apartment please tight beam Furgas and ask for one.</desc>
+      <exits n='397' e='462' s='525' w='460' up='402' down='395' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Siberian Trading Corporation</name>
+      <desc>As you enter the office for Siberian Trading Corporation, you first notice the coat of arms for the company.  &quot;The coat of arms features a Siberian Tiger in battle with a Sabortoothed Tiger.  There is a man with a rifle in the background pointing at both beasts.&quot;  Next your eyes stop at the picture of the space ship on the west wall.  Under the picture the plaque reads, &quot;To all those that went before us to pave the roads for those that soon will follow.&quot; The rest of the decor of the office is set in Twentieth Century Russian decor. There is a large Russian flag hung from the ceiling. The large desk in the center of the room holds a holo cube that displays all the company information. It is obvious that this company is controlled by a very knowledgable businessman.</desc>
+      <exits w='461' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='466'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='402' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='517' flags='b'>
+      <name>Living room</name>
+      <desc>Your eyes adjust to the dim interior of the home.  The drapes are drawn tight against the light from outside.  A series of candle like lamp lights cast a comforting glow without the smoke or hazards of open flames.  Several overstuffed chairs and a love seat are situated by a fire which casts a further set of shadows throughout the room.  The smell of wood smoke and warm leather fills the room. A staircase hugs one wall leading to the second floor while one door leads back out to the front yard and another leads south onto the terrace.</desc>
+      <exits n='453' s='581' out='453' no-exit='nomove.dannae.1'/>
+   </location>
+
+   <location num='520'>
+      <name>Altar Room</name>
+      <desc>Onyx candles rest in silver wall sconces around the room casting pale flickering shadows around the room from all directions.  A dias in the center of the room has thirteen steps adorned with the colors of each of the thirteen houses of Dilconia. Atop the dias is a large block of bloodstone serves as the altar with rough sides and a polished top.  The floor is a mosaic of Lord Furgas&apos; family crest in bloodstone, black onyx and silver hematite tiles of the family colors.  The tapestries on the Altar room walls depict the coronations and marriages of each of the previous Dilconian Overlords.</desc>
+      <exits n='456' e='521' in='584' out='456'/>
+   </location>
+
+   <location num='521'>
+      <name>Preparations Room</name>
+      <desc>Soft lighting complements soothing colors and music to make this the ideal place for those who are to participate in the ceremonies performed in the temple. Floor to ceiling stone tiles make the room both sanitary and calming to allow participants to clear their minds and cleanse their bodies. The way to the Altar room is east and the entry way is back to the northwest.</desc>
+      <exits w='520' nw='456' out='456'/>
+   </location>
+
+   <location num='523'>
+      <name>half way up the mountain</name>
+      <desc>A mountain pass leads farther up the mountain to the castle or back down the mountain.</desc>
+      <exits up='588' down='458'/>
+   </location>
+
+   <location num='525'>
+      <name>Desperados Corporation</name>
+      <desc>You enter the office of Santana CEO of Desperados Corporation and your eyes are immediately drawn to the south wall which is one big plate glass taking up the whole wall. The view from here is breath taking. You gaze out the window and imagine that the CEO must spend a lot of time with his back to the door.</desc>
+      <exits n='461' no-exit='nomove.planet.1'/>
+   </location>
+
+   <location num='533'>
+      <name>Alcove</name>
+      <desc>Tall hedges surround this private corner, a low padded bench is along the hedge and is the perfect place for a couple to sit privately. The trees filter the light creating a calm dappled shade providing soothing rustling sounds as the wind blows through the leaves.</desc>
+      <exits out='597'/>
+   </location>
+
+   <location num='580'>
+      <name>Bedroom</name>
+      <desc>A large bed dominates the room with its heavy drapes pulled back.  Rows of shelves display various trinkets from around the universe.  You may go back down to the living room if you wish.</desc>
+      <exits down='517' no-exit='nomove.dannae.1'/>
+   </location>
+
+   <location num='581'>
+      <name>Terrace</name>
+      <desc>A well tended herb garden surrounds the terrace giving easy access to a large variety of herbs used in cooking, medicine and fragrances.  The herbs were chosen with the cool Dilconian sun in mind making them perfectly suited to the growing conditions.  A padded bench sits against the house and a small fountain gently splashes water in the corner.  You can always go back in the house when you please.</desc>
+      <exits n='517' up='580' no-exit='nomove.dannae.1'/>
+   </location>
+
+   <location num='584'>
+      <name>Private Ceremonial Room</name>
+      <desc>This intimate room off of the main altar room is used for only the most private of ceremonies.  A large raised platform is in the center of the room.  Cupboards line one wall full of the tools that contain the ritual paraphernalia needed to complete the ceremonies. You may go back out to the main Altar room.</desc>
+      <exits out='520'/>
+   </location>
+
+   <location num='588'>
+      <name>Top of the mountain</name>
+      <desc>This is the top of the mountain to the east is a large castle. The mountain path leads back down the mountain.</desc>
+      <exits e='589' down='523'/>
+   </location>
+
+   <location num='589'>
+      <name>Top of the mountain </name>
+      <desc>To the west the ledge goes on. To the south is the gatehouse of the castle.</desc>
+      <exits s='653' w='588'/>
+   </location>
+
+   <location num='597'>
+      <name>Flower Garden </name>
+      <desc>A formal design laid out at angles with tall fruit trees in the center of several squares that adjoin the rest of the garden. Boxwood hedges create a spiral design that leads your eyes throughout the well tended garden beds. There is an alcove off to one side that couples sometimes sit in to find a private moment away from prying eyes. The gardens continue east, south east and south.</desc>
+      <exits e='598' se='662' s='661' in='533'/>
+   </location>
+
+   <location num='598'>
+      <name>Herb Garden</name>
+      <desc>The herb garden has been shaped into a large Celtic triangle knot with its loops and swirls filled with various herbs each labeled neatly. Some of the names are easily recognizable as old earth herbal staples such as lavender and chamomile but others such as razloct are from exotic off world beds. Its iridescent blue flowers and bright pink foliage are not only beautiful but good for curing a variety of ills. A warm breeze blows lightly stirring the leaves releasing their fragrance into the air. The gardens continue west, southwest and south</desc>
+      <exits s='662' sw='661' w='597'/>
+   </location>
+
+   <location num='653'>
+      <name>Courtyard</name>
+      <desc>A large wooden door is to the north. The courtyard expands to the east, northeast, and south.</desc>
+      <exits n='589' e='654' se='718' s='717'/>
+   </location>
+
+   <location num='654'>
+      <name>Courtyard</name>
+      <desc>The courtyard expands to the west, southwest, and south.</desc>
+      <exits e='655' se='719' s='718' sw='717' w='653'/>
+   </location>
+
+   <location num='655'>
+      <name>Courtyard</name>
+      <desc>the courtyard eapnds to the west, southwest, and south.</desc>
+      <exits s='719' sw='718' w='654'/>
+   </location>
+
+   <location num='661'>
+      <name>Imperial Garden</name>
+      <desc>A large terrace spreads before you leading from the entrance at the south back to the castle down to the formal gardens. From here you can see across the gardens and see the intricate patterns the gardeners and even the Empress herself have worked for and designed.  Paths lead off to the north,east and north east.</desc>
+      <exits n='597' ne='598' e='662' s='725'/>
+   </location>
+
+   <location num='662'>
+      <name>Vegetable Garden</name>
+      <desc>Adjacent to the Herbs is an extensive vegetable garden that grows all types of edible plants from around the universe. The rows flair out in a spiral design that is both beautiful and practical sending stripes of color radiating out in all directions. The gardens continue north, west and north west.</desc>
+      <exits n='598' w='661' nw='597'/>
+   </location>
+
+   <location num='663'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the east, south and southeast.</desc>
+      <exits e='664' se='728' s='727'/>
+   </location>
+
+   <location num='664'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the east, west, south, southwest and southeast.</desc>
+      <exits e='665' se='729' s='728' sw='727' w='663'/>
+   </location>
+
+   <location num='665'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the west, south and southwest. There is a large platform before you, but there doesnt seem to be any way to get up from here.</desc>
+      <exits s='729' sw='728' w='664'/>
+   </location>
+
+   <location num='666'>
+      <name>Platform</name>
+      <desc>This is the north end of the raised platform. The thrones of the royal family are to the south.</desc>
+      <exits s='730'/>
+   </location>
+
+   <location num='717'>
+      <name>Courthyard</name>
+      <desc>The courtyard expands to the north, northeast, east, southeast, south..</desc>
+      <exits n='653' ne='654' e='718' se='782' s='781'/>
+   </location>
+
+   <location num='718'>
+      <name>Center of the courtyard</name>
+      <desc>The courtyard expands to the west, northwest, north, northeast, east, southeast, south, southwest.</desc>
+      <exits n='654' ne='655' e='719' se='783' s='782' sw='781' w='717' nw='653'/>
+   </location>
+
+   <location num='719'>
+      <name>courtyard</name>
+      <desc>The courtyard expands to the south, southwest, west, northwest and north. To the east the castle goes on.</desc>
+      <exits n='655' e='720' s='783' sw='782' w='718' nw='654'/>
+   </location>
+
+   <location num='720'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the east and the west. On the wall are pictures of dilconia history.</desc>
+      <exits e='721' w='719'/>
+   </location>
+
+   <location num='721'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the east and the west. On the wall are pictures of dilconia history.</desc>
+      <exits e='722' w='720'/>
+   </location>
+
+   <location num='722'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the east and the west. On the wall are pictures of dilconia history.</desc>
+      <exits e='723' w='721'/>
+   </location>
+
+   <location num='723'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the east and the west. On the wall are pictures of dilconia history.</desc>
+      <exits e='724' w='722'/>
+   </location>
+
+   <location num='724'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the east and the west. on the wall are pictures of dilconia history. The royal apartment is to the south</desc>
+      <exits e='725' s='788' w='723'/>
+   </location>
+
+   <location num='725'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the east and the west. On the wall are pictures of dilconia history. The Queen&apos;s garden is to the north.</desc>
+      <exits n='661' e='726' w='724'/>
+   </location>
+
+   <location num='726'>
+      <name>Long Hallway</name>
+      <desc>The hallway goes to the west. On the wall are pictures of dilconia history. The royal hall is to the east.</desc>
+      <exits e='727' w='725'/>
+   </location>
+
+   <location num='727'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the north, south, northeast, and east. There is a long hallway to the west.</desc>
+      <exits n='663' ne='664' e='728' se='792' s='791' w='726'/>
+   </location>
+
+   <location num='728'>
+      <name>Royal Hall</name>
+      <desc>The hall expands in every direction.</desc>
+      <exits n='664' ne='665' e='729' se='793' s='792' sw='791' w='727' nw='663'/>
+   </location>
+
+   <location num='729'>
+      <name>Royal Hall</name>
+      <desc>You stand before a raise platform. You wonder if it would be ok to go up onto the platform. The hall expands to the north,south,southwest and northwest.</desc>
+      <exits n='665' s='793' sw='792' w='728' nw='664' up='730'/>
+   </location>
+
+   <location num='730'>
+      <name>Platform</name>
+      <desc>There is a rasied plate form with the thrones of the empire and his lady. The platform goes to the north and south of here.</desc>
+      <exits n='666' s='794' down='729'/>
+   </location>
+
+   <location num='781'>
+      <name>Courtyard</name>
+      <desc>the courtyard expands to the north, northeast, and east.</desc>
+      <exits n='717' ne='718' e='782'/>
+   </location>
+
+   <location num='782'>
+      <name>Courtyard</name>
+      <desc>the courtyard expands to the west, northwest, north, northeast, and east.</desc>
+      <exits n='718' ne='719' e='783' w='781' nw='717'/>
+   </location>
+
+   <location num='783'>
+      <name>Courtyard</name>
+      <desc>the courtyard expands to the west, northwest, and north.</desc>
+      <exits n='719' w='782' nw='718'/>
+   </location>
+
+   <location num='788'>
+      <name>Sitting Room</name>
+      <desc>There is a large LCD television playing the lately news from around the galaxy. There is a large overstuffed couch here as well as a couple of chairs borrowed from the lounge on earth. Art work covers the walls from famous artists such as Vince Vango of Earth and Helka Grossman of Dilconia. The Overlord&apos;s office is to the southeast, and the hot tub is to the south.</desc>
+      <exits n='724' e='789' se='853' s='852' down='200' out='329'/>
+   </location>
+
+   <location num='789'>
+      <name>Library</name>
+      <desc>This is Lord Furgas&apos; personal library. On each wall are shelves full of the his favorite books from his favorite authors. To the east is the sitting room, to the south is the Overlord&apos;s office, and to the southwest is the hot tub.</desc>
+      <exits s='853' sw='852' w='788'/>
+   </location>
+
+   <location num='791'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the north, east and northeast.</desc>
+      <exits n='727' ne='728' e='792'/>
+   </location>
+
+   <location num='792'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the north, west, east, northeast and northwest</desc>
+      <exits n='728' ne='729' e='793' w='791' nw='727'/>
+   </location>
+
+   <location num='793'>
+      <name>Royal Hall</name>
+      <desc>The hall expands to the north,west and northwest. there is a platform before you but there is no way up on it.</desc>
+      <exits n='729' w='792' nw='728'/>
+   </location>
+
+   <location num='794'>
+      <name>Platform</name>
+      <desc>This is the south end of the platform. The platform expands to the north where the royal families thrones are located.</desc>
+      <exits n='730'/>
+   </location>
+
+   <location num='852' flags='b'>
+      <name>Hot Tub</name>
+      <desc>This is a Hot tub built for two. The water is will relax your tired muscles from either a long day fighting or hauling. The Overlord&apos;s office is to the east, the sitting room is to the north, the Royal Bedroom is up the stairs behind the hot tub.</desc>
+      <desc>A droid stands in the corner waiting to bring you whatever you desire.</desc>
+      <exits n='788' ne='789' e='853' up='916'/>
+   </location>
+
+   <location num='853'>
+      <name>OverLord Furgas&apos; Office</name>
+      <desc>There is a large real earth oak wood desk in the far corner of the office, on the left wall scrolls the current prices and activities of the exchange. To the northwest is the sitting room, to the north is the library, and finally to the West is the hot tub</desc>
+      <exits n='789' w='852' nw='788'/>
+   </location>
+
+   <location num='916'>
+      <name>Royal Bedroom</name>
+      <desc>This is the Royal Bedroom for the Overlord and his lady wife. Heavy velvet drapes surround and enclose the large bed designed to block out light from the large picture windows and to keep prying eyes out as well. A large wardrobe stands in the corner and a low set of shelves displays an assortment of crystals and gems along with several rows of books. You may go back down to the hot tub if you wish.</desc>
+      <exits down='852' in='917'/>
+   </location>
+
+   <location num='917'>
+      <name>Bed</name>
+      <desc>The drapes surrounding the bed block out all of the exterior lighting leaving the interior dark and cozy. Two candle like lamps flicker softly against the wall casting dim shadows across the bed spread. The bedding is turned back just enough to reveal creamy satin sheets in contrast to the deep red velvet spread.</desc>
+      <exits out='916' no-exit='nomove.dannae.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<fed2-map title='Arawn' version='12' editor='standard' from='393' to='Terran.Terran Space.268'>
+
+   <location num='193' flags='t'>
+      <name>Store Room</name>
+      <desc>   Unspeakable horrors reside here.</desc>
+   </location>
+
+   <location num='200'>
+      <name>Weyland-Yutani Arawn Office</name>
+      <desc>   As you walk through the double glass doors, you are greeted by a small lobby with minimal furnishings. A single receptionist is busy working at her desk and barely notices you entering the room. To your left is a tan leather couch with a short coffee table in front of it. Although you&apos;re the only one here, you can tell that visitors do come by from time to time due to the magazines conveniently placed on the table there. Looking through them you see a variety of publications including Genetics Quarterly, Endorphins Weekly, and Synthetics Illustrated. Out of the corner of your eye you also notice a coffee table book which just happens to be about coffee tables. Hmm.</desc>
+      <desc>   As you approach the desk, the receptionist informs you that she can&apos;t let you pass without an appointment, which you don&apos;t have. The only exit it seems, then, is to your SouthEast.</desc>
+      <exits se='265' up='211'/>
+   </location>
+
+   <location num='201'>
+      <name>Research Facility Elevator - Administration Level</name>
+      <desc>   Stainless steel walls and a linoleum floor don&apos;t make for a very elaborate elevator, but considering this is a research facility, it makes sense that functionality was chosen over opulance. One of the things that sticks out to you the most is the lack of horrible music playing in the background. Isn&apos;t that standard fare for elevators? It doesn&apos;t seem like a busy day as there&apos;s no one else on the elevator except yourself. Glancing at the buttons, it appears that all of the lower floors require a key. You&apos;re not going to get very far exploring today. Then again, you are in a biological research facility. It&apos;s not like they can just let strangers walk around wherever they want.</desc>
+      <desc>   Oh well, looks like you&apos;re only current option is back to your South.</desc>
+      <exits s='265' out='265'/>
+   </location>
+
+   <location num='211' flags='t'>
+      <name>Lia&apos;s Arawn Office</name>
+      <desc>   You have entered the quiet, executive office of Lia Kell. This room is quite cozy and furnished comfortably but not too lavishly. Dominated by the king size bed nestled against the opposite wall, the room contains all the ammenities one would need without ever having to leave. Bookshelves line the walls with a sizeable library. A desk, along with a holo computer, is set off to the side for Ms. Kell to work from. Furthermore, in a room of to the side of the main suite, there is a small kitchen which includes a stove and a refrigerator in case anyone feels like cooking.</desc>
+      <desc>   Normally, one would question why this room&apos;s normal entrance has been sealed off forcing people to enter through a secret passageway. In this case, however, the burden of running the local government often requires Lia to find a nice, secluded place where no one can find her.</desc>
+      <exits down='200'/>
+   </location>
+
+   <location num='264' flags='b'>
+      <name>W/Y Research Facility Cantina</name>
+      <desc>   Fluorescent lights give a pale green glow to what would otherwise be a white and light gray room. You&apos;ve wandered into the research facility&apos;s cantina where several workers are taking their breaks. Simple rounded tables are placed throughout the rectangular room which appears large enough to seat at least 60 workers at a time. Just seeing the size of the cantina gives you an idea of how many people must work here.</desc>
+      <desc>   Automated food dispencing machines line the West wall. You should have no problem grabbing a bite to eat if you want one. Otherwise, if you&apos;re done taking a break, you can head back to your East.</desc>
+      <exits e='265'/>
+   </location>
+
+   <location num='265'>
+      <name>W/Y Biological Sciences Research Station - Administration Level</name>
+      <desc>   The Weyland-Yutani Research facility has a very sterile feel to it as you walk through the main entryway. White walls and periodic glass windows make up the bulk of the architechture here. As this is the administration level, there&apos;s no actual research going on here. To your immediate North is a set of reinforced metal doors that lead to a series of elevators. You can use them to head deeper into the facility.</desc>
+      <desc>   East of you appears to be the station&apos;s dedicated medical clinic, while to the West is the cantina. A pair of glass doors to the NorthWest separate you from the actual Administration offices themselves. Finally, the Security checkpoints leading into and out of the facility are to your SouthEast and SouthWest, although it looks like they won&apos;t let you go back out the entrance. SouthWest would be your only choice in that case.</desc>
+      <exits n='201' e='266' sw='328' w='264' nw='200'/>
+   </location>
+
+   <location num='266' flags='hi'>
+      <name>W/Y Research Facility Medical Bay</name>
+      <desc>   What a surprise, the room is predominantly white. Not like every other room that you&apos;ve seen so far in this place looks anything like this at all... really... Anyways, you find yourself wandering around the Weyland-Yutani Research Station&apos;s med-bay. This place being inside of a biomedical research facility practically guarantees that it&apos;s a level one trauma center with the latest in experimental treatments at their fingertips. Their are a few facility employees waiting patiently here to be called into the triage room. You think you faintly hear someone behind the door say, &quot;Please state the nature of your medical emergency.&quot;</desc>
+      <desc>   If you need help of any kind, you&apos;re definitely in the right place. Otherwise you can always head out the door to your West.</desc>
+      <exits w='265'/>
+   </location>
+
+   <location num='328'>
+      <name>Security Checkpoint</name>
+      <desc>   An all too familiar sensation passes through your body as you are once again scanned for contraband items. While standing inside the scanning station, you see another individual looking around suspiciously before walking into the scanner next to you. An alarm goes off, and you turn just in time to see the pod next to you filled with flames. As things quiet down, you can see tiny pieces of ash flutter quietly to the floor of the pod. A guard motions you to move out now without giving the spectacle another look. Apparently, these guys are serious about biological containment.</desc>
+      <desc>   The only way you can go from here is back out to the main airlock to your East.</desc>
+      <exits e='329'/>
+   </location>
+
+   <location num='329'>
+      <name>Weyland-Yutani Biological Sciences Research Station Alpha</name>
+      <desc>   The sturdy airlock doors form a tight seal as they close around you. You&apos;ve entered the complexes main airlock. This one room controls the flow of traffic into and out of the Weyland-Yutani research station. Cameras are perched in several places around the room constantly scanning for contraband being smuggled into and out of the facility. It&apos;d be wise to behave while so many eyes are watching you at once.</desc>
+      <desc>   The complex&apos;s main doors to the South will lead you back to the frigid wasteland outside. It&apos;s recommended that you have warm clothing and a rebreather as you will have a hard time surviving without them. Of course, if you wish to go inside the facility, you must proceed to the security checkpoint to the East.</desc>
+      <exits e='330' s='393'/>
+   </location>
+
+   <location num='330'>
+      <name>Security Checkpoint</name>
+      <desc>   A strange sensation passes through your body as you are scanned for contraband items. While standing inside the scanning station, a pair of gruff looking guards glance back and forth between you and the displays in front of them. As this takes a moment to complete, you see that all traffic from here is being led to your NorthEast. Finally being waved through, you can proceed out of the security checkpoint.</desc>
+      <exits nw='265'/>
+   </location>
+
+   <location num='393' flags='yr'>
+      <name>Arawn Planetary Defense Airfield</name>
+      <desc>   The ringed planet, Clota, is rising over the horizon as you survey the Arawn Planetary Defense Airfield. Although slated primarily for military use, this is the main spaceport for interplanetary traffic travelling to and from the icy moon. Hangars dominate most of the visible landscape in the area. A good portion of them, however, are surrounded by razorwire fences as they are military facilities. The bulk of these buildings are to your immediate South, but you&apos;re certain that an attempt to check them out would be stopped quickly.</desc>
+      <desc>   To your East lies a squat, concrete structure with a small airlock serving as a main entrance. Its markings identify it as the planetary exchange. All commercial activities on this moon are most likely conducted there. To the North is a much larger complex which appears to be a research facility.</desc>
+      <exits n='329' e='394'/>
+   </location>
+
+   <location num='394' flags='eb'>
+      <name>Arawn Planetary Exchange</name>
+      <desc>   A small airlock is all that separates the exchange floor from the frozen wastes outside. Once inside, however, you can take off any protective gear you were wearing safely as the exchange&apos;s interior is much more temperate. Elegant stone floors, vaulted ceilings and crown-molded walls give the exchange the feel of a 20th century commercial lending bank. A broker wearing a once traditional suit and tie approaches you quietly and offers to assist you with any of your trading needs.</desc>
+      <desc>   Once you&apos;re done here, you may put your environment suit back on, and head outside to your West.</desc>
+      <exits w='393'/>
+   </location>
+
+</fed2-map>

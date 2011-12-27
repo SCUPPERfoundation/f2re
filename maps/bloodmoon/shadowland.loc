@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<fed2-map title='Shadowland' version='16' editor='standard' from='197' to='Bloodmoon.Bloodmoon Space.198'>
+
+   <location num='73'>
+      <name>Cattle Fields</name>
+      <desc>These are a mini display of the fields used for the raising of the cattle that is a part of what makes up Blood wine. The fields go south, south-east and east</desc>
+      <exits e='74' se='138' s='137'/>
+   </location>
+
+   <location num='74'>
+      <name>Cattle Fields</name>
+      <desc>These are a mini display of the fields used for the raising of the cattle that is a part of what makes up Blood wine. The fields go south, southeast, southwest, west and east</desc>
+      <exits e='75' se='139' s='138' sw='137' w='73'/>
+   </location>
+
+   <location num='75'>
+      <name>Cattle Fields</name>
+      <desc>These are a mini display of the fields used for the raising of the cattle that is a part of what makes up Blood wine. The fields go south, southwest and south</desc>
+      <exits s='139' sw='138' w='74'/>
+   </location>
+
+   <location num='76'>
+      <name>Fermation chamber</name>
+      <desc>This is where all the ingredients for blood wine come together, Placed in large copper stills and left to fermates for 3 years. After it is done it is shipped to the main planet for bottling and shipment thru out the galaxy. The exit is south.</desc>
+      <exits s='140'/>
+   </location>
+
+   <location num='135'>
+      <name>Empire Medical Services</name>
+      <desc>This is the branch office for the medical services for the empire. Were sorry that this branch is inactive and you must go to the capital planet for medical service.</desc>
+      <exits s='199'/>
+   </location>
+
+   <location num='136' flags='yr'>
+      <name>Shadowland&apos;s Shipworks</name>
+      <desc>As you enter a service droid rolls up to you, and hands you a service ticket. &quot;Welcome to the shadowland ship works please be patience we had a large order from the empire to finish before we can handle your ship.</desc>
+      <exits sw='199'/>
+   </location>
+
+   <location num='137'>
+      <name>Cattle Fields</name>
+      <desc>These are a mini display of the fields used for the raising of the cattle that is a part of what makes up Blood wine. The fields go north, northeast and east.</desc>
+      <exits n='73' ne='74' e='138' s='201'/>
+   </location>
+
+   <location num='138'>
+      <name>Cattle Fields</name>
+      <desc>These are a mini display of the fields used for the raising of the cattle that is a part of what makes up Blood wine. The fields go north, northeast, west, northwest and east.</desc>
+      <exits n='74' ne='75' e='139' w='137' nw='73'/>
+   </location>
+
+   <location num='139'>
+      <name>Cattle Fields</name>
+      <desc>These are a mini display of the fields used for the raising of the cattle that is a part of what makes up Blood wine. The fields go north, northwest and west</desc>
+      <exits n='75' w='138' nw='74'/>
+   </location>
+
+   <location num='140'>
+      <name>Brewery</name>
+      <desc>In this room is a display of how the cattle are herded in and small amounts of their rich blood is extracted to be sent to the fermation chambers.</desc>
+      <exits n='76' s='204'/>
+   </location>
+
+   <location num='141'>
+      <name>Shadowland look out </name>
+      <desc>Below you you see more of this lush planet, with not a hint of any industry to pollute it. The platform expands to the south</desc>
+      <exits s='205'/>
+   </location>
+
+   <location num='197'>
+      <name>Landing Pad</name>
+      <desc>This is a large Floating landing pad. The Empire does not wish for any fuel related toxins getting to the delicate blood orange groves or bottling process. To reach the planet please head down.</desc>
+      <exits down='198'/>
+   </location>
+
+   <location num='198'>
+      <name>Security Check Point</name>
+      <desc>As you emerge off the lift you see a large security check point, there are 3 dilconian security guards here checking all incoming and outgoing travelers. You may go east to the planet services.</desc>
+      <exits e='199' up='197'/>
+   </location>
+
+   <location num='199'>
+      <name>Planetary Hub</name>
+      <desc>This is a large open area where all planetary services are located.</desc>
+      <desc>A large sign shows where everything is</desc>
+      <desc>North-- Empire Medical Services</desc>
+      <desc>South-- The Blood Works Bar</desc>
+      <desc>Northeast-- Shadowland&apos;s Ship works.</desc>
+      <desc>Southeast-- Wine exchange</desc>
+      <desc>East-- Road to production fields</desc>
+      <desc>West-- Security Check Point</desc>
+      <exits n='135' ne='136' e='200' se='264' s='263' w='198'/>
+   </location>
+
+   <location num='200'>
+      <name>Road</name>
+      <desc>To the east stand a large dome shaped building. The hub is back to the west. There is a sign that states&quot; Empire department of agriculture&apos;s Model operations of the day to day on the planet Shadowlands please enjoy the display.</desc>
+      <exits e='201' w='199'/>
+   </location>
+
+   <location num='201'>
+      <name>EDA Project Blood wine </name>
+      <desc>To the north is a mini display of the cattle raising operations. To the east is the rest of the building. To the south is the orange groves display.</desc>
+      <exits n='137' e='202' s='265' w='200'/>
+   </location>
+
+   <location num='202'>
+      <name>Hallway</name>
+      <desc>The hallway goes east and west. To the north is a large glass window showing the cattle fields display. And to the south is a window showing the orange groves.</desc>
+      <exits e='203' w='201'/>
+   </location>
+
+   <location num='203'>
+      <name>Hallway</name>
+      <desc>The hallway goes east and west. To the north is a large glass window showing the cattle fields display. And to the south is a window showing the orange groves. Ahead is the brewery display.</desc>
+      <exits e='204' w='202'/>
+   </location>
+
+   <location num='204'>
+      <name>Brewery</name>
+      <desc>Welcome to the brewery display for the EDA. There is a display of the process of bloodwine both north and south. In the corner of the room is a large copper barrel with a small sign saying &quot;First formation chamber used in the year 23,450 of the empire&apos;s calendar. Conversion for earth&apos;s children year is 20,000 b.c. To the east is a sight to be seen.</desc>
+      <exits n='140' e='205' s='268' w='203'/>
+   </location>
+
+   <location num='205'>
+      <name>Shadowland look out.</name>
+      <desc>Far below you is the planet of Shadowlands. You can make out the huge traces of land used to raise the 1000s heads of cattle used to provide the universe with bloodwine, also there are the rows and rows of orange groves, and one little sign that says &quot;planetary restrictions to be lifted soon&quot;. The platform expands both north and south.</desc>
+      <exits n='141' s='269' w='204'/>
+   </location>
+
+   <location num='263' flags='b'>
+      <name>The Blood Works Bar</name>
+      <desc>This is a simple bar used by the farm workers, ships crews, and other travelers thru out the galaxy. The hub is to the north.</desc>
+      <exits n='199' up='327'/>
+   </location>
+
+   <location num='264' flags='e'>
+      <name>Wine exchange</name>
+      <desc>Welcome to the exchange. There are trading machines spaced out around the room to allow privacy while trading. Remember buy low and sell high.</desc>
+      <exits nw='199'/>
+   </location>
+
+   <location num='265'>
+      <name>Orange Groves</name>
+      <desc>This is a mini display of the groves that provide the blood oranges for the blood wine. The path between the trees goes east and the main building is north.</desc>
+      <exits n='201' e='266' s='329'/>
+   </location>
+
+   <location num='266'>
+      <name>Orange Groves</name>
+      <desc>This is a mini display of the groves that provide the blood oranges for the blood wine. The path between the trees goes east and west.</desc>
+      <exits e='267' w='265'/>
+   </location>
+
+   <location num='267'>
+      <name>Orange Groves</name>
+      <desc>This is a mini display of the groves that provide the blood oranges for the blood wine. The path between the trees goes west and south</desc>
+      <exits s='331' w='266'/>
+   </location>
+
+   <location num='268'>
+      <name>Brewery</name>
+      <desc>This is a display of how the oranges are gathered for juicing. Large bins of oranges are all around the room with a small path leading north and south between the bins.</desc>
+      <exits n='204' s='332'/>
+   </location>
+
+   <location num='269'>
+      <name>Shadowland over look</name>
+      <desc>Below you you see more of this lush planet, with not a hint of any industry to pollute it. The platform expands to the north.</desc>
+      <exits n='205'/>
+   </location>
+
+   <location num='327'>
+      <name>Lusifers office </name>
+      <desc>This is the office of the planet administrator Lusifer. In the center of the room is a large oak desk brought from Dilconia.</desc>
+      <exits down='263'/>
+   </location>
+
+   <location num='329'>
+      <name>Orange Groves</name>
+      <desc>This is a mini display of the groves that provide the blood oranges for the blood wine. The path between the trees goes east and the main building is north, north</desc>
+      <exits n='265' e='330'/>
+   </location>
+
+   <location num='330'>
+      <name>Orange Groves</name>
+      <desc>This is a mini display of the groves that provide the blood oranges for the blood wine. The path between the trees goes east and west</desc>
+      <exits e='331' w='329'/>
+   </location>
+
+   <location num='331'>
+      <name>Orange Groves</name>
+      <desc>This is a mini display of the groves that provide the blood oranges for the blood wine. The path between the trees goes west and north</desc>
+      <exits n='267' w='330'/>
+   </location>
+
+   <location num='332'>
+      <name>Juicing chamber</name>
+      <desc>This is a display of the juicing process. There is a large bin that dumps into a collection tank where the oranges are washed and then send up to a large crunching unit that extracts the juice and then it is piped to the fermation chamber. The exit is north.</desc>
+      <exits n='268'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<fed2-map title='Cloud Space' version='38' editor='standard'>
+
+   <location num='268' flags='slp'>
+      <name>Cloud Space Interstellar Link</name>
+      <desc>Your ship sits in a this mist at the outer edge of Cloud Space, from here you can make out the distant stars, the foreground is dominated by the interstellar link.</desc>
+      <exits se='333' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You are in a dense cloud that forms within the Cloud Space area. Your Sensors indicate a large inhabited mass to the South.</desc>
+      <exits se='398' s='397' sw='396' nw='268' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Stratus Orbit</name>
+      <desc>   You are in orbit about the Planet Stratus in the Cloud system. From the view screen you would not think so as your ship in encased in a cloudy mist. It is neither possible to see the planet that you hope you are orbiting, let alone any other features. A quick glance at your instrument panel reveals nothing to reassure you as the composition of the cloud seems to have rendered them inoperative.</desc>
+      <exits ne='333' e='397' se='461' s='460' no-exit='moves.noexit.1'/>
+      <events in-room='moves.stratusclosed.1'/>
+   </location>
+
+   <location num='397' flags='sp'>
+      <name>Cloudbase Orbit</name>
+      <desc>You are in a clear area of Cloud Space, in the distant south your sensors indicate the planet Cumulus, before you is the newly constructed Cloudbase Space Station.</desc>
+      <exits n='333' e='398' se='462' s='461' sw='460' w='396' no-exit='moves.noexit.1'/>
+      <events in-room='greeting.cloudbaseorbit.1'/>
+   </location>
+
+   <location num='398' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You are in a dense cloud that forms within the Cloud Space area.</desc>
+      <exits s='462' sw='461' w='397' nw='333' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You are in a dense cloud that forms within the Cloud Space area.</desc>
+      <exits n='396' ne='397' e='461' se='525' s='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>Cumulus Orbit </name>
+      <desc>   You are in orbit about the Planet Cumulus in the Cloud system. From the view screen you would not think so as your ship in encased in a cloudy mist. It is neither possible to see the planet that you hope you are orbiting, let alone any other features. A quick glance at your instrument panel reveals nothing to reassure you as the composition of the cloud seems to have rendered them inoperative. The Charts indicate that the planet should be there !!!!</desc>
+      <desc>   The planet itself is however an M Class planet and will comfortably sustain life.</desc>
+      <desc>   Your Comms unit crackles with a message from Cloudbase, &quot;Welcome to my homeworld, please do not build without my approval, and enjoy your stay on Cumulus&quot;</desc>
+      <exits n='397' ne='398' e='462' se='526' s='525' sw='524' w='460' nw='396' no-exit='moves.noexit.1'/>
+      <events in-room='greeting.cumulusorbit.1'/>
+   </location>
+
+   <location num='462' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You are in a dense cloud that forms within the Cloud Space area.</desc>
+      <exits n='398' s='526' sw='525' w='461' nw='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Sirrus Orbit</name>
+      <desc>   You are in orbit about the Planet Sirrus in the Cloud system. From the view screen you would not think so as your ship in encased in a cloudy mist. It is neither possible to see the planet that you hope you are orbiting, let alone any other features. A quick glance at your instrument panel reveals nothing to reassure you as the composition of the cloud seems to have rendered them inoperative.</desc>
+      <exits n='460' ne='461' e='525' no-exit='moves.noexit.1'/>
+      <events in-room='moves.sirrusclosed.1'/>
+   </location>
+
+   <location num='525' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You are in a dense cloud that forms within the Cloud Space area. There is something that looks unusal to the south, a forcefield perhaps? Your sensors don&apos;t quite know what to make of it, and your eyes certainly seem to be deceiving you, though as the mist forms and disapates, you can make out a traversable route to the South.</desc>
+      <exits n='461' ne='462' e='526' s='589' w='524' nw='460' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='526' flags='s'>
+      <name>Nimbus Orbit</name>
+      <desc>   You are in orbit about the Planet Nimbus in the Cloud system. From the view screen you would not think so as your ship in encased in a cloudy mist. It is neither possible to see the planet that you hope you are orbiting, let alone any other features. A quick glance at your instrument panel reveals nothing to reassure you as the composition of the cloud seems to have rendered them inoperative.</desc>
+      <exits n='462' w='525' nw='461' no-exit='moves.noexit.1'/>
+      <events in-room='moves.nimbusclosed.1'/>
+   </location>
+
+   <location num='589' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You carefully guide your ship through a little known and long since travelled part of Cloud Space.</desc>
+      <exits n='525' s='653'/>
+      <events enter='moves.ownerentry.1'/>
+   </location>
+
+   <location num='653' flags='s'>
+      <name>Cloud Space</name>
+      <desc>You carefully guide your ship through a little known and long since travelled part of Cloud Space.</desc>
+      <exits n='589' s='717'/>
+   </location>
+
+   <location num='717' flags='s'>
+      <name>Wisp Orbit</name>
+      <desc>You carefully guide your ship through a little known and long since travelled part of Cloud Space.</desc>
+      <desc>You find yourself in orbit above the original planet in Cloud Space. This planet has not been inhabited for many many centuries and you ponder thoughtfully about the wisdom of boarding your shuttle and landing on this planet.</desc>
+      <exits n='653'/>
+      <events in-room='moves.cloudclosed.1'/>
+   </location>
+
+</fed2-map>

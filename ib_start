@@ -1,0 +1,11 @@
+echo "ibgames services startup\n"
+
+cd ~billing
+./start &
+echo "Billing started, please wait...\n"
+sleep 15
+
+cd ~fed2
+./start &
+echo "Federation 2 started\n"
+

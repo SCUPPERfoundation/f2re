@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<fed2-map title='Corleone' version='1.00' editor='standard' from='1612' to='Sicilia.Sicilia Space.644'>
+
+   <location num='0' flags='kt'>
+      <name>Storage locker</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='973'>
+      <name>City Hall</name>
+      <desc>The marble interior of City Hall is a maze of corded lines receding from the windows representing various governmental agencies.  There are windows for the Bureau of Factory Construction, The Factory Destruction Agency, The Refuse Agency, The Planetary Export Commission, and The Department of Space Vehicles.  It is rumored that if you want to get business done, a meeting with Doncorleone will open all the doors that you need.</desc>
+      <exits s='1037' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='976' flags='hi'>
+      <name>Cathedral d&apos; Santa Jezzeria</name>
+      <desc>The Cathedral d&apos; Santa Jezzeria is a beautiful, ornate structure, constructed of polished white marble, and ordained with an array of statuary.  Rows of oaken pews line the interior, and light streams through the stained glass windows in a variety of colored hues that play of the interior to stain the white columns with shades of red and blue.  The Cathedral serves as a refuge for the people, and when injured, they are brought here as well.  Ever lurking near the confessionals is an insurance agent, anxious to prey upon those souls in need.</desc>
+      <exits s='1040' no-exit='moves.noexit.18'/>
+   </location>
+
+   <location num='977'>
+      <name>Plaza de Corleone</name>
+      <desc>The Plaza d&apos; Corleone juts out from the cliff and a marble railing along the edge provides a vantage point to enjoy the view of the valley below.  From this high spot, the olive grove, vineyard and shuttle port can be seen.  And beyond, in the distance, the deep blue of a sea can be seen.</desc>
+      <exits sw='1040' no-exit='moves.noexit.17'/>
+   </location>
+
+   <location num='980' flags='b'>
+      <name>Doncorleone&apos;s Bedroom</name>
+      <desc>Doncorleone&apos;s Bedroom is dominated by a massive king size bed, with the finest sheets.  The bed is quite large, but the Don has the security necessary to ensure that a horses head will not wind up with him as he sleeps.</desc>
+      <exits s='1044' out='1612' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1036' flags='e'>
+      <name>Corleone Planetary Exchange</name>
+      <desc>Large screens hang from the walls with tickers running across the bottom detailing the latest trading prices of the various goods offered or desired by the local populace.  Shouts from Merchants offering bids and exchanging groats are deafening in this small enclosure.  Service droids and messenger rush among the din and enter the exchanges on wireless clipboards to signal the loaders on the shuttle pad to load or unload accordingly.  In a small corner a group of traders is gathered, sobbing, and lamenting their lack of foresight in promoting too quickly.</desc>
+      <desc>  The exit to the plaza is to the east.</desc>
+      <exits e='1037' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='1037'>
+      <name>Village Square</name>
+      <desc>Cobblestones worn over the ages to a smooth, polished sheen line the main plaza of the Village of Corleone.  In the center of the plaza is a fountain with a marble statue of Santa Jezzeria, the patron saint of Corleone.  The water cascades over various tiers of the statue and the mist blows across the plaza and creates hues of rainbows visible in the mist.  Various pushcarts operated by  local vendors are here offering samples of the various products produced by the planet.  The shouts of traders to the west indicate that the planet&apos;s exchange is close by.  To the north is the local seat of government, and to the west a small cafe, with tables seated outside alongside the plaza beckons.</desc>
+      <exits n='973' e='1038' s='1101' w='1036' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='1038' flags='b'>
+      <name>Cafe d&apos; Corleone</name>
+      <desc>Small tables with red and white checkered tableclothes are set up on a small veranda seperated from the plaza by a wrought iron grated fence.  Dry red wines and strong grappa is available along with a variety of bruchetta and anti pasti.  The soft spray of the fountain cools the warm wind, and the soft sound of the pelting water provides a calming ambiance in which to sip some wine and watch the events of the day unfold.</desc>
+      <exits w='1037' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='1040'>
+      <name>Avenue d&apos; Corleone</name>
+      <desc>The Avenue runs from the southwest to the northeast.  To the east is Doncorleone&apos;s Villa, and to the north is the Cathedral d&apos; Santa Jezzeria, the patron saint of Corleone.</desc>
+      <exits n='976' ne='977' e='1041' sw='1103' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='1041'>
+      <name>Doncorleone&apos;s Villa</name>
+      <desc>Iron gates lead to a garden courtyard which is the entry way to Doncorleone&apos;s Villa.  In the center of the garden is a marble statue of Zardoz, for whom Doncorleone owes a debt of honor.  The Villa is constructed in an ornate Tuscan style and has terraces bounded by wrought iron railings through out the second floor.  The entrance to the Villa is to the east, and the Avenue d&apos; Corleone is to the west.</desc>
+      <exits e='1042' w='1040' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1042'>
+      <name>House</name>
+      <desc>The main entry hall of the house has a high ceiling.  Balconies from the second floor overlook the hall, and a large chandelier hangs down from a wrought iron chain to provide light.  The room is dominated by a painting of the patron saint of Corleone, Santa Jezzeria.  She is sitting on a white horse, and is wearing a white gown, and grasping a coiled bull whip.  The floors of the house are dark stained oak, and the walls are cream colored stucco.  The aromas of garlic and delectable meals drift from the dining room to the south.</desc>
+      <exits s='1106' w='1041' up='1044' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1044'>
+      <name>Upstairs Landing</name>
+      <desc>The second story of the villa contain the bedrooms.  Doncorleone&apos;s bedroom is to the north, and the guest room is to the south.</desc>
+      <exits n='980' s='1108' down='1042' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1101'>
+      <name>Road to Corleone</name>
+      <desc>At the top of the cliff is the Village of Corleone.  The road to town branches off to the main square to the north and to a side avenue to the east.  To the southwest is the path down the hillside.  To the south is a view of the shuttle port and in a lush valley to the southeast is a vineyard and olive grove.</desc>
+      <exits n='1037' e='1102' sw='1228' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1102'>
+      <name>Side Street</name>
+      <desc>A narrow cobble stoned street leads from the main road to the west, to the Avenue d&apos; Corleone to the east.</desc>
+      <exits e='1103' w='1101' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1103'>
+      <name>Avenue d&apos; Corleone</name>
+      <desc>Running from the southeast to the northwest the Avenue d&apos; Corleone is a narrow lane with homes on either side.  The homes have small terraces on their second floor that over look the avenue, and it is common for the local people to stop and have near shouting conversations with their neighbors on the terraces above, oblivious to the fact that everyone can hear their conversation.</desc>
+      <exits ne='1040' w='1102' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='1106' flags='b'>
+      <name>Dining Room</name>
+      <desc>The large Dining room has windows that open up to an unobstructed view of the lush valley below and it&apos;s olive groves and vineyards.  In the distance, shuttles can be seen lifting off from the shuttle port.  A large heavy oak table dominates the room, and it is festooned with bowls of pasta, each covered with a different style of gravy.  A platter of grilled sausages and a basket of fresh bread, along with plates of fresh fruits complete the meat.  Bottles of wine are mixed among the platters to provide a satisfying feast.</desc>
+      <exits n='1042' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1108' flags='b'>
+      <name>Guest Bedroom</name>
+      <desc>The Guest Bedroom is tastefully decorated and fresh flowers are arranged in several vases.  A large picture window affords a beautiful panoramic view of the lush valley below.  A freshly made king size bed with linen sheets is here, and they are turned down.  Small chocolate mints lie on each pillow.</desc>
+      <exits n='1044' out='1612' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1228'>
+      <name>Road to the Village of Corleone</name>
+      <desc>The dusty road snakes up the hill side from the fork to the southeast and turns up to the city in the northeast.</desc>
+      <exits ne='1101' se='1358' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1234' flags='bt'>
+      <name>Luca Brasi&apos;s Office</name>
+      <desc>In an office overlooking the operations of the olive oil plant, Lucabrasi is able to monitor it&apos;s operation.  Luca is the Don&apos;s right hand man for undertaking those &quot;delicate&quot; jobs that occassionally arise.  There is a large oak desk here and dark wood paneled walls.  Hanging on a coat rack in the corner is a heavy bullet proof vest.</desc>
+      <exits down='1298' out='1612' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='1297'>
+      <name>Olive Press</name>
+      <desc>A large cask is fitted with a disc,  Connected to the center of the disc is a threaded shaft that runs up and though a cross piece that bisects the top of the cask.  Long Handles jut from the end of the shaft.  When these handles are turned, they raise or lower disc within the cask.  Freshly harvested olives are poured into this press and the shaft is turned, pressing down upon the olives with a great pressure.  The oil contained in the olives drains from the bottom of the cask through a spigot into waiting barrels which are taken to the bottling planet to the east.</desc>
+      <exits e='1298' s='1361' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1298'>
+      <name>Genco Olive Oil Company</name>
+      <desc>Freshly pressed olive oil is brought in, and filtered, and then separated by class.  Heavy, fruity oil from the first press is brought in and labled Extra Virgin, as it is bottled.  Then next presses are labled regular Olive oil, and the last, light oil to emerge from the press is labled Light Olive Oil.  Genco Olive Oil Company ships the oil to Italian restaurants throughout the galaxy.  Of course, such trade volume does create opportunities for smuggling.  But as Doncorleone has said, it&apos;s just business.</desc>
+      <exits w='1297' up='1234' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='1358'>
+      <name>Fork in the Road</name>
+      <desc>A sign post displays the following information:</desc>
+      <desc>   Northwest - Road to the Village of Corleone</desc>
+      <desc>   Southwest - Road to the Landing Pad</desc>
+      <desc>   East - Road to the Olive Grove.</desc>
+      <exits e='1360' sw='1484' nw='1228' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1360'>
+      <name>East/West Road</name>
+      <desc>As the road travels from the east to the west, the arid, dusty path gives way to a more lush, garden surrounding.  Underground aquifers supply ample water to this agricultural domain of Corleone.  To the east is an olive grove, to the south is the Vineyard, and to the west are roads to the Village of Corleone, and to the Landing Pad.</desc>
+      <exits e='1361' s='1424' w='1358' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1361'>
+      <name>Olive Grove</name>
+      <desc>Row after row of olive tree line this lush valley field.  The branches of the trees are literally bending under the strain of the ripening crop.  Nets are set up around each tree to catch the olives as they fall from the branches, and carts are waiting to take the olives to the press to the north.</desc>
+      <exits n='1297' w='1360' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1362' flags='b'>
+      <name>Winery</name>
+      <desc>Built directly into the side of the mountain itself is a large dimly lit room.  Huge Oaken Casks line both sides of the room and go on as far as the eye can see.  Within each cask are vintages of fermenting grapes, the yeast long gone dormant, and now the wine is aging, to produce a more flavorful boquet.  A small table is set up on one side of the room to allow for tasting, and bread and cheese is available to clean your palate.</desc>
+      <exits sw='1425' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1424'>
+      <name>Vineyard</name>
+      <desc>Long rows of grapes grafted from the finest lineages of wine grapes are in rows stretching across the valley.  The thick clumps of grapes hang heavy on the vine and are supported by wood frames.  The different varietals of grapes ranging from Chianti to Sangeovese, are artfully arranged to provide for optimal harvesting.  Once harvested, the grapes are taken to the wine crusher to the east.</desc>
+      <exits n='1360' e='1425' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1425'>
+      <name>Wine Crusher</name>
+      <desc>Stone walls and a roof provide shelter for the large grape crusher.  The crusher itself is a great oak tub in which the freshly harvested grapes are deposited.  The people of Corleone are renowned for many things, their hardiness, their zest for life, and their code of honor.  They are also known throughout the galaxy for having some of the largest feet in the galaxy.  This attribute has enabled Corleone wine production to set records each year.  Also, a little known secret, the feet of the villagers are infested with a unique yeast, that as they stomp on the grapes, is deposited, and mixed throughout the produced juice.  This yeast once infused in the juice provides the necessary ingredient for fementation, and the production of the renowned wines of Corleone.  The winery is to the northeast, and the vineyard to the west.</desc>
+      <exits ne='1362' w='1424' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1484'>
+      <name>Riverbed</name>
+      <desc>The riverbed serves as a road to the Landing Pad to the south.  High above, built on the very cliffs themselves, is the Village of Corleone.  A road begins it&apos;s snaking path up the hill to the northeast.</desc>
+      <exits ne='1358' s='1548' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1548'>
+      <name>River Bed</name>
+      <desc>The river bed is a dried gully of loose worn rocks.  Aside from seeing the effect of erosion which occurred years ago, there is no evidence of any moisture at all in the dried bed.  It does however make an effective road and connects the Landing Pad to the south to the village to north.</desc>
+      <exits n='1484' s='1612' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1612' flags='yr'>
+      <name>Corleone Shuttle Facilities</name>
+      <desc>Clouds of steam erupting from the various vents on the side of the shuttles appear to be instantly drawn into the arid surroundings.  The Landing pad is set upon a cleared area of dusty rocks, and shale.  The arid climate offers scant vegetation and to the north is a dried out river bed which serves as the road to the Village of Corleone.  It is visible in the distance, situated upon the cliffs to the north.  A winding road of switchbacks climbs the cliff&apos;s steep face to connect the valley floor to the village above.</desc>
+      <exits n='1548' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

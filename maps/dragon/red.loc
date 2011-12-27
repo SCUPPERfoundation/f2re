@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<fed2-map title='Red' version='12' editor='standard' from='323' to='Dragon.Dragon Space.264'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>You have entered the storeroom of planet Red. There are no exits.. and no way in.. So how did you get in here?</desc>
+      <exits no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='74'>
+      <name>Tip of the wing</name>
+      <desc>    Here at the height of the winged section. You can look out among the whole planet, and gaze out into space and peer at the colorful cloud of toxic gas and other pollutants.</desc>
+      <desc>   The path leads Southwest and Southeast from this point.</desc>
+      <exits se='139' sw='137' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='137'>
+      <name>Depot path</name>
+      <desc>    Here, among the various depots of industrialists and manufacturers, the path is more accessible as newer cleaning droids are used to give access to the various depots.  The only real note of observation is the appearance of a low flying craft. Which you believe is one of the orbital cleaners of that giant toxic cloud, due to the weird design of the craft.</desc>
+      <desc>   The path leads to the South or the the Northeast.</desc>
+      <exits ne='74' s='201' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='139'>
+      <name>Factory path</name>
+      <desc>     Here the path expands to allow for large quantities of commodities to be moved about.  Allowing for the nearby factories to get there needed inputs and outputs delivered without hassle.  But this close to the factories, you can get a closer look at what causes the space cloud hanging about your head.</desc>
+      <desc>    The path leads off to the Northwest and the Southwest.</desc>
+      <exits sw='202' nw='74' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='144'>
+      <name>Express Elevator</name>
+      <desc>  You&apos;ve entered an elevator that was hidden behind the rows of filing cabinets in the Office of Dragon Research and Experimentation.</desc>
+      <exits up='147' out='521' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='147'>
+      <name>Elevator</name>
+      <desc>      You&apos;ve reached the only exit for this elevator.</desc>
+      <exits e='148' down='144' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='148' flags='b'>
+      <name>Office</name>
+      <desc>   This is an out of the way office. Other then that, there&apos;s nothing special about this office then any other you might find.</desc>
+      <exits out='323' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='197' flags='b'>
+      <name>Red Dragon Bar and Grill</name>
+      <desc>   The bar of Red is a dimly lit saloon, designed to give it&apos;s guest peace and relaxation from the outside world and it&apos;s many dangers. There are also several viewports that look out into the nearby space, to allow for the viewing of the native dragon species that lives in this region of space.  Small clusters of various lifeforms, can be seen huddle in their groups eating, drinking, or in quiet debate or discussions of differing topics. As you take a seat at an empty table, a ServoMaid approaches, &quot;How can I be of service today?&quot; It asks.</desc>
+      <exits down='323' out='259' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='201'>
+      <name>Warehouse path</name>
+      <desc>   The path here winds around many warehouses, most owned by the planet and the occasional one owned by some aspiring merchant awaiting his windfall of groats to make his go as a cutthroat trader.  Though this area is not as well kept up, you see a couple of robots making their way along the path, picking up most of the bigger trash. You hurry along incase they decide you are among that trash.</desc>
+      <desc>     You can continue to the North, or back Southwest to the Lift.</desc>
+      <exits n='137' sw='264' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='202'>
+      <name>End of the path</name>
+      <desc>     The path ends here near the end of the planetary factories.  You can head back the way you came, to the Northeast. Or there is a small lifted installed here, to allow for a quick drop Down to the lift.</desc>
+      <exits ne='139' down='264' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='259' flags='e'>
+      <name>Red Exchange</name>
+      <desc>     The Red Exchange is full of traders, merchants, and many others that are out to make a fortune. The large room is filled with the latest trading machines that allow for fast and secure transactions. The West wall of the room is filled with two large, thick windows, that you realize are actually the nostrils of the giant Red dragon planet.  While looking out the window, you see the large shape of a dragon fly past the windows.</desc>
+      <desc>    A notice is hung by the entrance, reminding of the exit to the south, back to the LP, and the Bar that is located &apos;IN&apos; the back of the exchange area.</desc>
+      <exits s='323' in='197' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='260'>
+      <name>Hidden Lift</name>
+      <desc>     This lift takes supplies and people up to the winged part of the planet where most of the warehouses, depots, and factories are located.</desc>
+      <desc>     You can exit the lift by going Out or going Up</desc>
+      <exits up='264' out='323' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='264'>
+      <name>Lift</name>
+      <desc>     You&apos;ve reached the top of the Lift. From here, you can see numerous factories and other stuctures. From this area, they tend to pump any pollution or toxic materials out into the thin atmosphere here and out into the nearby space area.   This makes for a most unusual sky from this vantage point.  The view is made more unusual by the toxic space cloud and the orbiting spacecraft that are used to pickup and remove it.  Some of theses ships, obvious enjoy leaving a trail through the cloud, in some random attempt to spell various words or phrases. Most of which you find hard to understand, as the trails or soon filled by more of the toxic cloud.</desc>
+      <desc>     You can move amoung some of the buildings through a path to the NE, or head back Down the lift.</desc>
+      <exits ne='201' down='260' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='323'>
+      <name>Landing Pad</name>
+      <desc>     You have arrived on the planet Red. Around the LP, you see several ships loading and unloading commodites, that are sent hurriedly on their way to some unknown destination.  You see a sign nearby that flashes the following directiosn, &quot;EX- N, Bar- U, all other facilities are located towards the East.&quot;</desc>
+      <desc>     As you decide on your destination, a siren goes off in the distance, followed by a recorded voice, &quot;Approaching dragon, please hurry to a more secure location.&quot;</desc>
+      <exits n='259' e='324' up='197' in='260' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='324'>
+      <name>Connecting corridor</name>
+      <desc>     This is a large corridor that connects the LP area with the main body of the planet, along with all of it&apos;s housing, storage, and factories.  The corridor is divided in half, allowing for traffice to flow freely to and from the LP.</desc>
+      <desc>     West heads to the LP and the corridor curves to the SE in the other direction.</desc>
+      <exits se='389' w='323' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='326' flags='yr'>
+      <name>Red Dragon&apos;s Shipyard and Ship Repair facilities</name>
+      <desc>   The Shipyard and Repair facilities are available to all visitors.  The business here seems to be booming.  You can only assume it is due to the increase in attacks by Red Dragons on visiting Merchants.</desc>
+      <desc>    You see an exit to the SW.</desc>
+      <exits sw='389' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Office of Ravanheart</name>
+      <desc>  This is the private office of the Planet Owner, Ravanheart.  You see a modern style office, complete with desk, sofa, several chairs, a small bar, and a pool table.</desc>
+      <desc>  The exit is East.</desc>
+      <exits e='328' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='328'>
+      <name>Upper Office level</name>
+      <desc>  This level contains private offices  The doors are to the West and East, and the stairway leading back Down.</desc>
+      <exits e='329' w='327' down='392' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>Office of Arethalas&apos;s Antique Auctioning</name>
+      <desc>   You have entered the office of Arethalas&apos;s Antique Auctioning.  This company was the main outside influence in the developing economy of Red.  The office is designed in and Antique fashion.. from wood paneled walls, large oak desk, leather chairs, and displays of various types of Antique items that were aquired by the company.</desc>
+      <desc>   The exit is West.</desc>
+      <exits w='328' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='389'>
+      <name>Continued corridor</name>
+      <desc>    The wide corridor curves here again, heading east. You see an exit to the Northeast leading to a large facility with several ships docked and being repaired.  Another exit to the Southeast leads to the local hospital on Red.</desc>
+      <exits ne='326' e='390' se='454' nw='324' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='390'>
+      <name>End of corridor</name>
+      <desc>     This is the end of the corridor from the LP, to the West leads back to the LP. And the the East leads further into the heart of the planet. Off in the distance you see numerous Warehouse, Depots, Factories, and various styles of apartments for the local populace.</desc>
+      <exits e='391' w='389' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='391'>
+      <name>Entrance to Red&apos;s Official Headquarters Building</name>
+      <desc>     Before you stands a tall building, where many offices of local government and various companies can be found, made of similar red concrete to blend into the planetary soil.  A guard standing near the door eyes you suspiciously as you approach the building.</desc>
+      <desc>    The exits are to the West or In to the building.</desc>
+      <exits w='390' in='392' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='392'>
+      <name>Lobby</name>
+      <desc> You are in the lobby of Red&apos;s Planetary Headquarters. A receptionists sits behind a large desk in one corner, though she appears to pay you no attention. You see stairs that lead up and down, and a hallway that goes east.</desc>
+      <exits e='393' up='328' down='456' out='391' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Halllway</name>
+      <desc>    This Hallway leads to the back of the building.  Along the walls, are hung several pictures which show the founding and building of the buildings and businesses of the planet.</desc>
+      <desc>  The exits are West and East.</desc>
+      <exits e='394' w='392' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Back alley</name>
+      <desc>  You&apos;ve entered into a back alley located behind the building. The alley continues to the East, or back into the building to the West.</desc>
+      <exits e='395' w='393' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Alley</name>
+      <desc>  Continueing through the alley, you see a bend coming up to the Southeast. The alley also heads West from here.</desc>
+      <exits se='460' w='394' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='454' flags='hi'>
+      <name>Red Hospital</name>
+      <desc>    The hospital of planet Red is available to attend to any injuries, whether Dragon related or non-Dragon related. The large waiting room is mostly empy, as the receptionist behind the counter yawns watching the daily planet news.</desc>
+      <desc>     A sign near the exit to the Northwest reads, &quot;Please remember to &apos;reinsure&apos; before leaving.&quot;</desc>
+      <exits sw='517' nw='389' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='455'>
+      <name>Office of Planetary Defense</name>
+      <desc>    This office is for the planetary defense, which consists mainly of the handling of the recent raids by the native red dragons.  The numerous desks in the room are occupied by men and women in uniform, either talking on their comm units, concentrating on their computers screen, or talking with another person in uniform.  You are approached by an armed officer.  Upon seeing you don&apos;t have any business here, you are ushered to the exit to the East.</desc>
+      <exits e='456' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='456'>
+      <name>Lower Level</name>
+      <desc>   Here on the lower level, you find most of the planetary offices.  Such a fitting place for many of those bottom feeders dwelling in the depth of government, siphoning the last few groats from the poor to line their pockets with all sorts of gadgets and gizmos.</desc>
+      <desc>   You see doors to the West, East, and Southeast. And the stairway leading back Up to the lobby.</desc>
+      <exits e='457' se='521' w='455' up='392' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='457'>
+      <name>Office of Planetary Commerce</name>
+      <desc>   This large room is filled with several large desks that are filled with stacks of papers and forms.  Each desks has several traders, merchants, or industrialists waiting to be helped next.  As with most government agencies.. The long wait is the main hassle when trying to get the proper permits or licenses to conduct proper business.</desc>
+      <desc>    As you stand there, looking around the room, you are shoved aside by someone entering to file a complaint. You decide it would be best to leave to the West, before you end up lost with all the other government paperwork.</desc>
+      <exits w='456' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Bend in alley</name>
+      <desc>  From here, you notice that this alley seems to be traveling down the tail part of the planet.</desc>
+      <desc>  The alley leads Northwest or Southeast from here.</desc>
+      <exits se='525' nw='395' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='464'>
+      <name>Observation Outpost</name>
+      <desc>    This is the Observation Outpost for the planet.. From here, several scientists and military officers, observe and examine the going ons of the nearby dragons.</desc>
+      <desc>   The exit is Southwest.</desc>
+      <exits sw='527' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='517'>
+      <name>Examination Room</name>
+      <desc>    This room is identical to all the other examination rooms throughout the hospital.  Various types of equipment are lined along the wall, ready to perform it&apos;s programmed function.</desc>
+      <desc>   The exit, to the NE, leads back to the entrance of the hospital.</desc>
+      <exits ne='454'/>
+   </location>
+
+   <location num='521'>
+      <name>Office of Dragon Research and Experimentation</name>
+      <desc>    Unlike other government offices, this one only contains one main desk, and then rows of filing cabinets.  The clerk at the desk asks, &quot;Do you need any assistance? This office is for filing or for information on the native population of Dragons.&quot;</desc>
+      <desc>    The exit is to the Northwest.</desc>
+      <exits nw='456' in='144' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>Curve</name>
+      <desc>   The alley curves here from the Northwest to the East.</desc>
+      <exits e='526' nw='460' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name>Alley</name>
+      <desc>  Just another part of the alley</desc>
+      <desc>  The exits are West and East.</desc>
+      <exits e='527' w='525' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='527'>
+      <name>End of Alley</name>
+      <desc>    They alley ends here at a building.  The Building is Northeast, and the alley goes back to the West.</desc>
+      <exits ne='464' w='526' no-exit='move.noexit.1'/>
+   </location>
+
+</fed2-map>
+

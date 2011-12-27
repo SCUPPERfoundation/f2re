@@ -1,0 +1,669 @@
+<?xml version="1.0"?>
+<fed2-map title='Selena' version='5' editor='standard' from='587' to='Sol.Sol Space.853'>
+
+   <location num='327'>
+      <name>Gravshaft</name>
+      <desc>   You are in a gravshaft which can take you down to the next level. The exit is to the southeast.</desc>
+      <exits se='392' down='527' out='392'/>
+   </location>
+
+   <location num='328'>
+      <name>Park</name>
+      <desc>   The contents of this park were imported at great cost from Earth. A sign says &apos;Keep off the grass&apos;, and everybody seems to be obeying the instruction, even children. The park continues to the east and the dome entrance is south.</desc>
+      <exits e='329' se='393' s='392' out='392'/>
+   </location>
+
+   <location num='329'>
+      <name>Park</name>
+      <desc>   You are in the northeast corner of a park, where a small but ornate fountain is spraying water into a pool - a very extravagant use of the colony&apos;s resources!</desc>
+      <desc>   To the southwest the park debouches into the entrance area of the dome.</desc>
+      <exits s='393' sw='392' w='328' out='392'/>
+   </location>
+
+   <location num='336' flags='a'>
+      <name>Church</name>
+      <desc>   The church provides a little comfort in the drab lives of the moon&apos;s workers. The building has been very cleverly designed to give the effect of sunlight shining through stained glass windows.</desc>
+      <exits e='337' out='337'/>
+   </location>
+
+   <location num='337'>
+      <name>Corridor</name>
+      <desc>   The long corridor comes to an end here. West is the entrance to a small church, while east is an office.</desc>
+      <exits e='338' s='401' w='336'/>
+   </location>
+
+   <location num='338' flags='a'>
+      <name>Labor assignment office</name>
+      <desc>   The labor boss that uses this office has the power of life and death over the workers, since it is she who decides who will be assigned to the easy jobs, and who to the dangerous and even deadly workcrews. All the workers know how important it is to keep on her good side!</desc>
+      <exits w='337' out='337'/>
+   </location>
+
+   <location num='348' flags='t'>
+      <name>Temple of Gaelaan</name>
+      <desc>   Now you understand why the entrance to this room was concealed; the bosses on Selena frown on the workers joining organizations of any kind; they consider it disloyal.</desc>
+      <desc>   The room was originally an extension to the workshop. It has been hung with curtains that smooth off the corners of the room, turning it into the kind of round space that the worshippers are used to. This has the added benefit that the curtains can be removed in a hurry, disguising the evidence of what the room is used for.</desc>
+      <desc>   The curtains are decorated with pictures of strange machinery. A large crate has been placed in the exact center of the room, and on top of it is a holo projector, currently switched off.</desc>
+      <desc>   There is a table against one wall; on it is a pile of holo-cards. A recharger is mounted on the wall above the holo-cards.</desc>
+      <desc>   You can leave through the south door.</desc>
+      <exits s='412'/>
+   </location>
+
+   <location num='390' flags='ba'>
+      <name>Cafe</name>
+      <desc>   You are in a pleasant cafe with a massive espresso coffee machine dominating the counter. One wall has a panoramic window giving a view of the moon&apos;s surface.</desc>
+      <exits e='391' out='391'/>
+   </location>
+
+   <location num='391'>
+      <name>Viewing Lounge</name>
+      <desc>   The colony&apos;s viewing area has large transparent panels fitted into the roof of the dome, through which you can see the blue-green crescent of the waning Earth. To the west a pleasant cafe beckons.</desc>
+      <desc>   East is the dome&apos;s entrance, while south and southeast the viewing area continues.</desc>
+      <exits e='392' se='456' s='455' w='390' in='390' out='392'/>
+   </location>
+
+   <location num='392'>
+      <name>Main entrance</name>
+      <desc>   You are standing in the main entrance to the dome. To the north and east are parks, while to the south and west are viewing areas. Northwest is the entrance to a gravshaft. Looking southeast you can see your shuttle waiting for you on the landing pad in the distance.</desc>
+      <exits n='328' ne='329' e='393' se='457' s='456' sw='455' w='391' nw='327' in='327' out='457'/>
+   </location>
+
+   <location num='393'>
+      <name>Park</name>
+      <desc>   You are standing at the southeast corner of a park which is constantly being changed, so the locals don&apos;t get bored with it.</desc>
+      <desc>   The park unrolls to your north and northwest, while to your west is the dome&apos;s exit to the surface.</desc>
+      <exits n='329' w='392' nw='328' out='392'/>
+   </location>
+
+   <location num='400'>
+      <name>Dormitory</name>
+      <desc>   This room was designed to sleep about ten people, but extra beds have been crammed in, making it extremely crowded. There&apos;s barely enough room between the beds to get your feet on the floor!</desc>
+      <exits e='401' out='401'/>
+   </location>
+
+   <location num='401'>
+      <name>Corridor</name>
+      <desc>   Doors lead east and west into dormitories which house the colony&apos;s workforce, while the functional corridor stretches north and south.</desc>
+      <exits n='337' e='402' s='465' w='400' in='402'/>
+   </location>
+
+   <location num='402' flags='a'>
+      <name>Dormitory</name>
+      <desc>   This large room contains beds for ten people, and not much else. It must be a grim place to live, with no privacy and nothing of a personal nature on display.</desc>
+      <exits w='401' out='401'/>
+   </location>
+
+   <location num='409'>
+      <name>Workshop</name>
+      <desc>   You are in the northwest corner of a vast workshop.</desc>
+      <exits e='410' se='474' s='473'/>
+   </location>
+
+   <location num='410'>
+      <name>Workshop</name>
+      <desc>   You are standing with your back to the northern wall of an immense underground workshop which stretches away as far as the eye can see.</desc>
+      <exits e='411' se='475' s='474' sw='473' w='409'/>
+   </location>
+
+   <location num='411'>
+      <name>Workshop</name>
+      <desc>   You are standing at the north end of a huge workshop.</desc>
+      <exits e='412' se='476' s='475' sw='474' w='410'/>
+   </location>
+
+   <location num='412'>
+      <name>Workshop</name>
+      <desc>   You are standing in the northeast corner of a massive underground workshop. There is a large pile of crates in the corner, which seem to have been piled up rather haphazardly. Something just seems odd about them...</desc>
+      <exits s='476' sw='475' w='411'/>
+      <events enter='moves.temple.2'/>
+      <vocab cmd='search' event='moves.temple.1'/>
+   </location>
+
+   <location num='455'>
+      <name>Viewing lounge</name>
+      <desc>   Displayed on screens all around you are magnificent views of the different features of the moon, including the sites of the very first moon landings. The viewing area extends both north and east of your present position.</desc>
+      <desc>   The dome entrance is to the northeast.</desc>
+      <exits n='391' ne='392' e='456' out='392'/>
+   </location>
+
+   <location num='456' flags='a'>
+      <name>Viewing Lounge</name>
+      <desc>   This area is devoted to a display of the various activities that take place on the moon. Particular prominence is given to leisure activities, such as the colony&apos;s famous casino.</desc>
+      <desc>   The dome entrance is north, and the area continues to the west and the northwest.</desc>
+      <exits n='392' w='455' nw='391' out='392'/>
+   </location>
+
+   <location num='457'>
+      <name>Airlock</name>
+      <desc>   You are in the main airlock of Selena City. The entrance to the city is northwest, and the exit to the landing pad is southeast.</desc>
+      <exits se='522' nw='392' in='392' out='522'/>
+   </location>
+
+   <location num='464'>
+      <name>Dormitory</name>
+      <desc>   Six beds just about fill this small dormitory. Some attempt has been made to provide a little privacy by hanging tattered fabric to act as curtains between the beds, but it&apos;s more a token than a reality.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='465' out='465'/>
+   </location>
+
+   <location num='465'>
+      <name>Corridor</name>
+      <desc>   This gray-painted north/south corridor gives access to the workers&apos; dormitories. There are doors to the east and west.</desc>
+      <exits n='401' e='466' s='529' w='464' in='466'/>
+   </location>
+
+   <location num='466'>
+      <name>Dormitory</name>
+      <desc>   This small dormitory is capable of sleeping about six people. There&apos;s not much room for anything other than the beds, with small lockers to hold personal belongings.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='465' out='465'/>
+   </location>
+
+   <location num='473'>
+      <name>Workshop</name>
+      <desc>   You are standing by the west wall of a very large workshop.</desc>
+      <exits n='409' ne='410' e='474' se='538' s='537'/>
+   </location>
+
+   <location num='474'>
+      <name>Workshop</name>
+      <desc>   You are in a colossal workshop, which stretches away on all sides.</desc>
+      <exits n='410' ne='411' e='475' se='539' s='538' sw='537' w='473' nw='409'/>
+   </location>
+
+   <location num='475'>
+      <name>Workshop</name>
+      <desc>   You are in a mighty workshop which continues in all directions.</desc>
+      <exits n='411' ne='412' e='476' se='540' s='539' sw='538' w='474' nw='410'/>
+   </location>
+
+   <location num='476'>
+      <name>Workshop</name>
+      <desc>   You are standing by the east wall of a gargantuan workshop.</desc>
+      <exits n='412' s='540' sw='539' w='475' nw='411'/>
+   </location>
+
+   <location num='522'>
+      <name>Moon surface</name>
+      <desc>   A track leads from the landing pad in the southeast to the airlock in the northwest.</desc>
+      <exits e='523' se='587' s='586' nw='457' in='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Moon surface</name>
+      <desc>   You are on the surface of the moon, just north of the landing pad.</desc>
+      <exits se='588' s='587' sw='586' w='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='c'>
+      <name>Armstrong Cuthbert, Inc</name>
+      <desc>   Armstrong Cuthbert may be all-powerful everywhere in the Solar System, but those running things on Selena don&apos;t like to be reminded that they are not in complete control. The cargo company&apos;s office is outside the main dome, therefore, and it operates with some discretion, to avoid antagonizing the locals.</desc>
+      <desc>   There&apos;s only a small staff here, but they are in constant contact with the head office back on Earth, so they can arrange all your cargo needs.</desc>
+      <exits s='588' out='588'/>
+   </location>
+
+   <location num='527'>
+      <name>Gravshaft</name>
+      <desc>   You are hovering in a gravshaft, and can go either up to the surface, or down to the workers&apos; level. The exit is southeast, leading to the visitors&apos; area of the colony.</desc>
+      <exits se='592' up='327' down='661' out='592'/>
+   </location>
+
+   <location num='529'>
+      <name>Corridor</name>
+      <desc>   The gray-painted corridor leads north to areas not usually frequented by visitors. The concourse is southwest and there is an elevator to the east.</desc>
+      <exits n='465' e='530' sw='592' in='530'/>
+   </location>
+
+   <location num='530'>
+      <name>Elevator</name>
+      <desc>   This small elevator is intended for the use of staff, not visitors. It is plain and featureless, with none of the plushness on display elsewhere on Selena.</desc>
+      <desc>   The doors open to the west. There is a button which you should press to make the elevator move down to the lower level.</desc>
+      <exits w='529' out='529'/>
+   </location>
+
+   <location num='537'>
+      <name>Workshop</name>
+      <desc>   You are standing by the west wall of a workshop of titanic dimensions.</desc>
+      <exits n='473' ne='474' e='538' se='602' s='601'/>
+   </location>
+
+   <location num='538'>
+      <name>Workshop</name>
+      <desc>   You are in the middle of a seemingly limitless workshop.</desc>
+      <exits n='474' ne='475' e='539' se='603' s='602' sw='601' w='537' nw='473'/>
+   </location>
+
+   <location num='539'>
+      <name>Workshop</name>
+      <desc>   All around you is yet more of this monumentally large workshop.</desc>
+      <exits n='475' ne='476' e='540' se='604' s='603' sw='602' w='538' nw='474'/>
+   </location>
+
+   <location num='540'>
+      <name>Workshop</name>
+      <desc>   You are by the east wall of the workshop, which stretches into the far distance.</desc>
+      <exits n='476' s='604' sw='603' w='539' nw='475'/>
+   </location>
+
+   <location num='586'>
+      <name>Moon surface</name>
+      <desc>   You are bouncing around on the surface of the moon. The controllers in the nearby Selena City are watching your attempts to walk in the low gravity with a great deal of mirth!</desc>
+      <desc>   Selena City lies to the north, and the landing area is to your east.</desc>
+      <exits n='522' ne='523' e='587' se='651' s='650' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Selena shuttle landing pad</name>
+      <desc>   This is the landing pad for shuttles, just outside Selena City. The city&apos;s main airlock is to the northwest and there is one of the moon&apos;s famous &apos;rays&apos; just to your south.</desc>
+      <desc>   A signpost points east, with the letters AC on it.</desc>
+      <exits n='523' e='588' se='652' s='651' sw='650' w='586' nw='522'/>
+   </location>
+
+   <location num='588'>
+      <name>Moon surface</name>
+      <desc>   This part of the moon&apos;s surface is covered with small craters. If it wasn&apos;t for the low gravity, it would be quite hard to walk here.</desc>
+      <desc>There is a small dome here, with the letters AC on it - the entrance is north. To your south there lies a very bright surface, and the landing pad is west.</desc>
+      <exits n='524' s='652' sw='651' w='587' nw='523' in='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='590'>
+      <name>Flying room</name>
+      <desc>   This zero-grav room is used by flyers, wearing large wings strapped to their arms, who race each other around the room playing games that look similar to tag. They seem to be having an enormous amount of fun.</desc>
+      <exits se='655' out='655'/>
+   </location>
+
+   <location num='591' flags='e'>
+      <name>Market</name>
+      <desc>   The Moon&apos;s commodity market is not a place for the faint-hearted. On the far wall the buying display is flickering rapidly through the prices for the various commodities, and ruthless traders are jostling each other to take advantage of price changes.</desc>
+      <desc>   There is an exit from the bedlam to the east.</desc>
+      <exits e='592' out='592'/>
+   </location>
+
+   <location num='592'>
+      <name>Concourse</name>
+      <desc>   You are standing in an open concourse which has been elegantly decorated with Italian-style colonnades. Northeast and southeast are corridors, while to the west is the colony&apos;s trading market. To the southwest is an entrance over which hangs a sign saying &apos;Lunar Sports.&apos; East stands the entrance to a luxury hotel.</desc>
+      <desc>   At the northwest corner of the concourse there is a gravshaft.</desc>
+      <exits ne='529' e='593' se='657' sw='655' w='591' nw='527'/>
+   </location>
+
+   <location num='593' flags='a'>
+      <name>Hotel Magnifico</name>
+      <desc>   Judging by the lobby, this hotel has been well named - it truly is magnificent. Real wood panels have been imported from Earth to line the walls, and the room is dotted with marble statues of classical figures.</desc>
+      <desc>   As you would expect, the hotel doesn&apos;t cater for lowly space traders, not even those that have made their fortune. To get a room here you have to have more money than you could ever dream of making, and the right connections!</desc>
+      <exits w='592' out='592'/>
+   </location>
+
+   <location num='599' flags='a'>
+      <name>Machine shop</name>
+      <desc>   Broken equipment which is small enough to be moved is brought here for repair. The engineers have become skilled at getting things operational again, since the cost of bringing a replacement up from Earth is prohibitive.</desc>
+      <desc>   A pair of engineers are struggling to deal with a wardrobe malfunction.</desc>
+      <desc>   The exit is southwest.</desc>
+      <exits sw='662' out='662'/>
+   </location>
+
+   <location num='600'>
+      <name>Elevator</name>
+      <desc>   The elevator is small and the walls are simply unadorned metal. It has clearly seen some heavy use in the past, judging by the scratches and dents.</desc>
+      <desc>   On this level, the doors open in the east wall. Press the button to go up to the next level.</desc>
+      <exits e='601' out='601'/>
+      <events enter='objects.wrench.4'/>
+   </location>
+
+   <location num='601'>
+      <name>Workshop</name>
+      <desc>   You are at the west wall of a huge workshop. To the west is the entrance to an elevator.</desc>
+      <exits n='537' ne='538' e='602' se='666' s='665' w='600' in='600'/>
+   </location>
+
+   <location num='602'>
+      <name>Workshop</name>
+      <desc>   You are standing in the middle of a workshop that continues on all sides.</desc>
+      <exits n='538' ne='539' e='603' se='667' s='666' sw='665' w='601' nw='537'/>
+   </location>
+
+   <location num='603'>
+      <name>Workshop</name>
+      <desc>   You are standing in the middle of a very large workshop...</desc>
+      <exits n='539' ne='540' e='604' se='668' s='667' sw='666' w='602' nw='538'/>
+   </location>
+
+   <location num='604'>
+      <name>Workshop</name>
+      <desc>   You are on the east side of a workshop of Brobdingnagian size.</desc>
+      <exits n='540' s='668' sw='667' w='603' nw='539'/>
+   </location>
+
+   <location num='650'>
+      <name>Moon surface</name>
+      <desc>   Looking northeast, you can see a large dustcloud caused by the takeoff of a shuttle from the landing pad. After a few moments, it subsides, allowing you a view of the shuttles neatly parked in rows.</desc>
+      <exits n='586' ne='587' e='651' se='715' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='651'>
+      <name>Moon surface</name>
+      <desc>   To the south and the east lies one of the moon&apos;s &apos;rays&apos;, while to the north is the landing pad.</desc>
+      <exits n='587' ne='588' e='652' s='715' w='650' nw='586'/>
+   </location>
+
+   <location num='652'>
+      <name>Moon ray</name>
+      <desc>   You are standing on a semi-metallic surface. A notice has been hammered into the ground. It says &apos;Property of the Selena Mining Co. - Trespassers will be shot&apos;! To the northwest is the landing pad.</desc>
+      <exits n='588' sw='715' w='651' nw='587' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='654'>
+      <name>Zero-gravity arena</name>
+      <desc>   You are standing in the balcony of the zero-gravity arena. In the arena two teams of wrestlers are straining to get in touch with one another! The exit is east.</desc>
+      <exits e='655' out='655'/>
+   </location>
+
+   <location num='655' flags='a'>
+      <name>Sports complex</name>
+      <desc>   The entrance hall of the Selena City sports complex is busy with people eager to take advantage of the extensive facilities, which includes the services of a bevy of young, fit and attractive personal trainers. An equally fit-looking clerk is engaged in booking appointments, taking money, and directing customers to the various parts of the complex.</desc>
+      <desc>   The exit is northeast, and entrances to the different sections of the sports complex lie in all other directions.</desc>
+      <exits ne='592' e='656' se='720' s='719' sw='718' w='654' nw='590' out='592'/>
+   </location>
+
+   <location num='656'>
+      <name>Sauna baths</name>
+      <desc>   The sauna is being used by all genders - you can even see a couple of hermaphrodites and a neuter stretched out on the benches. Fortunately for decency, steam veils most of the exposed flesh... most of the time!</desc>
+      <exits w='655' out='655'/>
+   </location>
+
+   <location num='657'>
+      <name>Corridor</name>
+      <desc>   You are at the north end of a brightly lit corridor, decorated in Italianate style. To the northwest is the concourse.</desc>
+      <exits s='721' nw='592'/>
+   </location>
+
+   <location num='661'>
+      <name>Gravshaft</name>
+      <desc>   You are floating in a gravshaft which will take you up to the next level. There is an exit to the southeast, leading to the workers part of the colony.</desc>
+      <exits se='726' up='527' out='726'/>
+   </location>
+
+   <location num='662' flags='a'>
+      <name>Maintenance</name>
+      <desc>   A young woman is seated at a counter, taking complaints about problems with equipment, and allocating maintenance work to the specialist engineers whose job it is to keep this colony running. There is a faint air of hysteria in the room, because as soon as she deals with one problem, three more arrive on her desk.</desc>
+      <desc>   The machine shop is northeast, and the exit is south.</desc>
+      <exits ne='599' s='726' in='599' out='726'/>
+   </location>
+
+   <location num='665'>
+      <name>Workshop</name>
+      <desc>   You are on the west side of the biggest workshop you have ever seen in your life!</desc>
+      <exits n='601' ne='602' e='666' se='730' s='729'/>
+   </location>
+
+   <location num='666'>
+      <name>Workshop</name>
+      <desc>   You are in a mind-bogglingly large workshop area which continues in all directions.</desc>
+      <exits n='602' ne='603' e='667' se='731' s='730' sw='729' w='665' nw='601'/>
+   </location>
+
+   <location num='667'>
+      <name>Workshop</name>
+      <desc>   You are in a giant workshop, which seemingly has no end.</desc>
+      <exits n='603' ne='604' e='668' se='732' s='731' sw='730' w='666' nw='602'/>
+   </location>
+
+   <location num='668'>
+      <name>Workshop</name>
+      <desc>   You are on the east side of an immense workshop.</desc>
+      <exits n='604' s='732' sw='731' w='667' nw='603'/>
+   </location>
+
+   <location num='715'>
+      <name>Moon ray</name>
+      <desc>   You are standing on a metallic-seeming surface, which runs from the southwest to the northeast.</desc>
+      <exits n='651' ne='652' sw='778' nw='650' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='718'>
+      <name>Running track</name>
+      <desc>   A few athletes are practicing, running around the track with the strange slow-motion gait that characterizes sport in low gravity environments. The exit is northeast.</desc>
+      <exits ne='655' out='655'/>
+   </location>
+
+   <location num='719'>
+      <name>High-gravity gym</name>
+      <desc>   The sweat pours off your face as you stand in the double gravity of the gym. Over in the far corner two bemuscled specimens are actually doing press-ups! The exit is north.</desc>
+      <exits n='655' out='655'/>
+   </location>
+
+   <location num='720' flags='a'>
+      <name>Swimming pool</name>
+      <desc>   You are standing on the balcony of the swimming pool. The bathers are having a lot of fun as they do things that are normally impossible, courtesy of the moon&apos;s low gravity.</desc>
+      <desc>   The exit is northwest.</desc>
+      <exits nw='655' out='655'/>
+   </location>
+
+   <location num='721'>
+      <name>Corridor</name>
+      <desc>   You are in a brightly lit north/south corridor, with a shop to the east. The heavily-barred window contains just one item: a beautifully cut diamond, about the size of your fist.</desc>
+      <exits n='657' e='722' s='785' in='722'/>
+   </location>
+
+   <location num='722' flags='ta'>
+      <name>Family Jewels</name>
+      <desc>   This jewelry shop is small, but then the items on sale don&apos;t take up much room. Around you the air is hazy from the jewels on display - all of them safely behind force fields.</desc>
+      <desc>   A glance at the prices shows that most of the merchandise costs far more than your ship did! The moon must get some very rich tourists indeed.</desc>
+      <exits w='721' out='721' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='725'>
+      <name>Broom cupboard</name>
+      <desc>   You have stumbled into a cupboard where brooms, mops and buckets are kept. Better back out before you knock something over!</desc>
+      <exits e='726' out='726'/>
+   </location>
+
+   <location num='726'>
+      <name>Circulation area</name>
+      <desc>   You are in a small open space, with minimal decoration. Corridors run southeast and southwest. Northwest is a gravshaft giving access to other levels of the colony. Doors lead north, east and west.</desc>
+      <exits n='662' e='727' se='791' sw='789' w='725' nw='661'/>
+   </location>
+
+   <location num='727'>
+      <name>Environmental control</name>
+      <desc>   Miles of pipe and ductwork intersect here, carrying water and air to all parts of the colony. A man wearing greasy coveralls and a hard hat is struggling to turn a large control wheel, but you can&apos;t tell what it is he&apos;s trying to turn on or shut off.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='726' out='726'/>
+   </location>
+
+   <location num='729'>
+      <name>Workshop</name>
+      <desc>   You are in the southwest corner of a mind-bogglingly large workshop.</desc>
+      <exits n='665' ne='666' e='730'/>
+   </location>
+
+   <location num='730'>
+      <name>Workshop</name>
+      <desc>   You are at the southern end of an immense workshop. There is a door in the south wall.</desc>
+      <exits n='666' ne='667' e='731' s='794' w='729' nw='665' out='794'/>
+   </location>
+
+   <location num='731'>
+      <name>Workshop</name>
+      <desc>   You are standing on a raised platform at the south end of a workshop which stretches into the far distance.</desc>
+      <exits n='667' ne='668' e='732' w='730' nw='666'/>
+   </location>
+
+   <location num='732'>
+      <name>Workshop</name>
+      <desc>   You are in the southeast corner of a vast and busy workshop.</desc>
+      <exits n='668' w='731' nw='667'/>
+   </location>
+
+   <location num='778'>
+      <name>Moon ray</name>
+      <desc>   You are standing on the surface of one of the moon&apos;s rays. The ray continues to the northeast, but in all other directions the surface is too broken to move around.</desc>
+      <exits ne='715' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='783'>
+      <name>Corridor</name>
+      <desc>   The luxurious corridor bends from the east to the southwest. Soft music comes from the door to the south.</desc>
+      <exits e='784' s='847' sw='846' in='847'/>
+   </location>
+
+   <location num='784'>
+      <name>Corridor</name>
+      <desc>   The east/west corridor is lushly decorated, with a thick carpet underfoot. Even with the moon&apos;s one-sixth gee, you sink into the pile...</desc>
+      <exits e='785' w='783'/>
+   </location>
+
+   <location num='785'>
+      <name>Corridor</name>
+      <desc>   You are in a brightly lit corridor which curves round from the north to the west. To the south is a shop, with a sign in the window saying &apos;GORIM&apos;S WEAPONS - Mass Destruction our Speciality.&apos;</desc>
+      <exits n='721' s='849' w='784'/>
+   </location>
+
+   <location num='789'>
+      <name>Corridor</name>
+      <desc>   To the northeast the dimly-lit corridor runs into the circulation area. Southwest it runs into darkness.</desc>
+      <exits ne='726' sw='852'/>
+   </location>
+
+   <location num='791'>
+      <name>Corridor</name>
+      <desc>   This bare corridor has a high ceiling, allowing machinery to be moved through it. Northwest it leads to an open area, and south it meets another corridor.</desc>
+      <exits s='855' nw='726'/>
+   </location>
+
+   <location num='794'>
+      <name>Corridor</name>
+      <desc>   This dingy, scruffy corridor runs from the north to the southwest. A crooked sign has been nailed above a door in the southeast wall. The sign says &apos;Arnie&apos;s Surplus Store&apos;.</desc>
+      <exits n='730' se='859' sw='857'/>
+      <events enter='objects.wrench.4'/>
+   </location>
+
+   <location num='845'>
+      <name>Fortenzi&apos;s</name>
+      <desc>   As you enter the restaurant, a sonic field cuts off all the noise from the plaza outside. The most delicious smells fill the air, and the food being carried to the tables looks exquisite.</desc>
+      <desc>   Sadly, the maitre d&apos; takes one look at you, and informs you icily that only those with reservations can eat here. He ushers you back towards the door, to the south.</desc>
+      <exits s='909' out='909'/>
+   </location>
+
+   <location num='846'>
+      <name>Corridor</name>
+      <desc>   Southwest, you can see the corridor leads to an area of flashing lights and loud noises, while northeast things seem quieter and more relaxed.</desc>
+      <exits ne='783' sw='909'/>
+   </location>
+
+   <location num='847' flags='ba'>
+      <name>Mario&apos;s</name>
+      <desc>   Mario&apos;s bar is where those that own and run everything on the moon meet, to socialize and to do deals. Mario himself, despite being old, is still tough enough to ensure that disputes don&apos;t get too intense; anyone who shows signs of wanting to throw a punch is escorted into a backroom and calmed down, before being allowed back in the bar.</desc>
+      <exits n='783' out='783' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='849' flags='a'>
+      <name>Gorim&apos;s Weapons of Mass Destruction</name>
+      <desc>   The name of the shop is only a slight exaggeration; Gorim sells all kinds of weapons, from those to be used up close and personal to those that deliver enormous destruction from a distance.</desc>
+      <desc>   Pride of place is given to a display of hand lasers, all bearing the mark of the famous Isher Weapon Shops.</desc>
+      <desc>   The weapon shop has an annex to the east.</desc>
+      <exits n='785' e='850' out='785'/>
+   </location>
+
+   <location num='850'>
+      <name>Weapons shop annex</name>
+      <desc>   This small annex is a mini-museum devoted to the history of weapons. A chart shows the development of killing technology from longbows and crossbows, through the invention of guns, right up to the latest crop of planet-busting missiles.</desc>
+      <desc>   The exit is to the west.</desc>
+      <exits w='849' out='849'/>
+   </location>
+
+   <location num='852'>
+      <name>Rock face</name>
+      <desc>   You are in an area of rough rocks. The tunneling process that continuously goes on to extend the base is taking place here. This could explain why there is no lighting. The way out is northeast.</desc>
+      <exits ne='789' out='789' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='854' flags='ba'>
+      <name>Canteen</name>
+      <desc>   The moon&apos;s workers may have drab and hard lives, but they are well fed. Whenever they are off duty they can come here and eat as much as they like of the wholesome, tasty food provided by the Italian cooks.</desc>
+      <desc>   The exit is east, while south is a lounge used by the workers.</desc>
+      <exits e='855' s='918' out='855'/>
+   </location>
+
+   <location num='855'>
+      <name>Corridor</name>
+      <desc>   You are at the southern end of a badly-lit corridor. A scruffy corridor leads east from here, south is an office, and to the west is a canteen.</desc>
+      <exits n='791' e='856' s='919' w='854'/>
+   </location>
+
+   <location num='856'>
+      <name>Corridor</name>
+      <desc>   This badly painted east/west corridor looks as if it hasn&apos;t been swept for quite a while.</desc>
+      <exits e='857' w='855'/>
+   </location>
+
+   <location num='857'>
+      <name>Corridor</name>
+      <desc>   You are in a scruffy, ill-lit corridor running from the northeast to the west. In the south wall there is a door.</desc>
+      <exits ne='794' s='921' w='856' in='921'/>
+   </location>
+
+   <location num='859' flags='a'>
+      <name>Arnie&apos;s Surplus Store</name>
+      <desc>The shop is full of the most amazing archaic ex-navy and ex-army junk, most of which you wouldn&apos;t want to touch with a barge pole. The monitor of an antique Vic20 computer displays the exhortation &apos;Special Limited Offer - Ask about NavComp Software&apos; in the funny blocky text characteristic of that machine. The exit is to the northwest.</desc>
+      <exits nw='794' out='794'/>
+   </location>
+
+   <location num='908' flags='ba'>
+      <name>Alhambra</name>
+      <desc>   The entertainment complex shows the latest holos and old Earth 2D films, and also puts on live performances for the moon&apos;s visitors. The movie theater is showing a season of 1990&apos;s films - &apos;Rocky XXIV: Dumbo&apos; is the current feature. The main stage is the venue for the visiting Milan Opera Company&apos;s famous production of &apos;The Barber of Selena&apos;.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='909' out='909'/>
+   </location>
+
+   <location num='909'>
+      <name>Plaza</name>
+      <desc>   The plaza was originally designed in a rather gaudy, baroque style, with dramatic and ornate murals painted on the walls. However, it has been overlaid by lots of flashing neon signs, advertising the various services available to rich tourists.</desc>
+      <desc>   South is the Lunar Casino, west is an entertainment complex, and north is a very exclusive restaurant.</desc>
+      <desc>   There is a corridor to the northeast.</desc>
+      <exits n='845' ne='846' s='973' w='908'/>
+   </location>
+
+   <location num='918' flags='a'>
+      <name>Slot machines</name>
+      <desc>   This lounge is filled with slot machines, provided by the management of the local casino, who are keen to give even the lowest paid workers the chance to gamble their groats away. Since this is one of the few entertainments available to the workers, they are only too happy to spend their off duty hours stuffing coins into the voracious machines.</desc>
+      <desc>   The canteen is north.</desc>
+      <exits n='854' out='854'/>
+   </location>
+
+   <location num='919' flags='a'>
+      <name>Production office</name>
+      <desc>   The office walls are festooned with charts, graphs and dozens of framed certificates attesting to the fact that Menella Bute Smedley IV has completed various courses. Her co-workers are obviously jokers, because one of the certificates states that Menella is a &apos;certified bozo&apos;. Menella doesn&apos;t seem to have spotted that one yet.</desc>
+      <desc>   There is a door in the north wall.</desc>
+      <exits n='855' out='855'/>
+   </location>
+
+   <location num='921'>
+      <name>Stores</name>
+      <desc>   Workers come here to collect tools needed for their work, and other necessary stores. Control of such items is tight; nothing is handed over by the storeman without an authorizing chitty from the worker&apos;s supervisor, and the worker has to sign to confirm he has received the item.</desc>
+      <desc>   Of course, workers have found ways around these restrictions, and are still able to engage in petty pilfering!</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='857' out='857'/>
+   </location>
+
+   <location num='972' flags='ta'>
+      <name>Casino office</name>
+      <desc>   From here, the casino bosses can monitor activity out on the tables, watching for anyone who seems to be winning a bit too often. Those caught cheating are not dealt with kindly! There&apos;s nobody here right now, but they could come back at any moment.</desc>
+      <desc>   Against one wall is a table, upon which are stacked some packs of cards.</desc>
+      <exits e='973' out='973'/>
+   </location>
+
+   <location num='973' flags='bt'>
+      <name>Casino</name>
+      <desc>   All around you are rich people, hoping to become even richer by playing on the tables. All kinds of gambling games are offered here: blackjack, roulette, craps, bighouse and Martian roundeye. This is way beyond your league; you could lose the shirt off your back, here!</desc>
+      <desc>   Doors lead east and west, and the exit is north.</desc>
+      <exits n='909' e='974' w='972' out='909'/>
+   </location>
+
+   <location num='974' flags='t'>
+      <name>Casino backroom</name>
+      <desc>   This small room is provided for those who wish their gambling to be in a more intimate setting. Around a table, blank-faced men are playing a round of poker; the stakes are obviously high, judging by the huge pile of chips in the pot.</desc>
+      <desc>   Your entrance doesn&apos;t break the gamblers&apos; concentration, but you should probably leave before they notice you.</desc>
+      <exits w='973' out='973'/>
+      <events in-room='newbod.message.1'/>
+   </location>
+
+</fed2-map>

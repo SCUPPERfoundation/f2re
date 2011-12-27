@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<fed2-map title='Augusta' version='32' editor='standard' from='396' to='Georgia.Georgia Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>A hidden room to store mobiles and objects.</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Medical College Of Georgia</name>
+      <desc>   The hospital is filled with students hustling and bustling around you.  Children are taken care of first here so you will have to wait your turn and take a chance that a student will feel sorry for you and help you get an insurance policy.</desc>
+      <desc>   When you feel you can get up from your semi-coma and you feel safe that the student gave you the right insurance, you can leave from the South.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='b'>
+      <name>Office of the Sacred Hearts Cultural Exchange</name>
+      <desc>Rich velvet tapestries line the broad antebellum windows of the 19th century Earth building that overlooks the massive industrial heart of Augusta and her exchange.  You see a broad desk in the center of the office with a pensive looking Secretary sitting at it looking at you questioning why you are here.  Read the board here to see what is going on. The exit is to the South that leads you back to the Cultural Exchange.</desc>
+      <exits s='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Savannah River Boathouse Bridge</name>
+      <desc>   The wooden rails overlooking the lazy, glass-like river are large and very old as you notice that the Boathouse is really a bridge crossing over the Savannah.  You cross over them as you look around you and realize that there is a red, dirt path leading to the southwest that leads you beside the river lurking back at you as you look into it.</desc>
+      <exits e='396' sw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   At first glance, the ground here is made of red clay and bright green paths of luscious grass alongside the Savannah River. You see a building to the East that is a Cultural Exchange.  To the North you see a hospital.  To the South you see a restaurant and bar.  To the West you see a path that leads you to the Savannah River Boathouse Bridge.</desc>
+      <exits n='332' e='397' s='460' w='395' up='464' in='707' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Cultural Exchange</name>
+      <desc>   There are varieties of cultural comodities in this exchange.  You will find many to suit your tastes here.  All are priced right for you to profit as you trade.</desc>
+      <desc>   The exit back to the landing pad is West.</desc>
+      <exits n='333' w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>The Red, Dirt Path</name>
+      <desc>   You feel the rich red dirt beneath your feet.  The smell of the foliage along the sides and the dirt is something close to a spicy scent. To the South you can continue along the river to a Lake.  The Northeast leads you back to the Boathouse.  East leads you to the Rocks on the Savannah River.</desc>
+      <exits ne='395' e='459' s='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>The Rocks</name>
+      <desc>You step onto large, granite rocks that are in the middle of the Savannah River.  There are many sunbathers around you sticking their feet into the water running through the Rocks.  There is an old, Native American legend that when you rub the smoothness of the rock it will take your troubles away and bring about inner peace. The lazy river seems to come to life as it gushes past the Rocks and turns into white water.  The exit is to the West back to the red, dirt path.</desc>
+      <exits w='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Scarlet&apos;s Bed and Breakfast</name>
+      <desc>   You find yourself in one of the most exquisite southern antebellum homes of the South.  You have walked through the tall, white columns to enter into the parlor of a home that will serve you endless drinks, food and fun.  Here you can relax from the hot, southern sun to find good company and fine wine.  The exit is to the North and frankly, my dear, come back again!</desc>
+      <desc>   Scarlet tends the bar here and everyone knows Scarlet in Augusta.</desc>
+      <exits n='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='464' flags='yrb'>
+      <name>Augusta Hidden Room Overlooking the LP</name>
+      <desc>A secret spot that all planets should have.  Here you can take a break and oversee all of the activity below...</desc>
+      <exits down='396' in='397' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Lake Olmstead</name>
+      <desc>   Here you can fish, picnic or just relax at the Lake like so many people of the City do in a public park.  There is no concrete here but you can find a Gazebo where alot of people get married to the South.  The North leads you back on the Red, Dirt Path.</desc>
+      <exits n='458' s='586' up='586' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='585'>
+      <name>Augusta Golf Hall of Fame</name>
+      <desc>Here the Masters meet for one of the largest golf tournaments each year.  You have to be really good at golf to get into the Hall of Fame.  You see statues of such players as Jack Nicholson, Tiger Woods and Arnold Palmer cased in glass in the splendour of the tiled rooms surrounded by an exquisite golf course where you can get into the game and tee off. A visit South to the clubhouse is where you can relax with buddies and get a drink out of the hot sun beating down. To the East you can exit and go back to the Gazebo.</desc>
+      <exits e='586' s='649'/>
+   </location>
+
+   <location num='586'>
+      <name>The White Gazebo</name>
+      <desc>   There is a legend in Augusta that all who come here finds the love of their lives.  Many people have gotten married here.  The White Gazebo overlooks Lake Olmstead to the North.  To the South you can find the Canal. To the East there is a Garden Terrace overlooking the Savannah River where people meet and have fun in the local outdoor bar and restaurant. To the West there is a Golf Hall of Fame. The North leads you back along Lake Olmstead along the Red, Dirt Path through the Boathouse Bridge and back to the Landing Pad.</desc>
+      <exits n='522' e='587' s='650' w='585' up='650' down='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='587' flags='b'>
+      <name>Garden Terrace</name>
+      <desc>The lush foliage surrounds you as you see lines of tables on the terra cotta terrace.  The Savannah River smoothly flows under the sturdy built bar.  Sit down and have a few drinks with friends and the like and enjoy the fresh oxygen rich air pumped through water and into the restaurant.  To the West you can go back to the Gazebo.</desc>
+      <exits w='586'/>
+   </location>
+
+   <location num='645'>
+      <name>Penthouse</name>
+      <desc>Top of the line bedcovers cover the most luxurious room you can get in Augusta.  You have a breathtaking view of all of Augusta from here.  The exit is to the South.</desc>
+      <exits s='709'/>
+   </location>
+
+   <location num='646'>
+      <name>Room 101</name>
+      <desc>Room for rent.</desc>
+      <exits s='710'/>
+   </location>
+
+   <location num='649' flags='b'>
+      <name>Augusta Hall of Fame Clubhouse</name>
+      <desc>You step into a room filled with barstools that looks like it dates back to 19th Century Earth during the Antebellum period of the South.  Large windows stretch from the floor to the high ceiling draped with long curtains sweeping down to the floor.  To the North is the Augusta Golf Hall of Fame.  To the East is the Canal.</desc>
+      <exits n='585' e='650'/>
+   </location>
+
+   <location num='650'>
+      <name>The Canal</name>
+      <desc>   The Canal runs through the City of Augusta.  It was built in 1847 to bring water to the city from the Savannah River. Some of Augusta is still being built and renovated around this area.  Please come back and explore our progress.  You can leave by the North through the Gazebo and along the Red, Dirt Path to go back to the Landing Pad. West leads you to the Augusta Hall of Fame Clubhouse.  South leads you to a City Street.</desc>
+      <exits n='586' s='714' w='649' down='586' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='706'>
+      <name>Jeffro&apos;s Balcony</name>
+      <desc>Towers of industries stretch the length of Augusta as far as the eye can see.  You can see the canal from here churning turbines and moving barges.  Water from the river is used to operate the vast array of plants producing a variety of comodities.  To the East is the Office of Slug Bug Unlimited.</desc>
+      <exits e='707'/>
+   </location>
+
+   <location num='707'>
+      <name>Slug Bug Unlimited Office - CEO Hillbilly Jeffro</name>
+      <desc>You see a desk with pictures of his buddies, Scottric and Von.  The wide sprawl of the room on top of the Bon Air Hotel opens into a balcony that overlooks the industrial section of the planet to the West.</desc>
+      <exits w='706' down='708' out='396'/>
+   </location>
+
+   <location num='708'>
+      <name>The Black Eyed Pea Restaurant and Pub</name>
+      <desc>High atop the Bon Air Hotel you can get the best eats and ale in Augusta.  You look down into the valley and see the buildings of Augusta.  The bar rotates as the waiter, dressed in a black suit and tie, comes up to you and asks if you would like a drink before dinner. The exit is to the East.</desc>
+      <exits e='709' up='707'/>
+   </location>
+
+   <location num='709'>
+      <name>2nd Floor Bon Air Hotel</name>
+      <desc>You see a sprawling Penthouse to the North and a Sauna to the South.  The Black Eyed Pea Restaurant and Pub is to the West.</desc>
+      <exits n='645' s='773' w='708' down='710'/>
+   </location>
+
+   <location num='710'>
+      <name>1st Floor Bon Air Hotel</name>
+      <desc>Luxurious carpets line the interior of the Bon Air Hotel.  To the North is a room for rent and to the South is a room for rent. Up leads you to the Penthouse, the Sauna and the Black Eyed Pea Restaurant and Pub.</desc>
+      <exits n='646' s='774' up='709' down='713'/>
+   </location>
+
+   <location num='713'>
+      <name>Bon Air Hotel Lobby</name>
+      <desc>The Bon Air Hotel was built in 1920 by a group of United States Veterans.  The lobby is decorated with early 19th century art from Earth. It rises high above Augusta with a Penthouse and Sauna on the 2nd Floor and rooms for rent on the 1st Floor when you go Up. To go back out to the City Street, go East.</desc>
+      <exits e='714' up='710'/>
+   </location>
+
+   <location num='714'>
+      <name>City Street</name>
+      <desc>The streets are paved with cobblestone in Augusta.  To the West is a large, white building with a sign above the entrance reading Bon Air Hotel and to the East is a small, hexagonal building forming the Augusta Chamber of Commerce.</desc>
+      <exits n='650' e='715' w='713'/>
+   </location>
+
+   <location num='715'>
+      <name>Augusta Chamber of Commerce</name>
+      <desc>Welcome to the Augusta Chamber of Commerce.  If you would like an office space on this planet or have ideas that may enrich this planet, please see the Planet Owner, Von.</desc>
+      <exits w='714'/>
+   </location>
+
+   <location num='773'>
+      <name>Bon Air Hotel Sauna</name>
+      <desc>You hear mineral water from the Savannah bubbling in the hot sauna in front of you.  The exit is to the North.</desc>
+      <exits n='709'/>
+   </location>
+
+   <location num='774'>
+      <name>Room 102</name>
+      <desc>Room for rent.</desc>
+      <exits n='710'/>
+   </location>
+
+</fed2-map>
+

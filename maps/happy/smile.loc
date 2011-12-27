@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<fed2-map title='Smile' version='1.00' editor='standard' from='2000' to='Happy.Happy Space.331'>
+
+   <location num='0' flags='t'>
+      <name>Storage</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1999' flags='hi'>
+      <name>Smile First Aid</name>
+      <desc>  Friendly nurses rush to greet you as you enter, ready to assess your ills and call the physician if necessary. If you came here any way other than under your own power, don&apos;t forget to reinsure!</desc>
+      <exits e='2000' no-exit='moves.noexit.1999'/>
+   </location>
+
+   <location num='2000'>
+      <name>Smile Landing Pad</name>
+      <desc> You step out onto the landing pad on the planet Smile. Your immediate impression is that this is a friendly and welcoming place. You see a signpost with a green arrow that says &quot;Smile Exchange&quot; pointing east; a red arrow that says &quot;First Aid&quot; pointing west; a blue arrow that says &quot;Smile Food Court and Entertainment District&quot; pointing south toward a large archway. Off to the north you see a road that disappears around a bend. It appears to be paved with yellow bricks and looks tempting, but there are roadblocks which say, &quot;Under Construction,&quot; that obstruct your way.</desc>
+      <exits e='2001' s='2064' w='1999' no-exit='moves.noexit.2000'/>
+   </location>
+
+   <location num='2001' flags='e'>
+      <name>Smile Exchange</name>
+      <desc>  As you enter the exchange, you see many traders with smiles on their faces. They are pleased with the growth they are showing in their investments as a result of the healthy economy on Smile. When they desire to take a break from their travails, they step into the Happy Camper Soda Fountain to the east.</desc>
+      <exits e='2002' w='2000' no-exit='moves.noexit.2001'/>
+   </location>
+
+   <location num='2002' flags='b'>
+      <name>Happy Camper Soda Fountain</name>
+      <desc>  You see small groups of smiling traders relaxing at the counter and in the booths that line the windows. Several appear to be telling jokes or interesting stories, and periodic laughter erupts from different areas in the room.</desc>
+      <desc>  The soda jerk at the fountain asks if you&apos;d like to try a root beer float. You see a menu on the wall that lists many delicious treats.</desc>
+      <desc>  The exit is to the west.</desc>
+      <exits w='2001' no-exit='moves.noexit.2002'/>
+   </location>
+
+   <location num='2064'>
+      <name>Archway</name>
+      <desc>  You enter through an archway into the food court area. Tantalizing aromas assail your senses, and you feel drawn to step down into the serving area.</desc>
+      <desc>  You see a sign that says there is only forward progression allowed through the food court; if you do not wish to continue on to the food court area, please exit north.</desc>
+      <exits n='2000' down='2193' no-exit='moves.noexit.2064'/>
+   </location>
+
+   <location num='2065'>
+      <name>Exit from Archway</name>
+      <desc>  You are at the Archway; proceed northwest to the landing pad, or, if you would like to return to the food court area, move west.</desc>
+      <exits w='2064' nw='2000' no-exit='moves.noexit.2065'/>
+   </location>
+
+   <location num='2130'>
+      <name>Partyland Exit</name>
+      <desc>  What you thought might be a lounge actually turns out to be the exit to a balcony that overlooks the whole area. As you look out over the complex, it occurs to you that you have seen this spatial configuration somewhere before.  Amused by the cleverness of the architect, you chuckle and move out to the archway where you first entered.</desc>
+      <exits out='2065' no-exit='moves.noexit.2130'/>
+   </location>
+
+   <location num='2131'>
+      <name>Partyland</name>
+      <desc>  As you near the top of the stairs, you begin to hear the beat of music. As you enter the room, you see a large room with a dance floor, upon which many happy people are dancing and having a good time. The room is lit with a glow which is neither bright nor dim; as you look toward the ceiling, you see that the source of the light is beautiful stained glass in every color imaginable, which adds to the ambiance of the room. There are tables around the edges of the room for those who would like to sit and chat with each other while taking a break from the dancing. Refreshments may be ordered here.</desc>
+      <desc>   Looking around the room, you spy a door which you suspect might be a lounge. When you have partied sufficiently, you go in the door.</desc>
+      <exits in='2130' no-exit='moves.noexit.2131'/>
+   </location>
+
+   <location num='2193'>
+      <name>Service and Seating area</name>
+      <desc>  As you look about you, you see the walls are filled with colorful art, much of it murals painted by talented young people. It looks as if there is a service counter at which you place and receive your order, then an attractive seating area. You feel your stomach rumble and realize you are very hungry, so you step southeast to the brightly lit counter.</desc>
+      <exits se='2258' no-exit='moves.noexit.2193'/>
+   </location>
+
+   <location num='2196'>
+      <name>Exit</name>
+      <desc>  Nearing the exit, you see a colorful sign on a stairway marked &quot;Partyland.&quot; Your curiosity is aroused, so you decide to go up the stairs.</desc>
+      <exits up='2131' no-exit='moves.noexit.2196'/>
+   </location>
+
+   <location num='2258' flags='b'>
+      <name>Service Counter</name>
+      <desc>   A smiling order taker greets you and asks for your order. You take a moment to glance at the menu, which you see is filled with what most folks would consider comfort foods at very reasonable prices. You happily order and pay for your favorites, and receive them in short order on a colorful tray. You head east to the seating area.</desc>
+      <exits e='2259' no-exit='moves.noexit.2258'/>
+   </location>
+
+   <location num='2259'>
+      <name>Seating Area</name>
+      <desc>  The seating area is filled with tables for those who would like to linger over their food and beverage, or counters for those desiring to eat quickly and be on their way. The high windows let in light from the Happy Space sun, which makes this a very attractive atmosphere in which to sit for a while.</desc>
+      <desc>  When you are finished, a smiling droid clears your refuse, and you move northeast towards the exit.</desc>
+      <exits ne='2196' no-exit='moves.noexit.2259'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='8'>
+
+   <object type='static' start='337' visibility='0' size='1' weight='1'>
+      <name>wine</name>
+      <id>obj_wine</id>
+      <desc>If you need more wine, you can order some.</desc>
+      <vocab cmd='order' event='party.loft.1'></vocab>
+   </object>
+
+   <object type='static' start='337' visibility='0' size='1' weight='1'>
+      <name>strawberries</name>
+      <id>obj_berries</id>
+      <desc>If you need more strawberries, you can order some.</desc>
+      <vocab cmd='order' event='party.loft.2'></vocab>
+   </object>
+
+   <object type='static' start='339' visibility='0' size='1' weight='1'>
+      <name>champagne</name>
+      <id>obj_fizz</id>
+      <desc>Champagne is available on order.</desc>
+      <vocab cmd='order' event='party.loft.3'></vocab>
+   </object>
+
+   <object type='static' start='339' visibility='0' size='1' weight='1'>
+      <name>peaches</name>
+      <id>obj_peaches</id>
+      <desc>Peaches can be ordered if you desire some.</desc>
+      <vocab cmd='order' event='party.loft.4'></vocab>
+   </object>
+
+   <object type='static' start='403' visibility='0' size='1' weight='1'>
+      <name>round</name>
+      <id>obj_round</id>
+      <desc>You can order up a round of drinks whenever you like.</desc>
+      <vocab cmd='order' event='party.stag.1'></vocab>
+      <vocab cmd='buy' event='party.stag.1'></vocab>
+   </object>
+
+   <object type='static' start='403' visibility='0' size='1' weight='1'>
+      <name>girls</name>
+      <id>obj_girls</id>
+      <desc>Bring them on...</desc>
+      <vocab cmd='dancing' event='party.stag.2'></vocab>
+   </object>
+
+   <object type='static' start='401' visibility='0' size='1' weight='1'>
+      <name>desserts</name>
+      <id>obj_desserts</id>
+      <desc>The dessert cart will appear if you order it.</desc>
+      <vocab cmd='order' event='party.hen.1'></vocab>
+   </object>
+
+   <object type='static' start='401' visibility='0' size='1' weight='1'>
+      <name>n' dale</name>
+      <id>obj_boys</id>
+      <desc>Bring them on!</desc>
+      <vocab cmd='chip' event='party.hen.2'></vocab>
+   </object>
+
+   <object type='static' start='783' visibility='0' size='1' weight='1'>
+      <name>swimming</name>
+      <id>obj_swim</id>
+      <desc>The water is so inviting - why not go swimming?</desc>
+      <vocab cmd='go' event='fun.beach.1'></vocab>
+   </object>
+
+   <object type='static' start='783' visibility='0' size='1' weight='1'>
+      <name>volleyball</name>
+      <id>obj_ball</id>
+      <desc>You can play volleyball if you are feeling energetic.</desc>
+      <vocab cmd='play' event='fun.beach.2'></vocab>
+   </object>
+
+   <object type='static' start='327' visibility='0' size='1' weight='1'>
+      <name>sandwich</name>
+      <id>obj_sandwich</id>
+      <desc>Order a sandwich if you feel hungry.</desc>
+      <vocab cmd='order' event='cafe.food.1'></vocab>
+   </object>
+
+   <object type='static' start='327' visibility='0' size='1' weight='1'>
+      <name>pizza</name>
+      <id>obj_pizza</id>
+      <desc>Order a pizza if you are really hungry.</desc>
+      <vocab cmd='order' event='cafe.food.2'></vocab>
+   </object>
+
+   <object type='static' start='327' visibility='0' size='1' weight='1'>
+      <name>chocolates</name>
+      <id>obj_1chocs</id>
+      <desc>You can buy chocolates to take away with you.</desc>
+      <vocab cmd='buy' event='cafe.chocs.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ps'>
+      <name>caramels</name>
+      <id>obj_caramels</id>
+      <desc>The box contains chocolate-coated caramels, which are extremely tempting.</desc>
+      <vocab cmd='eat' event='cafe.chocs.4'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>t-shirt</name>
+      <id>obj_shirt</id>
+      <desc>The t-shirt says 'I love Caramel' on the front and 'I took the Caramel tour' on the back. It's one-size-fits-all, thanks to the magic of modern fabric technology.</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='s'>
+      <name>goodie bag</name>
+      <id>obj_bag</id>
+      <desc>It is a goodie bag of caramelish samples. If you want to eat one, open it.</desc>
+      <vocab cmd='open' event='objects.bag.1'></vocab>
+   </object>
+
+</object-list>

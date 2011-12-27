@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<fed2-map title='Dantooine' version='26' editor='standard' from='260' to='Corsec.Corsec Space.260'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='70'>
+      <name>Dog house.</name>
+      <desc>A duplicate of the main house only Dog sized (With 2 stories). It is still larger then the Inlaw cottage.</desc>
+      <desc>SW takes you to the In-law jailhou... uhgmm...Quarters.</desc>
+      <desc>SE to Family graveyard.</desc>
+      <exits se='135' sw='133'/>
+   </location>
+
+   <location num='133'>
+      <name>In-law quarters.</name>
+      <desc>This small cottage is a very basic house set up for In-laws. This one appears to have bars on the windows and a metal door with the lock on the outside.</desc>
+      <desc>SE to front of the house.</desc>
+      <exits ne='70' se='198'/>
+   </location>
+
+   <location num='134'>
+      <name>Inside The Victorian House</name>
+      <desc>No Tours are running today so you are only alloud into the reception hall.</desc>
+      <desc>Exit is South.</desc>
+      <exits s='198'/>
+   </location>
+
+   <location num='135' flags='b'>
+      <name>Family Graveyard</name>
+      <desc>An old graveyard for the estates family and ancestors. A large mausoleum sits in the center.</desc>
+      <desc>SW to head back to the rest of the planet</desc>
+      <desc>NW to the Dog house.</desc>
+      <exits sw='198' nw='70'/>
+   </location>
+
+   <location num='198' flags='b'>
+      <name>Front gate to Veexe and family&apos;s HUGE Estate.</name>
+      <desc>Wow what a great house. Designed to mimic old victorian building styles used in the early 20th century of earth. Its Green with Purple trim. Very ugly colors for such a beautiful house.</desc>
+      <desc>N to Veexe Family Home were you might find Vee Veex Veexe Veexx Veexxe or Tim.</desc>
+      <desc>NW takes you to the In-law jailhou... uhgmm...Quarters.</desc>
+      <desc>NE to Family graveyard.</desc>
+      <desc>S to go back to Crossroads.</desc>
+      <exits n='134' ne='135' s='262' nw='133'/>
+   </location>
+
+   <location num='260' flags='rb'>
+      <name>Dantooine Landing Pad.</name>
+      <desc>A Architectual dream. The LAnding Facility is setup so that each ships berth is Private and hold every possible Need. There is even a minibar Set on the Docking umbilicus.</desc>
+      <desc>S. to the Exchange.</desc>
+      <desc>E. To the rest of the planet.</desc>
+      <desc>The rest is here for you to explore and enjoy.</desc>
+      <exits e='261' s='324'/>
+   </location>
+
+   <location num='261' flags='b'>
+      <name>Wooden walkway</name>
+      <desc>A finely Carved Walkway that links the Ship Landing Berths to the rest of the planetary Resort. As with Ever single location on this marvelous planet there is a Bar and Cafe here for your comfort.</desc>
+      <desc>W to Landing pad</desc>
+      <desc>E to visit the Resort planet.</desc>
+      <exits e='262' w='260'/>
+   </location>
+
+   <location num='262' flags='b'>
+      <name>Crossroads to Pleasure.</name>
+      <desc>In the center of this plaza is a large fountain with Dolphines sorounding the edge. They are all faceing the center of the large fountain with their upper half lifted out of the water and their noses lifted at different levels. All spit out perfect streams of weater into the center Statue. The Center Statue is a Woman in a long Glowing purple Gown. She is stunningly beautiful with lang curled hair that is made to look as of the wind has caught it just right. Each of the streams of water lands in a perfect spiral around the Statue. The water poors down and with the Purple Glow from the Gown the water too lights up, Giving the Woman a splendid aura.</desc>
+      <desc>A plaque on the fountain Reads &quot;A devotion to the Planet owners Wife. &quot;</desc>
+      <desc>North= Hotel Sunrise</desc>
+      <desc>East= The private Hotel Of Veexe and Lynne.</desc>
+      <desc>South = Beaches of all colors.</desc>
+      <desc>West= Landing pad and Buisness offices.</desc>
+      <exits n='198' e='263' s='326' w='261'/>
+   </location>
+
+   <location num='263' flags='b'>
+      <name>Hotel Front Desk</name>
+      <desc>A Bored looking desk clerk sits behind the counter in this very nice modern resort hotel. When you enter he greets you and apologizes as all the rooms are currently full.</desc>
+      <desc>W back to Crossroads.</desc>
+      <desc>E to Hotel.</desc>
+      <exits e='264' w='262'/>
+   </location>
+
+   <location num='264' flags='b'>
+      <name>Elevators to upper floors.</name>
+      <desc>I beefy security guard says &quot; you can pass through, But you need a room key to use the elevators. Have a nice day.&quot;</desc>
+      <desc>S to Continue through the Hotel.</desc>
+      <desc>W back to Crossroads.</desc>
+      <exits s='328' w='263'/>
+   </location>
+
+   <location num='269' flags='b'>
+      <name>Office of the Planetary Master, Veexe the leisurely.</name>
+      <desc>Out will take you to the landing pad.</desc>
+      <desc>IN will take you directly to the exchange.</desc>
+      <exits down='388' in='324' out='260'/>
+   </location>
+
+   <location num='324' flags='eb'>
+      <name>Dantooine Buisness Center and Exchange.</name>
+      <desc>A Very basic Exchange system is setup here for Buisness Peoples needs. Though The room is setup in great comfort. It is the one place the planetary budget did not go wild on. After all, this is a Resort Planet.</desc>
+      <desc>N to Landing pad</desc>
+      <desc>S to Office Suites.</desc>
+      <exits n='260' s='388'/>
+   </location>
+
+   <location num='326'>
+      <name>Path to the beaches.</name>
+      <desc>A pathway made of wood planks polished to perfection craft this large walkway that leads to the swimming and sun bathing areas to the south.</desc>
+      <exits n='262' s='390'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>Blank Hallway</name>
+      <desc>Oddly this is a very blank and insignificant hallway. The oddest part is there is STILL a mini-bar setup for your convieniance.</desc>
+      <desc>N and S take you through the Hotel.</desc>
+      <exits n='264' s='392'/>
+   </location>
+
+   <location num='332'>
+      <name>Ununed Office</name>
+      <desc>Out will take you to the landing pad.</desc>
+      <desc>IN will take you directly to the exchange.</desc>
+      <exits e='333' in='324' out='260'/>
+   </location>
+
+   <location num='333'>
+      <name>Offices of the Planets Company Owners.</name>
+      <desc>All unoccupied at the moment. if you would like an office and are a current Fac owner here. Contact Zeexe.</desc>
+      <desc>UP to return to main Floor.</desc>
+      <exits e='334' se='398' s='397' sw='396' w='332' up='388'/>
+   </location>
+
+   <location num='334'>
+      <name>Ununed Office</name>
+      <desc>Out will take you to the landing pad.</desc>
+      <desc>IN will take you directly to the exchange.</desc>
+      <exits w='333' in='324' out='260'/>
+   </location>
+
+   <location num='388'>
+      <name>Elevator to PO and IPO offices.</name>
+      <desc>Up to reach Veexe, The Planet&apos;s PO, and his office. (Though he spends more time on the beaches)</desc>
+      <desc>Down to Reach the Offices of the various Company owners that operate out of Dantooines Industrial center.</desc>
+      <desc>N to EX</desc>
+      <exits n='324' up='269' down='333'/>
+   </location>
+
+   <location num='389' flags='hib'>
+      <name>Dantooine First Aid Station.</name>
+      <desc>Get hurt? Get healed, get insured, Get back to FUN!!!</desc>
+      <desc>Also, the dermetology office offeres thereputic spa treatments as well as burn releif for even the most insignificant burns.</desc>
+      <exits e='390'/>
+   </location>
+
+   <location num='390' flags='b'>
+      <name>Walkway to the beaches.</name>
+      <desc>A pathway made of wood planks polished to perfection craft this large walkway that leads to the swimming and sun bathing areas to the south.</desc>
+      <desc>West to the Burn Clinic and South to the beaches, swimming pools and Sun bathing areas.</desc>
+      <exits n='326' s='454' w='389'/>
+   </location>
+
+   <location num='391' flags='b'>
+      <name>Resort Convention Center.</name>
+      <desc>This is a massive room for all sorts of conventions and shows. Currently this room is in use by a trekky fan convention. There are all sorts of odd aliens wearing all sorts of other alien costumes.</desc>
+      <desc>E is the only exit back through the Hotel.</desc>
+      <exits e='392'/>
+   </location>
+
+   <location num='392' flags='b'>
+      <name>Another blank Hallway.</name>
+      <desc>Oddly this is a very blank and insignificant hallway. The oddest part is there is STILL a mini-bar setup for your convieniance.</desc>
+      <desc>W and N take you through the hotel.</desc>
+      <exits n='328' w='391'/>
+   </location>
+
+   <location num='396'>
+      <name>Ununed Office</name>
+      <desc>Out will take you to the landing pad.</desc>
+      <desc>IN will take you directly to the exchange.</desc>
+      <exits ne='333' in='324' out='260'/>
+   </location>
+
+   <location num='397'>
+      <name>Ununed Office</name>
+      <desc>Out will take you to the landing pad.</desc>
+      <desc>IN will take you directly to the exchange.</desc>
+      <exits n='333' in='324' out='260'/>
+   </location>
+
+   <location num='398'>
+      <name>Ununed Office</name>
+      <desc>Out will take you to the landing pad.</desc>
+      <desc>IN will take you directly to the exchange.</desc>
+      <exits nw='333' in='324' out='260'/>
+   </location>
+
+   <location num='453' flags='b'>
+      <name>Multi-Special Female Restroom.</name>
+      <desc>Restrooms for all Female Species.Waiting couches and refreshments servered 29 hours a day, 8 days a week. Wait times can be up to 3 days. A first aide station is nearby for those female species that have the unfortunate emergancy due to bladder rupture. Enjoy.</desc>
+      <exits e='454'/>
+   </location>
+
+   <location num='454' flags='b'>
+      <name>Main Causeway to Dantooine Beachfronts</name>
+      <desc>A large sieries of artisticlly designed swimming pools and Hut tubs fill the center of the courtyard to the south, surrounded by them are the multi colored beaches. A large sign says &quot;Multi Special Restrooms to the east and west. Please wash before entering pools or water fronts. Please dont use the weater areas as toilets. And lastly, Adault Swim after 7 pm on all southern beaches and pools.&quot; &quot;Enjoy&quot;</desc>
+      <exits n='390' e='455' se='519' s='518' sw='517' w='453'/>
+   </location>
+
+   <location num='455'>
+      <name>Multi-Special male/Neuter Restroom.</name>
+      <desc>Multi-special Restroom for males and Neuters.</desc>
+      <exits w='454'/>
+   </location>
+
+   <location num='516' flags='b'>
+      <name>wading in the water</name>
+      <desc>You are standing in hip deep water. Hope you thought to wear a swim suit and take your Comm unnit out of your pocket.</desc>
+      <exits e='517' no-exit='corpsec.dantooinewater.4'/>
+   </location>
+
+   <location num='517'>
+      <name>Purple Sandy Beach.</name>
+      <desc>Purple Sandy Beach.</desc>
+      <exits ne='454' e='518' se='582' s='581' w='516'/>
+   </location>
+
+   <location num='518'>
+      <name>Swimming Pools and Sun bathing Req area.</name>
+      <desc>14 Intricatly shaped pools serounded by a lazy river pool for those that like to drift around its 3 mile eye filling splendor. Located throughout are sun bathing chairs and beds. Very hot females of all the known and unknown species are serving drinks and food while wearing the most eye drawing bakinis ever seen.</desc>
+      <exits n='454' e='519' se='583' s='582' sw='581' w='517'/>
+   </location>
+
+   <location num='519'>
+      <name>Golden Sandy Beach</name>
+      <desc>Golden Sandy Beach</desc>
+      <exits e='520' s='583' sw='582' w='518' nw='454'/>
+   </location>
+
+   <location num='520' flags='b'>
+      <name>Wadeing in the water</name>
+      <desc>You are standing in hip deep water. Hope you thought to wear a swim suit and take your Comm unnit out of your pocket.</desc>
+      <exits w='519' no-exit='corpsec.dantooinewater.4'/>
+   </location>
+
+   <location num='580' flags='b'>
+      <name>Wading in the water</name>
+      <desc>You are standing in hip deep water. Hope you thought to wear a swim suit and take your Comm unnit out of your pocket.</desc>
+      <exits e='581' no-exit='corpsec.dantooinewater.4'/>
+   </location>
+
+   <location num='581'>
+      <name>Green Sandy Beach</name>
+      <desc>Green Sandy Beach</desc>
+      <exits n='517' ne='518' e='582' se='646' s='645' w='580'/>
+   </location>
+
+   <location num='582'>
+      <name>Swimming Pools and Sun bathing Req area.</name>
+      <desc>14 Intricatly shaped pools serounded by a lazy river pool for those that like to drift around its 3 mile eye filling splendor. Located throughout are sun bathing chairs and beds. Very hot females of all the known and unknown species are serving drinks and food while wearing the most eye drawing bakinis ever seen.</desc>
+      <exits n='518' ne='519' e='583' se='647' s='646' sw='645' w='581' nw='517'/>
+   </location>
+
+   <location num='583'>
+      <name>Ultra-Violete Sandy Beach</name>
+      <desc>Ultra-Violete Sandy Beach</desc>
+      <desc>Warning. Some species might get severe Sun Burns due to the type of beach sand and reflections from the Like colored water Front. Enter at your own risk.</desc>
+      <exits n='519' e='584' s='647' sw='646' w='582' nw='518'/>
+   </location>
+
+   <location num='584' flags='b'>
+      <name>wading in the water</name>
+      <desc>You are standing in hip deep water. Hope you thought to wear a swim suit and take your Comm unnit out of your pocket.</desc>
+      <exits w='583' no-exit='corpsec.dantooinewater.4'/>
+   </location>
+
+   <location num='645' flags='b'>
+      <name>Entrance to Lover&apos;s warf.</name>
+      <desc>This 200 Foot Warf streaches out into the ocean cove. From the warf you can look down on the coral reef and see with unbelieveable clarity the thousands of different water creatures.Benches line each side the the floor of the warf is clear plastiglass so that it looks like you are walking on water.</desc>
+      <exits n='581' ne='582' s='709'/>
+   </location>
+
+   <location num='646'>
+      <name>Boating Docks and tour Launches.</name>
+      <desc>A large tour office sits on this pier 39, Past the office is a large Boating dock filled with every imaginable boat and ship. some are even old earth Warships and submarines converted into museums. The tours are temporarily closed due to lost tour guide search efforts. We hope to find him and the 39 passengers soon so we can reopen the tours.</desc>
+      <exits n='582' ne='583' nw='581'/>
+   </location>
+
+   <location num='647' flags='b'>
+      <name>Fisher&apos;s Fishing Warf.</name>
+      <desc>A long Warf for those avid Fishermen and women and even neuters. This long warf extends nearly three quarters of a mile out to sea. Along the edges as far as you can see ppl have all sorts of Fishing gear and poles.</desc>
+      <exits n='583' s='711' nw='582'/>
+   </location>
+
+   <location num='709' flags='b'>
+      <name>Lover&apos;s Warf and whale watching Pools.</name>
+      <desc>This 200 Foot Warf streaches out into the ocean cove. From the warf you can look down on the coral reef and see with unbelieveable clarity the thousands of different water creatures.Benches line each side the the floor of the warf is clear plastiglass so that it looks like you are walking on water.</desc>
+      <desc>At sunset from this end of the warf you can see the whales of dantooine in their native mating pools.</desc>
+      <exits n='645'/>
+   </location>
+
+   <location num='711' flags='b'>
+      <name>Great wide open sea.</name>
+      <desc>At this far end of the fishing warf the water sits only 10 feet below the warf and you can clearly see the hundreds of species of fish and fishlike creatures swimming around. A Giant sea turtle floats on the surface near the warf munching on some seaweed. On the End of the warf is a plaque about this turtle named &quot;Waterlump&quot; as dubbed by the park marine care takers. Apparently this Turtle has been floating around this warf since a few days after it was built, Well over 300 years ago.. This turtle weighs over 2 and a half tons and is very friendly tward humanoids.</desc>
+      <exits n='647'/>
+   </location>
+
+</fed2-map>
+

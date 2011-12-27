@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<fed2-map title='Terra Space' version='3' editor='standard'>
+
+   <location num='2014' flags='slp'>
+      <name>System link</name>
+      <desc>The system continues to the east.</desc>
+      <exits e='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2015' flags='sp'>
+      <name>Orbit of Wagon</name>
+      <desc>The link is west.</desc>
+      <exits e='2016' w='2014' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2016' flags='sp'>
+      <name>Orbit of Railway</name>
+      <desc>The planet Wagon is west and the system continues to the east.</desc>
+      <exits e='2017' w='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2017' flags='sp'>
+      <name>Space</name>
+      <desc>The system continues west.</desc>
+      <exits w='2016' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

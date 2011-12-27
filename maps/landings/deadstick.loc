@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<fed2-map title='Deadstick' version='22' editor='standard' from='396' to='Landings.Landings Space.524'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Spare sand is kept here. Well you never know, they might run out one day!</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Touch-n-Go Clinic</name>
+      <desc>  EMT and crash teams standby to render assistance not only to the large crowds attending the air shows but to aircrew who may need their special kind of service. Peeping behind a screen you see doctors battling to save the life of a Student Pilot who crashed because he ran out of fuel. An insurance agent wrings his hands in despair, saying, &apos;Why didn&apos;t he get himself insured? What a tragic waste.&apos; You hope he&apos;s talking about the life, not the money. The exit is south.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing strip</name>
+      <desc>You have landed in the midst of a full blown air show. The sky is full of Aircraft taking off and landing there must be over 12 vintage aircraft in the pattern. You see all types of aircraft lined up on the Tarmac in different stages of preflight; Bi-Planes, taildraggers, war birds, single engine props and jets small and large. Attractive women dressed in flight attendant uniforms, welcome visitors and directing them to the viewing center to the southeast, the exchange to the east, the hospital to the north and the Hangar Door Canteen to the southwest.</desc>
+      <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Downwind exchange</name>
+      <desc>  Set up in an old Blimp hangar complete with all the trading machinery. It looks very similar to the squadron ready room on an aircraft carrier. The full range of commodities are bought and sold here. Exits to the west and south.</desc>
+      <exits s='461' w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>Hangar Door Canteen</name>
+      <desc>Welcome to the Hangar Door! Food and Drink currently being served. There is a 40&apos;s style Big Band orchestra playing an old Glen Miller tune on the juke box.  There are several couples dancing the jitterbug in the corner. There are several vintage War birds hung by cables from the ceiling. The B-24 Liberator World War II bomber is the centerpiece. Exit to the northeast.</desc>
+      <desc>The door in the northeast wall leads back to the landing strip</desc>
+      <exits ne='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>VIP Viewing center</name>
+      <desc>  Great seats, you have a 360 degree view of the Air Show. You look up as a 1940&apos;s Bi Plane rotates and spins in a   power dive towards the center of the runway. For aviation enthusiast there are so many things to see and do.Exit to the norh and east</desc>
+      <exits n='397' e='462' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Windsock Cove</name>
+      <desc>   Eroded into the side of a rocky hill by the waves, this secluded cove provides excellent views of the experimental aircraft that are taking part of the show. The FAA determines them as experimental but most are homebuilt and Kit airplanes built by aviation enthusiast. Exits to west and the south.</desc>
+      <exits s='526' w='461' down='526' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name> Official Aviation Museum and Education Center</name>
+      <desc>This Museum is more than a collection of airplanes; it is a tribute to the history and joy of flight highlighting pioneers such as Howard Hughes, early air racers, and countless military and civilian  individuals who have influenced the world of aviation. The Museum also offers a variety of unique year-round educational experiences for all ages including camps, tours, workshops and speaker presentations. The exit is to the north</desc>
+      <exits n='462' up='462' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

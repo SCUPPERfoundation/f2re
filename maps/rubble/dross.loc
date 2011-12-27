@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<fed2-map title='Dross' version='1.00' editor='standard' from='459' to='Rubble.Rubble Space.459'>
+
+   <location num='0'>
+      <name>storage</name>
+      <desc>storage</desc>
+   </location>
+
+   <location num='329'>
+      <name>Dawgs &amp; Bonez Salvage, Inc. lobby</name>
+      <desc>   You enter the lobby at the base of a large structure that appears to be an egg on a pedestal.  Looking up, you observe the center shaft rises easily one hundred meters with no less than twenty levels.  Hanging plants adorn the railings, and a security desk is off to the side.</desc>
+      <desc>   The security guard politely asks what&apos;s your business with DBS. On hearing you have no business here and really only wandered in, the guard just as politely asks you to leave.</desc>
+      <exits se='394' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='394'>
+      <name>concrete path</name>
+      <desc>   You leave the rather rough hewn landing pad area and follow a neatly manicured concrete path imbedded with flakes of mica.  The sidewalk shimmers and scintillates in the weak reddish light of the dwarf star, making it appear to be red-hot coals.  The illusion makes you walk faster to get off the walkway. </desc>
+      <desc>   The LP is southeast while an large commercial complex is towards the northwest.</desc>
+      <exits se='459' nw='329' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='395'>
+      <name>Visitors Center</name>
+      <desc>   You are in front of large building with unique architecture, whose proportions and style mimic the classic Old Earth vidi - Metropolis.  The center is presently closed for extensive renovations.</desc>
+      <desc>   The LP is south.</desc>
+      <exits s='459' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>Trader Fic&apos;s</name>
+      <desc>   Wolfgang von Fic was a commodities trader who capitalized on the observation that commodity exchanges are also social magnets. His business model was simple - build a bar and they will come.  Thus, Fic&apos;s is one of over ten thousand restaurants and clubs across the galaxy whose franchise spans hundreds of years and thousands of light years.  Palm trees adorn the Tiki bar, where the signature Yoetai is still served in a plastic half-coconut garnished with a slice of pineapple impaled by a paper umbrella. </desc>
+      <desc>   Traders can casually wait in comfortable lounge chairs while their futures are either made or lost in the exchange to the southwest.</desc>
+      <exits sw='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='458' flags='hi'>
+      <name>Hospital and Insurance</name>
+      <desc>   The one emergency room, three examination rooms and the vending machine room that doubles as a staff lounge is not likely to be mistaken for a hospital. The staff is more than competent to tend to the scoria scrapes on workers playing rugby on the LP, but if you get bounced on the head by one of the billion ton boulders zooming overhead you will need to reinsure. </desc>
+      <desc>   Fortunately, the staff is more than happy to point you towards the insurance desk if you happen to find yourself in need of that service.</desc>
+      <desc>   The exit to the LP is east.</desc>
+      <exits e='459' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='459'>
+      <name>Dross Landing Pad</name>
+      <desc>   The shuttle pad is in a wide shallow crater with a very thin, but breathable atmosphere and large enough to hold several shuttles.  The entire surface of the landing pad is covered in a layer of gritty black scoria and paths marked by a lighter colored grit lead to domes and entrances to underground structures.  Signs direct you to these various points of interest.</desc>
+      <desc>  The commodity market is east</desc>
+      <desc>  Junkyard Industries is southeast</desc>
+      <desc>  Junkyard Dawgs Saloon and Grill is south</desc>
+      <desc>  The Hospital and insurance is west</desc>
+      <desc>  A corporate office complex to the northwest</desc>
+      <desc>  A Visitors Center is north.</desc>
+      <exits n='395' e='460' se='524' s='523' w='458' nw='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='e'>
+      <name>Dross commodity exchange</name>
+      <desc>   The small glassteel-paneled geodesic dome has a denser than Earth-normal atmosphere with a higher percentage of oxygen.  The transparent panels provide a sense of enclosed openness. You are invigorated and with an enhanced mental acuity you observe the frenetic pace that merchants and traders are manipulating their market terminals.  </desc>
+      <desc>  You hear a slackstring guitar playing from the room towards the northeast, and the dome exit is west.</desc>
+      <exits ne='397' w='459' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='523'>
+      <name>gritty path</name>
+      <desc>   The path leads from the north to the shipyard to the south. The path also takes a dogleg to the southwest, past a row of warehouses in various states of construction or disrepair.  You notice some have been strengthened and increased in size, and these have workers hauling goods and materials to and from the LP on lorries.</desc>
+      <exits n='459' s='587' sw='586' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='524'>
+      <name>private road</name>
+      <desc>   A well maintained road that heads southeast towards a distant space port.  You notice peculiar circular ruts cut in the road a short distance beyond a sign that reads:</desc>
+      <desc>      PRIVATE ROAD</desc>
+      <desc>    NO TRESPASSING </desc>
+      <desc>   or folding, spindling or mutilating!</desc>
+      <desc>  Someone added in black marker.</desc>
+      <desc>   The LP is northwest.</desc>
+      <exits nw='459' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='586'>
+      <name>Outside Dawgs</name>
+      <desc>   You are at the entrance of a most peculiar structure, which for all intentions, appears to be a rather large doghouse. You notice that it is quite disheveled with peeling paint, loose shingles and complete with an enormous spiked collar on a large chain.  The chain is attached to a huge iron stake driven into the ground in the front yard of the building.  Fortunately, for you anyway, the collar is empty. </desc>
+      <desc>   You can go in or follow the path towards the northeast and back to the LP.</desc>
+      <exits ne='523' in='650' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='587' flags='y'>
+      <name>Shipyard</name>
+      <desc>   Jarrow Shipbuilders has a small office set up here and will take your orders for a new starship.</desc>
+      <desc>   The exit is to the north.</desc>
+      <exits n='523' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='589'>
+      <name>off a lorry</name>
+      <desc>   The lorry trundles along a private roadway which skirts the landing crater.  As soon as you are within sight of the landing pad to the northwest, the lorry once again grinds to a halt and waits patiently for all of about ten microfortnights for you to disembark.  Interpreting your indecision that you need a hint your presence is no longer welcome, the bin lifts and unceremoniously dumps you on the ground.</desc>
+      <desc>   The bin lowers while the lorry makes a tight U-turn kicking grit on you and the light changes back to blue.  You dust yourself off as the lorry disappears back down the road towards the Junkyard.</desc>
+      <exits nw='524' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='649'>
+      <name>Business office</name>
+      <desc>   As tacky as the Saloon and Grille appear downstairs, it is all business up here.  The servers&apos; schedules for the next two weeks are neatly arranged on a dry marker board.  Food and drink order manifests are organized on multiple clipboards and a neat stack of signed and stamped invoices are placed in the outbox ready for payment.</desc>
+      <desc>   The stairs lead back down to the foyer.</desc>
+      <exits down='650' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='650'>
+      <name>Junkyard Dawgs Saloon and Grille foyer</name>
+      <desc>   Dawgs certainly lives up to your expectations. You are amazed by the vast collection of junk that festoons the walls and ceiling. Even the lolly columns supporting the second floor are made to look like giant chew bones.</desc>
+      <desc>   The cavernous dining room is divided into a bar and lounge section where you can order drink or food from the bar, and a sit down area with booths for table service.  The female servers are wearing skimpy black cat costumes with mascara whiskers and showing ample cleavage. The male servers are dressed modestly in black jeans and black shirts but wearing hats with large floppy ears.  Here and there you can see some of the servers attempt nonconformity by adding colored pins, large buttons, or an earring through one of the goofy ears. </desc>
+      <desc>   You can go southeast towards the bar and lounge, southwest towards the dining area, south towards the back room of the doghouse, or up to the management office.</desc>
+      <exits se='715' s='714' sw='713' up='649' out='586' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='654'>
+      <name>on a lorry</name>
+      <desc>  You decide to risk life and limb by jumping on board a slow moving lorry with a blue light.  As soon as you land, the lorry grinds to a halt and the blue light changes to a flashing red.  After a few moments, the light switches to a blinking green and the lorry begins moving off towards the northwest.</desc>
+      <exits nw='589' out='589' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='713' flags='b'>
+      <name>Junkyard Grille</name>
+      <desc>   The hostess, wearing a rather puzzling button that proclaims &quot;I GOT SCREWED IN FREEFALL&quot;, guides you to a comfortable booth in the corner and offers you a menu.  The diversity of fare contradicts the outward appearance of the doghouse and you order the Dirty Dog half kilo sirloin steak, medium rare with a cracked peppercorn crust.</desc>
+      <desc>   After you finish your steak you pay your check and generously tip your server, not in small part because she repeatedly leaned over to fill your water glass, but that your steak was also done to perfection.  </desc>
+      <desc>   You can head northeast back to the foyer or southeast towards the back room.</desc>
+      <exits ne='650' e='714' se='778' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='714'>
+      <name>between the tables</name>
+      <desc>   You brush off a hostess who offers you a table, and walk towards the center of the restaurant.  Diners on either side are busy enjoying their meals, and the snips of conversation you catch are lively and intriguing.</desc>
+      <exits n='650' e='715' s='778' w='713' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='715' flags='b'>
+      <name>Junkyard Bar</name>
+      <desc>   You sidle up to the bar and climb on a convenient barstool.  The bar and lounge have the intimate and quaint atmosphere of an Old Earth Irish pub with a wide selection of imported brews as well as the local domestic offering - Dross Draft.</desc>
+      <desc>   The foyer is northwest while southwest leads towards the back room.</desc>
+      <exits sw='778' w='714' nw='650' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='778'>
+      <name>hind leg</name>
+      <desc>   At the back of the restaurant you see a wooden sign of a lifted dog&apos;s leg, pointing towards the restrooms in a small passageway to the south.</desc>
+      <exits n='714' s='842' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='841'>
+      <name>dogs</name>
+      <desc>   place holder for puzzle</desc>
+      <exits no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='842'>
+      <name>restrooms</name>
+      <desc>   You walk down a narrow corridor to the rear of the restaurant with doors on either side. The door on the left is marked with a silhouette of a cat in a coy pose, while the door on the right has a silhouette of a hound dog leering the cat.  Both doors are locked, the rooms ostensibly occupied.  There is another closed door to the south.</desc>
+      <exits n='778' s='906' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='843'>
+      <name>cats</name>
+      <desc>  place holder for puzzle</desc>
+      <exits no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='906'>
+      <name>backroom</name>
+      <desc>  You knock on the door at the end of the corridor and a tiny view port slides open.  &quot;Whaddya want!&quot; rasps a voice.  You fumble for an answer, and finally blurt out &quot;Jake sent me!&quot; It&apos;s the best you can do on such short notice.</desc>
+      <desc>   The lock rattles for a few moments and then the door flies open.</desc>
+      <desc>   &quot;Why didn&apos;t ya say so in the first place!&quot; a short little gnome of a creature rails at you. &quot;Come in! Come in! We&apos;ve been expecting you. And bolt the door!&quot;</desc>
+      <exits n='842' in='970' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='970'>
+      <name>Junkyard Dawgs control room</name>
+      <desc>   The door latches behind you as you enter a large room full of computer terminals and keyboards and an avatar control screen covers an entire wall. A dozen or more operators are busy controlling a virtual junkyard displayed on the wall.  The majority of blue icons appear to follow a programmed route, but you occasionally observe an operator reroute a blinking red icon from a location in the yard to another near the landing pad. After a few moments a green icon will follow in the same path, merge with the red, blink for a moment and then turn blue and resume its normal program.  This sequence is repeated countless times.</desc>
+      <desc>   The north door is bolted shut, but there is an unlocked door on the south wall.</desc>
+      <exits s='1034' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1034'>
+      <name>Junkyard Industries</name>
+      <desc>    You exit the doghouse into a storage yard of immense proportions, while the door slams shut.  Neatly ordered enormous piles of stuff, for lack of a more appropriate description, extend south as far as you can see.  Loaders and lorries with blue lights scurry amongst the piles, either unloading or reclaiming stuff from them. From the familiar movements, you surmise the function of the large control screen in the control room.  These are robotic stevedores! There will be no nicking of half the junk handled by these mindless but faithful servants.</desc>
+      <desc>   Pathways between the piles lead towards the south, southeast and southwest. You observe a low building towards the southeast and a large spaceport beyond it.</desc>
+      <exits n='970' se='1099' s='1098' sw='1097' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1097'>
+      <name>pile of junk</name>
+      <desc>   A typical pile of jumbled castoffs from a disposable society. As enormous as this pile is, you recognize nothing of value.</desc>
+      <exits ne='1034' e='1098' s='1161' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1098'>
+      <name>pile of black scoria</name>
+      <desc>   A perfectly conical pile of vitreous slag.  This material appears identical to the grit covering the LP.</desc>
+      <exits n='1034' e='1099' se='1163' s='1162' sw='1161' w='1097' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1099'>
+      <name>ferrous metals</name>
+      <desc>    The weak sun glints off of this pile of twisted metal since in the low oxygen and low humidity rust is slow to form.</desc>
+      <desc>    You see lorries heading towards the south and southeast. </desc>
+      <exits se='1164' s='1163' w='1098' nw='1034' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1161'>
+      <name>non-ferrous metals</name>
+      <desc>   Mostly copper, zinc and tin appear to be in this pile.</desc>
+      <exits n='1097' ne='1098' e='1162' s='1225' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1162'>
+      <name>cullet</name>
+      <desc>   A gigantic pile of broken glass that mostly contains recycled bottles, broken window glass, and waste glass from the processing factories beneath the surface.  The myriad of colored shards forms a tapestry of amorphous silicon dioxide. </desc>
+      <exits n='1098' e='1163' se='1227' s='1226' sw='1225' w='1161' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1163'>
+      <name>a moldering pile of carbonaceous waste</name>
+      <desc>    Here is an enormous pile of good old fashioned garbage.  This stuff stinks to high heaven.  Unfortunately, heaven is right over your head so you get a double dose of this olfactory delight.</desc>
+      <desc>   Lorries arriving from the east add to the pile, while loaders to the west carve away at it.</desc>
+      <exits n='1099' e='1164' s='1227' w='1162' nw='1098' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1164'>
+      <name>access tunnel</name>
+      <desc>  You find yourself at the entrance of a huge access tunnel that slopes down towards the southeast into the surface of the asteroid.  The robotic loaders pour out of and back into the access tunnel and you recall the mindless insectoids you have seen on the nature holos.  Even though well lit by halogen lights, the tunnel fades into the far distance.</desc>
+      <desc>   You might as well hitch a ride on a loader out to the lp, since you won&apos;t be allowed to enter the tunnel.</desc>
+      <exits sw='1227' w='1163' nw='1099' out='654'/>
+   </location>
+
+   <location num='1225'>
+      <name>waste grease</name>
+      <desc>   An enormous tank containing a mixture of waste cooking fats, lards from the meat processing factories and any combination of hydrocarbon goo.  You decide to give this storage area a wide berth.</desc>
+      <exits n='1161' ne='1162' e='1226' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1226'>
+      <name>pile of broken crockery</name>
+      <desc>   The vast majority of the pile seems to be made up of disposable stoneware.  You look closer and discern some broken meticulously handcrafted pieces.  As you muse on what was once a work of art and is now trash, a perfectly symmetrical vase that is miraculously unbroken rolls down the pile and into the path of a loader.</desc>
+      <exits n='1162' e='1227' w='1225' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1227'>
+      <name>precious metals</name>
+      <desc>   A pile not as large as the festering trash heap to the north, but still trash all the same until it is reclaimed and sold.  Gold, silver, platinum, palladium, thulium, thallium, all metals extracted from antiquated teleporters and hyperjump engines.  You spot a gold ring engraved with a strange script.  Just as you start to walk over to pick it up a loader arrives from the northeast and buries it.</desc>
+      <exits n='1163' ne='1164' w='1226' nw='1162' out='654' no-exit='moves.noexit.5'/>
+   </location>
+
+</fed2-map>

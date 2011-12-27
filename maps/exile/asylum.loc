@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<fed2-map title='Asylum' version='1.00' editor='standard' from='584' to='Exile.Exile Space.524'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>The cleaning droids have steered clear of this room for several years, which explains the dust, cobwebs and multiple skeletons of naughty visitors who dared to stray from the authorized pathway.</desc>
+   </location>
+
+   <location num='397'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='453'>
+      <name>Asylum Recorded Tour</name>
+      <desc>The tour concludes:  &quot;The tourist aspects, as well as the still-effective Asylum prison, are overseen by BrookeRF, who was chosen for her outstanding background in business, as well as her no-nonsense approach when dealing with criminals.  She has been granted supreme galactic power over the fate of her inmates and makes the final decisions on who goes and who stays.</desc>
+      <desc>   She is extremely reclusive and is usually found hard at work in her office, poring over legal documents and making serious decisions on the fate of those in her keep.  She spends any free time remaining with her three children and husband in their home on the planet Earth.&quot;</desc>
+      <desc>   &quot;This concludes the tour.  To exit back to the main room, please go OUT the door.&quot;</desc>
+      <exits se='518' out='583'/>
+   </location>
+
+   <location num='458'>
+      <name>Bunk Beds</name>
+      <desc>You approach the bunk beds with trepidation and pull back the thin blanket.  There is a man huddled under the blanket who looks at you with fearful eyes.  You are initially taken aback, but once you&apos;ve calmed down, you ask the man why he is in this prison cell.</desc>
+      <desc>   The man whispers in a raspy voice, &quot;I was caught smuggling tquarks onto Starbase 1 three years ago.  The customs officials that stopped me put me into restraints, threw me into their cargo hold and brought me here.  This planet is for all the scum of the galaxy and we have no way of leaving.  The only person who can save us refuses to hear anyone&apos;s plea for mercy!&quot;  He shakes uncontrollably and refuses to speak any further.</desc>
+      <desc>   While curious to hear more, you&apos;re extremely creeped out by the cell.  You can stay here and visit with the creepy-crawlies, or you can get out of here!</desc>
+      <exits out='586'/>
+   </location>
+
+   <location num='518'>
+      <name>Asylum Recorded Tour</name>
+      <desc>The tour continues:  &quot;The stronger and more intelligent prisoners successfully built shelter and found food sources to sustain them.  The indigenous wildlife and non-poisonous plantlife were staples of their diet.  Soon, a group of concerned Fedizens grew concerned that these thriving inmates would somehow find their way to freedom, so an effort to colonize the planet was put forth.  The remaining Asylum prisoners were rounded up and placed into the most secure prison built thus far.  The remainder of the planet was converted into a vacation getaway.</desc>
+      <desc>  For the last stage of the tour, please go enter the next room through the northwest door or you may go southeast out to the main room.&quot;</desc>
+      <exits se='583' nw='453'/>
+   </location>
+
+   <location num='522'>
+      <name>Deserted Prison Cell</name>
+      <desc>You&apos;ve foolishly stumbled into what appeared to be an empty prison cell, but you get the feeling you are not alone.  The glow from your comm unit casts a soft light on your surroundings.  Several small, furry creatures scamper away at the introduction of a light source.  The bunk beds against the wall still have thin, plastic mattresses and thin blankets over something lumpy.  Common sense tells you not to look, but if you had any common sense, you wouldn&apos;t be here in the first place.</desc>
+      <exits n='458' out='586'/>
+   </location>
+
+   <location num='582' flags='b'>
+      <name>North end of bar</name>
+      <desc>You peek through the opening between the huddled men and women and see that they are watching a replay of a spaceship battle between Pegasus and a seemingly fearless pilot.  They are laying down groats and taking bets on who will win.  In each battle, the pilot repeatedly demolishes Pegasus&apos; ship.  Its hard to make out the lettering on the side of the pilot&apos;s ship, but it looks like it says &quot;BrookeRF&quot;.</desc>
+      <exits s='646'/>
+   </location>
+
+   <location num='583'>
+      <name>Asylum Tourist Information Bureau</name>
+      <desc>You enter a plain looking building and enter a room filled with artifacts from Asylum&apos;s history.  In one display, there are manacles and chains dating back several centuries.  Along the left wall there are pictures of some of the galaxy&apos;s most elusive criminals.  More display cases hold items relating to inprisonment, restraint and failed escape attempts.</desc>
+      <desc>   You push a button on the wall in front of you to begin a short recording about Asylum.</desc>
+      <desc>   &quot;Four hundred years ago, the planet Asylum was chosen as a place to send those who chose to disregard the laws of the galaxy.  Shiploads of prisoners were brought until the planet was overflowing with the slime of the universe.  No provisions for food, drink or shelter were given to the prisoners and thus, they were left to fend for themselves.  The weaker inmates died off quickly...mostly from hunger or exposure to the elements.</desc>
+      <desc>   To continue your tour, please continue to the northwest.&quot;</desc>
+      <exits se='648' nw='518'/>
+   </location>
+
+   <location num='584'>
+      <name>Asylum Landing Pad</name>
+      <desc>Immediately after landing, you are subjected to a rigorous, if not slightly enjoyable, pat-down by burly Asylum officials.  Upon passage of the security measures, a nervous Visitor Assistance official snaps a visitor clearance badge to the front of your spacesuit.  His thin, greasy mustache twitches ever so slightly as he quickly points you to the south.  The pathway leading to the south is surrounded by lush foliage that appears to hide tall, metallic security bars.  Is that a door concealed beneath the leafy vines?</desc>
+      <exits e='585' s='648'/>
+   </location>
+
+   <location num='585'>
+      <name>Concealed Metal Door</name>
+      <desc>Your suspicions are confirmed when you pull the vines back to find a concealed metal door.  It is slightly ajar, so you peek over your shoulder to see if anyone is watching and go inside.</desc>
+      <exits w='584' in='586'/>
+   </location>
+
+   <location num='586'>
+      <name>Dark Hallway</name>
+      <desc>As you step inside the metal door, a cold, dank breeze hits your face.  You can barely make out your surroundings because the hallway is lit only by a light at the east end of the hallway.  Your footsteps make a hollow echo as you cautiously walk toward the end of the passage.  To your right and left appear to be old prison cells, and they seem to be deserted.  The light to the east gets brighter as you approach.</desc>
+      <exits e='587' in='522' out='648'/>
+   </location>
+
+   <location num='587'>
+      <name>Control Room</name>
+      <desc>The bright room you&apos;ve entered is the control room for the entire prison section of Asylum.  Two thin, stringy-haired men are watching two rows of monitors.  There is a snack machine in the corner and a small, plastic break table littered with candy wrappers and dirty magazines.  On the east side of the room is a heavy, metal door with the sign, &quot;Judge, Jury and Queen&quot; attached on the wall.  Neither of the men seem to notice your presence and seem to be engrossed in what initially appeared to be a survelliance monitor, but on second glance is actually a game of &quot;Space Invaders&quot;.</desc>
+      <desc>   You can either go back to the hallway and try to find your way back to the landing pad or peek into the door to the east.</desc>
+      <exits e='588' w='586'/>
+   </location>
+
+   <location num='588'>
+      <name>Office of BrookeRF</name>
+      <desc>You slip into the office and see an empty desk covered with loose papers.  There are books stacked up against the north and east walls and all around the desk.  A monitor is flickering on the wall above the door you just entered and it shows the two stringy-haired men from the control room, still playing &quot;Space Invaders&quot; at their workstation.  Upon closer inspection, you notice that the papers on the desk are covered with doodles and random drawings...obviously the work of a completely bored mind.  If BrookeRF is the one making the judicial decisions around here, its apparent that not much thought goes into it!</desc>
+      <desc>   You can either exit back out the door or go out to the landing pad.</desc>
+      <exits w='587' down='589' out='584'/>
+   </location>
+
+   <location num='589' flags='b'>
+      <name>Private Residence of BrookeRF</name>
+      <desc>When she&apos;s not ignoring the prisoners of the galaxy that are currently residing on Asylum, BrookeRF retreats to her private den to relax.  This is no fancy residence.  It is merely a cavernous room that has been converted into a living space.</desc>
+      <desc>   Looking around the space, you start to get a feel for the other side of BrookeRF.  Pictures tell the story.  On the far wall are pictures of BrookeRF posing with three small children and a man outside the Wilderness Tour on Earth.  In another photo, the same group smiles in front of the Cargon City shuttle station on Venus.  A third photo shows BrookeRF and the man toasting a drink with Diesel on Mars.</desc>
+      <desc>   As you continue down the wall, there is a photo of BrookeRF cutting the ribbon on her company Knitted Socks, Inc.  A framed computer newspaper print-out profiles BrookeRF as the judge, jury and queen of Asylum in the Exile Space System.  You can see this job is not the most important aspect of her life.</desc>
+      <exits up='588'/>
+   </location>
+
+   <location num='646' flags='b'>
+      <name>The Rusted Nail Lounge</name>
+      <desc>The lounge has darkened corners for those wishing to have a quiet break from the push and shove of the exchange, and you notice a few weary merchants taking a break while sipping from a glass with a smoking green liquid.  Behind the shining oak bar is a wall of monitors.  One small monitor shows the activity of the exchange next door, while the other monitors have different displays.  At the north end of the bar, you notice several off-duty guards and a couple of slightly tipsy financiers huddling around another monitor.  You may venture to the north end of the bar to see what they are up to, or you may relax here with a drink.  The exit back to the exchange is east.</desc>
+      <exits n='582' e='647'/>
+   </location>
+
+   <location num='647' flags='e'>
+      <name>Asylum Exchange</name>
+      <desc>The bored traders lounging on the easy chairs in the corner wave to you as you enter.   There is an unprecedented amount of security at the entrance to the room, with a familiar looking guard speaking quietly into his comm unit.  You look closer at the guard and recognize him as one of the more frisky customs officials that seemed to stop you every time you travelled in Sol Space.  You hide your face and quickly set about your business.</desc>
+      <desc>You may head to the exchange bar to the west, or you may exit to the east.</desc>
+      <exits e='648' w='646'/>
+   </location>
+
+   <location num='648'>
+      <name>Visitor Approved Services Kiosk</name>
+      <desc>You arrive at a small service kiosk with directions to the most valuable services for visitors to the planet Asylum.  The arrow pointing WEST leads the way to the planetary exchange.  Visitors requiring a new spaceship or just adjustments or repairs to their current ships should proceed to the EAST.  The non-prisoner entrance to the Asylum Hospital is to the SOUTHEAST.  The entrance to the Asylum Resort is to the SOUTH (reservations appreciated, but not required).  You may enter a small Visitor Assistance building to the NORTHWEST to learn more about the planet Asylum.</desc>
+      <exits n='584' e='649' se='713' s='712' w='647' nw='583'/>
+   </location>
+
+   <location num='649' flags='y'>
+      <name>Crazy Ed&apos;s Used Ships and Repairs</name>
+      <desc>You enter the shipyard and are immediately greeted by an insane looking man speaking very loudly and spitting with every word.  He introduces himself as Crazy Ed and explains that he is a former resident of the prisoner section of Asylum, but has since been allowed to run the shipyard on a closely supervised work release program.  His nervous eye tic makes you uncomfortable, but if you do choose to purchase a Crazy Ed used ship, just type BUY.  Further to the east is the ship repair warehouse or you may exit back to the Visitor Approved Services Kiosk to the west.</desc>
+      <exits e='650' w='648'/>
+   </location>
+
+   <location num='650' flags='r'>
+      <name>Crazy Ed&apos;s Ship Repair Warehouse</name>
+      <desc>You enter a cavernous warehouse which appears large enough to house three or four spaceships at a time.  There are a couple of droids in the corner playing Lucky Louie.  It looks like the spaceship repair is just going to have to wait!</desc>
+      <exits w='649'/>
+   </location>
+
+   <location num='711'>
+      <name>Your Hotel Room</name>
+      <desc>After the retinal scan, the door opens into your hotel room.  The room is furnished with the most exquiste fabrics and obviously of the highest quality.   Your room is decorated in a conservative fashion, looking expensive but not gaudy.  The bed has been pulled down for you and there is a mint on the pillow.  Under the tan duvet cover, the sheets are of the best Venusian-cotton quality.  The oak desk in the corner has a charger for your comm unit and a fully equipped computing unit for your personal use.  A comfy sitting area with overstuffed chairs near the window allows you to watch satellite t.v. on the flatscreen video monitor that slides down from the ceiling.  The only thing that is strange about your room is that your windows have heavy metal bars on them.</desc>
+      <desc>   When you are ready to check-out, go down to the lobby.</desc>
+      <exits down='712'/>
+   </location>
+
+   <location num='712'>
+      <name>Asylum Resort Lobby</name>
+      <desc>The doorman opens the doors and you enter a beautifully decorated hotel lobby.  There is a tasteful floral print wallpaper trimmed with oak with gold accents.  The overstuffed chairs to the right are being plumped by one of the cleaning droids.  The receptionist behind the large desk offers you assistance in checking-in.  You may go to the southwest if you wish to eat in Asylum&apos;s galaxy-famous restaurant or you may go up to your room.</desc>
+      <exits n='648' sw='775' up='711'/>
+   </location>
+
+   <location num='713'>
+      <name>Asylum Memorial Hospital (Non-Prisoner Entrance)</name>
+      <desc>You enter the hospital and are drawn to the large welcome sign in the middle of the foyer.  It reads, &quot;Welcome to Memorial Hospital!  You are currently on the main floor.  Please be aware that this hospital provides services for our permanent residents, as well as our visitors.  Visitor needs are addressed on the first floor.  If you wish to look into our hospital&apos;s cloning services or look into re-insurance needs, please proceed UP the stairs to the first floor.&quot;</desc>
+      <desc>Visitors ready to leave the hospital may exit to the northwest.</desc>
+      <exits nw='648' up='777'/>
+   </location>
+
+   <location num='775' flags='b'>
+      <name>Chez Brooke</name>
+      <desc>The maitre&apos; d seats you in a secluded corner table and you observe the room around you.  The restaurant is fairly empty, except for a pair of Industrialists speaking intently to a financier, in what appears to be a business dinner, three tables away.  The round tables are covered with stark, white tablecloths and soft music is piped in through hidden speakers.  A soft breeze comes through one of the large, open patio doors and it causes the crystal chandeliers to tinkle softly.</desc>
+      <desc>   The waitdroid brings you a drink menu and a dinner menu.  The prices are astronomical, but how often do you get to eat in a galaxy-famous restaurant such as this?</desc>
+      <desc>   When you are done eating, you can exit northeast to the hotel lobby.</desc>
+      <exits ne='712'/>
+   </location>
+
+   <location num='776'>
+      <name>Visitor Surgical Suite</name>
+      <desc>Quiet nursing staff glide around the suite, polishing and sanitizing gleaming surgical instruments that are so clean, they appear to have never been used.  There is no one sitting in the waiting area and it appears that no doctors are currently on duty, so you decide to leave.  The exit is to the east.</desc>
+      <exits e='777'/>
+   </location>
+
+   <location num='777' flags='hi'>
+      <name>First Floor (Visitors Only)</name>
+      <desc>The gleaming first floor is one of the cleanest places you&apos;ve ever visited.  The most basic services are provided by machines against the wall across from you.  You look at the machines and see that most of them provide a cloning service should you find yourself in pieces, or just in a general bad state.  The largest machine on the end allows you to re-insure to provide you with the necessary protection in case you find yourself here again in the future.</desc>
+      <desc>   Visitors requiring more intense surgical needs may enter the surgical suite to the west.  If you are ready to go back to the main floor, you can go DOWN the flight of stairs at the end of the room.  The stairs going up are off limits and are guarded by a snoozing security guard.</desc>
+      <exits w='776' up='841' down='713'/>
+   </location>
+
+   <location num='841'>
+      <name>Second Floor (Prisoner and Authorized Personnel Only)</name>
+      <desc>You quietly sneak past the snoozing security guard and you find yourself on the second floor of the hospital.  It looks nothing like the first floor.  There are bars on the shuttered windows and instead of nursing staff, there are burly guards standing at each door.  You wonder what is inside each room for it to require such intense supervision.  You notice that a guard has left his post to head to the restroom and you can&apos;t resist taking a peek inside the room.</desc>
+      <exits down='777' in='842'/>
+   </location>
+
+   <location num='842'>
+      <name>Room 013</name>
+      <desc>You peek into the darkened room and gasp at what you see!  On the bed lies a skinny human man.  His sheets have obviously not been changed in a long time and he is manacled to the bed frame by a thick chain.  There is a piece of molded bread on his bedside table and a plastic cup of water with a couple of insects floating on the top.  His window is shuttered closed and there are heavy metal bars covering the inside of the shutter.  The stench is unbearable.  The man sees you and begins to scream loudly.  You dart out of the room before the guard returns!</desc>
+      <exits out='841'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<fed2-map title='Goldman Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name></name>
+      <exits  no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265' flags='sp'>
+      <name>Franc Orbit</name>
+      <desc>  The asteroid Franc rotates slowly below you.  Your comms again transmit a message from the surface, &quot;Welcome to Franc.  Unfortunately, the mining team is still preparing Franc.  You may return to Florin to the southwest.&quot;</desc>
+      <desc>  You may return southwest to Florin.</desc>
+      <exits  sw='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='sp'>
+      <name>Guilder Orbit</name>
+      <desc>  The planet Guilder rotates slowly below you.  Your comms again transmit a message from the surface, &quot;Welcome to Guilder.  Unfortunately, Guilder is not yet open for business.  Return to the link and Florin to the east.&quot;</desc>
+      <desc>  You may return east to the link.</desc>
+      <exits  e='327' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='slp'>
+      <name>Goldman System Interstellar Link</name>
+      <desc>  You are hovering in darkness next to the interstellar link.  The link at the moment is quiet and invisible, but will open instantly at your request.  At this distance, the Goldman sun is only tiny pin prick far to the south.  The planets Florin and Guilder orbit silently nearby.</desc>
+      <desc>  As you approach, a message is broadcast to you ship, which your computer translates into a language you easily understand.  &quot;Welcome to the Goldman System.  All travelers are welcome.  Civility is expected on the planet at all times.  If you don&apos;t understand that, please visit the visitor center, north of the LP on Florin, for instructions.&quot;</desc>
+      <desc>  You may travel EAST to Florin and it&apos;s asteroid or WEST to Guilder.</desc>
+      <exits  e='328' w='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='sp'>
+      <name>Florin Orbit</name>
+      <desc>  The planet Florin rotates slowly below you.  Your comms again transmit a message from the surface, &quot;Welcome to Florin.  A shuttle will arrive shortly to take you down to the surface.&quot;</desc>
+      <desc>  You may board the the shuttle or return west to the link.</desc>
+      <exits  ne='265' w='327' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+
+

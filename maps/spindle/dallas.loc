@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<fed2-map title='Dallas' version='4' editor='standard' from='655' to='Spindle.Spindle Space.525'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='591' flags='yr'>
+      <name>Dallas Shipyard and Repair</name>
+      <desc>Please feel free to repair or buy your ship here!</desc>
+      <exits s='655'/>
+   </location>
+
+   <location num='654' flags='hi'>
+      <name>Dallas Hospital</name>
+      <desc>You may repurchase life insurance here!</desc>
+      <exits e='655'/>
+   </location>
+
+   <location num='655'>
+      <name>Dallas Interplanetary Starport</name>
+      <desc>As you enter the starport, you notice that this planet is primarily used for commerce and is currently underconstruction.  There is a sign that reads:</desc>
+      <desc>------</desc>
+      <desc>E - Exchange</desc>
+      <desc>W - Hospital</desc>
+      <desc>N - Shipyard</desc>
+      <desc>S - Sports Bar</desc>
+      <desc>----</desc>
+      <exits n='591' e='656' s='719' w='654'/>
+   </location>
+
+   <location num='656' flags='eb'>
+      <name>Dallas Exchange</name>
+      <desc>Please do not trade any commodities for which Dallas currently has factories. Thank you!</desc>
+      <exits w='655'/>
+   </location>
+
+   <location num='719' flags='b'>
+      <name>Sports Bar</name>
+      <desc>Please enjoy any of our numerous eats and drinks!</desc>
+      <exits n='655'/>
+   </location>
+
+</fed2-map>

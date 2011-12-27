@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='88'>
+
+   <object type='static' start='2078' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto black</name>
+      <id>obj_black2078</id>
+      <desc>The disk is about three feet in diameter and colored black</desc>
+      <vocab cmd='step' event='teleport.general.1'></vocab>
+   </object>
+
+   <object type='static' start='2589' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto white</name>
+      <id>obj_white2589</id>
+      <desc>The disk is about three feet in diameter and colored white</desc>
+      <vocab cmd='step' event='teleport.general.2'></vocab>
+   </object>
+
+   <object type='static' start='2589' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto black</name>
+      <id>obj_black2589</id>
+      <desc>The disk is about three feet in diameter and colored black</desc>
+      <vocab cmd='step' event='teleport.general.3'></vocab>
+   </object>
+
+   <object type='static' start='2406' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto white</name>
+      <id>obj_white2406</id>
+      <desc>The disk is about three feet in diameter and colored white</desc>
+      <vocab cmd='step' event='teleport.general.4'></vocab>
+   </object>
+
+   <object type='static' start='2589' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto yellow</name>
+      <id>obj_yellow2589</id>
+      <desc>The disk is about three feet in diameter and colored yellow</desc>
+      <vocab cmd='step' event='teleport.general.5'></vocab>
+   </object>
+
+   <object type='static' start='2078' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto yellow</name>
+      <id>obj_yellow2078</id>
+      <desc>The disk is about three feet in diameter and colored yellow</desc>
+      <vocab cmd='step' event='teleport.general.1'></vocab>
+   </object>
+
+   <object type='static' start='2457' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto white</name>
+      <id>obj_white2457</id>
+      <desc>The disk is about three feet in diameter and colored white</desc>
+      <vocab cmd='step' event='teleport.general.4'></vocab>
+   </object>
+
+   <object type='static' start='2078' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto blue</name>
+      <id>obj_blue2078</id>
+      <desc>The disk is about three feet in diameter and colored blue</desc>
+      <vocab cmd='step' event='teleport.general.6'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto blue</name>
+      <id>obj_blue1958</id>
+      <desc>The disk is about three feet in diameter and colored blue</desc>
+      <vocab cmd='step' event='teleport.general.7'></vocab>
+   </object>
+
+   <object type='static' start='2069' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto white</name>
+      <id>obj_white2069</id>
+      <desc>The disk is about three feet in diameter and colored white</desc>
+      <vocab cmd='step' event='teleport.general.8'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto white</name>
+      <id>obj_white1958</id>
+      <desc>The disk is about three feet in diameter and colored white</desc>
+      <vocab cmd='step' event='teleport.general.2'></vocab>
+   </object>
+
+   <object type='static' start='2078' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto green</name>
+      <id>obj_green2078</id>
+      <desc>The disk is about three feet in diameter and colored green.</desc>
+      <vocab cmd='step' event='teleport.general.6'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto green</name>
+      <id>obj_green1958</id>
+      <desc>The disk is about three feet in diameter and colored green.</desc>
+      <vocab cmd='step' event='teleport.general.9'></vocab>
+   </object>
+
+   <object type='static' start='1508' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto white</name>
+      <id>obj_white1508</id>
+      <desc>The disk is about three feet in diameter and colored white</desc>
+      <vocab cmd='step' event='teleport.general.4'></vocab>
+   </object>
+
+   <object type='static' start='1508' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto blue</name>
+      <id>obj_blue1508</id>
+      <desc>The disk is about three feet in diameter and colored blue</desc>
+      <vocab cmd='step' event='teleport.general.7'></vocab>
+   </object>
+
+   <object type='static' start='1508' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto gold</name>
+      <id>obj_gold1508</id>
+      <desc>The disk is about three feet in diameter and colored gold</desc>
+      <vocab cmd='step' event='teleport.general.10'></vocab>
+   </object>
+
+   <object type='static' start='2078' visibility='100' size='1' weight='1' flags='i'>
+      <name>notice</name>
+      <id>obj_notice</id>
+      <desc>The notice is headed 'Use of the Lattice Teleportation System'.</desc>
+      <vocab cmd='read' event='objects.notice.1'></vocab>
+   </object>
+
+   <object type='static' start='1443' visibility='100' size='1' weight='500' flags='d'>
+      <name>slab</name>
+      <id>obj_slab</id>
+      <desc>This large, highly polished, slab of Venusian fire opal has the names of Lattice media team members killed while in the field carved into it.</desc>
+   </object>
+
+   <object type='static' start='2078' visibility='0' size='1' weight='1' flags='d'>
+      <name>fountain</name>
+      <id>obj_fountain</id>
+      <desc>The fountain is made from an iridescent, marble like, substance. The water in the fountain has tiny flecks of a silver substance which reflects the light. The water is underlit by banks of lights which change color at intervals.</desc>
+   </object>
+
+   <object type='static' start='1572' visibility='100' size='1' weight='1' flags='i'>
+      <name>plaque</name>
+      <id>obj_plaque</id>
+      <desc>An inscribed brass plaque has been mounted on an oak plinth.</desc>
+      <vocab cmd='read' event='objects.plaque.1'></vocab>
+   </object>
+
+   <object type='static' start='2457' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto grey</name>
+      <id>obj2457_grey</id>
+      <desc>The disk is about three feet in diameter and colored grey</desc>
+      <vocab cmd='step' event='teleport.general.11'></vocab>
+   </object>
+
+   <object type='static' start='2706' visibility='0' size='1' weight='1' flags='d'>
+      <name>onto grey</name>
+      <id>obj2706_grey</id>
+      <desc>The disk is about three feet in diameter and colored grey</desc>
+      <vocab cmd='step' event='teleport.general.12'></vocab>
+   </object>
+
+   <object type='static' start='2642' visibility='100' size='1' weight='1' flags='d'>
+      <name>wheel</name>
+      <id>obj_wheel</id>
+      <desc>The wheel is huge - taller than you are! It's decorated with lights, which flash wildly when the wheel is spinning. There are 25 spaces on which the wheel can stop. To set the wheel in motion, spin it.</desc>
+      <vocab cmd='get' event='objects.wheel.1'></vocab>
+      <vocab cmd='spin' event='objects.wheel.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>pass</name>
+      <id>obj_pass</id>
+      <desc>This pass will admit you to the private studio on The Lattice.</desc>
+      <vocab cmd='eat' event='objects.pass.1'></vocab>
+      <vocab cmd='drop' event='objects.pass.2'></vocab>
+   </object>
+
+   <object type='static' start='2706' visibility='0' size='1' weight='1'>
+      <name>pass please</name>
+      <id>obj_password</id>
+      <desc>I can't find anything called pass please in the vicinity!</desc>
+      <vocab cmd='issue' event='objects.pass.3'></vocab>
+   </object>
+
+   <object type='static' start='2770' visibility='100' size='1' weight='1' flags='d'>
+      <name>lottery machine</name>
+      <id>obj_lottery</id>
+      <desc>It is a large silver drum which is spun around and around by the machine's mechanism. The outside is covered with lights; inside are a multitude of colored balls, numbered 0 to 9.</desc>
+      <vocab cmd='activate' event='objects.lottery.1'></vocab>
+      <vocab cmd='stop' event='objects.lottery.13'></vocab>
+   </object>
+
+   <object type='static' start='2770' visibility='0' size='1' weight='1'>
+      <name>ball</name>
+      <id>obj_ball</id>
+      <desc>The lottery machine contains a lot of colored balls, each one with a number.</desc>
+      <vocab cmd='release' event='objects.lottery.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='dst'>
+      <name>hexagon</name>
+      <id>obj_hexagon</id>
+      <desc>This is a small flat hexagon made from some unknown material. On it is inscribed, 'Twas Brillig, and the Slithy Toves did gyre and gimble in the Wabe...'</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='static' start='2642' visibility='0' size='1' weight='1' flags='d'>
+      <name>buzzer</name>
+      <id>obj_1buzzer</id>
+      <desc>The buzzer is a large red button - there's one in front of each contestant. Press it, and it will light up and make a noise.</desc>
+      <vocab cmd='push' event='objects.buzzer.1'></vocab>
+      <vocab cmd='press' event='objects.buzzer.1'></vocab>
+   </object>
+
+   <object type='static' start='1509' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The food here is served in the Spanish tapas-style - a number of small dishes allowing you a taste of many different things.</desc>
+      <vocab cmd='buy' event='food.fur.1'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='100' size='1' weight='1'>
+      <name>dylan</name>
+      <id>obj_dylan</id>
+      <desc>A creature a little like a large version of an Earth rabbit is sitting on the floor with his back to the wall.</desc>
+      <vocab cmd='ex' event='objects.dylan.1'></vocab>
+      <vocab cmd='examine' event='objects.dylan.1'></vocab>
+      <vocab cmd='dylan' event='objects.dylan.3'></vocab>
+      <vocab cmd='shake' event='objects.dylan.3'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1'>
+      <name>badge</name>
+      <id>obj_dylanbadge</id>
+      <desc>The badge has a picture of a strange creature with a large moustache and a spring where its legs should be. The badge's slogan says 'Zebedee Rools!'</desc>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1'>
+      <name>cap</name>
+      <id>obj_dylancap</id>
+      <desc>The cap has a couple of 20 groat coins and a brass button in it. If you were feeling generous, you could 'toss a coin' into the hat...</desc>
+      <vocab cmd='steal' event='objects.dylan.4'></vocab>
+      <vocab cmd='get' event='objects.dylan.4'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1'>
+      <name>a coin</name>
+      <id>obj_dylancoin</id>
+      <desc>It's a thirteen sided 20 groat piece.</desc>
+      <vocab cmd='toss' event='objects.dylan.2'></vocab>
+      <vocab cmd='steal' event='objects.dylan.4'></vocab>
+      <vocab cmd='get' event='objects.dylan.4'></vocab>
+   </object>
+
+   <object type='static' start='1958' visibility='100' size='1' weight='1' flags='i'>
+      <name>notice</name>
+      <id>obj_dylannotice</id>
+      <desc>The notice says 'No Busking' in large letters.</desc>
+   </object>
+
+   <object type='static' start='1958' visibility='0' size='1' weight='1' flags='i'>
+      <name>coin</name>
+      <id>obj_dylancoin</id>
+      <desc>It's a thirteen sided 20 groat piece.</desc>
+      <vocab cmd='toss' event='objects.dylan.2'></vocab>
+      <vocab cmd='steal' event='objects.dylan.4'></vocab>
+      <vocab cmd='get' event='objects.dylan.4'></vocab>
+   </object>
+
+   <object type='dynamic' start='2076' visibility='100' size='1' weight='1' flags='d'>
+      <name>wheel</name>
+      <id>obj_2wheel</id>
+      <desc>This special portable wheel can be moved out of the studio - even to different planets - so that the game can be played on location. It's mounted on a trolley so it can be pushed along, and it runs off a big battery pack.</desc>
+      <vocab cmd='get' event='objects.wheel.28'></vocab>
+      <vocab cmd='spin' event='objects.wheel.2'></vocab>
+      <vocab cmd='examine' event='objects.wheel.27'></vocab>
+      <vocab cmd='ex' event='objects.wheel.27'></vocab>
+      <vocab cmd='drop' event='objects.wheel.31'></vocab>
+   </object>
+
+   <object type='dynamic' start='2076' visibility='100' size='1' weight='1' flags='d'>
+      <name>buzzer</name>
+      <id>obj_2buzzer</id>
+      <desc>This special portable buzzer can be moved out of the studio - even to different planets - so that the game can be played on location. It's actually a whole set of buzzers mounted on a board, running off a big battery pack.</desc>
+      <vocab cmd='push' event='objects.buzzer.1'></vocab>
+      <vocab cmd='press' event='objects.buzzer.1'></vocab>
+      <vocab cmd='examine' event='objects.buzzer.2'></vocab>
+      <vocab cmd='ex' event='objects.buzzer.2'></vocab>
+      <vocab cmd='drop' event='objects.buzzer.6'></vocab>
+      <vocab cmd='get' event='objects.buzzer.3'></vocab>
+   </object>
+
+   <object type='static' start='1637' visibility='100' size='1' weight='1'>
+      <name>Emily</name>
+      <id>obj_emily</id>
+      <desc>Emily is a generously proportioned lady with a steam driven mechanical left arm. As you look, a wisp of steam escapes from her ample cleavage.</desc>
+      <vocab cmd='emily' event='objects.emily.1'></vocab>
+   </object>
+
+</object-list>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<fed2-map title='Gremlins 2' version='2' editor='standard' from='265' to='Mogwai.Mogwai Space.266'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='265' flags='eyrb'>
+      <name>Under Construction</name>
+      <desc>Under Construction - All services can be found here.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<fed2-map title='Rhea' version='2' editor='standard' from='850' to='Sol.Sol Space.589'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>Guess what is hiding in here?</desc>
+   </location>
+
+   <location num='653' flags='e'>
+      <name>Rhea Trading Exchange</name>
+      <desc>   As members of a modern agricultural complex, the inhabitants of Rhea have taken a keen interest in buying and selling commodities. This large room has multiple screens on the walls all scrolling through the various items available for trade. Rows of computers are available for the use of members of the trading guild, and the beeps and hums of the various appliances makes it difficult to hear ordinary speech.</desc>
+      <desc>   A door to the south leads to the operations center and there is an exit southeast to the quiet of a park.</desc>
+      <exits se='718' s='717' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='654' flags='c'>
+      <name>Armstrong Cuthbert, Inc</name>
+      <desc>   This modern office is occupied by a robot that seems to be growing out of a desk. A motivational poster hanging on the back wall reads, &quot;Rhea - We Feed the Solar System!&quot; The robot&apos;s eyes glow brightly as it processes and records all the shipments for the complex.</desc>
+      <desc>   A door in the south wall leads back out to the park.</desc>
+      <exits s='718' out='718' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='655'>
+      <name>Dome entrance</name>
+      <desc>   The eastern wall of the dome curves overhead and somehow the wan light of the distant sun is able to penetrate the solar panels which cover the exterior. The light is supplemented by unidirectional sources so that inhabitants do not suffer from too much darkness.</desc>
+      <desc>   There is a small park to the southwest, and a hatch to the southeast that leads out to the main airlock.</desc>
+      <exits se='720' sw='718' out='720' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='716' flags='ba'>
+      <name>Art&apos;s Bistro</name>
+      <desc>   This out of the way eatery is a gathering place for off world visitors to Rhea. The walls are lined with booths which can be closed off with curtains for more intimate discussions. Waitdroids whirl between tables carrying platters of buffalo wings and drinks on metal trays and several hidden loudspeakers offer an eclectic mix of song styles.</desc>
+      <desc>   The exit to the museum is to the southeast.</desc>
+      <exits se='781' out='781' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='717' flags='a'>
+      <name>Plant operations</name>
+      <desc>   This large room is filled with cubicles and the hum of people at work. Occasional rings and tones issue from the myriad computers in use. All of the cubicle openings are facing in other directions so that no actual person can be seen which gives the room a feeling of emptiness in spite of the sounds. Occasionally, one head pops up over the top of the cubicle, looks around, and then vanishes again.</desc>
+      <desc>   A convenient door to the north leads to the local trading exchange and to the east is a door to a park where workers can relax during breaks.</desc>
+      <exits n='653' e='718' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='718'>
+      <name>Park</name>
+      <desc>   A small park has been set aside so that inhabitants can have a place to relax. Several trees have been encouraged to grow from seedlings brought from Earth. Light from the dome overhead is filtered by the leaves and hidden blowers send a breeze to complete the illusion that visitors are outside. There are swings and a teeter-totter for the local children, and several picnic tables.</desc>
+      <desc>   There is a small building to the north with a sign over the door proclaiming it to be the local Armstrong Cuthbert office. The trading exchange is to the northwest, and there is a large office to the west. Southwest is the entrance to the Rhea Municipal Art Museum which features works by local artists and replicas of other famous pieces.</desc>
+      <desc>   South is a corridor leading to the production domes and the airlock is northeast.</desc>
+      <exits n='654' ne='655' s='782' sw='781' w='717' nw='653' out='655' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='720'>
+      <name>Airlock</name>
+      <desc>   The airlock leads southeast out to the crater and shuttle port, and northwest into the main dome of the Rhea agricultural complex.</desc>
+      <exits se='785' nw='655' in='655' out='785' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='732' flags='t'>
+      <name>Dummy loc</name>
+      <desc>You shouldn&apos;t be seeing this - it&apos;s intended to move you to the top of the pit again. If you do find yourself in here, please email feedback@ibgames.net and tell someone. Go Up to get back to safety.</desc>
+      <exits up='789'/>
+      <events enter='objects.rope.7'/>
+   </location>
+
+   <location num='780' flags='a'>
+      <name>Biological Lab</name>
+      <desc>   Rows of cages line the walls of this large room, many containing agricultural hybrids. Various scientists, biologists, and horticulturists are working on experiments to improve production. In one cage is a large ear of corn with a double row of tiny legs which enable it to scrabble around, though its lack of eyes means that it keeps running into the sides.</desc>
+      <desc>   To the left is a large pen with a four legged chicken the size of an ostrich. Each drumstick is large enough to feed a family. Surely with this level of research going on, Rhea&apos;s claims to feed the solar system are true.</desc>
+      <desc>   The door to the south leads back to the office.</desc>
+      <exits s='844' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='781' flags='a'>
+      <name>Rhea Municipal Art Museum</name>
+      <desc>   A sign near the main entrance, southwest from the park, welcomes visitors to the museum and cautions about touching the exhibits. A nearby map shows that the north wall is currently devoted to replicas of Martian artifacts, including a mysterious jewel that flashes bright colors. The east wall has a display of the classical sculptures of Auguste Rodin, and the south and west walls showcase works by local talents.</desc>
+      <desc>   There is an archway leading to a small bistro in the northwest.</desc>
+      <exits ne='718' nw='716' in='716' out='718' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='782'>
+      <name>Corridor</name>
+      <desc>   A wide corridor runs from a park in the north towards the production domes in the south. The material used to construct the walls and ceiling allow light to pass through while capturing the energy of the distant sun for power.</desc>
+      <exits n='718' s='846' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='785'>
+      <name>Rhea landing crater</name>
+      <desc>   The prints of numerous visitors to Rhea have worn a path from the shuttle port in the southeast through a break in the northwest crater wall leading to an airlock. The rest of the crater walls stretch to the east and south.</desc>
+      <exits e='786' se='850' s='849' nw='720' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='786'>
+      <name>Rhea landing crater</name>
+      <desc>   The wall of the crater stretches away in an arc from the east to the west while the bulk of the crater is to the south. Rocks have fallen from the top edge and the slope is steep enough to discourage climbing without proper equipment.</desc>
+      <exits e='787' se='851' s='850' sw='849' w='785' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='787'>
+      <name>Rhea landing crater</name>
+      <desc>   The walls of the crater curve along the edge of a circle from the west around to the south. The shuttle port can be seen far to the southwest in the center of the crater. The walls are steep and relatively smooth. The planet Saturn, along with partial rings, can be seen over the top edge.</desc>
+      <exits s='851' sw='850' w='786' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='789'>
+      <name>The Pit</name>
+      <desc>   The northwestern end of the tunnel stops abruptly at the edge of a deep pit with a crumbling edge. A sturdy ring has been set into the wall and several inches of rope are still knotted in it. Far below, the rock covered bottom of the pit can be seen, and someone has cleared some of the debris to make a trail, though where it leads can&apos;t be viewed from the top.</desc>
+      <exits se='854' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='791'>
+      <name>Branching tunnel</name>
+      <desc>   The tunnel widens before it branches to the southwest, south, and southeast. The walls are glittering with crystals, and small tubes of crystalline rock hang overhead. A small sign politely requests that visitors refrain from touching any formations.</desc>
+      <exits se='856' s='855' sw='854' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='796'>
+      <name>Bottom of a pit</name>
+      <desc>   The bottom of this pit is strewn with rocks except for a small path leading off to the south. The only way to reach the top is to use a length of rope. Fortunately, the rope you clambered down is still attached to the ring at the top of the pit, so you can just climb back up.</desc>
+      <exits s='860' up='732' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='843'>
+      <name>Employee lounge</name>
+      <desc>   This room is typical of all break rooms: there are two tables, a counter with an empty coffee pot, and a vending machine with several bars of candy and bags of snacks. One wall has hooks on which workers have hung personal cups with sayings like &quot;You don&apos;t have to be crazy to work here, but it helps&quot; and &quot;World&apos;s Greatest Lover&quot; printed on the sides.</desc>
+      <desc>   Several employees have clustered around one metal table and are gazing intently into a metal cage. &quot;See, I told you it would work,&quot; says one. &quot;And it&apos;s perfectly safe.&quot;</desc>
+      <desc>   &quot;As long as you keep them in that cage, sure,&quot; points out another. &quot;But if they ever got loose, watch out!&quot;</desc>
+      <desc>   Another looks closer, counting, then asks, &quot;I thought you had six in there?&quot;</desc>
+      <exits e='844' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='844' flags='a'>
+      <name>Rhea-Laboratories</name>
+      <desc>   As the door opens into Rhea-Laboratories the receptionist sits back down and tries to smooth her hair, her face still flushed from whatever has just happened. Her breathing has almost returned to normal though her eyes widen when she glances in the corner. She swallows hard, then stammers, &quot;Can... can I help you? R&amp;D is through that door,&quot; she points to the south, &quot;And the biological labs are that way,&quot; she indicates the north door. She then squeaks softly and lifts her feet, &quot;Do be careful, and good luck.&quot;</desc>
+      <desc>   There is a door to the west behind her, and the exit is to the east.</desc>
+      <exits n='780' e='845' s='908' w='843'/>
+   </location>
+
+   <location num='845'>
+      <name>Entrance to Rhea-Laboratories</name>
+      <desc>   The east-west hallway has ended at a sturdy metal door. A sign on the door informs visitors that only authorized personnel are allowed beyond this point. A faint scream comes from the far side followed by the scurrying of tiny feet and the thump of something falling to the floor.</desc>
+      <exits e='846' w='844' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='846'>
+      <name>Corridor</name>
+      <desc>   The corridor north from the entrance dome branches here. To the west is the dome housing Rhea-Laboratories while to the southwest the corridor curves out of sight.</desc>
+      <exits n='782' sw='909' w='845' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='849'>
+      <name>Rhea landing crater</name>
+      <desc>   The crater wall stretches from the north to the south along the curve of a circle. The steep slope prevents climbers from going over the edge while a break in the wall to the north allows access to the dark energy-absorbing domes that protect the colony. Fine sand covers the floor of the crater and the shuttle port can be seen far to the east.</desc>
+      <exits n='785' ne='786' e='850' se='914' s='913' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='850'>
+      <name>Rhea shuttle port</name>
+      <desc>   This is the main shuttle port for the moon of Rhea. Shuttles have blasted the area clear of most snow, and the thin atmosphere offers little distortion to the steady gleam of stars. The large flat plain of the crater is bounded by a nearly circular ring of distant mountains.</desc>
+      <desc>   There is a heavily traveled path to the northwest which leads to the airlock of a dome.</desc>
+      <exits n='786' ne='787' e='851' se='915' s='914' sw='913' w='849' nw='785'/>
+   </location>
+
+   <location num='851'>
+      <name>Rhea landing crater</name>
+      <desc>   A crater wall bends around the edge of the crater from the north to a break in the south. Far to the west is the shuttle port in the center of the depression. Fine sand covers the floor of the crater and there are few footprints in this remote area.</desc>
+      <exits n='787' s='915' sw='914' w='850' nw='786' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='854'>
+      <name>Grand Hall</name>
+      <desc>   This is the north end of the Grand Hall, a large chamber with beautiful crystal formations. Lights accentuate some of the astonishing structures. There is a ring of stalagmites, each in a different color, which circle a huge flat stalagmite like chairs around a circular table. On another wall there is what looks like the face of a marsrat, snarling as it leaps from inside the wall.</desc>
+      <desc>   Narrow tunnels lead off to the northwest and northeast.</desc>
+      <exits ne='791' s='918' nw='789' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='855'>
+      <name>Dead end</name>
+      <desc>   The walls of this southbound tunnel become more and more narrow then finally join together in a dead end. Explorers are left with no choice but to retrace their steps back to the north.</desc>
+      <exits n='791' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='856'>
+      <name>Corridor</name>
+      <desc>   The sparkling walls of this corridor almost dazzle the senses with an explosion of color as it bends from the northwest to the south where it widens into a perfect natural arch.</desc>
+      <exits s='920' nw='791' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='860'>
+      <name>Crystal Cave</name>
+      <desc>   This large room is a natural museum of crystal formations. No matter where visitors look there are more wonders to enchant the sight. Stalactites and stalagmites are frozen as they reach for each other, some separated by just the width of a sheet of paper. Columns support the ceiling high overhead and there is a large pool of perfectly still liquid which reflects a small formation overhead which can only be seen by reflection.</desc>
+      <desc>   There is a beautiful room to the southeast and tunnels lead to the north and southwest.</desc>
+      <exits n='796' se='925' sw='923' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='908'>
+      <name>Research and Development</name>
+      <desc>   The door in the north wall has opened to reveal yet another laboratory, this one having several computers on which chemical formula are modeled. One young scientist calls over a supervisor with an excited, &quot;Look at this! I think I&apos;ve got it!&quot;</desc>
+      <desc>   The white coated supervisor walks over, looks, and then says, &quot;Looks like you&apos;re getting closer, but why are those asparagus singing?&quot;</desc>
+      <desc>   &quot;It&apos;s just a side effect. We can take care of it later,&quot; the scientist explains.</desc>
+      <desc>   The supervisor listens for a minute. &quot;Better not,&quot; he suggests. &quot;You know how popular the cabbages are.&quot;</desc>
+      <exits n='844' no-exit='moves.noexit.3'/>
+      <events in-room='newbod.asparagus.1'/>
+   </location>
+
+   <location num='909'>
+      <name>Agricultural dome access</name>
+      <desc>   The corridor from the northeast bends around to the south where it ends at a sturdy metal hatch. On the far side is the largest dome of the colony. It houses the fields and orchards which supply the agricultural products for which Rhea is famous. The door is wide enough to allow the large electric carts easy access from the dome to the shipping areas.</desc>
+      <exits ne='846' s='973' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='910' flags='a'>
+      <name>Joe Bob&apos;s General Store</name>
+      <desc>   The bulk of this large building is blocked off by a counter behind which stands a tall man in overalls. His name tag proclaims him to be Joe Bob. He looks up with an energetic smile and in one breath asks, &quot;Welcome to Joe Bob&apos;s General Store where we have everything under Saturn&apos;s rings, just tell me what you need and I&apos;ll be happy to ring up your order. What can I get you today?&quot;</desc>
+      <desc>   On rows of shelves behind him is indeed just about everything that an agricultural worker could want: buckets, shovels, coils of rope, sturdy clothing, baskets, flashlights, light bulbs, batteries, communicators, and still more things too distant to make out. Larger items are stored toward the back.</desc>
+      <desc>   A sign tells you that Joe Bob has a sale on certain items. He is offering coils of good quality rope for just 2 groats, so if you need to climb up or down anywhere inaccessible, maybe you should buy some rope.</desc>
+      <desc>   The door out is southwest.</desc>
+      <exits sw='973' out='973'/>
+   </location>
+
+   <location num='913'>
+      <name>Rhea landing crater</name>
+      <desc>   The crater wall bends from the north to the east in a huge arc, the top edge of which forms the horizon for this large moon. Saturn, with a portion of its rings can be seen as a backdrop for the shuttle port in the northeast. The fine sand on the floor of the depression has been scuffed by previous explorers, though none seem to have been able to climb the steep walls.</desc>
+      <exits n='849' ne='850' e='914' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='914'>
+      <name>Rhea landing crater</name>
+      <desc>   The crater is bordered by steep sloping walls which curve from the west to a rough break in the east. The fine sand covering the bottom of this depression stretches almost unblemished to the shuttle port far to the north.</desc>
+      <exits n='850' ne='851' e='915' w='913' nw='849' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='915'>
+      <name>Rhea landing crater</name>
+      <desc>   The smooth curve of the crater wall arcs from the west around to the north, but a portion of the southeast edge has collapsed to expose a rough trail leading out of the depression. Far to the northwest is the shuttle port, and a shuttle can be seen in the center of the crater.</desc>
+      <exits n='851' se='980' w='914' nw='850' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='918'>
+      <name>Grand Hall</name>
+      <desc>   This is the south end of what has been nicknamed the Grand Hall. This room is a natural showcase for many varieties of crystal formations. A few lights have been set up to highlight some of the more spectacular shapes. One stalactite seems to defy gravity by hanging perpendicular to the wall and then taking a turn upwards. There are several that have formed interlocking rings and another is shaped like a marillion.</desc>
+      <desc>   The hall narrows into a corridor to the southeast.</desc>
+      <exits n='854' se='983' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='920'>
+      <name>Temple of Gaelaan</name>
+      <desc>   This naturally circular room is dominated by an altar that was formed by the action of moisture seeping through rock and depositing minerals on the floor below. The walls sparkle with crystal formations instead of the usual pictures of the prophet. The local cult members have taken this room as their place of worship, but have been careful not to destroy the natural beauty found here.</desc>
+      <desc>   There is an arched exit to the north.</desc>
+      <exits n='856' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='922'>
+      <name>Dead end</name>
+      <desc>   The smooth walls at the western end of this tunnel curve together and join in a blank face. Visitors have no choice except to turn back to the east.</desc>
+      <exits e='923' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='923'>
+      <name>Smooth tunnel</name>
+      <desc>   The walls of this tunnel are strangely devoid of the crystals found throughout most of the rest of the cave system. It widens a bit around a single column from which it branches to the west, southeast, and northeast. There is moisture on the walls which catches and reflects the lights carried by explorers.</desc>
+      <exits ne='860' se='988' w='922' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='925'>
+      <name>Curtain room</name>
+      <desc>   This room has walls that appear to be covered with beautiful drapery, but these curtains are formed from minerals as moisture seeped through the rock. The rippled sheets of thin crystal hang from the roof in what would be a maze if they were more extensive. Some of the curtains are so thin and clear that even small print can be read through them.</desc>
+      <desc>   There is a crystal cave to the northwest and a narrow tunnel to the east.</desc>
+      <exits e='926' nw='860' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='926'>
+      <name>Narrow hall</name>
+      <desc>   This narrow hallway extends from the southeast to a larger room in the west. The walls here, as elsewhere in this system, are covered with multi-colored crystals which catch and reflect the light in breathtaking beauty.</desc>
+      <exits se='991' w='925' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='971'>
+      <name>Citrus groves</name>
+      <desc>   Rows of orange, lemon, and lime trees send their sweet fragrance wafting through the air. The yellow and green globes hang from sturdy branches as bright lights encourage ripening. Several workers move through the trees checking for any problems that might arise. The temperature is carefully monitored, and the imported bees buzz between hives scattered throughout the groves.</desc>
+      <desc>   The orchards continue to the east.</desc>
+      <exits e='972' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='972'>
+      <name>Orchards</name>
+      <desc>   Rows of trees meet the gaze of all who survey these orchards. Apple, peach, pear, and cherry trees are easily identified among the more exotic varieties that have been developed by the hard working researchers of Rhea Labs. Special lights allow the trees to grow under domes far from the planet of their origin.</desc>
+      <desc>   There are citrus groves further to the west.</desc>
+      <exits e='973' w='971' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='973'>
+      <name>Entrance to field domes</name>
+      <desc>   The door from the north opens on a large central area where the various farming areas come together. To the northeast, several people are entering and exiting a large metal building which houses supplies that might be needed by the workers.</desc>
+      <desc>   To the west are the orchards, to the east are the grain fields, while south are the ranges where cattle are raised and processed.</desc>
+      <exits n='909' ne='910' e='974' s='1037' w='972' in='910'/>
+   </location>
+
+   <location num='974'>
+      <name>Fields: wheat and oats</name>
+      <desc>   Amber waves of grain stretch far to the east from the field entrance. Wheat and oats spread out in a patchwork of gold and green. Unusual varieties developed by the talented scientists of Rhea Labs fill in what would be even more fields spreading north and south to the edge of the dome.</desc>
+      <desc>   Still more fields can be seen further to the east.</desc>
+      <exits e='975' w='973' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='975'>
+      <name>Fields: rice and corn</name>
+      <desc>   To the north are rice paddies along with other hybrid grains growing in the moist soil while to the south are corn fields. Harvesters move through the fields gathering ears and readying them for processing.</desc>
+      <desc>   The fields extend to the west towards the entrance to the dome.</desc>
+      <exits w='974' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='980'>
+      <name>Broken trail</name>
+      <desc>   The rock covered trail twists and turns from the northwest towards the southeast. The unevenness of the path causes stumbling and in some places, it threatens to disappear altogether.</desc>
+      <exits se='1045' nw='915' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='982'>
+      <name>Corridor</name>
+      <desc>   The southwest opening of the cave has narrowed and forks run off to the east and southeast. In spite of the low temperatures, the walls are strangely moist and almost seem to glisten.</desc>
+      <exits e='983' se='1047' sw='1045' out='1045' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='983'>
+      <name>Cave tunnel</name>
+      <desc>   The glistening crystallized walls of the tunnel take a sharp bend here from the northwest to the west and light catches on the myriad facets creating a rainbow.</desc>
+      <exits w='982' nw='918' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='988'>
+      <name>Echo room</name>
+      <desc>   At the first step into this room all sounds are magnified and echoes race back and forth. Explorers are cautioned to move quietly so as not to cause any damage. Every step causes vibrations and dust falls from the roof.</desc>
+      <desc>   There are tunnels to the northwest and south.</desc>
+      <exits s='1052' nw='923' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='991'>
+      <name>Rough tunnel</name>
+      <desc>   The crystals covering the walls of this tunnel have increased in size and their rougher texture and sharp edges could cause harm to careless visitors who brush against them. The crystals are smaller to the northwest and even larger to the south.</desc>
+      <exits s='1055' nw='926' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1037' flags='a'>
+      <name>Meat and hide processing</name>
+      <desc>   This particular location is usually shunned by visitors who have no wish to see just how the cattle which roam the Range to the south are processed into meat and hides. Fortunately most of the actual processing occurs behind walls so as to contain the mess.</desc>
+      <desc>   The entrance to the field domes is just to the north.</desc>
+      <exits n='973' s='1101' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1045'>
+      <name>Cave entrance</name>
+      <desc>   The trail from the northwest has ended in an airlock to the northeast which protects the atmosphere of this underground cave system. There is a book available just inside the entrance for explorers to sign in and out so that no one will be left inside, and a notice cautions that anyone causing any damage to the formations will be prosecuted to the fullest extent allowed by the law.</desc>
+      <exits ne='982' nw='980' in='982' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1047'>
+      <name>Cave tunnel</name>
+      <desc>   This branch of the tunnel twists from the northwest to the south and small multi-colored crystals have developed on the walls.</desc>
+      <exits s='1111' nw='982' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1052'>
+      <name>Rock fall</name>
+      <desc>   All of the vibrations from the echo room in the north have caused a rock fall which blocks all possible passage. The only choice for explorers who don&apos;t want to spend the rest of their lives here is to turn back.</desc>
+      <exits n='988' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1055'>
+      <name>Winding tunnel</name>
+      <desc>   The large crystals covering the walls of this tunnel reflect multiple images of all who pass through, something like a hall of mirrors. The reflections make the twists and turns of the passage difficult to follow though eventually exits can be found in the north and southwest.</desc>
+      <exits n='991' sw='1118' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1101'>
+      <name>The Range</name>
+      <desc>   The huge dome overhead reaches so far to the south that the edge cannot be seen. What can be seen are several vast herds grazing on the grasses covering this area which has been nicknamed the Range by the locals. Some individual members of the nearest herd can be seen to be larger than most others. Workers use horses as they ride herd on the cattle.</desc>
+      <desc>   Flying near the top of the dome are a flock of hybrid buffalo, their great wings beating the air as their massive forms swoop and dive. A trio of babies seem to be playing tag among the wings of the adults. The scientists at Rhea Labs have been working overtime to develop a breed that didn&apos;t taste like chicken.</desc>
+      <desc>   There is a processing center to the north.</desc>
+      <exits n='1037' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1111'>
+      <name>The Pit</name>
+      <desc>   The tunnel from the north has ended at the edge of a deep pit. A pebble tossed in takes a long time to hit the bottom. It would probably be safer to turn back.</desc>
+      <exits n='1047' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1118'>
+      <name>Bottom of a pit</name>
+      <desc>   The walls of this room reach upward to the level above, and the floor is covered with small rocks that have been tossed down by previous explorers. There doesn&apos;t seem to be any way to reach the upper level without some sort of climbing equipment though there is an exit to the northeast.</desc>
+      <exits ne='1055' no-exit='moves.noexit.7'/>
+   </location>
+
+</fed2-map>

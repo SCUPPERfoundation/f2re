@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<fed2-map title='Eire' version='11' editor='standard' from='396' to='Sithein.Sithein Space.396'>
+
+   <location num='0' flags='t'>
+      <name>Abandoned storeroom</name>
+      <desc>   This is where spare goods have been stored, although a thin layer of dust covers them as though they have been long abandoned.</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Abandoned medical hut</name>
+      <desc>   This small hut appears to have been used for medicinal purposes.  There is a fire still burning on the grate, and bottles of herbs and potions line shelves on one wall.  There are several cots with soft pillows and woolen blankets.</desc>
+      <desc>   The hut is very quiet, however.  There is no one here--it is as if it were recently abandoned.  Fortunately, the bottles are well-marked, so if you need medicine, you will have to help yourself.</desc>
+      <desc>   When you are feeling better, you can leave by going south.</desc>
+      <exits s='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Well-packed road</name>
+      <desc>   The dirt road appears to be well-traveled, with slight ruts that must have been made by large vehicles.  The road, however, is as abandoned as the buildings to the east, with the only signs of life being the bird and animal life in the trees that line the road on both sides,.</desc>
+      <desc>   The road heads southwest where it runs alongside a river, bubbling with clear fresh water. East it goes back to the landing pad.</desc>
+      <exits e='396' sw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Grassy Knoll</name>
+      <desc>   The soft grass on this knoll is unmarred by footprints or sign of any other than animal life.  Surrounding the clearing in which you stand are several trees filled with birds and other animals.  Several of the trees have large knotholes at their bases and near large branches.  On closer examination, there are even small ladders running up and down the tree trunks.</desc>
+      <desc>   There are buildings surrounding the knoll, to the north, the east, and the south.  All the buildings appear to have been recently abandoned.  A well-packed road leads west towards a bubbling river.</desc>
+      <exits n='332' e='397' s='460' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Abandoned trade hut</name>
+      <desc>   This hut appears to have been used by traders.  It is filled with bags of goods used in trade--everything from furs to grains to fragrant fruits.  The only thing absent appears to be the traders themselves.</desc>
+      <desc>   The exit from the trade hut is west, right next to where several head of cattle graze on some loose hay on the floor.</desc>
+      <exits w='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='400'>
+      <name>Lantern</name>
+      <desc>     Inside this lantern is a tiny bed with a blanket and pillow.  Beside the bed is a tiny box that serves as a night table.  Whatever creature uses this bed must be quite wee.  The walls of the lantern allow a view of the room outside while at the same time hiding the existance of the small bedroom.</desc>
+      <exits out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>Bubbling river</name>
+      <desc>   The road takes a turn to the south here, towards a forest of drooping trees that look something like weeping willows. Northeast it heads back towards the grassy knoll.</desc>
+      <desc>   Alongside the road runs a river, the waters of which are so clear that even the clouds are reflected on its surface.</desc>
+      <exits ne='395' s='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Abandoned inn</name>
+      <desc>   This abandoned hut appears to have been used as an inn and pub.  There is a long bar against one wall, with several glasses of brown liquid still resting on the shining surface of the bar.</desc>
+      <desc>   In the fireplace hangs a pot in which a fragrant stew bubbles happily.  There are several tables scattered around the room, and bowls of the stew are on one of the tables, along with a loaf of bread and some gingham napkins.  Steam still rises from the bowls.</desc>
+      <desc>   A small dog lies on the rug in front of the fire, gnawing on a soup bone.  On the wall beside the fireplace is a lantern that has been lit, and provides a warm glow to the room.  There is an exit to the north leading from the abandoned inn.</desc>
+      <exits n='396' in='400' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Serene forest</name>
+      <desc>   The road moves into the shade of the drooping trees. Despite the teeming animal life the forest is as abandoned as everywhere else.</desc>
+      <desc>   Birds have woven nests out of the willow leaves, and young nestlings peek their tiny heads from the nests.</desc>
+      <desc>   The road heads south, towards some mountains, and north to a bubbling river.</desc>
+      <exits n='458' s='586' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='586'>
+      <name>Lush foothills</name>
+      <desc>   Rising out of the forest to the north, these rolling hills serve as the foothills of the towering mountains to the south.</desc>
+      <desc>   The grass is soft and wildflowers grow in a colorful blanket of fragrance that fills the air.</desc>
+      <desc>   Around the rocks, small rodents scurry, the only sign of life to be seen.</desc>
+      <exits n='522' up='650' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='650'>
+      <name>Tall mountains</name>
+      <desc>   Rising out of the foothills are several mountains, all of which are tree-covered and rise into the sky.. The summit of the tallest mountain provides a view of the isle.  No movement can be seen, even from this vantage point.. In the distance can be seen other islands rising out of the ocean.</desc>
+      <exits down='586' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

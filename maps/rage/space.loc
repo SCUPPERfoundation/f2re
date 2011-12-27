@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Rage Space' version='6' editor='standard'>
+
+   <location num='131' flags='sl'>
+      <name>Rage Space</name>
+      <desc>The light a star gives off literally colors the way that system is seen.  Here, Rage burns red hot which lends a scarlet haze to everything around you. You adjust your sensors to compensate and see a small agricultural planet mostly blue ocean, dotted by islands. A landing beacon informs you that you are cleared to land on one of the larger islands or to jump on to your next destination.</desc>
+      <exits e='132' s='195'/>
+   </location>
+
+   <location num='132' flags='s'>
+      <name>Plotikos Orbit</name>
+      <desc>Looking at your sensors you can see there is a planetary mass covered entirely by water.  You can see that it has been equipped with a set of landing docks to allow commerce. You can either board your shuttle to land or go east to the link.</desc>
+      <exits sw='195' w='131'/>
+   </location>
+
+   <location num='195' flags='s'>
+      <name>Serapis </name>
+      <desc>Outside of your ship you can see the hulking mass of the cargo ship Serapis. It fills the veiwscreen dominating the area around it.  You can either board the ship via the shuttle docks or continue north to the link.</desc>
+      <exits n='131' ne='132'/>
+   </location>
+
+</fed2-map>

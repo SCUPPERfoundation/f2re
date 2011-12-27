@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<fed2-map title='Alba Two' version='1.00' editor='standard' from='260' to='Iberia.Iberia Space.325'>
+
+   <location num='0'>
+      <name>Storage</name>
+      <desc>This is where I keep my mobs and objects when they&apos;re not busy destroying stuff.</desc>
+   </location>
+
+   <location num='260'>
+      <name>Shuttle Port</name>
+      <desc>   Shuttles pack this plain, enormous, gunmetal-gray storage area. Droids buzz here and there and the air is filled with a mechanical din in the interest of keeping all the shuttles in flying form. One side of the room is a gaping hole that allows the shuttles to enter and exit. Through this entryway, the stars glimmer, and the broad curve of Alba II is just barely visible along the bottom. On the opposite side, to the southeast, is a comparatively smaller doorway into the rest of the station. To one side of the door is a notice informing all visitors that rules on the space station, Carlos V, are reasonably relaxed but that travel to Alba II is highly restricted due to the reasonably primitive nature of the &apos;natives.&apos;</desc>
+      <exits se='325' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='324' flags='yr'>
+      <name>Alba II Ship Services</name>
+      <desc>  A friendly-looking droid stands behind a little desk. It grins broadly at all who enter its small corner of the station. The whole room is done in a drab gunmetal gray, but a large transparent panel wraps around three walls, the fourth to the east occupied by a door. On one wall is a bunch of pamphlets with pricing schedules and ship designs and comparisons.</desc>
+      <desc>   On the other wall is a series of view screens so that customers can observe the work done either on their existing ship or their new one. However, many patrons prefer to watch out through the window, trying to spot which ship in the distance is theirs. The droid almost certainly finds it curious how living beings would rather try to see things with their own imperfect senses than employ the provided technology. But she just stands there, grinning, hand perpetually hovering over her console as she awaits a new order. Creepy, really, until she&apos;s put her to work.</desc>
+      <exits e='325' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='325'>
+      <name>Storage Bay</name>
+      <desc>   Due to space considerations on the station, this sizable corridor is packed with boxes, bags, agricultural equipment, and tools of all descriptions. Walking space has been left along the northern and western walls, meeting at the entrance door to the shuttle port. Strangely, the tools and equipment appear to be of types that went out of style centuries, if not millennia, ago. Also disconcerting is a relatively small stand of boxes labeled TNT, a pre-space flight explosive. In fact, only a few of the crates are made of materials widely used in the rest of the universe, and many are made of wood.</desc>
+      <desc>   Cardboard signs temporarily hung on stored objects indicate that the door in the south wall leads to planetside transportation and facilities uninteresting to the casual visitor, the door in the east wall is the entrance to a gravshaft, and the northwestern portal brings visitors back to the shuttle port. A modest door in the middle of the west wall is labeled &apos;shipyard.&apos;</desc>
+      <exits e='326' s='389' w='324' nw='260' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='326'>
+      <name>Anti-Gravity Shaft, Lower Floor</name>
+      <desc>   The lower section of this shaft is made of the same gunmetal gray as the corridors on this level, but towards the top it becomes a transparent material. The &apos;natural&apos; light from above is almost in competition with the artificial light illuminating the first floor, giving a double-lit appearance, pretty eerie if you ask me. To the west is the storage bay and, through there, the shuttle port. The upper level of the station, accessed by way of this shaft, houses all of the facilities that would be of interest to a visitor.</desc>
+      <exits w='325' up='329' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Anti-Gravity Shaft, Upper Floor</name>
+      <desc>   The transparent tube used for this gravshaft reveals a gorgeous, well-manicured, park-like area all around the tube. The exit from the shaft is to the south, but it can be used to travel back down to the first level of the station.</desc>
+      <exits s='393' down='326' no-exit='noexit.carlos.2'/>
+   </location>
+
+   <location num='330' flags='hi'>
+      <name>Franco Memorial Hospital</name>
+      <desc>   Generalissimo&apos;s hospital is a no-frills affair. The building is built as a complex of plain cubes, the roof flat. Clay tiles cover the floor and the walls are painted stark white. The whole place smells strongly of disinfectant, the belief being that things are going to get messy regardless of all efforts to the contrary, and the best situation is to clean the place constantly. Lucky for patients, there is a shifty looking man behind a counter marked &apos;Insurance&apos;. The door, by the way, is to the southwest and will bring you back into the garden on Carlos V.</desc>
+      <exits sw='393' no-exit='noexit.indoor.1'/>
+   </location>
+
+   <location num='388'>
+      <name>Carlos V Control Room</name>
+      <desc>   From the door in the east wall a catwalk extends into this giant room whose walls are covered with viewing screens and control panels. The roof of the room is flat, while the rest of the wall is hemispherical. At the far end of the catwalk are floating seats that can be used to access control surfaces. At any given time, most are in use by the several crew members employed in keeping the station running. Frankly, the crew members generally stay at certain critical stations while only one or two zip between the less important consoles to make sure that there are no emergency situations.</desc>
+      <desc>   Interestingly, only about a quarter of the screens show images from inside and outside the Carlos V while the balance of the screens show lush tropical images from the planet. A disproportionate number of these show the fields, farms, and worker living quarters on the planet. The only exit is to the east, back into the corridor.</desc>
+      <exits e='389' no-exit='noexit.carlos.3'/>
+   </location>
+
+   <location num='389'>
+      <name>Large Cylindrical Corridor</name>
+      <desc>   This is a pretty standard corridor, cylindrically shaped with a radius of about ten imperial feet and a floor made of removable grating placed about a foot above the lowest point. The walls are the same gunmetal gray color used in the storage bay and shuttle port. About halfway along the corridor, two doors are set into the walls. To the west, the door is marked &apos;Control Room&apos; while to the east, the sign on the door reads &apos;Machine Room&apos;. At the southern end of this corridor is an airlock that leads, according to the label, to a room through which the planet itself can be accessed, while the door to the storage bay is at the northern end.</desc>
+      <exits n='325' e='390' s='453' w='388' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='390'>
+      <name>Machine Room</name>
+      <desc>   To call this place a machine room is a bit of a misnomer. Machine rooms are noisy places, filled with air and water pumps, motors, and all other manner of clanking, clunking, and otherwise mechanical devices. In fact, this room is filled with a chorus of soft humming created by machines that control the gravity in the space station or generate power, along with a few well-lubricated and quiet electrical motors. Quite frankly, there is little interesting in this room besides a door in the western wall that leads back to the hallway.</desc>
+      <exits w='389' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='391' flags='b'>
+      <name>The Office of Albansire, PO</name>
+      <desc>   Immediately to the right is a fire place with a couch and two lounge chairs, all overstuffed and upholstered in brown leather. Directly ahead of the door is a matching set surrounding a coffee table, and just beyond that are two straight-backed chairs, only propery stuffed, sitting in front of an enormous mahogany desk, behind which is a tall-backed chair on wheels. On the far back wall is a map of the Iberian Peninsula of Earth with the feudal political distinctions of the middle of the fifteenth century, Common Era. To one side, a stairwell can be seen.</desc>
+      <desc>   On the left side of the room is a wooden table with four chairs that can be used for meals, and beyond that is a heavy stone, cut at about waist-high. In the middle of it is a holoprojector above which floats a round, bluish-green planet. An engraving around the edge on the table top identifies the planet as the original Alba, along with a list of pertinent dates. The last date marks the acquisition of Alba II.</desc>
+      <exits e='392' up='455' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='392' flags='b'>
+      <name>Antechamber</name>
+      <desc>   The light peach walls inside match those of the outside, but around waist-high, a blue and red geometric design sits on each wall. At strategic areas, bare stained logs support the walls and ceiling. A modest fountain runs in the middle of the room, keeping the place cool and giving it a fresh scent. Four tables are set up, each with a set of five straight-backed chairs upholstered in colorful cloth. Wait droids hover at one wall, waiting to take orders from anyone who is waiting.</desc>
+      <desc>   The floor is the same red clay tiles seen in other buildings, and the roof is done all in a deep brown wood. The roof sits only over the front half of the room, suggesting an upstairs towards the back. There is no secretary, no desk, no work station to speak of here. Presumably either the visitors or the man behind the great oak doors to the west knows whose turn is when. Loafing is not entirely discouraged, but the patience of the planet owner is limited, though it may not always seem so.</desc>
+      <exits e='393' w='391' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='393'>
+      <name>Carlos V Green Space</name>
+      <desc>   This upper level of the station is a glorious park. Soft grass blankets the floor all around while oak trees, elm trees, and other trees and shrubs have been carefully placed in order to appear as if they appeared there naturally, all of the plant life originating from Earth. Besides the floor, there are no enclosing walls of any sort. Instead, a transparent dome was fitted on this level. From the control room, a semi-opaque blue tint can be added for the times when the sun is in view. At night, the tint is removed and the ambient lights dimmed or turned off to allow a view of the stars. Being in geosynchronous orbit, night and day are approximately the same length as on the planet.</desc>
+      <desc>   To the north sits the gravshaft tube, while to the east and west are stucco buildings with brick-colored tiles on the roof. To the southeast is the exchange, while to the northeast is a white building with a red cross on a sign out front. The park continues to the south.</desc>
+      <exits n='329' ne='330' e='394' se='458' s='457' w='392' no-exit='noexit.carlos.2'/>
+   </location>
+
+   <location num='394' flags='b'>
+      <name>Albaicin</name>
+      <desc>   In actuality, the Albaicin is two rows of white stucco buildings separated by a narrow street just barely wide enough for a small horse-drawn cart, though none are apparent within eyeshot or noseshot. The fronts of the buildings are open either completely or forming an exterior countertop and the smell of Moorish cuisine emanates from all of the buildings. Rice dishes and thick soups are sold in some shops, while desserts smelling of cinnamon and other spices are in others. There is also no shortage of bars dispensing drinks, although technically the Moors did not consume alcohol. Hey, it&apos;s a party!</desc>
+      <desc>   The east end of the street ends in a shop selling Islamic trinkets and copies of the Qur&apos;an. On Earth, these were powerful symbols of faith, but now they are trite and, frankly, tasteless novelties. Back to the west is the access to the garden.</desc>
+      <exits w='393' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='453'>
+      <name>Planetside Transportation</name>
+      <desc>   Gravity has been eliminated in this room, allowing occupants to float to portals on the walls that allow access to shuttles down to the lovely planet of Alba II. Labels on the walls give the illusion of &apos;up&apos; and &apos;down&apos; in accord with the rest of the station. Most of the portals are marked &apos;emergency only,&apos; obviously life boats. At present, only one shuttle to the planet is accessible. It is labeled Leon and is &apos;up&apos; from the center of the room. Another portal, &apos;downwards,&apos; is covered with a metal disc, preventing passage and covering the label. In the north wall is an airlock that leads to the cylindrical corridor and the rest of the station.</desc>
+      <exits n='389' up='840' no-exit='noexit.carlos.1'/>
+   </location>
+
+   <location num='455' flags='b'>
+      <name>Albansire&apos;s Apartment</name>
+      <desc>   From the center of the ceiling hang long, broad bolts of silk that sag between the center and the wall where they are attached, just below the roof, obscuring most of that wooden structure. The silks are each a different color, and off to one side is a huge bank of pillows in matching colors set on a shaggy rug over the tile. A roll-top desk sits next to one of the large windows, and a pair of very comfy chairs sit in front of a fireplace approximately in the same place as the one downstairs, putting it away from the walls.</desc>
+      <desc>   There is a breakfast set for two next to a modest bay window, and a glass-enclosed shower large enough to accommodate even the largest overnight guests. Two beds are set about ten feet from each other against the wall furthest from the stairs, and these have multi-colored comforters to match all the silks. Both beds are large enough to accommodate at least three sleepers comfortably. A cabinet near the fire place boasts a wide selection of drinks.</desc>
+      <exits down='391' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='457'>
+      <name>Suspicious-Looking Green Space</name>
+      <desc>   This southern stretch of the garden is much the same as the northern. More perennial flowers and fewer trees occupy this area, giving the area a more open appearance, but also a more manicured one. The area is criss-crossed by cobbled paths which have occasional benches along their length. At the extreme southern end of the garden, near the bubble wall, is an area separated by a low rail fence. It has obviously been planted on purpose; all of the individuals are of the same pungent plant with seven-lobed leaves with serrate edges. Though they seem vaguely familiar to most visitors, few could ever name them. Near the middle of this garden is a sizable lake stocked with happy, robotic fish.</desc>
+      <desc>   Off to the southeast can be seen a gothic-style building that is the Obradoiro Hotel, while to the southwest is a restaurant done in the elaborate Moorish style. While both are in the style of houses of worship, there is very little praying in either.</desc>
+      <exits n='393' se='522' sw='520' no-exit='noexit.carlos.2'/>
+   </location>
+
+   <location num='458' flags='e'>
+      <name>The Alba II Exchange</name>
+      <desc>   The exchange is housed in a nondescript, square building not unlike the hospital. The floors are made of the same clay tile, but the room is jammed full of consoles so that traders can do... whatever it is that they do. A quiet hum fills this room along with the comforting blue glow of console screens. Keeping the &apos;natives&apos; in a constantly primitive state requires that while storage and shipping facilities are kept on the planet, the transactions of commerce must take place in the Carlos V. Some things, such as modest industrial installations and the constant sight of freight craft act against the owner&apos;s wishes, but little can be done about it. Of course, the elaborate transfer protocol gives those rotten stevedores more opportunities for thievery, and only through bribing his work force can the planet owner keep things in check.</desc>
+      <exits nw='393' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='520' flags='b'>
+      <name>Restaurante Alhambra</name>
+      <desc>   This restaurant, surrounded by an exterior wall of pinkish-red bricks, boasts huge courtyards blanketed in white tables and chairs. In the middle of the space is a building with minarets at each corner and a large dome on the top. Inside, candle holders line the walls and chandeliers glow with burning wax, brightly illuminated the honeycomb-vaulted interior dome which is ostentatiously but attractively gilt. Small windows pierce the sides of the dome, heightening the light and shadow on the ridges there. The large, round hall is filled with mahogany tables surrounded by sizable green leather chairs with high, straight backs.</desc>
+      <desc>   Wait droids flitter about back and forth from dining areas to the kitchen in the back corner of the hall. In the exterior courtyard, some have the added duty of offering cigars and cigarettes to patrons, including the torpedo-shaped Humo del Rey, the only product of the system that does not cross the link. The southern garden is back to the northeast.</desc>
+      <exits ne='457' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='522'>
+      <name>Obradoiro Hotel</name>
+      <desc>   The lobby of this hotel is immense! The ceiling soars upward, the sensation heightened by the sharp slope of the roof which peaks in the middle. Clay tiles buffed to a shine gleam on the floor, and a sitting area of four brown leather, overstuffed chairs surrounding a coffee table. The check-in counter is well lit and made of white marble, but the rest of the gray stone interior is under lit, allowing sunlight to stream through the stained glass windows in the day time.</desc>
+      <desc>   All of the rooms are set down halfway into the floor in order to leave the whole great hall visible, and semi-open, elevated wings offer a nice path to stroll. At the end of the east wing is a fabulously appointed villa, but that and all the other rooms are already occupied. Bad luck. The path back to the garden is off to the northwest.</desc>
+      <exits nw='457' no-exit='noexit.indoor.3'/>
+   </location>
+
+   <location num='582'>
+      <name>Rough-Hewn Pathway</name>
+      <desc>   This dusty path is about six feet wide, and the jungle doesn&apos;t seem to have any interest in changing that. Along to the east, a modest, low building whose exterior is all mesh screen with a matching door sits unassumingly, it&apos;s roof done in dark green-black asphalt shingles. More conspicuous in the jungle are heliconia plants with their broad, spout-like leaf-flowers in red, yellow, and green. Adjacent to the screen outside is their cousin, the purple-leafed bird of paradise.</desc>
+      <desc>   Elephant ears, liriope grass, mint plants, hibiscus, and wild petunias round out this garden. Behind the house can be seen a large carambola tree, it&apos;s broad, dark green leaves shining. The front door is directly to the east, while down the slope one can return to the path&apos;s fork.</desc>
+      <exits e='583' down='645' no-exit='noexit.leon.2'/>
+   </location>
+
+   <location num='583' flags='b'>
+      <name>Owner&apos;s Residence</name>
+      <desc>   This sprawling residence is primarily outside, the screen going the whole way around the house and creating an enormous patio. In the left back corner is a barbecue, and across from that against the stucco wall of the inner structure is a gas range and stove. A large refrigerator and deep freeze sits flush against the corner on its side so that the door is on top. Nearby is a long dining table with seating for ten.</desc>
+      <desc>   To the left of the door is a smaller, octagonal table with six seats around it, and on the right in the corner are two couches facing a cathode-ray-tube-based video box. Along that wall and on the back wall are two more tables, these a little lower, with very comfortable seats. Breaking up the room is a stucco-walled square with a door in one wall and large wind-out windows all around. However, the screen and windows obscure the view to the inside.</desc>
+      <exits w='582' in='647' no-exit='noexit.indoor.2'/>
+   </location>
+
+   <location num='644' flags='b'>
+      <name>Hammocks on the Cliff</name>
+      <desc>   In stark contrast to the jungle, this grassy cliff top is wide open save for eight specially planted queen palm trees arranged in two concentric arcs, the center being just off the cliff. Stretched between each pair of trees radially is a multi-colored but almost completely faded hammock made of some coarse fiber. Three coolers sit between the hammocks and every few hours a few &apos;natives&apos; come by to refill them with beer, sandwiches, and ice.</desc>
+      <desc>   The view over the cliff is lovely by most standards, the dark blue sea stretching out to the horizon, the north, west, and south regions of the sky open to plain view. The cliff face is sheer however, leaving the only exit back down the path to the east.</desc>
+      <exits e='645'/>
+   </location>
+
+   <location num='645'>
+      <name>Rough-Hewn Pathway</name>
+      <desc>   At this point, the trail splits at this three way intersection. To the southeast, the trail is narrow, dark, and a little foreboding. About ten feet down the western arm, the path opens up and the sea is visible in the distance. The third arm is along a hillside where someone has laid logs down to prevent erosion and to create terraced steps. This path upwards is particularly broad and well-kept, and some trellis work distracts the vines.</desc>
+      <exits se='710' w='644' up='582' no-exit='noexit.leon.2'/>
+   </location>
+
+   <location num='647' flags='b'>
+      <name>The Inner Building</name>
+      <desc>   This room is, to a first approximation, a bit cramped. A queen-sized bed takes up most of the back right corner, and a large glass-enclosed shower takes up the left back corner. The door itself precludes the placement of any furniture in the front left corner, and the right front corner is occupied by a modest roll-top desk with a little wicker chair.</desc>
+      <desc>   With the exception of the shower, the walls are wind-out windows with four broad, glass slats in each pane. The wind blows easily through here, aided by a wicker-blade ceiling fan in the roof. A small fridge sits between the bed and the shower for convenience, and mounted securely above the head of the bed are two long-shafted, spade-shaped wicker fans crossed in an X.</desc>
+      <exits out='583' no-exit='noexit.indoor.1'/>
+   </location>
+
+   <location num='710'>
+      <name>Rough-Hewn Pathway</name>
+      <desc>   This is barely a path at all! The dark green, broad-leaved plants of the jungle encroach on either side of the path, and the path itself is barely maintained by light foot traffic. The work of machetes is apparent on both sides, but they don&apos;t seem to have made too much of a difference. Even now, vines have crept across the open space, their thorny stalks making things uncomfortable for the barefoot.</desc>
+      <desc>   The path arcs off to the northwest, into the jungle, and directly south towards what passes for a town square.</desc>
+      <exits s='774' nw='645' no-exit='noexit.leon.2'/>
+   </location>
+
+   <location num='773' flags='b'>
+      <name>Food of Questionable Nutritive Value</name>
+      <desc>   I wouldn&apos;t call this a restaurant. It&apos;s somewhere between a hot dog cart and a chip wagon, a plywood box whose front sports an open window with a counter and whose back... well... there&apos;s no back. Visible through the building is a large, open pit filled with glowing coals under a palm-frond roof. Just over the pit, one of the employees is slowly turning a whole pig on a spit. A griddle inside the shack enables the cooks to make all sorts of greasy food, but the real attraction here is the shredded pork.</desc>
+      <desc>   Kaiser rolls pack one of the walls, and both vinegar and tomato based sauces stand at the ready at intervals along the counter. Stools sit along half the length of the counter if, for some reason, someone wants to eat here. However, the sound of good cheer can be heard just to the south, while the center of &apos;town&apos; can be found just to the east.</desc>
+      <exits e='774' s='837'/>
+   </location>
+
+   <location num='774'>
+      <name>A Dusty Town Square</name>
+      <desc>   This large clearing is all dirt. A few small huts have been set up on the outskirts near the jungle, but for the most part this is merely a cross-roads. On three sides, the jungle does its best to reclaim this tiny desert though the constant travel this way and that frustrates this end. The western side of this clearing is open, revealing small, crude structures to the west and southwest. A broad, brick-paved path extends to the south. Barely visible to the north, east, and south east are small foot paths through the jungle.</desc>
+      <exits n='710' e='775' se='839' s='838' sw='837' w='773' no-exit='noexit.leon.4'/>
+   </location>
+
+   <location num='775'>
+      <name>Rough-Hewn Pathway</name>
+      <desc>   The jungle is once again hard upon either side of the path, which itself is barely two closely spaced ruts and a bit of dust. The canopy closes up about fifteen feet above the ground, and the broad leaves are so close together that in places it is almost dark as night. Along the path is a sign informing travelers that going any further is not a good idea, for in this direction lie the fields.</desc>
+      <desc>   A strange musky smell wafts down from that direction which can only be Alban peanuts, a strange plant left to its own devices on this planet for years, its progenitors brought from the original Alba. The natives still use it to make a protein-rich, spreadable paste, but there is no getting around the smell; only the locals seem to be able to stomach it. At any rate, there will be no tasting today as the path is effectively blocked and the only exit is back west.</desc>
+      <exits w='774' no-exit='noexit.leon.2'/>
+   </location>
+
+   <location num='837' flags='b'>
+      <name>The Drunken Gecko Chickee Bar</name>
+      <desc>   In a style just barely remembered, cypress tree trunks have been used to create a frame whose primary purpose is to hold up a roof of dry palm fronds, giving the Drunken Gecko a nice, open, breezy feel. The bar is rectangular and small enough to allow two rows of people under the roof as well as those seated on the crude but comfortable bar stools. Upwards of twenty beer taps are set in a central island within the bar, and there is a modest selection of liquor, a nod to those that like such things. Food can also be ordered from the stand to the north.</desc>
+      <desc>   At any given time, a handful of regular locals can be found here, often grinning, joking, and laughing their hearty laugh, giving the place a welcoming atmosphere. The head bartender was once a rotund white human but is now as brown as the stained oak bar, and he is as jovial as his customers. Those who have paid the tab can stumble off to the northeast or the north, depending on whether they prefer escape or food.</desc>
+      <exits n='773' ne='774'/>
+   </location>
+
+   <location num='838'>
+      <name>Well-Kept Pathway</name>
+      <desc>   The jungle has been cut back for yards here, non-vegetative plants having been placed in their stead to reduce the need for maintenance. The path is made of interlocking red, gray, and white bricks. In the day time, the sun shines down on the path making it almost unbearably hot while in the evening, a chill wind races across it without the protection of the jungle. The path continues off to the south while it comes to an end to the north in a dusty open area.</desc>
+      <exits n='774' s='902' no-exit='noexit.leon.1'/>
+   </location>
+
+   <location num='839'>
+      <name>Over-Grown Jungle Path</name>
+      <desc>   The jungle is absurdly thick here. Parties must travel one by one, and there is always that eerie feeling that someone is watching. On the plus side, the foliage here is gorgeous. Everything is growing wildly and without any restriction at all. The humidity is oppressive to most, but the cool shade of broad-leaved trees keeps things a little cooler, if misty. At least in the evening the heat is bearable, although spending a night in the jungle is not recommended as the planet owner actually introduced predatory along with herbivorous species in order to create as complete an ecosystem as possible.</desc>
+      <desc>   The path continues east back towards the shuttle they call Leon and to the northwest where it appears the jungle relents.</desc>
+      <exits e='840' nw='774' no-exit='noexit.leon.2'/>
+   </location>
+
+   <location num='840'>
+      <name>Leon&apos;s Home</name>
+      <desc>   The small shuttle sits upright Buck-Rogers-style in a cypress log frame. Every time it lands, it destroys the roof, but every time, within ten minutes, the natives have covered the nose of the shuttle with palm frond thatch, creating a cozy little house for the transport. How the natives get here so fast is a bit of a puzzler however, because the place is surrounded with dense rainforest. To the west is what passes for a path through the forest, but it is as good as it gets. The Carlos V is accessible from here merely by going in to the shuttle.</desc>
+      <exits w='839' in='453' no-exit='noexit.leon.2'/>
+   </location>
+
+   <location num='902'>
+      <name>Interlocking-Brick Pathway</name>
+      <desc>   The path opens up here into a large courtyard dominated by an enormous hotel to the southeast. The building is maybe fifteen stories high, the west and south walls lined with open-air walkways. Its roof is done in clay-red tiles and the building itself is shining white with a large, stylized, golden &apos;R&apos; on one side. All around the courtyard are casuarina trees holding back the jungle and almost obscuring a high chain-link fence around the perimeter.</desc>
+      <desc>   Though a large water feature just before the glass doors of the lobby as well as colorful perennials in planters make this courtyard very pretty, the occasional low growl suggests that the best course of action would be to enter the doors to the southeast or follow the path northward off the property.</desc>
+      <exits n='838' se='967' no-exit='noexit.leon.1'/>
+   </location>
+
+   <location num='906' flags='b'>
+      <name>Club Luna, Upper Floor</name>
+      <desc>   The upper level of the club is not a single upstairs, but a series of terraces each a few feet higher than the other. They spiral up the walls of the club so that there is an unobstructed view down to the dance floor while there are chromed rails about three feet high with glass panels to prevent accidents. A variety of chairs and couches line the walls, and though none look particularly comfortable, they&apos;ll do in a pinch.</desc>
+      <desc>   At the very top floor, where the wooden ceiling slopes down in a pyramid shape, is another bar, this one with much more comfortable stools. It&apos;s a good deal darker up here, and the dance floor three stories below is brightly lit in contrast. The music also has faded, making this a rather nice refuge from the more intense lower levels. Drinks are, however, still absurdly priced. The stairs lead down through the terraces back to the floor level.</desc>
+      <exits down='907' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='907' flags='b'>
+      <name>Club Luna, Lower Floor</name>
+      <desc>   The club is done all in blue-grey, with wide bolts of fabric hanging across non-standard corners to give that &apos;under construction&apos; feeling. The music isn&apos;t too loud, but on the dance floor it&apos;s enough to lose oneself. The bar is off in one back corner and the only set of facilities is in a front corner, but both can be reached with an acceptable amount of crowd-infiltration. In the other two corners are stairs leading up to the terraced levels.</desc>
+      <desc>   Luna is the hot spot for all the young professionals and dignitaries, the Registry being a bit more stylish and hip than the Obradoiro on the space station. While it is kind of a long walk back to the shuttle Leon, the lighter architecture and atmosphere seem worth it. Also, there&apos;s a club! Luna continues up the stairs while a corridor to the south leads back to the fourth floor landing.</desc>
+      <exits s='971' up='906' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='967'>
+      <name>Lobby of The Registry</name>
+      <desc>   This huge, opulent lobby behind the glass doors has the floor and the walls up to the chair rail done in off-white marble with pink veining. In the middle between the doors and the check-in kiosk (also in marble) is a yellow-gold stone, stylized R set in an obsidian diamond set into the marble floor, flush with it. The check-in kiosk is circular and has a pedestal of the off-white marble and a counter made of the obsidian.</desc>
+      <desc>   Strangely, behind the counter are computerized consoles! The real, live, and rather pale humans behind there smile broadly if less than believably. The large, open ground floor extends to the east and southeast to a bunch of elevators and a gift shop respectively. To the south, through a wall of solid glass, can be seen a pool.</desc>
+      <exits e='968' se='1032' s='1031' nw='902' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='968'>
+      <name>Elevator Bank</name>
+      <desc>   Three elevator doors stand in a row with two shiny &apos;up&apos; buttons between them. The doors and jambs are of brass polished to a gleam. The walls from the chair rail up are coral colored and textured with a sponge to give them a soft appearance, while below that and even onto the floor it is done in the off-white marble with pink accents.</desc>
+      <desc>   A sign next to the door apologetically explains that without a room key, only the fourth floor is accessible, with its bar and club. However, the gift shop to the south, the lobby to the west, and a dim restaurant to the east can be reached without obstruction, and only a glass door separates this elevator bank from the pool to the southwest.</desc>
+      <exits e='969' s='1032' sw='1031' w='967' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='969' flags='b'>
+      <name>TDP Restaurant</name>
+      <desc>   The TDP has booths all along the walls elevated by a step. Six or seven other two- and four-top tables sit in the intervening space, all of the seats upholstered in calf-skin. The bar, in the southeast corner, is three-quarters of a circle surrounded by stools with backs in the same style as the other chairs. The fourth quarter of the bar is left for access by the wait-staff, who are all human, to the kitchen.</desc>
+      <desc>   From the center of the ceiling to the north and east walls hang broad bolts of off-white cloth in contrast to the dark-brown stained oak panels on the wall. Large cushions set against the north and west walls and upholstered in the same fabric complete the setup. The whole place is lit dimly, albeit with electric lights, in order to create ambience. The only exit is back to the west into the hall between here and the lobby.</desc>
+      <exits w='968' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='971'>
+      <name>Upstairs Landing</name>
+      <desc>   In the same style as the lobby, this trapezoidal room has a bank of elevators on the longer, north wall while the southern wall and the two slanted walls have windows across their length starting about two feet above the floor. The glass door to the southeast leads out into an open walkway while the one to the southwest opens out onto a lovely veranda. A corridor just to the left of the elevators in the north wall leads into a slightly darker room with the latest popular music echoing even into this landing.</desc>
+      <exits n='907' se='1036' sw='1034' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='972' flags='b'>
+      <name>A Quiet Hotel Room</name>
+      <desc>   Placed in the southwest corner of the building, room #420 has three walls made almost completely of glass. While the south wall shows the lovely walkway, and through it the sea, the east wall has a commanding view of the jungle as it slopes away from the hotel as well as a lovely sugar-sand beach where the cliff the hotel is built on diminishes to nothing. Out the north wall, the jungle rises in a dramatic crescendo to a high mountain still covered with dense green foliage.</desc>
+      <desc>   The room itself is enormous! A king-size waterbed sits in the middle of the west wall across from an oversized mini-bar. A controller on the night table determines the positioning of the curtains as well as the tint of the windows. Four chairs surrounding a semi-circular table against the north window provide a comfortable place to relax and watch the birds flit from spot to spot in the canopy. And when it&apos;s time to check-out, the exit is &apos;out&apos;.</desc>
+      <exits out='1036' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='1031'>
+      <name>Cliffside Pool</name>
+      <desc>   The south side of this pool is lower than the rest, allowing the water to flow over and providing the illusion that there is no barrier there at all, which provides an unabated view to the sea. It&apos;s meant to appear continuous, but because the hotel is on a cliff, it merely causes vertigo in the less stout visitors. For this reason, a droid with a skimmer bobs unobtrusively in one corner.</desc>
+      <desc>   Off to the west end of the pool there is an attached hot tub large enough for twelve people or so. The deck is covered in lounge chairs in light blue and white stripes. The whole patio is bordered by a quarter-circle arc of a glass wall with three doors. The door to the north leads to the lobby, the one to the northeast leads to the elevators and from there to the rooms, and the door to the east leads to the gift shop, a must-see for all visitors with too many groats.</desc>
+      <exits n='967' ne='968' e='1032' down='1095' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='1032'>
+      <name>Souvenirs and Such Like</name>
+      <desc>   A droid stands behind the counter, the big ticket items such as Vak-42s back there with him. The rest of the rather sizeable boutique is absolutely packed with things most people wouldn&apos;t even think about buying on vacation. There are knife-sets, feminine products, ping-pong paddles, shot glasses, and pewter mugs all emblazoned with that stylized R; some even carry the caption, &quot;The Registry, Alba II.&quot;</desc>
+      <desc>   Three stands of postcards offer every scene a visitor could think of sending back home, plus two or three that wouldn&apos;t make that cut. Some of the images on the postcards aren&apos;t even from this planet! Shirts, shorts, bathing suits, and sandals hang from various racks, marked either with the symbol of the Registry or the symbols of Alba. All of them carry the name of the local sweat shop... errr... apparel manufactory, Napoli. Some of these are subtle, but most are quite obvious or even prominent.</desc>
+      <desc>   Exits from this shop are to the west, northwest, or north.</desc>
+      <exits n='968' w='1031' nw='967' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='1034' flags='b'>
+      <name>Large Veranda</name>
+      <desc>   A decagonal platform is built off the side of the building out of heavy, white-washed timbers to resemble a gazebo, complete with the ornate woodwork hanging from the beams that make up the roof. The northeast side is the glass door of the landing, but the other sides have a railing with more ornate woodwork below while above there is nothing but open air. Opposite the door, across the baked-clay tile floor, is a large quarter-circle bar with a green padded armrest along its outer edge. Fancy white folding patio chairs sit in groups of four and five around tables in the rest of the area, but tall, padded, white stools sit along the perimeter of the darkly stained wooden bar.</desc>
+      <desc>   The tables are arranged so that there is a clear path to the bar while wait droids flitter around providing service to the tables. At night, strings of small lights hang around the eaves while the cool sea breeze blows away unwelcome biting insects.</desc>
+      <exits ne='971' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='1036'>
+      <name>Open Air Walkway</name>
+      <desc>xxx</desc>
+      <exits nw='971' in='972' no-exit='noexit.leon.3'/>
+   </location>
+
+   <location num='1095'>
+      <name>Cliffside Landing</name>
+      <desc>   Down along a dangerously steep run of stairs from behind the pool is this landing. In order to remain concealed, it is not very wide, but to the south is a lovely little octagonal home. Just beyond the home, the cliff resumes. From up above, the Registry towers, its height embellished by the sharp angle up to it and the stretch of bare rock intervening. Around the edges of this modest clearing, light brush creeps along where it can; there are even a couple of stunted palm trees.</desc>
+      <desc>   Back up the stairs will take you to The Registry.</desc>
+      <exits s='1159' up='1031'/>
+   </location>
+
+   <location num='1159' flags='b'>
+      <name>House of Lynnea and Gwaptiva</name>
+      <desc>You find yourself inside an octagonal, open-plan house, made entirely of hardwoods. Large double doors on three sides give access to balconies meaning allowing one to sit and enjoy the magnificent views. The doors are almost permanently open, letting the fresh wind cool down the inside. Cream-colored curtains flutter next to the doors.</desc>
+      <desc>One area of the room is hidden behind rattan screens, but behind it you can see a four-poster bed with a multi-colored spread. Netting is hung around it to prevent bugs coming in, and to provide some privacy. A small black-and-white cat</desc>
+      <desc>has a snooze on one of the pillows.</desc>
+      <desc>Spread throughout the room you see comfortable chairs couches, a bar with a near-endless selection of finest wines from Sauterne and brown liquids from around FedSpace. If you care to examine the well-stocked bookcases spread around the room, you&apos;ll conclude the occupants are quite well-read people.</desc>
+      <exits n='1095' out='260'/>
+   </location>
+
+</fed2-map>

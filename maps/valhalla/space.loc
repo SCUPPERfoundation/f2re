@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<fed2-map title='Valhalla Space' version='1.00' editor='standard'>
+
+   <location num='74' flags='s'>
+      <name>Orilla Orbit</name>
+      <desc>Below you is the tranquil world of Orilla in the Valhalla system.</desc>
+      <exits se='139' out='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='139' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the southeast and northwest.</desc>
+      <exits se='204' nw='74' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='204' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the south and northwest.</desc>
+      <exits s='268' nw='139' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263' flags='sp'>
+      <name>Othala Orbit</name>
+      <desc>Below you is the planet Othala.  You can see a landing platform near the equator of the planet.</desc>
+      <exits e='264' se='328' s='327' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits e='265' w='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits s='329' sw='328' w='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the north and southwest.</desc>
+      <exits n='204' sw='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits n='263' e='328' s='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='slp'>
+      <name>Valhalla Link</name>
+      <desc>The link to the rest of space is located here.  The planet Othala is to the northwest.</desc>
+      <exits ne='265' e='329' se='393' sw='391' w='327' nw='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329' flags='s'>
+      <name>Entry to Asteroid Field</name>
+      <desc>Large and small asteroid litter space ahead.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the east while space lanes in most other directions are clear.</desc>
+      <exits n='265' e='330' s='393' w='328' in='74' out='584' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the east and west.  An even narrower channel appears to the southeast.</desc>
+      <exits e='331' se='395' w='329' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the west and northeast.</desc>
+      <exits ne='268' s='395' w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits n='327' ne='328' e='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits e='393' w='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits n='329' w='392' nw='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  You can make out a small path just large enough for your vessel to the north and northwest.  No other navigable channels are apparent.  You are on your own going further into the field.</desc>
+      <exits n='331' s='459' nw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  No navigable channels are apparent.  You are on your own going further into the field.</desc>
+      <exits e='459' sw='521' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  No navigable channels are apparent.  You are on your own going further into the field.</desc>
+      <exits n='395' w='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='521' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Large and small asteroid litter space.  The slightest miscalculation could cause major damange to your vessel.  No navigable channels are apparent.  You are on your own going further into the field.</desc>
+      <exits ne='458' sw='584' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='584' flags='s'>
+      <name>Cimmeria Orbit</name>
+      <desc>Below you is the asteroid Cimmaria.</desc>
+      <exits ne='521' out='328' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

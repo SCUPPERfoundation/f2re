@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Scotch' version='8' editor='standard' from='198' to='Liquor.Liquor Space.264'>
+
+   <location num='0' flags='t'>
+      <name>dropbox</name>
+      <desc>put mobiles here.</desc>
+   </location>
+
+   <location num='134' flags='hi'>
+      <name>Scotch hospital</name>
+      <desc>get well, get engendered, or get out! The exit is south</desc>
+      <exits s='198'/>
+   </location>
+
+   <location num='197' flags='yrb'>
+      <name>Shipyard</name>
+      <desc>You can buy a ship, or you can buy a shot! The exit is east.</desc>
+      <exits e='198'/>
+   </location>
+
+   <location num='198'>
+      <name>Welcome to the planet Scotch</name>
+      <desc>The landing pad is in the center of a crossroads leading north to the hospital, west to a shipyard, east to the exchange or south to the bar.</desc>
+      <exits n='134' e='199' s='262' w='197'/>
+   </location>
+
+   <location num='199' flags='eb'>
+      <name>The Scotch Exchange</name>
+      <desc>Buy your futures, fill  your wares, fill your defs. Have a drink while you&apos;re at it. The exit is west.</desc>
+      <exits w='198'/>
+   </location>
+
+   <location num='262' flags='b'>
+      <name>The scotch bar</name>
+      <desc>Sit awhile in one of the padded lounge chairs. The bar&apos;s relaxing atmosphere is a great place to recharge and/or get snockered! The exit is north.</desc>
+      <exits n='198'/>
+   </location>
+
+</fed2-map>

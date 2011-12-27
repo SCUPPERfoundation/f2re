@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Railway' version='1' editor='standard' from='2015' to='Terra.Terra Space.2016'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='2015' flags='r'>
+      <name>Landing pad</name>
+      <desc>Welcome to Railway. The exchange is east, and a bar is south</desc>
+      <exits e='2016' s='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2016' flags='e'>
+      <name>Exchange</name>
+      <desc>The landing pad is west, and a bar is southwest.</desc>
+      <exits sw='2079' w='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2079' flags='b'>
+      <name>The Old Caboose Bar</name>
+      <desc>The landing pad is north and the exchange is northeast.</desc>
+      <exits n='2015' ne='2016' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

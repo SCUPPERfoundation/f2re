@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<fed2-map title='Oak' version='2' editor='standard' from='325' to='Acorn.Acorn Space.325'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>   There are lots of acorns here.</desc>
+   </location>
+
+   <location num='142'>
+      <name>Waterfall Overlook</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits e='143'/>
+   </location>
+
+   <location num='143'>
+      <name>River Walk</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits w='142'/>
+   </location>
+
+   <location num='202'>
+      <name>GravTube - Main Floor</name>
+      <desc>   Weightlessness overtakes you as you float aimlessly in the middle of an anti-gravity lift tube that leads to the other sections of the Oak Tree.  Grasping onto a red support beam, you find a plaque with directions.  On the basement level below, you can find The Nuthouse, Oak&apos;s premier - and umm... only - dining location.  Located on the upper levels are the Hospital and Business Offices.</desc>
+      <desc>   The exchange is located through an exit to the south and the reception area to the southwest.</desc>
+      <exits s='266' sw='265' up='978' down='970'/>
+   </location>
+
+   <location num='208'>
+      <name>River Walk</name>
+      <desc>   As you walk down the stone ramp, something doesn&apos;t strike you quite right.  It could be the police tape that is trung across the bottom portion of the ramp, or maybe the hundreds of squirrels swarming over the whole area.  You&apos;re not sure which.</desc>
+      <desc>   &quot;Excuse me!&quot; a squirrel rides up to you on the back of a husky.  &quot;I&apos;m sorry, but the River Walk is currently closed to all visitors.&quot;</desc>
+      <desc>   It seems impossible to get a glimpse of anything going on down below, so you should probably head back up the ramp to the southeast.</desc>
+      <exits se='264' up='264'/>
+   </location>
+
+   <location num='262'>
+      <name>The Beaten Path</name>
+      <desc>   A narrow path surrounded by large oak trees bends to the east, following the steep banks of the River Sciurus and over a stone bridge on its way to the central tree.  A few acorns bounce on the ground just ahead of you, but before you react, one beans you right on top of your head.  In the distance, a squirrel chatters, but you can&apos;t find the assailant anywhere.</desc>
+      <desc>   The path continues southeast is the landing zone and east towards the giant oak tree that contains all areas accessible by visitors.</desc>
+      <exits e='263' sw='325' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263'>
+      <name>Stone Bridge</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits e='264' w='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264'>
+      <name>Clearing</name>
+      <desc>   You are standing just outside of the giant oak tree in a large clearing.  A light breeze blows past you, picking up several fallen leaves that draws your attention towards the canopy above you.  The oak tree continues up until it disappears into the leaves and you can only imagine that it doesn&apos;t just stop there.</desc>
+      <desc>   To your east is a large archway that leads to the Oak Reception Area and Planetary Exchange.  To your west is the pathway through the forest that leads to the landing zone.</desc>
+      <exits e='265' w='263' nw='208' down='208' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Oak Reception</name>
+      <desc>   Sitting before you is a large, u-shaped desk that is filled with information packets regarding local recreation areas and even some information regarding investing in your very own Oak Office.  The desk has been carved out of the tree itself with black granite tops that have been so heavily polished that you begin to consider getting a haircut.</desc>
+      <desc>   &quot;Hi-my-name-is-Terri-welcome-to-Oak,&quot; the monotone voice pulls you away from your reflection and a hint of recognizion strikes you.  As it turns out, back when Risu was a CEO, he had not been able to steal Tracey away from Phobos, but was able to hire her equally attractive - and dense - twin sister.  Since the shutting down of his offices on Aekonia, Terri has found a new home here in the reception area of Oak.</desc>
+      <desc>   Terri informs you that you can find the exchange to the east or make your way back outside by leaving to the west.  A small squirrel is sitting next to Terri, smiling happily and points out the GravTube to the northeast.</desc>
+      <exits ne='202' e='266' w='264'/>
+   </location>
+
+   <location num='266' flags='eb'>
+      <name>Oak Exchange</name>
+      <desc>   The shouting traders, merchants, and the like echo in your brain as you take a seat in an empty booth that is recessed into the exchange floor.  The terminal on the table in front of you shows the scrolling prices of all the commodities sold in the exchange.  A variety of wait staff wanders back and forth between the booths, offering a variety of drinks and snacks to the exchange&apos;s visitors.</desc>
+      <desc>   In the center of the room stands a large circular screen that repeat the same data as your personal terminal; however, unlike the one on your table it doesn&apos;t display detailed information on any of the commodities.</desc>
+      <desc>   You&apos;ll find the reception area and exit to the rest of the planet to the west.  To the north, you see the entrance to a GravTube.</desc>
+      <exits n='202' w='265' out='325'/>
+   </location>
+
+   <location num='272'>
+      <name>Under the Bridge</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits n='208' sw='335'/>
+   </location>
+
+   <location num='325'>
+      <name>Oak Landing Zone</name>
+      <desc>   A hum echos overhead as a shuttle pilot does his best to avoid the branches as it cuts down through the opening in the forest canopy.  The opening is one of very few on the planet that is large enough to actually allow shuttles to make it to the forest floor, but at least the central tree - where everyone wants to be - is just a short walk along the path to the northeast.</desc>
+      <desc>   A small squirrel floats up to you on a hover disc.  &quot;If you don&apos;t feel like taking that long walk and are here to do some trading, you can always step into the teleporter, but umm... the Planetary Safety Council requires that you sign a small waiver first,&quot; he says, handing you a stack of papers.</desc>
+      <desc>   &quot;Oh! One last note if you&apos;re lookin to do some exploring.  The Forestry Reservation Committee requests that all unauthorized personel stay on marked paths only.  To ensure that you do just that, if you try to step off these paths, you might feel a slight tingle when you run into the electrified forcefield.&quot;</desc>
+      <exits ne='262' in='266' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='335'>
+      <name>River Walk</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits ne='272' s='399'/>
+   </location>
+
+   <location num='399'>
+      <name>River Walk</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits n='335' se='464'/>
+   </location>
+
+   <location num='464'>
+      <name>River Walk&apos;s End</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.</desc>
+      <exits nw='399'/>
+   </location>
+
+   <location num='970'>
+      <name>GravTube - Basement</name>
+      <desc>   Driven by the smells of exotic food, your body drifts towards the southern exit like a Saturday morning cartoon character.  The sound of clinking silverware and the echoing chatter from the numerous visitors beats home the obvious point that The Nuthouse, the one and only restuarant available for fine dining.</desc>
+      <desc>   Besides the restuarant, the only other direction you can go is up, towards the rest of Oak&apos;s facilities.</desc>
+      <exits s='1034' up='202'/>
+   </location>
+
+   <location num='978'>
+      <name>GravTube</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.  You can visit the hospital to the south or go back down the GravTube.</desc>
+      <exits down='202'/>
+   </location>
+
+   <location num='1033' flags='b'>
+      <name>Banquet Hall</name>
+      <desc>   The Banquet hall turns out to be a gigantic room equiped with a hard-light holo-projection system.  It can be made to feel as small and cozy or cavernous and open as the operator so desires, which makes it prefect for any event one can think of!  Currently, the default program is running and there are a few extra tables around the room that Twiggy can use incase the main room of the bar gets a bit too crowded.</desc>
+      <desc>   If you&apos;re interested in renting the space for a special occasion, just contact Risu and he&apos;ll see if he can&apos;t make an arrangement for you.</desc>
+      <exits e='1034'/>
+   </location>
+
+   <location num='1034' flags='b'>
+      <name>The Nuthouse - Bar and Grill</name>
+      <desc>   Stepping into the bar, you notice roots growing all around the ceiling, indicating that you must actually be underground or at least amoung the tangled life support system of the huge Oak tree above you.  On each table there is a bucket of assorted nuts for people to snack on while they wait for their dinner to be served.  Of course, you see more than one squirrel making it their dinner!</desc>
+      <desc>   The Nuthouse may not be the finest restaurant in the universe, but for the people of Oak, it suits their needs quite adequately and Twiggy, the bar&apos;s owner, can make you pretty much any meal your mind can conjure up.</desc>
+      <desc>   Along the east wall you notice large, comfortable booths that seem to beg you to sit down just for a few and have a drink.  All you would have to do is sit down.</desc>
+      <desc>   Resisting the booth&apos;s evil magic, you notice a set of double doors to the west that leads into a private party room and a door to the north that leads back to the GravTube.</desc>
+      <exits n='970' w='1033' down='1099'/>
+   </location>
+
+   <location num='1042'>
+      <name>Hospital Reception</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.  The emergency ward is to the southeast, mental ward to the southwest, and the GravTube is back to the north.</desc>
+      <exits n='978' se='1107' sw='1105'/>
+   </location>
+
+   <location num='1099' flags='bt'>
+      <name>Private Booth</name>
+      <desc>   Soft leather squeaks as you scoot into your place in the overstuffed booth and an instant feeling of relaxation floods into your senses.  At the end of the table, you see a menu terminal with a huge selection (including a custom order field for anything your heart desires).</desc>
+      <desc>   You study the walls around the bar as you relax, noting famous figures as you do so.  At your particular booth happens to be a picture of Risu hanging out with Rocky, Slappy, and even Steven.  Another table over, there are authographed pictures of Secret Squirrel and Morocco the Mole.  There&apos;s even a picture of Skunky and Rosie!</desc>
+      <desc>   If you can manage to resist the temptation to sit around all day, just stand up to return to the normal work-a-day grind.</desc>
+      <exits up='1034'/>
+   </location>
+
+   <location num='1105'>
+      <name>Mental Ward - Lost Marbles, Inc.</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.  Your only exit is to the northeast.</desc>
+   </location>
+
+   <location num='1107'>
+      <name>Emergency Ward</name>
+      <desc>   Words can not describe what you see, so you decide to keep moving.  Your only exit is to the northwest.</desc>
+   </location>
+
+</fed2-map>

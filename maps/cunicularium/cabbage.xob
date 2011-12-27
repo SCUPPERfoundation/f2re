@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='7'>
+
+   <object type='static' start='269' visibility='100' size='1' weight='1' flags='i'>
+      <name>snail</name>
+      <id>obj_snail</id>
+      <desc>The snail is enormous - the size of a large horse. Or a small elephant. Its shell is iridescent pink, with great whorls showing how it has grown over the years. It is nibbling a lettuce. You wonder if you could climb on top of it?</desc>
+   </object>
+
+   <object type='static' start='331' visibility='100' size='1' weight='1'>
+      <name>Jessica</name>
+      <id>obj_jess</id>
+      <desc>This sexy creature is draped seductively on a chair. Half girl, half rabbit, here is living proof that humans and bunnies can interbreed. Many have wished to continue the experiment with Jessica...</desc>
+   </object>
+
+</object-list>

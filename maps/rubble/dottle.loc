@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<fed2-map title='Dottle' version='11' editor='standard' from='331' to='Rubble.Rubble Space.331'>
+
+   <location num='0'>
+      <name>A bin</name>
+      <desc>A bin</desc>
+      <exits no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='199'>
+      <name>Malodorous Tunnel</name>
+      <desc>   The tunnel continues in the gloom where excavators can be heard tearing their way through the wretched mess.  Rumor has it that the highly organic nature of the waste is ideally suitable for converting into fertilizer, and beneath the surface of Dottle there is a closet industry in agricultural products, as well as tabacum supplying an addicted galaxy.</desc>
+      <desc>   Regardless, for the time being anyway, your tour ends here, and you may go OUT to the LP, or return south and eastward if you care to walk.</desc>
+      <exits s='263' out='331' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='263'>
+      <name>Malodorous Tunnel</name>
+      <desc>   Extremely tight control over smoking, chewing, sniffing, snorting, dipping and tucking in tabacum pleasure domes allowed the remaining sixty six one hundredths percent of the population to enjoy their vice.</desc>
+      <desc>   Unfortunately, with over 100 trillion galactic inhabitants, there are nearly 700 billion citizens who still smoke, chew, sniff, snort, dip and tuck tabacum, with the accumulated mountains of extremely hazardous waste, requiring the services of a small asteroid for disposal.</desc>
+      <desc>   The dank, smelly tunnel continues from the south towards the north.</desc>
+      <exits n='199' s='327' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='269' flags='e'>
+      <name>Dottle Exchange</name>
+      <desc>   The aesthetically displeasing structure belies its function.  The interior of the windowless exchange is a beehive of activity with traders, merchants, and not a few planet owners using state of the art holographic trading terminals to access the robust Dottle market.</desc>
+      <exits sw='332' out='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='327'>
+      <name>Malodorous Tunnel</name>
+      <desc>   What a health conscious galaxy could not do in five thousand years, the Galactic Environmental Agency solved in a mere decade.  By regulating the ash and charred residue from tabacum products as extremely hazardous waste with massive fines and taxes, the GEA effectively eliminated public consumption of tabacum and cured ninety nine and forty four one hundredth percent of the galactic population of its nicotine addiction.</desc>
+      <desc>   The horrifically odoriferous tunnel leads north into gloom, while the southern direction appears rather brighter.</desc>
+      <exits n='263' s='391' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='328'>
+      <name>Gritty Path</name>
+      <desc>   A towering mound of charred fibrous material is immediately west, while the path skirts the mound towards the southwest.</desc>
+      <exits e='329' sw='391' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='329'>
+      <name>Gritty Path</name>
+      <desc>  The surface of the path thins out as it leaves the area of the landing pad. It continues west towards curiously shaped mounds and east back to the LP.  Adjacent to the path is one quite large and active depot, ostensibly the working storehouse for the Dottle Exchange.</desc>
+      <desc>   There are numerous private warehouses, some appearing active while others have been abandoned, and at least several have been upgraded to depot status. Automated loaders trundle between the warehouses and landing pad fulfilling orders placed in the exchange towards the east.</desc>
+      <exits e='330' w='328' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='330'>
+      <name>Gritty Path</name>
+      <desc>  The path continues east and west, adjacent to a row of large domed warehouses in various states of repair or disrepair, as is generally the case.</desc>
+      <exits e='331' w='329' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='331'>
+      <name>Dottle Landing Pad</name>
+      <desc>   The LP is little more than a shallow depression in the surface of the moderately sized asteroid, and is covered with a layer of gritty black scoria.  A path leads east around a large mound of the grit towards a small group of functional, if not singularly unattractive structures. The view from the top of the mound might be interesting if one could find a way to scale it.</desc>
+      <desc>  Another path leads west towards a row of low warehouses, and towards a mountain range of nearly uniform conical peaks.</desc>
+      <exits e='332' w='330' in='269' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332'>
+      <name>Gritty Path</name>
+      <desc>   The path circles towards the south from the west and around a large mound of granulated slag, which can only be described as appearing to be ash tray filler.  The Dottle economic exchange is towards the northeast, in a squat igloo constructed from foamstone and half buried in the surface.</desc>
+      <exits ne='269' s='396' w='331' up='395' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='391'>
+      <name>Dottle Pile</name>
+      <desc>   Mountains of charred dottle rise in the west as far as can be seen.  Occasionally, a drop ship will soar in low overhead and eject yet more debris onto this already tortured landscape.  The path leads from the northeast and turns north into a tunnel excavated through the nearest mountain of smelly fibrous char.</desc>
+      <exits n='327' ne='328' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='395'>
+      <name>Mound of Vitreous Slag</name>
+      <desc>   Trudging up the slippery slope of slag is exhausting, but once the summit is scaled, the view is spectacular.  The entire settlement of Dottle Landing can be seen to be encircled by conical mountains of tabacum waste.  A nearby mountain of the waste appears towards the west, and active reclaiming of the material can be observed. North of the largest of the warehouse domes, a large amount of active construction can also be seen, but there doesn&apos;t appear to be any visible means to visit the area.</desc>
+      <exits down='332' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='396'>
+      <name>Gritty Path</name>
+      <desc>  The path leads north towards a bend and a small dome towards the northeast, and south to the hospital and local insurance kiosk.  Another small dome, curiously formed in the shape of a meerschaum pipe and with a tightly closed door to keep out the grit and dust, is east.</desc>
+      <exits n='332' s='460' in='397' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>The Pipestem</name>
+      <desc>   The Pipestem is the local watering spot for tourists and workers alike.  The homey atmosphere offers a large bar with comfortable backed stools, and numerous tables with leather easy chairs for table service or just relaxing.  The walls are adorned with a myriad of tabacum pipes from all over the galaxy, although you can&apos;t help but notice the enigmatic NO SMOKING sign amidst the center of the collection. Does the proprietor mean these pipes are not to be smoked, or that smoking is not allowed in the bar?  How very curious considering the milieu.</desc>
+      <exits out='396' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='459'>
+      <name>D&amp;B Enterprises</name>
+      <desc>   The stout foamstone structure serves the small contingent of D&amp;B Enterprises, LLC personnel who oversee the operations on Dottle as the corporate administration headquarters, dormitory, recreation, kitchen and dining areas.  The furnishings are austere, to be sure, but there is the benefit of having all the tabacum one could possibly desire.</desc>
+      <exits e='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='460'>
+      <name>Gritty Path</name>
+      <desc>   A sullen structure is to the east while an administration building and dormitory is to the west. The path continues south and into oblivion.</desc>
+      <exits n='396' e='461' s='524' w='459' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='461' flags='hi'>
+      <name>Hospital and Insurance</name>
+      <desc>   The hospital staff has seen their share of both acute and chronic nicotine poisoning of workers who have failed to heed the workplace warnings about not inhaling while working in the dottle storage piles. While there is no antidote, the staff can, and does, make the afflicted more comfortable while the toxins are purged from their bodies.</desc>
+      <desc>   In the event a visitor succumbs to the near lethal levels of nicotine, there is an automatic insurance kiosk off to the side.</desc>
+      <exits w='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='524'>
+      <name>Oblivion</name>
+      <desc>   The gritty path ends in a cul-de-sac with foundations of foamstone poured for several more structures. The construction process doesn&apos;t appear to be in a hurry.</desc>
+      <desc>   A rough sign, hastily scrawled on a broken piece of foamboard proclaims:</desc>
+      <desc>   &gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;</desc>
+      <desc>   Coming Soon!</desc>
+      <desc>   Oblivion at Dottle Landing</desc>
+      <desc>   An Upscale Retirement Community</desc>
+      <desc>   At Downscale Prices!</desc>
+      <desc>       ...A D&amp;B Realty Corporation Development</desc>
+      <desc>    &gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;</desc>
+      <desc>  Planks lead in to one of the slabs, while little more than furtive tracks lead through the foundation slabs and far into the sandy waste that is the surface of the asteroid.  A mountain range of peculiar conical shaped peaks encircles the small settlement of Dottle Landing.  The tracks seem to lead off towards the mountains, but considering the light breeze is already covering the tracks, finding your way back may well prove problematic and it is probably prudent to remain on the path.</desc>
+      <exits n='460' in='587' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='587'>
+      <name>Foamstone Foundation</name>
+      <desc>   A roughly poured slab of the ubiquitous building material is made of frothed silicon dioxide.  On closer inspection the material looks exactly like volcanic pumice, although with a higher compression strength and roughly the same density.  Capped off pipes and conduits protrude from the surface of the slab.</desc>
+      <exits out='589' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='588'>
+      <name>Foamstone Foundation</name>
+      <desc>   A roughly poured slab of the ubiquitous building material is made of frothed silicon dioxide.  On closer inspection the material looks exactly like volcanic pumice, although with a higher compression strength and roughly the same density.  Capped off pipes and conduits protrude from the surface of the slab.</desc>
+      <exits up='524' down='524' in='589' out='587' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='589'>
+      <name>Foamstone Foundation</name>
+      <desc>   A roughly poured slab of the ubiquitous building material is made of frothed silicon dioxide.  Capped off pipes and conduits protrude from the surface of the slab.  Embossed into a corner of the slab is the DBC logo, the iconic image of a spiral galaxy with a happy face formed within the spiral bands.</desc>
+      <desc>   D&amp;B Minerals, Inc. holds no less than 27 patents on the proprietary cool temperature formulas and processes for creating essentially foamed glass.  The lucrative captive market in this highly sought building material has formed the core, or at least the foundation, of the galactic mega-corporation - D&amp;B Companies.</desc>
+      <exits up='588' down='588' in='588' out='588' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>
+

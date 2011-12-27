@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<fed2-map title='Brig' version='12' editor='standard' from='2207' to='Spy.Spy Space.2269'>
+
+   <location num='0'>
+      <name>storeroom</name>
+      <desc>objects and events yet to be created</desc>
+   </location>
+
+   <location num='1947'>
+      <name>Warden&apos;s Office</name>
+      <desc>The Warden&apos;s responsibilities are vast on Brig.  Not only must the Warden administer this enormous prison system, but liaison between multiple planets&apos; judicial and criminal systems is also required.   The Warden&apos;s staff includes lawyers, data base administrators, corrections staff and support services.  Angelique personally oversees the apointment of Brig&apos;s Warden after extensive review of qualified candidates complete with recommendations from experts in the field.  Exits South or UP the gravlift.</desc>
+      <exits s='2011' up='1951'/>
+   </location>
+
+   <location num='1951'>
+      <name>Judicial Center</name>
+      <desc>Crimes occur on Brig, and these must be adjudicated.  The laws on the books are uncomplicated and penalties are specific.  Violence is dealt with harshly.  There is no jury system here.  A panel of three highly experienced judges hears and rules upon each case.  Local residents who are not inmates are subject to the same justice.   Exit South or take the gravlift UP or DOWN.</desc>
+      <exits s='2015' up='1955' down='1947'/>
+   </location>
+
+   <location num='1955'>
+      <name>Gatelodge</name>
+      <desc>This is where newly arrived prisoners are processed.  All their personal belongings are taken and they are stripped for personal searches.  They are also examined by medical staff.  This entire procedure is documented and videoed.  Each inmate is then issued prison garb, bedding and toiletries and given a manual of conduct and regulations.  Exits are South, DOWN the gravlift or UP the road.</desc>
+      <exits s='2019' up='1959' down='1951'/>
+   </location>
+
+   <location num='1959'>
+      <name>Detention Center</name>
+      <desc>You enter through a gate onto what appears to be a campus with several three or four story buildings.  An electrified fence encircles the Detention Center and other security measures are evident.  Low security risk, well behaved inmates whose release dates are within reach are invited to the Detention Center as a first step to preparing to reimmerse into society.  They must follow a strict regimen of classes, behavioral training and counseling and demonstrate a cooperative attitude towards inmates and prison personnel alike.  Exits are SOUTH or DOWN the road.</desc>
+      <exits s='2023' down='1955'/>
+   </location>
+
+   <location num='2011'>
+      <name>Warden&apos;s House</name>
+      <desc>You see a gracious Tudor style home on a small knoll, home to the Warden&apos;s family.  Each newly appointed Warden is given a budget to furnish the home, so as to provide personalization and contentment to the family, since the assignment to Brig is considered a hardship assignment.  For example, the current Warden is from Corkscrew, so a wine cellar was installed.  On the grounds you see a small guest cottage, provided for visiting friends and family.  Angelique resides there when she visits Brig.  Exits North or South.</desc>
+      <exits n='1947' s='2075'/>
+   </location>
+
+   <location num='2015'>
+      <name>Complaints Department</name>
+      <desc>Brig attempts to treat its inmates in a humane manner, so it provides a channel for prisoners to lodge complaints.  These can be directed against prison personnel, fellow inmates or specific conditions.  Inmates learn fast that frivolous complaints are ignored, but they also learn that valid complaints are quickly and justly addressed.  This gives inmates a sense of control over their situation and relieves general stress in the population.  Exits North or South.</desc>
+      <exits n='1951' s='2079'/>
+   </location>
+
+   <location num='2019'>
+      <name>Monitoring Center</name>
+      <desc>High tech monitoring and audio devices keep a watch and an ear on every portion of the prison.  Computers are programmed to detect any unusual movement or anomaly.  Rotating shifts of human observers also man the monitors, taking frequent breaks in order to stay alert.  Security is twofold - containment of the inmates and protection of guards and inmates.  Exits North or South.</desc>
+      <exits n='1955' s='2083'/>
+   </location>
+
+   <location num='2023'>
+      <name>Dormitories</name>
+      <desc>Inmates are housed in rooms for six inmates of the same gender.  The rooms are organized in pods of five rooms.  There is a common bathroom area and kitcheonette area for each pod.  You notice how neat and organized the dormitories are.  You also see personal touches missing from the cells you visited in the cell blocks.  You see photographs of loved ones, cards received from home, a poster here and there.  Exits are North or South.</desc>
+      <exits n='1959' s='2087'/>
+   </location>
+
+   <location num='2075'>
+      <name>The Retreat</name>
+      <desc>A self-contained community has been established for the non-inmate population of Brig.  Pleasant neighborhoods of homes and garden apartments are surrounded by parks and small lakes.  Schools, playgounds, markets, medical facilities, shops and recreation are all nearby.   The buildings are largely stucco, painted in cheerful pastel colors and it is clear that great attention is paid to landscaping, especially to flowering shrubs and graceful trees.  Exits North or you can go IN the shopping mall.</desc>
+      <exits n='2011' in='2203'/>
+   </location>
+
+   <location num='2079'>
+      <name>Parole Board</name>
+      <desc>Not many inmates on Brig pass before the Parole Board, which convenes only twice a year.  Before being sentenced to Brig, inmates have generally been given mandatory sentences for their crimes.  However, sometimes mitigating circumstances occur that necessitate commuting sentences.  On rare occasions, inmates receive pardons.  Exits North or South.</desc>
+      <exits n='2015' s='2143'/>
+   </location>
+
+   <location num='2083'>
+      <name>Protective Custody</name>
+      <desc>Brig&apos;s mega prison was designed to eliminate the occurence of prisoner violence and bullying upon other prisoners.  All cells are solitary.  Only low security risk inmates have the privilege of socializing at meals or during recreation with other detainees.  The other prisoners take meals in their cells, have full bathrooms contained within their cells and have highly restricted recreation arrangements that prevent physical contact.  However, some inmates are psychologically fragile and are bullied mentally by more agressive prisoners.  Such inmates are housed in the Protective Custody Cell Block.  The facilities here mirror the other cell blocks, but virtually eliminate the harrassment.  Exits North or South.</desc>
+      <exits n='2019' s='2147'/>
+   </location>
+
+   <location num='2087'>
+      <name>Research Room</name>
+      <desc>In their unassigned time, Detention Center inmates can research information on the web.  Access is only restricted in the sense that any website can be reached, but no outgoing messages, email or contact from Brig is permitted.  Inmates use the opportunity to scan for news of their home planet, to research what employment opportunities may be available, to increase training/knowledge in a particular specialty, and sometimes to research legal information pertaining to their personal circumstances.  Exit North or go OUT to the Farm.</desc>
+      <exits n='2023' out='2215'/>
+   </location>
+
+   <location num='2143'>
+      <name>Release Staging</name>
+      <desc>This nondescript building nevertheless is one where hope and promise reside.  It is where inmates are processed for release and return transport to their home planets.  They are provided with essentials and given final instructions.  The process takes several days, mainly to acclimate inmates to the large transition from identifying as a prisoner to becoming once again a free person.  Exits North or South.</desc>
+      <exits n='2079' s='2207' in='2599'/>
+   </location>
+
+   <location num='2147' flags='b'>
+      <name>Visitors Chambers</name>
+      <desc>A large lobby has doorways leading to several visitor rooms, each comfortably equipped with couches, chairs and a beverage dispenser.  This is the one part of the prison where the decor is not institutional, but rather, warm, plush and inviting.  This amenity is feasible because there are so few who visit inmates since it requires a trip from another planet.  Often it is a dying relative, or a child who has come to adulthood without knowing the parent.  As a result, officials attempt to make the visit pleasant, all the while keeping security considerations in mind, but conducted in less obvious ways.  Exits are North or South.</desc>
+      <exits n='2083' s='2211'/>
+   </location>
+
+   <location num='2203'>
+      <name>Retreat Mall</name>
+      <desc>The Mall boasts every kind of store one could need, and is replete with good dining, skating rinks, a carousel, vidtheaters, and seasonal displays.  One would expect prices to be high, since very little is manufactured on Brig and most must be transported from offplanet.  However, the planets in Merit subsidize prices on Brig as an inducement for people to be willing to work there.  You may go South or go back OUT to Retreat.</desc>
+      <exits s='2267' out='2075'/>
+   </location>
+
+   <location num='2206' flags='e'>
+      <name>Brig Exchange</name>
+      <desc>You&apos;ve never seen such an uncrowded exchange, but then again this is a small planet and most of the population does not have trading privileges.  Still, all standard commodities and futures are available and spreads and stockpiles are favorable on most days.  Exit East or go DOWN the wide roadway.</desc>
+      <exits e='2207' down='2270'/>
+   </location>
+
+   <location num='2207' flags='yrb'>
+      <name>Brig LP</name>
+      <desc>Planets that support human life are valuable assets to humanity, but this planet is very small and devoid of valuable resources.  The cartel of Merit recognized a need to isolate sociopaths and criminals and found this world was made to order, both economically and tactically.  You see shackled prisoners being directed to ground shuttles.  Surveillance bots and armed guards keep a vigilant eye on new arrivals.  You also see small groups of newly released inmates.  They await their flights offplanet, sitting quietly, not engaging in conversation, introspective looks on their faces.  You can purchase refreshments at the snack bar.  The Exchange is West, or you can go North.</desc>
+      <exits n='2143' w='2206'/>
+   </location>
+
+   <location num='2210' flags='b'>
+      <name>Stir</name>
+      <desc>Response Force team members and guards take their breaks at the Stir, where a variety of coffees and teas are available as well as cold beverages.  There is almost always a box of pastries or breads that someone has brought in to share with colleagues.  Exits East or DOWN the wide stairs.</desc>
+      <exits e='2211' down='2274'/>
+   </location>
+
+   <location num='2211'>
+      <name>Corrections Response Force</name>
+      <desc>This is where two quick response teams are always on call, ready to converge on any trouble spot in the prison. Equipment and gear is organized and stored here as well.  The teams respond to suspicion of contraband and conduct intense searches.  They defuse incidents of non cooperation by inmates, or respond to any other kind of urgent situation.  A slideway ramp carries them rapidly DOWN to the cell blocks.  Other exits are North or West.</desc>
+      <exits n='2147' w='2210' down='2403'/>
+   </location>
+
+   <location num='2215'>
+      <name>The Farm</name>
+      <desc>The farm is comprised of 900 acres devoted to growing food for the prison community.  Detention Center inmates learn the techniques of successful agriculture, and are given access to modern equipment to prepare the soil, plant, irrigate, maintain and harvest.  The farm provides enough vegetables and fruits from its orchards to feed the entire prison and still sell enough to Brig residents to pay for the equipment.  Exit South or go back INto the Center.</desc>
+      <exits s='2279' in='2087'/>
+   </location>
+
+   <location num='2267' flags='b'>
+      <name>Clink</name>
+      <desc>A wine and tapas bar, Clink provides a relaxing and enjoyable escape from some of the unpleasant tasks that burden Brig personnel.  Wines are imported from many planets, the most popular being Provence and Corkscrew.  The tapas menu changes every couple weeks and is consistently tasty and original.  The stemmed glasses clink with toasts and customers are usually satisfied.  Exits North or South.</desc>
+      <exits n='2203' s='2331'/>
+   </location>
+
+   <location num='2270' flags='b'>
+      <name>Guardhouse</name>
+      <desc>The entire physical security envelope of the enormous Brig prison is controlled from this high-tech guardhouse.  Here also is where Brig&apos;s guards who are on call remain until their shifts are over.  Additionally, there are several rooms on this floor of the building where equipment is stored and where guards can relax, get a bite to eat, and compare notes.  Exit East or go UP or DOWN the wide roadway.</desc>
+      <exits e='2271' up='2206' down='2334'/>
+   </location>
+
+   <location num='2271'>
+      <name>SWAT Headquarters</name>
+      <desc>You&apos;ve come to a tall, massive granite building surrounded by acres of training fields.  Special weapons and tactical teams are on duty here and also trained here.  The intensive training includes hostage rescue, riot control, resolving high risk situations, and specialized stealth operations.  The fully trained SWAT officers continually work towards  improving security on Brig in their down time from performing their special duties.  Exit West.</desc>
+      <exits w='2270'/>
+   </location>
+
+   <location num='2274'>
+      <name>Commissary</name>
+      <desc>Here is where prison and hospital staff can pick up a variety of simple items they may need during their work day.  Snacks, tissues, batteries and other sundries are crammed onto the shelves.  Last minute gifts, sunglasses, and  toiletries are part of the full inventory.  Exit UP or DOWN the wide stairs or go EAST to the Hospital.</desc>
+      <exits e='2275' up='2210' down='2338'/>
+   </location>
+
+   <location num='2275' flags='hi'>
+      <name>Hospital</name>
+      <desc>A large steel and glass walled building, the hospital consists of a central administrative and laboratory area and two wings.  The only large scale hospital on the planet, all modern medical treatments and services are available.  However, each wing fully functions independentally and duplicates all services with the exception of laboratories and administration.  The difference between the wings is that the inmate wing puts a priority on keeping inmates contained, secure, and given no opportunity to obtain what can be used as contraband of any kind.  Exit West.</desc>
+      <exits w='2274'/>
+   </location>
+
+   <location num='2279'>
+      <name>Training</name>
+      <desc>Vocational training is an important aspect of preparing inmates to return to productive lives in society.  This program seeks to greatly reduce recidivism.  Training in landscaping, engine repair, electricians, practical nursing, health care technicians, and weatherization technicians are but a few of the vocational avenues available.  You notice the engaged look on the inmate faces around you and are impressed.  Exits North or South.</desc>
+      <exits n='2215' s='2343'/>
+   </location>
+
+   <location num='2331'>
+      <name>Records Headquarters</name>
+      <desc>Keeping all the judicial and personnel records for the inmates and staff on Brig is a monumental task, but fortunately it is a well organized group that administers it.  Housed in a solid, windowless building kept at a steady temperature and humidity, the computers are naturally the lifeblood of the Records Department.  Software and hardware technicians, statisticians and clerks keep the operation humming smoothly.  Exit North or go IN the shuttle for the  Intelligence offices.</desc>
+      <exits n='2267' in='2459'/>
+   </location>
+
+   <location num='2334' flags='b'>
+      <name>The Hoosegow</name>
+      <desc>Primarily a steakhouse, the Hoosegow serves up plenty of hearty food for security personnel who expend a lot of energy in their jobs.  The music is loud, the talk is louder and most customers know each other, so the comraderie is evident.  Alcohol consumption is strictly forbidden with 6 hours of being on official duty, but the beer is plentiful for officers going off shift.  Exits UP the steep roadway or East.</desc>
+      <exits e='2335' up='2270'/>
+   </location>
+
+   <location num='2335'>
+      <name>Rehabilitation Center</name>
+      <desc>A squat grey stone building houses Brig&apos;s Rehabilitation Center.  Bear in mind, petty criminals and low level offenders are not generally worth the expense of transport to another planet, so the inmates here tend to be repeat offenders who present a danger to society.  Rehab programs seek to reduce recidivism, but it is recognized that certain types of offenders are more likely to benefit than others.  Potential candidates for the rehab programs are carefully screened by medical and mental health professionals.  They are evaluated for their ability to tolerate others and assume personal responsibility.  Those that qualify are then taught life skills and pro-social values to enable them to succeed upon release.  Exits South or West.</desc>
+      <exits s='2399' w='2334'/>
+   </location>
+
+   <location num='2338' flags='b'>
+      <name>Cooler</name>
+      <desc>Open day and night, every day of the year, the Cooler has several very long buffet tables offering a large variety of food which is continually refreshed.  Able to serve many people quickly, it&apos;s where most prison and hospital personnel eat during their shifts.  After filling one&apos;s plate, a diner sits at one of the long tables that each seat eight.  A server comes by with pitchers of iced tea, punch, juices and water.  Exit EAST or UP the stairs.</desc>
+      <exits e='2339' up='2274'/>
+   </location>
+
+   <location num='2339'>
+      <name>Work Programs</name>
+      <desc>Work is a privilege in the Brig prison system, a reward for good behavior which provides low security risk inmates both a relief from boredom, the ability to interact with others, and an opportunity to learn skills that can transition into work once released.  The prison negotiated a contract with Brice Industries to manufacture circuit boards.  The inmates actually conduct the training program for new inmate workers as well as the actual manufacturing, although all work programs are done under close supervision by prison staff.  The inmates earn groats which can be sent home to family.  The program is a major motivator for prisoners to exhibit good behavior to qualify for the program.  Exits South or West.</desc>
+      <exits s='2403' w='2338'/>
+   </location>
+
+   <location num='2343' flags='b'>
+      <name>Social Hall</name>
+      <desc>This large building is part of what makes Detention Center inmates so anxious to demonstrate a good attitude and remain here.  Although ostensibly created for relaxation, the inmates are relearning positive social skills to help them succeed in the future.  Some play video games, others play ping pong or billiards, others just sit and talk.  Sometimes they even put on skits to amuse each other.  A snack bar offers special treats like pizza and sodas.  Exits are North or IN the breezeway to the next building.</desc>
+      <exits n='2279' in='2471'/>
+   </location>
+
+   <location num='2399'>
+      <name>Counseling Center</name>
+      <desc>Psychiatrists and Psychologists provide therapy and counseling sessions for inmates.  They evaluate their stability, behavior and backgrounds and determine appropriate responses for each individual.  These professionals have become sophisticated at recognizing which inmates are &quot;playing&quot; them and mouthing what they think the therapists want to hear.  Exits North and South.</desc>
+      <exits n='2335' s='2463'/>
+   </location>
+
+   <location num='2403'>
+      <name>Close Security Cell Block</name>
+      <desc>This cell block houses prisoners who cannot be trusted in open conditions but who are unlikely to escape.  You see multiple levels of row upon row of identical cells.  Each cell is designed for one occupant and contains a complete bathroom.  Provided is a bed, a chair and table, and a desk with 2 drawers beneath it.  Meals are delivered to each cell.  Inmates here have been convicted of non-violent crimes but have come to Brig because they are repeat offenders with long criminal records.  Their crimes include burglary, theft, fraud, forgery and counterfeiting.  Exits are North or South.  You can also go UP the ramp to the Corrections Response Force.</desc>
+      <exits n='2339' s='2467' up='2211'/>
+   </location>
+
+   <location num='2459'>
+      <name>Counter Terrorism Offices</name>
+      <desc>Fortunately, counter terrorism policies and approaches instituted by Angelique have virtually eliminated terrorist acts in Merit, with the exception of the stubborn weathermen who inexplicably continue to sabotage weather control stations.  However, only with continued efforts to prevent, deter and respond to terrorist threats can this success continue.  These offices have been situated on Brig for two reasons.  First, the agents can share training facilities with SWAT teams and guards located here.  Secondly, the inmates have proven to be valuable sources of intelligence.  Exit South or go OUT to the Records Headquarters.</desc>
+      <exits s='2523' out='2331'/>
+   </location>
+
+   <location num='2463' flags='b'>
+      <name>Cafeteria</name>
+      <desc>One of several cafeterias in the system, this dining hall provides meals to low security risk prisoners who have earned privileges through sustained good behavior.  The cooks are fellow inmates who are pursuing job training as food preparers, most of whom are serious about pursuing careers upon release in the restaurant and food service industry.  Some of the meals offered are surprisingly tasty and well-prepared, which in turn is a great motivator in the inmate population to earn the right to eat here.  Exits are North and South.</desc>
+      <exits n='2399' s='2527'/>
+   </location>
+
+   <location num='2467'>
+      <name>Recreation Yard</name>
+      <desc>Set outdoors, the resemblance to dog kennels is what first comes to mind.  Recreation corrals about 20 feet long and 5 feet wide are separated from each other by chain link fencing, with a chain link cover above as well.  Prisoners are placed in corrals individually.  They have 1 hour rotations throughout the day in which they can exercise or speak with other prisoners in nearby corrals.  These inmates are not trusted enough to allow actual physical contact with each other.  Exits are North or South.</desc>
+      <exits n='2403' s='2531'/>
+   </location>
+
+   <location num='2471'>
+      <name>Crisis Stabilization Center</name>
+      <desc>If an inmate has been sent to Brig, it is because something went very wrong in his or her life.  The Crisis Stabilization Center is a resource staffed by mental health professionals to improve the psychological outlook of troubled inmates, or to intervene when a personal crisis occurs.  One on one sessions address deep seated neuroses or undesirable behavior patterns.  When an inmate has experienced the death of a loved one, or news that a loved one is no longer waiting with open arms, the trained professionals can help the inmate handle the setback in a healthy, non destructive way.  Exit South or UP the breezeway to the next building.</desc>
+      <exits s='2535' out='2343'/>
+   </location>
+
+   <location num='2523'>
+      <name>Intelligence Center</name>
+      <desc>You enter a 15-story building, the architecture stark and modern.  Analysts, communications experts and language specialists collect mountains of intelligence data here.  The trick is sifting through the mass of material in order to reach what&apos;s valuable.  Identifying and accurately assessing security threats stemming from violence prone extremists is no easy task.  Exits North and South.</desc>
+      <exits n='2459' s='2587'/>
+   </location>
+
+   <location num='2527'>
+      <name>Team Sports Facilities</name>
+      <desc>Team sports are encouraged among the non violent inmates for the lessons taught.  Individual sports that were popular in the past in prisons such as weight lifting and plyometrics (resistance training) are prohibited on Brig.  Cooperation, good sportsmanship and working with others to achieve a result are all important life tools that the team sports programs impart.  However, any displays of undue roughness or violence are immediately halted and such violators lose their right to particpate.  Exits North or South.</desc>
+      <exits n='2463' s='2591'/>
+   </location>
+
+   <location num='2531'>
+      <name>Maximum Security Cell Block</name>
+      <desc>Inmates here have violent pasts, including assault, battery, sexual abuse, use of firearms or other weapons.  They are generally in control of their actions and can cooperate within the system although they are considered escape threats.  Their cells mirror the facilities in the Close Security Cell Block, again multiple levels of countless rows of cells.  Exits are North or South.</desc>
+      <exits n='2467' s='2595'/>
+   </location>
+
+   <location num='2535'>
+      <name>The Zoo</name>
+      <desc>As you walk into the enclosure you see all kinds of animals, each type penned together, such as pigs, goats, lambs, dogs, rabbits, ponies and ducks.  Inmates volunteer to feed, clean up after and care for these animals, and although the work is sometimes hard, there is a waiting list for this assignment.  Inmates feel free to express affection for these animals, and indeed become quite attached to them.  This program is encouraged as a positive step towards being able to relate to people.  Exits are North or South.</desc>
+      <exits n='2471' s='2599'/>
+   </location>
+
+   <location num='2587'>
+      <name>Operations</name>
+      <desc>Security is tight here, and your way is barred.  AUTHORIZED PERSONNEL ONLY is written in big letters on a sign above the entrance, which is protected by several layers of security measures.  You can either go North or take the gravlift UP.</desc>
+      <exits n='2523' up='2591'/>
+   </location>
+
+   <location num='2591'>
+      <name>Confessional</name>
+      <desc>This is a circular building filled with soundproof plexiglass booths so that inmates can be observed but not heard.  The confessionals can be used in a variety of ways.  The offender may want to relieve his or her guilt and apologize to his or her victims or the victims&apos; families.  In this case, a personal video can be created and sent, which is reviewed first by Brig personnel who ensure that the video is a sincere confessional and not being used to inflict further pain.  They can also record a confession to previously unsolved crimes, or to crimes for which others have been wrongfully accused.  Finally, they can simply own up to their criminal acts privately for their own psychological peace of mind.  Exit North or take the Gravlift UP or DOWN.</desc>
+      <exits n='2527' up='2595' down='2587'/>
+   </location>
+
+   <location num='2595'>
+      <name>Super Maximum Security Cell Block</name>
+      <desc>Inmates here have been convicted of particular heinous murders, kidnappings and rapes or crimes against society such as acts of terrorism or serial killings.  They are considered extremely dangerous and are treated accordingly.  Their cells differ from the other cell blocks in two ways.  First, the plumbing in their cells is controlled by a central board operated by the guards, so water is only available at restricted, supervised times.  This minimizes instances of flooding out the cells as protest.  Also, rather than chance injury to guards, the inmates have no recreation yard privileges.  Instead, guards can activate a door at the back of their cell which slides open onto a balcony outdoors.  The balcony has plexiglass walls and a metal screen ceiling.  Any attempt to climb results in a severe electrical jolt.  Each balcony is accessed by 5 cells, so it is relatively large, but only one prisoner can be out at a time.  Exits are North or UP or DOWN the gravlift.</desc>
+      <exits n='2531' up='2599' down='2591'/>
+   </location>
+
+   <location num='2599'>
+      <name>Halfway House</name>
+      <desc>This is the final step for inmates serving the end of their terms.  They each have a room to themselves, and are required to participate in group therapy, their chosen work program and keeping their quarters and the common areas clean.  They cook their own meals and do their own laundry.  Halfway House residents are asked to focus their efforts on readying themselves for reintegration into society.  Exits are North, DOWN the gravlift or OUT to Release Staging and the LP.</desc>
+      <exits n='2535' down='2595' out='2143'/>
+   </location>
+
+</fed2-map>

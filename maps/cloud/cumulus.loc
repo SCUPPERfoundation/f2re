@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<fed2-map title='Cumulus' version='21' editor='standard' from='461' to='Cloud.Cloud Space.461'>
+
+   <location num='0'>
+      <name>Store Room</name>
+      <desc>Store room for all kinds of misty bits and bobs</desc>
+   </location>
+
+   <location num='199'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='385'>
+      <name>Parliamentary Chambers</name>
+      <desc>You stand in the Public Viewing Gallery of the Parliamentary Chambers, below you can see the Cumulus Parliament in full session, a neon sign indicates that a fierce debate is being undertaken by the government with regard to a serious environmental issue, though at first glance, the one hundred members of the Cumulus Parliament appear to be sat in total silence and perfectly still, you realise of course that this race of humanoid have evolved to the point where they can communicate using thought process. You see the exit to the East.</desc>
+      <exits e='386' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='386'>
+      <name>Corridor</name>
+      <desc>You are in a Grand East/West Corridor that&apos;s is between the Main Parliamentary Chambers and the Prime Ministers Private Office.</desc>
+      <exits e='387' w='385' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='387'>
+      <name>Corridor</name>
+      <desc>You are in a Grand East/West Corridor thats is between the Main Parliamentary Chambers and the Prime Ministers Private Office.</desc>
+      <exits e='388' w='386' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='388'>
+      <name>Office of the Prime Minister</name>
+      <desc>The splendour of this office momentarilly takes your breath away, the opulence borders upon decadent and you can only wonder at how much the decoration must have cost. Exits are to the South and West.</desc>
+      <exits s='452' w='387' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='392'>
+      <name>Cumulus Observatory</name>
+      <desc>You are in the Cumulus Observatory. The technology utilised in the Public Viewing area has been adapted in order that all the planets in the Cloud system can be viewed. From here you can see the planets Stratus, Sirrus and Nimbus as well as their associated moons in total clarity.</desc>
+      <desc>You can exit to the City Square by going Southeast from here.</desc>
+      <exits se='457' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='394'>
+      <name>Public Viewing Area</name>
+      <desc>You are in an impressive Public Viewing area, sophisticated technology allows you to see the Cumulus terrain free of the dense mist that exists all over this planet. You gaze in wonder at the myriad of colours of the flora and fauna and cannot help but think that the whole thing is an illusion. After all how can such things of beauty exist without direct exposure to sunlight. You decide to cary out a botanical investigation to explain the reasons, before remembering, you have more important matters at hand.</desc>
+      <desc>Exits are South and Southwest to the City Square.</desc>
+      <exits s='458' sw='457' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='396'>
+      <name>Exchange Computer Centre</name>
+      <desc>The Walls are lined with banks of computers that have numerous flashing lights and a large number of operatives are dashing between the various panels. You think it best not to disturb them. The exit to the Exchange is East</desc>
+      <exits e='397' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Cumulus Exchange</name>
+      <desc>The exchange here upon Cumulus is so misty that it is not possible to see from one side to the other, there are no obvious terminals in here but you can see a trading display projected onto the mist. Ingeniously however, wherever you position yourself in the room, you always have a clear view of this display.</desc>
+      <desc>You see many of the Planets indigenous population operating the terminal using their mind powers. Fortunately, there are keyboards for lesser mortals to use.</desc>
+      <desc>This is obviously a busy exchange judging by the large amount of trading taking place, and nobody seems to have the time to even stop and say hello</desc>
+      <desc>You see a sign telling you the Bar and Lounge area is to the East, South takes you to the Landing Pad and West takes you to the Exchange Computer Centre.</desc>
+      <exits e='398' s='461' w='396' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='398' flags='b'>
+      <name>Cumulus Bar</name>
+      <desc> You notice a large demister humming in the centre of the room, vision is perfect in here. There are row upon row of very comfortable Chesterfield Leather armchairs in here with their own comms units built in for you to order your wares and discuss the successes of your endeavours. The Exit to the Exchange is West.</desc>
+      <exits w='397' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='449' flags='b'>
+      <name>WVRS Shop</name>
+      <desc>This is the Womens Royal Voluntary Services shop, it seems that this is one of the few imports that has been successfully imported from Earth, there is no escaping them anywhere!!!</desc>
+      <desc>Exit is to the South.</desc>
+      <exits s='513' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='452'>
+      <name>Office of the Secretary of the Prime Minister</name>
+      <desc>This is the office of the Secretary of the Prime Minister, as austere office decorated in the finest wood panelling. An ornately carved desk has various files strewn over it and a plush leather armchair sat behind it. You think about opening one of the files that has TOP SECRET stamped upon it, but you think better of it.</desc>
+      <desc>Exits are North and South.</desc>
+      <exits n='388' s='516' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='455'>
+      <name>Museum</name>
+      <desc>You enter the Hall of a vast museum, all around you are displays including gifts from all the planets that have been visited by this intrepid race of explorers as well as the ceremonial crown and sceptre of the Royal family.</desc>
+      <desc>You can exit to the South</desc>
+      <exits s='519' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='457'>
+      <name>City Square</name>
+      <desc>You are in the city square, in the centre of which is an impressive statue erected in honour of the intrepid explorers that many centuries before, set off through the mists of the solar system in search of new life and new civilisations, who boldly went where no man had gone before!</desc>
+      <desc>Exits are East, Southeast and South to go further into the City Square, Northeast takes you to a Public Viewing Area, and Northwest to the Cumulus Observatory.</desc>
+      <exits ne='394' e='458' se='522' s='521' nw='392' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='458'>
+      <name>City Square</name>
+      <desc>You are in the city square, in the centre of which is an impressive statue erected in honour of the intrepid explorers that many centuries before, set off through the mists of the solar system in search of new life and new civilisations, who boldly went where no man had gone before!</desc>
+      <desc>Exits are to the West, Southwest, and South to go further into the City Square, North is a Public Viewing Area.</desc>
+      <exits n='394' s='522' sw='521' w='457' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='460'>
+      <name>Lost Property</name>
+      <desc>This is the Lost Property Office and Storage area for goods that are not permitted onto the Planet area, to avoid confiscation at the Port Entry by Customs, goods can be left here for a small fee.</desc>
+      <desc>Exit to the Landing area is East</desc>
+      <exits e='461' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='461'>
+      <name>Landing Pad</name>
+      <desc>Above you see the thick white mist where you know your ship is in orbit.</desc>
+      <desc>As you look around the mist is less dense here and you can make out exits to the</desc>
+      <desc>                                         North is the Planetary Exchange</desc>
+      <desc>                                         West is what appears to be a small office</desc>
+      <desc>                                         South is a Paved Walkway.</desc>
+      <desc>             DO NOT BUILD ANY FACTORIES WITHOUT  PERMISSION OR THEY WILL BE REMOVED !!!!!!</desc>
+      <exits n='397' s='525' w='460' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='463' flags='r'>
+      <name>Cumulus ShipYard Repairs</name>
+      <desc>  Row upon row of workbays are loaded with Repair Ships waiting to Launch into orbit to repair your Spaceship, this fully automated system reacts to the voice operated command REPAIR SHIP.</desc>
+      <desc>Exit South to the Shipyard.</desc>
+      <exits s='527' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='513'>
+      <name>Store Room</name>
+      <desc>This is the Hospital Store Room where box upon box of bandages blankets and various medicines can be found. A thin layer of dust over everything indicates that it has been some time since anything in here has been touched. You can see a door in the North Wall, the Hospital Ward is to the South.</desc>
+      <exits n='449' s='577' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='516'>
+      <name>Parliament Entrance</name>
+      <desc>The entrance to the Parliament buildings houses the oldest democracy in the known universe. A sign advises that guided tours leave from this point every hour on the hour, a leaflet shelf holding tourist guides has long since needed refilling.</desc>
+      <desc>Exits are to the North, further into the Parliament Buildings and South.</desc>
+      <exits n='452' s='580' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='519'>
+      <name>Cumulus Palace</name>
+      <desc>Walls of Gold encrusted with precious jewels surround you, you think about perhaps prising a couple off the wall as souvenirs, but the ceremonial guards seem to be everywhere, so you decide against it. Exits are all points of the compass though many have been blocked and guarded by the ceremonial troops. There is what appears to be a laser beam preventing access to a long winding staircase that descends below this ornate building, it is made of the finest marble and the handrails appear to be made from solid gold. You can only wonder what treasures such a staircase could lead to.</desc>
+      <desc>You can go North, Southeast and Southwest.</desc>
+      <exits n='455' se='584' sw='582' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='521'>
+      <name>City Square</name>
+      <desc>You are in the city square, in the centre of which is an impressive statue erected in honour of the intrepid explorers that many centuries before, set off through the mists of the solar system in search of new life and new civilisations, who boldly went where no man had gone before!</desc>
+      <desc>Exits are North, Northeast and East to go further into the City Square, and Southwest to enter the Entrance to an impressive Building.</desc>
+      <exits n='457' ne='458' e='522' sw='584' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='522'>
+      <name>City Square</name>
+      <desc>You are in the city square, in the centre of which is an impressive statue erected in honour of the intrepid explorers that many centuries before, set off through the mists of the solar system in search of new life and new civilisations, who boldly went where no man had gone before!</desc>
+      <desc>Exits are to the North, Northwest and West go to further into the City Square, South is the City Concourse</desc>
+      <exits n='458' s='586' w='521' nw='457' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='524'>
+      <name>Cumulus Prison</name>
+      <desc>You find yourself in a dank and misty prison area. a group of Guards are laughing hysterically and pointing in your direction. One walks over and still smiling, apologises and explains that crime was eradicated centuries ago on Cumulus, and that you are the butt of a practical joke intended to make their day pass by a little less mundanely.</desc>
+      <desc>&quot;You can exit into the Planetary area by going OUT or back to the Shuttle Landing area by going UP&quot;, he smirks and walks back to the huddle of prison officers and they break once more into loud raucous laughter.</desc>
+      <exits up='461' out='587' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='525'>
+      <name>Paved Walkway</name>
+      <desc>As you walk through the mist you can make out perfectly formed slabs beneath your feet. You momentarily gaze in wonder at the perfection of their manufacture and also the skill of those that laid them many thousands of years hence. The Pathway extends to the North, to the Landing Pad, and South, to a Junction in the Pathway.</desc>
+      <exits n='461' s='589' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='527' flags='y'>
+      <name>Cumulus Shipyard</name>
+      <desc>  Through the mist you can see various gleaming spaceships of all sizes in what appears to be the largest showroom you have ever seen. In the centre of the room is a Terminal, above which a sign advertises the &quot;best deals in the universe. Simply type BUY SHIP to take advantage of these wonderful offers&quot; A sign says one free slithy issued to each ship owner at the free bi-monthly service of your Cumulus registered spaceship.</desc>
+      <desc>South-West will take you to the Paved Walkway and North to the Shipyard Repair area.</desc>
+      <exits n='463' sw='590' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='577' flags='hi'>
+      <name>Hospital Ward</name>
+      <desc>This is a largely unused area of the hospital as most illnesses were eradicated years ago, the occasional visitor from other planets can be found in here recovering and taking advantage of the excellent healthcare system.</desc>
+      <desc>Exits are North and East to other areas of the Hospital.</desc>
+      <exits n='513' e='578' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='578'>
+      <name>Research Laboratory</name>
+      <desc>This area of the hospital is dedicated to the research for cures to foreign imported diseases, all Cumulus based disease have long since had various serums and potions eradicated all locally based illnesses.</desc>
+      <desc>The Hospital continues to both the East and the West.</desc>
+      <exits e='579' w='577' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='579'>
+      <name>Cumulus Hospital Reception Area</name>
+      <desc>You are before the Counter of the Cumulus Hospital Reception, a petite receptionist sits in front of a computer screen blissfully unaware of your presence. Exits are to the Entrance in the East, or further into the Hospital to the west.</desc>
+      <exits e='580' w='578' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='580'>
+      <name>Entrance to Public Buildings</name>
+      <desc>You are in the Foyer of the entrance to the Cumulus public buildings, to the North are the Offices of the Government of Cumulus and to the West is the Cumulus Community Hospital, East heads off towards the Palace.</desc>
+      <exits n='516' e='581' w='579' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='581'>
+      <name>Drawbridge</name>
+      <desc>You are on the Drawbridge over the moat that surrounds the Cumulus Palace which is to the East. West are the Government and Hospital Buildings.</desc>
+      <exits e='582' w='580' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='582'>
+      <name>Cumulus Palace Entrance</name>
+      <desc>You stand in awe in the Entrance to the Palace of the Royalty of Cumulus. In every corner there are statues erected in honour of Cloudbase and his ancestors.</desc>
+      <desc>Exits are Northeast into the Palace and West to the Drawbridge.</desc>
+      <exits ne='519' w='581' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='584'>
+      <name>Cumulus Palace Entrance</name>
+      <desc>You stand in awe in the Entrance to the Palace of the Royalty of Cumulus. In every corner there are statues erected in honour of Cloudbase and his ancestors. Exits are at all points of the compass though many lead to the royal families private quarters, you can go Northwest from here or Northeast to the City Square.</desc>
+      <exits ne='521' nw='519' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='586'>
+      <name>City Concourse</name>
+      <desc>You are on the City Concourse exits are to the North, the Tourist Office is to the East.</desc>
+      <exits n='522' e='587' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='587'>
+      <name>Tourist Office</name>
+      <desc>The walls are lined with various holographic images detailing the sites to see whilst on Cumulous, there are clearly eons of history to view here. Exits are to the East and to the West.</desc>
+      <exits e='588' w='586' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='588' flags='t'>
+      <name>Customs and Port Entry</name>
+      <desc>You walk through a Scanning device which is seeking to find illegal substances, a sign tells you that smugglers goods are automatically confiscated and the perpetrators summarily imprisoned. you start to doubt your own integrity and break into a cold sweat when almost immediately an alarm sounds and lights start to flash. You panic and look around you to see a means of escape.</desc>
+      <exits n='524' ne='524' e='524' se='524' s='524' sw='524' w='524' nw='524' up='524' down='524' in='524' out='524'/>
+   </location>
+
+   <location num='589'>
+      <name>Junction</name>
+      <desc>You arrive at a Junction on the Paved Walkway.</desc>
+      <desc> You see a sign saying;</desc>
+      <desc>North - Exchange</desc>
+      <desc>East  - Shipyard</desc>
+      <desc>West - Customs and Port Entry</desc>
+      <exits n='525' e='590' w='588' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='590'>
+      <name>Paved Walkway</name>
+      <desc>  As you walk through the mist you can make out perfectly formed slabs beneath your feet. You momentarily gaze in wonder at the perfection of their manufacture and also the skill of those that laid them many thousands of years hence. A signpost tells you the Junction is West and the Shipyard area is North-East.</desc>
+      <exits ne='527' w='589' no-exit='moves.noexit.4'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<fed2-map title='Insane Space' version='1.00' editor='standard'>
+
+   <location num='330' flags='s'>
+      <name>Nutless orbit</name>
+      <desc>You are in Nutless&apos;s orbit. Please board shuttle to head to planet or SE to head towards INSANE System link.</desc>
+      <exits se='395'/>
+   </location>
+
+   <location num='332' flags='s'>
+      <name>Vast empty space.</name>
+      <desc>Nothing in this area to be seen or explored.</desc>
+      <exits sw='395'/>
+   </location>
+
+   <location num='395' flags='sl'>
+      <name>Insane&apos;s Planetary Link</name>
+      <desc>You have arrived an Insane Sytem please head SouthEast to Nuthouse ro NorthWest to (INSERT NAME HERE)</desc>
+      <exits ne='332' se='460' sw='458' nw='330'/>
+   </location>
+
+   <location num='458' flags='s'>
+      <name>Vast empty space.</name>
+      <desc>Nothing in this area to be seen or explored.</desc>
+      <exits ne='395'/>
+   </location>
+
+   <location num='460' flags='sp'>
+      <name>Nuthouse Orbit</name>
+      <desc>   Your ship is floating above a very small planet called Nuthouse. The planet is pretty normal looking, there is water,land,trees, an open fields for exploration. You hear a message over your comms from Nut. Welcome to</desc>
+      <desc>Nuthouse please enjoy your stay.  Please feel free to explore ,buy commods,sell commods, and even look for</desc>
+      <desc>futures.  If you are arriving please BOARD shuttle and visit, If you are leaveing.. Thank you come again. Becareful</desc>
+      <desc>of the first JUMP its a doozy.</desc>
+      <exits nw='395' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

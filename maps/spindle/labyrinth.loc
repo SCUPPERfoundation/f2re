@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<fed2-map title='Labyrinth' version='3' editor='standard' from='1887' to='Spindle.Spindle Space.397'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='1435'>
+      <name>Maze</name>
+      <desc>Available Directions: East, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1436' s='1499' out='1887'/>
+   </location>
+
+   <location num='1436'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1437' w='1435' out='1887'/>
+   </location>
+
+   <location num='1437'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1438' w='1436' out='1887'/>
+   </location>
+
+   <location num='1438'>
+      <name>Finish Line</name>
+      <desc>Congratulations!  You have solved the maze.</desc>
+      <desc>You may exit to the LP by going out.</desc>
+      <exits out='1887'/>
+   </location>
+
+   <location num='1497'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits s='1561' out='1887'/>
+   </location>
+
+   <location num='1499'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1435' s='1563' out='1887'/>
+   </location>
+
+   <location num='1501'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: East</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1502' out='1887'/>
+   </location>
+
+   <location num='1502'>
+      <name>Maze</name>
+      <desc>Available Directions: West, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits s='1566' w='1501' out='1887'/>
+   </location>
+
+   <location num='1561'>
+      <name>Maze</name>
+      <desc>Available Directions: East, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1497' e='1562' out='1887'/>
+   </location>
+
+   <location num='1562'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1563' s='1626' w='1561' out='1887'/>
+   </location>
+
+   <location num='1563'>
+      <name>Maze</name>
+      <desc>Available Directions: West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1499' w='1562' out='1887'/>
+   </location>
+
+   <location num='1564'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: East</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1565' out='1887'/>
+   </location>
+
+   <location num='1565'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1566' s='1629' w='1564' out='1887'/>
+   </location>
+
+   <location num='1566'>
+      <name>Maze</name>
+      <desc>Available Directions: North, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1502' w='1565' out='1887'/>
+   </location>
+
+   <location num='1626'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1562' s='1690' out='1887'/>
+   </location>
+
+   <location num='1627'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits s='1691' out='1887'/>
+   </location>
+
+   <location num='1628'>
+      <name>Maze</name>
+      <desc>Available Directions: East, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1629' s='1692' out='1887'/>
+   </location>
+
+   <location num='1629'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1565' e='1630' w='1628' out='1887'/>
+   </location>
+
+   <location num='1630'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits w='1629' out='1887'/>
+   </location>
+
+   <location num='1688'>
+      <name>Maze</name>
+      <desc>Available Directions: East, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1689' s='1752' out='1887'/>
+   </location>
+
+   <location num='1689'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1690' w='1688' out='1887'/>
+   </location>
+
+   <location num='1690'>
+      <name>Maze</name>
+      <desc>Available Directions: West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1626' w='1689' out='1887'/>
+   </location>
+
+   <location num='1691'>
+      <name>Maze</name>
+      <desc>Available Directions: East, North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1627' e='1692' s='1755' out='1887'/>
+   </location>
+
+   <location num='1692'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1628' e='1693' w='1691' out='1887'/>
+   </location>
+
+   <location num='1693'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1694' w='1692' out='1887'/>
+   </location>
+
+   <location num='1694'>
+      <name>Maze</name>
+      <desc>Available Directions: West, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits s='1758' w='1693' out='1887'/>
+   </location>
+
+   <location num='1752'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1688' s='1816' out='1887'/>
+   </location>
+
+   <location num='1753'>
+      <name>Maze</name>
+      <desc>Available Directions: East, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1754' s='1817' out='1887'/>
+   </location>
+
+   <location num='1754'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1755' w='1753' out='1887'/>
+   </location>
+
+   <location num='1755'>
+      <name>Maze</name>
+      <desc>Available Directions: West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1691' w='1754' out='1887'/>
+   </location>
+
+   <location num='1756'>
+      <name>Maze</name>
+      <desc>Available Directions: East, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1757' s='1820' out='1887'/>
+   </location>
+
+   <location num='1757'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1758' s='1821' w='1756' out='1887'/>
+   </location>
+
+   <location num='1758'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1694' s='1822' w='1757' out='1887'/>
+   </location>
+
+   <location num='1816'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1752' s='1880' out='1887'/>
+   </location>
+
+   <location num='1817'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1753' out='1887'/>
+   </location>
+
+   <location num='1818'>
+      <name>Maze</name>
+      <desc>Available Directions: East, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1819' s='1882' out='1887'/>
+   </location>
+
+   <location num='1819'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1820' w='1818' out='1887'/>
+   </location>
+
+   <location num='1820'>
+      <name>Maze</name>
+      <desc>Available Directions: West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1756' w='1819' out='1887'/>
+   </location>
+
+   <location num='1821'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1757' s='1885' out='1887'/>
+   </location>
+
+   <location num='1822'>
+      <name>Maze</name>
+      <desc>Available Directions: North, South</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1758' s='1886' out='1887'/>
+   </location>
+
+   <location num='1880'>
+      <name>Maze</name>
+      <desc>Available Directions: East, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1816' e='1881' out='1887'/>
+   </location>
+
+   <location num='1881'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1882' w='1880' out='1887'/>
+   </location>
+
+   <location num='1882'>
+      <name>Maze</name>
+      <desc>Available Directions: West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1818' w='1881' out='1887'/>
+   </location>
+
+   <location num='1883'>
+      <name>Maze (Dead End)</name>
+      <desc>Available Directions: East</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1884' out='1887'/>
+   </location>
+
+   <location num='1884'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits e='1885' w='1883' out='1887'/>
+   </location>
+
+   <location num='1885'>
+      <name>Maze</name>
+      <desc>Available Directions: East, West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1821' e='1886' w='1884' out='1887'/>
+   </location>
+
+   <location num='1886'>
+      <name>Start of Maze</name>
+      <desc>Available Directions: East, West, North</desc>
+      <desc>Landing Pad: Out</desc>
+      <exits n='1822' e='1887' w='1885' out='1887'/>
+   </location>
+
+   <location num='1887'>
+      <name>Labyrinth Interplanetary Starport</name>
+      <desc>You have entered the puzzle world of Labyrinth. From time to time, the world is completely re-done in order to provide a new puzzle.  The current puzzle was built on 5/23/2008.</desc>
+      <desc>Instructions:</desc>
+      <desc>* You can always return to the landing pad from any location by going OUT.</desc>
+      <desc>* Please do not share the route to the finish line with others, as it will ruin the fun.</desc>
+      <desc>* Please let MisterT know of any suggestions for events or puzzles.</desc>
+      <desc>* Enjoy!</desc>
+      <desc>To start the maze, you may go west. The Exchange is to the east.</desc>
+      <exits e='1888' w='1886'/>
+   </location>
+
+   <location num='1888' flags='eb'>
+      <name>Labyrinth Exchange</name>
+      <desc>Please do not trade commodities in which this planet currently has factories.  Thank you!</desc>
+      <desc>    The exit is back to the west.</desc>
+      <exits w='1887'/>
+   </location>
+
+</fed2-map>
+

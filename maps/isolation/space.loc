@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<fed2-map title='Isolation Space' version='6' editor='standard'>
+
+   <location num='331' flags='s'>
+      <name>Isolation Space</name>
+      <desc>The vastness of space is ever consumming.  Strange planetary readings are present.</desc>
+      <exits se='396'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Isolation Space</name>
+      <desc>The vastness of space is ever consumming.  Strange planetary readings are present.</desc>
+      <exits s='460' nw='331'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Isolation Space</name>
+      <desc>   There are only two planets in this system, and they are very close to the star. Thankfully your nano-chameleon suit is just as good at keeping out the heat of the sun as it is the cold of deep space!</desc>
+      <desc>   The planest glow deep, bright orange, much of then enveloped in fire. There&apos;s a small terraformed area surrounded by very thick firewalls where you can land your shuttle.</desc>
+      <exits n='396' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

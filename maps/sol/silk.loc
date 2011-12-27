@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<fed2-map title='Silk' version='1.00' from='391' to='Sol.Sol Space.2383'>
+
+   <location num='0'>
+      <name>store room</name>
+      <desc>dusty corners, piled up cartons</desc>
+   </location>
+
+   <location num='74'>
+      <name>SpaceBloom Conservatory</name>
+      <desc>Between the silksteel beams you can see the flinty gleam of stars. Small glow-orbs hang by delicate strands of silk, illuminating the bedding rows of SpaceBlooms. The Xiphosurans cultivate the rare blossoms, extracting their active constituents for commercial use. Not much is known of the complex life cycle of these flowers other than that they drift through space during the bloom cycle. Their critical use for the Xiphosurans is in launching the hatchlings on their complex migratory travels.</desc>
+      <desc>You notice a nearby tray of mixed spacebloom seedlings has just flowered. The tiny blossoms are brilliantly colored and exotically scented. Very tempting.</desc>
+      <exits se='139' out='139'/>
+   </location>
+
+   <location num='76' flags='a'>
+      <name>Ballooning stage</name>
+      <desc>The silk fiber beams rise in eight flat arrays to a high peak topped by a flat octagonal structural platform. The area is open to the stars and the solar wind. Xiphosurans arrive and climb to the high platform, launching hatchlings and SpaceBlooms to balloon through the depths of space.</desc>
+      <exits sw='139'/>
+      <events enter='mobiles.spider.2'/>
+   </location>
+
+   <location num='136'>
+      <name>Ars Conjectandi</name>
+      <desc>The chamber is one of smoothly polished seamless silksteel. Your footsteps echo softly as you approach the one visible feature in the room, a large inscription on the far wall of an equiangular spiral, in imitation of Archimedes. Under it appear the words, Eadem mutata resurgo.</desc>
+      <exits se='201'/>
+   </location>
+
+   <location num='139'>
+      <name>Euler Line</name>
+      <desc>The main beam of the structure gently rises here toward the ballooning stage. The protective glassteel dome arches overhead and flows to a gentle close at the airlock in the northeast. Bridges of silksteel arch out to the northwest and southeast.</desc>
+      <exits ne='76' se='204' sw='202' nw='74'/>
+   </location>
+
+   <location num='201'>
+      <name>Passageway</name>
+      <desc>Locked doors line the passageway. Writing etched into each door panel is in the native Xiphosuran script. At the far end of the passage is the sole open doorway.</desc>
+      <exits s='265' nw='136'/>
+   </location>
+
+   <location num='202'>
+      <name>Euler Line</name>
+      <desc>The main beam of the structure, a tapestry of silksteel cables, runs from the southwest to the northeast. A protective glassteel dome arches overhead.</desc>
+      <exits ne='139' sw='265'/>
+   </location>
+
+   <location num='204'>
+      <name>Chamber</name>
+      <desc>An arachnid hangs on a shimmering silk thread suspended from a beam high overhead. It continues vacuuming up the Cantor dust, ignoring you. You can hear soft humming sounds from the open doors around the chamber, the sounds audible above the constant swoosh of the hoover.</desc>
+      <exits e='205' s='268' nw='139'/>
+   </location>
+
+   <location num='205' flags='a'>
+      <name>Solar Prime</name>
+      <desc>Solar Sails: Imagine drifting across the seas of space slowly, yet steadily, gaining velocity until you have reached nearly the speed of light. Solar sails are a more elegant way of traveling to the stars. Using the slight pressure exerted by sunlight, the sail can reach enormous speeds. Arachnid workers are industriously creating solar sails here, spinning and weaving the finest silksteel.</desc>
+      <exits w='204'/>
+   </location>
+
+   <location num='262' flags='b'>
+      <name>Exchange Lounge</name>
+      <desc>The glassteel walls of the chamber allow you to relax back, sip your drink, and watch the shuttle craft arriving and departing. Clever traders keep an eye on the huge cargo ships, ever watching for unusual shipments that might affect the market.</desc>
+      <exits se='327'/>
+   </location>
+
+   <location num='265'>
+      <name>Euler Line</name>
+      <desc>The main beam of the structure, a tapestry of silksteel cables, runs from the southwest to the northeast. A protective glassteel dome arches overhead. Bridges of silksteel arch out to the north and east.</desc>
+      <exits n='201' ne='202' e='266' sw='328'/>
+   </location>
+
+   <location num='266'>
+      <name>Fifth Bridge</name>
+      <desc>The silksteel bridge soars in a magnificent bell curve joining the main colony walkway with commercial facilities modules to the south and southeast. Tourists and traders alike stand scattered along the bridge talking, staring out the glassteel walls, or striding purposefully along.</desc>
+      <exits se='331' s='330' w='265'/>
+   </location>
+
+   <location num='268'>
+      <name>Library</name>
+      <desc>A hodge-podge of information storage. Ancient scrolls in glassteel cases sit beside the newest panoramic holos. Several study tables in the center of the room are available for scholarly researchers.</desc>
+      <exits n='204'/>
+   </location>
+
+   <location num='327' flags='e'>
+      <name>Silk Exchange</name>
+      <desc>Holoscreens hang suspended by silk strands on either side of the Exchange. On one side the screens display the available or desired commodities whilst the other displays futures contracts and other market information. To the northwest is a set of double doors that continuously slide open and closed again as traders seek a quiet retreat. To the south, an archway leads back to the main walkway.</desc>
+      <exits s='391' nw='262'/>
+   </location>
+
+   <location num='328'>
+      <name>Euler Line</name>
+      <desc>The main beam of the structure, a tapestry of silksteel cables, runs from the southwest to the northeast. A protective glassteel tube arches overhead to protect the more vacuum vulnerable visitors to the colony.</desc>
+      <exits ne='265' sw='391'/>
+   </location>
+
+   <location num='330'>
+      <name>Normal Distribution Claims Office</name>
+      <desc>Packages, crates, and oddly shaped boxes hang everywhere tethered by silk strands. If a package goes missing anywhere in the Solar System, sooner or later, it probably turns up here. There's a constant stream of traffic at the Inquiries desk where two Xiphosurans patiently assist frazzled claimants.</desc>
+      <exits n='266'/>
+   </location>
+
+   <location num='331' flags='a'>
+      <name>Bespoke Engineering</name>
+      <desc>Engineers and project managers from all known space come to Bespoke Engineering to order the finest custom made silksteel fabrications. High shelves line the walls with displays of some of the products produced here. To one side is a long counter with display holos and order comm units. The comm units of the arachnid agents hiss sibilantly as they discuss specifications with their customers.</desc>
+      <exits nw='266'/>
+   </location>
+
+   <location num='391'>
+      <name>Silk Shuttle Pad</name>
+      <desc>The shuttle pad of Silk is a large octagonal field at the orthocenter of the asteroid. The entire facility is constructed of silksteel. Silksteel, the strongest known material in the solar system, is naturally produced by the Xiphosurans, an exosolar race of arachnids. The Xiphosurans, a nomadic race of brilliant mathematicians, spend much of their lives drifting through space on solar sails woven of their silksteel. The arachnids have their own incomprehensible method of communication but those who must have contact with citizens of the Galactic Federation use comm units to supply a rough translation. Signs in Galactic Standard English are mounted in public areas for the convenience of visitors. The main beam of the structure runs from the southwest to the northeast. Bridges of silksteel arch out to the north and east leading to the main visitor facilities.</desc>
+      <exits n='327' ne='328' e='392' sw='454'/>
+   </location>
+
+   <location num='392'>
+      <name>Constantly Euler</name>
+      <desc> It's always difficult to know what's acceptable and what's not from one culture to another. What seems harmless in one can be quite offensive in another. Silk is not bound by the rule of the Galactic Administration, therefore citizens of the Galactic Federation should take care not to offend the Xiphosurans. To the east is a quiet pub and southeast is the local branch of Armstrong Cuthbert.</desc>
+      <exits e='393' se='457' w='391'/>
+   </location>
+
+   <location num='393' flags='ba'>
+      <name>Sierpinsky lounge</name>
+      <desc>This cafe is renowned for the eye-catching complex carpet the arachnids wove as flooring. Behind the bar, a Xiphosuran leisurely dispenses beverages with 3 nimble appendages whilst holding a book of proofs in another. A pair of his eyes are focused on carefully pouring drinks, another pair on the book, and the third pair scan the scattering of traders, couriers, and merchants gathered at the small tables. A row of sparkling klein flasks is lined up on the bar waiting to be filled with Old Drosophila Ale.</desc>
+      <exits w='392'/>
+   </location>
+
+   <location num='454'>
+      <name>Egg Vault</name>
+      <desc>The finely spun silksteel arches far overhead, the myriad glistening filaments creating a vaulted cavern. Fibrous white egg cases hang from the radial beams, each globe supported by a single silksteel fiber. Xiphosurans glide among the structural fibers in a slow motion ballet, methodically pausing above each egg case to examine it. Ignoring the intrusion of visitors, the arachnids rapidly click to each other in their own speech.</desc>
+      <exits ne='391' out='391'/>
+   </location>
+
+   <location num='457' flags='c'>
+      <name>Armstrong Cuthbert Office</name>
+      <desc>Data units hang suspended by slender strands of silk from the dark overhead while the local Armstrong Cuthbert agent scuttles between them controlling the flow of traffic in and out of Silk's cargo facilities. It peers at you with its six beady shining eyes, distractedly waving documents with six of its eight appendages. A synthetic voice hisses out of the comm unit hanging on a silk loop from its cephalothorax, "Yesss, yesss, what do you want, I am busy here."</desc>
+      <exits nw='392'/>
+   </location>
+
+</fed2-map>

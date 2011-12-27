@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<fed2-map title='Katana' version='3' editor='standard' from='932' to='Kiddo.Kiddo Space.2203'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Events and Objects reside here.</desc>
+   </location>
+
+   <location num='869' flags='b'>
+      <name>The Sanctuary</name>
+      <desc>This is where Beatrix removes herself from the outside world to contemplate, enjoy her friends and family and recover from her many pursuits.  The entire residence has shiny black marble flooring, pinkish beige onyx walls and rustic distressed pine furniture.  The kitchen is modern and fully equipped, fresh herbs hanging to dry and colorful bowls of fruit and vegetables ripening on the counters.  There are no vidscreens or etablets, although speakers distribute haunting music throughout the home.  Exit SW to the LP.</desc>
+      <exits sw='932'/>
+   </location>
+
+   <location num='931' flags='e'>
+      <name>Katana Exchange</name>
+      <desc>Although replete with modern exchange price screens and computerized updates, this trade center looks more like a farmer&apos;s market.  Agricultural commodities, and expertly crafted goods are the specialties here, although all commodities are priced competitively.  The LP is due East.</desc>
+      <exits e='932'/>
+   </location>
+
+   <location num='932' flags='yrb'>
+      <name>Katana Launch Pad</name>
+      <desc>Beatrix named this planet in honor of her superb custom made katana which saved her life many times over.  The launch pad is located on a raised plain which overlooks fields of crops as far as the eye can see.  Winding rivers snake through the rich farmland, and few buildings exceed two stories.  The launch pad area is well maintained, but is relatively quiet compared to the traffic on some planets in this cartel.</desc>
+      <exits ne='869' s='996' sw='995' w='931'/>
+   </location>
+
+   <location num='995'>
+      <name>Training Grounds</name>
+      <desc>You see several people dressed in simple white robes, barefoot, carrying rocks in buckets from the quarry below, building a rock wall along one side of the Hanzo School.  They run up the hill with their loads, fighting exhaustion.  An elderly bearded man observes them, sipping a cup of tea.  Exits NE or SW.</desc>
+      <exits ne='932' sw='1058'/>
+   </location>
+
+   <location num='996'>
+      <name>Hanzo School of Martial Arts</name>
+      <desc>Many visitors to Katana come for advanced instruction in martial arts, for experts have assembled here to advance their art.  Very few are accepted into the program, because character weighs even more heavily than skill.  The masters are demanding, and a great many eager students lose their enthusiasm and depart.  Those that remain achieve skills beyond their expectations.  Exit North.</desc>
+      <exits n='932'/>
+   </location>
+
+   <location num='1058'>
+      <name>Shirasaya Farm</name>
+      <desc>A small scale, organic farm, Shirasaya&apos;s output is prized for its freshness and intense flavor and is exported throughout the cartel.  Polyculture is practiced, where several crops are grown in the same space, requiring expertise and close attention.  You can tell from the size of the vegetables that harvest time is close at hand.  Exits are SW and NE.</desc>
+      <exits ne='995' sw='1121'/>
+   </location>
+
+   <location num='1121'>
+      <name>Tanto Farm</name>
+      <desc>A livestock and poultry farm, Tanto provides animals with natural, humane living conditions with free ranging outdoor access for grazing and exercise as the norm.  Feed is all natural and not supplemented with substances that can eventually be absorbed by the consumer.  Exits are SE and NE.</desc>
+      <exits ne='1058' se='1186'/>
+   </location>
+
+   <location num='1186'>
+      <name>Wakazashi Farm</name>
+      <desc>A rice plantation, the fields are currently flooded with young seedlings having just been set.  You notice a dam and channels that have been built so as to provide the necessary water for the crops.  The flooding method of crop production also minimizes damage from vermin.  Quite a few different varieties are grown here, including jasmine, basrati, inari, brown and black rices.  Exits SE or NW.</desc>
+      <exits se='1251' nw='1121'/>
+   </location>
+
+   <location num='1251'>
+      <name>Musashi Orchards</name>
+      <desc>Set in a valley sheltered from winds and colder temperatures, these orchards produce succulent peaches, several apple varieties, pears, plums and even pecans.    Katanans enjoy picking their own fruit, and the farm provides baskets and ladders to their customers, which in turn saves on labor for the orchard owner.</desc>
+      <exits s='1315' nw='1186'/>
+   </location>
+
+   <location num='1315'>
+      <name>Qing Farm</name>
+      <desc>You come to a a sea of red and pink, a bog where cranberries are being grown.  The vines are planted and flooded from time to time, but the natural moistness of the sandy soil provides the necessary moisture.  When ripe, the cranberries are picked dry so as to minimize bruising, although some are picked when flooded and used for juice.</desc>
+      <desc>Exits SW and North.</desc>
+      <exits n='1251' sw='1378'/>
+   </location>
+
+   <location num='1378'>
+      <name>Mamba River Bridge</name>
+      <desc>One of the widest and longest rivers on Katana,  the Mamba serves for recreation, transportation of crops, a home for multiple varieties of fresh water fish, and irrigation for the farmland.  This suspension bridge is cable stayed, all white, seemingly delicate in design but built to withstand tremendous winds and even earthquakes.  Bicycle lanes and pedestrian lanes are well utilized in addition to the normal pod traffic.  Exits SW or NE.</desc>
+      <exits ne='1315' sw='1441'/>
+   </location>
+
+   <location num='1441' flags='b'>
+      <name>Bamboo Cafe</name>
+      <desc>Overlooking the Mamba River, with umbrella tables all along the riverfront, the Bamboo Cafe features the freshest produce and meat from neighboring farms, prepared with skill and respect for the fresh ingredients.  The menu changes weekly according to what is being currently harvested, and it is such a popular dining spot that reservations must be made weeks in advance.  Exits South or NE.</desc>
+      <exits ne='1378' s='1505'/>
+   </location>
+
+   <location num='1505' flags='hi'>
+      <name>Kiddo Wellness Center</name>
+      <desc>Although a fully equipped hospital capable of treating all illnesses and injuries, the Kiddo Wellness Center focuses on preventative medicine, including nutrition, genetic testing, early diagnosis and good life habits.  If you woke up here, don&apos;t forget to insure!  Exits North or SE.</desc>
+      <exits n='1441' se='1570'/>
+   </location>
+
+   <location num='1570'>
+      <name>Dragon Playhouse</name>
+      <desc>Original plays are presented here year round by a permanent acting troupe.  Many of the productions are experimental theater, although some classics are included in the schedule every year.  A good portion of the Dragon Playhouse personnel work part time on farms, but come when they are available to sew costumes, build sets and contribute as their talents dictate.  Exits are SE or NW.</desc>
+      <exits se='1635' nw='1505'/>
+   </location>
+
+   <location num='1635' flags='b'>
+      <name>Viper Club</name>
+      <desc>One of the few nightclubs on Katana, the Viper Club usually has both a comic and  a musical group to entertain its patrons each night.  Its specialty drink is called the Venom Strike, the ingredients a closely held secret.  A large dance floor is generally crowded when the dance music starts up.  People tend to come here with groups of friends.</desc>
+      <desc>Exits are South or NW.</desc>
+      <exits s='1699' nw='1570'/>
+   </location>
+
+   <location num='1699'>
+      <name>Mulberry Grove</name>
+      <desc>You immediately notice the mulberry trees, but upon closer inspection you realize the trees are swarming with silkworms, and that this is a domestic silkworm farm.  After gorging on the mulberry leaves, the worms spin cocoons made of silk, which is how raw silk is produced.  The silk produced here is strong and is the biggest money-making crop on Katana.  Exits</desc>
+      <exits n='1635' sw='1762'/>
+   </location>
+
+   <location num='1762'>
+      <name>The Bride - A Wedding Chapel</name>
+      <desc>Nestled among moss draped trees, you come to a beautiful chapel, all painted white, surrounded by flowering shrubs.  Couples who want to keep things simple and romantic exchange vows here.  The Chapel provides coordinators who ensure that the happy couple and their friends and family can relax and enjoy their joyous occasion.  Exits NE and SW.</desc>
+      <exits ne='1699' sw='1825'/>
+   </location>
+
+   <location num='1825'>
+      <name>The Path</name>
+      <desc>As you look back, you realize that the road you have taken from the LP moves in a serpentine shape through the countryside.  Ahead the road narrows to a footpath, wild berries budding in the bushes crowding out the path.  You hear the rustling of small animals, birds singing brightly all around you.  You wish you had more time to explore.  The road back to the LP is NE.</desc>
+      <exits ne='1762'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<fed2-map title='Hopeless' version='3' editor='standard' from='394' to='Esperanza.Esperanza Space.66'>
+
+   <location num='0' flags='t'>
+      <name>storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='330' flags='hi'>
+      <name>Hospital</name>
+      <desc>Moaning eminates from sunken beds covered in dirty stained sheets. Rusted poles hold leaking bottles of stuff with hoses and needles swimming around them.</desc>
+      <desc>The exit is south.</desc>
+      <exits s='394'/>
+   </location>
+
+   <location num='393'>
+      <name>Shipyard</name>
+      <desc>The ships are cheap here. That&apos;s about all that can be said.</desc>
+      <desc>The exit is east.</desc>
+      <exits e='394'/>
+   </location>
+
+   <location num='394'>
+      <name>Hopeless Landing Pad</name>
+      <desc>Dirt and weeds swirl around in hot fetid breeze. The stench of decay and mold is bad enough to make the grounds crew tie their masks tight.</desc>
+      <desc>West is a shipyard, north a hospital, south a bar, and east is the exchange.</desc>
+      <exits n='330' e='395' s='458' w='393'/>
+   </location>
+
+   <location num='395' flags='e'>
+      <name>The exchange</name>
+      <desc>Screens flicker and buzz as they seem to struggle to remain alive. Connecting cords appear to be melting and the floor is dirty. The exit is west.</desc>
+      <exits w='394'/>
+   </location>
+
+   <location num='458' flags='b'>
+      <name>Sticky Bar</name>
+      <desc>The room is very dim which is probably a good thing considering it hasn&apos;t been given a good cleaning in over a hundred years.</desc>
+      <desc>The exit is north.</desc>
+      <exits n='394'/>
+   </location>
+
+</fed2-map>

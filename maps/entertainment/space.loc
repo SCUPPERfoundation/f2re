@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<fed2-map title='Entertainment Space' version='9' editor='standard'>
+
+   <location num='201' flags='s'>
+      <name>Orbiting Planet Movies</name>
+      <desc>Seemingly out of place here in the void of space is the artificial planet Movies.  Roughly the size of a standard moon, this constructed giant serves as the center of visual entertainment production for the Known Galaxy.  Two massive satellite stations positioned near the relative poles of the planet radiate with intense light at controlled intervals giving the planet the ability to adjust the effect of day and night as needed.  Even from space the activity on the ground is apparent as flashes of light, explosions, and city-sized Monsters can be seen.  Located in a fixed orbit around Movies are several directional buoys.</desc>
+      <desc>SOUTH - Interstellar Link</desc>
+      <desc>SOUTH-WEST - The &quot;Laughing Gas&quot; Nebula and Space-station Games</desc>
+      <desc>SOUTH- EAST - Planetoid (UNDER CONSTRUCTION)</desc>
+      <exits se='266' s='265' sw='264'/>
+   </location>
+
+   <location num='264' flags='s'>
+      <name>The &quot;Laughing Gas&quot; Nebula and Space-station Games</name>
+      <desc>An eerie nebulous cloud expands throughout this region of space.  Currents of multi-colored gas ebb and swirl in seemingly random directions.  In the distance, only barely visible through the dense cloud, a large man-made structure comes into view.  Not large enough to be called a planet, or a moon for that matter; Space-station Games rests at the heart of the nebula.  The structure of the station is a perfect cube, with panels on the walls painted different colors.   The walls of the station rotate and move, sometimes aligning all the same color panels on the same wall, or mixing all the colors together.  Is this actually a Space-station, or just the largest Rubix Cube in existence?</desc>
+      <desc>EAST - Entertainment System Interstellar Link</desc>
+      <desc>NORTH-EAST - Planet Movies</desc>
+      <exits ne='201' e='265'/>
+   </location>
+
+   <location num='265' flags='sl'>
+      <name>Entertainment System Interstellar Link</name>
+      <desc>Located here is the Interstellar jump beacon for the Entertainment System.  Cluttering the space around the beacon are scores of advertisement satellites beaming pictures of various up-coming shows and events to your NAVCOMP screen.  The sheer amount of space junk in the area would make it difficult to navigate successfully without some quality piloting skills.  Standing out among the endless space garbage are three directional buoys that guide traffic throughout the system.</desc>
+      <desc>NORTH - Planet Movies</desc>
+      <desc>West - The &quot;Laughing Gas&quot; Nebula and Space-station Games</desc>
+      <desc>East - Planetoid (UNDER CONSTRUCTION)</desc>
+      <exits n='201' e='266' w='264'/>
+   </location>
+
+   <location num='266' flags='s'>
+      <name>Un-developed Planetoid in the Entertainment System</name>
+      <desc>Throughout this region of space countless ships ferrying supplies and construction equipment fly in seemingly random directions in support of developing a new planet.  It is not obvious yet as to the identity of the new planet, but who knows what the futures holds!  Tethered to two Barges are some directional signs.</desc>
+      <desc>WEST - Interstellar Link</desc>
+      <desc>NORTH-WEST - Planet Movies</desc>
+      <exits w='265' nw='201'/>
+   </location>
+
+</fed2-map>

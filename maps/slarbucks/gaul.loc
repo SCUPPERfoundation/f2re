@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<fed2-map title='Gaul' version='1.00' editor='standard' from='587' to='Slarbucks.Slarbucks Space.392'>
+
+   <location num='0'>
+      <name>Store-room sponsored by MicroHard</name>
+      <desc>   You wonder why a store-room, that nobody can enter or leave would receive corporate sponsorship. That&apos;s just counter-intuitive, but hey, if they want to pay for it, who&apos;s to stop them?</desc>
+      <desc>  By the way, if you find yourself in this room, please e-mail DSGvertz@buffalo.edu to alert Asterix to this problem.</desc>
+   </location>
+
+   <location num='264'>
+      <name>Elevator - brought to you by PespiCo.</name>
+      <desc>   The elevator dings and the door opens, revealing Gaul&apos;s Terminus Mall.</desc>
+      <desc>   A synthetic voice chimes, &quot;Welcome to Gaul&apos;s main shopping area, refreshments are available as well as music and books, have a nice day.&quot;</desc>
+      <desc>   You may step out of the elevator here, or go up or down to another floor.</desc>
+      <exits up='651' down='328' out='847' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='328'>
+      <name>Elevator - brought to you by Pespi Co.</name>
+      <desc>   The elevator dings and the doors open. There is a completely baron hallway outside the doors. The synthetic voice does not chime in with any message.</desc>
+      <desc>   You can step out of the elevator or continue up or down.</desc>
+      <exits up='264' down='392' out='1167' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='392'>
+      <name>Elevator - brought to you by PespiCo.</name>
+      <desc>   The elevator dings and the doors open, showing the Terminus lobby.</desc>
+      <desc>   A synthetic voice chimes in and says, &quot;This is the bottom floor of the Terminus, you may go upstairs to the rest of the Terminus or step out of the elevator into the lobby, have a nice day.&quot;</desc>
+      <exits up='328' out='1484' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='587'>
+      <name>Gaul Terminus - top floor EX: IN</name>
+      <desc>   The top floor of the Terminus is so close to the link that you are afraid that the ships appearing and disappearing in showers of tachyons will cause the sky to fall on your head!</desc>
+      <desc>   Walking around the main concourse of this floor, which has a huge area for all people boarding and un-boarding shuttles to and from their ships, you notice that the every inch of the walls are covered with advertisements for various companies. The ceiling is lit-up with a running display of a car commercial, and when that advertisement gets too bright for your eyes, you look down and see that the ground on which you walk is brought to you by the local phone company.</desc>
+      <desc>   There is a ship repair shop and a shipyard to the East. An elevator leading down through the rest of the Terminus and to the planet&apos;s surface is South.</desc>
+      <desc>   An express elevator leading straight to the exhange for those who need it is open, waiting for anyone to step IN.</desc>
+      <desc>   Armstrong Cuthbert has set up their local office here.</desc>
+      <exits e='588' s='651' in='1483' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='588' flags='yr'>
+      <name>Shiny Happy Shipyards Inc.</name>
+      <desc>   This is really just your basic ship repair/shipyard service. If your ship has been damaged, you may want to contact your lawyer to make sure you get photos of the damage before you get it repaired, and if you just want to purchase a new ship, you can go ahead and do that here, one of the droids will be happy to help.</desc>
+      <exits w='587' out='587' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='651'>
+      <name>Elevator - brought to you by PespiCo.</name>
+      <desc>   The elevator dings and the doors open, revealing the top floor of Gaul&apos;s Terminus building.</desc>
+      <desc>   A synthetic voice chimes in and says, &quot;Welcome to the top floor of our Terminus building, you may step out of the elevator and board a shuttle here or you can continue downstairs and visit the rest of the Terminus. Have a nice day.&quot;</desc>
+      <exits n='587' down='264' out='587' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='781'>
+      <name>Hye - Music that you have to love</name>
+      <desc>   As you enter the store, you hear that the radio is blaring that new trendy song that everyone&apos;s been singing the last few days.</desc>
+      <desc>   The lady behind the counter is dressed head-to-toe in the trendiest clothing of all - MOM descript hat, shirt, jeans, shoes and of course the brand new MOM descript glasses. She gives you a look of disdain as if to say, &quot;If you need my help, you&apos;re not nearly cool enough to shop here.&quot;</desc>
+      <desc>   You peruse the shelves and find only the most popular bands and albums.</desc>
+      <desc>   If you were looking for anything that hasn&apos;t been on the radio in the last three days, you&apos;re definitely in the wrong place.</desc>
+      <desc>   The exit is to the Southeast.</desc>
+      <exits se='846' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='783'>
+      <name>North Wing, brought to you by The North Visage clothing company</name>
+      <desc>   The growing popularity of nano-chameleon clothing has rendered these stores completely obsolete, and as such they have been closed for business. Nobody has yet found a purpose for this area, so none of the space is being rented out at this moment.</desc>
+      <desc>   The main concourse lies to the South.</desc>
+      <exits s='847' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='785'>
+      <name>Left-Handers Anonymous</name>
+      <desc>   As you force your way into Left-Handers Anonymous, the first thing you notice is that all the walls are painted a deep blue, all the people who work here wear the same shade of blue.</desc>
+      <desc>   Other liberals are walking around the store fretting at how much paper was used for each book, but they are reassured when a manager explains to them that every book in the store is made from recycled paper that has been re-used three or four times, at least.</desc>
+      <desc>   A sign next to the cash register proclaims that all employees make the same amount of money, regardless of their tasks and all employees receive the same benefits regardless of their seniority.</desc>
+      <desc>   You hear a pair of people behind you talking about Gaul&apos;s new leader, Asterix.</desc>
+      <desc>   &quot;I&apos;m glad someone is finally working for workthing equality,&quot; says one.</desc>
+      <desc>   &quot;Yes, and his background in Political Science is really going to prove useful,&quot; says the other.</desc>
+      <desc>   The exit back to the main concourse is southwest from here.</desc>
+      <exits sw='848' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='845' flags='b'>
+      <name>Thumper&apos;s Beat Box</name>
+      <desc>   The bland music from the mall is quickly drowned out upon entering this raucous music store that is just a poor excuse to have a party and get paid for it. Thumper&apos;s cashiers are in the middle of the floor dancing along with the beat. They invite you out to the floor to join them in the dancing and fun.</desc>
+      <desc>   Because of this store&apos;s popularity, McTonald&apos;s opened up an express service here where you can buy food and drinks as you shop for music to dance by.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='846' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='846'>
+      <name>The West Wing, brought to you by Gaul&apos;s Broadcast Company, GBC</name>
+      <desc>   The West Wing of the shopping mall contains the music stores, whose sales determine what the radio stations play, which in turn determines what people listen to, which in turn determines what people buy.</desc>
+      <desc>   You decide not to contemplate this circular logic any further, and look inside the store windows. The Indie Rock store is to the Southwest, the Hip-Hop/R&amp;B store is to the West and the Bubble-gum Pop store is to the Northwest.</desc>
+      <desc>   The main concourse is to the East.</desc>
+      <exits e='847' sw='909' w='845' nw='781' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='847'>
+      <name>Terminus - 76th Floor, main shopping area</name>
+      <desc>   The main concourse of the 76th floor expands in all Cardinal directions. The floor opens up into a shopping center, complete with a food court and a plethora of stores that sell things that you&apos;re sure you dont need. Just like every area of this building, all you can see when you look around are advertisements for companies and products that you&apos;re not even sure are sold in this mall or even on this planet!</desc>
+      <desc>   A directory shows that the food court is to the south, the clothing stores are to the north, music stores are to the west and the politics stores are to the east.</desc>
+      <desc>   The elevator doors are open, waiting for anyone to step in.</desc>
+      <exits n='783' e='848' s='911' w='846' in='264' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='848'>
+      <name>The Political Bookstore Strip</name>
+      <desc>  You are walking along one of the few un-sponsored parts of the Terminus building: The Political Bookstore Strip. The entire area looks completely out of place, because of the lack of flashing signs, and other such advertisements.</desc>
+      <desc>   Another thing that makes this section of the mall look odd is that the book stores have lines leading all the way out of the stores. Why would a corporation not jump at the possibility to have this many potential viewers of advertisements?</desc>
+      <desc>   You shrug as you consider that question, and you note that the store Left-handers anonymous, representing the liberals is to the northeast. Indecisive Independants is to the east, and Right of Way is to the southeast.</desc>
+      <desc>   The main concourse is back to the west.</desc>
+      <exits ne='785' e='849' se='913' w='847' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='849'>
+      <name>Indecisive Independants</name>
+      <desc>   Indecisive Independants is a book-store designed for those people who won&apos;t let things like media-bias determine how they vote. The store is full of literature that adequately represents both sides of the political spectrum. That must be why it has the fewest shoppers!</desc>
+      <desc>   You overhear a conversation between a few of the patrons behind you.</desc>
+      <desc>   &quot;Asterix doesn&apos;t have much experience, though, how can he be a leader?&quot; asks one.</desc>
+      <desc>   &quot;He does have a degree in Political Science, maybe he knows what he&apos;s doing. What worries me is that he didn&apos;t even want to be our leader, his company and his family forced him into the seat of power,&quot; replies the other.</desc>
+      <desc>   The exit is back to the west.</desc>
+      <exits w='848' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='909'>
+      <name>I-N-D Music shop</name>
+      <desc>   As you enter this music store, the first thing you notice is that the song playing over the sound system is nothing you&apos;ve ever heard. If you wanted to hear a song that has been on the radio even once since stardate 000000 : 0010 then you are in entirely the wrong place.</desc>
+      <desc>   The young man behind the counter stares at your relatively fashionable clothes and sneers at you, apparently for caring about what you look like.</desc>
+      <desc>   The exit is to the northeast.</desc>
+      <exits ne='846' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='911' flags='b'>
+      <name>The Slarbucks food court</name>
+      <desc>   Delicious smells waft through your nose from all directions, and you don&apos;t even know where to sit. Booths line the enclosed space designated for consumption, while there are tables and chairs all around the center of the area.</desc>
+      <desc>   Hundreds of happy but hungry shoppers wait in line at the various eateries to buy their greasy, fatty treats. The line for pizza seems to be the shortest.</desc>
+      <desc>   Waitdroids glide around the eating area with ease, bringing drinks to the patrons, courtesy of Slarbucks.</desc>
+      <desc>   You can exit to the main concourse by going north.</desc>
+      <exits n='847' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='913'>
+      <name>Right of Way</name>
+      <desc>   Right of Way is less like a book store and more like a non-stop party. The sign next to the cash-register states that it has been 15 elections since the conservatives have lost a single seat in parliament, and that they have been steadily gaining seats during that time.</desc>
+      <desc>   Because of that, the sign continues, all books are free every day for members of the Conservative Party.</desc>
+      <desc>   Registration forms are piled up on the counter next to the sign.</desc>
+      <desc>   Right of Way contains all sorts of conservative literature, from &quot;Liberals, and Other Terrible Mistakes,&quot; by Al Franken Jr. to classics like, &quot;How to Talk to a Liberal (If you Must),&quot; by former president, Anne Coulter.</desc>
+      <desc>   You overhear two customers arguing about Gaul&apos;s leader, Asterix.</desc>
+      <desc>   &quot;That hippie-freak won&apos;t know what to do when stronger planets, like Lair try to invade, we&apos;re screwed,&quot; says one.</desc>
+      <desc>   &quot;Yeah, that pinko commie rat is probably going to run our economy into the ground, too!&quot;</desc>
+      <desc>   The exit is to the northwest.</desc>
+      <exits nw='848' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1103'>
+      <name>Interstellar Travel</name>
+      <desc>   You step into what is a very plain office. No pictures or conferred degrees hang on the wall, and the occupant is not present. The sign on the desk - which is entirely free of clutter - reads &quot;Office of the under-secretary of Interstellar Travel,&quot; so you assume that&apos;s what this office is for - since there are no other indicators!</desc>
+      <desc>   There is nothing of interest in the office at the moment, snce the occupant isn&apos;t here and all the drawers in the desks and filing cabinets are locked!</desc>
+      <desc>   The exit is to the South.</desc>
+      <exits s='1167' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1104'>
+      <name>Customs</name>
+      <desc>   You step into what is a very plain office. No pictures or conferred degrees hang on the wall, and the occupant is not present. The sign on the desk - which is entirely free of clutter - reads &quot;Office of the under-secretary of Customs and Inter-planetary relations,&quot; so you assume that&apos;s what this office is for - since there are no other indicators!</desc>
+      <desc>   The cabinets behind the desk have glass doors and reveal all kinds of interesting materials, the one that strikes your eye the most, though, is the French-English dictionary on the top shelf.</desc>
+      <desc>   The door is to the South.</desc>
+      <exits s='1168' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1167'>
+      <name>Terminus - 13th floor</name>
+      <desc>   This floor houses government and bureaucratic offices that are related with interstellar travel, customs and zoning laws. Obviously these offices were strategically placed here to avoid having too many unwanted visitors!</desc>
+      <desc>   In fact, it would seem that all visitors were unwanted as there are no signs on the hallways to tell people which door leads to which offices!</desc>
+      <desc>   There are doors to the North and the South and the hallway continues to the East.</desc>
+      <desc>   The elevator doors are open, waiting for someone to step in.</desc>
+      <exits n='1103' e='1168' s='1231' in='328' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1168'>
+      <name>Hallway</name>
+      <desc>   This section of the hallway looks exactly like the last section, completely non-descript, and very quiet. The walls are painted an off-white, with a horizontal green stripe in the middle.</desc>
+      <desc>   There is a door to the North and the hallway continues to the West.</desc>
+      <exits n='1104' w='1167' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1231'>
+      <name>Zoning</name>
+      <desc>   You step into what is a very plain office. No pictures or conferred degrees hang on the wall, and the occupant is not present. The sign on the desk - which is entirely free of clutter - reads &quot;Office of the under-secretary of the Zoning Department,&quot; so you assume that&apos;s what this office is for!</desc>
+      <desc>   There is nothing of interest here, as the occupant must be out for the day.</desc>
+      <desc>   The exit is to the North.</desc>
+      <exits n='1167' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1419' flags='b'>
+      <name>The Terminal Snack Bar</name>
+      <desc>   Just another unfortunate use of the word Terminus. You find it quite hard to get hungry at the Terminal Snack Bar, but you try anyway. They say the house piza is actually quite good.</desc>
+      <desc>   At a table near where you enter, two people discuss the merits of Gaul&apos;s leader, Asterix.</desc>
+      <desc>   &quot;I don&apos;t know, he just doesn&apos;t seem like he&apos;s a strong leader. I wish they would&apos;ve brought in that Necrose from Lair. Now THERE&apos;S a strong leader!&quot; exclaims one.</desc>
+      <desc>   &quot;A strong leader if you want to start a war with every planet in FedSpace! I think we need to give Asterix a chance, he wants peace throughout the land. And anyway, he&apos;s just so gosh-darn handsome,&quot; replies the other.</desc>
+      <desc>   &quot;I guess, but have you heard about what he&apos;s been doing with his time since he&apos;s been out of cryo-stasis? He&apos;s been drifting around Sol, sleeping in bars for crying out loud,&quot; responds the first.</desc>
+      <desc>   The conversation trails off and you can no longer hear it. The exit back to the lobby is to the Southeast.</desc>
+      <exits se='1484' out='1484' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1421'>
+      <name>Jewelry Store</name>
+      <desc>   The Terminal Jewelry Store - Gaul&apos;s final destination for flashy items. The displays are lined with gold and silver, necklaces, bracelets and rings. Everything that could catch anyone&apos;s attention and keep it from how poor they really are is sold here.</desc>
+      <desc>   You can overhear yet another conversation going on about Gaul&apos;s leader, Asterix, as there must be in every corner of this planet.</desc>
+      <desc>   &quot;He&apos;s just a student, what does he possibly know about running an entire planet? My dog has more real-world experience then he does,&quot; says one person.</desc>
+      <desc>   &quot;I don&apos;t know, there&apos;s something about him, he knows his history. He knows what has worked in the past and what will work again in the future, and he has studied with today&apos;s great leaders, he should be successful,&quot; replies another.</desc>
+      <desc>   The exit is to the Southwest.</desc>
+      <exits sw='1484' out='1484' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1483' flags='e'>
+      <name>Gaul Exchange LP: IN</name>
+      <desc>   Ah, the exchange! The heart of any capitalist society! The blood, the beating heart, the source of every groat that flows into the treasury.</desc>
+      <desc>   The Gaul Exchange is similar to most exchanges, with Merchants in one end, buying and selling in loud voices making thousands upon thousands of groats per trade. Traders are in the far end, sitting quietly and praying to Bella that the price on some futures contract doesn&apos;t drop too far before trading is no longer suspended. Yet a third section of the exchange is taken up by the CEO&apos;s looking to buy depots and factories.</desc>
+      <desc>   The exit is to the East, and there is an express elevator to the landing pad with its doors open, waiting for anyone to step in.</desc>
+      <exits e='1484' in='587' out='1484' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1484'>
+      <name>Terminus - Lobby</name>
+      <desc>   Despite the immense number of people in the Terminus lobby, it is quite easy to get around. Like the top floor, every inch of this place is covered by advertisements and billboards. All services are available on this floor and there is an exit out onto the street which will leave you in downtown Gaul.</desc>
+      <desc>   The directory, which you note with amusement is brought to you by Shiny Happy Workthings inc. is actually physically handed to you. It shows that the exchange is to the West, a cafe is to the Northeast and a jewelry store to lies to the Northeast.</desc>
+      <desc>   The immensity of the lobby requires three separate exits in each Southerly direction.</desc>
+      <desc>   An elevator waits with its doors open, waiting for anyone to step in.</desc>
+      <exits ne='1421' se='1548' s='1548' sw='1548' w='1483' nw='1419' in='392' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1545'>
+      <name>Supreme Court</name>
+      <desc>   Upon entering Gaul&apos;s highest court, the Supreme Court of Gaul, you are impressed at the size and intensity of the building. The marble columns that adorn the entrance are especially intimidating, even more so is the large security guard checking IDs and blocking the entrance.</desc>
+      <desc>   Luckily, you&apos;re not awaiting trial for anything right now, so you decide it would be best not to bother the guard who seems to be busy with an especially rowdy person trying to gain entrance.</desc>
+      <desc>   Main Street is to the South.</desc>
+      <exits s='1609' out='1609' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1546'>
+      <name>Police Station</name>
+      <desc>   Book &apos;em Danno! That&apos;s the first thing you think when you enter the police station.</desc>
+      <desc>   As always, there are conversations about Gaul&apos;s new leader, Asterix going on in all corners of the room.</desc>
+      <desc>   &quot;Under Asterix&apos;s guidance, funding has increased tenfold for the police station, leading some to believe that he doesn&apos;t care about Civil Liberties,&quot; says one officer.</desc>
+      <desc>   &quot;Yeah, but he hired that damn workthing to be our police lieutennant, obviously he isn&apos;t tough enough on crime,&quot; responds another angrily.</desc>
+      <desc>   The exit back to Main Street is to the South.</desc>
+      <exits s='1610' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1548'>
+      <name>Terminus Foyer</name>
+      <desc>   The hustle and bustle of the terminus is most evident here, with streams of people coming in and out of the Terminus. People brush past you as you stand in the middle of the foyer. Outside you can see the streets of downtown Gaul, and to the North you can see the lights of the advertisements inside the Terminus lobby.</desc>
+      <exits n='1484' ne='1484' s='1612' nw='1484' in='1484' out='1612' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1608'>
+      <name>Gaulcatraz</name>
+      <desc>   Gaul&apos;s main prison, from which no inmate has ever escaped stands before you. You thank your lucky stars that you have not committed any crimes, as you notice a bus-load of criminals dropped off in front of the gates. According to the prisoners&apos; ID tags, the crimes they have committed range from &quot;Speaking in French in a public place.&quot; To &quot;Suggesting that there might be too much advertising in the Terminus building.&quot; Oh, and there&apos;s a murderer in the back of the bus.</desc>
+      <desc>   Luckily, they all go to the same prison. The exit is to the East.</desc>
+      <exits e='1609' out='1609' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1609'>
+      <name>Main Street</name>
+      <desc>   Main Street ends here in a cluster of Federal buildings. Gaul&apos;s Supreme Court is to the North, the main prison is to the West, and the Hospital is to the Southwest.</desc>
+      <exits n='1545' e='1610' sw='1672' w='1608' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1610'>
+      <name>Main Street</name>
+      <desc>   You are walking along Main Street, which is an east/west road, and you are closer to the Federal buildings, the first of which, the Police Station is to the North. The road continues and there are a cluster of buildings where the road ends to the West.</desc>
+      <exits n='1546' e='1611' w='1609' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1611'>
+      <name>Main Street</name>
+      <desc>   You are walking along Main Street which is an east/west road extending from the Federal buildings in the West past the Terminus building which still looms large on the Northeastern horizon and all the way to the East side of Gaul, ending in Alphabet City.</desc>
+      <exits e='1612' w='1610' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1612'>
+      <name>Main and Delaware</name>
+      <desc>   You are walking along the intersection of Main Street and Delaware Avenue. Main Street is the connecting street that goes past the Terminus to the North, the federal buildings to the West and Alphabet City, Gaul&apos;s East side.</desc>
+      <desc>   Delaware Avenue continues to the South. The strip contains Gaul&apos;s main bars.</desc>
+      <exits n='1548' e='1613' s='1676' w='1611' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1613'>
+      <name>Main Street</name>
+      <desc>   You are walking along Main Street, which is an East/West road going from Gaul&apos;s federal buildings, past the Terminus and towards Alphabet City.</desc>
+      <exits e='1614' w='1612' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1614'>
+      <name>Alphabet City</name>
+      <desc>   You are standing in Gaul&apos;s East Side, commonly referred to as Alphabet City because the buildings are lettered instead of numbered. The buildings are dilapidated, nothing like anything you would have seen in any other part of town. Obviously tax dollars don&apos;t get spent on maintenance around here.</desc>
+      <desc>   There are dirty, run-down buildings all around, and the one to the East has had it&apos;s lock broken and you can enter it. Main Street continues to the West.</desc>
+      <exits e='1615' w='1613' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1615'>
+      <name>Apartment Building Lobby - Building B</name>
+      <desc>   This is an industrial housing project in all its glory. Each building in this area is entirely identical to the next. The worst part of them is that there is no elevator. You pity the poor souls who live on the upper floors!</desc>
+      <desc>   The stairwell is locked so that only residents can walk up to their apartments, but surprisingly, the stairway leading down to the basement has been left unlocked.</desc>
+      <desc>   The exit back onto Main Street is to the West.</desc>
+      <exits w='1614' down='2188' out='1614' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1672' flags='hi'>
+      <name>Hopelessly under-funded Hospital</name>
+      <desc>   Gaul&apos;s hospital/insurance claims office is just one small room. In one end of the room is the triage nurse/receptionist who gives a first assessment of patients and also takes appointments for claims adjustments. The Insurance officer/surgeon sits behind his desk/gurney waiting for the next patient/applicant.</desc>
+      <desc>   The exit back to Main Street is to the Northeast.</desc>
+      <exits ne='1609' out='1609' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1675' flags='b'>
+      <name>The Cheat Sheet</name>
+      <desc>   This is a dive bar that students at the local university frequent for two reasons: First, the drinks are cheap and second, they don&apos;t check ID!</desc>
+      <desc>   There is a menu on a chalk board behind the bar, but only two items are written on it: Beer and Pizza. Take your pick!</desc>
+      <desc>   The exit back to Delaware Avenua is to the East.</desc>
+      <exits e='1676' out='1676' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1676'>
+      <name>Delaware Avenue - The Strip</name>
+      <desc>   You are walking along Delaware Avenue&apos;s main attraction: The Strip, which contains Gaul&apos;s four most notorious bars. Each bar has its own theme and purpose.</desc>
+      <desc>   To the Southwest, is Bottoms Up! a pretty low-class establishment, according to your brochure. The police have attempted to shut it down many different times, but have been completely unsuccessful. To the West is The Cheat Sheet, a rowdy bar that serves cheap beer to college students. On the East side of Delaware Avenue is The Uptown Club, a high-end bar that serves champaign and only the best wine from Sauterne. And finally, to the Southeast is Home Plate, a sports bar that serves the best baby back ribs in all of FedSpace.</desc>
+      <desc>   To the North and South, Delaware Avenue continues.</desc>
+      <exits n='1612' e='1677' se='1741' s='1740' sw='1739' w='1675' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1677' flags='b'>
+      <name>The Uptown Club</name>
+      <desc>   Plush leather chairs and sofas are all around this high-roller&apos;s club. The waitdroid staff is attentive and one is already waiting to take your drink order and direct you to the nearest empty sofa or chair.</desc>
+      <desc>   The bartender here knows how to make all drinks, and specializes in Asterix&apos;s favorite all-time drink, the White Russian.</desc>
+      <desc>   A set of lavish spiral stairs lead up to a member&apos;s-only lounge, where people can stay the night if they don&apos;t think they&apos;re going to be able to make it back to their mansion tonight.</desc>
+      <desc>   The exit back to to Delaware Avenue is to the West.</desc>
+      <exits w='1676' up='1678' out='1676' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1678' flags='b'>
+      <name>Master Bedroom</name>
+      <desc>   This is a large room with rows upon rows of soft, comfortable beds. Each bed has a set of curtains that can be pulled down to protect its occupant&apos;s privacy. There are no rules stating that more than one person can&apos;t use the same bed, though!</desc>
+      <desc>   There are mini-bars near every bed, so you can have any drink that you could have gotten down-stairs - for a fee!</desc>
+      <desc>   The stairs lead back down into the bar.</desc>
+      <exits down='1677' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1739' flags='b'>
+      <name>Bottom&apos;s Up!</name>
+      <desc>   You see immediately why the police have attempted multiple times to shut this place down. The tables have a thick layer of dust, there are cups and lime wedges in the corner that look like they must have been there since Gaul&apos;s pre-history.</desc>
+      <desc>   The patrons of this bar don&apos;t look any better. Everyone you see is covered in scars, tattoos and reeks of alcohol.</desc>
+      <desc>   The tables, if you dare to sit at them, are waited on intermittently by waitdroids who look like they might have been imported from the Muddy Waters Lounge on Sumatra.</desc>
+      <desc>   The exit back to Delaware Avenue is to the Northeast.</desc>
+      <exits ne='1676' out='1676' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1740'>
+      <name>Delaware Cul-de-sac</name>
+      <desc>   This is the entrance to the Delaware Cul-de-sac as the sign on the construction post says. The construction, according to your brochure is underway to build a series of houses for Gaul&apos;s legislative officials. Right now, however the construction-workers won&apos;t let you enter the area until construction is finished.</desc>
+      <exits n='1676' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1741' flags='b'>
+      <name>Home Plate</name>
+      <desc>   As you step into the bar you are nearly thrown off your feet by the noise coming out of the patrons and televisions. Each TV shows a different sporting event going on around FedSpace, and there are at least 20 or so around the area.</desc>
+      <desc>   The bartender, without looking at you, hands you a beer and points at an empty table then promptly forgets that you exist.</desc>
+      <desc>   The exit back to Delaware Avenue is to the Northwest.</desc>
+      <exits nw='1676' out='1676' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2124'>
+      <name>Asterix&apos;s Office</name>
+      <desc>   Now this is a surprise. What in the world would Gaul&apos;s leader, Asterix want with an office in the basement of a dilapidated building in a toxic waste part of town?</desc>
+      <desc>   On the desk are papers with diagrams and figures that you could not hope to understand without intricate knowledge of where they come from, but on top of one of the files that you can see that the title is &quot;Workthing Equality.&quot;</desc>
+      <desc>   Apparently, Gaul&apos;s leader is not a fan of the treatment of workthings. But why? To what end and purpose is he going to see this plan through?</desc>
+      <desc>   As you ponder the answers to these questions, you note that the exit out of this office is to the South.</desc>
+      <exits s='2188' out='2188' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2188'>
+      <name>Basement of Building B</name>
+      <desc>   The basement of the building is much as you would have expected. Exposed pipes drip and creak, giving the obvious impression that maintenance is hardly ever performed in this area.</desc>
+      <desc>   There are doors to the North and South and you can go back up the stairs to the apartment building&apos;s lobby.</desc>
+      <exits n='2124' s='2252' up='1615' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2252'>
+      <name>Planning Room</name>
+      <desc>   This is a simple room, with a large table in the middle. Scattered across the table are sheets of paper, diagrams, blue-prints and lists with all sorts of numbers and equations that are completely incomprehensible.</desc>
+      <desc>   What could the people who live in these buildings possibly be planning that they have to hide in the basement?</desc>
+      <desc>   The exposed pipes continue to drip and creak, causing puddles to collect around the floor.</desc>
+      <desc>   The exit is to the North.</desc>
+      <exits n='2188' out='2188' no-exit='moves.noexit.3'/>
+   </location>
+
+</fed2-map>

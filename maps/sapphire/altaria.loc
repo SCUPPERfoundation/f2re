@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<fed2-map title='Altaria' version='1.00' editor='standard' from='330' to='Sapphire.Sapphire Space.267'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Hiding place for mobiles and objects.</desc>
+   </location>
+
+   <location num='145' flags='t'>
+      <name>Master Suite</name>
+      <desc>   Upon entering this room the cool air makes you tingle after coming in from the heat of the warm outdoors. In the corner is a Canapied bed with veils to secure privacy even in the most private of rooms. A large window in the northern wall provides a spectacular view of snowcapped mountains. A dressing table with various brushes and combs along with hair pins and other such useful items. Beyond the table is a full closet and a full length mirror to admire the handywork of the Altarian tailors.</desc>
+      <desc>   From this room you can either go through the door to the south or or the french doors to the east.</desc>
+      <exits e='146' s='209' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='146' flags='t'>
+      <name>Master Suite Balcony</name>
+      <desc>   As you can see this is designed for the Master of the mansion in one corner of the balcony is a large hot tub, the jets causing the water to swirl and bubble to ease away the pains of the day and the light steam rolling off the surface lets you know that it&apos;s set at just the right temperature. At the opposite end a porch swing hangs from ceiling the lattice covering it is teeming with honeysuckle, although the scent is not overwhelming it is sweet and can be relaxing while you sit looking out over the yard. A table is centrally placed where one might have breakfast in the morning sun that filters through the lattice cover over the balcony.</desc>
+      <desc>   A set of stairs will take you down to the pool if you prefer a swim over the tub, or you can go west through the french doors to the Master Suite.</desc>
+      <exits w='145' down='339' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='199'>
+      <name>Cave Corridor</name>
+      <desc>   You near the deepest end of cave as it curves to the southeast and the blue light grows stronger. The sound of water is much louder here apparently coming from an underground stream.</desc>
+      <exits se='264' sw='262' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='200'>
+      <name>Mountain Road</name>
+      <desc>   You look out over the valley at the beautiful forests and the green pastures below. Far off in the distance you can hear the steady thumping of a woodpecker making its new home in the tall trees.</desc>
+      <desc>   The road levels out here a bit and curves around the mountain to the southwest or up toward the shuttle pad.</desc>
+      <exits sw='263' up='265'/>
+   </location>
+
+   <location num='209' flags='t'>
+      <name>Rooms</name>
+      <desc>   At the top of the stairs you face a hallway with a door to the south and one to the north. At the end of the hall is a small table with a flower planted in a pot placed by a window so it can easily get sunlight.</desc>
+      <exits n='145' s='273' down='401' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='262'>
+      <name>Cave Corridor</name>
+      <desc>   You are walking down the corridor and can see a faint light to the northeast. The light is bluish in color and you wonder at its origin. With better light you now can see the walls of the cave. They are smooth with no visable cracks anywhere in the surface. You decide that the cave must be man made cut through the hillside long ago.</desc>
+      <exits ne='199' s='326' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='263'>
+      <name>Mountain Road</name>
+      <desc>   As you walk the trees are thick making it difficult to see the surrounding area. The wild blueberries are plentiful in the heavy underbrush. Now you can hear the faint trickling of water but cannot yet see the source.</desc>
+      <desc>   The road turns northeast up the mountain and south toward the valley.</desc>
+      <exits ne='200' s='327' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='264'>
+      <name>Underground Stream</name>
+      <desc>   As you turn the corner you see a stream running through the center of the mountain, rushing to its unseen destination. Across the stream you see the source of the light. A rose placed in a vase sitting on top of pedestal, the light itself is coming from the rose. You read the message chiseled into the wall next to you as you consider wading through the stream.</desc>
+      <desc>   &quot;DEATH TO ALL WHO PASS THIS WAY&quot;</desc>
+      <exits nw='199' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='265'>
+      <name>Mountain Road</name>
+      <desc>   The trees are massive and thick around the road leading to the valley. The air is sweet with the scent of pine and an occasional sparrow flys by as you continue on your way.</desc>
+      <desc>   The road leads southeast to the shuttle pad and down to the valley.</desc>
+      <exits se='330' down='200' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='266' flags='yrk'>
+      <name>General Store</name>
+      <desc>   From the doorway you can see the dressing booths located in the back and shelves upon shelves of different goods you can purchase. On one side is the electronic equipment, down the middle you spot the clothing just about anything you could imagine, the right side is loaded with guns, ammo, lasers and outside the window you can see missles standing in groups.</desc>
+      <exits s='330' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='267' flags='hik'>
+      <name>Altaria Hospital</name>
+      <desc>   Many are here cause they didn&apos;t heed the &quot;WARNING&quot; clearly posted on Altaria&apos;s only Death location or broke the laws of Altaria. The hospital serves multi purposes as you can reinsure here and it provides the other basic hospice services.</desc>
+      <exits sw='330' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='273' flags='t'>
+      <name>Guest Suite</name>
+      <desc>   A large room for Kingman&apos;s guests is provided here, all the comforts of home. A large bed sits to your right and looking through the window you can see the valley, the forests dotted with lakes and stream, and a few open fields blazing different colors from the wild flowers growing there. Sofas and chairs are provide a comfortable place to sit and talk and a dressing table is provided with a full mirror to examine the finished work. One must keep up their appearance y&apos;know.</desc>
+      <exits n='209' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='326'>
+      <name>Cave Corridor</name>
+      <desc>   You are walking along a corridor of the cave. You hear the sound of moving water, faint at first but growing louder as you move further north into the cave.</desc>
+      <exits n='262' s='390' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='327'>
+      <name>Mountain Road</name>
+      <desc>   As you round the corner you can see an underground stream exiting from the mountain and running down the side. You wonder where the water could be coming from and bend down for a better look. You can&apos;t quite see into the opening and you can see a faint light coming from within it, but the opening is much too small to squeeze into.</desc>
+      <desc>   The road turns southeast down the mountain and north to the mountain top.</desc>
+      <exits n='263' se='392' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='329'>
+      <name>The Eagles Flight Tavern</name>
+      <desc>   This being one of King&apos;s favorite haunts, there are all kinds of photographs hanging around the room. Mostly of King and his friends you see a large</desc>
+      <desc>one of he and Viki standing together on the her LP working on her planet, as they did so often, both of them with a huge grin, as if they just got</desc>
+      <desc>caught in some mischief. There&apos;s one of the wedding of Zargot to Bunytales and next to it of Buny hopping into Zargot&apos;s lap. Another wedding photo of</desc>
+      <desc>DiploRick to Viki showing Rick with the heel of his shoe raised and on it the words &quot;HELP ME&quot; clearly visable..................... This is a place to</desc>
+      <desc>remember all the good things in fed so drink up and enjoy yourself.</desc>
+      <desc>   An archway leads to the south while the shuttle pad exit is to the east.</desc>
+      <exits e='330' s='393' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='330' flags='k'>
+      <name>Altaria Shuttle Pad</name>
+      <desc>   From the landing pad atop the mountain you can see the vast forests of Altaria, spotted here and there with blue lakes and open fields and to the northwest a road winding down the mountain and disappearing into the forest. To the east you see the local exch and through the windows an occasional flash tells you that the exch is open for trading. To the west there is a tavern with doors standing open for all who need to rest and partake of food and beverage. There are buildings to the north with signs showing the  various goods sold there. To the southeast a small building with cables coming from it leading off towards another mountain and to the south an office complex stands with flags waving in the breeze telling you that this building has some importance to Altaria.</desc>
+      <exits n='266' ne='267' e='331' se='395' s='394' w='329' nw='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='ek'>
+      <name>Altaria Exchange</name>
+      <desc>   Rows of plush chairs face a panel of flashing screens displaying the various prices for the goods bought and sold on Altaria. Don&apos;t forget to buy a warehouse or depot or you might miss the chance of a lifetime at these prices. Always remember,  &quot;Buy Low, Sell High&quot; and you&apos;ll do just fine here.</desc>
+      <exits w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='338'>
+      <name>Changing Room</name>
+      <desc>   The room is lit by the soft light filtering through the skylight and the lights located on either side of the mirror. There are suits in various sizes provided if you didn&apos;t bring one along.</desc>
+      <exits out='339' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='339' flags='t'>
+      <name>Pool</name>
+      <desc>   The pool with its cool clear water begs you to come and swim but, of course you don&apos;t have to. You might choose to just sit in one of many Chairs placed about the pool and look out over the valley below, or if at night look to the stars which you  can see quite clearly from the vantage point provided here.</desc>
+      <exits s='403' up='146' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='340'>
+      <name>Gardens</name>
+      <desc>   Nestled in this corner of the garden you see a grand willow tree standing in the center with benches located beneath it for you to sit and reflect or just relax a bit. A carefully laid stone path extends to the south, and on either side of it are brightly colored tulips and irises growing to their full height while shadowing the baby&apos;s breath planted in front of them. A small furry animal runs across the path to hide in its favorite hiding place as you listen to the birds singing in the trees.</desc>
+      <exits s='404' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='390'>
+      <name>Cave Entrance</name>
+      <desc>   You have stumbled onto a cave entrance and look about you curiously. Looking into the cave you can</desc>
+      <desc>barely make out a tunnel it&apos;s dark but not too dark .....Yet.</desc>
+      <desc>   The cave goes deeper to the north and southeast takes to the village.</desc>
+      <exits n='326' se='455' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='392'>
+      <name>Mountain Road</name>
+      <desc>   You are standing near the bottom of the mountain and  the road widens a bit, but is still very rough to traverse. Off in the distance you can see a small village or perhaps a town. The trees here are so large they almost completely block the light from above and the fresh smell of pine permiates the air around you.</desc>
+      <desc>   The road turns southwest toward the village and northwest goes up the mountain.</desc>
+      <exits sw='455' nw='327' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='393'>
+      <name>Eagles Flight Diner</name>
+      <desc>   This perfect little diner is a great place to sit and talk or just sit for that matter. Why not order up a drink from the pub while you wait. Looking around you see several pictures much the same as in the pub. There&apos;s one of BlueBeard and his ever present barrel of rum sitting back and enjoying a cigar while laughing at .... Who knows what. There&apos;s KianSquaw and her ever menacing pet wolverine Dakota munching on some jerky that King always kept handy to avoid getting robbed by the beast. Another of BB being kicked in the shin, a daily event by DropTop, and DT hopping around cause he kicked the peg leg rather than the good one.</desc>
+      <desc>   On your way out of the Diner you see a photo of two very ugly women, looking closer you think to yourself they resemble Zargot and DT ... naaaaww, couldn&apos;t be, must be relatives.</desc>
+      <desc>   A Tribute to Classic Federation.</desc>
+      <exits n='329' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='394'>
+      <name>Altaria Capitol Building</name>
+      <desc>   Stone statues greet you on either side of the doorway as you enter, like two guards protecting all who pass through the foyer. The office of Kingman lies to the south and to the southwest is a large room with an engraved sign marked archives.</desc>
+      <desc>   A large banner hangs above you suspended there motionless, even with the breeze coming through the doors, held there by an unseen force. The banner shows crossed swords over a shield and below it is a lion holding a rose in it&apos;s teeth.</desc>
+      <exits n='330' s='458' sw='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Gondola</name>
+      <desc>   A platform surrounds the gondola berth allowing maintenance crews to do necessary repairs from a recent quake. A planet official stands nearby carefully monitoring the work and casually walk over as he spots you entering. He informs you that the gondola isn&apos;t safe to use at this time and directs you to a hastily set up transporter that looks nearly as unsafe as the gondola.</desc>
+      <desc>   A door exits to the northwest.</desc>
+      <exits nw='330' in='399' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='399' flags='t'>
+      <name>Gondola Platform</name>
+      <desc>   A temporary transporter is set up in one corner to facilitate in reaching the shuttle pad from here. An officer sits lazily in a chair perusing a recent issue of Fed II Star guarding a series of ropes preventing anyone from stepping too close to the platform edge while work is being done to repair damage at the other end.</desc>
+      <desc>   A set of stairs leads down to the east.</desc>
+      <exits down='400' in='395' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='400' flags='t'>
+      <name>Mansion Courtyard</name>
+      <desc>   The courtyard is in full bloom anytime of year, the roses and tulips mingle in the gardens. Along with the trees surrounding the property and the wall beyond that, he does like his privacy and there is only one way to get here. To the west is the main entrance to the home, a long walk lined with tulips and crocus share a bed with the hostas&apos; getting their sun in the morning as  it comes up. A large perch standing next to the entrance and you wonder what kind of bird might use it, as it is so close to the house.</desc>
+      <desc>   A short set of stairs leads up to the gondola platform.</desc>
+      <exits e='401' up='399' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='401' flags='bt'>
+      <name>Great Hall</name>
+      <desc>   The main hall is a large room used for entertaining guests. There are deep comfortable chairs placed about the room for sitting and talking as well as a few sofas. A sound system has been placed in one corner to allow you to play music of your  choice from the collection of discs stored on the shelves next to it ranging from Classical to Jazz to Rock, quite a wide selection you notice.</desc>
+      <desc>   A set of stairs lead up to the suites provided there for his guests as well as the Master suite and a doorway to the east takes you to the back of the mansion.</desc>
+      <exits e='402' w='400' up='209' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='402' flags='bt'>
+      <name>Kitchen</name>
+      <desc>   Along the north wall is a stainless steel hood over all sorts of grilling and steaming tables. On the east wall is the dishwashing and food prep area... it is an area of high activity.  All the cooks are gathered around an island in the center of the room, busy preparing for the night&apos;s feast. Some are slicing and dicing, while others just carry various dishes to and from the chefs. If you&apos;re hungry enough, maybe one of the chefs will offer you a sample of the evening meal!</desc>
+      <desc>   An doorway leads west to the great hall while and a closed door leads to the back of the mansion.</desc>
+      <exits e='403' w='401' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='403' flags='bt'>
+      <name>Back Yard</name>
+      <desc>   As you walk through the doorway you are standing on a stone patio and the mountain looms before you. The smell of the foliage that surrounds you is cause enough to sit and relax in this large but secluded area of Altaria. There&apos;s a pool to the north large enough to allow  groups to enjoy its cool water on hot day. There are lounge chairs placed around the pool for those not wanting to swim.You may want to go into the changing room if you like before your swim. To the south stands a gazebo with a bench just large enough for two to sit and talk or to just be with each other. and you can see gardens lining the eastern wall.</desc>
+      <desc>   A set of stairs goes up to a balcony and a bar is placed against the back of the home to allow you to have a drink or two and if you wish the cook is always available to serve up whatever you like.</desc>
+      <exits n='339' e='404' s='467' w='402' in='338' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='404'>
+      <name>Gardens</name>
+      <desc>   You enter the garden through an archway covered in draping clusters of dainty Blue Wisteria. In this main area of the garden, you see a stone wishing well located just to the left of the stone path. On either side of the well are several rose bushes, deep crimson red on the right, and stark white on the left. Lush bluegrass covers the entire area. Placed in front of the bushes are benches on which to sit and admire the beauty that surrounds you. While sitting there taking in the scenery, you notice a few of the roses have been cut, and you wonder who would deface such a wonderful place. As you get up to take a closer look you get the urge to toss a coin in the wishing well and make a wish for good luck.</desc>
+      <desc>   The stone path leads north, south, and west.</desc>
+      <exits n='340' s='468' w='403' in='478' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='455'>
+      <name>Village Entrance</name>
+      <desc>   The road turns southward here and enters the village. It has been a long walk and is close to dusk as you enter but you can still see a sign placed at the entrance so as not to be missed by anyone. While taking in the ambiance of the small village a deer bounds across the road and disappears</desc>
+      <desc>into the trees.</desc>
+      <desc>   Northeast leads back to the mountain going south takes you into the village proper.</desc>
+      <exits ne='392' s='519' in='390' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='457'>
+      <name>Altarian Archives</name>
+      <desc>   An ornate room with walls covered in tapestries depicting many past events in Altarian history. Against the far wall are four stands, each holding a jewel encrusted broadsword. A large pedestal stands alone in the center holding a leather bound book embossed with the Altarian Crest.</desc>
+      <exits ne='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='bkt'>
+      <name>Kingman&apos;s Office</name>
+      <desc>   A large cherrywood desk upon which a humidor and tray are placed conveniently within arms reach. The Altarian crest hangs hangs on the wall behind it. In one corner stands an ancient suit of armor, in another stands a rack holding the a sheathed longsword, its jewled pomel shining and winking at you even in the low light. The large comfortable chairs invite you to sit and relax as you do business on Altaria. A window to the west allows you to look upon the valley in all of its splendor.</desc>
+      <exits n='394' up='522' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='467' flags='bt'>
+      <name>Gazebo</name>
+      <desc>   As you step into the gazebo the fragrance of the rose scented candles catches you attention and soothes the mind just a bit. The small table in the center is just enough to give a place to set a drink or perhaps have a light lunch with the one you love, the padded bench, again just large enough for two. This place in the yard was designed with just two people in mind.</desc>
+      <desc>   From here you can see the Altarian sea where it meets the coast, I sight to see at dusk with it&apos;s beautiful colors mixing to  provide a sight like no other on Altaria.</desc>
+      <exits n='403' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='468'>
+      <name>Gardens</name>
+      <desc>   In this area of the garden, you see an ivy covered wall to the east, and a small pond located under a large maple tree. Cattails wave gently back and forth with the breeze, as the ducks swim carelessly about their business. Looking into the pond you see the fish swimming at the bottom of the crystal clear water and immediately think that you should have brought your pole.</desc>
+      <desc>   The carefully laid path leading off to the north is lined on either side by various flora of all shades and colors.</desc>
+      <exits n='404' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='478' flags='bt'>
+      <name>The Hideaway</name>
+      <desc>   At first glance you know this is a hideaway as it has all the marking of a place few have been to. A warm fire burns lazily in the hearth releasing the scent of mesquite and on the mantel are a few small statues and knick-knacks a woman&apos;s hand is in all the decor here. A large bearskin rug is placed in front of the fireplace and in the center of the room is a coffee table and a plush sofa, resting over the back are afghans in pastel colors for added warmth if necessary. On a table in the corner an Ice bucket, a few bottles of wine and a couple of glasses. There is a window overlooking the Altarian forests and in the cool mornings you can see the mists rising from the forest to collect the morning sun. A small chandelier hangs from the ceiling giving off a subdued light and soft music is coming fom some hidden speakers behind a bookshelf full of novels.</desc>
+      <exits e='479' out='404' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='479' flags='bt'>
+      <name>The Hideaway</name>
+      <desc>   As you step out onto the porch the fresh air laced with pine assaults your sense and relaxes you. To your left is the mountainside and a small waterfall cascading down the rocks with a gentle sound of a continuous rainstorm. Walking over to the railing you can look over the entire valley with its grassy fields and lakes as two hawks circle overhead in their seemingly endless flight. To your right is a bench worn by the weather but still strong, it&apos;s cushions still soft and comfortable to sit on. A small table next to it provides a place to put a drink or a book One could spend hours here and enjoy their surroundings without a care.</desc>
+      <exits w='478' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='518'>
+      <name>Park</name>
+      <desc>   The large trees and green grass offer a cool palce to relax as you watch children play amongst themselves. A fountain is right before you gushing it&apos;s water high ito the air before falls back to the surface sounding like rain striking the surface of the pool surrounding it. Looking around you see many people engaged in conversation as well as a few couples engaged in each other, oblivious to their surroundings and caught up with each other.</desc>
+      <exits e='519' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='519'>
+      <name>Village Proper</name>
+      <desc>   As you enter the village everything is placed conveniently around the central square. To the west is a park with its green grass and trees inviting you to come and relax a spell. You can see couples walking hand in hand while they enjoy the fresh cool air of the evening. To the southeast is Chereck&apos;s Pub and Diner with freshly prepared meals for a weary travelers. A sign hangs in the window welcoming all to enter and everyone you meet smiles and greets you as if you&apos;re an old friend. To the southwest stands The Falcon&apos;s Nest Hotel, a place for travelers to spend the night and refresh themselves. East is a Chinese restaurant where you might sits and get a bite to eat.</desc>
+      <exits n='455' e='520' se='584' sw='582' w='518' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='520' flags='b'>
+      <name>Peking Moon</name>
+      <desc>   As you step through the door the clatter of forks hitting  plates tells you this is a busy establishment. The waitress sees you standing at the entrance and smiles warmly at you. As she approaches you see her name tag reads Fifi Le&apos;Mew and wonder how odd it is to have a French waitress in a Chinese restaurant. As she takes you to your table you can see the chef through an open service area, dressed in his cap and apron as he stirs a huge wok. Fifi seats you near the back and you see a red telephone just inside the kitchen door with a small sign reading... &quot;Supply Hotline for use by Chow Linn only&quot;</desc>
+      <desc>   You assume that must be the head chef&apos;s name.</desc>
+      <exits w='519' no-exit='moves.noexit.18'/>
+   </location>
+
+   <location num='522' flags='bkt'>
+      <name>Kingman&apos;s Office Apartment</name>
+      <desc>   Large windows in each wall giving you a panoramic view in all directions flood the room in natural light. Of course there are heavy drapes to keep things private if he so chooses. Against the north wall is a bed for those occasions that he doesn&apos;t make it home. A large comfortable looking sofa is placed so that he may look out over the eastern valley and watch the sun rise as he is known to do at times. Also from this window you can see a new home on the opposite side of the valley, finally finished but not yet lived in. The southern view is spectacular looking out over the Altarian ocean.</desc>
+      <exits down='458' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='581'>
+      <name>Bistro</name>
+      <desc>   As you enter the ambiance is a little overwhelming, soft lighting and a cozy central fireplace there are but a few tables for dining at this small bistro, the reservations must be hard to come by. The hostess seats you by a window looking out over the calm ocean, it&apos;s waters shimmering in the sunset and the soft music fills the air.</desc>
+      <exits e='582' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='582'>
+      <name>The Falcon&apos;s Nest Hotel</name>
+      <desc>   The desk clerk smiles at you as you enter the building and calls for assitance for your luggage. While checking in your eyes sweep the room and notice the lobby is decorated in an old world theme. Vacationers sitting in plush sofas and chairs lining the walls, and there&apos;s a fireplace in the center to ward off the chill of the cool nights. As the clerk hails a bellhop as he directs your attention to the restaurant to the west and asks if he can make some reservations for you.</desc>
+      <exits ne='519' w='581' no-exit='moves.noexit.17'/>
+   </location>
+
+   <location num='584'>
+      <name>Chereck&apos;s Pub and Diner</name>
+      <desc>   A friendly face and a warm smile greet you as you enter the Tav. A long time friend of Kingman&apos;s, Chereck perished in a difficult war with the fed gods. He will always be remembered in this tavern as it chronicles the Altarian story.</desc>
+      <exits nw='519'/>
+   </location>
+
+</fed2-map>

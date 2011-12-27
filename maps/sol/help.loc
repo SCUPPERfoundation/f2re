@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='help' version='1.00'>
+
+   <location num='0'>
+      <name>Help messages</name>
+      <desc>Location to handle game help messages.</desc>
+   </location>
+
+</fed2-map>

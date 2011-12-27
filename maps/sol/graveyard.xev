@@ -1,0 +1,2845 @@
+<?xml version="1.0"?>
+
+<event-list version='160'>
+
+ <category name='brian'>
+
+  <section name='chat'>
+
+   <event num='1'>
+    <comment>Brian chat</comment>
+    <match phrase='hello' id-name='obj_brian' event='brian.chat.2'/>
+    <match phrase='lab' id-name='obj_brian' event='brian.chat.5'/>
+    <match phrase='cellar' id-name='obj_brian' event='brian.chat.6'/>
+    <match phrase='storeroom' id-name='obj_brian' event='brian.chat.6'/>
+    <match phrase='store room' id-name='obj_brian' event='brian.chat.6'/>
+    <match phrase='control room' id-name='obj_brian' event='brian.chat.7'/>
+    <match phrase='bye' id-name='obj_brian' lo='brian.chat.8'/>
+    <match phrase='explain' id-name='obj_brian' event='brian.chat.8'/>
+    <match phrase='problem' id-name='obj_brian' event='brian.chat.8'/>
+    <match phrase='yes' id-name='obj_brian' event='brian.chat.9'/>
+    <match phrase='no' id-name='obj_brian' event='brian.chat.16'/>
+    <match phrase='help' id-name='obj_brian' event='brian.chat.10'/>
+    <match phrase='task' id-name='obj_brian' event='brian.chat.12'/>
+    <match phrase='progress' id-name='obj_brian' event='brian.chat.24'/>
+    <match phrase='collar' id-name='obj_brian' lo='brian.chat.33'/>
+    <match phrase='safe place' id-name='obj_brian' lo='brian.chat.34' hi='brian.chat.35'/>
+    <match phrase='wire' id-name='obj_brian' lo='brian.chat.36'/>
+    <match phrase='cable' id-name='obj_brian' lo='brian.chat.36'/>
+    <match phrase='extension' id-name='obj_brian' lo='brian.chat.36'/>
+    <match phrase='duct tape' id-name='obj_brian' lo='brian.chat.36'/>
+    <match phrase='computer' id-name='obj_brian' event='brian.chat.21'/>
+    <match phrase='cedric' id-name='obj_brian' lo='brian.chat.39'/>
+    <match phrase='sephronia' id-name='obj_brian' lo='brian.chat.40' hi='brian.chat.41'/>
+    <match phrase='count' id-name='obj_brian' lo='brian.chat.42'/>
+    <match phrase='sinistre' id-name='obj_brian' lo='brian.chat.42'/>
+    <match phrase='graveyard' id-name='obj_brian' lo='brian.chat.43'/>
+    <match phrase='wedgewood' id-name='obj_brian' lo='brian.chat.44'/>
+    <match phrase='resistance' id-name='obj_brian' lo='brian.chat.45' hi='brian.chat.46'/>
+    <match phrase='continue' id-name='obj_brian' event='brian.chat.45'/>
+    <match phrase='insulat' id-name='obj_brian' lo='brian.chat.48'/>
+    <nomatch id-name='obj_brian' lo='brian.chat.7'/>
+   </event>
+
+   <event num='2'>
+    <comment>Hello - check if player has been briefed</comment>
+    <checkvariable name='graveyard' key='brian' value='briefed' equals='brian.chat.3' not-equal='brian.chat.41'/>
+   </event>
+
+   <event num='3'>
+    <comment>Has been briefed</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.1'/>
+   </event>
+
+   <event num='4'>
+    <comment>First time</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.2'/>
+    <setvariable name='graveyard' key='brian' value='met'/>
+    <setvariable name='graveyard' key='brianchat' value='explain' temporary='true'/>
+   </event>
+
+   <event num='5'>
+    <comment>Lab</comment>
+    <message type='multi' where='com' who='individual' lo='brian.chat.3' hi='brian.chat.4'/>
+    <setvariable name='graveyard' key='fireplace' value='yes'/>
+   </event>
+
+   <event num='6'>
+    <comment>Cellar/store room</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.5'/>
+    <setvariable name='graveyard' key='bracket' value='yes'/>
+   </event>
+
+   <event num='7'>
+    <comment>Control room</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.6'/>
+    <setvariable name='graveyard' key='control' value='yes'/>
+   </event>
+
+   <event num='8'>
+    <comment>Explain/problem</comment>
+    <message type='multi' where='com' who='individual' lo='brian.chat.9' hi='brian.chat.11'/>
+    <setvariable name='graveyard' key='brianchat' value='continue' temporary='true'/>
+   </event>
+
+   <event num='9'>
+    <comment>Yes - check if topic is help</comment>
+    <checkvariable name='graveyard' key='brianchat' value='help' equals='brian.chat.10' not-equal='brian.chat.11'/>
+   </event>
+
+   <event num='10'>
+    <comment>Help</comment>
+    <message type='multi' where='com' who='individual' lo='brian.chat.19' hi='brian.chat.21'/>
+    <setvariable name='graveyard' key='brianchat' value='task' temporary='true'/>
+   </event>
+
+   <event num='11'>
+    <comment>Topic is not help so check if it is task</comment>
+    <checkvariable name='graveyard' key='brianchat' value='task' equals='brian.chat.12' not-equal='brian.chat.43'/>
+   </event>
+
+   <event num='12'>
+    <comment>Task - check if player has completed task 1 yet</comment>
+    <checkvariable name='graveyard' key='machine' value='dead' equals='brian.chat.13' not-equal='brian.chat.14'/>
+   </event>
+
+   <event num='13'>
+    <comment>Machine is dead so brief on 2nd task</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.22'/>
+    <setvariable name='graveyard' key='brianchat' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='14'>
+    <comment>Machine is not dead so brief on 1st task</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.23'/>
+    <setvariable name='graveyard' key='brianchat' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='15'>
+    <comment>Topic is unknown</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.15'/>
+   </event>
+
+   <event num='16'>
+    <comment>No - check if topic is help</comment>
+    <checkvariable name='graveyard' key='brianchat' value='help' equals='brian.chat.17' not-equal='brian.chat.18'/>
+   </event>
+
+   <event num='17'>
+    <comment>Topic is help</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.16'/>
+    <setvariable name='graveyard' key='brianchat' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='18'>
+    <comment>Topic is not help - is it task?</comment>
+    <checkvariable name='graveyard' key='brianchat' value='task' equals='brian.chat.19' not-equal='brian.chat.46'/>
+   </event>
+
+   <event num='19'>
+    <comment>Topic is task</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.17'/>
+    <setvariable name='graveyard' key='brianchat' value='unknown' temporary='true'/>
+   </event>
+
+   <event num='20'>
+    <comment>Topic is unknown</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.18'/>
+   </event>
+
+   <event num='21'>
+    <comment>Computer - check if player has logged on</comment>
+    <checkvariable name='graveyard' key='computer' value='password' equals='brian.chat.22' not-equal='brian.chat.23'/>
+   </event>
+
+   <event num='22'>
+    <comment>Player has logged on</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.37'/>
+   </event>
+
+   <event num='23'>
+    <comment>Player has not logged on</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.38'/>
+   </event>
+
+   <event num='24'>
+    <comment>Progress - check if its unknown</comment>
+    <checkvariable name='graveyard' key='progress' value='unknown' equals='brian.chat.25' not-equal='brian.chat.26'/>
+   </event>
+
+   <event num='25'>
+    <comment>Progress is unknown</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.24'/>
+   </event>
+
+   <event num='26'>
+    <comment>Progress not unknown so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='machine1' equals='brian.chat.27' not-equal='brian.chat.28'/>
+   </event>
+
+   <event num='27'>
+    <comment>Progress is machine1</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.25'/>
+   </event>
+
+   <event num='28'>
+    <comment>Progress not machine1 so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='machine2' equals='brian.chat.29' not-equal='brian.chat.30'/>
+   </event>
+
+   <event num='29'>
+    <comment>Progress is machine2</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.26'/>
+   </event>
+
+   <event num='30'>
+    <comment>Progress not machine2 so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='machine3' equals='brian.chat.31' not-equal='brian.chat.32'/>
+   </event>
+
+   <event num='31'>
+    <comment>Progress is machine3</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.27'/>
+   </event>
+
+   <event num='32'>
+    <comment>Progress not machine3 so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='machine4' equals='brian.chat.33' not-equal='brian.chat.34'/>
+   </event>
+
+   <event num='33'>
+    <comment>Progress is machine4</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.28'/>
+   </event>
+
+   <event num='34'>
+    <comment>Progress not machine4 so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='control0' equals='brian.chat.35' not-equal='brian.chat.36'/>
+   </event>
+
+   <event num='35'>
+    <comment>Progress is control0</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.29'/>
+   </event>
+
+   <event num='36'>
+    <comment>Progress not control0 so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='control1' equals='brian.chat.37' not-equal='brian.chat.38'/>
+   </event>
+
+   <event num='37'>
+    <comment>Progress is control1</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.30'/>
+   </event>
+
+   <event num='38'>
+    <comment>Progress not control1 so next check</comment>
+    <checkvariable name='graveyard' key='progress' value='control2' equals='brian.chat.39' not-equal='brian.chat.40'/>
+   </event>
+
+   <event num='39'>
+    <comment>Progress is control2</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.31'/>
+   </event>
+
+   <event num='40'>
+    <comment>Progress is not control2 so...</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.32'/>
+   </event>
+
+   <event num='41'>
+    <comment>Hello - not been briefed so check if player has spoken to Brian before</comment>
+    <checkvariable name='graveyard' key='brian' value='met' equals='brian.chat.42' not-equal='brian.chat.4'/>
+   </event>
+
+   <event num='42'>
+    <comment>Player has met Brian but not been briefed</comment>
+    <message type='single' where='com' who='individual' lo='brian.chat.47'/>
+    <setvariable name='graveyard' key='brianchat' value='explain'/>
+   </event>
+
+   <event num='43'>
+    <comment>Yes - Topic is not task so check if it is explain</comment>
+    <checkvariable name='graveyard' key='brianchat' value='explain' equals='brian.chat.8' not-equal='brian.chat.44'/>
+   </event>
+
+   <event num='44'>
+    <comment>Topic is not explain so check if it is continue</comment>
+    <checkvariable name='graveyard' key='brianchat' value='continue' equals='brian.chat.45' not-equal='brian.chat.15'/>
+   </event>
+
+   <event num='45'>
+    <comment>Continue</comment>
+    <message type='multi' where='com' who='individual' lo='brian.chat.12' hi='brian.chat.14'/>
+    <setvariable name='graveyard' key='brian' value='briefed'/>
+    <setvariable name='graveyard' key='brianchat' value='help' temporary='true'/>
+   </event>
+
+   <event num='46'>
+    <comment>No - topic is not task, check if it is explain</comment>
+    <checkvariable name='graveyard' key='brianchat' value='explain' equals='brian.chat.17' not-equal='brian.chat.47'/>
+   </event>
+
+   <event num='47'>
+    <comment>No - topic is not explain, check if it is continue</comment>
+    <checkvariable name='graveyard' key='brianchat' value='continue' equals='brian.chat.17' not-equal='brian.chat.20'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='cable'>
+
+  <section name='attach'>
+
+   <event num='1'>
+    <comment>Lab - 1819 - attach cable to machine - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='cable.attach.2' not-equal='cable.attach.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is cable2</comment>
+    <message type='single' where='com' who='individual' lo='cable.attach.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='cable.attach.2' not-equal='cable.attach.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is not cable3 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='cable.attach.5' not-equal='cable.attach.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is cable1 so try to attach cable</comment>
+    <message type='single' where='com' who='individual' lo='cable.attach.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='dead' equals='cable.attach.7' not-equal='cable.attach.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is dead</comment>
+    <message type='single' where='com' who='individual' lo='cable.attach.4'/>
+   </event>
+
+   <event num='8'>
+    <comment>Status is not dead so check for cable</comment>
+    <checkinventory map='home' id-name='cable' found='cable.attach.10' not-found='cable.attach.9'/>
+   </event>
+
+   <event num='9'>
+    <comment>Got cable</comment>
+    <message type='single' where='com' who='individual' lo='cable.attach.5'/>
+   </event>
+
+   <event num='10'>
+    <comment>Not got cable</comment>
+    <message type='single' where='com' who='individual' lo='cable.attach.1'/>
+   </event>
+
+  </section>
+
+  <section name='examine'>
+
+   <event num='1'>
+    <comment>Lab - 1819 - ex cable - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='cable.examine.2' not-equal='cables.examine.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is cable1</comment>
+    <message type='single' where='com' who='individual' lo='cable.examine.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Tower - 1755 - ex cable - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='cable.examine.4' not-equal='cable.examine.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is cable1</comment>
+    <message type='single' where='com' who='individual' lo='cable.examine.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='cable.examine.4' not-equal='cable.examine.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='cable.examine.4' not-equal='cable.examine.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Otherwise...</comment>
+    <message type='single' where='com' who='individual' lo='cable.examine.3'/>
+   </event>
+
+  </section>
+
+  <section name='get'>
+
+   <event num='1'>
+    <comment>Lab 1819 and tower 1755 - get cable - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='cable.get.2' not-equal='cable.get.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is cable1</comment>
+    <message type='single' where='com' who='individual' lo='cable.get.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='cable.get.2' not-equal='cable.get.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='cable.get.2' not-equal='cable.examine.5'/>
+   </event>
+
+  </section>
+
+  <section name='join'>
+
+   <event num='1'>
+    <comment>Lab - 1819 - Join extension cable to cable - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='cable.join.2' not-equal='cable.join.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is cable2</comment>
+    <message type='single' where='com' who='individual' lo='cable.join.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='cable.join.2' not-equal='cable.join.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is not cable3 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='cable.join.6' not-equal='cable.examine.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>No cable present</comment>
+    <message type='single' where='com' who='individual' lo='cable.join.2'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is cable1 so check for extension cable</comment>
+    <checkinventory map='home' id-name='extension cable' found='cable.join.7' not-found='cable.join.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Got extension cable so do it...</comment>
+    <message type='single' where='com' who='individual' lo='cable.join.3'/>
+    <setvariable name='graveyard' key='lab' value='cable2'/>
+    <destroyobject where='inventory' map='home' id-name='extension cable'/>
+   </event>
+
+   <event num='8'>
+    <comment>Not got extension cable</comment>
+    <message type='single' where='com' who='individual' lo='cable.join.4'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='cables'>
+
+  <section name='examine'>
+
+   <event num='1'>
+    <comment>ex cables - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='cables.examine.2' not-equal='cables.examine.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is cable2</comment>
+    <message type='single' where='com' who='individual' lo='cables.examine.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='cables.examine.4' not-equal='cables.examine.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is cable3</comment>
+    <message type='single' where='com' who='individual' lo='cables.examine.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>No cables present</comment>
+    <message type='single' where='com' who='individual' lo='cables.examine.3'/>
+   </event>
+
+  </section>
+
+  <section name='insulate'>
+
+   <event num='1'>
+    <comment>Insulate cables - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='cables.insulate.2' not-equal='cables.insulate.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is cable3</comment>
+    <message type='single' where='com' who='individual' lo='cables.insulate.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not cable3 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='cables.insulate.5' not-equal='cables.insulate.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is not cable2</comment>
+    <message type='single' where='com' who='individual' lo='cables.insulate.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is cable2 so check for duct tape</comment>
+    <checkinventory map='home' id-name='duct tape' found='cables.insulate.6' not-found='cables.insulate.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Got duct tape so do it...</comment>
+    <message type='single' where='com' who='individual' lo='cables.insulate.3'/>
+    <setvariable name='graveyard' key='lab' value='cable3'/>
+    <destroyobject where='inventory' map='home' id-name='duct tape'/>
+   </event>
+
+   <event num='7'>
+    <comment>No duct tape</comment>
+    <message type='single' where='com' who='individual' lo='cables.insulate.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='castle'>
+
+  <section name='cellar'>
+
+   <event num='1'>
+    <comment>Cupboard - 1428 - ex bracket - check if she knows about it</comment>
+    <checkvariable name='graveyard' key='bracket' value='yes' equals='castle.cellar.2' not-equal='castle.cellar.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Success</comment>
+    <message type='single' where='com' who='individual' lo='castle.cellar.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Failure</comment>
+    <message type='single' where='com' who='individual' lo='castle.cellar.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Twist bracket - check she knows about it</comment>
+    <checkvariable name='graveyard' key='bracket' value='yes' equals='castle.cellar.5' not-equal='castle.cellar.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Success - move to cellar</comment>
+    <message type='multi' where='com' who='individual' lo='castle.cellar.3' hi='castle.cellar.4'/>
+    <move what='player' who='individual' loc='1876'/>
+   </event>
+
+   <event num='6'>
+    <comment>Failure</comment>
+    <message type='single' where='com' who='individual' lo='castle.cellar.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Cupboard - 1428 - in room event - check if player has climbed ladder</comment>
+    <checklastloc loc='1876' pass='castle.cellar.8'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player has climbed ladder</comment>
+    <message type='multi' where='com' who='individual' lo='castle.cellar.6' hi='castle.cellar.7'/>
+   </event>
+
+  </section>
+
+  <section name='control'>
+
+   <event num='1'>
+    <comment>Control room - 1814 - check if Brian has told them to go there</comment>
+    <checkvariable name='graveyard' key='control' value='yes' equals='castle.control.2' not-equal='castle.control.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Yes she can get into control room - let her in and check progress</comment>
+    <message type='single' where='com' who='individual' lo='castle.control.1'/>
+    <checkvariable name='graveyard' key='progress' value='control0' not-equal='stop'/>
+    <setvariable name='graveyard' key='progress' value='control1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Cannot get to control room - send her back</comment>
+    <message type='single' where='com' who='individual' lo='castle.control.2'/>
+    <move what='player' who='individual' loc='1813'/>
+   </event>
+
+  </section>
+
+  <section name='death'>
+
+   <event num='1'>
+    <comment>Tower roof - 1755 - no-exit event</comment>
+    <message type='single' where='com' who='individual' lo='castle.death.1'/>
+    <setvariable name='graveyard' key='lab' value='unknown'/>
+    <setvariable name='graveyard' key='corpse' value='unknown'/>
+    <destroyinv title='Graveyard'/>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='entrance'>
+
+   <event num='1'>
+    <comment>Castle wall - 1109 - Ex stone  - check if know about secret entrance</comment>
+    <checkvariable name='graveyard' key='stone' value='yes' equals='castle.entrance.2' not-equal='castle.entrance.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Know about secret entrance</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Doesn&apos;t know</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Press stone - check if knows about secret entrance</comment>
+    <checkvariable name='graveyard' key='stone' value='yes' equals='castle.entrance.5' not-equal='castle.entrance.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Knows about secret entrance, so move into tunnel</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.3'/>
+    <move what='player' who='individual' loc='1672'/>
+   </event>
+
+   <event num='6'>
+    <comment>Doesn&apos;t know</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>All other wall locs - Press stone</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.5'/>
+   </event>
+
+   <event num='8'>
+    <comment>Tunnel - 1674 - lift latch</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.6'/>
+    <move what='player' who='individual' loc='1675'/>
+   </event>
+
+   <event num='9'>
+    <comment>Behind shelves - 1675 - push shelves</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.7'/>
+    <move what='player' who='individual' loc='1677'/>
+   </event>
+
+   <event num='10'>
+    <comment>Pull shelves</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.8'/>
+   </event>
+
+   <event num='11'>
+    <comment>Slide shelves</comment>
+    <message type='single' where='com' who='individual' lo='castle.entrance.9'/>
+   </event>
+
+   <event num='12'>
+    <comment>Castle wall - 1109 - enter event to stop players who have freed zombies from entering castle</comment>
+    <checkvariable name='graveyard' key='zombies' value='freed' not-equal='stop'/>
+    <message type='single' where='com' who='individual' lo='castle.entrance.10'/>
+    <move what='player' who='individual' loc='1045'/>
+   </event>
+
+  </section>
+
+  <section name='exit'>
+
+   <event num='1'>
+    <comment>Tunnel - 1672 - press stone</comment>
+    <message type='single' where='com' who='individual' lo='castle.exit.1'/>
+    <move what='player' who='individual' loc='1109'/>
+   </event>
+
+   <event num='2'>
+    <comment>Behind shelves - 1675 - lift latch</comment>
+    <message type='single' where='com' who='individual' lo='castle.exit.2'/>
+    <move what='player' who='individual' loc='1674'/>
+   </event>
+
+   <event num='3'>
+    <comment>Wine cellar - 1677 - pull shelves</comment>
+    <message type='single' where='com' who='individual' lo='castle.exit.3'/>
+    <move what='player' who='individual' loc='1675'/>
+   </event>
+
+   <event num='4'>
+    <comment>Push shelves</comment>
+    <message type='single' where='com' who='individual' lo='castle.exit.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Pull shelves</comment>
+    <message type='single' where='com' who='individual' lo='castle.exit.5'/>
+   </event>
+
+  </section>
+
+  <section name='fireplace'>
+
+   <event num='1'>
+    <comment>Bedroom - 1435 - search fireplace - check if she knows about it</comment>
+    <checkvariable name='graveyard' key='fireplace' value='yes' equals='castle.fireplace.2' not-equal='castle.fireplace.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Success</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Failure</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Examine lever - check if she knows about it</comment>
+    <checkvariable name='graveyard' key='fireplace' value='yes' equals='castle.fireplace.5' not-equal='castle.fireplace.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Success</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Failure</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Pull lever - check if she knows about it</comment>
+    <checkvariable name='graveyard' key='fireplace' value='yes' equals='castle.fireplace.8' not-equal='castle.fireplace.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Success - player uses secret door</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.5'/>
+    <move what='player' who='individual' loc='1436'/>
+   </event>
+
+   <event num='9'>
+    <comment>Failure</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.6'/>
+   </event>
+
+   <event num='10'>
+    <comment>Staircase - 1436 - press button</comment>
+    <message type='single' where='com' who='individual' lo='castle.fireplace.7'/>
+    <move what='player' who='individual' loc='1435'/>
+   </event>
+
+  </section>
+
+  <section name='lab'>
+
+   <event num='1'>
+    <comment>Laboratory - 1819 - In room event to add suitable extra text to description</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='castle.lab.2' not-equal='castle.lab.3'/>
+    <checkvariable name='graveyard' key='progress' value='unknown' not-equal='stop'/>
+    <setvariable name='graveyard' key='progress' value='machine1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire1</comment>
+    <message type='single' where='com' who='individual' lo='castle.lab.1'/>
+    <call event='castle.tower.12'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not wire1 so do next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='castle.lab.4' not-equal='castle.lab.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is wire2</comment>
+    <message type='single' where='com' who='individual' lo='castle.lab.2'/>
+    <call event='castle.tower.12'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not wire2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='castle.lab.6' not-equal='castle.lab.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is cable1</comment>
+    <message type='single' where='com' who='individual' lo='castle.lab.3'/>
+    <call event='castle.tower.12'/>
+   </event>
+
+   <event num='7'>
+    <comment>Not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='castle.lab.8' not-equal='castle.lab.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Status is cable2 or cable3</comment>
+    <message type='single' where='com' who='individual' lo='castle.lab.4'/>
+    <call event='castle.tower.12'/>
+   </event>
+
+   <event num='9'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='castle.lab.8' not-equal='castle.lab.10'/>
+   </event>
+
+   <event num='10'>
+    <comment>Status is not cable3 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='dead' equals='castle.lab.11'/>
+   </event>
+
+   <event num='11'>
+    <comment>Status is dead</comment>
+    <message type='single' where='com' who='individual' lo='castle.lab.5'/>
+    <call event='castle.tower.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>No matter what machine status is, check for corpse on slab</comment>
+    <checkvariable name='graveyard' key='corpse' value='yes' not-equal='stop'/>
+    <message type='single' where='com' who='individual' lo='castle.lab.6'/>
+   </event>
+
+  </section>
+
+  <section name='tower'>
+
+   <event num='1'>
+    <comment>Tower roof - 1755 - in room - check status to add extra desc</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='castle.tower.2' not-equal='castle.tower.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire1 or wire2</comment>
+    <message type='single' where='com' who='individual' lo='castle.tower.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='castle.tower.2' not-equal='castle.tower.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is not wire2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='castle.tower.5' not-equal='castle.tower.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is cable1, cable2 or cable3</comment>
+    <message type='single' where='com' who='individual' lo='castle.tower.2'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='castle.tower.5' not-equal='castle.tower.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='castle.tower.5'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='cedric'>
+
+  <section name='catch'>
+
+   <event num='1'>
+    <comment>Catch Zombie - check if previously talked to Cedric</comment>
+    <checkvariable name='graveyard' key='cedric' value='talked' equals='cedric.catch.2' not-equal='cedric.catch.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Has talked to Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.catch.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Hasn&apos;t talked - so check if previously captured</comment>
+    <checkvariable name='graveyard' key='cedric' value='captured' equals='cedric.catch.4' not-equal='cedric.catch.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Has previous captured</comment>
+    <message type='single' where='com' who='individual' lo='cedric.catch.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>No tried before, so check for lasso</comment>
+    <checkinventory map='home' id-name='lasso' found='cedric.catch.6' not-found='cedric.catch.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Lasso zombie</comment>
+    <message type='single' where='com' who='individual' lo='cedric.catch.3'/>
+    <setvariable name='graveyard' key='cedric' value='captured'/>
+    <destroyobject where='inventory' map='home' id-name='lasso'/>
+   </event>
+
+   <event num='7'>
+    <comment>No lasso - check for bandages</comment>
+    <checkinventory map='home' id-name='bandages' found='cedric.catch.8' not-found='cedric.catch.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Got bandages so fling them at Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.catch.4'/>
+    <destroyobject where='inventory' map='home' id-name='bandages'/>
+   </event>
+
+   <event num='9'>
+    <comment>No bandages so try to catch him bare-handed</comment>
+    <message type='single' where='com' who='individual' lo='cedric.catch.5'/>
+   </event>
+
+  </section>
+
+  <section name='chat'>
+
+   <event num='1'>
+    <comment>Chat with Cedric the zombie (obj_cedric)</comment>
+    <match phrase='hello' id-name='obj_cedric' event='cedric.chat.2'/>
+    <match phrase='resistance' id-name='obj_cedric' lo='cedric.chat.5'/>
+    <match phrase='count' id-name='obj_cedric' lo='cedric.chat.6'/>
+    <match phrase='sinistre' id-name='obj_cedric' lo='cedric.chat.6'/>
+    <match phrase='help' id-name='obj_cedric' lo='cedric.chat.7'/>
+    <match phrase='plans' id-name='obj_cedric' lo='cedric.chat.7'/>
+    <match phrase='brian' id-name='obj_cedric' lo='cedric.chat.8'/>
+    <match phrase='castle' id-name='obj_cedric' event='cedric.chat.9'/>
+    <match phrase='bye' id-name='obj_cedric' lo='cedric.chat.13'/>
+    <match phrase='zombie' id-name='obj_cedric' lo='cedric.chat.15'/>
+    <nomatch id-name='obj_cedric' lo='cedric.chat.14'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player says Hello to Cedric - check if talked before</comment>
+    <checkvariable name='graveyard' key='cedric' value='talked' equals='cedric.chat.3' not-equal='cedric.chat.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Has talked before</comment>
+    <message type='single' where='com' who='individual' lo='cedric.chat.1'/>
+   </event>
+
+   <event num='4'>
+    <comment>Not talked before, so check if killed</comment>
+    <checkvariable name='graveyard' key='cedric' value='killed' equals='cedric.chat.5' not-equal='cedric.chat.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Has killed poor Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.chat.2'/>
+    <setvariable name='graveyard' key='zombie' value='talked'/>
+   </event>
+
+   <event num='6'>
+    <comment>Not killed so check if captured</comment>
+    <checkvariable name='graveyard' key='cedric' value='captured' equals='cedric.chat.7' not-equal='cedric.chat.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Has captured</comment>
+    <message type='single' where='com' who='individual' lo='cedric.chat.3'/>
+    <setvariable name='graveyard' key='cedric' value='talked'/>
+   </event>
+
+   <event num='8'>
+    <comment>Has not captured</comment>
+    <message type='single' where='com' who='individual' lo='cedric.chat.4'/>
+    <setvariable name='graveyard' key='cedric' value='talked'/>
+   </event>
+
+   <event num='9'>
+    <comment>Magic word - castle - explain how to use secret entrance</comment>
+    <message type='multi' where='com' who='individual' lo='cedric.chat.9' hi='cedric.chat.12'/>
+    <setvariable name='graveyard' key='stone' value='yes'/>
+   </event>
+
+  </section>
+
+  <section name='kill'>
+
+   <event num='1'>
+    <comment>Kill Zombie - check if previously chatted</comment>
+    <checkvariable name='graveyard' key='cedric' value='talked' equals='cedric.kill.2' not-equal='cedric.kill.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Have talked to Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.kill.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not talked - check if killed before</comment>
+    <checkvariable name='graveyard' key='cedric' value='killed' equals='cedric.kill.4' not-equal='cedric.kill.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Has killed poor Cedric before</comment>
+    <message type='single' where='com' who='individual' lo='cedric.kill.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not killed before - check for spade</comment>
+    <checkinventory map='home' id-name='spade' found='cedric.kill.6' not-found='cedric.kill.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Got spade - so kill the zombie</comment>
+    <message type='single' where='com' who='individual' lo='cedric.kill.3'/>
+    <setvariable name='graveyard' key='cedric' value='killed'/>
+    <move what='player' who='individual' loc='1240'/>
+    <destroyobject where='inventory' map='home' id-name='spade'/>
+   </event>
+
+   <event num='7'>
+    <comment>Not got spade so check for rake</comment>
+    <checkinventory map='home' id-name='rake' found='cedric.kill.8' not-found='cedric.kill.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Got rake - so kill the zombie</comment>
+    <message type='single' where='com' who='individual' lo='cedric.kill.4'/>
+    <setvariable name='graveyard' key='cedric' value='killed'/>
+    <move what='player' who='individual' loc='1240'/>
+    <destroyobject where='inventory' map='home' id-name='rake'/>
+   </event>
+
+   <event num='9'>
+    <comment>Not got rake either so can&apos;t kill the zombie</comment>
+    <message type='single' where='com' who='individual' lo='cedric.kill.5'/>
+   </event>
+
+  </section>
+
+  <section name='meet'>
+
+   <event num='1'>
+    <comment>Castle Wall - 1241 - in room - check the state of previous relations with cedric</comment>
+    <checkvariable name='graveyard' key='cedric' value='unknown' equals='cedric.meet.2' not-equal='cedric.meet.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Not met Cedric before</comment>
+    <message type='single' where='com' who='individual' lo='cedric.meet.1'/>
+    <setvariable name='graveyard' key='cedric' value='met'/>
+   </event>
+
+   <event num='3'>
+    <comment>Check if met but not attacked</comment>
+    <checkvariable name='graveyard' key='cedric' value='met' equals='cedric.meet.4' not-equal='cedric.meet.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Meet Cedric for 2nd time (or more)</comment>
+    <message type='single' where='com' who='individual' lo='cedric.meet.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Check if previous captured Cedric</comment>
+    <checkvariable name='graveyard' key='cedric' value='captured' equals='cedric.meet.6' not-equal='cedric.meet.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Previously tried to capture Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.meet.3'/>
+   </event>
+
+   <event num='7'>
+    <comment>Check if previously killed</comment>
+    <checkvariable name='graveyard' key='cedric' value='killed' equals='cedric.meet.8' not-equal='cedric.meet.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Has previously killed poor Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.meet.4'/>
+   </event>
+
+   <event num='9'>
+    <comment>Has chatted to Cedric</comment>
+    <message type='single' where='com' who='individual' lo='cedric.meet.5'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='computer'>
+
+  <section name='examine'>
+
+   <event num='1'>
+    <comment>Control room - 1814 - Examine computer</comment>
+    <message type='multi' where='com' who='individual' lo='computer.examine.1' hi='computer.examine.2'/>
+    <checkvariable name='graveyard' key='computer' value='unknown' equals='computer.examine.2' not-equal='computer.examine.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player not logged on</comment>
+    <message type='single' where='com' who='individual' lo='computer.examine.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player is logged on</comment>
+    <message type='single' where='com' who='individual' lo='computer.examine.4'/>
+   </event>
+
+  </section>
+
+  <section name='keyboard'>
+
+   <event num='1'>
+    <comment>Get keyboard</comment>
+    <message type='single' where='com' who='individual' lo='computer.keyboard.1'/>
+   </event>
+
+  </section>
+
+  <section name='misc'>
+
+   <event num='1'>
+    <comment>Get computer</comment>
+    <message type='single' where='com' who='individual' lo='computer.misc.1'/>
+   </event>
+
+  </section>
+
+  <section name='note'>
+
+   <event num='1'>
+    <comment>Get post-it note</comment>
+    <message type='single' where='com' who='individual' lo='computer.note.1'/>
+   </event>
+
+  </section>
+
+  <section name='screen'>
+
+   <event num='1'>
+    <comment>Examine screen</comment>
+    <message type='single' where='com' who='individual' lo='computer.screen.1'/>
+    <checkvariable name='graveyard' key='computer' value='unknown' equals='computer.examine.2' not-equal='computer.examine.3'/>
+   </event>
+
+  </section>
+
+  <section name='slot'>
+
+   <event num='1'>
+    <comment>Examine slot</comment>
+    <checkvariable name='graveyard' key='collar' value='yes' equals='computer.slot.2' not-equal='computer.slot.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Slot is full</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Slot is empty</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Put collar into slot - check if there&apos;s already one there</comment>
+    <checkvariable name='graveyard' key='collar' value='yes' equals='computer.slot.5' not-equal='computer.slot.14'/>
+   </event>
+
+   <event num='5'>
+    <comment>Collar already in slot</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Collar not in slot so check for collar</comment>
+    <checkinventory map='home' id-name='collar' found='computer.slot.7' not-found='computer.slot.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player has collar, so put it in slot</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.4'/>
+    <setvariable name='graveyard' key='collar' value='yes'/>
+    <destroyobject where='inventory' map='home' id-name='collar'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player does not have collar</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.5'/>
+   </event>
+
+   <event num='9'>
+    <comment>Examine collar - check if it&apos;s in slot</comment>
+    <checkvariable name='graveyard' key='collar' value='yes' equals='computer.slot.10' not-equal='computer.slot.11'/>
+   </event>
+
+   <event num='10'>
+    <comment>Collar is in slot</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.6'/>
+   </event>
+
+   <event num='11'>
+    <comment>No collar</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.7'/>
+   </event>
+
+   <event num='12'>
+    <comment>Get collar - check if it is in slot</comment>
+    <checkvariable name='graveyard' key='collar' value='yes' equals='computer.slot.13' not-equal='computer.slot.11'/>
+   </event>
+
+   <event num='13'>
+    <comment>Collar is there</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.8'/>
+   </event>
+
+   <event num='14'>
+    <comment>Collar not in slot so check if player is logged on</comment>
+    <checkvariable name='graveyard' key='computer' value='password' equals='computer.slot.6' not-equal='computer.slot.15'/>
+   </event>
+
+   <event num='15'>
+    <comment>Player not logged on so can&apos;t insert collar</comment>
+    <message type='single' where='com' who='individual' lo='computer.slot.9'/>
+   </event>
+
+  </section>
+
+  <section name='type'>
+
+   <event num='1'>
+    <comment>Typing on keyboard - check if player is logged on</comment>
+    <checkvariable name='graveyard' key='computer' value='unknown' equals='computer.type.2' not-equal='computer.type.4'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player not logged on - so check for password</comment>
+    <match phrase='frankenstein' id-name='obj_type' event='computer.type.3'/>
+    <nomatch id-name='obj_type' lo='computer.type.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player types correct password so log on</comment>
+    <message type='single' where='com' who='individual' lo='computer.type.1'/>
+    <setvariable name='graveyard' key='computer' value='password'/>
+    <setvariable name='graveyard' key='progress' value='control2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player is logged on so check for correct command</comment>
+    <match phrase='help' id-name='obj_type' lo='computer.type.3'/>
+    <match phrase='unlock collars' id-name='obj_type' event='computer.type.5'/>
+    <match phrase='manual' id-name='obj_type' lo='computer.type.3'/>
+    <nomatch id-name='obj_type' lo='computer.type.9'/>
+   </event>
+
+   <event num='5'>
+    <comment>Unlock collars - check if collar is in slot</comment>
+    <checkvariable name='graveyard' key='collar' value='yes' equals='computer.type.7' not-equal='computer.type.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Collar not in slot</comment>
+    <message type='single' where='com' who='individual' lo='computer.type.4'/>
+    <setvariable name='graveyard' key='progress' value='control3' temporary='true'/>
+   </event>
+
+   <event num='7'>
+    <comment>Collar is in slot - so success</comment>
+    <message type='multi' where='com' who='individual' lo='computer.type.5' hi='computer.type.8'/>
+    <setvariable name='graveyard' key='zombies' value='freed'/>
+    <move what='player' who='individual' loc='1045'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='graveyard'>
+
+  <section name='death'>
+
+   <event num='1'>
+    <comment>Player falls into an open grave - 912, 914, 916, 1005</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.death.1'/>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+    <destroyinv title='Graveyard'/>
+   </event>
+
+  </section>
+
+  <section name='effects'>
+
+   <event num='1'>
+    <comment>Spooky random effects in graveyard - lots of different locs - first call a delay</comment>
+    <delayevent delay='4' event='graveyard.effects.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Check if player is still on the planet</comment>
+    <checkmap map='graveyard'  pass='graveyard.effects.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Chance that nothing will happen anyway</comment>
+    <percent value='25' equals='graveyard.effects.4' lower='graveyard.effects.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Random pic from different effects</comment>
+    <call event='graveyard.effects.random[5-10]'/>
+   </event>
+
+   <event num='5'>
+    <comment>Effect 1</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.effects.1'/>
+   </event>
+
+   <event num='6'>
+    <comment>Effect 2</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.effects.2'/>
+   </event>
+
+   <event num='7'>
+    <comment>Effect 3</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.effects.3'/>
+   </event>
+
+   <event num='8'>
+    <comment>Effect 4</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.effects.1'/>
+   </event>
+
+   <event num='9'>
+    <comment>Effect 5</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.effects.5'/>
+   </event>
+
+   <event num='10'>
+    <comment>Effect 6</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.effects.6'/>
+   </event>
+
+  </section>
+
+  <section name='exit'>
+
+   <event num='1'>
+    <comment>Castle wall - loc 1045 - check if player has just left graveyard</comment>
+    <checklastloc loc='1044' pass='graveyard.exit.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Yes she has...</comment>
+    <message type='single' where='com' who='individual' lo='graveyard.exit.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='machine'>
+
+  <section name='examine'>
+
+   <event num='1'>
+    <comment>Examine machine - basic desc then check status</comment>
+    <message type='single' where='com' who='individual' lo='machine.examine.1'/>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='machine.examine.2' not-equal='machine.examine.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire2</comment>
+    <message type='single' where='com' who='individual' lo='machine.examine.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not wire2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='machine.examine.4' not-equal='machine.examine.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is cable2 or cable3</comment>
+    <message type='single' where='com' who='individual' lo='machine.examine.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='machine.examine.4' not-equal='machine.examine.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not cable3 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='dead' not-equal='stop'/>
+    <message type='single' where='com' who='individual' lo='machine.examine.4'/>
+   </event>
+
+  </section>
+
+  <section name='use'>
+
+   <event num='1'>
+    <comment>Use machine - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='dead' equals='machine.use.2' not-equal='machine.use.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is dead</comment>
+    <message type='single' where='com' who='individual' lo='machine.use.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not dead so move onto next check</comment>
+    <checkvariable name='graveyard' key='corpse' value='yes' equals='machine.use.4' not-equal='machine.use.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>There is a corpse on the slab</comment>
+    <message type='multi' where='com' who='individual' lo='machine.use.2' hi='machine.use.3'/>
+    <destroyinv title='Graveyard'/>
+    <setvariable name='graveyard' key='lab' value='unknown'/>
+    <setvariable name='graveyard' key='corpse' value='unknown'/>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+   </event>
+
+   <event num='5'>
+    <comment>There is no corpse on the slab so carry on checking machine status</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='machine.use.6' not-equal='machine.use.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is wire2</comment>
+    <message type='multi' where='com' who='individual' lo='machine.use.4' hi='machine.use.5'/>
+    <setvariable name='graveyard' key='lab' value='unknown'/>
+    <setvariable name='graveyard' key='progress' value='machine3'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is not wire2 so carry on with next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='machine.use.8' not-equal='machine.use.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Status is cable2</comment>
+    <message type='multi' where='com' who='individual' lo='machine.use.6' hi='machine.use.7'/>
+    <setvariable name='graveyard' key='progress' value='machine4' temporary='true'/>
+   </event>
+
+   <event num='9'>
+    <comment>Status is not cable2 so move onto the next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='machine.use.10' not-equal='machine.use.11'/>
+   </event>
+
+   <event num='10'>
+    <comment>Status is cable3 - success!</comment>
+    <message type='multi' where='com' who='individual' lo='machine.use.8' hi='machine.use.10'/>
+    <setvariable name='graveyard' key='lab' value='dead'/>
+    <setvariable name='graveyard' key='progress' value='control0'/>
+   </event>
+
+   <event num='11'>
+    <comment>Status is not cable3 so all the remaining states get this result</comment>
+    <message type='single' where='com' who='individual' lo='machine.use.11'/>
+    <setvariable name='graveyard' key='progress' value='machine2' temporary='true'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='mobiles'>
+
+  <section name='wedgewood'>
+
+   <event num='1'>
+    <comment>Conversation with Wedgewood</comment>
+    <match phrase='hello' id-name='obj_wedgewood' event='mobiles.wedgewood.2'/>
+    <match phrase='mission' id-name='obj_wedgewood' event='mobiles.wedgewood.7'/>
+    <match phrase='help' id-name='obj_wedgewood' event='mobiles.wedgewood.7'/>
+    <match phrase='brief' id-name='obj_wedgewood' event='mobiles.wedgewood.7'/>
+    <match phrase='graveyard' id-name='obj_wedgewood' lo='mobiles.wedgewood.9' hi='mobiles.wedgewood.10'/>
+    <match phrase='progress' id-name='obj_wedgewood' event='mobiles.wedgewood.11'/>
+    <match phrase='castle' id-name='obj_wedgewood' event='mobiles.wedgewood.8'/>
+    <match phrase='bye' id-name='obj_wedgewood' lo='mobiles.wedgewood.26'/>
+    <match phrase='brian' id-name='obj_wedgewood' lo='mobiles.wedgewood.28'/>
+    <match phrase='resistance' id-name='obj_wedgewood' lo='mobiles.wedgewood.29'/>
+    <match phrase='cedric' id-name='obj_wedgewood' lo='mobiles.wedgewood.30'/>
+    <nomatch id-name='obj_wedgewood' lo='mobiles.wedgewood.27'/>
+   </event>
+
+   <event num='2'>
+    <comment>Hello - check if this is player&apos;s first conversation with Wedgewood</comment>
+    <checkvariable name='graveyard' key='wedgewood' value='greeted' equals='mobiles.wedgewood.3' not-equal='mobiles.wedgewood.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Hello - First chat with Wedgewood</comment>
+    <message type='multi' where='com' who='individual' lo='mobiles.wedgewood.1' hi='mobiles.wedgewood.4'/>
+    <setvariable name='graveyard' key='wedgewood' value='talked'/>
+   </event>
+
+   <event num='4'>
+    <comment>Hello - not first chat so check if player has talked but not been briefed</comment>
+    <checkvariable name='graveyard' key='wedgewood' value='talked' equals='mobiles.wedgewood.5' not-equal='mobiles.wedgewood.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player has been greeted but not briefed</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player has been briefed</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>Wedgewood briefs player</comment>
+    <message type='multi' where='com' who='individual' lo='mobiles.wedgewood.7' hi='mobiles.wedgewood.8'/>
+    <setvariable name='graveyard' key='wedgewood' value='briefed'/>
+   </event>
+
+   <event num='8'>
+    <comment>Castle - check if player knows about stone</comment>
+    <checkvariable name='graveyard' key='stone' value='yes' equals='mobiles.wedgewood.9' not-equal='mobiles.wedgewood.10'/>
+   </event>
+
+   <event num='9'>
+    <comment>Player does know about stone</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.23'/>
+   </event>
+
+   <event num='10'>
+    <comment>Player does not</comment>
+    <message type='multi' where='com' who='individual' lo='mobiles.wedgewood.24' hi='mobiles.wedgewood.25'/>
+   </event>
+
+   <event num='11'>
+    <comment>Progress - check if zombies have been freed</comment>
+    <checkvariable name='graveyard' key='zombies' value='freed' equals='mobiles.wedgewood.12' not-equal='mobiles.wedgewood.13'/>
+   </event>
+
+   <event num='12'>
+    <comment>Zombies have been freed</comment>
+    <message type='multi' where='com' who='individual' lo='mobiles.wedgewood.11' hi='mobiles.wedgewood.12'/>
+    <setvariable name='graveyard' key='puzzle' value='reward'/>
+   </event>
+
+   <event num='13'>
+    <comment>Zombies have not been freed so move to next check</comment>
+    <checkvariable name='graveyard' key='brian' value='met' equals='mobiles.wedgewood.14' not-equal='mobiles.wedgewood.15'/>
+   </event>
+
+   <event num='14'>
+    <comment>Player has met Brian</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.13'/>
+   </event>
+
+   <event num='15'>
+    <comment>Brian is not met so is he briefed?</comment>
+    <checkvariable name='graveyard' key='brian' value='briefed' equals='mobiles.wedgewood.16' not-equal='mobiles.wedgewood.17'/>
+   </event>
+
+   <event num='16'>
+    <comment>Brian has briefed player</comment>
+    <message type='multi' where='com' who='individual' lo='mobiles.wedgewood.14' hi='mobiles.wedgewood.15'/>
+   </event>
+
+   <event num='17'>
+    <comment>Player hasn&apos;t spoken to Brian so check if she has met Cedric yet</comment>
+    <checkvariable name='graveyard' key='cedric' value='unknown' equals='mobiles.wedgewood.18' not-equal='mobiles.wedgewood.19'/>
+   </event>
+
+   <event num='18'>
+    <comment>Cedric is unknown</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.16'/>
+   </event>
+
+   <event num='19'>
+    <comment>Cedric not unknown so do next check</comment>
+    <checkvariable name='graveyard' key='cedric' value='met' equals='mobiles.wedgewood.20' not-equal='mobiles.wedgewood.21'/>
+   </event>
+
+   <event num='20'>
+    <comment>Cedric met</comment>
+    <message type='multi' where='com' who='individual' lo='mobiles.wedgewood.17' hi='mobiles.wedgewood.19'/>
+   </event>
+
+   <event num='21'>
+    <comment>Cedric not met - next check</comment>
+    <checkvariable name='graveyard' key='cedric' value='captured' equals='mobiles.wedgewood.22' not-equal='mobiles.wedgewood.23'/>
+   </event>
+
+   <event num='22'>
+    <comment>Cedric captured</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.20'/>
+   </event>
+
+   <event num='23'>
+    <comment>Cedric not captured - next check</comment>
+    <checkvariable name='graveyard' key='cedric' value='killed' equals='mobiles.wedgewood.24' not-equal='mobiles.wedgewood.25'/>
+   </event>
+
+   <event num='24'>
+    <comment>Cedric killed</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.21'/>
+   </event>
+
+   <event num='25'>
+    <comment>Cedric not killed so therefore must have talked</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.wedgewood.22'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='armor'>
+
+   <event num='1'>
+    <comment>Hall - 1498 - Get armor</comment>
+    <message type='single' where='com' who='individual' lo='objects.armor.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Wear armor</comment>
+    <message type='single' where='com' who='individual' lo='objects.armor.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Dismantle armor</comment>
+    <message type='single' where='com' who='individual' lo='objects.armor.3'/>
+   </event>
+
+  </section>
+
+  <section name='bandage'>
+
+   <event num='1'>
+    <comment>Crypt - 1106 - get bandage/bandages</comment>
+    <checkinventory map='home' id-name='bandages' found='objects.bandage.2' not-found='objects.bandage.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got some</comment>
+    <message type='single' where='com' who='individual' lo='objects.bandage.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create bandages</comment>
+    <message type='single' where='com' who='individual' lo='objects.bandage.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_bandage'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop bandages</comment>
+    <message type='single' where='com' who='individual' lo='objects.bandage.3'/>
+    <destroyobject where='inventory' map='home' id-name='bandages'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use bandages - check if in zombie location</comment>
+    <checkmap map='sol/graveyard'  pass='objects.bandage.7' fail='objects.bandage.6' loc='1241'/>
+   </event>
+
+   <event num='6'>
+    <comment>Normal response</comment>
+    <message type='single' where='com' who='individual' lo='objects.bandage.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.bandage.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Try to catch the zombie - check if tried before</comment>
+    <checkvariable name='graveyard' key='cedric' value='captured' equals='cedric.catch.4' not-equal='cedric.catch.8'/>
+   </event>
+
+   <event num='8'>
+    <comment>Knot/tie bandages</comment>
+    <message type='single' where='com' who='individual' lo='objects.bandage.6'/>
+    <destroyobject where='inventory' map='home' id-name='bandages'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_lasso'/>
+   </event>
+
+  </section>
+
+  <section name='board'>
+
+   <event num='1'>
+    <comment>Control room - 1814 - Get noticeboard</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Read noticeboard - random selection</comment>
+    <call event='objects.board.random[3-12]'/>
+   </event>
+
+   <event num='3'>
+    <comment>Option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Option 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Option 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Option 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.6'/>
+   </event>
+
+   <event num='8'>
+    <comment>Option 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.7'/>
+   </event>
+
+   <event num='9'>
+    <comment>Option 7</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.8'/>
+   </event>
+
+   <event num='10'>
+    <comment>Option 8</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.9'/>
+   </event>
+
+   <event num='11'>
+    <comment>Option 9</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.10'/>
+   </event>
+
+   <event num='12'>
+    <comment>Option 10</comment>
+    <message type='single' where='com' who='individual' lo='objects.board.11'/>
+   </event>
+
+  </section>
+
+  <section name='bone'>
+
+   <event num='1'>
+    <comment>Tomb - 1108 - get bone/bones</comment>
+    <message type='single' where='com' who='individual' lo='objects.bone.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Get skeleton/skeltons</comment>
+    <message type='single' where='com' who='individual' lo='objects.bone.2'/>
+   </event>
+
+  </section>
+
+  <section name='cable'>
+
+   <event num='1'>
+    <comment>Store room - 1812 - get cable - check if already got some</comment>
+    <checkinventory map='home' id-name='cable' found='objects.cable.2' not-found='objects.cable.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got some cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.cable.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got some - so create cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.cable.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_cable'/>
+   </event>
+
+   <event num='4'>
+    <comment>Use cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.cable.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Attach cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.cable.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Drop cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.cable.5'/>
+    <destroyobject where='inventory' map='home' id-name='cable'/>
+   </event>
+
+  </section>
+
+  <section name='chart'>
+
+   <event num='1'>
+    <comment>Control room - 1814 - Get flipchart</comment>
+    <message type='single' where='com' who='individual' lo='objects.chart.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Read flipchart</comment>
+    <message type='single' where='com' who='individual' lo='objects.chart.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Flip flipchart</comment>
+    <message type='single' where='com' who='individual' lo='objects.chart.3'/>
+   </event>
+
+  </section>
+
+  <section name='coffin'>
+
+   <event num='1'>
+    <comment>Graveyard - 1040 - get coffin</comment>
+    <message type='single' where='com' who='individual' lo='objects.coffin.1'/>
+   </event>
+
+  </section>
+
+  <section name='collar'>
+
+   <event num='1'>
+    <comment>Graveyard - 851 - Player rakes leaves - check if already got a collar</comment>
+    <checkinventory map='home' id-name='collar' found='objects.collar.3' not-found='objects.collar.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Create collar</comment>
+    <message type='single' where='com' who='individual' lo='objects.collar.1'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_collar'/>
+   </event>
+
+   <event num='3'>
+    <comment>Already got collar</comment>
+    <message type='single' where='com' who='individual' lo='objects.collar.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Wear collar</comment>
+    <message type='single' where='com' who='individual' lo='objects.collar.3'/>
+    <changestat who='individual' stamina='5' change='set' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='collar'/>
+   </event>
+
+   <event num='5'>
+    <comment>Get collar - in food processing room - 1813</comment>
+    <message type='single' where='com' who='individual' lo='objects.collar.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Drop collar</comment>
+    <message type='single' where='com' who='individual' lo='objects.collar.5'/>
+    <destroyobject where='inventory' map='home' id-name='collar'/>
+   </event>
+
+  </section>
+
+  <section name='corpse'>
+
+   <event num='1'>
+    <comment>Tomb - 1044 - get corpse</comment>
+    <checkinventory map='home' id-name='corpse' found='objects.corpse.2' not-found='objects.corpse.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got one</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create corpse</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.2'/>
+    <changestat who='individual' stamina='-5' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_corpse'/>
+   </event>
+
+   <event num='4'>
+    <comment>Use corpse - check if player is in lab</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Drop corpse - check if player is in lab</comment>
+    <checkmap map='sol/graveyard'  pass='objects.corpse.7' fail='objects.corpse.6' loc='1819'/>
+   </event>
+
+   <event num='6'>
+    <comment>Not in special loc</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.3'/>
+    <destroyobject where='inventory' map='home' id-name='corpse'/>
+   </event>
+
+   <event num='7'>
+    <comment>Corpse on slab events - check if there is already a corpse on the slab</comment>
+    <checkvariable name='graveyard' key='corpse' value='yes' equals='objects.corpse.8' not-equal='objects.corpse.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Yes there is already a corpse on the slab</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.5'/>
+    <destroyobject where='inventory' map='home' id-name='corpse'/>
+   </event>
+
+   <event num='9'>
+    <comment>Dump corpse on slab</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.6'/>
+    <destroyobject where='inventory' map='home' id-name='corpse'/>
+    <setvariable name='graveyard' key='corpse' value='yes'/>
+   </event>
+
+   <event num='10'>
+    <comment>Lab - 1819 - Ex corpse - check if there is a corpse on the slab</comment>
+    <checkvariable name='graveyard' key='corpse' value='yes' equals='objects.corpse.11' not-equal='objects.corpse.12'/>
+   </event>
+
+   <event num='11'>
+    <comment>There is a corpse on slab</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.7'/>
+   </event>
+
+   <event num='12'>
+    <comment>No corpse</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.8'/>
+   </event>
+
+   <event num='13'>
+    <comment>Get corpse - check status</comment>
+    <checkvariable name='graveyard' key='corpse' value='yes' equals='objects.corpse.14' not-equal='objects.corpse.12'/>
+   </event>
+
+   <event num='14'>
+    <comment>Corpse is on slab</comment>
+    <message type='single' where='com' who='individual' lo='objects.corpse.9'/>
+   </event>
+
+  </section>
+
+  <section name='crow'>
+
+   <event num='1'>
+    <comment>Graveyard - 1107 - get crow</comment>
+    <message type='single' where='com' who='individual' lo='objects.crow.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Kill crow</comment>
+    <message type='single' where='com' who='individual' lo='objects.crow.2'/>
+   </event>
+
+  </section>
+
+  <section name='extcable'>
+
+   <event num='1'>
+    <comment>Store room - 1812 - get extension cable - check if already got some</comment>
+    <checkinventory map='home' id-name='extension cable' found='objects.extcable.2' not-found='objects.extcable.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got some extcable</comment>
+    <message type='single' where='com' who='individual' lo='objects.extcable.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got some - so create extension cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.extcable.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_extcable'/>
+   </event>
+
+   <event num='4'>
+    <comment>Use extension cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.extcable.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Attach extension cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.extcable.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Drop extension cable</comment>
+    <message type='single' where='com' who='individual' lo='objects.extcable.5'/>
+    <destroyobject where='inventory' map='home' id-name='extension cable'/>
+   </event>
+
+  </section>
+
+  <section name='fungus'>
+
+   <event num='1'>
+    <comment>Graveyard - 1104 - get fungus</comment>
+    <message type='single' where='com' who='individual' lo='objects.fungus.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Eat fungus</comment>
+    <message type='single' where='com' who='individual' lo='objects.fungus.2'/>
+   </event>
+
+  </section>
+
+  <section name='horse'>
+
+   <event num='1'>
+    <comment>Nursery - 1433 - get rocking horse</comment>
+    <message type='single' where='com' who='individual' lo='objects.horse.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Rock rocking horse</comment>
+    <message type='single' where='com' who='individual' lo='objects.horse.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Ride rocking horse</comment>
+    <message type='single' where='com' who='individual' lo='objects.horse.3'/>
+   </event>
+
+  </section>
+
+  <section name='implements'>
+
+   <event num='1'>
+    <comment>Kitchen - 1678 - Get/use implements</comment>
+    <message type='single' where='com' who='individual' lo='objects.implements.1'/>
+   </event>
+
+  </section>
+
+  <section name='insect'>
+
+   <event num='1'>
+    <comment>Graveyard - 1169 - get insect</comment>
+    <message type='single' where='com' who='individual' lo='objects.insect.1'/>
+   </event>
+
+  </section>
+
+  <section name='lasso'>
+
+   <event num='1'>
+    <comment>Drop lasso</comment>
+    <message type='single' where='com' who='individual' lo='objects.lasso.1'/>
+    <destroyobject where='inventory' map='home' id-name='lasso'/>
+   </event>
+
+   <event num='2'>
+    <comment>Use/swing/throw lasso - check if player is in zombie location</comment>
+    <checkmap map='sol/graveyard'  pass='objects.lasso.4' fail='objects.lasso.3' loc='1241'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not in special loc</comment>
+    <message type='single' where='com' who='individual' lo='objects.lasso.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.lasso.3'/>
+    <destroyobject where='inventory' map='home' id-name='bandages'/>
+   </event>
+
+   <event num='4'>
+    <comment>Zombie catch - check if done before</comment>
+    <checkvariable name='graveyard' key='cedric' value='captured' equals='cedric.catch.4' not-equal='cedric.catch.6'/>
+   </event>
+
+  </section>
+
+  <section name='leaves'>
+
+   <event num='1'>
+    <comment>Graveyard - 851 - get/move/search leaves</comment>
+    <checkinventory map='home' id-name='rake' found='objects.collar.1' not-found='objects.leaves.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Not got rake</comment>
+    <message type='single' where='com' who='individual' lo='objects.leaves.1'/>
+   </event>
+
+  </section>
+
+  <section name='rake'>
+
+   <event num='1'>
+    <comment>Mausoleum - 979 - get rake</comment>
+    <checkinventory map='home' id-name='rake' found='objects.rake.2' not-found='objects.rake.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got rake</comment>
+    <message type='single' where='com' who='individual' lo='objects.rake.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create rake</comment>
+    <message type='single' where='com' who='individual' lo='objects.rake.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_rake'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop rake</comment>
+    <message type='single' where='com' who='individual' lo='objects.rake.3'/>
+    <destroyobject where='inventory' map='home' id-name='rake'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use rake - check for leaf pile location</comment>
+    <checkmap map='sol/graveyard'  pass='objects.rake.8' fail='objects.rake.6' loc='851'/>
+   </event>
+
+   <event num='6'>
+    <comment>Not in leaf pile loc so check for zombie location</comment>
+    <checkmap map='sol/graveyard'  pass='objects.rake.9' fail='objects.rake.7' loc='1241'/>
+   </event>
+
+   <event num='7'>
+    <comment>Not in any special location</comment>
+    <message type='single' where='com' who='individual' lo='objects.rake.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.rake.5'/>
+   </event>
+
+   <event num='8'>
+    <comment>Leaf pile events</comment>
+    <call event='objects.collar.1'/>
+   </event>
+
+   <event num='9'>
+    <comment>Zombie kill events - check if killed before</comment>
+    <checkvariable name='graveyard' key='cedric' value='killed' equals='cedric.kill.4' not-equal='cedric.kill.8'/>
+   </event>
+
+  </section>
+
+  <section name='rations'>
+
+   <event num='1'>
+    <comment>Bedroom - 1435 - get/take/eat rations</comment>
+    <message type='single' where='com' who='individual' lo='objects.rations.1'/>
+    <changestat who='individual' stamina='10' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='rose'>
+
+   <event num='1'>
+    <comment>Graveyard - 1042 - get vase</comment>
+    <message type='single' where='com' who='individual' lo='objects.rose.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Get rose</comment>
+    <checkinventory map='home' id-name='dead rose' found='objects.rose.3' not-found='objects.rose.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Already got one</comment>
+    <message type='single' where='com' who='individual' lo='objects.rose.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Create a dead rose</comment>
+    <message type='single' where='com' who='individual' lo='objects.rose.3'/>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_rose'/>
+   </event>
+
+   <event num='5'>
+    <comment>Drop dead rose</comment>
+    <message type='single' where='com' who='individual' lo='objects.rose.4'/>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='dead rose'/>
+   </event>
+
+   <event num='6'>
+    <comment>Smell dead rose</comment>
+    <message type='single' where='com' who='individual' lo='objects.rose.5'/>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='shears'>
+
+   <event num='1'>
+    <comment>979 - Mausoleum - get shears</comment>
+    <checkinventory map='home' id-name='shears' found='objects.shears.2' not-found='objects.shears.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got shears</comment>
+    <message type='single' where='com' who='individual' lo='objects.shears.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create shears</comment>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_shears'/>
+    <message type='single' where='com' who='individual' lo='objects.shears.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop shears</comment>
+    <message type='single' where='com' who='individual' lo='objects.shears.3'/>
+    <destroyobject where='inventory' map='home' id-name='shears'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use shears</comment>
+    <message type='single' where='com' who='individual' lo='objects.shears.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shears.5'/>
+   </event>
+
+  </section>
+
+  <section name='skull'>
+
+   <event num='1'>
+    <comment>Tomb - 1108 - get skull/skulls</comment>
+    <checkinventory map='home' id-name='skull' found='objects.skull.2' not-found='objects.skull.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got one</comment>
+    <message type='single' where='com' who='individual' lo='objects.skull.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create skull</comment>
+    <message type='single' where='com' who='individual' lo='objects.skull.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_skull'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop skull</comment>
+    <message type='single' where='com' who='individual' lo='objects.skull.3'/>
+    <message type='single' where='com' who='room_ex' lo='objects.skull.4'/>
+    <destroyobject where='inventory' map='home' id-name='skull'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use skull</comment>
+    <message type='single' where='com' who='individual' lo='objects.skull.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Juggle skull</comment>
+    <message type='single' where='com' who='individual' lo='objects.skull.6'/>
+    <message type='single' where='com' who='room_ex' lo='objects.skull.7'/>
+    <destroyobject where='inventory' map='home' id-name='skull'/>
+   </event>
+
+   <event num='7'>
+    <comment>Kick skull</comment>
+    <message type='single' where='com' who='individual' lo='objects.skull.8'/>
+    <message type='single' where='com' who='room_ex' lo='objects.skull.9'/>
+    <destroyobject where='inventory' map='home' id-name='skull'/>
+   </event>
+
+  </section>
+
+  <section name='slab'>
+
+   <event num='1'>
+    <comment>Laboratory - 1819 - examine slab - basic desc plus check whether it has a corpse on it or not</comment>
+    <message type='single' where='com' who='individual' lo='objects.slab.1'/>
+    <checkvariable name='graveyard' key='corpse' value='yes' not-equal='stop'/>
+    <message type='single' where='com' who='individual' lo='objects.slab.2'/>
+   </event>
+
+  </section>
+
+  <section name='spade'>
+
+   <event num='1'>
+    <comment>Mausoleum - 979 - get spade</comment>
+    <checkinventory map='home' id-name='spade' found='objects.spade.2' not-found='objects.spade.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got a spade</comment>
+    <message type='single' where='com' who='individual' lo='objects.spade.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create spade</comment>
+    <message type='single' where='com' who='individual' lo='objects.spade.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_spade'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop spade</comment>
+    <message type='single' where='com' who='individual' lo='objects.spade.3'/>
+    <destroyobject where='inventory' map='home' id-name='spade'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use spade</comment>
+    <checkmap map='sol/graveyard'  pass='objects.spade.7' fail='objects.spade.6' loc='1241'/>
+   </event>
+
+   <event num='6'>
+    <comment>Not in the zombie location</comment>
+    <message type='single' where='com' who='individual' lo='objects.spade.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.spade.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Zombie kill event - check if killed before</comment>
+    <checkvariable name='graveyard' key='cedric' value='kill' equals='cedric.kill.4' not-equal='cedric.kill.6'/>
+   </event>
+
+  </section>
+
+  <section name='stuff'>
+
+   <event num='1'>
+    <comment>Get/search junk/stuff - in the store rooms</comment>
+    <message type='single' where='com' who='individual' lo='objects.stuff.1'/>
+   </event>
+
+  </section>
+
+  <section name='tape'>
+
+   <event num='1'>
+    <comment>Store room - 1748 - get duct tape - check if already got some</comment>
+    <checkinventory map='home' id-name='duct tape' found='objects.tape.2' not-found='objects.tape.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got some duct tape</comment>
+    <message type='single' where='com' who='individual' lo='objects.tape.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got some - so create duct tape</comment>
+    <message type='single' where='com' who='individual' lo='objects.tape.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_tape'/>
+   </event>
+
+   <event num='4'>
+    <comment>Use duct tape</comment>
+    <message type='single' where='com' who='individual' lo='objects.tape.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Attach duct tape</comment>
+    <message type='single' where='com' who='individual' lo='objects.tape.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Drop duct tape</comment>
+    <message type='single' where='com' who='individual' lo='objects.tape.5'/>
+    <destroyobject where='inventory' map='home' id-name='duct tape'/>
+   </event>
+
+  </section>
+
+  <section name='urn'>
+
+   <event num='1'>
+    <comment>Get urn</comment>
+    <checkinventory map='home' id-name='urn' found='objects.urn.2' not-found='objects.urn.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got one</comment>
+    <message type='single' where='com' who='individual' lo='objects.urn.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Create urn</comment>
+    <message type='single' where='com' who='individual' lo='objects.urn.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_urn'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop urn</comment>
+    <message type='single' where='com' who='individual' lo='objects.urn.3'/>
+    <destroyobject where='inventory' map='home' id-name='urn'/>
+    <message type='single' where='com' who='room_ex' lo='objects.urn.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Open urn</comment>
+    <message type='single' where='com' who='individual' lo='objects.urn.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Empty urn</comment>
+    <message type='single' where='com' who='individual' lo='objects.urn.6'/>
+    <message type='single' where='com' who='room_ex' lo='objects.urn.7'/>
+    <destroyobject where='inventory' map='home' id-name='urn'/>
+   </event>
+
+  </section>
+
+  <section name='wheelbarrow'>
+
+   <event num='1'>
+    <comment>979 - Mausoleum - Get wheelbarrow</comment>
+    <message type='single' where='com' who='individual' lo='objects.wheelbarrow.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Use/wheel wheelbarrow</comment>
+    <message type='single' where='com' who='individual' lo='objects.wheelbarrow.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.wheelbarrow.3'/>
+   </event>
+
+  </section>
+
+  <section name='wine'>
+
+   <event num='1'>
+    <comment>Wine cellar - 1677 - get wine/get bottle</comment>
+    <message type='single' where='com' who='individual' lo='objects.wine.1'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_wine'/>
+   </event>
+
+   <event num='2'>
+    <comment>Open/drink wine</comment>
+    <message type='single' where='com' who='individual' lo='objects.wine.2'/>
+    <changestat who='individual' stamina='1' change='add' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='wine'/>
+   </event>
+
+   <event num='3'>
+    <comment>Drop wine</comment>
+    <message type='single' where='com' who='individual' lo='objects.wine.3'/>
+    <destroyobject where='inventory' map='home' id-name='wine'/>
+   </event>
+
+  </section>
+
+  <section name='wire'>
+
+   <event num='1'>
+    <comment>Store room - 1876 - get wire - check if already got some</comment>
+    <checkinventory map='home' id-name='wire' found='objects.wire.2' not-found='objects.wire.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got some wire</comment>
+    <message type='single' where='com' who='individual' lo='objects.wire.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got some - so create wire</comment>
+    <message type='single' where='com' who='individual' lo='objects.wire.2'/>
+    <createobject where='inventory' home-map='sol/graveyard' id='obj_wire'/>
+   </event>
+
+   <event num='4'>
+    <comment>Use wire</comment>
+    <message type='single' where='com' who='individual' lo='objects.wire.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Attach wire</comment>
+    <message type='single' where='com' who='individual' lo='objects.wire.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Drop wire</comment>
+    <message type='single' where='com' who='individual' lo='objects.wire.5'/>
+    <destroyobject where='inventory' map='home' id-name='wire'/>
+   </event>
+
+  </section>
+
+  <section name='wood'>
+
+   <event num='1'>
+    <comment>Graveyard - 980 - get wood/coffin</comment>
+    <message type='single' where='com' who='individual' lo='objects.wood.1'/>
+   </event>
+
+  </section>
+
+  <section name='worm'>
+
+   <event num='1'>
+    <comment>Graveyard - 1040 - get worm</comment>
+    <message type='single' where='com' who='individual' lo='objects.worm.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Eat worm</comment>
+    <message type='single' where='com' who='individual' lo='objects.worm.2'/>
+   </event>
+
+  </section>
+
+  <section name='zombies'>
+
+   <event num='1'>
+    <comment>Food proc room - 1813 - talk to zombies</comment>
+    <nomatch id-name='obj_zombies' lo='objects.zombies.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='puzzle'>
+
+  <section name='insurance'>
+
+   <event num='1'>
+    <comment>Graveyard entrance - 849 - check insurance</comment>
+    <checkflag who='individual' flag ='insured'  unset='puzzle.insurance.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player is not insured, so turn her back</comment>
+    <message type='single' where='com' who='individual' lo='puzzle.insurance.1'/>
+    <move what='player' who='individual' loc='720'/>
+   </event>
+
+  </section>
+
+  <section name='leaving'>
+
+   <event num='1'>
+    <comment>In room event on LP - 720 - to remove any Graveyard objects</comment>
+    <message type='single' where='com' who='individual' lo='puzzle.leaving.1'/>
+    <destroyinv title='Graveyard'/>
+   </event>
+
+  </section>
+
+  <section name='start'>
+
+   <event num='1'>
+    <comment>Misty wood - 784 - check if player has been sent by Trading Guild</comment>
+    <checkvariable name='graveyard' key='puzzle' value='unknown' equals='puzzle.start.2' not-equal='puzzle.start.4'/>
+   </event>
+
+   <event num='2'>
+    <comment>Check if player has been warned before</comment>
+    <checkvariable name='graveyard' key='warning' value='unknown' equals='puzzle.start.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player has not been sent by the Trading Guild and hasn&apos;t been warned before</comment>
+    <message type='single' where='com' who='individual' lo='puzzle.start.1'/>
+    <setvariable name='graveyard' key='warning' value='warned'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player has been sent by Guild - check if Wedgewood has greeted her</comment>
+    <checkvariable name='graveyard' key='wedgewood' value='unknown' equals='puzzle.start.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player has not been greeted by Wedgewood before</comment>
+    <message type='single' where='com' who='individual' lo='puzzle.start.2'/>
+    <setvariable name='graveyard' key='wedgewood' value='greeted'/>
+   </event>
+
+   <event num='6'>
+    <comment>Behind tree - 783 - enter event - check if player has started puzzle</comment>
+    <checkvariable name='graveyard' key='puzzle' value='unknown' equals='puzzle.start.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player has not been sent by Guild so turn her back</comment>
+    <message type='single' where='com' who='individual' lo='puzzle.start.3'/>
+    <move what='player' who='individual' loc='784'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='rod'>
+
+  <section name='cable'>
+
+   <event num='1'>
+    <comment>Tower - 1755 - attach cable to rod - check for cable</comment>
+    <checkinventory map='home' id-name='cable' found='rod.cable.3' not-found='rod.cable.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Not got cable</comment>
+    <message type='single' where='com' who='individual' lo='rod.cable.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Got cable so check status</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='rod.cable.4' not-equal='rod.cable.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is cable1</comment>
+    <message type='single' where='com' who='individual' lo='rod.cable.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='rod.cable.4' not-equal='rod.cable.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='rod.cable.4' not-equal='rod.cable.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is not cable3 so do it...</comment>
+    <message type='single' where='com' who='individual' lo='rod.cable.3'/>
+    <setvariable name='graveyard' key='lab' value='cable1'/>
+    <destroyobject where='inventory' map='home' id-name='cable'/>
+   </event>
+
+  </section>
+
+  <section name='examine'>
+
+   <event num='1'>
+    <comment>1755 - tower - examine lightning rod - basic desc plus status check</comment>
+    <message type='single' where='com' who='individual' lo='rod.examine.1'/>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='rod.examine.2' not-equal='rod.examine.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire1</comment>
+    <message type='single' where='com' who='individual' lo='rod.examine.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='rod.examine.2' not-equal='rod.examine.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is not wire2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable1' equals='rod.examine.5' not-equal='rod.examine.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is cable1</comment>
+    <message type='single' where='com' who='individual' lo='rod.examine.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not cable1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable2' equals='rod.examine.5' not-equal='rod.examine.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is not cable2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='cable3' equals='rod.examine.5'/>
+   </event>
+
+  </section>
+
+  <section name='wire'>
+
+   <event num='1'>
+    <comment>Tower - 1755 - attach wire to rod - check for wire</comment>
+    <checkinventory map='home' id-name='wire' found='rod.wire.3' not-found='rod.wire.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>No wire</comment>
+    <message type='single' where='com' who='individual' lo='rod.wire.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Got wire so check status</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='rod.wire.4' not-equal='rod.wire.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is wire1</comment>
+    <message type='single' where='com' who='individual' lo='rod.wire.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='rod.wire.4' not-equal='rod.wire.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is not wire2 so do it...</comment>
+    <message type='single' where='com' who='individual' lo='rod.wire.3'/>
+    <setvariable name='graveyard' key='lab' value='wire1'/>
+    <destroyobject where='inventory' map='home' id-name='wire'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='wire'>
+
+  <section name='attach'>
+
+   <event num='1'>
+    <comment>Lab - 1819 - attach wire to machine - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='wire.attach.2' not-equal='wire.attach.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire2</comment>
+    <message type='single' where='com' who='individual' lo='wire.attach.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not wire2 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='wire.attach.4' not-equal='wire.attach.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is wire1, so do it...</comment>
+    <message type='single' where='com' who='individual' lo='wire.attach.3'/>
+    <setvariable name='graveyard' key='lab' value='wire2'/>
+    <destroyobject where='inventory' map='home' id-name='wire'/>
+   </event>
+
+   <event num='5'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='dead' equals='wire.attach.6' not-equal='wire.attach.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Status is dead</comment>
+    <message type='single' where='com' who='individual' lo='wire.attach.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is not dead so check for wire</comment>
+    <checkinventory map='home' id-name='wire' found='wire.attach.8' not-found='wire.attach.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Got wire</comment>
+    <message type='single' where='com' who='individual' lo='wire.attach.5'/>
+   </event>
+
+   <event num='9'>
+    <comment>Not got wire</comment>
+    <message type='single' where='com' who='individual' lo='wire.attach.1'/>
+   </event>
+
+  </section>
+
+  <section name='examine'>
+
+   <event num='1'>
+    <comment>Lab - 1819 - ex wire - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='wire.examine.2' not-equal='wire.examine.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire1</comment>
+    <message type='single' where='com' who='individual' lo='wire.examine.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='wire.examine.4' not-equal='wire.examine.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Status is wire2</comment>
+    <message type='single' where='com' who='individual' lo='wire.examine.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Otherwise...</comment>
+    <message type='single' where='com' who='individual' lo='wire.examine.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Tower - 1755 - ex wire - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='wire.examine.7' not-equal='wire.examine.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Status is wire1</comment>
+    <message type='single' where='com' who='individual' lo='wire.examine.4'/>
+   </event>
+
+   <event num='8'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='wire.examine.7' not-equal='wire.examine.5'/>
+   </event>
+
+  </section>
+
+  <section name='get'>
+
+   <event num='1'>
+    <comment>Lab 1819 and tower 1755 - get wire - check status</comment>
+    <checkvariable name='graveyard' key='lab' value='wire1' equals='wire.get.2' not-equal='wire.get.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Status is wire1</comment>
+    <message type='single' where='com' who='individual' lo='wire.get.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Status is not wire1 so move onto next check</comment>
+    <checkvariable name='graveyard' key='lab' value='wire2' equals='wire.get.2' not-equal='wire.examine.5'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

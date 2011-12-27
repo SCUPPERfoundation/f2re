@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Spindle Space' version='13' editor='standard'>
+
+   <location num='397' flags='sp'>
+      <name>Labyrinth Planetary Orbit</name>
+      <desc>If you are in the mood for an adventure, you have come to the right place.  Labyrinth is the location of Spindle&apos;s infamous maze events.  As events change, the events will be posted on the landing pad.  All visitors are welcome and are reminded that they can access the landing pad from any location by going out.</desc>
+      <exits sw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Austin Orbit and Spindle Interstellar link</name>
+      <desc>You have reached Austin orbit. You can land at Austin-Bergstrom Interplanetary Starport and enjoy your stay. Austin is home to the University of Texas and home of the Longhorns.  A sign reads:</desc>
+      <desc>Austin Orbit - You are here</desc>
+      <desc>Labyrinth Orbit - Northeast</desc>
+      <desc>Planet Construction - Southeast</desc>
+      <desc>All trade is welcome. Please do not sell commodities to the exchange in which the planet has factories. Thank you!</desc>
+      <exits ne='397' se='525' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='sp'>
+      <name>Planet Construction Zone</name>
+      <desc>You are now entering a construction zone for Spindle&apos;s next planetary endeavor. There is not much to see yet, but more is to come in the future.</desc>
+      <exits nw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<object-list version='14' editor='Version 1.37'>
+   <object type='static' start='397' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>button1</id>
+      <desc>A well worn button with the word start above it.</desc>
+      <vocab cmd='push' event='shuttle.functions.3'></vocab>
+      <vocab cmd='use' event='shuttle.functions.3'></vocab>
+      <vocab cmd='hit' event='shuttle.functions.9'></vocab>
+      <vocab cmd='get' event='shuttle.functions.7'></vocab>
+      <vocab cmd='press' event='shuttle.functions.3'></vocab>
+   </object>
+
+   <object type='static' start='333' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>button2</id>
+      <desc>A well worn button with the words start above it.</desc>
+      <vocab cmd='push' event='shuttle.functions.4'></vocab>
+      <vocab cmd='use' event='shuttle.functions.4'></vocab>
+      <vocab cmd='hit' event='shuttle.functions.9'></vocab>
+      <vocab cmd='get' event='shuttle.functions.7'></vocab>
+      <vocab cmd='press' event='shuttle.functions.4'></vocab>
+   </object>
+
+   <object type='static' start='461' visibility='0' size='1' weight='1' flags='i'>
+      <name>in shuttle</name>
+      <id>shuttle1</id>
+      <desc>A old transport shuttle is parked here.</desc>
+      <vocab cmd='get' event='shuttle.functions.1'></vocab>
+      <vocab cmd='go' event='shuttle.functions.1'></vocab>
+      <vocab cmd='ex' event='shuttle.message.1'></vocab>
+      <vocab cmd='examine' event='shuttle.message.1'></vocab>
+   </object>
+
+   <object type='static' start='461' visibility='0' size='1' weight='1' flags='i'>
+      <name>shuttle</name>
+      <id>shuttle2</id>
+      <desc>A old transport shuttle is parked here.</desc>
+      <vocab cmd='get' event='shuttle.message.2'></vocab>
+      <vocab cmd='enter' event='shuttle.functions.1'></vocab>
+      <vocab cmd='ex' event='shuttle.message.5'></vocab>
+      <vocab cmd='examine' event='shuttle.message.5'></vocab>
+   </object>
+
+   <object type='static' start='397' visibility='0' size='1' weight='1' flags='i'>
+      <name>shuttle</name>
+      <id>shuttle3</id>
+      <desc>You look around the inside of a old transport shuttle.</desc>
+      <vocab cmd='exit' event='shuttle.functions.2'></vocab>
+      <vocab cmd='leave' event='shuttle.functions.2'></vocab>
+   </object>
+
+   <object type='static' start='334' visibility='0' size='1' weight='1' flags='i'>
+      <name>in shuttle</name>
+      <id>shuttle4</id>
+      <desc>A old transport shuttle is parked here.</desc>
+      <vocab cmd='get' event='shuttle.functions.5'></vocab>
+      <vocab cmd='go' event='shuttle.functions.5'></vocab>
+      <vocab cmd='ex' event='shuttle.message.1'></vocab>
+      <vocab cmd='examine' event='shuttle.message.1'></vocab>
+   </object>
+
+   <object type='static' start='334' visibility='0' size='1' weight='1' flags='i'>
+      <name>shuttle</name>
+      <id>shuttle5</id>
+      <desc>A old transport shuttle is parked here.</desc>
+      <vocab cmd='get' event='shuttle.message.2'></vocab>
+      <vocab cmd='enter' event='shuttle.functions.5'></vocab>
+      <vocab cmd='ex' event='shuttle.message.5'></vocab>
+      <vocab cmd='examine' event='shuttle.message.5'></vocab>
+   </object>
+
+   <object type='static' start='333' visibility='0' size='1' weight='1' flags='i'>
+      <name>shuttle</name>
+      <id>shuttle6</id>
+      <desc>You look around the inside of a old transport shuttle.</desc>
+      <vocab cmd='exit' event='shuttle.functions.6'></vocab>
+      <vocab cmd='leave' event='shuttle.functions.6'></vocab>
+   </object>
+
+   <object type='static' start='525' visibility='0' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>sign1</id>
+      <desc>A knock over sign with what looks like directions written on it.</desc>
+      <vocab cmd='read' event='message.sign.1'></vocab>
+      <vocab cmd='look' event='message.sign.1'></vocab>
+      <vocab cmd='get' event='message.sign.2'></vocab>
+   </object>
+
+</object-list>
+
+

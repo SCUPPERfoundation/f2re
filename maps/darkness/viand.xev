@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<event-list version='1' editor='Version 1.46'>
+   <category name='food'>
+      <section name='cheese'>
+
+      <event num='1'>
+         <comment>colby</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Colby cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='2'>
+         <comment>monterey jack</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Monterey Jack cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='3'>
+         <comment>pepperjack</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Pepperjack cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='4'>
+         <comment>american</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of American cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='5'>
+         <comment>cheddar</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Cheddar cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='6'>
+         <comment>gouda</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Gouda cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='7'>
+         <comment>mozzarella</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Mozzarella cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='8'>
+         <comment>swiss</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Swiss cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='9'>
+         <comment>provolone</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves you a full tray of Provolone cheese, some crackers, and a glass of fine wine. You quickly dig in and enjoy it all.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      <event num='10'>
+         <comment>fondue</comment>
+         <message type='text' where='com' who='individual'>The waitroid appears and serves a variety of crackers and bread that you quickly dip into the fondue and gobble up.</message>
+         <changeplayer sta='50'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='moves'>
+      <section name='button'>
+
+      <event num='1'>
+         <comment>colby</comment>
+         <move what='player' who='individual' loc='73'/>
+      </event>
+
+      <event num='2'>
+         <comment>monterey jack</comment>
+         <move what='player' who='individual' loc='137'/>
+      </event>
+
+      <event num='3'>
+         <comment>pepperjack</comment>
+         <move what='player' who='individual' loc='201'/>
+      </event>
+
+      <event num='4'>
+         <comment>american</comment>
+         <move what='player' who='individual' loc='265'/>
+      </event>
+
+      <event num='5'>
+         <comment>cheddar</comment>
+         <move what='player' who='individual' loc='329'/>
+      </event>
+
+      <event num='6'>
+         <comment>gouda</comment>
+         <move what='player' who='individual' loc='393'/>
+      </event>
+
+      <event num='7'>
+         <comment>mozzarella</comment>
+         <move what='player' who='individual' loc='457'/>
+      </event>
+
+      <event num='8'>
+         <comment>foyer</comment>
+         <move what='player' who='individual' loc='264'/>
+      </event>
+
+      <event num='9'>
+         <comment>random move</comment>
+         <call event='moves.button.random[1-7]'/>
+      </event>
+
+      </section>
+   </category>
+</event-list>
+

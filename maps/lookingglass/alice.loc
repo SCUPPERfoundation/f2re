@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<fed2-map title='Alice' version='16' editor='standard' from='1050' to='Looking Glass.Looking Glass Space.1050'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Ack! You shouldn&apos;t be here! Out! Out!</desc>
+   </location>
+
+   <location num='155'>
+      <name>Lost in the Forest</name>
+      <desc>   As you make your way through the forest you see a sign reading: &quot;Alice apologizes profusely, but this part of her mind has not been built yet. Please go back OUT the way you came and return at a later date when Alice&apos;s mind is more complete.&quot;</desc>
+      <exits e='156' out='1050' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='156'>
+      <name>Very Much Lost in the Forest</name>
+      <desc>   As you wander east through the dense forest you see another sign that reads: &quot;Now what did I tell you? Fine. Since you can&apos;t seem to follow directions, you can just wander around in this forest forever. Of course there is more than one way to get back to your ship. Feel free to take the express route if you want. :)&quot; You notice a rather large butcher knife glinting beneath the sign.</desc>
+      <desc>   You start thinking that this planet must have been designed by some freak girl. Oh well, surely there&apos;s a way back to the landing pad from here that doesn&apos;t involve... that.</desc>
+      <exits s='220' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='158'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits up='220' down='220' in='220' out='220' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='219'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits e='220' sw='282' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='220'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits e='221' w='219' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='221'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits ne='158' w='220' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='222'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits up='346' down='220' in='219' out='349' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='282'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits ne='219' down='283' in='346' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='283'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits n='219' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='284'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits ne='221' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='285'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits w='284' up='283' down='283' in='221' out='283' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='346'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits up='282' down='349' in='348' out='158' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='348'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits ne='285' nw='283' up='220' down='220' in='220' out='282' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='349'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits up='222' down='222' in='222' out='350' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='350'>
+      <name>Lost in the Forest</name>
+      <desc>   This part of the forest looks exactly like the part you just left.</desc>
+      <exits up='346' down='1050' in='349' out='220' no-exit='noexit.landing.2'/>
+   </location>
+
+   <location num='1050' flags='hi'>
+      <name>Clearing</name>
+      <desc>   Since Alice is completely covered with dense vegetation, this is the only place you could find to land your shuttle. The clearing is surrounded on every side by a dark forest that has a decidedly foreboding look to it. You can hear the predatorial cry of some strange creature, and there are no signs of civilization anywhere. Fortunately, this clearing is brightly illuminated by sunlight, and you feel safe here. Except... how can there be sunlight when this planet has no star?</desc>
+      <desc>   At the center of the clearing is an unnaturally huge oak tree. A cat sits on one of its branches and watches you with greenish eyes. You also notice the head of a narrow path over to the east.</desc>
+      <desc>   Your shuttle sits here, waiting to bear you back to your ship.</desc>
+      <exits e='1051' out='155' no-exit='noexit.landing.1'/>
+   </location>
+
+   <location num='1051'>
+      <name>Narrow Path</name>
+      <desc>   As you pick your way carefully along the path, the forest seems to close in on you. Everything is absolutely silent. Even your movement is noiseless. The ground is composed of what feels like a shaved polymer that completely absorbs sound. The eerie stillness gives you the urge to shout at the forest... though that probably wouldn&apos;t be wise.</desc>
+      <desc>   The path wends its way east. To the west is a large clearing where your shuttle is waiting. Dense forest continues out of site in every other direction.</desc>
+      <exits e='1052' w='1050' out='155' no-exit='noexit.landing.1'/>
+   </location>
+
+   <location num='1052'>
+      <name>Narrow Path</name>
+      <desc>   Tree branches bend down nearly to the ground on this section of the path, and there is barely enough clearance for you to move normally. A particularly desultory weeping willow stands right in your way at one point, but you are able to make your way around it.</desc>
+      <desc>   The path continues to the west and east.</desc>
+      <exits e='1053' w='1051' out='155' no-exit='noexit.landing.1'/>
+   </location>
+
+   <location num='1053' flags='eb'>
+      <name>Exchange</name>
+      <desc>   This is quite different from the high-tech hustle and bustle you are used to seeing at planetary trading centers. A mouse sleeps against one of the trees with an overly large clipboard on its chest. On the oppsosite side of the clearing stands a man in the unmistakable black-and-red livery of the House of Doz. The man somehow manages to look nervous, uncomfortable, and bored all at the same time.</desc>
+      <desc>   As you walk about the clearing, the mouse suddenly awakens, ambles over to you, and asks if you would like to buy or sell any goods. He assures you that all transactions will be discreetly onloaded and offloaded from your ship and then begins calling off commodity prices. You wonder how the exchange can have all these trade goods when this planet does not appear to have any infrastructure other than a single narrow path.</desc>
+      <desc>   The path heads out west into the forest.</desc>
+      <exits w='1052' out='155' no-exit='noexit.landing.1'/>
+   </location>
+
+</fed2-map>

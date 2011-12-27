@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Tempus Space' version='4' editor='standard'>
+
+   <location num='2278' flags='sl'>
+      <name>Tempus Interstellar Link and Alzarius Orbit</name>
+      <desc>You see a dark green planet below, its surface covered with dense forests and marshlands.  You see a much larger planet in the far distance, which is responsible for dragging Alzarius somewhat further from its sun every 50 years.  The Time Lady Romana welcomes visitors who come in friendship.  South you will find Ribos.  Voga is along the space lane to the SW.</desc>
+      <exits s='2342' sw='2341'/>
+   </location>
+
+   <location num='2341' flags='s'>
+      <name>Voga Orbit</name>
+      <desc>Voga is a large, regularly shaped wandering asteroid about the size of a small planet.  Nevertheless, it contains sufficient atmosphere and maintains adequate distance to its sun to support life.  Its inhabitants are all wealthy because Voga has massive deposits of gold.  The Tempus Link and Alzarius Orbit is NE.  The space lane East leads to Ribos.</desc>
+      <exits ne='2278' e='2342'/>
+   </location>
+
+   <location num='2342' flags='s'>
+      <name>Ribos Orbit</name>
+      <desc>The planet below is all white, gripped in its 32 year long Ice Time.  Still, visitors can expect a warm welcome.  The Link and Alzarius orbit are North.  Voga is due West.</desc>
+      <exits n='2278' w='2341'/>
+   </location>
+
+</fed2-map>

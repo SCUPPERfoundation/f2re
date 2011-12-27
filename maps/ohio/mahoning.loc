@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<fed2-map title='Mahoning' version='15' editor='standard' from='523' to='Ohio.Ohio Space.523'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='197'>
+      <name>Route 46 at Maoning/Trumbull County line</name>
+      <desc>Orange Barrels Block the Road to the north From here.  For a Great Sub Sandwich check out the Country Fair Store on the East!</desc>
+      <exits e='198' s='261'/>
+   </location>
+
+   <location num='198' flags='b'>
+      <name>Country Fair Convieience Store</name>
+      <desc>It&apos;s odd that this Gas Sation/Convienence Store has the best Sandwiches on the Planet... we&apos;ll next to the Boardman Location that is!</desc>
+      <exits w='197'/>
+   </location>
+
+   <location num='206'>
+      <name>US 422 (State Street) Girard</name>
+      <desc>You are on State Street in Girard.  Unfortunately, the road is closed to the North due to a paving project.  Fortunately, the Jib Jab Hot Dog Shop is open on the East side of the road.</desc>
+      <desc>You can head South to Interstate 80 and Youngstown from here.</desc>
+      <exits e='207' s='270'/>
+   </location>
+
+   <location num='207' flags='b'>
+      <name>Jib Jab Hot Dog Shop</name>
+      <desc>Nice, Simple but somehow great food for an excellent price!  Try a local favorite 2 Chilli Dogs with Mustard and a family size order of chilli-chesse frys.  Wash it down with a cold mug of root beer!</desc>
+      <exits w='206'/>
+   </location>
+
+   <location num='260'>
+      <name>I-80 Westbound</name>
+      <desc>Apparently the bridge over the Berlin Reservoir is out, all traffic is being directed (south) across the median onto the East bound side of the freeway.</desc>
+      <exits s='324'/>
+   </location>
+
+   <location num='261'>
+      <name>I-80/Route 46 Interchange</name>
+      <desc>From here you can take I-80 West toward Route 534 or Route 46 South toward Mahoning Avenue or North toward the County Line</desc>
+      <exits n='197' s='325' w='260'/>
+   </location>
+
+   <location num='262'>
+      <name>I-80 West (Near Route 46)</name>
+      <desc>You&apos;re Headed West on I-80  you see the Route 46 Interchange ahead</desc>
+      <exits w='261'/>
+   </location>
+
+   <location num='263'>
+      <name>I-80 West/Route 11 Southbound Interchange</name>
+      <desc>Form here you can continue West on I-80 toward Route 46 or take Route 11 South toward Mahoning Avenue</desc>
+      <exits s='327' w='262'/>
+   </location>
+
+   <location num='264'>
+      <name>I-80West/Route 11 Northbound Interchange</name>
+      <desc>You can only head West on I-80 toward Route 46 from here</desc>
+      <exits w='263'/>
+   </location>
+
+   <location num='265'>
+      <name>I-80 West (Near Route 11)</name>
+      <desc>You&apos;re headed West on I-80 you can see the Route 11 cloverleaf in the distance.</desc>
+      <exits w='264'/>
+   </location>
+
+   <location num='266'>
+      <name>I-80 West</name>
+      <desc>You&apos;re headed West on I-80 toward Route 11</desc>
+      <exits w='265'/>
+   </location>
+
+   <location num='267'>
+      <name>I-80 Westbound/Meridan Road Interchange</name>
+      <desc>Fron here you can take Meridian Road South toward the LP, North toward the County Line or I-80 West toward Route 11</desc>
+      <desc>Meridan Road becomes Salt Springs Road as it crosses the County Line here.  Unfortunately, the Trumbull County Engineer has stolen all of the money set aside to maintain Salt Springs Road.  Therefore the famous orange barrels prevent you from going any farther north.</desc>
+      <exits s='331' w='266'/>
+   </location>
+
+   <location num='268'>
+      <name>I-80 Westbound</name>
+      <desc>You&apos;re headed West on I-80 toward Meridian Road</desc>
+      <exits w='267'/>
+   </location>
+
+   <location num='269'>
+      <name>I-80 West over Steel Valley</name>
+      <desc>You&apos;re on a freeway bridge over the Mahoning River.  As you look North and South From Here you can see the remains of several Steel Mills along the banks of the Mahoning River.  It&apos;s an impressive, but somehow sad thing to see.</desc>
+      <exits w='268'/>
+   </location>
+
+   <location num='270'>
+      <name>US 422/ I-80 West Ramp</name>
+      <desc>From here you can head North into Girard South toward Yougstown or take I-80 West Toward Meridian Road</desc>
+      <exits n='206' s='334' w='269'/>
+   </location>
+
+   <location num='271'>
+      <name>I-80 Westbound</name>
+      <desc>You can only go west toward US 422 from here</desc>
+      <exits w='270'/>
+   </location>
+
+   <location num='324'>
+      <name>I-80 Eastbound</name>
+      <desc>You can only head east toward route 46 from here</desc>
+      <exits e='325'/>
+   </location>
+
+   <location num='325'>
+      <name>I-80 East/ Route 46 Interchange</name>
+      <desc>From Here you can take I-80 East Toward Route 11 or head south on Roue 46 toward Mahoning Avenue</desc>
+      <exits n='261' e='326' s='389'/>
+   </location>
+
+   <location num='326'>
+      <name>I-80 East</name>
+      <desc>You&apos;re headed east on I-80, you can see the Route 11 Cloverleaf ahead.</desc>
+      <exits e='327'/>
+   </location>
+
+   <location num='327'>
+      <name>Route 11 South/I-80 East Interchange</name>
+      <desc>From here you can Take I-80 East toward Meridian Road or head South on Roue 11 toward mahoning Avenue</desc>
+      <exits e='328' s='391'/>
+   </location>
+
+   <location num='328'>
+      <name>Route 11 North/I-80 East Interchange</name>
+      <desc>From here you can take I-80 East toward Meridian Road or go north to the I-80 West Interchange</desc>
+      <exits n='264' e='329'/>
+   </location>
+
+   <location num='329'>
+      <name>I-80 Eastbound</name>
+      <desc>You&apos;re headed East on I-80 toward Meridian Road</desc>
+      <exits e='330'/>
+   </location>
+
+   <location num='330'>
+      <name>I-80 East</name>
+      <desc>You&apos;re eastbound on I-80 the Meridian Road exit is just ahead.</desc>
+      <exits e='331'/>
+   </location>
+
+   <location num='331'>
+      <name>Meridian Road Onramp to I-80 East </name>
+      <desc>From here can exit or enter Interstate 80 from Meridan Road</desc>
+      <desc>East takes you toward Girard</desc>
+      <desc>South takes you Toward the LP at Perkins Corners</desc>
+      <desc>North is the I-80 Westbound ramp (on the way to McDonald)</desc>
+      <exits n='267' e='332' s='395'/>
+   </location>
+
+   <location num='332'>
+      <name>I-80 East</name>
+      <desc>You&apos;re headed East on Interstate 80 toward Girard</desc>
+      <exits e='333'/>
+   </location>
+
+   <location num='333'>
+      <name>I-80 East over the Steel Valley</name>
+      <desc>You&apos;re on a freeway bridge over the Mahoning River.  As you look North and South From Here you can see the remains of several Steel Mills along the banks of the Mahoning River.  It&apos;s an impressive, but somehow sad thing to see.</desc>
+      <exits e='334'/>
+   </location>
+
+   <location num='334'>
+      <name>I-80 East US 422 Ramp</name>
+      <desc>This is the Exit for Girard I-80 continues East toward Hubbard from here</desc>
+      <desc>US 422 Heads North into Girard or South toward Youngstown</desc>
+      <desc>The route south is blocked by a police car.</desc>
+      <exits n='270' e='335'/>
+   </location>
+
+   <location num='335'>
+      <name>I-80 East toward Hubbard</name>
+      <desc>An Ohio State Highway Patrol Car blocks the road here.  A trooper motions for you to cross the median onto the west bound lane</desc>
+      <exits n='271'/>
+   </location>
+
+   <location num='389'>
+      <name>Route 46/Silca Road Intersection</name>
+      <desc>Route 46 runs North toward I-80 and South toward Mahoning Avenue from here.  On the Wset, you can see that a major construction project has closed Silica road.</desc>
+      <exits n='325' s='453'/>
+   </location>
+
+   <location num='391'>
+      <name>Route 11 South</name>
+      <desc>You are headed south on Route 11 toward Mahoning Avenue</desc>
+      <exits s='455'/>
+   </location>
+
+   <location num='392'>
+      <name>Route 11 North</name>
+      <desc>You&apos;re on Route 11 headed North to I-80</desc>
+      <desc>The I-80 Interchange is just ahead</desc>
+      <exits n='328'/>
+   </location>
+
+   <location num='394' flags='rb'>
+      <name>Ohio Machinery (Spaceship Repairs)</name>
+      <desc>Welcome to the pride of Mahoning.  This shop is known galaxy-wide for it&apos;s quick and efficient service.  The device for Targeting and Eliminating Deficiencies (TED) is a fully automated system that diagnoses and repairs not only spaceships, but all mechanical devices, including itself, instantanously.  ...Well,  as &quot;instantly&quot; as payment id recieved!</desc>
+      <desc>    The machine is named after the legendary Mechanic Ted Anzelmo who worked in the  Old Earth counterpart of the shop which was a Caterpillar Equipment dealer.</desc>
+      <exits e='395'/>
+   </location>
+
+   <location num='395'>
+      <name>Meridian Road South of I-80</name>
+      <desc>You can get your ship fixed to the west or go slumming with the locals to the east.</desc>
+      <desc>Meridian Road Joins I-80 to the North runs South to the LP</desc>
+      <exits n='331' e='396' s='459' w='394'/>
+   </location>
+
+   <location num='396'>
+      <name>Petro Truck Stop</name>
+      <desc>   As you walk into this place you can feel the jealous eyes of the planet bound truckers peircing through you. You take a seat at the counter and are imeadiately greeted by the rather attractive female human Flo.</desc>
+      <desc>   She takes your order and serves your meal which you find to be a rather disappointing attempt at Old Earth &quot;Home Cooking.&quot;   You look up from your plate to notice that every waitress in the place is undressing you with their eyes while every trucker is murdering you with theirs!  Feeling extremely uncomfortable, you click the page button on your comm unit and fake an emergency which gives you an excuse to rush out of the restaurant. The waitresses follow you to the door, beeging you to &quot;come back soon.&quot;</desc>
+      <exits w='395'/>
+   </location>
+
+   <location num='453'>
+      <name>Route 46 (North of Mahoning Avenue)</name>
+      <desc>Route 46 runs North toward I-80 and South Toward Mahoning Avenue from here</desc>
+      <exits n='389' s='517'/>
+   </location>
+
+   <location num='455'>
+      <name>Route 11 Southbund</name>
+      <desc>You are headed south on Route 11 toward Mahoning Avenue.</desc>
+      <desc>You see the Mahoning Avenue interchange ahead</desc>
+      <exits s='519'/>
+   </location>
+
+   <location num='456'>
+      <name>Route 11 North</name>
+      <desc>You&apos;re on Route 11 headed North to I-80</desc>
+      <exits n='392'/>
+   </location>
+
+   <location num='458' flags='y'>
+      <name>Lordstown Assembly Plant</name>
+      <desc>Here you can purchase a ship.</desc>
+      <desc>The shipyard is a replica of the Lordstown GM assembly plant.  The actual location of this plant on old earth was far to the Northwest of here. Actually it was in another county!  It was found to be more profitable to locate it near the landing Pad.</desc>
+      <desc>Ask about our generous incentive program!</desc>
+      <exits se='523'/>
+   </location>
+
+   <location num='459'>
+      <name>Meridian Road North of the LP</name>
+      <desc>Meridian Road runs North toward I-80 and South to the LP from here</desc>
+      <exits n='395' s='523'/>
+   </location>
+
+   <location num='517'>
+      <name>Mahoning Avenue/Route 46 Intersection</name>
+      <desc>From here you can take Route 46 North toward I-80 or south toward Canfield</desc>
+      <desc>Mahoning Avenue runs east toward Route 11 or west toward North Jackson</desc>
+      <desc>A &quot;Bridge Out&quot; sign block Mahoning Avenue to the West.</desc>
+      <desc>A Major Traffic accident has Route 46 closed to the South.</desc>
+      <exits n='453' e='518'/>
+   </location>
+
+   <location num='518'>
+      <name>Mahoning Avenue (Austintown)</name>
+      <desc>From here Mahoning Avenue runs east toward Route 11 and West toward Route 46.  The Skate Zone is on the North, but you forgot your roller skates!</desc>
+      <exits e='519' w='517'/>
+   </location>
+
+   <location num='519'>
+      <name>Mahoning Avenue/Route 11 South Interchange</name>
+      <desc>From Here you can take Route 11 South toward Canfield.</desc>
+      <desc>Mahoning Avenue runs East toward the LP or West toward Route 46</desc>
+      <exits e='520' w='518'/>
+   </location>
+
+   <location num='520'>
+      <name>Mahoning Avenue/Route 11 North Interchange</name>
+      <desc>From Here you can take Route 11 North toward I-80.</desc>
+      <desc>Mahoning Avenue runs East toward the LP or West toward Route 46</desc>
+      <exits n='456' e='521' w='519'/>
+   </location>
+
+   <location num='521'>
+      <name>Manoning Avenue East of Route 11</name>
+      <desc>to the South you can see &quot;Bill&apos;s Place&quot; famous for having the best drink prices in town.  But you decide to go right past it.  The beer always tastes funny there.</desc>
+      <exits e='522' w='520'/>
+   </location>
+
+   <location num='522'>
+      <name>Mahoning Avenue West</name>
+      <desc>Form here You can go East toward the LP or west toward Route 11</desc>
+      <exits e='523' w='521'/>
+   </location>
+
+   <location num='523'>
+      <name>Mahoning LP (Exchange SE)</name>
+      <desc>Welcome to Mahoning</desc>
+      <desc>Thiis planet was founded by followers of Trafficantism.  A religion having it&apos;s roots on 20th century Earth. The faithful have constructed what they believe to be an accurate reproduction of Mahoning County, Ohio in the ancient country known as the USA shortly before the once great land converted to socialism and was absorbed by the European Union which later became the Galactic Administration.   The followers believe that that the congressman and sheriff of the period, James Trafficant, who was persecuted and sacrificed for sins of  mafiosos, will return from heaven and set up headquarters on this planet.</desc>
+      <desc>Southern Park Mall (Exchange)-Southeast</desc>
+      <desc>Lordstown (Shipyard)- Northwest</desc>
+      <desc>Fernando&apos;s Pizza- Southwest</desc>
+      <desc>Meridian Road runs North (toward Interstate 80) and South (toward Cornersburg) from this Location</desc>
+      <desc>Mahoning Avenue Runs East (into Youngstown) and West (into Austintown)</desc>
+      <desc>Mahoning Avenue is closed to the  East</desc>
+      <desc>Meridian Road is Closed to the South</desc>
+      <exits n='459' se='588' sw='586' w='522' nw='458'/>
+   </location>
+
+   <location num='586' flags='hib'>
+      <name>Fernando&apos;s Pizza</name>
+      <desc>Commonly known as serving the Best Pizza on Mahoning.  Not an easy title to hold given the number of Pizza Places on the Planet!</desc>
+      <desc>You can also buy insurance here from Fernando&apos;s son</desc>
+      <exits ne='523'/>
+   </location>
+
+   <location num='588' flags='eb'>
+      <name>Mahoning Exchange</name>
+      <desc>Southern Park Mall:  The Hub of Commerce for the planet.  Although records remaining from the time of Trafficant indicate that this mall was located in the Village of Boardman (far southeast of this area,) the decision was made to locate it here, next to the landing pad, for the convieience of business travelers. Being a replica of an earth mall, you may also eat and drink here.  Please take care not to spill drinks on the trading consoles.</desc>
+      <desc>Oddly, a statute of Ed DeBartolo Senior still graces the center of the concourse.  Although the developer/rumored mafioso aided in the persecution of Trafficant it is believed by Trafficanists that he had no choice other than to offer James up to the Feds.  It is believed by some that he will hold high office when the Kingdom of Jim comes to the planet.</desc>
+      <exits nw='523'/>
+   </location>
+
+</fed2-map>

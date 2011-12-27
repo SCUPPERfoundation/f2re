@@ -1,0 +1,12 @@
+
+# ibgames fed2 test version SCons file
+
+# VariantDir('./obj','./src')
+
+env = Environment(CPPPATH='#./include',
+						CCFLAGS =' -Wall -Wcast-qual -Wcast-align -Wwrite-strings -Wpointer-arith -O2 -DFEDTEST',
+						LIBS = ['expat','db_cxx','sqlite3'],
+						LIBPATH = '/urs/lib')
+
+
+SConscript(['src/SConstruct.test'],exports = 'env',variant_dir = './objtest', duplicate = 0)

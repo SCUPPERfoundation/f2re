@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<fed2-map title='Doris' version='4' editor='standard' from='402' to='Sol.Sol Space.2573'>
+
+   <location num='402'>
+      <name>Doris BioLabs shuttle port</name>
+      <desc>   This is the public shuttle port for visitors to Doris BioLabs. The surface of the asteroid is bleak and featureless, with just one prefabricated building in view. An airlock leads south into the building.</desc>
+      <desc>   A plaque has been fixed to the outside of the building, telling you that the asteroid was discovered by H Goldschmidt in 1857. It doesn&apos;t tell you why he called it Doris, though!</desc>
+      <exits s='466' in='466' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='466'>
+      <name>Airlock</name>
+      <desc>   The airlock leads out to the asteroid&apos;s surface, and in to the public reception area.</desc>
+      <exits n='402' s='530' in='530' out='402'/>
+   </location>
+
+   <location num='529' flags='c'>
+      <name>Armstrong Cuthbert, Inc.</name>
+      <desc>   Doris Biolabs have outsourced their freight services to the Solar System&apos;s experts, Armstrong Cuthbert, who are only too happy to set up yet another office in their ever-expanding commercial cargo empire.</desc>
+      <desc>   The agent who has been posted here has made an effort to brighten up her office a little with personal touches, such as a stuffed marsrat on her desk, and a holo of Galactic sim star Brix Chanterel flexing his trademark muscles, but it still doesn&apos;t seem a terribly enjoyable place to work.</desc>
+      <desc>   She looks up as you enter, clearly delighted to see you - well, it&apos;s nothing personal, no doubt she would be delighted to see anyone!</desc>
+      <exits e='530' out='530'/>
+   </location>
+
+   <location num='530' flags='rb'>
+      <name>Doris Biolabs reception area</name>
+      <desc>   As you enter, a hovering camera circles you, recording your image and using sensors to scan your iris. The biolab takes security very seriously, dealing as they do in dangerous substances. They need to know exactly who is visiting the facility, and why!</desc>
+      <desc>   The decor is very austere, with the emphasis on functionality. The bare metal of the walls hasn&apos;t been disguised, except for a number of notices giving dire warnings of what happens to unauthorized visitors, and a sign saying that customers for the strength enhancement program should report to security.</desc>
+      <desc>   There are three doors leading off the reception area. The west one is labelled &quot;Armstrong Cuthbert&quot;, and the east  &quot;Exchange&quot;. South is a security post, and north, the airlock leads back out to the shuttle port.</desc>
+      <desc>   The reception area contains refreshment facilities, with a vending machine able to produce most popular foodstuffs and beverages.</desc>
+      <exits n='466' e='531' s='594' w='529' out='466'/>
+   </location>
+
+   <location num='531' flags='e'>
+      <name>Trading exchange</name>
+      <desc>   Doris BioLabs may not like receiving visitors, but they have surpluses and shortages just like any community, and so need to buy and sell. The exchange looks just like every other commodity market you have ever been in - prices scrolling on huge screens, and traders frantically punching in trading orders in pursuit of a profit.</desc>
+      <desc>   However, the cameras pointing in every direction show that security keeps a very close eye on traders. Looking at their field of view, you can&apos;t see even a square inch of the room which is not under surveillance. As a consequence, traders tend to do their business in silence and then leave as quickly as possible - no stopping to chat with fellow members of the guild.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='530' out='530'/>
+   </location>
+
+   <location num='594' flags='a'>
+      <name>Security station</name>
+      <desc>   Two armed security droids stand against one wall, staring at you intently. A human security technician studies a monitor, which presumably contains the information gleaned by the remote cameras and sensors out in reception.</desc>
+      <desc>   A fierce-looking woman with a clipboard asks you what business you have visiting Doris Biolabs. &quot;If you are here for the strength enhancement program, go that way,&quot; she says, pointing east towards a booth. Otherwise, if you cannot give a satisfactory answer, she gestures you towards the door back to reception, in a very peremptory manner.</desc>
+      <desc>   There is a door in the south wall, but there is no way you can get close to it, let alone through it, with this level of security.</desc>
+      <exits n='530' e='595' out='530' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='595'>
+      <name>Strength enhancement booth</name>
+      <desc>   The booth is filled with automated medical equipment, and is part of a new program being offered by Doris Biolabs to enhance the physical strength of those willing to pay. It is still experimental, which is why it isn&apos;t openly advertized - in fact there is some concern about its legality. However, it&apos;s rumored to be 100% successful so has to be worth a try!</desc>
+      <desc>   You can increase your strength by one point in exchange for one slithy tove, up to a limit of 150. However, you are limited to one stat increase per day; any more would have dangerous consequences for your health. To take part in the program, BUY STRENGTH.</desc>
+      <exits w='594'/>
+   </location>
+
+</fed2-map>

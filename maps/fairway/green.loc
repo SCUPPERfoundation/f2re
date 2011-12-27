@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<fed2-map title='Green' version='52' editor='standard' from='580' to='Fairway.Fairway Space.525'>
+
+   <location num='328' flags='b'>
+      <name>Lounge</name>
+      <desc>You are standing in the northwesterly corner of the Rub of the Green Room. Large windows draped with pulled back elegant curtains to the west and north afford the room a view of the well-manicured landscape of the country club. The room is lined with fine wooden paneling and the green carpet yields softly to your footsteps. Fine oaken tables and chairs are located throughout this large expanse of room for the use of members and guests.  You can sit down, order a cocktail or some food and enjoy yourself if you wish. A solitary man holding a glass is standing at the north window looking out onto the golf course. As you pass by he turns your way, gives you a quick look over and turns back to the window without saying anything.</desc>
+      <exits e='329' se='393' s='392' no-exit='noexit.lounge.3'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>Lounge</name>
+      <desc>You are standing in the northeasterly corner of the Rub of the Green Room. Large windows draped with pulled back elegant curtains to the north afford the room a view of the well-manicured landscape of the country club. The room is lined with fine wooden paneling and the green carpet yields softly to your footsteps. Fine oaken tables and chairs are located throughout this large expanse of room for the use of members and guests.  You can sit down, order a cocktail or some food and enjoy yourself if you wish. A gathering of members at a corner table talk quietly among themselves and do not notice as you pass by. You notice a small alcove to the east.</desc>
+      <exits e='330' s='393' sw='392' w='328' no-exit='noexit.lounge.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Trophy Display</name>
+      <desc>You are standing before an elegant display case full of awards. You bend over to view the names on the trophies and plaques and see that all the awards have been given to one individual by the name of Jose Cuevo. A solitary gentleman gets up from his table and walks over and stands beside you. In a hushed voice he tells you &quot;Greetings, my name is Angus McLeod, you look familiar, have we met before?&quot; Without waiting for an answer he continues &quot;As you can see the club championships and outings have been dominated by Jose, but the club members are ever hopeful that some new member or guest can come along and put an end to Jose&apos;s dominance on the course. It will take someone with great talent and luck though. By the way, how&apos;s your golf game?&quot; You turn to answer but it appears that the gentleman has slipped quietly away back into the crowd to the west. You begin to wonder if the conversation really occurred at all when you see a bulletin board to the south.</desc>
+      <exits s='394' w='329' no-exit='noexit.lounge.4'/>
+   </location>
+
+   <location num='392' flags='b'>
+      <name>Lounge</name>
+      <desc>You are standing in the southwesterly corner of the Rub of the Green Room. Large windows draped with pulled back elegant curtains to the west afford the room a view of the well-manicured landscape of the country club. The room is lined with fine wooden paneling and the green carpet yields softly to your footsteps. Fine oaken tables and chairs are located throughout this large expanse of room for the use of members and guests.  You can sit down, order a cocktail or some food and enjoy yourself if you wish. Several members look your way, nod and smile at you, welcoming you to the country club.</desc>
+      <exits n='328' ne='329' e='393' s='456' no-exit='noexit.lounge.1'/>
+   </location>
+
+   <location num='393' flags='b'>
+      <name>Bar</name>
+      <desc>You are standing in the southeasterly corner of the Rub of the Green Room. A large oaken bar runs the length of the west and south walls of this room and is staffed by two bartenders and several waiters and waitresses. The green carpet yields softly to your footsteps. Fine oaken tables and chairs are located throughout this large expanse of room for the use of members and guests.  You can sit down, order a cocktail or some food and enjoy yourself if you wish or belly up to the bar and drink and socialize with the other members and guests.</desc>
+      <exits n='329' w='392' nw='328' no-exit='noexit.lounge.2'/>
+   </location>
+
+   <location num='394'>
+      <name>Bulletin Board</name>
+      <desc>You stand before a glass enclosed bulletin board. Obviously you have to get permission to post a notice here. Aside from the numerous notices for club social events and committee meetings you see a notice in bold lettering. It reads &quot;MEMBERS - THE USE OF THE GOLF COURSE WILL BE LIMITED DURING THE RENOVATION AND RECONSTRUCTION OF SEVERAL OF THE HOLES. THE COURSE MAINTENANCE COMMITTEE THANKS YOU FOR YOUR UNDERSTANDING AND PATIENCE DURING THIS TIME.&quot; As you turn north to leave, you see a group of members and guests looking at the trophy case and blocking your way. You might be able to squeeze pass them by going to the northwest.</desc>
+      <exits nw='329' no-exit='noexit.lounge.5'/>
+   </location>
+
+   <location num='453' flags='b'>
+      <name>Side Bar</name>
+      <desc>You are standing in a quaint little bar situated in a foyer off to the side of the main trading room. Here you can get a quick bite to eat before venturing back to the trading pits, or a congratulatory drink to celebrate your latest financial conquest. The food is good and the liquor isn&apos;t watered down. You see two comfortable booths where you can relax or you can belly up to the oak bar and join the fray partaking of their cocktails. Your bartender&apos;s name is Phil and he will be glad to &quot;fill&quot; up your glass with your favorite beverage. As you contemplate what to order you hear much hollering and laughter from the main trading room to the south. Someone just made a big score on the future&apos;s market.</desc>
+      <exits s='517' out='517' no-exit='noexit.exchange.2'/>
+   </location>
+
+   <location num='456'>
+      <name>Northern Hallway</name>
+      <desc>You are standing in the northerly end of a long hallway. To the south the hallway continues to the entrance hall of the country club. Looking north you see the entryway into a large room from which you hear talking and laughing. Above the entryway is an ornate wooden plaque that reads &quot;Rub of the Green Room&quot;. The smells of delicious food floats in from the north causing your mouth to slightly water from the expectations.</desc>
+      <exits n='392' s='520' no-exit='noexit.hallway.1'/>
+   </location>
+
+   <location num='457' flags='b'>
+      <name>Kitchen</name>
+      <desc>You are standing in the kitchen area of the country club. Here is where all the succulent and delicious meals and hors d&apos;oeuvres are prepared for your dining and snacking please, The staff of chefs, waiters, waitress and busboys are hurrying about their duties and you feel a sense of being in the way although no one has asked you to leave. They seem to be used to these minor intrusions into their sanctuary of work and simply work around you without a care. You notice a tray of hors d&apos;oeuvres and champagne and wonder if anyone would care if you sample a taste or two.</desc>
+      <exits s='521' out='521' no-exit='noexit.kitchen.1'/>
+   </location>
+
+   <location num='517' flags='e'>
+      <name>Mulligan Hill Commerce Center</name>
+      <desc>You are standing in the Mulligan Hill Commerce Center. Numerous consoles and displays line the walls of this financial facility and are being used by numerous merchants, traders, the heads of industry and manufacturing and the occasional planet owners. If you need to buy or sell commodities or futures you better elbow your way onto a machine. Its dog eats dog in here and the weak or inexperienced are soon chewed up and spit out. As you take in all the excitement buzzing in the air you happen to notice exits to the north and south.</desc>
+      <exits n='453' s='581' out='581' no-exit='noexit.exchange.1'/>
+   </location>
+
+   <location num='519' flags='b'>
+      <name>Porch of Clubhouse</name>
+      <desc>You are standing at the northerly end of the front porch of the Mulligan Hill Country Club. A wooden railing encloses the porch to ensure the safety of the clubs guest. Several antique but sturdy chairs are grouped around two circular wooden tables. You notice that this would be a nice place to sit and socialize with friends. You can order drinks and food from the kitchen simply by requesting them through the intercom located on each table.  You can leave the area by walking south to the clubhouse entry.</desc>
+      <exits s='583' no-exit='noexit.porch.1'/>
+   </location>
+
+   <location num='520'>
+      <name>Southern Hallway</name>
+      <desc>You are standing in the southerly end of a long hallway. Windows to the west allow you to see the porch of the clubhouse where you notice a couple engaging in idle chat while enjoying a meal and some cocktails. To the south you see the entrance hall of the country club. Turning to the east you see a pair of large oaken doors above which a wooden plaque reads &quot;Divot Room&quot;. You can hear talking and laughter coming from the end of the hallway to the north.</desc>
+      <exits n='456' e='521' s='584' no-exit='noexit.hallway.1'/>
+   </location>
+
+   <location num='521' flags='b'>
+      <name>Divot Room</name>
+      <desc>You are standing in the main banquet hall of the country club. The dining staff is hurriedly cleaning up and preparing for the next scheduled meal, but I&apos;m sure if you ask politely they will seat you at one of the corner tables and bring you something simple to eat and drink.  However, it would be rude to bring in a large group at this time and they would surely politely request that you make a reservation for the next scheduled meal. As you stand and watch the staff move quickly with their duties you see doors to the north and west as well as french doors to the south leading to a covered patio.</desc>
+      <exits n='457' s='585' w='520' no-exit='noexit.diningroom.1'/>
+   </location>
+
+   <location num='580' flags='yr'>
+      <name>Mulligan Hill Landing Pad</name>
+      <desc>Your shuttle has landed at the spaceport of the oldest colony on Green. As you exit your shuttle you hear a metallic voice over the speaker system &quot;Welcome to Mulligan Hill, please check your clubs with the caddie master and reserve a locker for your stay. Thank-you and have a nice day.&quot; Your initial surprise at the announcement disappears when you realize Mulligan Hill is dedicated to the pursuit of that ancient and venerable game of golf. You wonder what lunatic, while carving out a colony on an obscure planet off the beaten path, decided to make golf an important part of this colony&apos;s infrastructure. You are still shaking your head as you make your way to the navigational kiosk to read the directions: &quot;All Armstrong Cuthbert Collections and Deliveries, ship purchases or repairs should be made with the appropriate Armstrong Cuthbert agents, sales-droid or mechanic-droid on the landing pad. For all other matters please proceed to the east.&quot;</desc>
+      <exits e='581' no-exit='noexit.pathways.2'/>
+   </location>
+
+   <location num='581'>
+      <name>The Hub</name>
+      <desc>You are at a hub of pathways that lead off to the north, east, south and west. None of the buildings gives any hint of what they contain. As you look around you see a disheveled looking man in a business suit wander from the north and proceed west, muttering &quot;Darn T-Quarks fell through the floor, I&apos;m ruined, ruined.&quot; While another man in a business suit is joyously running from the north building following the first screaming &quot;Polymers, I told you the future is in polymers!&quot; Behind you, emerging from the south building is a couple dressed in recreational attire. The man is wearing a bandage on his head and is talking in a loud manner to his female companion &quot;Alice, I told you to yell FORE if you hit that golf ball towards me. These stitches are gonna leave a mark!&quot; From the east comes a foursome of obviously drunken men. &quot;Did ya see that 10 foot putt I made?&quot; one of the men asks the others. &quot;YES&quot; they all answer in unison. You hear a roar and look west to see a shuttle lift off.</desc>
+      <exits n='517' e='582' s='645' w='580' no-exit='noexit.pathways.1'/>
+   </location>
+
+   <location num='582'>
+      <name>Pathway</name>
+      <desc>You are walking along an east-west flagstone pathway alongside an inconspicuous building to the south. To the north you see immaculately kept lawns with signs asking you to &quot;Keep off the grass&quot;. To the west you see a hub of pathways. In the distant west you see a shuttle coming in for a landing. To the east you see a large white building with four ornate columns lining the entrance. Above the large oak doors is a crest of crossed putters with a solitary white golf ball in between them and the words &quot;Mulligan Hill Country Club&quot;. A smartly dressed doorman stands nearby, ready to open the door for any incoming or departing guests. The windows are curtained to afford some privacy to the guests as they mingle and talk, but you can hear an occasional burst of laughter as the front doors are opened and closed.</desc>
+      <exits e='583' w='581' no-exit='noexit.pathways.1'/>
+   </location>
+
+   <location num='583'>
+      <name>Entry Door to Clubhouse</name>
+      <desc>You are standing on an elevated porch at the entrance to the Mulligan Hill Country Club. Wooden railings keep you from falling off the edges. You study the fine architecture and lines of the building and notice that the porch extends northerly. Double oak doors to the east allow entry into the country club. If you wish to go in, the doorman will surely open the doors for you.</desc>
+      <exits n='519' e='584' w='582' in='584' no-exit='noexit.porch.1'/>
+   </location>
+
+   <location num='584'>
+      <name>Entrance Hall</name>
+      <desc>You are standing in the entrance hall of the Mulligan Hill Country Club. Your senses are greeted with fine wooden paneling on all walls upon which are displayed some of the finest pieces of art you&apos;ve seen. Looking up you see a fresco painted on the ceiling depicting images of golfers enjoying some the famous golf courses in the universe. You look around and see a door to the south with a brass plate. Looking closely at the brass plate you read &quot;Manager&quot;. An open entryway to the southeast leads into the clubhouse&apos;s pro shop and french doors to the east appear to lead outside. Turning your head to the north you see a long hallway down which you hear talking and laughter.</desc>
+      <exits n='520' e='585' se='649' s='648' w='583' out='583' no-exit='noexit.hallway.1'/>
+   </location>
+
+   <location num='585' flags='b'>
+      <name>Covered Patio</name>
+      <desc>You are standing on a covered patio that will protect you from the elements whether it is a hot summer day or a rainy fall day. A waiter stands nearby to take any orders for food or drinks you may have. Comfortable tables and chairs are placed around the perimeter of the patio, the center is left open for dancing or standing groups. Glancing around you see french doors to the north that appear to lead to a dining room, a single multi-window paned door south which leads to the pro shop and french doors to the north which lead back into the main building. To the southeast and below you see some outlying buildings and the first tee of the golf course. Some concrete stairs lead downwards to a concrete path.</desc>
+      <exits n='521' s='649' w='584' down='650' no-exit='noexit.patio.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Golf Cart Parking</name>
+      <desc>You are standing on a large concrete slab with white painted lines running parallel and in a north and south direction. You realize that this is most likely where the golf carts are parked when they are available for use. You wonder why there are no carts out and ready for use on such a nice day. A concrete pathway leads south back to the main pathway.</desc>
+      <exits s='651' no-exit='noexit.pathways.1'/>
+   </location>
+
+   <location num='645'>
+      <name>Mulligan Hill Hospital</name>
+      <desc>You are standing in the waiting room of the Mulligan Hill Hospital. Several people are sitting in the numerous chairs that line the walls of this immense room. They all appear to be waiting, waiting, waiting.... A nurse scurries from a room to the south yelling &quot;Code Blue, we got another guest with a putter wrapped around his neck in the ER!&quot; The receptionist looks up and says &quot;That&apos;s the third one this week, you think they would learn not to brag so much when playing with Jose!&quot; You turn to ask the receptionist who is this Jose, but she has gone back to her paperwork. You see doors in the north, east, southeast, south and southwest walls.</desc>
+      <exits n='581' e='646' se='710' s='709' sw='708' no-exit='noexit.hospital.1'/>
+   </location>
+
+   <location num='646' flags='b'>
+      <name>Cafeteria</name>
+      <desc>You are standing in the hospital cafeteria. Off duty hospital personnel are quietly eating their meals, going over charts or reading the paper. You take a look at the offerings, get a nice whiff of the specials and decide that it might be better than space rations. While contemplating your choices you notice an exit sign on the west wall.</desc>
+      <exits w='645' out='645' no-exit='noexit.hospital.2'/>
+   </location>
+
+   <location num='648' flags='b'>
+      <name>Manager&apos;s Office</name>
+      <desc>You are standing in the office of the clubhouse manager. Urns containing potted planks flank a moderate oak desk and leather chair. A brass nameplate sits on the desk that reads &quot;Angus McLeod - Manager&quot;. Two high backed oak and leather chairs sit an angles in front of the desk for the use of guests to this office. A small wet bar stands in the corner of the room. Windows to the west, south and east give a pleasing view of the surrounding landscape. Apparently Mr. McLeod isn&apos;t in right now, so he must be attending to the needs and wishes of the country clubs members and guests. His office is tidy and orderly and seems to be the model of efficiency. You see no other exits other than the doorway to the north.</desc>
+      <exits n='584' out='584' no-exit='noexit.manager.1'/>
+   </location>
+
+   <location num='649'>
+      <name>Pro Shop</name>
+      <desc>You are standing in the pro shop of the Mulligan Hill Country Club. Racks and racks of the latest golfing equipment, shoes and clothing that vast amounts of money can buy surround you. Business seems to be good too judging by the interest of several members as they review the latest golf clubs with a serious intent to purchase. A teenage girl with blonde hair is looking over the racks of shirts while her parents talk to the club pro about reserving a tee time. You walk by to look at some clubs and overhear the pro tell the couple &quot;Right now the course play is severely limited as a lot of the course is closed for renovation and reconstruction. That last cloud of space debris that passed through the system did some sizable damage to the course. Only the first hole is ready for play, but if you want to play it more than once you can. Go out onto the patio and then walk down the path to the Starter&apos;s hut and he will set you up.&quot;</desc>
+      <exits n='585' nw='584' out='585' no-exit='noexit.proshop.1'/>
+   </location>
+
+   <location num='650'>
+      <name>Path to Golf Course</name>
+      <desc>You are on a concrete path which winds it&apos;s way through a well-manicured lawn. Slightly above you and to the northwest you see the main building of the country club. Some concrete stairs lead up to the main building. The concrete path continues to the east.</desc>
+      <exits e='651' up='585' no-exit='noexit.pathways.1'/>
+   </location>
+
+   <location num='651'>
+      <name>Path to Golf Course</name>
+      <desc>You are on a concrete path which winds it&apos;s way through a well-manicured lawn. Slightly above you and in the distance to the northwest you see the main building of the country club and the concrete path leads off to the west in that direction. To the south you see a small building with a sign above the entry door which says &quot;Starter&quot;. To the north you see a large concrete slab which looks big enough to land a small shuttle.</desc>
+      <exits n='587' s='715' w='650' in='715' no-exit='noexit.pathways.1'/>
+   </location>
+
+   <location num='708' flags='hi'>
+      <name>Cloning Room</name>
+      <desc>You are standing in the hospital&apos;s cloning room. The odor of cloning fluid has made you woozy. You aren&apos;t sure if you just stumbled in here, or needed the cloning services. Off to the side you see an oak desk with a nameplate. It reads &quot;Dewey Screwem, Insurance Agent&quot;. Behind the desk sits a scrawny old balding man in horn-rimmed glasses wearing a tattered three-piece suit. He catches your glance and asks &quot;Oh I&apos;m sorry, I must have dozed off, do you need to re-insure yourself?&quot; While gathering your thoughts you notice a door in the northeast wall.</desc>
+      <exits ne='645' out='645' no-exit='noexit.hospital.3'/>
+   </location>
+
+   <location num='709'>
+      <name>Hospital Emergency Room</name>
+      <desc>You have stumbled into the emergency room. A nurse rushes toward you and asks you in a firm voice. &quot;Are you injured? Was it Jose?&quot; You stand there while she gives you a visual examination, presumably looking for a misplaced putter. As she puts on a latex glove and smears it with lubricant you come to your senses and mumble &quot;No I&apos;m fine, I went through the wrong door!&quot; You glance around looking for a quick exit and see doors in the north and east walls.</desc>
+      <exits n='645' e='710' out='645' no-exit='noexit.hospital.1'/>
+   </location>
+
+   <location num='710'>
+      <name>Examination Room</name>
+      <desc>You are standing in the hospital&apos;s examination room. Cloth curtain partitions separate the three examination chambers but do not give much privacy of conversation. You can overhear the waiting patient in chamber two complain about how long he has had to wait to get his head wound treated. He sounds very upset. You notice that the doctor, who probably hasn&apos;t slept in two days, has a crazed look on his face. He slaps on a latex glove and grabs a bottle of KY jelly and walks over to examination chamber two. He reads the chart, opens the curtain and says &quot;Mr. Smith, I see you have a head wound. We&apos;ll need to do a complete physical exam. Please bend over the table.&quot; In case the doctor mistakes you for a patient you quickly glance around for exits and see doors in the west and northwest walls.</desc>
+      <exits w='709' nw='645' out='645' no-exit='noexit.hospital.1'/>
+   </location>
+
+   <location num='715' flags='b'>
+      <name>Starter&apos;s Hut</name>
+      <desc>You are standing in the Starter&apos;s Hut. The room is very sparse as far as furnishings go. A few chairs line the wall opposite the counter where John, the starter, sits and does a crossword puzzle when he isn&apos;t getting golfers out on the course. Two vending machines, one dispensing beverages, the other snacks stand along the southern wall. John looks up from his puzzle and notices you waiting. &quot;I&apos;m sorry, I didn&apos;t see you come in, what can I do for you?&quot; You explain that you would like to play some golf and when can you get a tee time. John shakes his head and says &quot;The pro sent you down here didn&apos;t he? Well like I told the couple that was just in here, the course is closed today. Local authorities came in and shut down the first hole even though it was repaired and open. Something about needing some permits for our construction. Nothing but red tape if you ask me. Sorry.&quot; You sigh and John goes back to his puzzle.</desc>
+      <exits n='651' out='651' no-exit='noexit.starter.1'/>
+   </location>
+
+</fed2-map>
+

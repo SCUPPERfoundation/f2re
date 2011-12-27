@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<fed2-map title='Sludge' version='14' editor='standard' from='1055' to='Java.Java Space.267'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>whatever this is all about</desc>
+   </location>
+
+   <location num='671'>
+      <name>Malfunction</name>
+      <desc>You hear a distant explosion and wonder what it could have been.  You brush it off and focus at the task at hand.</desc>
+      <exits n='2015' ne='2015' e='2015' se='2015' s='2015' sw='1365' w='2015' nw='2015' up='2015' down='2015' in='2015' out='2655'/>
+   </location>
+
+   <location num='990' flags='hib'>
+      <name>Cloning Room</name>
+      <desc>   You sit up from the table wondering if you just had a bad dream, the doctor looks at you shaking his head in disappointment.  Without ever looking you in the eyes he, &quot;Well, you are all set, back to normal.  Now get out of here before they come and find you.&quot;</desc>
+      <desc>   You can leave and go to the Main Dome to the SouthEast.</desc>
+      <exits se='1055'/>
+   </location>
+
+   <location num='992' flags='r'>
+      <name>Ship Repairs</name>
+      <desc>   You may make any necassary repairs to your ship here, although a sign tells you that if you are in the market for a new ship to go to the Provincial Planet of Sulawesi.</desc>
+      <desc>   You can return to the Landing Pad to the SouthWest.</desc>
+      <exits sw='1055'/>
+   </location>
+
+   <location num='1055'>
+      <name>Main Dome</name>
+      <desc>   After going through a series of airlocks to ensure you have not been contaminated by the severe harmful pollutants that exist in the ozone of this world, you are now standing in the planet&apos;s Main Dome.  Through the glass dome you can see the beautiful array of colors in the sky which ironically could have only been created by the toxins that exist on a Biological wasteland.  To the South you can see a large extraordinary building, which could only be the infamous Biological Experimentation Facility Dome.  The Exchange can be seen to the East in a seperate Dome. and the Ship repair facilities are to the NorthEast.</desc>
+      <exits ne='992' e='1056' s='1119'/>
+   </location>
+
+   <location num='1056' flags='e'>
+      <name>Exchange Dome</name>
+      <desc>   The exchange is going crazy with activity, it is apparent that this exchange never goes idle as there are not very many Biological worlds available in the known galaxy.  It appears to be an insane cutthroat environment as people are pushing one another trying to get their hands on the commodities they desire.  If you need a break from the frantic rush you can go DOWN below to the bar and have a drink.</desc>
+      <desc>   The Main Dome is seen to your West.</desc>
+      <exits w='1055' down='1057'/>
+   </location>
+
+   <location num='1057' flags='b'>
+      <name>Trader&apos;s Bar</name>
+      <desc>   Sit down and enjoy the peaceful environment while you can, this is the only place on this forsaken place that this is possible.  You can go back UP to the Exchange when you are ready.</desc>
+      <exits up='1056'/>
+   </location>
+
+   <location num='1119'>
+      <name>Biological Facilities Establishment - Research Division</name>
+      <desc>   You enter the massive dome structure rather hesitantly.  A tall gorgeous receptionist greets you, &quot;Thank you for visiting BFE, all questions may be directed to any scientist you may find.&quot; You hear her mutter under her breathe, &quot;Good luck finding one, suckers.&quot;  She looks at you and smiles, &quot;Please just sign here before entering the facility and we hope you enjoy your visit.&quot;  You look over the document you are about to sign realizing it is your typical release form offered by every other company out there.  She directs you to the door to the SouthWest, you notice several Biological &amp; Hazardous Material postings plastered all over the door.</desc>
+      <desc>   If you would rather leave you cna go back to the Main Dome to the North.</desc>
+      <exits n='1055' sw='1245'/>
+   </location>
+
+   <location num='1245'>
+      <name>Corridor</name>
+      <desc>   The doors shut behind you with a gaseous sound, you suddenly realize there is no going back.  After the doors pressurize you notice a large glass window to the southeast looking down into the main portion of the dome.  You can see hundreds of Scientists working intensely, running all over the place. You wonder what the heck is going on here.</desc>
+      <desc>   After the lengthy corridor there is another pair of doors to the SouthWest.</desc>
+      <exits sw='1371'/>
+   </location>
+
+   <location num='1249'>
+      <name>Corridor</name>
+      <desc>   The end is in sight, your legs are beginning to cramp but you don&apos;t let up.  The gaurds continue to gain on you as they shout and yell, begging you to stop and go back to help as you notice the lights begin begin to flicker on and off.</desc>
+      <desc>   Suddenly there is a bright flash, it blinds you completely and you can&apos;t see a thing.  The shock causes you to lose your balance as you fall to the ground sliding across the floor, you try to pick yourself up and make it to the door... to safety.</desc>
+      <exits nw='1392'/>
+   </location>
+
+   <location num='1365'>
+      <name>Malfunction</name>
+      <desc>You hear a distant explosion and wonder what it could have been.  You brush it off and focus at the task at hand.</desc>
+      <exits n='671' ne='671' e='1385' se='671' s='671' sw='671' w='671' nw='671' up='671' down='671' in='671' out='2655'/>
+   </location>
+
+   <location num='1371'>
+      <name>Western Wing</name>
+      <desc>   Once you reach the area known as the Western Wing you understand that you are circling the rather large Bio-Lab floor inside the facility.  Once again there is a glass window looking into the center of the facility as you notice a strange platform located directly in the center of the floor.</desc>
+      <desc>   Suddenly there is a loud explosion as you are knocked down to the floor.  The fluorescent lights flicker for a moment then go out completely.  You sit there in pure darkness as frightening thoughts creep into your head, you worry you may not make it out of here alive.  Your heart begins to race as alarms begin to sound, you hear the loud humming of backup generators revving up and then red lights begin flashing.  You slowly pick yourself up to your feet and peek into the Bio-Lab, scientists are scurrying around like mice trying to figure out what is going on.  You decide all you can do at this point is continue on to the SouthEast.</desc>
+      <exits se='1501'/>
+   </location>
+
+   <location num='1375'>
+      <name>Testing Platform</name>
+      <desc>You step up onto the platform and look back to the crew at the other terminal.  You look at the terminal wondering what you have gotten yourself into.  Before you have a chance to do anything a blinding bluish white plasma field engulfes the perimeter of the platform and the gentleman&apos;s face appears on the terminal screen, &quot;All set to go sir, and one last thing... never step OUTside of the terminal not at anytime.  Good luck.&quot;  You begin to punch in a sequence of commands.</desc>
+      <exits n='671' ne='671' e='671' se='671' s='671' sw='671' w='671' nw='671' up='671' down='671' in='671' out='2655'/>
+   </location>
+
+   <location num='1379'>
+      <name>Eastern Wing</name>
+      <desc>   You reach the Eastern Wing, rounding the corner you run like you have never ran in your life.  You can&apos;t help but fight images from your past flashing before your eyes.  Is this it? Is this the end? You shake it off and continue on as you hear the gaurds behind you, gaining on you.</desc>
+      <exits nw='1249'/>
+   </location>
+
+   <location num='1385'>
+      <name>Testing Platform</name>
+      <desc>   The plasma field deminishes as you hear a roar of applause and shouts of joy.  The terminal screen lights up again and the gentleman is all smiles now, &quot;Congratulations Sir, you did it! You&apos;ve saved us all!&quot; Several individuals come up to you and congratulate you on saving the facility and the planet for that matter.</desc>
+      <desc>   The door back to the Main Dome is to the North</desc>
+      <exits n='1055'/>
+   </location>
+
+   <location num='1392'>
+      <name>Darkness</name>
+      <desc>   Just before you reach the door a massive explosion rocks the facility throwing you against the far wall, you fall to the ground yet again, only this time you lay there, motionless, lifeless... there is nothing around you but Darkness...</desc>
+      <exits up='990'/>
+   </location>
+
+   <location num='1501'>
+      <name>Corridor</name>
+      <desc>   As you walk down the corridor leading you to the southern end of the facility you continually glance inside the facility as a figure appears and makes eye contact with you.  He raises his hand pointing in your direction as he turns and shouts to one of his colleagues you can&apos;t make out what he is saying, but you soon realize several individuals pause and look at you.  The heavy set man looks back toward you and motions you to hurry up and get in there.  It seems as if they need your help for something.</desc>
+      <desc>   Just as before another loud explosion rocks the structure as debris falls from the ceiling above, you decide you&apos;d better hurry it up and get in there to see what the fuss is all about.  You begin to run to the SouthEast.</desc>
+      <exits se='1631'/>
+   </location>
+
+   <location num='1503'>
+      <name>Staging and Control Room</name>
+      <desc>You walk inside the massive central nerve of the facility and meet with the individual you saw inside.  He explains the situation breifly stating something about unstable biological commods and testing the ability to teleport anywhere in the galaxy from this hub.  Somehow the system has come across a glitch and they need you to go onto the testing platform and try to fix the situation.  As he goes on and on, all you can think of is &quot;Am I really qualified to do this?&quot; Of course, you soon realize that it has nothing to do with what you know, but all to do with the fact that you are &apos;expendable.&apos;  He walks you to the testing platform and says that all you have to do is input the correct sequence code into the testing terminal and all stability shall be restored.  &quot;Good luck,&quot; he says as he turns back to the Staging &amp; Control Terminal .</desc>
+      <exits n='1375'/>
+   </location>
+
+   <location num='1505'>
+      <name>Corridor</name>
+      <desc>   You bolt off running as fast as your legs can take you, of course the one thing you didn&apos;t think about is the continual glass that surrounds the facility inside as you notice people getting even more panicked when they see you running.  The familiar figure begins to yell in what appears to be a terrified rage, you soon realize that six security gaurds begin running after you trying to catch you.  You had better hurry.</desc>
+      <exits ne='1379'/>
+   </location>
+
+   <location num='1631'>
+      <name>Southern Wing</name>
+      <desc>   You finally reach the Southern Wing and realize you have to make a choice.  First off you can go north into the Bio-Lab facility and try to help out to the best of your ability, or secondly, you can just take off running your tail off like there is no tomorrow and try to make it back to the northern end of the dome before anything major happens that coudl result in your death.  You see the large individual motioning to you to come in and help him out, he looks frightened like he is not sure what to do.</desc>
+      <exits n='1503' ne='1505'/>
+   </location>
+
+   <location num='2015'>
+      <name>Malfunction</name>
+      <desc>You hear a distant explosion and wonder what it could have been.  You brush it off and focus at the task at hand.</desc>
+      <exits n='671' ne='671' e='671' se='671' s='671' sw='671' w='671' nw='671' up='671' down='671' in='671' out='2655'/>
+   </location>
+
+   <location num='2655'>
+      <name>Darkness</name>
+      <desc>As you attempt to step out of the Testing Platform the plasma field instantly disintegrates your entire body into nothing.  Maybe you should have listened and not step outside the platform.</desc>
+      <exits up='990'/>
+   </location>
+
+</fed2-map>
+

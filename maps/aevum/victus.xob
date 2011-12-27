@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+
+<object-list version='33' editor='Version 1.37'>
+   <object type='static' start='1055' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>food_lounge</id>
+      <desc>You watch as a beautiful dish of filet mignon is delivered to a nearby table, it looks absolutely delicious.</desc>
+      <vocab cmd='buy' event='food.lounge.1'></vocab>
+   </object>
+
+   <object type='static' start='260' visibility='100' size='1' weight='1' flags='i'>
+      <name>boat</name>
+      <id>forest_boat</id>
+      <desc>It is an old but sturdy rowboat, just waiting to be used to enjoy the lake.</desc>
+      <vocab cmd='use' event='forest.boat.1'></vocab>
+   </object>
+
+   <object type='static' start='324' visibility='100' size='1' weight='1' flags='p'>
+      <name>fishing gear</name>
+      <id>forest_fishing_gear</id>
+      <desc>There&apos;s a couple of poles, a tackle box, and plenty of bait, ready to be used.</desc>
+      <vocab cmd='use' event='forest.gear.1'></vocab>
+   </object>
+
+   <object type='static' start='324' visibility='0' size='1' weight='1'>
+      <name>gear</name>
+      <id>forest_gear</id>
+      <desc>There&apos;s a couple of poles, a tackle box, and plenty of bait, ready to be used.</desc>
+      <vocab cmd='use' event='forest.gear.1'></vocab>
+   </object>
+
+   <object type='dynamic' start='3871' visibility='100' size='1' weight='1'>
+      <name>Ella</name>
+      <id>jewells_ella</id>
+      <desc>Ella is a black and white &quot;tuxedo&quot; cat.</desc>
+      <vocab cmd='call' event='general.jewells.11'></vocab>
+      <vocab cmd='pet' event='general.jewells.15'></vocab>
+   </object>
+
+   <object type='dynamic' start='3871' visibility='100' size='1' weight='1'>
+      <name>Pirate</name>
+      <id>jewells_pirate</id>
+      <desc>Pirate is a smoky shade of grey.</desc>
+      <vocab cmd='call' event='general.jewells.10'></vocab>
+      <vocab cmd='pet' event='general.jewells.14'></vocab>
+   </object>
+
+   <object type='static' start='1759' visibility='100' size='1' weight='1' flags='i'>
+      <name>keypad</name>
+      <id>pq_keypad</id>
+      <desc>Located on the wall near the stairway, it&apos;s a 0-9 number pad with two small lights, red and green.</desc>
+      <vocab cmd='press' event='general.pq_keypad.3'></vocab>
+      <vocab cmd='push' event='general.pq_keypad.3'></vocab>
+   </object>
+
+   <object type='static' start='1759' visibility='0' size='1' weight='1'>
+      <name>type</name>
+      <id>pq_type</id>
+      <desc>I can&apos;t find anything called type in the vicinity!</desc>
+      <vocab cmd='type' event='general.pq_keypad.1'></vocab>
+   </object>
+
+   <object type='static' start='1888' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_beach</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.beach.1'></vocab>
+      <vocab cmd='use' event='teleport.beach.1'></vocab>
+      <vocab cmd='activate' event='teleport.beach.1'></vocab>
+   </object>
+
+   <object type='static' start='3835' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_beach_2</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.beach.2'></vocab>
+      <vocab cmd='use' event='teleport.beach.2'></vocab>
+      <vocab cmd='activate' event='teleport.beach.2'></vocab>
+   </object>
+
+   <object type='static' start='1888' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_beach_in</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.beach.1'></vocab>
+      <vocab cmd='step' event='teleport.beach.1'></vocab>
+   </object>
+
+   <object type='static' start='3835' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_beach_in_2</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.beach.2'></vocab>
+      <vocab cmd='step' event='teleport.beach.2'></vocab>
+   </object>
+
+   <object type='static' start='1888' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_beach_into</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.beach.1'></vocab>
+      <vocab cmd='step' event='teleport.beach.1'></vocab>
+   </object>
+
+   <object type='static' start='3835' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_beach_into_2</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.beach.2'></vocab>
+      <vocab cmd='step' event='teleport.beach.2'></vocab>
+   </object>
+
+   <object type='static' start='1886' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_desert</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.desert.1'></vocab>
+      <vocab cmd='use' event='teleport.desert.1'></vocab>
+      <vocab cmd='activate' event='teleport.desert.1'></vocab>
+   </object>
+
+   <object type='static' start='3780' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_desert_2</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.desert.2'></vocab>
+      <vocab cmd='use' event='teleport.desert.2'></vocab>
+      <vocab cmd='activate' event='teleport.desert.2'></vocab>
+   </object>
+
+   <object type='static' start='1886' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_desert_in</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.desert.1'></vocab>
+      <vocab cmd='step' event='teleport.desert.1'></vocab>
+   </object>
+
+   <object type='static' start='3780' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_desert_in_2</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.desert.2'></vocab>
+      <vocab cmd='step' event='teleport.desert.2'></vocab>
+   </object>
+
+   <object type='static' start='1886' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_desert_into</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.desert.1'></vocab>
+      <vocab cmd='step' event='teleport.desert.1'></vocab>
+   </object>
+
+   <object type='static' start='3780' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_desert_into_2</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.desert.2'></vocab>
+      <vocab cmd='step' event='teleport.desert.2'></vocab>
+   </object>
+
+   <object type='static' start='1822' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_forest</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.forest.1'></vocab>
+      <vocab cmd='use' event='teleport.forest.1'></vocab>
+      <vocab cmd='activate' event='teleport.forest.1'></vocab>
+   </object>
+
+   <object type='static' start='260' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_forest_2</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.forest.2'></vocab>
+      <vocab cmd='use' event='teleport.forest.2'></vocab>
+      <vocab cmd='activate' event='teleport.forest.2'></vocab>
+   </object>
+
+   <object type='static' start='1822' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_forest_in</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.forest.1'></vocab>
+      <vocab cmd='step' event='teleport.forest.1'></vocab>
+   </object>
+
+   <object type='static' start='260' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_forest_in_2</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='step' event='teleport.forest.2'></vocab>
+      <vocab cmd='get' event='teleport.forest.2'></vocab>
+   </object>
+
+   <object type='static' start='1822' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_forest_into</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.forest.1'></vocab>
+      <vocab cmd='step' event='teleport.forest.1'></vocab>
+   </object>
+
+   <object type='static' start='260' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_forest_into_2</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='step' event='teleport.forest.2'></vocab>
+      <vocab cmd='get' event='teleport.forest.2'></vocab>
+   </object>
+
+   <object type='static' start='1824' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_slope</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.slope.1'></vocab>
+      <vocab cmd='use' event='teleport.slope.1'></vocab>
+      <vocab cmd='activate' event='teleport.slope.1'></vocab>
+   </object>
+
+   <object type='static' start='315' visibility='100' size='1' weight='1' flags='i'>
+      <name>teleporter</name>
+      <id>tp_slope_2</id>
+      <desc>A low hum eminates from the machine, which reminds you of a tanning bed turned on its side. Step into it to use it.</desc>
+      <vocab cmd='step' event='teleport.slope.2'></vocab>
+      <vocab cmd='use' event='teleport.slope.2'></vocab>
+      <vocab cmd='activate' event='teleport.slope.2'></vocab>
+   </object>
+
+   <object type='static' start='1824' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_slope_in</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.slope.1'></vocab>
+      <vocab cmd='step' event='teleport.slope.1'></vocab>
+   </object>
+
+   <object type='static' start='315' visibility='0' size='1' weight='1'>
+      <name>in teleporter</name>
+      <id>tp_slope_in_2</id>
+      <desc>I can&apos;t find anything called in teleporter in the vicinity!</desc>
+      <vocab cmd='step' event='teleport.slope.2'></vocab>
+      <vocab cmd='get' event='teleport.slope.2'></vocab>
+   </object>
+
+   <object type='static' start='1824' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_slope_into</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='get' event='teleport.slope.1'></vocab>
+      <vocab cmd='step' event='teleport.slope.1'></vocab>
+   </object>
+
+   <object type='static' start='315' visibility='0' size='1' weight='1'>
+      <name>into teleporter</name>
+      <id>tp_slope_into_2</id>
+      <desc>I can&apos;t find anything called into teleporter in the vicinity!</desc>
+      <vocab cmd='step' event='teleport.slope.2'></vocab>
+      <vocab cmd='get' event='teleport.slope.2'></vocab>
+   </object>
+
+</object-list>
+

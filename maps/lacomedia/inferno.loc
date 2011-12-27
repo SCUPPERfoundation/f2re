@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<fed2-map title='Inferno' version='65' editor='standard' from='331' to='La Comedia.La Comedia Space.526'>
+
+   <location num='0' flags='t'>
+      <name>Storage Closet</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='329' flags='t'>
+      <name>Dante&apos;s Closet</name>
+      <desc>Dante&apos;s Closet contains a variety of items for his use and pleasure.</desc>
+      <exits e='330' no-exit='moves.noexit.1'/>
+      <events enter='moves.keepout.1'/>
+   </location>
+
+   <location num='330' flags='hib'>
+      <name>Dante&apos;s Home</name>
+      <desc>Dante&apos;s home is sparsely furnished.  There is a small cot covered with a woolen blanket in one corner, and against an opposite wall is a plain desk, lit by a single candle.  On the desk is a picture of Dante&apos;s beloved, Beatrice, and an open Bible.  Several sheets of paper lined with flowing script document Dante&apos;s visit to the nether regions of Inferno.</desc>
+      <exits e='331' w='329' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='yr'>
+      <name>Inferno Landing Pad</name>
+      <desc>The dreary landscape of Inferno is shrouded in a thick mist.  The Landing Pad itself is lit by four pyres, their flames licking up to the heavens as if in a vain attempt to escape the barren desolation they have been consigned to.  The burning pitch of the fires adds to the smells carried in the air.  The stench of death and decay assaults your nostrils and although a modern nano-chameleon suit offers thermal protection, a cold shiver runs up your spine.</desc>
+      <desc>     To the west is a small hut, and a road leads south.</desc>
+      <exits s='395' w='330' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='395'>
+      <name>Inferno Gate</name>
+      <desc>Sighs, lamentations and loud cries are echoing across the starless air.  Their pitiful wails cause travelers to weep.  Strange utterances, horrible pronouncements,accents of anger, words of suffering,and voices shrill and faint, and beating hands all go to make a tumult that will whirl forever through this turbid, timeless air, like sand that eddies when a whirlwind swirls.  Behold!  The gate to the judgement of the Damned.</desc>
+      <desc>     The gate itself is black and above it is a stone arch.  Across the arch is a sign that reads,</desc>
+      <desc>     ABANDON ALL HOPE, YE WHO ENTER HERE</desc>
+      <desc>The gate opens to a path to the south.</desc>
+      <exits n='331' s='459' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='459'>
+      <name>Shore of the River Acheron</name>
+      <desc>Amassed on the shore of the River Acheron are a multitude of souls who in life neither chose good nor evil.  They include angels that stood by while a third of their number rebeled..  The multitudes are pursuing a banner which represents their pursuit of their selfish interests in life.  The wretched souls are being tormented by swarms of horse flies and wasps that sting them again and again.  The faces of the damned are streaked with the blood from the stings and mixed with their tears to fall to the ground and be devoured by sickening worms.  The Demon Caronte, his worn face and white hair evidencing his age, shouts from his boat, &quot;Woe to you, corrupted souls!  Forget your hope of ever seeing Heaven.  I come to take you to the other shore, to the eternal dark, to fire and frost.&quot;</desc>
+      <desc>    Caronte&apos;s boat is here and you can get in it.</desc>
+      <exits n='395' in='586' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='586'>
+      <name>Caronte&apos;s Boat</name>
+      <desc>Caronte swings his oar about to strike those souls attempting to reach out to the boat.  As the boat leaves the horrific spectacle on the shore, faintness overcomes you, and you sleep until reaching the other side.</desc>
+      <desc>     The boat has reached the opposite shore and you may get out.</desc>
+      <exits out='715' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='588'>
+      <name>Caronte&apos;s Boat</name>
+      <desc>Caronte swings his oar about to strike those souls attempting to reach out to the boat.  As the boat leaves the shore of Limbo it approaches a horrific spectacle on the opposite shore, faintness overcomes you, and you sleep until reaching the other side.</desc>
+      <desc>     The boat has reached the opposite shore and you may get out.</desc>
+      <exits out='459' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='710' flags='e'>
+      <name>Inferno Exchange</name>
+      <desc>Even Hell has an economy, and in an effort to obtain needed goods for it&apos;s population of assorted demons, Inferno had a planetary exchange established.  A large board hangs in mid-air, suspended above the trading floor.  A winged demon flaps it&apos;s bat-like wings as it marks the board with the latest commodity pricing.  In a pit beneath the board, Traders writhe in flames, damned to the Hell of Futures.  Demons glare menacingly as they are handed trading chits and brandish their pitchforks as they carry the orders for processing.</desc>
+      <desc>     To the south is an exit door.</desc>
+      <exits s='774' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='715'>
+      <name>Dock at the River Acheron</name>
+      <desc>Caronte&apos;s boat lies at rest at the dock on the south shore of the River Acheron.  A path leads south to a mist enshrouded valley.  Arising from the valley is a cacophony of sighs.  The sighs are those of sorrow without torment.  The sighs cause the everlasting air to tremble.</desc>
+      <desc>     A path leads to the misty valley to the south, and Caronte&apos;s boat is at the dock.</desc>
+      <exits s='779' in='588' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='774'>
+      <name>The Great Hall of Nobile Castello</name>
+      <desc>Torches set into the walls flicker and illuminate the large entry hall.  Hung on the walls are woven tapestries with images commemorating the residents of Limbo.  There are tapestries of Aristotle, Socrates, Hector, Aeneas, and even Julius Caesar himself.  To the south, is a dining hall, and to the north, the shouts and cries of tormented traders can be heard.</desc>
+      <exits n='710' s='838' out='777' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='777'>
+      <name>Nobile Castello</name>
+      <desc>Towering above the Limbo Fields is Nobile Castello.  It&apos;s towering stone walls rise above the ground almost in a vain attempt to reach the heavens.  Set in the middle of the outermost wall is an immense oak door, buttressed with large crossbeams and fitted with wrought iron bands which span it&apos;s width.  Lost souls of the virtuous pagans wander about and enter and exit the castle.  Although magnificent and noble in both construction and design, the castle seems to lack something, but what that may be is not readily apparent.</desc>
+      <desc>     The Limbo Fields lie to the east.</desc>
+      <exits e='778' in='774' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='778'>
+      <name>Limbo Fields</name>
+      <desc>Wandering souls walk upon a wide green plain.  The lush greenery is reminiscent of the storied Elysian Fields, yet like the rest of the First Circle, there is something missing, an absence of one element, that makes the peaceful setting deficient, and lonely rather than joyful.  On the western edge of the field lies an exalted castle circled seven times by towering walls defended by a fair stream.</desc>
+      <desc>     The castle lies to the west and the road to the east.</desc>
+      <exits e='779' w='777' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='779'>
+      <name>Limbo</name>
+      <desc>The First Circle of Hell is the domain of the virtuous pagans whose lives were not sinful, yet because they were not baptized, they are banished to Limbo.   For this defect, they are condemned to live with no hope, yet have eternal longing.  Among the souls here are Homer, Horace, Ovid, Lucan, and even Saladin.</desc>
+      <desc>     A meadow lies to the west and the seven spires of a castle can be seen beyond.  To the south is a rocky path that leads deeper into the depths of Hell.</desc>
+      <exits n='715' s='843' w='778' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='799' flags='t'>
+      <name>Bolgia 1</name>
+      <desc>The Eighth Circle of Hell is also called the Malebolge.  This circle is divided into ten Bolgie.  Each Bolgia, or stone ditch, has a stone bridge spanning it&apos;s circumference.  The Malebolge is for the punishment of the fradulent.  Those guilty of deliberate, knowing evil are condemned here.  Marching in long lines, while being whipped by Demons, are panderers and seducers.  They are forced to march in opposite directions and will be whipped and driven to march throughout eternity.  Just as they misled others in life, they will be misled to the end of time.</desc>
+      <desc>     The next Bolgia is to the southwest.</desc>
+      <exits sw='862' no-exit='moves.noexit.26'/>
+   </location>
+
+   <location num='838'>
+      <name>Dining Hall</name>
+      <desc>In the center of the Dining Hall of the Nobile Castello is a long polished wood dining table.  Chairs line both sides of the table and ornate dishes are set before the table.  Goblets of fine wines are full and set out on the table.  Candles flicker from polished silver candelabras, and cast a warm glow over the prepared feast.  The dishes arrayed across the table represent the finest in cuisine from across the galaxy.  But as tempting as the dishes do appear, there is no aroma arising from the plates.</desc>
+      <desc>     The main hall is to the north.</desc>
+      <exits n='774' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='843'>
+      <name>Minos, the Judge of Souls</name>
+      <desc>Towering above the entry way to the Second Circle stands the dreadful demon Minos, gnashing his teeth as he examines the souls of all who pass.  Each soul appears before him and confesses their evil, and Minos, the connoisuer of sin is able to determine their appropriate punishment.  Around each sinner, his terrible tail entwines, and the number of times it circles the hapless soul is the level in which lies their fate.</desc>
+      <desc>     There is a warning here.  Once past Minos, the only exit is through the very depth of Hell itself, for Minos will let you pass by him entering the depths of Hell, but not allow you to exit past him.  The next circle is down, and the path back to Limbo is to the north.</desc>
+      <exits n='779' down='1098' no-exit='moves.noexit.13'/>
+      <events enter='moves.infomessage.1'/>
+   </location>
+
+   <location num='862' flags='t'>
+      <name>Bolgia 2</name>
+      <desc>The stench of excrement permuates the air around the Second Bolgia.  In this bolgia, flatterers are condemned to spend eternity mired in human waste.  This is punishment for their flatteries on earth which were nothing more than a load of excrement.  Standing on the sides of the bolgia are winged demons with long forked spears.  The demons extend their spears to push down the poor condemned souls that try to escape thier fate.</desc>
+      <desc>     The stone bridge over the bolgia leads to another to the southwest.</desc>
+      <exits sw='925' no-exit='moves.noexit.27'/>
+   </location>
+
+   <location num='863' flags='t'>
+      <name>Bolgia 9</name>
+      <desc>The souls of the shismatics, the sowers of discord, are confined to the Ninth Bolgia.  They are tormented by sword wielding demons who rend their bodies.  The wounds are healed, only to be inflicted again by the gruesome demons of Hell.  Muhammed and Ali are here for their role in dividing the faithful, and creating division in Isalm.  A man, if it can be called that, with a headless torso approaches.  He is carrying his head as if it were a lamp.  The head is that of Bertran de Born, the one who gave bad counsel to the fledgling king.  His head cries out in a tortured voice, &quot;Because I severed those so joined, I carry alas my brain dissevered from its source,which is within my trunk. And thus, in me one sees the law of counter-penalty.&quot;</desc>
+      <desc>     The next bolgia is to the south.</desc>
+      <exits s='927' no-exit='moves.noexit.34'/>
+   </location>
+
+   <location num='864' flags='t'>
+      <name>Bolgia 8</name>
+      <desc>Across the Eighth Bolgia, are fires, who at at distance appear to be a single flame, but as approached, the distinction between the flames is apparent, and it is in fact a multitude of dancing flames spread throughout the pit.  Encased in each flame is the burning soul of a fraudulent advisor.  The souls of Ulysses, and Diomedes as well as Guido da Montefeltro are here, damned for eternity to burn for their false advice.  The flaming soul of Montefeltro crackles as he recounts his sin, and the deceit of Boniface VIII that resulted in his damnation.  Boniface promised him absolution for his sins, but absolution is meaningless without repentance, and thus he spends eternity burning.  The flames hiss and writhe as they flicker about the tormented soul.</desc>
+      <desc>     The next Bolgia is to the west.</desc>
+      <exits w='863' no-exit='moves.noexit.33'/>
+   </location>
+
+   <location num='925' flags='t'>
+      <name>Bolgia 3</name>
+      <desc>The floor of the Third Bolgia is made up of large pits, carved into the rock.  Each pit is the size of the baptismal font of San Giovanni.  In each pit, stuck head first, are the Simonists, those who would buy and sell Church offices.  Only their feet and legs up to mid thigh are showing, the rest of their tortured bodies are inverted into the pit.  Dancing across the souls of their feet are tiny tongues of flame.  Here, for all eternity, they will received the baptism that their foul deeds so warrant.</desc>
+      <desc>     The next Bolgia is to the southeast.</desc>
+      <exits se='990' no-exit='moves.noexit.28'/>
+   </location>
+
+   <location num='927' flags='t'>
+      <name>Bolgia 10</name>
+      <desc>The fetid smell of decaying flesh and all manners of filth assault the nostrils of visitors to the Tenth Bolgia.  In the confines of the stone ditch, are all manner of falsifiers, alchemists, counterfeiters, perjurers, and impersonators.  They lie, writhing in agony, as they are touched by hideous diseases.  Lepers scratch at their scabs which fly off their body as the scales of a fish fly off when it is prepared.  The alchemists Cappachio and Griffolino are here along with Potiphar&apos;s wife, condemned for her false accusation of Joseph.  The Malebolge begins with the sale of the body, and continues with the sale of Church, State, then theft of money.  Here in this last bolgia, nothing remains, every affirmation has become perjury, and every identity a lie.</desc>
+      <desc>     To the south can be heard a blaring trumpet and tall towers can be seen.  It is the gateway to the next Circle of Hell.</desc>
+      <exits s='991' no-exit='moves.noexit.35'/>
+   </location>
+
+   <location num='929' flags='t'>
+      <name>Bolgia 7</name>
+      <desc>Condemned to the Seventh Bolgia are the Thieves.  They run wildly around, endlessly pursued by snakes and other venemous serpents.  The serpents wrap themselves around their hapless prey and bite them mercilessly.  Upon being bitten, some souls instantly burst into flame.  And as the ashes and embers die away, they come back into being just as the legends of the Phoenix of old.  Other victims of a serpent bite are transformed into serpents themselves and begin pursuing their fellow thieves.  Just as they stole from others in life, so is it that their very substance is stolen by other thieves.</desc>
+      <desc>     The next Bolgia is to the northwest</desc>
+      <exits nw='864' no-exit='moves.noexit.32'/>
+   </location>
+
+   <location num='990' flags='t'>
+      <name>Bolgia 4</name>
+      <desc>Deep within the dark depths of the ditch is a long path of condemned souls walking mournfully through eternity.  As they come closer to lighted areas, their features become more recognizable, then, it is apparent that their bodies have been horribly contorted so that their heads have been completely twisted around on their bodies backward.  This is the punishment for sorcerers and false prophets.  Throughout their lives, they desired to see ahead into the future.  Now, and for the rest of eternity, they are condemned to walk and only able to see behind.</desc>
+      <desc>     The next bolgia lies to the southeast.</desc>
+      <exits se='1055' no-exit='moves.noexit.29'/>
+   </location>
+
+   <location num='991' flags='t'>
+      <name>Giants</name>
+      <desc>Standing so tall, that from a distance, they appear to be the towering spires of cities stand giants, who tower above this level from the navel on up.  Holding a great horn, is Nimrod, he would have built a giant tower to reach the heavens.  There is also Ephialtes, who would try to scale Mount Olympus by piling mountains atop each other.  These great giants are all chained to the cliffside, with the exception of one.  Antaeus, the giant whose strength  flowed from his mother earth, and was slain by Hercules when he was suspended above the source of his strength, is unchained.</desc>
+      <desc>     Anateus will take you down to the next level.</desc>
+      <exits down='1311' no-exit='moves.noexit.36'/>
+   </location>
+
+   <location num='992' flags='t'>
+      <name>Bolgia 6</name>
+      <desc>The sixth Bolgia is home to the hypocrites.  Walking slowly in a long path wearing gilded robes, they plod their way along a well worn trail.  Two of the souls, Catalano and Loderingo approach and explain their plight.  They display their robes, and although gilded on the outside, they are in reality constructed of lead, just as their lies were gilded on the outside, but in reality were worthless.  Catalano points out the fate of Caiaphas, whose lies condemned one man in the vain hope of saving a city.  He is staked out in the middle of the trail, where all the rest must tread over him throughout eternity.</desc>
+      <desc>     The next Bolgia is to the northeast.</desc>
+      <exits ne='929' no-exit='moves.noexit.31'/>
+   </location>
+
+   <location num='1055' flags='t'>
+      <name>Bolgia 5</name>
+      <desc>The bottom of this bolgia is a pool of boiling pitch.  Immersed in the pitch are corrupt politicians whose fingers rise up and claw at the sides of the bolgia, covered with the sticky tar that represents the sticky fingers of their corrupt dark deals.  Standing on the side of this horrific spectacle are great winged demons called Malebranche.  Their great wings unfurl as they lean over and stab the condemned with long pitchforks, pushing them back into the boiling pitch as a cook would push meat deeper into a boiling pot of stew.</desc>
+      <desc>    The leader of the Malebranche, Malacoda says to go to the southeast, but the Malebranche are prisoners here as well, condemned for their lies and hypocrisy, just as the imprisoned souls who they now torment.  Perhaps it is best to go to the northeast instead.</desc>
+      <exits ne='992' no-exit='moves.noexit.30'/>
+   </location>
+
+   <location num='1098' flags='t'>
+      <name>Second Circle of Hell</name>
+      <desc>A strong wind whips about and in the air are the scattered souls of the damned as they are tossed around the circle.  Their cries of anquish echo through out the circle.  Included among the damned here are Semiramis, Dido, Cleopatra, and Achilles.  Francesca da Rimini is receiving her punishment for her adulterous affair with her husband&apos;s brother, Paolo.  The Second Circle of Hell is the fate for those sinners, who in their natural life, succumbed to and were overcome by lust.  Their punishment is to be blown to and fro by a violent storm without hope of rest.  This punishment befits their sin as it shows the power of lust to move a sinner in random directions without thought or logic.</desc>
+      <desc>     Their are some steps leading down to the Third Circle of Hell.</desc>
+      <exits down='1100' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='1100' flags='t'>
+      <name>Third Circle of Hell</name>
+      <desc>In the center of the Third Circle is a shallow pit with a vile slush comprised of freezing rain, black snow, and hail.  The slush is filled with rotting garbage and the smell assaults the nostrils,  Along the edge of the pit of slush stands Cerbero who is watching over the poor souls who have been condemned to spend eternity here.  Sinners who have spent their lives mired in the sins of gluttony are forced to live in the vile waste that symbolizes the garbage that they made of their lives on Earth.  The poor souls slaver over their food, as they lie in the fetid waste.</desc>
+      <desc>     The Fourth Circle of Hell is down some stairs at the edge of the circle.</desc>
+      <exits down='1228' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='1226' flags='t'>
+      <name>Shore of the River Styx</name>
+      <desc>The rocky path follows a stream that is even darker than deep purple.  When the strange pathway reaches the foot of malign gray slopes, that melancholy stream descends, forming a swamp that bears the name of Styx.  Barely discernable in that slime are muddied people, all naked and their faces furious.  They strike each other not with hands alone, but with their heads and chests and with their feet, and tear each other piecemeal with their teeth.  Ringing out from the darkness surrounding the swamp, a voice calls, &quot;Now you are caught, foul soul!&quot;  It is Phlegyas, standing in his skiff, the ferryman across the River Styx.</desc>
+      <desc>    Phlegyas&apos; skiff is here and you can get in to cross the river.</desc>
+      <exits in='1483' no-exit='moves.noexit.17'/>
+   </location>
+
+   <location num='1228' flags='t'>
+      <name>Fourth Circle of Hell</name>
+      <desc>In this circle is a vast multitude of condemned souls, divided into two groups.  The group gathered on one side of the circle push large bags of gold coins using their chests toward the center of the circle, which is inhabited by the second group.  When the first group gets to the center, they meet the second group and together they shout, &quot;Why do you hoard?&quot; &quot;Why do you squander?&quot;  The first group leaves their burden and continues to the opposite side, while the second group takes on their burden, and pushes it back to it&apos;s starting point.  Once the first group reaches the opposite side, they take up a new burden, and the cycle repeats, again, and again, and again.  This is the fate of the Misers and the Squanderers.  They are each condemned to do the opposite of how they lived their lives for the rest of time.</desc>
+      <desc>     A rocky path leads down to the River Styx.</desc>
+      <exits down='1226' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='1311' flags='t'>
+      <name>Caina</name>
+      <desc>Antaeus&apos; great hand places you gently on the ground.  The bottom of this circle is dark, and bitterly cold.  The path makes it&apos;s way across a frozen lake.  Arising from the frozen lake, and scattered about, are dark shapes that at a distance are barely discernable.  But as the sounds of their pitiful sobbing rise up, their awful visage is apparent.  The dark shapes are the heads of the damned souls confined to this dreadful fate.  The rest of their bodies lie in the ice of the frozen lake, and only their heads, neck and bit of their shoulders reach out the lake&apos;s icy grasp.  This is home to the traitors of their kindred, and is named Caina, after Cain who betrayed and slew his brother.</desc>
+      <desc>     There is a path that winds it&apos;s way among the heads of the damned to the southeast.</desc>
+      <exits se='1376' no-exit='moves.noexit.37'/>
+   </location>
+
+   <location num='1374' flags='t'>
+      <name>Judecca</name>
+      <desc>A cold wind whips across the frozen lake.  Fully encased in ice are traitors to their lords and benefactors.  The bodies of the souls are twisted within their icy tomb in horrible shapes and positions.</desc>
+      <desc>     A cold wind gusts from the east, and a path leads that direction to the center of this last circle.</desc>
+      <exits e='1375' no-exit='moves.noexit.38'/>
+   </location>
+
+   <location num='1375' flags='t'>
+      <name>Satan</name>
+      <desc>For committing the ultimate sin, treason against God, the Prince of Deceivers was condemned to his punishment here.  He stands waist deep in the ice and his torso towers above the frozen plain.  HIs awful visage has three faces, one red, one black, and one yellow.  His back is covered with thick black fur, and from it, six wings are spread, each beating the air, and creating icy gusts of wind.  Protruding from his three mouths are long fangs, and each mouth is chewing on a notorious traitor.  In two of his mouths are Brutus and Cassius, those foul traitors that conspired to kill Julius Caesar.  In his center mouth, with only his back and legs protruding, is Judas Iscariot, the betrayer of Jesus.  Satan&apos;s claws flail at the back of Judas, ripping the skin off.</desc>
+      <desc>     The beating of the wings occurs at regular intervals, and if timed right, you may go down Satan&apos;s back.</desc>
+      <exits down='1631' no-exit='moves.noexit.39'/>
+   </location>
+
+   <location num='1376' flags='t'>
+      <name>Antenora</name>
+      <desc>As the path winds it&apos;s way out onto the frozen lake, the depth of the lake submerges more of the bodies of the souls condemned to be punished here.  The Anetora is named for Antenor of Troy, that foul traitor who betrayed his city to the Greeks.  Traitors who betrayed their country are sent to this place of judgement.  The traitors are submerged to a level that encases them up to their necks.  Off to one side, Ugolino della Gherardesca, who betrayed Pisa is here, exacting his revenge against his killer, Ruggieri degli Ubaldini.  Archbishop Ruggieri murdered Ugolino by imprisoning him, and his children in the Torre dei Gualandi, and nailing the door shut.  Ugolino watched his young children starve to death, before he himself succumbed.  Now, for the rest of time, Ugolino gnaws at the head and brains of Ruggieri as he remembers the manner of his demise.</desc>
+      <desc>     The pathway across the frozen lake winds through the field of heads to the southwest.</desc>
+      <exits sw='1439' no-exit='moves.noexit.37'/>
+   </location>
+
+   <location num='1439' flags='t'>
+      <name>Ptolomaea</name>
+      <desc>Ptolomaea is named after Ptolemy, the captain of Jericho, who invited Simon Maccabaeus and his sons to a banquet, and then betrayed and murdered them.  This is the home for the traitors to their guests.  The traitors are immersed so that only the top of their faces are above the ice.  As they sob, and bemoan their fate, their tears freeze and seal their eyes shut, so that they are denied even the comfort of their tears.</desc>
+      <desc>     The path winds it&apos;s way among the damned to the northwest.</desc>
+      <exits nw='1374' no-exit='moves.noexit.37'/>
+   </location>
+
+   <location num='1483' flags='t'>
+      <name>Phlegyas&apos; Skiff</name>
+      <desc>The skiff makes it&apos;s way through the fighting and gnashing of the condemned.  The swamp of the River Styx is the punishment for the wrathful, who could not control their anger.  They are condemned to an eternal violent struggle without reason, nor abatement.  In the distance, the tall towers of the City Dis can be seen.  As the skiff draws closer to the shore, Filippo Argenti, that foul Black Guelph, can be seen.  The wrathful descend upon him with a passionate hatred and rend him to pieces.</desc>
+      <desc>    The skiff arrives at the shore and you can get out.</desc>
+      <exits out='1675' no-exit='moves.noexit.18'/>
+   </location>
+
+   <location num='1631' flags='t'>
+      <name>Satan&apos;s Back</name>
+      <desc>Satan&apos;s wings beat helplessly in a vain attempt to extricate himself from his confinement.  The fur on his back provides handholds from which one can climb further down.   Below, a faint light appears marking a possible exit point from this horrible place of torment.</desc>
+      <exits down='1823' no-exit='moves.noexit.40'/>
+   </location>
+
+   <location num='1675' flags='t'>
+      <name>Outside the City Dis</name>
+      <desc>Rising from the shores of the swampy River Styx stand two towers bordering a gated entrance to a city.  Within the city, mosques gleam as crimson as if they had just been drawn out of the fire of the eternal flames of Hell.  Surrounding the gates are more than a thousand of those who had once rained from heaven.  They are shouting, &quot;Who is this who, without death, can journey through the kingdom of the dead?&quot;  Beyond the gates lie the sixth circle, and barring the path is this cursed horde.  An angel sent from Heaven on high appears, and chases the brood of Lucifer away, opening the path.</desc>
+      <desc>     The City of Dis, and the Sixth Circle of Hell lie within the gate.</desc>
+      <exits in='1867' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1823' flags='t'>
+      <name>Center of the Earth</name>
+      <desc>A rocky ledge leads to a cave which snakes up to a glimmer of light.  Behind is the endless sobbing of the condemned.  Their moans echo through the chamber and serve as a reminder of the fate that awaits those that live an evil life.  The opening up the path reveals a starry plain spread across the sky.  Perhaps the journey is now at an end.</desc>
+      <exits up='331' no-exit='moves.noexit.41'/>
+   </location>
+
+   <location num='1867' flags='t'>
+      <name>Sixth Circle of Hell</name>
+      <desc>Laid across the open courtyard beyond the City Gate is a plain of sepulchers, their lids slightly ajar, and the tongues of flames can be seen licking up around the edges of the lids.  Discernable within the flames is the writhing contortions of soul trapped inside.  This unholy cemetary is home to Heretics.  Scatered among the smoldering graves are the epicureans, those that would deny the existinence of the soul after Death.  Now, till the end of time, their cursed soul will burn in it&apos;s tomb.</desc>
+      <desc>      The path to the Seventh Circle leads down.</desc>
+      <exits down='2059' no-exit='moves.noexit.20'/>
+   </location>
+
+   <location num='2059' flags='t'>
+      <name>Minotaur</name>
+      <desc>From the mountain down to the Seventh Circle, the rock is shattered, which creates a path upon which travelers can traverse.  At the foot of the path is a sight of terror from days long past.  At the edge of the shattered rock lies the infamy of Crete.  The Minotaur bellows with rage and his nostrils flare as he shakes his acursed bull head.  His horns flash in the dim light as he stomps his foot in his fury.  The seventh circle is the home of the violent, and this infamy of Crete guards the entryway.  His fury overcomes him and he flies into a beserk rage.  But in his rage, a pathway opens to the south, allowing an opportunity to pass.</desc>
+      <exits s='2123' no-exit='moves.noexit.21'/>
+   </location>
+
+   <location num='2123' flags='t'>
+      <name>Outer Ring</name>
+      <desc>A valley opens up with a stone ditch that turns in an arc along the outer edge.  Running along the embankment are Centaurs, each armed with bow and arrow, which in their former life, they used to hunt.  Fitting shaft to bowstring, they let arrow fly towards souls that attempt to escape their torment that lies within the ditch.  In the ditch flows a river of boiling blood.  Condemned to eternal immersion are the violent against people and property.  Their depth of immersion is to a level commensurate with their violent sin.</desc>
+      <desc>     To the south is a passage to the next ring in this circle.</desc>
+      <exits s='2187' no-exit='moves.noexit.22'/>
+   </location>
+
+   <location num='2187' flags='t'>
+      <name>Middle ring</name>
+      <desc>Beyond the stone ditch of the outer ring lies a forest that stands between the outer ring and an inner ring.  The forest is filled with gnarled bushes and trees, their twisted limbs, and knotty bark take on an almost human appearance.  Swooping down out of the sky are gruesome creatures called Harpies.  They have the bodies of birds, but the face of a woman.  The Harpies fly down and tear limbs off of the gnarled trees, and a faint audible cry seems to emanate from the trees, and blood pours from the stump.  This is the fate of those who were violent against themselves and sought to end their life.  They are condemned to spend eternity as these tortured trees, and denied a bodily ressurection.</desc>
+      <desc>     The path through the trees continues to the south.</desc>
+      <exits s='2251' no-exit='moves.noexit.23'/>
+   </location>
+
+   <location num='2251' flags='t'>
+      <name>Inner Ring</name>
+      <desc>The path leaves the tortured forest and comes upon an open plain that banishes all green things from its bed.  The wood of sorrow is a garland round it, just as that wood is ringed by a sad channel.  The ground is made of sand, dry and compact, totally desolate of life.  There are many flocks of naked souls, all weeping miserably, and it seems that they are ruled by different decrees.  Some lie upon the ground, flat on their backs; some huddle in a crouch, and there they sit; and others move about incessantly.  Above that plain of sand, distended flakes of fire shower down; their fall is slow, as snow descends on alps when no wind blows.  The desolate plain has no shelter from the raining flames, and the souls writhe in pain when struck, and the sand burns the soles of their feet.  This is the fate of the violent against God, Nature, and Order.</desc>
+      <desc>     A beast with the face of a man and the body of a reptile says that you may climb up on his back, to travel to the next circle.</desc>
+      <exits up='2443' no-exit='moves.noexit.24'/>
+   </location>
+
+   <location num='2443' flags='t'>
+      <name>Back of Geryon</name>
+      <desc>Geryon&apos;s large reptilian wings flap and his great hideous body takes to the air.  Geryon bears the face of a man, but the body of a reptile.  His long tail trails off to form the stinger of a scorpion.  As his great paws leave the ground his tail moves eel-like behind him.  Geryon moves in a slow descending spiral lower and lower and finally, he lands on a rocky outcrop at the base of the steep cliff.</desc>
+      <desc>     You may climb down off of Geryon to visit the Eighth Circle.</desc>
+      <exits down='799' no-exit='moves.noexit.25'/>
+   </location>
+
+</fed2-map>
+

@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<fed2-map title='Phyxius' version='12' editor='standard' from='1115' to='Rage.Rage Space.131'>
+
+   <location num='0'>
+      <name>Store Room</name>
+      <desc>Event/Object storage</desc>
+   </location>
+
+   <location num='663' flags='b'>
+      <name>Campsite</name>
+      <desc>A comfortable clearing in the woods has been carved out here with loads of soft pine straw laid down to create a soft area for sleeping. A large pile of wood has been gathered, split and stacked to one side for use in the fire pit.  Several large logs have been gathered around it for toasting marshmallows or just telling spooky stories.   A solar powered catering unit has been set here for campers&apos; convenience and a quick glance tells you that it is programmed to meet any needs that might arise and a path leads up the slope of a hill back towards the house.</desc>
+      <exits up='792'/>
+   </location>
+
+   <location num='727'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='792' flags='b'>
+      <name>Backyard</name>
+      <desc>A large sliding glass door opens to the backyard. A path leads down into the woods and the well cared for lawn is springy under your feet. A cool breeze off the ocean stirs the air as you look around. To one side is a large deck with a clear pool and a hot tub and built into it. You can also see a large grill equiped with several burners a smoker and a mini fridge.  The deck also has several heaters placed near a large granite topped table and chairs to make outdoor dining in the evenings more pleasant.</desc>
+      <exits e='793' down='663'/>
+   </location>
+
+   <location num='793' flags='b'>
+      <name>Kitchen</name>
+      <desc>The kitchen, while spotless, is cozy and obviously designed for maximum efficiency. The rich walnut cabinets are offset by the dark granite counters that match the granite tile on the floor. The large range doesn&apos;t seem to get much use but you can see a catering unit in the corner and suspect that much of the &quot;cooking&quot; goes on there.</desc>
+      <exits s='857' w='792'/>
+   </location>
+
+   <location num='794' flags='b'>
+      <name>Canopy Bed</name>
+      <desc>xxx</desc>
+      <exits out='858'/>
+   </location>
+
+   <location num='856'>
+      <name>Entryway</name>
+      <desc>The entrance to the home is clean and neat. Large travertine tile covers the floor making its own beauty statement.  There is also a row of hooks on one wall inviting you to hang up your coat if you like. The living room is to the west or you can go back out to the front yard.</desc>
+      <exits e='857' out='1048'/>
+   </location>
+
+   <location num='857' flags='b'>
+      <name>Living Room</name>
+      <desc>Large over stuffed couches and recliners are scattered through this room.  A cheerful fireplace crackles with a warm fire and the chocolate colored carpet just begs for bare feet. Large bookshelves line the wall filled to capacity with books of all shapes sizes and genres.  The A pass through to the kitchen to the north allows you to order whatever food or beverage you might desire.</desc>
+      <exits n='793' w='856' up='858'/>
+   </location>
+
+   <location num='858' flags='b'>
+      <name>Master Bedroom</name>
+      <desc>   Deep rich carpet covers the floor in a deep midnight blue.  At first the outside walls seem to be made of mirrors but a closer look reveals that it is specially treated glass that allows the view of the outside in without showing off the inside to those outside. The sky is red and orange as the sun sets filling the room with a warm glow. A massive canopy bed dominates the room here but the real gem in this room is the large fireplace complete with stone hearth. You can imagine two people sitting here enjoying the soft light cast by the fire while cuddling together on the love seat that has been positioned at the foot of the bed in front of it.</desc>
+      <exits s='922' up='859' down='857' in='794'/>
+   </location>
+
+   <location num='859' flags='b'>
+      <name>Rooftop Garden</name>
+      <desc>    A decorative railing surrounds the terrace and a glass surface that must be a skylight can be seen on the roof beyond. Out over the horizon you can see the sun setting beneath the waves of the western horizon as they crash against the break water of the harbor. The wind carries the scent of the sea to you and rustles the leaves of nearby trees. Planters have been strategically placed around the edges of the garden and are filled with herbs and flowers lending their fragrances to the evening air. A hot tub sits in one corner next to an automated food dispenser. The bedroom is back down the spiral stairs.</desc>
+      <exits down='858'/>
+   </location>
+
+   <location num='922'>
+      <name>Master Bath </name>
+      <desc>Large bright travertine tile covers the bathroom floor to ceiling making this a warm and comfortable space. In one corner is a large shower with adjustable jets and a steam function that makes it work like a sauna. You can also see a big jet spa tub that has more than enough room for two. Hung over dual sinks is a large mirror with bright lights. The counters are done in the matching light tile with delicate white porcelin fixtures. A door in one wall leads to the closet toilet and the one to the north leads back to the bedroom.</desc>
+      <exits n='858'/>
+   </location>
+
+   <location num='977' flags='b'>
+      <name>Waterfall</name>
+      <desc>The warm water cascades down the face of the rock but from your sheltered position you can sit on the ledge and watch from your hidden location. Little fish swim around where the water swirls occasionally brushing against your feet as they hang down.</desc>
+      <exits out='978'/>
+   </location>
+
+   <location num='978' flags='b'>
+      <name>Hot Springs</name>
+      <desc>Here the warm water of the hotsprings above has created a warm pool of water to swim in. The origin of the water is actually higher up several waterfalls coming off the mountain while it cools from near boiling point to comfortable heat. The temperature is perfect here where the water edges out to meet the ocean. You can hear the waves breaking on the distant rocks. As you poke around the vegetation you see that someone has ingeniously rigged a food catering droid to run on geothermal energy!</desc>
+      <exits in='977' out='1107'/>
+   </location>
+
+   <location num='1044'>
+      <name>Sandy Beach</name>
+      <desc>Here the beach trails off to the southwest as there are more pebbles than sand. The sand is softer and wider to the east. The cliffs press you closer to the water but the path you are on stays dry most of the time so its probably safe to travel.</desc>
+      <exits e='1045' sw='1107'/>
+   </location>
+
+   <location num='1045'>
+      <name>Sandy Beach</name>
+      <desc>Here the soft sand is laid out in a thick stretch between the cliffs to the north and the ocean to the south. As you look out across the water you can make out the shapes of people sailing and hear the waves as they hit the breakwater keeping this part of the ocean calm.</desc>
+      <exits e='1046' w='1044'/>
+   </location>
+
+   <location num='1046'>
+      <name>Sandy Beach</name>
+      <desc>The strip of beach ends here at the cliff face. You can just see a set of stairs that has been carved into it allowing one to climb back up to the road.</desc>
+      <exits w='1045' up='1112'/>
+   </location>
+
+   <location num='1048'>
+      <name>Front Yard</name>
+      <desc>Here is a well cared for front yard at the end of the road. The name on the mailbox is however indecipherable but there is a rather large &quot;Welcome&quot; mat that you figure serves as an invitation. Rows of carefully pruned shrubs along with tall palm trees line the driveway. Looking around you see carefully tended flower beds and a large manicured lawn. The remains of a croquet game can be seen with mallets, balls and hoops scattered about. You can make your way back to the LP by following the road that leads south.</desc>
+      <exits s='1112' in='856'/>
+   </location>
+
+   <location num='1051' flags='hib'>
+      <name>Hospital and Insurance Broker</name>
+      <desc>Here are several beds reserved for those who either forgot to eat or managed to stab themselves with a fishing spear.  If you find yourself here after such an &quot;accident&quot; don&apos;t for get to INSURE yourself before you go. Looking around you see that the hospital seems a bit more crowded than you would expect. Given the nature of the injuries from of bumps and bruises and several sprains you figure the high number of patients has more to do with several well endowed and scantilly clad nurses giving sponge baths than to actual injuries.</desc>
+      <exits s='1115'/>
+   </location>
+
+   <location num='1107'>
+      <name>Beach</name>
+      <desc>As you make your way around the rocks you find yourself on a path that winds from the northeast to the south.  A small stream of water can be seen coming out from under the almost jungle like vegetation that pushes up to the sand.</desc>
+      <exits ne='1044' s='1171' in='978'/>
+   </location>
+
+   <location num='1112'>
+      <name>Sandy Road</name>
+      <desc>The road ends here, in front of a cozy looking house and continues to the southeast. It looks like some attempt has been made to keep the road clear of sand and debris but the wind and the tides have had other ideas. A sheer cliff drops off to the west. It is not recommended that you try and traverse it without proper equipment.</desc>
+      <exits n='1048' se='1177' down='1046'/>
+   </location>
+
+   <location num='1114' flags='b'>
+      <name>Cantina</name>
+      <desc>The cantina is just as brightly colored and loud inside as it was outside.  Booths line the walls proving plenty of space for customers to come and sit in out of the sun. Wait staff immediately shows you to a table and brings out a basket of fresh hot tortilla chips and homemade salsa and guacamole to munch on while you decide what you would like to eat.   A comely waitress walks by carrying a several beers and a plate of tacos. A mariachi band plays in the corner, its lively music entertaining the customers and the staff alike while the smells coming from the kitchen are quite intoxicating. You are inclined to believe the sign outside and try some of the fare for yourself.</desc>
+      <exits e='1115'/>
+   </location>
+
+   <location num='1115'>
+      <name>Landing Pad</name>
+      <desc>The sand stirred up by landing shuttle craft is carefully dampened down to prevent huge clouds, still you cough slightly before looking around. The local traders can be seen traveling to and from the east where the exchange is.  Ships can be purchased with excellent bargains available to the south. Colorful and loud is a cantina to the west that proclaims on a sign that its the home of the best taco in the universe.  A large red cross labels the building to the north as the hospital.  A statue stands in the center of the square. Oddly enough, the statue is carrying a case of Corona and is pointing South East toward the docks. You notice that it has a plaque on it that reads: Dennotairn&apos;s Docks named in honor and memorial of Obisean&apos;s best friend.</desc>
+      <exits n='1051' e='1116' se='1180' s='1179' sw='1178' w='1114'/>
+   </location>
+
+   <location num='1116' flags='eb'>
+      <name>Sandy Exchange</name>
+      <desc>Yes, its another sandy exchange, but this one is inhabited by burly looking sailor fellows loading and offloading carts, boxes and bundles. You wonder if these aren&apos;t part of Schroedeger&apos;s team offloading forgotten and misplaced goods.</desc>
+      <exits w='1115' up='1117'/>
+   </location>
+
+   <location num='1117' flags='b'>
+      <name>Office </name>
+      <desc>A tidy office is here complete with several potted plants and battered old filing cabinets. The carpet and upholstery, while looking as if they have seen better days, have been kept clean.  A large solid oak desk sits under the open window overlooking the harbor. Below you can see the harbor master directing the traffic of goods.</desc>
+      <exits down='1116'/>
+   </location>
+
+   <location num='1171'>
+      <name>Wide Stretch of Sand</name>
+      <desc>Here a wide strip of sand is almost pure white and soft under your feet. A cove of sorts has formed here where the water is crystal clear blue and calm, perfect for swimming.</desc>
+      <exits n='1107' sw='1234' in='1236'/>
+   </location>
+
+   <location num='1177'>
+      <name>Sandy Path</name>
+      <desc>The boardwalk from the east peters out here, not so much ending as gradually having been covered by sand as to have disappeared entirely. The soft white sand is soft under your feet and wide between the water front and the road.  Several palms here lend shade  and a coconut drops to the ground not far from where you stand. You look up nervously at the wind blowing in the trees and decide here might not be the best place to stay. The path that was once the boardwalk continues to the northwest.</desc>
+      <exits e='1178' nw='1112'/>
+   </location>
+
+   <location num='1178'>
+      <name>Boardwalk</name>
+      <desc>The wooden boardwalk creeks as you walk along it. Holes have been cut out to allow the occasional tree to grow through. Looking down you see kids playing in the cool sand in the shade. A youngster rides back and forth on a skateboard that makes an odd sound as it crosses the boards. It continues to the west following the waterline and continues to the north east toward the landing pad.</desc>
+      <exits ne='1115' w='1177'/>
+   </location>
+
+   <location num='1179' flags='yr'>
+      <name>Ship Sales</name>
+      <desc>Here, high quality ships can be bought at a reasonable price. As you get ready to peruse the catalog, a sailor walks up to you and &apos;suggests&apos; that you purchase a ship on Recipe and get a much better price.</desc>
+      <exits n='1115'/>
+   </location>
+
+   <location num='1180'>
+      <name>Dennotairn&apos;s Dock And Ship Tours</name>
+      <desc>Under the large sign, which incidentally also serves as the passage to and from the docks, the harbor master is busy directing traffic as ships are emptied of their luxury goods and loaded up with the high quality agricultural wares of the planet. He notices you and motions for you to move which you do just in time to avoid being crushed by a load of goods that is swinging at the end of a crane line.  You can see a large four masted ship has docked here. It doesn&apos;t appear to be a cargo ship and you can make out the name as the  P.S.S. Lady Sheka. A gangway to the southeast will allow you to board her.</desc>
+      <exits se='1245' nw='1115'/>
+   </location>
+
+   <location num='1185' flags='b'>
+      <name>Crow&apos;s Nest</name>
+      <desc>This is the Admiral&apos;s quarters. Windows all along the walls give the spectator a breathtaking panoramic view of the ship below as well as the ocean. A large cluttered Cherry wood desk sits in the center of the room, surrounded by telescopes, viewing chairs and shelves upon shelves of ancient books. A portrait of the beautiful Lady Sheka hangs above the always burning Cherry wood fireplace. Exit is: Down.</desc>
+      <exits down='1377'/>
+   </location>
+
+   <location num='1234'>
+      <name>Beaches End</name>
+      <desc>Here the beach ends abruptly where the breakwater has ended. Huge waves crash on the rocks of the cliff creating huge sprays of salt water. High up on the cliff you can see a red and white striped lighthouse, but cannot see a way to get up to it. The sandy beach continues to the northeast into the calmer cove.</desc>
+      <exits ne='1171'/>
+   </location>
+
+   <location num='1236'>
+      <name>In the Cove</name>
+      <desc>You find yourself wading in the warm water. It only comes up about 3 feet allowing you to walk out quite a distance before deciding to turn back. The water is so clear you can see the white sand on the bottom of the lagoon as well as the occasional fish as it swims by intent on either catching, or avoiding being dinner.</desc>
+      <exits out='1171'/>
+   </location>
+
+   <location num='1245'>
+      <name>Gangway</name>
+      <desc>As you make your way up the gangway you pause a moment to take in how truly massive the ship is. You can continue up to the ship or northwest back to the docks.</desc>
+      <exits nw='1180' up='1249'/>
+   </location>
+
+   <location num='1249' flags='b'>
+      <name>Bow</name>
+      <desc>You are in the front end of this gargantuan ship. There are tables and chairs all along the rails for the passengers to sit and enjoy Phyxius&apos; stunning views. There are archways to the southwest, south, and southeast. Alternatively, you can go back down the gangway to return to the mainland.</desc>
+      <exits se='1314' s='1313' sw='1312' down='1245'/>
+   </location>
+
+   <location num='1312' flags='b'>
+      <name>Geddyan&apos;s Pub</name>
+      <desc>You walk into this quaint establishment and see license plates of ships from all over the galaxy tacked up on every available space of wall and ceiling. Spirits from a myriad of choices as well as tasty foods awaits the lucky patron. Exits are northeast, east, and south.</desc>
+      <exits ne='1249' e='1313' s='1376'/>
+   </location>
+
+   <location num='1313'>
+      <name>Foresail Area</name>
+      <desc>This is the first of the Lady Sheka&apos;s massive sails. Have a seat in one of the many benches surrounding this very large mast and enjoy the sea breeze. Exits are north, south, east, and west.</desc>
+      <exits n='1249' e='1314' s='1377' w='1312'/>
+   </location>
+
+   <location num='1314' flags='b'>
+      <name>Picture Gallery</name>
+      <desc>The arched area here is entirely devoted to pictures and paintings of all of the greatest Captains, Commodores, and Admirals of sea and space history. You see on the northernmost wall, a painting of the current commander Sir Admiral Nokalus von Arbitrary. Exits are northwest, west, and south.</desc>
+      <exits s='1378' w='1313' nw='1249'/>
+   </location>
+
+   <location num='1376' flags='b'>
+      <name>Dewey&apos;s Coffee and Wine Bar</name>
+      <desc>You walk into a cozy, dimly-lit with over-sized chairs and couches with low tables laden with paperbacks and magazines. Dewey&apos;s serves a diverse assortment of wines and coffees from around the galaxy. A picture of a regal-looking Cairn Terrier hangs above the bar. Exits are north, east, and south.</desc>
+      <exits n='1312' e='1377' s='1440'/>
+   </location>
+
+   <location num='1377'>
+      <name>Mainsail Area</name>
+      <desc>This is the second of the ship&apos;s four enormous sails. Ornate Oak chairs line the perimeter of this great mast. On the south side is a door that reads: Crow&apos;s Nest.</desc>
+      <exits n='1313' e='1378' s='1441' w='1376' up='1185'/>
+   </location>
+
+   <location num='1378' flags='b'>
+      <name>Theater</name>
+      <desc>You walk into a Grand Hall, fashioned after the entertainment centers of Earth&apos;s 18th and 19th centuries. Row after row of plush recliner chairs afford the patron a splendid view of the day&apos;s showing. A sign above the entrance says: This week only!!! The Rime of the Ancient Mariner!!! Is that roasted peanuts and popcorn you smell? Exits are north, west, and south.</desc>
+      <exits n='1314' s='1442' w='1377'/>
+   </location>
+
+   <location num='1440' flags='b'>
+      <name>Rudy&apos;s Game Room</name>
+      <desc>This is a lively, if somewhat noisy, area. Wooden tables and chairs are located throughout the room. Beings from near and far are milling about from game to game, cheering or jeering, depending on how Lady Luck is treating them. Order a mug of coffee or a hot scone from Dewey&apos;s, and stay a while. Exits are north, east, and south.</desc>
+      <exits n='1376' e='1441' s='1504'/>
+   </location>
+
+   <location num='1441'>
+      <name>Mizzen Sail Area</name>
+      <desc>This is the third of the ship&apos;s mighty four sails. Trinket and snack shops are positioned along the humongous mast. Try not to stop and gawk for too long, however, as this is one of the busiest thoroughfares of the Lady Sheka. Exits are north, south, east, and west.</desc>
+      <exits n='1377' e='1442' s='1505' w='1440'/>
+   </location>
+
+   <location num='1442' flags='b'>
+      <name>Starboard Library</name>
+      <desc>Shelves of ancient hardcover and paperback books line the walls, in addition to numerous rows of this pleasurable media. Sit on one of the library&apos;s many over-sized leather recliner chairs, open a book and become lost in another world. Exits are north, south, and west.</desc>
+      <exits n='1378' s='1506' w='1441'/>
+   </location>
+
+   <location num='1504' flags='b'>
+      <name>Schmutzie&apos;s Brewery</name>
+      <desc>Come on in and grab a 22 Oz. freshly-brewed Draft and an appetizer, too from the menu&apos;s varied choices. Comfy large stools line the sizeable center bar with a gigantic 3-D Vid Screen overhead broadcasting the latest Galactic Series ball game. Exits are north, east, and southeast.</desc>
+      <exits n='1440' e='1505' se='1569'/>
+   </location>
+
+   <location num='1505'>
+      <name>Spanker Sail Area</name>
+      <desc>This is the last of the sea vessel&apos;s four sails. The huge mast has elegant wooden benches surrounding it, affording the traveler a relaxing respite from the day&apos;s activities. Exits are north, south, east, and west.</desc>
+      <exits n='1441' e='1506' s='1569' w='1504'/>
+   </location>
+
+   <location num='1506' flags='b'>
+      <name>J.&amp; J. G&apos;s Music Room</name>
+      <desc>Musical instruments from around the Cosmos rest in different stands throughout the room. Either sit or stand and play the instrument of your choice. All are vintage reproductions and are sure to provide hours of enjoyment for the player and listeners alike. Exits are north, west, and southwest.</desc>
+      <exits n='1442' sw='1569' w='1505'/>
+   </location>
+
+   <location num='1569' flags='b'>
+      <name>Stern Observation Area</name>
+      <desc>This area resembles a garden with flora from all of the various known worlds of the galaxy. The tables with chairs and benches are placed in such a way as to give the onlooker a dazzling view of Phyxius&apos; pristine seas. Exits are northwest, north, and northeast.</desc>
+      <exits n='1505' ne='1506' nw='1504'/>
+   </location>
+
+</fed2-map>

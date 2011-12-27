@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Ability Space' version='1' editor='standard'>
+
+   <location num='460' flags='sl'>
+      <name>Immortality Orbit</name>
+      <desc>So close to Immortality you can almost taste it. Some say it tastes like a donut. In one direction is the planet and in the opposite direction is the rest of the galaxy. Getting them confused could cause a gaint mess to clean up.</desc>
+   </location>
+
+</fed2-map>

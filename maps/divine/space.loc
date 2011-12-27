@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<fed2-map title='Divine Space' version='1.00' editor='standard'>
+
+   <location num='331' flags='sp'>
+      <name>Nirvana Orbit</name>
+      <desc>You can see an extremely bright white planet beneath you glowing radiantly. For now, there is no safe way to land on this planet. With time, maybe the Galatic Administration will come up with a way to safely land a shuttle on it. You can head back towards the Interstellar Link by going southeast.</desc>
+      <exits se='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='sp'>
+      <name>Above a Black Hole</name>
+      <desc>Looking at your spaceship&apos;s monitors, you notice a shirling vortex containing mass that is more then three times that of the Sun in the Solar System. You can head back to safety by going southwest, or you can fly straight into the black hole and see what happens and where you end up.</desc>
+      <exits sw='396' in='334' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='334' flags='sp'>
+      <name>Black Hole</name>
+      <desc>You head into the black hole at top speed only to find the controls of your ship completely useless. Your second mate comes up with the idea to fire your blasters and try to fly through the black hole, but according to ancient theories, what would happen? Maybe time travel, maybe you&apos;d cease to exist all together. All you can really do is fly down into the black hole and find out for yourself.</desc>
+      <exits down='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='396' flags='sp'>
+      <name>Road to Nirvana</name>
+      <desc>Floating in space on the Road to Nirvana, you can go northwest towards the planet Nirvana, or you can go south to the Interstellar Link. The Interstellar Link is located directly to the south. There is also a path leading off to the northeast, but there is no indications of what may be laying out in that sector of space.</desc>
+      <exits ne='333' s='460' nw='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Divine&apos;s Interstellar Link to the Galaxies</name>
+      <desc>Welcome to the Divine System, home of Inferno, Purgatorio, and Nirvana. You can find Inferno to your southwest, Purgatorio to your southeast, and you can head to the north to find Nirvana.</desc>
+      <exits n='396' se='525' sw='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523' flags='sp'>
+      <name>Inferno Orbit</name>
+      <desc>You can see a shining red ball of flames beneath your shuttle. As you look closely, you notice that the shuttle from the ship to the planet takes you to an area that has been kept separate from the flames of the planet, which makes it safe to land and explore on such a planet. The Interstellar Link is back to the northeast.</desc>
+      <exits ne='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='sp'>
+      <name>Purgatorio Orbit</name>
+      <desc>You can see a pale and dull chunk of rock beneath your shuttle, which must have come from the asteroid belt millions of miles away. For now, there is no safe way to land on this asteroid. With time, maybe the Galatic Administration will come up with a way to safely land a shuttle on it. The Interstellar Link is back to the northwest.</desc>
+      <exits nw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

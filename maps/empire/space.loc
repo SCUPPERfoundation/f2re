@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<fed2-map title='Empire Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>Space storeroom</name>
+      <desc>Location for storing space mobiles and such</desc>
+   </location>
+
+   <location num='326' flags='sp'>
+      <name>Empire Space</name>
+      <desc>The space lanes continue to the east to the orbit of an unknown planet and to the south to the interstellar link.</desc>
+      <exits e='327' s='390' no-exit='space.empire.1'/>
+   </location>
+
+   <location num='327' flags='sp'>
+      <name>Orbit of an unknown planet</name>
+      <desc>This planet is mostly unknown other than that it exists. It is closed to visitors at this time. The space lanes leading to the link is to the west.</desc>
+      <exits w='326' no-exit='space.empire.1'/>
+   </location>
+
+   <location num='390' flags='slp'>
+      <name>Empire Interstellar Link</name>
+      <desc>This is the link for the planet Rome in the Empire system. The planet is to the east. Space lances continue to the north and south.</desc>
+      <exits n='326' e='391' s='454' no-exit='space.empire.1'/>
+   </location>
+
+   <location num='391' flags='sp'>
+      <name>Rome Orbit</name>
+      <desc>The orbit of the planet Rome. The link is to the west.</desc>
+      <exits w='390' no-exit='space.empire.1'/>
+   </location>
+
+   <location num='454' flags='sp'>
+      <name>Empire Space</name>
+      <desc>The planet Carthage is to the east but it is closed to visitors at the time. The link is to the north.</desc>
+      <exits n='390' e='455' no-exit='space.empire.1'/>
+   </location>
+
+   <location num='455' flags='sp'>
+      <name>Carthage Orbit</name>
+      <desc>The planet is closed to visitors. The path to the link is west.</desc>
+      <exits w='454' no-exit='space.empire.1'/>
+   </location>
+
+</fed2-map>

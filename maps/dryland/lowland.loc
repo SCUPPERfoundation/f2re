@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<fed2-map title='Lowland' version='18' editor='standard' from='262' to='Dryland.Dryland Space.273'>
+
+   <location num='132'>
+      <name>Dryland Embassy Main Hall</name>
+      <desc>The main hall of the Embassy is not what you would expect.  There are holographic interfaces scattered in all four corners of the room.    Worked into the Marble is a round Dryland System Logo.    Each station appears to have a holographic sign above it informing you of what the station will help with.     Northeast it reads &quot;Dryland Authority Fine Dept&quot;.   To the Northwest it reads &quot;Dryland Building Permits&quot;.   Southwest reads  &quot;Manufacturing Permits&quot; and South East it reads &quot;Dryland Housing and Job Authority&quot;.</desc>
+      <desc>You can step down into the main hall from here.</desc>
+      <exits down='197'/>
+   </location>
+
+   <location num='197'>
+      <name>Dryland Embassy</name>
+      <desc>As you enter the great  reception hall in the Dryland embassy you are greeted by two large statues of Lions.   These lions appear to be watching you as you walk on the marble floor toward a raised platform.   The walls are 20 feet high and have white colonial pillars set on each side of the wall four feet up.   The ceiling reminds you of old documents of a time lost on earth know as the time of the &quot;roman.&quot;</desc>
+      <desc>You can step up the platform or leave the embassy by heading SE.</desc>
+      <exits se='262' up='132'/>
+   </location>
+
+   <location num='202' flags='hi'>
+      <name>Lowlands Medical Hospital</name>
+      <desc>Walking into the hospital you immediately feel at east that your medical needs can be addressed.   High tech droids and equipment are moving about in a calm sterile manner.   Each patient is given a consolation with their own silver droid.    You can&apos;t help but notice some of the detail of the droid as it walks over.</desc>
+      <desc>Your silver droid stands in front of you.   &quot;She&quot; has an old fashioned doctor&apos;s bag in hand.  On her chest is a red cross to symbolize her status as a medical droid.   While she is silver her makeup appears to be more of a silver skin rather then a metal droid.    She asks your illness, addresses it, then informs you that you can purchase your own droid at Highland at the system link in Dryland.</desc>
+      <desc>You look to your left and right and see that most of their patients are from injuries occurred while making the goods that lowland sells.</desc>
+      <exits se='267'/>
+   </location>
+
+   <location num='203'>
+      <name>Agri Production area #1</name>
+      <desc>You pass thru a large fence labeled #1.   The fence is a metal link fence that stretches far out to the northwest.   In front of you the fence makes an upside down U allowing you to walk toward the wooden make shift dock.   To the right of the dock is a small wooden desk with a Forman sitting at it.  Currently there is a wagon pulled up to the dock.</desc>
+      <desc>You can see livestock running around from what look like Shepard&apos;s.     The Forman looks up and says &quot;Another order for 75tons of livestock.   Load them up!  Need to get these to the stevedores as soon as possible.</desc>
+      <desc>You and the wagon both can exit southeast.</desc>
+      <exits se='268'/>
+   </location>
+
+   <location num='204'>
+      <name>agri production area 2</name>
+      <desc>You pass thru a large fence labeled #2.   The fence is a wooden timber fence that stretches far out to the on both sides in a northerly direction.   Groves of trees are in front of you.   Each type of fruit tree is in neat rows.   Nothing tastes as good as fresh fruit.   Sure you could use a synthesizer for food, but it just doesn&apos;t taste the same.  In the center of the rows of trees is a wooden wagon dock.   To the right of the dock is a small wooden desk with a Forman sitting at it.  Currently there is a wagon pulled up to the dock.</desc>
+      <desc>Decedents of former basketball players now work the fields to reach the fruit with ease.      The Forman looks up and says &quot;Another order for 75tons of fruit.  Pick a variety this time!  Not all apples!   Load them up!  Need to get these to the stevedores as soon as possible.&quot;</desc>
+      <desc>You and the wagon both can exit south.</desc>
+      <exits s='268'/>
+   </location>
+
+   <location num='205'>
+      <name>agri production area 3</name>
+      <desc>You pass thru a large fence labeled #3.   The fence is plastic privacy fence.   It is the kind of fence where the glass has been altered so you can not see through it.  At the top of the fence line is a deck.   Two sets of roller belts are set 8 feet apart at the top.   These rollers run down to an area where the trucks can dock.   To the right of the dock is a small wooden desk with a Forman sitting at it.  Currently there is a wagon pulled up to the dock.</desc>
+      <desc>A small woman with glasses and an electronic tablet are taking notes.   By her apparel you can see that she works for the Dryland Animal Society.  Every time you hear a squeal the woman takes notes with a scowl on her face.  The Forman looks up and says &quot;Another order for 75tons of hides.&quot;  He points to the roller crew on the left.   The Forman points to the right and yells, &quot;Another order for 75tons of furs.  Let&apos;s get it loaded!&quot;   You notice that all the Forman seem to look alike.  Perhaps they are all relatives.</desc>
+      <exits sw='268'/>
+   </location>
+
+   <location num='207' flags='b'>
+      <name>Workers Refreshments</name>
+      <desc>Music is playing at a nice level.  You immediately feel relaxed and at ease.  The soft glow of neon lights glows from behind the bar.   There is little speaking going on besides that of ordering your drink of choice.   You are mesmerized and feel the need to work with the locals in one of the production areas.</desc>
+      <desc>Above the bar reads a sign of what the bar has to offer.</desc>
+      <desc>*Woodsman Beer*</desc>
+      <desc>*Fruit Drinks*</desc>
+      <desc>*Save no Hide or Hair Special*</desc>
+      <desc>*Sheep Sharp Special*</desc>
+      <desc>They all sound strange.  Speaking of strange, you see a small man wearing horn rimmed glasses.  You can see by his apparel he works for the Dryland Workers Choice Society.  With every drink order he takes notes and grunts.</desc>
+      <exits sw='270'/>
+   </location>
+
+   <location num='261' flags='b'>
+      <name>Lowland Lowly Last Lucrative Bar</name>
+      <desc>This bar appears to be one of the first structures built on Lowland.  It no longer serves the general population.  During construction of the planet the locals would gather here each day after a long shift.</desc>
+      <desc>Now it is left for you the tourist or business partner traveling in system.</desc>
+      <desc>The bar itself is nothing that you would write in the Galactic Travelers guide but it is functional.  IT has  an Earth style bar in the center with stools around it.   The bar itself is metallic as well as the stools that are stationed around it.   The chairs surround three sides of the bar while the fourth side serves as a place for the Cooking Droids to place the orders as they are created.   You find this comical as these droids simply input the order and place the food from the replicator on the &quot;Order Up&quot; area.</desc>
+      <exits e='262'/>
+   </location>
+
+   <location num='262'>
+      <name>Lowlands Landing Pad</name>
+      <desc>As you step out of your ship you notice that it is scratched and damaged from flying through the fomer asteroid field.    A droids walks up welcoming you to Lowland.  He says &quot;You can head to the Dryland Embassy to the northwest, the LLLLB is to the west and the main commerce area is to the east.    Unfortunately the Aquarium and Zoo are currently closed.&quot;   Before the droids strolls away he gives you a sheet of paper that reads. &quot;Please donate to the Lowlands Treasury.   Suggested donation is 1000ig that can be given at the Embassy of Dryland.</desc>
+      <desc>The outside of the Embassy appears to be something out of roman times.   Many people are moving in and out of this building.  Many grumbling about fines and needing to make a payment before a late fee is given.</desc>
+      <desc>In order to go to the commerce section of the planet all personnel are required to go thru the trading exchange.</desc>
+      <exits e='263' sw='325' w='261' nw='197'/>
+   </location>
+
+   <location num='263' flags='e'>
+      <name>Lowlands Exchagne</name>
+      <desc>The lowlands exchange is housed in an old barn.   This barn at one time housed the livestock for the main town.</desc>
+      <desc>You can return to the landing pad by heading west.</desc>
+      <desc>The barn doors are wide open to the east or you can slide open the doors to the west and head back to the landing pad.</desc>
+      <exits e='264' w='262'/>
+   </location>
+
+   <location num='264'>
+      <name>Lowland Trail</name>
+      <desc>Traveling along on this dirt path you have several choices.    There is a barn to your West that houses the Lowland Trading Exchange.   To your east the path continues.</desc>
+      <exits e='265' w='263'/>
+   </location>
+
+   <location num='265'>
+      <name>Lowland Trail</name>
+      <desc>Traveling along on this dirt path you have several choices.   There is a tent to your south.   The trail continues east and west.</desc>
+      <exits e='266' s='329' w='264'/>
+   </location>
+
+   <location num='266'>
+      <name>Lowland Trail</name>
+      <desc>This dirt trail continues east and west.   To the west you can see a large barn.  To the east you see the production fields.</desc>
+      <exits e='267' w='265'/>
+   </location>
+
+   <location num='267'>
+      <name>Lowland Trail </name>
+      <desc>This part of the trail goes in several different directions.   To the west you see the shipyard tents and the exchange barn.   You can even see the top of the embassy from here as well.   Directly to your east you see the production fields.   Northwest lies the hospital and southeast lies the Lowland Production office.</desc>
+      <exits e='268' sw='330' w='266' nw='202'/>
+   </location>
+
+   <location num='268'>
+      <name>Trade Goods Hub</name>
+      <desc>You have entered the center of the production hub of lowland.  From here you can see all the products being produced and harvested.  Since it is an agriculature world you can see all the work from the hub as it is all done outside.   You can view the basic work areas in every direction north and south.</desc>
+      <desc>To the west you can see the outline of a barn.   There is a trail that continues east.   In the distance to the east you can see structures.</desc>
+      <exits n='204' ne='205' e='269' se='333' s='332' sw='331' w='267' nw='203'/>
+   </location>
+
+   <location num='269'>
+      <name>Lowland Workers Trail</name>
+      <desc>Walking the path can be hard for some.   For you it appears easy as you head east toward the workers area.  To the west you see production fields and see the distant outline of a barn.</desc>
+      <exits e='270' w='268'/>
+   </location>
+
+   <location num='270'>
+      <name>Lowlands Worker Trail</name>
+      <desc>Here the workers trail goes off in different directions.  To the northeast you see a grey building with an open door.  It is dark and you can hear music playing from the door.  Your mind desperately wants to go in that direction.   Be careful#.</desc>
+      <desc>To the west you can head back to the Lowland Trail.   To the Southeast you see additional buildings.</desc>
+      <exits ne='207' se='335' w='269'/>
+   </location>
+
+   <location num='272'>
+      <name>Research Labs</name>
+      <desc>Humans, droids, and other creatures are working at several stations in the laboratory.   All workers are wearing white lab coats.  They are working for shortcuts and improvements in agri production.  A strange looking man in the corner appears to be speaking to a fish in a jar.   He appears to be having a heated conversation!</desc>
+      <exits sw='335'/>
+   </location>
+
+   <location num='325'>
+      <name>Aquarium and Zoo admission Dome  </name>
+      <desc>As you walk into this small dome that lies to the southwest of the landing pad you are struck by the condition it is in.   There is an old fashioned ticket booth with a glass ticket window in the middle of the dome.   Paper(yes actual paper.  Joy of an agri world) is scattered all over the floor of this location.</desc>
+      <desc>Picking one up you read that the Aquarium and Zoo are currently closed.   Lowland council is meeting to conform with Dryland law that does not allow animals to &quot;perform&quot; in this setting without there approval.    The laboratories in the farming area are dedicated to improving the quality of product produced.  However, there is a small lab that is used to work on communication between animals.   The law states that animals must be compensated for there time and paid in advance.   Locals call this a catch 23.   The flyer states &quot;How can you pay them, when you can&apos;t charge for admission?&quot;</desc>
+      <desc>You wonder if catch 23 is the right phrase or another lost phrase over time.</desc>
+      <exits ne='262'/>
+   </location>
+
+   <location num='329'>
+      <name>Shipyard Tent</name>
+      <desc>Welcome to the Lowland Ship Builders.    This tent opens up to the dirt trail to the north.   Two very large tents are set to the southeast and southwest.</desc>
+      <desc>A plaque on the wall reads &quot;We build you EVERY ship dream here!&quot;</desc>
+      <exits n='265' se='394' sw='392'/>
+   </location>
+
+   <location num='330'>
+      <name>Lowland Production Office</name>
+      <desc>The office is dimly lit and appears to be devoid of life.  Three of the walls are covered with file cabinets floor to ceiling.   Some are labeled accounts payable.  While others are labeled production statistics.   The grey walls have a layer of dirt that no doubt must have been brought in from some of the workers.</desc>
+      <desc>You can exit the office by returning the way you came in.</desc>
+      <exits ne='267'/>
+   </location>
+
+   <location num='331'>
+      <name>agri production area #6</name>
+      <desc>You pass thru a large fence labeled #6.   Fences are running in all directions in this area.   People are running around like crazy!!  It&apos;s like working in the old &quot;new your stock exchange.&quot;   The fences make up Z&apos;s, W&apos;s, M&apos;s, and E&apos;s.   You can&apos;t see rhyme or reason for it</desc>
+      <desc>The Forman looks up and says &quot;Another order for 75tons of Soya, textiles, cereals.&quot;</desc>
+      <exits ne='268'/>
+   </location>
+
+   <location num='332'>
+      <name>agri production area 5</name>
+      <desc>You pass thru a large fence labeled #5.   Once past the entry fence you can see rows and rows of trees in the distance.   Placed directly above the trees in metal rows is what looks to be some kind of watering system.   They go back as far as you can see.   In front of the trees are rows of table saws.   Next to the table saw&apos;s is a loading area.  The Forman is helping direct where to load the items.  Currently there is a wagon trying to figure out where to pull up avoiding different cuts of wood.</desc>
+      <desc>The Forman looks up and says &quot;Another order for 75tons of woods.&quot;   You notice that as they cut a tree they plant a tree.   &quot;Turn on the Miracle Grow over the newest tree lings.&quot;  As the water is turned on you are amazed how fast they grow!!</desc>
+      <exits n='268'/>
+   </location>
+
+   <location num='333'>
+      <name>Agri Production area #4</name>
+      <desc>You pass thru a large fence labeled #4.   Once past the entry fence you can see only open fields.  That is if you can look past the rows of tables.    The tables are set up in groups that look like the letter E.   They go back as far as you can see.   Lined up on the table are buckets of spices.   Each is labeled Lowland Spice Farm.    Pulling up next to the tables is a loading area.  The Forman is helping direct where to load the items.  Currently there is a wagon trying to figure out where to pull up.</desc>
+      <desc>The Forman looks up and says &quot;Another order for 75tons of spices.&quot;   Several people bring sealed buckets to the Forman.  He moves them onto the wagon himself.</desc>
+      <exits nw='268'/>
+   </location>
+
+   <location num='335'>
+      <name>Worker Hub</name>
+      <desc>In the center of the workers hub is a fountain.   Every five minutes a new color of water seems to be displayed.  Right now the fountain is shooting out green water.</desc>
+      <desc>You can move Southwest, Northeast, and East into lowland domes.  You can leave the hub by heading northwest.</desc>
+      <exits ne='272' e='336' sw='398' nw='270'/>
+   </location>
+
+   <location num='336'>
+      <name>Maintence</name>
+      <desc>You have entered a small maintence dome.   Here several machinery and droids are stored here to keep the production lines going.  Even though you can easily enter the room, all the items are locked in steel cases.</desc>
+      <exits w='335'/>
+   </location>
+
+   <location num='392' flags='r'>
+      <name>Ship Repair Tent</name>
+      <desc>Pictures of the asteroids of Dryland are pictured on the walls.   A service desk stands off to your left.   You can currently see a Captain working with the droid to get his ship repaired.   You think to yourself that newbie&apos;s need to learn to avoid the damage asteroids can cause.</desc>
+      <exits ne='329'/>
+   </location>
+
+   <location num='394' flags='y'>
+      <name>Lowlands Shipyard</name>
+      <desc>Droids are running frantically around this room.   The tent is not as large as you would have assumed in order to build ships.   In the center of the room is a hologram(yes another one) of a ship.   You realize that you can order your ship here but it is not built in this room.   There is a spacedock somewhere in Dryland Space that builds the ships for Lowland and Highland.   The ships are then delivered to their respective landing pad.</desc>
+      <desc>The work the droids do down here control the machines in the Space dock.</desc>
+      <desc>There is a row of chairs to the left to sit and view your ships construction.   You can leave by going northwest.</desc>
+      <exits nw='329'/>
+   </location>
+
+   <location num='398'>
+      <name>Workers Houses</name>
+      <desc>A large burly man points at you and says &quot;Get out! You are not part of the workforce and we are not buying what you&apos;re selling!&quot;  Another person comes out and says &quot;This is Camp Lowland#.workers only!&quot;   What in the world is making this group afraid of visitors?	</desc>
+      <exits ne='335'/>
+   </location>
+
+   <location num='517'>
+      <name>Locked Room</name>
+      <desc>Locked Room</desc>
+   </location>
+
+</fed2-map>

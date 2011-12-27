@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<event-list version='5'>
+
+ <category name='moves'>
+
+  <section name='airlock'>
+
+   <event num='1'>
+    <comment>Loc 396 - press/push button</comment>
+    <message type='single' where='com' who='individual' lo='moves.airlock.1'/>
+    <message type='single' where='com' who='room_ex' lo='moves.airlock.2'/>
+    <announce type='single' loc='2061' lo='moves.airlock.3'/>
+    <move what='player' who='individual' loc='460'/>
+   </event>
+
+  </section>
+
+  <section name='altar'>
+
+   <event num='1'>
+    <comment>loc 588 - climb/ascend/step onto altar</comment>
+    <message type='single' where='com' who='individual' lo='moves.altar.1'/>
+    <message type='single' where='com' who='room_ex' lo='moves.altar.2'/>
+    <announce type='single' loc='2060' lo='moves.altar.3'/>
+    <announce type='single' loc='2061' lo='moves.altar.4'/>
+    <move what='player' who='individual' loc='2060'/>
+   </event>
+
+  </section>
+
+  <section name='exchange'>
+
+   <event num='1'>
+    <comment>loc 460 - press/push button</comment>
+    <message type='single' where='com' who='individual' lo='moves.exchange.1'/>
+    <announce type='single' loc='2061' lo='moves.exchange.2'/>
+    <move what='player' who='individual' loc='459'/>
+   </event>
+
+  </section>
+
+  <section name='teleport'>
+
+   <event num='1'>
+    <comment>loc 2061 - activate teleporter</comment>
+    <message type='single' where='com' who='individual' lo='moves.teleport.1'/>
+    <message type='single' where='com' who='room_ex' lo='moves.teleport.2'/>
+    <announce type='single' loc='588' lo='moves.teleport.3'/>
+    <move what='player' who='individual' loc='588'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='remote'>
+
+   <event num='1'>
+    <comment>exchange remote (command on object)</comment>
+    <message type='single' where='com' who='room_ex' lo='objects.remote.1'/>
+    <announce type='single' loc='458' lo='objects.remote.2'/>
+    <message type='single' where='com' who='individual' lo='objects.remote.3'/>
+    <move what='player' who='individual' loc='458'/>
+   </event>
+
+   <event num='2'>
+    <comment>dock remote (command on object)</comment>
+    <message type='single' where='com' who='room_ex' lo='objects.remote.1'/>
+    <announce type='single' loc='396' lo='objects.remote.2'/>
+    <message type='single' where='com' who='individual' lo='objects.remote.4'/>
+    <move what='player' who='individual' loc='396'/>
+   </event>
+
+   <event num='3'>
+    <comment>office remote (command on object)</comment>
+    <message type='single' where='com' who='room_ex' lo='objects.remote.1'/>
+    <announce type='single' loc='267' lo='objects.remote.2'/>
+    <message type='single' where='com' who='individual' lo='objects.remote.5'/>
+    <move what='player' who='individual' loc='267'/>
+   </event>
+
+   <event num='4'>
+    <comment>retreat remote (command on object)</comment>
+    <message type='single' where='com' who='room_ex' lo='objects.remote.1'/>
+    <announce type='single' loc='2061' lo='objects.remote.2'/>
+    <message type='single' where='com' who='individual' lo='objects.remote.6'/>
+    <move what='player' who='individual' loc='2061'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+

@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<fed2-map title='Zidon' version='1.00' editor='standard' from='198' to='Zerahl.Zerahl Space.196'>
+
+   <location num='65' flags='kt'>
+      <name>Storage Closet</name>
+      <desc>Not to be seen!!!  Contact Feedback if you find this!</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='68' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>The only marked exit is East.  You can also teleport OUT to the LP.</desc>
+      <exits e='69' down='449' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='69' flags='b'>
+      <name>Production Factory</name>
+      <desc>You enter to see a space tether extending from the shield carrying what seems to be some type of elevator.  As the door opens, raw mineral deposits are dumped onto a conveyor which leads around the room.  The last segment is covered so you cannot tell what&apos;s inside of it at that point.  The covered part of the conveyor leads East.</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='70' w='68' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='70' flags='b'>
+      <name>Mineral Processing Facility</name>
+      <desc>You notice the conveyor coming from the West is uncovered.  You try to walk up to see exactly what is coming out, yet a force field blocks your path.  A foreman approaches you and tells you that he cannot allow you access.  He says these are precious Zidonian Deposits.  They are made into 3 types of goods which sustain our planetary economy.  Zidonian Diamonds, Zidonian Sapphires, and Zidonian Gold!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='71' w='69' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='71' flags='b'>
+      <name>Zman&apos;s Memorializing Tribute</name>
+      <desc>You enter to see pictures of Zman everywhere!  Statues dedicated to him and paintings of every kind.  You begin to read of the triumphs of Zman against the Syndicate.  Near the doorway there is a plaque that reads, &quot;Zman becomes the first off-worlder to be given the honor of becoming a Zidonian Citizen.  The Zidonian Congress, 2 years after the great war, passed a law canonizing Zman for his heroic command efforts performed during the great war.  Although we did lose the war, without his efforts, genocide of our entire race could have occurred.  There is to be one of each memorial on each level of our planet.&quot;</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='72' w='70' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='72' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may go SW or W.  You can also teleport OUT to the LP.</desc>
+      <exits sw='135' w='71' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='75' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit East.  You can also teleport OUT to the LP.</desc>
+      <exits e='76' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='76' flags='b'>
+      <name>Zidonian Private Housing Block 3</name>
+      <desc>You enter to a checkpoint!!  Only Zidonians may go DOWN to the private housing complex!!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.  If you are Zidonian You may go down.</desc>
+      <exits e='77' w='75' out='198' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='77' flags='b'>
+      <name>Zidonian Private Housing Block 2</name>
+      <desc>You enter to a checkpoint!!  Only Zidonians may go DOWN to the private housing complex!!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.  If you are Zidonian You may go down.</desc>
+      <exits e='78' w='76' out='198' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='78' flags='b'>
+      <name>Zidonian Private Housing Block 1</name>
+      <desc>You enter to a checkpoint!!  Only Zidonians may go DOWN to the private housing complex!!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.  If you are Zidonian You may go down.</desc>
+      <exits e='79' w='77' out='198' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='79' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may go SW or W.  You can also teleport OUT to the LP.</desc>
+      <exits sw='142' w='78' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='135' flags='b'>
+      <name>Zidonian Bar Facilities</name>
+      <desc>As you walk in you are in amazement at how large a complex this bar is!!!  You look around and see Zidonians everywhere!!  You begin thinking does anyone work around here!?!?!!?  You overhear several groups of people talking about how depressing their home planet is.  You realize now why they are all drinking and decide to meander to the corner by yourself and order a drink.</desc>
+      <desc>You may exit to the Landing Pad to the Southwest or continue NorthEast.  You can also teleport OUT to the LP.</desc>
+      <exits ne='72' sw='198' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='142' flags='b'>
+      <name>Zidonian Hotel</name>
+      <desc>You come to the entrance that reads, &quot;Non-Zidonians MUST stay here unless otherwise granted facilities by Zman&quot;  You enter the hotel to find less than hospitable staff.  You go to the front desk and they assign you Room 102.  You enter your room to find a bleak and dreary room.  You know no why no one sleeps here.</desc>
+      <desc>You may exit to the Northeast or Southwest.  You can also teleport OUT to the LP.</desc>
+      <exits ne='79' sw='205' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='193' flags='bkt'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit South or Down.  You can also teleport OUT to the LP.</desc>
+      <exits s='257' down='712' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='198' flags='b'>
+      <name>Zidon Landing Pad Teleport Center</name>
+      <desc>You arrive to find working crews working in pretty much every area of the landing pad.  You look up to see a glimpse of the sector in clear view thru the poleron shield.  There is a vibrating humming noise coming from the oxygen generators to your right.  You here a voice come over the communal telecom system, &quot;Please be sure to stay out of areas that are not marked public, we are still working on restoring more facilities.  Thank You.&quot;  As you continue, a droid walks by and notifies you that every room on the planet has a bar.  You then wonder if everyone on this planet are drunks!!</desc>
+      <desc>You see a display mentioning the Exchange is to the SouthWest and the Bar is to the NorthEast.  You may also visit the Habitat ring by going Down.</desc>
+      <exits ne='135' sw='261' down='205' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='205' flags='b'>
+      <name>Zidon Habitat Ring</name>
+      <desc>You have reached the Habitat Level.  Please be aware people may be resting.  Most sections of this level are restricted to Zidonians ONLY!  You will be allowed to view the public sections without any trouble.</desc>
+      <desc>You may exit to the SouthWest or NorthEast.  You can go UP to the Landing Pad or Down to the Recreational Area.</desc>
+      <exits ne='142' sw='268' up='198' down='582' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='257' flags='bkt'>
+      <name>Zidonian Treasury</name>
+      <desc>The gleam of gold coins shines upon your face as you enter the room.  You see one entire wall looking down into a glass encased vault full of gold coins.  To the right side you see a stack of slithy certificates.   You then begin to wonder if the Zidonians are as bad off as they have led you to believe.</desc>
+      <desc>The only visible exits are North and South.  You can also teleport OUT to the LP.</desc>
+      <exits n='193' s='321' down='513' out='198' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='261' flags='eb'>
+      <name>Zidonian Exchange</name>
+      <desc>While cost of goods are generally high, a convoy of supplies from the link provided by Sol Planets and the Galactic Administration helps keep prices down a tad.  Be aware that prices will be higher than normal due to the disaster the planet has gone through.  Although remember, a portion of the proceeds of your sales goes to help the &quot;Zidonian Disaster Relief Fund.&quot;  As you turn to run out, you see a Zidonian child in need.  You begin to ponder buying all of your goods here for now on due to that cute, innocent, and helpless face.</desc>
+      <desc>You may exit to the NorthEast toward the Landing Pad or to the SouthWest. You can also teleport OUT to the LP.</desc>
+      <exits ne='198' sw='324' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268' flags='b'>
+      <name>Zman&apos;s Memorializing Tribute</name>
+      <desc>You enter to see pictures of Zman everywhere!  Statues dedicated to him and paintings of every kind.  You begin to read of the triumphs of Zman against the Syndicate.  Near the doorway there is a plaque that reads, &quot;Zman becomes the first off-worlder to be given the honor of becoming a Zidonian Citizen.  The Zidonian Congress, 2 years after the great war, passed a law canonizing Zman for his heroic command efforts performed during the great war.  Although we did lose the war, without his efforts, genocide of our entire race could have occurred.  There is to be one of each memorial on each level of our planet.&quot;</desc>
+      <desc>You may exit to the Northeast or Southwest.  You can also teleport OUT to the LP.</desc>
+      <exits ne='205' sw='331' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='321' flags='bkt'>
+      <name>Zman&apos;s Private Rest Area</name>
+      <desc>You sneak into Zman&apos;s peaceful existence.  You ponder whether this is the biggest room you&apos;ve ever seen!!  He has a full range of entertainment available to him.  He also has a lavish bed in the corner.  You mosey over to his bar and notice every kind of alcohol known to man, and then some!  A hologram appears before you, &quot;Welcome to my private quarters, you are welcome to enjoy yourself with anything the Zidonians have provided me.&quot;</desc>
+      <desc>You may exit to the North or the South.  You may also exit OUT to the LP.</desc>
+      <exits n='257' s='385' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='324' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit NorthEast to the exchange, or continue East.  You can also teleport OUT to the LP.</desc>
+      <exits ne='261' e='325' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='325' flags='hib'>
+      <name>Zidonian Hospital</name>
+      <desc>The Hospital is full of mostly Zidonians will a variety of ailments.  As you enter, you are hurried off to a side room.  A nurse walks up to you and states, &quot;You did not enter from the Non-Zidonian Entrance!!  Its vital that you not become infected with the biogenic virus that plagues our people!&quot;  You began to walk away and notice a plaque that reads, &quot;MAKE SURE TO INSURE YOURSELF!!  Only way we can really save you!!!&quot;</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='326' w='324' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='yrb'>
+      <name>Zidonian Shipyard</name>
+      <desc>As you enter there is a flurry of activity!!  This is the busiest shipyard you have ever seen!!!  You look to the south to see the pre-built shipyard lot and it is completely empty!!!  To the north side you see 10 building bays, 9 of which have some sort of construction going on.  As you turn around an automated droid welcomes you, &quot;Greetings, Welcome to the Zidonian Shipyards, If you wish to have your ship repaired or buy a new ship, we have one construction bay available.  Let us know how we can be of service.&quot;</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='327' w='325' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Zidonian Restaurant</name>
+      <desc>While the rest of the planet seems bleak and unlively, you enter to a joyful sound of laughter.  You look at the menu and see different varieties of imports from every sector.  You ask what are the specialties of Zidon.  The hostess answers, &quot;We are short on supplies of our native foods, only those with permission from the Zidonian Congressional Assembly can choose from those menus.&quot;.  You snap your fingers in haste and decide to choose from a list of imports that are available.</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='328' w='326' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit West only.  You can also teleport OUT to the LP</desc>
+      <exits w='327' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit NorthEast, or continue East.  You can also teleport OUT to the LP.</desc>
+      <exits ne='268' e='332' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332' flags='b'>
+      <name>Patrons Ferreri and Catspaws Hideaway</name>
+      <desc>You are greeted by a large fireplace in the center of a large room.  You look around and see a Kitty play land leading up and around every single wall.    Next to the fire place on the right you see a few sitting chairs, with one embossed with Ferreri on it.  Next to Ferreri&apos;s chair is a pillow embossed with Catspaws on it.  To the south wall there is a kitty food, treat, and catnip serving station.  You notice the room continues to the east.</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='333' w='331' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='b'>
+      <name>Ferreris Bedroom and Shooting Range</name>
+      <desc>At the front of the room you notice a glamorous four post bed with a plethora of colors and styles.  Embossed on the comforters, quilts, and pillows are the words, &quot;To Ferreri for all she has done for our people.&quot; You look to the right of the bed and see several different cat pillows of different comforts.  Each pillow reads, &quot;To Catspaws and her Kitty Friends, they are always welcome.&quot;  You again see a kitty feeding station, along with treats and catnip at their disposal.  There is a kitty play land that runs into the room to the West.  To the back of the room you see a shooting range, this time owned by Kitty.  There are several targets of Poco plastered all over the wall.  From the looks of things, CatsPaws has a great aim. :)</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='334' w='332' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='334' flags='b'>
+      <name>Zidonian Hot Tub</name>
+      <desc>You ease into the hot tub as you enter to find a statue of Zman in the middle.  The tub encompasses more than 75% of the room!!  The steam generated is being taken into a tube and exported thru the shield grid, you wonder what that can be used for?  Needless to say you begin to relax and get very tired.  An extravagant bar lines the north wall.  A flying waiter droid asks, &quot;Would you like something to drink?&quot;</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='335' w='333' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='335' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit West only.  You can also teleport OUT to the LP</desc>
+      <exits w='334' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='385' flags='bkt'>
+      <name>Zman&apos;s Memorializing Tribute</name>
+      <desc>You enter to see pictures of Zman everywhere!  Statues dedicated to him and paintings of every kind.  You begin to read of the triumphs of Zman against the Syndicate.  Near the doorway there is a plaque that reads, &quot;Zman becomes the first off-worlder to be given the honor of becoming a Zidonian Citizen.  The Zidonian Congress, 2 years after the great war, passed a law canonizing Zman for his heroic command efforts performed during the great war.  Although we did lose the war, without his efforts, genocide of our entire race could have occurred.  There is to be one of each memorial on each level of our planet.&quot;</desc>
+      <desc>You may exit to the North or South.  You can also teleport OUT to the LP.</desc>
+      <exits n='321' s='449' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='449' flags='bkt'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit North or Up.  You can also teleport OUT to the LP.</desc>
+      <exits n='385' up='68' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='452' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit East.  You can also teleport OUT to the LP.</desc>
+      <exits e='453' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='453' flags='b'>
+      <name>Zidonian Diamond Storage</name>
+      <desc>You enter to see the most precious commodities under HEAVY security.  There is a tube leading into the room from the shield at the top of the room.  You only see sparkling diamonds as far as the eye can see!!!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='454' w='452' out='198' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='454' flags='b'>
+      <name>Zidonian Sapphire Storage</name>
+      <desc>You enter to see the most precious commodities under HEAVY security.  There is a tube leading into the room from the shield at the top of the room.  You only see sparkling sapphires as far as the eye can see!!!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='455' w='453' out='198' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='455' flags='b'>
+      <name>Zidonian Gold Storage</name>
+      <desc>You enter to see the most precious commodities under HEAVY security.  There is a tube leading into the room from the shield at the top of the room.  You only see sparkling gold as far as the eye can see!!!</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='456' w='454' out='198' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='456' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may go Southwest or West.  You can also teleport OUT to the LP.</desc>
+      <exits sw='519' w='455' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='513' flags='bkt'>
+      <name>High Security Treasury Vault</name>
+      <desc>You enter cautiously knowing you aren&apos;t supposed to be here.  You immediately begin filling your pockets with all the slithy certificates and gold you can get your hands on.  You begin to turn back but your greed grabs a hold of you and you continue stuffing your pockets, shirt, anything you can carry.  Suddenly, MEEEEEP MEEEEP MEEEEEP, INTRUDER ALERT IN THE VAULT ROOM!!  10 Armed Zidonians quickly surround you.  The strip you down and take every simple gold coin away from you and every slithy certificate.  You now have been added to the criminals list in the Zidonian database.  You are told to get dressed quickly, but before you do, you are branded with a Z with a line thru it.  Now you can no longer go anywhere without being tracked.  You here a Zidonian, GET OUT OF HERE, LEAVE UP NOW!!!!</desc>
+      <desc>You can exit Up, or OUT to the LP.</desc>
+      <exits up='257' out='198' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='519' flags='b'>
+      <name>GA Tribute</name>
+      <desc>To thank the good people of Sol and the Galactic Association Administration, be provide this moving tribute to thank all the good people for helping our society to survive.  Maybe one day our society will flourish again.</desc>
+      <desc>You may exit to the NE or SW.  You can also teleport OUT to the LP.</desc>
+      <exits ne='456' sw='582' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='582' flags='b'>
+      <name>Zidon Recreational and Storage Area</name>
+      <desc>You have reached the Zidon Recreational Facilities.  Most activities are reserved to keep Zidonians preoccupied while not on duty.  Please do not take items if you are not in need.</desc>
+      <desc>You may go to the Southwest or NorthEast.  You may also go UP to the Habitat Ring, or OUT to the LP.</desc>
+      <exits ne='519' sw='645' up='205' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='645' flags='b'>
+      <name>Zidon Children&apos;s Playground</name>
+      <desc>Children run past you as you enter into what reminds you of 20th Century Earth&apos;s Neverland Estate owned by Michael Jackson.  (no Michael here though) ;)  Kids are laughing and playing and it just brings a smile upon your face.  It#s the first time you have seen full smiles on any Zidonians since you made it to the planet.</desc>
+      <desc>You may exit to the NorthEast or SouthWest.  You may also teleport OUT to the LP.</desc>
+      <exits ne='582' sw='708' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='708' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>You may exit NorthEast, or continue East.  You can also teleport OUT to the LP.</desc>
+      <exits ne='645' e='709' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='709' flags='b'>
+      <name>Jessecka&apos;s Place</name>
+      <desc>We would like to thank Jessecka for her contributions to our society.  Zman mentioned he would have never made it without Jessecka so we provide this tribute to her for all she has done.  To the east wall there is a lounging area and bar.  And to the south end of the room you see a bed marked &quot;For Jessica and Robius&quot; shall it long endure.  A small spa is just to the right of the bed.</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='710' w='708' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='710' flags='b'>
+      <name>DJ&apos;s I-beam Meadow</name>
+      <desc>One of the final tributes the Zidonian government issued, is presented to Djentsch.  His hard work has helped our society become what it is today.  To the right side of the room are ibeams lining the wall.  To the left side is a comfortable bed and small spa.</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='711' w='709' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='711' flags='b'>
+      <name>Zman&apos;s Memorializing Tribute</name>
+      <desc>You enter to see pictures of Zman everywhere!  Statues dedicated to him and paintings of every kind.  You begin to read of the triumphs of Zman against the Syndicate.  Near the doorway there is a plaque that reads, &quot;Zman becomes the first off-worlder to be given the honor of becoming a Zidonian Citizen.  The Zidonian Congress, 2 years after the great war, passed a law canonizing Zman for his heroic command efforts performed during the great war.  Although we did lose the war, without his efforts, genocide of our entire race could have occurred.  There is to be one of each memorial on each level of our planet.&quot;</desc>
+      <desc>You may exit East or West.  You can also teleport OUT to the LP.</desc>
+      <exits e='712' w='710' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='712' flags='b'>
+      <name>Corridor Memorial</name>
+      <desc>You walk in and step on a icky substances that has a horrible stench to it.  A holographic Zidonian comes fourth and speaks, &quot;Remember, always remember.&quot;  As you look around you see horrifying Valahian&apos;s massacred.  You begin to wonder how bad the war really was, even though the Zidonians lost, it was apparent they did alot of damage to the Valahian&apos;s.  You then read a sign, &quot;As a matter of law passed by the Zidonian Congressional Assembly, Each corner of each level MUST display a memorial to remind us of our time of sorrow.  To show us what we have re-achieved, and to let us know what we can accomplish if we stick to our goals!!&quot;</desc>
+      <desc>Your only visible exit is West.  You can also teleport OUT to the LP.</desc>
+      <exits w='711' out='198' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

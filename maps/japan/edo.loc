@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<fed2-map title='Edo' version='18' editor='standard' from='329' to='Japan.Japan Space.393'>
+
+   <location num='0' flags='t'>
+      <name>Store Room</name>
+      <desc>A simple store room that is here for no purpose other than to exist. You, however, do not belong here.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='hi'>
+      <name>Senso-ji</name>
+      <desc>   Looking around inside of the temple, Senso-ji, you can&apos;t help being enthralled by the sanctified atmosphere. Ancient even to the people in this time period, Senso-ji stands as the home of an ancient statue to Kannon, a bodhisattva of mercy in the Buddhist religion. Although you cannot see the statue from your vantage point, you happen to notice an intricate Japanese garden residing at the center of the temple. Along the sides of the central room, you see several omikuji stalls where the locals can consult an oracle if necessary.</desc>
+      <desc>   The only exit that you can see from here is back to the South.</desc>
+      <exits s='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326'>
+      <name>Asakusa</name>
+      <desc>   A strange air hangs above you as you move through the &quot;low city&quot; of Edo, or Asakusa as the locals call it. Even older than the surrounding city districts, the Asakusa seems dull and colorless when compared to its neighbors. A calm wind blows at a somber pace as it flows through the crumbling streets. As you stroll along the path, a surrealistic feeling of pseudomemory that there is just something wrong about standing here begins to overwhelm you.</desc>
+      <desc>   To your north is a well constructed temple of definite japanese architecture that seems out of place in this district. Made from an assortment of stone, wood, and ceramic tiles, the temple&apos;s appears both sophisticated and antiquated at the same time. As you get closer to the structure, an aura of calm seems to flow over you. If you wish to leave Asakusa instead, however, you can head to the South or SouthWest.</desc>
+      <exits n='262' s='390' sw='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329'>
+      <name>On the Bank of the Great River</name>
+      <desc>   Your shuttle rests silently alongside the gently flowing waters of the Great River. Almost the perfect place to land your shuttle, the Great River cuts through the center of a lush forest as it approaches Edo, an 18th century version of the city of Tokyo, Japan. It wasn&apos;t until recently that the time distortion in orbit above you shifted ever so slightly as to allow passage to this earlier time period. Still, even as you can now access this ancient city, there are still more questions than answers regarding the time distortion.</desc>
+      <desc>   To the SouthWest, you believe you can see a passage that leads through the woods towards the city&apos;s gates. Of course, if your curiosity has been satisfied, you can always board your shuttle and head back to your own time.</desc>
+      <exits sw='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='389'>
+      <name>Yamanote</name>
+      <desc>   Exploring the Yamanote, you can&apos;t help but notice that the area&apos;s level of affluence is much higher than the rest of the city. It appears that most of the people here are feudal lords of some sort. Your translater picks up the title, daimyo, being spoken by one of the locals near where you are walking. At the same time, though, a spirit of disquiet creeps over you as you begin to get the feeling that you are being watched. Yes, it seems outsiders are not entirely welcome here.</desc>
+      <desc>   A pair of armed guards encased in wooden armor block a massive stone gate to the Northwest. On the other side of the gate appears to be a japanese castle. It&apos;s not surprising that the level of security would be higher if a lord presides over Edo from there. It seems the only directions you can head from here are to the South, East, or NorthEast.</desc>
+      <exits ne='326' e='390' s='453' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='390' flags='b'>
+      <name>Southern Shitamachi</name>
+      <desc>   Walking through the southern half of the Shitamachi or &quot;downtown&quot; Edo, you are surrounded by a multitude of vendors and cafes. Here, you can acquire a small trinket or two, or rather, if you get hungry, you can get a decent meal. Regardless of what you may think of the affluence of the area, each vendor appears to take pride in their work as evidenced by the air that floats about them.</desc>
+      <desc>   Standing at a crossroads in the Shitamachi district, you can reach the Yamanote by going West, Edo-wan by going SouthWest, the Kuramae by going East, or you can head further into &quot;low-town&quot; by going North.</desc>
+      <exits n='326' e='391' sw='453' w='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391' flags='eb'>
+      <name>Kuramae</name>
+      <desc>   You are surrounded by the dull roar of merchants doing business as you walk through the center of Kuramae, Edo&apos;s business district. From what you can tell, it seems that most of the goods being peddled here are agricultural or sea-based products, which are consistant with the fact that this is an ancient city. Still, one or two of the items being sold here seem to be from your time period. Perhaps you&apos;re not the first merchant to stumble this way? At the moment, however, another idea crosses your mind. If this is indeed the past, then what effect will these things being here have on Earth&apos;s history?</desc>
+      <desc>   Putting those thoughts out of the way for the moment, you see that you can head back towards the Edo bridge by heading East, or you can go further into Edo by going West.</desc>
+      <exits e='392' w='390' in='529' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392'>
+      <name>Edo-bashi</name>
+      <desc>   Standing on the Edo Bridge, you can see for many miles up and down the path of the Great River as it cuts through the nearly unblemished countryside. As for the bridge itself, the wooden bridge below your feet seems quite sturdy in its construction, as it serves as a major crossroads between several land routes and the seaport in Edo itself. Dozens of merchants are busy moving their wares across the bridge as you stand there examing the scene.</desc>
+      <desc>    To your West is the business district of Kuramae. If you wish to head back to your shuttle on the banks of the Great River, you can head NorthEast.</desc>
+      <exits ne='329' w='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='453'>
+      <name>Edo-wan</name>
+      <desc>   A bustling seaport off Edo Bay, the namesake of the city, the Edo-wan seaport is full of activity as mercantile vessels pull into the harbor and unload their cargo. From your vantage point you can see several Imperial officials talking to the ships&apos; captains periodically in order to make sure everything is in order. Not far behind the officials are a pair of soldiers wearing wooden armor with a pair of swords hanging at their waists. From their appearance it seems that these are people who are not to be trifled with, even with your technological advantage.</desc>
+      <desc>   If you are done hanging about the seaport, you can head back to your North or NorthEast.</desc>
+      <exits n='389' ne='390' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='529' flags='t'>
+      <name>In Front of a Strange House</name>
+      <desc>  It seems you&apos;ve have wandered inside of the fenceline of a strange looking house. It&apos;s Victorian style is a stark contrast compared to the skyscrapers surrounding the home. Around the side of the house, you can see a clothesline with several different linens hanging out to dry. As you get closer to the front of the house, you notice that the front door is cracked slightly open as if it&apos;s inviting you to come inside.</desc>
+      <desc>   At this point, you can always head Outside of the fenceline, or you can go Into the house and see what&apos;s going on here.</desc>
+      <exits e='530' out='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='530' flags='t'>
+      <name>The Foyer</name>
+      <desc>   Looking around the foyer, you are amazed to see the rusticness of this mansion. Various pieces of antique furniture including a large wall mirror and a grandfather clock line the walls of the foyer as it leads away from the front door. There is a small rack at your feet with several pairs of shoes on it. It must be customary for anyone who enters to take off their shoes before they proceed.</desc>
+      <desc>   Their entrance unnoticed, two strange looking, young girls appear before you.</desc>
+      <desc>   &quot;The mistress will see you shortly,&quot; they announce in unison. &quot;Please follow us into the parlor where you may await our mistress&apos;s arrival.&quot;</desc>
+      <desc>   With that, they turn and begin to walk gingerly down the hallway. Your only choice if you wish to find out what&apos;s going on around here is to follow them down the hall to your east, otherwise you should head out the door to your west.</desc>
+      <exits e='531' w='529' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='531' flags='bt'>
+      <name>The Parlor</name>
+      <desc>   Once again you&apos;ve found yourself in another place that seems out of its time. The parlor surrounding you is something straight out of 19th century Victorian England. From the antique table and chairs to the lavish architecture of the room, it easy to see that the owner has some extravagant tastes. Sitting down at the table you have a lovely look at the backyard of the odd mansion that you&apos;ve wandered into.</desc>
+      <desc>   As you sit there, a teenaged boy serves you a drink. &quot;Yuko-san will be with you in just a moment. Why don&apos;t you have this until she is ready to join you?&quot; With that, he turns and heads into what you believe is the kitchen. You can either wait here for Yuko or you can head West back out into the Foyer.</desc>
+      <exits w='530' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>
+

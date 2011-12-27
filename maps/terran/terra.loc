@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<fed2-map title='Terra' version='14' editor='standard' from='331' to='Terran.Terran Space.392'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>   Really... it&apos;s just a storeroom... Move along. There&apos;s nothing to see here... Keep moving...</desc>
+   </location>
+
+   <location num='264'>
+      <name>Administrative Offices</name>
+      <desc>   The lobby of Arkham&apos;s City Administrative Offices take up nearly the entire first floor of the building. You can tell a modest expense was spent in constructing the floor, walls and supporting pillars of the offices, however the furnishings appear to be less expensive in their construction. Most of the lighting for the offices come from the fluorescent ceiling lamps which appear to be quite similar those used in ancient Earth&apos;s office complexes.</desc>
+      <desc>   A small bank of elevators are situated on the northern wall of the lobby, however a security guard standing by the door of the elevators prevents you from entering.</desc>
+      <exits s='328' up='275'/>
+   </location>
+
+   <location num='266'>
+      <name>Miskatonic University Campus</name>
+      <desc>   Miskatonic University is the heart of the planet&apos;s agricultural knowledge base. Here students study and prepare for their fields in irrigation engineering, mechanics, and various other trades. Additionally, research is conducted here in the field of genetics in order to breed better, heartier plants that are more nutritious and can survive in harsher climates.</desc>
+      <desc>   Displayed along the walls of the lobby are the portraits of the agricultural center&apos;s founders as well as the class pictures of several graduating classes. It doesn&apos;t seem like there&apos;s much else to explore at this time without class being in session. At this point, whenever you&apos;re ready, you might as well head back out to your South.</desc>
+      <exits s='330'/>
+   </location>
+
+   <location num='268' flags='eb'>
+      <name>Terra Commodities Exchange and Brokerage</name>
+      <desc>   The skylights above you set a cozy mood in what should normally be an extremely busy place. The brokers here all seem rather relaxed compared to most other planetary exchanges. You can see a couple brokers marking down orders and then phoning them into their home offices. Mounted on the walls are large monitors which display the most updated prices of commodities which are available for purchase.</desc>
+      <desc>   Near the entrance is a large sign with bold letters with the following message: Attention all industrialists and manufacturers. All factories placed on this planet must be approved by the Terran Manufacturer&apos;s Union. Any unwanted factories can and will be expropriated without prior notice.</desc>
+      <desc>   The only exit that leads out of the commodities exchange is to your Southwest.</desc>
+      <exits sw='331'/>
+   </location>
+
+   <location num='275' flags='bt'>
+      <name>Lia&apos;s Terra Office</name>
+      <desc>   You have entered the quiet, executive office of Lia Kell. This room is quite cozy and furnished comfortably but not too lavishly. Dominated by the king size bed nestled against the opposite wall, the room contains all the ammenities one would need without ever having to leave. Bookshelves line the walls with a sizeable library. A desk, along with a holo computer, is set off to the side for Ms. Kell to work from. Furthermore, in a room of to the side of the main suite, there is a small kitchen which includes a stove and a refrigerator in case anyone feels like cooking.</desc>
+      <desc>   Normally, one would question why this room&apos;s normal entrance has been sealed off forcing people to enter through a secret passageway. In this case, however, the burden of running the local government often requires Lia to find a nice, secluded place where no one can find her.</desc>
+      <exits down='264'/>
+   </location>
+
+   <location num='326'>
+      <name>Security Checkpoint</name>
+      <desc>   Upon approaching the security check point, you see two uniformed Police Officers checking the ID&apos;s of any traffic that wishes to pass by. One of the officers walks up to you and informs you that only Terran residents are allowed to proceed any further down Main Street. At first you&apos;re tempted to run the gate, however after a better look at the police issue weapons holstered on the officers&apos; belts, something inside you hinders you from wanting to attempt it. The officer who approached you heads back to the humble security office that serves as the check point and smiles happily at the next resident that passes by. The only way to head from here is back East.</desc>
+      <exits e='327'/>
+   </location>
+
+   <location num='327'>
+      <name>400 Block of Main Street</name>
+      <desc>   As you continue down Main Street, you notice a large park to your South. A stark contrast to the urban setting around you, it looks quite inviting to stop in if you have the time. To your West down Main Street it appears that there is a security checkpoint. Of course, you can always go back East down Main Street as well.</desc>
+      <exits e='328' s='391' w='326'/>
+   </location>
+
+   <location num='328'>
+      <name>300 Block of Main Street</name>
+      <desc>   It&apos;s definitely a pleasant day as you walk along Main Street in downtown Arkham. The yellow sun shining down upon the blue sky of the atmosphere reminds you of Earth, well Earth before it was completely paved over. At least here in Arkham you can see trees in the distance. Along the northern side of the street is the only major high rise in Arkham. When the building has the words, Arkham Administrative Offices, mounted on its face, it&apos;s not hard to guess what&apos;s inside. Main Street continues to the West and East of you.</desc>
+      <exits n='264' e='329' w='327'/>
+   </location>
+
+   <location num='329'>
+      <name>200 Block of Main Street</name>
+      <desc>   There&apos;s not a whole lot going on here as you continue walking along Main Street. The traffic, foot traffic or vehicle traffic, doesn&apos;t seem too bad at this time of day. To your South appears to be a one story primary care clinic. If you&apos;re feeling a bit ill, you could always stop in for a moment. Main Street continunes to the East and West of your current location.</desc>
+      <exits e='330' s='393' w='328'/>
+   </location>
+
+   <location num='330'>
+      <name>100 Block of Main Street</name>
+      <desc>   Walking along the sidewalk of Main St, you notice a few vehicles driving down the road. It&apos;s obvious that due to the agriculturally based economy, the majority of the populace is unable to afford owning a car. The road itself is paved and well kept, and also has a well maintained sidewalk on either side of the street. To the North of you, you see a somewhat large two story facility that is labeled as Miskatonic University. The red stone veneer adds a nice contrast to the tan color of most of the surrounding architecture. To your South, you see an odd looking restaurant, Die Fledermaus. Of course, besides the two buildings located here, you can also travel East to the spaceport or further West down Main Street.</desc>
+      <exits n='266' e='331' s='394' w='329'/>
+   </location>
+
+   <location num='331'>
+      <name>Arkham Seaport</name>
+      <desc>   Sitting on the outskirts of Arkham, the newly established capital of Terra, is the Arkham Seaport. Once derelict due to Terra being cut off from the rest of civilized space during the Interregnum, the revitalized seaport now acts as the center for Interplanetary as well as Oceanic trade for the region. Shuttle arrivals are few and far between, however, cargo deliveries from other cities along the coast dominate the traffic flow in and out of the port. As of late, a small amount of military traffic has appeared as well.</desc>
+      <desc>   To the northeast of your position, you notice a modest structure that serves as Arkham&apos;s local exchange. Most of the foot traffic in and out of the port is obviously due to the exchange&apos;s presence. Arkham&apos;s Main street starts on the western edge of the seaport and leads into the city center. Your shuttle sits on the tarmac ready for departure back to your orbiting vessel.</desc>
+      <exits ne='268' w='330'/>
+   </location>
+
+   <location num='391'>
+      <name>Arkham Central Park</name>
+      <desc>   You are immediately engulfed by a warm and gentle atmosphere as you enter Arkham&apos;s Central Park. Although there are trees scattered throughout the park, open fields of grass dominate the landscape. A light breeze blows through the park as you take a better look around. It seems for the moment, that there are not a lot of people here to disturb the atmosphere.</desc>
+      <desc>   Near the Southeastern edge of the park, you notice a memorial has been set up. Of course, if you are ready to head back to civilization, Main Street is to the North.</desc>
+      <exits n='327' se='456'/>
+   </location>
+
+   <location num='393' flags='hi'>
+      <name>Arkham University Hospital</name>
+      <desc>   The first thing that you notice as you enter the Arkham University Hospital is the antiseptic smell that nearly all hospitals have. Disregarding that, you are currently standing in the hospital lobby. A receptionist is seated behind the front desk while several patients sit uncomfortably while awaiting their names to be called. An insurance agent is also stationed here in the event that someone might find themselves in dire need of a new clone.</desc>
+      <desc>   When you&apos;re done in the Arkham University Hospital, you can head back to Main Street through the door to your North.</desc>
+      <exits n='329'/>
+   </location>
+
+   <location num='394' flags='b'>
+      <name>Die Fledermaus</name>
+      <desc>   Who would&apos;ve thought that you&apos;d find an authentic german pub in the middle of downtown Arkham? Okay, so it&apos;s a tourist trap. Still, you can tell the restaurant offers great beer, fresh sauerkraut, and perfectly prepared bratwurst. You can tell a lot of craftsmanship was put into the wooden furnishings as well. Apparently, several customers are having difficulty remaining seated at the bar due to the sheer amount of alcohol that they&apos;ve drunk.</desc>
+      <desc>   While you&apos;re here, you might as well sit down and have a good time. Whenever you&apos;re ready, however, you can head back outside to your North.</desc>
+      <exits n='330'/>
+   </location>
+
+   <location num='456'>
+      <name>Memorial to Those Who Were Lost</name>
+      <desc>   The air is still in this quiet section of Arkham&apos;s Central Park. The sun&apos;s gentle warmth as well as the songs of the native fauna seem out of place as you gaze upon the stone monolith before you. Standing nearly 2 meters in height and 45 meters in width, it is inscribed with the names of people who were lost due to the wars and famine following the Constant Catastrophe which plunged Terra into relative darkness.</desc>
+      <desc>   A much smaller, stone marker catches your eye as it lays quietly off to the easternmost side of the memorial. It reads simply, &quot;K.A. You will be missed.&quot; A solemn young woman walks up to the stone marker without paying much attention to what you are doing. It&apos;s your choice as to when you wish to leave the memorial, but your only exit is to the Northwest.</desc>
+      <exits nw='391'/>
+   </location>
+
+</fed2-map>

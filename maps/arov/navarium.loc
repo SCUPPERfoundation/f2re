@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<fed2-map title='Navarium' version='14' editor='standard' from='523' to='Arov.Arov Space.262'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>The great Spare Ooom.</desc>
+   </location>
+
+   <location num='458'>
+      <name>Bridge</name>
+      <desc>The bridge of the Estate is packed with the requisite instruments and controls to run the entire ship. A sweeping panoramic view allows the officers to see tens of miles of the surrounding sea, including the dozens of ISD ships accompanying the Estate. The Captain of the Fleet, a tall, thin, gray-haired Arovian, monitors the various displays with a watchful eye. A hatch leads to the flight deck below.</desc>
+      <exits se='523' down='523' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='523' flags='yr'>
+      <name>Flight Deck</name>
+      <desc>The flight deck of the ISDS Estate stretches a great distance under a dazzling blue sky. The aft portion of the deck handles shuttles from orbiting starships. Other areas of the deck launch terrestrial fighters, which maintain a security screen around the fleet as it steams north and scout the seas ahead. A large Interstellar Sword &amp; Dagger Company flag snaps in the breeze astern. A ladder to the bridge lies forward to port, while a hatch leads below.</desc>
+      <exits nw='458' up='458' down='587' no-exit='Moves.Standard.2'/>
+   </location>
+
+   <location num='524'>
+      <name>Purser&apos;s Office</name>
+      <desc>This spacious office belongs to the Fleet Purser, who is responsible for all the financial affairs of the fleet, and by extension of the planet. Navarium is is a planet covered entirely by water, and the sole economic activity is the operation of the ISD fleet. Whether it is extracting minerals from the sea bed or hunting the various creatures of the deep, all activity is conducted from ship.</desc>
+      <desc>The purser himself is a neat, compact man with wire framed spectacles. Hundreds of ledgers line the bulkheads, reflecting the accounts of each ship in the fleet. A porthole in the starboard bulkhead provides a glimpse of the sunny sky. The exit lies aft.</desc>
+      <exits s='588' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='586'>
+      <name>Galley</name>
+      <desc>The galley is a gigantic concourse filled with rows of ovens and stoves. Pantries bolted to the upper reaches of the hull store the great quantities of provisions required to feed the 25,000 members of the Estate&apos;s crew. Some of the stove-flames are already lit, preparing a delightful smelling meal for the next watch. A mess hall lies aft, but that is off limits except to the Estate&apos;s crew. A passageway to starboard leads back to the main concourse.</desc>
+      <exits e='587' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Main Concourse</name>
+      <desc>This capacious concourse is the largest publicly accessible portion of the Estate. Uniformed crewmen move to and fro, seeing to the working of this enormous vessel. Passageways branch off aft, port, and starboard, while ladders lead both below and above.</desc>
+      <exits e='588' s='651' w='586' up='523' down='779' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='588' flags='e'>
+      <name>Navarium Exchange</name>
+      <desc>Row after row of computer terminals line the starboard bulkhead of this compartment. As Navarium has no dry land whatsoever, all of the planet&apos;s off-world commerce is routed through this ship. Traders can buy some of the many products produced by the ISD fleet, or can sell commodities to feed the fleets needs. A hatchway forward leads to the purser&apos;s office, while a passageway to port leads back to the main concourse.</desc>
+      <exits n='524' w='587' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='651' flags='b'>
+      <name>Viewing Lounge</name>
+      <desc>The viewing lounge sits just below the flight deck. The port and starboard bulkheads are made entirely of glass, affording a wide view of the surrounding sea. Other ships in the fleet can be seen plying their trade, tending to sea farms or harvesting fish. Smoke billows from factory ships synthesizing manufactured goods for use or export. Bulk transport or passenger bearing hydroplanes dart from ship to ship atop the waves.</desc>
+      <desc>The lounge itself consists of pole mounted tables surrounded by slender chairs affixed to the deck, with a circular bar in the center. White coated waiters hover attentively, bring fresh food straight from the galley. The exit is forward.</desc>
+      <exits n='587' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='779'>
+      <name>Airlock</name>
+      <desc>This compartment lies at the bottom of the hold, and forms an airlock with the minisubs that connect the surface and subsurface vessels of the fleet. ISD submarines conduct mineral extraction and deep water hunting. A hatch in the deck leads to a minisub that offers transportation to a sub below. Ladders lead above both fore and aft.</desc>
+      <exits n='587' s='843' up='587' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='842' flags='b'>
+      <name>Dining Cabin</name>
+      <desc>A heavy oak table fixed to the floor is the centerpiece of this cabin. Intricate gold patterns cover the table, while chairs line the table with room for servants to stand discretely behind. A lift provides quick access for for servers from Jazir&apos;s private galley. The stern window provides a splendid view of the sea. The exit lies starboard.</desc>
+      <exits e='843' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='843' flags='b'>
+      <name>Admiral&apos;s Sitting Room</name>
+      <desc>The admiral&apos;s suite is located at the stern of the ship. The suite consists of several rooms with the sitting room in the center. The sitting room is lavishly furnished, with oak paneling covering the bulkheads and luxurious rugs covering the deck. The stern window offers a spectacular view of the Estate&apos;s wake.</desc>
+      <desc>Several comfortable armchairs are arranged in a circle at the center of the room. A hatchway leads forward, while doors lie to both sides.</desc>
+      <exits n='779' e='844' w='842' no-exit='Moves.Standard.1'/>
+   </location>
+
+   <location num='844' flags='b'>
+      <name>Jazir&apos;s Stateroom</name>
+      <desc>Plush furs line the floor of this stateroom, the largest on the Estate. A narrow but comfortable cot rests against the bulkhead to the left, while a locked mahogany desk is bolted against the hull astern. Next to the desk, a locked glass case houses Duke Jazir&apos;s battle swords. Banners of old Estate, Loverly, Riva, and ISD drape the walls. A large porthole to starboard provides ample light for the cabin. Duke Jazir, ex-officio admiral of the fleet, resides here in style. The exit lies to port.</desc>
+      <exits w='843' no-exit='Moves.Standard.1'/>
+   </location>
+
+</fed2-map>

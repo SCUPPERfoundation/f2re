@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Stars End Space' version='1.00' editor='standard'>
+
+   <location num='328' flags='slp'>
+      <name>Orbit and System Link</name>
+      <desc>You have entered Stars End Space and are in orbit around Cinna.  Welcome!</desc>
+   </location>
+
+</fed2-map>

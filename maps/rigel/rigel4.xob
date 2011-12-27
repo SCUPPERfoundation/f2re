@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<object-list version='8' editor='Version 1.40a'>
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>Certificate</name>
+      <id>bestpo_abs</id>
+      <desc>The certificate says that Pugwash was voted the best PO by her adoring populace. Surely it must have been meant as a joke!</desc>
+   </object>
+
+   <object type='static' start='593' visibility='100' size='1' weight='1' flags='i'>
+      <name>Juggler</name>
+      <id>juggler_mob</id>
+      <desc>The juggler is dressed in bright yellow and red clothing. He is wearing purple shoes, and a green hat with blue pom-poms on it. It&apos;s all so vivid it makes your eyes hurt.</desc>
+      <movement speed='6' low='593' high='980'></movement>
+   </object>
+
+   <object type='static' start='786' visibility='0' size='1' weight='1'>
+      <name>billboard</name>
+      <id>obj_billboard</id>
+      <desc>The billboard has a picture of the famous (and sexy) Pugwash. Written underneath in large letters is &quot;Rigel 4 - Under New Management&quot;. Underneath that is some smaller lettering which you will be able to see if you READ BILLBOARD.</desc>
+      <vocab cmd='read' event='objects.billboard.1'></vocab>
+   </object>
+
+</object-list>
+

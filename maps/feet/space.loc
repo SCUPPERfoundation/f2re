@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<fed2-map title='Feet Space' version='5' editor='standard'>
+
+   <location num='395' flags='s'>
+      <name>Gas Gangrene Smell</name>
+      <desc>This space smells like rotten feet being eaten by Clostridium Difficil.  The link is SE.</desc>
+      <exits e='396' se='460' s='459'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Foot Odor Space</name>
+      <desc>The odor from the feet reaches out far.  The link is South.</desc>
+      <exits e='397' se='461' s='460' sw='459' w='395'/>
+   </location>
+
+   <location num='397' flags='s'>
+      <name>Stinky Space</name>
+      <desc>The smell of the feet is even worse over here.  The link is SW.</desc>
+      <exits s='461' sw='460' w='396'/>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Toe Jam smell</name>
+      <desc>The space here smell like old toenails that havent been cleaned for years. The link is East.</desc>
+      <exits n='395' ne='396' e='460' se='524' s='523'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Interstellar link and LEFT FOOT orbit.</name>
+      <desc>   You are in orbit around a foot? That&apos;s odd. It&apos;s the left one even. The smell! OH the smell!   You see Right foot to the EAST.</desc>
+      <exits n='396' ne='397' e='461' se='525' s='524' sw='523' w='459' nw='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>RIGHT FOOT orbit</name>
+      <desc>You are orbiting around another foot.  Very odd again.  This time, however, it is the right foot.  The link is West.</desc>
+      <exits n='397' s='525' sw='524' w='460' nw='396'/>
+   </location>
+
+   <location num='523' flags='s'>
+      <name>Bromohydrosis Space</name>
+      <desc>Just plain old smelly sweaty feet smell.  The link is NE.</desc>
+      <exits n='459' ne='460' e='524'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Mascerated Interdigital Space</name>
+      <desc>Old wet soggy skin between the toes smells as good as it looks.  The link is North.</desc>
+      <exits n='460' ne='461' e='525' w='523' nw='459'/>
+   </location>
+
+   <location num='525' flags='s'>
+      <name>Wet Gangrenous Space</name>
+      <desc>The smell of wet gangrene at its best.  Not even an asteroid could survive here.  The link is NW.</desc>
+      <exits n='461' w='524' nw='460'/>
+   </location>
+
+</fed2-map>

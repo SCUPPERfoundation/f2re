@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<fed2-map title='Vacation Space' version='5' editor='standard'>
+
+   <location num='329' flags='s'>
+      <name>Nowhere Orbit</name>
+      <desc>   The second in a series of vacation planets for your pleasure and amusement, Nowhere caters to the sweet tooth in all of us. please land and enjoy yourselves for as long as you wish.</desc>
+      <desc>Link is sw</desc>
+      <exits sw='392'/>
+   </location>
+
+   <location num='392' flags='slp'>
+      <name>Vacation Link and Somewhere orbit</name>
+      <desc>    You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <desc>Nowhere is to the NE</desc>
+      <exits ne='329'/>
+   </location>
+
+</fed2-map>
+

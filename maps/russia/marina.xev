@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+
+<event-list version='23'>
+
+ <category name='objects'>
+
+  <section name='doll'>
+
+   <event num='1'>
+    <comment>Get doll - in Gift Shop, loc 783</comment>
+    <message type='single' where='com' who='individual' lo='objects.doll.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Buy doll - check if they already have the ming doll</comment>
+    <checkinventory map='home' id-name='ming doll' found='objects.doll.6' not-found='objects.doll.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>No ming doll, so check if they already have the fogg doll</comment>
+    <checkinventory map='home' id-name='fogg doll' found='objects.doll.6' not-found='objects.doll.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>No fogg doll, so check if they already have the selena doll</comment>
+    <checkinventory map='home' id-name='selena doll' found='objects.doll.6' not-found='objects.doll.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>No selena doll, so check if they already have the diesel doll</comment>
+    <checkinventory map='home' id-name='diesel doll' found='objects.doll.6' not-found='objects.doll.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player is carrying one of the dolls</comment>
+    <message type='single' where='com' who='individual' lo='objects.doll.2'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player is not carrying any of the dolls, so check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.doll.9' equals='objects.doll.9' lower='objects.doll.8'/>
+   </event>
+
+   <event num='8'>
+    <comment>Not enough groats to buy a doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.doll.3'/>
+   </event>
+
+   <event num='9'>
+    <comment>Sell diesel doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.doll.4'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='russia/marina' id='obj_diesel'/>
+   </event>
+
+  </section>
+
+  <section name='dolldiesel'>
+
+   <event num='1'>
+    <comment>Shake diesel doll - check if it has other dolls inside</comment>
+    <checksize id-name='diesel doll' value='1' more='objects.dolldiesel.2' equal='objects.dolldiesel.2' less='objects.dolldiesel.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Size is 1 so doll has something inside it</comment>
+    <message type='single' where='com' who='individual' lo='objects.dolldiesel.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Size is 0 so doll is empty</comment>
+    <message type='single' where='com' who='individual' lo='objects.dolldiesel.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Open diesel doll - check to see if it has other dolls inside</comment>
+    <checksize id-name='diesel doll' value='1' more='objects.dolldiesel.5' equal='objects.dolldiesel.5' less='objects.dolldiesel.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Size is 1 - it has something inside, so open it and create new doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dolldiesel.3'/>
+    <createobject where='inventory' home-map='russia/marina' id='obj_selena'/>
+    <changesize id-name='diesel doll' amount='0' change='set' max-size='1' destroy='no'/>
+   </event>
+
+   <event num='6'>
+    <comment>Doll is empty</comment>
+    <message type='single' where='com' who='individual' lo='objects.dolldiesel.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Drop diesel doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dolldiesel.5'/>
+    <destroyobject where='inventory' map='home' id-name='diesel doll'/>
+   </event>
+
+  </section>
+
+  <section name='dollfogg'>
+
+   <event num='1'>
+    <comment>Shake fogg doll - check if it has other dolls inside</comment>
+    <checksize id-name='fogg doll' value='1' more='objects.dollfogg.2' equal='objects.dollfogg.2' less='objects.dollfogg.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Size is 1 so doll has something inside it</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollfogg.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Size is 0 so doll is empty</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollfogg.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Open fogg doll - check to see if it has other dolls inside</comment>
+    <checksize id-name='fogg doll' value='1' more='objects.dollfogg.5' equal='objects.dollfogg.5' less='objects.dollfogg.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Size is 1 - it has something inside, so open it and create new doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollfogg.3'/>
+    <createobject where='inventory' home-map='russia/marina' id='obj_ming'/>
+    <changesize id-name='fogg doll' amount='0' change='set' max-size='1' destroy='no'/>
+   </event>
+
+   <event num='6'>
+    <comment>Doll is empty</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollfogg.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Drop fogg doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollfogg.5'/>
+    <destroyobject where='inventory' map='home' id-name='fogg doll'/>
+   </event>
+
+  </section>
+
+  <section name='dollming'>
+
+   <event num='1'>
+    <comment>Shake ming doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollming.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Open ming doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollming.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Drop ming doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollming.3'/>
+    <destroyobject where='inventory' map='home' id-name='ming doll'/>
+   </event>
+
+  </section>
+
+  <section name='dollselena'>
+
+   <event num='1'>
+    <comment>Shake selena doll - check if it has other dolls inside</comment>
+    <checksize id-name='selena doll' value='1' more='objects.dollselena.2' equal='objects.dollselena.2' less='objects.dollselena.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Size is 1 so doll has something inside it</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollselena.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Size is 0 so doll is empty</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollselena.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Open selena doll - check to see if it has other dolls inside</comment>
+    <checksize id-name='selena doll' value='1' more='objects.dollselena.5' equal='objects.dollselena.5' less='objects.dollselena.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Size is 1 - it has something inside, so open it and create new doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollselena.3'/>
+    <createobject where='inventory' home-map='russia/marina' id='obj_fogg'/>
+    <changesize id-name='selena doll' amount='0' change='set' max-size='1' destroy='no'/>
+   </event>
+
+   <event num='6'>
+    <comment>Doll is empty</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollselena.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Drop selena doll</comment>
+    <message type='single' where='com' who='individual' lo='objects.dollselena.5'/>
+    <destroyobject where='inventory' map='home' id-name='selena doll'/>
+   </event>
+
+  </section>
+
+  <section name='ivan'>
+
+   <event num='1'>
+    <comment>Talk to Ivan - although right now he a little to say on a few things</comment>
+    <match phrase='hi' id-name='obj_ivan' lo='objects.ivan.1'/>
+    <match phrase='dmz' id-name='obj_ivan' lo='objects.ivan.2'/>
+    <match phrase='dolls' id-name='obj_ivan' lo='objects.ivan.7'/>
+    <match phrase='planet' id-name='obj_ivan' lo='objects.ivan.5'/>
+    <match phrase='person' id-name='obj_ivan' lo='objects.ivan.6'/>
+    <match phrase='marina' id-name='obj_ivan' lo='objects.ivan.4'/>
+    <match phrase='vodka' id-name='obj_ivan' lo='objects.ivan.8'/>
+    <nomatch id-name='obj_ivan' lo='objects.ivan.3'/>
+   </event>
+
+  </section>
+
+  <section name='olga'>
+
+   <event num='1'>
+    <comment>Talk to Olga - she doesn&apos;t know much english</comment>
+    <match phrase='hi' id-name='obj_olga' lo='objects.olga.1'/>
+    <match phrase='no' id-name='obj_olga' lo='objects.olga.2'/>
+    <match phrase='yes' id-name='obg_olga' lo='objects.olga.3'/>
+    <nomatch id-name='obj_olga' lo='objects.olga.4'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+

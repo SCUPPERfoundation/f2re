@@ -1,0 +1,4 @@
+mv fed2d fed2d.latest
+cp fed2d.old fed2d
+echo "Previous version of fed2d restored."
+ls -l fed2d*

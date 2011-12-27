@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<fed2-map title='Demeter Space' version='7' editor='standard'>
+
+   <location num='650' flags='sl'>
+      <name>Spaceport 9 station and interstellar link</name>
+      <desc>Right next to the interstellar link is a space station, the perfect trade location.</desc>
+   </location>
+
+</fed2-map>
+

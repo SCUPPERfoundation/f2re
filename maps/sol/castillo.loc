@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<fed2-map title='Castillo' version='1.00' from='781' to='Sol.Sol Space.593'>
+
+   <location num='136'>
+      <name>Elevator</name>
+      <desc>   You are in a small elevator. Through the door in the south wall, you can see the reception area of the Castillo base. Press the button and the elevator will take you up to the surface.</desc>
+      <exits s='200' out='200'/>
+   </location>
+
+   <location num='198' flags='a'>
+      <name>Clive's Collectibles</name>
+      <desc>   What used to be a storeroom has been converted into a shop selling rare collectibles, such as decorative thimbles, commemorative plates, ancient postage stamps, and coins from planets across the Galaxy. One shelf contains a small selection of action figures from bygone days, none of which you recognize.</desc>
+      <desc>   A sign on the wall says, "You break it, you pay for it. Until you pay for it, no handling the merchandise." </desc>
+      <desc>   The center of the counter is taken up with an impressive display of trading cards, the item that Clive is most pleased to sell. This month's special offer is part of the series "Great Emperors of the Galaxy" and features Catty, the last emperor to reign over the Galaxy. The limited edition costs one slithy tove and customers are restricted to one purchase only.</desc>
+      <exits e='199' out='199' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='199' flags='e'>
+      <name>Trading exchange</name>
+      <desc>   The floor of the Castillo Commodity Exchange is filled with knots of brokers and traders huddled in earnest conversation, all of them hoping for that one killer deal that's going to make their fortunes. One whole wall is given over to a massive screen, on which the prices of commodities are displayed in rapid succession. </desc>
+      <desc>   The exit is east, and a door leads west into a shop.</desc>
+      <exits e='200' w='198' out='200'/>
+   </location>
+
+   <location num='200' flags='ca'>
+      <name>Reception</name>
+      <desc>   This is the reception area of the Castillo base. It's sparsely furnished, with just a couple of uncomfortable-looking metal folding chairs provided for visitors waiting for appointments.</desc>
+      <desc>   To the north is an elevator up to the surface, to the west is the entrance to the commodity exchange, and corridors lead east and south.</desc>
+      <desc>   A large notice has been pinned to the wall behind the receptionist's head, proclaiming the opening of a new shop selling collectible items, with an arrow pointing and the directions "walk through the exchange to Clive's Collectibles".</desc>
+      <desc>   The receptionist also doubles as the local agent for Armstrong Cuthbert, Inc. This may be a tiny research station, but the giant interplanetary cargo combine even has a presence here.</desc>
+      <exits n='136' e='201' s='264' w='199' out='136'/>
+   </location>
+
+   <location num='201'>
+      <name>Corridor</name>
+      <desc>   The west end of this bare, featureless corridor runs into the reception area; at the other end is a door with a crudely stenciled sign saying 'CONTROL ROOM'.</desc>
+      <exits e='202' w='200'/>
+   </location>
+
+   <location num='202' flags='a'>
+      <name>Control room</name>
+      <desc>   From this room, the chief of the facility controls everything that happens on Castillo. The walls are lined with panels and screens showing views of the surface and various parts of the base. From somewhere you can hear the hum of the air-conditioning.</desc>
+      <desc>   There is a door marked 'EXIT' in the west wall.</desc>
+      <exits w='201' out='201'/>
+   </location>
+
+   <location num='263' flags='a'>
+      <name>Office</name>
+      <desc>   This office is quite large, given the lack of space in the Castillo base. There is one large desk, cluttered with all the usual clerical paraphernalia.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='264' out='264'/>
+   </location>
+
+   <location num='264'>
+      <name>Corridor</name>
+      <desc>   The corridor leads north and south, and there are doors on both sides.</desc>
+      <exits n='200' e='265' s='328' w='263'/>
+   </location>
+
+   <location num='265' flags='ba'>
+      <name>Fedruckers</name>
+      <desc>   This large bar is decorated in garish yellow and bright blue, with rows of tables filled with raucous diners.</desc>
+      <desc>   Hordes of small children, many of them green and some with tentacles, cluster around the latest arcade machine, "Martian Invasion", which makes the most peculiar hooting and hammering noises. This makes it hard to hear the names being called over the loudspeaker.</desc>
+      <exits w='264' out='264'/>
+   </location>
+
+   <location num='327' flags='a'>
+      <name>Small office</name>
+      <desc>   Space is at a premium in the base - the more space you have, the more important you are! You can safely assume, therefore, that whoever uses this office is not very far up the food chain.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='328' out='328' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='328'>
+      <name>Corridor</name>
+      <desc>   You are standing at the south end of a gray-painted corridor. There are unmarked doors to the east, west and south.</desc>
+      <exits n='264' e='329' s='392' w='327'/>
+   </location>
+
+   <location num='329'>
+      <name>Living quarters</name>
+      <desc>   These quarters are quite spacious - whoever lives here must be a big wheel at the base! Some attempt has been made to brighten the room up, with holos on the walls showing scenes from Earth. Under the bed is a large box, used for storage. You could probably open it if you were feeling nosy.</desc>
+      <desc>   There is a door in the west wall, leading to the corridor.</desc>
+      <exits w='328' out='328'/>
+   </location>
+
+   <location num='392'>
+      <name>Cramped quarters</name>
+      <desc>   You are in tiny, cramped living quarters. All the furniture is folded back against the wall, and there is not even room to swing a quix in here. The only personal item on display is a tattered picture cut out of one of those magazines that feature semi-clad human women being threatened by aliens. This must be the home of a real nonentity...</desc>
+      <desc>   The door is north.</desc>
+      <exits n='328' out='328' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='525'>
+      <name>Elevator</name>
+      <desc>   You are in a small elevator. Through the door you can see the airlock, which leads out to the surface. The elevator will take you down into the base if you press the button.</desc>
+      <exits s='589' out='589'/>
+   </location>
+
+   <location num='589'>
+      <name>Airlock</name>
+      <desc>   You are in the airlock leading to the Castillo base. The north end of the lock leads into an elevator, and the south side exits onto the surface.</desc>
+      <exits n='525' s='653' in='525' out='653'/>
+   </location>
+
+   <location num='653'>
+      <name>Before airlock</name>
+      <desc>   You are standing outside an airlock. The airlock is built into the crater wall, directly to the north of you. In all other directions is the floor of the crater.</desc>
+      <exits n='589' e='654' se='718' s='717' sw='716' in='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='654'>
+      <name>Crumbling surface</name>
+      <desc>   You pick your way gingerly across the crumbling surface of Castillo, trying to avoid the cracks and crevasses.</desc>
+      <desc>   To the north the crater walls rise sheer and unclimbable. To the west you can see the airlock to the base.</desc>
+      <exits se='719' s='718' sw='717' w='653' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='716'>
+      <name>Steep wall</name>
+      <desc>   You are standing at the bottom of a steep and unclimbable crater wall. To the southeast is the landing area, and to the northeast is an airlock.</desc>
+      <exits ne='653' e='717' se='781' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='717'>
+      <name>Cratered surface</name>
+      <desc>   You are standing on a very cratered part of the surface. A path runs from the airlock in the north to the landing area in the south.</desc>
+      <exits n='653' ne='654' e='718' se='782' s='781' w='716'/>
+   </location>
+
+   <location num='718'>
+      <name>Uneven surface</name>
+      <desc>   You are moving across a rocky, uneven surface, on which it is difficult to keep your balance. To the northwest you can see the main airlock.</desc>
+      <exits n='654' e='719' s='782' sw='781' w='717' nw='653'/>
+   </location>
+
+   <location num='719'>
+      <name>Bottom of cliff</name>
+      <desc>   You are standing at the bottom of a sheer cliff. The floor of the crater continues to the west.</desc>
+      <exits sw='782' w='718' nw='654' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='781'>
+      <name>Castillo landing pad</name>
+      <desc>   The landing pad is situated in a medium-sized crater with steep walls. Looking up, you can see the bulk of Jupiter filling the sky.</desc>
+      <desc>   To the north is the airlock leading to the base.</desc>
+      <exits n='717' ne='718' e='782' nw='716' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='782'>
+      <name>Sheer cliff</name>
+      <desc>   You are standing in front of a sheer cliff that runs south and east. The landing area is to the west.</desc>
+      <exits n='718' ne='719' w='781' nw='717' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='22'>
+
+   <object type='static' start='456' visibility='0' size='1' weight='1'>
+      <name>burger</name>
+      <id>obj_burger</id>
+      <desc>The llama burgers are being barbecued on a jury-rigged powerpack. You can buy one for 10 groats.</desc>
+      <vocab cmd='buy' event='food.burger.1'></vocab>
+   </object>
+
+   <object type='static' start='456' visibility='0' size='1' weight='1'>
+      <name>milk</name>
+      <id>obj_1milk</id>
+      <desc>Large tankards of frothy fermented llama milk are on sale for 5 groats.</desc>
+      <vocab cmd='buy' event='food.milk.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>sample</name>
+      <id>obj_sample</id>
+      <desc>This rug sample is made of brightly-colored Minter-strain llama wool. The pattern is a scene from a very ancient video game.</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='static' start='265' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The house speciality is chicken-in-a-basket, made from birds which are reared in a poultry tent around the back.</desc>
+      <vocab cmd='buy' event='food.madhouse.1'></vocab>
+   </object>
+
+   <object type='static' start='456' visibility='0' size='1' weight='1'>
+      <name>carton</name>
+      <id>obj_carton</id>
+      <desc>A carton of fermented llama milk to take away costs 25 groats and contains three drinks.</desc>
+      <vocab cmd='buy' event='food.milk.4'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='3' weight='2' flags='ps'>
+      <name>milk</name>
+      <id>obj_milk</id>
+      <desc>The carton contains fermented llama milk, the favorite beverage on Brass.</desc>
+      <vocab cmd='examine' event='food.milk.7'></vocab>
+      <vocab cmd='ex' event='food.milk.7'></vocab>
+      <vocab cmd='drink' event='food.milk.10'></vocab>
+      <vocab cmd='drop' event='food.milk.13'></vocab>
+   </object>
+
+</object-list>

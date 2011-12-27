@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<fed2-map title='Joyzee Space' version='1' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>Storage closet</name>
+      <desc>An empty corner of Joyzee Space.</desc>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Piles of Stuff that New Ark is SELLING</name>
+      <desc>Commodities being sold:</desc>
+      <exits e='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Joyzee Interstellar link and Orbit</name>
+      <desc>  You materialize out of hyperspace near a decrepit, but surprisingly large antiquated space station that&apos;s being retrofitted with Bussard fusion ramjets.  Piles of commodities are randomly heaped around the station and in space as far as the eye can see.</desc>
+      <desc>  You can BOARD your shuttle to dock with New Ark Station, fly WEST to see what stuff is being sold, or EAST to see what the station is buying.</desc>
+      <exits e='461' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Flashing Neon Sign &quot;NEW ARK IS BUYING&quot;</name>
+      <desc>Commods bought:</desc>
+      <exits w='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<fed2-map title='Aevum Space' version='21' editor='standard'>
+
+   <location num='1953' flags='sp'>
+      <name>Orbit of Somnium</name>
+      <desc>The hazy, ethereal atmosphere of this world completely masks any presence of a solid planet. It roils and swirls in a tableau of countless colors. So fascinating and hypnotic is watching the shapes and patterns as they form and dissipate, you have to shake yourself back to your senses. A double check of your instruments confirms there is indeed a place on which to set down, if you choose, or the system link is to the southwest.</desc>
+      <exits sw='2016' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2014' flags='sp'>
+      <name>Orbit of Pario</name>
+      <desc>You are in orbit around an irregularly-shaped mass of rock and liquid elements. Fairly close to the system&apos;s sun, you can tell as the planetoid revolves that there are extreme differences in temperature between the sunlit and shaded areas. As they come into the light, previously frozen pools of liquid roil and turn to mist, some so violently that the material is ejected for a great distance into space.  A working settlement has been established inside this burgeoning world and the underground docking bay is accessed via shuttle. The way back is southeast.</desc>
+      <exits se='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2016' flags='slp'>
+      <name>Aevum Space Interstellar Link</name>
+      <desc>As you orbit the link, a silken female voice coos from your comm unit, &quot;Welcome to the Aevum system, we hope you enjoy your stay.  Please set a course southwest or northeast to access the rest of the system.  Thank you.&quot;</desc>
+      <exits ne='1953' sw='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2079' flags='sp'>
+      <name>Orbit of Victus</name>
+      <desc>The beautiful, lush world of Victus spins in serene silence slowly before you. Through the wispy blanket of cloud cover, you admire the deep blue oceans, dense verdant rain forests, prickly white snow-capped mountain ranges and sandy expanses of desert.  Known throughout the galaxy for its widely varied topography and climes, it is a much sought after destination for business and leisure alike.</desc>
+      <desc>   Your comm unit again relays the velvet-voiced female, &quot;There are no suitable shuttle landing locations on the planet surface.  Please use the orbital platform for all commerce and egress to the planet.  Thank you.&quot;</desc>
+      <desc>   You confirm your instruments have locked onto the orbiting station. Open bays on the platform await your shuttle should you like to board.  You can also head northwest or southeast to other parts of the system, or northeast to the link.</desc>
+      <exits ne='2016' se='2144' sw='2142' nw='2014' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2142' flags='sp'>
+      <name>Calm stretch of space</name>
+      <desc>Distant stars glide by in your viewscreen as you traverse this stretch of space between Victus to the northeast and Lascivio to the southwest.</desc>
+      <exits ne='2079' sw='2205' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2144' flags='sp'>
+      <name>Orbit of Mortuus</name>
+      <desc>The planet around which you are orbiting is rather still and lifeless.  It seems to lack sunlight, due to its distance from the star; you can&apos;t detect any sort of vegetation on its surface.  It does show signs of once being a vibrant world, but those days are long past. Some limited terraforming has taken place and a quick scan of your instruments confirms the presence of a landing pad on the surface. The return route is northwest.</desc>
+      <exits nw='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2205' flags='sp'>
+      <name>Orbit of Lascivio</name>
+      <desc>This world is a happy place; a cheerful voice comes on the comm and lets you know that you&apos;re welcome to land if you like.  The rest of the system is to the northeast.</desc>
+      <exits ne='2142' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

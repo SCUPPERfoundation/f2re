@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<fed2-map title='Edinboro' version='11' editor='standard' from='200' to='Eriez.Eriez Space.202'>
+
+   <location num='0' flags='kt'>
+      <name>storage Room</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1' flags='t'>
+      <name>Restricted Area</name>
+      <desc>Congratulations for finding this area. Using this area I will tell you a little bit about myself.</desc>
+      <desc>My real name is Matt and I live in Pennsylvania and am currently working on my Master&apos;s degree in rehabilitation counseling. The reason I chose rehab counseling is very simple, when I was working towards my undergraduate degree in criminal justice I had a lot of assistance from several rehab counselors so I feel that it is time to return the favor. I decided to go back to school when I could not find a job using my undergraduate degree, part of the &quot;problem&quot; is that I have cerebral palsey, affecting my right side I am also learning disabled in math which effectively prevents me from entering my dream job of being a police officer, it also makes playing Fed rather interesting at times:). I try not to let my disability stop me and I pretty openly discuss my disability, if there is something you want to know, just ask. Have a great day!</desc>
+      <exits out='200'/>
+   </location>
+
+   <location num='134' flags='b'>
+      <name>Reserved Space</name>
+      <desc>The air is filled with sawdust as workers scramble to complete this exhibit.  Please return later and see thier finished work.</desc>
+      <exits se='199'/>
+   </location>
+
+   <location num='135' flags='b'>
+      <name>Sulawesian Bar</name>
+      <desc>This Bar was built to honor the great Sulawesian Culture (not the Country on Earth, but the Planet in the Java System).  There are large collections of exotic coffees and chocolates imported from Sulawesi.  However, if you were not aware, the Sulawesian culture makes most of their riches exporting several distinct brands of Single Malt Scotch Whiskey.  They learned the secrets of creating rich flavors from their Scottish friends back on Earth.  Here you can enjoy a sample of all their unique aged drinks, or have the Bartender make your own favorite drink.</desc>
+      <desc>     Please come and visit Sulawesi in the Java System, and have another drink.</desc>
+      <exits s='199' no-exit='message.noexit.13'/>
+   </location>
+
+   <location num='136' flags='b'>
+      <name>Reserved for Exhibitor</name>
+      <desc>The air is filled with sawdust as workers scramble to complete this exhibit.  Please return later and see thier finished work.</desc>
+      <exits sw='199'/>
+   </location>
+
+   <location num='137' flags='eb'>
+      <name>Edinboro Exchange</name>
+      <desc>The planet Edinboro is a free trade planet.  Here at the exchange, merchants and planet trade representatives come to place orders and negotiate prices for imports and exports.  There is a bustle of activity as runners hurry to place orders and ship owners hurry off to collect their cargo.  Waitdroids hurry about to deliver refreshments to the visitors as they conduct their business.  In a corner, a group of traders are drinking heavily as they watch their spreads vanish and dread the arrival of the inevitable mail announcing a margin call.</desc>
+      <desc>     To the East is a small area with planetary announcements.  The exit is to the Southwest.</desc>
+      <exits e='138' sw='200' no-exit='message.noexit.12'/>
+   </location>
+
+   <location num='138'>
+      <name>Planetary Announcements</name>
+      <desc>On large board are posted the current products needed and produced.  Factory spaces available are also posted here</desc>
+      <desc>     The board is currently blank</desc>
+      <exits w='137'/>
+   </location>
+
+   <location num='198' flags='b'>
+      <name>Carpathia Cafe</name>
+      <desc>The world of Carpathia has brought a display of its cuisine for the people of Edinboro.  There is blood sausage, roast beast (rare of course), blood oranges, and fine wines (red of course).  Their are tables and chairs with red table clothes laid out for you to sit and sample the foods.  Carpathia was honored to be invited by Edinboro, and its founder, Count Nosferatu Doz has agreed to not eat any of the guests.  So sit dine, and enjoy.</desc>
+      <exits e='199' no-exit='message.noexit.15'/>
+   </location>
+
+   <location num='199'>
+      <name>Edinboro Intergalactic Exposition</name>
+      <desc>Edinboro is hosting various planets to come and display their culture, products, and history to the people of Edinboro.  Various flags, seals, and banners are arrayed that identify the participating worlds.  Edinboro invites you to come and sample the displays.</desc>
+      <exits n='135' ne='136' e='200' w='198' nw='134' no-exit='message.noexit.3'/>
+   </location>
+
+   <location num='200'>
+      <name>Shuttle Landing Pad</name>
+      <desc>The Stunning array of colors dazzles your eyes.  The foliage of the various trees has turned to a variety of hues, from a pale yellow to a fiery orange.  The effect of the variety, and their intensity, is to create a landscape the resembles Van Gogh&apos;s pallete.  The sun is warm, and the air is crisp and clean.  A cool breeze blows over the Shuttle pad, and announces the coming of Fall.</desc>
+      <desc>     The shuttle pad itself is awash with activity.  Droids, and cargo workers appear oblivious to the beauty of their surroundings as they hurriedly rush to load cargo purchased from the planetary exchange, and unload imports destined for sale on the planet.  To the Northeast is the Planetary Exchange, and to the South is Edinboro Town.</desc>
+      <exits ne='137' s='264' w='199' in='1290'/>
+   </location>
+
+   <location num='207'>
+      <name>North Shore of the Lake</name>
+      <desc>The view of the Lake to the south is spectacular on this North shore.  The surface of the water is as smooth as glass, and the orange, red, and yellow hues of the surrounding foliage are reflected in the water as if the lake were a mirror.  The clear cloudless blue sky is reflected in the same manner which has created on the lake surface a menagerie of color that human hands could never create.</desc>
+      <exits se='337' sw='333' no-exit='message.noexit.9'/>
+   </location>
+
+   <location num='263' flags='hi'>
+      <name>Edinboro Hospital</name>
+      <desc>The Edinboro Hospital provides health care services to residents and visitors alike.  The clean sanitized hallways, and clean sanitized staff provide patients a degree of confidence that their ills will be cured.</desc>
+      <desc>     There is a large sign that says, &quot;DON&apos;T FORGET TO REINSURE&quot;</desc>
+      <exits e='264'/>
+   </location>
+
+   <location num='264'>
+      <name>Road to Edinboro Town</name>
+      <desc>Edinboro Town has maintained a consistency of design standards and zoning ordinances that require that all buildings incorporate a colonial era theme.  The buildings on both sides of the road are constructed of red brick and have colorful awnings.  The sidewalks are swept, and the hedges are neatly and uniformly trimmed.</desc>
+      <desc>     To the West is the Hospital.  To the North is the Shuttle Landing Pad.  To the South is Edinboro Town.</desc>
+      <exits n='200' s='328' w='263' no-exit='message.noexit.1'/>
+   </location>
+
+   <location num='266' flags='b'>
+      <name>Aekonian Embassy</name>
+      <desc>The Cilbuper of Aekonia maintains a warm relationship with Edinboro, and established this embassy both to conduct interplanetary trade negotiations, and provide a symbol of friendship between the two peoples.  Posting to this embassy is a most sought after appointment within the Aekonian diplomatic corps.  The beauty of the planet&apos;s surroundings, and the warmth and friendliness of its people makes this a plum assignment.</desc>
+      <desc>     On the wall are the obligatory government issued paintings.  Their is a portrait of Zodraz, the Administrator of Aekonia, a full length painting of Zardoz, the Elder of the House of Doz, and a matching full length painting of the Lady Sephorin, wife of Zardoz, and the first Lady of the House of Doz.</desc>
+      <exits s='330' no-exit='message.noexit.5'/>
+   </location>
+
+   <location num='281'>
+      <name>Office - A</name>
+      <desc>This is a simple office.  There are hookups for communication and data services.  The office is available for lease, please see the planet administrator for details.</desc>
+      <exits se='346' out='200'/>
+   </location>
+
+   <location num='282'>
+      <name>Gravtube - Second Floor</name>
+      <desc>The Second Floor has offices of various companies.  You can go south to the second floor lobby or down to the first floor.</desc>
+      <exits s='346' down='458' out='346'/>
+   </location>
+
+   <location num='283' flags='b'>
+      <name>Unlimited Ltd. - Edinboro Branch</name>
+      <desc>This is the Edinboro Branch office of Unlimited Ltd.  Unlimited Ltd,, is led by Zardoz, and is a member of the House of Doz.  This company assists new CEOs with financing public offerings and provides very favorable terms for share return.</desc>
+      <desc>     The office contains a small bar, comfortable couch, and a desk.  On the walls are photos of CEOs that Zardoz has assisted over the cycles.  On his desk, Zardoz has, in a gold frame, a photo of his love, and wife, Sephorin.</desc>
+      <exits sw='346' out='200' no-exit='message.noexit.11'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Edinboro Hotel Bar</name>
+      <desc>Here at the corner of Meadville Street is the Edinboro Hotel Bar.  The bar is a popular gathering place for both residents and visitors.  The bar offers 15 different types of beer on tap, and has a varied, but tempting menu.  The Hotel Bar is famous for its wild parties, and special events.  Photos are placed on the bulletin board of various functions and parties.  The Hotel Bar is one of those rare bars that makes a visitor feel instantly welcomed, and a regular as comfortable as if they were at home.</desc>
+      <exits e='328' no-exit='message.noexit.4'/>
+   </location>
+
+   <location num='328'>
+      <name>Edinboro Town - Meadville Street</name>
+      <desc>Meadville Street begins here and runs to the East.  To the West is Edinboro Hotel.  To the South is John&apos;s Wildwood Pizzeria.  To the North is the Shuttle Pad and Exchange.</desc>
+      <exits n='264' e='329' s='392' w='327' no-exit='message.noexit.2'/>
+   </location>
+
+   <location num='329'>
+      <name>Meadville Street</name>
+      <desc>Meadville Street is the main East-West road that runs through Edinboro town to Edinboro Lake.  On both side of the road are trees.  At this time of year, the fall season has turned the trees into a tapestry of color, which wraps the road like a blanket.  The sun is warm, but the wind contains a hint of chill that indicates that summer has passed, and winter is just around the corner.</desc>
+      <exits e='330' w='328' no-exit='message.noexit.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Intersection</name>
+      <desc>Meadville Street comes to a four way intersection.  To the North is the Aekonian Embassy.  To the South is the Edinboro Professional Center.  To the West is Edinboro Town.  To the East is Edinboro Lake.</desc>
+      <exits n='266' e='333' s='394' w='329' no-exit='message.noexit.3'/>
+   </location>
+
+   <location num='333'>
+      <name>Edinboro Lake</name>
+      <desc>The centerpiece of Edinboro&apos;s recreational opportunities is the 245 acre Edinboro Lake, with accompanying parks and playgrounds.  Included is a guarded beach, two free boat launch ramps with public parking, a fishing pier denoted for persons with disabilities, and a major playground complex at Billings Park.  This lakeside park area serves a wide range of persons, which includes summer vacationers, summer residents, permanent residents from Edinboro and surrounding areas, and an ever-changing population of University students.</desc>
+      <desc>   To the Southeast and Northeast are paths along the lake&apos;s shore.</desc>
+      <exits ne='207' se='463' w='330' no-exit='message.noexit.9'/>
+   </location>
+
+   <location num='337'>
+      <name>Municipal Dock</name>
+      <desc>Edinboro provides docking facilities for boating enthusiasts.  In summer months, this area is crowded and in heavy use, but now with the approach of fall, its empty and quiet.</desc>
+      <exits sw='463' nw='207' in='1241' no-exit='message.noexit.9'/>
+   </location>
+
+   <location num='346'>
+      <name>Second Floor Lobby</name>
+      <desc>The second floor has four offices.  Office A is to the Northwest, and is currently available for lease.  Office B is the The Southwest, and is currently available for lease.  Office C is to the Southeast, and is currently available for lease.  Office D is to the Northeast and is currently leased by Unlimited Ltd.</desc>
+      <exits n='282' ne='283' se='411' sw='409' nw='281' no-exit='message.noexit.10'/>
+   </location>
+
+   <location num='392' flags='b'>
+      <name>John&apos;s Wildwood Pizzeria</name>
+      <desc>John&apos;s Wildwood Pizza is famous throughout the galaxy as the finest pizza served.  Its pizza, and cold draft ale is so good, that the combination of pizza and ale has been copied by most drinking establishments across the galaxy,  The establishment is always open late for hungry traders.</desc>
+      <exits n='328' no-exit='message.noexit.8'/>
+   </location>
+
+   <location num='394'>
+      <name>Edinboro Professional Center Lobby</name>
+      <desc>The Edinboro Professional Center is a low-rise building housing offices of various companies.  The building was designed as a low-rise so that the natural scenic beauty of the planet would remain unspoiled.  The interior reflects a colonial era decor.  The walls are white, and carved pillars are placed throughout.  The floor is grey marble, and your footsteps echo as you walk across the room.</desc>
+      <desc>     To the South is a Grav Tube.  The exit is to the North.</desc>
+      <exits n='330' s='458' in='797' no-exit='message.noexit.10'/>
+   </location>
+
+   <location num='409'>
+      <name>Office - B</name>
+      <desc>This is a simple office.  There are hookups for communication and data services.  The office is available for lease, please see the planet administrator for details.</desc>
+      <exits ne='346' out='200'/>
+   </location>
+
+   <location num='411' flags='b'>
+      <name>S. Morganstern, Llc - Edinboro Branch</name>
+      <desc>You step in to the local branch of the S. Morganstern, Llc corporation.  The room is dominated by a large desk stacked with files and orders.  Behind the desk sits Zarquad,s commanding leather chair with his portrait on the wall behind it.  On the eastern wall is a large display screen providing up to moment information on all of the company&apos;s operations.  Opposite the display is a large painting of a beautiful young lady.  The gold plaque below it indicates that it of someone named &apos;Buttercup.&apos;</desc>
+      <desc>       In front of the desk are three leather chairs surrounding a short table where Zarquad entertains his clients and patrons.  A lush red carpet frames the entertainment area.  In the corner, is a replicator that will make whatever food or beverage he desires.</desc>
+      <exits nw='346' out='200'/>
+   </location>
+
+   <location num='458'>
+      <name>Grav Tube - First Floor</name>
+      <desc>The Grav Tube can take you to the second Floor.  You can go Up to the second floor or North to the main lobby.</desc>
+      <exits n='394' up='282' out='394'/>
+   </location>
+
+   <location num='463'>
+      <name>Mike Onda Beach Park</name>
+      <desc>The waters of Edinboro lake wash up against the white sand of Mike Onda Beach Park.  In the summer months, the park is crowded with residents and tourists as they frolic in the water and enjoy a cool respite from a hot summer day.  On a cool Fall day such as today, the park is quiet and deserted.  But gazing at the view, and the contrasting colors of the foliage, you wonder if perhaps the better time to visit this area is the fall.  Granted, activities such as swimming are not really available, but on the other hand, sometimes you need to just sit, observe, and enjoy a view as glorious as this.</desc>
+      <desc>     The trail goes to the Northwest and Northeast.  There is a picnic area to the South.</desc>
+      <exits ne='337' s='527' nw='333' no-exit='message.noexit.9'/>
+   </location>
+
+   <location num='513' flags='t'>
+      <name>Path to restricted area</name>
+      <desc>This leads to the secret area that Meteu has secretly been building for years.</desc>
+      <exits n='907'/>
+   </location>
+
+   <location num='527' flags='b'>
+      <name>Picnic Area</name>
+      <desc>In a small meadow above the lake, a picnic area has been established.  You can enjoy a leisurely picnic meal here and enjoy the spectacular view of the lake below.  In the center of the lake, you can see a small island.</desc>
+      <exits n='463' no-exit='message.noexit.1'/>
+   </location>
+
+   <location num='797'>
+      <name>Path to restricted area</name>
+      <desc>This leads to the secret area that Meteu has secretly been building for years.</desc>
+      <exits up='513'/>
+   </location>
+
+   <location num='907' flags='t'>
+      <name>Path to restricted area</name>
+      <desc>This leads to the secret area that Meteu has secretly been building for years.</desc>
+      <exits in='1'/>
+   </location>
+
+   <location num='1162' flags='bt'>
+      <name>Meteu&apos;s Bedroom</name>
+      <desc>Meteu&apos;s Bedroom is comfortably furnished with a King Size bed constructed of varnished local woods.  The night stands and dresser of constructed of the same varnished woods.  Covering the bed is a Tartan comforter.  The lighting is subdued allowing one to rest comfortably, but still see.  There is an enterainment console that has every recorded piece of music available, plus all the available holovids.  There are ample pillows on the bed, so it can be used both for sleeping, or when the mood strikes, for working from bed.</desc>
+      <desc>     There is an exit to the Den to the South.</desc>
+      <exits s='1226' no-exit='message.noexit.14'/>
+   </location>
+
+   <location num='1226' flags='bt'>
+      <name>Meteu&apos;s Private Den</name>
+      <desc>Every busy Planet Administrator needs to have a quiet place to themselves to handle the complex tasks of administering a planet.  Meteu is no exception.  Here, Meteu has built a private den of solitude.  Then den has a deep blue carpet.  Against one wall is a brown leather couch that is as comfortable as it looks.  Meteu&apos;s desk is made of deeply polished wood milled from local trees.  The grain has been brought out by a golden stain, and displays deep swirls and contasts across the surface of the desk.  A large data panel has been installed on one wall, and Meteu can monitor all aspects of the planet&apos;s operation.  There is a wet bar here, and a small teleporter in the corner.  In a brass umbrella stand is a gnarled wooden walking stick the Meteu carries as he takes his daily hike around Edinboro Lake.</desc>
+      <desc>     There is a bedroom to the North.</desc>
+      <exits n='1162' s='1290' no-exit='message.noexit.14'/>
+   </location>
+
+   <location num='1241'>
+      <name>Sailboat to Center of Lake</name>
+      <desc>The sailboat leaves the dock and tacks into the wind across the lake.  The bow cuts a path through the smooth glass surface of the water as it ventures forth to its destination.  In the center of the lake is a small island.  A rustic stone cabin is visible in the trees on the island.  The sailboat glides to a halt at a dock and is automatically secured.</desc>
+      <exits out='2073' no-exit='message.noexit.7'/>
+   </location>
+
+   <location num='1243'>
+      <name>Ship Out</name>
+      <desc>The sailboat leaves the dock and tacks into the wind across the lake.  The bow cuts a path through the smooth glass surface of the water as it ventures forth to its destination.   The sailboat glides to a halt at a dock and is automatically secured.</desc>
+      <exits out='337' no-exit='message.noexit.7'/>
+   </location>
+
+   <location num='1290'>
+      <name>Front Porch</name>
+      <desc>This is the front porch for Meteu&apos;s apartment. The porch overlooks a small wooded area with the trees in the middle of changing colors, there are vibrant reds and oranges and even a few green leaves left.</desc>
+      <exits n='1226' out='200'/>
+   </location>
+
+   <location num='1883' flags='bt'>
+      <name>Loft</name>
+      <desc>Above the living area is a small loft.  The loft has a comfortable futon bed, which is covered by a tartan blanket.  On both walls are bookshelves filled with books.  The subject matter of the books is wide ranging and reflecting the eclectic interests of Zard and Sephy.  There are books on Cooking, Japanese Language and History, Politics, Music, Art, and Philosophy.  Laid against the wall is a classical guitar.  On quiet evenings, Zard likes to strum a melody for his bride that bubbles from his soul and is inspired by his love for her.</desc>
+      <exits down='1945' no-exit='message.noexit.6'/>
+   </location>
+
+   <location num='1944' flags='bt'>
+      <name>Sephy&apos;s Studio</name>
+      <desc>Zardoz constructed a small studio for Sephy here.  The studio has windows to the north, west, and south, that give a panoramic view of the lake, and the far shores.  An easel is here with paints and brushes.  Sephy&apos;s art is renowned, and Zardoz had the room constructed to provide a variety of inspirations from which Sephy could create unique landscapes.</desc>
+      <exits e='1945' no-exit='message.noexit.6'/>
+   </location>
+
+   <location num='1945' flags='bt'>
+      <name>Living Room</name>
+      <desc>The Living Room Entryway to the cabin has a high ceiling.  Great oak beams support the roof, and from these beams,  lamps are hung.  The lamps are modern, but constructed in such a way as to give the illusion that they are kerosene lamps.  In fact, the entire cabin, although equiped with all the modern conveniences, gives the impression that it is from a different time, when things were much slower, and easier paced.</desc>
+      <desc>     There is a large window that overlooks the lake.  Comfortable couches are placed so Zard, Sephy, and their friends can sit and relax and enjoy the beautiful view of the lake, and the folliage on the far shore.  There is a loft above, and rooms to the East and West.  The exit to the docks is to the South.</desc>
+      <exits e='1946' s='2009' w='1944' up='1883' no-exit='message.noexit.6'/>
+   </location>
+
+   <location num='1946' flags='bt'>
+      <name>Kitchen and Dining Area</name>
+      <desc>The kitchen is clean and efficient.  The large gas stove has six burners, plus a large wok.  Copper pots and pans hang from hooks above the stove.  The counter tops are polished granite, and the color of the stone matches the grey stone color of the house.</desc>
+      <desc>     In a small corner is a table and two chairs.  The table is bordered on two sides by windows, and Zard and Sephy can enjoy their meals together while gazing out at the view of the lake.  The table is covered with a light blue tablecloth.  On the table in a small crystal vase is a red rose and a note is attached to the vase.  The note reads, &quot;To my lovely wife, The views of a thousand lakes on a thousand worlds in a thousand systems are nothing to the view I have of you, my bride.  The joy I have as I look at you cannot be matched by any wordly vista.  Your adoring husband, Zardoz.&quot;</desc>
+      <exits w='1945' no-exit='message.noexit.6'/>
+   </location>
+
+   <location num='2009'>
+      <name>Path to Zard and Sephy&apos;s Cabin</name>
+      <desc>At the top of the path is a stone cabin with a thatched roof.  The door is made of solid oak.  From the chimney, a wisp of smoke appears.  The pathway is freshly swept,and consists of inlaid stone.  The land on this island was given to Zardoz by Meteu as a wedding present when Zardoz married Sephorin.  Zardoz promptly hired the finest Edinboro craftsman to construct this small vacation home to run away to with his lovely bride.</desc>
+      <desc>     Zardoz and Sephy welcome you. You may go North to the cabin, or South to the docks.</desc>
+      <exits n='1945' s='2073'/>
+   </location>
+
+   <location num='2073'>
+      <name>Dock</name>
+      <desc>The waters of the lake softly wash against the pilings of the dock.  There is a small sailboat here that has the gold dragon seal of the House of Doz emblazoned on its sail.  Across the stern is written &quot;Sephy&apos;s Joy&quot;.  There is a path to the North that leads to a small rustic cabin.</desc>
+      <exits n='2009' in='1243' no-exit='message.noexit.9'/>
+   </location>
+
+</fed2-map>

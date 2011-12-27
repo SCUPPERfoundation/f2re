@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<fed2-map title='Bloodmoon Space' version='11' editor='standard'>
+
+   <location num='67' flags='sp'>
+      <name>Space</name>
+      <desc>To the south is the System Link. the system expands to the south, east, and southwest.</desc>
+      <exits e='68' se='132' s='131'/>
+   </location>
+
+   <location num='68' flags='s'>
+      <name>Empty Space</name>
+      <desc>the system expands out to the west,south, and southwest</desc>
+      <exits e='69' se='133' s='132' sw='131' w='67'/>
+   </location>
+
+   <location num='69' flags='s'>
+      <name>Empty space</name>
+      <desc>the system expands to the east, west, south and southeast</desc>
+      <exits e='70' se='134' s='133' sw='132' w='68'/>
+   </location>
+
+   <location num='70' flags='s'>
+      <name>Empty Space</name>
+      <desc>the system expands to the east, southeast, west, south and southwest.</desc>
+      <exits e='71' se='135' s='134' sw='133' w='69'/>
+   </location>
+
+   <location num='71' flags='s'>
+      <name>Empty space</name>
+      <desc>the system expands to the south, and southwest.</desc>
+      <exits s='135' sw='134' w='70'/>
+   </location>
+
+   <location num='131' flags='slp'>
+      <name>Link</name>
+      <desc>As your ship appears out of the hyper link, far to the east you notice the great Capital of the Dilconia Empire. On behalf of the entire empire &quot;Welcome to Dilconia&quot;. to the north is empty space</desc>
+      <exits n='67' ne='68' e='132' s='195'/>
+   </location>
+
+   <location num='132' flags='s'>
+      <name>Space</name>
+      <desc>As you move further into the sector, the planet to the east grows larger.</desc>
+      <exits n='68' ne='69' e='133' s='196' sw='195' w='131' nw='67'/>
+   </location>
+
+   <location num='133' flags='sp'>
+      <name>Dilconia&apos;s Orbit</name>
+      <desc>Your ship slides into a geostationary orbit. You take in the sheer beauty of the planet far below thru your view screen. You receive a message from the Dilconian Space Station that you&apos;re clear for landing because the planet is off limits to all non Dilconians. There is a small planetorid orbiting far down beyond.</desc>
+      <exits n='69' ne='70' e='134' sw='196' w='132' nw='68' down='197'/>
+   </location>
+
+   <location num='134' flags='s'>
+      <name>Empty space</name>
+      <desc>the system expands to the west, northwest, north, northeast, east, and southeast.</desc>
+      <exits n='70' ne='71' e='135' se='199' s='198' w='133' nw='69'/>
+   </location>
+
+   <location num='135' flags='s'>
+      <name>empty space </name>
+      <desc>the system expands to the west, northwest, north, and south.</desc>
+      <exits n='71' s='199' w='134' nw='70'/>
+   </location>
+
+   <location num='195' flags='s'>
+      <name>Space </name>
+      <desc>the Link is back to the north while the system expands to the northeast.</desc>
+      <exits n='131' ne='132' e='196'/>
+   </location>
+
+   <location num='196' flags='s'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='132' ne='133' w='195'/>
+   </location>
+
+   <location num='197' flags='s'>
+      <name>Space Between Dilconia and Shadowland</name>
+      <desc>Far above you orbits the capital planet, and to the east is the farm world of Shadowland.</desc>
+      <exits e='198' up='133'/>
+   </location>
+
+   <location num='198' flags='sp'>
+      <name>Shadowland Space</name>
+      <desc>You are in orbit above the farm world of shadowland. You notice the large vast green of the groves.Right now the Planet is off limits</desc>
+      <exits n='134' e='199' w='197'/>
+   </location>
+
+   <location num='199' flags='s'>
+      <name>Empty space</name>
+      <desc>the system expands to the northwest, and north.</desc>
+      <exits n='135' w='198' nw='134'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+<event-list version='11'>
+
+ <category name='cafe'>
+
+  <section name='chocs'>
+
+   <event num='1'>
+    <comment>buy chocolate - check cash</comment>
+    <checkstat who='individual' money='20' higher='cafe.chocs.3' equals='cafe.chocs.3' lower='cafe.chocs.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Can&apos;t afford chocs</comment>
+    <message type='single' where='com' who='individual' lo='cafe.chocs.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Can afford chocs</comment>
+    <message type='single' where='com' who='individual' lo='cafe.chocs.2'/>
+    <changestat who='individual' money='-20' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='home' id='obj_caramels'/>
+   </event>
+
+   <event num='4'>
+    <comment>eat caramels</comment>
+    <message type='single' where='com' who='individual' lo='cafe.chocs.3'/>
+    <changestat who='individual' stamina='1' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='food'>
+
+   <event num='1'>
+    <comment>loc 327 - caramel cafe - order sandwich</comment>
+    <message type='single' where='com' who='individual' lo='cafe.food.1'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>order pizza</comment>
+    <message type='single' where='com' who='individual' lo='cafe.food.2'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='fun'>
+
+  <section name='beach'>
+
+   <event num='1'>
+    <comment>loc 783 - caramel smoothy beach - go swimming</comment>
+    <message type='single' where='com' who='individual' lo='fun.beach.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>play volleyball</comment>
+    <message type='single' where='com' who='individual' lo='fun.beach.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='bag'>
+
+   <event num='1'>
+    <comment>open goodie bag</comment>
+    <message type='single' where='com' who='individual' lo='objects.bag.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='party'>
+
+  <section name='hen'>
+
+   <event num='1'>
+    <comment>loc 401 - bachelorette pad - order desserts</comment>
+    <message type='single' where='com' who='room' lo='party.hen.1'/>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>chip n dale</comment>
+    <message type='multi' where='com' who='room' lo='party.hen.2' hi='party.hen.3'/>
+   </event>
+
+  </section>
+
+  <section name='loft'>
+
+   <event num='1'>
+    <comment>loc 337 - honeymooners loft - order wine</comment>
+    <message type='single' where='com' who='room' lo='party.loft.1'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>order strawberries</comment>
+    <message type='single' where='com' who='room' lo='party.loft.2'/>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>loc 339 - order champagne</comment>
+    <message type='single' where='com' who='room' lo='party.loft.3'/>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='4'>
+    <comment>order peaches</comment>
+    <message type='single' where='com' who='room' lo='party.loft.4'/>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='stag'>
+
+   <event num='1'>
+    <comment>loc 403 - bachelor pad - order round</comment>
+    <message type='single' where='com' who='room' lo='party.stag.1'/>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>dancing girls</comment>
+    <message type='multi' where='com' who='room' lo='party.stag.2' hi='party.stag.3'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='tour'>
+
+  <section name='present'>
+
+   <event num='1'>
+    <comment>loc 394 - check where player came from</comment>
+    <checklastloc loc='393' pass='tour.present.2'/>
+    <checklastloc loc='331' pass='tour.present.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Start of tour - give goodie bag</comment>
+    <message type='single' where='com' who='individual' lo='tour.present.1'/>
+    <createobject where='inventory' home-map='home' id='obj_bag'/>
+   </event>
+
+   <event num='3'>
+    <comment>End of tour - give shirt</comment>
+    <message type='single' where='com' who='individual' lo='tour.present.2'/>
+    <createobject where='inventory' home-map='home' id='obj_shirt'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+

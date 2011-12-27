@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<fed2-map title='SuperLand' version='6' editor='standard' from='269' to='Crypton.Crypton Space.333'>
+
+   <location num='0'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='64'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='65'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='269'>
+      <name>Landing Pad</name>
+      <desc>This is the planets Landing Pad</desc>
+      <desc>   Exits are SOUTH</desc>
+      <exits s='333'/>
+   </location>
+
+   <location num='333'>
+      <name>Hallway From Landing Pad</name>
+      <desc>Exits leading SW lead to the exchange, the other exit leads EAST to the Long Corridor</desc>
+      <exits n='269' e='334' sw='396'/>
+   </location>
+
+   <location num='334'>
+      <name>Long Corridor </name>
+      <desc>Exits are EAST which leads to the Long Corridor, The other exit is WEST and that leads to the Landing Pad Hallway</desc>
+      <exits e='335' w='333'/>
+   </location>
+
+   <location num='335'>
+      <name>Long Corridor</name>
+      <desc>Exits WEST and EAST lead to the Long Corridor</desc>
+      <exits e='336' w='334'/>
+   </location>
+
+   <location num='336'>
+      <name>Long Corridor</name>
+      <desc>Exit to the WEST leads to the Long Corridor, the exit to the SOUTH leads to the Hospital Entrance.</desc>
+      <exits s='400' w='335'/>
+   </location>
+
+   <location num='396' flags='e'>
+      <name>SuperLands Exchange</name>
+      <desc>This is the planets Exchange, There is a large crowd here all watching a screen waiting to make money.</desc>
+      <desc>   The exit to the SW leads to the Walkway, the exit NE leads to the Hallway From Landing Pad.</desc>
+      <exits ne='333' sw='459'/>
+   </location>
+
+   <location num='397'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='400'>
+      <name>Hospital Entrance</name>
+      <desc>This is the planets hospital entrance, There are not many people going into the hospital or coming out of the Hospital.</desc>
+      <desc>   The exits are EAST which leads to the Planets Hospital, The Other exit is SOUTH which leads to the rest of the Long Corridor.</desc>
+      <exits n='336' e='401' s='464'/>
+   </location>
+
+   <location num='401' flags='hi'>
+      <name>Planet Hospital</name>
+      <desc>The planets hospital.</desc>
+      <desc>   The only exut is to the WEST it leads out to the Hospitals Entrance.</desc>
+      <exits w='400'/>
+   </location>
+
+   <location num='459'>
+      <name>Walkway</name>
+      <desc>This area is a walkway towards the exchanges relaxation area.</desc>
+      <desc>   The exit to the SW leads to the Mops and Brooms Pub, the exit to the NE leads to Superlands Exchange.</desc>
+      <exits ne='396' sw='522'/>
+   </location>
+
+   <location num='462'>
+      <name>Long Corridor</name>
+      <desc>The exit to the EAST lead to the Long Corridor and the exit leading to the SOUTH lead to the Shopping Centre.</desc>
+      <exits e='463' s='526'/>
+   </location>
+
+   <location num='463'>
+      <name>Long Corridor</name>
+      <desc>The exits are to the WEST and EAST they both lead to the Long Corridor.</desc>
+      <exits e='464' w='462'/>
+   </location>
+
+   <location num='464'>
+      <name>Long Corridor</name>
+      <desc>The exit NORTH leads to the Hospitals Entrance, the exit to the WEST lead to the Long Corridor.</desc>
+      <exits n='400' w='463'/>
+   </location>
+
+   <location num='522' flags='b'>
+      <name>The Mops And Brooms Pub</name>
+      <desc>This place is for all beings to come and relax after a long hard day of being in the Exchanges.</desc>
+      <desc>   The exit to the NE leads to the walkway.</desc>
+      <exits ne='459'/>
+   </location>
+
+   <location num='526'>
+      <name>Planets Shopping Centre</name>
+      <desc>This is the planets Shopping Centre.</desc>
+      <desc>   The Exit to the SW and SE lead to the Shopping Centre.</desc>
+      <exits n='462' se='591' sw='589'/>
+   </location>
+
+   <location num='588' flags='b'>
+      <name>Shopping Centre&apos;s Cafe</name>
+      <desc>This Cafe is mostly used by people shopping in the Shopping Centre.</desc>
+      <desc>   The exit to the WEST leads to the Shopping Centre.</desc>
+      <exits e='589'/>
+   </location>
+
+   <location num='589'>
+      <name>Shopping Centre</name>
+      <desc>The exit to the WEST leads to the Shopping Centres Cafe, the other exits to the NE and SW lead to the Shopping Centre.</desc>
+      <exits ne='526' sw='652' w='588'/>
+   </location>
+
+   <location num='591'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the NW and SE lead to the Shopping Centre and the exit to the EAST leads to the Shipyard.</desc>
+      <exits e='592' se='656' nw='526'/>
+   </location>
+
+   <location num='592' flags='y'>
+      <name>Shipyard</name>
+      <desc>This is where you can buy your ship from.</desc>
+      <exits w='591'/>
+   </location>
+
+   <location num='652'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the NE and SW lead to the Shopping Centre.</desc>
+      <exits ne='589' sw='715'/>
+   </location>
+
+   <location num='656'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the NE and SW lead to the Shopping Centre.</desc>
+      <exits se='721' nw='591'/>
+   </location>
+
+   <location num='715'>
+      <name>Shopping Centre</name>
+      <desc>The exit to the NE leads to the Shopping Centre and the exit to the EAST leads to the Shopping Centre.</desc>
+      <exits ne='652' e='716'/>
+   </location>
+
+   <location num='716'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the WEST and EAST lead to the Shopping Centre.</desc>
+      <exits e='717' w='715'/>
+   </location>
+
+   <location num='717'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the WEST and EAST lead to the Shopping Centre.</desc>
+      <exits e='718' w='716'/>
+   </location>
+
+   <location num='718'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the WEST and EAST lead to the Shopping Centre.</desc>
+      <exits e='719' w='717'/>
+   </location>
+
+   <location num='719'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the WEST and EAST lead to the Shopping Centre.</desc>
+      <exits e='720' w='718'/>
+   </location>
+
+   <location num='720'>
+      <name>Shopping Centre</name>
+      <desc>The exits to the WEST and EAST lead to the Shopping Centre.</desc>
+      <exits e='721' w='719'/>
+   </location>
+
+   <location num='721'>
+      <name>Shopping Centre</name>
+      <desc>The exit to the WEST lead to the Shopping Centre and the exit to the North Lead to the shopping Centre.</desc>
+      <exits w='720' nw='656'/>
+   </location>
+
+</fed2-map>

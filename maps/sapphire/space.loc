@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fed2-map title='Sapphire Space' version='1.00' editor='standard'>
+
+   <location num='202' flags='slp'>
+      <name>Sapphire Link</name>
+      <desc>   Your ship slows to a crawl as the hyperspace jump in completed. Southeast lies a clear path to Altaria and you narrowly miss being struck by a Harrier as it cruises past head for the planet&apos;s large  moon.</desc>
+      <exits se='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='267' flags='sp'>
+      <name>Altaria Orbit</name>
+      <desc>   From this point you can see the blue world of Altaria, the home of Kingman. All are welcome here but must be warned that there is one Death Location on the planet. It&apos;s clearly marked so please be careful as you venture forth to explore the planet.</desc>
+      <desc>   You may notice that many descriptions may seem incomplete and paths lead to dead ends. Altaria was originally designed as an elaborate puzzle in Classic Fed and the current omissions are due to lack of space and the need for objects and events to fully discover their meanings. Don&apos;t want to give away too much before they can be implemented. They are already in the works so be patient as we wait for new fun stuff to add and for me to learn how to use them.</desc>
+      <exits nw='202' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>

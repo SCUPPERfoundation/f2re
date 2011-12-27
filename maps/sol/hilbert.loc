@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<fed2-map title='hilbert' version='1.00'>
+
+   <location num='266' flags='s'>
+      <name>Snark orbit</name>
+      <desc>   Beneath you lies the seared and blackened asteroid known as Snark. Your instruments make it clear that it is far from being uninhabited, though!</desc>
+      <exits n='394' ne='395' e='459' se='331' s='330' sw='332' w='269' nw='461'/>
+   </location>
+
+   <location num='268' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   The space around you is permeated with a strange greenish-blue glow. Your instruments suggest that you are looking at the residual tachyon radiation caused by the creation of neutron/anti-neutron pairs out of nothingness. </desc>
+      <desc>   You are suitably awed by this revelation.</desc>
+      <exits n='460' ne='461' e='269' se='330' s='332' sw='331' w='459' nw='395'/>
+   </location>
+
+   <location num='269' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   You find the green-blue glow unsettling, but a flicker of your mass-magnetometer indicates the possibility of something to the east of your present position.</desc>
+      <exits n='461' ne='459' e='266' se='331' s='330' sw='332' w='268' nw='460'/>
+   </location>
+
+   <location num='330' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   You feel like you are on the edge of nowhere. Angrily you cut in the filters to remove the flickering light from outside.</desc>
+      <exits n='266' ne='459' e='331' se='395' s='394' sw='397' w='332' nw='269'/>
+   </location>
+
+   <location num='331' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   You are flying through Hilbert space by the seat of your pants - none of your instruments are making any sense at all.</desc>
+      <exits n='459' ne='268' e='332' se='396' s='395' sw='394' w='330' nw='266'/>
+   </location>
+
+   <location num='332' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   The all pervading greenish-blue light seems to be affecting your sense of direction. You are beginning to be worried about whether you are flying round in circles.</desc>
+      <exits n='268' ne='269' e='330' se='397' s='396' sw='395' w='331' nw='459'/>
+   </location>
+
+   <location num='394' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   You wish that you were out of this blue-green nightmare, and safely back in normal space.</desc>
+      <exits n='330' ne='331' e='395' se='459' s='266' sw='268' w='397' nw='332'/>
+   </location>
+
+   <location num='395' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   Space here is curiously striated. You have no idea what it means as bands of green and blue march past your window in weird, unfathomable sequences.</desc>
+      <exits n='331' ne='332' e='396' se='460' s='459' sw='266' w='394' nw='330'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   The space around you seems to break up into a jumble of black patches and bright green blotches - all superimposed on a blue-green striated background.</desc>
+      <exits n='332' ne='330' e='397' se='461' s='460' sw='459' w='395' nw='331'/>
+   </location>
+
+   <location num='397' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   You are drifting in an interminable sea of blue-green light. You find it very disorienting!</desc>
+      <exits n='330' ne='331' e='394' se='459' s='461' sw='460' w='396' nw='332'/>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   Looking at the viewscreen - a random seeming pattern of blues and greens - you start to feel spacesick...</desc>
+      <exits n='395' ne='396' e='460' se='268' s='331' sw='269' w='266' nw='394'/>
+   </location>
+
+   <location num='460' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   Green flakes seem to drift past - though your instruments insist that there is nothing there - jagged blue pinpoints pulse on the screen. Your ship seems to crawl through the sector...</desc>
+      <exits n='396' ne='397' e='461' se='269' s='268' sw='331' w='459' nw='395'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Hilbert space</name>
+      <desc>   This sector of Hilbert space seems relatively quiet. The greenish-blue glow has faded to a soft velvety background through which your ship moves smoothly.</desc>
+      <exits n='397' ne='394' e='459' se='266' s='269' sw='268' w='460' nw='396'/>
+   </location>
+
+</fed2-map>

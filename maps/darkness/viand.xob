@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+<object-list version='1' editor='Version 1.37'>
+   <object type='static' start='265' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>americanbutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='329' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>cheddarbutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='73' visibility='0' size='1' weight='1' flags='i'>
+      <name>colby</name>
+      <id>cheese1</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.1'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='0' size='1' weight='1' flags='i'>
+      <name>fondue</name>
+      <id>cheese10</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.10'></vocab>
+   </object>
+
+   <object type='static' start='137' visibility='0' size='1' weight='1' flags='i'>
+      <name>monterey jack</name>
+      <id>cheese2</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.2'></vocab>
+   </object>
+
+   <object type='static' start='201' visibility='0' size='1' weight='1' flags='i'>
+      <name>pepperjack</name>
+      <id>cheese3</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.3'></vocab>
+   </object>
+
+   <object type='static' start='265' visibility='0' size='1' weight='1' flags='i'>
+      <name>american</name>
+      <id>cheese4</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.4'></vocab>
+   </object>
+
+   <object type='static' start='329' visibility='0' size='1' weight='1' flags='i'>
+      <name>cheddar</name>
+      <id>cheese5</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.5'></vocab>
+   </object>
+
+   <object type='static' start='393' visibility='0' size='1' weight='1' flags='i'>
+      <name>gouda</name>
+      <id>cheese6</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.6'></vocab>
+   </object>
+
+   <object type='static' start='457' visibility='0' size='1' weight='1' flags='i'>
+      <name>mozzarella</name>
+      <id>cheese7</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.7'></vocab>
+   </object>
+
+   <object type='static' start='200' visibility='0' size='1' weight='1' flags='i'>
+      <name>swiss</name>
+      <id>cheese8</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.8'></vocab>
+   </object>
+
+   <object type='static' start='328' visibility='0' size='1' weight='1' flags='i'>
+      <name>provolone</name>
+      <id>cheese9</id>
+      <desc>You are looking at some of the finest cheese you have ever seen.</desc>
+      <vocab cmd='buy' event='food.cheese.9'></vocab>
+   </object>
+
+   <object type='static' start='73' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>colbybutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>foyerbutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='393' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>goudabutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='137' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>montereyjackbutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='457' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>mozzarellabutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+   <object type='static' start='201' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>pepperjackbutton</id>
+      <desc>You are looking at a big red button with white letters on it that read &quot;PUSH ME&quot;.</desc>
+      <vocab cmd='push' event='moves.button.9'></vocab>
+   </object>
+
+</object-list>
+

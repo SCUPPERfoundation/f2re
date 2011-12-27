@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='104'>
+
+   <object type='static' start='526' visibility='0' size='1' weight='1' flags='i'>
+      <name>Celestial Armamentarium</name>
+      <id>obj_globe</id>
+      <desc>The crystal globe seems to hold all of space; within it float stars and planets. It depicts all the nearby stars, and their positions at any time you choose to specify. Native to Aerlith.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='100' size='1' weight='1' flags='i'>
+      <name>Arachnofiber Uniform</name>
+      <id>obj_uniform</id>
+      <desc>Produced exclusively for the CosaNostra Pizza Syndicate, the arachnofiber uniform combines incredible protection with great comfort. It defies most energy and projectile weapons with ease. It dates to the early Interregnum.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='100' size='1' weight='1' flags='i'>
+      <name>Jet Propulsion Golf Club</name>
+      <id>obj_golf</id>
+      <desc>Awarded a patent on late 20th century Earth, this is a golf club for impelling a golf ball further with thrust force assist. Used the same physics that pushed a jet fighter to 600 mph in Earth atmosphere.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='100' size='1' weight='1' flags='d'>
+      <name>Gravity Effect Paper</name>
+      <id>obj_paper</id>
+      <desc>Under special conditions (Meissner-effect levitation in a high frequency magnetic field and rapid rotation) this superconducting paper was found to produce a weak shielding of the gravitational field. See EG entry for Podkletno.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='100' size='1' weight='1' flags='i'>
+      <name>Orgone box</name>
+      <id>obj_box</id>
+      <desc>Invented by Wilhelm Reich, its function was to absorb orgone (life force energy) out of the atmosphere and concentrate it for directed use.</desc>
+   </object>
+
+   <object type='static' start='518' visibility='100' size='1' weight='1' flags='i'>
+      <name>card</name>
+      <id>obj_card</id>
+      <desc>You see a grubby white card tacked to the wall next to a collection of tiny framed paintings. The scrawled writing is blurred, peering close you decipher the message, "Small French Painters".</desc>
+   </object>
+
+   <object type='static' start='518' visibility='100' size='1' weight='1' flags='d'>
+      <name>scrolls</name>
+      <id>obj_scrolls</id>
+      <desc>More than a dozen ancient scrolls are precariously piled in a heap. Some spill out across the table, some boast the remnants of wax seals and ribbon. None seem to be in any language you can read.</desc>
+   </object>
+
+   <object type='static' start='518' visibility='100' size='1' weight='1' flags='i'>
+      <name>crystal</name>
+      <id>obj_diamond</id>
+      <desc>A great diamond, of an irregular, nine-sided, 126-facet double rose cut, light yellow with slight green overtones is balanced between a set of diminutive pressor beams.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='100' size='1' weight='1' flags='i'>
+      <name>globe</name>
+      <id>obj_globe1</id>
+      <desc>The Celestial Armamentarium seems to hold all of space; within it float stars and planets. It depicts all the nearby stars, and their positions at any time you choose to specify.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='0' size='1' weight='1'>
+      <name>Uniform</name>
+      <id>obj_uniform1</id>
+      <desc>Produced exclusively for the CosaNostra Pizza Syndicate, the arachnofiber uniform combines incredible protection with great comfort. It defies most energy and projectile weapons with ease. It dates to the early Interregnum.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='0' size='1' weight='1'>
+      <name>Club</name>
+      <id>obj_golf1</id>
+      <desc>Awarded a patent on late 20th century Earth, this is a golf club for impelling a golf ball further with thrust force assist. Used the same physics that pushed a jet fighter to 600 mph in Earth atmosphere.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='0' size='1' weight='1'>
+      <name>Golf Club</name>
+      <id>obj_golf2</id>
+      <desc>Awarded a patent on late 20th century Earth, this is a golf club for impelling a golf ball further with thrust force assist. Used the same physics that pushed a jet fighter to 600 mph in Earth atmosphere.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='0' size='1' weight='1'>
+      <name>Paper</name>
+      <id>obj_paper1</id>
+      <desc>Under special conditions (Meissner-effect levitation in a high frequency magnetic field and rapid rotation) this superconducting paper was found to produce a weak shielding of the gravitational field. See EG entry for Podkletno.</desc>
+   </object>
+
+   <object type='static' start='526' visibility='0' size='1' weight='1'>
+      <name>box</name>
+      <id>obj_box1</id>
+      <desc>Invented by Wilhelm Reich, its function was to absorb orgone (life force energy) out of the atmosphere and concentrate it for directed use.</desc>
+   </object>
+
+   <object type='static' start='461' visibility='100' size='1' weight='1' flags='i'>
+      <name>Wasp</name>
+      <id>obj_wasp</id>
+      <desc>The Arcturan Wasp is over 7 feet tall; its head and body black with yellow and white stripes; body fairly stout; wings smoky gray. They are noted for their aggressive temper and grouchiness.</desc>
+   </object>
+
+   <object type='static' start='453' visibility='100' size='1' weight='1' flags='i'>
+      <name>moosehead</name>
+      <id>obj_moose</id>
+      <desc>You see a large, slightly moth-eaten, stuffed moosehead with enormous spreading antlers hanging on the wall. The glass eyes swivel to stare at you.</desc>
+   </object>
+
+   <object type='static' start='453' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>Large, overstuffed sandwiches are the food on offer.</desc>
+      <vocab cmd='buy' event='food.knobs.1'></vocab>
+   </object>
+
+   <object type='static' start='453' visibility='100' size='1' weight='1' flags='i'>
+      <name>table</name>
+      <id>obj_table</id>
+      <desc>You look carefully at the battered old table. The wood is almost completely covered with grafitti carved into it over many decades. You wonder if you have anything that could carve your own momento into the dark surface.</desc>
+      <vocab cmd='carve' event='charms.charms.1'></vocab>
+      <vocab cmd='laser' event='charms.charms.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='st'>
+      <name>doogmints</name>
+      <id>obj_1flower</id>
+      <desc>A shuttlecock-like coroot holds an aquamarine pucore in its center. A neon pink navelipe crowns its tip. A thin black ring floating just above the pucore is called oracling. It is held in situ by a weak electromagnetic field.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='st'>
+      <name>crialis</name>
+      <id>obj_2flower</id>
+      <desc>A silence-scented spacebloom, crialis diligently collects and processes matter that is turned into ferzele, the red spinach tinged offspring of the mustard family. A complex snowflake composed of six identical units.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='st'>
+      <name>zippinia</name>
+      <id>obj_3flower</id>
+      <desc>A unique spacebloom of erratic intentions, none of which are known. A favorite of kids and neophyte magicians universe-wide, zippinia can transform itself into a tasty blurango.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='st'>
+      <name>koulekouli</name>
+      <id>obj_4flower</id>
+      <desc>A perennial favourite at floral shows, admired for its perfect shape and unique scent. Hunted for its library content. A rule-structured, perfectly symmetrical cluster of red curantloopz and blue or purple pilkos.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='st'>
+      <name>kubiko</name>
+      <id>obj_5flower</id>
+      <desc>Deep space faring workhorse. Unassuming and selfless, kubiko is the only spacebloom capable of carrying seedlets of other spaceblooms to distant regions. Quadriclover-shaped frame with four matrigon solpans.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='st'>
+      <name>elpae</name>
+      <id>obj_6flower</id>
+      <desc>Sapid and rapid. Elpae is the fastest digital bioprocessor yet is full of flavor. Its antenna tips hide self-adjusting sweet nothings, desired by half of the population everywhere.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='static' start='524' visibility='0' size='1' weight='1'>
+      <name>spacebloom</name>
+      <id>obj_flower</id>
+      <desc>You peer closely at the tray of flowering spaceblooms. Favourite of floral artists and tourists; their pleasant aroma is the base for multiChannel fragrances. A single spacebloom flower may be bought here for 100 IG.</desc>
+      <vocab cmd='buy' event='objects.flower.1'></vocab>
+      <vocab cmd='pick' event='objects.flower.1'></vocab>
+      <vocab cmd='pluck' event='objects.flower.1'></vocab>
+      <vocab cmd='get' event='objects.flower.1'></vocab>
+   </object>
+
+   <object type='static' start='524' visibility='100' size='1' weight='1' flags='d'>
+      <name>spaceblooms</name>
+      <id>obj_flower1</id>
+      <desc>You peer closely at the tray of flowering spaceblooms. Favourite of floral artists and tourists; their pleasant aroma is the base for multiChannel fragrances. A single spacebloom flower may be bought here for 100 IG.</desc>
+      <vocab cmd='get' event='objects.flower.1'></vocab>
+      <vocab cmd='pick' event='objects.flower.1'></vocab>
+      <vocab cmd='pluck' event='objects.flower.1'></vocab>
+      <vocab cmd='buy' event='objects.flower.1'></vocab>
+   </object>
+
+   <object type='static' start='453' visibility='0' size='1' weight='1'>
+      <name>momento</name>
+      <id>obj_table1</id>
+      <desc>You look carefully at the battered old table. The wood is almost completely covered with grafitti carved into it over many decades. You wonder if you have anything that could carve your own momento into the dark surface.</desc>
+      <vocab cmd='carve' event='charms.charms.1'></vocab>
+      <vocab cmd='laser' event='charms.charms.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>mug</name>
+      <id>obj_1mug</id>
+      <desc>You gaze at the capacious ceramic mug tied with a bright blue ribbon emblazoned, "Sumatra State Agricultural Fair - First Prize Winner". Freya's Quiz is scribbled over the lettering in glittering gold magic marker.</desc>
+      <vocab cmd='sip' event='prize.quiz.2'></vocab>
+   </object>
+
+   <object type='static' start='518' visibility='0' size='1' weight='1'>
+      <name>carton</name>
+      <id>obj_1carton</id>
+      <desc>You see a battered brown cardboard carton overflowing with old flotsam and jetsam from Freya's farm.</desc>
+      <vocab cmd='quizone' event='prize.quiz.1'></vocab>
+      <vocab cmd='quiztwo' event='prize.quiz.3'></vocab>
+      <vocab cmd='quizthree' event='prize.quiz.6'></vocab>
+      <vocab cmd='quizradio' event='prize.quiz.7'></vocab>
+      <vocab cmd='quizpurse' event='prize.quiz.8'></vocab>
+      <vocab cmd='quizice' event='prize.quiz.9'></vocab>
+      <vocab cmd='quizturkey' event='prize.quiz.10'></vocab>
+      <vocab cmd='quizsuit' event='prize.suit.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ds'>
+      <name>golden escargot</name>
+      <id>obj_1snail</id>
+      <desc>A small gold starburst dangles from a blue satin ribbon. Its central shield is blazoned with a field of azure and an escargot d'or couchant.</desc>
+      <vocab cmd='pin' event='prize.quiz.4'></vocab>
+      <vocab cmd='unpin' event='prize.quiz.5'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>DAB4D</name>
+      <id>obj_1radio</id>
+      <desc>Contained within a small, sleek black case, this fourth dimension portable digital audio broadcast receiver allows dedicated reception of early atomic age music transmissions.</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>silk purse</name>
+      <id>obj_1purse</id>
+      <desc>A fantasy of delicate silver mesh knit into the capacious shape of a sow's ear. Perfect for those unexpected shopping trips.</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>icicle</name>
+      <id>obj_1icicle</id>
+      <desc>A slender, fragile spike of twirled crystal hangs from a loop of silver thread. Smooth and shiny as frozen rain, it catches and prizmatically scintillates light. Etched into its heart in miniscule letters is, "Fed2 Christmas 2008"</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>wishbone</name>
+      <id>obj_1wish</id>
+      <desc>A small gold charm fashioned by the craftsmen of Brass in the shape of a turkey's wishbone. It hangs on a delicate silksteel thread.</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>bat</name>
+      <id>obj_1bat</id>
+      <desc>You see a tiny vampire bat carved from obsidion. Its ruby eyes glow with the light of concealed LEDs.</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ds'>
+      <name>antiradiation suit</name>
+      <id>obj_1suit</id>
+      <desc>Hey, is this an antiradiation suit? It's really shiny, looks like some technological gadgets are sewn into it, and could probably survive the cold vacuum of space! Maybe its why you never pick up anyone at bars.</desc>
+   </object>
+
+</object-list>

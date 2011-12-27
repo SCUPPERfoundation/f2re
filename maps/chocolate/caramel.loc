@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<fed2-map title='Caramel' version='34' editor='standard' from='328' to='Chocolate.Chocolate Space.395'>
+
+   <location num='0' flags='kt'>
+      <name>storeroom</name>
+      <desc>needed storeroom</desc>
+   </location>
+
+   <location num='198'>
+      <name>Hotel Elevator</name>
+      <desc>The doors close and there is soft music playing. &apos;Before we can go any where you have to tell me where we are going&apos; says your Caramelien bell hop. &apos;If you want to go straight to your room then we go &apos;UP&apos; and Your room will be to the &apos;South&apos; if you want to go get a massage, or a pedicure then we must go &apos;DOWN&apos; he returns to humming alot with the music while you decide.</desc>
+      <desc>(Out will take you back to the hotel lobby)</desc>
+      <exits up='466' down='515' out='263' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='202' flags='r'>
+      <name>Caramel Ship Repairs</name>
+      <desc>Not unlike the room before you this room is also very clean, You see a handful of Carameliens lounging around, two seem to be finishing up an oil change on an old rusted out ship. Some are playing cards in the back corner. The young caramelien from before walks up to you. &apos;Aint much need for us here in the repair shop, YET. Peoples want to buy new stead of fixin&apos; what they already gots&apos; He shakes his head, but his look of disappointment quickly disappears and his smile flashes acrossed his face &apos;Alright by me, gives me more time to work on my ship&apos; he nods to the rust bucket they just finished the change on. You raise your eye brows and then flash a quick smile, before saying goodbye and heading back the way you came. -SW-</desc>
+      <exits sw='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263'>
+      <name>Caramel Hotel Reception </name>
+      <desc>As you enter you see before you a large caramel fountain, Just beond that is the reception desk where you see guests checking in and out of the Caramel Hotel. A Caramelien bell hop seemingly popping out of nowhere offers his assistance with any lugage as you unknowingly follow him to the check in counter. You really hadn&apos;t planned on staying the night, but when you over here the couple next to you talking about their wonderful massage they received you decide that you are feeling a little tense. After checking yourself in, you follow the bell hop to the elevator to which he says you must simply get &apos;IN&apos; to go to the rest of the hotel.</desc>
+      <exits se='328' in='198' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='265' flags='y'>
+      <name>Caramel Shipyard</name>
+      <desc>The room is small, Just a counter and a computer, it&apos;s plain but clean, looking at the computer screen you see that it says to type &apos;BUY SHIP&apos; to start your ship selection. Hmm, looks easy enough right?</desc>
+      <desc>&apos;Make sure ya know what ya want before you start, she doesn&apos;t like to cancel an order once ya start&apos; comes a voice seemingly from no where, you look up from the computer screen and see a young Caramelien boy standing behind the counter wiping his hands on a dirty rag. He smiles seeing the look of fright on your face, &apos;Sorry, didn&apos;t mean to scare ya, saw ya standin there looking at that screen when I came out of the back, that there computer is what ya need if your buying a new ship, if&apos;n ya need one fixed come this&apos;n way -NE- and we&apos;ll take a look.&apos;</desc>
+      <desc>SW take you to the landing pad.</desc>
+      <exits ne='202' sw='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Caramel Cafe</name>
+      <desc>The room you walk into is small and simple, couple small round tables each with two chairs, booths line the walls, a small counter toward the back of the store. A large menu acrossed the back wall lists every thing for sale here at the cafe, as you read you realize you are much more hungery then you thought. Glancing down you see a small sign with today&apos;s special it reads:</desc>
+      <desc>Large slice peanut butter / M &amp; M pizza and medium drink half price</desc>
+      <desc>Ham and Swiss sandwich, carameled apple slices and small drink save 2ig!</desc>
+      <desc>You may also &apos;Buy Chocolates&apos; And take a treat home for yourself or as a gift! Special priced today!</desc>
+      <desc>You notice the Caramelien Cafe Cashier standing there with a pleasant smile on her face</desc>
+      <desc>&apos;Take your time, it&apos;s alot to take in&apos; She says to you and goes back to wiping down the counter.</desc>
+      <desc>(Exit is to the East)</desc>
+      <exits e='328' out='530' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='328'>
+      <name>Landing Pad for the planet Caramel</name>
+      <desc>Welcome to the planet Caramel! Home of the Carameliens. This is where all the caramel treats for the galaxy are made. You can already smell the delicious treats being made to your SE.</desc>
+      <desc>Before you stands a statue of a maiden made completely out of caramel, makes you almost want to steal a finger but you decide better of it. Turning around you look out the wall sized window and see a caramelfall flowing down past the window, you bump the window watching it flow past you..</desc>
+      <desc>Turning you see a sign with the direction which reads as follows...</desc>
+      <desc>NE = Shipyard</desc>
+      <desc>East = Exchange</desc>
+      <desc>SE = Tour</desc>
+      <desc>SW = Hospital</desc>
+      <desc>West = Cafe</desc>
+      <exits ne='265' e='329' se='393' sw='391' w='327' nw='263' no-exit='moves.noexit.1'/>
+      <events enter='Caramel' no-exit='328' in-room='Chocolate.ChocolateSpace.329'/>
+   </location>
+
+   <location num='329' flags='e'>
+      <name>Caramel Exchange</name>
+      <desc>You see a Caramelien Stewardess standing next to the doorway, She greets you as you enter.</desc>
+      <desc>&apos;Welcome! Here at the Caramel Exchange there are varieties of cultural comodities.  You will find many to suit your taste.  All are priced right to profit you as you trade. Remember buy low and sell high.&apos; She says with a smile.</desc>
+      <desc>   The exit back to the landing pad is West.</desc>
+      <exits w='328' in='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331'>
+      <name>Tour of Caramel&apos;s Caramel Factory</name>
+      <desc>Once again your friendly Caramelien Stewardess&apos; voice comes over the speakers above directing your attention to the window in front of you.</desc>
+      <desc>&apos;This is the last phase of our individually wrapped caramels, In this part of the factory the caramels are wrapped, checked and packaged. Then they are shipped all over the galaxy for sale in most cafe&apos;s! And that concludes this tour, thank you from all of us here on Caramel and if you will all proceed to the SW we have more gifts for you back in the Tour Meeting Room&apos;  She smiles as you pass her on your way to back to the Tour Meeting Room, you then realize that you still have a caramel in your goodie bag! As you slip it into your mouth you decide you should stop by the cafe and pick up some more before you leave.</desc>
+      <exits sw='394' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='337' flags='b'>
+      <name>Honeymooners Loft </name>
+      <desc>The room is white, Large windows are covered by even larger velet drapes, a large heart shaped bed to the far wall, a heart shaped hut tub in the middle of the room.. Wine and fresh strawberries are on a cart next to the bed, And with a simple call  you can place an &apos;order&apos; for more. A large DO NOT DISTURB sign in easy reach to hang on the door..</desc>
+      <exits e='338' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='338'>
+      <name>Caramel&apos;s Rest Stop Hallway</name>
+      <desc>Here is the end of the hallway, but not the end to the doors, Both doors East and West are labeled &apos;Honeymooners Loft&apos; guess it&apos;s time to head back South and find your room, Or give up on finding your room for now and head &apos;Down&apos; to the Beach.</desc>
+      <exits e='339' s='402' w='337' down='783' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='339' flags='b'>
+      <name>Honeymooners Loft</name>
+      <desc>For those that aren&apos;t all into the lovey dovey decore of a honeymoon suite (or those that come from more of a jungle type home) this room is perfect.. Walls are painted to look as green jungle vines, carpet also a green, a waterfall flows from the wall into a large spa below it. A tray with champagne and caramel covered peaches sit next to the spa along with a instruction card on how to &apos;order&apos; more. The bed is raise off the floor a bit more then normal and is built to look as though it were a tree house. You notice the DO NOT DISTURB sign close to the door......</desc>
+      <exits w='338' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='391' flags='hi'>
+      <name>Caramel Clinic</name>
+      <desc>As you enter the Caramel Clinic you see Caramelien Nurses running from here to there, This sure seems to be a busy place today! A man on a gurney is wheeled past you, one hand clenching this stomach the other he streches out to you, &apos;Help me&apos; he moans before this eyes close tight and he is pushed forward to a room in the back. You hear a voice next to you, &apos;He&apos;ll never learn&apos;. When you look next to you a Caramelien Nurse is standing there looking at the door the man on the gurney was just pushed threw. &apos;What do you mean he&apos;ll never learn? He needs some help, why aren&apos;t you helping him?!&apos; Your anger brings a smile to her face &apos;This is his third time here this week, he ate to many sweets at the cafe..... AGAIN&apos; Smile still on her face she goes back to her tasks. Deciding this place is way to busy to see any more then you have you turn back to the NE to leave, you notice a sign by the door &apos;Remember to REINSURE&apos; it says..</desc>
+      <exits ne='328' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='393'>
+      <name>Caramel Factory Tour</name>
+      <desc>A crowded room filled with people in line for the tour of Caramel&apos;s Caramel Company. The room is so full you can&apos;t see the walls around you or the floor besides the square you stand on, which happens to be blue. You hear happy children&apos;s voices, talking loudly with one another, and you see a Caramelien Stewardess bring a new balloon through the crowd to a girl who&apos;s balloon floated to the celing. The crowd starts moving toward the opening to the E, samples of caramels covered in chocolate are being handed out as you go on to the next room.</desc>
+      <exits e='394' nw='328' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='394'>
+      <name>Tour Meeting Room</name>
+      <desc>Your Caramelien Stewardess is standing beside the door as you file into the room behind the crowd you hear her voice coming over the speakers above your head.</desc>
+      <desc>&apos;This is the first stop on our tour, If you are here to begin the tour please exit to your SE, if you have just finished the tour please exit to your W and thank you for joining us on our tour today&apos;</desc>
+      <exits se='459' w='393' no-exit='moves.noexit.3'/>
+      <events in-room='tour.present.1'/>
+   </location>
+
+   <location num='395'>
+      <name>QM&apos;s Office</name>
+      <desc>This is where QM does all the final paperwork, pays bills, employees, etc. Nothing fun about this room at all, White walls, oak desk a mess with papers, oak bookshelves overflowing with binders of paperwork, but the one plus is that it is quiet. Thank God!</desc>
+      <exits down='1290' out='329' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='396'>
+      <name>Tour of Caramel&apos;s Caramel Factory</name>
+      <desc>Your friendly Caramelien Stewardess&apos; voice comes over the speakers again.</desc>
+      <desc>&apos;Here you will see our Caramel specialists taking the caramel&apos;s from their cooler and inspecting them for their shape, size and over all quality. Then they move on down the different lines to be wrapped or coated, Lets move onto our last room of the tour to the NW&apos;</desc>
+      <exits nw='331' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='401'>
+      <name>Last Night Without Him Bachelorette Pad</name>
+      <desc>Here you see every dessert known to man kind, Chocolate Caramel Cakes, Cheese Cakes, to little truffles. A large screen tv aginist the wall and next to that a movie rack with every &apos;Chick Flick&apos; title known upon it&apos;s shelves. Along with a stack of tissue boxes. A wardrobe full of clothes that any female would love to own. Of course there is a bar here too. And the phone number for the &apos;Chip n&apos; Dale dancers&apos; is on speed dial.</desc>
+      <exits e='402' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='402'>
+      <name>Caramel&apos;s Rest Stop Hallway</name>
+      <desc>To your East you see a door labeled &apos;Last Night Without Her Bachelor Pad&apos; you can&apos;t help but smile when you turn to see the door to your West is labeled &apos;Last Night Without Him Bachelorette Pad&apos;  That&apos;s a way to keep tabs on your soon to be other half while still having a good time you think to yourself before moving on to the North.</desc>
+      <exits n='338' e='403' s='466' w='401' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='403' flags='b'>
+      <name>Last Night Without Her Bachelor Pad</name>
+      <desc>Before you stands a HUGE screen tv, playing the last football game, a full bar almost within reaching from the massive recliner couch, fully stocked with every type of beer known to man (or beast) a basket ball hoop on the opposite side of the room from the tv. Two poles from floor to ceiling are in the center of the room, but not in front of the tv... Wonder what those are for..... Oh well.....</desc>
+      <desc>Might as well grab a drink while your here</desc>
+      <exits w='402' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='459'>
+      <name>Tour of Caramel&apos;s Caramel Factory</name>
+      <desc>You hear your friendly Caramelien Stewardess&apos; voice over the speakers again and the crowd hushes.</desc>
+      <desc>&apos;Infront of you, you see where the Caramelfall ends pouring itself into different sorted containers as they move past on there way to be made into the various treats we make here on Caramel, Unfortunately we can not see every thing made on this tour, but we will see our delicious soft caramel squares being made, and in your goodie bag you will find three of these caramels one for each of room on the tour. Please enjoy one as we move onto the next room to our NE.&apos;</desc>
+      <exits ne='396' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='466'>
+      <name>Caramel&apos;s Rest Stop Hallway</name>
+      <desc>As you exit the elevator you see that you are in a hallway with many doors. You chose to stay in the &apos;Singles get away room&apos; but there are many other doors from here to there as the bell hop said it was the last door to the &apos;WEST&apos;</desc>
+      <desc>but he never said if you go North or South, guess you&apos;ll have to just look around.</desc>
+      <exits n='402' s='530' down='198' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='515'>
+      <name>Carameled Apple Salon </name>
+      <desc>On your right you see small tables where you can get your nails done, Whether you just want your nails (or claws) trimmed or you want a set of nails applied they have you covered here. Straight ahead are chairs for a manicure, and to your left they will wash and style your hair or fur for half price on Tuesdays! You see a see which reads, &apos;Massages SE&apos; or if you wish to take the elevator &apos;UP&apos; to your room you can do that too.</desc>
+      <exits se='580' up='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='529'>
+      <name>Single Pad for Men</name>
+      <desc>As you enter the room do you notice the dark blue walls? The shag carpet? The king sized bed? What about the large bathroom, which the tub is big enough for three with jets. But doubtful, your eyes focus in on the large recliner couch, the 52 inch flat screen plasma tv, the Playstation 3, Wii, xbox 360 and the shelves over flowing with every game made for them. You might have noticed the fully stocked bar in the corner, but we think your brain is still on the game systems. If you can drag your butt out of this room, then why not go &apos;Down&apos; and check out the beach and maybe some chicks. Or just go &apos;IN&apos; to the cafe if you get hungry and hit on the girl behind the counter.</desc>
+      <exits e='530' down='783' in='327' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='530'>
+      <name>Caramel&apos;s Rest Stop Hallway</name>
+      <desc>Here is the end of the Hallway, to your West is &apos;Single Pad for Men&apos; to your SouthWest is &apos;Single Pad for Small Unknowns&apos; to your East is &apos;Single Pad for Ladies&apos; and to the South is &apos;Single Pad for Large and Flammable Unknowns&apos;  please go to your gender specific room. Or you can just go &apos;Down&apos; to the Beach.</desc>
+      <exits n='466' e='531' s='594' sw='593' w='529' down='783' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='531'>
+      <name>Single Pad for Ladies</name>
+      <desc>As you enter the room you notice the that the walls are painted to look like you are in a secert garden, The large four post bed is covered with a down filled comforter, and vines with budding roses climb the posts, There is also a large tv, a stereo with every mini compact disk known to womankind, a bar with waitdroid collecting dust in the cornor, a large wardrobe containing an outfit for any thing you may want one for. The bathroom is huge, the tub has jets, and candles and a good book lay next to it waiting for you. The hotel put all your BBF&apos;s on speed dail for you, So if you decide that it&apos;s time to have fun verses relaxing feel free to call them, maybe you&apos;ll want to hang &apos;Down&apos; at the beach, play Volleyball or something. Or go &apos;IN&apos; to the cafe for a snack.</desc>
+      <exits w='530' down='783' in='327' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='580'>
+      <name>Carameled Bananas Massages</name>
+      <desc>For a more relaxing feeling the room is painted in pastel colors and the lights are dim, but you can see massage tables and a rod hangs from the ceiling that holds a closable curtain for privicy. You notice a sign in counter and small waiting area to your right, after filling in your name a young Caramelien woman comes from the back and users you to a table for a deep tissue massage. After an enjoyable hour in la la land you remember your way back to the elevator in to the NW through the salon.</desc>
+      <exits nw='515' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='593'>
+      <name>Singles Pad for Small Unknowns</name>
+      <desc>This room is small, with a small bed, just a inch off the floor. A small tv, small recliner sofa, small tub, small every thing, including a tiny bar in the corner. A waitdroid is available incase you need something out of your reach, and if you feel like a nice walk you can go &apos;Down&apos; and check out the beach. Or just go &apos;IN&apos; to the cafe if your hungry.</desc>
+      <exits ne='530' down='783' in='327' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='594'>
+      <name>Singles Pad for Large and Flammable Unknowns </name>
+      <desc>This room is HUGE! and it better be for the price you paid for it. The bed is huge, the furniture made to withstand the size of any beast that may visit, every thing is also flame proof. A large tv hangs on the wall, that works off voice command for those with hands/paws/claws to large for the buttons. The bar is staffed with a waitdroid to fetch your drinking needs. And if you feel like being social you can go &apos;Down&apos; to the beach. Or go &apos;IN&apos; to the cafe if you get hungry.</desc>
+      <exits n='530' down='783' in='327' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='783'>
+      <name>Caramel Smoothy Beach</name>
+      <desc>The water is crystal clear, the sand smooth and warm, white beach lounges line the beach, It is a perfect day for a &apos;Swim&apos;. Caramelien waitdroids zoom back and forth fetching towels and drinks for those to ask. Down the beach a ways you hear laughter, looking you see a group of people playing &apos;Volleyball&apos;. Maybe later...... Just remember to go &apos;IN&apos; / &apos;UP&apos; to the hotel before you get a sunburn.</desc>
+      <exits up='530' in='338' out='263' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1290'>
+      <name>Caramel Smoothy Beach At Night</name>
+      <desc>Here is QM&apos;s most favorite place in the world, The sky, black but lit with millions of stars. The sand is cool, the water is almost still, just a slight ripple. The breeze is warm. From a distance you hear music and laughter from a party on the other end of the beach, but in the peaceful state of mind you are in you don&apos;t really notice them. Here you may see QM, sitting close to the waters edge, holding her legs close to her looking thoughtfully over the water.. Maybe now is not a good time to interrupt her peace. But enjoying it with her would be okay.</desc>
+      <exits up='395'/>
+   </location>
+
+</fed2-map>

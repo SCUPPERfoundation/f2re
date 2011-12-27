@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<fed2-map title='Sirius Space' version='64' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>Space Store Room</name>
+      <desc>No way out of here.</desc>
+   </location>
+
+   <location num='2000' flags='sl'>
+      <name>Sirius Link and Canis Orbit</name>
+      <desc>Board your shuttle to visit the planet Canis, capital of Sirius, or JUMP to another system in Time Cartel.</desc>
+   </location>
+
+</fed2-map>

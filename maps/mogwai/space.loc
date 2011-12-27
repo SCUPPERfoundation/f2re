@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Mogwai Space' version='4' editor='standard'>
+
+   <location num='264' flags='sp'>
+      <name>Guerrilla Gremlins</name>
+      <desc>This planet is currently under construction.</desc>
+      <exits e='265'/>
+   </location>
+
+   <location num='265' flags='slp'>
+      <name>Gremlins Orbit</name>
+      <desc>Below you there is a small uninviting planet. The planet does not look inviting at all. The planet seems to be very unwelcoming. Basically the inhabitants do not like visitors is what I am trying to get across here. Most people seem to be ignoring the feelings of the inhabitants and shuttles seems to be going back and forth from planet to different ships. You can board the planet yourself or it will not hurt the inhabitant&apos;s feelings if you fly away from here.</desc>
+      <exits e='266' w='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='266' flags='sp'>
+      <name>Gremlins 2 Orbit</name>
+      <desc>This planet is currently under construction.</desc>
+      <exits w='265'/>
+   </location>
+
+</fed2-map>

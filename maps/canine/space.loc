@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Canine Space' version='16' editor='standard'>
+
+   <location num='393' flags='s'>
+      <name>Flea Orbit</name>
+      <desc>   Flea was ordained as a very needed outlet for Bassetopia.  The High Council of Slobberness and the SlobberMeister General on one side and the Infestation Panel on the other, designed and are building this planet for the vast population that is literally living side by side on Bassetopia.  There is no telling when the planet will be completed.  The workers hammer once and scratch twice, so the going is very slow.</desc>
+      <exits down='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='457' flags='sl'>
+      <name>Canine Link</name>
+      <desc>   Welcome to the Link of Canine. You can either lie down with dogs or climb up the trapeze of the flea circus.</desc>
+      <exits up='393' down='521' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='521' flags='s'>
+      <name>Bassetopia Orbit</name>
+      <desc>ARF, ARF ARF, ARF WOOF ARF.  The automatic translator has locked in on your systems.  You will be able to understand all that is being said.  The SlobberMeister General and the High Council of Slobberness rule here with a rusty, iron fist.  The Bassetopian motto is:  &quot;We drool AND we rule&quot;</desc>
+      <exits up='457' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

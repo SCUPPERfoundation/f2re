@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<fed2-map title='Ombey Space' version='1.00' editor='standard'>
+
+   <location num='200' flags='s'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Valisk Orbit and interstellar link</name>
+      <desc>   You are datavised instructions to approach the docking ledge and dock at clamp 4.  The habitat is cylindrical in shape 8.2km in length, 1.2km wide.  Constantly rotating to provide a constant 0.8Gs of centrifugal force, an efficient if crude solution to the lack of gravity.  Small intersystem craft are swarming over the docking ledge transporting raw materials from the gas giant the habitat is orbiting.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

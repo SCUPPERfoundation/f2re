@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<fed2-map title='Ruby Space' version='3' editor='standard'>
+
+   <location num='391' flags='sl'>
+      <name>Orbiting The Linkship Eidolon</name>
+      <desc>   A tenebrous hulk looms above you. Glints of crimson from the enveloping nebula dance across an undulating sea of immaculate steel, stretching kilometers off into the gases. A teratoid near-octagon juts from the hull nearby, a surging azure field betraying the link woven within it.</desc>
+      <desc>   Dark shapes cruise between a dusty planetoid to the east and this vessel, issuing forth from unseen bays with the emotionless languidity reserved for automata. Along the ship&apos;s darkened belly, blue guide-lights slither towards a singular hangar. From there emanates the docking beacon of the Linkship Eidolon.</desc>
+      <desc>  Gleaming space-lane beacons mark a path towards the planet east of here.</desc>
+      <exits e='392' no-exit='space.noexit.1'/>
+   </location>
+
+   <location num='392' flags='s'>
+      <name>In Orbit of Planet Charlie-Three-Lima</name>
+      <desc>   Here turns the arid orb designated Charlie-Three-Lima, dancing lifelessly within the Ruby Nebula. Scattered in the chthonic scars carved by unknown eons, viridian hints prophesy this planet&apos;s future. From the west, serpentine drones glide into orbit, the skeletal automata tending to the planet&apos;s gestation.</desc>
+      <desc>   Navigational beacons have been recently deployed in orbit, marking safe travel lanes around the planet and off to Galactic west, towards the linkship Eidolon.</desc>
+      <exits w='391' no-exit='space.noexit.2'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<object-list version='13' editor='Version 1.37'>
+   <object type='static' start='530' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The vending machines claim to be able to produce anything you request, but the default seems to be some sort of meat pie.</desc>
+      <vocab cmd='buy' event='food.reception.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1'>
+      <name>mince pie</name>
+      <id>obj_pie</id>
+      <desc>You can see a large plate of mince pies being kept warm. They looked stuffed with fruit, and have a generous dusting of sugar on top.</desc>
+      <vocab cmd='buy' event='xmas.pie.1'></vocab>
+   </object>
+
+   <object type='static' start='595' visibility='0' size='1' weight='1'>
+      <name>strength</name>
+      <id>obj_strength</id>
+      <desc>You can increase your strength by 1 point for 1 slithy, up to a limit of 150, with BUY STRENGTH. However, you can only increase a stat once each day.</desc>
+      <vocab cmd='buy' event='stats.strength.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1'>
+      <name>mulled wine</name>
+      <id>obj_wine</id>
+      <desc>The mulled wine is gently simmering in a large pot, and the steam smells of fruit and spices. You can buy a cup for 5 groats.</desc>
+      <vocab cmd='buy' event='xmas.wine.1'></vocab>
+   </object>
+
+</object-list>
+

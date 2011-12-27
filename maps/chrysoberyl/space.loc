@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<fed2-map title='Chrysoberyl Space' version='7' editor='standard'>
+
+   <location num='135' flags='sp'>
+      <name>Hairball Orbit</name>
+      <desc>   You widen your eyes in surprise as what appears to be a giant hairball appears before you.  Indeed, it&apos;s a moderately sized asteroid that doesn&apos;t look too inviting.... Well, what can you say about a giant hairball?  You can only hope you never meet the feline that hacked the thing up.</desc>
+      <desc>   It may not be a good thing, but most of the debris that is surrounding the asteroid has been moved aside, allowing you to land, if you have the stomach for it, or you can reverse slowly away from the disgusting thing, heading South back toward Litterbox and the system link.</desc>
+      <exits s='199' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='199' flags='sp'>
+      <name>Litterbox Orbit</name>
+      <desc>   You are orbiting above Litterbox, a totally dog-free planet  where cats abound and spiked cream is free for all! Milky rivers flow and  Meow Mix grows on every tree!</desc>
+      <desc>   Orbiting overhead you can see the flying spaceship of Kis, keeping vigil over this peaceful world.</desc>
+      <desc>   The debris that is surrounding the planet has been cleared enough to allow you to place your spaceship into orbit and BOARD your shuttle down to the planet, or you can gaze in admiration at what appears to be a large litterbox that is orbiting around the system&apos;s sun.</desc>
+      <desc>   With a sigh, you turn around and head SouthWest back toward the system link, or North to Hairball.</desc>
+      <exits n='135' sw='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='261' flags='slp'>
+      <name>Chrysoberyl System Link</name>
+      <desc>   You have safely navigated your way to Chrysoberyl.  Through your viewscreen you can see several planets orbiting around a sun.</desc>
+      <desc>   The nearest planet appears to be a catseye stone, winking in the light from the sun as if inviting you to come closer.  The other planet orbiting the sun is more rectangular in shape and is surrounded by clouds of dust.  Near the flying litterbox is a small asteroid that seems to look like a ball of yarn.</desc>
+      <desc>   Scattered through the system are odd items such as fish bones, mice tails, yarn balls and catnip mice, not to mention clumps of a strange clay-like substance.  As you maneuver your way IN, the static on your radio increases, punctuated with strange mewing sounds...</desc>
+      <exits in='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='s'>
+      <name>Chrysoberyl Space Lanes</name>
+      <desc>   Carefully you maneuver through the debris, wincing as you hear tiny clumps of a clay-like substance pinging against your ship.  The static on your radio is worse now, as is the mewing, as if a whole litter of kittens were playing nearby.</desc>
+      <desc>   From the port side a ship appears, shaped much like a giant panther with green eyes.  You twitch nervously in your seat as you look at that ship.</desc>
+      <desc>   You can maneuver DOWN to Catseye from here, or go NorthEast to Litterbox and Hairball, or OUT to return to the System Link.</desc>
+      <desc>   Glancing at that ship, you just know you have to go SOMEWHERE....</desc>
+      <exits ne='199' down='263' out='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263' flags='sp'>
+      <name>Catseye Orbit</name>
+      <desc>   The large panther ship has followed you, its green eyes flashing a warning.  You gulp and wince as a volley of clay-like clumping substances begin to pelt your ship.</desc>
+      <desc>   You look at the planet in your viewscreen, which really does look like a giant cats-eye watching you.  You can swear the thing winked, but that has to be a trick of the lighting.</desc>
+      <desc>   The debris that is floating through the system is denser here, yet there is a clear path through which you can carefully maneuver to BOARD.  Which might be a good idea, unless you&apos;d rather go UP and get out of the system altogether.</desc>
+      <desc>  A renewed volley of the clay-like substance strikes your ship, encouraging you to make up your mind...</desc>
+      <exits up='262' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

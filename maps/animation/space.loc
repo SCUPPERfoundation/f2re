@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<fed2-map title='Animation Space' version='1.00' editor='standard'>
+
+   <location num='261' flags='slp'>
+      <name>Animation link</name>
+      <desc>  You find your ship near the hyperspace link for the Animation system, which gleams brightly in the void of space.  Your sensors detect two different worlds off to the south and east.</desc>
+      <exits e='262' se='326' s='325' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='s'>
+      <name>Animation space</name>
+      <desc>  You are in space.  Signs of inhabited worlds come from due south of you, and also off to the south and east.  You are able to detect a faint glimmer to the west.</desc>
+      <exits e='263' se='327' s='326' sw='325' w='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263' flags='s'>
+      <name>Space</name>
+      <desc>  Your ship glides through empty space in this sector.  Sensors pick up reflected light from the sector to your southeast, and fainter light from the south and west.</desc>
+      <exits e='264' se='328' s='327' sw='326' w='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264' flags='s'>
+      <name>Space</name>
+      <desc>  The darkness of space surrounds you in this sector.  Penetrating the darkness is a small, bright point of light visible off to the south.  Sensors also pick up light to the southwest in the distance.</desc>
+      <exits  s='328' sw='327' w='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='325' flags='s'>
+      <name>Animation space</name>
+      <desc> You are travelling through space.  Your sensors detect a bright light off to the southeast, and another due east.</desc>
+      <exits n='261' ne='262' e='326' se='390' s='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='s'>
+      <name>Animation space</name>
+      <desc>  Your ship is travelling through space.  Your sensors detect terrain off to the south, and also off to the east.  There is also a faint gleam off to the northwest.</desc>
+      <exits n='262' ne='263' e='327' se='391' s='390' sw='389' w='325' nw='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='s'>
+      <name>Space</name>
+      <desc>  You are floating through space in the Animation system.  Sensors detect signs of life in the sectors to the southwest and to the east.</desc>
+      <exits n='263' ne='264' e='328' se='392' s='391' sw='390' w='326' nw='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='sp'>
+      <name>Yarnball orbit</name>
+      <desc>  You are orbiting the planet Yarnball.  Your sensors pick up another world to the south and west.</desc>
+      <exits n='264' s='392' sw='391' w='327' nw='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='389' flags='s'>
+      <name>Space</name>
+      <desc>  You are travelling through space.  Your sensors pick up a bright light in the sector directly to the east of you.  They also detect another further off to the east and north.</desc>
+      <exits n='325' ne='326' e='390' se='454' s='453' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='390' flags='sp'>
+      <name>Toontown orbit</name>
+      <desc> You are orbiting the colorful world of Toontown.  A bustling, brightly colored planet rotates slowly below you.  Checking your view screen, you see a sun with a definite smiling face orbiting the planet, as well as a sleepy-looking crescent moon wearing a night cap diametrically opposite.  Your view screen also shows a bubble-shaped ship in the sector, inside of which you can see a family of four with a dog as big as the man.  You could swear you&apos;ve seen them somewhere before.  As you watch, you see the ship about the size of your shuttle descend toward the roof of a tall building.  Your comm unit receives a transmission from the planet with the shuttle pad coordinates for you to land.</desc>
+      <exits n='326' ne='327' e='391' se='455' s='454' sw='453' w='389' nw='325' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391' flags='s'>
+      <name>Space</name>
+      <desc>  You are travelling through space.  You are able to see what looks like reflected light  reasonably close to the west, and to the northeast.</desc>
+      <exits n='327' ne='328' e='392' se='456' s='455' sw='454' w='390' nw='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392' flags='s'>
+      <name>Space</name>
+      <desc>  This sector is empty, save for the occasional speck of dust that deflects off your ship&apos;s shields and gives off a momentary glow in the process as you glide through the sector.  You are able to see some light in the sector to the north, and your sensors detect energy due west of you.</desc>
+      <exits n='328' s='456' sw='455' w='391' nw='327' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='453' flags='s'>
+      <name>Space</name>
+      <desc>  Sensors pick up energy sources north and east of your sector, one fairly close, the other further away.</desc>
+      <exits n='389' ne='390' e='454' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='454' flags='s'>
+      <name>Space</name>
+      <desc>  You are gliding through space in the Animation system.  Your ship&apos;s sensors detect signs of life to the north, and another world off to the northeast.</desc>
+      <exits n='390' ne='391' e='455' w='453' nw='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='455' flags='s'>
+      <name>Space</name>
+      <desc>  Pinpoints of light can be seen from distant stars, penetrating the darkness of space.  Your sensors pick up a brighter source of light to the northwest, and detect a fainter light off to the north and east.</desc>
+      <exits n='391' ne='392' e='456' w='454' nw='390' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='456' flags='s'>
+      <name>Asteroid</name>
+      <desc>  A small asteroid, perhaps a mile across, slowly spins in this sector.  You can see a light sprinkle of space dust flying off the asteroid as it spins, glowing softly in the low light from distant stars.  Your sensors are picking up energy sources due north, and off to the north and west in this sector.</desc>
+      <exits n='392' w='455' nw='391' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<fed2-map title='Ice Space' version='18' editor='standard'>
+
+   <location num='197' flags='s'>
+      <name>Ice Space</name>
+      <desc>   Orbiting around the planet Arctic, which lies to the South East.  Your sensors also detect a satellite to the East.</desc>
+      <exits e='198' se='262' s='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='198' flags='sp'>
+      <name>Aurora Orbit</name>
+      <desc>   You are in close orbit over the satellite Aurora, which is in a polar orbit about the planet Arctic.  Arctic currently lies to the South.</desc>
+      <exits e='199' se='263' s='262' sw='261' w='197' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='199' flags='s'>
+      <name>Ice Space</name>
+      <desc>   You are in an inclined orbit about the planet Arctic, which your sensors tell you lies to the South West.  Your sensors also detect a satellite to the West.</desc>
+      <exits s='263' sw='262' w='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='261' flags='s'>
+      <name>Ice Space</name>
+      <desc>   You are in high orbit around the planet Arctic, which appears on you sensors to East.</desc>
+      <exits n='197' ne='198' e='262' se='326' s='325' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='slp'>
+      <name>Arctic Orbit and Link</name>
+      <desc>   You in orbit above a bright white planet, so bright that you have to dim your viewscreen to see that most of the planet is a frozen ocean.  A locator beacon from the planet&apos;s surface identifies the Launch Pad.</desc>
+      <desc>   Your sensors also detect a satellite to the North.  Without anything else on the scanners in nearby space, you can either take your shuttle to the planet surface, explore the space around the planet, or use the Interstellar Link to move on...</desc>
+      <exits n='198' ne='199' e='263' se='327' s='326' sw='325' w='261' nw='197' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263' flags='s'>
+      <name>Ice Space</name>
+      <desc>   Orbiting about the planet Arctic, which is to the West.</desc>
+      <exits n='199' s='327' sw='326' w='262' nw='198' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='325' flags='s'>
+      <name>Ice Space</name>
+      <desc>   In slant orbit about the planet Arctic, which is to the North East.</desc>
+      <exits n='261' ne='262' e='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='s'>
+      <name>Ice Space</name>
+      <desc>   You are in a polar orbit above the planet Arctic, currently south of the planet.</desc>
+      <exits n='262' ne='263' e='327' w='325' nw='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='s'>
+      <name>Ice Space</name>
+      <desc>   You are in an eccentric orbit around the planet Arctic, which at this time is to the North West.</desc>
+      <exits n='263' w='326' nw='262' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

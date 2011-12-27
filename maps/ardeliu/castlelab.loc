@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<fed2-map title='Castle Lab' version='1.00' editor='standard' from='1952' to='Ardeliu.Ardeliu Space.1294'>
+
+   <location num='0' flags='kt'>
+      <name>storage closet</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1888'>
+      <name>Iron Door</name>
+      <desc>A large iron door stands between the tram station and the interior of the underground lab beneath Castle Doz.  The door appears to be unlocked.</desc>
+      <exits s='1952' in='2721' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1952'>
+      <name>Tram Station</name>
+      <desc>The Tram Station is a dark, stone lined tube lit by crackling torches.  The underground facility is beneath Castle Doz, and large pillars of stone stand to hold the weight of the castle&apos;s towers.  To the north is a large metal door.  A tram to the shuttle station is here, and you can board it.</desc>
+      <exits n='1888' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2356'>
+      <name>Specimen Cage</name>
+      <desc>Chains with iron bracelets hang from the walls, and a bed of straw sits in the corner of Nosferatu&apos;s accomodations for his specimens.  Uncomfortable as the accomodations appear, they are sufficient, as the stay of the room&apos;s occupants is all too brief.  They are either used in an experiment, or served as food to quench Nosferatu&apos;s insatiable hunger.</desc>
+      <exits s='2420' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='2420'>
+      <name>Nosferatu&apos;s Laboratory</name>
+      <desc>Deep in the bowels of Castle Doz is Nosferatu&apos;s Laboratory.  Long workbenches containing beakers with various colored liquids and bunsen burners line the room.  Strange machines with unknown functions hum and spark, flashes of the sparks illuminate the lab in rare glimpses of brightness.  Flickering torches on the wall sizzle and the smell of burning pine tar mixed with ozone fill the room.  The flickering flames reveal a doorway to the east leading to a book filled room, and a caged door to the north.</desc>
+      <exits n='2356' e='2421' out='2548' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2421'>
+      <name>Nosferatu&apos;s Research Library</name>
+      <desc>Towering bookshelves line this room, illuminated by hanging chandeliers of candles that appear to burn without end.  Leatherbound texts in ancient tongues fill the shelves.  Their contents contain a wealth of information relating to the manipulation of blood cells to enhance their life giving qualities.  The texts date back hundreds of years and a layer of dust lightly coats some of the older texts.  A few empty gaps in the rows of books indicate that the library is still consulted for information.</desc>
+      <exits e='2422' w='2420' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='2422' flags='bt'>
+      <name>Nosferatu&apos;s Private Study</name>
+      <desc> The flickering light reveals a dark oak desk, covered with ancient texts, each open and scattered across the surface of the desk.  Their pages reveal various incantations and formulae involving the extraction and preparation of blood to sate the neverending hunger of the damned.  A decanter filled with a rose colored liquid sits on the desk, and a half filled glass is next to it.  The stone walls bear the flickering shadows of shapes, some of which seem alive in the eerie confines of this room.</desc>
+      <desc>     On one wall is a picture of Ardeal, before the Weathermen destroyed it&apos;s weather control station, and condemned it to an existence of robust life.  The picture shows a tortured landscape, and to this day, Nosferatu longs for it&apos;s return.  It is said, that Nosferatu has not returned, even for a low orbit flyover to even glimpse Ardeal in it&apos;s current sorry state.</desc>
+      <exits w='2421' out='2721' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='2463'>
+      <name>Stairway</name>
+      <desc>A narrow row of stairs lead down into the deep recesses of Castle Doz.  The hallway is to the south.</desc>
+      <exits s='2527' down='2612' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='2526'>
+      <name>Cold Storage</name>
+      <desc>In the cold confines of this room, rows of tables with covered shapes are arranged in rows.  The shapes appear to be eerily familiar, and a sense of foreboding and dread hangs about the room and it&apos;s silent occupants.  The exit to the east appears to be more inviting by the second.</desc>
+      <exits e='2527' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2527'>
+      <name>Intersection</name>
+      <desc>The narrow hallway comes to an intersection with doors to the north, west, and south.  The narrow hallway extends to the east.</desc>
+      <exits n='2463' e='2528' s='2591' w='2526' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2528'>
+      <name>Narrow Hallway</name>
+      <desc>The narrow east/west hallway is lit by a single torch.  It hisses and cracks in the narrow confines of the hallway.  The smell of burning pine pitch fills the air.</desc>
+      <exits e='2529' w='2527' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2529'>
+      <name>End of Arched Hallway</name>
+      <desc>At the northern end of the north/south hallway is a smaller hallway to the west.</desc>
+      <exits s='2593' w='2528' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2548'>
+      <name>Large Wooden Door</name>
+      <desc>The flickering yellow light of the the buring torches reveal a large wooden door, with iron bands and a large iron ring hanging in the middle.  The door appears to be unlocked.</desc>
+      <exits s='2612' in='2420' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2591'>
+      <name>Stockpile Warehouse</name>
+      <desc>This room extends as far as the eye can see.  Long rows of commodities stacked on pallets stretch along it&apos;s length.  This is the main storage room for Carpathia&apos;s stockpiles.  Cranes run along tracks in the ceiling snatching bays of pallets for loading at the two Carpathian shuttle pads.</desc>
+      <exits n='2527' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2592' flags='e'>
+      <name>Carpathian Bio-Exchange</name>
+      <desc>Nosferatu&apos;s Laboratory produces a variety of by-products in it&apos;s plasma refinement processes.  These by-products are offered for sale, and commodities required for the lab&apos;s needs are purchased in this exchange annex.  The usual tickers run the latest prices in monitors across a screens set up at various trading stations set up in the exchange hall.  The modern computer interfaces seem to be at odds with the stark stone walls, and the torch lit interior, but Nosferatu preferred it this way.</desc>
+      <exits s='2656' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2593'>
+      <name>Arched Hallway</name>
+      <desc>The long arched hallway runs from the north to the south.  To the east is a doorway.</desc>
+      <exits n='2529' e='2594' s='2657' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2594' flags='b'>
+      <name>Plasma Bar</name>
+      <desc>The Plasma Bar is dimly lit by a few candles interspersed among the tables and two torches bordering the bar.  The pale yellow light displays rows of exotically shaped bottles, all containing various red liquids.  Several handles stick up from the bar, each displaying the name of the brew to which it is attached.  There is one labeled &quot;Bud&quot;, and another labeled &quot;Bob&quot;, and yet another labeled &quot;Larry&quot;.  A large sign behind the bar informs patrons that, &quot;Due to popular demand, we are unable to serve our famous Bloody Mary.  However, we do have a very delightful Bloody Elizabeth now on tap.&quot;</desc>
+      <desc>     The exit is to the west.</desc>
+      <exits w='2593' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2612'>
+      <name>Landing</name>
+      <desc>Deep within the bowels of Castle Doz, the air hangs thickly as if the permeation of evil and suffering has laden it down with the burdens of the tortured souls&apos; memories.  Torches protruding from their brackets on the walls crackle and hiss as their flickering flames cast an orange glow against the dark stone walls.</desc>
+      <exits n='2548' up='2463' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2656'>
+      <name>Dark Hallway</name>
+      <desc>The dark hallway bends from the north to the east.  To the north is a large, well lit room, and to the east is a long hallway.</desc>
+      <exits n='2592' e='2657' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2657'>
+      <name>Arched Hallway</name>
+      <desc>The long arched hallway runs from the north to the south.  To the west is a dark hallway.</desc>
+      <exits n='2593' s='2721' w='2656' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2721'>
+      <name>Nosferatu&apos;s Laboratory</name>
+      <desc>Deep within Castle Doz is Nosferatu&apos;s laboratory.  The entry way stands at the southern point of a long north/south hallway.  The hallway is lit with torches on either side and the meager light that the torches provide does not extend all the way to the top of the arched ceiling of the long hallway.</desc>
+      <exits n='2657' out='1888' no-exit='moves.noexit.3'/>
+   </location>
+
+</fed2-map>
+

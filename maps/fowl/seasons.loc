@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<fed2-map title='Seasons' version='28' editor='standard' from='537' to='Fowl.Fowl Space.658'>
+
+   <location num='0' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='18'>
+      <name>Flower Grove</name>
+      <desc>     The light here is coming through the tree branches as a light mist hovers over the flowery grove. A creek runs through the middle of the grove and wild flowers grow everywhere in different shapes and sizes. The hatch on the ground as a ladder you can climb down.</desc>
+      <exits down='148' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='21'>
+      <name>Dead End</name>
+      <desc>     The tunnel abruptly ends here, at a giant boulder that seems to be blocking the way to somewhere. There is little strands of light coming around it but it is impossible to move it.</desc>
+      <exits s='85' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='85'>
+      <name>Tunnel</name>
+      <desc>     The tunnel here is dark and the ground seems to be on a steady trek downward as you have a choice, go north down the slope, or go southwest back up the slope.</desc>
+      <exits n='21' se='150' sw='148' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='95' flags='b'>
+      <name>AngelFowl&apos;s House</name>
+      <desc>     This looks like the den of a writer, a desk is sitting in the corner with a laptop and papers scattered everywhere with different notes on it. Two pictures sit on the desk, one of Gwarrior, and one of Gwarrior and Angelfowl together. There is three bookcases with books stuffed into them. One seems entirely stuffed with notebooks, a canvas bag sits in the corner ready to be stuffed for when Angel leaves somewhere. There is a 3 disk CD player with large speakers in the corner so she can blare music while she write. There is a staircase that heads down.</desc>
+      <exits down='225' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='98' flags='b'>
+      <name>Amara&apos;s House</name>
+      <desc>     This house is made for a blind elf girl, all the furniture is spread out so no one runs into anything. There is a corner with several flutes, drums and one small guitar. Amara&apos;s Staff is leaning against the wall and there is a large comfy couch/bed in the middle, that looks like someone just got up. There is a staircase you can head down.</desc>
+      <exits down='160' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='148'>
+      <name>Tunnel</name>
+      <desc>     There is a ladder in this section of tunnel, it is an old rod iron ladder that seems to have stood the test of time. The tunnel here takes a turn northeast and dips down towards the sinking darkness.</desc>
+      <exits ne='85' se='213' up='18' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='150'>
+      <name>Tunnel</name>
+      <desc>     Pitch black here, and the only way to find your way forward is to follow the dirt wall near you. The tunnel takes a sharp turn northwest and dips down a little as it seems to get lower and lower.</desc>
+      <exits sw='213' nw='85' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='160'>
+      <name>Hidden Village</name>
+      <desc>     There is a staircase here that winds up and around the tree up to someones house it seems. There is leaves scattered all over the ground, and the twilight looks almost magical here. And a thin mist hangs over this clearing.</desc>
+      <exits e='161' se='225' s='224' up='98' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='161'>
+      <name>Hidden Village</name>
+      <desc>     There is a staircase here that winds up and around the tree up to someones house it seems. There is leaves scattered all over the ground, and the twilight looks almost magical here. And a thin mist hangs over this clearing.</desc>
+      <exits s='225' sw='224' w='160' up='290' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='213'>
+      <name>Tunnel</name>
+      <desc>     A small light comes from the hole above as the dark dirt tunnel stretches out from here. There is a branch off of the tunnel here, to the northwest and to the northeast. But neither seem to have much light and no one knows what might be lurking down here.</desc>
+      <exits ne='150' nw='148' up='277' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='217' flags='b'>
+      <name>Kingdoms Fried Chicken</name>
+      <desc>     The smell of chicken and other fried chicken side dishes is almost over bearing up here. Tables are set around and people are eating what most people think is the best fried chicken in the galaxy. The stairs lead back down to the Observation Deck.</desc>
+      <exits down='281' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='224'>
+      <name>Hidden Village</name>
+      <desc>     A portal swirls to one side of this place, it seems to be a clearing of sorts with a hill leading down into what seems to be a small hidden village of sorts. The houses are made in the trees, stairs lead up into the giagantic silvery trees. Colorful leaves fall down to the ground but there are more leaves still up in the trees. You may walk amoungst these trees as the people here watch you warily.</desc>
+      <exits n='160' ne='161' e='225' out='349' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='225'>
+      <name>Hidden Village</name>
+      <desc>     There is a staircase here that winds up and around the tree up to someones house it seems. There is leaves scattered all over the ground, and the twilight looks almost magical here. And a thin mist hangs over this clearing.</desc>
+      <exits n='161' w='224' nw='160' up='95' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='277'>
+      <name>Field</name>
+      <desc>     The grass here is long and sways in the breeze. But in one spot the grass seems to not grow, there is loose dirt over something. Upon closer inspection, there is a hatch here, that swings open when pulled on hard. There is a ladder leading down into a dark hole.</desc>
+      <exits se='342' s='341' down='213' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='281' flags='hib'>
+      <name>Observation Deck</name>
+      <desc>     &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically. The airlock to the south has silvery letters: &quot;Spring/Autumn Junction&quot; The Observation Deck has a wall entirely made of windows to see down to the mysterious planet. It does not turn like most, and you can see, clearly defined, seasons. They seemed to be in sections on the planet. The smell of fried chicken and mashed potatoes is coming down from a staircase with another neon sign reading: &quot;Kingdoms Fried Chicken.&quot;</desc>
+      <exits s='345' up='217' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='290' flags='b'>
+      <name>Isella&apos;s House</name>
+      <desc>    There is several chairs scattered around this area, with a large screen TV up against one wall. Where the electricity is coming from no one knows. But the TV runs and so does the PS2 and GameCube. The three disk CD player in the corner, and a laptop that is resting on a desk. There is a bed in the corner that is neatly made with blue pillows and a purple comforter. There is a staircase that heads down.</desc>
+      <exits down='161' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='341'>
+      <name>Field</name>
+      <desc>     The grass here is long and so are the flowers, just waiting to be plucked and put together which anyone may do. The sun is still rising here but it doesn&apos;t seem to be moving. A soft breeze passes through this field.</desc>
+      <exits n='277' e='342' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='342'>
+      <name>Spring Landing</name>
+      <desc>     The sun here is on the horizon, neither setting or rising just sitting a perpetual sun rise. There is a platform here with the shuttle landing and taking off from it to the space station. The grass in the field is long and there are wild flowers everywhere.</desc>
+      <exits w='341' nw='277' up='344' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='344'>
+      <name>Spring Portal</name>
+      <desc>      &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically. The wall across the airlock was made up of glass showing down to the Spring land below. A field is below of flowers being apart of this area. A shuttle is waiting to take people down to the surface.</desc>
+      <exits e='345' down='342' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='345'>
+      <name>Spring/Autumn Junction</name>
+      <desc>       &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically.This area has four airlocks. The one to the west is labeled in bright green letter: &quot;Spring Portal&quot;</desc>
+      <desc>To the east is another sign labeled in bright purple letters: &quot;Autumn Portal&quot;</desc>
+      <desc>The south is labeled with a yellow lettering sign: &quot;Transition&quot;</desc>
+      <desc>To the north in orange letters: &quot;Observation Deck&quot;</desc>
+      <exits n='281' e='346' s='409' w='344' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='346'>
+      <name>Autumn Portal</name>
+      <desc>    &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically. A wall of glass shows down to the Autumn area, there is a forest down below in part of the area. A shuttle is ready to take people down to the surface.</desc>
+      <exits w='345' down='348' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='348'>
+      <name>Autumn Landing</name>
+      <desc>     Twilight is settling over this area, the yellow, orange, pink, blue sky can be seen through the tree branchs here. There is a platform here where the shuttle heads up to the space station from. The trees give way towards the east a path leading through them.</desc>
+      <exits e='349' up='346' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='349'>
+      <name>Forest</name>
+      <desc>     The trees here are spread out in this clearing, and there are two trees in the middle that are intertwined. There seems to be mist around this clearing. There are stairs leading up to the portal it seems and you can go into it if you wish.</desc>
+      <exits n='348' ne='348' e='348' se='348' s='348' sw='348' w='348' nw='348' in='224' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='409'>
+      <name>Transition</name>
+      <desc>   &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically. This area has only two airlocks, one to the north leading to what the map calls. &quot;Spring/Autumn Junction&quot;</desc>
+      <desc>And one to the south leading to the: &quot;Summer/Winter Junction.&quot;</desc>
+      <desc>There is a large sign on the wall explaining this stations function:</desc>
+      <desc>&quot;This Seasons Stations is the vacation center of the Fowl System, seeing as there are anything you may want to do. In any season, Spring, Summer, Winter, or Autumn. This planet is very strange as to the fact it does not turn and the seasons stay where they are all year round, so if you are warm go to Winter portal and take the shuttle to cool down. If you want to get warm, go to the Summer portal. Love leaves and wind? Go to the Autumn portal. Flowers and green earth? Spring portal is what you want. This planet is very diverse and we hope you enjoy.</desc>
+      <desc>Founder of the Fowl System,</desc>
+      <desc>Angelfowl&quot;</desc>
+      <exits n='345' s='473' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='467'>
+      <name>Hot Pretzels</name>
+      <desc>     Hot large soft pretzels are rotating in the case and the woman there is handing out pretzels and other things to go with them. She smiles wearing the same uniform as all the rest of the workers, red and white striped clothes and her long black hair is put up into a bun as she smiles.</desc>
+      <exits s='531' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='468'>
+      <name>Rollercoaster Line</name>
+      <desc>     This part seems to be incomplete, the line is taped off, and there are construction workers on the iron rollercoaster, at the moment people are urged to stay away and not get in the way of the workers so you are urge to head back.</desc>
+      <exits s='532' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='472'>
+      <name>Summer Portal</name>
+      <desc>    &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically. A wall of glass shows down to the Summer area, there is a beach down below in part of the area. A shuttle is ready to take people down to the surface.</desc>
+      <exits e='473' down='534' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='473'>
+      <name>Summer/Winter Junction</name>
+      <desc>     &quot;Closing airlock&quot; a loud voice chimed as the airlock closes automatically. This area has four airlocks. The one to the west is labeled in bright red letter: &quot;Summer Portal&quot;</desc>
+      <desc>To the east is another sign labeled in bright blue letters: &quot;Winter Portal&quot;</desc>
+      <desc>The south is labeled with a silvery lettering sign: &quot;Landing Pad&quot;</desc>
+      <desc>To the north in Yellow letters: &quot;Transition&quot;</desc>
+      <exits n='409' e='474' s='537' w='472' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='474'>
+      <name>Winter Portal</name>
+      <desc>    &quot;Closing Airlock&quot; a high pitched voice chimes as the airlock closes automatically. A wall of glass shows down to the Winter area, there is a mountain down below in part of the area. A shuttle is ready to take people down to the surface.</desc>
+      <exits w='473' down='540' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='480'>
+      <name>Bedroom</name>
+      <desc>     There is a wooden hearth in the corner filling the entire room with warmth, there is two windows looking out into the frozen tundra. The bed is large and has blue sheets covering it, with a pile of feather soft pillows. A beautiful handmade quilt is folded up on the end of the bed. There is a wardrobe with extra clothes in all sizes just in case someone gets dirty or is cold and needs an extra set of clothes. The whole room is covered in a glow from the fire and there are candles and oil lamps that may be turned on if need be.</desc>
+      <exits s='544' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='481'>
+      <name>Bedroom</name>
+      <desc>     There is a wooden hearth in the corner filling the entire room with warmth, there is two windows looking out into the frozen tundra. The bed is large and has black sheets covering it, with a pile of feather soft pillows. A beautiful handmade quilt is folded up on the end of the bed. There is a wardrobe with extra clothes in all sizes just in case someone gets dirty or is cold and needs an extra set of clothes. The whole room is covered in a glow from the fire and there are candles and oil lamps that may be turned on if need be.</desc>
+      <exits s='545' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='531'>
+      <name>Boardwalk</name>
+      <desc>     This area of the boardwalk is abuzz with activity, the smell of cotton candy and pretzels is in the air here. To the north is a booth that has the wonderful smell of soft pretzels, and to the south you see a bunch of children gathered around a cotton candy maker.</desc>
+      <exits n='467' e='532' s='595' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='532'>
+      <name>Boardwalk</name>
+      <desc>     This area of the boardwalk is abuzz with activity, the smell of Funnel cakes and pretzels is in the air here. To the north is a rollercoaster that looks to be under construction. To the south is a booth called: &quot;Funnel Cake House&quot;</desc>
+      <exits n='468' e='533' s='596' w='531' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='533'>
+      <name>Boardwalk</name>
+      <desc>     The wood of the board walk creeks as it continues west into the carnival itself. Food booths, and a rollercoaster are sitting on the board walk, the ocean air is clean and clear. Ocean spray comes up and hits the deck sometimes.</desc>
+      <exits e='534' w='532' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='534'>
+      <name>Summer Landing</name>
+      <desc>     There is a boardwalk here jetting out into the ocean, the sun high in the sky the wooden boardwalk continues west from here. There is a set of stairs leading down onto part of the beach. The boardwalk has what seems to be a carnival on it. With booths and a couple rides.</desc>
+      <exits w='533' up='472' down='598' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='537'>
+      <name>Landing Pad</name>
+      <desc>    The landing pad is open space with a clear glass ceiling to show the stars above glimmering in the distant sunlight. There are two moons in the sky, a clear white one, and a deep purple one. Both hiding behind one another. Ships are landing and taking off through the force field keeping the air contained in this area. There are spiral stairs in the corner, with a large neon sign that says: &quot;Exchange&quot; in big bright blue letters. To the north is an airlock with bright Golden letters: &quot;Summer/Winter Junction&quot;</desc>
+      <exits n='473' up='602' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='540'>
+      <name>Platform</name>
+      <desc>     It&apos;s cold here, there is a platform out side of a large wooden structure with lights on and seems to have warmth inside of it. The shuttle here leads up to the space station, you can go into the wooden building from here. The air is dense and cold snow falling all around you, the sky is dark like it is night all the time.</desc>
+      <exits up='474' in='541' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='541'>
+      <name>Seasons Winter Cabin</name>
+      <desc>     This place is warm, this looks like a living room type area, with loung chairs scattered around everywhere. A fireplace is in the corner burning brightly. There is a dinning area, library, and a staircase to the southwest.</desc>
+      <exits e='542' se='606' s='605' out='540' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='542' flags='b'>
+      <name>Dinning room</name>
+      <desc>     There is a table here, with chairs up and down it, food is laid out for you to eat whatever you want. There is also a fireplace here, keeping the whole cabin nice and warm. The whole area is a buzz with people who are talking and eating and it seems like you are able to help yourself.</desc>
+      <exits s='606' sw='605' w='541' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='544'>
+      <name>Hallway</name>
+      <desc>     Grand staircase leading down is here, and there is also a door to the north heading into one of the bedrooms. The floor creaks below you and you can head east from here down the hall.</desc>
+      <exits n='480' e='545' down='606' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='545'>
+      <name>Hallway</name>
+      <desc>     There is a door to the north heading into one of the bedrooms. The floor creaks below you and you can head west from here down the hall. There is a painting here of Angelfowl herself one of the caretakers of this fine cabin, and below on a silver plate, is written: &quot;Founder of Seasons, Vacation Central&quot;</desc>
+      <exits n='481' w='544' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='595'>
+      <name>Cotton Candy Shoppe</name>
+      <desc>     Children are all gathered around the man who is making big piles of pink fluff and handing it out to everyone. Once the children get there fill he smiles turning and asking if anyone else wants some. He wears a red and white striped outfit and a flat white hat with a red ribbon.</desc>
+      <exits n='531' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='596' flags='b'>
+      <name>Funnel Cake House</name>
+      <desc>     The smell of sugar and cake is very strong here as you see a man working over a fryer making many funnel cakes for the great deal of people. He smiles and looks around, &quot;Next? Sugar or Chocolate?&quot; he motions to the funnel cake and what he should put onto it. You can go back north to the boardwalk.</desc>
+      <exits n='532' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='598'>
+      <name>Beach front</name>
+      <desc>    Waves crash on the shore, deep blue ocean, and shells are imbedded in the shore. People are laying out on blankets sunbathing and some little kids are out in the water swimming. You can go up the stairs back onto the boardwalk.</desc>
+      <exits up='534' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='602' flags='eb'>
+      <name>Exchange</name>
+      <desc>     The stairs in the corner lead up to a cozy looking room, with chairs scattered around and a screen up in the corner with the exchange scrolling by. Carpets laid out on the floor to make the room extra cozy. Who said traders and merchants can&apos;t be comfy while trading? Going down the stairs leads back to the landing pad.</desc>
+      <exits down='537' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='605'>
+      <name>Library</name>
+      <desc>     There is a fireplace here, with a large fire going. There is also five or six bookcases full of books for the people staying at the cabin. Large chairs and couchs are here and a couple people are here reading and the whole place is quiet except for the crackling of the fire which is rather relaxing.</desc>
+      <exits n='541' ne='542' e='606' no-exit='seasons.entire.1'/>
+   </location>
+
+   <location num='606'>
+      <name>Staircase</name>
+      <desc>     Here there is a grand staircase leading up to the second floor bedrooms. It is old wooden and is cold because it must be thirty below outside, and it is blowing against the windows where people can see out and see it is dark still. Like perpetual night always and forever more here. The frozen tundra outside is nothing anyone wants to be caught out in.</desc>
+      <exits n='542' w='605' nw='541' up='544' no-exit='seasons.entire.1'/>
+   </location>
+
+</fed2-map>
+

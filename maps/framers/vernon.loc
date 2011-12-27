@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<fed2-map title='Vernon' version='17' editor='standard' from='2013' to='Framers.Framers Space.394'>
+
+   <location num='1756'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits se='1821'/>
+   </location>
+
+   <location num='1757'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits s='1821'/>
+   </location>
+
+   <location num='1758'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits sw='1821'/>
+   </location>
+
+   <location num='1767'>
+      <name>Storeroom</name>
+      <desc>nothing here for now</desc>
+   </location>
+
+   <location num='1818'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits se='1883'/>
+   </location>
+
+   <location num='1819'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits s='1883'/>
+   </location>
+
+   <location num='1820'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits e='1821'/>
+   </location>
+
+   <location num='1821'>
+      <name>Hallway End</name>
+      <desc>You are at the end of the Northern Hallway.  There are doorways leading off in all directions except to the South.</desc>
+      <exits n='1757' ne='1758' e='1822' se='1886' s='1885' sw='1884' w='1820' nw='1756'/>
+   </location>
+
+   <location num='1822'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits w='1821'/>
+   </location>
+
+   <location num='1823'>
+      <name>Office</name>
+      <desc>tbd</desc>
+      <exits s='1887'/>
+   </location>
+
+   <location num='1824'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits sw='1887'/>
+   </location>
+
+   <location num='1883'>
+      <name>Hallway end</name>
+      <desc>This is the end of the Northwestern Hallway.  There are doors leading off to your N,NW,SW and South.</desc>
+      <exits n='1819' se='1948' s='1947' sw='1946' nw='1818'/>
+   </location>
+
+   <location num='1884'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits ne='1821'/>
+   </location>
+
+   <location num='1885'>
+      <name>Northern Hallway</name>
+      <desc>You continue northward towards several doorways.</desc>
+      <exits n='1821' s='1949'/>
+   </location>
+
+   <location num='1886'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits nw='1821'/>
+   </location>
+
+   <location num='1887'>
+      <name>Hallway End</name>
+      <desc>This is the end of the NE Hallway.  There are doors to your N,NE,SE and South.</desc>
+      <exits n='1823' ne='1824' se='1952' s='1951' sw='1950'/>
+   </location>
+
+   <location num='1946'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits ne='1883'/>
+   </location>
+
+   <location num='1947'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits n='1883'/>
+   </location>
+
+   <location num='1948'>
+      <name>Northwestern Hallway</name>
+      <desc>This hallway continues off to the NW.</desc>
+      <exits se='2013' nw='1883'/>
+   </location>
+
+   <location num='1949' flags='b'>
+      <name>Northern Hallway</name>
+      <desc>There are tables wih food and drink along the walkway which continues to the North.</desc>
+      <exits n='1885' s='2013'/>
+   </location>
+
+   <location num='1950'>
+      <name>Northeastern Hallway</name>
+      <desc>This hallway continues off to the NE.</desc>
+      <exits ne='1887' sw='2013'/>
+   </location>
+
+   <location num='1951'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits n='1887'/>
+   </location>
+
+   <location num='1952'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits nw='1887'/>
+   </location>
+
+   <location num='2012'>
+      <name>President Washingtons Office</name>
+      <desc>tbd</desc>
+      <exits e='2013'/>
+   </location>
+
+   <location num='2013' flags='yrhi'>
+      <name>Framers Landing Pad</name>
+      <desc>Stepping out of the shuttle you notice a sign Welcoming you.Feel free to trade and wander around the planet visiting all the offices that extend out in all directions except for the EAST. Where Trading is executed.</desc>
+      <exits n='1949' ne='1950' e='2014' se='2078' s='2077' sw='2076' w='2012' nw='1948'/>
+   </location>
+
+   <location num='2014' flags='e'>
+      <name>Framers Trading Exchange</name>
+      <desc>This is where all trading is done.  All other planet services can be found elsewhere.</desc>
+      <exits w='2013'/>
+   </location>
+
+   <location num='2074'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits se='2139'/>
+   </location>
+
+   <location num='2075'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits s='2139'/>
+   </location>
+
+   <location num='2076'>
+      <name>Southwestern Hallway</name>
+      <desc>This hallway continues off to the SW.</desc>
+      <exits ne='2013' sw='2139'/>
+   </location>
+
+   <location num='2077' flags='b'>
+      <name>Southern Hallway</name>
+      <desc>There are tables with food and drink along the walkway which continues to the South.</desc>
+      <exits n='2013' s='2141'/>
+   </location>
+
+   <location num='2078'>
+      <name>Southeastern Hallway</name>
+      <desc>This hallway continues off to the SE.</desc>
+      <exits se='2143' nw='2013'/>
+   </location>
+
+   <location num='2079'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits s='2143'/>
+   </location>
+
+   <location num='2080'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits sw='2143'/>
+   </location>
+
+   <location num='2139'>
+      <name>Hallway End</name>
+      <desc>This is the end of the Southwestern Hallway.  There are doors leading off to your S,SW,NW and North.</desc>
+      <exits n='2075' ne='2076' s='2203' sw='2202' nw='2074'/>
+   </location>
+
+   <location num='2140'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits se='2205'/>
+   </location>
+
+   <location num='2141'>
+      <name>Southern Hallway</name>
+      <desc>You continue South toward several doorways</desc>
+      <exits n='2077' s='2205'/>
+   </location>
+
+   <location num='2142'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits sw='2205'/>
+   </location>
+
+   <location num='2143'>
+      <name>Hallway End</name>
+      <desc>This is the end of the Southeastern hallway.  There are several doors leading off to the S,SE,NE and North.</desc>
+      <exits n='2079' ne='2080' se='2208' s='2207' nw='2078'/>
+   </location>
+
+   <location num='2202'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits ne='2139'/>
+   </location>
+
+   <location num='2203'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits n='2139'/>
+   </location>
+
+   <location num='2204'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits e='2205'/>
+   </location>
+
+   <location num='2205'>
+      <name>Hallway End</name>
+      <desc>You are at the end of the Southern Hallway.  There are doorways leading in all directions except the North.</desc>
+      <exits n='2141' ne='2142' e='2206' se='2270' s='2269' sw='2268' w='2204' nw='2140'/>
+   </location>
+
+   <location num='2206'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits w='2205'/>
+   </location>
+
+   <location num='2207'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits n='2143'/>
+   </location>
+
+   <location num='2208'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits nw='2143'/>
+   </location>
+
+   <location num='2268'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits ne='2205'/>
+   </location>
+
+   <location num='2269'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits n='2205'/>
+   </location>
+
+   <location num='2270'>
+      <name>office</name>
+      <desc>tbd</desc>
+      <exits nw='2205'/>
+   </location>
+
+</fed2-map>

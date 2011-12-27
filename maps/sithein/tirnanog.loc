@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<fed2-map title='Tir Na Nog' version='16' editor='standard' from='394' to='Sithein.Sithein Space.395'>
+
+   <location num='0'>
+      <name>Inside a Secret Storeroom</name>
+      <desc>   Under the roots of an old tree is this secret storeroom, which has no visible entrances or exits.</desc>
+   </location>
+
+   <location num='130'>
+      <name>Inside a Flower</name>
+      <desc>   You are inside a flower with petals as soft as a feather.  .You can see the sky above you as you lie back to watch birds and clouds overhead.</desc>
+      <desc>     Exits: Down</desc>
+      <exits down='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='266'>
+      <name>Under the Great Oak</name>
+      <desc>   This is a clearing in the northern part of the garden.  High over your head are the branches of the Great Oak, which provide a green canopy over much of the garden.  Its branches are home to many of the creatures of the garden.  On the ground around the tree is a soft bed of moss.</desc>
+      <desc>     Exits: South</desc>
+      <exits s='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330'>
+      <name>On a Shaded Path</name>
+      <desc>   You are walking on a shaded path in the garden.  Tiny hummingbirds flit from flower to flower, racing small bumblebees to eat the sweet nectar of the flowers.  There is a small cottage store to the east.  Further to the north is the large oak tree that shades the garden and provides a home for much of the wildlife in the garden.</desc>
+      <desc>     Exits: South, East</desc>
+      <exits n='266' e='331' s='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='e'>
+      <name>In a Cottage Shop</name>
+      <desc>   This is a small cottage with rows of shelves on each wall.  Items and packages are stacked neatly on the shelf.  A shopkeeper steps forward to help you make your purchases.  The cottage is lit by torches placed to each side of the door.</desc>
+      <desc>     Exits: West</desc>
+      <exits w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Beside a Small Pool</name>
+      <desc>   You are standing on the edge of a small pool which contains clear, fresh water.  Small animals, ignoring you, move to the edge of the pool to drink.  Wildflowers grow in wild abandon around the pool, forming a soft bed.</desc>
+      <desc>     Exits: East</desc>
+      <exits e='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='394'>
+      <name>In the Middle of a Garden</name>
+      <desc>   You are in the middle of a lush garden filled with flowers and surrounded by shrubbery.  The music of hundreds of birds fills the air.  Paths between the flowers lead to a small cafe to the east, to a pool to the west, and to a cottage to the north.  Another path leads to the south.</desc>
+      <desc>     Exits:  North, South, East, West</desc>
+      <exits n='330' e='395' s='458' w='393' up='130' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='b'>
+      <name>In a Small Cafe</name>
+      <desc>  You find yourself in a small clearing among the flowers.  Mushrooms with place settings on their tops serve as tables, while acorns arranged around the mushrooms make perfect chairs.  A small waitress moves among the mushrooms, pushing a food cart.</desc>
+      <desc>     Exits: West</desc>
+      <exits w='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='b'>
+      <name>A Stone Circle</name>
+      <desc>   You are standing in a clearing that is surrounded by five standing stones arranged in a circle.  In the center of the circle is a small grass-covered mound with a doorway in its side.  The doorway is blocked by a locked green door.</desc>
+      <desc>     Exits: North</desc>
+      <exits n='394' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

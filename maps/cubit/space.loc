@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<fed2-map title='Cubit Space' version='1.00' editor='standard'>
+
+   <location num='66' flags='sl'>
+      <name>Cubit Interstellar Link</name>
+      <desc>You have arrived at the Interstellar Link for the Cubit system. Scanners to the East indicate an asteroid in the shape of a triangle. To the South is a large asteroid field and the asteroid Cube can be seen on the southern edge of the field.</desc>
+      <exits e='67' s='130'/>
+   </location>
+
+   <location num='67' flags='s'>
+      <name>Cubit Space</name>
+      <desc>Your ship&apos;s computer screens indicate the asteroid Triangle is located to the East. The Interstellar Link is to the West.</desc>
+      <exits e='68' w='66'/>
+   </location>
+
+   <location num='68' flags='s'>
+      <name>Cubit Space</name>
+      <desc> You are in orbit around the asteroid Triangle. The Interstellar Link is to the West.</desc>
+      <exits s='132' w='67'/>
+   </location>
+
+   <location num='130' flags='s'>
+      <name>Asteroid Field</name>
+      <desc>Shields on maximum is automatic as hundreds of asteroids whiz by your ship in irregular orbits. The mining asteroid Cube is on the southern edge of the field which is displayed on your ship&apos;s computer screen. You can navigate to the Interstellar Link by going North.</desc>
+      <exits n='66' s='194'/>
+   </location>
+
+   <location num='132' flags='s'>
+      <name>Cubit Space</name>
+      <desc> Your ship&apos;s computer screen indicates that the asteroid Triangle is to the North.</desc>
+      <exits n='68' s='196'/>
+   </location>
+
+   <location num='194' flags='s'>
+      <name>Cube Orbit</name>
+      <desc>Far below you is the asteroid Cube. It is customary to Board your shuttle for the trip down to the landing pad unless you decide to enter the asteroid field to the North.</desc>
+      <exits n='130' e='195'/>
+   </location>
+
+   <location num='195' flags='s'>
+      <name>Cubit Space</name>
+      <desc> The southern edge of an asteroid field can be seen clearly on your compyter screen to the West. The asteroid Cube stands out from the rest of the flying rocks in that field.</desc>
+      <exits e='196' w='194'/>
+   </location>
+
+   <location num='196' flags='s'>
+      <name>Cubit Space</name>
+      <desc> Your ship&apos;s computer screen detects an asteroid field to the West. To the North lies the asteroid Triangle..</desc>
+      <exits n='132' w='195'/>
+   </location>
+
+</fed2-map>

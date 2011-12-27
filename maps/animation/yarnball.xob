@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<object-list version='20' editor='mac version 0.33'>
+   <object type='static' start='2020' size='1' visibility='100' weight='20' flags='i'>
+      <name>bobcat</name>
+      <id>obj_bobcat</id>
+      <desc>You see a three-foot tall anthropomorphic bobcat sporting a big, friendly grin and wearing a white shirt with a big red exclamation point on the front.</desc>
+      <vocab cmd='bobcat' event='bubsy.talk.1'></vocab>
+   </object>
+
+   <object type='static' start='2020' size='1' visibility='0' weight='20'>
+      <name>Bubsy</name>
+      <id>obj_bubsy</id>
+      <desc>You see a three-foot tall anthropomorphic bobcat sporting a big, friendly grin and wearing a white shirt with a big red exclamation point on the front.</desc>
+      <vocab cmd='pet' event='objects.ifhave.3'></vocab>
+      <vocab cmd='bubsy' event='bubsy.talk.2'></vocab>
+      <vocab cmd='drop' event='objects.events.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='0' weight='0'>
+      <name>dayflag</name>
+      <id>obj_dayflag</id>
+      <desc>I can&apos;t find anything called dayflag in the vicinity!</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='0' weight='0' flags='is'>
+      <name>followflag</name>
+      <id>obj_followflag</id>
+      <desc>I can&apos;t find anything called followflag in the vicinity!</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='100' weight='5' flags='is'>
+      <name>glider</name>
+      <id>obj_glider</id>
+      <desc>You are in possession of a hang glider.  An adventurous part of you itches to find a suitable place to use it.</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='0' weight='0' flags='s'>
+      <name>greetedflagone</name>
+      <id>obj_greeted1flag</id>
+      <desc>I can&apos;t find anything called greetedflagone in the vicinity!</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='0' weight='0' flags='s'>
+      <name>greetedflagtwo</name>
+      <id>obj_greeted2flag</id>
+      <desc>I can&apos;t find anything called greetedflagtwo in the vicinity!</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='0' weight='0' flags='s'>
+      <name>knownflag</name>
+      <id>obj_knownflag</id>
+      <desc>I can&apos;t find anything called knownflag in the vicinity!</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='100' weight='1' flags='is'>
+      <name>yarnball</name>
+      <id>obj_miniyarn</id>
+      <desc>You have a small ball of red yarn, a token of Bubsy&apos;s esteem.</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='100' weight='1' flags='ds'>
+      <name>T-shirt</name>
+      <id>obj_shirt</id>
+      <desc>You see a big, plain white T-shirt, save for a large, red exclamation point on the front.</desc>
+   </object>
+
+   <object type='abstract' start='0' size='1' visibility='100' weight='1' flags='is'>
+      <name>yarnball</name>
+      <id>obj_yarnball</id>
+      <desc>You have a ball of red yarn about as big as your fists (or equivalent) put together, a token of Bubsy&apos;s esteem.</desc>
+   </object>
+
+</object-list>

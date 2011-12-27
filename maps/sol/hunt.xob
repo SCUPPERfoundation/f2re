@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='10'>
+
+   <object type='static' start='393' visibility='100' size='1' weight='1' flags='d'>
+      <name>guard</name>
+      <id>obj_guard</id>
+      <desc>This massive droid is here to prevent anybody from entering the Hunt arena unless they are authorized, which means you have to give it the correct password for the day. It can't be persuaded otherwise, or bribed, or defeated.</desc>
+      <vocab cmd='guard' event='mobiles.guard.1'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The droids are handing out free egg custard pies - just help yourself.</desc>
+      <vocab cmd='buy' event='party.food.1'></vocab>
+      <vocab cmd='get' event='party.food.1'></vocab>
+      <vocab cmd='take' event='party.food.1'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='0' size='1' weight='1'>
+      <name>drink</name>
+      <id>obj_drink</id>
+      <desc>The droids are handing out free drinks, so you don't have to buy one - just help yourself.</desc>
+      <vocab cmd='buy' event='party.food.3'></vocab>
+      <vocab cmd='get' event='party.food.3'></vocab>
+      <vocab cmd='take' event='party.food.3'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='0' size='1' weight='1'>
+      <name>round</name>
+      <id>obj_round</id>
+      <desc>The droids are handing out free drinks, so you don't have to buy rounds - unless you want to offer something other than the special easter drink to your friends.</desc>
+      <vocab cmd='buy' event='party.food.4'></vocab>
+      <vocab cmd='get' event='party.food.4'></vocab>
+      <vocab cmd='take' event='party.food.4'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='0' size='1' weight='1'>
+      <name>pie</name>
+      <id>obj_pie</id>
+      <desc>The droids are handing out free egg custard pies - just help yourself.</desc>
+      <vocab cmd='buy' event='party.food.1'></vocab>
+      <vocab cmd='get' event='party.food.1'></vocab>
+      <vocab cmd='take' event='party.food.1'></vocab>
+      <vocab cmd='throw' event='party.food.2'></vocab>
+   </object>
+
+</object-list>

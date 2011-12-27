@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<fed2-map title='Bronze' version='5' editor='standard' from='131' to='Dragon.Dragon Space.549'>
+
+   <location num='0'>
+      <name>Storage room</name>
+      <desc>Bronze&apos;s Storage room for various things.</desc>
+      <exits no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='131'>
+      <name>Bronze Landing Pad</name>
+      <desc>   You have arrived at the small landing pad for the planet Bronze.  The small clearing appears to have seen alot of recent use.. The surrounding forest that surrounds the LP seems to be attempting to reclaim it&apos;s lost territory.  Standing out in the heat of the day, you can hear a variety of bugs, birds, and other wild animals that call this planet home.</desc>
+      <desc>     You see a small dirt trail that leads into a nearby cave to the southeast. And a newer looking structure, that appears to be some sort of teleporter, at the edge of the landing pad, with a sign that reads, &quot;enter here for the planetary exchange&quot;.</desc>
+      <exits se='196' in='515' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='196'>
+      <name>Outpost Cave</name>
+      <desc>   The coolness of the cave is refreshing after the heat from outside. The inside of the cave is lined with lighting, to allow for visitors to see.  The cave runs off into three paths.. One leading to the east further into the cave, another heading south into the information center, and one leading down into the planet surface where most of the basic planetery functions are.</desc>
+      <exits e='197' s='260' nw='131' down='516' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='197'>
+      <name>Tunnel</name>
+      <desc>   This tunnel leads to the back entrance to the cave. Up ahead you can see the sunlight from the exit.</desc>
+      <desc>   The exits lead West and East.</desc>
+      <exits e='198' w='196' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='198'>
+      <name>Rear Entrance</name>
+      <desc>  You have reached the end of the cave.. In the coolness of the shade, you can almost feel the heat trying to invade the inner sanctum of the cave.  You can exit the cave to the East, or return to the West.</desc>
+      <exits e='199' w='197' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='199'>
+      <name>Hill top</name>
+      <desc>  Standing outside the cave, on top of a large hill. You can look out over the wilderness for a long distance. Down at the base of the hill, you can see the new construction being done on the dragon training camp. With a sudden shriek from above, you look up, just as a large bronze dragon flies overhead. On the back of this dragon, you see the shape of a man, who appears to be attempting to control the great beast. A sign near the edge of the hill reads, &quot;Closed for further maintenance and construction&quot;</desc>
+      <desc>  The exit is West, back into the cave.</desc>
+      <exits w='198' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='260'>
+      <name>Planetary Visitor Information Center</name>
+      <desc>   This office is the local information center..  New visitors to the planet Bronze, can be seen waiting in line to learn of the local laws, policies, and other various information that would be relevant to them. A large sign near the entrance reads, &quot;To all new visitors, please be patient while we continue to work at taming the local dragon population of Bronze dragons. Once this is accomplished, the local government has decided to set up a dragon riding session for those willing to attend. Till then, please report any damages occured by these dragons to the proper authorities.&quot;</desc>
+      <desc>  The exit is to the north.</desc>
+      <exits n='196' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='515' flags='e'>
+      <name>Bronze Exchange</name>
+      <desc>This large cavern is filled with various trading devices, to allow for the transfer of planetary goods onto and off of the planet.  Many Merchants and traders can be seen moving about as they look for there next big transaction that might move them up in the universe.</desc>
+      <desc>   You can leave the exchange by going in to the teleporter or by taking the scenic route to the east.</desc>
+      <exits e='516' in='131' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='516'>
+      <name>Business corridor</name>
+      <desc>    This Corridor branches off to the main areas of the planet.  The cave here has been dug out quite efficient and with an oddly, almost unreal fashion that you wonder how it was even possibly done.</desc>
+      <desc>   To the West you see the comings and goings of all sorts of people, which leads you to believe that is the planetery exchange.</desc>
+      <desc>   The southwest path is marked as the planetary shipyard and repair facility. From the south, comes sounds of the local cafe, The east shows a sign for the local hospital and insurance agent. The Southeast leads to a local warehouse. The cave also leads up towards the landing pad.</desc>
+      <exits e='517' se='581' s='580' sw='579' w='515' up='196' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='517' flags='hi'>
+      <name>Hospital</name>
+      <desc>  This is the local hospital, though it is small. They claim to be able to attend to every need.  In one corner you can see the local insurance agent, ready and willing to reinsure one.. for a price of course.</desc>
+      <desc>  The exit is to the west.</desc>
+      <exits w='516' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='579' flags='yr'>
+      <name>Bronze Shipyard and Repair Facility</name>
+      <desc>  This is the planetary shipyards, where one can come to purchase a newer model or repair their existing ships from any and all damages.</desc>
+      <desc>  The exit is Northeast.</desc>
+      <exits ne='516' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='580' flags='b'>
+      <name>Cafe le Bronze</name>
+      <desc>   This small cafe, serves the usual galactic beverages and food for consumption.  The small cavern is packed full, to  make for full use of its area and provide adequate tables to serve the local workers and visiting merchants and traders.</desc>
+      <desc>  The exit lies to the North.</desc>
+      <exits n='516' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='581'>
+      <name>Empty warehouse</name>
+      <desc>  This warehouse, though empty, appears to be ready for use in a moments notice. Though not much else to see, you decide to leave to the northwest.</desc>
+      <exits nw='516' no-exit='move.noexit.1'/>
+   </location>
+
+</fed2-map>
+

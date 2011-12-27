@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<fed2-map title='Whiskey Map' version='1.00' editor='standard' from='585' to='Havefun.Havefun Space.584'>
+
+   <location num='0'>
+      <name>storeroom</name>
+      <desc>storeroom</desc>
+   </location>
+
+   <location num='137'>
+      <name>The Springs</name>
+      <desc>Jack pulls on the reins and brings the horses to a halt, and directs your attention to The Springs. The soft sounds of the water passing over the rocks and the lush green plants that surround this area is tempting for one to grab a blanket and have an ole time picnic.  &quot;Pure clean water is a necssity of any fine whiskey.  With luck and a helping hand from the Man Above, there is this crystal clear source of water on this planet.&quot;  Urging the horses on, he asks you to move East.</desc>
+      <exits e='138'/>
+   </location>
+
+   <location num='138'>
+      <name>The Stills</name>
+      <desc>As the carriage takes you inside what appears to be a very large barn, you hear the horse&apos;s hoffs clip-clopping on the wooden floor.  Joining Jack at this part of the tour is his brother Dan.  He tells you that what you have seen so far can take the outside weather to some extent, but whten the actual brewing begins, that some element control needs to take place.  He says &quot;Here are huge vats that contain the core ingredients of any fine whiskey.  The barley, malt, corn, rye, and some of tha crystal clean water are being mixed in the secret recipe by skilled brewer-master droids.  Hence, the word Mesh.  With the addition of some previous made mesh, the formula is allowed to age and ferment in Copper vats, that we will see next.&quot;  In unison, Jack and Dan say &quot;Please move East.&quot;</desc>
+      <exits e='139'/>
+   </location>
+
+   <location num='139'>
+      <name>Copper vats</name>
+      <desc>As Jack once again slows the horse&apos;s pace, Dan tells you &quot;In these gigantic copper vats, the mixture is heated and allowed to begin their final process.  The content can reach 120-140 proof at this stage.&quot;  Dan lowers himself to the floor board of the carriage and says &quot;Please do not light a cigarette here.&quot;  Jack just rolls his eyes and wonders why his brother has to always do that on every tour.  Flinging the reins again, the carriage begins to move SE.</desc>
+      <exits se='204'/>
+   </location>
+
+   <location num='202'>
+      <name>Rickyard</name>
+      <desc>Jack slows the carriage and tells you that is the Rickyard.  &quot;Hard sugar maple trees are being hauled in and placed in this pit, then turned into charcoal by the brewery-droids.  The ingredients are later filtered over this charcoal to purify it and leave that velvet taste on the taste-buds, which is a mellow whiskey.  Environments concerss are addresed so as not to pollute the air, as you noticed at the Dome.  Please move NW.&quot;</desc>
+      <exits nw='137'/>
+   </location>
+
+   <location num='204'>
+      <name>Mellowing Tanks</name>
+      <desc>As Jack once again stops the carriage, Dan stands up and tells you that these are the Mellowing Tanks.  &quot;What you have seen in the past all comes together here to get close to the final process.  Piles of burnt wood from the Rickyard are stacked multi feet high now receives the liquid brew from the Copper Vats to begin to mellow.  What was a high alcohol rate ingredient is now reduced along with any impurities.&quot;  Jack says lets go South.</desc>
+      <exits s='268'/>
+   </location>
+
+   <location num='267'>
+      <name>Tour begins</name>
+      <desc>&quot;Hello, my name is Jack, and I will be your guide.  If you have second thoughts on taking the this one way tour, you can simple get Out of the carriage.  Once you begin the tour, you will need to go through the whole tour.&quot;  Seeing everyone is still aboard, Jack flips the reins and the pair of horses slowly begin to move the carriage to begin the trip.  Jack says, &quot;Please go NW.&quot;</desc>
+      <exits nw='202' out='331'/>
+   </location>
+
+   <location num='268'>
+      <name>The Barrels</name>
+      <desc>With a smile on his face, Dan informs you that &quot;After the trip to the vats, this mixture is now ready to enter the blacken White Oak barrels and begin the aging process.  this is a process that will add the color to your Choice of Whiskey, a process that can take many years.  Weather and temperature will cause the barrels to expand and contract. When the barrels contract, the brew will be drawn deep into the burned barrels, thus picking up the dark color.  When the barrels expand, the brew will be alowed to be withdrawn from the wood.  It takes the talent of our finest Brew-master droids to know when to remove the liquid and send it to our bottling plant.&quot;  Jack and Dan departs the carriage and helps everyone out.  &quot;This is the final part of the Tour, the bottling process.  Please go South.&quot;</desc>
+      <exits s='332'/>
+   </location>
+
+   <location num='331'>
+      <name>Tour</name>
+      <desc>This is the Tour to the Distillery.  As you pass the massive oak doors, you see a gift shop that sells T-Shirts and miniatures of the prized beverage, along with various nick-knacks.  The other side is a booth that has pamphlets that show the history and other information about the industry.  You can take the guided tour by going IN a horse drawn carriage, or leave by going South.</desc>
+      <exits s='395' in='267'/>
+   </location>
+
+   <location num='332'>
+      <name>Bottling process</name>
+      <desc>You enter a huge super clean room and hear the sounds of machinery that take sanitized clear bottles across conveyor belts and are filled with the liquids from The Barrels in lightening speed.  The bottles are then capped and sealed, then a signature label is attached before they are dropped into shipping boxes.  Jack and Dan bide you a fair goodbye and hands you a miniture sample of the brewed substance.  &quot;Thank you for coming on the tour.&quot;  The exit is Out.</desc>
+      <exits out='331'/>
+   </location>
+
+   <location num='395'>
+      <name>Entrance</name>
+      <desc>This is the entrance to the Distillery.  Walking past luscious green lawns and manicured hedges thata border the walkway, the sign on the gigantic building says &quot;Home of the North American Brewery&quot;.  Off to your side is a small pond with a gentle waterfall, in the middle is a statue of the original founder Bourbon, who is holding a glass filled with the home-brew, and smiling at everyone.  To take the visit, go North, or SE will take you back towards the LP.</desc>
+      <exits n='331' se='460'/>
+   </location>
+
+   <location num='460'>
+      <name>Path</name>
+      <desc>The Path continues and becomes sparsely surrounded by small oak shrubs with patches of green grass. The breeze finds a path to cool you off again.</desc>
+      <exits s='524' nw='395'/>
+   </location>
+
+   <location num='523' flags='b'>
+      <name>Lounge</name>
+      <desc>In this quaint lounge you can buy a cold or warm beer from all around the world.  There are also glasses of wine from France, Australia, Italy, Portugal, California, or almost anywhere that exports fine wines.  A variety of mixed drinks are also available if you wish.  A pretty waitress brings you a menu that list both appetizers and full course meals.   The exit is SE.</desc>
+      <exits se='588'/>
+   </location>
+
+   <location num='524'>
+      <name>Path</name>
+      <desc>This is the path to the Still.  Overgrowth has stolen any breeze that you once felt.  Out of what looks like the hills of Tennessee or the jungles in Vietnam, is a well traveled path.  Sweating from the humid air and swatting mosquitoes the size of dragon flies, you wonder if this is a worthwhile journey.  You can continue North, or go back to the comfort  of the dome South.</desc>
+      <exits n='460' s='588'/>
+   </location>
+
+   <location num='585' flags='yr'>
+      <name>Landing Pad</name>
+      <desc>As you enter the LP, the Valet service will either park your spaceship if you are arriving, or bring your spaceship if you are leaving.  Should you wish to visit the Exchange or other places on the planet, then you will need to go IN.</desc>
+      <exits in='588'/>
+   </location>
+
+   <location num='587' flags='e'>
+      <name>Exchange</name>
+      <desc>A brass sign at the entrance reads &quot;The Exchange&quot;.  Pushing your way towards the board to examine the going prices, you find an open booth to plug in your laptop and ponder trading, wondering if you cann sell imports or buy outputs for a profit.  For some ranks, the Futures display board reveals other potential profits.  The exit is East.</desc>
+      <exits e='588'/>
+   </location>
+
+   <location num='588'>
+      <name>Atrium</name>
+      <desc>You have entered the glass covered Atrium that is home to the Exchange to the West, the Clinic to the SouthWest, the Lounge to the NorthWest.  To the North is the path to the Brewery, and to the South is the path to the Mansion.  If you are not sure what you want to do, then just sit down on one of the many wooden benches and enjoy the scenery.  There are various tropical plants and citrus trees that gently rustle in the soft breeze.</desc>
+      <exits n='524' s='652' sw='651' w='587' nw='523' out='585'/>
+   </location>
+
+   <location num='651' flags='hi'>
+      <name>Clinic/Insurance</name>
+      <desc>A pretty young nurse looks up at you with a curious look on her face.  In a soft southern voice, she informs you that you should not be here for medical reasons, and that the Lounge is over there.  The exit is NE.</desc>
+      <exits ne='588'/>
+   </location>
+
+   <location num='652'>
+      <name>Oak lined path</name>
+      <desc>You are escorted into a Surrey with rich leather seats and are driven down this path that is lined with century old oaks that creat a canopy and allows rays of sunlight through their thick brances.  The autumn air is cool and sweet.  The path continues Sourth, or you can return North towards the LP.</desc>
+      <exits n='588' s='716'/>
+   </location>
+
+   <location num='716'>
+      <name>Clearing</name>
+      <desc>In the distance, you see a large Mansion that is surrounded by lush green pasture land and protected wy a white fence, where there are several mares and even more colts.  The mares shake their heads before mundhing on more of the grass, while keeping an eye on their colts.  The colts run and frolic in the open area.  Several apple trees are there to offer them a delicate treat, and a small pond for refreshing their thirst.  Paths lead South to the Mansion, or North back to the already traveled path.</desc>
+      <exits n='652' s='780'/>
+   </location>
+
+   <location num='779' flags='b'>
+      <name>Ballroom</name>
+      <desc>Occasionally there are celebrations and parties that require the use of a large area for people to socialize, have fun, and dance in a formal setting.  This room fits the bill, with highly polished wooded floors and sparkling chadeliers.  The butler informs you that the exit is South.</desc>
+      <exits s='843'/>
+   </location>
+
+   <location num='780'>
+      <name>Front of Mansion</name>
+      <desc>Nearing the Mansion, there is a brick road and you can hear the clip-clop of the horse&apos;s hoofs as they step onto the stones.  Fraser firs are scattered around the Mansion in random fashion.  In the warmer months, they sway with the gentle breezes.  In the winter time, they will catch drops of snowflakes and will be dressed in lights and decorations for the holidays.  The carriage rounds the circular stone path and delivers you to the front of the Mansion.  Pulling the reins on the horse to a halt, the driver departs. As he walks around the carriage, he offers a sugar cube to his horse before moving around to help you get out.  Final gesture, he bows and wishes you a pleasant visit.</desc>
+      <exits n='716' s='844'/>
+   </location>
+
+   <location num='843' flags='b'>
+      <name>West Wing</name>
+      <desc>The butler leads you down another long hall that will take you to the Dining Area.  Much like the East Wing, the walls are again covered with fine arts and tapestries that will take you into the room that guests and residents are fed with all the fine cusines that one may want.  Another large oak table can handle a banquet that can serve 24 people.  Fine  china, silver and crystal lay on the table for a celebration. Behind a closed door, the chefs are hard at work preparing today&apos;s menu. &quot;You can go back East or go North to enter the ballroom.&quot;</desc>
+      <exits n='779' e='844'/>
+   </location>
+
+   <location num='844'>
+      <name>Entrance to Mansion</name>
+      <desc>The Butler greets you at the door and escorts you in.  Stepping onto the Terrazzo floors, you see  the massive twin spiral staircases leading to the upper rooms, or the Turn of the Century brass caged elevator that leads to the lower level.  You can only guess what else is in this Mansion.  &quot;We can go to the South Wing, the East Wing, or the West Wing on this floor,&quot; he informs you.  There is also an area Down to the lower level, or Up to the various offices and bedrooms on the Upper Level.  The butler asks, &quot;Where would you like to visit?&quot;  You can go S, E,W, In, or Up to visit other parts of the Mansion, or N to leave.</desc>
+      <exits n='780' e='845' s='908' w='843' up='972' down='1100'/>
+   </location>
+
+   <location num='845'>
+      <name>East Wing</name>
+      <desc>tapestries, and leads into a large room that celebrates part of the Sol system.  On one wall is a massive mahogany bookcase filled with all the novels and writings of both famous and less famous authors and writers.  In front of the bookcase, is a large oak table that rests on an imported rug from Brass.  The table is surrounded by plush leather chairs, from the hides bought in Mars and Rhea.  On another wall is a lighted glass enclosed oak display case.  Magnificent carved eggs and fine crystal sparkle under the lights.  To leave, you can go West, or East to more of the room.</desc>
+      <exits e='846' w='844'/>
+   </location>
+
+   <location num='846'>
+      <name>Extention</name>
+      <desc>This part of the room has a flat glass covered display case that holds cherished Civil War relics of a time when brother fought against brother.  A shattered uniform of blue, and another of grey lies gently together that shows violence of the time and of aging.  Diaries from some of the troops from both sides speaks of the battles that went well, and those that did not.  On the desk is an open bible turned to Ecclesiastes 3.  The butler asks &quot;If you want to leave this room, we need to go West.&quot;</desc>
+      <exits w='845'/>
+   </location>
+
+   <location num='904'>
+      <name>Suite</name>
+      <desc>This is the Suite at the end of the hallway.  The wet bar contains several bottles of the home brew of different ages.  The Armoire has several spacesuits that have been there for a long time.  The bed is draped in green satin sheets, but has been missed by the maids and remains unmade.  A soft breeze flows through the burgundy and gold silk curtains from the open French Doors.  A Christmas tree sits undecorated in the corner just waiting for the lights and garland to be hung.</desc>
+      <exits down='1100' out='968'/>
+   </location>
+
+   <location num='905'>
+      <name>Suite</name>
+      <desc>This Suite is totally decorated in red, from the curtains to the satin sheets, even the comforters and pillows.  A singe pink rose with a note, and a chocolate min lays upon one of the pillows.  The double closet contains rows of red spacesuits on one side, and multi laser guns on the other.  A wicker container holds a silk cloth with a few cat hairs and a fur ball.  The wet bar displays various bottles of Scotch.</desc>
+      <exits down='1100' out='969'/>
+   </location>
+
+   <location num='906'>
+      <name>Suite</name>
+      <desc>This Suite is decorated in the autumn colors.  Manuscripts of past Meet &amp; Greets, and the planner of future ones sit on the desk.  A plush soft bed is covered with pillows of green, tan, and yellow invites you to a slumber party.  Crimson red curtains sway in the breeze from the open doors.  The wet bar invites the tastes of every rum filled drink imaginable.  Who know why the chandelier is double strung.  Some unique stuff may happen in this room.</desc>
+      <exits down='1100' out='970'/>
+   </location>
+
+   <location num='907'>
+      <name>Suite</name>
+      <desc>This Suite is done in a soft white color.  School boods and a computer sit on the desk.  There is a notepad that has the beginning of a new novel.  A poster of Rob Thomas hangs on one wall.  Cases of diet drinks lay next to the refrigerator.  The closet contain only the clothes that a teenager could wear.  White silk curtains hang across the French doors that lead to the balcony outside.</desc>
+      <exits down='1100' out='971'/>
+   </location>
+
+   <location num='908'>
+      <name>Outdoor Balcony</name>
+      <desc>You pass through large French Doors and step onto the stone balcony and gaze at the manicured green lawn which goes for several hundred yards.  At the outher edge there are various fruit trees.  You step closer to the rail and look down to see part of the swimming pool.  Towards the west is a garden that allows the chefs the freshest of vegetables and herbs.  Looking back, you see a variety of rose and bougainvilleas that offer their fresh scents in the gentle breeze.  Several jasmine and lavender plants add to the mixed aroma.  There are a couple of hammocks for those that just want to relax.  To leave, the butler opens the door North.  Ahh, but to lay in one of those hammocks for only a minute, would do wonders for your soul.</desc>
+      <exits n='844'/>
+   </location>
+
+   <location num='909' flags='b'>
+      <name>Suite</name>
+      <desc>This is the first Suite on the East side.the ceiling has beams made of joined 2x4&apos;s and are held in place with several bent I-beams.  One the desk are several boods, one of which is open, &quot;Catherine the Great.&quot; In the fridge is a case of chilled German beers that have been flown in.  The bed is coered with a quilt that has a mixture of tan, beige, and olive green.  Beige and gold sheer curtains flow in the breeze that comes from the open doors.</desc>
+      <exits down='1100' out='973'/>
+   </location>
+
+   <location num='910'>
+      <name>Suite</name>
+      <desc>This Suite is a little different from the rest.  There are pictures on the wall.  There is one that is signed by Sylvesteer, and yet another one autographed by Morris.  There is an electronc dart board with a picture of a mouse as the bull&apos;s-eye.  On the counter rests several crystals bowls.  There is not a normal bed in the room, only a vary large wicker basket with clawed cloths of silk and lace.  On the balcony is abird bath that stands only 1 foot tall, and a grill with various condiments for poultry on the side.</desc>
+      <exits down='1100' out='974'/>
+   </location>
+
+   <location num='968'>
+      <name>Suite</name>
+      <desc>Suite</desc>
+      <exits e='969' in='904'/>
+   </location>
+
+   <location num='969'>
+      <name>Suite</name>
+      <desc>Suite</desc>
+      <exits e='970' w='968' in='905'/>
+   </location>
+
+   <location num='970'>
+      <name>Suite</name>
+      <desc>Suite</desc>
+      <exits e='971' w='969' in='906'/>
+   </location>
+
+   <location num='971'>
+      <name>Suite</name>
+      <desc>Suite</desc>
+      <exits e='972' w='970' in='907'/>
+   </location>
+
+   <location num='972'>
+      <name>Upper Floor</name>
+      <desc>Being escorted up the spiral staircase until you both reach the upper landing at the same time, the Butler offers a seat on the sofa.  The Butler tells you, &quot; The suites are mostly the same, just differnet docors to accommodate the various special guests, and those that may not want to leave at the moment.  No signs are on the doors lead to the privacy of the residents who may not want you to go in.  Each suite has a balcony that overlooks the backyard.&quot;  The hallway goes both E and W, while going Down will take you back to the entrance of the Mansion.  &quot;Shall we begin?&quot; he asks.</desc>
+      <exits e='973' w='971' down='844'/>
+   </location>
+
+   <location num='973'>
+      <name>Suite</name>
+      <desc>Suite</desc>
+      <exits e='974' w='972' in='909'/>
+   </location>
+
+   <location num='974'>
+      <name>Suite</name>
+      <desc>Suite</desc>
+      <exits w='973' in='910'/>
+   </location>
+
+   <location num='1039'>
+      <name>Showers</name>
+      <desc>Entering your private shower area, there is a sign that tells you that these showers are voice activated.  Simply say cold, warm, or hot, and the shower will adjust the temperature.  Instantly, the water temperature is adjusted.  Once inside, you can say warmer or cooler to get it just to your liking.  There are both wash clothes and sponges.  Dispensers are also voice activated, just say soap, shampoo, or rinse, and a portion of that ingredient is delivered to you mode of cleansing.  When you are done, you can go South back to the Locker Room</desc>
+      <exits s='1103'/>
+   </location>
+
+   <location num='1099' flags='b'>
+      <name>Entertainment area</name>
+      <desc>Entering this area,  you look around.  There is a large bar on one end of the room, along with several solid oak pool tables covered in burgundy felt.  There are several vintage pin ball machines from the 70&apos;s and 80&apos;s for your amusement.  Near the bar there are also several large flat screen TV&apos;s for viewing sporting events.  To take the chill out on a crispy winter night, a stone fireplace rises up to the vaulted ceiling.  Leather chairs and sofas are plentiful in that area.  Off to the side of the bar is a finely polished dance floor and a stage where touring bands may want to perform.  The microphone is on if you care to give it a try.  On party nights, &quot;You lost that loving feeling&quot; gets sung alot.  Rumors has it that a couple of guys named Maverick and Goose once stopped by. You can also go IN the Jacuzzi.</desc>
+      <exits e='1100' in='1163'/>
+   </location>
+
+   <location num='1100'>
+      <name>Lower Level</name>
+      <desc>As you exit the elevator you walk into the most massive room of the Mansion.  There is a mega sized pool that is indoors, but has a cave feature that will allow you to swim outside the confines of the room to the South.  Surrounding  the indoor portion of the pool, are large planters holding various ferns and other tropical plants of multi-colored greens.  To the West is the entertaining portion of this room, while to the East is the fitness area.  If you wish to leave , just go Up to get to the Main Floor.</desc>
+      <exits e='1101' s='1164' w='1099' up='844'/>
+   </location>
+
+   <location num='1101'>
+      <name>Fitness area</name>
+      <desc>Should you feel the need to work out, there are machines that will work almost every part of you body.  All the machines and free weights are of polished chrome.  A petite woman is also available for aerobics and Yoga.  There is the basic bench press, lat machine, preachers chair, leg lifts, curl machines, and tread mills.  All are state of the art.  The trainers are all highly trained and will assist you with  any help or questions you may have.  Assistants constantly wipe all the equipment to sanitize them after being used.  After a long workout, you can go IN the locker room that will allow you to shower off or use the sauna.  You can leave by going West, or IN for the locker room.</desc>
+      <exits w='1100' in='1103'/>
+   </location>
+
+   <location num='1103'>
+      <name>Locker room</name>
+      <desc>Unlike the normal gym, there are no metal lockers here to put your clothing and personal belonging.  Instead, there are armoires in a private changing area for each and every guest that has chosen to work out.  This is for both men and woman, so privacy is an issue.  After a long workout, a shower and a sauna may be just what you need.  The showers are North, the saunas are South.  To go back to the Fitness area, simply go Out.</desc>
+      <exits n='1039' s='1167' out='1101'/>
+   </location>
+
+   <location num='1163'>
+      <name>Jacuzzi</name>
+      <desc>Entering the jacuzzi, your aches, pains, and/or worries seem to magically disappear.  Tiny jets of warm water massage every part of you body.  Clothing is optional.  Waitresses and Waiters will be around to refill you choice of beverage.  A super sized filter has been installed to keep the water fresh and clean, regardless of who may enter.</desc>
+      <exits out='1099'/>
+   </location>
+
+   <location num='1164'>
+      <name>Pool</name>
+      <desc>If you care to relax and take a few lap, enjoy the pool.</desc>
+      <exits n='1100'/>
+   </location>
+
+   <location num='1167'>
+      <name>Sauna</name>
+      <desc>Ahhhh   nothing better than a hot suana after a good workout.  The hot water just melts away the pain from the gain.  The staff will make sure you only stay in for only a couple of minutes. You close you eyes and relax for those mere minutes.  After the short relaxing time, you go North back to the Lockers.</desc>
+      <exits n='1103'/>
+   </location>
+
+</fed2-map>

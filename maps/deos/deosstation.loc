@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<fed2-map title='Deos Station' version='1.00' editor='standard' from='460' to='Deos.Deos Space.264'>
+
+   <location num='0' flags='kt'>
+      <name>Storage</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='398' flags='b'>
+      <name>Canteen</name>
+      <desc>A temporary canteen has been set up to provide for the repair teams.  Boxes of Dozio&apos;s Pizza House Special Pizza are laid out on a long table.  Dozio&apos;s Pizza House is renowned for its huge delivery area, and they cater to eating establishments throughout the galaxy.  Against one wall, temporary cots have been set up to give workers a place to grab a quick nap between shifts.</desc>
+      <exits s='462' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='400' flags='e'>
+      <name>Remote Exchange</name>
+      <desc>Freshly unpacked trade terminals have been placed on the old trading stations, the wiring is still exposed.  The remote trade facility is tied to the main trading terminals on Ainokea, and goods ordered here will be transported to the shuttle bay and loaded on your shuttle.  Goods sold will be used first to support the repair effort of Deos Station, and will then be shipped to Ainokea.</desc>
+      <exits s='464' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='412' flags='bt'>
+      <name>Zardoz&apos;s Office</name>
+      <desc>Amid the rubble of the long departed Planet Owner of Deos, Zardoz has set up a private office.  The office was at one time tastefully decorated and had an adjoining apartment as well.  But now, fallen debris has blocked off the private quarters, and the once opulent interior is ruined.  Zardoz has a small portable table set up as a desk, and a remote computer link brings him reports of the various Dozian enterprises.  Also on the desk is a picture, in a silver frame, of Zardoz&apos;s love, Sephorin.</desc>
+      <exits s='476' out='460' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='460'>
+      <name>Landing Bay</name>
+      <desc>The Shuttle&apos;s exterior lights provide added illumination to the dim interior of the station&apos;s shuttle bay.  Ainokean engineers have just recently been able to restore power to the derelict station, and currently the priority is life support systems and inertial dampeners.  Lights are only a secondary concern.  The shuttle bay itself is a display of contrasts.  The arched steel framework, and heavy electrical cables are testaments to a long ago age of Federation, while the compact portable fission generators and fiber-optic cabling are examples of the latest technology.  Deos Station was once the gate way to Deos, and it has sat dormant now through the ages.  Recently, Zardoz ordered an expeditionary team to determine the viability of restoring the station.  Workers scramble about as failing systems are patched, and life support begins to operate within safe parameters.</desc>
+      <desc>     The rest of the station is Down.</desc>
+      <exits down='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Observation Deck</name>
+      <desc>The Observation Deck is strewn with debris.  Cables hang from the ceiling and opened crates from shipped in equipment are now used as garbage bins to collect unsalvageable pieces of malfunctioning equipment that has been removed by the repair teams.  Scalfolding and tool bins are set about for use by the teams as new areas are opened up.  One wall is made up of a large window which is now partially obscured by a thick layer of dust.  Through the window, it is possible to catch a glimpse of the dark lifeless surface of Deos.</desc>
+      <desc>   To the North is a temporary canteen, and to the south is the station&apos;s life support.</desc>
+      <exits n='398' e='463' s='526' up='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='463'>
+      <name>Corridor</name>
+      <desc>A long corridor leads from the Observation deck to the other side of the station.  The corridor is dimly lit and long shadows loom along the dark grey walls.  The air is dusty, and has just started to be purified.  Even with the life support system functioning at peak capacity, there is a stale scent that fills the air.</desc>
+      <exits e='464' w='462' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='464'>
+      <name>Terminus</name>
+      <desc>The long corridor ends at a dimly lit intersection.  To the North is a room with flashing trade monitors.  To the South is a door marked &quot;SECURITY&quot;.  To the East is a dimly lit Grav Tube that may be operational.</desc>
+      <exits n='400' e='465' s='528' w='463' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='465'>
+      <name>Grav Tube - Main Level</name>
+      <desc>The dimly lit Grav Tube is still operational.  It can go Up or Down.</desc>
+      <exits w='464' up='476' down='469' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='469'>
+      <name>Grav Tube - Lower Level</name>
+      <desc>The lowest level of the Grav Tube is unlit.  To the East is a faint light.</desc>
+      <exits e='470' up='465' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='470'>
+      <name>Shuttle Bay</name>
+      <desc>When Deos was still inhabited, entry was via shuttles which departed from this station.  The old shuttle bay is lit only by a few utility lamps left by the repair crew.  The meager light that they provide is enough to see that the shuttle bay is currently devoid of shuttles.  The shuttle bay doors are sealed shut by an accumulation of dust, and the station is not currently providing enough power to open the doors.  Since the bay is no longer capable of being used as it was originally intended, it is currently used as a storage room.  Boxes of unopened equipment and parts are stacked throughout the room.</desc>
+      <exits w='469' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='476'>
+      <name>Grav Tube - Level 1</name>
+      <desc>Level 1 has doors to the North and South.  Level 2 is Up, and the main level is Down.</desc>
+      <exits n='412' s='540' up='482' down='465' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='482'>
+      <name>Grav Tube - Observation Level</name>
+      <desc>The lights of the Grav Tube grow a liitle brighter as it reaches its highest level.  There is a room to the East, or the tube will go Down to the lower levels.</desc>
+      <exits e='483' down='476' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='483' flags='b'>
+      <name>Observation Lounge</name>
+      <desc>The view from the lounge is breathtaking.  One entire wall of the lounge is a glass window.  The repair crew has cleaned, and polished the window so it offers a clear view of Deos.  The planet&apos;s desolation is clear from this vantage.  Deos, once the pearl of the Neverland Duchy, is now a dark, lifeless wasteland.  The lounge itself reflects the same deterioration.  The lounge was once an upscale dining establishment where travelers could enjoy a fine dining experience with an unmatched view of the planet below.  Now, the tables are covered in a layer of dust, and the glasses behind the bar are either broken, or covered by so much dust that they are unusable.  A piano in the corner is out of tune and unplayable.  Repair team members who visit this area have been known to pause, reflect, and shed a tear over what once was, and is no more.</desc>
+      <exits w='482' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='526'>
+      <name>Life Support</name>
+      <desc>Deos Station&apos;s life support systems have only recently been reactivated.  Coils of cable, and discarded fused relays are piled in one corner.  The newly installed air quality monitors and oxygen generators hum with a reassuring continuity.  Technicians with clipboards stop at each station and make continual adjustments to set the system at it&apos;s most optimal levels.  Monitors display the current system condition, and everything is operating in the green.</desc>
+      <exits n='462' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='528'>
+      <name>Security Station</name>
+      <desc>Two uniformed guards man newly installed work stations and monitor the operations of Deos Station.  Observation monitors line one wall, and terminals provide displays of the status of the various operations on the station.  Communication links with Ainokean Space Command assure that reinforcements will arrive without delay should the need occur.  In reality, the real job of Station Security is to ensure that the newly installed systems are functioning, and if not, to alert the repair teams promptly.</desc>
+      <exits n='464' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='540' flags='b'>
+      <name>Zardroid Charging Station</name>
+      <desc>Built into the recess of the wall is a charging station for Zardroid, one of Zardoz&apos;s service droids.  Conduits supplying power, and access to the station&apos;s main frame are here for it to plug into as it charges its batteries.</desc>
+      <exits n='476' out='460' no-exit='moves.noexit.10'/>
+   </location>
+
+</fed2-map>
+

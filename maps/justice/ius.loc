@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<fed2-map title='Ius' version='8' editor='standard' from='1693' to='Justice.Justice Space.1695'>
+
+   <location num='0' flags='t'>
+      <name>Ius Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='924'>
+      <name>Govenor Three</name>
+      <desc>Govenor Three&apos;s chambers.</desc>
+      <exits se='989'/>
+   </location>
+
+   <location num='925'>
+      <name>Govenor Seven</name>
+      <desc>Govenor Seven&apos;s chambers.  This is the largest chamber because Govenor Seven serves as the Chief Govenor.</desc>
+      <exits s='989'/>
+   </location>
+
+   <location num='926'>
+      <name>Govenor Six</name>
+      <desc>Govenor Six&apos;s chambers.</desc>
+      <exits sw='989'/>
+   </location>
+
+   <location num='988'>
+      <name>Govenor Two</name>
+      <desc>Govenor Two&apos;s chambers.</desc>
+      <exits e='989'/>
+   </location>
+
+   <location num='989' flags='pkt'>
+      <name>Ius Great Hall Central Chamber</name>
+      <desc>     The Central Chamber serves as the center of dispute resolution for Ius.  Conflicts from around the universe are brought here for settlement by the seven Govenors of Ius.</desc>
+      <desc>     A sign hovers over the Chief Govenor&apos;s seat that reads: Justitium, we apologize for any inconvenience.</desc>
+      <exits n='925' ne='926' e='990' se='1054' s='1053' sw='1052' w='988' nw='924'/>
+   </location>
+
+   <location num='990'>
+      <name>Govenor Five</name>
+      <desc>Govenor Five&apos;s chambers.</desc>
+      <exits w='989'/>
+   </location>
+
+   <location num='1052'>
+      <name>Govenor One</name>
+      <desc>Govenor One&apos;s chambers.</desc>
+      <exits ne='989'/>
+   </location>
+
+   <location num='1053'>
+      <name>Ius Great Hall Entry Court</name>
+      <desc>Long wooden benches line the marble walls within this hallway.  The hallway extends from the huge entryway to the South to the Central Chamber to the North.</desc>
+      <exits n='989' s='1117' out='1117'/>
+   </location>
+
+   <location num='1054'>
+      <name>Govenor Four</name>
+      <desc>Govenor Four&apos;s chambers.</desc>
+      <exits nw='989'/>
+   </location>
+
+   <location num='1116'>
+      <name>Ius Hall</name>
+      <desc>You are standing outside a tremendous structure.  Seven columns support the front marble overhang covering the huge double doorway into the Great Hall.</desc>
+      <exits ne='1053' e='1117' se='1181' in='1053'/>
+   </location>
+
+   <location num='1117'>
+      <name>Ius Great Hall</name>
+      <desc>You are standing outside a tremendous structure.  Seven columns support the front marble overhang covering the huge double doorway into the Great Hall.</desc>
+      <exits n='1053' e='1118' s='1181' w='1116' in='1053'/>
+   </location>
+
+   <location num='1118'>
+      <name>Ius Hall</name>
+      <desc>You are standing outside a tremendous structure.  Seven columns support the front marble overhang covering the huge double doorway into the Great Hall.</desc>
+      <exits sw='1181' w='1117' nw='1053' in='1053'/>
+   </location>
+
+   <location num='1179'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits e='1180' sw='1242'/>
+   </location>
+
+   <location num='1180'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits e='1181' w='1179'/>
+   </location>
+
+   <location num='1181'>
+      <name>Ius Town Center</name>
+      <desc>The crossroads of Ius.  To the West lies the Commercial District, which is opposite the Residential District to the East.  North continues to the Great Hall, while South leads back to the Shuttle Pad.</desc>
+      <exits n='1117' ne='1118' e='1182' se='1246' s='1245' sw='1244' w='1180' nw='1116'/>
+   </location>
+
+   <location num='1182'>
+      <name>Lex Avenue East</name>
+      <desc>The eastern side of Ius is primarily residential.  The clerks, workers, and staff of Ius live in this area.  A wooden sign hangs to the south showing a white marble column on a bright blue background with two red wine glasses toasting the column edge.</desc>
+      <exits e='1183' s='1246' w='1181' in='1246'/>
+   </location>
+
+   <location num='1183'>
+      <name>Lex Avenue East</name>
+      <desc>Houses line this quaint roadway.  Several locals gaze at you from their rooftop porches.</desc>
+      <exits e='1184' w='1182'/>
+   </location>
+
+   <location num='1184'>
+      <name>Lex Avenue East</name>
+      <desc>Houses line this quaint roadway.  Several locals gaze at you from their rooftop porches.</desc>
+      <exits e='1185' w='1183'/>
+   </location>
+
+   <location num='1185'>
+      <name>Lex Avenue East</name>
+      <desc>Houses line this quaint roadway.  Several locals gaze at you from their rooftop porches.</desc>
+      <exits se='1250' w='1184'/>
+   </location>
+
+   <location num='1242'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits ne='1179' sw='1305'/>
+   </location>
+
+   <location num='1244'>
+      <name>Ius Museum</name>
+      <desc>This building is under construction.  Eventually the history of Ius will be housed within this structure&apos;s halls.</desc>
+      <exits ne='1181'/>
+   </location>
+
+   <location num='1245'>
+      <name>Ius Boulevard</name>
+      <desc>This main road leads directly to the Great Hall.</desc>
+      <exits n='1181' s='1309'/>
+   </location>
+
+   <location num='1246' flags='b'>
+      <name>The Perfect Column</name>
+      <desc>Here you find mainly the locals drinking their favorite beverage.  Dressed in white robes they sit about laughing, drinking, and engaged in conversation about everday life on Ius.</desc>
+      <exits n='1182' nw='1181' out='1182'/>
+   </location>
+
+   <location num='1250'>
+      <name>Lex Avenue East</name>
+      <desc>Houses line this quaint roadway.  Several locals gaze at you from their rooftop porches.</desc>
+      <exits s='1314' nw='1185'/>
+   </location>
+
+   <location num='1305'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits ne='1242' sw='1368'/>
+   </location>
+
+   <location num='1309'>
+      <name>Ius Boulevard</name>
+      <desc>This main road leads directly to the Great Hall.</desc>
+      <exits n='1245' s='1373'/>
+   </location>
+
+   <location num='1314'>
+      <name>Lex Avenue East</name>
+      <desc>Houses line this quaint roadway.  Several locals gaze at you from their rooftop porches.</desc>
+      <exits n='1250'/>
+   </location>
+
+   <location num='1368'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits ne='1305' s='1432'/>
+   </location>
+
+   <location num='1373'>
+      <name>Ius Boulevard</name>
+      <desc>This main road leads directly to the Great Hall.</desc>
+      <exits n='1309' s='1437'/>
+   </location>
+
+   <location num='1431'>
+      <name>Ius Tower</name>
+      <desc>The foyer is carved marble with multiple elevators leading up to the offices.  To lease space contact Stirling up in his office.</desc>
+      <exits e='1432' up='1559' out='1432'/>
+   </location>
+
+   <location num='1432'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.  Ius Tower, the tallest building on the planet, lies to your West.  You can lease space here or meet with the Stirling.</desc>
+      <exits n='1368' s='1496' w='1431'/>
+   </location>
+
+   <location num='1437'>
+      <name>Ius Boulevard</name>
+      <desc>This main road leads directly to the Great Hall.</desc>
+      <exits n='1373' s='1501'/>
+   </location>
+
+   <location num='1496'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits n='1432' se='1561'/>
+   </location>
+
+   <location num='1501'>
+      <name>Ius Boulevard</name>
+      <desc>This main road leads directly to the Great Hall.</desc>
+      <exits n='1437' s='1565'/>
+   </location>
+
+   <location num='1559'>
+      <name>Stirling Suite</name>
+      <desc>A large oak desk with a skyline backdrop sits on an imported rug.  Stirling is not here right now, but can be contacted directly via your comm unit.</desc>
+      <exits down='1431'/>
+   </location>
+
+   <location num='1561'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits se='1626' nw='1496'/>
+   </location>
+
+   <location num='1564' flags='bk'>
+      <name>Ius Pub</name>
+      <desc>As you enter the pub through an auto-bioscan instrument, an attractive foreigner approaches and offers to buy you a drink.  &quot;This is one of the few places you don&apos;t need one of those crazy Jus Commercii to spend money, just buy all the drinks you want!&quot;  The barkeeper rolls his eyes, smiles, and politely asks what you would like to drink.</desc>
+      <desc>Scattered about this well kept pub are locals and foreigners from all over the galaxy.  Most seem engaged in some form of serious conversation about business or Ius itself, particularly all the rules.</desc>
+      <exits e='1565' se='1629' s='1628' out='1629'/>
+   </location>
+
+   <location num='1565'>
+      <name>Ius Boulevard</name>
+      <desc>This main road leads directly to the Great Hall.</desc>
+      <exits n='1501' s='1629' w='1564'/>
+   </location>
+
+   <location num='1626'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits e='1627' nw='1561'/>
+   </location>
+
+   <location num='1627'>
+      <name>Lex Avenue</name>
+      <desc>Buildings line this commercial thoroughfare, which travels through the commercial district up to the Town Center.</desc>
+      <exits e='1628' w='1626'/>
+   </location>
+
+   <location num='1628'>
+      <name>Lex Avenue</name>
+      <desc>This street is the main roadway through the commercial district of Ius.  If you are just visiting enjoy your stay and avoid getting into trouble.  If you plan to conduct business on Ius, please report to the Exchange and obtain your Jus Commercii prior to any transactions.  Conducting business without your permit would be unfair and therefore punishable under Ius Law.</desc>
+      <desc>To the North you notice a friendly looking pub.</desc>
+      <exits n='1564' e='1629' w='1627'/>
+   </location>
+
+   <location num='1629' flags='k'>
+      <name>Ius Welcome Center</name>
+      <desc>A large marble gazebo draws your attention to the center of this large area.  People are scurrying about, most wearing a white robe reminiscent of Earth&apos;s ancient Rome.  The gazebo has seven sides each with a touch screen video panel.  Touching the map icon gives you general directions from this location:  North to the Town Center and Govenors&apos; Realm.  South to the Shuttle Pad.  East to the Exchange.  West to the Commercial District.  SouthWest to the Hospital.  Southeast to the Shipyard and Repairs.  Touching the screen also subjected you to a bioscan, thank  you.  Each side of the gazebo has a different name carved into the marble.</desc>
+      <exits n='1565' e='1630' se='1694' s='1693' sw='1692' w='1628'/>
+   </location>
+
+   <location num='1630' flags='e'>
+      <name>Ius Exchange</name>
+      <desc>The Grand Hall of the Ius Exchange.  You&apos;ve heard about the fortunes made in the place and want your share of the action.  In order to conduct business on the exchange, please place your finger into a bioscan instrument to indicate your acceptance of the Terms of Service Agreement.  Upon your acceptance you are granted Jus Commercii for all transactions within or related to Ius.  Thank you.</desc>
+      <exits w='1629'/>
+   </location>
+
+   <location num='1692' flags='hi'>
+      <name>Ius Hospital</name>
+      <desc>You are greeted by an admissions clerk who requests you stand along the bioscan instrument for DNA identification and diagnosis.  The clerk reminds you that you are responsible for payment of all services provided and failure to complete payment will result in the Ius Hospital pursuing all possible actions against you to recover payment.  Upon diagnosis and agreement of all Terms of Service, you may proceed to the Treatment Facility.  Please note, if you are requesting an IBP (Intrusive Bioscan Procedure) please present your permit before conducting your acceptance bioscan.</desc>
+      <exits ne='1629'/>
+   </location>
+
+   <location num='1693'>
+      <name>Ius Landing Zone</name>
+      <desc>Shuttles are coming and going from here between the planet surface and the space link.  Please proceed to a shuttle immediately or continue to the main areas.  Loitering is subject to fine up to and including intrusive bioscan procedure (IBP).</desc>
+      <exits n='1629'/>
+   </location>
+
+   <location num='1694' flags='yr'>
+      <name>Ius Shipyard and Repairs</name>
+      <desc>Greetings! shouts the older gentleman walking in your direction.  We handle everything associated with Spaceships here.  If you are interested in trading in your old ship for a new one, just place your finger in the bioscan instrument as a mark of agreement of all Sales Terms and then say BUY SHIP.  You will be asked to confirm your acceptance of all Sale Terms upon exit from the catalog.  If you need your ship repaired, you&apos;ll have to come back another time because our Terms of Service Agreement is not complete, sorry.</desc>
+      <exits w='1693' nw='1629' out='1693'/>
+   </location>
+
+</fed2-map>

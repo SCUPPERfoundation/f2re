@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='46'>
+
+   <object type='static' start='328' visibility='100' size='1' weight='1' flags='i'>
+      <name>jukebox</name>
+      <id>obj_jukebox</id>
+      <desc>This ancient Earth artifact from the pre-spaceflight era will play a selection of songs from the period.</desc>
+      <vocab cmd='play' event='objects.jukebox.1'></vocab>
+   </object>
+
+   <object type='static' start='328' visibility='100' size='1' weight='1' flags='p'>
+      <name>dice</name>
+      <id>obj_dice</id>
+      <desc>These two standard six-sided dice are white with red spots. To play with the dice, roll them.</desc>
+      <vocab cmd='get' event='objects.dice.1'></vocab>
+      <vocab cmd='roll' event='objects.dice.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='it'>
+      <name>lantern</name>
+      <id>obj_lantern</id>
+      <desc>These unique patent self-igniting paper chinese lanterns are made exclusively for the Sizzling Wok on Mercury. A label warns that sharp knocks may cause the lamp to ignite while still folded.</desc>
+      <vocab cmd='drop' event='newbod.lantern.3'></vocab>
+   </object>
+
+   <object type='static' start='328' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>The food on sale here is a selection of traditional foodstuffs from old Earth, which is only fitting considering the theme of the bar.</desc>
+      <vocab cmd='buy' event='food.taproom.1'></vocab>
+   </object>
+
+   <object type='static' start='648' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>The dish of the day is squid in black bean sauce, on a sizzling platter.</desc>
+      <vocab cmd='buy' event='food.wok.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ps'>
+      <name>dice</name>
+      <id>obj_2dice</id>
+      <desc>These two standard six-sided dice are white with red spots. To play with the dice, roll them.</desc>
+      <vocab cmd='roll' event='objects.dice.2'></vocab>
+      <vocab cmd='drop' event='objects.dice.15'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='100' size='1' weight='1' flags='i'>
+      <name>box</name>
+      <id>obj_box</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='examine' event='objects.box.1'></vocab>
+      <vocab cmd='ex' event='objects.box.1'></vocab>
+      <vocab cmd='get' event='objects.box.4'></vocab>
+      <vocab cmd='take' event='objects.box.4'></vocab>
+      <vocab cmd='open' event='objects.box.5'></vocab>
+      <vocab cmd='close' event='objects.box.8'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='0' size='1' weight='1'>
+      <name>candle</name>
+      <id>obj_1candle</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='get' event='objects.box.11'></vocab>
+      <vocab cmd='take' event='objects.box.11'></vocab>
+      <vocab cmd='examine' event='objects.box.16'></vocab>
+      <vocab cmd='ex' event='objects.box.16'></vocab>
+   </object>
+
+   <object type='static' start='264' visibility='0' size='1' weight='1'>
+      <name>candles</name>
+      <id>obj_2candle</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='get' event='objects.box.11'></vocab>
+      <vocab cmd='take' event='objects.box.11'></vocab>
+      <vocab cmd='examine' event='objects.box.16'></vocab>
+      <vocab cmd='ex' event='objects.box.16'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>candle</name>
+      <id>obj_candle</id>
+      <desc>The candle is in the shape of a sphere, and is made up of layers of different colored wax forming a rainbow pattern. The self-igniting wick protrudes from the center.</desc>
+      <vocab cmd='drop' event='objects.candle.1'></vocab>
+      <vocab cmd='ex' event='objects.candle.2'></vocab>
+      <vocab cmd='examine' event='objects.candle.2'></vocab>
+      <vocab cmd='light' event='objects.candle.3'></vocab>
+   </object>
+
+   <object type='static' start='976' visibility='0' size='1' weight='1'>
+      <name>intelligence</name>
+      <id>obj_intelligence</id>
+      <desc>You can increase your intelligence by 1 point for 1 slithy, up to a limit of 150, with BUY INTELLIGENCE. However, you can only increase a stat once each day.</desc>
+      <vocab cmd='buy' event='stats.int.1'></vocab>
+   </object>
+
+</object-list>

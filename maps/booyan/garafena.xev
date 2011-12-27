@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+
+<event-list version='7'>
+
+ <category name='objects'>
+
+  <section name='ball'>
+
+   <event num='1'>
+    <comment>Get/take ball - loc 1374</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.1'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.2'/>
+    <createobject where='inventory' home-map='booyan/garafena' id='obj_ball'/>
+   </event>
+
+   <event num='2'>
+    <comment>Drop ball</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.3'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.4'/>
+    <destroyobject where='inventory' map='home' id-name='magic 8-ball'/>
+   </event>
+
+   <event num='3'>
+    <comment>Shake ball</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.5'/>
+    <call event='objects.ball.random[4-13]'/>
+   </event>
+
+   <event num='4'>
+    <comment>Response 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.6'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.16'/>
+   </event>
+
+   <event num='5'>
+    <comment>Response 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.7'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.17'/>
+   </event>
+
+   <event num='6'>
+    <comment>Response 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.8'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.16'/>
+   </event>
+
+   <event num='7'>
+    <comment>Response 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.9'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.18'/>
+   </event>
+
+   <event num='8'>
+    <comment>Response 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.10'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.16'/>
+   </event>
+
+   <event num='9'>
+    <comment>Response 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.11'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.17'/>
+   </event>
+
+   <event num='10'>
+    <comment>Response 7</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.12'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.18'/>
+   </event>
+
+   <event num='11'>
+    <comment>Response 8</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.13'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.16'/>
+   </event>
+
+   <event num='12'>
+    <comment>Response 9</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.14'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.16'/>
+   </event>
+
+   <event num='13'>
+    <comment>Response 10</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.15'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.18'/>
+   </event>
+
+  </section>
+
+  <section name='lever'>
+
+   <event num='1'>
+    <comment>Pull lever - loc 2013</comment>
+    <message type='single' where='com' who='individual' lo='objects.lever.1'/>
+    <move what='player' who='individual' loc='1949'/>
+   </event>
+
+   <event num='2'>
+    <comment>Pull lever - loc 1949</comment>
+    <message type='single' where='com' who='individual' lo='objects.lever.2'/>
+    <move what='player' who='individual' loc='2013'/>
+   </event>
+
+  </section>
+
+  <section name='map'>
+
+   <event num='1'>
+    <comment>Look/read map - loc 2141</comment>
+    <message type='multi' where='com' who='individual' lo='objects.map.1' hi='objects.map.5'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Haidec Space' version='9' editor='standard'>
+
+   <location num='395' flags='s'>
+      <name>The asteroid belt</name>
+      <desc>   This is the asteroid belt separating the inner planets of the Haidec system from the outer planet.  Several defense systems protecting the inner planets from invasion are located here and they are all zeroing in on your location.  This may not be the best parking spot for an unknown spacecraft like yours.  The icy moon known as Somma is located Southeast.</desc>
+      <exits se='460' out='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Somma orbit and interstellar link</name>
+      <desc>   The Haidec system is a small planetary system with three planets and an asteroid belt.  Two of the planets are inside the asteroid belt, however the defense systems positioned in the asteroid belt make those planets unappealing for visitors.  The third planet, a large gas giant located outside the asteroid belt, has several moons.  You are in the orbit of the largest of those moons, an icy world called Somma.  A small area of this cold moon has been terraformed so it is possible to survive there, but you&apos;d better turn the heating up... it&apos;s cold down there!</desc>
+      <exits e='461' nw='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>The Gas Giant</name>
+      <desc>   You are in orbit of a gas giant planet.  The planet is a light blue world with small rings and several moons.  The only inhabitable moon is the icy world of Somma located to the west.</desc>
+      <exits w='460' in='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

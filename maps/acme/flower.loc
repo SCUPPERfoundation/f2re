@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<fed2-map title='Flower' version='10' editor='standard' from='520' to='Acme.Acme Space.528'>
+
+   <location num='263'>
+      <name>Lab # 4</name>
+      <desc>Lab # 4 is use to find new meds for the wildlife and plants on Occyland. It takes alot new meds allthe time because of all the tourist that vist Occyland. South east to the hub.</desc>
+      <exits se='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='264' flags='e'>
+      <name>Flower Exchange</name>
+      <desc>Flower Exchange, The smell of money is all you smell here. You can try and make a groat too. South to the hub.</desc>
+      <exits s='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Lab # 3</name>
+      <desc>Lab # 3 New wild life lab for Occyland. South west to the hub.</desc>
+      <exits sw='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Lab Fizzy</name>
+      <desc>Lab Fizzy, for your drinking pleasure. East to get out.</desc>
+      <exits e='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='328'>
+      <name>Hub of Flower</name>
+      <desc>The Hub of the Flower, everything can be access  from here, south east lab  # 1, east lab #  2, north east lab # 3, north exchange, north west lab # 4, west lab fizzy, south west lab new, south towards landing pad</desc>
+      <exits n='264' ne='265' e='329' se='393' s='392' sw='391' w='327' nw='263' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Lab # 2</name>
+      <desc>Lab # 2 New Plant Life for Occyland. West to the Hub.</desc>
+      <exits w='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='391' flags='yrhib'>
+      <name>Lab New</name>
+      <desc>Lab is where new things start on the astroid. Besure and check your insurance if your in here.Northwest to the hub.</desc>
+      <exits ne='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='392'>
+      <name>The Stem</name>
+      <desc>The Stem is a corridor running north and south</desc>
+      <exits n='328' s='456' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Lab # 1</name>
+      <desc>Lab # 1 is the try anything lab. One wonders what comes out of this lab. North east to the hub.</desc>
+      <exits nw='328' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='456'>
+      <name>The Stem</name>
+      <desc>The Stem is a corridor running north and south</desc>
+      <exits n='392' s='520' no-exit='flower.moves.1'/>
+   </location>
+
+   <location num='520'>
+      <name>Flower&apos;s Shuttle Dock</name>
+      <desc>Flower&apos;s shuttle dock. this is the way in to the asteriod going north</desc>
+      <exits n='456' no-exit='flower.moves.1'/>
+   </location>
+
+</fed2-map>

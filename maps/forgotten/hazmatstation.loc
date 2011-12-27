@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<fed2-map title='Hazmat Station' version='15' editor='standard' from='279' to='Forgotten.Forgotten Space.459'>
+
+   <location num='0'>
+      <name>Blackhole generator</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='69' flags='bt'>
+      <name>Nomad&apos;s Private Sky Lounge</name>
+      <desc>As you look around the room you see pictures of some great People of Classic Fed Space. Bellyup, Kella, Gypsy, Von, Blirish, Doppelganger, Wolfyn, Sistertwo, Rere, Redspice holding up a set of Nomad&apos;s boxers,</desc>
+      <desc>Kimba, Lordkubera, Persephonie and the pictures goes on and on.</desc>
+      <exits down='276' out='276'/>
+   </location>
+
+   <location num='136' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='137' sw='199'/>
+   </location>
+
+   <location num='137' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='138' s='201' w='136' in='265'/>
+   </location>
+
+   <location num='138' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits se='203' w='137'/>
+   </location>
+
+   <location num='142' flags='t'>
+      <name>Beta Corridoor B1</name>
+      <desc>xxx</desc>
+      <exits e='143' sw='205'/>
+   </location>
+
+   <location num='143' flags='t'>
+      <name>Beta Corridoor B2</name>
+      <desc>xxx</desc>
+      <exits e='144' s='207' w='142' in='271'/>
+   </location>
+
+   <location num='144' flags='t'>
+      <name>Beta Corridoor B3</name>
+      <desc>xxx</desc>
+      <exits se='209' w='143'/>
+   </location>
+
+   <location num='196' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits se='261' s='260' sw='259'/>
+   </location>
+
+   <location num='199' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits ne='136' s='263'/>
+   </location>
+
+   <location num='201' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='137'/>
+   </location>
+
+   <location num='203' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits s='267' nw='138'/>
+   </location>
+
+   <location num='205' flags='t'>
+      <name>Alpha Corridoor A3</name>
+      <desc>xxx</desc>
+      <exits ne='142' s='269'/>
+   </location>
+
+   <location num='207' flags='t'>
+      <name>Crew Bunk Room Beta</name>
+      <desc>xxx</desc>
+      <exits n='143'/>
+   </location>
+
+   <location num='209' flags='t'>
+      <name>Gamma Corridoor G1</name>
+      <desc>xxx</desc>
+      <exits s='273' nw='144'/>
+   </location>
+
+   <location num='212' flags='yr'>
+      <name>Shipyard</name>
+      <desc>You are standing in a module on the upper most ring of the station. Standing behind a counter on the outer most walls is a couple of druids and view screens above them. The view screens on the left look like all the newer models of ships you can buy. The ones on the right are showing ships getting repairs done. There is an airlock south of you and corridors leading southwest and southeast.</desc>
+      <exits se='277' s='276' sw='275'/>
+   </location>
+
+   <location num='257' flags='t'>
+      <name>L6 Solar Collector Room</name>
+      <desc>xxx</desc>
+      <exits up='260'/>
+   </location>
+
+   <location num='259' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits ne='196' e='260' se='324'/>
+   </location>
+
+   <location num='260' flags='t'>
+      <name>L5 Station Command Level</name>
+      <desc>As you stand in the anti-grav lift, it starts to power up. It seems that you should be able to go up. Everything around you is made of gray plasteel. There is a airlock here.</desc>
+      <exits n='196' e='261' s='324' w='259' up='265' down='257'/>
+   </location>
+
+   <location num='261' flags='t'>
+      <name>Emergence Controls</name>
+      <desc>Looking around you see control panels everywhere. Some are marked with labels, Gravity Control, Fire Control, Airlock Control, and more are all around.</desc>
+      <exits sw='324' w='260' nw='196'/>
+   </location>
+
+   <location num='263' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='199' e='264' s='327'/>
+   </location>
+
+   <location num='264' flags='t'>
+      <name>Factory Owners Offices</name>
+      <desc>You are standing in a giant office with private cubes set up for each CEO. Each Cube is set up with its own com unit, computers with uplinks to the exchanges and a droid assistant to help do the work. You make out a few desks with names on them which are Kella and Lordkubera, the others can not be read. The exit is west.</desc>
+      <exits w='263'/>
+   </location>
+
+   <location num='265' flags='t'>
+      <name>L4 Station Support</name>
+      <desc>As you stand in the anti-grav lift, it starts to power up. It seems that you should be able to go up or down. Everything around you is made of gray plasteel. There is a airlock here.</desc>
+      <exits up='271' down='260' out='137'/>
+   </location>
+
+   <location num='266' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='267'/>
+   </location>
+
+   <location num='267' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='203' s='331' w='266'/>
+   </location>
+
+   <location num='269' flags='t'>
+      <name>Alpha Corridoor A2</name>
+      <desc>You are standing in a transparent plasteel outer ring of a space station floating around the planet. Looking out you can see the planet below all brown covered in the sands of a desert. The outer ring continues north and south, but it seems like the airlock has closed off the north corridor. There is a sealed doorway to the east.</desc>
+      <exits n='205' e='270' s='333'/>
+   </location>
+
+   <location num='270' flags='t'>
+      <name>Crew Bunk Room Alpha</name>
+      <desc>xxx</desc>
+      <exits w='269'/>
+   </location>
+
+   <location num='271' flags='t'>
+      <name>L3 Station Residences</name>
+      <desc>As you stand in the anti-grav lift, it starts to power up. It seems that you should be able to go up or down. Everything around you is made of gray plasteel. There is a airlock here.</desc>
+      <exits up='276' down='265' out='143'/>
+      <events enter='noenter.level.1'/>
+   </location>
+
+   <location num='272' flags='t'>
+      <name>Crew Bunk Room Gamma</name>
+      <desc>xxx</desc>
+      <exits e='273'/>
+   </location>
+
+   <location num='273' flags='t'>
+      <name>Gamma Corridoor G2</name>
+      <desc>xxx</desc>
+      <exits n='209' s='337' w='272'/>
+   </location>
+
+   <location num='275' flags='hi'>
+      <name>Med Center</name>
+      <desc>You are standing in the triage area. All around you can see curtained areas were treatments will be performed.</desc>
+      <exits ne='212' e='276' se='340'/>
+   </location>
+
+   <location num='276'>
+      <name>L2 Station Services</name>
+      <desc>As you stand in the anti-grav lift, it starts to power up. It seems that you should be able to go up or down. Everything around you is made of gray plasteel. There are airlocks north, west, south, and east.</desc>
+      <exits n='212' e='277' s='340' w='275' up='279' down='271' in='69'/>
+   </location>
+
+   <location num='277' flags='b'>
+      <name>Spacey Lounge</name>
+      <desc>Standing in this room almost makes you feel wheezy, as all walls and ceiling are transparent. There is bar counter with stools at the center of the room, with tables and chairs radiating out around the center. There is a service droid running around that will take your order. There is an airlock west of you and corridors leading southwest and northwest. Looking down stares right into space while looking up you can see the desert surface of Wasteland.</desc>
+      <exits sw='340' w='276' nw='212'/>
+   </location>
+
+   <location num='279'>
+      <name>L1 Shuttle Docking Bays</name>
+      <desc>Looking around you notice the shuttle bay void of any other shuttles. You see service droids run right at your shuttle eager to do the tasks they were programmed to do, as if they have been waiting 100s of years. You notice a anti-grav lift in the center of the bay that should take you down into the station.</desc>
+      <exits down='276' no-exit='shuttlepad.nomove.1'/>
+   </location>
+
+   <location num='324' flags='t'>
+      <name>Life Support</name>
+      <desc>xxx</desc>
+      <exits n='260' ne='261' nw='259'/>
+   </location>
+
+   <location num='327' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='263' se='392'/>
+   </location>
+
+   <location num='329' flags='t'>
+      <name>Research Lab</name>
+      <desc>xxx</desc>
+      <exits s='393'/>
+   </location>
+
+   <location num='331' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='267' sw='394'/>
+   </location>
+
+   <location num='333' flags='t'>
+      <name>Alpha Corridoor A1</name>
+      <desc>xxx</desc>
+      <exits n='269' se='398'/>
+   </location>
+
+   <location num='335' flags='t'>
+      <name>Commanders Quarters</name>
+      <desc>xxx</desc>
+      <exits s='399'/>
+   </location>
+
+   <location num='337' flags='t'>
+      <name>Gamma Corridoor G3</name>
+      <desc>xxx</desc>
+      <exits n='273' sw='400'/>
+   </location>
+
+   <location num='340' flags='e'>
+      <name>Exchange</name>
+      <desc>This section has floor to ceiling vid screens that are displaying all the various prices for commodities being bought and sold from the station. There are terminals through out the area for buying and selling. There is an airlock north of you and corridors leading northwest and northeast.</desc>
+      <exits n='276' ne='277' nw='275'/>
+   </location>
+
+   <location num='392' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='393' nw='327'/>
+   </location>
+
+   <location num='393' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='329' e='394' w='392'/>
+   </location>
+
+   <location num='394' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits ne='331' w='393'/>
+   </location>
+
+   <location num='398' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='399' nw='333'/>
+   </location>
+
+   <location num='399' flags='t'>
+      <name>xxx</name>
+      <desc>You are standing in a transparent plasteel outer ring of a space station floating around the planet. Looking out you can see the planet below all brown covered in the sands of a desert. The outer ring continues west and east, but it seems like the airlock has closed off the east corridor. There is a sealed doorway to the north.</desc>
+      <exits n='335' e='400' w='398'/>
+   </location>
+
+   <location num='400' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits ne='337' w='399'/>
+   </location>
+
+</fed2-map>

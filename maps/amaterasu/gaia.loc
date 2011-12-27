@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<fed2-map title='Gaia' version='1.00' editor='standard' from='524' to='Amaterasu.Amaterasu Space.327'>
+
+   <location num='0'>
+      <name>The Construct</name>
+      <desc>All around you, there is white purer than the freshest snow untouched by human footprints. Gazing in all directions, you see no hint of even a distant wall that provides bounds for what seems to be an infinite space.</desc>
+   </location>
+
+   <location num='204'>
+      <name>AirTrain Station</name>
+      <desc>   As you step into the station, a formally dressed public relations android steps up and says, &quot;I apologize, the AirTrain station will be closed until further notice due to a shutdown of the probability drive. Please check back in the near future.&quot; He politely gives a small bow and extends his arm to the south, to indicate the exit.</desc>
+      <exits s='268'/>
+   </location>
+
+   <location num='268'>
+      <name>Crystal Bridge</name>
+      <desc>   You stand on an enormous north-south bridge that links the spaceport terminus to the south to the central AirRail station to the north. The walls, ceiling, and floor are all seem to be made out of diamond-reinforced glass, yet, with every step, the floor around your foot seems to illuminate a brilliant blue luster that swells, only to fade slowly again into nothingness, once again revealing the tops of the trees of the forest below.</desc>
+      <exits n='204' s='332'/>
+   </location>
+
+   <location num='269' flags='b'>
+      <name>Rusty Dragon Sushi</name>
+      <desc>   Everything seems strangely quiet in comparison to the business of the spaceport terminus outside. Solar shades that surround the glass enclosure of the restaurant collect solar energy to power the dim lighting inside, complemented by a slow rock band that softly plays perfect renditions of The Album Leaf and Damien Rice songs.</desc>
+      <desc>   A conveyor belt that loops around amongst the tables and bar carries an endless supply of sushi, as the restaurant&apos;s occupants quietly chatter as they sip their sake and tea.</desc>
+      <desc>   Double glass doors to the southwest lead back out into the busy spaceport terminus.</desc>
+      <exits sw='332'/>
+   </location>
+
+   <location num='332'>
+      <name>Spaceport Terminus, Northern End</name>
+      <desc>   You are on the northern end of the vast, circular terminus of the Gaia&apos;s spaceport. The curved walls extend far toward the illuminated skies above, and their diamond-reinforced glass offers a scenic view of the expansive forest upon which the city was built.</desc>
+      <desc>   Due south is a set of marble, terraced stairs that opens out into the mezzanine trading floor of the Gaian Trading Exchange. Shops and restaurants inhabit small enclosures to the northeast and northwest, and a large glass door holographically labeled &quot;AirTrain Station&quot; looms further to the north. Alternatively, the circular terminus cuves around to the southeast and the southwest.</desc>
+      <exits n='268' ne='269' se='397' s='396' sw='395'/>
+   </location>
+
+   <location num='395'>
+      <name>Spaceport Terminus, Western End</name>
+      <desc>   You are on the western end of the vast, circular terminus of the Gaia&apos;s spaceport. The curved walls extend far toward the illuminated skies above, and their diamond-reinforced glass offers a scenic view of the expansive forest upon which the city was built.</desc>
+      <desc>   Due east is a set of marble, terraced stairs that opens out into the mezzanine trading floor of the Gaian Trading Exchange. Immediately east is a temporary medical clinic set up in one of the spaceport&apos;s many gates. Alternatively, the circular terminus cuves around to the northeast and the southeast.</desc>
+      <exits ne='332' e='396' se='460'/>
+   </location>
+
+   <location num='396' flags='e'>
+      <name>Trading Floor, Gaian Trading Exchange</name>
+      <desc>   You find yourself in a vast, open mezzanine in which traders and businessmen rush hurriedly about, noisly chatting with analysts and making stock trades. Centered in the circle is an enormous, terraced waterfall, whose crystal-clear waters gently reflect the cool blue light of Amaterasu above. Holographic displays hovering around the waterfall display up-to-the-nanosecond prices of the various commodities traded here.</desc>
+      <desc>   Four sets of terraced marbled stairs in each of the cardinal directions lead up into the spaceport proper.</desc>
+      <exits n='332' e='397' s='460' w='395'/>
+   </location>
+
+   <location num='397'>
+      <name>Spaceport Terminus, Eastern End</name>
+      <desc>   You are on the eastern end of the vast, circular terminus of the Gaia&apos;s spaceport. The curved walls extend far toward the illuminated skies above, and their diamond-reinforced glass offers a scenic view of the expansive forest upon which the city was built.</desc>
+      <desc>   Due west is a set of marble, terraced stairs that opens out into the mezzanine trading floor of the Gaian Trading Exchange. Immediately east is a temporary medical clinic set up in one of the spaceport&apos;s many gates. Alternatively, the circular terminus cuves around to the northwest and the southwest.</desc>
+      <exits e='398' sw='460' w='396' nw='332'/>
+   </location>
+
+   <location num='398' flags='hi'>
+      <name>Makeshift Clinic</name>
+      <desc>   Medical droids of various flavors race about attending to patients in this clinic that was set up to treat visitors to the spaceport during the closure of AirTrain, due to the catastrophic probability drive failure. A sleasy-looking insurance salesdroid looms behind you, ready to collect your groats and your DNA.</desc>
+      <desc>   The spaceport&apos;s terminus is to the west.</desc>
+      <exits w='397'/>
+   </location>
+
+   <location num='460'>
+      <name>Spaceport Terminus, Southern End</name>
+      <desc>   You are on the southern end of the vast, circular terminus of the Gaia&apos;s spaceport. The curved walls extend far toward the illuminated skies above, and their diamond-reinforced glass offers a scenic view of the expansive forest upon which the city was built.</desc>
+      <desc>   Due north is a set of marble, terraced stairs that opens out into the mezzanine trading floor of the Gaian Trading Exchange. Immediately south lies the door into famed Landing Bay #42. Alternatively, the circular terminus cuves around to the northwest and the northeast.</desc>
+      <exits n='396' ne='397' s='524' nw='395'/>
+   </location>
+
+   <location num='524'>
+      <name>Landing Bay #42</name>
+      <desc>   You stand at the entrance of the most famous of Gaia&apos;s spaceport&apos;s landing bays, whose walls, just visible over the horizon, enclose nearly a thousand ships of dozens of varieties. Recent regulations, in an attempt to reduce emissions, have outlawed all ships of Harrier-class and above from entering the planet&apos;s atmosphere, so, minus the occasional star skiffs and short-range fighters, the entirety of the bay is filled with shuttles, waiting to transport their owners back to their larger ships.</desc>
+      <desc>   A humanoid robot branded with an Akaturi logo hovers nearby.</desc>
+      <exits n='460'/>
+   </location>
+
+</fed2-map>

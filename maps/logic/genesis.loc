@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<fed2-map title='Genesis' version='18' editor='standard' from='800' to='Logic.Logic Space.335'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   The room where all kind of junk gets stored</desc>
+   </location>
+
+   <location num='673' flags='b'>
+      <name>Observation Area</name>
+      <desc>   This room is shaped in a semi-circle with stadium type, sofa seating. The lighting is low and there is an enormous spherical window through which you can see Genesis below. The planet is stunningly beautiful and you can see the vivid colors of lush vegetation and the contour of some breathtaking geographic features. A wait-droid is here to serve you.</desc>
+      <desc>   The Exchange Lounge is south.</desc>
+      <exits s='737' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='737' flags='b'>
+      <name>Exchange Lounge</name>
+      <desc>   You have entered what looks like an old fashioned tap room. Along one side of the room is a long, deep-grained mahogany bar. Soft music is playing and there are tables with comfortable chairs around the room. Commodity traders come here to relax and unwind. There is a grand piano here. In the center of the room is an elaborate holographic jukebox.</desc>
+      <desc>   Up the stairway is the exchange, and to the north is the observation area.</desc>
+      <exits n='673' up='801' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='799'>
+      <name>Souvenir Shoppe</name>
+      <desc>   You have entered a small souvenir shoppe. There are all kinds of typical souvenirs here, including a small model of the Spaceport. You also see a glass case containing a small, silver ball with intricate carvings covering the surface of it. It is about the size of a grapefruit and the tag below it identifies it as a holoball. The exorbitant price leaves you wondering exactly what it is and whether it serves any useful purpose.</desc>
+      <desc>   The exit is to the southeast.</desc>
+      <exits se='864' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='800'>
+      <name>Spaceport Docking Bay and Armstrong Cuthbert Office</name>
+      <desc>   You are standing across from the access hatch to your shuttle. There is a small sign on the wall above a computer terminal in the corner which identifies this as an automated Armstrong Cuthbert station. The gravity here seems normal despite the fact that you are on a space station. You detect no odor or air movement, yet it is quite comfortable, suggesting a technologically advanced environmental control system. As you try to figure out which way to go, a holographic image of this area of the space station appears next to you. From the image, you can see that the Trading Exchange is to the east, and that the main part of the station is to the south.</desc>
+      <exits e='801' s='864' in='801' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='801' flags='e'>
+      <name>Genesis Remote Trading Exchange</name>
+      <desc>   You have entered a large room with computer terminals everywhere. You instantly recognize them as remote trading computers tied in with the Galactic Trading Guild system. You see others quietly transacting business at some of the machines. Droids scurry about keeping everything in order and scooping up the crumpled bits of paper dropped by traders. Spaceships are visible through the large window above and you can see stevedores ferrying cargo around.</desc>
+      <desc>   In the middle of the room is a circular stairway leading both up and down and you hear the sound of soft music from below and the smell of fresh brewed coffee is wafting down from above. The Spaceport Docking Bay is to the west.</desc>
+      <exits w='800' up='802' down='737' out='800' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='802' flags='b'>
+      <name>Javan Franchise Coffee and Bagel Bar</name>
+      <desc>   You are standing at a coffee bar and the rich smell of fresh brewed coffee fills the air. You notice that the coffee logo is familiar and realize that this is a franchise of Javan Coffee. They must haul the coffee in fresh everyday from the Java system. There are twenty-five varieties of fresh-baked bagels and all kinds of choices of cream cheese too. It&apos;s the perfect combination.</desc>
+      <desc>   You are standing on a raised platform that sits over the trading floor. There are plenty of tables and chairs here and the glass dome over the exchange is above you, offering a spectacular view of cargo being ferried about by stevedores in and out of the wide assortment of ships that have come to do business at the Spaceport.</desc>
+      <exits down='801' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='861' flags='t'>
+      <name>Chapel</name>
+      <desc>   You are standing in a small chapel. It has a very conventional design with wooden pews on either side of the center isle. Beautifully crafted stained glass widows are evenly spaced along the side walls. In the front is a chancel area that includes a large wooden pulpit on one side, and a less ornately carved lecturn on the other. There is an altar against the front wall with a communion rail in front of it. Above the altar is a large, round stained glass window. You recognize the design as Luther&apos;s Rose. As you look to the rear of the chapel, you see a baptismal font and a balcony with a large pipe organ. The exit is to the southeast.</desc>
+      <exits se='926' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='862'>
+      <name>North Promenade</name>
+      <desc>   You are standing at the western end of a long Promenade. The stone walkway has windows along the northern side that offer an exceptional view of the planet below. You see that there are large polar regions and there doesn&apos;t appear to be any cloud cover over the planet surface. There is a large Atrium along the southern edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. The Promenade continues to the east and there is a corridor to the southwest. There is an Archway to the west.</desc>
+      <exits e='863' sw='925' w='864' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='863'>
+      <name>North Promenade</name>
+      <desc>   You are standing at the eastern end of a long Promenade. The stone walkway has windows along the northern side that offer an exceptional view of the planet below. You see that there is lush vegetation visible in the equatorial region that is below you. It is a beautiful site. There is a large Atrium along the southern edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. The Promenade continues to the west and the only other exit is a corridor to the southeast.</desc>
+      <exits se='928' w='862' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='864'>
+      <name>Archway</name>
+      <desc>   You are in an Archway between the Spaceport Docking Bay and the main part of the station. A holographic image that has appeared next to you indicates that the main part of the station is to the west, ship services are to the east, a small shop is to the northwest, and the Spaceport Docking Bay is to the north.</desc>
+      <exits n='800' e='865' w='863' nw='799' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='865' flags='r'>
+      <name>Ship Repair Depot</name>
+      <desc>   As you enter, you immediately notice all kinds of ship parts displayed on the walls of the shop. At the counter, you notice a sensor has been activated as you entered the room. You hear a soft hum and the halographic image of a technician materializes in front of you. The technician says, &quot;Your space ship has been fully scanned and no deficiencies were detected. Should you wish to trade in your vessel for another, please go up the stairway to your left.&quot;</desc>
+      <desc>   &quot;You are free to browse the shop. Please exit to the west when you have finished.&quot;</desc>
+      <exits w='864' up='866' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='866' flags='y'>
+      <name>Spaceport Shipyard Sales Office</name>
+      <desc>   As you climb to the top of the stairway you see a room with a halographic chamber in the center and comfortable seating around the sides of it. When you entered the room, the halographic chamber activated and an image of your ship materialized. A terminal to your right indicates the current trade in value for your vessel, which appears to be in perfect operating condition. A synthesized voice says, &quot;If you would like to see the models and options currently available, please simply type BUY SHIP, and our sales system will be activated. Thank you for visiting our shipyard sales office. We hope you enjoy your visit to our spaceport.&quot;</desc>
+      <exits down='865' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='924' flags='b'>
+      <name>Promenade Cafe</name>
+      <desc>   You are standing in a small, circular cafe. There is a bar in the middle with stools around it and tables and chairs ring the room. All the furniture is made of wicker, including the bar stools, which you find to be surprisingly strong, despite the elegant construction. There is gentle music playing and it feels like there is a breeze coming through the door from the Atrium in the center of the Promenade. You are caught up by the smell of pine and you realize that the floor is covered with soft needles forming a carpet. The exit is to the east.</desc>
+      <exits e='925' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='925' flags='b'>
+      <name>West Promenade</name>
+      <desc>   You are standing at the northern end of a long Promenade. There is a large Atrium along the eastern edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. The stone walkway of the Promenade is scattered with wicker tables and chairs from a nearby eatery. You can order food and drink to sit and enjoy out here, or enter the cafe proper to the west. The Promenade continues to the south. There is a corridor to the northeast and an Archway to the north.</desc>
+      <exits n='864' ne='862' s='989' w='924' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='926'>
+      <name>Atrium Garden</name>
+      <desc>   You are standing in the northwest corner of a large garden. There is a tall willow tree in the middle of this portion of the garden with different types of colorful song birds perched upon the branches. The sound of their voices is like a chorus and you find it unusually relaxing. There are benches along the pathway underneath the shade of the tree where you can sit and listen to the beautiful birds. You smell a fragrant aroma from the south, you hear the sound of water gurgling to the east, and you see a small chapel to the northwest.</desc>
+      <exits e='927' se='991' s='990' nw='861' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='927'>
+      <name>Atrium Garden</name>
+      <desc>   You are standing in the northeast corner of a large garden. The pathway here winds its way around a beautiful granite fountain where a constant column of fresh water bubbles up from the center and cascades down the intricate system of carvings and channels around it. There are benches here where you can sit and listen to the refreshing sound of the water. You smell a fragrant aroma from the southwest and can hear the faint sound of song birds coming from the west.</desc>
+      <exits s='991' sw='990' w='926' up='928' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='928'>
+      <name>East Promenade</name>
+      <desc>   You are standing at the northern end of a long Promenade. Transportation Services is through the doorway to the east. There is a large Atrium along the western edge of the walkway that provides natural light into a large garden below. The stone walkway of the Promenade continues to the south and there is a corridor to the northwest. An Archway is visible to the north.</desc>
+      <exits n='864' e='929' s='992' nw='863' down='927' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='929'>
+      <name>Transportation Services</name>
+      <desc>   You are standing in the office of Transportation Services. There are tables around the room with displays of various resorts which must be on the planet surface. There is a small hologram of a terrific looking ski resort, another shows a beach resort where people are surfing, yet another shows a rich tropical forest with people camping, hiking, and rafting, and other holograms sprinkled around the room which depict all sorts of recreational activities. You are captivated by the clarity and detail of the movement within the holograms and you realize they are not repeating, but may be actual live images somehow contained in the holograms. You wonder how you can get to these places when you see a sign above a stairway in the middle of the room that indicates the transportation platforms are downstairs. A receptionist smiles at you from behind her desk. The exit is to the west.</desc>
+      <exits w='928' down='934' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='930'>
+      <name>Bathroom</name>
+      <desc>   You are standing inside a large bathroom, intended to be used by all genders, or even genderless beings. There are good-sized private stalls along the sides that can be used for those private, yet necessary functions. A generous sink area complete with oils and lotions of every description, as well as other bathroom amenities are here. Mirrors are installed at unique angles, allowing for an interesting view around the enourmous room. There is an air vent in the ceiling that keeps the temperature and humidity of the air within ideal parameters, smelling of lavender, mint, and lilac. A droid scuttles around the room making sure that everything remains clean and neat. There are couches where you can sit and relax a bit. The exit is to the south.</desc>
+      <exits s='994' up='987' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='931' flags='b'>
+      <name>Guest Office</name>
+      <desc>   You have stepped into an office area that is simple and comfortable. A beautiful desk sits in the middle of the room that is complete with all the regular office amenities including a voice-activated computer terminal. There are four comfortable chairs around a small table, and a wet bar in the corner. A droid is sitting here quietly waiting for instructions from you. It is obvious that this office is available for use by visitors to the station that would like a quiet place to work or meet with a few friends. The exit is to the south.</desc>
+      <exits s='995' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='934'>
+      <name>Transportation Central</name>
+      <desc>   You are standing in the center of an array of transporter pads at the base of a stairway leading upstairs to the transportation offices. There is a Security Guard standing next to you. A sign above you indicates that teleporting down to the planet requires a permit. There is a security guard here.</desc>
+      <exits up='929' no-exit='move.noexit.5'/>
+   </location>
+
+   <location num='987'>
+      <name>Ventilation Duct</name>
+      <desc>   You have somehow climbed up into a ventilation duct through a vent in the bathroom. You can see down into the bathroom through the vent. It is a long drop, but you can probably return to the bathroom by dropping down through the vent. Most of the ducts are too small, but you might be able to squeeze through a duct to the south.</desc>
+      <exits s='1051' down='930' no-exit='move.noexit.6'/>
+   </location>
+
+   <location num='988' flags='hi'>
+      <name>Spaceport Hospital</name>
+      <desc>   You have entered a large, automated medical facility. A holographic doctor materializes as you enter the room and is currently scanning you to verify bodily function for your species&apos; anatomy. &quot;Please state your emergency,&quot; he says in a deep, clear voice, looking at you expectantly. There is a large amount of equipment around the room and the doctor looks so real. You see a transporter pad at the rear of the room and an insurance droid sits quietly in the corner by the banks of DNA samples waiting for one to be cloned into life so that he may peddle his wares. Each of the hospital beds has a large monitor above it, and you are impressed with the technology. There are currently no patients, but the room still smells of rubbing alcohol. The exit is to the east.</desc>
+      <exits e='989' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='989'>
+      <name>West Promenade</name>
+      <desc>   You are standing at the southern end of a long Promenade. There is a large Atrium along the eastern edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. A doorway in the western wall has the universal medical symbol over it. The stone walkway of the Promenade continues to the north and there is a corridor to the southeast. An Archway is visible to the south.</desc>
+      <exits n='925' se='1054' s='864' w='988' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='990'>
+      <name>Atrium Garden</name>
+      <desc>   You are standing in the southwest corner of a large garden. The smell of fresh flowers is thick in the air here as you can see roses, tulips, lilacs, daffodils, orchids, marigolds, buttercups, carnations, azaleas, and other flowers you don&apos;t even recognize, making up what looks like a beautiful tapestry of color and shape. There is a cool breeze here that might make you drift off into a dream-filled sleep if you were to sit down on one of the benches. You hear the faint sound of song birds from the north and the sound of water gurgling from the northeast.</desc>
+      <exits n='926' ne='927' e='991' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='991' flags='b'>
+      <name>Atrium Garden Restaurant</name>
+      <desc>   You are standing in the southeast corner of a large garden. There are comfortable looking tables and chairs scattered around and from the presence of the wait-droids you quickly realize that this is a full service restaurant. From the north you can hear the sounds of water gurgling and from the northwest you can hear a chorus of songbirds. A frangrant aroma is coming from the west.</desc>
+      <exits n='927' w='990' nw='926' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='992'>
+      <name>East Promenade</name>
+      <desc>   You are standing at the southern end of a long Promenade. There is a doorway to the east. There is a large Atrium along the western edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. The stone walkway of the Promenade continues to the north and there is a corridor to the southwest. An Archway is visible to the south.</desc>
+      <exits n='928' e='993' s='864' sw='1055' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='993'>
+      <name>Office Hallway</name>
+      <desc>   You are standing at the western end of a hallway to various offices. There is plush, beige carpeting under your feet which quiets all the noise. You can see that paintings are displayed along the walls. You are amazed at the beautiful landscape of the beach area depicted in the painting here. A holographic image of this area of the space station has materialized next to you. You can see that the doorway to the south leads to a Guest Office, the East Promenade is to the west, and the hallway continues to the east.</desc>
+      <exits e='994' s='1057' w='992' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='994'>
+      <name>Office Hallway</name>
+      <desc>   You are standing in the middle of a hallway to various offices. There is plush, beige carpeting under your feet which quiets all the noise. You can see that paintings are displayed along the walls. The log cabin depicted in the wooded area shown in the painting here looks like someplace you could easily relax. A holographic image of this area of the space station has materialized next to you. You can see that the doorway to the north leads to a Bathroom, and the doorway to the south leads to the outer office of Logical, this system&apos;s founder. The hallway continues to the east and to the west.</desc>
+      <exits n='930' e='995' s='1058' w='993' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='995'>
+      <name>Office Hallway</name>
+      <desc>   You are standing at the eastern end of a hallway to various offices. There is plush, beige carpeting under your feet which quiets all the noise. You can see that paintings are displayed along the walls. You become absorbed in admiring the snow covered mountains and ski lodge depicted in the painting here. A holographic image of this area of the space station has materialized next to you. You can see that the doorway to the north leads to a Guest Office and the hallway continues to the west.</desc>
+      <exits n='931' w='994' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1049'>
+      <name>Ventilation Duct</name>
+      <desc>   You are crawling through a ventilation duct. There is not enough room for you to turn around, but you can continue crawling to the south.</desc>
+      <exits s='1113' no-exit='move.noexit.6'/>
+   </location>
+
+   <location num='1050'>
+      <name>Ventilation Duct</name>
+      <desc>   You are crawling through a ventilation duct. There isn&apos;t enough room to turn around. The only direction that you can go is to continue crawling to the west.</desc>
+      <exits w='1049' no-exit='move.noexit.6'/>
+   </location>
+
+   <location num='1051'>
+      <name>Ventilation Duct</name>
+      <desc>   You are in a ventilation duct somewhere inside the spaceport. This area is way too small for you to turn around, so the only direction that is large enough for you to continue crawling is to the west.</desc>
+      <exits w='1050' no-exit='move.noexit.6'/>
+   </location>
+
+   <location num='1054'>
+      <name>South Promenade</name>
+      <desc>   You are standing at the western end of a long Promenade. The stone walkway has windows along the southern side that offer an exceptional view of the transport vessels and ships that are moving cargo up and down from the planet below; a bustle of activity and you stand captivated by it all. There is a large Atrium along the northern edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. The Promenade continues to the east and there is a corridor to the northwest. An Archway is visible to the west.</desc>
+      <exits e='1055' w='864' nw='989' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='1055'>
+      <name>South Promenade</name>
+      <desc>   You are standing at the eastern end of a long Promenade. You hear piano music coming from a doorway to the south. There is a large Atrium along the northern edge of the walkway that provides natural light into a large garden below, but a transparent force field keeps you from climbing down into it. The stone walkway of the Promenade continues to the west and there is a corridor to the northeast. An Archway is visible to the east.</desc>
+      <exits ne='992' e='864' s='1119' w='1054' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='1056' flags='t'>
+      <name>Private Shower</name>
+      <desc>  You are standing in Logical&apos;s Private Shower. The controls are all voice activated. There are benches around the wall here that appear to have been chiseled out of solid rock. This is actually quite an elaborate setup. The Studio Apartment is to the southeast. Looking closer at one of the mirrors in the northwest corner, you realize that it is not a mirror at all, but some type of holographic barrier that conceals a passageway to the Atrium Garden Restaurant.</desc>
+      <exits se='1121' nw='991' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1057' flags='b'>
+      <name>Guest Office</name>
+      <desc>   You have stepped into an office area that is simple and comfortable. A beautiful desk sits in the middle of the room that is complete with all the regular office amenities including a voice-activated computer terminal. There are four comfortable chairs around a small table, and a wet bar in the corner. A droid is sitting here quietly waiting for instructions from you. It is obvious that this office is available for use by visitors to the station that would like a quiet place to work or meet with a few friends. The exit is to the north.</desc>
+      <exits n='993' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1058' flags='b'>
+      <name>Outer Office</name>
+      <desc>   You are standing in the outer office of Logical, the founder of this system. Around you are various cushy chairs and some tables with fresh flowers. There are portraits on the walls. You recognize the wonderfully detailed one of Logical, complete with his top hat. You also see a portrait of Logical&apos;s daughter, the beautiful elfqueen and founder of the Fowl system. You don&apos;t recognize the portrait of the tall man, with wavy brown hair and cold steel eyes. The plaque below it reads, &quot;Ops, Duke of Connor.&quot; There is one more portrait that you don&apos;t recognize. It&apos;s of a woman pirate with a patch over one eye. The plaque below it reads, &quot;Blaze, Duchess of Gossamer.&quot; A droid sits quietly in the corner ready to serve you food or drink. Perhaps just a good cup of hazelnut coffee or some bagels and cream cheese? The exit is to the north and Logical&apos;s library is to the east.</desc>
+      <exits n='994' e='1059' in='1122' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1059' flags='b'>
+      <name>Library</name>
+      <desc>   You are standing in a large study. There is a stone fireplace in the center of the room and you are surprised to see that there are bookshelves with actual books on every wall. With most information available on computer today, it is interesting that there isn&apos;t a computer in site, just more books than you have ever seen in one place. There are a couple of cherry tables, a recliner, and a small couch in the room. While most of the books are neatly shelved, a few are stacked on some of the tables. There is one large volume that is open on one of the tables. Upon closer inspection, you see that it is the 42nd Edition of the Encyclopedia Galactica, open to an article on the Interregnum. The Outer Office is to the west and the Inner Office is to the southwest.</desc>
+      <exits sw='1122' w='1058'/>
+   </location>
+
+   <location num='1113'>
+      <name>Ventilation Duct</name>
+      <desc>   You are crawling through ventilation ducts. You have reached a vent area and are too tired to crawl back the way that you came. There is some kind of archway below you.</desc>
+      <exits down='1117' no-exit='move.noexit.6'/>
+   </location>
+
+   <location num='1117' flags='t'>
+      <name>Archway</name>
+      <desc>   You are in an Archway between the Front Desk and the Guest Rooms of the spaceport Grand Hotel. Since you appear not to have a keycard, the Archway will not automatically teleport you to your Guest Room. In fact, it appears that the Archway has not detected your presence. It is impossible to reach the Guest Rooms without a valid keycard, and the ventilation duct you entered through is too high above your head to reach. The Front Desk is to the East.</desc>
+      <exits e='1118' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1118'>
+      <name>Front Desk</name>
+      <desc>   You are standing at the front desk of the Grand Hotel. As soon as you entered the room, a desk clerk appeared. She smiles at you warmly and asks to see your reservation certificate. She gathers from the look on your face that you don&apos;t have one.</desc>
+      <desc>   &quot;I&apos;m sorry, but the hotel is fully booked and we cannot provide you with a room if you don&apos;t have a reservation certificate,&quot; she says.</desc>
+      <desc>   The Archway to the guest rooms is to the west, but you cannot enter without a room key. The lobby is to the east.</desc>
+      <exits e='1119' w='864' no-exit='move.noexit.4'/>
+   </location>
+
+   <location num='1119'>
+      <name>Grand Hotel Lobby</name>
+      <desc>   You are standing in the immense lobby of the Grand Hotel. The room is breathtakingly beautiful with red velvet carpet under your feet and a large chandelier hanging in the center of the room. There is finely crafted wood furniture around the room. A bell captain, standing at the concierge desk just inside the doorway, gives you an up and down glance. From the distasteful look on his face, you can assume that your attire does not match that of the usual guests here. You hear piano music coming from the lounge to the south, the hotel desk is to the west, and the exit is to the north.</desc>
+      <exits n='1055' s='1183' w='1118' no-exit='move.noexit.3'/>
+   </location>
+
+   <location num='1121' flags='t'>
+      <name>Studio Apartment</name>
+      <desc>   This is a small studio apartment. There is a table and chairs here along with a double bed that makes a quiet place for Logical to rest when he needs it. There is a shower in the northwest corner and a dresser next to the bed. The wallpaper is an intricate pattern of rich blue colors and the carpeting is a shade of deep blue. The Inner Office is up from here.</desc>
+      <exits nw='1056' up='1122' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1122' flags='b'>
+      <name>Inner Office</name>
+      <desc>   You are standing in the Inner Office. There is a very large cherry desk in the middle of the room with a comfortable looking high-backed chair. On a credenza behind the desk are four large computer monitors that are connected to a massive computer system. The eastern wall is all glass and provides a spectacular view of the spaceport, making it easy for Logical to keep an eye on what is happening. Soft music is playing and a droid sits at the ready to serve food or drink. There are three comfortable chairs accross from the desk and a small table. Sitting in the middle of the table is a golden holoball.</desc>
+      <exits ne='1059' down='1121' in='801' out='1058' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='1183' flags='b'>
+      <name>Grand Hotel Lounge</name>
+      <desc>   You are in the lounge of the Grand Hotel. There is an enormous mahogeny bar along one wall. The bar stools are made of leather and look very comfortable. There is a grand piano on the rear wall that must be automated because, despite the fact that no one is sitting on the piano bench, there is beautiful music coming from it. There are round tables with cushioned sofas for seating all over the room. There are very smart looking wait-droids who will bring you whatever you would like to eat or to drink. The exit is to the north.</desc>
+      <exits n='1119' no-exit='move.noexit.1'/>
+   </location>
+
+</fed2-map>
+

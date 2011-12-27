@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<fed2-map title='Cinna' version='1.00' editor='standard' from='328' to='Stars End.Stars End Space.328'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='198' flags='b'>
+      <name>Encyclopedia Galactica Library Cinna Annex - Hari Seldon Section</name>
+      <desc>This annex library contains all known personal writing of Hari Seldon about his work and adventures.  The library exit is just past the library lobby to the south.</desc>
+      <exits  s='262'/>
+   </location>
+
+   <location num='262' flags='b'>
+      <name>Encyclopedia Galactica Library Cinna Annex</name>
+      <desc>You are standing in the Cinna Annex of the Encyclopedia Galactic Library.  Contained here are bound volumes and computer links to every piece of knowledge known to exist in the galaxy.  This task was the only way of easing the barbarism to follow the fall of the galactic empire.  This library is an important annex to the man that developed Psychohistory, his personal writings that tell the story of how the science was almost never developed and how with the help of Venabili, Hari Seldon was able to complete the final formulas and theories.</desc>
+      <desc>N -- Library </desc>
+      <desc>E -- Holographic Vault</desc>
+      <exits n='198' e='263'/>
+   </location>
+
+   <location num='263'>
+      <name>Holographic Vault</name>
+      <desc>The lights brighten as you walk into the room.  There is a glass enclosure with several dozen seats surrounding the glass vault.  This is undoubtably where Seldon appeared to reveal the final details of each and every Seldon Crisis that occurred.</desc>
+      <desc>LP -- SE</desc>
+      <desc>Library -- W</desc>
+      <exits se='328' w='262'/>
+   </location>
+
+   <location num='264' flags='hib'>
+      <name>Clinic</name>
+      <desc>We treat all injuries and provide personal insurance.</desc>
+      <exits s='328'/>
+   </location>
+
+   <location num='265' flags='b'>
+      <name>Cinna Kitchen</name>
+      <desc>The planetary kitchen has it all, check the menu for your favorite meal, it&apos;s there and its good, enjoy!</desc>
+      <exits s='329' sw='328'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>Landing Pad</name>
+      <desc>N - Hospital</desc>
+      <desc>NE - Kitchen</desc>
+      <desc>E - Exchange</desc>
+      <desc>SW - Shipyard</desc>
+      <desc>NW - Vault Room</desc>
+      <exits n='264' ne='265' e='329' sw='391' nw='263'/>
+   </location>
+
+   <location num='329' flags='eb'>
+      <name>Cinna Exchange</name>
+      <desc>The Exchange Room is the heart of the Cinna economy.  There are monitors around the room displaying various commodity groupings.  There is an exit to the north that leads to the kitchen and an exit to the west leading to the exchange.</desc>
+      <exits n='265' w='328'/>
+   </location>
+
+   <location num='391' flags='yrb'>
+      <name>Shipyard</name>
+      <desc>Look around and pick a winner!</desc>
+      <exits ne='328'/>
+   </location>
+
+</fed2-map>

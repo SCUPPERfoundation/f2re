@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<object-list next_number='2' version='22'>
+
+   <object type='static' start='783' visibility='0' size='1' weight='1'>
+      <name>doll</name>
+      <id>obj_1doll</id>
+      <desc>The Famous Figures of Federation dolls are quite large, and are painted with Diesel's face.</desc>
+      <vocab cmd='get' event='objects.doll.1'></vocab>
+      <vocab cmd='take' event='objects.doll.1'></vocab>
+      <vocab cmd='buy' event='objects.doll.2'></vocab>
+   </object>
+
+   <object type='static' start='783' visibility='0' size='1' weight='1'>
+      <name>dolls</name>
+      <id>obj_2doll</id>
+      <desc>The Famous Figures of Federation dolls are quite large, and are painted with Diesel's face.</desc>
+      <vocab cmd='get' event='objects.doll.1'></vocab>
+      <vocab cmd='take' event='objects.doll.1'></vocab>
+      <vocab cmd='buy' event='objects.doll.2'></vocab>
+   </object>
+
+   <object type='static' start='783' visibility='0' size='1' weight='1'>
+      <name>nesting doll</name>
+      <id>obj_3doll</id>
+      <desc>The Famous Figures of Federation dolls are quite large, and are painted with Diesel's face.</desc>
+      <vocab cmd='get' event='objects.doll.1'></vocab>
+      <vocab cmd='take' event='objects.doll.1'></vocab>
+      <vocab cmd='buy' event='objects.doll.2'></vocab>
+   </object>
+
+   <object type='static' start='783' visibility='0' size='1' weight='1'>
+      <name>nesting dolls</name>
+      <id>obj_4doll</id>
+      <desc>The Famous Figures of Federation dolls are quite large, and are painted with Diesel's face.</desc>
+      <vocab cmd='get' event='objects.doll.1'></vocab>
+      <vocab cmd='take' event='objects.doll.1'></vocab>
+      <vocab cmd='buy' event='objects.doll.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='i'>
+      <name>diesel doll</name>
+      <id>obj_diesel</id>
+      <desc>This large round wooden doll is painted with Diesel's face and trademark leather costume. There seems to be a crack running around ithe middle of the doll.</desc>
+      <vocab cmd='shake' event='objects.dolldiesel.1'></vocab>
+      <vocab cmd='open' event='objects.dolldiesel.4'></vocab>
+      <vocab cmd='drop' event='objects.dolldiesel.7'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='i'>
+      <name>selena doll</name>
+      <id>obj_selena</id>
+      <desc>This medium-sized round wooden doll is painted with the face of Selena of the Spaceways and her tight golden spacesuit. There seems to be a crack running around the middle of the doll.</desc>
+      <vocab cmd='shake' event='objects.dollselena.1'></vocab>
+      <vocab cmd='open' event='objects.dollselena.4'></vocab>
+      <vocab cmd='drop' event='objects.dollselena.7'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='i'>
+      <name>fogg doll</name>
+      <id>obj_fogg</id>
+      <desc>This small round wooden doll is painted with Fogg's leering face and dirty raincoat. There seems to be a crack running around the middle of the doll.</desc>
+      <vocab cmd='shake' event='objects.dollfogg.1'></vocab>
+      <vocab cmd='open' event='objects.dollfogg.4'></vocab>
+      <vocab cmd='drop' event='objects.dollfogg.7'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='i'>
+      <name>ming doll</name>
+      <id>obj_ming</id>
+      <desc>This tiny round wooden doll is painted with the cruel imperialistic face of Ming the Merciless, and the long purple robe he used to swish with such flair.</desc>
+      <vocab cmd='shake' event='objects.dollming.1'></vocab>
+      <vocab cmd='open' event='objects.dollming.2'></vocab>
+      <vocab cmd='drop' event='objects.dollming.3'></vocab>
+   </object>
+
+   <object type='static' start='783' visibility='100' size='1' weight='1'>
+      <name>Ivan</name>
+      <id>obj_ivan</id>
+      <desc>Ivan runs the Marina gift shop. He is busy arranging the Famous Figures of Federation dolls on a shelf so they line up exactly.</desc>
+      <vocab cmd='ivan' event='objects.ivan.1'></vocab>
+   </object>
+
+   <object type='static' start='785' visibility='100' size='1' weight='1'>
+      <name>Olga</name>
+      <id>obj_olga</id>
+      <desc>Olga works here in the Mustang Club. She asks people to buy her drinks to help her earn money for her family back in Russia.</desc>
+      <vocab cmd='olga' event='objects.olga.1'></vocab>
+   </object>
+
+   <object type='static' start='655' visibility='100' size='1' weight='1'>
+      <name>Registrar</name>
+      <id>obj_registrar</id>
+      <desc>He is the Metropolitan of Moscow and all Russia dressed in his finest garments.</desc>
+   </object>
+
+</object-list>
+

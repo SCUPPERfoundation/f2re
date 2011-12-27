@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<fed2-map title='Hop' version='1' editor='standard' from='2333' to='Rock.Rock Space.2334'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Objects and Events...when will they appear?</desc>
+   </location>
+
+   <location num='2141' flags='b'>
+      <name>Rose&apos;s Loft</name>
+      <desc>This is where Rose comes when she needs to be alone.  Her life since meeting the Doctor has been exciting, but confusing, involving parallel worlds, time travel and even a human version of the Doctor.  Involved in some of the most important events in the universe, she requires time to process it all.  Cushions and reading material abound, including memorabilia from her travels.  When she&apos;s recharged, she comes back down.</desc>
+      <exits down='2206'/>
+   </location>
+
+   <location num='2206' flags='b'>
+      <name>Rose&apos;s Front Room</name>
+      <desc>You walk right into a combination eat-in kitchen and sitting room.  The decor is rustic but very bright, the windows covered with sheer lace.  A plate of fish and chips has been set out, a mug of stout beside it, and you wonder if Rose is here.  You also see a loft.</desc>
+      <exits up='2141' out='2270'/>
+   </location>
+
+   <location num='2270'>
+      <name>The Rose Cottage</name>
+      <desc>Surrounded by an English garden blooming with every color rose, the thatched roof cottage looks like something from a fairy tale.  You may go IN or return SE.</desc>
+      <exits se='2335' in='2206'/>
+   </location>
+
+   <location num='2272'>
+      <name>Excursion Center</name>
+      <desc>There&apos;s a tour suited for every taste, the hardest part is choosing.  Scientists have specialized tours that take them into remote areas for sampling and studying the local fauna and flora.  Others enjoy the safaris, conducted by hopper train and knowledgeable guides.  Younger visitors enjoy the zipline tours and white water rafting through the jungle areas.  Exit SW.</desc>
+      <exits sw='2335'/>
+   </location>
+
+   <location num='2332' flags='eb'>
+      <name>Hop Exchange</name>
+      <desc>A typical exchange, traders do their best to make a decent profit.  A transparent dome covers the trading chamber allowing a view of the masses of large leafed vegetation.   Green tea, both iced and steaming hot are available with some specialty cookies.  The LP is east.</desc>
+      <exits e='2333'/>
+   </location>
+
+   <location num='2333' flags='yrb'>
+      <name>Hop Landing Pad</name>
+      <desc>Named for its indigenous hopping gulls, the planet is a jungle paradise for botanists, zoologists and biologists as well as tourists.  Expect simple living in harmony with the planet&apos;s natural beauty.  The exchange is west and all other points of interest are down the ramp.</desc>
+      <exits w='2332' down='2335'/>
+   </location>
+
+   <location num='2335'>
+      <name>Gathering Square</name>
+      <desc>Tour Companies line one part of the square to the NE, offering different types of excursions for visitors.  Rose has a cottage to the NW.  If you fall ill or succumb to a poisonous native life form, the Hospital is SW.  Lodgings and Food are generally to the SE.  Residential and commercial districts can be reached by hoppers you can hire to the East.</desc>
+      <exits ne='2272' e='2336' se='2400' sw='2398' nw='2270' up='2333'/>
+   </location>
+
+   <location num='2336'>
+      <name>Hopper Hub</name>
+      <desc>Locals who work in the landing pad, exchange or tourist areas park their personal hoppers here.  Hoppers are available for rental if you wish to shop in one of the commercial districts, or have business with a Hoppy, as natives are called.  Gatehring Square is West.</desc>
+      <exits w='2335'/>
+   </location>
+
+   <location num='2398' flags='hi'>
+      <name>Hospital</name>
+      <desc>Whether you need major surgery or emergency medicine, you will find the medical personnel at Hop&apos;s central hospital to be well trained and caring.  Don&apos;t forget to reinsure!  Exit NE.</desc>
+      <exits ne='2335'/>
+   </location>
+
+   <location num='2400'>
+      <name>The Gullery</name>
+      <desc>Cabins and even treehouses spread out among the trees and lush foliage accommodate visitors in clean but simple lodgings.  Many of the native hopping gulls come calling, looking for food scraps and entertaining the visitors with their peculiar hopping locomotion.  Gathering Square is NW and food can be found SE.</desc>
+      <exits se='2465' nw='2335'/>
+   </location>
+
+   <location num='2465' flags='b'>
+      <name>The Buffet</name>
+      <desc>This establishment provides most of the meals for visitors to Hop.  A dozen or more buffet tables are attractively filled with tantalizing fare.  One table features the sweet luscious local fruit.  Another has native cheeses, from mild to very sharp.  Fresh water fish, lamb and sausages are cooked simply but flavorfully.  Once you&apos;ve filled your plate, you can have a seat at one of the many communal tables, where beverages will be brought to you.  Dig in!  Exit NW.</desc>
+      <exits nw='2400'/>
+   </location>
+
+</fed2-map>

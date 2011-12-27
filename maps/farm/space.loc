@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Farm Space' version='7' editor='standard'>
+
+   <location num='458' flags='slp'>
+      <name>Farm Space and Interstellar Link</name>
+      <desc>Welcome to the Farm Space Interstallar link, the planet Fluffy floats serenly below you and looks very inviting.</desc>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Lost Space' version='7' editor='standard'>
+
+   <location num='132' flags='s'>
+      <name>Bubbles Orbit</name>
+      <desc>Floating below your ship is the recently discovered planet of Bubbles, shining with shimmers of rainbows like a huge soap bubble. Not much is known about the planet, so try not to wander far. The Link is to the south.</desc>
+      <exits s='196' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='196' flags='slp'>
+      <name>Lost Link</name>
+      <desc>Welcome to the Lost system. The lost colony of Dryad is to your east, the recently discovered planet of Bubble or you can use the link to jump to another system.</desc>
+      <exits n='132' e='197' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='197' flags='sp'>
+      <name>Lost space</name>
+      <desc>Darkness enfolds your ship as you steer through the vast space of the Lost system. The link to the outside world is to the west, while the lost colony of Dryad is to the south.</desc>
+      <exits s='261' w='196' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='198' flags='sp'>
+      <name>Space Station Orbit</name>
+      <desc>Below you lies a masterpeice of modern technology. Silver gleaming brightly from the rays of Lost&apos;s distant sun, the space station houses some of the most extensive facilities that can be found this far out in barely charted space. You can board your shuttle and dock at the landing facilities at any time, or you can reach the Lost system&apos;s link by moving southwest.</desc>
+      <exits sw='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='261' flags='sp'>
+      <name>Dryad Orbit</name>
+      <desc>Looming before you, all reds, golds and greens, with occasional splashes of blue, swirls the vast planet of Dryad, home to the lost colony of Dryad. Breathtaking as the view is, you feel a shudder of fear run down your spine, as if under that beautiful face lies the heart of a killer. How dangerous can one planet be? Or is it the inhabitants, the Dryad Goddesses, you have to watch for? All visits to the planet are very restricted, and as such, you must dock with the space station gleaming to the northeast for clearence first. Also, the space station offers travelers every comfort to be had this far out in known space. The link is to the north.</desc>
+      <exits n='197' ne='198' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

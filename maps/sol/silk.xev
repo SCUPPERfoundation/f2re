@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+
+<event-list version='66'>
+
+ <category name='announce'>
+
+  <section name='exchbar'>
+
+   <event num='1'>
+    <comment>spider window</comment>
+    <announce type='text' loc='262'>A group of Xiphosurans enter the room and click-clack their way to a windowside table. A waitdroid glides over to serve them the local special, a dry martini with a skewered fly.</announce>
+    <delayevent delay='90' logoff='announce.exchbar.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>crude humans</comment>
+    <announce type='text' loc='262'>A burst of loud laughter draws your attention to a nearby table. By the sound of their loud boasts and crude jokes, the party of tipsy merchants is celebrating cornering the market.</announce>
+    <delayevent delay='120' logoff='announce.exchbar.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>arachnid dinner</comment>
+    <announce type='text' loc='262'>An arachnid waiter scuttles by holding a garnished platter of worms and mollusks. It&apos;s served to a table of Xiphosurans who welcome it with loud clickings of their mandibles.</announce>
+    <delayevent delay='120' logoff='announce.exchbar.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>arachnid at bar</comment>
+    <announce type='text' loc='262'>A pair of arachnids glide by and perch on a set of support stands by the glassteel viewing wall.</announce>
+    <delayevent delay='120' logoff='announce.exchbar.1'/>
+   </event>
+
+  </section>
+
+  <section name='library'>
+
+   <event num='1'>
+    <comment>spiders in library</comment>
+    <announce type='text' loc='268'>An arachnid enters the room, a large scroll grasped in two of its appendages. Moving quickly to an empty table it unrolls the paper to reveal a complex diagram.</announce>
+    <delayevent delay='120' logoff='announce.library.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>spider crystal</comment>
+    <announce type='text' loc='268'>A Xiphosuran opens the door of a glass case and rearranges a set of complex crystals on a black velvet display mat.</announce>
+    <delayevent delay='120' logoff='announce.library.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>angry scholars</comment>
+    <announce type='text' loc='268'>Two arachnids, clicking rapidly at each other in their native language, clatter their way to the large information desk at the end of the room. One drops a matrix of small ebony rods on the desk while the other turns to the librarian. All three begin to click furiously at each other.</announce>
+    <delayevent delay='30' logoff='announce.library.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>passing thru</comment>
+    <announce type='text' loc='268'>An arachnid edges past you and out the doorway.</announce>
+    <delayevent delay='180' logoff='announce.library.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>study table</comment>
+    <announce type='text' loc='268'>An arachnid slides down a shimmering silk thread suspended from a beam high overhead and comes to a stop beside a study table.</announce>
+    <delayevent delay='90' logoff='announce.library.1'/>
+   </event>
+
+  </section>
+
+  <section name='spiders'>
+
+   <event num='1'>
+    <comment>spider 391</comment>
+    <announce type='text' loc='391'>A Xiphosuran moves slowly past you and disappears between two shuttles.</announce>
+    <delayevent delay='60' logoff='announce.spiders.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>spider 201</comment>
+    <announce type='text' loc='201'>An arachnid slides down a shimmering silk thread suspended from a beam high overhead. It taps at a door panel, which slides open, and the arachid slips inside as the door slides closed again.</announce>
+    <delayevent delay='60' logoff='announce.spiders.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>spider 202</comment>
+    <announce type='text' loc='202'>A Xiphosuran glides along the structural fibers in a slow deterimined pace, oblivious to your presence.</announce>
+    <delayevent delay='60' logoff='announce.spiders.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>spider 328</comment>
+    <announce type='text' loc='328'>A Xiphosuran slides down a shimmering silk thread suspended from a beam high overhead. Reaching a thick cable of twisted silksteel fibers, it moves off without delay.</announce>
+    <delayevent delay='60' logoff='announce.spiders.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>spider 204</comment>
+    <announce type='text' loc='204'>A Xiphosuran slides down a shimmering silk thread suspended from a beam high overhead. It reaches the floor and moves rapidly along the corridor to an open doorway.</announce>
+    <delayevent delay='60' logoff='announce.spiders.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>spider 205</comment>
+    <announce type='text' loc='205'>Two arachnids move slowly along the edge of a solar sail under construction. Your comm unit doesn&apos;t seem able to translate the clicks of their native language.</announce>
+    <delayevent delay='60' logoff='announce.spiders.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>spider 392</comment>
+    <announce type='text' loc='392'>A Xiphosuran glides along a structural fiber cable at a slow deterimined pace, oblivious to your presence.</announce>
+    <delayevent delay='60' logoff='announce.spiders.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='exchange'>
+
+   <event num='1'>
+    <comment>Buy food - Exchange Lounge - 262</comment>
+    <checkstat who='individual' money='10' higher='food.exchange.2' equals='food.exchange.2' lower='food.exchange.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.exchange.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.exchange.2'/>
+   </event>
+
+  </section>
+
+  <section name='sier'>
+
+   <event num='1'>
+    <comment>Buy food - Sierpinsky Lounge - 393</comment>
+    <checkstat who='individual' money='10' higher='food.sier.2' equals='food.sier.2' lower='food.sier.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.sier.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.sier.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='keepout'>
+
+  <section name='staff'>
+
+   <event num='1'>
+    <comment>keepout non-staff from Silk</comment>
+    <checkflag who='individual' flag ='staff'  unset='keepout.staff.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>move player to shuttle pad</comment>
+    <message type='text' where='com' who='individual'>A large gleaming black arachnid creature, with a shiny silver comm unit hanging from its pneumothorax, slides down a glimmering strand of silk to stop directly in front of you. "Sssssorry, ssssorry, no visitorsss today. We are launching the ssspacebloomsss. Come back tomorrow and tomorrow and tomorrow."</message>
+    <move what='player' who='individual' loc='391'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='mobiles'>
+
+  <section name='droids'>
+
+   <event num='1'>
+    <comment>get droids message</comment>
+    <message type='text' where='com' who='individual'>A large gleaming black arachnid, with a shiny silver comm unit hanging from its cephalothorax, slides down a glimmering strand of silk to stop directly in front of you. "Thessse are not the droidssss you&apos;re looking for. Move along."</message>
+   </event>
+
+  </section>
+
+  <section name='spider'>
+
+   <event num='1'>
+    <comment>Spider stops you getting flower if you already have one</comment>
+    <message type='text' where='com' who='individual'>A large gleaming black arachnid, with a shiny silver comm unit hanging from its pneumothorax, slides down a glimmering strand of silk to stop directly in front of you. "Sssssorry, ssssorry, you already possessss a sssspacebloom. One is more than enough, it issss infinitely more than zero."</message>
+   </event>
+
+   <event num='2'>
+    <comment>delay for event 3</comment>
+    <delayevent delay='5' event='mobiles.spider.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>spider warns you to leave launch site</comment>
+    <message type='text' where='com' who='individual'>A large gleaming black arachnid creature, with a shiny silver comm unit hanging from its pneumothorax, slides down a glimmering strand of silk to stop directly in front of you. "Sssssorry, ssssorry, no visitorsss today. We are launching the ssspacebloomsss and our hatchlingsss. Come back tomorrow and tomorrow and tomorrow."</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='flower'>
+
+   <event num='1'>
+    <comment>check for flower1</comment>
+    <checkinventory map='home' id-name='doogmints' found='mobiles.spider.1' not-found='objects.flower.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for flower2</comment>
+    <checkinventory map='home' id-name='crialis' found='mobiles.spider.1' not-found='objects.flower.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>check for flower3</comment>
+    <checkinventory map='home' id-name='zippinia' found='mobiles.spider.1' not-found='objects.flower.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>check for flower4</comment>
+    <checkinventory map='home' id-name='koulekouli' found='mobiles.spider.1' not-found='objects.flower.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>check for flower5</comment>
+    <checkinventory map='home' id-name='kubiko' found='mobiles.spider.1' not-found='objects.flower.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>check for flower6</comment>
+    <checkinventory map='home' id-name='elpae' found='mobiles.spider.1' not-found='objects.flower.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>call random event</comment>
+    <call event='objects.flower.random[8-13]'/>
+    <message type='text' where='com' who='individual'>No one appears to be watching, so, keeping your fingers crossed that its transmitter isn&apos;t yet functioning, you surreptitiously pluck one of the immature blooms.</message>
+   </event>
+
+   <event num='8'>
+    <comment>create flower1</comment>
+    <createobject where='inventory' home-map='sol/silk' id='obj_1flower'/>
+   </event>
+
+   <event num='9'>
+    <comment>create flower2</comment>
+    <createobject where='inventory' home-map='sol/silk' id='obj_2flower'/>
+   </event>
+
+   <event num='10'>
+    <comment>create flower3</comment>
+    <createobject where='inventory' home-map='sol/silk' id='obj_3flower'/>
+   </event>
+
+   <event num='11'>
+    <comment>create flower4</comment>
+    <createobject where='inventory' home-map='sol/silk' id='obj_4flower'/>
+   </event>
+
+   <event num='12'>
+    <comment>create flower5</comment>
+    <createobject where='inventory' home-map='sol/silk' id='obj_5flower'/>
+   </event>
+
+   <event num='13'>
+    <comment>create flower6</comment>
+    <createobject where='inventory' home-map='sol/silk' id='obj_6flower'/>
+   </event>
+
+   <event num='14'>
+    <comment>drop flower</comment>
+    <destroyobject where='inventory' map='home' id-name='doogmints'/>
+    <destroyobject where='inventory' map='home' id-name='crialis'/>
+    <destroyobject where='inventory' map='home' id-name='zippinia'/>
+    <destroyobject where='inventory' map='home' id-name='koulekouli'/>
+    <destroyobject where='inventory' map='home' id-name='kubiko'/>
+    <destroyobject where='inventory' map='home' id-name='elpae'/>
+    <message type='text' where='com' who='individual'>You open your hand (or equivalent) and the spacebloom lays on your palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+    <checkgender male='objects.flower.15' female='objects.flower.16' neuter='objects.flower.17'/>
+   </event>
+
+   <event num='15'>
+    <comment>male drop messages</comment>
+    <message type='text' where='com' who='room_ex'>You see %s holding a spacebloom. The spacebloom lays on his open palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+   </event>
+
+   <event num='16'>
+    <comment>female drop message</comment>
+    <message type='text' where='com' who='room_ex'>You see %s holding a spacebloom. The spacebloom lays on her open palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+   </event>
+
+   <event num='17'>
+    <comment>neuter drop message</comment>
+    <message type='text' where='com' who='room_ex'>You see %s holding a spacebloom. The spacebloom lays on its open palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='start'>
+
+  <section name='start'>
+
+   <event num='1'>
+    <comment>library - spiders visit</comment>
+    <call event='announce.library.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>general - spiders appear in assorted locations</comment>
+    <call event='announce.spiders.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>exchange lounge</comment>
+    <call event='announce.exchbar.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

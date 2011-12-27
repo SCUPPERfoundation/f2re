@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<fed2-map title='Viand' version='2' editor='standard' from='263' to='Darkness.Darkness Space.137'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>It is a dusty old storeroom and if you do not like it this dirty then you clean it.</desc>
+   </location>
+
+   <location num='73'>
+      <name>Colby Cheese Room</name>
+      <desc>You have arrived in a room made completely of Colby cheese. There are a few couches and tables and stools scattered around the room and they too are made of cheese. Everywhere you look its Colby. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY COLBY and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+   <location num='137'>
+      <name>Monterey Jack Cheese Room</name>
+      <desc>You have arrived in a room made completely of Monterey Jack cheese. There are bean bag chairs scattered around the room and they too are made of cheese. Everywhere you look its Monterey Jack. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY MONTEREY JACK and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+   <location num='200' flags='e'>
+      <name>Swiss Cheese Exchange</name>
+      <desc>You walk into a room made entirely of Swiss cheese. The furniture, the walls, the ceiling, the floor, everything is made of Swiss cheese. The only exception is the computers that display the exchange prices of the different commodities. There is plenty of light in this room for all the daylight coming through the holes in the Swiss cheese but you do hope that is does not rain on this planet as it would probably get very uncomfortable in this room. If you would like to sample the swiss type BUY SWISS and a waitroid will happily serve you. From here you can go SOUTH to the foyer.</desc>
+      <exits s='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='201'>
+      <name>PepperJack Cheese Room</name>
+      <desc>You have arrived in a room made completely of Pepperjack cheese. There are a bunch of dish chairs scattered around the room and they too are made of cheese. Everywhere you look its Pepperjack. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY PEPPERJACK and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+   <location num='263'>
+      <name>Cheesy Launch Pad</name>
+      <desc>As you exit your shuttle pad you find yourself on a planet made completely of cheese. There is nothing but cheese in every direction. Every variety you have ever heard of is here and many more types of cheeses you have never seen or know the name of. As you look around you start to get very hungry and begin to wonder if you can eat the planet. You can go EAST from here or BOARD your ship and leave.</desc>
+      <exits e='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264'>
+      <name>Fondue Foyer</name>
+      <desc>As you step into the foyer you look around. You realize the the entire foyer is surrounded by a river of fondue. There is a counter to one side of the room with all sorts of different foods on it that can be dipped into the the fondue. They all look delicious and if you type BUY FONDUE you can try some of them. You can also see a button on the wall of the east side of the room with a small sign next to the button. The sign reads &quot;PUSH the BUTTON to travel to one of the cheese rooms at random where you can sample a different cheese in each room.&quot; From here you can go NORTH to the exchange, SOUTH to the shipyard, or back WEST to the launch pad.</desc>
+      <exits n='200' s='328' w='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265'>
+      <name>American Cheese Room</name>
+      <desc>You have arrived in a room made completely of American cheese. There are a bunch of hammocks scattered around the room and they too are made of cheese. Everywhere you look its American cheese. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY AMERICAN and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+   <location num='328' flags='yr'>
+      <name>Provolone Cheese Shipyard</name>
+      <desc>You walk into a room made entirely of provolone cheese. Every part of the room except the ships for sale is made of cheese. You begin to wonder what happens when somebody starts up one of the display ships to test it out and why the room does not just melt. You ponder this as you wander around the room admiring the beautiful ships for sale. If you would like to sample the provolone type BUY PROVOLONE and a waitroid will happily serve you. From here you can go NORTH to the foyer.</desc>
+      <exits n='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Cheddar Cheese Room</name>
+      <desc>You have arrived in a room made completely of Cheddar cheese. There are a bunch of beach chairs scattered around the room and they too are made of cheese. Everywhere you look its Cheddar. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY CHEDDAR and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+   <location num='393'>
+      <name>Gouda Cheese Room</name>
+      <desc>You have arrived in a room made completely of Gouda cheese. There are a bunch of lounge chairs scattered around the room and they too are made of cheese. Everywhere you look its Gouda. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY GOUDA and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+   <location num='457'>
+      <name>Mozzarella Cheese Room</name>
+      <desc>You have arrived in a room made completely of Mozzarella cheese. There is a bunch of hanging chairs scattered around the room and they too are made of cheese. Everywhere you look its Mozzarella. There is a sign on one wall of the room that reads &quot;Please refrain from eating the room and furniture even though they are made of cheese and look edible. They have been treated with preservatives and are not actually edible. However, if you would like a sample of the cheese type BUY MOZZARELLA and a waitroid will be glad to serve you.&quot; Along the opposite wall you notice another button on the wall just like the one in the foyer. There is a sign next to the button that reads &quot;PUSH the BUTTON to be randomly taken to another cheese room or type FOYER and you will be taken back to the foyer.&quot;</desc>
+      <exits no-exit='moves.noexit.1'/>
+      <vocab cmd='foyer' event='moves.button.8'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<fed2-map title='Lunarian' version='9' editor='standard' from='396' to='Lunax.Lunax Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Guardian Round Table</name>
+      <desc>   Wait, as you enter the room you notice a rather large round table! Could it be they are knights of the round table who have evolved over the centuries to become immortal knights and traveled all this way? Could this mean Lester Truewind there Headmaster could be Arthur Pendragon or perhaps Merlin? or even a Descendent?</desc>
+      <desc>    A swirling portal leading out will take you back to Lester&apos;s Office.</desc>
+      <exits out='650'/>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Lunar Guardian Hospital</name>
+      <desc> The Lunar Guardians are here to help you, as injured Lunarians lay back onto the beds the Guardians come around using there magical crystals to heal them.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Lunar Road</name>
+      <desc>A regular gravel road leading off into the distance. Southwest to continue your journey.</desc>
+      <exits e='396' sw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Lunarian Landing Pad</name>
+      <desc>Starfighters &amp; Space Transports land and launch as they leave to go about there business. The exchange is to the east, the hospital to the north, the Lunar Tavern is to the south, while Guardian Road is off to the west leading towards the Lunar Guardian Academy.</desc>
+      <exits n='332' e='397' s='460' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Lunarian Crystal Exchange</name>
+      <desc>   Large view screens adorne the walls, there texture that of crystal. The commodites seem to appear as if by magic in a 3D formation before vanishing again to show the next ones.</desc>
+      <exits w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='457'>
+      <name>Lunar Side Inn</name>
+      <desc>A lush inn, with all the comforts of a home away from home. The Inn has not lost its touch in all the years it has been here, its still running on its medevil style charms but with a touch of new age pazaz.</desc>
+      <exits e='458'/>
+   </location>
+
+   <location num='458'>
+      <name>Lunar Road </name>
+      <desc>A regular gravel road leading off into the distance. south to continue your journey, west to Lunar Side Inn.</desc>
+      <exits ne='395' s='522' w='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Lunar Tavern</name>
+      <desc> All the Guardians &amp; Knights come here to play, drink and eat while there not on duty. A big burly man sits at the door with a crystal staff watching as people arrive and leave to make sure no trouble is started.</desc>
+      <exits n='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Lunar Academy Gates</name>
+      <desc> The front gates leading into a massive school yard, four big guards wearing formfitting armor and hoods guard the gates holding there crystal swords at there sides as there eyes shift back and forth to watch everyone who is coming and going.</desc>
+      <exits n='458' s='586' up='586' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='586'>
+      <name>Lunar Academy School Yard</name>
+      <desc>A sign to your right says if your on school grounds you better have a good reason if your not a student. To the south is headmaster Lester Truewind&apos;s office the one and only Lunar Mystic ever born.</desc>
+      <exits n='522' s='650' up='650' down='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='588'>
+      <name>Mystic Crystal Room</name>
+      <desc>A very strange room, only one man has ever steped foot in this room and come out with more power then one could dream of. The crystals on the walls and the roof shine with a bright power, thoughs with a pure heart who could tap into them would have great power to use for goodness, thoughs with a evil heart who could tape into them would have more power then the universe could wish from such evil.</desc>
+      <desc>The exit is back up through the trapdoor.</desc>
+      <exits up='651'/>
+   </location>
+
+   <location num='650' flags='bt'>
+      <name>Lester Truewind&apos;s Office</name>
+      <desc> A rather large room, from the outside one might not belive there eyes as they enter the room its fifty times larger then expected. A desk sitting on a secondary platform at the back of the room while books adorne the walls and a spiral staircase leads upwards to a second floor and more. A portal on the side wall leading out will take you to a mysterious place suspended in time for thousands of years.</desc>
+      <exits n='586' e='651' down='586' out='0' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='651' flags='yrhibt'>
+      <name>Lester&apos;s Bedroom</name>
+      <desc>A large lavish bedroom, the bed at the far end of the room just seems to float on air. There is a large crystal viewscreen on the side wall which displays information on Past, Present &amp; Future members of the Lunar Knights.</desc>
+      <desc>There is a trapdoor in the floor leading downwards.</desc>
+      <exits w='650' down='588'/>
+   </location>
+
+</fed2-map>

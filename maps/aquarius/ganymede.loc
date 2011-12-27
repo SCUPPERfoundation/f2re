@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<fed2-map title='Ganymede' version='1.00' editor='standard' from='650' to='Aquarius.Aquarius Space.202'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='135'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='136'>
+      <name>Mount Ida</name>
+      <desc>   The view from the summit is breathtaking, overlooking the city far below, and the mountain with pine forests and lush green pastures where sheep are grazing.</desc>
+      <desc>   Shepherds are tending there sheep on the hillside, while scholars are studying in the peacefull surroundings.</desc>
+      <desc>On the summit a statue of Ganymede has been erected, and at it&apos;s base is a stone slab that reads :</desc>
+      <desc>   &quot;There too, flushed Ganymede his rosy thigh</desc>
+      <desc>    Half buried in the eagles down,</desc>
+      <desc>    Sole as a flying star shot through the sky,</desc>
+      <desc>    Above the pillared town.&quot;</desc>
+      <desc>             ---Tennyson---</desc>
+      <desc>    You can return down the mountain Southeast.</desc>
+      <exits se='201' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='139'>
+      <name>Forest </name>
+      <desc>   With the village in the distance to the South, you enter a large dark forest where the sunlight is hard to penetrate. You need to tread carefully, as the going can be treacherous.</desc>
+      <desc>   You can just make out a glimmer of light to the East.</desc>
+      <exits e='140' s='203' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='140'>
+      <name>Foot of Mount Olympus</name>
+      <desc>   Your eyes grow accustomed to the light as you gradualy come out into a clearing , before you Mount Olympus towers up from the center of the earth, and through the clouds. Here the major gods live and hold court.</desc>
+      <desc>   South is a Partical Beam Transporter</desc>
+      <desc>   To your West is the forest.</desc>
+      <exits s='204' w='139' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='201'>
+      <name>Slopes of Mount Ida</name>
+      <desc>   You stop and catch your breath from the climb, it&apos;s quiet peaceful here, with the sheep and cattle grazing on the hillside.</desc>
+      <desc>   You can make that last effort Northwest  to the summit of Mount Ida, or turn back Southwest.</desc>
+      <exits sw='264' nw='136' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='203' flags='b'>
+      <name>Village</name>
+      <desc>   You can buy some local authentic crafts from the local trades people.</desc>
+      <desc>   In a small courtyard tables are set up where you may buy drinks, to cool you off in this hot sun.</desc>
+      <desc>   To the North you leave the village, or you can retrace your steps back South</desc>
+      <exits n='139' s='267' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='204'>
+      <name>Partical Beam Transporter</name>
+      <desc>   As you step into the transporter you realize it will take you up to the top of Mount Olympus.</desc>
+      <desc>   If you are not willing to continue you can return North.</desc>
+      <exits n='140' in='271' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='206'>
+      <name>Hermes the Messenger God</name>
+      <desc>   Hermes the messenger God sits before you, and you cant help noticing his winged feet. He winks, with speed the message is delivered he say&apos;s.</desc>
+      <desc>   He is also the conductor of souls to Hades.</desc>
+      <exits se='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='207'>
+      <name>Zeus King of the Gods</name>
+      <desc>   When the time is right the eight gods assembled here, will give you a quest, that will bring imortality to Ganymede, and fame and fortune to yourselves.</desc>
+      <exits s='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='208'>
+      <name>Hera Queen of the Gods</name>
+      <desc>   You stand before Hera daughter of Kronos and Rhea, also the sister and wife of Zeus.</desc>
+      <desc>   She looks a majestic figure fully draped, crowned with a wreath and carrying a scepter</desc>
+      <desc>   Hera is the protectress of woman, presiding over marriage and childbirth.</desc>
+      <exits sw='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='264'>
+      <name>Farmland</name>
+      <desc>   As the road turns North you enter farmland. You see a small homestead and farm buidings. Peasants in the fields are picking the crops and storing them in packing cases, for transport through out Ganymede.</desc>
+      <desc>   Mount Ida looms up in the Northeast,and the city is to the South</desc>
+      <exits ne='201' s='328' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='267'>
+      <name>Village</name>
+      <desc>   You travel through a small village, little stone cottages with thatched roofs and small shops that display their wares You can buy lamps, pots and pans and any other cooking utensils from the iornmongers. On the left a small clothes shop sells local made dresses and pants.</desc>
+      <desc>   The village continues North or you can return South towards the city.</desc>
+      <exits n='203' s='331' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='270'>
+      <name>Aphrodite Godess of Love</name>
+      <desc>   I am the Godess of love, fertility and beauty she smiles.and from her great looks and charm you see why, dressed in a white shift dress, with her long blonde hair flowing down around her shoulders, she creates a stunning presence.</desc>
+      <exits e='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='271'>
+      <name>Palace of the Gods</name>
+      <desc>   There&apos;s a shudder and flash of light, and for a brief second you imagined that the Eagle Aquila had picked you up and transported you to the Palace of the Gods</desc>
+      <desc>   You are in a magnificant palace that gives the impression of a huge snowflake. Cyrystaline pillars reach up into a white pearly mist. and a thin layer of snow lays like a white crystal carpet on the floor. You ar encircled buy the eight gods sitting here in discussion.</desc>
+      <desc>  &quot;Pour forth heaven&apos;s wine, Idaean Ganymede</desc>
+      <desc>   And let it fill the Daedal cups like fire&quot;</desc>
+      <desc>   The cupbearer Ganymede goes from one god to another filling their cups with nectar and honey.</desc>
+      <desc>   You can move to all the cardinal points.</desc>
+      <desc>   Step into the transporter to return to the foot of Mount Olympus.</desc>
+      <exits n='207' ne='208' e='272' se='336' s='335' sw='334' w='270' nw='206' in='140' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='272'>
+      <name>Ares God of War</name>
+      <desc>   I am Ares probably the most disliked God of all, but admired as a great warrior. I have led the Trojans many times into war, in my war chariot pulled by my two hoses, Flame and terror</desc>
+      <exits w='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='328'>
+      <name>Wooden Swing Bidge </name>
+      <desc>   At this point you cross the Scamander river by a wooden swing bridge. You feel a little giddy, as the bridge moves in the wind, but you hang on tight  and continue across.</desc>
+      <desc>   The city is Southeast.</desc>
+      <exits n='264' se='393' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='331'>
+      <name>Lower Slopes</name>
+      <desc>   As you look back Southwest you overlook the city of Ilium and the river Scamander beyond.</desc>
+      <desc>   The road leads north towards a small village.</desc>
+      <exits n='267' sw='394' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='334'>
+      <name>Apollo God of Light and Sun</name>
+      <desc>   I am one of the most important gods concerned with prophecy, medicine, music and poetry, and try and attend the arts as often as possible.</desc>
+      <desc>   I am also associated  with the development of civilization, such as law and philosophy.</desc>
+      <exits ne='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='335'>
+      <name>Poseidon God of the Seas</name>
+      <desc>   It has been noted that I am extremely powerful, with a violent and vengeful disposition. While they may be right I am also the protector of the sea and navigation and will help those in distress.</desc>
+      <exits n='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='336'>
+      <name>Celesta Godess of death</name>
+      <desc>   I give mortals relief by taking them to the other side. I have a flame that I carry every where, and without it I dont exist, and if I dont exist; Death does not exist.</desc>
+      <desc>   The world would live in agony and no one would ever die and mortals would have to live with their pain.</desc>
+      <exits nw='271' no-exit='olympus.noexit.3'/>
+   </location>
+
+   <location num='391'>
+      <name>Aquarobotic Solutions</name>
+      <desc>This building houses Aquarobotic Solutions, who design and use undersea water craft, for experimentation, and in the construction of underwater cities.</desc>
+      <desc>   This facility is at the present working on five new designs, Transporters, Building drones, Heavy lift, maintainance and exploration drones The crafts are at various stages of completion,</desc>
+      <desc>   The new Poseidon Underwater city off the Dardanelles is two thirds completed but due to some bad weather it is behind schedule.</desc>
+      <desc>   To the south work has started on the new vacuum train station. when finished there will be a high speed link to the new Poseidon underwater city.</desc>
+      <desc>   exit East</desc>
+      <exits e='392' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='392'>
+      <name>The Old Port </name>
+      <desc>   Since most of the trading is gacltic nowdays the port as an industry is pretty much dead. Instead it has become a large marina for  those expensive yachts and power cruisers.</desc>
+      <desc>   To the west at the end of the dock there is a large building.</desc>
+      <desc>   The city is East</desc>
+      <exits e='393' w='391' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='393'>
+      <name>City Walls</name>
+      <desc>   The road runs parallel to the city walls then takes a Northwest turn.</desc>
+      <desc>   East will take you back to the city.</desc>
+      <desc>   A small path to the West will take you to the old port.</desc>
+      <exits e='394' w='392' nw='328' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='394'>
+      <name>Outside the City Gates</name>
+      <desc>   You are standing at the gated entrance to the city. Two Trojan sentry&apos;s guard the ouside of the gates. Your paper work needs to be in order to be able to go South into the city.</desc>
+      <desc>   As you look around you can see why the city was built here. It sits on a hillside overlooking the plains of Scamander, making it almost impregnable.</desc>
+      <desc>   To the Northeast the road keeps climbing, while to the West it decends to the plains.</desc>
+      <exits ne='331' s='458' w='393' no-exit='road.noexit.2'/>
+   </location>
+
+   <location num='456'>
+      <name>Battlements </name>
+      <desc>   From this point you control any attack from the river below, you can guard the battlements to the East or South</desc>
+      <exits e='457' s='520' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='457'>
+      <name>West Tower</name>
+      <desc>   Spiral stone steps lead up to the top of the tower. From this advantage point you can stop any attack on the gates. You can see a brazier in the corner for heating oil, which then is used to pour down on the heads of attackers.</desc>
+      <desc>   The stone archway to the West leads out on to the battlements, or you can go Down to the courtyard below</desc>
+      <exits w='456' down='522' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>City Gates</name>
+      <desc>   The two large oak gates stand ajar with a Trojan sentry on either side of the gate archway, to stop any undesirable persons entering or leaving.</desc>
+      <desc>   You can go back into the city, or show your papers and leave by going North</desc>
+      <exits n='394' s='522' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>East Tower</name>
+      <desc>   Spiral stone steps lead to the top of the tower,and like the west tower, commands the advantage when any attack may occur.</desc>
+      <desc>   A stone archway to the east leads onto the battlements, or you can go down to the courtyard.</desc>
+      <exits e='460' down='522' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Battlements</name>
+      <desc>   This strategic point overlooks Mount Olympus and defends against any attacks from the north or the east</desc>
+      <desc>   A Trojan Warrier stands guard.</desc>
+      <desc>   exits South and West</desc>
+      <exits s='524' w='459' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='520'>
+      <name>Southwest Battelments</name>
+      <desc>   A Trojan sentry stands guard here, with a view over the plains and the river Scamander, He has plenty of time to give a warning in the event of an attack.</desc>
+      <desc>   You can return North</desc>
+      <exits n='456' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='521'>
+      <name>Courtyard</name>
+      <desc>   You are in the Northwest corner of the courtyard</desc>
+      <exits e='522' s='585' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Courtyard</name>
+      <desc>   You are in the  North of the courtyard. the city gates are to the north.</desc>
+      <desc>   You can go Nortwest to the West Tower.</desc>
+      <desc>   Or go Northeast to the East Tower</desc>
+      <exits n='458' ne='459' e='523' se='587' s='586' sw='585' w='521' nw='457' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Courtyard</name>
+      <desc>   You are in the Northeast corner of the courtyard</desc>
+      <exits s='587' w='522' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Southeast Battlements</name>
+      <desc>   This area has access to the armoury below. A small platform operated buy rope and pulleys lift the heavy equipment  and weapons as needed in time of battle.</desc>
+      <desc>   exit North</desc>
+      <exits n='460' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='584' flags='ebt'>
+      <name>Demeter Exchange (God of Harvest)</name>
+      <desc>   All though Ilium is an ancient city,  the exchange is one of the most modern in the Galaxy. As you seat yourself in a large leather lounger, you are supplied with a holographic monitor for all the latest news, trade and stock prices.</desc>
+      <desc>None of the hustle and Bustle of the usual exchanges just a relaxing experience.</desc>
+      <desc>   A waiteroid moves around the exchange getting refreshments for any traders requiring it.</desc>
+      <desc>   You can return to the LP East.</desc>
+      <exits e='585' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='585'>
+      <name>Courtyard</name>
+      <desc>   You are in the Southwest corner of the courtyard.</desc>
+      <desc>   Exchange to the West</desc>
+      <desc>   Hospital to the Southwest</desc>
+      <exits n='521' ne='522' e='586' sw='648' w='584' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='586'>
+      <name>Courtyard</name>
+      <desc>   You are on the South side of a large paved courtyard. In the center sits a large well the main water supply for Ilium, from underground springs that come down from Mount Ida and Mount Olympus.</desc>
+      <desc>   Exchange is West</desc>
+      <desc>   Shipyard to the Southwest</desc>
+      <desc>   To the East is The Archives</desc>
+      <desc>   The Helen of Troy lounge is Southeast</desc>
+      <desc>   And exits to all cardinal points</desc>
+      <exits n='522' e='587' se='651' s='650' sw='649' w='585' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Courtyard</name>
+      <desc>   You are in the Southeast corner of the courtyard.</desc>
+      <desc>   The Banqueting hall is to the Southeast</desc>
+      <desc>   The Archives are to the East</desc>
+      <exits n='523' e='588' se='652' w='586' nw='522' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='588'>
+      <name>The Archives</name>
+      <desc>   At first glance there seems to be chaos, then as you look around you see all the scrolls, manuscripts, stone tablets and documents have been filed in some sort of order. The original translations have been transfered to hologhraphic images for easy and safe viewing.</desc>
+      <desc>   You press the red button on the table, imediately the holographical legend of Ganymede stands out before you.</desc>
+      <desc>  &quot;Ganeymede is the young and beautiful boy that became one of Zeus&apos;s lovers. Zeus fell in love with Ganymede when he spotted him herding his flock on Mount Ida. He sent Aquila the eagle down, to carry Ganymede to Mount Olympus,  where Ganymede became the cupbearer to the gods.</desc>
+      <desc>   When Ganymedes father king Tros found out about his disappearence, he greived so hard, that Zeus sent Hermes , on his behalf to give king Tros two storm footed horses, that could run over water.&quot;</desc>
+      <desc>   The hollographic image moves down.</desc>
+      <exits w='587' down='589' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='589'>
+      <name>Archives</name>
+      <desc>   &quot;For help building the city of Ilium, King Tros promised to reward Apollo and Posiedon well, a promise he refused to fulfill. In vengeance Posiedon sent a sea monster to attack Troy.</desc>
+      <desc>   Heracles asked for the two beautiful horses in exchange for destroying the sea monster, which King Tros agreed to .</desc>
+      <desc>   Upon hearing that Ganymede was to become the cup bearer as well as Zeus&apos;s lover the infinitely jealous Hera was outraged.</desc>
+      <desc>   Therefor Zeus set Ganymedes image among the stars as the constellation Aquarius.</desc>
+      <desc>   If you study the map of the planet Ganymede you will also see the image of the cup bearer.&quot;</desc>
+      <exits up='588'/>
+   </location>
+
+   <location num='648' flags='hit'>
+      <name>Promeatheus Hospital ( God of Healing)</name>
+      <desc>   The gods are unwilling to interfere in the life cycles of mere mortal man, but the facility for all that, boasts all the latest equipment and technology.</desc>
+      <desc>   Doctors and nurses hurry through the various wards attending and caring for their patients.</desc>
+      <desc>   Northeast will take you back to th LP.</desc>
+      <exits ne='585' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='649' flags='y'>
+      <name>Laomedon  Shipyards</name>
+      <desc>   A large workshop full of various ships under construction, from naval cutters, you&apos;r family speedster or large cargo ships, you are surprised at the quality of what they build here,</desc>
+      <desc>   You make your way through the workshop to the sales counter.</desc>
+      <desc>   The receptionist asks &quot;Would you like to order a new ship.&quot;</desc>
+      <desc>   You can exit to the Northeast</desc>
+      <exits ne='586' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='650' flags='kt'>
+      <name>Landing Pad</name>
+      <desc>   You have landed in the city of Ilium, the ancient city of Troy.</desc>
+      <desc>   The gods Apollo and Poseidon were ordered by Zeus, in a period which they were under punishment, and this punishment was being forced to labor with mortal man, their labor created the city of Troy. The gods help with the construction, not simply building the city with their power, since it had been declared that the city of Troy would someday, be over ran in a location built by mortal hands.</desc>
+      <desc>   A courtyard is to the North.</desc>
+      <desc>   Make sure you visit the Archives to learn the legend of Ganymede</desc>
+      <exits n='586' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='651' flags='b'>
+      <name>Helen of Troy Lounge</name>
+      <desc>   This cosy little bar creates a sanctuary for traders and PO&apos;s, after a long tireing day. Small intimate booths give privacy for that quiet drink.</desc>
+      <desc>   Waiteroids hover between the tables and booths to take you&apos;r drink or food order.</desc>
+      <desc>   The sound of the piano playing in the backround completes the ambience.</desc>
+      <desc>   Exit is Northwest</desc>
+      <exits e='652' nw='586' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='652' flags='b'>
+      <name>King Tors Banquet Room</name>
+      <desc>   This large banqueting room plays host to diplomats, Merchants and traders from all over the galaxy. A large oak dining table for 50 guests stretches along the middle of the room,</desc>
+      <desc>   The food is in abundance with tropical fruits Pheasants, grouse, partidges, hams and turkeys. The home grown and  imported wines add to the over indulgence.</desc>
+      <desc>   Large historic art works hang  on the west and south walls. In the east wall a window overlooks Mount Olympus, while a log fire burns in the large stone fireplace in the north wall.</desc>
+      <desc>   You can go West to the Helen of Troy Lounge, or Northwest back to the courtyard.</desc>
+      <exits w='651' nw='587' no-exit='city.noexit.1'/>
+   </location>
+
+</fed2-map>

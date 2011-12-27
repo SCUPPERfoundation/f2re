@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<fed2-map title='Rogue' version='66' editor='standard' from='330' to='Wilderness.Wilderness Space.2082'>
+
+   <location num='137' flags='t'>
+      <name>Stone Dias</name>
+      <desc>You are standing on a raised stone dias in a darken cave. If you are afraid of heights and think the boogie man resides in the dark you might be in trouble. You look around and can see some computer screens on the far wall. You will need to step down off the dias to examine the equipment more closely.</desc>
+      <exits down='459' no-exit='nomove.alpha.1'/>
+   </location>
+
+   <location num='138' flags='t'>
+      <name>Tree Trunk Bridge</name>
+      <desc>You are standing on a tree trunk that spans a narrow gorge in which a rapidly flowing river is flowing from the north to the south. Careful where you step, you might end up in the river below. Of course on a hot day that river may look inviting to go down into for a refreshing dip. To the east and west the tree trunk bridge will take you back into forest.</desc>
+      <exits n='140' ne='140' e='458' se='140' s='140' sw='140' w='461' nw='140' down='205' in='205' no-exit='nomove.treetrunk.2'/>
+   </location>
+
+   <location num='139' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy. A strong sense of burning woods fills your nostrils and the smell seems to be coming from the north somewhere. However, heavy undergrowth appears to block your way in all directions northerly. The forest continues in all other directions.</desc>
+      <exits ne='141' e='268' se='455' s='202' sw='200' w='525' no-exit='nomove.forest.3'/>
+   </location>
+
+   <location num='140' flags='t'>
+      <name>River</name>
+      <desc>SPLASH! You are in the river and have been swept southerly and downstream from the tree trunk crossing. You can fight the current and stay here in the water or float south downstream to hopefully find a place to extract yourself from the river.</desc>
+      <exits s='267' no-exit='nomove.river.6'/>
+   </location>
+
+   <location num='141' flags='bt'>
+      <name>Village</name>
+      <desc>You are standing in a village of indigenous people who take no notice of a stranger in their midst. Perhaps you are not the first outsider to come here. This must be trading day as the locals are haggling and exchanging foodstuffs for pelts, cloth for tools and other necessities of everyday survival. Perhaps you can trade for some food or drink if you are in need. You notice to the east a solitary hut with a wisp of smoke curling from an opening in the roof. To the south you see a footpath that appears to disappear into the thick impenetrable undergrowth of the forest that surrounds the village.</desc>
+      <exits e='269' s='139' no-exit='nomove.village.1'/>
+   </location>
+
+   <location num='199' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing on the westerly side of a large tree in a forest of trees. All around you the underbrush is snarled and tangled. It would require great effort to go in any direction except to the east where you see a downed tree trunk spanning a narrow gorge. You can also hear the sound of rapidly moving water. A well crafted rope and plank ladder hangs down from the treehouse above but ends 10 or so feet above ground level. Unusual damage to the tree trunk can be seen in the area just under the suspended ladder. You wonder what kind of wild animal could make such markings and better yet, where is this animal now? You look up at the ladder, perhaps you can climb up the trunk and reach it?</desc>
+      <exits e='138' up='524' no-exit='nomove.forest.8'/>
+   </location>
+
+   <location num='200' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy. To the south you can see a clearing and your shuttle. In all other directions the forest continues.</desc>
+      <exits n='525' ne='139' e='202' se='331' s='330' sw='456' w='328' nw='397' no-exit='nomove.forest.5'/>
+   </location>
+
+   <location num='201' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest near a large rock formation which blocks your way to the east. To the west a smoothly flowing river runs north and south through a shallow and wide gorge. You take quick look over the edge of the gorge to see if you can climb down but see no way to reach the bottom safely. To the southwest the gorge appears to flatten out. A raven looks at you from the top of the rock formation. It cocks its head to the side, squawks at you and then flies off to the east. In all other directions the forest beckons.</desc>
+      <exits n='458' ne='204' se='203' s='266' no-exit='nomove.forest.9'/>
+   </location>
+
+   <location num='202' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy. To the southwest you can see a clearing and your shuttle. In all other directions the forest continues.</desc>
+      <exits n='139' ne='268' e='455' se='332' s='331' sw='330' w='200' nw='525' no-exit='nomove.forest.4'/>
+   </location>
+
+   <location num='203' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in a forest near a patch of wildflowers. The forest canopy allows just enough light through to allow the wildflowers to establish and grow in an otherwise dense forest. A large rock formation blocks your way to the north and northeast. Dense vegetation blocks your way in all directions southerly. The forest continues in all other directions.</desc>
+      <exits e='523' w='266' nw='201' no-exit='nomove.forest.11'/>
+   </location>
+
+   <location num='204' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy. To the north you can see a clearing and your shuttle. A large rock formation blocks your way to the south and southeast. In all other directions the forest continues.</desc>
+      <exits n='330' ne='331' e='395' sw='201' w='458' nw='456' no-exit='nomove.forest.8'/>
+   </location>
+
+   <location num='205' flags='t'>
+      <name>Secluded Beach and Pool</name>
+      <desc>Here, sheltered from the effects of the rapidly moving river is a small sandy beach and a small but inviting pool of water. You look around and see that no one can see you from the tree trunk bridge. This is a perfect spot to strip down and skinny-dip if you should so desire. The cool water looks inviting. A path leads up and out from this hidden area.</desc>
+      <exits up='138' out='138' no-exit='nomove.hiddenpool.1'/>
+   </location>
+
+   <location num='264' flags='t'>
+      <name>River</name>
+      <desc>Pushing off from the river bottom you surface gasping for breath. Once you have finished coughing up river water and caught your breath again you realized that you are being swept downstream. As you float downstream you realize the rock walls of the gorge have no place to grab onto and drag yourself out and even if there was, you couldn&apos;t climb the steep walls. You can struggle to fight the current and stay here or allow the current to take you south in hopes of finding a place to get out of the river.</desc>
+      <exits s='265' no-exit='nomove.river.4'/>
+   </location>
+
+   <location num='265' flags='t'>
+      <name>River</name>
+      <desc>You are floating along in the southerly moving current of the rapidly flowing river. The rock walls in this part of the river are still steep but are not as tall as when you first fell in. In fact the current seems to be flowing a little more smoothly now without as much whitewater. As you continue to be swept downstream you notice a tree trunk that has fallen across the gorge and sits only a few feet above the water&apos;s edge. Maybe you can reach up and grab it and pull yourself to safety. As you approach the tree trunk you take a quick peek downstream and think you see the river widening and becoming calmer. It also looks like the rock walls began to flatten out as well. As you get closer to the tree trunk you have to make a decision.</desc>
+      <exits s='267' up='333' no-exit='nomove.river.5'/>
+   </location>
+
+   <location num='266' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in a forest near a large rock formation which blocks you way to the northeast. To the west a lazy flowing river flows out of a shallow gorge from the north to the south and looks shallow enough to cross by foot.  Dense vegetation blocks your way in all directions southerly. The forest continues in all other directions.</desc>
+      <exits n='201' e='203' w='520' no-exit='nomove.forest.11'/>
+   </location>
+
+   <location num='267' flags='t'>
+      <name>River</name>
+      <desc>You are standing chest deep in the smoothly flowing river. You are able to hold your ground against the current. To the north you see a narrow gorge and river rapids, but it is unlikely that you will be able go in that direction. To the east you see a rock wall that is unclimbable. To the west you see a sandy beach surrounded by an unclimbable rock wall. To the south the river continues to flow in a lazy manner.</desc>
+      <exits s='520' w='393' no-exit='nomove.river.7'/>
+   </location>
+
+   <location num='268' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy and casts unusual shadows on the forest floor. Heavy underbrush blocks your way in all directions northerly and easterly. You hear some rustling in the trees overhead. You look up and see two squirrels staring down at you. They sit still for a few moments twitching their noses then bound off through the canopy and out of sight. The forest continues in all other directions.</desc>
+      <exits s='455' sw='202' w='139' no-exit='nomove.forest.10'/>
+   </location>
+
+   <location num='269' flags='hit'>
+      <name>Shaman&apos;s Hut</name>
+      <desc>You are standing in a large dark hut. An old man sits cross-legged by a low fire gazing into the flames and chanting softly. He appears to be in a trance. Behind him is a low wooden bed. Looking around you see pouches lining the walls of the hut which appear to contain parts of plants, some moss and bark peelings. The old man looks up at you and asks &quot;You need healing. Yes?&quot; You are surprised that he speaks your language. He answers your unasked question &quot;Many like you come, spirits bring some, some come alone, all seek healing.&quot;. He stares at you for a few minutes then returns his gaze to the fire and starts to chant softly again. The exit to the hut is west.</desc>
+      <exits w='141' out='141' no-exit='nomove.village.3'/>
+   </location>
+
+   <location num='327' flags='bt'>
+      <name>Tree House</name>
+      <desc>You are standing in a treehouse that is placed in a tall tree which extends above the canopy of the forest. Several windows around the structure provide spectacular views of the landscape. To the northeast you see smoke rising from what looks like an encampment. To the east you can see a small clearing and yep, there&apos;s your shuttle. To the southeast almost hidden from view in the canopy is a large rock formation. You look around the room and see fresh water to drink and fruit to eat. Opening the westerly facing door you see a rope and plank ladder which hangs down through the canopy. You can&apos;t see the ground below the tree due to the leaves obstructing your view. A hammock sways from a large branch that spans the middle of the ceiling and a small desk and chair are in the corner. Otherwise there is not much else to look at in the room.</desc>
+      <exits down='199' no-exit='nomove.treehouse.1'/>
+   </location>
+
+   <location num='328' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on the easterly edge of a deep gorge running to the south. Stepping carefully to the edge you peer over and see a rapidly moving river below. You back away quickly, your head spinning from a touch of vertigo. To the southwest the gorge continues. To the northwest the gorge looks like it shallows out and you may be able to climb down to a pool of water. Looking around you can see a clearing and your shuttle to the southeast.  In all other directions the forest beckons.</desc>
+      <exits n='397' ne='525' e='200' se='330' s='456' sw='519' w='519' nw='457' no-exit='nomove.forest.7'/>
+   </location>
+
+   <location num='329' flags='t'>
+      <name>River</name>
+      <desc>SPLASH! You find yourself in the river. You are sucked under the water by the raging current and dragged southerly upon the river bottom. You are wondering if you paid your last insurance premium when you suddenly find yourself in a patch of calmer flowing water. You should swim up and surface before you run out of breath.</desc>
+      <exits n='521' e='521' s='521' w='521' up='264' in='521' no-exit='nomove.river.3'/>
+   </location>
+
+   <location num='330' flags='rt'>
+      <name>Ring of Stones</name>
+      <desc>You are standing in a clearing in an immense forest which surrounds you and seems to stretch out forever in all directions. You turn in a circle looking for some direction. You notice that paths to the east and southeast seem to have been created recently but everywhere else you look you see only trees and more trees. Stone monuments ring the perimeter of the clearing. An examination of the monuments gives you no clues to their purpose. Walking back to your shuttle you pick up a whiff of smoke and scan the tree tops looking for the source but the proximity and density of the forest does not give you sufficient line of sight to determine a direction.  You hear someone behind you whisper &quot;Welcome traveler&quot; but when you turn you only see and hear the trees rustling in the distance.</desc>
+      <exits n='200' ne='202' e='331' se='395' s='204' sw='458' w='456' nw='328' no-exit='nomove.clearing.1'/>
+   </location>
+
+   <location num='331' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on an east-west path. Filtered sunlight makes its way down through the evergreen canopy and dances on the forest floor. To the west is a clearing where you can see your shuttle. To the east the path winds its way through the trees and out of sight. In all other directions the forest continues.</desc>
+      <exits n='202' ne='455' e='332' se='522' s='395' sw='204' w='330' nw='200' no-exit='nomove.forest.2'/>
+   </location>
+
+   <location num='332' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on the end of a path. To the west the path winds through the trees and out of sight. In front of you at the end of the path is a raised stone dais. It looks like the area surrounding the dais has been recently cleared of vegetation. Filtered sunlight makes its way down through the evergreen canopy and dances on the forest floor. Heavy underbrush blocks your way in all directions easterly. The forest continues in all other directions. A squirrel chatters in the branches overhead obviously disturbed at your presence. You watch the squirrel overhead as you walk around the raised dais. Perhaps if you got up on the dais you could see over the heavy underbrush. You also notice that some settlers have begun building a log house in this vicinity. It seems like an ambitious project as the outer walls encompass a rather large area. Perhaps you should come back at some time in the future to check on its progress.</desc>
+      <exits n='455' s='522' sw='395' w='331' nw='202' up='396' no-exit='nomove.forest.3'/>
+   </location>
+
+   <location num='333' flags='t'>
+      <name>Tree Trunk Bridge</name>
+      <desc>WHAT LUCK! You are lying on top of the tree trunk bridge in your sopping wet clothes from your time spent in the river below. The tree trunk is now wet and slippery so be careful when you move. When you are rested enough you can stand up and walk off the downed tree.</desc>
+      <exits up='138' no-exit='nomove.treetrunk.1'/>
+   </location>
+
+   <location num='391' flags='t'>
+      <name>Shaman&apos;s hut</name>
+      <desc>You are standing in a large dark hut. An old man sits cross-legged by a low fire gazing into the flames and chanting softly. He appears to be in a trance. Behind him is a low wooden bed. Looking around you see pouches lining the walls of the hut which appear to contain parts of plants, some moss and bark peelings. You turn away from the fire and see a white wolf in the darkest corner of the hut. You think it must be dead and stuffed, when suddenly it moves its head and stares at you. It seems to nod your way, but then you blink and the wolf is gone. The old man stirs and say &quot;Spirits say you all better now, time to go&quot;. He nods to the hut&apos;s doorway to the west.</desc>
+      <exits w='141' no-exit='nomove.village.3'/>
+   </location>
+
+   <location num='392' flags='t'>
+      <name>Path in gorge</name>
+      <desc>You are standing on a narrow rock path cut into the easterly rock wall above a rapidly flowing river. Careful where you step, you wouldn&apos;t want to fall into the river. To the north the rock path continues. To the south the rock path is narrow but probably walkable. Just keep your eyes on the path and not the scenary. The rushing waters of the river below flow by you in all directions westerly. In all other directions the rock walls of the gorge prevent you from continuing.</desc>
+      <exits n='457' s='329' sw='329' w='329' nw='329' down='329' in='329' no-exit='nomove.river.2'/>
+   </location>
+
+   <location num='393' flags='t'>
+      <name>Beach</name>
+      <desc>You are standing on a sandy beach. The fine sand crunches under your feet as you walk around. You notice some tree trucks that have been arranged to sit upon around what appears to be a fire pit. To the east is a slowly moving river which appears to be wadeable. However steep rock walls on the other side appear to be unclimbable. In all other directions, unclimbable rock walls bar your way.</desc>
+      <exits e='267' no-exit='nomove.beach.1'/>
+   </location>
+
+   <location num='394' flags='ebt'>
+      <name>Logistics Station</name>
+      <desc>You are standing in a room filled with monitors and data entry pads. The exit is east. Prices and inventory levels or consumption rates of many commodities are updated continuously on the many screens. You don&apos;t understand why a planet that which on the surface appears to not have any advanced civilization, except for what you have discovered here in this cave needs to maintain such a comprehension list of commodities. None-the-less, you scan the monitors and check your inventory and available cargo space to see if you can make a few groats. You grin when you see that even rations and drink are offered here. You see a trade you would like to make and examining the data entry facilities you see that you must place your palm on a scanner. As soon as your place your hand on the scanner, the computer says &quot; Welcome Fed citizen, please indicate your business with Research Station Alpha. All transfer of goods to and from your ship will be handled automatically.&quot;</desc>
+      <exits e='459' no-exit='nomove.alpha.3'/>
+   </location>
+
+   <location num='395' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on a southeast-northwest path. Filtered sunlight makes its way down through the evergreen canopy and casts unusual shadows on the forest floor. To the northwest along the path you can see a clearing and your shuttle.To the southeast the path winds through the trees and out of sight. A large rock formation blocks your way to the south and southwest. In all other directions the forest continues.</desc>
+      <exits n='331' ne='332' e='522' se='460' w='204' nw='330' no-exit='nomove.forest.1'/>
+   </location>
+
+   <location num='396' flags='t'>
+      <name>Stone Dais</name>
+      <desc>You are standing on a raised stone dais in the northeasterly corner of a dark cave. The last thing you remember was stepping onto a raised stone dais in the forest and then a bright flash of light. As your vision sharpens you begin to see some computer screens on the far wall. You&apos;ll need to step down off the dais for a closer look.</desc>
+      <exits s='459' sw='459' w='459' down='459' no-exit='nomove.alpha.4'/>
+   </location>
+
+   <location num='397' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy. Heavy underbrush blocks your way in all directions northerly. You hear some rustling in the trees overhead but cannot see anything. To the west a small pool of water sits down in a shallow gorge. To the southwest the gorge wall steepens and is unclimbable. The forest continues in all other directions.</desc>
+      <exits e='525' se='200' s='328' sw='519' w='457' no-exit='nomove.forest.3'/>
+   </location>
+
+   <location num='455' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy. Heavy underbrush blocks your way in all directions easterly. You hear some rustling in the trees overhead but cannot see anything. The forest continues in all other directions.</desc>
+      <exits n='268' s='332' sw='331' w='202' nw='139' no-exit='nomove.forest.3'/>
+   </location>
+
+   <location num='456' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on the easterly edge of a deep gorge running north and south. Stepping carefully to the edge you peer over and see a rapidly moving river below. To the northwest and southwest the deep gorge continues. Looking around you can see a clearing and your shuttle to the east.  In all other directions the forest beckons.</desc>
+      <exits n='328' ne='200' e='330' se='460' s='458' sw='519' w='519' nw='519' no-exit='nomove.forest.7'/>
+   </location>
+
+   <location num='457' flags='t'>
+      <name>Tranquil pool</name>
+      <desc>You are standing in a shallow gorge near a tranquil pool of blue water fed from a hidden spring to the north. To the east and southeast you see a gently rising slope that you can easily climb up and out of the gorge. Northerly and westerly the gorge wall rises much quicker and would be difficult to climb without gear. To the south the gorge begins to descend rapidly. The walls become steeper and narrower but there is a small path carved into the rock face that you can follow. The sounds of rapidly flowing water emanate from the gorge to the south.</desc>
+      <exits e='397' se='328' s='392' no-exit='nomove.river.1'/>
+   </location>
+
+   <location num='458' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on the easterly edge of a deep gorge running north and south. Stepping carefully to the edge you peer over and see a rapidly moving river below. A squirrel stops its foraging and stares at you, twitching his nose and whiskers repeatedly. It then suddenly begins chattering excitedly and bounds away westerly across a tree trunk which has fallen across the deep gorge. The tree trunk is wide enough to cross and should support your weight but does look slippery. To the northwest and southwest the deep gorge continues. Looking around you can see a clearing and your shuttle to the northeast.  A large rock formation blocks your way to the southeast. In all other directions the forest beckons.</desc>
+      <exits n='456' ne='330' e='204' s='201' sw='519' w='138' nw='519' no-exit='nomove.forest.6'/>
+   </location>
+
+   <location num='459' flags='t'>
+      <name>Monitoring Station</name>
+      <desc>You are standing in what looks like a control center. There are multiple screens set into what looks a stone wall. A chair is overturned in front of the screens. It appears as if whoever was sitting in it had to leave in a hurry. An electronic pad rests on a table in front of the monitors. You pick it up and look at it but you don&apos;t understand the language so place it back down. Each screen appears to be  monitoring a different part of the planet. On one screen you see your shuttle in the clearing, on another you see some rapids moving through a gorge. Another screen shows a beach, while another shows a village of huts. All the other screens are monitoring portions of the forest. Looking around you see more equipment to the west. To the south you see the forest through a shimmering energy field. A raised stone dais sit in the corner. All other directions either are blocked by a stone wall or some kind of equipment, the function of which you do not understand.</desc>
+      <exits s='523' w='394' up='137' no-exit='nomove.alpha.2'/>
+   </location>
+
+   <location num='460' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on a path that disappears into the forest to the northwest. A large rock formation blocks your way to the west. The path continues southwesterly around the rock formation and out of sight. While contemplating your next move you notice an arched opening in the stone face. It appears that there is barely enough room to fit inside but it would provide shelter in case of rain. Pushing aside some overgrown vegetation you see that the archway is bordered with some writings or symbols, the language of which you do not understand. Filtered sunlight makes its way down through the evergreen canopy and casts unusual shadows on the forest floor. You look around and see that heavy underbrush blocks your way in all directions easterly and to the south. However, the forest continues in all other directions.</desc>
+      <exits n='522' sw='523' nw='395' in='327' no-exit='nomove.forest.5'/>
+   </location>
+
+   <location num='461' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in a forest of trees. All around you the underbrush is snarled and tangled. It would require great effort to continue in any direction except from where you came from. You turn around and while walking back notice that the westerly side of one tree has unusual scratches and damage to the bark. You walk over to the tree to examine it closely but also keeping a weary eye out for any animal that could have made these markings. You notice that the markings seem to travel up the trunk and as your eyes follow the markings upwards you happen to see hanging down and a few feet higher than you can reach while jumping is a well-crafted rope and plank ladder. Barely visible though the canopy and beyond the ladder is a platform for what appears is a tree house. Perhaps you can climb up the trunk to get to the rope ladder....</desc>
+      <exits e='138' up='524' out='138' no-exit='nomove.forest.8'/>
+   </location>
+
+   <location num='519' flags='t'>
+      <name>Here and there</name>
+      <desc>You are lying on a hard surface in a dark place. The last thing you remember was falling over the edge of a gorge and hitting the rocks below. You thought you were a goner and are not quite sure that you aren&apos;t really dead. You smell smoke and catch a glimpse of fire and think &quot;Oh no, I didn&apos;t end up there did I?&quot;. As your vision clears you see an old man standing over you chanting softly and waving a bird&apos;s feather over your head. As you stir he stops his chanting and says &quot;Spirits bring you here for healing, say you try to fly like bird, but not so good. You healed but you rest now. When better can get up.&quot; The old man then walks away to a low fire and begins to chant softly again while staring into the fire.</desc>
+      <exits up='391' no-exit='nomove.village.2'/>
+   </location>
+
+   <location num='520' flags='t'>
+      <name>River</name>
+      <desc>You are standing knee high in a lazy flowing river flowing from the north to the southeast around a bend and through some dense aquatic vegetion and out of sight. To the east you see a gently rising slope that you can easily climb up and out of the gorge. To the northwest, west, southwest south and northeast the gorge wall rises much quicker and would be difficult to climb without gear.</desc>
+      <exits n='267' e='266' no-exit='nomove.river.8'/>
+   </location>
+
+   <location num='521' flags='t'>
+      <name>Here and there</name>
+      <desc>You are lying on a hard surface in a dark place. The last thing you remember was being caught in the under current of a river and struggling to reach the surface before you ran out of air. You thought you were a goner and are not quite sure that you aren&apos;t really dead. You smell smoke and catch a glimpse of fire and think &quot;Oh no, I didn&apos;t end up there did I?&quot;. As your vision clears you see an old man standing over you chanting softly and waving a bird&apos;s feather over your head. As you stir he stops his chanting and says &quot;Spirits bring you here for healing, say you try to swin like fish, but not so good. You healed but you rest now. When better can get up.&quot; The old man then walks away to a low fire and begins to chant softly again while staring into the fire.</desc>
+      <exits up='391' no-exit='nomove.village.2'/>
+   </location>
+
+   <location num='522' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy and casts unusual shadows on the forest floor. A large rock formation blocks your way to the southwest. Heavy underbrush blocks your way in all directions easterly. The forest continues in all other directions.</desc>
+      <exits n='332' s='460' w='395' nw='331' no-exit='nomove.forest.3'/>
+   </location>
+
+   <location num='523' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest on a path near a rock formation which blocks your way to the north and northwest.To the northeast the path winds its way around the rock formation and out of sight. To the north the pathway seems to end at the rock face. You stare along the path to the north at the rock face but the rocks seem to twist and twirl. You close your eyes and shake your head. When you open your eyes everything looks okay, but the hairs on the back of your neck are tingling. It feels as it someone or &lt;gasp&gt; something is silently watching you. Dense vegetation blocks your way in all directions southerly and to the east. The forest continues in all other directions.</desc>
+      <exits ne='460' w='523' no-exit='nomove.forest.10'/>
+   </location>
+
+   <location num='524' flags='t'>
+      <name>Forest</name>
+      <desc>You begin to climb up the tree trunk. The going is difficult because of the wide girth of the tree and the brittleness of the bark. Seemingly secure foot and hand holds crumble away leaving you scrambling to quickly find new ones, but the extra effort expended begins to fatigue you. However with one last effort you come with inches of your goal. You make one gallant effort to get your hand onto the bottom rung of the ladder just as your footholds in the bark give way. Sadly, you miscalculated your lunge and find yourself grasping air. You began to slide down the trunk clawing and stabbing with your hands and feet seeking any means to stop your fall. Your attempts are futile and you find yourself in a jumble at the bottom of the massive tree. You understand where all those strange markings have come from as you have added a few of your own. You stand up, relieved that there is no serious damage to yourself except your pride. You can always try again or go east to the river.</desc>
+      <exits e='138' up='524' out='138' no-exit='nomove.forest.3'/>
+   </location>
+
+   <location num='525' flags='t'>
+      <name>Forest</name>
+      <desc>You are standing in the forest. Filtered sunlight makes its way down through the evergreen canopy and dances on the forest floor. Heavy underbrush blocks your way in all directions northerly. You catch a whiff of smoke but cannot determine the direction from where it came from. The forest continues in all other directions.</desc>
+      <exits e='139' se='202' s='200' sw='328' w='397' no-exit='nomove.forest.3'/>
+   </location>
+
+</fed2-map>

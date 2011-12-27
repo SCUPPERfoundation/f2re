@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<fed2-map title='Atlantis' version='1.00' editor='standard' from='543' to='Aegean.Aegean Space.390'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>This is Atlantis&apos; storeroom, full of riches beyond your wildest imagination!</desc>
+   </location>
+
+   <location num='415'>
+      <name>Sea Dragon Landing</name>
+      <desc>What a ride! The sea dragon emerges into a small pool in a cave back on the island you arrived on. He wishes you well, dives back into the pool, and presumably descends back down to the Lost City. You note that the interior walls of the cave landing you&apos;re in has been layered by kelp, perhaps as a reminder of the city which lies below. There are guards standing by the path to the South, but they step aside, allowing you to exit if you with. Otherwise, you can summon a sea dragon to take you back to the Lost City by going Down into the pool.</desc>
+      <exits s='479' down='2636' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='479'>
+      <name>Cavern Entrance</name>
+      <desc>You are at the entrance to a small cavern, which looks pretty forbidding from where you stand. However, three large guards stand in your way, so you can&apos;t enter right now. Looks like the only way you can go is South back to the Landing Pad...</desc>
+      <exits s='543' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='542' flags='b'>
+      <name>Beach</name>
+      <desc>You are on a small beach on the planet&apos;s main, though small, island. The palm trees, gentle breeze, and white sand make this beach one of the island&apos;s hippest hot spots. A small bar near the road, which leads to the Landing Pad to the East, serves drinks and refreshments. Looking out into the peaceful ocean, you notice people popping up out of the water every now and then...</desc>
+      <exits e='543' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='543'>
+      <name>Atlantis Landing Pad</name>
+      <desc>You arrive at the LP of Atlantis. Aside from the shuttles and a few basic amenities, not much can be seen happening. You can find the planet&apos;s exchange to the East, a posh-looking beach to the West, while to the South there appears to be a small commercial center. You also notice a small cave to the North.</desc>
+      <desc>A small sign reads: &quot;All unauthorized factories built on Atlantis will be expropriated unless they were built with the owner&apos;s consent.&quot; Armstrong Cuthbert also has a small facility here.</desc>
+      <exits n='479' e='544' s='607' w='542' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='544' flags='e'>
+      <name>Atlantis Exchange</name>
+      <desc>This is the exchange for the planet Atlantis. Madddder wishes you happy trading! Several locals, visitors, and traders from afar are scurrying to and fro, shouting the likes of &quot;Buy, buy!&quot; and &quot;Sell, sell!&quot; One man tells you &quot;Please DO NOT sell commods that already have Factories pleasant on this planet! There might be consequences!&quot; The Landing Pad is back to the West.</desc>
+      <exits w='543' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='606' flags='b'>
+      <name>Pub</name>
+      <desc>The pub actually looks like it belongs here on the island. The walls are made of old wood, you assume from the wreckage of ships that have crashed into the island&apos;s reefs and washed up onto the island&apos;s shore. A good crowd of locals are here kicking back some of the local beer and liquors. Glancing at a menu on the wall, you see that the most popular drinks here are Triton&apos;s Dark Ale and Fire Juice with Cola.</desc>
+      <desc>A sign on the wall reads - &quot;Traders!!! Hate futures contracts? Tired of keeping track of what you have, where you have it, how much you paid for it, and where you want the price to go? If you have Excel, then fear not! The pub brings you the Futures Calculator! Just point your web browser to-</desc>
+      <desc>http://www.pipelinedog.com/futures.xls</desc>
+      <desc>download, and follow the instructions on Sheet 2. It&apos;s a Trader&apos;s best friend!&quot;</desc>
+      <desc>The exit is to the East.</desc>
+      <exits e='607' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='607'>
+      <name>Island Village Center</name>
+      <desc>You are standing in the town center of the planet Atlantis. You&apos;re surprised how small it is, for a planet that was rumored to house a hidden empire long ago... Villagers have converted old Atlantean Ruins into various shops. To the East is the shipyard and the ship repairs, to the South is the Hospital and Insurance Broker, and to the West appears to be a tavern. The path to the Landing Pad is North. There is also a 10-foot wide circular pool in the middle of the Village Center, which you can enter by going &lt;IN&gt; or &lt;DOWN&gt;. You can&apos;t help but wonder where it leads.</desc>
+      <exits n='543' e='608' s='671' w='606' down='1476' in='1476' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='608' flags='yr'>
+      <name>Shipyard and Repairs</name>
+      <desc>You have arrived at the planet&apos;s shipyard, where a half-dozen or so natives can be seen making ship parts and putting them together. A couple others are hammering out dents of damaged ships that been brought in for repair. You sure think that this sort of establishment seems out of place on this island. How is it that such advanced technology as spaceships can be built on this primitive island? The Town Center is back to the West.</desc>
+      <exits w='607' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='671'>
+      <name>Hospital and Insurance</name>
+      <desc>You arrive in yet another structure that awes you. A hospital has been built into some ancient Atlantean Ruins, the technology of which is as modern as back on Earth. A man behind a small counter with a sign reading &quot;Insurance Claims&quot; looks bored. Probably because there aren&apos;t any places you can die on this planet, so he probably doesn&apos;t get very many customers. The exit is to the North.</desc>
+      <exits n='607' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1476'>
+      <name>You&apos;re being sucked under!!!</name>
+      <desc>You&apos;re wondering if jumping into that pool was such a great idea after all! The water keeps on sucking you down. You&apos;re sinking faster in faster for seconds... Which quickly turns to minutes! You start to fade as your breath runs out. The light above looks like the size of a pencil lead... The current continues to suck you &lt;DOWN&gt;...</desc>
+      <exits down='2890' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2378'>
+      <name>Outer Throne Room</name>
+      <desc>You are in the Palace&apos;s Outer Throne Room. You try to walk North to see King Poseidon, but the Guard stops you.</desc>
+      <desc>&quot;You who have not be summoned by the King have no business in his presence.&quot;</desc>
+      <desc>They point you back the way you came to the South.</desc>
+      <exits s='2442' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2442'>
+      <name>Grand Palace</name>
+      <desc>You behold the inside of the Grand Palace of Atlantis. It looks just as exquisite as it does from the outside! Courtiers are walking to and fro, servants are delivering things left and right, and the Palace Guard stand firm, ready to stop anyone who they deem to be a threat. You venture that the only place that would be safe to go would be to the North, towards the Throne Room. Otherwise, you may exit the Palace by going Out.</desc>
+      <exits n='2378' out='2634' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2632'>
+      <name>Research Lab back room</name>
+      <desc>This back room looks cluttered compared to the front room. A single scientist, who you presume is the brains of this operation, seems to be conducting some electrical experiment on a trident. He keeps muttering something like &quot;Treasure landlubbers come near zap zap ha ha!&quot; Speaking of zap, you think he might&apos;ve shocked himself one time too many to maintain his sanity! The exit to the main lab is to the Southeast.</desc>
+      <exits se='2697' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2634'>
+      <name>Grand Palace Entryway</name>
+      <desc>You stand before the Grand Palace, which according to legend is the home of the sea god Poseidon. The palace is massive - you imagine that most of it is off limits to you - and the exterior looks to be made both of gold and sea shell fragments. A member of the Royal Guard informs you that you may go In to enter the palace, or go to the path to the South.</desc>
+      <exits s='2698' in='2442' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2636'>
+      <name>Sea Dragon Alcove</name>
+      <desc>&quot;This here is Tessie,&quot; Robben tells you. &quot;She&apos;s a beaut!&quot;</desc>
+      <desc>A large blue Sea Dragon swims up to you, a large smile on her face. &quot;Going up?&quot; she asks. If you wish to return to the world above, go ahead and climb Up onto Tessie&apos;s back, otherwise you can head back to the main grounds to the Southwest.</desc>
+      <exits sw='2699' up='415' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2653'>
+      <name>Kelp Forest</name>
+      <desc>You are wandering through the Kelp Forest. From here you can go South or Southeast. You notice some odd bushes in this area.</desc>
+      <exits se='2718' s='2717' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2655'>
+      <name>Kelp Forest</name>
+      <desc>You are swimming through the Kelp Forest. From here, the path goes from Southwest to the East.</desc>
+      <exits e='2656' sw='2718' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2656'>
+      <name>Kelp Forest</name>
+      <desc>You are still in the Kelp Forest. Paths from here stretch to the West, South, and Southeast. It looks like a fire is burning to the South, and you hear some voices coming from that direction. You wonder how a fire can burn underwater...</desc>
+      <exits se='2721' s='2720' w='2655' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2697' flags='t'>
+      <name>Research Lab</name>
+      <desc>You&apos;re in the front room of Atlantis&apos; research lab. The look of the lab reminds you of the lab used by a scientist who invented several contraptions for a certain secret agent for the British secret service back on Earth! The lab extends to the Northwest, or you can take the exit to the Southeast.</desc>
+      <exits se='2762' nw='2632' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2698'>
+      <name>Regal Roadway</name>
+      <desc>The road you now travel leads from the center of the City to the South to the Grand Palace Entryway to the North</desc>
+      <exits n='2634' s='2762'/>
+   </location>
+
+   <location num='2699'>
+      <name>Robben&apos;s Sea Dragon Grounds</name>
+      <desc>So apparently all (or so you&apos;re hoping) those Sea Dragons you&apos;ve seen flying around underwater are bred, housed, and trained here at the Sea Dragon Grounds. A series of plaques on the south wall tell the apparently the Grounds have been awarded as &quot;The Best Under the Ocean&quot; for the past 23 years. You wonder if it&apos;s a coincidence that the Grounds have only been operating that long... Robben, the proprietor, is a foreigner who immigrated to Atlantis several years ago in search of a better life. He sits in the corner of his office, whittling away at what is starting to look like a wooden beer mug. The exit is to the Southwest, or, if you wish to use a Dragon to return to the surface, you can proceed to the Northeast.</desc>
+      <exits ne='2636' sw='2762' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2717'>
+      <name>Kelp Forest</name>
+      <desc>You are in the Kelp Forest. Outside of Atlantis, you assume that the Forest is a source of trade for the Atlanteans. Kelp plants grow in most directions.</desc>
+      <desc>The path leads to the North, or you can exit the Forest to the Southwest.</desc>
+      <exits n='2653' sw='2780' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2718'>
+      <name>Kelp Forest</name>
+      <desc>The path splits here in the Kelp Forest. You can go Northwest, Northeast, or Southeast.</desc>
+      <exits ne='2655' se='2783' nw='2653' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2720'>
+      <name>Pirates!!!</name>
+      <desc>You have wandered into a meeting of Pirates! They spot you and approach you. &quot;Ello there, chum,&quot; one of them says. &quot;This part of the Forest belongs to the crew of Captain Iron Sam Rackham of the Dark Joke! If ye won&apos;t be leavin&apos;, we&apos;ll speed you on your way!&quot; You are knocked over the head, and everything goes black...</desc>
+      <desc>Some time later, you regain consciousness and wake &lt;UP&gt;.</desc>
+      <exits up='2780' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2721'>
+      <name>Kelp Forest</name>
+      <desc>The paths here in the Kelp Forest lead to the Northwest, East, and Southwest. An odd-looking bush is here too...</desc>
+      <exits e='2722' sw='2784' nw='2656' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2722'>
+      <name>Kelp Forest</name>
+      <desc>You have reached a dead end in the Forest, as the kelp is too thick to go in any direction but West.</desc>
+      <exits w='2721' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2760' flags='b'>
+      <name>Old Aegean Restaurant</name>
+      <desc>You set foot into the Old Aegean Restaurant and a hostess quickly escorts you to a table, pours you a drink, and opens a menu in front of you. &quot;Our specials today are the Aegean deep fried crab, Atlantean oysters with butter, and the Swordfish, which I recommend.&quot; She runs off before you&apos;re able to tell her what you&apos;d like to order. No worries though, you&apos;re still impressed at how romantic this establishment is. If you wish, you can order a nice meal from the waitress, or you can go East back to the Hotel Lobby.</desc>
+      <exits e='2761' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2761'>
+      <name>Old Aegean Hotel Lobby</name>
+      <desc>You are in the lobby of the Old Aegean Hotel. You&apos;re pleasantly surprised that such a luxurious hotel can exist underwater of all places. &quot;But hey, it&apos;s Atlantis,&quot; you think to yourself. The receptionist sees you enter, and informs you that if you wish, you can take the elevator up to the second level of the hotel. >From here you can also go West into the Restaurant, or East back out to the City Center.</desc>
+      <exits e='2762' w='2760' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2762'>
+      <name>The Lost City of Atlantis</name>
+      <desc>You&apos;ve discovered it! You aren&apos;t sure if you&apos;re the first, but you are definitely at the Lost City of Atlantis. The city itself looks much more extravagant than the entryway made it out to be. Atlanteans glide about, some look like they are working, some are taking their time and enjoying themselves. What really catches your eye is an elegant fountain located in the center of the City. You wonder how a fountain with water could work in an underwater city, but you realize that there is already too much about this place that you&apos;ll never understand...</desc>
+      <desc>To the North a roadway continues, to the Southwest lies an underwater Atlantean Temple, to the West is a lavish building which a regal sign identifies as the Old Aegean Hotel and Restaurant, to the Northwest is the Research Lab, to the North is the path to the Grand Palace, to the Northeast is Robben&apos;s Sea Dragon Grounds, the path to the East leads out to the open Ocean, and to the Southeast is the Stadium di Atlantisium.</desc>
+      <exits n='2698' ne='2699' e='2763' se='2827' s='2826' sw='2825' w='2761' nw='2697' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2763'>
+      <name>Path to the Ocean</name>
+      <desc>You are swimming along a path that leads from the main section of the City to the West to the City&apos;s Main Gate to the East. Shops line the North and South sides of the street, but you don&apos;t see any reason to visit them.</desc>
+      <exits e='2764' w='2762' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2764'>
+      <name>Main Gate</name>
+      <desc>You are at the Main Gate of the City of Atlantis. The Gate is guarded by some of Atlantis&apos; finest soldiers, so you know they take security of their city very seriously. You can go West towards the City, or Out to exit the City and go out to the open Ocean.</desc>
+      <exits w='2763' out='2780' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2780'>
+      <name>Outside Atlantis</name>
+      <desc>You are outside the city limits of the Lost City. Though you can still see well, it&apos;s definitely a little bit darker out here compared to the City, save maybe for the big lights you see coming from the South. From the North to the East spans several kelp plants, stretching as far as you can see in that direction. A man who looks like a lumberjack, complete with flannel, emerges from the plants from the Northeast. &quot;You goin&apos; to the Kelp Forest?&quot; he asks. &quot;Best be on the lookout for Pirates, they be no honest man&apos;s friend.&quot; He then walks off.</desc>
+      <desc>From here you can go Northeast into the Kelp Forest, South towards the bright lights, or In through the Gates towards the City.</desc>
+      <exits ne='2717' s='2844' in='2764' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2783'>
+      <name>Kelp Forest</name>
+      <desc>The paths here in the Forest run to the Northwest and Southeast. An odd-looking bush is here on the ground...</desc>
+      <exits se='2848' nw='2718' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2784'>
+      <name>Kelp Forest</name>
+      <desc>The paths here in the Kelp Forest lead to the South and Northeast.</desc>
+      <exits ne='2721' s='2848' down='3038' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2825'>
+      <name>Temple Courtyard</name>
+      <desc>You are floating in the middle of a courtyard of a large, Olympic-style Atlantean Temple. Despite the damage that obviously occurred when the City was sunk beneath the waves, the temple looks in good shape. Flowers are blooming on either side of the stone path you walk on, and ivy flows in spiral patterns down the Corinthian columns that support the temple itself. Southwest leads into the temple, or you can go Northeast back to the center of the City.</desc>
+      <exits ne='2762' sw='2888' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2826'>
+      <name>Path to the Lost City</name>
+      <desc>You&apos;re swimming (effortlessly, thanks to the magic of Atlantis) along the path which connects the landing to the Lost City of Atlantis. The path seems to lead from South to North.</desc>
+      <exits n='2762' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2827'>
+      <name>Stadium di Atlantisium Entrance</name>
+      <desc>You are standing before what appears to be a massive soccer stadium, built in Atlantean style that is consistent with the other structures you have seen here on the ocean floor. The stadium is home to Atlantean Spearthrusters, who, judging by the flags and colors, bear the colors aquamarine and navy blue. The admission gate to the stadium is to your Southeast, and the way back to the City is to the Northwest.</desc>
+      <exits se='2892' nw='2762' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2844'>
+      <name>Aegis Stadium</name>
+      <desc>Apparently the bright lights were coming from Aegis Stadium, home of the Eastborough Blitzers. Though the lights are on, the stadium is closed. The team must be training. Inspection of a schedule outside the entrance shows that only a few days remain until the Atlantis Derby, where the Blitzers will host the Spearthrusters. You hope you have time to attend!</desc>
+      <desc>The only way you can go is back to the North.</desc>
+      <exits n='2780' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2848'>
+      <name>Kelp Forest</name>
+      <desc>You are floundering about through the Kelp Forest. The paths lead to the Northwest, Southeast, and North. You hear what sounds like a crowd of people to the Southeast.</desc>
+      <exits n='2784' se='2913' nw='2783' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2888'>
+      <name>Temple Interior</name>
+      <desc>The Atlantean Temple on the inside looks much like pictures you&apos;ve seen of other Greek temples, though obviously this one is submerged. Atlanteans are praying near the north wall, while the wall to the south has a small group of musicians playing a peaceful, soothing melody. You are drawn to an inscription which lines the west wall. You step closer and read the inscription to yourself -</desc>
+      <desc>&quot;&quot; Through tides and trials we shall do all to stand &quot;&quot;</desc>
+      <desc>&quot;&quot; We shall lay everything down for our sacred land &quot;&quot;</desc>
+      <desc>&quot;&quot; When disaster strikes and hope seems forsaken&quot;&quot;</desc>
+      <desc>&quot;&quot; It shall be the one chance for the Hero to awaken &quot;&quot;</desc>
+      <desc>The exit back to the courtyard is to the Northeast.</desc>
+      <exits ne='2825' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2890'>
+      <name>Lost City of Atlantis - Entryway</name>
+      <desc>You open your eyes and freak out for a second. You&apos;re underwater, but you&apos;re awake, alert, can see perfectly, and are able to breathe! You realize that must be part of the magic of the fabled lost city of Atlantis. You look around and definitely feel like you&apos;re in a story you might have read about as a child. Large serpents, known as Sea Dragons, are peacefully swimming freely around. You imagine that if you can get a hold of one, it can return you to the surface in no time! The ocean floor is illuminated by some sort of lights, and looking up you can only see that the water stretches onto darkness. You don&apos;t know if the Lost City is in a cavern or if it&apos;s really that deep underwater! Giant kelp walls prevent you from going any direction other than North. Swimming is much easier than you remember, it feels more like underwater flight.</desc>
+      <exits n='2826' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2892'>
+      <name>Stadium Entrance</name>
+      <desc>It looks like the stadium is closed, because all the gates are locked up tight and there isn&apos;t any way to get in. Apparently the Spearthrusters aren&apos;t playing today. All you can do from here is to back to the Northwest.</desc>
+      <exits nw='2827' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='2913'>
+      <name>Pirates!!!</name>
+      <desc>You have wandered into a meeting of Pirates! They spot you and approach you. &quot;Ello there, chum,&quot; one of them says. &quot;This part of the Forest belongs to the crew of Captain Iron Sam Rackham of the Dark Joke! If ye won&apos;t be leavin&apos;, we&apos;ll speed you on your way!&quot; You are knocked over the head, and everything goes black...</desc>
+      <desc>Some time later, you regain consciousness and wake &lt;UP&gt;.</desc>
+      <exits up='2780' out='2780' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='3038'>
+      <name>Narrow tunnel</name>
+      <desc>You get an inkling to dig down below, and you find a trapdoor, which you open to go into a Narrow tunnel. It&apos;s too dark to see anything, but by feeling around you sense that you can climb Up go to back out, or you can crawl to the East.</desc>
+      <exits e='3039' up='2784' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='3039' flags='b'>
+      <name>Pirates&apos; Hideout</name>
+      <desc>You are in the hideout of the crew of the Dark Joke, captained by Iron Sam Rackham. You see a couple opened treasure chests with gold and silver doubloons spilling out. There is large door marked &quot;KEEP OUT&quot; to the South. A quick inspection shows a combination lock, the combination to which you obviously have no clue. There is also some mutton and rum here, so if you choose you can eat some, and your honest nature ensures that you&apos;ll leave some compensation for the owner. To the East is another door, this one not as strong though. The light is on inside, and you can hear some sea chanties being sung, then the Captain addresses his crew. You dare not go inside, but you think you hear him say something about &quot;invading and plundering Galmira&quot;. You think the only safe way to go from here is to the West.</desc>
+      <exits w='3038' no-exit='moves.noexit.7'/>
+   </location>
+
+</fed2-map>
+

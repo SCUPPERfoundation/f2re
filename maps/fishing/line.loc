@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<fed2-map title='Line' version='31' editor='standard' from='396' to='Fishing.Fishing Space.523'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Spare sand is kept here. Well you never know, they might run out one day!</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Silver Hospital</name>
+      <desc>   The hospital is named after Glenmorristone&apos;s Vivacious Silver. This very friendly Scottish collie is as mad as a hatter. When given the command &quot;elephant&quot; he will start barking like mad. Which is very handy for Mrs. Silvos when it&apos;s dark outside. Even though Silver is a collie, it WILL scare people.</desc>
+      <desc>South you see the landing strip.</desc>
+      <desc>East you see the bar.</desc>
+      <exits e='333' s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='b'>
+      <name>The Paulus Potter - bar</name>
+      <desc>   One of Silvos&apos; grandfathers was a sailor. During the second world war he was part of the crew of the Paulus Potter. This ship was attacked on July 13th 1942, after the convoy it was in had spread out. After the ammo ran out and the ship was heavily damaged the crew had to abandon ship in the icy Russian sea. 26 sailors lost toes (they froze and were amputated) but three months later all 73 survivors were fighting the nazis again. Here&apos;s an &quot;Oude Klare&quot;, his favorite drink. Cheers!</desc>
+      <desc>If you are still able to walk, use the southern door.</desc>
+      <desc>If not, crawl to the west.</desc>
+      <exits s='397' w='332'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing strip</name>
+      <desc>   Welcome at Line, the free-trade planet.</desc>
+      <desc>-North : Silver Hospital</desc>
+      <desc>-East  : Cutthroat Trout Exchange</desc>
+      <exits n='332' e='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Cutthroat Trout Exchange</name>
+      <desc>   Sell any commodity you want, factories are running at their own risk on this planet.</desc>
+      <desc>   Factories: only no-haul, the planet has to profit as well. No permission needed.</desc>
+      <desc>The bar is north.</desc>
+      <desc>The landing strip is west.</desc>
+      <exits n='333' w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

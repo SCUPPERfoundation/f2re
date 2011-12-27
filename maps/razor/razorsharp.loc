@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<fed2-map title='Razorsharp' version='19' editor='standard' from='513' to='Razor.Razor Space.458'>
+
+   <location num='0'>
+      <name>storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='73'>
+      <name>Lima&apos;s Sleeping Quarters</name>
+      <desc>If im in here im not at the computer at all. So try to contact me later.</desc>
+      <desc>To get back to the Shuttle pad go south</desc>
+      <exits e='74' s='513' down='527'/>
+   </location>
+
+   <location num='74'>
+      <name>Lima&apos;s Sitting Room</name>
+      <desc>If im in this room it means im online I maybe AFK but I will return shortly</desc>
+      <desc>To the West is Lima&apos;s Sleeping Quarters</desc>
+      <exits s='138' w='73' down='527'/>
+   </location>
+
+   <location num='138'>
+      <name>Lima&apos;s Reception Area</name>
+      <desc>There is a woman talking on the phone and writing down notes.</desc>
+      <desc>To the North is Lima&apos;s Sitting Room he stays here when he has nothing better to do</desc>
+      <exits n='74' down='527'/>
+   </location>
+
+   <location num='389' flags='hi'>
+      <name>Razorsharp Hospital</name>
+      <desc>Corporal Moss How did you end up in here?</desc>
+      <desc>Pfc. Mendez Pokes your stomach &quot;looks like the hike killed em!&quot;</desc>
+      <desc>Corporal Moss &quot;Well You might wanna reinsure yourself&quot;</desc>
+      <desc>The only exit is to the South</desc>
+      <exits s='453'/>
+   </location>
+
+   <location num='399' flags='b'>
+      <name>Tuns Tavern</name>
+      <desc>All you see when you walk in is a place packed full of jarheads Guess they finished field daying their barracks.</desc>
+      <exits s='463'/>
+   </location>
+
+   <location num='450'>
+      <name>Razorsharp&apos;s Marine corp barracks</name>
+      <desc>As you approach the building you see Marines field daying their  barracks rooms with a sense of urgency because they want to be sent on Libo before night fall and no doubt attempt to corrupt some poor woman.</desc>
+      <desc>Corporal Moss &quot;Im glad your here or we would be doing that right now but the only exit from here is to go back the way we came So lets go SOUTH&quot;</desc>
+      <exits s='514'/>
+   </location>
+
+   <location num='451'>
+      <name>Gravel Road</name>
+      <desc>Nothing much to see except the skyline of the city.</desc>
+      <desc>Corporal Moss &quot;What do you say we go into the city to the SouthEast of here&quot;</desc>
+      <exits se='516' sw='514'/>
+   </location>
+
+   <location num='453'>
+      <name>Welcome to the City of RazorSharp!</name>
+      <desc>Corporal Moss &quot;Good job buddy there were a few times I didnt think you would make it all the way here. You might wanna get into some better shape&quot;</desc>
+      <desc>Pfc. Mendez chuckles at Corporal Moss&apos;s comment</desc>
+      <desc>To the North is RazorSharp Hospital</desc>
+      <desc>To the East Is the Insurance Salesmen Office</desc>
+      <desc>To the Southwest is Main Street</desc>
+      <exits n='389' e='454' se='518' sw='516'/>
+   </location>
+
+   <location num='454'>
+      <name>RazorSharp&apos;s Insurance Office</name>
+      <desc>Corporal Moss &quot;smart move for someone as outta shape as you&quot;</desc>
+      <desc>Only exit is to the West</desc>
+      <exits w='453'/>
+   </location>
+
+   <location num='463'>
+      <name>RazorSharp&apos;s Main Square</name>
+      <desc>As your standing in the middle of Razorsharp&apos;s Square you notice a sign:</desc>
+      <desc>To the North Is another Bar</desc>
+      <desc>To the East is yet another bar</desc>
+      <desc>To the South Is the Planets Exchange</desc>
+      <exits n='399' e='464' s='527'/>
+   </location>
+
+   <location num='464' flags='b'>
+      <name>TopGun Bar</name>
+      <desc>As you walk in you cant help but feel outta place all the guys in here are wear their dress uniform and sunglasses.</desc>
+      <desc>Corporal Moss &quot;Stupid Pilots wearing glasses in a dark bar and they call us dense&quot;</desc>
+      <exits w='463'/>
+   </location>
+
+   <location num='513' flags='yrkt'>
+      <name>RazorSharp&apos;s Shuttle Pad</name>
+      <desc>Welcome to RazorSharp</desc>
+      <desc>As you step outta your shuttle you are surrounded by all sorts of Military personell, Cargo Inspectors and Customs Agents. As you walk through a metal detector it goes off A security offical who looks annoyed comes up to you with a hand held metal detector and says &quot;Don&apos;t worry its probably just your com badge this thing is to freaking sensitive Ive asked for new metal detectors but Lima doesnt listen to little old me&apos; He then scans you with the hand held wand and says &quot;yup I was right you may continue&quot; As you are going through the security stations exit you are approached by two young Marines &quot;Hi my name is Corporal Moss my self and Pfc. Mendez will be escorting you around the planet I bet you wondering what all this following you around is all about well lets just say razorsharp has some people on it that dont take kindly to strangers. And the PO just wants to ensure the peace on his planet anyways lets start by going EAST&quot;</desc>
+      <exits e='514' up='138'/>
+   </location>
+
+   <location num='514'>
+      <name>Shuttle pad Exit</name>
+      <desc>As you step beyond the doors you see a beautiful city filled with people who are all rushing around.</desc>
+      <desc>As your taking in the the beauty of the city the silence is interupted by Corporal Moss</desc>
+      <desc>&quot;Looks beautiful don&apos;t she well as long as you stay with us no one will mess with you&quot;</desc>
+      <desc>Pfc. Mendez says &quot; Ok to the north we have a road that leads to Razorsharp&apos;s barracks. whatever you do don&apos;t take a woman up there grunts swarm around women lol&quot;</desc>
+      <desc>Corporal Moss says &quot;Enough of that Mendez&quot;</desc>
+      <desc>Pfc Mendez &quot;Aye Aye Corporal&quot;</desc>
+      <desc>Corporal Moss &quot;Ok lets continue to the NorthEast&quot;</desc>
+      <exits n='450' ne='451' w='513'/>
+   </location>
+
+   <location num='516'>
+      <name>Paved Road</name>
+      <desc>The gravel road comes to an end and you step onto the Paved road</desc>
+      <desc>Corporal moss &quot;If you are thirsty there is a bar to the South.&quot;</desc>
+      <desc>Pfc. Mendez &quot;Or we could continue NorthEast to the city&quot;</desc>
+      <exits ne='453' s='580' nw='451'/>
+   </location>
+
+   <location num='518'>
+      <name>Mainstreet </name>
+      <desc>Nothing Special</desc>
+      <desc>To get to the Town square Go Up</desc>
+      <exits nw='453' up='463'/>
+   </location>
+
+   <location num='527' flags='e'>
+      <name>RazorSharps Exchange</name>
+      <desc>You should know what to do so get at it.</desc>
+      <desc>To get to the Shuttle Pad West</desc>
+      <exits n='463' w='513'/>
+   </location>
+
+   <location num='580' flags='b'>
+      <name>Razorsharp&apos;s Bar</name>
+      <desc>As you walk in the bar with corporal Moss the bartender welcome him back by name its obvious where the corporal spends all his off duty time at. Anyways all over the walls you see pictures of FighterPilots these pilots died while escorting some not so talented pilots through the Razor Sharp asteroid belt.</desc>
+      <desc>Corporal Moss &quot;When ever your ready the Exit is to the North&quot;</desc>
+      <exits n='516'/>
+   </location>
+
+</fed2-map>

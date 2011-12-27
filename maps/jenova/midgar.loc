@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<fed2-map title='Midgar' version='1.00' editor='standard' from='339' to='Jenova.Jenova Space.791'>
+
+   <location num='0' flags='kt'>
+      <name>storage</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='339'>
+      <name>Rocket Town - Landing Pad</name>
+      <desc>Rocket Town is a small town on Midgar which is dominated by a large rocket standing on it&apos;s pad north of the town.  Green trees of a small forest surround the quaint little town.  The rocket has been the object of ridicule for the local town folk, but the creator is a kind chap, and they tolerate his eccentricities.  Sephiroth extends his welcome, and announces that the planet is in the early stages of it&apos;s creation, and many areas are inaccessible.  You are welcome to return as the locations are opened at a later date.</desc>
+      <exits e='340' s='403' in='341'/>
+   </location>
+
+   <location num='340'>
+      <name>Rocket</name>
+      <desc>The rocket stands 50 meters tall.  Its large propulsion engines form a wide base and the rocket tapers along its length from the base to its small nose cone.  The rocket is tilted slightly and appears if not for the scafolding erected around it, that it would fall over.  The rocket is weathered, as if it has been exposed to the elements for some time.</desc>
+      <exits w='339' in='341'/>
+   </location>
+
+   <location num='341'>
+      <name>Rocket Interior</name>
+      <desc>Exposed wires and open access panels are evidence of the work being performed on the rocket.  The rocket is the brain child of Cid, and each nut, bolt, and screw was painstakingly placed by Cid.  This is his dream, but perhaps it is, like most dreams, more than the reality of a man&apos;s capabilities.</desc>
+      <exits out='340'/>
+   </location>
+
+   <location num='401' flags='bt'>
+      <name>Room</name>
+      <desc>The room is fresh, and the windows are open to let in a cool breeze.  Clean linens have been put on the bed, and there are fresh towels in the bathroom.  A small minibar is in the quarter, but at the sight of the individually wrapped cashews, most travelers decide that it may be too expensive.  The Queen size bed looks quite comfortable, and the covers are drawn back.  Small chocolates are place on each of the over stuffed pillows.</desc>
+      <exits down='402'/>
+   </location>
+
+   <location num='402'>
+      <name>Rocket Town Inn</name>
+      <desc>The Rocket Town Inn is clean and the service is crisp and efficient.  Traveler&apos;s staying overnight on Midgar are welcome to the facilities.  The Inn offers a clean quiet room which is upstairs.</desc>
+      <exits e='403' up='401'/>
+   </location>
+
+   <location num='403'>
+      <name>Rocket Town Square</name>
+      <desc>The main square of Rocket Town is a gathering place for the planet Midgar.  Since Rocket Town serves as the shuttle landing area for visitors to Midgar, goods from across the planet are shipped here.  Pallets of cargo, produce, and equipment are tagged hand held in holding areas.  Local merchants negotiate the price for various items to be shipped to the surrounding towns for resale to the population.  Piped in from loudspeakers is a rather lilting melody, that seems to set the mood for the town, as it plays over, and over, and over again.</desc>
+      <exits n='339' e='404' se='468' s='467' w='402'/>
+   </location>
+
+   <location num='404' flags='b'>
+      <name>House</name>
+      <desc>Just off the town square sits a small house.  It is a quaint little dwelling with shuttered windows and planter boxes filled with colorful flowers.  The interior is pleasingly furnished and the smell of a delightful beef stew fills the house with the wonderful aromas of a home cooked meal.</desc>
+      <exits w='403'/>
+   </location>
+
+   <location num='467'>
+      <name>Gateway to Rocket Town</name>
+      <desc>A small road leads from Rocket Town to the rest of the planet.  Most of the roadways are still under construction and will be completed soon.</desc>
+      <exits n='403' s='851'/>
+   </location>
+
+   <location num='468' flags='e'>
+      <name>Exchange</name>
+      <desc>Midgar&apos;s planetary exchange is located here in Rocket Town.  Merchant&apos;s rush through the exchange and shout out their orders across the busy exchange floor.  Runners take the orders and rush them to recorders at the front of the exchange.  Prices are updated and goods are shipped in a blurring frenzy of activity that contrasts sharply with the sleepy town character of Rocket Town.</desc>
+      <exits nw='403'/>
+   </location>
+
+   <location num='538'>
+      <name>Road to Costa Del Sol</name>
+      <desc>The Road to Costa Del Sol is currently closed.  Sephiroth sends his regrets, but informs all visitors that the planet is currently under construction, and this area will be opened at a later date.</desc>
+      <exits sw='851'/>
+   </location>
+
+   <location num='846'>
+      <name>Road to Gold Saucer</name>
+      <desc>The Road to the Gold Saucer is currently closed.  Sephiroth sends his regrets, but informs all visitors that the planet is currently under construction, and this area will be opened at a later date.</desc>
+      <exits e='851'/>
+   </location>
+
+   <location num='851'>
+      <name>Crossroads</name>
+      <desc>This is the main crossroad.  Roads lead off in all directions.</desc>
+      <exits n='467' ne='538' e='859' se='1047' s='1171' sw='1102' w='846'/>
+   </location>
+
+   <location num='859'>
+      <name>Road</name>
+      <desc>The road leads the the mining area where the raw materials for Nibelheim Metalworks are obtained.  To the west is the cross roads, to the east is the Mine Entrance.</desc>
+      <exits e='860' w='851'/>
+   </location>
+
+   <location num='860'>
+      <name>Mine Entrance</name>
+      <desc>The Mine stands as a gaping hole in the face of the hillside.  Rough hewn pilings provide the bracing that will prevent cave ins.  A small ore cart sits on the end of the trestle awaiting shipment to the foundry.</desc>
+      <exits w='859' in='863'/>
+   </location>
+
+   <location num='863'>
+      <name>Mine</name>
+      <desc>The mine is dark, save for the glimmering shafts of utility lights that run along the ceiling through the length of the mine shaft.  Rough hewn beams and posts set into place in regular intervals provide support for the shaft and prevent the full weight of the mountain above from crashing down and sealing the mine forever.  Faint glimmers of ore in the walls of the mine indicate that this is a rich producing venture, and the well worn tracks upon which ore carts run confirm this assessment.</desc>
+      <exits e='864' out='860'/>
+   </location>
+
+   <location num='864'>
+      <name>Mine</name>
+      <desc>The entrance to the mine is now a pin prick of light to the west.  The mine ends here, but as it is further excavated, additional locations will be added.</desc>
+      <exits w='863'/>
+   </location>
+
+   <location num='984'>
+      <name>Foundry</name>
+      <desc>A large blast furnace takes up one wall.  Great steel doors open and a large crucible filled with molten steel is drawn out.  The heat is intense, but subsides a bit as the doors close.  The crucible  follows an overhead track until it comes to a rest over some molds.  The crucible tips and a cascade of molten steel pours out like a fiery tongue of flame.  Excess drops glow orange, and then red, as they slowly flicker out.  The molds contain the raw pattern of various swords that are manufactured at this plant.  As the crucible rights itself, the molds roll away on a conveyer belt.  Scrap metal is tossed into the crucible as it makes its way back to the furnace to begin the process anew.</desc>
+      <exits e='985' s='1048'/>
+   </location>
+
+   <location num='985'>
+      <name>Forge</name>
+      <desc>Skilled swordsmiths take raw cast steel from the foundry and heat it to near white hot temperatures in the forge.  The clang of hammers striking steel reverberate throughout the room as the steel is shaped.  Clouds of steam hiss as the steel is dropped into the cooling bath.  At one time, droids were brought in to do the labor.  But it was quickly found that droids did not have the instinctive skill to master this work.  A machine created sword may be sharp, but it does not have a soul.  The craftsman of Midgar Forge create swords of a quality so high, that each carries its own name.  It is said, that when a skilled swordsman is given a blade that matches his personality, than he is unbeatable.  Sephiroth has such a blade, and his Murasame sword never leaves his side.</desc>
+      <exits w='984'/>
+   </location>
+
+   <location num='1047'>
+      <name>Road</name>
+      <desc>The road leads to Nibelheim Metalworks, a famed company specializing in the crafting of fine blades.  Written on one of the signs, with a can of spray paint, are the words, &quot;I AM NOT AN ALT - ZAND&quot;</desc>
+      <exits e='1048' nw='851'/>
+   </location>
+
+   <location num='1048'>
+      <name>Square</name>
+      <desc>To the North is the Nibelheim Metal Works.  To the East is the Company store, but it is currently closed.  To the South is Sephiroth&apos;s office.</desc>
+      <exits n='984' e='1049' s='1112' w='1047'/>
+   </location>
+
+   <location num='1049'>
+      <name>Shop</name>
+      <desc>The shop is currently closed, and the windows are painted over.  As the store&apos;s inventory arrives, and is recorded, the shop will open.</desc>
+      <exits w='1048'/>
+   </location>
+
+   <location num='1102'>
+      <name>Road to Midgar</name>
+      <desc>The Road to Midgar is currently closed.  Sephiroth sends his regrets, but informs all visitors that the planet is currently under construction, and this area will be opened at a later date.</desc>
+      <exits ne='851'/>
+   </location>
+
+   <location num='1112' flags='bt'>
+      <name>Company Office</name>
+      <desc>Sephiroth&apos;s office is sparsely furnished.  It is decorated with pieces from his renowned weapon collection.  On the walls are swords of immense value and beauty.  Interspersed among the swords are the occasional flintlock, and ivory handled revolver.  Sephiroth is in the process of having his old office on Aekonia closed, and the contents moved here, so the office will undoubtably change later.</desc>
+      <exits n='1048' out='339'/>
+   </location>
+
+   <location num='1171'>
+      <name>Nibelheim</name>
+      <desc>Nibelheim is a small village nestled in the foothills of the sharp craggy peaks of the Nibelheim range.  the cleanly swept cobble stone road leads to a town square.  The quaint buildings are made of wood and stone and have thatched roofs.  Small flowers and well kept gardens dot the area.  the town has a surreal quality, almost as if it is a dream, and shouldn&apos;t be here at all.</desc>
+      <exits n='851' s='1235'/>
+   </location>
+
+   <location num='1234' flags='b'>
+      <name>Nibelheim Inn</name>
+      <desc>The cheery brightness of the inn welcomes travelers to the town.  The inn is currently under construction, so only food and drinks are available.  Sephiroth sends his greetings, and apologies.</desc>
+      <exits e='1235'/>
+   </location>
+
+   <location num='1235'>
+      <name>Town Square</name>
+      <desc>The cobblestoned town square has a fountain in the center.  The town square is a central area that allows the residents to gather and mingle and exchange gossip about the latest events in Nibelheim.  Most of the gossip is currently centered on the strange goings on in the large mansion to the east.</desc>
+      <exits n='1171' e='1236' s='1299' w='1234'/>
+   </location>
+
+   <location num='1236'>
+      <name>Gate to Mansion</name>
+      <desc>Iron gates bar the way.  In the distance is a large stone mansion.  It&apos;s brooding dark presence casts a pall over the town.  The gate is locked.</desc>
+      <exits w='1235'/>
+   </location>
+
+   <location num='1299' flags='hib'>
+      <name>Home</name>
+      <desc>This small home is comfortable, and sparsely furnished.  It is rumored that the couple who owns the home are both insurance agents and doctors.  Perhaps that is why you can get healed and insured here.</desc>
+      <exits n='1235'/>
+   </location>
+
+</fed2-map>
+

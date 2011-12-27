@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<fed2-map title='Fringe Space' version='28' editor='standard'>
+
+   <location num='4' flags='s'>
+      <name>Planetary Orbit - Planet Alpha</name>
+      <desc>Your ship is currently in parking orbit of a large planetoid roughtly the size of Earth, similar yet very different. Your scans show the planet possesses roughly the same atmosphere as Earth, but with large red patches on the surface that seem disturbingly out of place on this otherwise serene world. Your computer likens the patches to the surface of Mars...</desc>
+      <desc>Grayson Corporation ships are parked in roughly the same plane as you are - the cruisers your ship detected before as well as several of the large Persuader class battleships. You can&apos;t help but wonder why Grayson Corporation would send so much (expensive!) firepower to a planet outside of the galaxy...one that as far as you had heard was having colonization proceed quietly and without incident.</desc>
+      <desc>The coordinates for the landing field have been uploaded to your computer. Attached to them is a waiver of liability for any death, damage or destruction to your person, ship or cargo while on the surface of Planet Alpha.</desc>
+      <exits e='5' out='326' no-exit='moves.nomove.3'/>
+   </location>
+
+   <location num='5' flags='s'>
+      <name>Intergalactic Space</name>
+      <desc>Your radar indicates several medium size ships in the area which are reported as Grayson Corporation Cerberus class cruisers. Ship traffic in this sector has also increased to a level that would lead you to believe that you are near the Planet Alpha that you have heard so much about.</desc>
+      <exits e='6' w='4' no-exit='moves.nomove.3'/>
+   </location>
+
+   <location num='6' flags='s'>
+      <name>Outside the Galactic Barrier - Intergalactic Space</name>
+      <desc>Your ship has made it through the Barrier in roughly one piece - but your sensors still refuse to work - probably because they have no stellar bodies to base your location on! All around you is nothing but black void...no stars - nothing. The only thing you see is the Barrier to your south and what could possibly be a planet to far to your west.</desc>
+      <exits e='7' s='70' w='5' no-exit='moves.nomove.3'/>
+   </location>
+
+   <location num='7' flags='s'>
+      <name>Intergalactic Space</name>
+      <desc>You are surrounded by the oppressive nothingness that is intergalactic space. The only thing you can see is the Galactic Barrier fluctuating to your south. Your sensors are still unable to fix your location due to a lack of stellar references. A small beacon indicates that that Barrier opens up to the southwest, allowing you to re-enter the Milky Way galaxy.</desc>
+      <exits e='8' sw='70' w='6'/>
+   </location>
+
+   <location num='8' flags='s'>
+      <name>Intergalactic Space</name>
+      <desc>You are travelling through the cold void of intergalactic space. It is cold and lonely out here and the emptiness is almost depressing. The Barrier pulses bright purple to your south providing the only light beyond those of your ship.</desc>
+      <exits w='7' no-exit='moves.nomove.3'/>
+   </location>
+
+   <location num='70' flags='s'>
+      <name>Galactic Barrier</name>
+      <desc>You are passing through the Galactic Barrier. All around swirls the angry purple soup that is the barrier itself. The only thing your sensors can make out is a weak beacon signal indicating that open space is located to the north.</desc>
+      <exits n='6' ne='7' se='135' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='72' flags='s'>
+      <name>Mysterious Clearing</name>
+      <desc>Your ship is floating in an area of the Barrier that seems to be devoid of, well, the Barrier itself. Without sensors its tough to tell what is causing the Barrier to be disrupted, but you&apos;d bet that it has something to do with the sonic emitters you can visually see encasing the area. Just as suddenly as you entered the clearing your sensors come back to life an indicate that there is a small station in the center of the clearing. Though your computer cannot match it with any known design the insignia on the side is that of Grayson Corporation...</desc>
+      <exits sw='135' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='135' flags='s'>
+      <name>Entering the Barrier</name>
+      <desc>The barrier pulses and warps around your ship but eventually you realize that yes, there is a &quot;clearing&quot; here. The sensors have gone haywire and are completely useless beyond the hull of the ship and all you can see in all directions is fluctuating purple lightning. A very sternly worded beacon informs you to turn your ship around and return to the spacelanes to the south.</desc>
+      <desc>As you do not have the proper navcharts of the barrier you decide that compliance would be a good idea.</desc>
+      <exits ne='72' s='199' nw='70' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='197' flags='s'>
+      <name>Fringe Space</name>
+      <desc>The ship is located near the beacons marking the eastern end of the marked spacelanes. Directly north the galactic barrier pulses and flares, obscuring your sensors and what lies beyond.</desc>
+      <exits e='198' se='262' s='261' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='198' flags='s'>
+      <name>Fringe Space</name>
+      <desc>You are in space directly south of the galactic barrier. Warning beacons have been set up at the edge of the barrier inform you that attempting to navigate the barrier without precise starcharts amounts to virtual suicide.</desc>
+      <exits e='199' se='263' s='262' sw='261' w='197' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='199' flags='s'>
+      <name>Fringe Space</name>
+      <desc>The barrier field seems to open slightly to the north of your position. However warning beacons inform you that without proper navigational aides your ship will be pulled apart by the immense gravity inside.</desc>
+      <exits n='135' e='200' se='264' s='263' sw='262' w='198' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='200' flags='s'>
+      <name>Fringe Space</name>
+      <desc>You are flying through space directly south of the galactic barrier. Warning beacons inform you of the dangers of attempting to fly through the barrier without proper navigational aides. Other then a small Grayson Corporation relay satellite there is nothing (or nobody) else out here.</desc>
+      <exits e='201' se='265' s='264' sw='263' w='199' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='201' flags='s'>
+      <name>Fringe Space</name>
+      <desc>You ship is in the space directly south of the galactic barrier. Other than Solus Station far to the southwest your sensors pick up nothing. A sensor scan of the galactic barrier results in the eerie report from your computer that it can&apos;t detect anything there...</desc>
+      <exits s='265' sw='264' w='200' no-exit='moves.nomove.2'/>
+   </location>
+
+   <location num='261' flags='s'>
+      <name>Fringe Space</name>
+      <desc>The ship is moving at the edge of the Fringe spacelanes. Far to the north the galactic barrier pulses bright purple, obstructing the secrets beyond.</desc>
+      <exits n='197' ne='198' e='262' se='326' s='325' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='262' flags='s'>
+      <name>Fringe Space</name>
+      <desc>The ship is floating through the space directly north of the interstellar link. Far north you can see the pulsing of the galactic barrier while your sensors report that Solus Station is to the southeast.</desc>
+      <exits n='198' ne='199' e='263' se='327' s='326' sw='325' w='261' nw='197' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='263' flags='s'>
+      <name>Fringe Space</name>
+      <desc>The ship&apos;s computer registers none of the debris that would normally be found in more travelled spaceways. All that comes up is the interstellar link to the southwest and Solus Station to the south.</desc>
+      <exits n='199' ne='200' e='264' se='328' s='327' sw='326' w='262' nw='198' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='264' flags='s'>
+      <name>Fringe Space</name>
+      <desc>The computer reports that Solus Station is to the southwest of your current position. Other than that, both the sensors and comms are quiet.</desc>
+      <exits n='200' ne='201' e='265' se='329' s='328' sw='327' w='263' nw='199' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='265' flags='s'>
+      <name>Fringe Space</name>
+      <desc>You are at the western edge of the spacelanes in Fringe space. Most of the meager space traffic the system gets stays in the area of Solus Station, so you are alone out here.</desc>
+      <exits n='201' s='329' sw='328' w='264' nw='200'/>
+   </location>
+
+   <location num='325' flags='s'>
+      <name>Fringe Space</name>
+      <desc>Your ship is currently floating through space near the edge of the galaxy. Beacons nearby indicate the edge of charted space and Solus flight control will be sure to correct your actions should you attempt to go past them!</desc>
+      <exits n='261' ne='262' e='326' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='326' flags='slp'>
+      <name>Interstellar Link</name>
+      <desc>The large interstellar link pulsates behind you and you find your ship in the most distant system ever settled by mankind. Far north you can make out the swirling purple haze that is the intergalactic barrier. Behind it lies the mysterious Planet Alpha, which your radar cannot detect due to the barrier. A beacon on your console lights up and a voice welcomes you to System C-4172, more commonly known by its popular name - Fringe. The voice continues by stating that Solus Station is located to your east and that while you are free to explore Fringe space you do so at your own risk. The beacon then shuts off and you are left to your own devices...</desc>
+      <exits n='262' ne='263' e='327' w='325' nw='261' in='4' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='327' flags='sp'>
+      <name>Solus Station</name>
+      <desc>Your ship is floating silently around the large space station known to the locals simply as &quot;Solus.&quot; The station itself was designed by Grayson Corporation and built to support their activities in this area. The station itself is rather unremarkable. Painted a odd tanish color the station is really nothing more then two circles joined together in the middle. A light on your console indicates that docking control has confirmed your arrival and is awaiting your shuttle in the station&apos;s shuttle bay.</desc>
+      <exits n='263' ne='264' e='328' w='326' nw='262' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='328' flags='s'>
+      <name>Fringe Space</name>
+      <desc>You marvel at the total emptiness of space in this system. Due to the system&apos;s proximity to the edge of the galaxy not even the stars are visible. Solus Station&apos;s homing beacon is detected to the west of your current position.</desc>
+      <exits n='264' ne='265' e='329' w='327' nw='263' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='329' flags='s'>
+      <name>Fringe Space</name>
+      <desc>Your ship is near the warning beacons that mark the eastern end of explored space in this system. Just as well, as the space beyond the beacons looks dreadfully empty to the point of sending a shiver down your spine...</desc>
+      <exits n='265' w='328' nw='264' no-exit='moves.nomove.1'/>
+   </location>
+
+</fed2-map>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<fed2-map title='Valinor' version='1.00' editor='standard' from='331' to='Aman.Aman Space.392'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>Blank intentionally</desc>
+   </location>
+
+   <location num='267' flags='yr'>
+      <name>Teleri Shipworks - Sales and Repair</name>
+      <desc>Teleri, ancient ancestors of this planet are all but extinct.  A few survive in peace with the current planet inhabitants.  They run this shop which specializes in ship building and repair.  You can buy a new and efficient space vehicle or repair your current ship.</desc>
+      <exits s='331'/>
+   </location>
+
+   <location num='270' flags='eb'>
+      <name>Valmar Market</name>
+      <desc>Access to the market is free.  All of the commodities you need can be bought and sold from this exchange.  You can also buy refreshments from the hostesses who circulate about among the traders.</desc>
+      <exits s='334'/>
+   </location>
+
+   <location num='331'>
+      <name>Valinor Landing Pad</name>
+      <desc>The landing pad is empty here on this quiet planet.  To the east you can see a city while north is a garage of sorts and a small shack from which emanats a delicious smell lies to the southwest.</desc>
+      <exits n='267' e='332' sw='394'/>
+   </location>
+
+   <location num='332'>
+      <name>Pelori Pass</name>
+      <desc>To the north and south are large mountain ranges.  This appears to be the only passable highway to the city.  The path runs east to west.</desc>
+      <exits e='333' w='331'/>
+   </location>
+
+   <location num='333'>
+      <name>Pelori Pass</name>
+      <desc>The mountain ranges continue to the north and south.  This appears to be the only passable highway to the city.  The path runs east to west.  The landing pad is to the west while the city appears just ahead to the east.</desc>
+      <exits e='334' w='332'/>
+   </location>
+
+   <location num='334'>
+      <name>Valmar City Gates</name>
+      <desc>You have reached the city of Valmar, capital city of this planet.  Merchants hustle and bustle to the north at the city&apos;s market.  You also can see a hospital to the south.  The city contines on to the east but access is denied to all but planet inhabitants for now.  The landing pad lies to the west back along the pass.</desc>
+      <exits n='270' s='398' w='333'/>
+   </location>
+
+   <location num='394' flags='b'>
+      <name>Alqualonde Eats</name>
+      <desc>This restaurant serves 8 meals a day (hobbits LOVE to eat!).  All of the food is quite good.  You can also stock up on food for your ships galley here.</desc>
+      <exits ne='331'/>
+   </location>
+
+   <location num='398' flags='hi'>
+      <name>Hospital</name>
+      <desc>If you feel ill or get hurt, this is the place to get well!</desc>
+      <exits n='334'/>
+   </location>
+
+</fed2-map>

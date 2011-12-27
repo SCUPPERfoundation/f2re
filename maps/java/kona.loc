@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<fed2-map title='Kona' version='16' editor='standard' from='1055' to='Java.Java Space.395'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>whatever this is all about</desc>
+   </location>
+
+   <location num='925'>
+      <name>Sulawesian Embassy</name>
+      <desc>This Embassy was built to honor the great Sulawesian Culture (not the Country on Earth, but the Planet).  There are large collections of exotic coffees and chocolates imported from Sulawesi.  However, if you were not aware, the Sulawesian culture makes most of their riches exporting several distinct brands of Single Malt Scotch Whiskey.  They learned the secrets of creating rich flavors from their Scottish friends back on Earth.  Here you can enjoy a sample of all their unique aged drinks, or have the Bartender make your own favorite drink.</desc>
+      <desc>     Please come and visit Sulawesi and have another drink.</desc>
+      <exits se='990' out='1055' no-exit='nomove.all.6'/>
+   </location>
+
+   <location num='926'>
+      <name>Vacant Embassy</name>
+      <desc>You are in an empty building waiting for a tenant to claim the area.</desc>
+      <exits s='990' out='1055'/>
+   </location>
+
+   <location num='927'>
+      <name>Embassy of the Grand Republic of Ainokea</name>
+      <desc>Demonstrative of the close relations shared between the Java System and The House of Doz, Zardoz himself supervised the design construction of the Ainokean Embassy.  All the Dozian worlds donated the materials.  Marble was shipped from quarries on Carpathia.  Mouldings were obtained from the forests of Aekonia. Steel was mined and forged in the foundry on Midgar.  And Gold leaf was obtained from the mines on Ainokea.  Zardoz spared no expense in the construction, and the result is a display of contrasting materials that come together in a singular display of exquisiteness, and is representative of Dozian principles of design.  On one wall, in a gold frame, is a painting of the Lady of the House of Doz, Sephorin, as she poses in a Japanese garden.</desc>
+      <desc>     The embassy staff move in a blur as official documents are exchanged between the Deosian and Javan governments.  The speed is due to the fact that the envoys have been drinking the local brew, and the caffine buzz is kicking in.</desc>
+      <exits sw='990' out='1055'/>
+   </location>
+
+   <location num='989'>
+      <name>The Kingdom Embassy</name>
+      <desc>You walk into an office looking space that has windows looking out into the ocean. The room is decorated in the same way as the Kingdom Planet.</desc>
+      <desc>Four desks sit in the room, all for the Kingdom representatives from each one of the kingdoms plus the Planet Owner herself.</desc>
+      <desc>One desk is covered in green cloth that on a closer look doesn&apos;t look like cloth. You may not want to know what it is. Another desk has a flame pattern carved into the sides of it. The next one has a blue cloth covering it. A fish bowl sits on the desk holding a tropical fish.</desc>
+      <desc>The Last desk is the Planet Owner&apos;s desk. It has a flat top computer screen on it. Several notebooks scattered on the desk with notes on planet economy in them or new story ideas.</desc>
+      <desc>On the computer screen scrolls a message: &quot;Welcome To The Kingdom Embassy.</desc>
+      <exits e='990' out='1055' no-exit='nomove.all.7'/>
+   </location>
+
+   <location num='990'>
+      <name>The Embassy Court</name>
+      <desc>The path opens up to a large Court with several paths leading to different Embassies from around the Galaxy.  The Court is beautifully landscaped with plants from their respective worlds to help them feel more at home.   Each path is appropriately gated and manned by security to insure no unwanted individuals enter the embassies.  You can return to the Landing Pad to the SouthEast.</desc>
+      <exits n='926' ne='927' se='1055' sw='1053' w='989' nw='925' no-exit='nomove.all.3'/>
+   </location>
+
+   <location num='992' flags='r'>
+      <name>Kona Ship Repairs</name>
+      <desc>You are standing inside the largest naturally made Hangar known to man, or any other odd creature for that matter.  You may make any necassary repairs to your ship here, although a sign tells you that if you are in the market for a new ship to go to the Provincial Planet of Sulawesi.  You can return to the Landing Pad to the SouthWest.</desc>
+      <exits sw='1055' no-exit='nomove.all.2'/>
+   </location>
+
+   <location num='1053'>
+      <name>Embassy of the planet of Edinboro</name>
+      <desc>You are in an empty building, it appears that the Edinboro government has yet to move in.</desc>
+      <exits ne='990' out='1055'/>
+   </location>
+
+   <location num='1055' flags='b'>
+      <name>Kona Landing Pad</name>
+      <desc>The Landing Pad is nestled against the hillside of this rocky volcanic mountain.  The workers are rushing back and forth on the pad pushing boxes of freshly packed Kona Coffee to be shipped off to their long awaited destinations.  There is a large hanger-like opening in the NorthEast side of the mountain leading to the Kona Shipyard.  The Exchange is tucked behind some Kona Coffee trees to the East.  There is a path leading down to the ocean to the SouthWest.  The Admin Building is to the SouthEast, and there is a path leading to the Embassy Court to the North West.</desc>
+      <exits ne='992' e='1056' se='1120' sw='1118' nw='990' down='1695' no-exit='nomove.all.1'/>
+   </location>
+
+   <location num='1056' flags='eb'>
+      <name>Exchange</name>
+      <desc>Amidst the Kona Coffee Trees are some makeshift exchange terminals.  It is obvious the natives could care less about the traditional commodities being traded on the current market, their focus is entirely on the Kona Coffee.  There is a retractable roof above which covers the exchange when the rains it.  There is a stairway leading DOWN underground into the rocky depths below taking you to the Elemental Lounge.  You can return to the Landing Pad to the West.</desc>
+      <exits w='1055' down='1057' no-exit='nomove.all.3'/>
+   </location>
+
+   <location num='1057' flags='b'>
+      <name>Elemental Lounge</name>
+      <desc>This Lounge intricately unites the extremes of the planet. On the eastern side of the lounge there is a lava flow wrapping through the rocks which can be viewed safely from behind a railing, the lava flow disappears as it drops off a ledge in the distance. The western side of Lounge opens up into a large cathedraled rock area as waves from the ocean surge through a cave and slap against the retaining wall below.  There are steps down to the water but at the moment there is a chain preventing you from going down.  You notice a few kayaks on some racks down below and wonder if soon there will be guided trips out to sea.  You can return to the Exchange by going Up the stairs.</desc>
+      <exits up='1056' no-exit='nomove.all.5'/>
+   </location>
+
+   <location num='1118'>
+      <name>Path to the Ocean</name>
+      <desc>The path is currently baracaded for your safety, as you try to peek ahead of you, you can see an active lava flow crassing the path and leading down to the oceanside.  You can return to the Landing Pad to the NorthEast.</desc>
+      <exits ne='1055' no-exit='nomove.all.5'/>
+   </location>
+
+   <location num='1120'>
+      <name>Kona Admin Building</name>
+      <desc>You are inside this magnificent Kona Admin Building, there are several officials and employees whizzing by in this caffienated environment.  As you wonder what is going on you notice the numerous freshly brewed coffee pots with the aroma throughout the air.  You can return to the Landing Pad to the NorthWest.</desc>
+      <exits nw='1055' no-exit='nomove.all.4'/>
+   </location>
+
+   <location num='1695'>
+      <name>Catacombs</name>
+      <desc>This area has been natural carved out with a little help from the Lava flows. It appears this area is used primarily for storage of the packaged coffee and other random items before going up to the LP to be shipped off.</desc>
+      <exits up='1055' no-exit='nomove.all.2'/>
+   </location>
+
+</fed2-map>
+

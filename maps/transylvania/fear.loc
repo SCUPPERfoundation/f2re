@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<fed2-map title='Fear' version='5' editor='standard' from='654' to='Transylvania.Transylvania Space.583'>
+
+   <location num='144'>
+      <name>Catwalk above the disposal</name>
+      <desc>The railings along the catwalk are loose and rusty, giving the impression that the whole contraption is not the safest thing to be walking upon.  The catwalk contines to the SOUTH and EAST.</desc>
+      <exits e='145' s='208' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='145'>
+      <name>Catwalk above the disposal</name>
+      <desc>The catwalk shakes under the weight of foot falls releasing bits of metal, nuts and bolts that must be vital to the integrity of the structure.  The catwalk continues to the WEST and SOUTH</desc>
+      <exits s='209' w='144' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='208'>
+      <name>Catwalk above the disposal</name>
+      <desc>A rickety metal catwalk rings the gaping hole of the disposal below.  Electrodes straight out of Ming&apos;s lab hang from the ceiling above.  A conveyor belt winding out of two scortched doors below, when moving, brings the waste to be incinerated in the blasting pit.  The catwalk, suspended from the ceiling by old and rusting chains, goes off to the NORTH and EAST.  The exit back onto solid floor is to the SOUTHWEST.</desc>
+      <exits n='144' e='209' sw='271' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='209'>
+      <name>Catwalk above the disposal</name>
+      <desc>The catwalk sways under the weight it is supporting.  No, it is not to imply that the person walking upon it is overweight, it is to imply that it is not very safe to be walking on.  The catwalk continues to the WEST and NORTH.</desc>
+      <exits n='145' w='208' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='270'>
+      <name>Factory Hallway</name>
+      <desc>The Hallway normally runs EAST and WEST, but the western branch is blocked by a rather nasty looking beast.  Somewhere between a werewolf and a dragon, it eyes you with disdain and blows smoke rings out of its nostrils filling the hall with a rather pungent smell.</desc>
+      <exits e='271' s='334' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='271'>
+      <name>Factory Disposal</name>
+      <desc>The Hallway continues from the WEST towards the NORTHEAST.  Signs above the double doors indicate that this is the way to the factory disposal.  Accompanying the signs are several danger and warning signs telling anyone who enters unauthorized just what may happen to them.  The one depicting the stick figure being twisted, electrified and decaptiated usually captures the most attention.</desc>
+      <exits ne='208' w='270' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='331'>
+      <name>R&amp;D Facility</name>
+      <desc>Devices of torture ring the outer wall as well as the raised central stage.  Two rather large ogrish figures bring in what appears to be a timid creature and place it in a chamber with large tubes on the top.  The huling pair wears torn, white lab coats and huge leather gloves that fit tightly on their hands and go all the way to their elbows.  One turns to the other and nods, pointing a gloved finger as the other nods back and gives a thumbs up, throwing a heavy switch that generates a shower of sparks.  A high pitched whine drones from the machine and it is soon joined by an even higher pitched scream.  As smoke pours and billows out of the machine, the first ogre makes a motion with the side of his hand across his neck as his partner gives another thumbs up and turns the machine off.  Opening the door, they reach in and pull out a blackened version of the creature they put inside before the test.  They shake their heads and pull out clipboards making notations.</desc>
+      <exits e='332' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='332'>
+      <name>Factory Hallway</name>
+      <desc>At the northwest end of the hallway that runs back into the darkness to the SOUTHEAST, a single door stands alone.  In simple goldleaf, the letters R&amp;D are on the door.  Suddenly, the floor seems to shake and roll under foot, begging for a hasty escape.</desc>
+      <exits se='397' w='331' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='334'>
+      <name>Hallway towards the Factory Floor</name>
+      <desc>Through double doors to the SOUTH is the reception area.  To the NORTH the hallway comes to another hallway going EAST and WEST.  Several dust covered awards line the walls on each side from floor to ceiling and a large sign  that is now tipped over at one time told the days since the last accident occured.  Someone seems to have written a rather rude comment to express their opinion about accidents in the area generally reserved for a number.</desc>
+      <exits n='270' s='398' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='397'>
+      <name>Factory Hallway</name>
+      <desc>The hallway is lined with door after door all the way into the darkness to the NORTHWEST.  The door to the EAST leads out to the reception area.  There seems to be a scratching sound growing louder and louder by the minute accompanied by the sound of someone desperately trying to turn a locked door handle.</desc>
+      <exits e='398' nw='332' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='398'>
+      <name>Factory Reception Area</name>
+      <desc>A unattended receptionist desk takes up a better portion of what was once a grand foyer.  The grand staircase up to the public meeting and conference room have since fallen down to the floor below.  Doors lead off to the NORTH, EAST and WEST and the main entrance is to the SOUTH through doors that are slighly off their hinges.</desc>
+      <exits n='334' e='399' s='462' w='397' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='399'>
+      <name>Foreman&apos;s Office</name>
+      <desc>KABOOM!!  The ceiling rattles and the walls shake as plaster falls and papers fly in the acrid smell of a small explosion.  Opening the door seems to have triggered an incinderary device attached to the desk, blowing it to smithereens as well as whomever occupied the space behind it.  Suddenly, everything starts to shudder and then go back the way it came making the room as it must have been before the explosion.  A smallish woman behind the desk squints her eyes in anger because she knows the only exit is to the WEST and she will have to endure being blown to bits and reassembled all over again.</desc>
+      <exits w='398' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='462'>
+      <name>Factory Steps</name>
+      <desc>Crumbling steps lead to the NORTH into the factory.  The doors seem to be slightly off their hinges allowing entrance to those who can navigate the misplaces stones that were once grand stairs.</desc>
+      <exits n='398' s='526' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='526'>
+      <name>Factory Gates</name>
+      <desc>The gates appear to be malfunctioning as they open and close with a grinding metallic sound at random intervals.  Perhaps with perfect timing, one could possibly get through their twisted and rusted bulk towards the factory to the NORTH.</desc>
+      <exits n='462' s='590' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='590'>
+      <name>Factory Path </name>
+      <desc>The southern end of the pathway is pitted with holes and overgrown with vines and roots.  The path opens to the shuttle pad to the south and continues north towards the factory gates.  Mind your step.</desc>
+      <exits n='526' s='654' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='653' flags='b'>
+      <name>The Jolly Corpse Pub</name>
+      <desc>As there are no actual residents of the moon, this pub was placed off the shuttle pad for when the factory was open to tourists.  It quenched the thirst and allowed people to recouperate after their invigorating tour.  Now that the factory is closed to the general public, the pub has been mostly abandoned with the exception of the autovend replicators that can reproduce any food or beverage of your choice.  The machine seems to sense your presence and hums to life, lighting up its large bin opening on the bottom with two smaller lights side by side above it to make your choice of FOOD or DRINK.  The exit is to the EAST.</desc>
+      <exits e='654' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='654' flags='yr'>
+      <name>Fear Shuttle Pad</name>
+      <desc>The Shuttle Pad is overgrown with roots, making the walk in any direction hazardous to anyone&apos;s health.  A sign leans to one side, having been bent and controrted by the sinewy shoots of plant roots.  According to its present orientation, the factory is off to the NORTH, The exchange is to the EAST, a store is to the WEST and a clinic is to the SOUTH.  Can the sign be trustted to be true?  Only one way to find out.</desc>
+      <exits n='590' e='655' s='718' w='653'/>
+   </location>
+
+   <location num='655' flags='e'>
+      <name>Fear Exchange</name>
+      <desc>A single spotlight shines down from above, attached to what is unknown as there is nothing visible in the inky blackness there.  The light makes visible a single console that looks like a slot machine, but it is actually a interface terminal in which people can make trades and transactions.  The temperature of the exchange does not make the place inviting at all, unless you enjoy being inside a room whose temperature matches that of a meat locker.</desc>
+      <exits w='654' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='718'>
+      <name>Fear Clinic</name>
+      <desc>The room is absolutely dark with no visible exit.  The sound of machinery can be heard humming all around and a faint glow can be detected from the readouts.  The glow slowly seems to increase in brightness, but then again, it could just be the eyes adjusting to the almost non-existant lighting.  A small metallic tinking can be heard from above.  The sound seems to be coming from all sorts of surgical instruments hanging from clips on a series of wires that stretch from wall to wall.  The exit is now visible to the NORTH.</desc>
+      <exits n='654' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>

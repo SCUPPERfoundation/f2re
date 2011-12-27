@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<fed2-map title='Aegean Space' version='1.00' editor='standard'>
+
+   <location num='262' flags='s'>
+      <name>Mykonos Orbit</name>
+      <desc>You arrive at the orbit of Mykonos, known as the hotspot of the Aegean system, since the planet is the perfect blend of commerce and nightlife. Like the other systems in the Aegean system, Mykonos is mostly composed of water, with a few islands scattered here and there. You can land here, otherwise the Aegean Interstellar Link is to the South, or you can go SouthEast to Rhodes.</desc>
+      <exits se='327' s='326' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='326' flags='sl'>
+      <name>Aegean Space Interstellar Link</name>
+      <desc>You have arrived at the Interstellar Link of the Aegean System. Space appears in a blueish hue on your viewscreen, and your sensors confirm your suspicions - the entire system is engulfed in a gelatinous-like blue nebula! An old signpost informs you that the planet of Atlantis can be found to your South, the planet of Mykonos is to the North, and the Biological Research Facility of Rhodes is to the East.</desc>
+      <exits n='262' e='327' s='390' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='327' flags='s'>
+      <name>Rhodes Orbit</name>
+      <desc>Your ship arrives at the large asteroid of Rhodes, the Biological Research and Experimentation Center of the Aegean system. Rhodes was originally classified as a planet, but it&apos;s lack of sufficient gravity and size caused scientists to reclassify it later. You can land here, go NorthWest to Mykonos, SouthWest to Atlantis, or West back to the Interstellar Link.</desc>
+      <exits sw='390' w='326' nw='262' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='390' flags='s'>
+      <name>Atlantis Orbit</name>
+      <desc>Your ship is hovering near the ancient planet of Atlantis. Fortunately the nebula doesn&apos;t seem to have disrupted the planet&apos;s atmosphere, or so it appears from up here, as you look down on a planet that seems to be almost completely covered in water, with the exception of a small island that serves as a Landing Pad and village. From here you know you can either land, go NorthEast to Rhodes, or go North to the Link.</desc>
+      <exits n='326' ne='327' no-exit='move.noexit.1'/>
+   </location>
+
+</fed2-map>
+

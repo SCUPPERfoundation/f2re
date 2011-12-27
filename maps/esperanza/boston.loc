@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Boston' version='3' editor='standard' from='198' to='Esperanza.Esperanza Space.64'>
+
+   <location num='0' flags='t'>
+      <name>object container</name>
+      <desc>This is for putting stuff in.</desc>
+   </location>
+
+   <location num='134' flags='hi'>
+      <name>Hospital and Insurance</name>
+      <desc>Try not to get hurt. The LP is south.</desc>
+      <exits s='198'/>
+   </location>
+
+   <location num='197' flags='yr'>
+      <name>Ship purchase and repair</name>
+      <desc>Ships ships ships! The LP is east.</desc>
+      <exits e='198'/>
+   </location>
+
+   <location num='198'>
+      <name>Boston&apos;s LP</name>
+      <desc>The usual shops and services are scattered around here. The Exchange is east.</desc>
+      <exits n='134' e='199' s='262' w='197'/>
+   </location>
+
+   <location num='199' flags='e'>
+      <name>The Exchange</name>
+      <desc>The place to get it all! The LP is West.</desc>
+      <exits w='198'/>
+   </location>
+
+   <location num='262' flags='b'>
+      <name>A Lounge</name>
+      <desc>Hermetically sealed food, beverages, and servers wait to assuage your hunger and thirst. The LP is north.</desc>
+      <exits n='198'/>
+   </location>
+
+</fed2-map>

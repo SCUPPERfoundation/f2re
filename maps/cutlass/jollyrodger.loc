@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<fed2-map title='Jollyrodger' version='42' editor='standard' from='395' to='Cutlass.Cutlass Space.330'>
+
+   <location num='136'>
+      <name>Vacant office</name>
+      <desc>For Lease</desc>
+      <exits se='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='137'>
+      <name>Vacant office</name>
+      <desc>Open, For Lease</desc>
+      <exits s='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='138'>
+      <name>Office of Diplomacy, Stash System</name>
+      <desc>You can&apos;t help but notice the smell of Buttered Rum Tea And Coffee. A light oak desk dominates this large office and a white nanofabric sofa is to the left. Upon the desk is an antique tea service and on the right wall is a Holo playing hypnotapes. You notice a leach. Exit to the southwest.</desc>
+      <exits sw='201' down='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='193'>
+      <name>Hilltop Lookout</name>
+      <desc>Outdoors in this small tower you can see the Jollyrodger in the bay. The sky looks huge here. The sun is warm upon your face and a cool sea breeze causes you to day dream. A few sun loungers are scattered about. A cabana boy waits patiently to serve you drinks or bring you suntan oil.</desc>
+      <exits e='194' out='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='194'>
+      <name>Dingers Private Office</name>
+      <desc>In the middle of this room in an old oak desk. You imagine that it was hauled in here from a ship captured at sea. It is covered with charts and spreadsheets that are studied everyday by the great Captain. You can tell this room is designed for work and not to entertain. I huge holo of the known universe spins slowly in the corner. The thick, molded carpet relaxes you as you walk towards the door to the west.</desc>
+      <exits w='193' down='324' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='198' flags='bt'>
+      <name>Bridal Suite</name>
+      <desc>This room is simple elegant. As you step in to the room you are greeted by your personal chamber maid. Her name is Andrea and she smiles as she greets you. As you look around you notice white silk drapes hanging from the four post bed, red velvet chair facing the vanity. Across the room is a fireplace with a leather recliner nearby. A piano, a Bosendorfer 9 foot Grand Piano. Shiny Black Lacquer. Perfect Condition. It has 92 keys instead of the standard 88 with 4 extra black keys and stands near the window so the sunlight can shine on the music. You may play if you like, the room is yours. You may also play the piano, once it is tuned. Pour yourself a glass of champaign and relax.</desc>
+      <exits s='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='200'>
+      <name>Vacant office</name>
+      <desc>Open, For Lease</desc>
+      <exits e='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='201'>
+      <name>Small Lobby</name>
+      <desc>From this lobby you will find the office of Factory Owners and allied Planet Owners. Vacant offices are all that is here now. Brandy is your receptionist and will glady answer any of your questions. Oh, she only speaks in sign language. Exit to the south. You notice a familiar suit of armour against the wall.</desc>
+      <exits n='137' ne='138' e='202' se='266' s='265' sw='264' w='200' nw='136' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='202'>
+      <name>Vacant office</name>
+      <desc>Open, For Lease</desc>
+      <exits w='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='261'>
+      <name>Landing to the Northwestern Guest Suites</name>
+      <desc>With your green guest room pass you may enter the rooms to the north and to the west. A suit of armour in the corner looks vaguely familiar.</desc>
+      <exits s='325' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262'>
+      <name>Stairway to Heavan</name>
+      <desc>A long spiral staircase takes you up to the guest rooms or down to the east ballroom. You notice a gold ring lying on the steps.</desc>
+      <exits n='198' s='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263'>
+      <name>Ladies Powder Room</name>
+      <desc>Many chairs line both walls of this long room. You can see a number of women powdering their noses and brushing their hair. Each chair has it&apos;s own mirror, wash basin and fresh lenin. At the far end are small doored rooms for privacy. Exit to the south.</desc>
+      <exits s='327' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264'>
+      <name>Vacant office</name>
+      <desc>Open, For Lease</desc>
+      <exits ne='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Eastern Hallway to the North</name>
+      <desc>North lies a small lobby, to the south takes you back to Ginger.</desc>
+      <exits n='201' s='329' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='266'>
+      <name>Vacant office</name>
+      <desc>Open, For Lease</desc>
+      <exits nw='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='324' flags='b'>
+      <name>Great Hall Spirits and Fine Wines.</name>
+      <desc>With a wide grin, Svenson will be glad to take your order and is happy to see you&apos;ve made it to his bar. We server the most sought after wines and spirits in the universe. Of course, we also have Dinger&apos;s favorite liquer from a brown jug marked XXX.</desc>
+      <exits e='325' up='194' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='325'>
+      <name>Great Hall West</name>
+      <desc>Many folks are gathering here for a refreshment which you&apos;ll find to the west and to rest a bit before returning to the dance floor. There is a consort here readying herself for the next dance. For a modest token of groats, she will have the next dance with you, should you care to. To the north are the northwestern guest suites and to the south are the southwestern guest suites. You may head east to find Ginger and the LP.</desc>
+      <exits n='261' e='326' s='389' w='324' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326'>
+      <name>Great Hall East</name>
+      <desc>You emirge from the hallway to an emense ballroom. The ceilings are so high it is hard to imagine the height of them. The walls are the whitest in color and columns have candles burning from golden candlabras mounted on each. Far to the western corner of the room is a minstral quartet playing typical 16th and 17th century waltz music. Dozens of couples dancing in the center of the ballroom while many others sit at linen covered tables sharing gossip and bottles of wine. Here you can return to the east or continue to the west of this massive room.</desc>
+      <exits n='262' e='327' s='390' w='325' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327'>
+      <name>Welcome to Dinger&apos;s</name>
+      <desc>Chandeliers of exquist chrystals and gold, native to this planet, hang high above you. The hallway swings to the southwest. East will return you to Ginger. To the north is the Ladies Powder Room</desc>
+      <exits n='263' e='328' w='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328'>
+      <name>Check-in and Reception</name>
+      <desc>This is the lobby of the administration offices of Jollyrodger and reception for &quot;Dinger&apos;s&quot;. Southwest will lead you back to the LP. Ginger, the receptionist, is with a newly arrived couple, confirming reservations for them. She is very happy to help and always has a pretty smile on her face along with amble cleavage! Ginger points to the east if you are looking for the office block. You can see a hallway leading to the east and another to the west. The sounds you her from the west entices you to move in that direction. Back to the LP is southeast. You see a suit of armour.</desc>
+      <exits e='329' se='393' w='327' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Short Hallway</name>
+      <desc>This short hallway turns to the north. The west leads back to Ginger.</desc>
+      <exits n='265' w='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='hib'>
+      <name>Eye Patch Infirmery</name>
+      <desc>Here you can get fixed up after a scap or a visit to the &quot;Gunner&apos;s Daughter&quot;. As you look around and can see an old swabbie being fit with a wooden leg! The preferred anethesia is poured from a jug with XXX on it. Exit is south to LP.</desc>
+      <exits s='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332' flags='yb'>
+      <name>The Doubloon Saloon</name>
+      <desc>The place is packed with swashbucklers from all over the galaxy. Here you can buy yourself a bit of grog and play some cards. Keep an &apos;and on yer purse matie! If you look close you may be able to see the likes of Edward Teach or &quot;Black Beard&quot;, William Kidd, Thomas Cavandish or the dangerous &quot;Calico&quot; Jack Rackham. You can also purchase a fine Ship of the Line here, at a pirate&apos;s discount of course!</desc>
+      <exits sw='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='389'>
+      <name>Landing to the Southwestern Guest Suites</name>
+      <desc>Only one vacancy is available at this time and it is the room to the south. Back to the ballroom and more liquor is to the north.</desc>
+      <exits n='325' s='453' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='390'>
+      <name>Landing to the Southeastern Guest Suites</name>
+      <desc>If you have a yellow guest pass you may continue to the suites to the south and east from here.</desc>
+      <exits n='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Cave</name>
+      <desc>This passage way leads northwest to the planet administration offices. To the east is the LP. Torches along the cave wall light your path.</desc>
+      <exits e='394' nw='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Cave</name>
+      <desc>As you head to the west you are coming to the mouth of a large cave. To help you see your way there are torches mounted every few yards on either side. It appears to be a deep cavern and you can not see the end, but you endever forward. If you are head east the LP is just ahead.</desc>
+      <exits e='395' w='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>LP and Home of the Jollyrodger</name>
+      <desc>You have arrived at the center of Pirates Haven! This is a small town that has many services nearby. From here you can trade at the &quot;Dead Men Tell No Tales&quot; exchange to the east. South leads to a path through native vegatation. To the west you can see a business park where you will find the administrative offices of Jollyrodger. You can here the calling of native birds as they soar from tree to tree. The sun is hot here so you should be moving along. North is the infirmary and insurance center. Northeast you will find yourself elbow to elbow with the universe&apos;s most notorious privateers at the Doubloon Saloon.</desc>
+      <exits n='331' ne='332' e='396' s='459' w='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='e'>
+      <name>&quot;Dead Men Tell No Tales&quot; Trading Post</name>
+      <desc>Here you see booths full of pirates and merchants from far away lands here to trade the finest booty to be found. Pet monkeys and crazy looking birds roam and soar throughout the exchange. Exit is to the west. Relax and enjoy your  tax free trading.</desc>
+      <exits w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='453'>
+      <name>Summer Suite</name>
+      <desc>Complete with a balcony, four posted bed and vanity. You step out to the balcony and can see the seven seas. You feel the ocean breeze blowing through the soft sheer draperies. You can&apos;t wait to curl up on the soft bed with it&apos;s many pillows. You may not want to be if you must, the exit is north.</desc>
+      <exits n='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>Narrow Path To The Port</name>
+      <desc>Watch your step on this path through the native palms and foliage. It continues southwest or north to the LP</desc>
+      <exits n='395' sw='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Sandy Beach! </name>
+      <desc>Aye, so you survived such an insane dive! Lucky you didn&apos;t break your neck, say ye? Swim out of the water and relax on this sandy beach. Back to the village is to the west.</desc>
+      <exits w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='466'>
+      <name>The Brig</name>
+      <desc>As you attempt to leave the room you are greeted by the Captain&apos;s guards. The four of them hold cutlasses on you and you are escorted to the brig... May the Captain have mercy on your soul! As your being led down to your cell you hear the crew gathering to watch as you are thrown into the brig. You hear them chant &quot;Dead men tell no tales&quot;! As the guards leave and the crowd disperses you see a vent in the ceiling above you.</desc>
+      <exits up='522' out='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='467'>
+      <name>Stearn glass of the Captain&apos;s Quarters</name>
+      <desc>As you climb up the rope you try to be very quiet. As you step inside you notice all the riches a sucessful pirate would have. A ruby incrested sextance, the finest silk clothing, a fine display of cutlasses and bottled spirits from the four coners of the world. You would not enjoy being caught in here with out escort! Step to the west.</desc>
+      <exits w='466' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='521'>
+      <name>Into the surf</name>
+      <desc>There is only one way out of here due to the riptide taking you out to sea and that is to the southwest. You see a message in a bottle floating within reach!</desc>
+      <exits sw='584' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Port</name>
+      <desc>If your headed to the port, you&apos;ve come out of the thick jungle of palms and coconut trees on to a beige sandy beach which lines the beautiful blue waters of this natural port. Rising high above you is the famed Ship of the Line the &quot;Jollyrodger&quot;. A three masted high seas sailing vessel sporting 74 guns with a large cargo hold and is waiting to be unloaded by the local natives. Head south to the gangway. If you are headed to the LP then the path leads northeast into the thick jungle. If you want to sneak onboard then head west.</desc>
+      <exits ne='459' s='586' w='521' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Rope Ladder</name>
+      <desc>This rope ladder leads you up the main mast, high above the ship up to the crow&apos;s nest. Down get&apos;s you no where! Careful now matie... It&apos;s not so stable! Yo Ho!</desc>
+      <exits up='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='b'>
+      <name>Crow&apos;s Nest</name>
+      <desc>You are high above the ship and can see the small village of Pirates Haven that makes up the island. You fell a soft wind on your face and turn to look out across the vastness of the ocean. Now pour yourself a drink from the hidden bottle marked XXX, Dinger&apos;s favorite grog, and have a seat and reflect. Ok, if your ready to leave, dive right in!</desc>
+      <exits in='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='584'>
+      <name>Rear of the Ship</name>
+      <desc>As you swim towards the stearn of the ship you see a loose line dangling just above you. If you try real hard you might be able to grasp it and pull yourself up!</desc>
+      <exits ne='521' up='467' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='586'>
+      <name>Gang Plank</name>
+      <desc>As you step on to the gangway you must ask permission to come aboard, once this is granted then you may proceed to the south and board the ship, if not, then head north. Climb up to see the Crow&apos;s Nest!</desc>
+      <exits n='522' s='650' up='523' no-exit='Use your good eye!'/>
+   </location>
+
+   <location num='648' flags='b'>
+      <name>Wheel Deck</name>
+      <desc>As you step up a short flight of wooden stairs you are greated by the Pilot of the Jollyrodger. There is a large wooden ship&apos;s wheel and a brass compass. From here is where the ship&apos;s sailing direction is made. The pilot&apos;s only job is to keep the Jollyrodger on the captain&apos;s ordered heading. He smiles a toothless grin at you. There is a wooden barrel hidden behind the ropes to your left. There&apos;s an X on it. The exit is east.</desc>
+      <exits e='649' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='649' flags='b'>
+      <name>Ship&apos;s Stern</name>
+      <desc>This is the rear half of the ship and a meeting area due to the fact that it is close to the Captain&apos;s quarters. Head west for some exciting action! Head down the stairs to the Captain&apos;s Quarters if you dare, aye matie!</desc>
+      <exits e='650' w='648' down='467' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='650'>
+      <name>The Jollyrodger</name>
+      <desc>You&apos;ve heard about it, read about it, now your standing on it! As you step onto the massive deck you observe deckhands scrubbing, mopping, polishing, painting and repairing everything in site. A sailmaker is repairing silk and attaching it a spar. A Bowswain is overseeing the work being carried on. The deck is clear of canons for they are in the decks down below. Head east to inspect the stern of the ship. West will take you to the bow. To disembark head north.</desc>
+      <exits n='586' e='651' w='649' down='714' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='651'>
+      <name>Ship&apos;s Bow</name>
+      <desc>Not much going on here, but you notice a keg nestled in a coil of line. It&apos;s marked XXX. How cool is that? You can buy yourself and your new shipmates a round of grog here. Go up to investigate the FO&quot;C&quot;SLE or forecastle. Go visit the other parts of this amazing vessel by heading west.</desc>
+      <exits w='650' up='652' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='652'>
+      <name>FO&quot;C&quot;SLE</name>
+      <desc>This is a defensively fortified area were you can fire small canons (called pivot guns) at enemy ships and their crewmen. The shot the canons use are called pea shot. Noy unlike todays shotgun, these pellets are designed to kill as many enemy soldiers as possible. This is the most forward area of the ship. Head down to the bow.</desc>
+      <exits down='651' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='713'>
+      <name>Powder Room</name>
+      <desc>As the door swings open you see many red kegs marked XXX on them. I think it&apos;s safe to say that these do not contain Dinger&apos;s favorite brew. This is the gunpowder storage room. There is NO SMOKING here and DO NOT strike a match. You see a lantern on a small shelf next to it are a book of matches. Exit is to the east.</desc>
+      <exits e='714' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='714' flags='b'>
+      <name>Upper Cannonade Deck</name>
+      <desc>As you step down off the ladder you are in awe of the fire power on this deck. Rows of canons on both the starboard and port sides of this floor. Pyramids of canonballs stacked next to each gun. Hanging from the wall, near each cannon are chain shot. Chain shot is two small canonballs connect by a lenth of chain. This type of shot was used to ripe the heart or sails out of an enemy ship. Along the center ar hammocks for the crew. Three rows high. Since we&apos;re in port right now, most hands are down at the Doubloon Saloon. Cafeful of the repairmen that are working near the galley to the east and another room to the west. Please have a drink here, then head up and enjoy the rest of your journey.</desc>
+      <exits e='715' w='713' up='650' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='715'>
+      <name>Ships Galley</name>
+      <desc>All captains must feed their crew. Luckily, you &quot;found&quot; a crewman that knows his way around a kitchen. He smiles at you as he stirs a large steaming pot on an old wood stove. It look&apos;s like chicken for the mates tonight! But the cook turns and says &quot;Nope, frog night&quot;. Exit is to the west.</desc>
+      <exits w='714' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

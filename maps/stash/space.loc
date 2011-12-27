@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<fed2-map title='Stash Space' version='16' editor='standard'>
+
+   <location num='457' flags='s'>
+      <name>Chamomile </name>
+      <desc>You are about to enter the soothing Chamomile Tea Country. You will find yourself running into rabbits munching on broccoli in the farmers fields. We have a farmers market where you can get some freshly made pastries from our own fields. Enjoy and please don&apos;t forget to take a tour or two!</desc>
+      <exits se='522'/>
+   </location>
+
+   <location num='522' flags='sl'>
+      <name>Stash System</name>
+      <desc>Welcome to the Stash System. To the east you will find the Planet of Buttered Rum. To the nw you will find the planet of Chamomile. In Buttered Rum, there are various shoppes to enjoy a nice cup of tea with a variety of different flavors. Chamomile is a touring planet, designed after the memories, with a twist, of a childhood book where chamomile tea was used to get Peter Rabbit his health back.</desc>
+      <exits e='523' nw='457'/>
+      <events enter='Stash Space'/>
+   </location>
+
+   <location num='523' flags='s'>
+      <name>Buttered Rum</name>
+      <desc>You are ready to embark on the quaint Butter Rum Tea Towne where you can stroll down Main St and visit a variety of shoppes. If you are up to it, please visit the card hall to the rear of the tea room.</desc>
+      <exits w='522'/>
+   </location>
+
+</fed2-map>

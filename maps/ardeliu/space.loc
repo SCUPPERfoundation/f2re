@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<fed2-map title='Ardeliu Space' version='1.00' editor='standard'>
+
+   <location num='267' flags='sp'>
+      <name>Carpathia Orbit - Home of Castle Doz</name>
+      <desc>Carpathia is a dead world, cloaked in an inky cloud of redness.  It&apos;s desolation has a strange type of beauty.  Count Nosferatu Doz is at home here among the tortured twisted lifeless branches, the howling winds.  It&apos;s a planet that reflects his cheerful outlook.</desc>
+      <desc>   Carpathian Ground Control signals that you are cleared to land on the shuttle pad, or you may proceed into the cliffside docking for the Castle Lab.  The link is to the southwest.</desc>
+      <exits s='331' sw='330' in='1292' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330' flags='slp'>
+      <name>Ardeliu System - A Proud Member of the House of Doz</name>
+      <desc>The Ardeliu System was recently discovered by merchants searching for ever better deals.  Ardeliu requested and received admittance to Federation.  It was thought that Ardeliu was a new system, however, searches of the archives of the Galactic Administration have indicated that the owner of the system, Count Nosferatu Doz, is quite old, and has ties dating back years, even to the time of Ming.  It is rumored that the Count was known by another name during this time.  Nosferatu has pledged his loyalty to the House of Doz, and proudly serves this Family.</desc>
+      <exits ne='267' e='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='sp'>
+      <name>Empty Space</name>
+      <desc>The area is void and empty.  What did you expect in Empty Space?   A Starbucks?</desc>
+      <exits n='267' e='332' se='396' w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332' flags='sp'>
+      <name>Empty Space</name>
+      <desc>An empty void... a vacuum... but wait.  Is that a Starbucks over there?</desc>
+      <exits s='396' w='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='sp'>
+      <name>Ardeal Orbit</name>
+      <desc>In contrast to Carpathia&apos;s aura of death and desolation, Ardeal is a misty green world teeming with life.  Nosferatu hates it.   He deeded the planet to Zardoz and tries to forget that it even exists.  Planet Flight control has signaled that you are cleared to land.</desc>
+      <exits n='332' nw='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1228' flags='s'>
+      <name>The landing platform recedes as you gain altitude</name>
+      <desc>You are pressed back into your seat.  Carpathian ground control advises us that you can proceed up to higher altitude.</desc>
+      <exits up='267' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1229' flags='s'>
+      <name>A large claw brings your shuttle to launch point.</name>
+      <desc>As your engines begin to wind up and the dials on your control display begin to flash in the green, your ship is carried to it&apos;s ready point to the west.</desc>
+      <exits w='1228' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1292' flags='s'>
+      <name>The yawning mouth of the Cliffside Cave fills the viewscreen.</name>
+      <desc>The cliff towers above the rocky valley floor below.  It&apos;s twisted crags reach high above, where the steep spires of Castle Doz claw their way to the heavens.  Set in the middle of the cliff is large cave, protected by two thick blast doors.  The doors swing open to admit your shuttle, and a tractor beam locks on.  You ship&apos;s display indicates that an automatic pilot has taken control, and is guiding your craft to the east.</desc>
+      <exits e='1293' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1293' flags='s'>
+      <name>A large claw grabs your shuttle as your engines shut down.</name>
+      <desc>The claw carries your shuttle to a designated stowage area.  The stowage area is a cavernous room carved into the cliffs.  The grey rock glistens with the various minerals contained in its rich ore.  Shuttles line the edges of the polished granite floor and cargo pallets are moved from the central warehouses to each shuttle for export.  Deliveries are offloaded and taken to conveyor belts for transport to Carpathia&apos;s populace.  The exit door from your shuttle is to the east.</desc>
+      <exits e='1294' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1294' flags='s'>
+      <name>Shuttlebay</name>
+      <desc>The shuttle bay has repair droids moving along prescribed paths, stopping occassionally to service a disabled shuttle.  The arc of their plasma welders creates eerie strobe flashes of blue-white light that seems to halt time with each flash.  The smell of ozone fills the air, and mixes with the sweet smell of lubricants and rocket fuel.</desc>
+      <desc>     There is a tram that will take you to the lab that you can board, or you can enter your shuttle to the west.</desc>
+      <exits w='1229' no-exit='moves.noexit.5'/>
+   </location>
+
+</fed2-map>
+

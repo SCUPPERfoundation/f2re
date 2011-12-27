@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Badlands' version='25' editor='standard' from='202' to='Forgotten.Forgotten Space.457'>
+
+   <location num='0'>
+      <name>The Island of misfit toys</name>
+      <desc>A place for all the toys that no one wants</desc>
+   </location>
+
+   <location num='137' flags='hi'>
+      <name>Med Center</name>
+      <desc>Looking around you see one big room. The entrance part looks like a office and waiting area. The back section can be curtained off, looks like a simple examining/treatment room. There is no high tech equipment here, most you can not even tell what it is.</desc>
+      <exits se='202' no-exit='shuttlepad.nomove.1'/>
+   </location>
+
+   <location num='139' flags='e'>
+      <name>Badland&apos;s Exchange</name>
+      <desc>You see old fashion stock ticket machines still running in this room spitting out paper.The floor is completely covered with the ticket tapes.</desc>
+      <exits sw='202' no-exit='shuttlepad.nomove.1'/>
+   </location>
+
+   <location num='202'>
+      <name>Shuttle Pad</name>
+      <desc>Standing in the middle of the town common is a flagpole with a frayed Ming flag. There are 4 buildings nw, ne, sw, se. In front of each one there is a old wooden trough that is full of rain water which seems to server no purpose. Next to them is a long wooden railing which seems to serve no purpose either.</desc>
+      <exits ne='139' se='267' sw='265' nw='137' no-exit='shuttlepad.nomove.1'/>
+   </location>
+
+   <location num='265' flags='yr'>
+      <name>Ship services</name>
+      <desc>Looking around you see old fashion covered spaceships on one side looking like there are ready to be repaired. On the other side you see newer models of covered spaceships.</desc>
+      <exits ne='202' no-exit='shuttlepad.nomove.1'/>
+   </location>
+
+   <location num='267' flags='b'>
+      <name>Badlands Shoot&apos;em Up Bar</name>
+      <desc>Looking around you can tell this is like a tavern from the old west on Earth. At the far end looks like a general store counter.</desc>
+      <exits nw='202' no-exit='shuttlepad.nomove.1'/>
+   </location>
+
+</fed2-map>

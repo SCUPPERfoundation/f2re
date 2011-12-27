@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<fed2-map title='Tree' version='7' editor='standard' from='330' to='Green String.Green String Space.397'>
+
+   <location num='266' flags='b'>
+      <name>String&apos;s Pizza Parlor, Tree Annex</name>
+      <desc>   In the middle of the tent, is what appears to be a Pizza Oven and a smallish Beverage station.  Scattered about are several wooden Picnic tables and benches.  On each Picnic table is a dispensor of paper napkins, a large shaker full of grated Parmesan cheese and a smaller shaker of Red Pepper Flakes.</desc>
+      <desc>   Many Simians and Other-worlders are scattered about, the Simians in small groups, the Other-worlders (like yourself) alone or in pairs, eating huge Pizza&apos;s and guzzling them down with Ale.</desc>
+      <desc>   You saunter on over to the serving area, which is manned by an older, grey-haired, female Simian and order your favorite Pizza (with extra Moose, please).  The outside of the tent seems to be cordoned off except for the exit back to your South.</desc>
+      <exits s='330'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>A small grassy knoll if you please, NOT hill.</name>
+      <desc>   Okay, it&apos;s a knoll, not a hill (tho what&apos;s the difference, I have no idea, but when in Rome...).</desc>
+      <desc>   Spread out before you, are large pens, each filled with a different type of animal.  Cattle, goats, chickens, sheep, camels, turkey... wait,  CAMELS!     Oh well, again, when in Rome...</desc>
+      <desc>   Off in the distance, are golden fields of flax, wheat, corn, soybeans, spinach, turnips (okay, you get the drift, Mr. Rome).   Hundreds of Simians are moving about, herding and feeding the animals and tending the crops.  A whole planetoid turned over to agriculture, to feed the Industrialized Port Simian (and as many other High-ranked planets as possible, I&apos;m sure).</desc>
+      <desc>   Paths wind they way around the pens and fields, but they appear to be closed off at present.  Maybe in the future, you can take a more leisurely tour of this planetoid, and learn more about this Race of Simians, but for now, all you can do is turn around and head back west to the Landing Pad.</desc>
+      <exits e='330'/>
+   </location>
+
+   <location num='330' flags='yrb'>
+      <name>Landing Slot 3, Sector 2, Beta Quadrant on Tree.</name>
+      <desc>   Exiting your shuttle, the crisp taste of clean air on this terraformed moon is a pleasant change after breathing the recycled air of your ship for so long.  Oops, on second sniff, maybe it wasn&apos;t such a good idea to park so close to the Livestock pens, which appear to be just over a small hill to your West.  A path to the East will take you to a Geodesic Dome that houses the Exchange.  A short hop, skip and a jump to the South is a tent with a large Red Cross painted on it, while an open-air tent to your North appears to be a commissary.  Scattered about are neat piles of spare parts for all types of Spaceships.</desc>
+      <desc>   Several members of the inhabitants of this planetoid are rushing about.  They are all members of the Race of Simians, originally from Port Simain.  They all seem to be dressed in Green pants and white T-shirts.</desc>
+      <exits n='266' e='331' s='394' w='329'/>
+   </location>
+
+   <location num='331' flags='eb'>
+      <name>Tree Exchange</name>
+      <desc>   Upon entering the Dome, what appears to be a young juvenile male Simian rushes up to you, hands you a pad and a pencil, then rushes off.</desc>
+      <desc>   Okay, obviously buying and selling here is done the old-fashioned way.  All around the inner walls, many small tables are set up, each one manned (Simmed?) by a Sim, a large sign behind each table announces a commodity that Sim is either buying or selling.  So off to work you go, buy and sell what you need, then return thru the opening to your west, back to the Landing Pad.</desc>
+      <exits w='330'/>
+   </location>
+
+   <location num='394' flags='hib'>
+      <name>Medical Clinic</name>
+      <desc>   Inside the tent you find a small table, with a box of band-aids and a small bottle of asperin.  Oh yeah, that&apos;ll save your life alright.   Looking further, you do find a pad of Insurance Forms.</desc>
+      <desc>   Yep, everything you&apos;d ever need, as long as you only needed Band-aids, Asperin and Insurance.  The only exit seems to be the same way you came in, to your North.</desc>
+      <exits n='330'/>
+   </location>
+
+</fed2-map>

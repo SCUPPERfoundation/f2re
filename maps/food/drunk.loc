@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<fed2-map title='Drunk' version='12' editor='standard' from='1757' to='Food.Food Space.329'>
+
+   <location num='804'>
+      <name>End of the line</name>
+      <desc>Here is the end of the swizzle stick. The bulb here at the end opens up a bit and there are seats creating a bit of a veiwing lounge. You can see several other visitors obviously a bit tipsy from sampling the different beverages on their way here. The exit back to the rest of the station is southwest.</desc>
+      <exits sw='867' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='867'>
+      <name>Swizzle Path</name>
+      <desc>Stepping off the rim and out into the swizzle corridor, the planet below takes on a reddish hue as the glazsteel here is tinted red. You can either continue out to the northeast or go back to the rim which is southwest.</desc>
+      <exits ne='804' sw='930' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='918'>
+      <name>Jack Daniel&apos;s Lynchburg Lemonade</name>
+      <desc>1 part Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>1 part Sweet and Sour Mix</desc>
+      <desc>1 part Triple Sec</desc>
+      <desc>4 parts Sprite Soda</desc>
+      <desc>Add ice and stir, garnish with lemon slices and cherries</desc>
+      <exits e='919' se='983' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='919'>
+      <name>Gulf of Mexico</name>
+      <desc>1-1/2 oz. Gold Tequilla</desc>
+      <desc>1/2 oz. Blue Curacao Liqueur</desc>
+      <desc>1 splash Orange Juice</desc>
+      <desc>1 splash Pineapple Juice</desc>
+      <desc>Shake ingredients in a cocktail shaker with ice, strain into a glass and serve.</desc>
+      <exits e='920' w='918' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='920'>
+      <name>Grim Reaper</name>
+      <desc>1 oz. Kahlua Coffee Liqueur</desc>
+      <desc>1 oz. Bacardi 151 Rum</desc>
+      <desc>1 dash Grenadine Syrup</desc>
+      <desc>Mix Kahlua Coffee Liqueur and Bacardi 151 Rum in an old fashioned glass, quickly add ice and pour Grenadine Syrup over the top to give an ice red tint, serve.</desc>
+      <exits e='921' w='919' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='921'>
+      <name>Gorilla Fart</name>
+      <desc>1 oz. Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>1 oz. Wild Turkey Bourbon Whiskey</desc>
+      <desc>1 oz. Crown Royal Canadian Whiskey</desc>
+      <desc>Shake and strain, pour into rocks glass, straight up.</desc>
+      <exits e='922' w='920' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='922'>
+      <name>Bahama Mama</name>
+      <desc>1 oz. Nassau Royale Rum</desc>
+      <desc>1 oz. Dark Rum</desc>
+      <desc>1 oz. Malibu Coconut Rum</desc>
+      <desc>1/2 oz. Grenadine Syrup</desc>
+      <desc>6 oz. Pineapple Juice</desc>
+      <desc>Shake all ingredients together with ice in a cocktail shaker, pour with ice into a hurricane glass and serve with an orange slice.</desc>
+      <exits e='923' w='921' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='923'>
+      <name>Burried Treasure</name>
+      <desc>1 oz. Captain Morgan Original Spiced Rum</desc>
+      <desc>1 oz. Goldschlager Cinnamon Schnapps</desc>
+      <desc>Pour the Captain Morgans Original Spiced Rum and Goldschlager Schnapps into a shot glass and serve, Also works best when screaming &quot;Arghh&quot; immediately after consumption.</desc>
+      <exits e='924' w='922' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='924'>
+      <name>Eliminator</name>
+      <desc>1/2 oz Jagermeister Herbal Liqueur</desc>
+      <desc>1/4 oz. Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>1/4 oz. Tequilla</desc>
+      <desc>1/2 tsp Bacardi 151 Rum</desc>
+      <desc>Pour Jagermeister into a shot glass, add Jack Daniel&apos;s Tennessee Whiskey, then the Tequilla, place a thin film of Bacardi 151 Rum on top, ignite, extinguish and serve.</desc>
+      <exits e='925' w='923' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='925'>
+      <name>Death Of A Virgin</name>
+      <desc>1-1/2 oz. Vodka</desc>
+      <desc>1-12/ oz. Peach Schnapps</desc>
+      <desc>1 oz. Lime Juice</desc>
+      <desc>Orange Juice</desc>
+      <desc>7-Up Soda</desc>
+      <desc>Pour Vodka, Schnapps and Lime Juice into a glass, add Orange Juice until glass is half filled, and fill completely with 7-Up Soda, stir well and serve.</desc>
+      <exits e='926' w='924' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='926'>
+      <name>Cinco De Mayo</name>
+      <desc>2-1/2 oz. White Tequilla</desc>
+      <desc>1 oz. Grenadine Syrup</desc>
+      <desc>1 oz. Rose&apos;s Lime Juice</desc>
+      <desc>Shake well with lots of ice, Strain glass, garnish with fresh lime wedges if desired, serve.</desc>
+      <exits e='927' w='925' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='927'>
+      <name>Car Bomb</name>
+      <desc>1 oz. Bailey&apos;s Irish Cream</desc>
+      <desc>1 Glass Guinness Stout</desc>
+      <desc>1 oz. Whiskey</desc>
+      <desc>Combine Bailey&apos;s Irish Cream and Whiskey in a shot glass, drop shot glass into a glass of Guiness Stout and drink quickly.</desc>
+      <exits e='928' w='926' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='928'>
+      <name>Captain&apos;s Mast</name>
+      <desc>1 oz. Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>1 oz. Jim Beam Bourbon Whiskey</desc>
+      <desc>1 oz. Jose Cuervo Especial Gold Tequilla</desc>
+      <desc>1 oz. Captain Morgan Original Spiced Rum</desc>
+      <desc>Pour all ingredients into a old fashioned glass, add 1 to 3 ice cubes, and serve.</desc>
+      <exits e='929' w='927' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='929'>
+      <name>Captain Jack Sparrow</name>
+      <desc>2 oz. Cabo Wabo Anejo Tequilla</desc>
+      <desc>1 oz. Captain Morgan Private Stock Dark Rum</desc>
+      <desc>3 oz. Minute Maid Limeade Soda</desc>
+      <desc>1 Splash Maraschino Cherry Juice</desc>
+      <desc>1/2 oz. 99 Oranges Orange Schnapps</desc>
+      <desc>2 Marashino Cherries</desc>
+      <desc>Drop the cherries and some ice into a highball glass, Pour the Cabo Wabo Anejo Tequilla, Captain Morgan Private Stock Dark Rum, Minute Maid Limeade and 99 Oranges Orange Schnapps into the glass, Add a splah of Maraschino Cherry Juice on top, and serve.</desc>
+      <exits e='930' w='928' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='930'>
+      <name>Intersection</name>
+      <desc>Here the toothpick, which appears to really be a large red plastic swizzle stick intersects at a north east by south westerly angle. The rim of the glass continues to the east and west.</desc>
+      <exits ne='867' e='931' sw='993' w='929' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='931'>
+      <name>Blue Hawaiian Screw</name>
+      <desc>1 oz. Vodka</desc>
+      <desc>1/2 oz Blue Curacao Liqueur</desc>
+      <desc>Fill with Pineapple Juice</desc>
+      <desc>Pour Vodka and Blue Curacao Liqueur into a large rocks or old fashioned glass filled with ice. Fill with Pineapple Juice, and serve.</desc>
+      <exits e='932' w='930' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='932'>
+      <name>Four Wheeler</name>
+      <desc>1-1/4 oz. Dark Rum</desc>
+      <desc>1 oz. Coconut Cream</desc>
+      <desc>2 oz. Orange Juice</desc>
+      <desc>2 oz. Pineapple Juice</desc>
+      <desc>Pour all ingredients into a blender with one scoop (half-cup) of crushed ice, blend well. Pour into a highball glass and serve.</desc>
+      <exits sw='995' w='931' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='983'>
+      <name>Jack Frost</name>
+      <desc>3/4 oz. Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>1/4 oz. Peppermint Schnapps</desc>
+      <desc>Stir together in a shot glass, and serve.</desc>
+      <exits se='1048' nw='918' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='993'>
+      <name>Hangover Corner</name>
+      <desc>As you drift along the swizzle stick you see a sign that indicates recipes to the southwest are known as hangover cures for when you have had just a bit too much the night before. You notice that the fine print at the bottom reads: The proprietors of Drunk take no responsibility for and make no promises that the afformentioned cures will work and have not been evaluated by the Galactic Hangover Association to cure or prevent any medical conditions.  ....Interesting.</desc>
+      <exits ne='930' sw='1056' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='995'>
+      <name>Backseat Boogie</name>
+      <desc>1 oz. Absolut Vodka</desc>
+      <desc>1 oz. Gin</desc>
+      <desc>1 part Ginger Ale</desc>
+      <desc>1 part Ocean Spray Cranberry Juice</desc>
+      <desc>Pour Absolut Vodka and Gin over ice in a collins glass, fill with equal parts of Ginger Ale and Ocean Spray Cranberry Juice, garnish with fruit and serve.</desc>
+      <exits ne='932' sw='1058' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1048'>
+      <name>Jack&apos;s Fruit Punch</name>
+      <desc>1-1/2 oz. Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>3 oz. Minute Maid Fruit Punch</desc>
+      <desc>3 oz. Sprite Soda</desc>
+      <desc>Shake ingredients with about a cup of ice, strain into a cocktail glass with or without ice (whatever you feel like) and serve. If not strong enough, make the harder version by doubling the Jack Daniel&apos;s Tennesee Whiskey.</desc>
+      <exits se='1113' nw='983' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1056'>
+      <name>Golden Hangover Cure</name>
+      <desc>2 oz Gold Tequila</desc>
+      <desc>1 oz Spiced Rum</desc>
+      <desc>1 oz Amaretto Almond Liqueur</desc>
+      <desc>1/2 Cup Coconut Milk</desc>
+      <desc>1 Cup Raspberry Juice</desc>
+      <desc>Blending Instructions: Pour raspberry juice into beer mug, then add tequlia, rum, and amaretto slowly. Add coconut milk and sprinkle with your favourite spices</desc>
+      <exits ne='993' sw='1119' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1058'>
+      <name>All Jacked Up</name>
+      <desc>1 oz. Jack Daniel&apos;s Tennessee Whiskey</desc>
+      <desc>1/3 oz. Sloe Gin</desc>
+      <desc>1/3 oz. Melon Liqueur</desc>
+      <desc>1/3 oz. Pineapple Juice</desc>
+      <desc>Chill is mixing tin and pour</desc>
+      <exits ne='995' sw='1121' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1113'>
+      <name>Jager Shaker</name>
+      <desc>1/2 oz. Bailey&apos;s Irish Cream</desc>
+      <desc>1/2 oz. Jagermeister Herbal Liqueur</desc>
+      <desc>1/2 oz. Kahlua Coffee Liqueur</desc>
+      <desc>1/2 oz. Water</desc>
+      <desc>Chill ingredients, mix together and serve in a shot glass.</desc>
+      <exits se='1178' nw='1048' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1118'>
+      <name>Basic Prarie Oyster</name>
+      <desc>1 whole raw egg</desc>
+      <desc>1 dash Worcestershire sauce</desc>
+      <desc>salt and freshly ground black pepper to taste</desc>
+      <desc>Carefully crack the egg into a glass without breaking the yolk. Season with sauce, salt and pepper, and down in one. The idea with this morning-after cocktail is to drink it without breaking the yolk.</desc>
+      <exits e='1119' s='1182' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1119'>
+      <name>Hangover Smoothee</name>
+      <desc>2 cups strawberries, shucked and chopped</desc>
+      <desc>1 cup milk</desc>
+      <desc>1 cup frozen yogurt (vanilla or strawberry)</desc>
+      <desc>6 ice cubes</desc>
+      <desc>1 banana (optional)</desc>
+      <desc>Toss everything into a blender and blend! The fructose helps metabolize the remaining alcohol in your system and gives you a boost of energy to get through the rough bits of the morning.</desc>
+      <exits ne='1056' s='1183' w='1118' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1121'>
+      <name>All American</name>
+      <desc>1 oz. Bourbon Whiskey</desc>
+      <desc>1 oz. Southern Comfort Peach Liqueur</desc>
+      <desc>2 oz. Coca-Cola</desc>
+      <desc>Serve with 2 ice cubes, you can vary the amount of Coca-Cola depending on how strong you want your drink to be.</desc>
+      <exits ne='1058' sw='1184' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1178'>
+      <name>Miami Vice</name>
+      <desc>5 oz. Bacardi 151 Rum</desc>
+      <desc>1 package Frozen Pina Colada Mix</desc>
+      <desc>1 package Frozen Daiquiri Mix</desc>
+      <desc>Mix Pina Colada with 2-1/2 oz. Bacardi 151 Rum</desc>
+      <desc>Mix Daiquiri Mix with 2-1/2 oz. Bacardi 151 Rum</desc>
+      <desc>While Frozen, add Pina Colada mix to a cocktail glass, add the Daquiri Mix on top, keeping it separated from the Pina Colada Mix, serve</desc>
+      <exits se='1243' nw='1113' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1182'>
+      <name>Buck&apos;s Fizz</name>
+      <desc>Here&apos;s the basic recipe, invented at the Buck&apos;s Club, London, in 1921</desc>
+      <desc>1 measure fresh orange juice, chilled</desc>
+      <desc>2 measures champagne, chilled</desc>
+      <desc>1 dash grenadine (optional) .</desc>
+      <desc>Simply pour the orange juice and champagne into a frosted glass. Add a dash of Grenadine if desired.</desc>
+      <exits n='1118' e='1183' sw='1245' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1183'>
+      <name>Hangover Eraser</name>
+      <desc>TO DRINK:</desc>
+      <desc>Tomato Juice</desc>
+      <desc>Tabasco sauce</desc>
+      <desc>Lemon Juice</desc>
+      <desc>1 measure of Vodka</desc>
+      <desc>TO EAT:</desc>
+      <desc>3 Servings of bacon</desc>
+      <desc>3 canned tomatoes</desc>
+      <desc>2 scrambled eggs</desc>
+      <desc>1 orange</desc>
+      <desc>Mix drink together and drink slowly while preparing food.  Eat the food rather slowly and take it easy, don&apos;t go back to bed, and drink lots of water.</desc>
+      <exits n='1119' w='1182' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1184'>
+      <name>2000 Flushes</name>
+      <desc>1 oz. Malibu Coconut Rum</desc>
+      <desc>1 oz. Vodka</desc>
+      <desc>1 splash Pineapple Juice</desc>
+      <desc>1 tsp. Blue Curacao Liqueur</desc>
+      <desc>In a shaker over ice, pour equal parts of Vodka and Malibu Coconut Rum, add splash of Pineapple Juice and Blue Curacao Liqueur (for color) shake and strain into shot glasses and serve.</desc>
+      <exits ne='1121' sw='1247' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1243'>
+      <name>Tequila Sunrise</name>
+      <desc>2 measures Tequila</desc>
+      <desc>Orange juice</desc>
+      <desc>2 dashes Grenadine</desc>
+      <desc>Pour tequila in a highball glass with ice, and top with orange juice. Stir. Add grenadine by tilting glass and pouring grenadine down side by flipping the bottle vertically very quickly. The grenadine should go straight to the bottom and then rise up slowly through the drink. Garnish stirrer, straw and cherry-orange.</desc>
+      <exits se='1308' nw='1178' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1245'>
+      <name>Hair of the Dog Bloody Mary</name>
+      <desc>1 1/2 oz Vodka</desc>
+      <desc>3 oz Tomato juice</desc>
+      <desc>1 dash Lemon juice</desc>
+      <desc>1/2 tsp Worcestershire sauce</desc>
+      <desc>2-3 drops Tabasco sauce</desc>
+      <desc>1 dash black pepper</desc>
+      <desc>1 wedge Lime</desc>
+      <desc>1 half celery stalk</desc>
+      <desc>Shake all ingredients (except lime wedge and celery) with ice and strain into an old-fashioned glass over ice cubes. Add salt and pepper to taste. Add the wedge of lime and celery stick and drink it while you cook some greasy sausage or bacon and a starch like biscuits or grits.</desc>
+      <exits ne='1182' out='1757' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1247'>
+      <name>357 Magnum</name>
+      <desc>1 oz. Bacardi 151 Rum</desc>
+      <desc>1 oz. Vodka</desc>
+      <desc>2 oz. Ameretto Almond Liqueur</desc>
+      <desc>2-1/2 oz. 7-Up Soda</desc>
+      <desc>Pour the Bacardi 151 Rum into a highball glass filled with ice cubes, add the Vodka and Ameretto. Fill with 7-Up and serve.</desc>
+      <exits ne='1184' sw='1310' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1308'>
+      <name>5 o&apos;clock Somewhere</name>
+      <desc>1 oz. Dark Rum</desc>
+      <desc>1 oz. Light Rum</desc>
+      <desc>splash Grenadine</desc>
+      <desc>Orange Juice</desc>
+      <desc>Pineapple Juice</desc>
+      <desc>Ice</desc>
+      <desc>Mix rum, grenadine and juice and either pour over ice in a hurricane glass or mix in blender for blended drink.</desc>
+      <exits se='1373' nw='1243' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1310'>
+      <name>B-52</name>
+      <desc>1 oz. Grand Marnier Orange Liqueur</desc>
+      <desc>3 oz. Kahlua Coffee Liqueur</desc>
+      <desc>1/2 oz. Bailey&apos;s Irish Cream</desc>
+      <desc>Pour the Grand Marnier, Kahlua Coffee Liqueur and Bailey&apos;s Irish Cream into a cocktail shaker half-filled with ice cubes. Shake well, strain into a cocktail glass, and serve.</desc>
+      <exits ne='1247' sw='1373' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1373'>
+      <name>Y Junction</name>
+      <desc>Here the glazsteel divides into three corridors. The one to the South leads back off to the LP while the tube to the northeast and the northwest lead to different tasting stations. Each is set up with a small sample of each drink either simu-hol for those underage or non-drinkers, or the real deal for those who are a bit more adventurous and not afraid of getting tipsy.</desc>
+      <exits ne='1310' s='1437' nw='1308' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1437'>
+      <name>Stem</name>
+      <desc>A long narrow corridor made of glazsteel runs in a North / South orientation. You can just make out the end of the tunnel to the north at some kind of intersection. The walls are completley transparent and the lack of gravity gives a illusion of space walking without the cumbersome suit</desc>
+      <exits n='1373' s='1501' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1501'>
+      <name>Stem</name>
+      <desc>A long narrow corridor made of glazsteel runs in a North / South orientation.  The walls are completley transparent and the lack of gravity gives a illusion of space walking without the cumbersome suit.</desc>
+      <exits n='1437' s='1565' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1565'>
+      <name>Stem</name>
+      <desc>A long narrow corridor continues made of glazsteel runs in a North / South orientation.  The walls are completley transparent and the lack of gravity gives a illusion of space walking without the cumbersome suit. You wonder if this tube will ever end as it seems to move on to infinity in both directions.</desc>
+      <exits n='1501' s='1629' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1629'>
+      <name>Stem</name>
+      <desc>A long narrow corridor made of glazsteel runs in a North / South orientation.  The walls are completley transparent and the lack of gravity gives a illusion of space walking without the cumbersome suit.</desc>
+      <exits n='1565' s='1693' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1693'>
+      <name>Stem</name>
+      <desc>A long narrow corridor made of glazsteel runs in a North / South orientation.  The walls are completley transparent and the lack of gravity gives a illusion of space walking without the cumbersome suit.</desc>
+      <exits n='1629' s='1757' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1757'>
+      <name>Landing Base</name>
+      <desc>The base of the monstrous martini glass that orbits Recipe also serves as its Landing Point. Narrow tunnels can be seen running to the South West and to the North and the sound of busy traders can be heard to the South East.</desc>
+      <exits n='1693' se='1822' sw='1820' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1818' flags='b'>
+      <name>Office</name>
+      <desc>Space for a FO office or other suitable living quarters.</desc>
+      <exits e='1819' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1819'>
+      <name>Hallway</name>
+      <desc>Here the Glazsteel tube leads east to an office or west towards the Traders&apos; Lounge and Exchange.</desc>
+      <exits e='1820' w='1818' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1820'>
+      <name>Passageway</name>
+      <desc>Three directions are possible at this juncture, one can either travel west to an office, east to the traders lounge, or northeast to get back to the landing pad.</desc>
+      <exits ne='1757' e='1821' w='1819' up='1757' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1821' flags='b'>
+      <name>Traders&apos; Lounge</name>
+      <desc>Traders here can be seen lounging in recliners using remote checkers to keep track of their futures and prices throughout the galaxy. Huge stuffed couches line the walls with an excellent view of the planet below and</desc>
+      <exits e='1822' w='1820' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1822' flags='e'>
+      <name>Exchange</name>
+      <desc>As you look around you see traders of all shapes and sizes at the various consoles sampling various cocktails from the large menu as they buy and sell stocks and futures. A waitress walks up to you and asks for your order and shows you to an empty console.</desc>
+      <exits e='1823' w='1821' nw='1757' up='1757' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1823'>
+      <name>Hallway</name>
+      <desc>Here the Glazsteel tube leads east to an office or west towards the Exchange.</desc>
+      <exits e='1824' w='1822' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1824' flags='b'>
+      <name>Office Space</name>
+      <desc>Free empty office space for FOs.</desc>
+      <exits w='1823' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

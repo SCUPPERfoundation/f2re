@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+
+<event-list version='17'>
+
+ <category name='cigar'>
+
+  <section name='buy'>
+
+   <event num='1'>
+    <comment>buy cigar routine</comment>
+    <createobject where='inventory' home-map='home' id='obj1_cigar'/>
+    <message type='text' where='com' who='individual'>You take the cigar and hand ovr the 10 groat price, you look round to see if anyone has noticed, relieved that no one has, you carefully conceal it.</message>
+   </event>
+
+  </section>
+
+  <section name='drop'>
+
+   <event num='1'>
+    <comment>Drop Cigar - Object command trigger</comment>
+    <destroyobject where='inventory' map='home' id-name='obj1_cigar'/>
+    <message type='text' where='com' who='individual'>Before the cigar hits the floor, it disintegrates scattering around your feet, a cleaning droid rushes in and clears the ghastly mess, before rushing off to whence it came.</message>
+   </event>
+
+   <event num='2'>
+    <comment>eat Cigar - Object command trigger</comment>
+    <destroyobject where='inventory' map='home' id-name='obj1_cigar'/>
+    <message type='text' where='com' who='individual'>You take a little nibble off the end and realise that this cigar is disgusting, so you spit it out and throw the cigar away, before the cigar hits the floor, it disintegrates scattering around your feet, a cleaning droid rushes in and clears the ghastly mess, before rushing off to whence it came.</message>
+   </event>
+
+  </section>
+
+  <section name='smoke'>
+
+   <event num='1'>
+    <comment>Smoke Cigar - Object command Trigger</comment>
+    <changestat who='individual' stamina='-20' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='objects.cigar.1'/>
+    <move what='player' who='individual' loc='1226'/>
+    <message type='single' where='com' who='individual' lo='objects.cigar.2'/>
+    <destroyobject where='inventory' map='cloudbase' id-name='obj1_cigar'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='flump'>
+
+  <section name='chat'>
+
+   <event num='1'>
+    <comment>variable letter = quest responses loc 523</comment>
+    <match phrase='hello' id-name='obj1_flump' lo='flump.chat.1'/>
+    <match phrase='who' id-name='obj1_flump' lo='flump.chat.2'/>
+    <match phrase='flump' id-name='obj1_flump' lo='flump.chat.2'/>
+    <match phrase='where' id-name='obj1_flump' lo='flump.chat.3'/>
+    <match phrase='bar' id-name='obj1_flump' lo='flump.chat.3'/>
+    <match phrase='wisp' id-name='obj1_flump' lo='flump.chat.4'/>
+    <match phrase='cumulus' id-name='obj1_flump' lo='flump.chat.5'/>
+    <match phrase='cloudbase' id-name='obj1_flump' lo='flump.chat.6'/>
+    <match phrase='nimbus' id-name='obj1_flump' lo='flump.chat.7'/>
+    <match phrase='cloudarian' id-name='obj1_flump' lo='flump.chat.8'/>
+    <match phrase='cloud' id-name='obj1_flump' lo='flump.chat.9'/>
+    <match phrase='challenge' id-name='obj1_flump' lo='flump.chat.10'/>
+    <match phrase='puzzle' id-name='obj1_flump' lo='flump.chat.10'/>
+    <match phrase='quest' id-name='obj1_flump' lo='flump.chat.10'/>
+    <match phrase='mission' id-name='obj1_flump' lo='flump.chat.10'/>
+    <match phrase='task' id-name='obj1_flump' lo='flump.chat.10'/>
+    <match phrase='cigar' id-name='obj1_flump' lo='flump.chat.11'/>
+    <match phrase='buy cigar' id-name='obj1_flump' event='flump.talk.5' lo='flump.chat.12'/>
+    <match phrase='grab' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='get' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='take' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='push' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='pull' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='touch' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='hit' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='hit' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='steal' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <nomatch id-name='obj1_flump' lo='flump.chat.14'/>
+   </event>
+
+   <event num='2'>
+    <comment>variable letter = found responses loc 523</comment>
+    <match phrase='hello' id-name='obj1_flump' lo='flump.chat.15'/>
+    <match phrase='flump' id-name='obj1_flump' lo='flump.chat.16'/>
+    <match phrase='where' id-name='obj1_flump' lo='flump.chat.17'/>
+    <match phrase='wisp' id-name='obj1_flump' lo='flump.chat.18'/>
+    <match phrase='cumulus' id-name='obj1_flump' lo='flump.chat.19'/>
+    <match phrase='cloudbase' id-name='obj1_flump' lo='flump.chat.20'/>
+    <match phrase='nimbus' id-name='obj1_flump' lo='flump.chat.21'/>
+    <match phrase='cloud' id-name='obj1_flump' lo='flump.chat.21'/>
+    <match phrase='challenge' id-name='obj1_flump' lo='flump.chat.22'/>
+    <match phrase='puzzle' id-name='obj1_flump' lo='flump.chat.22'/>
+    <match phrase='quest' id-name='obj1_flump' lo='flump.chat.22'/>
+    <match phrase='mission' id-name='obj1_flump' lo='flump.chat.22'/>
+    <match phrase='task' id-name='obj1_flump' lo='flump.chat.22'/>
+    <match phrase='idol' id-name='obj1_flump' lo='flump.chat.23'/>
+    <match phrase=' buy cigar' id-name='obj1_flump' event='flump.talk.5' lo='flump.chat.12'/>
+    <match phrase='grab' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='get' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='take' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='push' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='pull' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='touch' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='hit' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='hit' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='steal' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='curator' id-name='obj1.flump' lo='flump.talk.24'/>
+    <match phrase='museum' id-name='obj1_flump' lo='flump.talk.25'/>
+    <nomatch id-name='obj1_flump' lo='flump.chat.14'/>
+   </event>
+
+   <event num='3'>
+    <comment>variable letter = done responses loc 523</comment>
+    <match phrase='hello' id-name='obj1_flump' lo='flump.chat.26'/>
+    <match phrase='flump' id-name='obj1_flump' lo='flump.chat.26'/>
+    <match phrase='where' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='wisp' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='cumulus' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='cloudbase' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='nimbus' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='cloud' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='challenge' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='puzzle' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='quest' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='mission' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='task' id-name='obj1_flump' lo='flump.chat.27'/>
+    <match phrase='idol' id-name='obj1_flump' lo='flump.chat.28'/>
+    <match phrase=' buy cigar' id-name='obj1_flump' event='flump.talk.5' lo='flump.chat.12'/>
+    <match phrase='grab' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='get' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='take' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='push' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='pull' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='touch' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='hit' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='hit' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='steal' id-name='obj1_flump' event='flump.talk.4' lo='flump.chat.13'/>
+    <match phrase='curator' id-name='obj1.flump' lo='flump.talk.28'/>
+    <match phrase='museum' id-name='obj1_flump' lo='flump.talk.28'/>
+    <nomatch id-name='obj1_flump' lo='flump.chat.14'/>
+   </event>
+
+   <event num='4'>
+    <comment>variable letter not set responses loc 523</comment>
+    <message type='text' where='com' who='individual'>Flump looks you up and down with contempt and ignores you</message>
+   </event>
+
+  </section>
+
+  <section name='check'>
+
+   <event num='1'>
+    <comment>checks variable letter for response options loc 523</comment>
+    <checkvariable name='cloud' key='flump' value='done' equals='flump.chat.3'/>
+    <checkvariable name='cloud' key='letter' value='quest' equals='flump.chat.1'/>
+    <checkvariable name='cloud' key='letter' value='found' equals='flump.chat.2' not-equal='flump.chat.14'/>
+   </event>
+
+  </section>
+
+  <section name='talk'>
+
+   <event num='1'>
+    <comment>flump sales pitch - loc 523 - object command trigger</comment>
+    <message type='text' where='com' who='individual'>Hey you want cigars, I got em! 10 groats apiece best you can buy anywhere and you can trust me on that!</message>
+   </event>
+
+   <event num='2'>
+    <comment>flump inappropriate advance - loc 523 - object command trigger</comment>
+    <changestat who='individual' stamina='-10' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>Flump sidesteps your clumsy advance, he clearly thinks you are yet another predator trying to steal his wares, in a deft movement he punches you square on the jaw, you see stars for a moment before you regain your senses. Better rethink your approach, that blow on the chin just took 10 stamina points away!!!!</message>
+   </event>
+
+   <event num='3'>
+    <comment>flump sells cigar - loc 523 - object command trigger</comment>
+    <message type='text' where='com' who='individual'>Flump reaches deep into his coat and pulls out a cigar, as he passes it to you he deftly removes 10 groats from your balance in exchange.</message>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='523' id='obj1_cigar'/>
+   </event>
+
+   <event num='4'>
+    <comment>flump inappropriate advance - loc 523 - object command trigger</comment>
+    <message type='text' where='com' who='individual'>Flump sidesteps your unwelcome advance, he clearly thinks you are yet another predator trying to steal his wares, in a deft movement he hits you square on the jaw making you see stars momentarily</message>
+    <changestat who='individual' stamina='-10' change='add' cur-max='current'/>
+   </event>
+
+   <event num='5'>
+    <comment>flump sells cigar - loc 523 - object command trigger</comment>
+    <message type='text' where='com' who='individual'>Flump reaches deep into his coat and pulls out a cigar, as he passes it to you he deftly removes 10 groats from your balance in exchange.</message>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='523' id='obj1_cigar'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='test'>
+
+  <section name='variable'>
+
+   <event num='1'>
+    <comment>testing purposes, change letter variable to found - for flump responses</comment>
+    <setvariable name='cloud' key='letter' value='found' temporary='true'/>
+    <message type='text' where='com' who='individual'>Variable Cloud.letter set to FOUND</message>
+   </event>
+
+   <event num='2'>
+    <comment>testing purposes, change letter variable to done - for flump responses</comment>
+    <setvariable name='cloud' key='letter' value='done' temporary='true'/>
+    <message type='text' where='com' who='individual'>Variable Cloud.letter set to DONE</message>
+   </event>
+
+   <event num='3'>
+    <comment>testing purposes, change letter variable to quest - for flump responses</comment>
+    <setvariable name='cloud' key='letter' value='quest' temporary='true'/>
+    <message type='text' where='com' who='individual'>Variable Cloud.letter set to QUEST</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

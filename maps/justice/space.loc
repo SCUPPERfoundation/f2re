@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Justice Space' version='8' editor='standard'>
+
+   <location num='1497'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1693' flags='s'>
+      <name>Talionis Orbit</name>
+      <desc>Welcome to Talionis.  We represent a faction within Justice who believe that society&apos;s good depends upon retribution.  If you wrong someone, you shall be repaid in kind.  An eye for an eye.  Take caution in your shuttle ride to the surface and enjoy your visit to a society where right prevails by destroying wrong.</desc>
+      <exits se='1758'/>
+   </location>
+
+   <location num='1695' flags='sp'>
+      <name>Ius Orbit</name>
+      <desc>Welcome to Ius.  We represent a faction within Justice who believe that society&apos;s good depends upon fairness.  Please enjoy your shuttle to the surface and enjoy your visit to the perfect society.</desc>
+      <exits sw='1758'/>
+   </location>
+
+   <location num='1758' flags='slp'>
+      <name>Justice System Link</name>
+      <desc>Welcome to Justice.  Your entry indicates a desire to resolve a conflict or dispute.  You must choose the manner of resolution.  Choose wisely.  The factions of both Ius and Talionis co-exist in the Justice System.</desc>
+      <exits ne='1695' nw='1693'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<fed2-map title='Cooper Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='sp'>
+      <name>Coopersville System and Orbit.</name>
+      <desc>   Below you lies the planet of Coopersville.  From high Up in space you can see the continents as the planet rotates in its celestual orbit.  You may board your shuttle and proceed to land on the planets surface.</desc>
+   </location>
+
+   <location num='328' flags='slp'>
+      <name>Cooper Link and Coopersville Orbit.</name>
+      <desc>   Below you lies the planet of Coopersville.  From high up in space you can see the continents as the planet rotates in its celestual orbit.  You may Board your shuttle and proceed to land on the planets surface.</desc>
+      <exits no-exit='noexit.space.1'/>
+   </location>
+
+</fed2-map>

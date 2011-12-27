@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<fed2-map title='Hunt' version='1.00' from='143' to='Sol.Sol Space.2701'>
+
+   <location num='0'>
+      <name>Hunt storeroom</name>
+      <desc>   All around are shelves full of the items used in the various games played on the asteroid...</desc>
+   </location>
+
+   <location num='143'>
+      <name>Hunt landing pad</name>
+      <desc>   The bare rock of the asteroid has been levelled off to make a large flat area. The cracks and crevices have been filled in, so that shuttles can land safely. On all sides except one, there's nothing to be seen except more bare rock. The exception is what looks like a free-standing doorway which has been erected to the south.</desc>
+      <exits s='207'/>
+   </location>
+
+   <location num='207'>
+      <name>Portal</name>
+      <desc>   Imagine a door frame - two tall straight sides with a cross piece along the top - standing on its own, without any walls. If you look around the sides all you can see is the rocky surface of the asteroid. But look through the frame, into the space where the door should be, and a shimmering curtain of light beckons you through. Step in and see what lies beyond...</desc>
+      <desc>   Or go north back to your shuttle.</desc>
+      <exits n='143' in='328'/>
+   </location>
+
+   <location num='328'>
+      <name>Portal</name>
+      <desc>   The doorframe, or whatever it is, looks identical to the one on the landing pad, in fact it could be the other side of the same structure. If you needed proof of that, step in and find yourself back there.</desc>
+      <desc>   Of course, that assumption is rather overturned by the fact that you're no longer on the rocky surface of the asteroid. Instead, you're standing on the west side of a paved courtyard.</desc>
+      <exits e='329' in='207'/>
+   </location>
+
+   <location num='329'>
+      <name>Courtyard</name>
+      <desc>   This courtyard feels like a neutral space; there's nothing about it that places it in any particular time or space. The ground is paved with regularly-cut stone, and the buildings that surround the open space are bland and featureless. Most of them have their doors firmly closed. The only thing you can tell is that you're not on a rocky, airless asteroid any more - above you, the sky is blue and the sun is shining, just as it would on Earth.</desc>
+      <desc>   East is the party room, and a large banner saying "Welcome!" hangs (slightly crooked) over the open doors. South is another open door, with a sign next to it that says, "Hunt Central - this way to the Arena."</desc>
+      <exits e='330' s='393' w='328'/>
+   </location>
+
+   <location num='330'>
+      <name>Easter Eggstravaganza Party Room</name>
+      <desc>   The room has been decorated for this eggsellent Easter party with pictures of bunnies and chicks on the wall, all looking fluffy and oh-so-cute. Around the walls, huge wicker easter baskets filled with bright green fake grass make eggstremely comfy chairs - although they aren't over easy to get out of again.</desc>
+      <desc>   The center of the room is dominated by a chocolate fountain, with the molten brown chocolately goodness gushing out of a spout at least ten foot off the ground (and that's no eggsaggeration). It flows down to a pool on the floor, swirling around and around making interesting patterns. A droid tries to stop people from actually climbing into the fountain, but that simply acts as a challenge, encouraging people to try to evade his eye and wade into the chocolate.</desc>
+      <desc>   A waitdroid is handing around free food and drink - just help yourself!</desc>
+      <desc>   The eggsit, should you want to leave this eggsellent party, is west.</desc>
+      <exits w='329'/>
+   </location>
+
+   <location num='393'>
+      <name>Hunt Central</name>
+      <desc>   This is the room from which all activity on Hunt is controlled, and as you look around at the machinery you finally understand that the inside of the small rocky body is in fact one giant holo suite, and so can be made to look - and feel - like anything at all. How ingenious! No wonder it's in such demand for special parties, scavenger hunts, hide and seek, and other games.</desc>
+      <desc>   Technicians hunch over monitors, keeping an eye on activities in all parts of the hunt arena, occasionally tweaking a control to make sure everything runs smoothly. Creative types have their own consoles where they develop new modules so that visitors can experience different scenarios. One furry alien has several bald patches on his body where, overcome by the frustratings of writer's block, he has been pulling out handfuls of hair.</desc>
+      <desc>   A shimmering portal to the south leads to the hunt arena, but it is guarded by a very large security guard who won't let you through unless you give him today's password.</desc>
+      <exits n='329' s='457'/>
+   </location>
+
+   <location num='457'>
+      <name>Dummy location</name>
+      <desc>   You should not be able to get into this room. If you are here, something has gone horribly wrong, so please email feedback@ibgames.net and tell Hazed about it.</desc>
+      <exits n='393'/>
+      <events enter='moves.keepout.1'/>
+   </location>
+
+   <location num='914'>
+      <name>Clearing</name>
+      <desc>   A small grassy area is surrounded on all sides by bushes, which are tangled together so tightly that they form an almost impenetrable wall. Mostly. There is a narrow path leading southwest, and a small opening between the bushes to the north which is filled with the familiar shimmering of a portal. That's the way back to Hunt Central.</desc>
+      <exits sw='977' in='393'/>
+   </location>
+
+   <location num='977'>
+      <name>Narrow path</name>
+      <desc>   The path through the bushes bends from the south to the northeast. Little white flowers dot the green of the leaves, and give off a delicate floral scent which is redolent of springtime on Earth.</desc>
+      <exits ne='914' s='1041'/>
+   </location>
+
+   <location num='1041'>
+      <name>Tuffets</name>
+      <desc>   The ground is uneven here, raised up into numerous little humps, lumps and bumps, so that you have to be careful to pick your way between them. Some of them look as if they have been sat upon; a discarded bowl which once held some kind of milk product has been left on top of one of the tuffets, and a spider's web covered with dew drops glimmers in the bright sunshine.</desc>
+      <desc>   The path leads northwards through some bushes, and southeast into a meadow.</desc>
+      <exits n='977' se='1106'/>
+   </location>
+
+   <location num='1047'>
+      <name>Treehouse</name>
+      <desc>   Balanced precariously between two branches of the oak tree, somebody has contructed a rather ramshackle treehouse. The only clue as to who lives here is the large pile of nuts in the corner, and the road safety sign propped against a wall.</desc>
+      <desc>   A rope will allow you to climb down.</desc>
+      <exits down='1111'/>
+   </location>
+
+   <location num='1106'>
+      <name>Meadow</name>
+      <desc>   The grass grows thick in this meadow, never having known the violent touch of a lawnmower. It would be a good place for predators to hide, if there were any, but don't worry because there almost certainly aren't any so you are absolutely safe. Probably.</desc>
+      <desc>   You're currently in the northeast corner of the square-ish meadow, and a path leads from the corner to a rougher area of grassland.</desc>
+      <exits e='1107' se='1171' s='1170' nw='1041'/>
+   </location>
+
+   <location num='1107'>
+      <name>Meadow</name>
+      <desc>   The grass in the northeast corner of this meadow is full of poppies, their bright red petals forming splodges of colour against the green. A low buzzing fills the air; after a moment you realize it comes from the large bumble bees which lazily fly around, occasionally landing on a flower to collect nectar and distribute pollen.</desc>
+      <exits s='1171' sw='1170' w='1106'/>
+   </location>
+
+   <location num='1109'>
+      <name>Up the tree</name>
+      <desc>   You have gone about as high as it's safe to go; above you, the branches are not strong enough to bear your weight. Right here they are thick and sturdy; in fact you could easily walk along the branch which stretches out to the east.</desc>
+      <exits e='1110' down='1173'/>
+   </location>
+
+   <location num='1110'>
+      <name>Branch</name>
+      <desc>   The broad branch isn't quite wide enough to allow you to stroll along it in a carefree manner, but you can go further east quite safely so long as you move slowly. West takes you back to the trunk.</desc>
+      <exits e='1111' w='1109'/>
+   </location>
+
+   <location num='1111'>
+      <name>End of the branch</name>
+      <desc>   The branch splits into lots of smaller twigs - literally branching out in all directions - so you can't go any further east. You can move west back towards the trunk, or you can take advantage of the rope which dangles in front of you, and climb up to... well, who know where?</desc>
+      <exits w='1110' up='1047'/>
+   </location>
+
+   <location num='1114'>
+      <name>Roof</name>
+      <desc>   Climbing through the skylight, you find yourself on the flat roof of the hatchery. But it wasn't really worth the climb; there's nothing interesting up here.</desc>
+      <exits down='1177'/>
+   </location>
+
+   <location num='1170'>
+      <name>Meadow</name>
+      <desc>   Here in the southwest corner of the grassy meadow, lots of different varieties of flowers make a cascade of color that is almost dazzling - blue and white and yellow and pink and purple. Most of the flowers wouldn't bloom at the same time if this were a real meadow on Earth, but who cares - it looks great as it is!</desc>
+      <exits n='1106' ne='1107' e='1171'/>
+   </location>
+
+   <location num='1171'>
+      <name>Meadow</name>
+      <desc>   Here in the southeast corner of the meadow, it's not just the grass that has splodges of color - the air is filled with irridescent butterflies, flitting from blossom to blossom. One large white butterfly lands on your head for a moment, mistaking you for a flower, but when it can't find any nectar it flies off again.</desc>
+      <desc>   A path leads south into a wood.</desc>
+      <exits n='1107' s='1235' w='1170' nw='1106'/>
+   </location>
+
+   <location num='1173'>
+      <name>Up the tree</name>
+      <desc>   The mighty oak's branches seem to welcome you as you scale them. You can continue up into the leafy canopy, or jump down to the ground.</desc>
+      <exits up='1109' down='1237'/>
+   </location>
+
+   <location num='1177'>
+      <name>Hatchery</name>
+      <desc>   The air is filled with a "cheep, cheep, cheep" sound, which comes from the throats of thousands of tiny baby chicks. They are yellow and fluffy and so very cute. This where the Easter Bunny's chickens, the ones that lay the chocolate eggs, are born and kept until they are old enough to be moved to the egg farm.</desc>
+      <desc>   The door in the southwest wall leads out to the road. A ladder propped against the far wall leads up to a skylight.</desc>
+      <exits sw='1240' up='1114'/>
+   </location>
+
+   <location num='1235'>
+      <name>Wood</name>
+      <desc>   Birdsong fills the air as you follow the path through the wood, which splits here giving you a choice of three directions: north, southeast and soutwest.</desc>
+      <exits n='1171' se='1300' sw='1298'/>
+   </location>
+
+   <location num='1237'>
+      <name>Oak tree</name>
+      <desc>   The edge of the forest is mostly populated with young trees, except for this mightly oak which stands majestically, towering over them all, its branches spreading out in all directions, its leaves making the light and shade dapple on the ground. It's the sort of tree that is crying out to be climbed.</desc>
+      <desc>   When you're done admiring this magnificent tree, go south.</desc>
+      <exits s='1301' up='1173'/>
+   </location>
+
+   <location num='1238'>
+      <name>Road</name>
+      <desc>   This rough road comes to a stop at the edge of a wood which is to the southwest. East, it leads towards some buildings.</desc>
+      <exits e='1239' sw='1301'/>
+   </location>
+
+   <location num='1239'>
+      <name>Road</name>
+      <desc>   The gravel-covered road runs in a straight line from the western wood to the eastern buildings. Bushes line the road, stopping you from seeing what lies on either side.</desc>
+      <exits e='1240' w='1238'/>
+   </location>
+
+   <location num='1240'>
+      <name>Road</name>
+      <desc>   The road bends from the west to the southeast here. A long, low building lies to the northeast.</desc>
+      <exits ne='1177' se='1305' w='1239'/>
+   </location>
+
+   <location num='1297'>
+      <name>Wood</name>
+      <desc>   The green light is dim, the path is narrow, and it winds southwest and east between the thickly-clustered trees. A cuckoo calls softly from somewhere above you.</desc>
+      <exits e='1298' sw='1360'/>
+   </location>
+
+   <location num='1298'>
+      <name>Wood</name>
+      <desc>   The trees are close together here, their canopies blotting out the sky so that only a faint, dim, green light reaches the ground. Following the path as it bends from the west to the northeast is like walking through a green tunnel.</desc>
+      <exits ne='1235' w='1297'/>
+   </location>
+
+   <location num='1300'>
+      <name>Wood</name>
+      <desc>   You are close to the edge of the wood and the trees are not very old, some of them mere saplings that may, one day, aspire to become proper, grown-up trees. The path wends its way northwest and east.</desc>
+      <exits e='1301' nw='1235'/>
+   </location>
+
+   <location num='1301'>
+      <name>Edge of the wood</name>
+      <desc>   A path leads west into the woods, a road leads northeast towards civilization (of sorts), and a trail leads southeast to a grassy area. You can also walk a little way north towards a large oak tree. So you're spoilt for choice!</desc>
+      <exits n='1237' ne='1238' se='1366' w='1300'/>
+   </location>
+
+   <location num='1305'>
+      <name>Road</name>
+      <desc>   The country road curves gently from the northwest to the south. A very interesting smell, and a great deal of noise, comes from a large building to the east.</desc>
+      <exits e='1306' s='1369' nw='1240'/>
+   </location>
+
+   <location num='1306'>
+      <name>Egg farm</name>
+      <desc>   Here is where the Easter Bunny's chocolate eggs come from. Rows and rows of perches allow hundreds and hundreds of chickens to perch in reasonable comfort above troughs of food from which they help themselves. Each of them lays one egg every hour, and the eggs land on a conveyor belt which takes them through a door to the east.</desc>
+      <desc>   The door to the outside is west.</desc>
+      <exits e='1307' w='1305'/>
+   </location>
+
+   <location num='1307'>
+      <name>Egg wrapping room</name>
+      <desc>   The chocolate eggs that have been laid by the very special choccy chickies are wrapped in gold foil by specially trained droids, then placed in a transporter unit from which they are teleported to the magic basket which the Easter Bunny carries, so he can deliver them to children throughout the Galaxy. How clever!</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='1306'/>
+   </location>
+
+   <location num='1360'>
+      <name>Wood</name>
+      <desc>   The path gives a sharp turn here, from the northeast to the southeast. It's dark and quite damp here, and fungus grows around the foot of the trees - but don't worry, it's not the unpleasant, sinister kind, but nice, harmless, edible mushrooms. At least, they look like the edible kind... best leave them alone, just in case.</desc>
+      <exits ne='1297' se='1425'/>
+   </location>
+
+   <location num='1361'>
+      <name>Wood</name>
+      <desc>   The trees are too thick to go any further; you'll have to return to the clearing, which lies to the south.</desc>
+      <exits s='1425'/>
+   </location>
+
+   <location num='1362'>
+      <name>Wood</name>
+      <desc>   The trees are too thick to go any further; you'll have to return to the clearing, which lies to the southwest.</desc>
+      <exits sw='1425'/>
+   </location>
+
+   <location num='1364'>
+      <name>Riverbank</name>
+      <desc>   The river flows onwards but the bank becomes too steep to walk along; you will have to return southeast. As if to reinforce this, the daffodils on the bank have been planted deliberately so that the pattern of the flowers spells out letters. They say, "Dead End". And they are right!</desc>
+      <exits se='1429'/>
+   </location>
+
+   <location num='1366'>
+      <name>Grassy knoll</name>
+      <desc>   This gently rolling, grass-covered hill leads south towards a riverbank and northwest to a wood. Don't worry, it's quite safe, there are no snipers here. There are plenty of flowers, though: small white daisies and delicate yellow primroses which stud the grass with little spots of color.</desc>
+      <exits s='1430' nw='1301'/>
+   </location>
+
+   <location num='1368'>
+      <name>Easter Bunny's house</name>
+      <desc>   The bunny may be great at dishing out chocolate eggs to everybody he meets, but at housework, he's a slob. This place is a real mess; the table is piled up with dirty plates, opened cans of beans, half-eaten ready-meals, broken biscuits and discarded fruit peelings. The floor is just covered with unnameable filth. Somewhere in all this is his bed, and it looks as if the bedding hasn't been washed for months. Clearly, the bunny is a bachelor!</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='1369'/>
+   </location>
+
+   <location num='1369'>
+      <name>Road</name>
+      <desc>   The road runs north, towards the egg farm and hatchery, and southeast to a pond. West is the Easter Bunny's house.</desc>
+      <exits n='1305' se='1434' w='1368'/>
+   </location>
+
+   <location num='1424'>
+      <name>Wood</name>
+      <desc>   The trees are too thick to go any further; you'll have to return to the clearing, which lies to the east.</desc>
+      <exits e='1425'/>
+   </location>
+
+   <location num='1425'>
+      <name>Woodland clearing</name>
+      <desc>   The trees have drawn back, leaving a roughly circular patch of ground open to the sky. Taking advantage of the light, the grass grows thick and tall here. You can push your way through the trees in just about any direction.</desc>
+      <exits n='1361' ne='1362' e='1426' se='1490' s='1489' sw='1488' w='1424' nw='1360'/>
+   </location>
+
+   <location num='1426'>
+      <name>Wood</name>
+      <desc>   The trees are too thick to go any further; you'll have to return to the clearing, which lies to the west.</desc>
+      <exits w='1425'/>
+   </location>
+
+   <location num='1427'>
+      <name>Bird's nest</name>
+      <desc>   You have climbed up into a nest which must belong to a very large bird, since you can fit quite comfortably in it. Whatever type of bird the owner is, it's one of those that collects shiny things, because there's all kinds of glittering junk in the bottom of the nest; bits of silver foil, old bottle caps, an old cheap chain, bits of broken glass, even a tiny hand mirror.</desc>
+      <desc>   Considering the likely size of the bird that lives here, you probably don't want to be here when it comes home.</desc>
+      <exits down='1491'/>
+   </location>
+
+   <location num='1429'>
+      <name>Riverbank</name>
+      <desc>   Giving a gentle murmur as it flows over rocks and pebbles, the river curves from the northwest to the east, as does the bank. The grass has been planted with daffodils which are in full flower, the bright yellow trumpets of the blooms forming random spirals of color.</desc>
+      <exits e='1430' nw='1364'/>
+   </location>
+
+   <location num='1430'>
+      <name>Riverbank</name>
+      <desc>   A gentle river meanders its way east and west, and you can follow the bank in either direction or walk up a gentle hill to the north.</desc>
+      <exits n='1366' e='1431' w='1429'/>
+   </location>
+
+   <location num='1431'>
+      <name>Riverbank</name>
+      <desc>   The edge of the river is lined with reeds, and from within them you can hear the croaking of frogs. From time to time you see one jump up, its long tongue extended to catch an unwary insect. You can continue along the bank to the west or the southeast.</desc>
+      <exits se='1496' w='1430'/>
+   </location>
+
+   <location num='1434'>
+      <name>Golden pond</name>
+      <desc> The road comes to an end at the edge of the golden pond. There is an island in the center of the pond which can only be reached by wading into the water.</desc>
+      <exits nw='1369' in='1435'/>
+   </location>
+
+   <location num='1435'>
+      <name>In golden pond</name>
+      <desc>   The water of the pond is cool and clear, and you can see goldfish swimming amongst the reeds as you wade through the silty bottom. You can climb back out of the pond, or continue wading east towards the island.</desc>
+      <exits e='1436' out='1434'/>
+   </location>
+
+   <location num='1436'>
+      <name>In golden pond</name>
+      <desc>   A friendly quacking noise heralds the arrival of a fleet of ducks sailing placidly across the pond. The brightly colored feathers of the male gleam blue and green in the sun; by contrast, the dull brown of the female behind him seems very boring. Behind the parents comes seven little ducklings, including one very ugly one at the back.</desc>
+      <desc>   You can follow the ducklings west, back to the road, or you can climb out of the pond onto the island.</desc>
+      <exits w='1435' out='1437'/>
+   </location>
+
+   <location num='1437'>
+      <name>Golden island</name>
+      <desc>   The island is named after its inhabitant: a goose. Yes, it is that goose, the one that lays the very valuable eggs, but there's no point searching around for any of them - she lays them well out of sight, and you will never find any. The only eggs you'll be able to get your hands on are the Easter Bunny's chocolate eggs. In fact, to go any further onto the island would be a wild goose chase. You might as well get back into the water and wade to the shore.</desc>
+      <exits in='1436'/>
+   </location>
+
+   <location num='1488'>
+      <name>Wood</name>
+      <desc>   The trees are too thick to go any further; you'll have to return to the clearing, which lies to the northeast.</desc>
+      <exits ne='1425'/>
+   </location>
+
+   <location num='1489'>
+      <name>Wood</name>
+      <desc>   The trees are too thick to go any further; you'll have to return to the clearing, which lies to the north.</desc>
+      <exits n='1425'/>
+   </location>
+
+   <location num='1490'>
+      <name>Wood</name>
+      <desc>   The trees are almost too thick to go any further, although you may be able to squeeze between them to the east; otherwise, you'll have to return to the clearing, which lies to the northwest.</desc>
+      <exits e='1491' nw='1425'/>
+   </location>
+
+   <location num='1491'>
+      <name>Wood</name>
+      <desc>   The trees in this part of the wood are ancient, their trunks covered with ivy and other climbing plants. The largest (and therefore presumably the oldest) has bark which is so gnarled and knotted it almost seems as if a stairway leads up into its branches.</desc>
+      <desc>   The path continues through the wood to the west, and southeast it leads to an open field.</desc>
+      <exits se='1556' w='1490' up='1427'/>
+   </location>
+
+   <location num='1496'>
+      <name>Pool</name>
+      <desc>   The banks of the river widen out here, forming a deep pool. The river flows out of the pool to the northwest, and you can follow the bank in that direction, but the bank gets too steep the other way. Of course, you could jump into the pool and swim across to the other side, although it's likely to be freezing cold.</desc>
+      <exits nw='1431' in='1560'/>
+   </location>
+
+   <location num='1556'>
+      <name>Bunnies' field</name>
+      <desc>   This green, lush field is filled with clover and as far as the eye can see, little bunny rabbits are feasting upon the nutrious plants. Baby bunnies gambol in the sunshine, chasing each other backwards and forwards, then rolling over and over in mock fights. From time to time, one of them dashes into a large rabbithole on the edge of the field, then pops back out again to rejoin the fun.</desc>
+      <desc>   Around the edge of the field, adult rabbits keep watch for danger, ready to call an alarm by thumping their backlegs against the ground like a warning drum should anything threatening appear. Since you would definitely be counted as a threat, it would be a shame to go any further and make the bunnies run away, wouldn't it? Best head back northwest into the wood.</desc>
+      <exits nw='1491' in='1619'/>
+   </location>
+
+   <location num='1560'>
+      <name>In the pool</name>
+      <desc>The water in the pool is extremely cold; it's only the heating unit in your nano-chameleon suit that is preventing you from developing instant hypothermia. Even so, it's probably not a good idea to stay in the water too long, because the suit won't stop you from turning into a wrinkled prune.</desc>
+      <desc>   You can climb out onto the northern bank of the pool, or swim south and hope you can reach the other side safely.</desc>
+      <exits s='1624' out='1496'/>
+   </location>
+
+   <location num='1609'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1610' se='1674'/>
+   </location>
+
+   <location num='1610'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits se='1675' w='1609'/>
+   </location>
+
+   <location num='1616'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits se='1681' sw='1679'/>
+   </location>
+
+   <location num='1618'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1619' sw='1681'/>
+   </location>
+
+   <location num='1619'>
+      <name>Burrow</name>
+      <desc>   You slither and slide down the rabbit hole and find yourself in the burrow. It's just as well all of the rabbits are outside in the sunshine, because if they knew you were here they'd be terrified.</desc>
+      <desc>   Tunnels lead east and south. A glimmer of daylight shows you the way you would have to climb to get out of the burrow.</desc>
+      <exits s='1683' w='1618' up='1556' out='1556'/>
+   </location>
+
+   <location num='1624'>
+      <name>In the pool</name>
+      <desc>   A large shape swims up to you under the water, and hovers around your feet for a moment. Perhaps it is pondering whether you are good to eat. But don't worry, it decides that you aren't and swims off again, which is a relief. Still, best not linger here, eh?</desc>
+      <desc>   You can climb out of the pool here or swim back to the northern side.</desc>
+      <exits n='1560' out='1688'/>
+   </location>
+
+   <location num='1674'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads. But you can just about figure out that there's a tunnel leading upwards which may eventually lead back to the surface.</desc>
+      <exits sw='1737' nw='1609' up='1680'/>
+   </location>
+
+   <location num='1675'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1676' nw='1610'/>
+   </location>
+
+   <location num='1676'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits sw='1739' w='1675'/>
+   </location>
+
+   <location num='1679'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1616' s='1743'/>
+   </location>
+
+   <location num='1680'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads. But you can make out a separate tunnel leading downwards, further into the deep, dark depths.</desc>
+      <exits sw='1743' down='1674'/>
+   </location>
+
+   <location num='1681'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1618' nw='1616'/>
+   </location>
+
+   <location num='1683'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits n='1619' e='1684'/>
+   </location>
+
+   <location num='1684'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits se='1749' w='1683'/>
+   </location>
+
+   <location num='1688'>
+      <name>South bank</name>
+      <desc>   You have made it to the south bank of the river. Well done. A symphony orchestra plays a congratulatory tune, a troupe of dancing girls appear and whirl around in a circle, and a photographer takes your picture and displays it in a gallery for posterity.</desc>
+      <desc>   Well, that was fun, but there's nothing else going on this side of the river, so you might as well head back across the pool again!</desc>
+      <exits in='1624'/>
+   </location>
+
+   <location num='1735'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits se='1800' sw='1798'/>
+   </location>
+
+   <location num='1737'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1674' s='1801'/>
+   </location>
+
+   <location num='1739'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1676' s='1803'/>
+   </location>
+
+   <location num='1743'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits n='1679' ne='1680'/>
+   </location>
+
+   <location num='1744'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1745' se='1809'/>
+   </location>
+
+   <location num='1745'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits w='1744'/>
+   </location>
+
+   <location num='1746'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits s='1810'/>
+   </location>
+
+   <location num='1747'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1748' se='1812' sw='1810'/>
+   </location>
+
+   <location num='1748'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1749' w='1747'/>
+   </location>
+
+   <location num='1749'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits w='1748' nw='1684'/>
+   </location>
+
+   <location num='1798'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1735' se='1863'/>
+   </location>
+
+   <location num='1800'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1801' nw='1735'/>
+   </location>
+
+   <location num='1801'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits n='1737' se='1866' sw='1864' w='1800'/>
+   </location>
+
+   <location num='1803'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits n='1739' e='1804' sw='1866'/>
+   </location>
+
+   <location num='1804'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits se='1869' w='1803'/>
+   </location>
+
+   <location num='1809'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1810' nw='1744'/>
+   </location>
+
+   <location num='1810'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits n='1746' ne='1747' s='1874' w='1809'/>
+   </location>
+
+   <location num='1812'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits sw='1875' nw='1747'/>
+   </location>
+
+   <location num='1863'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1864' nw='1798'/>
+   </location>
+
+   <location num='1864'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1801' w='1863'/>
+   </location>
+
+   <location num='1866'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1803' nw='1801'/>
+   </location>
+
+   <location num='1868'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits e='1869' sw='1931'/>
+   </location>
+
+   <location num='1869'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits w='1868' nw='1804'/>
+   </location>
+
+   <location num='1874'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits n='1810'/>
+   </location>
+
+   <location num='1875'>
+      <name>Burrow</name>
+      <desc>   The narrow, dark tunnel of the burrow is barely large enough for you to squeeze through; it's impossible to see where it leads.</desc>
+      <exits ne='1812'/>
+   </location>
+
+   <location num='1931'>
+      <name>Bunnies' nursery</name>
+      <desc>   Here, at the bottom of the burrow, as far away from the dangers of the outside world as it is possible to be, live the tiny little baby bunnies before they are old enough to venture outside. Fortunately, there are no babies here right now, otherwise you'd probably scare them to death!</desc>
+      <desc>   The whole place stinks of rabbit poop, which is not an encouragement to linger here.</desc>
+      <exits ne='1868'/>
+   </location>
+
+</fed2-map>

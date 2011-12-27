@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+<event-list version='16'>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle</comment>
+    <checkvariable name='newbod' key='clue' value='nine' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does player already have a certificate?</comment>
+    <checkinventory map='home' id-name='certificate' found='stop'/>
+    <createobject where='inventory' home-map='sol/magrathea' id='obj_certificate'/>
+    <message type='text' where='com' who='individual'>There&apos;s no one here, but there are some copies of the fjord certificate lying on the table. You quickly filch one as proof that you&apos;ve solved the clue.</message>
+   </event>
+
+   <event num='3'>
+    <message type='text' where='com' who='individual'>Remembering that you will need this certificate to prove that you solved the clue in the Magellan Society&apos;s test, you change your mind.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='button'>
+
+   <event num='1'>
+    <comment>Press button - object in loc 589</comment>
+    <message type='single' where='com' who='individual' lo='objects.button.1'/>
+   </event>
+
+  </section>
+
+  <section name='marsrat'>
+
+   <event num='1'>
+    <comment>Spot marsrat event on reception 525</comment>
+    <checkinventory map='sol/mars' id-name='marsrat' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='objects.marsrat.1'/>
+    <destroyobject where='inventory' map='mars' id-name='marsrat'/>
+   </event>
+
+  </section>
+
+  <section name='spider'>
+
+   <event num='1'>
+    <comment>In room event on 717 - workshop - call a delay</comment>
+    <checksize id-name='obj_control' value='1' more='stop'/>
+    <delayevent delay='4' event='objects.spider.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Move spider into inventory</comment>
+    <message type='single' where='com' who='individual' lo='objects.spider.1'/>
+    <get id-name='obj_spider' silent='true'/>
+    <changesize id-name='obj_control' amount='1' change='add' max-size='2' destroy='yes'/>
+   </event>
+
+   <event num='3'>
+    <comment>Enter event on surrounding rooms - remove the spider</comment>
+    <checkinventory map='home' id-name='obj_spider' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='objects.spider.2'/>
+    <drop id-name='obj_spider' silent='true'/>
+    <changesize id-name='obj_control' amount='-1' change='add' max-size='2' destroy='yes'/>
+   </event>
+
+   <event num='4'>
+    <comment>Get event on spider - check if player already has spider</comment>
+    <checkinventory map='home' id-name='obj_spider' found='objects.spider.5' not-found='objects.spider.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Already got spider</comment>
+    <message type='single' where='com' who='individual' lo='objects.spider.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Not got spider</comment>
+    <message type='single' where='com' who='individual' lo='objects.spider.3'/>
+   </event>
+
+   <event num='7'>
+    <comment>Drop event on spider - check if they are carrying it</comment>
+    <checkinventory map='home' id-name='obj_spider' found='objects.spider.8' not-found='objects.spider.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>They are carrying spider</comment>
+    <message type='single' where='com' who='individual' lo='objects.spider.5'/>
+   </event>
+
+   <event num='9'>
+    <comment>Not carrying spider</comment>
+    <message type='single' where='com' who='individual' lo='objects.spider.6'/>
+   </event>
+
+   <event num='10'>
+    <comment>Squash spider</comment>
+    <message type='single' where='com' who='individual' lo='objects.spider.7'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

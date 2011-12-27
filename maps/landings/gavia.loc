@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<fed2-map title='Gavia' version='17' editor='standard' from='397' to='Landings.Landings Space.459'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   It&apos;s full of rocks. And mud. That&apos;s all.</desc>
+   </location>
+
+   <location num='397' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   The landscape is bleak, nothing but bare, empty rock the only thing on the surface besides rock is a huge sign that reads Welcome to Gavio don&apos;t miss &quot;Pasta Night&quot; at Max and Angels Trattoria</desc>
+      <desc>   Next to your shuttle is a small view screen for you to order any ship services you need, install new equipment, replenish your weapons or replace faulty electronics, or if you need to you can buy a completely new ship.</desc>
+      <desc>   The entrance to a Biological Lab&apos;s leads underground to the south.</desc>
+      <exits s='461' in='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='e'>
+      <name>Gavia Exchange</name>
+      <desc>   The planet is inhospitable, and so are the staff and the other traders. Everyone keeps themselves to themselves and they don&apos;t believe in indulging in unnecessary chat. You&apos;ll make no friends here, so just sit down, do your trading and then leave again, as quick as you can.</desc>
+      <desc>   If you need to buy any goods, someone will grudgingly sell you things, if they are available. If you need help, you won&apos;t get it here.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Lab foyer and  entrance</name>
+      <desc>   This small foyer has hallwys leading off to other rooms. An  to the north leads out to the landing pad. A west hallwayl leads to the trading exchange, east to the medical facilities, and south to a small restuarant and bar</desc>
+      <exits n='397' e='462' s='525' w='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='hi'>
+      <name>Underground Aid</name>
+      <desc>   The medical facilities here not only deal with day to day injuries, but also serve as the base for a scientific team trying to discover why the planet is so inimical to life. So far they&apos;ve had no success at all. The equipment is fairly primitive but adequate. They do have a modern automatic insurance machine so you can ensure any injuries you do sustain are not fatal.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='b'>
+      <name>Max and Angels</name>
+      <desc>Outside of automated canteens this is the only place on the planet you can find food. Max and Angel run this small eatery and have made quite a sensation on the planet with their all you can eat pasta on Tuesday evenings. The exit is to the North</desc>
+      <exits n='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

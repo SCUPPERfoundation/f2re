@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<fed2-map title='Parkland Station' version='10' editor='standard' from='523' to='Parklandia.Parklandia Space.716'>
+
+   <location num='64'>
+      <name>storeroom</name>
+      <desc>The is the storeroom for Parkland Station.  Nothing to see here...pay no attention to the man behind the curtain.</desc>
+   </location>
+
+   <location num='523'>
+      <name>Parkland Station Docking Ring</name>
+      <desc>A rather sterile room with airlocks all around.  The corridor heads towards the SOUTH towards the central core of the station.  The air seems fresh as the ducts rattle, pumping out oxygen with a whooshing sound which echoes off the metal floors, ceiling and walls.</desc>
+      <exits s='587'/>
+   </location>
+
+   <location num='524' flags='yr'>
+      <name>Engineering Services</name>
+      <desc>The room is empty save for a console on the far wall.  On the viewscreen the words SHIPS SERVICES slowly fade in and out of view.  Here you can purchase a new ship or have a service droid dispatched to repair any damage you may have on your vessel.</desc>
+      <exits sw='587'/>
+   </location>
+
+   <location num='586' flags='hi'>
+      <name>Sick Bay</name>
+      <desc>A row of biobeds to the right are the only furniture in the room.  Above each bed is a medical droid with several probes and tools attached to it with long flexible arms.  The droids chirp as they are activated by your presense in the room.  Lay down and let them heal your wounds or cure your ills, or if you have recently died and have awoken on one of the tables, insurance can be purchased here as well.</desc>
+      <exits e='587'/>
+   </location>
+
+   <location num='587'>
+      <name>Parkland Station Central Core</name>
+      <desc>A safety rail circles around a central shaft in the Central Core of the Parkland Station.  Airlocks ring the outer wall with signs above each opening: NORTH AIRLOCK - Docking Ring, EAST AIRLOCK - Exchange, SOUTH AIRLOCK - Lounge, WEST AIRLOCK - SICK BAY, NORTHEAST AIRLOCK - ENGINEERING SERVICES.  All other airlocks seem to be sealed shut with the Parkland Administration logo emblazened upon its surface.</desc>
+      <exits n='523' ne='524' e='588' s='651' w='586'/>
+   </location>
+
+   <location num='588' flags='e'>
+      <name>Exchange</name>
+      <desc>Nothing is in this room except for the ring of consoles which allow travellers to conduct their business.  The air hisses through the air duct, pumping fresh oxygen for those that breathe it.</desc>
+      <exits w='587'/>
+   </location>
+
+   <location num='651' flags='b'>
+      <name>Parkland Station Lounge</name>
+      <desc>Consoles line the walls for all food and drink orders.  There are several rows of metal tables and benches for comsumption of item purchased.  At the entrance there are several bins set deep into the wall to dispose trash in.</desc>
+      <exits n='587'/>
+   </location>
+
+</fed2-map>

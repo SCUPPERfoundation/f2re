@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<fed2-map title='Our House' version='19' editor='standard' from='712' to='Abode.Abode Space.392'>
+
+   <location num='326' flags='b'>
+      <name>Skyline View Deck</name>
+      <desc>Wow what a view!!! A view that is so spectacular that your eyes are drawn to the view, not seeing anyone else sitting around the deck. As you look out over the rail you can see the city lights for miles. The tiny red dot out in the distance appears to be none other than Mars. You are drawn back to reality from the sound of taking behind you, it appears Houdini has diappeared as quickly as he appeared.  You notice the sitting area where overstuffed chairs are located near a fire pit. Next to that is an area with several telescopes set up to see the entire Sol system from afar. There are a few guests braving the weather and have gotten in the pool/jacuzzi and are enjoying a drink from the swim up bar. To get back to the exchange, you must go Down the same staircase. You may exit to the dressing rooms, south for the mens and out for the ladies.</desc>
+      <exits s='390' down='456' out='459'/>
+   </location>
+
+   <location num='327'>
+      <name>Nursery</name>
+      <desc>There is always noise and activity in the nursery. In addition to our children, the children of all our guests stay up in this area with our nanny. In here you will find lines of bunk beds along the wall opposite the windows, accomodating up to 10 children at any given time. There are also 4 cribs on wall opposite the door. The rest of the room is set up as a play area for the children. There are 2 additional doors in this room, 1 east will take you to the schoolroom and going southwest leads to the childrens deck. There is also a seperate eating area through the school room for the kids. Slide down the banister to get to the landing pad or go In to get back to the nanny room.</desc>
+      <exits e='328' sw='390' in='519' out='712'/>
+   </location>
+
+   <location num='328'>
+      <name>School Room</name>
+      <desc>Desks are lined neatly in rows with the younger children seated closest to the teacher. There is only 1 teacher here to teach the many different ages, this encourages the kids to learn at the pace they are best at. Go west to get to the childrens deck for recess or go east to get to the kids eating area.</desc>
+      <exits e='329' w='327'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>Eating Room</name>
+      <desc>They say kids need food too!!  Here the children get nutrious meals 3 times daily and snacks to keep their energy up for school work. There are bowls of fruit on the tables for snacking throughout the day. Dr Office is to the east and the school room is to the west.</desc>
+      <exits e='330' w='328'/>
+   </location>
+
+   <location num='330' flags='hi'>
+      <name>Dr. Office </name>
+      <desc>No need to call 911, all your medical needs can be found right here on the property. Doc is on call 24 hours a day to make sure everyone is well and enjoying life. Head southeast to the clinic or west to the childrens wing. You may go Up to the Skyline View Deck or Out to the landing pad. If you go Down the stairs, you are back in the exchange.</desc>
+      <exits se='395' w='329' up='326' down='456' out='712'/>
+   </location>
+
+   <location num='338' flags='t'>
+      <name>Storage</name>
+      <desc>Storage</desc>
+   </location>
+
+   <location num='390'>
+      <name>Childrens Deck</name>
+      <desc>Having a deck in the childrens wing makes access for recess easy and helps keep the noise down during the entertaining. The deck is screened in and has pup tents here for overnight stays outdoors. There is a jungle gym and swingset on the deck to keep the kids happy. Here you will also find tables if the children would like to do some crafts out here on nice days. It is easy to go In to the craft room for more supplies or go Up to the school room. There is the adult deck North and a gate Southwest that will take you to the mens deck. Going Northeast you will get to the nursery. For a fast exit, go Down to the landing pad.</desc>
+      <exits n='326' ne='327' sw='453' up='328' down='712' in='329'/>
+   </location>
+
+   <location num='395' flags='hi'>
+      <name>Clinic</name>
+      <desc>No disease is too big or too small for our clinic and in house doctor. As you can see along the walls, there are gurneys for those that need to recoup and rest. The is a heart monitor with the blood pressure machine at each gurney. If you forgot your necessary meds, please look for Nurse Jane and she will get what you need. Exit northwest to the Dr Office, southeast take you to the ladies porch, or you can go In to the exhcange. Emergency exit to landing pad is Down the stairs. There is a door to the east taking you out to the gardens.</desc>
+      <exits e='396' se='460' nw='330' down='712' in='456'/>
+   </location>
+
+   <location num='396'>
+      <name>Gardens</name>
+      <desc>You see a waterfall in the center with water lilies floating in the pond. The garden is divided into different sections for a variety of plants brought in from earth.  Continue east to see the rose gardens.</desc>
+      <exits e='397' w='395'/>
+   </location>
+
+   <location num='397'>
+      <name>Rose Garden</name>
+      <desc>Roses galore, you see red ones, white ones, pink ones, and orange ones. The gardener has been experimenting with cross breeding the roses and we will soon see striped roses. Water lilies are to your west and southeast is our Cactus Garden</desc>
+      <exits se='462' w='396'/>
+   </location>
+
+   <location num='453' flags='b'>
+      <name>Mens Screened Porch</name>
+      <desc>As you step out to the mens deck, you find men telling stories. Most of them appear to be fish tales, 1 larger than the next. The guys only step out here to enjoy their smoking time, since we have deemed Our House non smoking. Here you will find a fully stocked bar with Sully tending to you thirst needs. Go In to get back to the exchange or Out to get back to the cigar bar. Going Northeast will take you through the kids porch, if you dare or go back to the mens room to the east. Go Up to get to the Skyline View Deck or Down to the landing pad.</desc>
+      <exits ne='390' e='454' up='326' down='712' in='456' out='455'/>
+   </location>
+
+   <location num='454'>
+      <name>Mens Room</name>
+      <desc>It&apos;s the mens room, no further description needed!!!</desc>
+      <exits e='455' w='453'/>
+   </location>
+
+   <location num='455'>
+      <name>Cigar Bar</name>
+      <desc>You can count on the men wanting to get away from the ladies gossip and sneak in a poker game and cigar. You can purchase authentic Cuban cigars here. There is a special ventilation system installed for this room to keep the air ordor and smoke free. Going east will take you to the exchange and head west to the mens room. For a fast exit to the exchange, go Down the stair in the back of the room.</desc>
+      <exits e='456' w='454' down='712'/>
+   </location>
+
+   <location num='456' flags='eb'>
+      <name>Attic Exchange</name>
+      <desc>We decided to tuck our full service exchange in the newly renovated attic. As you look around, you notice the latest flat screen panel monitors attached above the private seating areas around the border of the room. In the center, you see a large bar with built-in monitors to watch for the best deals and help yourself to a drink. Mikey, the bartender, is very helpful with some insider trading tips he has picked up throughout the day. He will also alert the management to any dumpers. To the east of the exchange you will find a ladies parlor and to the west you will find the mens room and a cigar bar. The stairs in the far corner will take you Down to the landing pad or Up to the skyline view deck.</desc>
+      <exits e='457' w='455' up='326' down='712' in='833'/>
+   </location>
+
+   <location num='457'>
+      <name>Ladies Parlor</name>
+      <desc>Mitsy is a young droid whose lifelong desire is to be a tour guide, that has just started working in the ladies parlor. It is her job to make sure all necessary toiletries are available to everyone. She points out that you have overstuffed chaise lounges in the seating room to just rest and get away from the guys for a while. There is a variety of magazines to flip through or you can get an eye mask and relax your eyes. The masks have a cooling cucumber gel that helps relax your eyes after staring at the monitors in the exchange. Misty has keys to open the individual stalls for the restrooms that are located to the east. She also knows where you can get some swimming attire if you would like to change and join others in the pool on our skyline view deck. Going back to the west will bring you back to the exchange or go OUT to the screened porch.</desc>
+      <exits e='458' w='456' out='460'/>
+   </location>
+
+   <location num='458'>
+      <name>Locked Stalls</name>
+      <desc>It appears Mitsy has found a vacant stall for your use. Here you find spare rolls of toilet tissue and kleenex to make you completely comfortable. The seats are lined with tissues for extra precautions, even though Mitsy does a thorough cleaning after every use. You may go west to the parlor and exchange or go OUT to the screened porch. East you will find a dressing room.</desc>
+      <exits e='459' w='457' out='460'/>
+   </location>
+
+   <location num='459'>
+      <name>Dressing Room</name>
+      <desc>It is like a swimwear shop with sooo many suits to choose from. There are one pieces for the timid, bikinis that you may mix and match, and some less decent suits for the brave. You will notice dressing rooms boarding the room with locks for you to lock up all your personal items. In the center of the room is a clothing optional spa, this is after all the womans dressing room. You can get back to the exchange going west or go east to get to the womans screened porch area where smoking is permitted.</desc>
+      <exits e='460' w='458'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Screened Porch</name>
+      <desc>From the outside it might appear to be just another country porch, but when as you look around, you notice a buffet style snack bar. There is a variety of foods, they all have chocolate as an ingredient. Since this is the womans porch, we see no reason not to indulge. Looking around you see this porch is completely screened in preventing any unwanted critters in. There are flower pots lining the railing with colorful spring flowers that last year round. Upon further inspection, you realize these are nothing more than plastic flowers that look amazingly real. You take decide to relax and sit with the ladies to catch up on the latest gossip.You can go Out to the Skyline View Deck or go west to the ladies parlor area. To get back to LP use the stair to go down.</desc>
+      <exits w='459' nw='395' up='326' in='456'/>
+   </location>
+
+   <location num='462'>
+      <name>Cactus Garden</name>
+      <desc>It looks like you just walked into a desert. The soil has been replaced with layers of sand and rocks. The cactus garden has a large pear cactus plant in the center of the area with river bed rocks weaving around to divide the area for different plants. There are Barrel Cactus, Madagascar Cactus Palms, and Aloe plants. The rocks are grey pebble and pink lava rocks for decorations. Contine southeast to the citrus tree garden or head back northwest towards the rose garden.</desc>
+      <exits se='527' nw='397'/>
+   </location>
+
+   <location num='518' flags='b'>
+      <name>Library</name>
+      <desc>You have entered the library where you can almost always find a few men enjoying a cognac or 2. There is a chess games with real ivory pieces set under the window. The mens room is to the north, the exchange is In the attic and a quick unnoticable escape to the landing pad is Out the back door.</desc>
+      <exits n='454' s='582' in='456' out='712'/>
+   </location>
+
+   <location num='519'>
+      <name>Nanny Room</name>
+      <desc>This is a small room with an adjoined door to the nursery. Here you find a single bed off to one side with a small dresser. The nanny spends the majority of her time in the nursery with the young children of the family. Go In to reach the childrens room and school room. In you go Up you will reach the hired helps restroom and you can go Down to the kitchen or Out to the landing pad.</desc>
+      <exits up='522' in='327' out='712'/>
+   </location>
+
+   <location num='522'>
+      <name>Restrooms</name>
+      <desc>You have opted to use the hired help restroom. This is as simple a room that you can find. There is a tub against the far wall with a shower surround and a blue curtain. You will also see a sink and toilet. As simple as it appears, this room is always kept spotless. You can go back down to the nanny room, out to the drivers room, in to the school room, or up to the landing pad.</desc>
+      <exits up='712' down='519' in='328' out='397'/>
+   </location>
+
+   <location num='523'>
+      <name>Guest Bath</name>
+      <desc>As you walk into the guest bath, you see marble!! Marble counters, jacuzzi tub, and marble tiled shower. There are many oversized, extra fluffy towels on the shelves for individual use. Hung on the back of the door you will find quilted, fluffy robes. North takes you to the ladies parlor and east and south takes you to guest rooms. Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad.</desc>
+      <exits n='459' s='587' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='524'>
+      <name>Guest Room 3</name>
+      <desc>Here you see 2 queen beds dressed with soft, medium, and firm down pillows. There are down comforters with egyptian cotton sheets. There is a seating area with a collection of books and a flat screen tv on the wall. The covers are turned down with chocolate truffles on your pillow. West will take you to the guest bath and east takes you to more guest rooms. Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad.</desc>
+      <exits e='525' w='523' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='525'>
+      <name>Guest Room 4</name>
+      <desc>There is a queen bed in this room with a flat screen tv on the wall. You have a sitting area and will find the covers turned down with chocolate truffles on your pillow when time to turn in. Coffee maker can be found on the dresser to make a quick cup before heading out for breakfast. West will take you back towards the guest bath and east takes you towards the gardens. Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad.</desc>
+      <exits e='526' w='524' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='526'>
+      <name>Guest Suite</name>
+      <desc>This is the largest of the guest rooms with a king bed and a pull out couch. There is also a crib for the very young baby that must stay near mom. You will find a desk with a computer and a plasma tv. The bedding here is the finest european down available with new bambo sheets. There is a single cup coffee maker for those that need coffee before meeting others in the morning. You have a door to the  east that will take you to our citrus garden or head west towards the guest bath. Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad.</desc>
+      <exits e='527' w='525' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='527' flags='b'>
+      <name>Citrus Tree Garden</name>
+      <desc>Lemons, limes, oranges, and grapefruit trees are growing in this area. There are benches out here for relaxation. As you walked in, you got the instant smell of lemons, very refreshing. There is a booth serving fresh squeezed lemonade and tea with lemon. If you listen carefully, you will hear the crickets chirping. South is the green house and gardeners shed, west will bring you into the guest rooms, and northwest takes you back through the gardens. You may go back IN to the exchange or Out to the landing pad.</desc>
+      <exits s='591' w='526' nw='462' in='456' out='712'/>
+   </location>
+
+   <location num='582'>
+      <name>Ballroom</name>
+      <desc>The chandeliers are glowing like diamonds as they hang0 from the ceiling, you hear ballroom dance music playing on the antique jukebox in the corner. There is seating area around the perimeter of the room with small round tables between 2 chairs to hold the cocktails. The dance floor in the center of the room is gleaming from the many coats of polish. To the north, you see an exit to the library or you may head south back to the dining area. You can go out to get some air on the Skyline View Deck or go Up to the Attic exchange. If you slide Down the banister in the corner, you will make a quick exit to the landing pad.</desc>
+      <exits n='518' s='646' up='456' down='712' out='326'/>
+   </location>
+
+   <location num='584'>
+      <name>Pantry</name>
+      <desc>This pantry is a good size room lined with shelves and bins. The shelves has every type of canned food imaginable, lined neatly in alphabetical order. There are bins next to the shelves that hold bread and pastries and fruits and vegetables. You will find only the best ingredients here to make all meals from scratch. The laundry room is to the south which will take you to the landing pad or east to the kitchen.</desc>
+      <exits e='585' s='648'/>
+   </location>
+
+   <location num='585' flags='b'>
+      <name>Kitchen</name>
+      <desc>The aroma of fresh baked breads takes over your senses. You have walked into a kitchen every chef dreams of. The appliances are all stainless steel without a single fingerprint in sight. There is a brick oven for baking fresh breads and pizza. You see help at different stations, salads, entres, pastries, and soups preparing foods for the exchange and other food stations throughout the house. The main concern here is to keep the house guest happy!!!  A quick exit to the landing pad is Out or you can go Up to the nursery/nanny rooms or Down to the butler/driver room. All other staff go home nightly, sometimes they are not headed home til the wee hours of the morning. To quickly get to the exchange, go In the back door.</desc>
+      <exits s='649' w='584' up='519' down='522' in='456' out='712'/>
+   </location>
+
+   <location num='587'>
+      <name>Guest room 2</name>
+      <desc>This is a smaller guest room designed for a single guest. Here is a full size bed with a down comforter for warmth. The covers will be turned down for you with chocolate truffle on your pillow. This room has no tv, but a computer with internet access. The computer has a cable box attached for those that need tv.  Head north to the guest bathrooms or south to head back towards the entry hall. Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad.</desc>
+      <exits n='523' s='651' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='591'>
+      <name>Green House</name>
+      <desc>In here you will find potting soil, misters, and experimental planets. The gardener will attempt new varieties of flowers to keep our gardens glowing. Head north to the gardens and south to the shed.</desc>
+      <exits n='527' s='655'/>
+   </location>
+
+   <location num='646' flags='b'>
+      <name>Dining Room</name>
+      <desc>Passing beyond the open fireplace, you come upon a dining room. This room is always set with a buffet table that has a variety of appetizers and desserts. You see several house boys here ready to offer you a refreshing beverage and help you get a snack. During main eating times, the buffet table is also set with meals for that particular hour. You are invited back for eggs benedict in the am and poached salmon in the evening. Finger sandwiches are available all day, if you request. Go In to the Attic Exchange from here or continue north to tour the living area. Heading back south with take you towards the landing pad. You may go Up to the ladies room from here or Out to the mens room.</desc>
+      <exits n='582' s='710' up='457' in='456' out='454'/>
+   </location>
+
+   <location num='648'>
+      <name>Laundry Room</name>
+      <desc>The laundry room is located in the house help quarters to make it convenient for the young help to work in the kitchen and get the laundry down. There is an ironing area, the steamer, and the new deluxe front load washer with the rapid release steam dryer. Continue north to the pantry which exits to the kitchen or go south back to the landing pad.</desc>
+      <exits n='584' s='712'/>
+   </location>
+
+   <location num='649'>
+      <name>House Help Eating room</name>
+      <desc>This room is sparsely furnished. There is a large wooden table with benches running down either side to seat 8. During peak season, the house help must take shifts for eating. There are 2 additional chairs in the corner for 10 sitting per shift. Go south to get to the guest wing or continue north for the kitchen.</desc>
+      <exits n='585' s='713'/>
+   </location>
+
+   <location num='651'>
+      <name>Guest Room 1</name>
+      <desc>Here is the first of 5 guest rooms. There is a queen bed in this room with a flat screen tv on the wall. You have a sitting area and will find the covers turned down with chocolate truffles on your pillow when time to turn in. Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad. Continue north towards the guest bathroom.</desc>
+      <exits n='587' s='715' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='655'>
+      <name>Shed</name>
+      <desc>The tools for the gardener will be found here in the shed. There is also a mop sink to keep tools clean. The gardener has brought in a small fridge and microwave to work through his lunch hour. When you are experimenting with plants, there is no time for breaks at times. North will take you to the gardens via the greenhouse and south takes you to the family living space.</desc>
+      <exits n='591' s='719'/>
+   </location>
+
+   <location num='710'>
+      <name>Living Room</name>
+      <desc>In our livingroom, you will notice the couches are less than inviting!! To keep them clean and preserve them, they are covered in plastic. The tables are goldleaf hand carved with glass tops. There is a fireplace to the wall on the north, which is open on the other side into the diningroom. As you search around for a place to rest your weary feet, or equivalent, you notice a leather, overstuffed couch behind a screen near the window. Going north will bring you to the dining area, ballroom, and library or go back east to the landing pad. You are always invited to go In to the Attic Exchange and enjoy some duty free trading.</desc>
+      <exits n='646' e='711' in='456'/>
+   </location>
+
+   <location num='711'>
+      <name>Hallway</name>
+      <desc>You are headed towards the main living space in Our House. Here is where you will find the formal dining area, living room, ballroom, and library. Feel free to wander and tour the living area west or go back east to landing pad. You can go In to the Attic Exchange at any time.</desc>
+      <exits e='712' w='710' in='456'/>
+   </location>
+
+   <location num='712'>
+      <name>Our House LP</name>
+      <desc>You have landed at Our House  where you are greeted in the entry hall by Celia, a friendly monster, that offers guided tours though Our House. Celia is always seen with a big smile, handing out tour guides and giving you the option to tour with her or on your own. She excitedly tells you the exchange is Up in the attic, to the east is a hallway leading to the guest wing and to the west you will find the main living space. North will take you to the house help quarters and OUT will take you to the gardens.  To get to the Dr&apos;s office and clinice, go In</desc>
+      <exits e='713' w='711' up='456' down='833' in='330' out='396'/>
+   </location>
+
+   <location num='713'>
+      <name>Hallway </name>
+      <desc>Contine east to the guest wings or go north to the servants quarters.</desc>
+      <exits e='714' w='712'/>
+   </location>
+
+   <location num='714'>
+      <name>Hallway</name>
+      <desc>Continue east to the guest rooms or go west for the landing pad.</desc>
+      <exits e='715' w='713'/>
+   </location>
+
+   <location num='715'>
+      <name>Entry Hall</name>
+      <desc>This is the entry hall where north heads you to the guest rooms and east takes you to the family living quarters. West takes you back to the landing pad.</desc>
+      <exits n='651' e='716' w='714'/>
+   </location>
+
+   <location num='716'>
+      <name>xxx</name>
+      <desc>Walls and walls of clothes!!!  One wall is a built in shoe rack, floor to ceiling, that will hold up to 250 pairs!!! There is 1 wall with 3 ranks for shirts and the other 2 walls are for dresses and pants. I have seen smaller bedrooms in some houses!! East brings you to the master suite and west takes you towards the landing pad.</desc>
+      <exits e='717' w='715'/>
+   </location>
+
+   <location num='717'>
+      <name>Master Bath</name>
+      <desc>Imported marble from Italy highlights this room. There is a full jacuzzi with a waterfall. The sink is a double, his and hers, with antique mirrors. The floor and wall tile is imported from Italy and hand painted. West is the dressing room and east is the master suite. Go In to get to the exchange, Out to the dining room or Up to the landing pad.</desc>
+      <exits e='718' w='716' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='718'>
+      <name>Sitting Room</name>
+      <desc>The master suite sitting room has several monitors above a desk monitoring the security system for the house. There is a 60&quot; plasma tv opposite overstuffed couches. Fresh flowers from the gardens can be found in a vase on a buffet where a coffee maker is found. East will take you to the master suite and west will take you to family bath. Go In to get to the exchange, Out to the dining room or Up to the landing pad.</desc>
+      <exits e='719' w='717' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='719'>
+      <name>Master Suite</name>
+      <desc>You see the largest bed you can imagine, it is called the Grand King, a bed that is 8 ft in legth!! There is a hand carved 4 poster bed with a Sleep Number Mattress. The bedding is hand made of Italian luxury sheets and a down comforter. The pillows are all down filled of european down, giving them more loft. To the west there is a sitting area and heading north brings you to the gardens.  Go IN to get to the exchange quickly, Out to the dining area or Up to the landing pad.</desc>
+      <exits n='655' w='718' up='712' in='456' out='646'/>
+   </location>
+
+   <location num='833'>
+      <name>Celia&apos;s Office</name>
+      <desc>With the mahogany desk and leather overstuffed couches, this is the place of leisure and relaxation. Unfortunately due to the risk of running not only a city but an entire planet, many monitors are showing the activity down below. All unruley guests will be escorted out promptly and exiled. Out to exchange and Down to landing pad.</desc>
+      <exits down='712' out='456'/>
+   </location>
+
+</fed2-map>
+

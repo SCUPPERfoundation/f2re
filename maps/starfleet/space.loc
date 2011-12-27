@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Starfleet Space' version='7' editor='standard'>
+
+   <location num='265' flags='s'>
+      <name>Let&apos;s Try It Again</name>
+      <desc>Now Voyager is to the south of you...the radio signals that you have been cleared to approach and docking lights begin flaring. Apparantly, after your first botched approach, the ship&apos;s crew doesn&apos;t trust your piloting skills.</desc>
+      <exits s='329' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='sl'>
+      <name>Interstellar Link And Approach to Voyager</name>
+      <desc>As you emerge from Hyperspace, a massive vessel looms on your viewscreen. That is Voyager, due east of here. Rotating slowly below you is a rather cold looking planet.</desc>
+      <exits e='329' down='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329' flags='s'>
+      <name>Approach To Voyager</name>
+      <desc>You&apos;ve received the final authorization to begin entering the shuttlebay. As you look out your window, you realize that you are so close to the ship&apos;s engines that if they decided to start moving, you&apos;d better hurry!</desc>
+      <exits e='330' w='328'/>
+   </location>
+
+   <location num='330' flags='s'>
+      <name>Overshoot</name>
+      <desc>You&apos;ve overshot your docking! All you can do is go out and try it again!</desc>
+      <exits out='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392' flags='s'>
+      <name>Nome Orbit</name>
+      <desc>A frigid planet spins below you as you circle in orbit, it appears one area has been cleared for use as a landing pad, you could board your ship and go down, or go back up to the link which twinkles above you.</desc>
+      <exits up='328'/>
+   </location>
+
+</fed2-map>

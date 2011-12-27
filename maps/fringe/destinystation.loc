@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fed2-map title='Destiny Station' version='4' editor='standard' from='453' to='Fringe.Fringe Space.72'>
+
+   <location num='453'>
+      <name>Docking Port</name>
+      <desc>The first thing that strikes you is not the incredibly small, bleak surroundings of the docking port but the immeasurable silence that you find yourself surrounded by. Unlike the lively Solus station you hear nothing here. The bulkheads show no signs of any openings save for a small opening to the east to what appears to be a small trading terminal. Looking above the opening you are surprised to see a giant Grayson Corporation flag hanging down from the ceiling above it.</desc>
+      <exits e='454' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='454' flags='e'>
+      <name>Trading Console</name>
+      <desc>This area is even smaller then the docking port with the only feature being a solid steel obelisk in the center with a trading screen attached. You saw no mechinisms for loading and unloading when you came aboard and your mind wonders how such tasks are accomplished here.</desc>
+      <exits w='453' no-exit='moves.nomove.1'/>
+   </location>
+
+</fed2-map>
+

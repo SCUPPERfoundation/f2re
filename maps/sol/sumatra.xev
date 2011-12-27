@@ -1,0 +1,824 @@
+<?xml version="1.0"?>
+
+<event-list version='200'>
+
+ <category name='announce'>
+
+  <section name='anthro'>
+
+   <event num='1'>
+    <comment>horse-cow chant in room - loc 135</comment>
+    <announce type='text' loc='135'>Horse!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='135'>Cow!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='135'>Horse!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='135'>Cow!</announce>
+   </event>
+
+   <event num='2'>
+    <comment>horse-cow - in loc 136</comment>
+    <announce type='text' loc='136'>Cow!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='136'>Horse!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='136'>Cow!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='136'>Horse!</announce>
+   </event>
+
+   <event num='3'>
+    <comment>horse-cow - in loc 71</comment>
+    <announce type='text' loc='71'>Cow!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='71'>Horse!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='71'>Cow!</announce>
+    <delayevent delay='2'/>
+    <announce type='text' loc='71'>Horse!</announce>
+   </event>
+
+  </section>
+
+  <section name='armstrong'>
+
+   <event num='1'>
+    <comment>check for rank at AC office</comment>
+    <checkstat who='individual' rank='3' higher='announce.armstrong.4' equals='announce.armstrong.2' lower='announce.armstrong.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>greeting for adventurers at AC</comment>
+    <message type='text' where='com' who='individual'>"Good day, %s," the Armstrong Cuthbert agent says in a low voice, "we have a valuable item urgently in need of an Akaturi courier."</message>
+    <message type='text' where='com' who='individual'>"Your mission, %s, should you decide to accept it, will be to deliver it to the assigned location."</message>
+    <message type='text' where='com' who='individual'>She smiles ruefully at you, "Good luck, %s."</message>
+   </event>
+
+   <event num='3'>
+    <comment>greeting for captain and commander</comment>
+    <message type='text' where='com' who='individual'>"Good day, %s," she smiles at you, "are you here to pickup some cargo or deliver it?"</message>
+    <message type='text' where='com' who='individual'>"I&apos;ll see if the stevedores are available."</message>
+   </event>
+
+   <event num='4'>
+    <comment>chat with Traders and other time wasters</comment>
+    <message type='text' where='com' who='individual'>"Hello %s, luv," she grins, "come to waste some time with me? Got any tasty gossip to share?"</message>
+    <message type='text' where='com' who='individual'>"It gets terribly boring sitting here all day with no one but poor people to chat with."</message>
+   </event>
+
+  </section>
+
+  <section name='cleaning'>
+
+   <event num='1'>
+    <comment>dustbin droid</comment>
+    <delayevent delay='2'/>
+    <announce type='text' loc='1531'>An autonomous dust bin glides past you and stops. With a slight humm it begins to open and extend downward a hatch cover forming a ramp. Some wit has scrawled HISTORY in large letters across the cylindrical body.</announce>
+    <delayevent delay='1'/>
+    <announce type='text' loc='1351'>Its red safety warning LEDs glowing, a small oval cleaning droid rolls out of the open compartment and down the ramp. No doubt it&apos;s the same wit who has scribbled TROTSKY across the droid&apos;s top.</announce>
+   </event>
+
+  </section>
+
+  <section name='landing'>
+
+   <event num='1'>
+    <comment>ship landing announcement in directors office</comment>
+    <announce type='text' loc='903'>A hidden speaker softly announces, "Attention please. %s&apos;s shuttle has landed."</announce>
+   </event>
+
+  </section>
+
+  <section name='random'>
+
+   <event num='1'>
+    <comment>workingmen&apos;s club announcements</comment>
+    <delayevent delay='3' event='announce.random.random[2-7]'/>
+   </event>
+
+   <event num='2'>
+    <comment>dart</comment>
+    <announce type='text' loc='1287'>A dart whizzes by you too close for comfort and lands, THWUNK! on the dartboard.</announce>
+   </event>
+
+   <event num='3'>
+    <comment>worker saunters by with coffee</comment>
+    <announce type='text' loc='1287'>A worker saunters past you with a wink, fresh coffee bulb in hand. Amazing what caffeine and no sense of self-preservation can do.</announce>
+   </event>
+
+   <event num='4'>
+    <comment>jacket and bell</comment>
+    <announce type='text' loc='1287'>A man in a garishly bright jacket steps thru the doorway. Chaos erupts in the room! The bartender yanks on the bell producing a piercing peal. Workers stomp their boots, whistle, and shout catcalls. In an instant, the offender exits, and the crowd settles down.</announce>
+   </event>
+
+   <event num='5'>
+    <comment>call for director to local 6</comment>
+    <announce type='text' loc='1287'>The tannoy hums to life and announces, "Your attention please. Will Director Custer please report to the Local 6 office."</announce>
+   </event>
+
+   <event num='6'>
+    <comment>dust bin</comment>
+    <announce type='text' loc='1287'>A mobile dust bin rolls by, its red warning lights slowly blink as it hoovers up rock dust. Some wit has scrawled HISTORY across its cylindrical body.</announce>
+   </event>
+
+   <event num='7'>
+    <comment>droid with graffito</comment>
+    <announce type='text' loc='1287'>The access hatch on a mobile dust bin opens and a tiny trio of cleaning droids roll out. Some wit has scribbled Trotsky on one.</announce>
+   </event>
+
+  </section>
+
+  <section name='welcome'>
+
+   <event num='1'>
+    <comment>on entry to Chez Guevarra</comment>
+    <message type='text' where='com' who='individual'>"Hallo, %s! Always good to see you, mate," someone shouts at you through the din.</message>
+    <message type='text' where='com' who='individual'>"Your turn to buy the next round, %s!"</message>
+    <call event='newbod.message.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='brasserie'>
+
+   <event num='1'>
+    <comment>Buy food - Sumatra Brasserie - 197</comment>
+    <checkstat who='individual' money='10' higher='food.brasserie.2' equals='food.brasserie.2' lower='food.brasserie.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.brasserie.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.brasserie.2'/>
+   </event>
+
+  </section>
+
+  <section name='cafeteria'>
+
+   <event num='1'>
+    <comment>Buy food - Cafeteria - 1352</comment>
+    <checkstat who='individual' money='10' higher='food.cafeteria.2' equals='food.cafeteria.2' lower='food.cafeteria.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.cafeteria.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.cafeteria.2'/>
+   </event>
+
+  </section>
+
+  <section name='coffee'>
+
+   <event num='1'>
+    <comment>Buy coffee - all bars</comment>
+    <checkstat who='individual' money='5' higher='food.coffee.2' equals='food.coffee.2' lower='food.coffee.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.coffee.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.coffee.2'/>
+   </event>
+
+  </section>
+
+  <section name='corsica'>
+
+   <event num='1'>
+    <comment>Buy food - King of Corsica - 196</comment>
+    <checkstat who='individual' money='10' higher='food.corsica.2' equals='food.corsica.2' lower='food.corsica.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.corsica.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.corsica.2'/>
+   </event>
+
+  </section>
+
+  <section name='custer'>
+
+   <event num='1'>
+    <comment>Buy food - Custers Last Stand/Backroom - 1161/1226</comment>
+    <checkstat who='individual' money='10' higher='food.custer.2' equals='food.custer.2' lower='food.custer.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.custer.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.custer.2'/>
+   </event>
+
+  </section>
+
+  <section name='guevarra'>
+
+   <event num='1'>
+    <comment>Buy food - Chez Guevarra - 450</comment>
+    <checkstat who='individual' money='10' higher='food.guevarra.2' equals='food.guevarra.2' lower='food.guevarra.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.guevarra.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.guevarra.2'/>
+   </event>
+
+  </section>
+
+  <section name='muddy'>
+
+   <event num='1'>
+    <comment>Buy food - Muddy Waters Bar - 195</comment>
+    <checkstat who='individual' money='10' higher='food.muddy.2' equals='food.muddy.2' lower='food.muddy.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.muddy.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.muddy.2'/>
+   </event>
+
+  </section>
+
+  <section name='working'>
+
+   <event num='1'>
+    <comment>Buy food - Workingmens Club - 1287</comment>
+    <checkstat who='individual' money='10' higher='food.working.2' equals='food.working.2' lower='food.working.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.working.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.working.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='mines'>
+
+  <section name='union'>
+
+   <event num='1'>
+    <comment>move out of tunnel - drill face</comment>
+    <message type='text' where='com' who='individual'>A large, muscular man in a grey coverall with a Shop Steward badge and armband rushes over to you scowling ferociously. Assisted by some workers, they seize you and hustle you away from the work area tossing you back out to the corridor. "Get out and stay out!", the Shop Steward shouts after you.</message>
+    <move what='player' who='individual' loc='1034'/>
+    <release />
+   </event>
+
+   <event num='2'>
+    <comment>shop steward delay - for evt 3</comment>
+    <freeze />
+    <delayevent delay='7' event='mines.union.8'/>
+   </event>
+
+   <event num='3'>
+    <comment>move out to tunnel - xmetals</comment>
+    <message type='text' where='com' who='individual'>The shop steward turns to you scowling ferociously. Assisted by some workers, they seize you and hustle you away from the work area tossing you back out to the corridor. "Get out and stay out!", the shop steward shouts after you.</message>
+    <move what='player' who='individual' loc='842'/>
+    <release />
+   </event>
+
+   <event num='4'>
+    <comment>shop steward delay - for evt 5</comment>
+    <freeze />
+    <delayevent delay='7' event='mines.union.9'/>
+   </event>
+
+   <event num='5'>
+    <comment>move out to tunnel - monopoles</comment>
+    <message type='text' where='com' who='individual'>The shop steward turns to you scowling ferociously. Assisted by some workers, they seize you and hustle you away from the work area tossing you back out to the corridor. "Get out and stay out!", the shop steward shouts after you.</message>
+    <move what='player' who='individual' loc='905'/>
+    <release />
+   </event>
+
+   <event num='6'>
+    <comment>shop steward delay - for evt 1</comment>
+    <freeze />
+    <delayevent delay='7' event='mines.union.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>check map - for evt 1</comment>
+    <checkmap map='home'  pass='mines.union.1' loc='1035'/>
+   </event>
+
+   <event num='8'>
+    <comment>check map - for evt 3</comment>
+    <checkmap map='home'  pass='mines.union.3' loc='778'/>
+   </event>
+
+   <event num='9'>
+    <comment>check map - for evt 5</comment>
+    <checkmap map='home'  pass='mines.union.5' loc='970'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='keepout'>
+
+   <event num='1'>
+    <comment>Staff check on Skimmer Yard - loc 838</comment>
+    <checkflag who='individual' flag ='staff'  unset='moves.keepout.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Turn non-staff back...</comment>
+    <message type='single' where='com' who='individual' lo='moves.keepout.1'/>
+    <move what='player' who='individual' loc='901'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle...</comment>
+    <checkvariable name='newbod' key='clue' value='fourteen' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does the player already have an expresso bulb?</comment>
+    <checkinventory map='home' id-name='expresso bulb' found='stop'/>
+    <createobject where='inventory' home-map='sol/sumatra' id='obj_expresso'/>
+    <message type='multi' where='com' who='individual' lo='newbod.message.1' hi='newbod.message.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>drop event for the expresso bulb</comment>
+    <message type='text' where='com' who='individual'>That would be most unwise. Someone could see you and grass you up. The penalty for dealing in triple expresso is nine years, with no remission.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='bottle1'>
+
+   <event num='1'>
+    <comment>check inventory for bottle</comment>
+    <checkinventory map='home' id-name='bottle' found='objects.bottle1.2' not-found='objects.bottle1.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>message if bottle in inventory</comment>
+    <message type='text' where='com' who='individual'>The clerk peers down her nose at you with a condescending air. "I&apos;m sorry, citizen but you already have a commemorative souvenir of Sumatra. Only one per person, musn&apos;t be greedy now." She turns away dismissively.</message>
+   </event>
+
+   <event num='3'>
+    <comment>if not in inventory-create bottle and message</comment>
+    <delayevent delay='3'/>
+    <createobject where='inventory' home-map='sol/sumatra' id='obj_bottle1'/>
+    <message type='text' where='com' who='individual'>The clerk scurries up to you with an obsequious smile. In the careful tones of a well rehearsed litany she says, "May I present you with this commemorative bottle of genuine Sumatra rock dust as a souvenir of your visit to our planet. Courtesy of Tamarack &amp; Custer Consolidated Mining and Extraction Corp." Out of breath, she hurriedly presses a small glass bottle into your hands.</message>
+   </event>
+
+   <event num='4'>
+    <comment>destroy bottle</comment>
+    <destroyobject where='inventory' map='home' id-name='bottle'/>
+    <message type='text' where='com' who='individual'>The bottle falls to the floor, shattering and releasing a cloud of fine Sumatran rock dust.</message>
+   </event>
+
+  </section>
+
+  <section name='coffee'>
+
+   <event num='1'>
+    <comment>check inventory for coffee</comment>
+    <checkinventory map='home' id-name='coffee bulb' found='objects.coffee.3' not-found='objects.coffee.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>coffee not found</comment>
+    <message type='text' where='com' who='individual'>Your skin tingles as some kind of security scan is performed.</message>
+   </event>
+
+   <event num='3'>
+    <comment>coffee found</comment>
+    <message type='text' where='com' who='individual'>Your skin tingles as some kind of security scan is performed. A security droid rushes up and clamps a heavy hand on your shoulder, "Sorry, citizen, just drop the coffee and no one gets hurt."</message>
+    <destroyobject where='inventory' map='home' id-name='coffee bulb'/>
+    <message type='text' where='com' who='individual'>You drop the coffee bulb, accidentally activating the self-destruct mechanism. The contraband disappears in a non-incriminating puff, leaving nothing behind but your smile.</message>
+   </event>
+
+   <event num='4'>
+    <comment>coffee drop</comment>
+    <destroyobject where='inventory' map='home' id-name='coffee bulb'/>
+    <message type='text' where='com' who='individual'>You drop the coffee bulb, accidentally activating the self-destruct mechanism. The contraband disappears in a non-incriminating puff, leaving nothing behind but your smile.</message>
+   </event>
+
+   <event num='5'>
+    <comment>create coffee</comment>
+    <checkinventory map='sol/sumatra' id-name='coffee bulb' found='objects.coffee.6' not-found='objects.coffee.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>get coffee - found</comment>
+    <message type='text' where='com' who='individual'>You notice the empty coffee bulb is encrusted with rock dust and sticky residue. You decide the one you have already is more than enough.</message>
+   </event>
+
+   <event num='7'>
+    <comment>get coffee - not found</comment>
+    <createobject where='inventory' home-map='sol/sumatra' id='obj_coffee'/>
+    <message type='text' where='com' who='individual'>You grab the coffee bulb and furtively shove it into a spare pocket. Ever so casually you glance about hoping no one has noticed you taking the contraband.</message>
+   </event>
+
+  </section>
+
+  <section name='coin1'>
+
+   <event num='1'>
+    <comment>drop coin message</comment>
+    <destroyobject where='inventory' map='home' id-name='coin'/>
+    <message type='text' where='com' who='individual'>You drop the coin and it falls to the ground with a slight tinkle and rolls off to disappear without trace.</message>
+   </event>
+
+  </section>
+
+  <section name='danger'>
+
+   <event num='1'>
+    <comment>warning sign on LP - loc 1027</comment>
+    <message type='text' where='com' who='individual'>***DANGER***</message>
+    <message type='text' where='com' who='individual'>****HIGH VOLTAGE****</message>
+    <message type='text' where='com' who='individual'>This is an Active Shuttle Landing Area</message>
+    <message type='text' where='com' who='individual'>Loitering in this High Voltage Area Will Result in Injury or Death</message>
+    <message type='text' where='com' who='individual'>Sumatra Colony takes no responsibility for violators!</message>
+    <changestat who='individual' stamina='-5' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>A feeling of weakness washes over you. Perhaps you should move on; a nice friendly pub sounds appealing.</message>
+   </event>
+
+  </section>
+
+  <section name='data1'>
+
+   <event num='1'>
+    <comment>pressing button on data moves you out of shed</comment>
+    <message type='text' where='com' who='individual'>You press the thumb pad which begins to flash a bright red. The display screen lights up and begins to flash UNAUTHORIZED ACCESS ATTEMPT while a tannoy loudly sirens a piercing alarm. A guard rushes in to clamp a heavy hand on your shoulder while with his other he reaches past you to turn off the alarm.</message>
+    <message type='text' where='com' who='individual'>"Not wise to poke about where you don&apos;t belong, citizen %s," he growls as he tosses you out of the control shed.</message>
+    <move what='player' who='individual' loc='1027'/>
+   </event>
+
+  </section>
+
+  <section name='document'>
+
+   <event num='1'>
+    <comment>read document</comment>
+    <message type='text' where='com' who='individual'>You try to open the document to read it but it is clamped tightly shut in the rack. All you can do is examine the cover.</message>
+   </event>
+
+  </section>
+
+  <section name='fountain'>
+
+   <event num='1'>
+    <comment>small dome- get a coin in the fountain -loc 515</comment>
+    <message type='text' where='com' who='individual'>You look about to make sure no one is watching you. A quick push back on your sleeve and you plunge your hand deep into the chill water, groping for a coin.</message>
+    <call event='objects.fountain.random[3-5]'/>
+   </event>
+
+   <event num='2'>
+    <comment>look at fountain - see coins</comment>
+    <message type='text' where='com' who='individual'>The elegantly simple form of the white plazstone fountain is in complete harmony with the sinuous flow of the water. Peering closely, you notice a scattering of smooth pebbles and a few glinting coins at the bottom of the basin. You wonder if you can get a coin from the fountain.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Create groat</comment>
+    <createobject where='inventory' home-map='sol/sumatra' id='obj_coin1'/>
+    <message type='text' where='com' who='individual'>You fish around in the cold water. Feeling a smooth metallic object beneath your fingers, you seize it in a tight grasp and step away from the fountain. Casually strolling off, you look at the tiny coin resting in the palm of your hand. You admire the silver groat and quickly shove it into your pocket.</message>
+   </event>
+
+   <event num='4'>
+    <comment>get pebble</comment>
+    <message type='text' where='com' who='individual'>You fish around in the cold water. Feeling a smooth object beneath your fingers, you seize it in a tight grasp and step away from the fountain. A quick glance shows you have retrieved a smooth little pebble. You toss it back into the fountain with a splash and consider whether to bother trying again for a coin.</message>
+   </event>
+
+   <event num='5'>
+    <comment>get coin - security guard stops you</comment>
+    <message type='text' where='com' who='individual'>You fish around in the cold water. Feeling a smooth metallic object beneath your fingers, you seize it in a tight grasp and step away from the fountain. You start to look at the silvery coin in your palm when a heavy hand clamps down on your shoulder. "Hello, hello, hello, and what&apos;s this we have here?" a too hearty voice says from behind you. "Not planning to snaffle that are we?"</message>
+    <message type='text' where='com' who='individual'>With a forced smile you look up at the stern faced security guard. You assure the guard you were simply looking and just about to return the coin to the fountain. You turn back to the fountain and let the coin drop back into the water. Stepping away, you are already thinking about coming back later for another go at it.</message>
+   </event>
+
+   <event num='6'>
+    <comment>get in fountain - loc 515</comment>
+    <message type='text' where='com' who='individual'>Grasping the cool marble rim of the fountain, you pull yourself up and swing a leg over the edge. A moment to catch your breath and you heave yourself completely over the rim and SPLASH! into the water of the basin.</message>
+    <move what='player' who='individual' loc='387'/>
+    <changestat who='individual' stamina='-3' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>You shiver in the cold water and feel a momentary weakness. The cold water is more exhausting than you expected.</message>
+    <delayevent delay='300' event='objects.fountain.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>get out - when in loc 397 Fountain</comment>
+    <message type='text' where='com' who='individual'>Getting to your feet, you brace your hands on the rim of the fountain and steal a quick glance around. Seeing you are in the clear, you lift one leg over the rim, steady yourself and bring the other leg up and over. A quick hop off the rim and you are back on your feet on the synthograss once more.</message>
+    <move what='player' who='individual' loc='515'/>
+   </event>
+
+   <event num='8'>
+    <comment>check if player still in fountain</comment>
+    <checkmap map='sol/sumatra'  pass='objects.fountain.9' loc='387'/>
+   </event>
+
+   <event num='9'>
+    <comment>loop stam loss in fountain</comment>
+    <changestat who='individual' stamina='-3' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>You shiver in the cold water and feel a momentary weakness.</message>
+    <delayevent delay='300' event='objects.fountain.8'/>
+   </event>
+
+  </section>
+
+  <section name='nameplate'>
+
+   <event num='1'>
+    <comment>brass nameplate</comment>
+    <message type='text' where='com' who='individual'>Managing Director, Joshua Custer.</message>
+   </event>
+
+  </section>
+
+  <section name='tissue'>
+
+   <event num='1'>
+    <comment>drop tissue</comment>
+    <destroyobject where='inventory' map='home' id-name='tissue'/>
+    <message type='text' where='com' who='individual'>You drop the tissue and it falls, self-destructing in an environmentally sound way. Poof!</message>
+   </event>
+
+  </section>
+
+  <section name='toilet'>
+
+   <event num='1'>
+    <comment>flushing noise</comment>
+    <message type='text' where='com' who='individual'>You press down on the shining flush lever and the toilet flushes with an enormously loud noise.</message>
+    <announce type='text' loc='450'>There&apos;s a loud flushing noise as %s finishes in the toilet.</announce>
+   </event>
+
+   <event num='2'>
+    <comment>wash hands</comment>
+    <message type='text' where='com' who='individual'>You turn on the water, making sure it&apos;s just the right mix of hot and cold. Dispensing some soap, you vigorously wash your hands. The auto-dryer hums into action as you turn off the taps. In a brief moment, your hands are clean and dry.</message>
+    <createobject where='inventory' home-map='sol/sumatra' id='obj_tissue1'/>
+   </event>
+
+   <event num='3'>
+    <comment>leave toilet - check for tissue</comment>
+    <checkinventory map='home' id-name='tissue' found='objects.toilet.4' not-found='objects.toilet.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>tissue found</comment>
+    <destroyobject where='inventory' map='home' id-name='tissue'/>
+    <message type='text' where='com' who='individual'>You open the door and walk back into the pub.</message>
+    <move what='player' who='individual' loc='450'/>
+   </event>
+
+   <event num='5'>
+    <comment>tissue not found</comment>
+    <message type='text' where='com' who='individual'>You pause, trying to remember what you forgot to do.</message>
+    <announce type='text' loc='450'>The speaker over the toilet announces, "%s, you forgot to wash your hands."</announce>
+    <delayevent delay='1'/>
+    <message type='text' where='com' who='individual'>As you open the door and walk back into the pub, you hear the speaker reminding you to wash your hands.</message>
+    <move what='player' who='individual' loc='450'/>
+   </event>
+
+  </section>
+
+  <section name='touchpad'>
+
+   <event num='1'>
+    <comment>from the outside into the lock</comment>
+    <message type='text' where='com' who='individual'>You touch the pad and the portal opens to admit you. You step into it and the outside iris closes behind you.</message>
+    <move what='player' who='individual' loc='966'/>
+    <message type='text' where='com' who='individual'>A sign tells you to wait while the pressure equalizes.</message>
+    <freeze />
+    <delayevent delay='5' event='objects.touchpad.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>from the lock to the inside</comment>
+    <message type='text' where='com' who='individual'>The wait sign blinks out and the inner iris dilates, allowing you to enter the colony.</message>
+    <move what='player' who='individual' loc='1030'/>
+    <release />
+   </event>
+
+   <event num='3'>
+    <comment>from the inside into the lock</comment>
+    <message type='text' where='com' who='individual'>You touch the pad and the iris dilates allowing you to enter.</message>
+    <move what='player' who='individual' loc='966'/>
+    <message type='text' where='com' who='individual'>A sign blinks on to tell you to wait while the air in the lock is removed.</message>
+    <freeze />
+    <delayevent delay='5' event='objects.touchpad.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>from the lock to the outside</comment>
+    <message type='text' where='com' who='individual'>The wait sign blinks off and the outer iris dilates to allow you out. You step through the portal and onto the surface.</message>
+    <move what='player' who='individual' loc='1029'/>
+    <release />
+   </event>
+
+   <event num='5'>
+    <comment>Important - handle log off before the delay event runs - last loc of -1 means just logged on trigger is loc 966 in room</comment>
+    <checklastloc loc='-1' fail='stop'/>
+    <message type='text' where='com' who='individual'>You realise that something has gone wrong with the airlock mechanism, so you press the alarm button. After a few moments there is a loud -CLANG- and the inner iris dilates with a show of reluctance. A maintainance worker holding a large hammer helps you out and tells you that it sometimes sticks shut.</message>
+    <move what='player' who='individual' loc='1030'/>
+   </event>
+
+  </section>
+
+  <section name='touchpad1'>
+
+   <event num='1'>
+    <comment>mantrap-from office to the mine</comment>
+    <message type='text' where='com' who='individual'>You touch the pad and the mantrap revolves open to admit you. You step into it and it begins to revolve until the open side faces the mine entrance and you step out.</message>
+    <move what='player' who='individual' loc='968'/>
+   </event>
+
+   <event num='2'>
+    <comment>mantrap-from mines out to office</comment>
+    <message type='text' where='com' who='individual'>You touch the pad and the mantrap revolves open to admit you. You step into it and it begins to revolve until the open side faces the reception area and you step out.</message>
+    <move what='player' who='individual' loc='967'/>
+   </event>
+
+  </section>
+
+  <section name='touchpad2'>
+
+   <event num='1'>
+    <comment>from the outside into the lock</comment>
+    <message type='text' where='com' who='individual'>You touch the pad and the portal opens to admit you. You step into it and the outside iris closes behind you.</message>
+    <move what='player' who='individual' loc='706'/>
+    <message type='text' where='com' who='individual'>A sign tells you to wait while the pressure equalizes.</message>
+    <delayevent delay='5' event='objects.touchpad2.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>from the lock to the inside</comment>
+    <message type='text' where='com' who='individual'>The wait sign blinks out and the inner iris dilates, allowing you to enter the colony.</message>
+    <move what='player' who='individual' loc='643'/>
+   </event>
+
+   <event num='3'>
+    <comment>from the inside into the lock</comment>
+    <message type='text' where='com' who='individual'>You touch the pad and the iris dilates allowing you to enter.</message>
+    <move what='player' who='individual' loc='706'/>
+    <message type='text' where='com' who='individual'>A sign blinks on to tell you to wait while the air in the lock is removed.</message>
+    <delayevent delay='5' event='objects.touchpad2.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>from the lock to the outside</comment>
+    <message type='text' where='com' who='individual'>The wait sign blinks off and the outer iris dilates to allow you out. You step through the portal and onto the surface.</message>
+    <move what='player' who='individual' loc='707'/>
+   </event>
+
+   <event num='5'>
+    <comment>Important - handle log off before the delay event runs - last loc of -1 means just logged on trigger is loc 707 in room</comment>
+    <checklastloc loc='-1' fail='stop'/>
+    <message type='text' where='com' who='individual'>You realise that something has gone wrong with the airlock mechanism, so you press the alarm button. After a few moments there is a loud -CLANG- and the inner iris dilates with a show of reluctance. A maintainance worker holding a large hammer helps you out and tells you that it sometimes sticks shut.</message>
+    <move what='player' who='individual' loc='707'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='signs'>
+
+  <section name='bofh'>
+
+   <event num='1'>
+    <comment>sign in data centre</comment>
+    <message type='text' where='com' who='individual'>TOUCH ANYTHING AND YOU DIE!</message>
+   </event>
+
+  </section>
+
+  <section name='catwalk'>
+
+   <event num='1'>
+    <comment>burma shave parody</comment>
+    <message type='text' where='com' who='individual'>DON&apos;T STICK YOUR ELBOW</message>
+    <delayevent delay='1'/>
+    <message type='text' where='com' who='individual'>OUT SO FAR</message>
+    <delayevent delay='1'/>
+    <message type='text' where='com' who='individual'>IT MIGHT GO HOME</message>
+    <delayevent delay='1'/>
+    <message type='text' where='com' who='individual'>IN ANOTHER CAR</message>
+    <delayevent delay='1'/>
+    <message type='text' where='com' who='individual'>GOSHA-SAVES</message>
+   </event>
+
+  </section>
+
+  <section name='mantrap'>
+
+   <event num='1'>
+    <comment>mantrap sign entering mine</comment>
+    <message type='text' where='com' who='individual'>To control the revolving mantrap, PRESS TOUCHPAD. Warning: You are entering an active mining zone. Full protective gear is required.</message>
+   </event>
+
+   <event num='2'>
+    <comment>mantrap sign leaving mine</comment>
+    <message type='text' where='com' who='individual'>To control the revolving mantrap, PRESS TOUCHPAD. Warning: You are leaving an active mining zone. Please be sure to leave all equipment safely stored.</message>
+   </event>
+
+  </section>
+
+  <section name='touchpad'>
+
+   <event num='1'>
+    <comment>touchpad instructions</comment>
+    <message type='text' where='com' who='individual'>To control the airlock, PRESS TOUCHPAD. Warning: This airlock is for use of beings class 9 and below. All cargo and beings class 10 and above must make arrangements to use cargo airlock.</message>
+   </event>
+
+  </section>
+
+  <section name='warning'>
+
+   <event num='1'>
+    <comment>warning sign at start of catwalk</comment>
+    <message type='text' where='com' who='individual'>WARNING!</message>
+    <message type='text' where='com' who='individual'>Do not attempt to climb over the railing.</message>
+    <message type='text' where='com' who='individual'>Do not stick body parts out beyond the railing.</message>
+    <message type='text' where='com' who='individual'>Walk, do not run.</message>
+    <message type='text' where='com' who='individual'>This is a one way passage.</message>
+    <message type='text' where='com' who='individual'>For your protection this is a coffee free area.</message>
+    <message type='text' where='com' who='individual'>Violators will be prosecuted.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

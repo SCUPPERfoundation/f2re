@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<fed2-map title='Fireye' version='43' editor='standard' from='460' to='Rawr.Rawr Space.524'>
+
+   <location num='460' flags='yr'>
+      <name>Fireye Stardock</name>
+      <desc>   &quot;Is it hot in here - or is it just me?&quot; - another inane comment your mind makes as your body adjusts to the much heated environment. Icy colored transparent walls with a slight blue glow along their borders keep the planet&apos;s environment from swallowing you wholesale. Numerous balls of fire and streaks of flame dance around on the scorched planet&apos;s surface. You stare in amazement at the elemental showing.</desc>
+      <exits e='461' s='524' sw='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='e'>
+      <name>Fireye Exchange</name>
+      <desc>   One could never tell what surprises the universe may present to you. Your mind tries to brace this fact as you step into the exchange. Out of the large transparent walls you see a sight to behold - massive refining machines made of some foreign alloy which all have a chute on top which looks like an advanced solar panel reflector. Every so often a dancing fireball from the surface would get sucked into the chute and the alloy monstrosity would make a slight rumble before you see a pallet of merchandise come out of it on a conveyor to a central depot. Amusingly enough there is a small scale version of the above right outside the window which has it&apos;s output chute connected to the center of the room. Every so often a flicker of flame would jump in the input chute and an old Earth Coke Slurpee would be spewed out of the output chute onto a rotating table. Apparently the denizens of this spaceport have discovered an alternate form of the Philosopher&apos;s stone! E - announcements   W - LP</desc>
+      <exits e='462' w='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Fireye Exchange Announcements</name>
+      <desc>Announcements for the Fireye Exchange will be posted here.</desc>
+      <desc>The exchange itself is back to the west...</desc>
+      <exits w='461'/>
+   </location>
+
+   <location num='523' flags='b'>
+      <name>Hades-Coldsnap Bar &amp; Grill</name>
+      <desc>   The marriage of fire and ice is no less evident than in Hades-Coldsnap Bar &amp; Grill. The menu is divided into two sections each with a fiery or icy colored background. The fiery section has delectable items such as &quot;Scorched Earth Fajitas&quot;, &quot;Fireye Maharaja Curry w/ Samosas&quot;, and &quot;Firecracker Salmon&quot;. The icy section has treats such as &quot;Coldsnap Vanilla Wafers with Coconut Cream&quot;, &quot;Ice Age Mammoth Ribs&quot;, and &quot;Double Frozen Lemonade w/ Real Lemons&quot;.</desc>
+      <exits ne='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='hi'>
+      <name>Fireye Medical Services</name>
+      <desc>   As you step in a receptionist asks you if you have burn injuries. If so you can make your way over to the long snaking line on one end of the room. If not - a doctor is ready to see you now!!!</desc>
+      <desc>   LP is north from here</desc>
+      <exits n='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

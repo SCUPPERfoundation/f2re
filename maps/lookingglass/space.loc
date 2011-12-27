@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<fed2-map title='Looking Glass Space' version='7' editor='standard'>
+
+   <location num='794' flags='sl'>
+      <name>The Looking Glass</name>
+      <desc>   Floating out in the middle of space is a looking glass. Within the glass there is a little girl who appears to be playing chess with a small black kitten. The chess pieces themselves seem to be doing most of the playing, though, as you witness a knight use its sword to cleanly slice through the arm of a pawn. The pawn is very obviously screaming as it clutches at its bloody stump, but the sound is halted either by the vacuum of space or by the looking glass itself.</desc>
+      <desc>   Floating above you is a very large planetary body. You can stear your ship there or through the looking glass to jump to another link.</desc>
+      <exits up='1050' no-exit='noexit.spacey.1'/>
+   </location>
+
+   <location num='1050' flags='s'>
+      <name>Orbiting Alice</name>
+      <desc>   This planet is huge! It looks to be about the size of a gas giant. And it&apos;s a rogue. There is no star or star system anywhere near here. Glancing at your instruments, you note that the mean surface temperature is 301 Kelvin. Now how can it be so warm without a sun? It makes no sense, but you can see a pronounced terminator as well as lush green vegetation covering the entire surface.</desc>
+      <desc>   As you make your way into a stable orbit, you brace your ship for the intense gravity of such a large planet... except that now your instruments indicate a gravitational field about 1/100 of what it should be. How can that be? The surface is clearly composed of rock.</desc>
+      <desc>  Maybe the planet is hollow. In any event, the looking glass is now far below you.</desc>
+      <exits down='794' no-exit='noexit.spacey.1'/>
+   </location>
+
+</fed2-map>

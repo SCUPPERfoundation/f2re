@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<fed2-map title='Leporidae Space' version='1.00' editor='standard'>
+
+   <location num='260' flags='s'>
+      <name>Space</name>
+      <desc>  The empty blackness of space surrounding your ship is pierced by several pinpoints of light from distant stars.</desc>
+      <exits n='388' ne='389' e='261' se='325' s='324' sw='326' w='262' nw='390' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='261' flags='s'>
+      <name>Space</name>
+      <desc>  Light from distant stars is visible against the deep darkness of space here.  You can move any direction in the plane.</desc>
+      <exits n='389' ne='390' e='262' se='326' s='325' sw='324' w='260' nw='388' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='s'>
+      <name>Space</name>
+      <desc>  The dim light from far-away stars dots this sector of space.</desc>
+      <exits n='390' ne='388' e='260' se='324' s='326' sw='325' w='261' nw='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='324' flags='s'>
+      <name>Space</name>
+      <desc>  The stars shine steady against the blackness of space.</desc>
+      <exits n='260' ne='261' e='325' se='389' s='388' sw='390' w='326' nw='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='325' flags='slp'>
+      <name>Maroon Link and Orbit</name>
+      <desc>  You are in orbit over the planet Maroon.  The link pulses a few hundred meters from your ship.  Empty space lies in all directions.</desc>
+      <exits n='261' ne='262' e='326' se='390' s='389' sw='388' w='324' nw='260' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='s'>
+      <name>Space</name>
+      <desc>  Stars shine visibly in this sector of space.  Movement is possible in all directions.</desc>
+      <exits n='262' ne='260' e='324' se='388' s='390' sw='389' w='325' nw='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='388' flags='s'>
+      <name>Space</name>
+      <desc>  All around you is empty space, broken only by the light of distant stars.</desc>
+      <exits n='324' ne='325' e='389' se='261' s='260' sw='262' w='390' nw='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='389' flags='s'>
+      <name>Space</name>
+      <desc>  The cold vacuum of space envelops your ship as you travel between the stars.</desc>
+      <exits n='325' ne='326' e='390' se='262' s='261' sw='260' w='388' nw='324' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='390' flags='s'>
+      <name>Space</name>
+      <desc>  This sector of space is devoid of planets.  There is only the light from distant stars here.</desc>
+      <exits n='326' ne='324' e='388' se='260' s='262' sw='261' w='389' nw='325' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<fed2-map title='Dyson Space' version='2' editor='standard'>
+
+   <location num='330' flags='slp'>
+      <name>Dyson Space</name>
+      <desc>   As your ship slows down from hyperlink speed, you are confused when you don&apos;t see the star system located on your radar and maps for this sector.  Out of the darkness, instead, you can only pick up the outline of a montrous sized metallic shell.  An automated data-link opens your comms and instructs your ship to BOARD to a small hole in what appears to be a small hole in the &quot;wall&quot; of the shell.  You silently hold your breath as your ship is overtaken and slowly led in.</desc>
+      <exits no-exit='noexit.space.1'/>
+   </location>
+
+</fed2-map>

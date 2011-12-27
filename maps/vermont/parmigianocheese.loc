@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<fed2-map title='Parmigiano Cheese' version='28' editor='standard' from='720' to='Vermont.Vermont Space.529'>
+
+   <location num='137'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='329'>
+      <name>The Cheese Cave 1</name>
+      <desc>You enter a large room that is 45F, somewhat damp.  The walls are made from brown river stone and it looks that this room was built over 1,000 years ago.  In the room sets many 80 pound cheese wheels aging for Two and upto 6 years.</desc>
+      <desc>Up           -      Takes you back to the Town Center</desc>
+      <desc>Down       -      Under Remodel</desc>
+      <exits up='592'/>
+   </location>
+
+   <location num='464' flags='t'>
+      <name>The Kitchen </name>
+      <desc>You walk into the busy Kitchen with line cooks yelling and food going to the pass.  A man that is 5&apos; 3&quot; in a brown chef coat looks at you and picks up his 18&quot; chef knife and tell you to &quot;Get out, or I will cut you!&quot; he turns back and starts to yell at the lines cooks.  Do you stay or do you get put?</desc>
+      <desc>South    -  Front of House</desc>
+      <desc>Down     -  Wine Room</desc>
+      <desc>In          -  Chef Table</desc>
+      <exits s='528' down='580' in='778'/>
+   </location>
+
+   <location num='465' flags='t'>
+      <name>Cigar Humidor</name>
+      <desc>	You entered the cigar humidor a room full of the best cigars from Earth.  The room is lined in Spanish cedar and the selves are made from African mahogany there is a black marble floor and some teak stools that you can set on.  In the far back there is a sign that says Pardon 1964 as you get closer the selves slides back and a iron wall takes its place and a loud alarm sounds.  A man enters the humidor and asks if there is something he can help you with and explains that these are only for the Planet Owner and any other cigar is for sale.  He looks at his pad and notices that he can sell you 5 of them at 195 credits each and you take all of them.  If it is good enough for the Planet Owner is must be the best of the best.</desc>
+      <desc>South - Exit</desc>
+      <exits s='529'/>
+   </location>
+
+   <location num='528' flags='bt'>
+      <name>The French American</name>
+      <desc>&quot;Welcome to the French American upscale restaurant&quot;, a human Host says to you.  You follower him to a table on the far side of the room where he pulls the seat out for you and unfold your napkin and puts it in your lap.  He says to you &quot;Captain Mark will take your order&quot; and he goes back to the front.  You look at the table and notice the fine Irish tablecloth and Waterford crystal on the table.  Next to the charger sets real silverware from the action days of Earth.  In the middle of the room sets a old lady at a piano playing classical music.  The room is cover in rich golds, silvers and browns with a white and gold marble floor.</desc>
+      <desc>Nouth  - Kitchen</desc>
+      <desc>South  - Town Center</desc>
+      <desc>UP      - Riley&apos;s VIP Room</desc>
+      <desc>Down  - The Wine Room</desc>
+      <exits n='464' s='592' up='1028' down='580'/>
+   </location>
+
+   <location num='529' flags='b'>
+      <name>The Flying Beagle&apos;s Scotch &amp; Cigar Bar</name>
+      <desc>    The room has the wonderful odor of hand made cigars in the air.  This room looks like an old men&apos;s club from Earth.  Reclaimed oak covers the floors and walls, there are tables and chairs covered in brown leather.  On the walls there are paintings of Beagles sleeping, hunting, howling and just getting into trouble.  Over the gold marble fireplace sets a large drawing of a Beagle on top of a doghouse with a Flying ace hat and scarf.  Charles Monroe Schulz has signed the artwork.</desc>
+      <desc>    You take a seat at the bar, which was made fro, reclaimed wood from WW2 planes.  You look at the menu and find only signal malt scotch from 12 to 200 years old, you turn it over and find a list of cigars.  There is one listed that says Padron 2000 and you notice most of the cigars are made from Padron.</desc>
+      <desc>SW            -            Town Center</desc>
+      <desc>North          -            Humidor</desc>
+      <exits n='465' sw='592'/>
+   </location>
+
+   <location num='580'>
+      <name>The Wine Room</name>
+      <desc>The Wine Room</desc>
+      <desc>You enter a large room that was dug into the rock.  The floor is made of gold marble that was added and the walls made of stone and polished where it is very smooth.  Lined on the walls is wine racks made from African mahogany.  1,000s of bottles of wine set in the racks some cover with layers of dust.  Waiting for the day they will be ready to drink.</desc>
+      <desc>In the center of the room sets a large oak table made from the HMS Bounty.  The wood was a gift from the people of England for the work the planet has done to protect the Beagle bloodline.  Here VIPS can dine on the chef menu where they put there self in the hands of the Great Chef to fix what he pleases.</desc>
+      <desc>Up  -  The French American</desc>
+      <exits up='528'/>
+   </location>
+
+   <location num='592' flags='b'>
+      <name>Town Center</name>
+      <desc>A busy town center with people and droids runing like little rats.</desc>
+      <desc>South - Gateway to Landing Pad</desc>
+      <desc>North  - The French American</desc>
+      <desc>NE      - The Flying Beagle&apos;s Scotch &amp; Cigar Bar</desc>
+      <desc>East   - Exchange</desc>
+      <desc>West  - Unknown</desc>
+      <exits n='528' ne='529' e='593' s='656' down='329'/>
+   </location>
+
+   <location num='593' flags='eb'>
+      <name>Parmigiano Cheese Exchange</name>
+      <desc>As you enter the  trading floor a droids ask that you read this.</desc>
+      <desc>                                                                       FYI</desc>
+      <desc>    Please do not build any Factories with out the approval of the planet government.  Any factories built with out the approval will be blown up with no warning giving.</desc>
+      <desc>After you are done reading the droids leads you to a trading desk.  If you need food or drink please ask.  You hear something in the back and turn around and you see a pack of Beagles running after a FO.  The droids says that what happen when you do not read! Then droids goes off.</desc>
+      <desc>West  -  Town Center</desc>
+      <desc>East   -  The Board Room</desc>
+      <desc>Up      - Light Rail to Landing Pad</desc>
+      <desc>SE    -   The Lobby to Hound Office Building</desc>
+      <exits e='594' se='658' w='592' up='720'/>
+   </location>
+
+   <location num='594' flags='t'>
+      <name>The Board Room</name>
+      <desc>                                                                                    Notice</desc>
+      <desc>                                       This board will be updated with factory space that is open or notice to FOs that have factory on world</desc>
+      <desc>West     -  Trading Floor</desc>
+      <desc>South     -  Lobby fir Hound Office Building</desc>
+      <exits s='658' w='593'/>
+   </location>
+
+   <location num='656' flags='t'>
+      <name>Department of Customs</name>
+      <desc>You are order to stand in line by a 7&apos; 3&quot; Officer.  He is dressed in black holding a large AR-1709.  As you stand in line doing what you been told you notice a Black lab that a female customer office finds.  The officer turns to the man and ask if this is his dog?  He says yes and she has him removed by 3 Guard Droids, she turns to the dog and order a droid to have the Lab removed from the planet and taking to the Doggy Spa that orbits the outer edge of the system</desc>
+      <desc>North  - Town</desc>
+      <desc>South -  Landing Pad</desc>
+      <exits n='592' s='720'/>
+   </location>
+
+   <location num='658' flags='t'>
+      <name>Lobby of The Hound Office Building</name>
+      <desc>Welcome to the Hound Office Building.  Space in the building can be loaned to FOs or POs for there Embassy.</desc>
+      <desc>NW                 -           Trading Floor</desc>
+      <desc>North               -           Board Room</desc>
+      <desc>Up                   -           Lift</desc>
+      <desc>Down               -           Under Remodel</desc>
+      <exits n='594' nw='593' up='731'/>
+   </location>
+
+   <location num='667'>
+      <name>Office A-1896</name>
+      <desc>Empty Space</desc>
+      <exits s='731'/>
+   </location>
+
+   <location num='720' flags='yrhib'>
+      <name>The Grand Landing Pad</name>
+      <desc>Your shuttlecraft lands at the far end of the pad.  800 yards to the North is the Parmigiano Cheese INS,</desc>
+      <desc>North -  Planet I. N. S.</desc>
+      <desc>South - Bone Yards</desc>
+      <desc>Up     -  Will take you to the light rail which goes to the Exchange</desc>
+      <exits n='656' up='593'/>
+   </location>
+
+   <location num='730'>
+      <name>Office D-1896</name>
+      <desc>Empty Space</desc>
+      <exits e='731'/>
+   </location>
+
+   <location num='731'>
+      <name>1896 Floor Green Marble Lobby</name>
+      <desc>You enter a lobby that the floor is made from Green Marble.</desc>
+      <desc>Down   -      Lobby</desc>
+      <desc>Up       -      96000 Floor Black Marble Lobby</desc>
+      <desc>North    -     Empty Space</desc>
+      <desc>South   -     The Flying Beagle</desc>
+      <desc>East    -      Empty Space</desc>
+      <desc>West    -     Empty Space</desc>
+      <exits n='667' e='732' s='795' w='730' up='1115' down='658'/>
+   </location>
+
+   <location num='732'>
+      <name>Office B-1896</name>
+      <desc>Empty Space</desc>
+      <exits w='731'/>
+   </location>
+
+   <location num='778'>
+      <name>Chef&apos;s Table </name>
+      <desc>You enter the kitchen and are taking to a table called the Chef&apos;s Table to have your wonderful meal that will be designed by the Chef just for you.  As you walk though you fell funny as the temp changes from hot to a very cool and it is not as loud.  A cook name Danny comes and pours you a glass of water and tells you that the Chef will be with you in a minute.  You ask about why it is so nice at the table but, in the kitchen it is hot, he points to the floor where a red light goes around and tells you this keeps this room from being like the kitchen.</desc>
+      <desc>The Chef comes and sets down and pours you and him self a glass of wine and starts to talk about the food.  You tell him you love lobster and rib eye and his brown eyes light up in delight.  Before you can ask him what on the menu he is gone but, you know it must be good!</desc>
+      <desc>Out - Exit Back to the Kitchen</desc>
+      <exits out='464'/>
+   </location>
+
+   <location num='795'>
+      <name>Office C-1896 The Flying Beagle </name>
+      <desc>The Flying Beagle  Offices</desc>
+      <exits n='731'/>
+   </location>
+
+   <location num='1028'>
+      <name>The V.I.P. Room</name>
+      <desc>	White table liners cover the tables and on each one sets a vase with rose of all different colors.  The place setting is Waterford white china with gold rims and accent with Waterford crystal glasses and the finest silverware.  In the middle of the large room is a pound with fishes and you can hear the sound of water though out the whole room.  On the west side of the room are large windows that leads to a balcony with a view of the woods and mountains.</desc>
+      <desc>Down - The French American</desc>
+      <exits down='528'/>
+   </location>
+
+   <location num='1051' flags='bt'>
+      <name>Riley&apos;s Office</name>
+      <desc>This is the office of Chef Riley the overload of this planet.  There is a large African mahogany desk in the center of the room.  On the Desk is a model of a 747-100 Pan Am and of the Starship Enterprise-C.  On the walls is a collection of Chef Knifes that are from Earth.  Though out the office is a collection of cookbooks.</desc>
+      <desc>South    -    Lobby</desc>
+      <exits s='1115'/>
+   </location>
+
+   <location num='1115'>
+      <name>96000 Floor Black Marble Lobb</name>
+      <desc>You enter a lobby that the Floor is Black Marble.</desc>
+      <desc>Down    -    1896 Green MArble Lobby</desc>
+      <desc>North    -    Chef Riley Main Office</desc>
+      <exits n='1051' down='731'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<fed2-map title='Crypton Space' version='9' editor='standard'>
+
+   <location num='269' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <exits se='334' s='333' sw='332'/>
+   </location>
+
+   <location num='332' flags='s'>
+      <name>Entertainment Dome Orbit</name>
+      <desc>Come and enter this floating arena for joys and wonders from all over the Federation universe. All are welcome and no one is turned away, Board for your enjoyment.</desc>
+      <desc>   WEST is the Orbit for Superland and the interstellar link.</desc>
+      <desc>Please DO NOT BUILD FACS WITHOUT PERMISSION thank you and good trading.</desc>
+      <exits ne='269' e='333' se='397'/>
+   </location>
+
+   <location num='333' flags='sl'>
+      <name>Superland Orbit</name>
+      <desc>This planet is now old but still looks as good as it did the day it was discovered there might be millions of people living there but the planet is evolving more and more every day.</desc>
+      <desc>  Please DO NOT BUILD FACS WITHOUT PERMISSION thank you and good trading.</desc>
+      <exits n='269' e='334' se='398' s='397' w='332'/>
+   </location>
+
+   <location num='334' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <exits e='335' sw='397' w='333' nw='269'/>
+   </location>
+
+   <location num='335' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <exits se='400' w='334'/>
+   </location>
+
+   <location num='397' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <exits n='333' ne='334' nw='332'/>
+   </location>
+
+   <location num='398' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <desc>   SOUTH EAST is the orbit for Katharon.</desc>
+      <desc>NORTH WEST is the interstellar link.</desc>
+      <exits se='463' nw='333'/>
+   </location>
+
+   <location num='400' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <exits s='464' nw='335'/>
+   </location>
+
+   <location num='463' flags='s'>
+      <name>Orbit for Katharon</name>
+      <desc>You look out your window of your ship and see a new asteroid that has been recently discovered in the Crypton system.</desc>
+      <desc>  NORTH WEST and EAST leads to empty space.</desc>
+      <desc>Please DO NOT BUILD FACS WITHOUT PERMISSION thank you and good trading.</desc>
+      <exits e='464' nw='398'/>
+   </location>
+
+   <location num='464' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are in a empty Location in space there is nothing to see in all directions.</desc>
+      <desc>    WEST is the orbit for Katharon.</desc>
+      <exits n='400' w='463'/>
+   </location>
+
+</fed2-map>

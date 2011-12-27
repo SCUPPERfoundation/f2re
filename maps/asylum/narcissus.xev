@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<event-list version='2'>
+
+ <category name='fanclub'>
+
+  <section name='member'>
+
+   <event num='1'>
+    <comment>Enter event on 1889 - check if already got the fanclub button</comment>
+    <checkvariable name='narcissus' key='fanclub' value='member' equals='fanclub.member.2' not-equal='fanclub.member.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already a member</comment>
+    <message type='single' where='com' who='individual' lo='fanclub.member.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not a member so set variable to give button</comment>
+    <setvariable name='narcissus' key='fanclub' value='member'/>
+    <message type='single' where='com' who='individual' lo='fanclub.member.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

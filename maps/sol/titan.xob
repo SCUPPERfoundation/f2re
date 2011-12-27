@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='46'>
+
+   <object type='static' start='778' visibility='100' size='1' weight='1' flags='i'>
+      <name>fountain</name>
+      <id>obj_fountain</id>
+      <desc>The fountain is small but ornate, a potent symbol of humankind's ability to exist on the most inhospitable of worlds.</desc>
+      <vocab cmd='examine' event='objects.fountain.1'></vocab>
+   </object>
+
+   <object type='static' start='456' visibility='100' size='1' weight='1' flags='i'>
+      <name>poster</name>
+      <id>obj_poster</id>
+      <desc>The poster contains a long list of safety rules and regulations pertaining to working in hazardous environments. It is issued by the colony's species resources department.</desc>
+      <vocab cmd='read' event='objects.poster.1'></vocab>
+   </object>
+
+   <object type='static' start='327' visibility='100' size='1' weight='1' flags='i'>
+      <name>lever</name>
+      <id>obj_lever</id>
+      <desc>The lever is labelled "emergency stop".</desc>
+      <vocab cmd='pull' event='objects.lever.1'></vocab>
+   </object>
+
+   <object type='static' start='778' visibility='0' size='1' weight='1'>
+      <name>in fountain</name>
+      <id>obj_infountain</id>
+      <desc>I can't find anything called in in the vicinity!</desc>
+      <vocab cmd='get' event='objects.fountain.2'></vocab>
+      <vocab cmd='jump' event='objects.fountain.2'></vocab>
+      <vocab cmd='swim' event='objects.fountain.2'></vocab>
+      <vocab cmd='paddle' event='objects.fountain.3'></vocab>
+   </object>
+
+   <object type='static' start='905' visibility='0' size='1' weight='1'>
+      <name>fridge magnet</name>
+      <id>obj_fridgemagnet</id>
+      <desc>The magnet is the ceramic, high gauss, kind and has a radioactivity symbol attached to it.</desc>
+      <vocab cmd='get' event='newbod.magnet.1'></vocab>
+   </object>
+
+   <object type='static' start='905' visibility='0' size='1' weight='1'>
+      <name>magnet</name>
+      <id>obj_magnet</id>
+      <desc>The magnet is the ceramic, high gauss, kind and has a radioactivity symbol attached to it.</desc>
+      <vocab cmd='get' event='newbod.magnet.1'></vocab>
+   </object>
+
+   <object type='static' start='905' visibility='0' size='1' weight='1'>
+      <name>radioactive symbol</name>
+      <id>obj_radsymbol</id>
+      <desc>The magnet is the ceramic, high gauss, kind and has a radioactivity symbol attached to it.</desc>
+      <vocab cmd='get' event='newbod.magnet.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>magnet</name>
+      <id>obj_newbodmagnet</id>
+      <desc>The magnet is the ceramic, high gauss, kind and has a radioactivity symbol attached to it.</desc>
+      <vocab cmd='drop' event='newbod.magnet.4'></vocab>
+   </object>
+
+   <object type='static' start='837' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The food on offer looks pretty unappetizing - catering-sized dishes of processed food, which probably has very little flavor.</desc>
+      <vocab cmd='buy' event='food.canteen.1'></vocab>
+   </object>
+
+   <object type='static' start='778' visibility='100' size='1' weight='1' flags='d'>
+      <name>weeble</name>
+      <id>obj_weeble</id>
+      <desc>The weeble is a small, rotund alien which at first sight appears to be a smooth, featureless ball. However, its surface is malleable and can produce appendages as needed, including legs, tendrils and eyes on stalks.</desc>
+      <vocab cmd='get' event='objects.weeble.1'></vocab>
+      <vocab cmd='take' event='objects.weeble.1'></vocab>
+      <vocab cmd='kiss' event='objects.weeble.2'></vocab>
+      <vocab cmd='hug' event='objects.weeble.3'></vocab>
+      <vocab cmd='push' event='objects.weeble.4'></vocab>
+      <vocab cmd='weeble' event='objects.weeble.5'></vocab>
+   </object>
+
+   <object type='static' start='654' visibility='0' size='1' weight='1'>
+      <name>screen</name>
+      <id>obj_screen</id>
+      <desc>Touch the screen in order to make the hopper take off.</desc>
+      <vocab cmd='touch' event='moves.hopper.1'></vocab>
+   </object>
+
+   <object type='static' start='1160' visibility='0' size='1' weight='1'>
+      <name>screen</name>
+      <id>obj_1screen</id>
+      <desc>Touch the screen in order to make the hopper take off.</desc>
+      <vocab cmd='touch' event='moves.hopper.2'></vocab>
+   </object>
+
+   <object type='static' start='1352' visibility='0' size='1' weight='1'>
+      <name>chairlift</name>
+      <id>obj_chairlift</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='examine' event='moves.chairlift.1'></vocab>
+      <vocab cmd='ex' event='moves.chairlift.1'></vocab>
+      <vocab cmd='use' event='moves.chairlift.2'></vocab>
+      <vocab cmd='take' event='moves.chairlift.2'></vocab>
+   </object>
+
+   <object type='static' start='1301' visibility='0' size='1' weight='1'>
+      <name>skis</name>
+      <id>obj_1ski</id>
+      <desc>There are pairs of skis piled up in a heap - just take some.</desc>
+      <vocab cmd='get' event='objects.skis.1'></vocab>
+      <vocab cmd='take' event='objects.skis.1'></vocab>
+   </object>
+
+   <object type='static' start='1301' visibility='0' size='1' weight='1'>
+      <name>ski</name>
+      <id>obj_2ski</id>
+      <desc>There are pairs of skis piled up in a heap - just take some.</desc>
+      <vocab cmd='get' event='objects.skis.1'></vocab>
+      <vocab cmd='take' event='objects.skis.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pt'>
+      <name>skis</name>
+      <id>obj_skis</id>
+      <desc>You have a pair of skis strapped to your feet (or equivalent). They are quite unwieldy on the flat.</desc>
+      <vocab cmd='drop' event='objects.skis.4'></vocab>
+      <vocab cmd='use' event='objects.skis.5'></vocab>
+   </object>
+
+   <object type='static' start='1235' visibility='0' size='1' weight='1'>
+      <name>push</name>
+      <id>obj_1off</id>
+      <desc>I can't find anything called off in the vicinity!</desc>
+      <vocab cmd='push' event='ski.nursery.1'></vocab>
+   </object>
+
+   <object type='static' start='1299' visibility='0' size='1' weight='1'>
+      <name>push</name>
+      <id>obj_2off</id>
+      <desc>I can't find anything called off in the vicinity!</desc>
+      <vocab cmd='push' event='ski.black.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>snowglobe</name>
+      <id>obj_snowglobe</id>
+      <desc>The globe has a model of the ice mountain on Titan. Give it a shake and see what happens.</desc>
+      <vocab cmd='shake' event='objects.snowglobe.1'></vocab>
+      <vocab cmd='use' event='objects.snowglobe.1'></vocab>
+      <vocab cmd='drop' event='objects.snowglobe.2'></vocab>
+   </object>
+
+   <object type='static' start='522' visibility='0' size='1' weight='1'>
+      <name>scanner</name>
+      <id>obj_scanner</id>
+      <desc>The scanner checks to see if those wanting access to the secure dome should be allowed in or not. To see if you are authorized, touch it.</desc>
+      <vocab cmd='touch' event='moves.secure.1'></vocab>
+   </object>
+
+   <object type='static' start='458' visibility='0' size='1' weight='1'>
+      <name>button</name>
+      <id>obj_button</id>
+      <desc>Press the button to open the door.</desc>
+      <vocab cmd='press' event='moves.secure.3'></vocab>
+   </object>
+
+   <object type='static' start='458' visibility='0' size='1' weight='1'>
+      <name>tdx</name>
+      <id>obj_1tdx</id>
+      <desc>The box is has a warning stencilled on it in big, red letters: WARNING - HIGH EXPLOSIVE. It is full of TDX.</desc>
+      <vocab cmd='get' event='objects.tdx.1'></vocab>
+   </object>
+
+   <object type='static' start='458' visibility='0' size='1' weight='1'>
+      <name>box</name>
+      <id>obj_2tdx</id>
+      <desc>The box is has a warning stencilled on it in big, red letters: WARNING - HIGH EXPLOSIVE. It is full of TDX.</desc>
+      <vocab cmd='get' event='objects.tdx.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='3' flags='pst'>
+      <name>TDX</name>
+      <id>obj_tdx</id>
+      <desc>The packet has a warning stencilled on it in big, red letters: WARNING - HIGH EXPLOSIVE. It should be handled carefully or something drastic will happen.</desc>
+      <vocab cmd='drop' event='objects.tdx.4'></vocab>
+      <vocab cmd='examine' event='objects.tdx.5'></vocab>
+      <vocab cmd='ex' event='objects.tdx.5'></vocab>
+      <vocab cmd='replace' event='objects.tdx.7'></vocab>
+      <vocab cmd='throw' event='objects.tdx.10'></vocab>
+      <vocab cmd='juggle' event='objects.tdx.21'></vocab>
+   </object>
+
+</object-list>

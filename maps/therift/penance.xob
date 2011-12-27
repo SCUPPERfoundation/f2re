@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='36'>
+
+   <object type='static' start='331' visibility='100' size='1' weight='1'>
+      <name>Joey</name>
+      <id>mob_joey</id>
+      <desc>He's a big bruiser of a guy, spiky dark hair and swarthy skin. You definitely wouldn't want to be on the wrong side of him.</desc>
+      <vocab cmd='joey' event='talk.joey.1'></vocab>
+   </object>
+
+   <object type='static' start='332' visibility='0' size='1' weight='1' flags='p'>
+      <name>rubber gloves</name>
+      <id>obj_staticgloves</id>
+      <desc>The bright yellow rubber gloves are in a sale hopper with a price tag of 50ig. You can BUY RUBBER GLOVES.</desc>
+      <vocab cmd='buy' event='obj.gloves.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ps'>
+      <name>rubber gloves</name>
+      <id>obj_gloves</id>
+      <desc>The rubber gloves are bright yellow with textured palms and fingertips. Just the thing for all those nasty, dirty, things you handle.</desc>
+      <vocab cmd='use' event='obj.gloves.2'></vocab>
+      <vocab cmd='blow' event='obj.gloves.3'></vocab>
+      <vocab cmd='snap' event='obj.gloves.4'></vocab>
+      <vocab cmd='drop' event='obj.gloves.5'></vocab>
+   </object>
+
+   <object type='static' start='335' visibility='100' size='1' weight='1' flags='i'>
+      <name>scrap of paper</name>
+      <id>obj_paper</id>
+      <desc>You can just make out the words "BL3 - No Output". Given that the paper is all stuck up with chewing gum, you decide to leave it where it is.</desc>
+   </object>
+
+   <object type='static' start='398' visibility='100' size='1' weight='1'>
+      <name>Tammy</name>
+      <id>mob_tammy</id>
+      <desc>She's well put together and attractive in a vacuous sort of way. Her red Universal Salvage uniform is just a little too snug in certain areas.</desc>
+      <vocab cmd='tammy' event='talk.tammy.1'></vocab>
+   </object>
+
+   <object type='static' start='398' visibility='0' size='1' weight='1'>
+      <name>form</name>
+      <id>obj_form</id>
+      <desc>Yes it's a form.  To garner any information you'll need to READ it.</desc>
+      <vocab cmd='read' event='obj.form.1'></vocab>
+      <vocab cmd='sign' event='obj.form.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>employee tag</name>
+      <id>obj_tag</id>
+      <desc>The small tag will clip to your clothing and appears to have a readable chip. "Universal Salvage - Maintenance Staff" is printed on the front.</desc>
+      <vocab cmd='drop' event='obj.tag.6'></vocab>
+   </object>
+
+   <object type='static' start='463' visibility='0' size='1' weight='1'>
+      <name>memo</name>
+      <id>obj_memo</id>
+      <desc>The memo appears to be addressed to the Director of Universal Salvage Penance Division.</desc>
+      <vocab cmd='read' event='obj.memo.1'></vocab>
+   </object>
+
+   <object type='static' start='463' visibility='100' size='1' weight='1' flags='i'>
+      <name>humidor</name>
+      <id>obj_humidor</id>
+      <desc>The humidor is made from rosewood with inlaid mother of pearl acanthus leaves on the lid.</desc>
+      <vocab cmd='get' event='obj.humidor.1'></vocab>
+      <vocab cmd='open' event='obj.humidor.3'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>lighter</name>
+      <id>obj_lighter</id>
+      <desc>The small silver lighter is engraved with the Universal Salvage logo. If you FLICK the top it should produce a flame.</desc>
+      <vocab cmd='drop' event='obj.lighter.1'></vocab>
+      <vocab cmd='flick' event='obj.lighter.2'></vocab>
+   </object>
+
+   <object type='static' start='782' visibility='0' size='1' weight='1' flags='i'>
+      <name>oily rag</name>
+      <id>obj_staticrag</id>
+      <desc>The rags in the bucket are covered with an oily residue.</desc>
+      <vocab cmd='get' event='obj.rag.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>oily rag</name>
+      <id>obj_rag</id>
+      <desc>The rag is filthy and covered in a thick black oily residue.</desc>
+      <vocab cmd='light' event='obj.rag.4'></vocab>
+   </object>
+
+   <object type='static' start='1032' visibility='100' size='1' weight='1'>
+      <name>Gord</name>
+      <id>mob_gord</id>
+      <desc>Gord is a security droid. His sheer size makes him an impenetrable barrier to anyone wishing to pass without his permission.</desc>
+      <vocab cmd='gord' event='talk.gord.1'></vocab>
+   </object>
+
+   <object type='static' start='1107' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_sign</id>
+      <desc>The sign is quite large and has bold red print on it.</desc>
+      <vocab cmd='read' event='obj.sign.1'></vocab>
+   </object>
+
+   <object type='static' start='1236' visibility='100' size='1' weight='1' flags='i'>
+      <name>on boulder</name>
+      <id>obj_boulder</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='sit' event='obj.boulder.1'></vocab>
+   </object>
+
+   <object type='static' start='1161' visibility='100' size='1' weight='1' flags='i'>
+      <name>keyboard</name>
+      <id>obj_keyboard</id>
+      <desc>The keyboard has alphabetical keys that could be used to type a password.</desc>
+   </object>
+
+   <object type='static' start='1161' visibility='0' size='1' weight='1'>
+      <name>type</name>
+      <id>mob_type</id>
+      <desc>You cannot see that here.</desc>
+      <vocab cmd='type' event='talk.type.1'></vocab>
+   </object>
+
+   <object type='static' start='1225' visibility='100' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>obj_button</id>
+      <desc>The button couldn't be any more obvious if it had a sign on it saying "PUSH".</desc>
+      <vocab cmd='push' event='talk.type.2'></vocab>
+   </object>
+
+   <object type='static' start='1352' visibility='100' size='1' weight='1' flags='d'>
+      <name>Companion</name>
+      <id>mob_comp</id>
+      <desc>She's a little wizzened old lady with barely a trace of chestnut in her long silver hair. Beneath hooded lids her sharp blue eyes survey you acutely.</desc>
+      <vocab cmd='companion' event='talk.comp.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ds'>
+      <name>letter</name>
+      <id>obj_letter</id>
+      <desc>The letter is sealed so you cannot read it.  The envelope is addressed to Jezz at her office on Ritual.</desc>
+      <vocab cmd='drop' event='obj.letter.1'></vocab>
+   </object>
+
+</object-list>
+

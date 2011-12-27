@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<fed2-map title='Dungeon' version='1' editor='standard' from='460' to='Rubble.Rubble Space.457'>
+
+   <location num='0' flags='t'>
+      <name>Version History</name>
+      <desc>1: Initial version submitted to Hazed 11/22/12</desc>
+   </location>
+
+   <location num='139'>
+      <name>Under Construction</name>
+      <desc>  The cavernous empty cavern has been recently excavated with side tunnels chalked out ready for the stone cutters.   The site is taped off preventing any further access, for your own safety.  The main cavern is south.</desc>
+      <exits s='203' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='202'>
+      <name>Livestock</name>
+      <desc>  The barnyard aroma of this cavern is nearly overpowering as livestock are tended to.  Dungeon imports no meat products, and indeed exports the surplus stock raised here.  The exit is east.</desc>
+      <exits e='203' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='203'>
+      <name>Agricultural Cavern</name>
+      <desc>  An immense cavern has been excavated beneath the cell blocks where various crops are grown under artificial sun lamps. Dirt, produced on the nearby asteroid of Dirt, has been imported and layered several meters deep on the floor of the cavern, within which an abundance of crops are being tended to.</desc>
+      <desc>  The constant climate, regulated watering, and the actinic solar lights enable the plants to thrive.  Locally, cereal grains are being harvested, while exotic spices are being grown in an adjacent field.  The cavern continues towards the north and side tunnels branch off east and west.  A gated lift will return you up to Processing.</desc>
+      <exits n='139' e='204' w='202' up='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='204'>
+      <name>Integral Trees</name>
+      <desc>  Trees are an integral part of the rehabilitation regimen of Dungeon.  Inmates having a clean discipline record are allowed to tend to the trees which require continual training, mulching, pruning and other arboriculture activities to enable healthy growth.  In the light gravity of the asteroid, the oldest trees are several meters in diameter and can grow to a height only limited by the ceiling of the cavern which exceeds 100 meters in this room.  The wood is generally harvested well before the trees are allowed to grow to such heights, but there are exceptions where the tops are kept pruned allowing to trunks to grow to prodigious girths.  The exit is west.</desc>
+      <exits w='203' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='265'>
+      <name>Cell Block Gamma</name>
+      <desc>  The cell block is carved deep into the basalt and the lighted corridor leads north into the gloom.  An uncountable number of barred cells line the passageway. An imposing automated steel gate blocks further access to the cell block.</desc>
+      <exits s='329' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='266'>
+      <name>Cell Block Beta</name>
+      <desc>  The cell block is carved deep into the basalt and the lighted corridor leads north into the gloom.  An uncountable number of barred cells line the passageway.  An imposing automated steel gate blocks further access to the cell block.</desc>
+      <exits s='330' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='267'>
+      <name>Cell Block Alpha</name>
+      <desc>  The cell block is carved deep into the basalt and the lighted corridor leads north into the gloom.  An uncountable number of barred cells line the passageway.  An imposing automated steel gate blocks further access to the cell block.</desc>
+      <exits s='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='268' flags='hi'>
+      <name>Infirmary</name>
+      <desc>  The small room carved from the basalt holds perhaps a dozen beds and is attended to by a robotic auto-doc. All the beds are vacant as the inmates know that the auto-doc software is a century out of date and that any cure is likely to be more dangerous than the ailment.  The exit is southwest.</desc>
+      <exits sw='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='328'>
+      <name>Cell Block Corridor</name>
+      <desc>  The corridor ends at a construction site where excavations continue west and north to extend both the cell block corridor and to excavate Cell Block Delta.  A large tracked stone disassociator used for carving through the hard basalt, connected by thick cables to an enormous wheeled cardenium reactor power generator are parked here and presently not being used.  The construction area is taped off with warning signs in several languages, not to enter. The corridor leads east.</desc>
+      <exits e='329' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='329'>
+      <name>Cell Block Corridor</name>
+      <desc>  The long brightly lit corridor leads east and west, while a passageway leads north to Cell Block Gamma. An open gate leads south and outside to a small exercise yard.</desc>
+      <exits n='265' e='330' s='393' w='328' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='330'>
+      <name>Cell Block Corridor</name>
+      <desc>  The long brightly lit corridor leads east and west, while a passageway leads north to Cell Block Beta.</desc>
+      <exits n='266' e='331' w='329' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='331'>
+      <name>Processing</name>
+      <desc>  Prisoners must pass through Processing to and from their cell blocks.  Since this facility only detains the worst of the worst of the galaxy&apos;s criminals, that trip is generally one way.</desc>
+      <desc>  D &amp; B Companies has made a fortune processing the untold mountains of waste generated by a galaxy of trillions of humans, and its efficient method for processing human waste is equally impressive.  Just like a roach motel, the roaches check in, but they don&apos;t check out. There has never been an escape attempt on Dungeon, much less an actual escape!</desc>
+      <desc>  Cell Block Alpha leads north, an infirmary to the northeast, while a corridor leading to other cell blocks is west.  A lift can transport you down to the agricultural caverns.</desc>
+      <exits n='267' ne='268' e='332' w='330' down='203' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='332'>
+      <name>Administration and Processing</name>
+      <desc>  The stark expansive anteroom of the Administrative building is constructed from unadorned dungstone.  A long hallway guarded by an extremely large and heavily armed cyborg leads east towards the administration offices, while the processing center and cellblocks are west.  Lines painted on the stone floor indicate where prisoners are required to queue before being led to processing.</desc>
+      <exits e='333' s='396' w='331' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='333'>
+      <name>Administrative Hall</name>
+      <desc>  The guard stops your advance and queries what your business is in the administrative wing.  Having none, your access is denied.  Peering past the guard, you can observe the long hall branches into many doored offices.</desc>
+      <exits w='332' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='393'>
+      <name>Exercise yard</name>
+      <desc>  The small courtyard is fully enclosed by high dungstone walls and topped with automatic laser cannons.  Various exercise equipment are scattered about the yard - weights, gym bars, climbing stairs, and even a climbing wall are for use by the prisoners, all designed to give the illusion of open space and the possibility of escape to freedom.  The baleful red dwarf of the Rubble System hangs large and high in the sky, casting a dim rufous glow that is reflected off the gleaming white dungstone. If there was ever a picture of an exercise yard from Hell, this would be it.  The door to the cell blocks is north.</desc>
+      <exits n='329' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='394'>
+      <name>Dungeon Museum</name>
+      <desc>  Much like the TARDIS, the small building appears much larger on the inside than its outward appearance would suggest.  The museum generally describes the function of the correctional institute, and most notably its construction material which is a form of foamstone, invented by D &amp; B Companies, and fabricated from the inorganic diagnoga waste material left over from the pharmaceutical processes on Diagaga once all the organic matter has been digested.  Dianoga dung is a highly refined form of metakaolin, which forms pure white dungstone, which is extraordinarily durable.</desc>
+      <desc>  The dianoga excrement, or diadung, is ideally suited as a pozzolonic aggregate for creating extremely strong and dense, but fairly light foamstone.  The resultant product is as hard as granite but as light as pumice.  Dungeon is a dungeon created literally from dung.  The museum gift shop is south, while the museum exit is east.</desc>
+      <exits e='395' s='458' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='395'>
+      <name>Courtyard West</name>
+      <desc>  The wide paved courtyard provides a walking area for bored gaolers, which are generally few since the entire correctional facility is automated, and routine maintenance functions are normally performed by robotic workers.  The courtyard is surrounded by high walls to the north and south, and above the northern wall an enormous basalt escarpment looms.  The courtyard is open towards the east, while a small building is west.</desc>
+      <exits e='396' w='394' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='396'>
+      <name>Inner Courtyard</name>
+      <desc>  Passing through an imposing portcullis set in an inner high wall of solid foamstone, the Administration and Processing building is on the north side of the inner courtyard. Tall ornately cast bronze doors open to the processing center.  The building abuts a high natural basalt palisade formed of hexagonal columns.  The courtyard opens towards the west where a smaller stone building is evident, and towards the east, where nothing much of interest is evident.</desc>
+      <exits n='332' e='397' s='460' w='395' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='397'>
+      <name>Courtyard East</name>
+      <desc>  The wide paved courtyard provides a walking area for bored gaolers, which are generally few since the entire correctional facility is automated, and routine maintenance functions are normally performed by robotic workers. The courtyard is surrounded by high walls to the north, east and south, and above the northern wall an enormous basalt escarpment looms.  The courtyard is open towards the west.</desc>
+      <exits w='396' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='399'>
+      <name>An enormous room</name>
+      <desc>  This is a very large room with a huge slab of a bed and giant closet for storing clothes or similar apparel. One might guess this room would be for the largest of the three bears, or any similar large entity needing to stay overnight.  The exit is southwest.</desc>
+      <exits sw='462' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='458'>
+      <name>Museum Gift shop</name>
+      <desc>  A gift shop on a prison asteroid would seem to be a non sequitur, but pandering to the morbid curiosity of humankind, D &amp; B Corrections makes a small but lucrative profit on the crafts the inmates make, with only a mere five percent, at best, being returned to the artists for their efforts.</desc>
+      <desc>  Large artistic sculptures cast and carved from dungstone, some whimsical while others somber and brooding, but all fetching small fortunes on the open market adorn the walls and shelves.  Smaller souvenirs, also cast from the white dungstone, such as castle paperweights, plaques, starship key-chains, holograph frames and even joke coprolites, are all created by the inmates and on sale here.   The exit is north.</desc>
+      <exits n='394'/>
+   </location>
+
+   <location num='460' flags='r'>
+      <name>Dungeon Landing Pad</name>
+      <desc>  The LP is a vast expanse of large flat paving stones, upon closer inspection appears to be an extremely hard and fine grained form of foamstone.  Obdurate and dense, the pavers exhibit little to no wear from the rigors of spaceship traffic or the heavy manacled footfalls of hardened criminals.  The pad is surrounded by high crenellated walls made of the same dense stone giving the appearance of being the castle&apos;s bailey.</desc>
+      <desc>  Markings on the pavement indicate that the Exchange is towards the East, while the Correctional Administration and Processing Center is North.  The only other way to exit the castle is to BOARD your shuttle.</desc>
+      <exits n='396' e='461' in='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='eb'>
+      <name>Dungeon Exchange</name>
+      <desc>  The exchange is located in a solid structure made from dense foamstone blocks with a crenellated roofline and massive corbels complete with machicolations and murder-holes which make it appear to be a gate keep for a medieval castle. Unfortunately, for this structure anyway, there is no gate to protect, and the fortifications are purely ornamental and designed to merely intimidate the inmates.</desc>
+      <desc>  The exchange provides traders a mechanism to either sell needed goods to the Institute, or purchase goods produced on Dungeon by its inmates, any profits of which go to D &amp; B Corrections.  The exit is a heavy faux wooden door on the western wall, while a smaller and lighter door on the eastern wall leads to a public house.</desc>
+      <exits e='462' w='460' out='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='462' flags='b'>
+      <name>The Gaoler&apos;s Inn</name>
+      <desc>  The Inn is true to its name - a place where the occasional human or similar sentient entities that are dispatched to perform non-routine maintenance activities can stay in a more comfortable milieu than the cold hard cells of the Correctional Institute.  The room is decorated to appear to be a medieval roadhouse, with an extended wooden bar, and comfortable chairs placed around a roaring fireplace.  Traders, managing their futures, are encouraged to relax by the fireplace and enjoy food and beverage provided by the attending wait-droids. Gaolers who need to remain for an extended period of time can stay in rooms to the northeast, east and southeast, while the exit to the Exchange is west.</desc>
+      <exits ne='399' e='463' se='527' w='461' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='463'>
+      <name>A room</name>
+      <desc>  This is a standard room with a comfortable bed and closet for storing clothes or similar apparel.  The exit is west.</desc>
+      <exits w='462' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='527'>
+      <name>A cozy room</name>
+      <desc>  This is a rather small room for a smallish entity, with a tiny but comfortable bed and closet for storing clothes or similar apparel.  The exit is northwest.</desc>
+      <exits nw='462' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>

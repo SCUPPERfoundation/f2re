@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<fed2-map title='Rhodes' version='1.00' editor='standard' from='1629' to='Aegean.Aegean Space.327'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>This is Rhodes&apos; storeroom. If you&apos;re here, I feel sorry for you, since there is no way out!</desc>
+   </location>
+
+   <location num='1501' flags='hi'>
+      <name>Rhodes Hospital</name>
+      <desc>This really seems more of a clinic than a hospital. You wonder, &quot;Wouldn&apos;t a dangerous research lab have a better hospital?&quot; Then you remember that there is one, but it&apos;s in the workers area... You can go South back to the hub.</desc>
+      <exits s='1565' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1564' flags='yr'>
+      <name>Shipyard and Repairs</name>
+      <desc>&quot;Need a new ship? Or your old one to be fixed up?&quot; asks an elderly, clearly apathetic gentleman behind the counter. You can get some work done here, or go East back to the hub.</desc>
+      <exits e='1565' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1565'>
+      <name>Basic Facilities Hub</name>
+      <desc>Because no planet would be complete without some proper facilities, the Rhodes Lab has all the basics covered. It&apos;s pretty quiet here, you&apos;re assuming that the scientists and station&apos;s inhabitants have their own part of the station that is a bit more upbeat than this. A sign in the middle of the hub explains -</desc>
+      <desc>==Shipyard / Repairs - West==</desc>
+      <desc>==Hospital - North==</desc>
+      <desc>==Cafe - East==</desc>
+      <desc>==Landing Pad - South==</desc>
+      <exits n='1501' e='1566' s='1629' w='1564' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1566' flags='b'>
+      <name>Bio Bar</name>
+      <desc>The Bio Bar is the only place that you can get alcohol on the station, and the scientists and workers are only allowed to come in for 3 hours after their shift is over, as not to risk them being tipsy on the job. Like the other facilities on the station, there&apos;s nothing upbeat about this place unfortunately, just your basic bar. The exist back to the hub is to the West.</desc>
+      <exits w='1565' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1629'>
+      <name>Rhodes Landing Pad</name>
+      <desc>You arrive at the Landing Pad of Rhodes, the Biological Research Facility of the Aegean system. The station itself is pretty large, but most of it isn&apos;t accessible to visitors such as yourself. The white metallic walls are at least five stories high. Armstrong Cuthbert has a small office here. You hear a shout from above, &quot;Norman, where are those BioChips I ordered?!?&quot;. You figure it would be best to not get involved, so you wander over to a large sign on the wall which reads -</desc>
+      <desc>==Welcome to Rhodes Laboratories. Please don&apos;t touch anything.==</desc>
+      <desc>==Exchange - East ==</desc>
+      <desc>==Facilities - North==</desc>
+      <desc>==Lab Tour - South==</desc>
+      <desc>==Security Droids won&apos;t let you go - Any other direction==</desc>
+      <desc>You also notice a small display showing a replica of the Colossus of Rhodes, one of the Seven Wonders of the Ancient World. Just as it stood watching over the harbor, you can&apos;t help but feel watched by all the security droids around here...</desc>
+      <exits n='1565' e='1630' s='1693' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1630' flags='eb'>
+      <name>Rhodes Exchange</name>
+      <desc>As you can imagine, the exchange on Rhodes specializes in Biological commodities, manufactured right here in the lab. As expected, Rhodes also buys many commodities that aren&apos;t available on gas planets such as this one. Oddly enough, this exchange seems more like a souvenir shop than an exchange, with only six clerks working the counters, although the delivery process is fully automated. There is also a vending machine where you can buy simple food and drinks. You can go West back to the LP from here.</desc>
+      <exits w='1629' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1693'>
+      <name>Lab Tour Lobby</name>
+      <desc>You enter the lobby where the tours take place, walk up to the counter, and see a small sign which reads -</desc>
+      <desc>==Tour closed. Please come back later.==</desc>
+      <desc>Oh, bother. You can go North back to the LP.</desc>
+      <exits n='1629' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

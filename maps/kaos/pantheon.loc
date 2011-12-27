@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<fed2-map title='Pantheon' version='4' editor='standard' from='2342' to='Kaos.Kaos Space.2216'>
+
+   <location num='0'>
+      <name>Storage</name>
+      <desc>Place to put objects</desc>
+   </location>
+
+   <location num='1831'>
+      <name>Pluto and Prosperpina&apos;s Private Chambers</name>
+      <desc>     Here is the private residence of the God and Goddess of the Underworld.  Firelight flickers off of dark walls accentuate the fact that we are indeed underground in the land of the dead.  Instead of making the room feel gloomy however, they give the room a warm cozy feel.  There is a fireplace in once corner that gives the room light and warmth.</desc>
+      <desc>     A large four poster bed dominates the center of the room with a mattress of deep soft space foam which molds itself to the sleepers form.  Each of the posters is gilded and covered in gems as symbols of all treasures hidden below the earth.  Rich soft chocolate colored leather drapes match the soft bedspread and pillows made of the same soft fabric.  The covers are turned down revealing soft satin sheets which create a cool very masculine but soft and oddly comforting effect.</desc>
+      <exits out='1895' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1894'>
+      <name>Vulcan&apos;s Forge</name>
+      <desc>     A blast of heat hits you as you enter the fiery blacksmith&apos;s workshop.  The Smithy is complete with a giant forge and bellows.  Most of the walls are covered in the various tools of his trade with many hammers of different shapes and weights used in different applications to pincers and leather pads used to hold and shape the metal once heated.  One wall is filled with hundreds of figures and delicate pieces of art work all cleverly crafted from the bounty of the underworld&apos;s mines.   It is difficult to imagine the craftsman who creates such fine artwork yet still possesses the strength to make the great lightening bolts that Jupiter uses to show his displeasure.  Several old blue prints of the ships he helped to build to bring mankind to Pantheon are also hanging on his walls.  Of course, they are encased in blast proof glass to protect them from the heat of the furnace.</desc>
+      <exits se='1959' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1895'>
+      <name>Pluto and Prosperpina</name>
+      <desc>     As God of Death and the Riches of the Underground Pluto&apos;s shrine is well visited and the altar covered with gifts of gold and jewels.  Also, gifts of flowers and other over-worldly gifts have been left her to cheer up Prosperpina during her exile to the underworld each winter.  As Goddess of the Underworld, the once kidnapped Prosperpina now spends 6 months of each year in Hades and the other 6 with her Mother Ceres.  After she had recovered from the terror of her kidnapping and sudden marriage to Pluto, Prosperpina set straight to decorating the underworld so that she could stand the winter months away from her mother.  Pluto and Prosperpina&apos;s home lays beyond the altar behind a door guarded by Cerberus the massive three headed dog.  Only the dead are allowed to pass beyond its massive teeth.  Of course if you insist, your death can be arranged......</desc>
+      <exits s='1959' in='1831' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1953'>
+      <name>Venus&apos;s Bedroom</name>
+      <desc>     A most exquisite four poster bed is before you.  It is obviously the bed of the Goddess with gauzy drapes that mask the interior from prying eyes.  Closer examination reveals that there is no mattress. A dial beside the bed turns on an anti-grav field so that the occupant(s) can relax and sleep in complete weightlessness.  Several quilts are stacked to one side for those who still like something fluffy to cuddle up with.</desc>
+      <exits out='1954' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='1954'>
+      <name>VIP - Venus in Private</name>
+      <desc>     Here, the atmosphere is decidedly more relaxed.  At the very least, its much less formal than the altar room below.  Venus comes up here when she needs to let down her hair and escape the constant devotion of her worshipers.  Off to one side is a dance floor made of a new, highly reflective yet damage resistant, mirro-plex surface which reflects the dancers perfectly while being able to display any number of graphic designs or patterns. It&apos;s punctuated by several highly polished poles and is surrounded by several dark padded booths.  A busty waitress stands ready to take your drink order.</desc>
+      <exits down='2085' in='1953' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='1958'>
+      <name>Stairwell</name>
+      <desc>A dank musty staircase ascends from here to the main level of the Pantheon.  In the distance to the East you see a murky river guarded by Charon whose job is to escort souls into the underworld.</desc>
+      <exits e='1959' up='2213' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1959'>
+      <name>Charon&apos;s Toll Station</name>
+      <desc>     Charon&apos;s boat rests against the near bank of the River Styx which winds its inky way around the perimeter of the underworld.  He stands ready to receive and transport souls to their eternal reward for good or bad in the underworld . . . for a fee of course.  Those who have no coin to give the ferryman must wait for a hundred years before he will take pity on them and allow them to cross.  One such unfortunate soul stands here crying as she is unable to join her family in the underworld.  Charon eyes you warily, but since you are still alive, you seem to be of little interest to him.</desc>
+      <exits n='1895' w='1958' nw='1894' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2085' flags='b'>
+      <name>Altar of Venus and Cupid</name>
+      <desc>     Soft cushions and billowing drapes fill the room leaving only a winding path cleared from the door to an altar in the back.  Below a depiction of Venus Goddess of Love emerging from the waves on the event of her birth, is the altar dedicated to the Goddess of Love and Beauty.  Beside her is Cupid, God of Love.  Gifts of roses, sweet scented candles and incense burn from those hoping to find true love or in gratitude from those who have found it.  A serving girl in one corner stands ready with simu-ambrosia.  She promises it will ease the aches from your body without pesky godly side effects.  The main dome of the Pantheon is South.</desc>
+      <exits s='2149' up='1954' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2087'>
+      <name>Sanctuary</name>
+      <desc>     Inky night surrounds you and you have lost track of all sense of direction.  As your eyes adjust to the darkness, you see that you are surrounded by stars and sparkling celestial bodies.  Instead of the usual altar and paraphernalia associated with worship to various deities, there are piles of bean bags scattered around the room.  Several bean bags are occupied by exhausted traders who snore softly while other travelers seem to be meditating in the welcome calm.</desc>
+      <desc>The main dome of the Pantheon is South.</desc>
+      <exits s='2151' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='2143'>
+      <name>Stairs to the Roof</name>
+      <desc>A set of dusty, seldom used stairs run from the main level of the Pantheon below through a gap in the walls to the roof above.  You sneeze as dust is stirred up by your passing.</desc>
+      <exits up='2206' down='2213' in='2207' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2148'>
+      <name>Library Of Minerva</name>
+      <desc>     The vast library stretches out in all directions before you as a sense of peace and order fills the air.  Tall floor to ceiling book shelves line the walls in this Shrine to Minerva Goddess of Wisdom, War, Learning, and the Arts.  The shelves are all very cleverly arranged so as to create separate rooms for each major subject area without actually having any walls.  There are several carts near the door labeled IN and OUT as well as a rather large and prominent sign that reads: &quot;Please do not bring food or drink into the library. Monetary donations are of course accepted.&quot;</desc>
+      <desc>     It was Minerva that had suggested an attempted be made to reconstruct Rome with the help of mankind. &quot;What use is paradise without worshipers?&quot; she asked.  She also proposed that Saturn the God of Time should suspend it so that the humans could be brought over without the several generations it would normally take to make the crossing.  The entrance to the main dome of the Pantheon is East.</desc>
+      <exits e='2149' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='2149'>
+      <name>Grotto Entrance</name>
+      <desc>You are standing under the Northwest edge of the giant dome of the Pantheon.  The huge oculus is visible high above to the Southeast. Shrines to the Gods lay in the North and Westerly directions.  The center of the Pantheon lies to the South East.</desc>
+      <exits n='2085' e='2150' se='2214' s='2213' w='2148' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2150'>
+      <name>Jupiter and Juno</name>
+      <desc>     Jupiter and Juno&apos;s altar, complete with larger than life sized statues, sits imposingly at the head of the Pantheon presiding over all who enter through the doors of the Pantheon.  When the Gods saw that they had been replaced in ancient Rome, it was Juno, Queen of the Gods who had suggested and pushed for the move away from Earth to teach man a lesson.  So it is no wonder that her face is etched with an eternal scowl since mankind managed to reach the space age without their intervention.  Jupiter&apos;s image sits at her side holding a lightning bolt just in case anyone tries to tell his temperamental with &quot;I told you so.&quot;</desc>
+      <exits e='2151' se='2215' s='2214' sw='2213' w='2149' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2151'>
+      <name>Grotto Entrance</name>
+      <desc>You are standing under the Northeast edge of the giant dome of the Pantheon.  The huge oculus is visible high above to the Southwest.  Shrines to the Gods lay in the North and Easterly directions.  The center of the Pantheon lies to the South West.</desc>
+      <exits n='2087' e='2152' s='2215' sw='2214' w='2150' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2152' flags='y'>
+      <name>Shrine to Mars</name>
+      <desc>     The shrine to Mars, God of War was often a very bloody and gory affair in Ancient times.  Now, in the enlightened age of man, nothing much has changed.  Although most of the people who volunteered to remake Ancient Rome were scholars, architects, and historians, many Gods chose to bring dedicated worshipers along as well.</desc>
+      <desc>     Mars, in concert with Vulcan, created the ships used to transport the people, animals and all forms of plant life and technology that would be needed to allow man to rebuild Rome in all its glory. Reproductions of those famous ships are available here for a modest fee and include the modern luxuries and safety upgrades required by the Galactic Administration for transit through the link.  Each ship is of course blessed by Mars himself to ensure the prosperity and success in battle of each owner.  Mars does not however guarantee safe passage through any celestial body and the user does so at their own risk.   The main dome of the Pantheon is West.</desc>
+      <exits w='2151' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2206'>
+      <name>Top of the Pantheon</name>
+      <desc>     Here at the very windy top of the Pantheon you can look down into the heart of the temple through the oculus and out over the city.  The vastness of Rome lays spread out before you as far as the eye can see.  A huge forest is visible to the southeast and you can just make out a path that leads through it.  In the far off distance you can hear the drums and see the great Roman Empire Coliseum where Gladiators fought to entertain the masses.  And the Via Sacra, running to the Forum which contains the Planetary Management complex, heads off to the South West.   You can go back down to the main level of the Pantheon via the stairs.</desc>
+      <exits down='2143' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2207'>
+      <name>Converted Closet</name>
+      <desc>As you enter the room you are requested to please remove your footwear and leave it near the door. As you do so, you notice that the room is dimly lit by candles that dot the walls in tiny alcoves and various shelves and ledges and it takes your eyes a moment to adjust to the change of lighting. The warm dark wood paneled walls show true craftsmanship and are worn soft with care and the smooth stone tile floor is surprisingly warm beneath your bare feet.  The subtle smell of incense hangs in the air and you can see a small burner tucked off to one corner letting out the occasional drift of its fragrant smoke. A large leather padded table stands next to a shelf lined with a neat row of bottles of scented massage oils along with a bench on which to leave your clothing should you choose.  A hot tub takes up the remaining space, its steam warming the room making the air feel thick and rich.</desc>
+      <exits out='2143' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2213'>
+      <name>Shrine to Apollo</name>
+      <desc>     Apollo the God of the sun, music and medicine had his altar placed here in the Pantheon where the morning sun shines down on it through the Oculus above before moving around the room to the other altars.  A statue of his shininess is gilded and polished.  He is depicted here holding a lyre in one hand while riding his golden chariot across the sky.  He was the first to bring light into Kaos by snagging a nearby star to provide the warmth and light needed for light.  He also brought with him his knowledge of ancient music and cultural heritage of Ancient Rome making it possible to recreate it here on Pantheon.   A small door is in one corner of the alcove</desc>
+      <exits n='2149' ne='2150' e='2214' se='2278' s='2277' up='2143' down='1958' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2214'>
+      <name>Under the Oculus</name>
+      <desc>     You can now look up and see the sky through a giant hole in the ceiling.  The Oculus is what holds the rest of the dome just like the keystone in an archway.  It is also the only source of natural light in the building.  As the day goes by, a spot of sunlight travels around the interior of the dome highlighting several of the altars that have been set up around the dome.  There is a steady stream to traders and merchants going to and from the exchange which is East.  You may leave the Pantheon by going South.</desc>
+      <exits n='2150' ne='2151' e='2215' se='2279' s='2278' sw='2277' w='2213' nw='2149' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2215' flags='e'>
+      <name>Exchange And Shrine To Mercury</name>
+      <desc>     Consoles line the walls of the shrine to Mercury, God of travelers and merchants. Traders are busily conducting their business before moving on to other trades or perhaps a cold drink after a job well done.   A beat up slot machines stands in the corner. It has the letters In--r-a-i-n on it and its console is missing several buttons and the God of commerce also seems to be missing one of his winged sandals!  Perhaps he is hoping someone will return it.   You can exit the Pantheon by moving to the Southwest.</desc>
+      <exits n='2151' s='2279' sw='2278' w='2214' nw='2150' out='2342' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2276'>
+      <name>Three Furies</name>
+      <desc>     Here, Alecto (The Unceasing or The Endless who was their leader), Megaera (The Grudging or The Envious Rager) and Tisiphone (The Avenging or The Retaliator) all sit in judgement of all who enter.  All those who break the peace on Pantheon are brought here to be put to trial.  The main dome of the Pantheon is East.</desc>
+      <exits e='2277' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2277'>
+      <name>Grotto Entrance</name>
+      <desc>     You are standing under the South west edge of the giant dome of the Pantheon.  The huge oculus is visible high above to the Northeast.  Shrines to the Gods lay in the South and Westerly directions.  The door to the Pantheon is East.</desc>
+      <exits n='2213' ne='2214' e='2278' s='2341' w='2276' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2278'>
+      <name>Doorway</name>
+      <desc>Two twenty four foot tall bronze doors stand ajar at the entrance to the Pantheon and lead from the interior to the portico with its giant columns.  The Pantheon lies to the North and the Landing Pad / The Piazza Della Rotunda is South.</desc>
+      <exits n='2214' ne='2215' e='2279' s='2342' w='2277' nw='2213' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2279'>
+      <name>Grotto Entrance</name>
+      <desc>     You are standing under the Southeast edge of the giant dome of the Pantheon.  The huge oculus is visible high above to the Northwest.Shrines to the Gods lay in the South and Easterly directions.  The door to the Pantheon is West.</desc>
+      <exits n='2215' e='2280' s='2343' w='2278' nw='2214' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2280' flags='b'>
+      <name>Pub Bacchus</name>
+      <desc>     This is the place to be if you need a cold drink, great food, and a lively atmosphere. Live grape vines that twine up the bar posts are descendent from the first cuttings propagated and cared for by Bacchus himself after the first crossing.  One end of the bar is dedicated as a shrine to Bacchus and, in addition to the usual accoutrements, contains a jar for collections to pay the God&apos;s rather hefty bar tab.  A waitress smiles and motions for you to take a seat where you like as she stands waiting patiently for newcomers to hmm and haw over the menu.</desc>
+      <desc>    Pub Bacchus is modeled after the old drinking pubs in Ireland and England, and is not an authentic piece of ancient Rome. The Roman Empire did, at one time, extend to the British Isles.  There was a small matter of a labor union agreement with the workers and scholars who insisted on being provided with a pub where Guinness hard cider and good pub food would be served at any hour desired. The main dome of the Pantheon is West.</desc>
+      <exits w='2279' down='2346' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2286'>
+      <name>Cave of the Goddesses</name>
+      <desc>A warm glow fills the cave bouncing off the walls and ceiling casting the shadows of a hundred candles. Three larger than life goddess statues stand before you.  The second looks to be carved straight out of an egyptian hyroglyph. The final goddess statue resembles a Hindu goddess of some kind although you can&apos;t put your finger on who she is. **** still under construction not functional yet ****</desc>
+      <exits out='2350'/>
+   </location>
+
+   <location num='2337'>
+      <name>Office</name>
+      <desc>This is a non-descript office currently in use by one of the many workthingy labor force officials.  A bored looking union boss sits behind his desk and tries to look busy while playing solitaire on his personal computing unit and studiously ignoring anyone that looks like they might need him to do any actual work.</desc>
+      <exits s='2401' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2341' flags='hi'>
+      <name>Hospital and Shrine to the Fates</name>
+      <desc>     The planetary hospital quarters serve as a place for those who die to be reborn but also as a shrine to The Parcae or Goddesses of fate.  If Morta the Goddess of Death has cut your thread short, it would be wise to REINSURE after your recent resurrection courtesy of Decima Goddess of Birth.  There are also gifts left here for Nona who spins the thread in the hopes of a long and fruitful life.</desc>
+      <desc>The main dome of the Pantheon is North.</desc>
+      <exits n='2277' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2342'>
+      <name>Piazza della Rotonda and Landing Pad</name>
+      <desc>     Before you spreads a large piazza that also serves as Pantheon&apos;s shuttle landing pad.  An old lady is selling bird food for a small fee and to one side you see that someone has put bird feed on their head and shoulders and is now covered in hungry birds.  A life scale replica of the Pantheon dominates the North of the square while crowds of tourists feed huge flocks of pigeons. The tinkling sound of a fountain can be heard to the south and well tended paths lie to the South East and down to the Forum.  Merchants and Traders can be seen going to and from the exchange.</desc>
+      <exits n='2278' se='2407' s='2406' down='2466' in='2215' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2343' flags='b'>
+      <name>Faunus&apos;s Chambers</name>
+      <desc>     This room more closely resembles a forest glade than an actual shrine.  A fire burns merrily in a corner set up to look like a campfire by a boulder and a corner bed&apos;s bedding is made to look like fallen leaves.  The four posts of the bed are made to resemble trees.  The carpet feels like soft green grass under your feet and the walls are projected to look like you are surrounded by a deserted forest glade.  Apparently this is where Faunus brings back the nymphs he has seduced.   While the altar here is covered in offerings, there is no sign of either nymphs or Faunus at the moment.  The main dome of the Pantheon is North.</desc>
+      <exits n='2279' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2346' flags='b'>
+      <name>Hot Tub</name>
+      <desc>Bacchus often comes here to relax after a hard day&apos;s drinking and the tub is shaped accordingly.  The tub is actually a giant wine barrel that has been cut in half!  The wooden staves have been sanded smooth and contoured for comfort.  Adjustable jets and environmental controls allow for a wide variety of temperature and massage settings. Several ledges have also been set up with padded cushions for people to sit on if they just want to dabble their feet or equivalent appendages in the water.</desc>
+      <exits up='2280' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='2349'>
+      <name>Narrow Ledge</name>
+      <desc> High above the forest floor the cliff starts to crumble under your feet.  As a few of the rocks tumble off the edge, you begin to realize just how precarious your position is.  The ledge continues to the east or you can try to pick your way down to the valley below.</desc>
+      <exits e='2350' down='2413' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2350'>
+      <name>Cliff of Prometheus</name>
+      <desc>      A chunk of the original cliff that Prometheus was chained to is here complete with one of the rings that held him to the rock.  Prometheus was chained here in punishment for bringing fire to mankind and was doomed to spend 30,000 generations having his liver eaten daily by an eagle only to have it grow back each night.  Thirty generations went by before a brave half God named Hercules came to Prometheus&apos;s rescue and freed him after slaying the eagle.</desc>
+      <desc>     The rock was brought here by the Gods as a reminder of the kind of punishment they will mete out when appropriate.  Regardless of their intentions, the rock now stands for the bravery of Prometheus in facing down Jupiter and defying his will in his efforts to improve mankind.</desc>
+      <exits w='2349' in='2286' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2400'>
+      <name>Kal&apos;s Office</name>
+      <desc>     As you enter the room you notice that there is a subtle difference from other offices.  Casting your eyes about you notice that there are no fluorescent or glaring light bulbs.  Floor to ceiling Mahogany shelves line the walls and are filled with old and tattered but well loved books.  A closer examination shows that while the titles do include &quot;Your Company and Success&quot; and &quot;How to Win in Futures,&quot; a whole section of books contain titles like &quot;A History of Rome&quot; and &quot;Cities of the Ancients.&quot;  The rest are either covered in discrete paper jackets or have titles like &quot;Pirates Passion.&quot;  Apparently Kal has very eclectic reading tastes.  You also discover a card on the desk that reads: to contact planetary management regarding settlements, job placement, or factory permits, please contact Kal at KalandraPantheon@yahoo.com.  Thank you.</desc>
+      <exits e='2401' in='2464' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2401'>
+      <name>Curia Julia Security Guard&apos;s Desk</name>
+      <desc>     Apparently everyone behaves themselves under the watchful eyes of the Gods since the security guard seems to be more interested in the latest episode of &quot;Days of Our Galaxy&quot; than on the comings and goings of the lobby visitors.  He glances up briefly, determines you are probably not much of a threat and goes back to watching the show.  You can see offices to the North, East, and South. A door to the West has a plaque on it that reads &quot;Planetary Manager: Kalandra.&quot;  You can exit out to the forum to the South East.</desc>
+      <exits n='2337' e='2402' se='2466' s='2465' w='2400' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2402'>
+      <name>Office</name>
+      <desc>This office stands empty and unoccupied as far as you can tell.  There is an empty desk with a chair and an abandoned plant sitting in the window.  It looks as if someone at least takes the time to see that it gets watered occasionally.</desc>
+      <exits w='2401' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2406'>
+      <name>Trevi Fountain</name>
+      <desc>     The Sound of Gushing water greets you in this sanctuary built in homage to Neptune God of the Seas.  He is depicted here riding a chariot drawn by wild sea horses and surrounded by the symbols of his domain.  It is said to be good luck and a guarantee of return to throw a coin into the fountain over your shoulder.</desc>
+      <exits n='2342' in='2470' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2407'>
+      <name>Altar to Janus</name>
+      <desc>     A large lavishly decorated Archway dedicated to Janus stands here, at the entrance to the garden as doorways were his domain.   His shrine is now maintained by no more than a handful of worshipers as the gates are shut.  When at war, Romans would open the doors so as to be ready for his assistance in times of need.</desc>
+      <desc>     At the entrance to the garden path a sign reads: For Your Own Safety And The Preservation of Tellus&apos;s Hard Work, Please Refrain From Leaving The Designated Paths.</desc>
+      <exits se='2472' nw='2342' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2410'>
+      <name>Bridge of Rainbows</name>
+      <desc>     You find yourself in a beautiful sunny clearing with the river rushing past, the wind in your hair, the earth beneath your feet, and a fire glowing on a stone hearth.  You have completed the journey to the place where the elements meet.  An altar to Iris, Goddess of Rainbows is here covered in gifts from the many pilgrims that travel here to cross the bridge and through the rainbow.  A pilgrim stands here worshiping her Goddess in a flowing multicolored robe.</desc>
+      <desc>     You are also standing on the other side of the bridge that crosses the river.  From this angle you can see that the rainbow in the sky is being cast by the bridge itself as the sun shines through the crystaline structure.</desc>
+      <exits s='2474'/>
+   </location>
+
+   <location num='2413'>
+      <name>Cliff face</name>
+      <desc>A very faint path leads up to the top of the cliff and you can see the garden path down below.</desc>
+      <exits up='2349' down='2475' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2463'>
+      <name>Kal&apos;s Escape</name>
+      <desc>     The faint smell of wood smoke fills a cozy bedroom and your feet sink into the wall to wall tan carpet. A huge mahogany four poster bed with burgundy drapes takes pride of place in the center of the room. A giant fluffy home-made quilt is laying across it.  A closet stands ajar and you can see several changes of clothing ranging from t-shirts to sundresses laying all over the place. A fire burns in a corner fireplace that casts soft shadows around the room. The stairs lead back down to the living area.</desc>
+      <exits down='2464' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2464'>
+      <name>Behind the Book Case</name>
+      <desc>     As you go into the book case, you find that there is an entire home here.    Huge overstuffed chairs have been deposited in front of a large fireplace. Shelves and bookcases are filled with mementos from her travels along with rows and rows of, you guessed it, more books.  A quick glance at the titles on display reveals textbooks from college, many romance novels, books on Ancient Rome, and an entire row of &quot;For Dummies Books&quot; on every subject imaginable. A cat purrs contentedly on the throw rug in front of the fire. A stairway leads up to the bedroom; a sliding glass door leads South West to the terrace. You may also go back out to Kal&apos;s office.</desc>
+      <exits sw='2527' up='2463' out='2400' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2465'>
+      <name>Office</name>
+      <desc>The desk here is covered in files stacked so high you cannot see if there is anyone sitting behind it or not.  The occasional grumble from behind the stacks confirms the presence of a worker but he or she doesn&apos;t sound very happy.</desc>
+      <exits n='2401' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2466'>
+      <name>Roman Forum and the Via Sacra</name>
+      <desc>The heart of Rome was and now once more is located here.  The Romans used the forum as a market place, political soap box and place for conducting important business as well as being the location for many of the important temples of Rome.  The Curia Julia or meeting place for the Roman Senate is located North West from here and serves as the office block for the Planet Administration offices.  The Temple dedicated to Hestia is East.  You can also go back up the Via Sacra to the Piazza del Rotunda.</desc>
+      <exits e='2467' nw='2401' up='2342' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2467'>
+      <name>Temple of Hestia</name>
+      <desc>     Hestia is known as the Goddess of the Fire and is attended by the Vestal Virgins.  Pictures of her sacred animal, the ass, are painted on the walls and depicted in stone.  The eternal flame burns in the center and is never allowed to burn out.  Upon becoming chosen for the high calling for the position of Vestal Virgin at the age of eight, the women are expected to maintain their virgin state for 30 years service to Rome.  Upon completion of their service requirement they may choose to continue as a Vestal or may retire to take a husband.  You see a sign to one side that advertizes a tour of the temple quarters.</desc>
+      <exits w='2466' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2468' flags='b'>
+      <name>Home of the Vestal Virgins</name>
+      <desc>      While living as Vestal Virgins can be deadly dull, the girls knew how to let loose when not on fire duty.  The place is decked out with cushions all over the floor with low tables for lounging at and eating.  Veils hang from the ceiling at strategic intervals to give privacy without the feeling of claustrophobia.  A shrine to the God Priapus stands in one corner and the exit to the temple of Hestia and the street is west.  Amongst the discarded clothing that can be seen strewn around the room are several sandals. A closer look tells you that at least one of them has little wings on it.</desc>
+      <exits in='2532' out='2467' no-exit='moves.noexit.10'/>
+   </location>
+
+
+   <location num='2470' flags='b'>
+      <name>In the Water</name>
+      <desc>     The fountain water here is kept at a comfortable temperature somewhere between a hot tub and a pool for swimming comfort.  The water splashes from the ledges above and plays along the statuary on its way down.  Cleverly hidden ledges along the edges of the pools create places to relax and enjoy the beating of the water.  You can just see the tourists through the sheets of water as they wander around visiting.</desc>
+      <exits out='2406' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='2472'>
+      <name>Crossroads of Hecate</name>
+      <desc>Hecate the three headed goddess of crossroads faces three directions.  The first path she faces is to the south, the second follows a river to the east, and the third is to the Northwest back toward the Pantheon.</desc>
+      <exits e='2473' s='2536' nw='2407' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2473'>
+      <name>Pax and Victoria</name>
+      <desc>Here on the banks of the river Tiber, the statues of Pax and Victoria stand hand in hand representing the necessity of each for the other to exist. Wreathes of olive branches bedeck the altar that they share.  The path continues east and west.</desc>
+      <exits e='2474' w='2472' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2474'>
+      <name>Altar to the Goddess Iris</name>
+      <desc>     Here, the river and garden path go by the altar to the Goddess Iris.  The altar to the Goddess of Rainbows itself lies across a rushing river that is spanned by a shining crystal bridge. The bridge has the names Kalandra, Monkey, Zadymka, Helga, Redrum, and Robius inscribed upon it.</desc>
+      <exits e='2475' w='2473' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2475'>
+      <name>Garden Path</name>
+      <desc>Prometheus was one of the few Gods who dared argue against Juno&apos;s plan to abandon mankind and instead gave the gifts of wisdom and reasoning with the help of Minerva to them to see them through.  In addition to his earlier tricking of Jupiter into accepting fat and bones as offerings and his gift of fire to mankind, this latest conflict was the tipping point for the King of the Gods.</desc>
+      <desc>Since Jupiter could not re-confine Prometheus to the Caucasus Mountains, Jupiter exiled Prometheus to stay on Earth with mankind stripped of all his Godly powers except his immortality.  When the space age began and Prometheus saw that mankind would succeed in spite of the God&apos;s desertion, he traveled to Pantheon to deliver the news.  The shrine here is dedicated to the God of healing and fire for the help he gave mankind through the centuries between ancient times and the space age.  You can see a replica of the Caucasus Mountains in the distance.</desc>
+      <exits s='2539' w='2474' in='2413' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='2527'>
+      <name>Terrace Garden</name>
+      <desc>     Kal&apos;s personal herb garden and meditation garden are here away from the bustle of tourist traffic.  A small fountain tinkles merrily in one corner.  Several containers, planted with various herbs, are scattered across the patio to make the best use of the sun as it travels accross the sky.   A low padded bench sits in the middle where Kal goes to meditate and take in the feel of the sun on her face, the wind in her hair, the sound of water flowing, and the smell of growing things.</desc>
+      <exits ne='2464' no-exit='moves.noexit.17'/>
+   </location>
+
+   <location num='2532' flags='b'>
+      <name>Altar to Priapus</name>
+      <desc>     All around you are various statues of the little God Priapus, God of gardens, viniculture, sailors, fisherman, virility and Fertility.   He wears a broad smile and why not?  His small stature doesn&apos;t seem to bother him a bit since he is obviously otherwise well endowed.  Aside from the usual ritual paraphernalia on and around the altar, a large cabinet is set to one side full of various toys and accessories.</desc>
+      <desc>     A massive four poster bed complete with virginal white drapes stands in the center of the room, its curtains billowing at the slightest breeze.  A sparkling white bedspread and lace pillow cases adorn the bed along with dozens of throw pillows.  A dial located on each side of the bed allows the sleeper to adjust the firmness of the mattress according to their own liking.  That is, if anyone ever got any sleeping done in here.</desc>
+      <exits out='2468' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2536'>
+      <name>Altar to Ceres and Tellus</name>
+      <desc>      An altar dedicated to Ceres, Goddess of Agriculture, and to Tellus, Goddess of Earth, stands here.  The figure representing Ceres has a scepter in one hand and a basket full of fruit and flowers at her feet, as she rules over crops and planting.  Tellus, on the other hand, appears to be more motherly and kind, yet her intense eyes seem to follow you around the clearing.</desc>
+      <desc>     Before there was organization in the system, Tellus found Pantheon and gave it life making it habitable for Gods and Mankind alike.  It was Ceres&apos;s special gift with grains and agriculture with Tellus&apos;s manipulation of the growing seasons that kept the people of  Pantheon fed while the Galactic Administration decided to allow the use of the link to transport goods.  The perpetual growing cycle now produces enough surplus grain to create a thriving agricultural economy, despite its halting entrance into the Interplanetary Federation.</desc>
+      <exits n='2472' se='2601' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2539'>
+      <name>Goddess of the Moon</name>
+      <desc>     Diana the huntress and protector of animals had her altar dedicated to her placed here instead of in the Pantheon with the other major Gods and Goddesses.  Here in the heart of the forest is her home.  A clear crystal pool is here in the clearing fed by a river that flows from the north.  She has occasionally been seen skinny dipping here. Be warned, she greatly values her privacy and does not take kindly to being spied upon.</desc>
+      <desc>     A statuesque representation of the Goddess stands near the altar surrounded by the animals of the forest and her loyal hunting dogs.  It was Diana&apos;s knowledge of animal husbandry that has made the forest a thriving community of plant and animal life and her nursing that brought them through the crossing from old Earth to Pantheon.</desc>
+      <exits n='2475' s='2603' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='2601'>
+      <name>Flora</name>
+      <desc>     A garden path meanders from the NW to the East.  For now, however you are surrounded by a large meadow full of flowers.  It was Flora&apos;s special gift with color and flowers that has kept Pantheon from being dull and colorless.  It is dyes from the herbs and flowers kept in perpetual bloom that lend their pigments to the clothing and paints throughout Pantheon.</desc>
+      <desc>      In once corner you can see a shrine dedicated to the Goddess Flora who keeps the flowers in a constant state of blooming beauty.  Her altar is covered in many gifts and offerings made by her devotees.  A rustle of wind swirls around you and the flowers near by burst into new blooms and you yourself feel invigorated by the Goddess&apos;s presence.</desc>
+      <exits e='2602' sw='2789' nw='2536' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2602'>
+      <name>Garden Path</name>
+      <desc>     A peaceful path continues from the west to toward a distant forest in the east.  The path is well kept and the Kaos sun shines warmly upon you.  It is hard to imagine that only a few millennia ago, nothing here existed and that only recently has the system been populated by mankind.</desc>
+      <exits e='2603' w='2601' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='2603'>
+      <name>Hebe</name>
+      <desc>An altar to the Goddess of Youth stands here in a clearing along the path.  Here she is depicted as the cupbearer to the Gods from before Ganymede&apos;s ascention to the position dressed in a sleeveless dress.</desc>
+      <exits n='2539' e='2604' w='2602' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='2604'>
+      <name>Dryad&apos;s Tree</name>
+      <desc>     Here, beneath the bows of an ancient tree, is an altar dedicated to the Dryad Goddess.  During the move across space she was in charge of not only safely bringing her tree to Pantheon, but also for the health of all the trees that were brought over on the crossing.  It was her loving care that made the forest that surrounds you possible.  She has carefully tended her tree for centuries now and its size is incredible.  While most other dryads appear to be in the bloom of youth, Belidis appears to be in her late 20&apos;s early 30&apos;s.  Which isn&apos;t bad considering she has been around for several millennia.</desc>
+      <exits w='2603' in='2607' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='2607' flags='b'>
+      <name>Dryad&apos;s Home</name>
+      <desc>     Inside the massive branches of the Dryad&apos;s tree is a cozy home where the Dryad has set up her personal quarters.  A large four poster bed has been built into several of the branches and a basin with dial has been set in the middle.  The label near the dial reads: &quot;Press for Bubbles.&quot;  When you do so, you see that the bed is actually blowing a bubble mattress!  The soft popping of the bubbles as they expand gives the sleeper a relaxing massage while the fluid they are blown from is sturdy enough to support the weight of several occupants.</desc>
+      <exits out='2604' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='2784'>
+      <name>Altar to the East</name>
+      <desc>In the tradition of beginnings, the path here begins in the east with the rising sun.  Soft yellow fabric drapes the altar billowing in the breeze and all manner of sunny things have been offered here.  There is no obvious entrance or exit, you may sit and meditate in the warm sunshine if you like, or move on to another place.</desc>
+      <exits n='2407' ne='2407' e='2407' se='2407' s='2407' sw='2407' w='3040' nw='2407' up='2407' down='2407' in='2407' out='2407'/>
+   </location>
+
+   <location num='2789'>
+      <name>Altar to the North</name>
+      <desc>Here, everything is green and growing lush with the energy that fills this place.  The clearing itself is an altar to growing things and to earth.  Bird song fills the air as the smell of warm earth rises from the forest floor.  This is a place of growing and grounding a place to be in touch with both nature and your inner self.  There are no entrances or exits marked, since earth, itself, is inescapable.</desc>
+      <exits n='2407' ne='2407' e='2407' se='2407' s='2784' sw='2407' w='2407' nw='2407' up='2407' down='2407' in='2407' out='2407' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='3040'>
+      <name>Altar to the South</name>
+      <desc>In a flash of fiery red you find yourself in an alcove of a cave dedicated to the South and Fire.  Lit candles have been placed on every available surface yet they never seem to be consumed.  This is a place dedicated to change and growth.  It is possible to continue on your path, but the way is not clear.</desc>
+      <exits n='3045' ne='2407' e='2407' se='2407' s='2407' sw='2407' w='2407' nw='2407' up='2407' down='2407' in='2407' out='2407'/>
+   </location>
+
+   <location num='3045'>
+      <name>Altar to the West</name>
+      <desc>Now you find yourself on the other side of Diana&apos;s crystal clear pool in the woods.  You are now able to see an altar to the West and Water covered in blue silk. Nearby, the river feeds the pool as it silently adds itself to it.  There is no obvious path available as a large outcropping of rocks prevents travel around the shore line.</desc>
+      <exits n='2407' ne='2407' e='2407' se='2407' s='2407' sw='2407' w='2407' nw='2407' up='2407' down='2407' in='2410' out='2407'/>
+   </location>
+
+</fed2-map>
+

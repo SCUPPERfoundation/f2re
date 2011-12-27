@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<fed2-map title='Java Space' version='6' editor='standard'>
+
+   <location num='267' flags='sp'>
+      <name>Sludge&apos;s Orbit</name>
+      <desc>The you can see the industrial wasteland of Sludge below, with it&apos;s extravagant colors it is quite breathe taking.  It&apos;s amazing what toxic pollutants can do to a planet.</desc>
+      <exits sw='330'/>
+   </location>
+
+   <location num='329' flags='sp'>
+      <name>Joe&apos;s Space Parking</name>
+      <desc>If Joe is parked here he is most likely napping in his Ship.</desc>
+      <exits e='330'/>
+   </location>
+
+   <location num='330' flags='slp'>
+      <name>Interstellar Link &amp; Sulawesian Orbit</name>
+      <desc>You are hovering over the Planet Sulawesi, which remarkably resembles the shape of a coffee bean.  The blinking lights of the Link shimmer nearby.</desc>
+      <desc>You receive a message on your comm unit, &quot;You are cleared to land on LP-26R.&quot;</desc>
+      <desc>Kona&apos;s Orbit is to the SouthEast</desc>
+      <exits ne='267' se='395' w='329'/>
+   </location>
+
+   <location num='395' flags='sp'>
+      <name>Kona&apos;s Orbit</name>
+      <desc>You see the Beautiful planet of Kona down below, you can almost smell the coffee aroma from here.</desc>
+      <exits nw='330'/>
+   </location>
+
+</fed2-map>
+

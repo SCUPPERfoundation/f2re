@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<fed2-map title='Aliment' version='1.00' editor='standard' from='1499' to='Pelf.Pelf Space.267'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='200'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='394' flags='s'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1314'>
+      <name>Barn</name>
+      <desc>A traditional-looking red barn, it has stalls along one wall to hold horses, cows, and maybe a goat or two.  On the other side of the barn is mostly farming equipment.  The floor is of hard-packed dirt and you can smell fresh cut hay in the air.  At the back of the barn is a ladder that will take you UP to the Hay Loft.</desc>
+      <desc>OUT will take you to the LP</desc>
+      <desc>SOUTHWEST will take you the Vegetable Garden</desc>
+      <exits sw='1377' up='1315' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1315'>
+      <name>Hay Loft</name>
+      <desc>It&apos;s dark and warm up here.  You hear mice scurry through the loose hay that covers the floor.  Along the walls bales of hay are stacked and you can taste the slight tang of salt in the air.  A few spots where the hay isn&apos;t stacked all the way to the roof look like great places to take a quick nap or have a tryst with someone special.</desc>
+      <desc>DOWN will take back to The Barn</desc>
+      <desc>OUT will take you to the LP</desc>
+      <exits down='1314' in='1318' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1318'>
+      <name>Hidden Room</name>
+      <desc>xxx</desc>
+      <exits down='1315' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1366'>
+      <name>Apple Orchard</name>
+      <desc>xxx</desc>
+      <exits e='1367' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1367'>
+      <name>Apple Orchard</name>
+      <desc>xxx</desc>
+      <exits e='1368' w='1366' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1368'>
+      <name>Apple Orchard</name>
+      <desc>xxx</desc>
+      <exits e='1369' w='1367' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1369'>
+      <name>Apple Orchard</name>
+      <desc>xxx</desc>
+      <exits se='1434' w='1368' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1373'>
+      <name>Path to Pond</name>
+      <desc>xxx</desc>
+      <exits e='1374' sw='1436' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1374'>
+      <name>The Pond</name>
+      <desc>xxx</desc>
+      <exits s='1438' w='1373' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1377'>
+      <name>Vegetable Garden</name>
+      <desc>Here are neat and tidy rows of all kinds of vegetables.  Most you can recognize easily as carrots, cabbage, and tomatoes.  Some are rather exotic and odd looking.  You wonder if they taste as good as they look.  You can be sure that whatever is grown in this garden is used in Zady&apos;s Kitchen.</desc>
+      <desc>NORTHEAST takes you to the Barn</desc>
+      <desc>SOUTHWEST takes you to the Herb Garden</desc>
+      <exits ne='1314' sw='1440' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1378'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1434'>
+      <name>Path to Orchard</name>
+      <desc>xxx</desc>
+      <exits se='1499' nw='1369' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1436'>
+      <name>Path to Pond</name>
+      <desc>xxx</desc>
+      <exits ne='1373' sw='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1437'>
+      <name>LIBRARY</name>
+      <desc>As you walk into this room you can feel the stillness and calm that only books can bring.  From floor to ceiling there are shelves filled to capacity with books.  There are several old and battered leather chairs scattered around the room with little wooden tables beside them piled with books.  There&apos;s a fireplace in the near wall and a large bear-skin rug in front of it that looks very inviting.  Instead of candles for lighting there are low-hanging light fixtures.  It&apos;s difficult to tell if they are gas, oil, or electrically powered.</desc>
+      <desc>SOUTH will take you to the Foyer</desc>
+      <desc>EAST will take you to the Breakfast Room</desc>
+      <desc>SOUTHEAST will take you to the Zady&apos; Kitchen</desc>
+      <exits e='1438' se='1502' s='1501' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1438'>
+      <name>BREAKFAST ROOM</name>
+      <desc>What a bright and sunny room!  The lemony-yellow walls and the floor to ceiling windows that look out onto the pond are the perfect way to start your day.  The white painted tables and chairs match the sideboards and shelves in this room.  Tea pots, vases, and various other types of porcelain in many distinctive patterns perch daintily on the shelves.  Thankfully there aren&apos;t too many dainty doilies in this room, otherwise it would be nauseatingly &quot;quaint&quot; in here.</desc>
+      <desc>SOUTH will take you back to Zady&apos;s Kitchen</desc>
+      <desc>NORTH will take you out to the Pond</desc>
+      <desc>WEST will take you to the Library</desc>
+      <exits n='1374' s='1502' w='1437' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1439'>
+      <name>Zady&apos;s Office</name>
+      <desc>Looks like Zady&apos;s done some cleaning!  On top of her desk is a tidy stack of papers being weighed down with a big rock.  A fresh breeze is blowing in from the window making the pink ruffly curtains flutter.  In the corner is P.I.T.A.&apos;s docking station, and the shelves along the wall are filled with little bunny knick knacks.  On the wall opposite her desk is a holograph of a bunny with the name &quot;Mara&quot; beneath it.</desc>
+      <desc>SOUTHWEST takes you to Zady&apos;s Kitchen</desc>
+      <desc>SOUTHEAST takes you to the Gazebo</desc>
+      <exits e='1440' se='1504' sw='1502' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1440'>
+      <name>Herb Garden</name>
+      <desc>There are so many different herbs and flowers here.  The staples of any good herb garden like chives, dill, basil, and rosemary are here as well as several varieties of mints and edible flowers.  All are used to flavor or garnish the food prepared in Zady&apos;s Kitchen.</desc>
+      <desc>NORTHEAST will take you to the Vegetable Garden</desc>
+      <desc>SOUTHWEST will take you to the Back Lawn</desc>
+      <desc>WEST will take you to Zady&apos;s Office</desc>
+      <exits ne='1377' sw='1503' w='1439' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1441'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1498' flags='e'>
+      <name>Farmer&apos;s Market and Exchange</name>
+      <desc>You walk through a large wooden door and see top of the line electronics mixed with old-fashioned over-stuffed furniture, wooden desks and tables, windows framed by floor length maroon curtains, and a hard wood floor that is constantly being swept, scrubbed, or polished by a droid.  To the WEST is the hallway leading to offices and to the SOUTH is the Drunken Deer Pub.  EAST will take you back to the LP.</desc>
+      <exits e='1499' s='1562' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1499' flags='p'>
+      <name>Aliment Landing Pad</name>
+      <desc>You find yourself in a town square that reminds you of a quaint Colonial American village.</desc>
+      <desc>The sign to the WEST reads Farmer&apos;s Market and Exchange</desc>
+      <desc>The sign to the SOUTHWEST reads The Drunken Deer Pub</desc>
+      <desc>The sign to the SOUTHEAST reads Doc Martin&apos;s Clinic</desc>
+      <desc>The sign to the NORTHWEST reads Path to the Apple Orchard</desc>
+      <desc>The sign to the NORTHEAST reads Path to The Pond</desc>
+      <desc>The sign to the EAST reads to Zadymka and Gordie&apos;s Farmhouse</desc>
+      <exits ne='1436' e='1500' se='1564' sw='1562' w='1498' nw='1434' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1500'>
+      <name>FRONT PORCH</name>
+      <desc>Welcome to Reid Manor Farm House, the home of  Zady and Gordie.  As you climb up the stairs to the front porch you see several swings swaying in the breeze.  Off in the corner you see Gordie&apos;s beagle Goober sprawled out taking a snooze.</desc>
+      <desc>EAST will take you into the house.</desc>
+      <desc>WEST will take you back to the LP.</desc>
+      <exits e='1501' w='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1501'>
+      <name>FOYER</name>
+      <desc>You&apos;ve entered the front hall of Reid Manor Farmhouse.  The walls are covered in an antique-style wallpaper with alternating cream and burgundy stripes.  You see lots of oak woodwork and a slate floor.  In the corner by the door is a coat rack and on the other side of the door is an umbrella stand.</desc>
+      <desc>SOUTH will take you to the Salon</desc>
+      <desc>NORTH will take you to the Library</desc>
+      <desc>WEST will take you back to the Front Porch, and</desc>
+      <desc>EAST will take you to Zady&apos;s Kitchen</desc>
+      <exits n='1437' e='1502' s='1565' w='1500' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1502' flags='b'>
+      <name>Zady&apos;s Kitchen</name>
+      <desc>You&apos;ve just entered Zady&apos;s kitchen.  Darn it smells good in here!  There&apos;s a droid over in the corner monitoring an oven baking chocolate chip cookies.  From the far corner you can smell a yeasty bread on the rise.  Over by the sink you see another droid peeling vegetables, and over on the stove top it smells like a chicken soup is simmering away.  All the appliances are top of the line 20th century Earth-style models.  In the middle of the kitchen is a very large wooden table that looks like it&apos;s been in use for generations.  On one end of the table is a fresh-baked pie and a large bowl of fruit.  On the other end is another droid mixing ingredients for what looks like a cake.</desc>
+      <desc>NORTH takes you to the Breakfast Room</desc>
+      <desc>SOUTH takes you to the Dining Room</desc>
+      <desc>EAST takes you to the Back Lawn</desc>
+      <desc>WEST takes you back to the Foyer</desc>
+      <desc>NORTHWEST takes you to the Library</desc>
+      <desc>SOUTHEAST takes you to the Pantry</desc>
+      <desc>NORTHEAST takes you to Zady&apos;s Office</desc>
+      <desc>SOUTHWEST takes you to the Salon</desc>
+      <exits n='1438' ne='1439' e='1503' se='1567' s='1566' sw='1565' w='1501' nw='1437' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1503'>
+      <name>Back Lawn</name>
+      <desc>You&apos;ve stepped out onto a grassy lawn.  The grass beneath your feet is a deep green and quite spongy.  Down the center of the lawn is a pathway covered in white shells.  Scattered across the lawn are garden gnomes of all sizes.  You see a rather cheeky looking fellow to your right, and a rather cheerful little guy to your left.</desc>
+      <desc>EAST will take you to the Gazebo</desc>
+      <desc>WEST will take you back to Zady&apos;s Kitchen</desc>
+      <exits ne='1440' e='1504' w='1502' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1504'>
+      <name>Gazebo</name>
+      <desc>Such a pleasant spot to relax and enjoy a beautiful day!  Beneath the graceful wooden arches of the gazebo hang wind chimes that plink and clink in the breeze.  Cushioned chairs and divans are placed about the inside of the gazebo to catch the cooling breezes.</desc>
+      <desc>WEST takes you to the Back Lawn</desc>
+      <desc>NORTWEST takes you to Zady&apos;s Office</desc>
+      <desc>OUT takes you to the LP</desc>
+      <exits w='1503' nw='1439' down='1505' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1505'>
+      <name>The Grotto</name>
+      <desc>xxx</desc>
+      <exits up='1504' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1562' flags='b'>
+      <name>The Drunken Deer Pub</name>
+      <desc>   To your left you see long trestle tables with benches to sit upon.  At the scrubbed wooden tables you can find Gordie and his workthingy friends enjoying a nice pint of ale, fresh cider, or some bizarre concoction the gang has thrown into their tankards.</desc>
+      <desc>   Straight ahead is the bar with a collection of stools around it.  Behind the bar are many rows of different liquors, but Zady&apos;s favorite tequilas take up the whole bottom shelf.</desc>
+      <desc>   Beside the bar is a holograph showing the local apple orchard.  You see deer eating apples that have fallen off the trees.  It appears that these apples have started fermenting, because as the deer walk through the orchard you see them sway drunkenly.</desc>
+      <desc>   To the NORTH is a door that leads to the Farmer&apos;s Market and Exchange.  NORTHEAST will take you back to the LP.</desc>
+      <exits n='1498' ne='1499' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1564' flags='hi'>
+      <name>Doc Martin&apos;s Clinic</name>
+      <desc>Welcome to Doc Martin&apos;s country clinic.  Doc is proficient in treating all kinds of scrapes, bumps and bruises in humans, humanoids, as well as most farm animals.  If you find you need to reINSURE, just ask and Doc will take care of all the necessary paperwork.  If you&apos;re in a hurry...be sure NOT to ask Doc anything about shoes.  He&apos;ll go on for DAYS on the subject!</desc>
+      <exits nw='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1565'>
+      <name>SALON</name>
+      <desc>As you enter the most formal room of the house, you see several clusters of chairs and settees in understated floral patterns.  The walls are painted a pale green and the floor is covered in a cream rug.  There are many oil paintings of what you assume are Zady and Gordie&apos;s relatives.  Over the fireplace is a large portrait of Goober flushing grouse from beneath some underbrush.</desc>
+      <desc>NORTH will take you to the Foyer</desc>
+      <desc>EAST will take you to the Dining Room</desc>
+      <desc>NORTHEAST will take you to Zady&apos;s Kitchen</desc>
+      <exits n='1501' ne='1502' e='1566' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1566'>
+      <name>DINING ROOM</name>
+      <desc>Here&apos;s a stately room!  The dark mahogany walls have been rubbed with oil to gleam.  The floor is covered in a blue and cream Persian-style rug.  Brass sconces on the wall hold candles that cast a warm glow over the room along with a crystal chandelier that sparkles.  The windows are framed by heavy burgundy drapes.  The dining table looks to seat about 20 comfortably.   A fireplace at the far end of the room looks like it could take the chill off the coldest of evenings.</desc>
+      <desc>NORTH takes you back to Zady&apos;s Kitchen</desc>
+      <desc>WEST takes you to the Salon</desc>
+      <exits n='1502' w='1565' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1567'>
+      <name>Pantry</name>
+      <desc>This room isn&apos;t very interesting, just shelves, barrels, and boxes of foodstuffs.  In fact, there seems to be an awful lot of food stored in this room.  You begin to wonder if Zady has a &quot;hoarding&quot; issue.</desc>
+      <desc>NORTHWEST will take you back to the kitchen.</desc>
+      <exits nw='1502' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1690' flags='b'>
+      <name>The Ladies&apos; Room</name>
+      <desc>xxx</desc>
+      <exits up='1562' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1754' flags='b'>
+      <name>Auditioning Room</name>
+      <desc>xxx</desc>
+      <exits up='1690' out='1499' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1949'>
+      <name>Upper Landing</name>
+      <desc>xxx</desc>
+      <exits e='1950' se='2014' out='1501' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1950'>
+      <name>Zady &amp; Gordie&apos;s Bedroom</name>
+      <desc>xxx</desc>
+      <exits se='2015' s='2014' w='1949' in='1951' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1951'>
+      <name>Balcony</name>
+      <desc>xxx</desc>
+      <exits out='1950' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2013'>
+      <name>Closed off room</name>
+      <desc>xxx</desc>
+      <exits out='1949' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2014'>
+      <name>Sitting Room</name>
+      <desc>xxx</desc>
+      <exits n='1950' nw='1949' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2015'>
+      <name>En Suite Bathroom</name>
+      <desc>xxx</desc>
+      <exits nw='1950' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

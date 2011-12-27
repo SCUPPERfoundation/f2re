@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<fed2-map title='Zeerox' version='43' editor='standard' from='785' to='Volleyball.Volleyball Space.463'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>This room is used to store objects and mobiles, of which there are none.</desc>
+      <exits no-exit='You shouldn'/>
+   </location>
+
+   <location num='273' flags='b'>
+      <name>DeSaxMan&apos;s Private Bar</name>
+      <desc>   You have snuck into Desaxman&apos;s private bar.  Out takes you back to the LP.</desc>
+      <exits down='591' out='785' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='400'>
+      <name>Volleyball Hall of Fame - Suryx Javnish Arena</name>
+      <desc>  This expansive room named in honor of the first major intergalactic volleyball superstar is floored with hardwood taken from the old Kiraly Courts on Selena.   All around you, display cases hold hundreds and thousands of old photographs, videos, and holograms showing the growth of volleyball as a universal sport.  Off to one corner, almost as if intentionally hidden from view, is the only mention of the scandal that threatened the existence of the sport: the game fixing problems of the early 2300s.  Luckily, casino sports wagering has been suspended in Federation for the time being.</desc>
+      <desc>   The Historical Wing continues to the SW, while the main hub lies to the East.</desc>
+      <exits e='401' sw='463' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='401' flags='b'>
+      <name>Volleyball Hall of Fame - Main Hub</name>
+      <desc>   You are now standing in the magnificent central hub of the Volleyball Hall of Fame.  The room is completely enclosed in glass, offering a superb view of the beautiful water and beaches outside.  To the West, the historical wing arises, glistening as the sunlight dances across its modern angles; to the East, the original building suffers a more modest, boxy construction, and houses the exhibits of paraphernalia associated with historical events.</desc>
+      <desc>   ALong the wall, a simple snack bar staffed by waitdroids offers visitors a chance to grab a bite or a drink, and cushioned benches and tables provide a place to take a short rest.</desc>
+      <exits e='402' w='400' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='402'>
+      <name>Volleyball Hall of Fame - Uniform Alley</name>
+      <desc>  Uniforms from throughout the ages are on display in this exhibition hall.  Full suits and trousers hang under a small sign marked &quot;1895&quot;, while the uniforms get progressively more athletic and more skimpy, until the tiny bikinis worn by the Brazilians in the 21st century draw your eyes in the middle of the room.  After the public outcry after Earth&apos;s Olympic mishap of 2160, where both the men and women had various exposure issues due to lack of fabric, you can see uniforms after that period become more modest, however slightly.</desc>
+      <desc>   Once the game went interstellar, however, the types of uniforms vary as widely as the species who play.  Under the sign marked &quot;Montynians&quot;, in fact, hangs an empty hanger, as the competitors from Python play volleyball the same way that they do everything - covered in nothing but their glistening green skin.</desc>
+      <desc>   The main hub lies to the West, while the exhibition wing continues to the SE.</desc>
+      <exits se='467' w='401' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='462'>
+      <name>Volleyball Hall of Fame - William G. Morgan Annex</name>
+      <desc>   The West Wing of the Volleyball Hall of Fame describes the origins of the game.  Here in the Morgan Annex, you can view old photographs, rule books, and descriptions of the game originally known as &quot;mintonette.&quot;  Though originally invented as a diversion for men on Earth, the game has now spread throughout the universe, with versions played indoors, outdoors, and even in space.  There is an exit to the SW, and the Hall of Fame continues to the East.</desc>
+      <exits e='463' sw='525' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='463'>
+      <name>Volleyball Hall of Fame - Will Rogers Room</name>
+      <desc>   Continuing your exploration of the Hall of Fame, you come upon old video footage of early tournaments.  On separate screens on the walls, various scenes are playing.  The first official two-man beach volleyball tournament held at Will Rogers State Beach in California; the first official tournament offering a prize (including a case of the old Sol favorite cola &quot;Pepsi&quot;) held in Los Angeles; and other early contests, all held on Earth, before volleyball&apos;s interstellar explosion.  The Hall of Fame continues to the West and NE.</desc>
+      <exits ne='400' w='462' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='467'>
+      <name>Volleyball Hall of Fame - the Ball Pit</name>
+      <desc>  Hundreds of years worth of volleyballs are on display in this room.  From early balls stolen from soccer fields and basketball courts, to dual-floating bladder versions, white and multi-colored, to the improbably square volleyballs used on Cube, to holo-balls used by virtual reality teams; everywhere you turn, you are surrounded by volleyballs.</desc>
+      <desc>  Uniform Alley lies to your NW, while Record Row is to the East.</desc>
+      <exits e='468' nw='402' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='468'>
+      <name>Volleyball Hall of Fame - Record Row</name>
+      <desc>  Record Row contains pieces from many record setting events.  Various nets, sweatbands, aqua socks, knee pads, and more hang from walls and sit in display cases throughout this cavernous room.  The whistle used by Coach Grigori Rasnov as he led his Marina team to 5 consecutive FedOlympic championships hangs above the sneakers worn by Logan Tom as she played in her 1,000th Earth World Championship match.</desc>
+      <desc>  There is an exit to the SE, while more exhibitions lie to the West.</desc>
+      <exits se='533' w='467' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='525' flags='k'>
+      <name>North Shore Pathway</name>
+      <desc>   You can see smoke coming from some barbecue pits to the SE.  The aroma of pork, chicken, and beef wafts over you as you walk along the North Shore Beach.</desc>
+      <desc>   The path continues to the Spamalot Fan Zone and the WPBVT sand courts to the SW, or to the Volleyball Hall of Fame in the NE.</desc>
+      <exits ne='462' se='590' sw='588' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='529'>
+      <name>North Shore Commercial Hub</name>
+      <desc>   Welcome to the commercial hub of Zeerox.  The planet Exchange is located to the SE.  Through the back of the exchange, you can access more shops and the sandy pathways that lead around this island.  You can also get back INto the shuttle to be immediately dropped off at the LP.</desc>
+      <desc>   To the SW is the offices of Spamalot Ltd.  Desaxman and his staff allow visitors to pass through the spacious office complex to take a shortcut to the many sand courts located in the western part of Zeerox.  Perhaps if you are lucky, the WPBVT (Zeerox Pro Beach Volleyball Tour) will be practicing or playing.  Admission is always free, and athletes are welcome to use any available court.</desc>
+      <exits se='594' sw='592' in='785' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='533'>
+      <name>North Shore Pathway</name>
+      <desc>   You can smell cotton candy, peanuts, and other food to the SW as you walk along the North Shore Beach.</desc>
+      <desc>   The path continues towards the medical complex in the SE, or to the Volleyball Hall of Fame to the NW.</desc>
+      <exits se='598' sw='596' nw='468' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='588' flags='b'>
+      <name>Spamalot Fan Zone</name>
+      <desc>   Spamalot Ltd is the main sponsor of this fan-friendly area, full of activities, shops and games for young and old alike.  You can hear the call of midway barkers tempting passersby with their tests of skill and strength.  The aroma of cotton candy, deep fried Twinkies, and chili cheese corn dogs fills the air, blowing through the crowd on the seaside breeze.  The North Beach and Hall of Fame lie towards the NE, while the Fan Zone continues to the South.</desc>
+      <exits ne='525' s='652' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='590' flags='bk'>
+      <name>Spamalot Ltd Office Complex - Back Deck</name>
+      <desc>   Ever the fun boss, Desaxman had a massive multi-tiered back deck built onto the rear entrance of Spamalot Ltd.  His office is to the East, while the path to the WPBVT court complex is to the NW.</desc>
+      <desc>   A fully stocked wet bar and massive stainless steel grills must mean that you can eat and drink here as well.  Stay for a bit and enjoy the warm, sunny atmosphere as you listen to the waves crash on the beach in the distance.</desc>
+      <exits e='591' nw='525'/>
+   </location>
+
+   <location num='591' flags='bk'>
+      <name>Office of Desaxman, CEO, Spamalot Ltd</name>
+      <desc>   Quite a simple office for a planet owner, but Desaxman prefers the simple life.  If you&apos;re lucky enough to pass through when he is here, Desaxman will show you how this seemingly barren room transforms into his office, but for now, you can only wonder at the faint outlines in the wall underneath the in-wall plasma television currently displaying sports news from around the galaxy.</desc>
+      <desc>   Desaxman also loves to be a hospitable host, and even if he is not here, you can always order a beverage or food of your choice.</desc>
+      <desc>   You can return to the lobby by going East, or head West through the office to the back deck.</desc>
+      <exits e='592' w='590' up='273' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='592'>
+      <name>Spamalot Ltd Lobby</name>
+      <desc>   This spacious office building is the home of Spamalot Ltd, built from the ground up by Desaxman.  His personal office is to the West, which also leads to the backdoor and onto the many sand volleyball courts.  Visitors are welcome and encouraged to pass through, say hello, and make their way to the courts.  However, you can head back NE to the commercial hub if you don&apos;t want to disturb him.</desc>
+      <exits ne='529' w='591' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='594' flags='ek'>
+      <name>Tachikara Exchange</name>
+      <desc>   Traders, tourists, and everyone in between meander through the busy exchange.  The Commercial hub lies to the NW, while a simple snack bar is due East.</desc>
+      <desc>   Factory owners wishing to place facs on Zeerox should contact Desaxman before building any facilities on this planet.  Failure to do so may result in expropriation without notice.</desc>
+      <exits e='595' nw='529' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='595' flags='bk'>
+      <name>Gold Bar</name>
+      <desc>   The snack bar is nearly filled to capacity with traders, merchants, and industrialists taking a break from the busy exchange.  However, there is plenty of outdoor seating to the East. You can see tourists and others enjoying the beautiful sun at the numerous benches and tables outside.</desc>
+      <exits e='596' w='594' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='596' flags='bk'>
+      <name>Gold Bar Outdoor Seating</name>
+      <desc>   While the outdoor patio is crowded, there are still several available tables and benches should you wish to sit and relax for a while.  You can also buy food and drinks from the walk-up service window.  Burgers, fries, shakes, pizza, and plenty more are available at any hour of the day.</desc>
+      <desc>   The path to the North Shore and Hall of Fame lies to the NE, or you can enter the Gold Bar to the West.</desc>
+      <exits ne='533' w='595' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='598'>
+      <name>Timmons Hospital North Entrance</name>
+      <desc>   The entire east beach of Zeerox is comprised of this sprawling medical complex.  Everything from minor bumps and bruises to critical life-threatening injuries and illnesses are treated here.  Zeerox boasts its own medical university and some of the top physicians in all specialties.  You can exit back to the North Shore in the NW, or enter the cafeteria to the South.</desc>
+      <exits s='662' nw='533' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='652' flags='b'>
+      <name>Spamalot Fan Zone</name>
+      <desc>   Spamalot Ltd is the main sponsor of this fan-friendly area, full of activities, shops and games for young and old alike.  You can hear the call of midway barkers tempting passersby with their tests of skill and strength.  The aroma of cotton candy, deep fried Twinkies, and chili cheese corn dogs fills the air, blowing through the crowd on the seaside breeze.  The stadium lies towards the SW, while the Fan Zone continues to the North.</desc>
+      <exits n='588' sw='715' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='662' flags='b'>
+      <name>Timmons Hospital Cafeteria</name>
+      <desc> Injured or not, players and fans need to keep their strength up!  Order anything you like in this glass-walled atrium.  The cafeteria is more like a large open courtyard, with the ceiling three stories high and also made of glass.  A peaceful stream of bubbling water flows through a channel cut into the floor, meandering around tables and plants through the middle of the atrium.  Gentle waterfalls dot the stream&apos;s path, and colorful flowering plants stand sentry along the channel.  You can exit to the North, or head to the medical rooms to the SE.</desc>
+      <exits n='598' se='727' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='715'>
+      <name>WPBVT Outer Courts</name>
+      <desc>   During tournaments, the lesser knows seeds are farmed out to these outer courts, leaving Championship Court for the top draws.  Nevertheless, the seating is comfortable and close to the action.  A few WPBVT players are currently practicing, but wave a friendly hello as you walk by.  Championship Court is South, while the Spamalot Fan Zone lies to the NE.</desc>
+      <exits ne='652' s='779' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='727'>
+      <name>Operating Theatre - Viewing Area</name>
+      <desc>   Reknowned surgeons practice their craft under the impressed gaze of passersby.  Since this is a teaching hospital, residents intermingle with the friends and families watching those undergoing procedures down below.  While most injuries on Zeerox are easily repaired, the operating rooms do seem to have their share of visitors.  You can visit the cafeteria to the NW, or visit friends in the Recovery Rooms to the South.</desc>
+      <exits s='791' nw='662' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='779'>
+      <name>WPBVT Championship Court</name>
+      <desc>   Thousands of spectators fill this arena to watch the best of the best square off when the Tour is in session.  For now, you can simply admire the smooth sand below and the posters of past champions adorning the walls above the rainbow-colored seats.  You can head towards the outer courts to the North or the South.</desc>
+      <exits n='715' s='843' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='785' flags='yk'>
+      <name>Zeerox Landing Pad</name>
+      <desc>  You have landed smack in the middle of this volleyball planet with no apparent connecting pathways.  It seems that construction of the future boardwalk and sand courts will take some time, and an Engineer, to complete.</desc>
+      <desc>   However, you can hop INto a shuttle which will automatically drop you off at the commercial hub, consisting of the exchange, the Spamalot complex, and the Volleyball Hall of Fame.  You can also go OUT to the south beach area, which is full of tourist attractions such as beaches and bars.  The east coast sports the Hospital, while the west coast hosts the Zeerox Pro Beach Volleyball Tour.</desc>
+      <desc>   The LP also doubles as the Planet Shipyard, so feel free to BUY SHIP and enjoy a cheap upgrade today!</desc>
+      <exits in='529' out='1041' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='791' flags='hi'>
+      <name>Recovery Rooms</name>
+      <desc>   Patients recovering from operations, from minor injuries, or even from death are all housed in this massive complex with private and semi-private rooms.  If you have woken up here, you may want to consider buying insurance from the agent that passes through every few minutes.  If you are passing through, you can view the operating theatre to the North, or the Training Room to the South.</desc>
+      <exits n='727' s='855' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='843'>
+      <name>WPBVT Outer Courts</name>
+      <desc>   During tournaments, the lesser knows seeds are farmed out to these outer courts, leaving Championship Court for the top draws.  Nevertheless, the seating is comfortable and close to the action.  A few WPBVT players are currently practicing, but wave a friendly hello as you walk by.  Championship Court is North, and the WPBVT park lies to the SE.</desc>
+      <exits n='779' se='908' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='855'>
+      <name>Training Room</name>
+      <desc>   Minor injuries are treated in this area, mostly filled with athletes complaining of minor sand burns, sun burns, and sore muscles.  To the North, the recovery room awaits, while to the SW, the Triage area looms near the south entrance.</desc>
+      <exits n='791' sw='918' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='908' flags='b'>
+      <name>WPBVT Park</name>
+      <desc>   Focusing on volleyball as a grassroots sport and not just a business, the WPBVT has created many smaller courts available to the public on a first-come first-served basis.  You can walk on a cobblestone path leading between many occupied sand courts, some filled with obvious amateurs, but others with respectable athletes.  The children of Zeerox often set up lemonade stands to make some pocket change; feel free to experience their delicious and refreshing concoction before you head towards the stadium to the NW or the South end of the park.</desc>
+      <exits s='972' nw='843'/>
+   </location>
+
+   <location num='918'>
+      <name>Timmons Hospital Triage</name>
+      <desc>   The South entrance used to be reserved for athletes only, and is still used by the majority of those injured on Zeerox.  Any patient entering here undergoes a series of questions and tests to determine his or her course of treatment.  Unless you are injured, you can feel free to move on to the Training Room to the NE, or to the South entrance in the South.</desc>
+      <exits ne='855' s='982'/>
+   </location>
+
+   <location num='972' flags='b'>
+      <name>WPBVT Park</name>
+      <desc>   Focusing on volleyball as a grassroots sport and not just a business, the WPBVT has created many smaller courts available to the public on a first-come first-served basis.  You can walk on a cobblestone path leading between many occupied sand courts, some filled with obvious amateurs, but others with respectable athletes.  The children of Zeerox often set up lemonade stands to make some pocket change; feel free to experience their delicious and refreshing concoction before you head towards the North end of the park, or towards South Beach in the SE.</desc>
+      <exits n='908' se='1037'/>
+   </location>
+
+   <location num='974' flags='b'>
+      <name>Masakayan MooTown Saloon</name>
+      <desc>   Sawdust, hay, and peanut shells cover the oaken floors in this old-style Country and Western bar.  A classic jukebox belts out music as many patrons line dance.  If you don&apos;t know how, there are holos in the back that can teach you step by step.  Or, belly up to the bar and drink some liquid courage before you take on Brutus, the bronco-bustin mechanical bull.</desc>
+      <desc>   The path to South Beach is out to the SW, while tempting aromas waft your way from the East.</desc>
+      <exits e='975' sw='1037' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='975' flags='b'>
+      <name>Steffes Smokey Bones Rib Joint</name>
+      <desc>   A row of classic Harley-Davidsons line up outside the entrance to this Fed-famous Barbecue dive.  But this ain&apos;t no biker bar - businessmen, athletes, tourists, and people from all walks of life line up for hours to get a taste of the ribs, beans, and beer.  The wait may be long, but the service won&apos;t be as ribs and pulled pork and all the sides you can eat seem to materialize instantly for those sitting down at the checkered-clothed tables.</desc>
+      <desc>   A fast food place can be seen to the East, while honky tonk music can be heard to the West.</desc>
+      <exits e='976' w='974' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='976' flags='b'>
+      <name>Shrimp Shack Shooters</name>
+      <desc>   This throwback snack shop serves a variety of chicken, fish, beef, and chops along with greasy fries or other side dishes.  Cheap, often fried, and extremely tasty.  Not recommended for those about to go play on the beach!  But if you&apos;re looking for comfort food, served quickly for the man/woman/neuter on the go, this is the best Zeerox has to offer.  The South Beach hub is to the SE, and the smell of smokey, tangy pork products is coming from the West.</desc>
+      <exits se='1041' w='975' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='978' flags='b'>
+      <name>Walsh&apos;s Wonderful World of Chocolates</name>
+      <desc>   Originally a simple chocolate shop, Walsh&apos;s is world-reknowned for its ever expanding line of desserts that will ever expand your waistline.  Though not limited to chocolate, you can choose any sinful treat your heart desires.  Chocolate candies, chocolate frozen treats, chocolate drinks, and chocolate-covered novelties are still the top sellers, but cheesecakes, mints, candies, and more can be had, and all at a reasonable price as well.</desc>
+      <desc>   Fine dining lies to your East, while the South Beach hub is to the SW.</desc>
+      <exits e='979' sw='1041' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='979' flags='b'>
+      <name>Chez May</name>
+      <desc>   A more formal dining experience can be enjoyed here at the tastefully decorated Chez May.  A fully stocked wine cellar and top of line meats from across the galaxy can be enjoyed here, though you may severely impact your vacation budget if you are not careful.  Tuxedoed waitdroids efficiently serve every course at just the right moment, as a piano droid gently tickles the piano with its 14 fingers.  If this isn&apos;t your scene, a sports bar lies to the East, while a dessert emporium is to the West.</desc>
+      <exits e='980' w='978' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='980' flags='b'>
+      <name>Kiraly Korner</name>
+      <desc>   Welcome to Kiraly Korner, home of the Zeerox Whammer, a 16-ounce ground beef patty covered with any topping your heart desires.  The music is loud, but not so loud that conversation is impossible.  Plasma television screens cover the walls in this ultimate sports bar, and you can watch almost any game of any sport in the universe.  Try the Whammer, if you dare, or try a dozen of the famous Zeerox Wings, which come with any of 200 complimentary dipping sauces.</desc>
+      <desc>   The exit to the SE leads towards the beach, while to the West, Chez May is open.</desc>
+      <exits se='1045' w='979' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='982'>
+      <name>Timmons Hospital South Entrance</name>
+      <desc>   The entire east beach of Zeerox is comprised of this sprawling medical complex.  Everything from minor bumps and bruises to critical life-threatening injuries and illnesses are treated here.  Zeerox boasts its own medical university and some of the top physicians in all specialties.  You can exit back to the South Beach in the SW, or enter Triage to the North.</desc>
+      <exits n='918' sw='1045' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1037' flags='k'>
+      <name>South Beach Pathway</name>
+      <desc>  The sun is shining, the wind blows a gentle cool breeze, and the waves crash softly along Zeerox&apos;s south beach.  The pathway continues to the SE.  To the NW, you can see activity on the WPBVT sand courts, while to the NE, the smell of food makes you salivate.</desc>
+      <exits ne='974' se='1102' nw='972' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1041' flags='k'>
+      <name>South Beach Hub</name>
+      <desc>   Welcome to the South Beach Hub.  Along these pathways you will find a multitude of beaches, sand volleyball courts, bars, and more.  Pathways leading to dining establishments run to the NE and NW.  You can also go back OUT from whence you came to return to the LP.</desc>
+      <exits ne='978' nw='976' out='785' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1045' flags='k'>
+      <name>South Beach Pathway</name>
+      <desc>  To the NW, you can hear loud music and the unmistakeable sounds of partying.  The path to the South Beach curves gently to the SW, while the medical complex looms to the NE.</desc>
+      <exits ne='982' sw='1108' nw='980' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1102' flags='k'>
+      <name>South Beach Pathway</name>
+      <desc>  The sun is shining, the wind blows a gentle cool breeze, and the waves crash softly along Zeerox&apos;s south beach.  The pathway continues to the NW and E.  To the NW, you can make out the sounds of whistles blowing and crowds cheering.</desc>
+      <exits e='1103' nw='1037' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1103' flags='k'>
+      <name>South Beach Pathway</name>
+      <desc>  The sun is shining, the wind blows a gentle cool breeze, and the waves crash softly along Zeerox&apos;s south beach.  The pathway continues to the W and the SE.</desc>
+      <exits se='1168' w='1102' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1107' flags='k'>
+      <name>South Beach Pathway</name>
+      <desc>  The sun is shining, the wind blows a gentle cool breeze, and the waves crash softly along Zeerox&apos;s south beach.  The pathway continues to the SW and the E.</desc>
+      <exits e='1108' sw='1170' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1108' flags='k'>
+      <name>South Beach Pathway</name>
+      <desc>  The sun is shining, the wind blows a gentle cool breeze, and the waves crash softly along Zeerox&apos;s south beach.  The pathway continues to the W and the NE.</desc>
+      <exits ne='1045' w='1107' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1168' flags='bk'>
+      <name>South Beach </name>
+      <desc>  Unobtrusive vendor carts set back from the main beach area, offering goodies such as ice cream, cotton candy, and beverages for those enjoying the sun and sand.  Crystal blue water as far as the eye can see matches the cloudless sky.  There are still plenty of prime locations to set your beach gear and head to the water.</desc>
+      <desc>  Zeerox&apos;s famed South Beach extends to the East, while the path trails off to the NW.</desc>
+      <exits e='1169' nw='1103' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1169' flags='bk'>
+      <name>South Beach Pier</name>
+      <desc>  A magnificent stone and wood pier extends out into the shimmering water, offering benches, gazebos, tables, and more to the many tourists.  Various vendors ply their wares along the fenced pier, and you can see people skating, fishing, tanning, and generally just enjoying themselves in the warm sun.</desc>
+      <desc>  Zeerox&apos;s famed South Beach extends to the East and the West.</desc>
+      <exits e='1170' w='1168' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1170' flags='bk'>
+      <name>South Beach </name>
+      <desc>  Unobtrusive vendor carts set back from the main beach area, offering goodies such as ice cream, cotton candy, and beverages for those enjoying the sun and sand.  Crystal blue water as far as the eye can see matches the cloudless sky.  There are still plenty of prime locations to set your beach gear and head to the water.</desc>
+      <desc>  Zeerox&apos;s famed South Beach extends to the West, while the path trails off to the NE.</desc>
+      <exits ne='1107' w='1169' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>

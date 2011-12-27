@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<fed2-map title='Siryn' version='89' editor='standard' from='2081' to='Mythos.Mythos Space.1624'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   This is a bare, empty storeroom.  There is a thin layer of dust on the floor.  You notice someone has used the dust to doodle a rather good likeness of Slarti, while a less-artistic vandal has written &quot;XQZ wuz hear!&quot;</desc>
+      <exits out='2081'/>
+   </location>
+
+   <location num='1'>
+      <name>Trill&apos;s Retreat</name>
+      <desc>   Deep inside the bowels of the tree itself is a hidden room.  There is solar lighting here, almost natural in appearance, and a laptop that currently displays the shopping page for a shoe catalog.  A dark green loveseat rests against one wall, several books stacked on the end table next to it.  A vid screen is recessed into the opposite wall, slightly dusty from disuse.</desc>
+      <desc>   Hidden behind a screen is a large bed, books resting on the nightstand and a locked journal atop those.  The elusive scent of jasmine seems to lurk in the blue-green coverlet and soft linen sheets, as well as in the braided rug on the floor.  A large closet, filled to capacity, is next to the bed, while an elegant dresser is also neatly but efficiently filled.</desc>
+      <desc>   The bath is a large, wood-carved tub, large enough for two to share comfortably, surrounded by thick, soft towels and a wide array of toiletries.  Other facilites are neatly hidden behind another screen.</desc>
+      <exits n='4033' ne='4033' e='4033' se='4033' s='4033' sw='4033' w='4033' nw='4033' up='4033' down='4033' in='4033' out='2081'/>
+   </location>
+
+   <location num='63'>
+      <name>In the Ocean</name>
+      <desc>   You land in the ocean with a splash and, despite your best efforts, the water closes in over your head, pulling you under.  You claw your way to gasp a precious breath of air, only to catch a stinging mouthful of salt water in the face.  The water fills your lungs as you go under again.  Your clothing is a leaden weight and your muscles start to cramp as you force your head to break the surface again.</desc>
+      <desc>   You barely manage a trickle of air before you go under again.  The light from the surface slowly receeds into a pinpoint as you go down.</desc>
+      <exits down='4095' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1766'>
+      <name>Hidden River</name>
+      <desc>   A long river is hidden behind the trees and you nearly step into it before finding your footing.  The ground is soft, pulling at your feet or footwear with each step.  If you follow the river, however, it may lead somewhere.</desc>
+      <desc>   Faux-insects dart around you.  None of them sting, but a few of them have rather nasty bites, leaving you with red welts.  The air is nearly still here, hanging in heavy dampness that soaks any clothing you may be wearing.  As you follow the river you occasionally hear a rustle over the drone of insects, but never see anything.</desc>
+      <desc>   Finally you can see a break in the jungle as the river pours out to the ocean.  Better yet, you see a bamboo hut, just to the southwest.</desc>
+      <exits sw='2146' no-exit='moves.noexit.20'/>
+   </location>
+
+   <location num='1785'>
+      <name>Shipwrecked</name>
+      <desc>   You crawl onto black sand, your arms giving out as soon as you are out of the water.  You haul in gasping breaths of dry air, feeling salt crust your eyelashes shut.  Weak and dizzy, you succumb to the darkness that pushes you into blessed oblivion.</desc>
+      <desc>   The angry squawk of birds wake you.  Your skin burns where the sun hits it, dry on one side and wet on the other, sand shoved into every wrinkle and crevice.  With effort, you force your eyes open and look around.</desc>
+      <desc>   Tall tropical trees form a perfect arc around the black sand beach.  Now that the storm has passed, sunlight glints over the aquamarine water, so clear that you can see where a large portion of your boat has sunk.  Soft breezes curl about you, whispering through the trees.</desc>
+      <desc>   The jungle is so thick where the treeline starts that it seems impassible.  Your only option appears to be to stay here or go back into the ocean.</desc>
+      <exits up='3596' in='63' out='1766' no-exit='moves.noexit.19'/>
+   </location>
+
+   <location num='1915'>
+      <name>Small Boat on the Ocean</name>
+      <desc>   The boat rocks from side to side, pushed in random directions by the waves.  Although there are several oars in the boat, you are hard-pressed to bail the water from the boat enough to stay afloat.  The water is dark and spray-flecked,  making it hard to tell the difference between sky and water, but a darker mass appears to the northwest.</desc>
+      <desc>   Abandoning all attempts to bail, you work the oars, salt spray and rain lashing your face.  Your shoulders feel the burn first, then your triceps.  Blisters form on your hands and are rubbed raw, so that the oars are slick with water and blood.  Your lungs feel on fire, each gasp of breath a knife in your chest, but still you row.</desc>
+      <desc>   You are so fixated on the land that you don&apos;t notice a huge wave that lifts your boat, holds it in the air for one frozen, lazy moment, and then dashes it down to the water with all the force of a giant fist.  The boat splinters, tossing you into the maelstrom, and you grab a board and swim northwest.</desc>
+      <exits nw='1785' down='63' in='63' no-exit='moves.noexit.18'/>
+   </location>
+
+   <location num='1998'>
+      <name>1966 Mustang </name>
+      <desc>   This gorgeous, candy apple red convertible has a black top, wire hubcaps, and a GT rear valence with dual exhausts and racing stripes along the rocker panels.  Inside is red and white pony upholstery and a woodgrain dash.  The front seats both recline, although there is room in the back for two or three people to sit as well.</desc>
+      <desc>   The sound for the movie filters in through the car&apos;s speakers, giving a slightly tinny sound to it.  There are blankets piled in the back in case the weather is cool and the faint, overlying smell of stale popcorn overcomes even the smell of freshly cleaned leather.</desc>
+      <desc>   You can sit back and relax, watch the movie, or go back out to the drive-in.</desc>
+      <exits se='2274' out='2274' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2041'>
+      <name>Against the Mutiny: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You choose to stand with the captain as the ship moves ever steadily north, only to find yourself facing knives, pistols, and cuirasses.  After surrendering, you are locked into the captain&apos;s quarters with the officers and cabin boy.</desc>
+      <desc>   There is nothing you or anyone else in the cabin can do when the ship hits rough waters.  The captain shouts to be set free in vain, the understaffed crew too busy trying to save the ship to heed his cries.  The whale charges the ship, its tail lashing the deck and sending both masts crashing into the ocean.  Helpless in the water, the ship flounders, rights for a moment, then lists slowly to one side, flooding rapidly.  You join the captain in his calls for freedom, eventually breaking in a window and hurling yourself into the water to escape the sinking ship.</desc>
+      <desc>   You can only go down.</desc>
+      <exits n='63' ne='63' e='63' se='63' s='63' sw='63' w='63' nw='63' up='63' down='63' in='63' out='63'/>
+   </location>
+
+   <location num='2043'>
+      <name>Surrendering to the Pirates: &quot;Lied van het Overzees&quot;</name>
+      <desc>Droplets of blood splatter the deck around you, the smell of iron hanging heavily in the air.  Bodies are pushed into the ocean, some still moving feebly, and you are forced down into the slavery hold with the remainder of the living crew, whether whole or not.</desc>
+      <desc>   Days drag by, the passage of time only marked by the small pan of water that is shoved into the hold twice each day.  Eventually the water comes less frequently, then not at all.  Several of the injured crew succumb to their injuries, adding to the rank smell.  The last of you decide to go above decks.  Better to die quickly than remain here and die little by little.</desc>
+      <desc>   The deck is abandoned, the ship is floundering in the water, nearly awash.  Why the hold wasn&apos;t flooded already is a mystery.  It appears the pirates took everything of value and left you all to survive on your own.  The only option appears to be to jump into the ocean and swim before the floundering ship pulls you down.</desc>
+      <exits s='2427' in='63' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='2045'>
+      <name>Chasing Treasure: &quot;Lied van het Overzees&quot;</name>
+      <desc>   The ship, in spite of the damage it&apos;s taken so far, sails along at a fair fast clip, heading due north.  The captured prisoners, including you, are put to work scrubbing the blood from the deck, but you are otherwise treated indifferently.</desc>
+      <desc>   Sails snap as the wind picks up, turning from a steady blow into a shifting whirlwind.  The pirates and a few crew members scramble about the deck as the sky darkens, the strong smell of ozone overpowering even the smell of blood.</desc>
+      <desc>   When the rain hits, it comes in driving sheets that pound the deck.  The ship is tossed on the wild waves like a ball in the hand of a child.  The sails are lowered and lashed firmly, but the ship, already damaged, starts to take on water.</desc>
+      <desc>   Small boats are lowered into the water, two pirates to every captured crewmember.  You are washed back against the cabin by a huge wave and, when you manage to get to your feet, you are left alone.  There is one boat left for you to get in.</desc>
+      <exits in='1915' no-exit='moves.noexit.17'/>
+   </location>
+
+   <location num='2080' flags='hi'>
+      <name>In the Hospital</name>
+      <desc>   You awaken to the feel of soft sheets, the low buzz of muted conversations, a vague golden light that washes the color out of the room, and the sharp tang of antiseptic in your nose.</desc>
+      <desc>   This area is partitioned off by a crisp white sheet that nearly obscures the rest of the hospital from view.  There are large windows to let in sunlight, bright pastel walls, and darkly stained bamboo flooring.</desc>
+      <desc>   &quot;You nearly drowned,&quot; the nurse informs you crisply.  &quot;Fortunately, a patrol boat picked you up.&quot;</desc>
+      <desc>   Any mention you make of mermaids will just make her oddly familiar blue-green eyes light up with repressed amusement.  If you feel better, perhaps you should just go back out to rejoin the rest of the world before they call in the men with white coats arrive.</desc>
+      <exits out='2081' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='2081'>
+      <name>Landing Pad</name>
+      <desc>   Welcome to the sandy shores of Siryn.  Long usage of this spot as a landing pad has blasted the fine black sand into a slick, glassy surface.  Most of the planet is hidden from view behind huge forcefields that wrap around the landing area, protecting the planet from the toxins of space travel.</desc>
+      <desc>   A merchant, rushing about filling his warehouses, slips and slides across the landing pad before coming to a halt in front of the shuttle.  He appears to have come from the south.</desc>
+      <desc>   The tendrils of an ocean breeze waft in through a hut to the southeast, coaxing visitors to explore the rest of the planet, while a dull thunking sound announces the shipyard to the east.</desc>
+      <exits e='2082' se='2146' s='2145' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2082' flags='r'>
+      <name>Shipyard</name>
+      <desc>   This is a desolate location.  There are no ships here to be purchased, although there are two hulls that have been gutted, every part and wire tossed into a scrap heap to one side.  The first shell has been turned into a bedroom, complete with an unmade twin-sized bed and closet.  The second appears to pass for living space, dominated by a grubby-looking orange couch that feels slightly greasy.</desc>
+      <desc>   Siryn&apos;s laws will allow spaceship repairs here only, to reduce the impact on the environment.   Apparently all the parts for repairs are recycled.</desc>
+      <desc>   The only way out is to the landing pad to the west.</desc>
+      <exits w='2081' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2145' flags='ebt'>
+      <name>Exchange</name>
+      <desc>   This is a sunlit, quiet hut with bamboo flooring and wide, low windows.  Discretely placed around the perimeter are large, black boxes-- noise dampeners that reduce even a shout to a loud whisper.  Even through the dampeners, the soft rhythm of the ocean and tang of salt air provides a calming background.</desc>
+      <desc>   The ticker tape that plays across all four walls is subdued, lit in dark greens, and is the only overt sign that this is Siryn&apos;s exchange.  Consoles are comfortable beach chairs with a small keyboard and monitor attached, as well as a self-cooling cupholder.</desc>
+      <desc>   A dark-haired, swimsuit-clad assistant wanders among the consoles, offering advice and drinks with equal ease.  The door to the north has been propped open by a huge, dog-earred copy of -The Idiot&apos;s Guide to Federation-.  Whenever the manual is needed for reference, it is replaced by an untouched hardback of -Moby Dick-.</desc>
+      <exits n='2081' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='2146' flags='kt'>
+      <name>Planetary Administration</name>
+      <desc>   This simple bamboo hut serves as the link between Siryn and the landing pad.  In spite of the hard-packed dirt floor and thatched roof, traffic flows smoothly.</desc>
+      <desc>   At the north end of the room, those travelling from the landing pad to the rest of the planet must declare any items to customs.  Most items are returned to the landing pad in an effort to keep the planet as pristine as possible.  The line moves steadily from the northwest to the southeast.</desc>
+      <desc>   The south end of the room is easily identified as where those leaving the planet are lined up.  This line moves from the southeast to the northwest and seems to be more relaxed.  A smiling, dark-haired man offers souvenir holograms for those wishing to remember their visit.</desc>
+      <exits se='2211' nw='2081' in='2211' out='2081' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2148'>
+      <name>Beach Clearing</name>
+      <desc>   The jungle has grown greedily right up to the edge of this black sand beach, providing a skirt for the half-moon of soft, sparkling sand.  Due to an anomaly in the planet&apos;s rotation, this beach remains in a perfect sunset at all times, with the warmth of the sand underfoot and the coolness of a salty evening breeze in the air.  A huge, orange-ball sun floats low in the sky, sending out varicolored streamers of light in long fingers across the wispy clouds.</desc>
+      <desc>   A pathway cuts through the jungle to the southwest, heading back toward the hidden spaceport.  The beach continues to the north, while a dock is to the southeast.</desc>
+      <exits se='2213' sw='2211' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2167'>
+      <name>Into the Whirlpool: &quot;Lied van het Overzees&quot;</name>
+      <desc>   Salt spray lashes your face as the ship plummets into maw of the whirlpool.  The wild vortex swirls the ship in a tightly spiraling creak of tortured wood and stressed lines.  The sails billow to their fullest, bending the masts, until the foremast snaps in two, dragging sails and lines across the deck and sweeping two crewmembers into the water.  Another line snaps from the mizzenmast, whipping across a crewmember and leaving him bleeding on the deck.</desc>
+      <desc>   The ship keels hard to one side, sending another crewmember into the foamy water, as the ship is sucked inexorably closer to the center of the vortex.  The ship splinters as it is sucked under, sending you plunging beneath the ocean.</desc>
+      <desc>   Barrels, planking, sails and other people whirl above you, pushing you further under the water, until you&apos;re forced to suck in a mouthful.  You manage to push your way to the surface and climb aboard a barrel, but your options are very limited.</desc>
+      <exits n='63' ne='63' e='63' se='63' s='63' sw='63' w='63' nw='63' up='63' down='4095' in='63' out='63'/>
+   </location>
+
+   <location num='2169'>
+      <name>Following the Whale: &quot;Lied van het Overzees&quot;</name>
+      <desc>   The ship follows the whale for hours, the sun slowly passing its zenith and dipping around to the other side.  The progress is unsteady, with the ship surging forward for several knots, then listing to one side or the other as the whale tries a new tack.  Rarely, the whale will lie still for a period, blood-tinged spray tinging the air above its blowhole, before again making a frantic appeal for escape.</desc>
+      <desc>   The sailors are tiring as well, most drenched in sweat from the effort.  Two lines have snapped, one of them leaving a long, bloody gash across a crewman&apos;s chest, shredding his shirt.  Although both masts creak ominously, they are still holding.  The crew looks worried, however, and are casting mutinous glares at the captain.</desc>
+      <desc>   A wizened sailor approaches you surreptuously. &quot;Y&apos;can stick with the captain an follow that whale northerly to our deaths or y&apos;can help us mutiny so&apos;s we can head east again. Y&apos;haveta choose now, outlander or not.&quot;  Which way will you go?</desc>
+      <exits n='2041' ne='63' e='2171' se='63' s='63' sw='63' w='63' nw='63' up='63' down='63' in='63' out='63'/>
+   </location>
+
+   <location num='2171'>
+      <name>Joining the Mutiny: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You decide to stand with the crew.  They don&apos;t trust you enough to give you a weapon, but you&apos;re just as glad to not be facing the motley assortment of knives, pistols, and cuirasses as the crew locks all of the officers, including the cabin boy, into the captain&apos;s quarters.</desc>
+      <desc>   The crew immediately starts to bicker about what to do first, stopping only when someone points out that there is a very angry whale still tethered to the ship.  The harpoon line is chopped free and the whale thunders into the open sea, leaving white foam and pink spray in its wake.</desc>
+      <desc>   Before more bickering can take place, dark sails are spotted.  Already limping in the water, your ship isn&apos;t able to flee from the pirates and you are boarded easily.</desc>
+      <desc>   You are tossed a knife.  Will you fight with the pirates as the ship continues east, flee down to the hold, or surrender to the pirate leader up on the mizzendeck?</desc>
+      <exits e='2173' up='2043' down='2299' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='2173'>
+      <name>Fighting the Pirates: &quot;Lied van het Overzees&quot;</name>
+      <desc>   The pirates are a motley crew, obviously experienced at boarding a hostile ship.  Two crewmen are killed before anyone can move and the rest are disarmed with quick efficiency.  You find yourself with a knife to your throat and the option to surrender or die.  The pirate&apos;s stale breath and the stink of unwashed clothing washes over you as the knife pricks your throat, drawing a single bead of blood.  The knife is taken from you, surrender forced on you.</desc>
+      <desc>   After moving anything of value to the other ship, the pirates pull out a treasure map.  They consult it for some time before turning the ship to the north.</desc>
+      <exits n='2045' ne='63' e='63' se='63' s='63' sw='63' w='63' nw='63' up='63' down='63' in='63' out='63'/>
+   </location>
+
+   <location num='2211'>
+      <name>Outside the Hut</name>
+      <desc>   This hard-packed dirt path butts right up against the forcefield to the northwest, leading into a small hut.  The path continues to the northeast and southwest.</desc>
+      <desc>   Long, spring-green tendrils of vines reach greedy fingers up the side of the hut to the northwest, seeking to reclaim it for the planet.  Twin flying insects, with ten slender legs and three pairs of iridescent wings, spin and dive in an aerial dance.</desc>
+      <desc>   A sign has been posted here, neatly hand-painted on driftwood:</desc>
+      <desc>LANDING PAD-  NW, NW</desc>
+      <desc>EXCHANGE-      NW, NW, S</desc>
+      <exits ne='2148' sw='2274' nw='2146' out='2146' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='2213'>
+      <name>Seaside Docks</name>
+      <desc>   Long, rough-hewn boards extend out over sparkling turquoise waters, forming a sturdy dock underfoot.  Foamy waves flow beneath the dock to crash against the rocks on the shore, moving the dock itself slightly with each ebb and flow.</desc>
+      <desc>   While many of the berths are empty, two are occupied.  The long lines of a schooner docks to the east, both masts bristling with a full load of sails.   A smaller yacht lies to the south, rocking gently in the waves.  The beach is to the northwest.</desc>
+      <exits e='2214' s='2277' nw='2148' out='2148' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2214'>
+      <name>Clipper Ship &quot;Lied van het Overzees&quot;</name>
+      <desc>   This sleek, dark ship has two high masts that rake back from bow to stern, each billowing with multiple bleached canvas sails that puff softly in the light breeze.  The deck is just above water level, the rails at chest height for the average human, wooden planks beneath well-scrubbed.  A dark maiden, hair flowing over her bare torso, is the ship&apos;s figurehead.</desc>
+      <desc>   Crew members go about their duties, ignoring you entirely.  They are oddly silent, even if you should speak to them.  The only sound is the soft slap of waves against the side, the snap of lines in the breeze, and the creak of ship underfoot.</desc>
+      <desc>   You may leave the ship for the dock to the west or go down below decks.</desc>
+      <exits w='2213' down='2222' in='2222' out='2213' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2220'>
+      <name>Slavery Hold: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You&apos;re in a tiny, hidden hold at the very stem and bottom of the ship.  The dampness here is pervasive, amplified by the slow ooze of water into the hold.  Although the ship doesn&apos;t seem to be in any danger of flooding, there&apos;s a full fingerspan of water constantly underfoot and the steady drip of water from the beams provides an eerie counterpoint to the creak and groan of the planks.</desc>
+      <desc>   The silent testament to this ship&apos;s past as a slaver is everywhere, from the pitted and rusted remains of chains and irons to the metallic tang of old blood in the air.  Although slavery has been banned on Siryn for decades, rumor has it some tribes still seek off-world novelty slaves.</desc>
+      <desc>   To escape the dank and gloomy hold, go back up the frayed and worn rope ladder.</desc>
+      <exits up='2222' out='2222' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='2222'>
+      <name>In the Hold: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You are below decks.  There is an elusive trace of sweat, salt, and iron in the air, tickling your nose and lungs.  The planks are rougher below decks and there is a dampness in the air that cuts through clothing and skin to gnaw at your bones.  The light is dim, only enough to illuminate vague outlines of barrels, crates, coiled lines, and spare sails strewn haphazardly about the hold.   Noise is likewise muted, the only clear sound your own footsteps upon the deck.</desc>
+      <desc>   The ground lurches beneath your feet without warning.  After a moment, the ship starts to sway in a regular, rhythmic manner.  It appears the ship is underway.</desc>
+      <desc>   There is nothing to do down here and little to see.  The only option appears to be to go back above deck and see what has happened.</desc>
+      <exits up='2225' down='2220' in='2220' out='2225' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='2225'>
+      <name>Out to Sea: &quot;Lied van het Overzees&quot;</name>
+      <desc>   The deck heaves underfoot, sails at full draft, as lines snap in the brisk wind.  Whether you wanted to or not, the ship is underway.  From the look of the rapidly receeding shoreline, jumping overboard and swimming ashore is not a recommended action.</desc>
+      <desc>   The crew continues to tend their stations, still either oblivious to or ignoring any questions directed at them.  Most are bearded or rough-shaven, darkly tanned, and smell of sweat, salt, and fish.  A boy just into his teens scurries up a line with the same agility as the near-monkey that returns to his shoulder.  He perches, one leg tangled into the lines, and looks out over the ocean.</desc>
+      <desc>   The ship is headed east.  If you go to the rail at the stern, you may be able to see where you are headed.</desc>
+      <exits e='2227' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2227'>
+      <name>Sirens&apos; Song: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You are nearly to the rail of the ship, wind whipping at loose hair and clothing.  The salt air bites at  your nostrils and your eyes tear from the steady breeze.</desc>
+      <desc>   Without warning, you are grabbed by several burly crewmembers, their hands like calloused iron, and lashed to the mizzenmast.  The crew is heedless of your cries for freedom and you finally see that they seem to have a thick, waxy substance blocking their ears.</desc>
+      <desc>   Slowly, starting so lowly that you feel it in the planks and your bones before you actually hear it, sound swells up from the ocean, so beautiful that it evokes a physical NEED to get closer.</desc>
+      <desc>   The rough ropes cut deeply as you strain for freedom to no avail.  Only when the sound fades and you limply sag into the ropes now holding you up are you released, as the ship continues east.  You can head that direction if you want to see where you&apos;re going.</desc>
+      <exits e='2229' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2229'>
+      <name>A Rock and a Hard Place: &quot;Lied van het Overzees&quot;</name>
+      <desc>   Large rocks jut out up in front of the ship without warning.  You must veer northeast or southeast to avoid being dashed upon them.</desc>
+      <desc>   To the northeast, a swirling whirlpool threatens to sink the ship and everyone aboard-- including you.  To the southeast, a grotesque female seamonster lurks.  Six long-necked heads snake about, each gnashing three rows of razor-sharp teeth.  Deep, beautiful eyes leer at the ship, while a long fish-like tail slaps the red-tinged water behind her.</desc>
+      <desc>   You will have to choose which way to proceed: northeast toward the whirlpool or southeast toward the monster.</desc>
+      <exits ne='2167' se='2295' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2254'>
+      <name>1967 Corvette Stingray</name>
+      <desc>   This long, low-slung car has plenty of room for a driver and passenger to sit comfortably inside, or you can camp out on the Triple Tuxedo black hood with the blankets in the backseat.  With plenty of chrome on the wheels and bumpers and a thick coat of wax on the chassis, it&apos;s easy to stare at the car and not the movie-- or your date.</desc>
+      <desc>   The sound comes from the speakers inside the car and, while it was state-of-the-art in 1967 Earth, it doesn&apos;t have quite the realism of modern equipment.</desc>
+      <desc>   You can watch the movie, relax, or head back out to the theatre itself.</desc>
+      <exits e='2274' out='2274' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2274' flags='b'>
+      <name>Drive-in Theatre</name>
+      <desc>   The drive-in here consists of a large, old fashioned video screen and stereo units, all enclosed in a force field to keep the sound and light from leaking out.</desc>
+      <desc>   Because there is no automated transport on Siryn, the empty chassis of classic cars are arrayed in front of the screen.  Radio units inside the cars transmit all the sound, leaving the outside of the theatre oddly quiet.</desc>
+      <desc>   There is a concessions stand selling snack foods and beverages.  The distinct odor of buttery popcorn permeates the area and small local seabirds hop through the theatre, pecking up dropped pieces.</desc>
+      <desc>   Currently your car choices are a candy apple red 1966 Mustang to the northwest or a shiny black-and-chrome 1967 Corvette Stingray to the west.  The path leading away from the theatre is to the northeast.</desc>
+      <desc>   The current movie is a tedious piece about a world that has lost all its land and is now covered by one endless ocean.</desc>
+      <exits ne='2211' w='2254' nw='1998' out='2211' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2276'>
+      <name>Ristorante &quot;Nave Della Mer&quot;</name>
+      <desc>   Scent overwhelm all other senses when you first step into this room.  Garlic, herbs, freshly-baked bread, and simmering sauces waft about you, drawing you further into the room.  As your eyes adjust to the low candlelight, you can see five round tables, prepared for just two diners apiece, circled around a larger center table that could easily hold eight.  Each table is set with a large candle as a centerpiece, containers of olive oil and vinegar, and a covered bowl of shredded cheese.  At each place is a ceramic plate and bowl, silverware, and a wine goblet.</desc>
+      <desc>   A Siryne waiter sets printed menus in front of each diner, bringing glasses of water and a basket of warm garlic rolls.  The cuisine is similar to Earth mediterranean, although there are dishes and ingredients you have never seen before.  The list of wines, many of them local, is also extensive, filling a page.</desc>
+      <desc>   You may stay here to eat or return to the ship&apos;s deck to the east.</desc>
+      <exits e='2277' out='2277' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='2277'>
+      <name>Pleasure Yacht &quot;Nave Della Mer&quot;</name>
+      <desc>   This sleek craft is obviously more intended for form than function.  It doesn&apos;t look like the ties have been released for years and the gangplank has been firmly nailed to both the deck and the dock.</desc>
+      <desc>   There are the racuous sounds of a karaoke bar to the east, an elaborate door of a private suite to the south, and the tantalizing aroma of a dining area to the west.</desc>
+      <exits n='2213' e='2278' s='2341' w='2276' up='2278' down='2341' in='2276' out='2213' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='2278'>
+      <name>Siryn&apos;s Song Karaoke Bar: &quot;Nave Della Mer&quot;</name>
+      <desc>   Loud music and even louder singing assaults your ears as glaring neon lights flash overhead and the odor of strong cologne and perfume washes over you.  Small tables and chairs are scattered about the room, most of them occupied, but a few still empty.  Many of the occupants are drinking; the menu lists a wide variety of options for those who need liquid courage before going on stage.</desc>
+      <desc>   There is a datapad at each table listing songs by singer, genre, planet, and almost any other variable you can think of trying.  Selections can be made from the datapad; after that, the lucky singer waits his turn to go onstage, stand before the floodlights, and belt out something that may or may not resemble the original recording.</desc>
+      <desc>   The current singer is doing a reasonable rendition of Hall and Oates&apos; &quot;Man Eater&quot;.  You can join the queue to sing or head out to the deck west of you.</desc>
+      <exits w='2277' out='2277' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='2295'>
+      <name>The Scylla: &quot;Lied van het Overzees&quot;</name>
+      <desc>   The ship sails toward the sea monster, bypassing the rocks and the whirlpool.  For a brief moment, a long-neck extends and you see a beautiful, yet frightening, face in front of you and smell the fetid stink of death deep in your lungs before the neck whips to one side and those terrifying fangs sink into one of the crewmembers, dragging him screaming out of the ship.</desc>
+      <desc>   Each of the other five heads grab a crewmember and drag him under the water, the deep blue turned into a violent red, bits of gore floating on the water.  The ship sails on, a few crewmembers keeping their heads long enough to sail out of the deadly reach of the Scylla.</desc>
+      <desc>   You continue slowly to the east.</desc>
+      <exits e='2297' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='2297'>
+      <name>The Great White Whale: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You sail on to the creak of timbers and the soft crash of waves.  Then, without warning, the sailors scramble on the deck, loading harpoon guns with efficiency.  Almost faster than your eye can follow, they fire simultaneously.  Three harpoons hit the water; there is a jolt and a huge splash, then the ship is being tugged sideways, as a great white whale strains against the harpoon sunk deep into its side.</desc>
+      <desc>   The water froths with foam and blood as the whale thrashes about, skittering the ship across the surface of the waves with each jerk.  Masts and lines lean to one side, at their limits, so that the harpoon line feeds out with a rapid buzz.  The mate turns the ship painstakingly, attempting to point the bow in the same direction the whale is now rampaging.  When the harpoon line reaches its limit with an audible snap, the ship leaps forward, dragged by the massive whale.</desc>
+      <desc>   Your only option is to follow the whale north-- anything else will destroy the ship.</desc>
+      <exits n='2169' ne='63' e='63' se='63' s='63' sw='63' w='63' nw='63' up='63' down='63' in='63' out='63'/>
+   </location>
+
+   <location num='2299'>
+      <name>Hiding in the Hold: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You retreat down the ladder into the hold, hoping no one has seen you.  Perhaps you can hide long enough for the pirates to go away.</desc>
+      <desc>   The small space stinks of fish, salt, and your own stale sweat as you try to wait the pirates out.  Days spent with no food leave you weak, but when the water runs out, you finally creep back onto the deck.</desc>
+      <desc>   The ship is abandoned, the sails and anything of value stripped away.  Already the deck lists to one side, slowly taking on water, but you could probably last for a few more weeks if you want to wait for rescue.</desc>
+      <desc>   Your only choices are to wait for rescue as the ship continues to drift south or to jump into the ocean and try to swim for the land in the distance.</desc>
+      <exits s='2427' in='63' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='2341'>
+      <name>Private Suite: &quot;Nave Della Mer&quot;</name>
+      <desc>   This room is tastefully decorated in muted shades of sunset; dusky yellows, reds, greens and gold touch everything from the thickly piled carpeting and light silk bedding to the gossamer-thin drapes and simple, delicate furniture.</desc>
+      <desc>   There is a huge canopied bed in the southwest corner.  Silken hangings drape around the bed, providing a measure of privacy.  The bathroom is in the southeast corner, door slightly ajar.  A delicately carved armoire rests against the wall, full of entertainment options ranging from light reading material for download, interactive vid games and holos for rent, and a full selection of liquors, snacks, toiletries and marital aids for purchase.</desc>
+      <desc>   In the southern center of the room, double french doors lead out to a private deck and, beyond that, the lure of the ocean, which plays a soft, incessant lullabye to combine with the gently rolling deck for a good night&apos;s sleep.  You can leave the room by heading north.</desc>
+      <exits n='2277' se='2406' s='2405' sw='2404' in='2404' out='2277' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2404'>
+      <name>Bed: &quot;Nave Della Mer&quot;</name>
+      <desc>   This bed automatically adjusts to height and build, providing almost weightless support.  Instead of heavy spreads, the bed is covered in light silk sheets that seem to shift colors from gold to green to blue, caressing the body with a muted sunset.  The hangings for the canopy can be moved to completely enclose the bed in privacy or left open to appreciate the ocean view through the French doors to the south.</desc>
+      <desc>   This bed can be used to read in, play games, or indulge in any other activity that the romantic setting might inspire, but any damage to the sheets will be automatically added to your bill.  It is so comfortable that it is far easier to get into than to get out.</desc>
+      <exits out='2341' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2405' flags='b'>
+      <name>Private Deck: &quot;Nave Della Mer&quot;</name>
+      <desc>   This private deck at the aft of the yacht has a polished wooden deck, delicate bamboo seats, and a silk and bamboo awning to protect the deck from the golden rays of the sun.  The deck sways gently in the lazy waves, the faintest of breezes keeping the air from becoming stifling.</desc>
+      <desc>   Tropical drinks and native juices rest in a cooler, along with assorted fruits, flatbreads, and cheeses.  Bright flowers with wide petals and long stems grow up the sides of a planter, filling the air with heady perfume.</desc>
+      <desc>   To leave the deck, go back into the private suite north.</desc>
+      <exits n='2341' in='2341' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2406'>
+      <name>Bathroom: &quot;Nave Della Mer &quot;</name>
+      <desc>   Polished mock-quartz stones give this bathroom a cool, luxurious air, but the stones are slightly warm, heated from beneath.  Two dark green rugs rest on the floor, one near the jacuzzi bath and the other in front of the double-basin sink.</desc>
+      <desc>   The tiled walls are decorated in a wave design, with white and blue tiles occasionally interspersed with sea-green.  Thick, fluffy green towels are piled on a rattan shelf; matching robes hang behind the bathroom door.</desc>
+      <desc>   A huge, marble jacuzzi bath rests in the middle of the bathroom, all dark blue and silver splendor.  It looks large enough to hold at least two people comfortably, and a wide assortment of bathing accessories is arrayed on the low shelf of the bath.</desc>
+      <desc>   The air is warm and scented, lulling the senses into a tranquil calm.  When you are finished, you can leave the bathroom to the northwest.</desc>
+      <exits nw='2341' out='2341' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='2427'>
+      <name>Drifting at Sea: &quot;Lied van het Overzees&quot;</name>
+      <desc>   You last for two more weeks, the sun baking you dark brown, using up the last of your rain water long after what little food is left on the ship has been eaten.  You consider eating one of the rats that have survived the voyage, but they are scrawny and mean, hissing at you before slinking into a hole.</desc>
+      <desc>   Twice you hallucinate, seeing ships on the horizon, but if they were real, they don&apos;t see you.  Eventually, the ship is  so low on the water that you are constantly wet, although your lips are parched and cracked from thirst.  The ship is going to sink and your only choice is to jump in the water.</desc>
+      <exits n='63' ne='63' e='63' se='63' s='63' sw='63' w='63' nw='63' up='63' down='63' in='63' out='63'/>
+   </location>
+
+   <location num='3596'>
+      <name>Up a Tree</name>
+      <desc>   You climb a tree, the rough bark skinning your hands and knees, looking over the landscape.</desc>
+      <desc>   The beach extends in a dark curve, contrasting starkly with the clear water.  In every other direction, there is a dark green mass of trees, extending to the far side of the small island.  The very faint traces of a path runs to the south, winding through the trees.  The breeze teases your face, making the huge leaves lift and fall in a curious mimicry of the ocean.</desc>
+      <exits s='3724' down='3724' no-exit='moves.noexit.22'/>
+   </location>
+
+   <location num='3724'>
+      <name>Hidden Path</name>
+      <desc>   You are walking along the faintest traces of a path.  The only way to be sure it is a path is that the jungle doesn&apos;t grow as closely here, making it possible for you to forge your way through it.  The air is hushed and close, thick with moisture that presses in on you.  Occasionally there is a rustling nearby, but you don&apos;t see any local wildlife and nothing appears to give you a direction to walk in.</desc>
+      <desc>   There is no obvious way through the jungle.  You could go any direction.</desc>
+      <exits n='3744' ne='3766' e='3744' se='3766' s='3744' sw='3766' w='3744' nw='3766' up='3744' down='3766' in='3744' out='3766'/>
+   </location>
+
+   <location num='3744'>
+      <name>Lost in the Jungle</name>
+      <desc>   You are lost in the jungle.  There is no sound other than your own breathing, sounding louder in your ears than it should.  The air is thick and heavy, scented with some cloying tropical flower, so strong as to make you lightheaded.</desc>
+      <desc>   You appear to be able to move in any direction, although the trees press in on you, grabbing at your hair, clothing, and limbs.</desc>
+      <exits n='3744' ne='3766' e='3744' se='3766' s='3744' sw='3766' w='3744' nw='3766' up='3744' down='3766' in='3744' out='3724'/>
+   </location>
+
+   <location num='3766'>
+      <name>Lost in the Jungle</name>
+      <desc>   You are lost in the jungle.  There is no sound other than your own breathing, sounding louder in your ears than it should.  The air is thick and heavy, scented with some cloying tropical flower, so strong as to make you lightheaded.</desc>
+      <desc>   You appear to be able to move in any direction, although the trees press in on you, grabbing at your hair, clothing, and limbs.</desc>
+      <exits n='3744' ne='3766' e='3744' se='3766' s='3744' sw='3766' w='3744' nw='3766' up='4034' down='3766' in='3744' out='3766'/>
+   </location>
+
+   <location num='4032'>
+      <name>Farol Lighthouse</name>
+      <desc>   A tall, whitewashed lighthouse stands here, a beacon to the ships braving the dark, capricious ocean.  Rumor has it that once a planetary year, the lighthouse goes briefly dark.  When the lights resume, a figure can be found standing throughout the night at one of the huge windows, looking out into the darkness.</desc>
+      <desc>   The spray from waves crashing against the jagged rocks splashes high up on the white walls of the lighthouse.  Weathered and worn from the constant beating, smooth stone steps encircle the building all the way to the narrow door at the top.</desc>
+      <desc>   The spot is isolated and desolate, loud from the constant weather.  But if you listen carefully enough, you can hear the faint sound of singing on the howling winds, a lonely, longing sound that invades your very soul.  Ships avoid this spot for more than the treacherous rocks.</desc>
+      <desc>   The door to the lighthouse is locked and barred; you may not enter without a key.</desc>
+      <exits up='4034' out='4034' no-exit='moves.noexit.21'/>
+   </location>
+
+   <location num='4033'>
+      <name>Hidden Treehouse</name>
+      <desc>   A ladder is cleverly worked into the trunk of a tree, so well-disguised that you have to touch it to notice it&apos;s there.  At the top of the ladder is a cleverly worked treehouse, most of it using the natural outlines of the tree itself, rather than cutting into them.</desc>
+      <desc>   A small sitting room is formed atop the spread of several branches.  A long couch is worked into the wood, with soft cushions the deep red of the flowers.  A simiilar table is formed from a branch that has been cut short, the round surface sanded and buffed to a dull sheen.  Lighting appears to be from naturally phosphorescent plants that have been cultivated into small containers.</desc>
+      <desc>   A library is formed directly into the thick trunk of a branch, books lining every shelf from floor to ceiling.  There is a comfortable &quot;window&quot; seat, a one-piece desk carved from the inside of the branch, and musical instruments neatly hanging on or resting against the walls.</desc>
+      <desc>   The only way out appears to be to go down.</desc>
+      <exits up='4033' down='4034' in='1' out='4034' no-exit='moves.noexit.22'/>
+   </location>
+
+   <location num='4034'>
+      <name>Tiny Clearing</name>
+      <desc>   This is a tiny clearing right in the middle of the jungle.  Tall, tropical trees loom all around the clearing, leaving it dappled in shade.  The air is humid and cool, a breeze trickling through the clearing and stirring tropical flowers to release their perfume.  The flowers range from tiny buds on creeping vines that wind up the tall trees to huge blooms as large as a small animal that are bent nearly to the ground from sheer weight.  Colors range from pale yellows and pastel pinks to bright oranges, purples, reds, and blues.</desc>
+      <desc>   The clearing is a perfect location for spreading out a blanket and relaxing.  It is difficult to find the path out, however.  You may have to do a bit of searching.</desc>
+      <exits n='3724' ne='3744' e='3766' se='3724' s='3744' sw='3766' w='3724' nw='3744' up='4033' down='4032' in='3766' out='4034'/>
+   </location>
+
+   <location num='4095'>
+      <name>Under the Water</name>
+      <desc>    Icy chill trails fingers into your very soul, stealing your last lungful of air, so that you take a reflexive breath.  Seawater floods your airway and your body convulses as your vision blurs and darkens around the edges.</desc>
+      <desc>   A flash of pale skin skitters across your fading vision and long tendrils of blue-green hair cocoon you as you are gently lifted to the surface.  The briny scent of fish envelopes you just before your hands are grasped roughly and you are heaved to the planking of an uneven deck.  There is the slap of a scaly tail hitting the surface of the water before the darkness finally cradles you into nothingness.</desc>
+      <exits n='2080' ne='2080' e='2080' se='2080' s='2080' sw='2080' w='2080' nw='2080' up='2080' down='2080' in='2080' out='2080'/>
+   </location>
+
+</fed2-map>
+

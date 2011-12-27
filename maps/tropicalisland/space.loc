@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<fed2-map title='Tropical Island Space' version='6' editor='standard'>
+
+   <location num='332' flags='s'>
+      <name>Beachhouse2 orbit</name>
+      <desc>   Demand from visitors is so great that another planet has been terraformed into a beautiful beach world in order to accommodate all the tourists. The planet looks identical to the main Beachhouse, which lies to the south. The asteroid Beachhouse3 is east.</desc>
+      <exits e='333' s='396'/>
+   </location>
+
+   <location num='333' flags='s'>
+      <name>Beachhouse3 orbit</name>
+      <desc>   The sparkling waters and golden beaches on this planet look somehow odd, the colors so bright that they no longer appear natural. Perhaps its something to do with the bio commodities produced here.</desc>
+      <desc>   More planets are west and southwest.</desc>
+      <exits sw='396' w='332'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Beachhouse orbit</name>
+      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <desc>   The interstellar link is south, and more planets are north and northeast.</desc>
+      <exits n='332' ne='333' s='460'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Tropical Island interstellar link</name>
+      <desc>   Welcome to Tropical Island. Head north for the Beachhouse.</desc>
+      <exits n='396' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

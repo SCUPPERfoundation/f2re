@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<fed2-map title='Baseball' version='13' editor='standard' from='711' to='Sports.Sports Space.258'>
+
+   <location num='331' flags='yr'>
+      <name>Coaches Box</name>
+      <desc>Rest and get your ships and ship repairs here.</desc>
+      <exits se='396' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='396'>
+      <name>Third Base</name>
+      <desc>You made it to Third Base. The Coaches Box is to the northwest. You can get your new ship and ship repairs there. The Southwest takes you to homeplate. If your OUT you should goto the Dugout.</desc>
+      <exits sw='459' nw='331' out='646' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='459'>
+      <name>Baseline</name>
+      <desc>Take you led off third. Home is 90 feet away.</desc>
+      <exits sw='522' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Baseline </name>
+      <desc>The throw was over the head of the third baseman you can go in standing up!!!</desc>
+      <exits nw='396' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Baseline</name>
+      <desc>Headed for Home. Your are going to test his arm. You are fast but are you fast enough!!</desc>
+      <exits sw='585' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='526'>
+      <name>Baseline</name>
+      <desc>The ball is on the way better be prepared to slide.</desc>
+      <exits nw='461' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='585'>
+      <name>Baseline</name>
+      <desc>The catcher is blocking the way. You better get ready to take him out. This is going to hurt!!</desc>
+      <exits sw='648' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='591'>
+      <name>Baseline</name>
+      <desc>You pass the shortstop on the way to third. Left Field is to the East.</desc>
+      <exits e='592' nw='526' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='592'>
+      <name>Short Left Field</name>
+      <desc>The shortstop hangs out here alot.</desc>
+      <exits e='593' w='591' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='593'>
+      <name>Left Field</name>
+      <desc>Now you know what it is like to be; WAY OUT IN LEFT FIELD !!! Better get back to the Baseline.</desc>
+      <exits w='592' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='646' flags='b'>
+      <name>Visitors Dugout</name>
+      <desc>Check the lineup. You maybe the next batter. Get your food and drink while you can.</desc>
+      <exits se='711' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='648'>
+      <name>Baseline</name>
+      <desc>The throw is right on the money. You better slide. The catcher looks really big but you can do it!!!. Keep digging Southwest.</desc>
+      <exits sw='711' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='656'>
+      <name>Baseline</name>
+      <desc>Take your led for Third base.</desc>
+      <exits nw='591' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='708' flags='b'>
+      <name>Press Box</name>
+      <desc>Always get the best view of the game from here.....But watch out for the Foul Balls.</desc>
+      <exits down='711' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='711'>
+      <name>Baseball - Homeplate</name>
+      <desc>Welcome to Baseball. You will find the Exchange at First Base. ( First base line is Southeast) To the Northwest is the Visitors Dugout. To the Southwest is the Home Dugout.</desc>
+      <exits se='776' sw='774' nw='646' up='708' no-exit='baseball.homeplate.4'/>
+   </location>
+
+   <location num='721'>
+      <name>Second Base</name>
+      <desc>Whew you Safe!!! To the east is Center Field. You can also continue around the bases. If you are Out you can goto the Dugout.</desc>
+      <exits e='722' nw='656' out='646' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='722'>
+      <name>Short Center Field</name>
+      <desc>No Man&apos;s Land. You can find lots of bloopers here.</desc>
+      <exits e='723' w='721' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='723'>
+      <name>Center Field</name>
+      <desc>It is a long way to homeplate from here. Unless you have a really good arm, better get back on the Baseline.</desc>
+      <exits w='722' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='774' flags='b'>
+      <name>Home Dugout</name>
+      <desc>Check the lineup. You maybe the next batter. Get your food and drink while you can.</desc>
+      <exits ne='711' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='776'>
+      <name>Baseline</name>
+      <desc>Welcome to Baseball. You will find the Exchange at First Base. ( First base line is southeast) To the Northwest is the Visitors Dugout. To the Southwest is the Home Dugout.</desc>
+      <exits se='841' nw='711' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='784'>
+      <name>Baseline</name>
+      <desc>You need to start your slide into Second base now.</desc>
+      <exits ne='721' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='841'>
+      <name>Baseline</name>
+      <desc>You are running down the first baseline, Can you beat the throw?</desc>
+      <exits se='906' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='847'>
+      <name>Baseline</name>
+      <desc>Halfway to Second Base. Are you going to slide or go in standing up?</desc>
+      <exits ne='784' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='906'>
+      <name>Baseline</name>
+      <desc>Halfway to First Base. The crowd cheers. Keep digging.</desc>
+      <exits se='971' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='910'>
+      <name>Baseline</name>
+      <desc>On the way to Second base. GO GO GO To the east is Right Field.</desc>
+      <exits ne='847' e='911' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='911'>
+      <name>Short Right Field</name>
+      <desc>Are you catching flies?</desc>
+      <exits e='912' w='910' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='912'>
+      <name>Right Field</name>
+      <desc>Now you know what it is like to be; OUT IN Right Field!!!   Now get back to the baseline.</desc>
+      <exits w='911' no-exit='baseball.default.2'/>
+   </location>
+
+   <location num='971'>
+      <name>Baseline</name>
+      <desc>Almost there. Here comes the throw, better hustle.</desc>
+      <exits se='1036' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='973'>
+      <name>Baseline</name>
+      <desc>Taking a led toward Second Base.</desc>
+      <exits ne='910' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='1036' flags='e'>
+      <name>First Base</name>
+      <desc>Great job!! You beat the throw!! Welcome to the Baseball &apos;s Exchange. To the Southwest is the Coaches Box. You can relax and catch your breath there. You can also get your bruises fixed. The Northeast takes you to Second Base. If you are Out then you need to goto the Dugout.</desc>
+      <exits ne='973' sw='1099' out='646' no-exit='baseball.baseline.1'/>
+   </location>
+
+   <location num='1099' flags='hi'>
+      <name>Coaches Box</name>
+      <desc>Catch you breath here. The coach can take care of your bruises too. Remember to INSURE yourself</desc>
+      <exits ne='1036' no-exit='baseball.default.2'/>
+   </location>
+
+</fed2-map>

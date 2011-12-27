@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<fed2-map title='Solus' version='19' editor='standard' from='326' to='Fringe.Fringe Space.327'>
+
+   <location num='193'>
+      <name>Manufacturing Corridor</name>
+      <desc>After a quick jolt the elevator stops at the first manufacturing area but rather than the door opening the computer lets out a set of rather unpleasent beeps and informs you that only factory and warehouse owners on Solus Station are permitted entry into the area.</desc>
+      <desc>Faced with no other options the only way out is back down to the central hub.</desc>
+      <exits down='331' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='196'>
+      <name>Production Hallway</name>
+      <desc>After a quick jolt the elevator stops at the first production zone but rather than the door opening the computer lets out a set of rather unpleasent beeps and informs you that only Grayson Corporation employees are permitted entry into the area.</desc>
+      <desc>Faced with no other options the only way out is back up to the central hub.</desc>
+      <exits up='331' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='263' flags='e'>
+      <name>Commodities Exchange</name>
+      <desc>This room is the financial center of the remote Solus Station and all of fringe space for that matter. Trading consoles are strategically placed around the small, metallic grey room to allow the trader to buy or sell quickly and efficiently. Looking through the transparasteel wall to the east you can see the trading docks, where all the commodities traded on the station are stored and dispursed from. It&apos;s also where the transports carrying mining equipment and resources from Planet Alpha dock. Due to the possibility of martian inflitration it&apos;s obviously not open to the public! The exit is through the door in the bulkhead to the south, back to the main corridor.</desc>
+      <exits s='327' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='264' flags='b'>
+      <name>The Solus Canteen</name>
+      <desc>You are standing in a rather large canteen which has been provided by the Grayson Corporation to it&apos;s workers on Solus station as a morale booster. The walls are decorated with holos of expensive art and sculpture from around the galaxy while the bar itself is made from pure marble. A bartender is on duty at all times and the bar is very well stocked. There is also a large transparasteel window in the northern wall that is filled with the bright purple hue and occasional electric storm of the galactic barrier, beyond which lies Planet Alpha. As a bonus all Grayson employees assigned to the station do not have to pay for food or drink here. You should be so lucky!</desc>
+      <desc>The exit is south through the door in the bulkhead.</desc>
+      <exits s='328' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='267'>
+      <name>Residential Hallway</name>
+      <desc>This is a long grey hallway that runs along the north-south axis of the station from the security areas in the south to the residential areas in the north. Since it&apos;s prefabricated however it looks just like any other hallway!</desc>
+      <desc>After checking your credentials you are sternly informed by a Grayson Corporation guard that only residents of the station are permitted beyond this point. He &quot;suggests&quot; that you return south to the central hub.</desc>
+      <exits s='331' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='326'>
+      <name>Solus Station Shuttle Bay</name>
+      <desc>You stand in a large shuttle bay designed to accomodate the command shuttles of the various large transports coming in and out of Fringe space. As the station is designed to be functional rather than visually appealing the room is little more than supply canisters, shuttles and manky grey bulkheads on all sides. The only variation is the opening to the east to which a sign reading &quot;STATION SERVICES THIS WAY&quot; has been affixed.</desc>
+      <exits e='327' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='327'>
+      <name>Services Corridor</name>
+      <desc>You are walking down a small, narrow hallway decored in the same manky grey and flourescant lighting that adorned the shuttle bay. This is the main artery of Solus Station with signs at various locations indicating services nearby. The whole length of the station can be traversed through this corridor. A sign next to the door to the north reads &quot;COMMODITY EXCHANGE.&quot; The corridor itself continues to the east while to the west it opens into the shuttle bay and to the south there is a door with a red cross over it.</desc>
+      <exits n='263' e='328' s='391' w='326' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='328'>
+      <name>Services Corridor</name>
+      <desc>The long grey corridor continues east and west from this point, while a sign over the northern door reads &quot;CANTEEN.&quot; An arrow on the wall indicates that the shuttle bay is at the eastern end of this corridor.</desc>
+      <exits n='264' e='329' w='327' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='329'>
+      <name>Services Corridor</name>
+      <desc>The long gray corridor continues east and west here and aside from some Grayson Corporation workers passing by you this section is relatively quiet.</desc>
+      <exits e='330' w='328' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Services Corridor</name>
+      <desc>You are marching down a bland east-west corridor through Solus Station. To the east the corridor opens up into the central hub of the station, which explains the increased traffic through here. A sign on the wall informs you that the landing area is at the far west of this location.</desc>
+      <exits e='331' w='329' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='331'>
+      <name>Central Hub</name>
+      <desc>This is it! You are gazing around the biggest part of Solus Station with certainly the most people you&apos;ve seen here yet. The is the primary junction of the station and you can access any area from here. A large holo informs you that the shuttle landing area, trading exchange, medical bay and canteen are located along the western hallway. Residential areas are located along the northern hallway while security and exploration areas are located along the southern hallway and along the eastern hallway is the science wing. Production areas are in the lower pod of the station accessed by taking the elevator down while warehousing and factory areas are reached by taking the elevator up.</desc>
+      <desc>While the people here don&apos;t quite rise to the level of organized chaos there are certainly enough of them to run into if you don&apos;t watch where you&apos;re going. The strange part is you can&apos;t help but notice the worried looks on all their faces, as if some looming apprehension was weighing down on them...</desc>
+      <exits n='267' e='332' s='395' w='330' up='193' down='196' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='332'>
+      <name>Science Corridor</name>
+      <desc>This corridor ends as quickly as it began as a large, reinforced steel door. Judging by the access card reader, biometric palm reader, retina scanner and voice recognition system this is as far as you&apos;re going to get!</desc>
+      <desc>The hub is west.</desc>
+      <exits w='331' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='391' flags='hi'>
+      <name>Medical Ward</name>
+      <desc>This room serves as a stark contrast to the other aboard the station as it painted a bright shade of white, presumably to attempt to raise the patient&apos;s spirits. Medical containment units are lined up parallel to the wall from one end of the bay to the other, with almost every one containing a patient. Judging from the horrific wounds some of them have sustained you can imagine they&apos;d need all the help they can get. While you are pondering what could cause wounds such as this you notice a door to the south marked &quot;RESTRICTED.&quot; The exit to the hallway is north.</desc>
+      <exits n='327' no-exit='moves.nomove.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Security Corridor</name>
+      <desc>You are heading down a grey north-south corridor towards the security area of the station. Judging by the large amount of security cameras and guards in this section you probably could have figured that one out on your own...</desc>
+      <desc>A large, burly guard steps in front of you and asks you exactly where you think you&apos;re going. Unable to formulate an appropriate response (or any response for that matter) you decide it would be best to head back north to the central hub...</desc>
+      <exits n='331' no-exit='moves.nomove.1'/>
+   </location>
+
+</fed2-map>
+

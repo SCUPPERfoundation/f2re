@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<fed2-map title='Dixie Space' version='3' editor='standard'>
+
+   <location num='390' flags='slp'>
+      <name>Tara Link/Orbit</name>
+      <desc>--== The charm of the South ==--</desc>
+      <desc>   There&apos;s no place like it in the world, and no way to describe it adequately. It&apos;s a region of mystery, beauty, hospitality and romance. Having known great ecstasy and tragedy. The South still laughs and loves... captivating visitors and inhabitants with its charm.</desc>
+      <desc>   &quot;There was a land of cavaliers and cotton fields called the Old South... Here in this pretty world, gallantry took its last bow... Here was the last ever to be seen of knights and their ladies fair, of master and of slave... Look for it only in the</desc>
+      <desc>books, for it is no more than a dream remembered... a civilization.&quot;</desc>
+   </location>
+
+</fed2-map>

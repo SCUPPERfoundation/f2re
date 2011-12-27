@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+
+<event-list version='36'>
+
+ <category name='buggy'>
+
+  <section name='alpha'>
+
+   <event num='1'>
+    <comment>Object command "press button" in loc 919</comment>
+    <message type='single' where='com' who='individual' lo='buggy.alpha.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Object command "press button 2" - already there!</comment>
+    <message type='single' where='com' who='individual' lo='buggy.alpha.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Object command "press button 1" - start move to LP</comment>
+    <message type='single' where='com' who='individual' lo='buggy.alpha.3'/>
+    <freeze />
+    <delayevent delay='2' event='buggy.alpha.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Arrive at LP</comment>
+    <message type='single' where='com' who='individual' lo='buggy.alpha.4'/>
+    <move what='player' who='individual' loc='217'/>
+    <release />
+   </event>
+
+   <event num='5'>
+    <comment>Press button 3 - nothing happens</comment>
+    <message type='single' where='com' who='individual' lo='buggy.alpha.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Press button 4 - nothing happens</comment>
+    <message type='single' where='com' who='individual' lo='buggy.alpha.6'/>
+   </event>
+
+  </section>
+
+  <section name='auth'>
+
+   <event num='1'>
+    <comment>Object command "ask tracey for authorisation" - in loc 341</comment>
+    <checkinventory map='sol/phobos' id-name='keycard' found='buggy.auth.2' not-found='buggy.auth.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>If they already have a keycard...</comment>
+    <message type='single' where='com' who='individual' lo='buggy.auth.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Give player keycard</comment>
+    <createobject where='inventory' home-map='sol/phobos' id='obj_keycard'/>
+    <message type='single' where='com' who='individual' lo='buggy.auth.2'/>
+   </event>
+
+  </section>
+
+  <section name='enter'>
+
+   <event num='1'>
+    <comment>Enter event on buggy - loc 218 - to make sure player has authorisation</comment>
+    <checkinventory map='sol/phobos' id-name='keycard' found='buggy.enter.3' not-found='buggy.enter.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>If no keycard...</comment>
+    <message type='single' where='com' who='individual' lo='buggy.enter.1'/>
+    <move what='player' who='individual' loc='217'/>
+   </event>
+
+   <event num='3'>
+    <comment>If they have authorisation, move into buggy</comment>
+    <message type='single' where='com' who='individual' lo='buggy.enter.2'/>
+   </event>
+
+  </section>
+
+  <section name='pad'>
+
+   <event num='1'>
+    <comment>Object command "press button" in loc 218</comment>
+    <message type='single' where='com' who='individual' lo='buggy.pad.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Object command "press button 1" - already there!</comment>
+    <message type='single' where='com' who='individual' lo='buggy.pad.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Object command "press button 2" - start move to alpha dome</comment>
+    <message type='single' where='com' who='individual' lo='buggy.pad.3'/>
+    <freeze />
+    <delayevent delay='2' event='buggy.pad.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Arrive at Alpha Dome</comment>
+    <message type='single' where='com' who='individual' lo='buggy.pad.4'/>
+    <move what='player' who='individual' loc='920'/>
+    <release />
+   </event>
+
+   <event num='5'>
+    <comment>Press button 3 - nothing happens</comment>
+    <message type='single' where='com' who='individual' lo='buggy.pad.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Press button 4 - nothing happens</comment>
+    <message type='single' where='com' who='individual' lo='buggy.pad.6'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='morph'>
+
+   <event num='1'>
+    <comment>Buy food - Morph Bar - loc 340</comment>
+    <checkstat who='individual' money='10' higher='food.morph.2' equals='food.morph.2' lower='food.morph.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='food.morph.1' hi='food.morph.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.morph.3'/>
+   </event>
+
+  </section>
+
+  <section name='noshery'>
+
+   <event num='1'>
+    <comment>Buy food - Noshery - loc 586</comment>
+    <checkstat who='individual' money='10' higher='food.noshery.2' equals='food.noshery.2' lower='food.noshery.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='food.noshery.1' hi='food.noshery.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.noshery.3'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle...</comment>
+    <checkvariable name='newbod' key='clue' value='thirteen' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does the player already have a flower?</comment>
+    <checkinventory map='home' id-name='flower' found='stop'/>
+    <createobject where='inventory' home-map='sol/phobos' id='obj_flower'/>
+    <message type='text' where='com' who='individual'>As you walk in Tracey glances from your face to her screen and back. "You&apos;re the Magellan Society candy," she announces triumphantly. "Here." She plucks a flower from her dress and hands it to you. "Give this to the gorgeous Victor with my love!" And then she collapses in a fit of giggles.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Drop event for the flower</comment>
+    <message type='text' where='com' who='individual'>The flower wilts in your hand at the mere thought of being dropped. Feeling more than a little guilty and secretly cursing whoever invented empathetic flowers you decide to do the decent thing and keep hold of it.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='keycard'>
+
+   <event num='1'>
+    <comment>Examine Keycard event - adds name to description</comment>
+    <message type='single' where='object' who='individual' lo='objects.keycard.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Drop keycard</comment>
+    <message type='single' where='object' who='individual' lo='objects.keycard.2'/>
+    <destroyobject where='inventory' map='home' id-name='keycard'/>
+   </event>
+
+  </section>
+
+  <section name='tracey'>
+
+   <event num='1'>
+    <comment>Kiss/hug/grope/get Tracey</comment>
+    <message type='single' where='object' who='individual' lo='objects.tracey.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Tracey conversation</comment>
+    <match phrase='hello' id-name='obj_tracey' lo='objects.tracey.2'/>
+    <match phrase='authoriz' id-name='obj_tracey' event='buggy.auth.1'/>
+    <match phrase='tracey' id-name='obj_tracey' lo='objects.tracey.3' hi='objects.tracey.4'/>
+    <match phrase='reception' id-name='obj_tracey' lo='objects.tracey.5' hi='objects.tracey.6'/>
+    <match phrase='scientists' id-name='obj_tracey' lo='objects.tracey.7' hi='objects.tracey.8'/>
+    <match phrase='phobos' id-name='obj_tracey' lo='objects.tracey.9'/>
+    <match phrase='earth' id-name='obj_tracey' lo='objects.tracey.10'/>
+    <match phrase='buggy' id-name='obj_tracey' lo='objects.tracey.11'/>
+    <match phrase='buggies' id-name='obj_tracey' lo='objects.tracey.11'/>
+    <match phrase='keycard' id-name='obj_tracey' lo='objects.tracey.11'/>
+    <match phrase='dress' id-name='obj_tracey' lo='objects.tracey.12'/>
+    <match phrase='clothes' id-name='obj_tracey' lo='objects.tracey.12'/>
+    <match phrase='ming' id-name='obj_tracey' lo='objects.tracey.13'/>
+    <match phrase='emperor' id-name='obj_tracey' lo='objects.tracey.14'/>
+    <match phrase='galactic admin' id-name='obj_tracey' lo='objects.tracey.15'/>
+    <match phrase='government' id-name='obj_tracey' lo='objects.tracey.15'/>
+    <match phrase='flower' id-name='obj_tracey' lo='objects.tracey.16'/>
+    <match phrase='computer' id-name='obj_tracey' lo='objects.tracey.17'/>
+    <match phrase='fur' id-name='obj_tracey' lo='objects.tracey.18'/>
+    <match phrase='living' id-name='obj_tracey' lo='objects.tracey.19'/>
+    <match phrase='job' id-name='obj_tracey' lo='objects.tracey.5' hi='objects.tracey.6'/>
+    <match phrase='buds' id-name='obj_tracey' lo='objects.tracey.21'/>
+    <match phrase='gravity' id-name='obj_tracey' lo='objects.tracey.22'/>
+    <match phrase='unc' id-name='obj_tracey' lo='objects.tracey.23'/>
+    <match phrase='silus' id-name='obj_tracey' lo='objects.tracey.23'/>
+    <match phrase='help' id-name='obj_tracey' lo='objects.tracey.24'/>
+    <match phrase='clue' id-name='obj_tracey' lo='objects.tracey.25'/>
+    <match phrase='magellan' id-name='obj_tracey' lo='objects.tracey.25'/>
+    <match phrase='victor' id-name='obj_tracey' lo='objects.tracey.25'/>
+    <match phrase='dna' id-name='obj_tracey' lo='objects.tracey.26'/>
+    <match phrase='sculpture' id-name='obj_tracey' lo='objects.tracey.26'/>
+    <match phrase='spiral' id-name='obj_tracey' lo='objects.tracey.26'/>
+    <match phrase='alpha' id-name='obj_tracey' lo='objects.tracey.28'/>
+    <match phrase='beta' id-name='obj_tracey' lo='objects.tracey.29'/>
+    <match phrase='gamma' id-name='obj_tracey' lo='objects.tracey.30'/>
+    <match phrase='dome' id-name='obj_tracey' lo='objects.tracey.27'/>
+    <match phrase='morph' id-name='obj_tracey' lo='objects.tracey.31'/>
+    <match phrase='dorm' id-name='obj_tracey' lo='objects.tracey.32'/>
+    <match phrase='accommodation' id-name='obj_tracey' lo='objects.tracey.32'/>
+    <match phrase='date' id-name='obj_tracey' lo='objects.tracey.33'/>
+    <match phrase='where' id-name='obj_tracey' lo='objects.tracey.9'/>
+    <match phrase='bye' id-name='obj_tracey' lo='objects.tracey.34'/>
+    <match phrase='hi' id-name='obj_tracey' lo='objects.tracey.2'/>
+    <match phrase='who' id-name='obj_tracey' lo='objects.tracey.3' hi='objects.tracey.4'/>
+    <match phrase='ga' id-name='obj_tracey' lo='objects.tracey.15'/>
+    <nomatch id-name='obj_tracey' lo='objects.tracey.20'/>
+   </event>
+
+   <event num='3'>
+    <comment>Ex Tracey</comment>
+    <message type='single' where='com' who='individual' lo='objects.tracey.35'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

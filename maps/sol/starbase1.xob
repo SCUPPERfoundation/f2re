@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='3'>
+
+   <object type='static' start='462' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The food here is Gordon's cheese triangles - small triangular chunks of deep-fried camembert.</desc>
+      <vocab cmd='buy' event='food.rama.1'></vocab>
+   </object>
+
+</object-list>

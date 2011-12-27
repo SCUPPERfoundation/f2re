@@ -1,0 +1,45 @@
+#!/usr/bin/python
+
+# Set up a new system and planet for fed2
+
+import os
+import shutil
+import sys
+
+if len(sys.argv) < 4:
+	print 'usage is extra_sys system_filename planet_filename owner_name'
+	sys.exit(1)
+
+src = '/home/alan/fed2d/'
+maps = src + 'maps/' + sys.argv[1]
+dest = '/var/opt/fed2/maps/'+ sys.argv[1];
+
+pwd = os.getcwd()
+os.chdir(src + 'maps')
+
+# move the new files into the maps directory
+os.system("mv " + src + "space.* " + maps)
+os.system("mv " + src + sys.argv[2] +".* " + maps)
+
+# misc activities and copy to destination, 
+# then set permissions on dest files
+os.system("chmod g+w *")
+os.system("cp " + sys.argv[2] + ".* " + dest)
+os.system("cp space.* " + dest)
+os.chdir(dest)
+
+# creat .inf file
+print "creating .inf file"
+planet_file = file("./" + sys.argv[2] + ".inf","w+")
+planet_file.write('<?xml version="1.0"?>\n')
+planet_file.write("<infrastructure owner='" + sys.argv[3] +"' economy='Agricultural' closed='false'>\n")
+planet_file.write("</infrastructure>\n")
+planet_file.close()
+
+os.system("chmod g+w *")
+os.system("chgrp fed2 *")
+
+print "extra system set up: completed"
+os.system("pwd")
+os.system("ls -l")
+

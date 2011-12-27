@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<fed2-map title='Eris' version='31' editor='standard' from='460' to='Terran.Terran Space.265'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Huge blocks of ice have been stored in here. You can&apos;t help wondering why, when there doesn&apos;t seem to be a shortage on the planet!</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='77' flags='bt'>
+      <name>Kara&apos;s Bungalow</name>
+      <desc>   The room above O&apos;Malley&apos;s is a refreshing change from the smoky haze below. The air smells like the great outdoors, and this sensation is aided by the subtle scent of fresh linen coming from the air conditioner.</desc>
+      <desc>   In one corner of the room sits a mahogany desk with books on it made with real paper, bound in leather, and preserved since the 20th century. Closer examination reveals them to be the works of a British playwright known as Shakespeare. A computer monitor is seated in the desk and a keyboard sits on a sliding drawer. Various notes and research books, are scattered around the room. An almost empty coffee cup sits next to an empty brandy snifter. A comfy dark grey chair with a chenille throw sits in the corner next to a painting of a mountain of deciduous trees in autumn. The hardwood floor is covered in a silk Indian rug.</desc>
+      <desc>   The sense is that Kara Athvanja will return at any moment to her refuge. The teeming life below is a source of inspiration for her writing.</desc>
+      <exits down='397' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='150'>
+      <name>Room 411 - Temporary HQ of the Arc Royal Libertarian Party</name>
+      <desc>   The only accessible room on this floor appears to be deserted at the moment. As you enter room 411, you notice propaganda promoting the Arc Royal Libertarian Party covering the place in the form of posters, leaflets, and buttons scattered across a desk in the far corner of the room. Although no one is here, you can tell that people have been here recently. There&apos;s a cigarette still in the ash tray. A wine glass sits on the desk half full (or half empty depending on your point of view). Where could everyone have gone?</desc>
+      <desc>   When you&apos;re ready to leave the room, you can head back south to the hall.</desc>
+      <exits s='214' in='541' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='213'>
+      <name>Elevator - 4th Floor</name>
+      <desc>   The elevator isn&apos;t that glamorous or extravagant of a place to be, but considering there&apos;s no musak playing right now, it isn&apos;t all that bad either. It doesn&apos;t seem like a busy day as there&apos;s no one else on the elevator except yourself. Glancing at the buttons, it appears that several floors don&apos;t require a key. I guess you could go back down to the lobby, or out to the 4th Floor.</desc>
+      <exits down='661' out='214' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='214'>
+      <name>4th Floor - Executive Level</name>
+      <desc>   As with any good hotel, accomodations have been set aside for businesses and guests of the hotel who might need some extra space. The Executive Level is home to several businesses and even includes the offices of some very prestigious CEO&apos;s. Most of the rooms located in this hallway are vacant, however 4 of them do seem to be occupied currently. From here you can go the following directions:</desc>
+      <desc>   North - Rm. 411 - Temporary HQ of the Arc Royal Libertarian Party</desc>
+      <desc>   Southeast - Rm. 404 - Office of Emie, CEO of Oak Solutions</desc>
+      <desc>   South - Rm. 402 - Office of Moonus Mining &amp; Manufacturing.</desc>
+      <desc>   In - Back Into the Elevator</desc>
+      <exits n='150' se='279' s='278' in='213' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='278' flags='b'>
+      <name>Rm 402 - Eris Satellite Office of Moonus Mining &amp; Manufacturing</name>
+      <desc>   Upon entering this small office, it is hard not to notice the paper and plans strewn from one end of the desk to the other. Closer inspection of the papers reveals several company projects of varying types all across the dataspace. Many projects center on one small world. The company has taken control of the whole planet and it seems to be striping it of all it resources. There are letters about the mistreatment of the local life forms, and the squashing of resistance. There are more files and papers scattered over the rest of the office, to many to look at in a short time. An old leather couch is in the corner; it looks well worn like someone has been sleeping it on late nights.</desc>
+      <exits n='214' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='279' flags='b'>
+      <name>Room 404 - Office of Emie, CEO of Oak Solutions</name>
+      <desc>   The scent of incense hangs heavily in the air. Along the western wall of the room, a table is draped with green cloth bearing a familiar pattern of interlocking spirals. The musk burner and three bowls sit on the cloth - in one bowl burns a small fire, protected by a force field, while the second bowl is filled with water and the third serves as a planter for an ancient-looking bonsai. In one corner, a desk faces out into the room with little on it besides the ambergris burner and a laptop - password-protected, due to the sub-standard security the Arc Royal Hilton provides to its lessees. In the other corner, next to a stand holding the citrus burner, a luxuriant anti-gravity bed beckons. You consider a short nap, but discover that the bed, too, is password-protected! Three comfy chairs provided for guests are arranged in a circle in the center of the room, ringing around a small refrigerator.</desc>
+      <exits nw='214' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='395' flags='e'>
+      <name>Eris Commodities Exchange and Brokerage</name>
+      <desc>   This room appears to have a lot in common with the New York Stock Exchange. Brokers climb over each other running around with tickets yelling, &quot;Buy, Sell, Buy, Sell!&quot; Of course, the main difference is that small droids are running around behind the brokers picking up all of the discarded slips and incinerating them on the spot as to prevent the room from filling to the brim with paper waste. Mounted on the walls are monitors that are constantly flashing the most updated prices of commodities offered and requested on Eris.</desc>
+      <desc>   Near the entrance is a large sign with bold letters with the following message: Attention all industrialists and manufacturers. All factories placed on this planet must be approved by the Terran Manufacturer&apos;s Union. Any unwanted factories can and will be expropriated without prior notice.</desc>
+      <desc>   The only exit that seems to be accessible at this time due to the brokers running back and forth leads back to the main terminal southeast of you.</desc>
+      <exits se='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>O&apos;Malley&apos;s Pub and Grill</name>
+      <desc>   Upon entering O&apos;Malley&apos;s Pub and Grill, you can already tell this is not a normal establishment. There is a dark gray haze of smoke hanging from the ceiling which fills your lungs with every breath. No wonder this place had an airlock for its front door! Anyone who doesn&apos;t smoke on a regular basis or doesn&apos;t breath carbon monoxide naturally might have to use a rebreather in here. To the rear, a small port attempts to pump fresh air from the loft above into the pub to no avail. Aside from the air quality problem, loud music from the owner&apos;s native Ireland is playing over the chatter of a group of drunken truckers at the bar. Isn&apos;t this place just quaint?</desc>
+      <desc>   If you dare to pull a chair and have a drink you&apos;re more than welcome. Otherwise, it might be best to head southwest through the airlock and back out to the main terminal. Oh, and if you&apos;re willing to chance The Loo, it&apos;s through the door to the southeast.</desc>
+      <exits se='462' sw='460' up='77' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='yr'>
+      <name>Max Manning&apos;s Magnificent Machines</name>
+      <desc>   This place is a trash heap! The walls are lined with everything from droids parts and used mecha actuators down to a partially disassembled vespa from ancient Earth. Towards the rear of the shop is long counter top with a rather aged and grizzled man standing behind it who is engaged in conversation with a quite bewildered looking alien. His stamina must be amazing as you don&apos;t ever hear the old geezer stop to take a breath.</desc>
+      <desc>   After a short time, he notices you out of the corner of his eye and looks your way.</desc>
+      <desc>   &quot;Ah ha! Fresh meat! Pull up a chair and let me tell you about some of my adventures. I&apos;m sure you&apos;ve heard a couple of them as I am the famous Max Manning, mecha pilot extraordinaire! While you&apos;re here, why not look at the various ship designs I am currently offering?&quot;</desc>
+      <desc>   It seems like this must be the place to purchase a spaceship or get repairs, however you can always save your sanity and run away to the east, back to the main terminal.</desc>
+      <exits e='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Arc Royal Interplanetary Spaceport Main Terminal</name>
+      <desc>   The terminal you are now standing is the first and last thing that anyone sees of Eris. Situated on the outskirts of the only major city on Eris, the Arc Royal Interplanetary Spaceport provides all of the amenities that the quintessential traveler requires. The decor in here is quite modern in appearance. There is a large domed roof above your head which opens into a skylight at the top. Monitors on the walls show everything from arriving and departing transport information to the daily Comstar News Broadcast.</desc>
+      <desc>   From this location you can board your shuttle if you so choose. Otherwise you see four different directions you can head from here. The vender to your west has a small sign labeled Max Manning&apos;s Magnificent Machines. Down a short walkway to the northwest, you see the entryway to the Eris Commodities Exchange and Brokerage. Off to the northeast, you hear a rukus coming from O&apos;Malley&apos;s Pub and Grill. Finally, southeast of the terminal is a long skybridge.</desc>
+      <exits ne='397' se='525' w='459' nw='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>The Loo</name>
+      <desc>   A foul stench assails your nostrils as you step into probably one of the most disgusting dens of filth in the known galaxy. The Loo&apos;s reputation obviously doesn&apos;t do it enough justice. Unless you are familiar in Xenobiology, it is nearly impossible to distinguish all of the substances littered across the floor, walls, and ceiling of The Loo. The barely working toilet appears to have difficulty evacuating 100% of the waste whenever you attempt to flush it. To make matters worse, the toilet lid appears to have been ripped off leaving a bit of a problem if anyone needs to sit down.</desc>
+      <desc>   Surprisingly, The Loo is also one of the most highly recommended information dumps in the Galaxy as well. Scribbled across the walls are trader tips and market strategies from all over the quadrant. Of course, the hard part is finding those tips and strategies amongst the years&apos; worth of bathroom graffiti that has engulfed every possible surface in The Loo. The only exit from here is northwest.</desc>
+      <exits nw='397'/>
+   </location>
+
+   <location num='525'>
+      <name>Skybridge</name>
+      <desc>   The skybridge leading to and from the Arc Royal Interplanetary Spaceport is the best place to stop and take a good view of the planet if you&apos;re in the mood. From your vantage point, the skybridge you&apos;re standing on is over 300 meters above the ground and slopes downward toward the southeast. The ground around you is lush and green as agricultural products of all sort are grown and harvested. In the distance, you can see the crater wall that surrounds all of Arc Royal. You know that the climate outside of that wall is harsh and desolate.</desc>
+      <desc>   To the east you can see an elevator to the surface which requires a key to access. There&apos;s a small plaque next to it. It reads: Due to security concerns with this seasons crops, all visitor traffic to the surface has been revoked.</desc>
+      <desc>   It seems the only directions you can go from here are further down the skybridge to the southeast, up to the main terminal northwest of here, or south to what appears to be a clinic.</desc>
+      <exits se='590' s='589' nw='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='541' flags='t'>
+      <name>Somewhere in the Hotel</name>
+      <desc>   Currently, you are standing at the bottom of a flight of stairs which lead back up to the Libertarian Party&apos;s HQ. The musty hallway that you are currently standing in is quite dark and if it wasn&apos;t for the light to the southeast of here, you wouldn&apos;t be able to see a thing. You can head back up to the Party HQ or head southeast to see where the light is coming from.</desc>
+      <exits se='606' out='150' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='589' flags='hi'>
+      <name>University Hospital Skybridge Annex</name>
+      <desc>   This planet is pretty calm for the most part, especially considering that visitors are restricted from venturing too far on the surface of the planet. Even so, people will always suffer from minor colds, flus, and the occasional slip and fall. The University Hospital of Arc-Royal&apos;s Skybridge Annex is just the place to go when these things do occur. The waiting room is only slightly filled at the moment so you shouldn&apos;t have any problems receiving medical attention should you need it.</desc>
+      <desc>   A rather bored looking insurance agent is propped up against the wall in the event someone should require his services. At this point you can stay here and receive medical attention or you can head back north to the skybridge.</desc>
+      <exits n='525' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='590'>
+      <name>Arc Royal Hilton Hotel</name>
+      <desc>   Yet another location of the famous hotel chain, the Arc Royal Hilton is the premier place to be for any would be traveler to Arc Royal. This 58 story hotel was built as the cornerstone of Arc Royal&apos;s Interplanetary Spaceport in order to promote commerce on an otherwise boring, agrarian world. As the major skyscraper in a city with a rather lowkey skyline, the Arc Royal Hilton doubles as the local government&apos;s headquarters. As such most of the floors are restricted from tourist traffic.</desc>
+      <desc>   From this spot, you can head in to the elevator or head back to the skybridge northwest of here.</desc>
+      <exits nw='525' in='655' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='606' flags='bt'>
+      <name>Lia Kell&apos;s Executive Suite</name>
+      <desc>   You have entered the quiet Executive Suite of Lia Kell. This room is quite cozy and furnished comfortably but not too lavishly. Dominated by the king size bed nestled against the opposite wall, the room contains all the ammenities one would need without ever having to leave. Bookshelves line the walls with a sizeable library. A desk, along with a holo computer, is set off to the side for Ms. Kell to work from. Furthermore, in a room of to the side of the main suite, there is a small kitchen which includes a stove and a refrigerator in case anyone feels like cooking.</desc>
+      <desc>   Normally, one would question why this room&apos;s normal entrance has been sealed off forcing people to enter through a secret passageway. In this case, however, the burden of running the local government often requires Lia to find a nice secluded place where no one can find her. The secret passageway is back to the northwest from here.</desc>
+      <exits nw='541' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='655'>
+      <name>Elevator - 1st Floor</name>
+      <desc>   The elevator isn&apos;t that glamorous or extravagant of a place to be, but considering there&apos;s no musak playing right now, it isn&apos;t all that bad either. It doesn&apos;t seem like a busy day as there&apos;s no one else on the elevator except yourself. Glancing at the buttons, it appears that several floors don&apos;t require a key. I guess you could go up from here, down to the basement, or back out to the hotel lobby.</desc>
+      <exits up='661' down='773' out='590' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='661'>
+      <name>Elevator - 2nd Floor</name>
+      <desc>   The elevator isn&apos;t that glamorous or extravagant of a place to be, but considering there&apos;s no musak playing right now, it isn&apos;t all that bad either. It doesn&apos;t seem like a busy day as there&apos;s no one else on the elevator except yourself. Glancing at the buttons, it appears that several floors don&apos;t require a key. I guess you could go up from here, back down to the lobby, or out to the 2nd Floor.</desc>
+      <exits up='213' down='655' out='662' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='662' flags='b'>
+      <name>2nd Floor - Pool Level</name>
+      <desc>   Many hotels offer a pool in order to give their customers a nice place to relax when they&apos;re away from home. The Arc Royal Hilton is definitely no exception to that. Located on the 2nd floor, the hotel pool is bathed in &quot;natural&quot; lighting so as to simulate a sunny sky and give customers the feel of an exotic beach. The crystal clear water is maintained at 70 degrees Fahrenheit in order to ensure that the hotel&apos;s clients have a pleasant swim as well.</desc>
+      <desc>   In the corner of the Pool room is a small hot tub for those who wish to warm up after an exotic voyage across a frozen planetoid. If you wish, you can jump in the pool or the hot tub, or instead you can just head back in to the elevator.</desc>
+      <exits in='661' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='773'>
+      <name>Elevator - Basement</name>
+      <desc>   The elevator isn&apos;t that glamorous or extravagant of a place to be, but considering there&apos;s no musak playing right now, it isn&apos;t all that bad either. It doesn&apos;t seem like a busy day as there&apos;s no one else on the elevator except yourself. Glancing at the buttons, it appears that several floors don&apos;t require a key. I guess you could go up from here or out to the room before you.</desc>
+      <exits up='655' out='837' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='837' flags='b'>
+      <name>Basement - Kblackdragon&apos;s Lair</name>
+      <desc>   You wander into a dark room, the floor more uneven then you expected. As your eyes begin to adjust, you notice it is less of a room, but rather more of a cave. There are groats and certificates for slithies all over, in great piles. As you glance up, you see a neon sign blinking, &quot;KBlackdragon&apos;s lair...don&apos;t touch anything!&quot; This must be the lair of the famous KBlackDragon, the most infamous dragon in all the galaxy! Of course, the big question is, &quot;What the heck is a dragon&apos;s lair doing below the Arc-Royal Hilton?!?&quot; You decide that rather than anger his majesty, you&apos;re better off not trying to proceed any further. That, and you don&apos;t think you could traverse the mountain of groats without some serious climbing gear.</desc>
+      <exits in='773' no-exit='moves.noexit.4'/>
+   </location>
+
+</fed2-map>

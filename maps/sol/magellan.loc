@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<fed2-map title='Magellan' version='6' editor='standard' from='1225' to='Sol.Sol Space.851'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>This is the Magellan storeroom, where unused items are stashed in readiness for the time they are required...</desc>
+   </location>
+
+   <location num='394'>
+      <name>Security door</name>
+      <desc>   This heavy security door is firmly shut, and you cannot see any way of opening it. A sign on the door tells you that only space station crew and workers and allowed beyond this point. Down one side of the door is a series of sensors and scanner pads, to enable staff to give their palm print, tongue print, tentacle print, sucker print, or whatever biometric is appropriate for their particular species.</desc>
+      <desc>   South is the MagSoc corridor.</desc>
+      <exits s='458'/>
+   </location>
+
+   <location num='457'>
+      <name>Magellan Society museum and archives</name>
+      <desc>   This large room houses the records of the society going back many, many centuries, although sadly nothing remains of the very early days of the society, and its exact origins are unknown.</desc>
+      <desc>   The walls of the room are lined with bookcases loaded with old-fashioned paper books of great age, and computer terminals allowing access to more modern electronic records. One screen is showing an entry from the Encyclopedia Galactica - you can read the entry at http://www.ibgames.net/fed2/galactica/magellan.html. The rest of the room is dotted with plinths, on which stand various items of significance to the society, including those found on its explorations of other worlds.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='458' out='458'/>
+   </location>
+
+   <location num='458'>
+      <name>MagSoc corridor</name>
+      <desc>   If you&apos;re not sure what the Magellan Society is all about, then the room to the west will tell you - it houses the society&apos;s museum and archive. The door to the room looks as if it is made from brass, with the sailing ship that forms the society crest stamped into it, giving an impression of antiquity quite in keeping with an organization that was founded centuries before man first took to the skies.</desc>
+      <desc>   East is the office of the President of the Magellan Society. The short corridor continues south, while north is a security door.</desc>
+      <exits n='394' e='459' s='522' w='457'/>
+   </location>
+
+   <location num='459' flags='a'>
+      <name>Magellan Society President&apos;s office</name>
+      <desc>   The President of the Magellan Society makes himself available to anyone who cares to come calling, and delights in meeting people from all walks of life. Now too old to go out exploring new worlds himself, he sits back and lets the Galaxy come to him. His official burdens are not onerous, leaving him plenty of time to greet and entertain those who visit the Society. Although his knowledge is vast, his insatiable curiosity means he spends little time talking, instead preferring to listen to the tales visitors bring to him. The first port of call for any society member who returns from an expedition is the President&apos;s office, and before any official report is turned in, the President wants to hear the story in great detail.</desc>
+      <desc>   A door leads south to the general office area, while the exit is west.</desc>
+      <exits s='523' w='458' out='458'/>
+      <events in-room='newbod.president.1'/>
+   </location>
+
+   <location num='521' flags='bt'>
+      <name>Magellan Society members room</name>
+      <desc>   Members of the Magellan Society use this room to socialize and to plan new expeditions to explore and discover new worlds. Now the interstellar link has been opened again, the place is abuzz with conversation, as revitalized members hatch all kinds of grandiose schemes.</desc>
+      <desc>   Private dining booths, many already occupied, line one wall.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='522' out='522'/>
+      <events enter='moves.keepout.1'/>
+   </location>
+
+   <location num='522'>
+      <name>MagSoc corridor</name>
+      <desc>   This short stretch of corridor is named after the owners of the space station: the Magellan Society. All the rooms on this corridor house the various facilities of the society. West is a lounge for members of the society, and east is the main public office. More Magellan Society facilities are to the north, while south is a security door.</desc>
+      <desc>   In the center of the corridor over your head floats a hologram of the Magellan Society crest: an old-fashioned sailing ship battling stormy seas, while alien moons float through the sky behind it.</desc>
+      <exits n='458' e='523' s='586' w='521'/>
+      <events enter='snark.bellman.10'/>
+   </location>
+
+   <location num='523' flags='a'>
+      <name>Magellan Society office</name>
+      <desc>   This office is once again a hive of activity; the long fallow period while the link was closed has finally ended. Staff are assisting members who want to set up expeditions, and the first returning explorers are arriving to make their official reports of what they have discovered.</desc>
+      <desc>   In addition, the commercial and tourist activities of the space station still generate a large amount of income, and require a certain amount of clerical work, so are still part of the day to day work of the society.</desc>
+      <desc>   A door in the north wall leads into the President&apos;s office, and the exit is west.</desc>
+      <exits n='459' w='522' out='522'/>
+   </location>
+
+   <location num='586'>
+      <name>Security door</name>
+      <desc>   Access to various parts of the Magellan space station is carefully controlled, and although this security door is open, scanners around the edge monitor those who pass through, keeping track of who is where in the station. This is not so much part of an obtrusive monitoring of personal habits, so much as a safety measure to ensure that everyone&apos;s whereabouts are known in case of an emergency.</desc>
+      <desc>   South through the open security door is one of the station&apos;s spokes. North is MagSoc corridor.</desc>
+      <exits n='522' s='650'/>
+   </location>
+
+   <location num='650'>
+      <name>Spoke</name>
+      <desc>   Look up, and you can see along the inside of the giant spoke. It acts as a huge gravshaft which allows you to rise up and travel to the center of the station, which has no gravity and is therefore suitable for various activities - industrial, scientific and leisure. At the moment, the gravshaft is not in operation, so you cannot ascend the spoke.</desc>
+      <desc>   North and south are open security doors leading to different parts of the rim. East is a link to the other Magellan wheel, but it is sealed off.</desc>
+      <exits n='586' s='714'/>
+   </location>
+
+   <location num='714'>
+      <name>Security door</name>
+      <desc>   At various points around the rim of the Magellan space station, the corridors are separated by security doors. This door is open, allowing anyone to pass through, but in the event of an emergency it will be closed to contain any problems.</desc>
+      <desc>   South is the commercial corridor, while north through the door is one of the giant spokes that connects the wheel to the central spindle around which it rotates.</desc>
+      <exits n='650' s='778'/>
+   </location>
+
+   <location num='777' flags='ba'>
+      <name>Minnie and Maxie&apos;s champagne bar</name>
+      <desc>   Business people who make a lot of money need a place where they can spend vast quantities of it, particularly on consumables which have no lasting presence. What better thing to waste groats on than champagne? The more expensive the beverage, the higher the status it confers upon the buyer, and never mind what it actually tastes like.</desc>
+      <desc>   Minnie and Maxie, who own this bar, understand this principle very well and although they both have a genuine love for fine champagne and a great knowledge of vintages, they are content to charge the idiot business people, who mostly have more money than sense, over the odds for inferior vintages, keeping the really good stuff for their friends.</desc>
+      <desc>   You can buy yourself some champagne if you want to fit in with the rest of the crowd here. They do serve other drinks too, but reluctantly, leaving the dispensing to a waitdroid.</desc>
+      <desc>   The exit to the corridor is east.</desc>
+      <exits e='778' out='778'/>
+   </location>
+
+   <location num='778'>
+      <name>Commercial corridor</name>
+      <desc>   This is the end of the commercial corridor (or the beginning, depending on which direction you came from). It stretches south, past offices and shops and ultimately back to the Magellan shuttle docking bay. North is a heavy security door which separates this part of the wheel from what lies beyond.</desc>
+      <desc>   A champagne bar lies to the west, while east is a lodge providing overnight accommodation for business people.</desc>
+      <exits n='714' e='779' s='842' w='777'/>
+   </location>
+
+   <location num='779' flags='a'>
+      <name>Magellan Travelers&apos; Lodge</name>
+      <desc>   This lodge is used by business people whose activities on the station will take more than a day, but who don&apos;t want to bother with (or can&apos;t afford) an expensive hotel. The rooms are plain and modest, but clean and smartly painted. The braying idiots who quaff expensive champagne opposite wouldn&apos;t dream of using such cheap accommodation, but there are many successful and rich visitors to the station who don&apos;t see the point of wasting money on a hotel room they are only going to sleep in.</desc>
+      <desc>   The lodge is fully automated, with no human staff in sight. A sign tells you that there are no vacant rooms, so it is clearly a popular place to stay.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='778' out='778'/>
+   </location>
+
+   <location num='841' flags='a'>
+      <name>Toys for the Boys</name>
+      <desc>   This rather strange shop specializes in toys and gadgets for grown-up male businessmen. There are the kind of executive toys you find on desks, such as Newton&apos;s cradles, pyramids of magnetic paperclips, and strange oil-filled hour-glasses. Then there are the toys that take up more room, like model train sets, Mobius racetracks with electric cars that race around the looping track defying gravity, helium-filled airships with little electric motors that fly around the room, and things on springs that dangle from the ceiling and spin around in circles. There is also a range of complicated electronic items of no obvious function, which seem to be in great demand from the over-stressed businessmen who shop here.</desc>
+      <desc>   You wonder why female and neuter business people don&apos;t seem to need such strange things in their offices!</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='842' out='842'/>
+   </location>
+
+   <location num='842'>
+      <name>Commercial corridor</name>
+      <desc>   This corridor runs from the north to the south, and caters to those who visit Magellan for business reasons. Crowds of people surge along in both directions, all of them with urgent business, places to be, people to meet, things to do. Everyone is moving with such haste that it is a wonder they don&apos;t bump into each other.</desc>
+      <desc>   West is a shop selling things to relax stressed-out executives, while east is an office complex that - the sign tells you - belongs to Universal Exports.</desc>
+      <exits n='778' e='843' s='906' w='841'/>
+   </location>
+
+   <location num='843'>
+      <name>Universal Exports lobby</name>
+      <desc>   Universal Exports is an old, long-established company that moves goods backwards and forwards, buying low and selling high. The firm does what merchants do, but as a corporate entity rather than as independent traders. This means they can make a lot more money than individual traders, although they can be slower to recognize and exploit new and emerging trends. They don&apos;t operate on Earth, to avoid interference from the Guild - who would like to think they have a monopoly on such activities - but instead have their headquarters here on the Magellan space station.</desc>
+      <desc>   This vast room serves as the lobby, and has been decorated in a modern style (unlike the old-fashioned look of the Guild building on Earth) with the curving walls and ceiling and the lack of corners and edges that are so popular today and which give the impression of being inside a giant egg.</desc>
+      <desc>   There is a reception desk on the south side of the enormous room, and the exit is west.</desc>
+      <exits s='907' w='842' out='842'/>
+   </location>
+
+   <location num='905' flags='a'>
+      <name>Rotary office facilities</name>
+      <desc>   Whether the name is a pun on the way the Magellan space station rotates in space, or whether the offices are owned by a Mr Rotary is not clear, and the business-like being who greets you doesn&apos;t say. A neuter human called Blythe, whatever your business needs, it will be able to provide it. It tells you that offices of all size can be rented for periods as short as an hour or as long as you wish, and a range of personalized secretarial and clerical services can also be offered.</desc>
+      <desc>   It is rumored that they offer more clandestine services, to those whose requirements are slightly on the shady side. The hot story on the grapevine is that they are the brokers for a highly illicit process to increase stamina. Should you be looking for something along those lines, you should talk to Blythe.</desc>
+      <desc>   If you don&apos;t require any such services at the moment, you can make your way out by going east.</desc>
+      <exits e='906' out='906'/>
+   </location>
+
+   <location num='906'>
+      <name>Commercial corridor</name>
+      <desc>   This north-south corridor runs around the rim of the space station, and on either side the rooms are used for offices. East is part of the suite occupied by Universal Exports, although there is no access from this part of the corridor. West is a set of small offices which can be rented by visiting business people.</desc>
+      <desc>   Entertainers ply their trade amongst the crowd, including two creatures that you first take for stilt-walkers, until you realize they are aliens that have very long, spindly legs. They are juggling with illuminated spheres - tossing them into the air and back and forth between them, weaving intricate patterns of colored light in the air. It&apos;s very pretty.</desc>
+      <exits n='842' s='970' w='905'/>
+   </location>
+
+   <location num='907' flags='a'>
+      <name>Universal Exports reception</name>
+      <desc>   There are three receptionists stationed here, all of them humanoid females with a faint blue tinge to their hair and skin, all of them appearing to be about twelve years old, and all three absolutely identical. Whether they are natural twins, clones, or have simply had cosmetic alterations to bring their appearances into sync, you can&apos;t tell, but the effect is rather disconcerting.</desc>
+      <desc>   The receptionist trio all fix you with their piercing blue eyes, and the one in the center asks you to state your business. Of course, unless you have a delivery for UE, you have no business here, so you cannot answer the triad of receptionists.</desc>
+      <desc>   You will have to walk north across the spacious lobby to reach the exit.</desc>
+      <exits n='843' out='843'/>
+   </location>
+
+   <location num='969' flags='a'>
+      <name>Chocolate Heaven</name>
+      <desc>   One of the stranger facts discovered by xenobiologists is that all known intelligent lifeforms in the Galaxy are affected the same way by the chemicals in the cocoa bean. As you walk into the shop, the exquisite aroma of top quality chocolate hits you like an intoxicant. Closing your eyes, you inhale deeply and you imagine you can taste the cocoa butter and feel it melting in your mouth. This shop has been named truly: it is a chocolate heaven.</desc>
+      <desc>   Then you open your eyes again before you knock something over, and now you are paying attention again, you notice the extortionate prices - a tiny box containing four little chocolates costs more than a steak and champagne dinner! But then, chocolates from Chocolate Heaven are chiefly bought as gifts by those who care about status symbols.</desc>
+      <desc>   The exit, if you can tear yourself away from the smell and the sight of the wonderful morsels that surround you, is east.</desc>
+      <exits e='970' out='970'/>
+   </location>
+
+   <location num='970'>
+      <name>Commercial corridor</name>
+      <desc>   In the center of this corridor, which leads north and south through Magellan&apos;s commercial area, is a large moving sculpture of the space station, its two wheels rotating slowly around a central spindle, to which they are joined by four spokes. Looking at the model of the whole structure gives you more of an idea of the immense scale of the space station than does wandering around inside it.</desc>
+      <desc>   Ignoring the grandeur of the sculpture, market stalls have been erected in a ring around it, selling a variety of tat and junk that nobody in their right mind would want. Still, they seem to be doing a healthy business, so clearly there are people on this station who are not in their right minds!</desc>
+      <desc>   West is a shop selling fine chocolates, and east is the Magellan trading exchange.</desc>
+      <exits n='906' e='971' s='1034' w='969'/>
+   </location>
+
+   <location num='971' flags='e'>
+      <name>Magellan trading exchange</name>
+      <desc>   It looks pretty much like all trading exchanges everywhere. There&apos;s the usual huge screens showing prices, around which cluster the expected merchants and traders, some nervous, some full of confidence, some in despair at having suffered a great loss.</desc>
+      <desc>   Even in the midst of this bastion of commerce, an entertainer is trying his luck, startling the traders with displays of close-up magic, making groat coins vanish and re-appear from their ears, and trying card tricks. Despite his skill, he is having trouble making anyone pay attention to him; they are all more intent on their trading. Then you notice the conjurer has an additional skill... he is picking pockets as he walks around! Before you can decide whether to call the authorities or not, he vanishes into the crowd.</desc>
+      <desc>   The door leading to the corridor is west.</desc>
+      <exits w='970' out='970'/>
+   </location>
+
+   <location num='1033' flags='c'>
+      <name>Armstrong Cuthbert</name>
+      <desc>   This branch of AC is the busiest in the system after the Earth office, reflecting the important role that the Magellan space station plays in the business of Sol. Haulers dash in and out to arrange collection and delivery of cargo, while special couriers receive details of their valuable packages before speeding off to the collection points. This whirlwind of activity ought to make a terrible noise, but carefully deployed sound baffles make it possible to talk without shouting, as well as stopping prying ears from hearing private conversations.</desc>
+      <desc>   The usual AC workers are seated at their terminals and comm units, setting up deals and authorizing shipments, while efficient clerks of all three genders staff the counter and deal with whatever is thrown at them. Occasionally they shoot each other long-suffering looks, when their patience is particularly tried, but in the main they remain calm and polite no matter what.</desc>
+      <desc>   The door in the east wall leads back to the corridor.</desc>
+      <exits e='1034' out='1034'/>
+   </location>
+
+   <location num='1034'>
+      <name>Commercial corridor</name>
+      <desc>   A lot of the hustle and bustle in this north-south corridor is caused by people dashing in and out of the office to the west, which has the familiar Armstrong Cuthbert sign over the door. Opposite them is an equally busy establishment, but for a more mellow reason - it&apos;s a bar. You can hear soft piano music coming from inside, as well as the faint sound of several voices crooning in harmony.</desc>
+      <desc>   Tables and chairs are clustered outside the door, and some people are sitting there eating food bought from the take-away food shop next door. From time to time a waitdroid comes out and shoos them away, but they are soon replaced by others.</desc>
+      <exits n='970' e='1035' s='1098' w='1033'/>
+   </location>
+
+   <location num='1035' flags='ba'>
+      <name>Spinning Wheel Bar</name>
+      <desc>   The lights in the bar are kept dim, and the floor and furniture is rough, giving it the atmosphere of a low-life dive where anything could happen. The business clientele enjoy the thrill but of course it is just an illusion - nothing dangerous ever does occur here. Behind the bar is the owner of the bar, a rugged man with a nose that has been broken in several places, and a wicked looking scar running down one cheek. His presence both adds to the air of menace in the bar, while at the same time ensuring that nobody will actually dare to cause any trouble.</desc>
+      <desc>   The bar is almost full, but the customers are mostly silent, listening to the music provided by the two performers in the corner. An adolescent male human plays the piano to accompany the most extraordinary singer. It is a small scaly alien with four separate heads sprouting from one body, each one singing a different melody line to combine in perfect harmony.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='1034' out='1034'/>
+   </location>
+
+   <location num='1097' flags='a'>
+      <name>Brewster and Boothroyd</name>
+      <desc>   If you are visiting Magellan on business, and you realize you have neglected to pack some essential item, then B&amp;B will be able to provide it for you. From the humble paperclip to the most expensive comm unit, from pencils to computers with artificial intelligence, whatever your need, these two gentlemen stand ready to serve you.</desc>
+      <desc>   The chaps in question - the Mr Brewster and Mr Boothroyd whose names grace the shop - are small, wizened Earth men of a great age, both completely bald, with an expanse of shiny pink skin on top of their heads, and bright smiles on their wrinkled faces. They are standing attentively behind the counter of the shop.</desc>
+      <desc>   The exit from the shop is east.</desc>
+      <exits e='1098' out='1098'/>
+   </location>
+
+   <location num='1098'>
+      <name>Commercial corridor</name>
+      <desc>   Crowds of purposeful businessmen, businesswomen and businessthings surge up and down this corridor, which leads north and south around the circumference of the giant wheel. Magellan provides a useful way station for goods to be transshipped to other planets, while avoiding Earth&apos;s customs duties, and for people who want to have dealings with Earth without actually landing on the planet.</desc>
+      <desc>   On either side of the corridor are shops; one sells business supplies, and the other take-away food items. In the center of the corridor is a raised dais, on which three musicians are playing a selection of old Earth folk songs with more volume than skill. Nobody seems to be stopping to listen, and there are only a few low-denomination coins in the hat that lies in front of them.</desc>
+      <exits n='1034' e='1099' s='1162' w='1097'/>
+   </location>
+
+   <location num='1099' flags='a'>
+      <name>Sally&apos;s Lunch Box</name>
+      <desc>   Sally sells sandwiches, cakes, buns, pastries, and small portions of more substantial food in self-heating containers. Her establishment is considered the best place for take-away food in the Solar System, and business people have been known to fix up meetings on Magellan just so they have an excuse to buy some of Sally&apos;s delicious food.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='1098' out='1098'/>
+   </location>
+
+   <location num='1162'>
+      <name>Commercial corridor</name>
+      <desc>   The commercial corridor on Magellan is where all kinds of business takes place. It is here that you will find the offices of great institutions such as Armstrong Cuthbert and Universal Exports, as well as the Magellan trading exchange and other facilities for business visitors.</desc>
+      <desc>   More informal business takes place here, too; the walls of the corridor are lined with market stalls selling a variety of goods and offering services of all kinds. Peddlers wander up and down selling things from trays hung around their necks, some of them serving food and drink that wafts tantalizing smells into the air. Here and there, street entertainers - or corridor entertainers - are doing their best to attract audiences that will toss them a few groats in exchange for some momentary diversion.</desc>
+      <desc>   The commercial corridor continues north, while south it leads to the shuttle docking bay.</desc>
+      <exits n='1098' s='1226'/>
+   </location>
+
+   <location num='1225'>
+      <name>Magellan shuttle docking bay</name>
+      <desc>   The two wheels that make up the Magellan space station both have huge docking bays. On this wheel, the bay is for shuttles, private vehicles, and the space-buses that bring tourists from Earth. One side is open to the stars - that&apos;s how shuttles get in and out, of course. Visitors to the space station are prohibited from taking space walks, so you can&apos;t go that way. On the east side, an airlock leads into the space station itself.</desc>
+      <desc>   The space station wheels spin, to provide artificial gravity at about two-thirds Earth normal. The low gravity is one of the reasons natives of Earth love to visit Magellan. Not only does the lightness of body feel exhilarating, but the health benefits have attracted a small cadre of the very wealthy whose bodies can no longer tolerate the full pull of Earth&apos;s gravity.</desc>
+      <exits e='1226' in='1226'/>
+   </location>
+
+   <location num='1226'>
+      <name>Magellan entrance corridor</name>
+      <desc>   Visitors to Magellan are always amazed when they first set foot on the station. Any worries about feeling cramped or shut in are soon dispelled, because the main corridor running all the way around the rim of this wheel is huge - several hundred feet across. The designers have also gone to some lengths to disguise the fact that you&apos;re basically standing inside a big metal hula-hoop, making sure the walls are covered with hangings, painted in bright colors, or otherwise disguised as much as possible (given safety constraints).</desc>
+      <desc>   The one oddity is that looking along the corridor in either direction, you can see it curving upwards, as it bends around to form the wheel shape.</desc>
+      <desc>   West is the airlock door into the shuttle bay. East is a linking corridor that leads to the other wheel.</desc>
+      <desc>Hanging in the air is an illuminated sign pointing north to the commercial corridor, and south to the burlesque corridor.</desc>
+      <exits n='1162' e='1227' s='1290' w='1225' out='1225'/>
+   </location>
+
+   <location num='1227'>
+      <name>Link between wheels</name>
+      <desc>   This corridor is much narrower than the main corridor, and it&apos;s made of some kind of stretchy, flexible material to allow for give should the two wheels get slightly out of alignment.</desc>
+      <desc>   West is the main corridor of wheel one. A security door leads east to wheel two, but it is closed and has a notice on it saying &apos;STATION PERSONNEL ONLY&apos;.</desc>
+      <exits w='1226'/>
+   </location>
+
+   <location num='1290'>
+      <name>Burlesque corridor</name>
+      <desc>   This southerly corridor is the entertainment area of the Magellan space station, catering for tourists here on vacation. As well as holiday-makers from Earth for whom a stay in Magellan is as far into space as they will ever go, there are those from the outer planets who want to holiday as close to the mother planet as they can get, without having to deal with the stringent entry procedures they would have to go through to actually land on Earth.</desc>
+      <desc>   The station management has given the whole area a French theme because they think it imparts a sense of romance and decadence that tourists enjoy. They are also quite strict about giving the right image to visitors, and they don&apos;t allow unlicensed vendors or performers to ply their trade in this corridor - unlike those found in the commercial corridor on the other side of the docking bay to the north.</desc>
+      <exits n='1226' s='1354'/>
+   </location>
+
+   <location num='1353' flags='a'>
+      <name>Quay D&apos;Orsay Souvenirs</name>
+      <desc>   Visitors to Magellan are discouraged from leaving without some memento to remind them of their stay, and this shop has a wide selection in reasonably good taste. There&apos;s the usual range of mugs, t-shirts, pens and comm bracelets adorned with pictures of the station, as well as posters showing the station rotating in the starry sky, with Earth in the background.</desc>
+      <desc>   The most popular item is a miniature model of the Magellan space station, which rotates on its stand, powered by a tiny fuel cell. Holographic representations of the sailing ship that appears on the Magellan Society crest - which you should have noticed as you approached the station - are also selling well.</desc>
+      <desc>   The name of the shop has no significance; clearly somebody just plucked a French street name off a map because it fit with the theme!</desc>
+      <desc>   The shop is completely automated; should you leave via the east exit, a scanner will detect the goods you are carrying and deduct the groats from your bank account.</desc>
+      <exits e='1354' out='1354'/>
+   </location>
+
+   <location num='1354'>
+      <name>Burlesque corridor</name>
+      <desc>   This wide, spacious corridor, which stretches south as far as you can see, is filled with people here for pleasure rather than business. As well as those spending holiday time on Magellan, there are visitors who fly up from Earth to see a show or have a meal in exotic surroundings. None of the people in the crowd are moving with any sense of urgency; they amble along, veering from side to side, stopping to look at anything which takes their fancy. There is a general air of relaxed enjoyment.</desc>
+      <desc>   North, the corridor leads back to the shuttle docking bay, while on the west side of the corridor is a shop selling souvenirs. To the east is a cafe, with a cluster of tables and chairs outside the door, on which visitors are taking refreshment. There are large gaily-striped umbrellas over each table, which seems absurd given there is no weather on the space station, but it does fit the French theme.</desc>
+      <exits n='1290' e='1355' s='1418' w='1353'/>
+   </location>
+
+   <location num='1355' flags='ba'>
+      <name>Cafe Blanc</name>
+      <desc>   The decor in the Cafe Blanc is a rather sanitized version of an ancient Parisian cafe, more in line with tourists&apos; expectations than with reality. The walls are covered with posters; some of them of art by French painters such as Toulouse-Lautrec, and others showing famous Parisian land-marks, such as the ancient iron tower called Eiffel, which was demolished by a terrorist bomb before the space-going era.</desc>
+      <desc>   The waitdroids in the cafe are painted black, and are wearing long white aprons. A few of them even have droopy mustaches affixed to their metallic faces. They move in a very leisurely fashion, in no hurry to serve the customers in the bar or at the tables outside.</desc>
+      <desc>   The special drink of the house is absinthe, an incredibly strong aniseed-flavored liqueur with a reputation for making those who drink too much go blind; of course, the version you can buy here has been altered to remove those dangerous properties.</desc>
+      <exits w='1354' out='1354'/>
+   </location>
+
+   <location num='1417' flags='ba'>
+      <name>Brasserie Camile Saint Saens</name>
+      <desc>   This restaurant, which enjoys the highest reputation amongst gourmets throughout the Solar System, has been named after one of the most famous French composers, and one of his symphonies is being played softly over the speaker system. On the walls are pictures of various animals, in homage to his Le Carnaval des Animaux (Carnival of the Animals).</desc>
+      <desc>   But never mind the decor, what people come here for is the food - the best French cuisine anywhere outside Paris itself. Rich, thick aromas come from the kitchen and from the plates of food being consumed by elegantly-costumed diners. The &quot;specialite de la maison&quot; is steak frite, a steak with French fries accompanied by a pepper sauce and a small green salad. This may sound quite plain but with the best quality ingredients, and the attention to detail the genuine French chef gives to his work, it truly is a meal fit for an Emperor, particularly when washed down with a glass of the fine red wine from the cellar.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='1418' out='1418'/>
+   </location>
+
+   <location num='1418'>
+      <name>Burlesque corridor</name>
+      <desc>   On a small raised platform in the center of the north-south corridor stands a musician playing an accordion. The gentle music ripples along the corridor, bringing a smile to the faces of the tourists passing by. He is obviously a hit with the crowd, because the beret he has placed on the ground in front of him is full of coins and even a few notes.</desc>
+      <desc>   A strong, delicious, smell of garlic and onions wafts from the west; the sign over the door tells you it is the Brasserie Camile Saint Saens. A door to the east leads into a nightclub.</desc>
+      <exits n='1354' e='1419' s='1482' w='1417'/>
+   </location>
+
+   <location num='1419' flags='ba'>
+      <name>Le Club Chaud</name>
+      <desc>   The name means The Hot Club, which was intended to imply that the club is the in place to go, at the height of modality. It could also apply to the ambient temperature; the crowds are packed tight in here and it&apos;s very hot. Tables and chairs are crammed in so as many people as possible can see the stage on which dancers are performing the cancan - a lively dance in which they kick their legs high into the air, showing their underwear. When it was invented, this dance was the height of naughtiness and was banned, but today it just seems jolly good fun!</desc>
+      <desc>   Waitdroids bustle around, ensuring that every table has a carafe of cheap red wine on it. The patrons guzzle the wine with gusto as they cheer on the antics of the high-kicking dancers. Many of the patrons have dressed in traditional old Parisian dress for the occasion, which adds to their enjoyment.</desc>
+      <desc>   The door out to the corridor is west.</desc>
+      <exits w='1418' out='1418'/>
+   </location>
+
+   <location num='1481' flags='a'>
+      <name>Hotel Francois reception</name>
+      <desc>   You don&apos;t have to be rich to come and stay on the Magellan space station; this hotel caters for those who don&apos;t have a great deal of money, offering basic facilities at a reasonable price. The rooms are small but functional and clean, and the price includes a continental breakfast, served in the lounge to the south at all hours of the day.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='1482' s='1545' out='1482'/>
+   </location>
+
+   <location num='1482'>
+      <name>Burlesque corridor</name>
+      <desc>   As the people in the crowd amble to and fro along this north-south corridor, they occasionally stop and chat to those they meet. Those on holiday often lose all inhibitions under the influence of the relaxed, slightly sensual atmosphere and are less up-tight about talking to complete strangers. Many a lasting friendship has been formed through a chance encounter in the burlesque corridor.</desc>
+      <desc>   There is a costumiers to the east called Valentino; the door is flanked by two mannequins wearing clothes suitable to the period evoked by the theme of the burlesque corridor.</desc>
+      <desc>   West is a hotel catering to tourists of modest means.</desc>
+      <exits n='1418' e='1483' s='1546' w='1481'/>
+   </location>
+
+   <location num='1483' flags='a'>
+      <name>Valentino</name>
+      <desc>   When visiting the nightclub or dining at the brasserie, many visitors choose to get into the spirit of the theme and dress in appropriate clothing. Valentino rents out costumes for those who don&apos;t have nano-chameleon suits, and have to rely on old-fashioned cloth. He mainly caters for humanoid males and females (elegant gowns for the women and frock coats for the men) but also has a small selection of outfits suitable for alien forms.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='1482' out='1482'/>
+   </location>
+
+   <location num='1545' flags='ba'>
+      <name>Hotel Francois lounge</name>
+      <desc>   Whatever time of day, you can get a continental breakfast here in the lounge. If you are staying in the hotel, it is included in the price of the room; otherwise, a board tells you it will cost you 7 Francs 50 centimes (the charge actually works out at 10 groats).</desc>
+      <desc>   You can choose to dine at a table or relax on one of the big squishy sofas that line the walls, where some of the guests sit while reading the real paper newspapers which are reprints of ancient French news.</desc>
+      <desc>   The exit back to the hotel reception is north.</desc>
+      <exits n='1481' out='1481'/>
+   </location>
+
+   <location num='1546'>
+      <name>Burlesque corridor</name>
+      <desc>   The corridor leads north past shops and services offering all manner of delights to visitors, and eventually to the entrance to the station. South, the corridor ends at the entrance of a garden.</desc>
+      <desc>   A portly tenor stands in the center of the corridor, regaling the passers-by with famous songs from ancient operas. He manages occasionally to slip in something French by Berlioz or St Saens, but the crowd prefers the tunes they are familiar with by such composers as Puccini, Verdi and the insectoid alien composer Buxella Kkinini. He has collected quite a crowd around him who are enjoying his singing, and a great cheer goes up every time he starts a new tune that they recognize.</desc>
+      <desc>   An open door to the east leads to a beauty salon.</desc>
+      <exits n='1482' e='1547' s='1610'/>
+   </location>
+
+   <location num='1547' flags='a'>
+      <name>Salon Isobella</name>
+      <desc>   For a grand night out, tourists who intend to get all dressed up also want their hair and make-up to match, and this beauty salon will oblige. Eschewing the automated cosmetic machinery which is all the rage on Earth, Isobella and her team of white-clad beauticians apply make-up by hand, delicately painting and shading until the faces of the customers appear as beautiful as they can be.</desc>
+      <desc>   The technicians are experts at arranging hair, and also offer a selection of wigs for those whose own hair isn&apos;t as good as it should be. They can make aliens looks great, too; one beautician specializes in the adornment and arrangement of tentacles of all kinds, whilst another is an expert in dealing with body fur.</desc>
+      <desc>   The door in the west wall leads back to the corridor.</desc>
+      <exits w='1546' out='1546'/>
+   </location>
+
+   <location num='1609'>
+      <name>Jardin de Paradis</name>
+      <desc>   This part of the skillfully crafted garden is filled with bushes surrounding little glades, in which artfully placed boulders and tree stumps act as natural tables and chairs. Some of the glades are well secluded, and are used by couples or groups in need of privacy - they are a popular meeting place for young romantics on the station, both visitors and staff members.</desc>
+      <desc>   The sound of running water comes from the south, and paths lead east and southeast.</desc>
+      <exits e='1610' se='1674' s='1673'/>
+   </location>
+
+   <location num='1610'>
+      <name>Jardin de Paradis</name>
+      <desc>   The efforts to disguise the fact that the space station corridors are just great big metal tubes are greatest here in the garden, which is very aptly named - it really does feel something like paradise. Tall trees hide any trace of the metal walls or ceiling, and bright lights which illuminate and provide the solar energy needed by the trees and plants make it feel as if you were in a real Earth garden or wood. But there is something missing; there&apos;s no birdsong and no rustling of animals in the undergrowth.</desc>
+      <desc>   A path which has been covered with soft green grass (a product of the labs on Phobos) meanders through the trees, leading south, southwest and west. Along the sides of the paths are bushes and shrubs, some of them in flower with blooms in a riot of colors.</desc>
+      <desc>   To the east, the trees part to reveal the entrance to a very expensive hotel.</desc>
+      <exits n='1546' e='1611' s='1674' sw='1673' w='1609'/>
+   </location>
+
+   <location num='1611' flags='a'>
+      <name>Hotel Splendide</name>
+      <desc>   Splendid by name and by nature, this is the hotel for the rich and important visitors to Magellan, and it is a favorite holiday spot for senior Galactic Administration bureaucrats, because once off Earth they cannot be contacted by subordinates with problems, yet they are close enough to return in a hurry in the case of real emergencies.</desc>
+      <desc>   Everything about the decor of the hotel reception area screams of wealth, in the most ostentatious fashion possible - there&apos;s nothing understated here. A commissionaire stands by the door to aid guests as they enter and leave the hotel, porters stand ready to help with luggage, and the hotel manager walks through the reception from time to time, just checking that everything is running smoothly. All of them eye you suspiciously, because you are obviously not rich enough to afford to stay here!</desc>
+      <desc>   The exit back to the garden is west.</desc>
+      <exits w='1610' out='1610'/>
+   </location>
+
+   <location num='1673'>
+      <name>Jardin de Paradis</name>
+      <desc>   This part of the garden has a small river running through it - the only free-running water on the whole of the Magellan space station. Close inspection shows that the water comes from a duct in one wall and runs out through another, but both are carefully disguised with undergrowth. The water is clear, and as it runs through its channel it makes a chuckling sound. It is deep enough to allow swimming, although it is very cold so only a few people are taking advantage of this. Others are sitting on the bank dangling various limbs into the water.</desc>
+      <desc>   Paths lead north, northeast and east to various other parts of these paradisiacal gardens.</desc>
+      <exits n='1609' ne='1610' e='1674'/>
+   </location>
+
+   <location num='1674'>
+      <name>Jardin de Paradis</name>
+      <desc>   This garden has a feeling of peace about it, a haven from the concerns of the busy station outside. The lack of any animals, birds or insects means that the only sounds you can hear are the muted conversations from other people, who seem impelled to keep the noise down rather than break the peaceful atmosphere, and the sound of running water to the west.</desc>
+      <desc>   In this part of the garden, paths curve gently over grassy areas which seem entirely natural, rather than crafted by the station&apos;s expert landscape designers. The paths lead west, northwest and north. The only signs that this isn&apos;t a real garden are the door to the east, which gives access to a residential building, and a security door to the south.</desc>
+      <exits n='1610' e='1675' s='1738' w='1673' nw='1609'/>
+   </location>
+
+   <location num='1675' flags='a'>
+      <name>Residence de St Honore</name>
+      <desc>   This part of the station consists of opulent apartments for the rich who have chosen to take up residence on the space station, whether for health or tax reasons. Free from the immediate grip of Earth&apos;s gravity, or her bureaucracy, they are still close enough not to feel completely exiled, and the facilities here are far better than anything that can be found on the other planets, with the possible exception of the moon.</desc>
+      <desc>   The lobby is all marble and gilt, designed to announce to any visitors that those who abide here are very, very rich. The security here is second-to-none, and nobody can get beyond the lobby who doesn&apos;t belong here.</desc>
+      <desc>   The door in the west wall leads back to the garden.</desc>
+      <exits w='1674' out='1674'/>
+   </location>
+
+   <location num='1738'>
+      <name>Security door</name>
+      <desc>   This security door is open, but it is designed to slam shut instantly if there is any problem that needs to be contained on either side of it. To the north is a very natural-looking garden, while south is one of the spokes that connects the Magellan wheel to the center of the space station.</desc>
+      <exits n='1674' s='1802'/>
+   </location>
+
+   <location num='1802'>
+      <name>Spoke</name>
+      <desc>   Between two security doors, north and south, is the foot of one of the space station&apos;s spokes. A gravshaft would allow you to ascend to the heart of Magellan&apos;s structure, where there is no gravity... if it weren&apos;t for the fact that only station staff are allowed to use this particular gravshaft.</desc>
+      <desc>   A small corridor leading off the east wall provides a link to the second wheel, but it is sealed off by a security door.</desc>
+      <exits n='1738' s='1866'/>
+   </location>
+
+   <location num='1866'>
+      <name>Security door</name>
+      <desc>   This sturdy door is currently open, allowing anyone to pass through. It links the observation room which is south, to the spoke which is north.</desc>
+      <desc>   Should there be any problems on the station, the door will automatically shut as soon as the alarms are activated. This will contain whatever the problem is and stop it from spreading to the whole station. It is to be hoped that should this happen, you will not find yourself on the wrong side of the door!</desc>
+      <exits n='1802' s='1930'/>
+   </location>
+
+   <location num='1930'>
+      <name>Observation room</name>
+      <desc>   People who are on holiday are fond of panoramic views, and there surely cannot be any more impressive vista than that provided by the transparent wall of the observation room. As the station spins around its axis, the stars seen from the window move, floating from one side of the window to the other. Of course, it&apos;s not the stars that move, it&apos;s the station and you with it, but that&apos;s not how it feels!</desc>
+      <desc>   The room continues south, where refreshments are available, and north is an open security door.</desc>
+      <exits n='1866' s='1994'/>
+      <events in-room='view.enter.1'/>
+   </location>
+
+   <location num='1994' flags='ba'>
+      <name>Observation bar</name>
+      <desc>   In this part of the observation room a bar has been set up with tables and chairs for customers, but although there are quite a few people taking refreshments here, there is none of the usual chatter you expect in a bar. Everyone seems content to sit quietly, drinking in the amazing view of the starry sky that drifts across the window.</desc>
+      <desc>   The observation room continues to the north, and there is a security door to the south.</desc>
+      <exits n='1930' s='2058'/>
+      <events in-room='view.enter.1'/>
+   </location>
+
+   <location num='2058'>
+      <name>Security door</name>
+      <desc>   North of this security door lies the observation bubble, and south is the crew quarters - but you are not allowed in there, and no amount of poking and prodding at the various scanners will make the door open and give you access.</desc>
+      <exits n='1994'/>
+   </location>
+
+</fed2-map>

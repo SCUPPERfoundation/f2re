@@ -1,0 +1,9 @@
+# Build fed2d and install it, using scons and make
+
+# test version
+scons -f SConstruct.test
+make -f Makefile.test
+
+# clear the obj files for production version so
+# that it will build properly next time
+scons -c

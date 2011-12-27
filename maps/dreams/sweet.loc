@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<fed2-map title='Sweet' version='25' editor='standard' from='330' to='Dreams.Dreams Space.329'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Sweet Storeroom</desc>
+   </location>
+
+   <location num='73'>
+      <name>Shop Till You Drop Mall</name>
+      <desc>   This is the mall to end all malls.  Every store you can imagine has an outlet here, and everything appears to be on sale!!  No waiting in lines either!  Whether you are looking for this years top toy, newest video game or you just have to have the hottest new jeans, you can find it all here.</desc>
+      <desc>   The exit back into the main concourse of the Entertainment and Leisure Complex is to the South East.</desc>
+      <exits se='138'/>
+   </location>
+
+   <location num='74'>
+      <name>Sweet Grand Hotel Front Entrance</name>
+      <desc>   Feeling tired after a long day of exploring all that Sweet has to offer?  The Sweet Grand Hotel offers five-star service to the weary traveler.  The fabulous postmodern building is an ingenious combination of classical architecture and modern design.  The Grand Hotel has a fine range of rooms and suites, an elegant ballroom, four restaurant and bars and a superb health club, spa and swimming pool.  All the rooms have been individually decorated with rich fabrics and beautifully restored antique furniture.  A ratio of two staff to every guest room guarantees the highest levels of personal service.</desc>
+      <desc>   You may proceed Up the marble stairs to the Grand Hotel Lobby, or the exit back into the main concourse of the Entertainment and Leisure Complex is to the South.</desc>
+      <exits s='138' up='729'/>
+   </location>
+
+   <location num='75' flags='b'>
+      <name>Derby Winners Racetrack</name>
+      <desc>   Are you ready to pick a winner??  It&apos;s racing day here at the Derby Winners Racetrack and the first race is about to get started.  Beautiful horses, ridden by brightly clothed jockeys dance their way to the starting gate.  Will the winner be Pretty Lady by a nose?</desc>
+      <desc>   The exit back into the main concourse of the Entertainment and Leisure Complex is to the South West.</desc>
+      <exits sw='138'/>
+   </location>
+
+   <location num='135'>
+      <name>Safari Putt Putt Golf Course Hole 10</name>
+      <desc>   The 10th hole is a water trap.  You need to maneuver your ball carefully up a small incline and into the hole.  But be careful, if you hit the ball too hard or too softly, chances are it&apos;s going into one of the two ponds located throughout the course.</desc>
+      <desc>   The course continues to the South East.</desc>
+      <exits se='200'/>
+   </location>
+
+   <location num='136'>
+      <name>Safari Putt Putt Golf Course Hole One</name>
+      <desc>   The 1st hole sets the safari off with a bang!  In front of you looms the gaping mouth of a Bengal tiger.  Your mission is to putt your ball between the tiger&apos;s paws and into its mouth.  But be careful, those jaws snap shut with speed.</desc>
+      <desc>   The course continues to the West.</desc>
+      <exits w='135'/>
+   </location>
+
+   <location num='137'>
+      <name>Safari Putt Putt Golf Course</name>
+      <desc>   As you approach the gates, you are confronted with an extremely realistic safari experience. Throughout the course, you will encounter giraffes, lions, tigers, elephants, and a plethora of wildlife normally exclusive to the African continent on Earth.  As well as seeing the animals, you can hear them and the atmosphere is breathtaking.</desc>
+      <desc>   You can head West to the first hole on the golf course, or the exit back into the main concourse of the Entertainment and Leisure Complex is to the East.</desc>
+      <exits e='138' w='136'/>
+   </location>
+
+   <location num='138'>
+      <name>Sweet Entertainment and Leisure Complex</name>
+      <desc>   Lights, colors, smells and sounds swirl in a maze designed to tempt all the senses.  This is the place where the residents of Sweet come for recreation.  Everywhere you look, diversions and delights await.  A directory is conveniently located by the front entrance to assist newcomers in finding their way around.</desc>
+      <desc>   Lower Level:  East - Virtual Reality Adventures</desc>
+      <desc>   Lower Level:  North East - Derby Winners Racetrack</desc>
+      <desc>   Lower Level:  North - Sweet Grand Hotel</desc>
+      <desc>   Lower Level:  North West - Shop Till You Drop Mall</desc>
+      <desc>   Lower Level:  West - Putt Putt Golf Course</desc>
+      <desc>   Upper Level:  Up - Food Court</desc>
+      <exits n='74' ne='75' e='139' s='202' w='137' nw='73' up='155'/>
+   </location>
+
+   <location num='139'>
+      <name>Virtual Reality Adventures</name>
+      <desc>   Forget those ordinary video games, this store houses a 3-D virtual reality experience not for the frail at heart.  Whether it&apos;s white water rafting down the Sweet River, climbing up to the top peak of Mt. Neverest or searching in an undersea world for the buried treasure of the Great Merrier Reef, there is something here to intrigue and excite everyone.</desc>
+      <desc>   The exit back into the main concourse of the Entertainment and Leisure Complex is to the West.</desc>
+      <exits w='138' up='409' down='150' in='283'/>
+   </location>
+
+   <location num='142'>
+      <name>Master Bedroom Suite</name>
+      <desc>   The master bedroom has been decorated in various shades of blue. The room features an antique European pine writing cabinet and a king-sized two-poster bed. Through the side windows is a stunning view of the rose garden.  The window faces so that the soft evening sun warms the room and makes it glow.</desc>
+      <desc>   You may exit the bedroom by heading South.</desc>
+      <exits s='206'/>
+   </location>
+
+   <location num='150'>
+      <name>Sweet River Virtual White Water Rafting Trip Upper Base Camp</name>
+      <desc>   Here you can challenge and face the fury of some of the best rapids that the Sweet River has to offer.  During this adventure, you are surrounded by the sounds of nature and the high adrenaline white water rapids. The rafting journey will pass through beautiful landscapes, small villages and miles of unspoiled natural environment. Moderate and more challenging rapids will dot the trip.  After a brief training session led by your guide, who ensures that you have all the appropriate equipment and have signed the iron-clad liability release, you paddle your inflated raft South and move into the flowing current.</desc>
+      <desc>   You may proceed South into the river&apos;s current or end your virtual reality experience by heading Out.</desc>
+      <exits s='214' out='139'/>
+   </location>
+
+   <location num='153'>
+      <name>Mt. Neverest Virtual Climbing Experience Summit</name>
+      <desc>   The view is breathtaking.  It almost feels like you can see across the entire planet from this height.  The summit reaches to 20,000 feet.  You are literally on the top of the world.  You pause to take a few pictures to record your achievement.  No one is going to believe this story!</desc>
+      <desc>   You may end your virtual reality experience by heading Out.</desc>
+      <exits out='139'/>
+   </location>
+
+   <location num='155' flags='b'>
+      <name>Food Court</name>
+      <desc>   Designed to cater to a wide variety of palates, the Food Court is home to dozens of choices of cuisine.  Are you in the mood for tacos, or are you more of the sushi type?  An arrangement of tables is located in the middle of the room.  Once you have picked up your food from the counter of the restaurant of your choice, make yourself comfortable and enjoy your meal.</desc>
+      <desc>   The exit back into the main concourse of the Entertainment and Leisure Complex may be reached by heading back Down.</desc>
+      <exits down='138'/>
+   </location>
+
+   <location num='199' flags='b'>
+      <name>The Safari Bar</name>
+      <desc>   Also known to locals as the 19th hole, the Safari Bar offers the best frozen fruity drinks on the planet.  So pull up a chair and relax!</desc>
+      <desc>   You may Exit back to the 18th Hole by heading Out.</desc>
+      <exits out='200'/>
+   </location>
+
+   <location num='200'>
+      <name>Safari Putt Putt Golf Course Hole 18</name>
+      <desc>   The 18th hole is a tricky one.  If you manage to position your ball in just the right spot, an elephant will scoop it up in its trunk and deposit it directly into the hole.  If the elephant misses, you will be forced to move your ball along a long path that winds around a grass thatched hut in the middle of the hole.  This route is guaranteed to take several strokes.</desc>
+      <desc>   Once you have completed the course, please proceed to the Exit, located to the North East.</desc>
+      <exits ne='137' in='199'/>
+   </location>
+
+   <location num='201' flags='b'>
+      <name>Heavenly Treats Bakery</name>
+      <desc>   Fresh baked treats of every kind have been arranged in piles on the sparkling glass counters along the back of the shop.  All at once you are convinced that the most important decision you need to make today involves choosing between a chocolate sticky bun and a tangy lemon tart.</desc>
+      <desc>   An exit to the East leads back to the Path.</desc>
+      <exits e='202'/>
+   </location>
+
+   <location num='202'>
+      <name>Path to Where All Your Dreams Come True</name>
+      <desc>   As you wander down the flower-lined path, you find that there is a spring in your step that had not been there when you landed on this planet.  You feel vibrant and full of energy!  Turning your head, you catch the scent of fresh baked cinnamon bread coming from a small shop on the West side of the road.</desc>
+      <desc>   The Path veers off to the East.  To the North you see the Entertainment and Leisure Complex.   Head West for the Heavenly Treats Bakery or you may head South back towards the Sweet Landing Pad.</desc>
+      <exits n='138' e='203' s='266' w='201'/>
+   </location>
+
+   <location num='203'>
+      <name>Path to Where All Your Dreams Come True</name>
+      <desc>   A group of children have drawn a hopscotch pattern with blue and green chalk on the sidewalk.  Smiling to yourself, you pick up a smooth stone to use as a marker and toss it easily into the first square.  You hop your way to the end of the court, turn around and hop back through the court, moving through the squares in reverse order and stopping to pick up your marker on the way back.</desc>
+      <desc>   The Path continues to the East or you may head back towards the West.</desc>
+      <exits e='204' w='202'/>
+   </location>
+
+   <location num='204'>
+      <name>Path to Where All Your Dreams Come True</name>
+      <desc>The path you have been walking along comes to an end as if it is time to wake up.  But not wanting to let the dream end you can go to the South where you see the entrance to Sweet Park, a warm sunny place filled with families having picnics and playing games.  Or you can head towards the East, where you see a beautiful, white marble villa.</desc>
+      <exits e='205' s='268' w='203'/>
+   </location>
+
+   <location num='205'>
+      <name>DreamEEyed&apos;s Estate</name>
+      <desc>   A breathtaking avenue lined with live oaks leads up to a French-style white marble villa.  A pair of bronze doors guard the entrance to the estate.  The villa is surrounded by an immaculately groomed lawn as well as white and yellow rose bushes.</desc>
+      <desc>   You may head East into the villa or head West back to the Path.</desc>
+      <exits e='206' w='204'/>
+   </location>
+
+   <location num='206'>
+      <name>DreamEEyed&apos;s Estate Foyer</name>
+      <desc>   As you enter through the main door you see the room is broken up into two distinct halves with a curving stone staircase dissecting each half.  Vases of fresh flowers sit on pairs of twin tables located on either side of each staircase.  Sunlight fills the room and you can&apos;t help but feel comfortable and welcome here.</desc>
+      <desc>   To the North, you see the entrance to the master bedroom suite.  To the South you notice a library.  To the East is the Villa&apos;s kitchen.  Finally, to exit the estate, go West.</desc>
+      <exits n='142' e='207' s='270' w='205'/>
+   </location>
+
+   <location num='207' flags='b'>
+      <name>Estate Kitchen</name>
+      <desc>   Many people say that the kitchen is the heart of a home, and this kitchen proves that statement true.  Your eyes are drawn to the gleaming granite counter tops, which complement the slate floor.  You could have a feast on just the aroma coming from the fresh baked bread cooling on the side board.  A bowl of crisp, Granny Smith apples sits in the middle of a hardwood table located in a corner of the room.</desc>
+      <desc>   You may exit the kitchen by heading West.</desc>
+      <exits w='206'/>
+   </location>
+
+   <location num='214'>
+      <name>Sweet River Rapids</name>
+      <desc>   The current moves you swiftly into the heart of the river, leaving the broad valley that housed the base camp and plunging into a beautiful, boulder-strewn chasm. The rapids are of the pool-drop variety, each rapid is followed by a pool where boaters can regain their composure before plunging into the next one.  You feel the spray of water hit your face as your raft moves at an accelerated pace and you suddenly wish you had remember to put on the splash jacket that your guide showed you.</desc>
+      <desc>   The rapids continue on to the South West.</desc>
+      <exits sw='277'/>
+   </location>
+
+   <location num='216'>
+      <name>Mt. Neverest Climb</name>
+      <desc>   Your arms are aching as you pull yourself up onto a small ledge.  This looks like a good place to rest up for the last part of the climb.  You start to settle in for a nice long rest, when you notice something strange sticking out of a pile of snow along the back of the ledge.  Upon examination, you realize that it is a boot, which appears to still be attached to the foot of the last climber to come through here.  Obviously this is not the best place to spend extended amounts of time.  Moving quickly, you decide that you are actually feeling much better and are ready to move out.</desc>
+      <desc>The climb continues on up to the North East.</desc>
+      <exits ne='153'/>
+   </location>
+
+   <location num='266'>
+      <name>Path to Where All Your Dreams Come True</name>
+      <desc>   The birds are singing and the sun is shining brightly.  Everywhere you look, people are smiling at one another.  The sidewalk is lined with multi-colored flowers, waving gently in a soft breeze.  Somewhere in the distance you hear the sounds of children laughing.</desc>
+      <desc>   The Path continues North towards the Entertainment and Leisure Complex or you may head South back towards the Sweet Landing Pad.</desc>
+      <exits n='202' s='330'/>
+   </location>
+
+   <location num='268' flags='b'>
+      <name>Sweet Park</name>
+      <desc>   Stately stone walls with tall piers frame the entrance to Sweet Park.  This is the perfect park for a picnic, relaxation, a peaceful walk, or even a wedding.  Everywhere you look, families are having fun.  In the distance, you hear the sounds of a softball game being played.  Off to one side, partially hidden by the sheltering arms of a pair of weeping willow trees, is a small white gazebo.</desc>
+      <desc>   The park&apos;s centerpiece, the Fantasy Carousel, may be entered by stepping Up onto the platform.  You may exit the park by heading North.</desc>
+      <exits n='204' up='333' in='332'/>
+   </location>
+
+   <location num='270'>
+      <name>Estate Library</name>
+      <desc>   You step through a pair of French doors into a well lit room with a teak planked floor.  Much of the walls are hand fashioned of walnut.  Hand carved shelves are built into the walls along two sides of the room.  One of the main features of the room is a massive fireplace of delicately sculpted marble.  You inhale deeply and smell the scent of the rich leather bound books that line the shelves.</desc>
+      <desc>   You may exit the library by heading North.</desc>
+      <exits n='206'/>
+   </location>
+
+   <location num='277'>
+      <name>Sweet River Rapids</name>
+      <desc>   The Sweet River is known for its big powerful drops. Sheer walls, over 1000 feet high, channel the river into narrow unforgiving rapids.  Brightly colored sandstone cliffs, smooth and sheer for hundreds of feet, tower high above you.  You might consider taking a picture, but you are not about to let go of your paddle long enough to find your camera!</desc>
+      <desc>   The rapids continue on to the South East.</desc>
+      <exits se='342'/>
+   </location>
+
+   <location num='281'>
+      <name>Mt. Neverest Climb</name>
+      <desc>   You have made it to 12,000 feet.  You notice a distinct difference in the temperature and realize that you are starting to get a little light-headed.  Watch your step!</desc>
+      <desc>   The climb continues on up to the North West.</desc>
+      <exits nw='216'/>
+   </location>
+
+   <location num='283'>
+      <name>Great Merrier Reef Virtual Undersea Experience Dive Boat</name>
+      <desc>   You are moored approximately two miles offshore in a small dive boat.  Your dive master will serve as your buddy for the dive, as it is not safe to dive alone.  Your undersea adventure is only a few fin kicks away, so put on the mask, fins, and the rest of your dive gear and in a matter of seconds you&apos;re in an underwater fantasy.</desc>
+      <desc>   You may proceed South into the deep blue sea, or end your virtual reality experience by heading Out.</desc>
+      <exits s='347' out='139'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>Good Fortunes Lounge</name>
+      <desc>   Here is where the planet&apos;s wheelers and dealers meet over a glass of champagne to toast another successful business deal.  Behind the bar you see Bart, who is reputed to have created the galaxy&apos;s most delicious martinis.  Try one today!</desc>
+      <desc>   The Lottery Winners Exchange is located to the East.</desc>
+      <exits e='329'/>
+   </location>
+
+   <location num='329' flags='e'>
+      <name>Lottery Winners Exchange</name>
+      <desc>   Happy people mill around the room.  Apparently everyone is a winner here!  You here the typical sounds of trading machines and the smell of good fortune and money is in the air.</desc>
+      <desc>   To the West is a small cafe where you can quench your thirst or get a bite to eat.  Making all this money makes a person hungry!  You see the planet&apos;s Landing Pad to the East.</desc>
+      <exits e='330' w='328'/>
+   </location>
+
+   <location num='330'>
+      <name>Sweet Landing Pad</name>
+      <desc>   A calm sense of comfort and relaxation comes over you when you stand on the planet&apos;s landing pad.  Ships move smoothly in and out of the planet&apos;s orbit and everyone appears to be having a great time.</desc>
+      <desc>   A path to the North leads towards the Entertainment and Leisure Complex.  The planet&apos;s Exchange can be found to the West.  An office block is off to the South East and a Walkway leading to the planet&apos;s Hospital and Shipyard is located to the South.</desc>
+      <exits n='266' se='395' s='394' w='329'/>
+   </location>
+
+   <location num='332' flags='b'>
+      <name>Lovers Gazebo</name>
+      <desc>   A secluded hide-a-way, a quiet corner tucked away from the bustling activity of the rest of the park.  Meant for those who want private time to themselves......a world away from it all.  The scent of fresh roses rises up from the bushes surrounding this romantic spot. You notice that some young Romeo has carved a tribute to his lady fair in the arm of one of the benches and you can just make out the letters T + A ILU4E.</desc>
+      <desc>   You can return back to the main park area by heading Out.</desc>
+      <exits out='268'/>
+   </location>
+
+   <location num='333'>
+      <name>Fantasy Carousel</name>
+      <desc>   More than one thousand lights sparkle from the carousel, reflected in the mirrors on the rounding board.  Hand carved horses and dozens of other animals seem to come to life on this tribute to a child&apos;s imagination.  How do you choose between speeding away on a charging mustang or flying through the air on a winged dragon?</desc>
+      <desc>   You may exit the Carousel by stepping back Down off the platform.</desc>
+      <exits down='268'/>
+   </location>
+
+   <location num='342'>
+      <name>Sweet River Rapids</name>
+      <desc>   Extremely rocky, this steep and very technical series of drops requires pinpoint precision paddling.  You are going to have to be prepared to make radical maneuvers as you punch powerful hydraulics and make lateral raft moves to thread the needle in boulder-choked drops.  One false move will leave you dashed against the rocks!</desc>
+      <desc>   The rapids continue on to the South East.</desc>
+      <exits se='407'/>
+   </location>
+
+   <location num='344'>
+      <name>Mt. Neverest Climb</name>
+      <desc>   Whew!  You pause for a rest about after climbing to about 8,000 feet.  You can already tell a difference in the level of oxygen in the air.</desc>
+      <desc>   The climb continues on up to the North East.</desc>
+      <exits ne='281'/>
+   </location>
+
+   <location num='347'>
+      <name>Great Merrier Reef Dive</name>
+      <desc>   Ahoy matey!  During the early 32 century, the nearby port was a base for pirate looting. It&apos;s rumored that up to 5,000 pirates sheltered among the surrounding islands.  When they weren&apos;t raiding for gold, the pirates were hunting, fishing, fixing their boats and hiding their treasured bounties.  Rumor has it that the Jolly Pirate, flagship to the legendary Pirate Alexander, sank somewhere close by during a fierce storm.  Maybe you will be the one to discover its underwater resting place.</desc>
+      <desc>   The dive continues on to the East.</desc>
+      <exits e='348'/>
+   </location>
+
+   <location num='348'>
+      <name>Great Merrier Reef Dive</name>
+      <desc>   Tunnels, ledges and volcanic mazes extend far into the coral walls forming caverns and cathedrals. Underwater cliffs are draped with kaleidoscope of hard corals and sponges.  From this depth you can see almost all species of Sweet marine life, ranging from flecks of fluorescent organisms to the grandeur of the whale shark.</desc>
+      <desc>   The dive continues on to the South East.</desc>
+      <exits se='413'/>
+   </location>
+
+   <location num='393' flags='hi'>
+      <name>Sweet No More Pain Hospital</name>
+      <desc>   No waiting for assistance here!  A pretty nurse with the perfect bed-side manner is ready to speed you back to good health.  In addition, you have heard that Doctors will even make house calls here, truly a dream come true.</desc>
+      <desc>   A door to the East leads back to the planet&apos;s Walkway.</desc>
+      <exits e='394'/>
+   </location>
+
+   <location num='394'>
+      <name>Walkway</name>
+      <desc>   The Sweet Walkway is actually a road paved with precious and semi-precious gems.  A stripe of perfect diamonds marks the center lane to keep the flow of traffic moving smoothly.</desc>
+      <desc>   The Sweet Hospital is located in a charming little brick building off to the West.  To the South West you see the entrance to the Shipyard.  The Sweet Landing Pad is to the North.</desc>
+      <exits n='330' sw='457' w='393'/>
+   </location>
+
+   <location num='395'>
+      <name>Office Block Sidewalk</name>
+      <desc>   An electronic sidewalk moves you back and forth between the Office Block to the South East and the Landing Pad to the North West.</desc>
+      <exits se='460' nw='330'/>
+   </location>
+
+   <location num='407'>
+      <name>Sweet River Virtual White Water Rafting Trip Lower Base Camp</name>
+      <desc>   After countless heart-pounding minutes, your raft moves out of the fast and furious rapids and drifts gently through a calmer stretch, where you can sit back and enjoy the passing scenery.  Your guide paddles you safely to the dock at the lower base camp.  You step out of the raft, noticing that it takes a minute to get your land legs back under you.  What an exciting, albeit soggy adventure!</desc>
+      <desc>   You may end your virtual reality experience by heading Out.</desc>
+      <exits out='139'/>
+   </location>
+
+   <location num='409'>
+      <name>Mt. Neverest Virtual Climbing Experience Base Camp</name>
+      <desc>   Your Sherpa guide stands before you, ready to join you on your journey up to the highest summit of Mt. Neverest, the most recognizable and dramatic mountain on the planet of Sweet.  To climb this beautiful mountain is truly a memorable experience. The magnificent scenery and final exposed summit ridge makes this perhaps the finest snow route ever found.  The ascent offers a relatively straight-forward, high altitude climb in a dramatic alpine setting.  Before you begin, your guide briefs you on the basics of mountain safety, avalanche awareness and technical skills such as ice axe self-arrest, crampon use, and basic roped travel.  Then you shoulder your light packs and start your trek upwards!</desc>
+      <desc>   You may proceed North West towards the first Peak of the mountain, or end your virtual reality experience by heading Out.</desc>
+      <exits nw='344' out='139'/>
+   </location>
+
+   <location num='413'>
+      <name>Pirate Ship</name>
+      <desc>   As you move through the water, you suddenly see the bow of a huge old ship, looming in front of you.  Visions of pirate riches begin swimming through your mind.  As you move closer you see a hole large enough to swim through in the side of the ship.  There is your way in!!!  But when you glance in the opening, you come face to face with the largest squid you have ever seen.  Maybe you had better wait to investigate your discovery.  If the gold is still there, another few days, or weeks will not matter.</desc>
+      <desc>   You may end your virtual reality experience by heading Out.</desc>
+      <exits out='139'/>
+   </location>
+
+   <location num='457' flags='yr'>
+      <name>Top of the Line Shipyard</name>
+      <desc>   Ever dreamt of owning a platinum covered spaceship? Maybe you would be interested in a gold-trimmed steering wheel or leather bucket seats.  If so, this is the place for you.  And best of all, the prices are rock bottom low!  No salesperson is hovering over you trying to pressure sell you a ship.  When you have made your decisions, simply BUY SHIP.</desc>
+      <desc>   The planet Walkway is located to the North East.</desc>
+      <exits ne='394'/>
+   </location>
+
+   <location num='460'>
+      <name>Fortune 100 Office Block</name>
+      <desc>   Here are the offices of the best of the best.  Those companies that set the standards of excellence in the business world.  You can smell the power and the money to be made in these rooms!!  Whether you are a wheeler or a dealer, this is the place to be.</desc>
+      <desc>   DreamEEyed&apos;s Office is located to the South East.  The Office Block Sidewalk is off to your North West.</desc>
+      <exits se='525' nw='395'/>
+   </location>
+
+   <location num='525' flags='b'>
+      <name>DreamEEyed&apos;s Office</name>
+      <desc>   Upon entering DreamEEyed&apos;s office, you quickly sense a warm, homey feeling.  A large pine desk sits in the middle of the room with a comfy looking leather chair behind it.  The desk is free from clutter, with the exception of some pictures of friends and family in small silver frames, and a pot of Constant Comment tea on the corner of the desk.  A ceramic mug and a small plate of chocolate-chip cookies sits next to the pot of tea.  Along one side of the office is an enormous soft brown leather couch that looks very inviting.  But as you move towards it, you realize that you were not the first to notice its appeal.  A beautiful and very regal looking Old English Mastiff is asleep on the couch, his nose buried deep into the cushions.  You hear the distinct sounds of snoring and decide to let sleeping dogs lie.</desc>
+      <desc>   The Fortune 100 Office Block is located to the North West.</desc>
+      <exits nw='460'/>
+   </location>
+
+   <location num='729'>
+      <name>Sweet Grand Hotel Lobby</name>
+      <desc>   You enter into a massive sweeping stone lobby to be welcomed by Robert, the head concierge, who is waiting to guide you through the registration process.  Our staff offer you more than a welcome at the Grand Hotel, they show you that nothing is too much trouble and your comfort and relaxation is their primary concern.</desc>
+      <desc>   You may exit the Grand Hotel Lobby by heading Down the marble stairs.</desc>
+      <exits down='74'/>
+   </location>
+
+</fed2-map>

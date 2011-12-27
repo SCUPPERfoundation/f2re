@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Brains Space' version='2' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>School Orbit </name>
+      <desc>   Below you is a ball of rock, devoid of any natural life. There&apos;s no atmosphere, no water except deep underground. It&apos;s one of the most inhospitable worlds in the Galaxy, to all forms of life - plant-life brought from other planets withers and dies. Nobody knows why.</desc>
+      <desc>   Only a small patch of the planet has been terraformed so that it is habitable, so it is the ideal place for learning, so distractions at all.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

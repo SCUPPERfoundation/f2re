@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<event-list version='12' editor='Version 1.46a'>
+   <category name='rayler'>
+      <section name='enter'>
+
+      <event num='1'>
+         <comment>Moves player to the Rayler&apos;s dock.</comment>
+         <move what='player' who='individual' loc='135'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='relay'>
+      <section name='sign'>
+
+      <event num='1'>
+         <comment>Displays sign message</comment>
+         <message type='multi' where='com' who='individual' lo='relay.sign.1' hi='relay.sign.1'/>
+      </event>
+
+      </section>
+   </category>
+</event-list>
+

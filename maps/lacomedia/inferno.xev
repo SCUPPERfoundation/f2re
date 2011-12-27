@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+
+<event-list version='39'>
+
+ <category name='mobiles'>
+
+  <section name='minos'>
+
+   <event num='1'>
+    <comment>minos conversation events</comment>
+    <match phrase='yes' id-name='obj_minos' event='mobiles.minos.2'/>
+    <match phrase='damned' id-name='obj_minos' lo='mobile.minos.2'/>
+    <match phrase='inferno' id-name='obj_minos' lo='mobile.minos.3'/>
+    <match phrase='no' id-name='obj_minos' lo='mobile.minos.7'/>
+    <match phrase='hello' id-name='obj_minos' lo='mobile.minos.1'/>
+    <match phrase='hell' id-name='obj_minos' lo='mobile.minos.4'/>
+    <match phrase='review' id-name='obj_minos' lo='mobile.minos.5'/>
+    <match phrase='assign' id-name='obj_minos' lo='mobile.minos.6'/>
+    <nomatch id-name='obj_minos' lo='mobile.minos.9'/>
+   </event>
+
+   <event num='2'>
+    <comment>random call for minos to review souls</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.8'/>
+    <call event='mobiles.minos.random[3-10]'/>
+   </event>
+
+   <event num='3'>
+    <comment>minos moving player to second circle loc 1098</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.10'/>
+    <message type='text' where='com' who='room_ex'>Minos&apos; tail wraps around %s two times and he says, "You are guilty of LUST."  And he sends the sinner to his fate.</message>
+    <move what='player' who='individual' loc='1098'/>
+   </event>
+
+   <event num='4'>
+    <comment>minos moves player to third circle</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.11'/>
+    <message type='text' where='com' who='room_ex'>Minos&apos; tail wraps around %s three times and he cries, "Gluttony!" and sends the poor soul to his fate.</message>
+    <move what='player' who='individual' loc='1100'/>
+   </event>
+
+   <event num='5'>
+    <comment>minos moves player to 4th circle</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.12'/>
+    <message type='text' where='com' who='room_ex'>Minos&apos; tail wraps around %s four times and he bellows, "MISER!" as he casts him to his fate in Hell.</message>
+    <move what='player' who='individual' loc='1228'/>
+   </event>
+
+   <event num='6'>
+    <comment>minos moves player to the river Styx</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.13'/>
+    <message type='text' where='com' who='individual'>Minos&apos; tail wraps around %s five times, and he bellows, "Wrath!" as he condemns that damned soul to the River Styx.</message>
+    <move what='player' who='individual' loc='1226'/>
+   </event>
+
+   <event num='7'>
+    <comment>Minos moves player to sixth circle</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.14'/>
+    <message type='text' where='com' who='room_ex'>Minos wraps his tail around %s six times and he cries, "Heresy!  You shall burn for this!" and condemns the poor soul to Hell.</message>
+    <move what='player' who='individual' loc='1867'/>
+   </event>
+
+   <event num='8'>
+    <comment>minos sends player to outer ring</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.15'/>
+    <message type='text' where='com' who='room_ex'>Minos wraps his tail around %s seven times and cries, "Violence!" and dispatches the poor soul to eternal torment.</message>
+    <move what='player' who='individual' loc='2123'/>
+   </event>
+
+   <event num='9'>
+    <comment>minos sends player to bolgia 1</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.16'/>
+    <message type='text' where='com' who='room_ex'>Minos wraps his tail around %s eight times and cries, "Seducer!", as he sends the poor soul to Hell.</message>
+    <move what='player' who='individual' loc='799'/>
+   </event>
+
+   <event num='10'>
+    <comment>Minos sends player to Caina</comment>
+    <message type='single' where='com' who='individual' lo='mobile.minos.17'/>
+    <message type='text' where='com' who='room_ex'>Minos wraps his tail around %s 9 times, and he cries, "Traitor!" and dispatches the poor soul to Hell.</message>
+    <move what='player' who='individual' loc='1311'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='infomessage'>
+
+   <event num='1'>
+    <comment>Warning Regarding one way</comment>
+    <message type='text' where='com' who='individual'>Welcome to Hell, %s.  One you pass this threshold, your condemned soul will not be able to return the path from whence it came.  Proceed at your own peril, if you wish to join the damned.</message>
+   </event>
+
+  </section>
+
+  <section name='keepout'>
+
+   <event num='1'>
+    <comment>Check for planet owner at Dante&apos;s Closet</comment>
+    <checkforowner owner='moves.keepout.3' visitor='moves.keepout.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Move Visitor From Dante&apos;s closet</comment>
+    <message type='single' where='com' who='individual' lo='moves.keepout.1'/>
+    <move what='player' who='individual' loc='330'/>
+   </event>
+
+   <event num='3'>
+    <comment>Dante&apos;s Greeting in closet</comment>
+    <message type='text' where='com' who='individual'>Greetings %s.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='object'>
+
+  <section name='case'>
+
+   <event num='1'>
+    <comment>check inventory for violin in case</comment>
+    <checkinventory map='home' id-name='obj_2violin' found='object.case.2' not-found='object.case.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>open case and violin is in inventory</comment>
+    <message type='text' where='com' who='individual'>You see an empty violin case.</message>
+   </event>
+
+   <event num='3'>
+    <comment>open violin case without violin in inventory</comment>
+    <message type='text' where='com' who='individual'>There is a gold violin nestled inside the case.</message>
+   </event>
+
+   <event num='4'>
+    <comment>getting the gold violin inventory check.</comment>
+    <checkinventory map='home' id-name='obj_2violin' found='object.case.6' not-found='object.case.7'/>
+   </event>
+
+   <event num='5'>
+    <comment>trying to get the violin case</comment>
+    <message type='text' where='com' who='individual'>The case is firmly wedged into the cleft in the rocks and cannot be moved.</message>
+   </event>
+
+   <event num='6'>
+    <comment>Message if you already have the gold violin</comment>
+    <message type='text' where='com' who='individual'>You already have a gold violin.</message>
+   </event>
+
+   <event num='7'>
+    <comment>creating the gold violin for inventory</comment>
+    <message type='text' where='com' who='individual'>You take the gold violin from it&apos;s case.</message>
+    <createobject where='inventory' home-map='home' id='obj_2violin'/>
+   </event>
+
+  </section>
+
+  <section name='raygun'>
+
+   <event num='1'>
+    <comment>Fire the ray gun</comment>
+    <message type='text' where='com' who='individual'>You aim the ray gun at the nearest target and pull the trigger.  There is an audible "click" as a dozen red flags emerge from a dozen barrels.  Each of the flags has the word "BANG" written on it.  Evidently, this weapon was designed to kill by causing it&apos;s victim to laugh to death</message>
+    <message type='text' where='com' who='room_ex'>There is an audible click as %s pulls the trigger of his Kill-A-Zap Raygun, and a dozen red flags emerge from the dozen barrels of the gun.  Each flag has the word "BANG" written on it.  Evidently this is a cheap knock off of the real Kill-A-Zap Raygun.</message>
+   </event>
+
+   <event num='2'>
+    <comment>brandish the raygun</comment>
+    <message type='text' where='com' who='individual'>You pull the gun and wave it around excitedly, hoping to do Hazed knows what, to all those around you.</message>
+    <message type='text' where='com' who='room_ex'>There is a wild scream as %s pulls out a raygun and waves it about wildly.  The raygun appears to be a Kill-A-Zap, BFG 5000 Raygun.  It&apos;s dozen or so barrels appear to be quite deadly.</message>
+   </event>
+
+   <event num='3'>
+    <comment>holster the raygun</comment>
+    <message type='text' where='com' who='individual'>You put the raygun back into it&apos;s convenient, leather shoulder holster.</message>
+    <message type='text' where='com' who='room_ex'>Everybody breathes a sigh of relief as %s puts the raygun back into the holster.</message>
+   </event>
+
+   <event num='4'>
+    <comment>dropping the raygun</comment>
+    <destroyobject where='inventory' map='home' id-name='raygun'/>
+    <message type='text' where='com' who='individual'>You drop the raygun and it shatters into a gajillion pieces which are quickly swept up by a nearby cleaning droid.</message>
+    <message type='text' where='com' who='room_ex'>The raygun is dropped by %s and it shatters into a gajillion pieces which are swept up by a passing cleaning droid.</message>
+   </event>
+
+   <event num='5'>
+    <comment>message on examine the raygun</comment>
+    <message type='text' where='com' who='individual'>It&apos;s a very deadly looking Kill-A-Zap BFG 5000 Raygun.  It has at least a dozen barrels and a whole bunch of blinking lights and a dial that indicates that it is set to KILL.</message>
+   </event>
+
+   <event num='6'>
+    <comment>getting the raygun</comment>
+    <message type='text' where='com' who='individual'>You take the raygun</message>
+    <createobject where='inventory' home-map='home' id='obj_gun'/>
+   </event>
+
+  </section>
+
+  <section name='violin'>
+
+   <event num='1'>
+    <comment>Playing the violin</comment>
+    <message type='text' where='com' who='individual'>You draw the bow across the strings and create a noise similar to a hundred cats getting their tails slammed in a door.  After a few minutes of ear-splitting screeching, you decide that you need some more practice before you play again, and put the violin away.</message>
+    <message type='text' where='com' who='room_ex'>An absolutely dreadful sound erupts from the gold violin as %s draws a bow across it&apos;s strings.  This is not Charlie Daniels material.</message>
+   </event>
+
+   <event num='2'>
+    <comment>hitting the violin</comment>
+    <message type='text' where='com' who='individual'>You strike the violin with the flat of your palm.  Amazingly, it sounds better when struck.  As you continue to hit it, you start to play Lara&apos;s Theme from Doctor Zhivago.</message>
+    <message type='text' where='com' who='room_ex'>The gold violin and begins to produce a beautiful melody right after %s bangs it against the floor.  It sounds like Lara&apos;s Theme from Doctor Zhivago.</message>
+   </event>
+
+   <event num='3'>
+    <comment>dropping the violin</comment>
+    <message type='text' where='com' who='individual'>You drop the violin and it breaks into pieces, and vanishes in a puff of black smoke.  The faint smell of sulfur fills the air.</message>
+    <message type='text' where='com' who='room_ex'>The gold violin is dropped by %s and it breaks into pieces, and vanishes in a puff of black smoke.  The faint smell of sulfur fills the air.</message>
+    <destroyobject where='inventory' map='home' id-name='gold violin'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='refreshment'>
+
+  <section name='food'>
+
+   <event num='1'>
+    <comment>player eats food.</comment>
+    <message type='text' where='com' who='individual'>You eat the food, and although it appears to be quite delicious, the taste is somewhat bland, although nourishing.</message>
+    <message type='text' where='com' who='room_ex'>%s grabs a plate, heaps a pile of the delicious offerings on it, and proceeds to snarf it all down.  Some people have no manners.</message>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player drinks wine</comment>
+    <message type='text' where='com' who='individual'>You grasp a gold goblet and take a healthy sip of the wine.  The wine appears normal, but there is no taste at all.</message>
+    <message type='text' where='com' who='room_ex'>%s reaches out and grabs a goblet of wine and takes a drink.</message>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+

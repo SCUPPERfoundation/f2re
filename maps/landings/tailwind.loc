@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<fed2-map title='Tailwind' version='17' editor='standard' from='461' to='Landings.Landings Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   It&apos;s full of rocks. And mud. That&apos;s all.</desc>
+   </location>
+
+   <location num='461' flags='yrb'>
+      <name>Landing Pad</name>
+      <desc>This Landing pad is extremely busy with flight instructors and pilots hurrying around to the numerous training aircraft on the runways. Because of the newness of this planet the landing area also handles shipbuilding, There is a small view screen for you to order any ship services you need, install new equipment, replenish your weapons or replace faulty electronics, or if you need to you can buy a completely new ship. You also see several vending machines serving coffee and snacks for Aircrews to catch a quick meal between flights. The entrance to a the Exchange is to the East.</desc>
+      <exits e='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='e'>
+      <name>Tailwind  Exchange</name>
+      <desc>A recently built single room exchange, you can immediately tell there was not much thought to trader comfort. Because of the amazing growth in such a short period, most Traders visiting the Landings system understand there is money to be made here. You can&apos;t believe the number of traders in such a small space running around making deals. You will be fortunate to find an empty table to do your business.</desc>
+      <exits w='461' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

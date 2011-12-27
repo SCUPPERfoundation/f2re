@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+
+<event-list version='42' editor='mac version 0.90'>
+   <category name='bubsy'>
+      <section name='guide'>
+
+      <event num='1'>
+         <comment>Loc 1834 - Bubsy speaks up when near home</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.4'/>
+      </event>
+
+      <event num='2'>
+         <comment>Loc 1898 - Bubsy welcomes player to his home</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.5'/>
+      </event>
+
+      <event num='3'>
+         <comment>Loc 1772 - in tailor shop with yarn ball</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.6'/>
+      </event>
+
+      <event num='4'>
+         <comment>Loc 2083 - Greeting when entering the Bobcat Saloon</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.1'/>
+      </event>
+
+      <event num='5'>
+         <comment>Loc 1833 - Random chance of a jumpy Bubsy around a car</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.7'/>
+      </event>
+
+      <event num='6'>
+         <comment>Loc 1831, 1894, 1959, 2022 10% chance of roadrunner chase</comment>
+         <message type='multi' where='com' who='individual' lo='desert.roadrunner.1' hi='desert.roadrunner.4'/>
+      </event>
+
+      <event num='7'>
+         <comment>Desert locs - 1% chance of egg bombing attempt &amp; response</comment>
+         <message type='multi' where='com' who='individual' lo='desert.chicken.1' hi='desert.chicken.3'/>
+      </event>
+
+      </section>
+      <section name='meet'>
+
+      <event num='1'>
+         <comment>Initial meeting; create flag for 1 visit</comment>
+         <message type='multi' where='com' who='individual' lo='bubsy.greeting.1' hi='bubsy.greeting.2'/>
+         <createobject where='inventory' home-map='home' id='obj_greeted1flag'/>
+         <createobject where='inventory' home-map='home' id='obj_dayflag'/>
+      </event>
+
+      <event num='2'>
+         <comment>Second visit; greet player by name; flag for 2 visits</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.greeting.4'/>
+         <createobject where='inventory' home-map='home' id='obj_greeted2flag'/>
+         <destroyobject where='inventory' map='home' id-name='greetedflagone'/>
+         <createobject where='inventory' home-map='home' id='obj_dayflag'/>
+      </event>
+
+      <event num='3'>
+         <comment>Third visit; greet player by name; flag for 3+ visits</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.greeting.4'/>
+         <createobject where='inventory' home-map='home' id='obj_knownflag'/>
+         <destroyobject where='inventory' map='home' id-name='greetedflagtwo'/>
+         <createobject where='inventory' home-map='home' id='obj_dayflag'/>
+      </event>
+
+      <event num='4'>
+         <comment>4th and later visit; greet player by name</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.greeting.6'/>
+         <createobject where='inventory' home-map='home' id='obj_dayflag'/>
+      </event>
+
+      <event num='5'>
+         <comment>player walks away without saying hello</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.greeting.5'/>
+         <message type='single' where='com' who='room_ex' lo='bubsy.greeting.7'/>
+      </event>
+
+      </section>
+      <section name='talk'>
+
+      <event num='1'>
+         <comment>Initial greeting</comment>
+         <match id-name='obj_bobcat' phrase='hello' event='objects.ifhave.2'/>
+         <nomatch id-name='obj_bobcat' lo='bubsy.greeting.8'/>
+      </event>
+
+      <event num='2'>
+         <comment>Bubsy conversation</comment>
+         <match id-name='obj_bubsy' phrase='hello' lo='bubsy.conversation.28'/>
+         <match id-name='obj_bubsy' phrase='bye' event='objects.remove.1'/>
+         <match id-name='obj_bubsy' phrase='yarnball' lo='bubsy.conversation.23'/>
+         <match id-name='obj_bubsy' phrase='yarn' lo='bubsy.conversation.1'/>
+         <match id-name='obj_bubsy' phrase='exchange' lo='bubsy.conversation.2'/>
+         <match id-name='obj_bubsy' phrase='trade' lo='bubsy.conversation.2'/>
+         <match id-name='obj_bubsy' phrase='steal' lo='bubsy.conversation.3' hi='bubsy.conversation.4'/>
+         <match id-name='obj_bubsy' phrase='woolies' lo='bubsy.conversation.3' hi='bubsy.conversation.4'/>
+         <match id-name='obj_bubsy' phrase='aliens' lo='bubsy.conversation.5'/>
+         <match id-name='obj_bubsy' phrase='furless' lo='bubsy.conversation.8' hi='bubsy.conversation.9'/>
+         <match id-name='obj_bubsy' phrase='pants' lo='bubsy.conversation.10'/>
+         <match id-name='obj_bubsy' phrase='earth' lo='bubsy.conversation.11'/>
+         <match id-name='obj_bubsy' phrase='water' lo='bubsy.conversation.12' hi='bubsy.conversation.13'/>
+         <match id-name='obj_bubsy' phrase='privacy' lo='bubsy.conversation.14'/>
+         <match id-name='obj_bubsy' phrase='lucky seven' lo='bubsy.conversation.15'/>
+         <match id-name='obj_bubsy' phrase='stuntcat' lo='bubsy.conversation.16'/>
+         <match id-name='obj_bubsy' phrase='fancy' lo='bubsy.conversation.17' hi='bubsy.conversation.18'/>
+         <match id-name='obj_bubsy' phrase='antonia' lo='bubsy.conversation.19' hi='bubsy.conversation.20'/>
+         <match id-name='obj_bubsy' phrase='who' lo='bubsy.conversation.21'/>
+         <match id-name='obj_bubsy' phrase='job' lo='bubsy.conversation.22'/>
+         <match id-name='obj_bubsy' phrase='claws encounters' lo='bubsy.conversation.24'/>
+         <match id-name='obj_bubsy' phrase='frizz' lo='bubsy.conversation.25'/>
+         <match id-name='obj_bubsy' phrase='bad hair' lo='bubsy.conversation.25'/>
+         <match id-name='obj_bubsy' phrase='naked' lo='bubsy.conversation.26'/>
+         <match id-name='obj_bubsy' phrase='bare' lo='bubsy.conversation.26'/>
+         <match id-name='obj_bubsy' phrase='banana' lo='bubsy.conversation.29'/>
+         <match id-name='obj_bubsy' phrase='glide' lo='bubsy.conversation.30'/>
+         <match id-name='obj_bubsy' phrase='gliding' lo='bubsy.conversation.30'/>
+         <match id-name='obj_bubsy' phrase='flying' lo='bubsy.conversation.30'/>
+         <match id-name='obj_bubsy' phrase=' fly ' lo='bubsy.conversation.30'/>
+         <nomatch id-name='obj_bubsy' event='bubsy.talk.random[3-5]'/>
+      </event>
+
+      <event num='3'>
+         <comment>no match message 1</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.nomatch.1'/>
+      </event>
+
+      <event num='4'>
+         <comment>no match message 2</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.nomatch.2'/>
+      </event>
+
+      <event num='5'>
+         <comment>no match message 3</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.nomatch.3'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='enter'>
+      <section name='barber'>
+
+      <event num='1'>
+         <comment>Entering barber shop</comment>
+         <checkinventory map='home' id-name='followflag' found='enter.barber.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>Bubsy comments on Furless Leader</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.8'/>
+      </event>
+
+      </section>
+      <section name='desert'>
+
+      <event num='1'>
+         <comment>check for random desert events</comment>
+         <percent value='10' equals='enter.desert.3' lower='enter.desert.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>roadrunner sounds off - is Bubsy around?</comment>
+         <checkinventory map='home' id-name='followflag' found='bubsy.guide.6' not-found='enter.desert.4'/>
+      </event>
+
+      <event num='3'>
+         <comment>egg bomb attack occurs - is Bubsy around?</comment>
+         <checkinventory map='home' id-name='followflag' found='bubsy.guide.7' not-found='enter.desert.5'/>
+      </event>
+
+      <event num='4'>
+         <comment>roadrunner sounds off, Bubsy not around</comment>
+         <message type='text' where='com' who='individual'>As you move along the road, you suddenly hear a &quot;Meep meep!&quot; followed by some kind of flapping sound.  You see some kind of bird dash away in a blur.</message>
+      </event>
+
+      <event num='5'>
+         <comment>egg bombing, Bubsy not around</comment>
+         <message type='text' where='com' who='individual'>You are startled by an egg which just misses your head and splatters on the hot asphalt about a foot from you.  The egg starts to fry on the hot road.</message>
+      </event>
+
+      </section>
+      <section name='home'>
+
+      <event num='1'>
+         <comment>Loc 1834 - check for Bubsy</comment>
+         <checkinventory map='home' id-name='followflag' found='bubsy.guide.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>Loc 1898 - check for Bubsy</comment>
+         <checkinventory map='home' id-name='followflag' found='bubsy.guide.2'/>
+      </event>
+
+      <event num='3'>
+         <comment>Loc 1772 - check for yarn ball, then Bubsy</comment>
+         <checkinventory map='home' id-name='yarnball' found='bubsy.guide.3' not-found='enter.home.6'/>
+      </event>
+
+      <event num='4'>
+         <comment>Loc 1833 - check random chance</comment>
+         <percent value='20' lower='enter.home.5'/>
+      </event>
+
+      <event num='5'>
+         <comment>Loc 1833 - check for Bubsy</comment>
+         <checkinventory map='home' id-name='followflag' found='bubsy.guide.5'/>
+      </event>
+
+      <event num='6'>
+         <comment>Loc 1772 - no yarn ball; check Bubsy</comment>
+         <checkinventory map='home' id-name='followflag' found='enter.home.7'/>
+      </event>
+
+      <event num='7'>
+         <comment>Loc 1772 - Bubsy speaks in tailor shop</comment>
+         <message type='multi' where='com' who='individual' lo='moves.enterloc.12' hi='moves.enterloc.13'/>
+      </event>
+
+      </section>
+      <section name='hospital'>
+
+      <event num='1'>
+         <comment>Loc 1889 - check for Bubsy; speaks if present</comment>
+         <checkinventory map='home' id-name='followflag' found='enter.hospital.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>Loc 1889 - Is there a veterinarian in the audience?</comment>
+         <message type='multi' where='com' who='individual' lo='moves.enterloc.9' hi='moves.enterloc.10'/>
+      </event>
+
+      <event num='3'>
+         <comment>Loc 1888 - Bubsy will talk if present</comment>
+         <checkinventory map='home' id-name='followflag' found='enter.hospital.4'/>
+      </event>
+
+      <event num='4'>
+         <comment>Loc 1888 - Bubsy present, talks to doc</comment>
+         <message type='single' where='com' who='individual' lo='moves.enterloc.11'/>
+         <call event='enter.hospital.5'/>
+      </event>
+
+      <event num='5'>
+         <comment>check if died and revived, or walked in</comment>
+         <checklastloc loc='1889' fail='enter.hospital.6'/>
+      </event>
+
+      <event num='6'>
+         <comment>if did not walk in, reminder about insurance</comment>
+         <message type='multi' where='com' who='individual' lo='hospital.revival.1' hi='hospital.revival.2'/>
+      </event>
+
+      </section>
+      <section name='landingpad'>
+
+      <event num='1'>
+         <comment>check if came from orbit</comment>
+         <checklastloc loc='0' pass='enter.landingpad.2' fail='enter.landingpad.8'/>
+      </event>
+
+      <event num='2'>
+         <comment>check for 1st visit of day</comment>
+         <checkinventory map='home' id-name='dayflag' not-found='enter.landingpad.3'/>
+      </event>
+
+      <event num='3'>
+         <comment>1st visit of day; 4th or more overall?</comment>
+         <checkinventory map='home' id-name='knownflag' found='bubsy.meet.4' not-found='enter.landingpad.4'/>
+      </event>
+
+      <event num='4'>
+         <comment>1st visit of day; 3rd overall?</comment>
+         <checkinventory map='home' id-name='greetedflagtwo' found='bubsy.meet.3' not-found='enter.landingpad.5'/>
+      </event>
+
+      <event num='5'>
+         <comment>1st visit of day; 1st or 2nd overall?</comment>
+         <checkinventory map='home' id-name='greetedflagone' found='bubsy.meet.2' not-found='bubsy.meet.1'/>
+      </event>
+
+      <event num='6'>
+         <comment>check indirectly if came from orbit</comment>
+         <checklastloc loc='2021' fail='enter.landingpad.2'/>
+      </event>
+
+      <event num='7'>
+         <comment>check player is leaving landing pad</comment>
+         <checklastloc loc='2020' pass='objects.ifhave.1'/>
+      </event>
+
+      <event num='8'>
+         <comment>check if came from orbit (indirectly)</comment>
+         <checklastloc loc='2019' fail='enter.landingpad.6'/>
+      </event>
+
+      </section>
+      <section name='saloon'>
+
+      <event num='1'>
+         <comment>Loc 2083 - greeting if Bubsy with you</comment>
+         <checkinventory map='home' id-name='followflag' found='bubsy.guide.4'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='objects'>
+      <section name='create'>
+
+      <event num='1'>
+         <comment>Bubsy in inventory, if not already there</comment>
+         <createobject where='inventory' home-map='home' id='obj_followflag'/>
+      </event>
+
+      <event num='2'>
+         <comment>gift yarnball, if don&apos;t already have one</comment>
+         <createobject where='inventory' home-map='home' id='obj_yarnball'/>
+         <message type='multi' where='com' who='individual' lo='bubsy.conversation.6' hi='bubsy.conversation.7'/>
+      </event>
+
+      <event num='3'>
+         <comment>buy a glider</comment>
+         <message type='text' where='com' who='individual'>After looking through the gliders and picking out the one you want, a salesman rings up your purchase, and deducts the 195 ig sales price from your account.</message>
+         <createobject where='inventory' home-map='home' id='obj_glider'/>
+         <changemoney amount='-195'/>
+      </event>
+
+      </section>
+      <section name='events'>
+
+      <event num='1'>
+         <comment>override dropping Bubsy</comment>
+         <message type='text' where='com' who='individual'>You&apos;re not carrying Bubsy - he&apos;s just following you around.</message>
+      </event>
+
+      </section>
+      <section name='ifhave'>
+
+      <event num='1'>
+         <comment>check if player has greeted Bubsy when leaving LP</comment>
+         <checkinventory map='home' id-name='followflag' not-found='bubsy.meet.5'/>
+      </event>
+
+      <event num='2'>
+         <comment>create Bubsy in inventory if not already there</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.greeting.3'/>
+         <checkinventory map='home' id-name='followflag' not-found='objects.create.1'/>
+      </event>
+
+      <event num='3'>
+         <comment>gift yarn ball, if don&apos;t already have one</comment>
+         <checkinventory map='home' id-name='yarnball' found='objects.ifhave.4' not-found='objects.create.2'/>
+      </event>
+
+      <event num='4'>
+         <comment>message when already have yarn ball</comment>
+         <message type='text' where='com' who='individual'>Bubsy allows you to stroke his fur again, this time not so taken aback, and apparently enjoying it.  But you don&apos;t get another yarnball out of it.</message>
+      </event>
+
+      </section>
+      <section name='remove'>
+
+      <event num='1'>
+         <comment>bye to Bubsy</comment>
+         <message type='single' where='com' who='individual' lo='bubsy.conversation.27'/>
+         <destroyobject where='inventory' map='home' id-name='bubsy'/>
+      </event>
+
+      <event num='2'>
+         <comment>Bubsy drowns</comment>
+         <message type='multi' where='com' who='individual' lo='save.bubsy.10' hi='save.bubsy.11'/>
+         <destroyobject where='inventory' map='home' id-name='bubsy'/>
+      </event>
+
+      </section>
+   </category>
+</event-list>

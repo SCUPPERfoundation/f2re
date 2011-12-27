@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<event-list version='12'>
+
+ <category name='death'>
+
+  <section name='sun'>
+
+   <event num='1'>
+    <comment>Death by dancing on the sun - loc 1108</comment>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='death.sun.1' hi='death.sun.2'/>
+    <announce type='single' loc='1043' lo='death.sun.3'/>
+    <announce type='single' loc='1044' lo='death.sun.3'/>
+    <announce type='single' loc='1045' lo='death.sun.3'/>
+    <announce type='single' loc='1107' lo='death.sun.3'/>
+    <announce type='single' loc='1109' lo='death.sun.3'/>
+    <announce type='single' loc='1172' lo='death.sun.3'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='graveyard'>
+
+   <event num='1'>
+    <comment>Asteroid belt - 2511 - check if player is on their way to Graveyard</comment>
+    <checklastloc loc='2510' pass='moves.graveyard.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player is heading for Graveyard - check if she has finished puzzle</comment>
+    <checkvariable name='graveyard' key='puzzle' value='finish' equals='moves.graveyard.4' not-equal='moves.graveyard.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not finished - so check if ready for reward</comment>
+    <checkvariable name='graveyard' key='puzzle' value='reward' equals='moves.graveyard.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Asteroid belt - 2511 - turn back people who have finished puzzle</comment>
+    <message type='text' where='com' who='individual'>That route only leads to the asteroid known as Graveyard, and you have been there, done that, got the t-shirt! You realize to return would be futile, and turn back.</message>
+    <move what='player' who='individual' loc='2510'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='atm'>
+
+   <event num='1'>
+    <comment>Use ATM/get money/get groats - loc 1172</comment>
+    <message type='single' where='loc' who='individual' lo='objects.atm.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>enter pin/type pin</comment>
+    <message type='single' where='loc' who='individual' lo='objects.atm.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>get atm</comment>
+    <message type='single' where='loc' who='individual' lo='objects.atm.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>get pin</comment>
+    <message type='single' where='loc' who='individual' lo='objects.atm.4'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

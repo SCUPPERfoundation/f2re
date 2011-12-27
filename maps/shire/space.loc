@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<fed2-map title='Shire Space' version='1.00' editor='standard'>
+
+   <location num='197' flags='s'>
+      <name>Longbottom Bio Colony and Agri Fields</name>
+      <desc>You have arrived at the bio colony of Longbottom.  Below you note several encampments but only one with a landing pad large enough for your ship.</desc>
+      <exits out='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='s'>
+      <name>Wormhole</name>
+      <desc>Thru the wormhole your scanners detect a small asteroid.  You can go in to take a look.</desc>
+      <exits e='263' se='327' s='326' in='197' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263' flags='sp'>
+      <name>Arda Orbit</name>
+      <desc>Below you is the planet Arda.  This side of the planet is covered my a large land mass with gently rolling hills and small waterways winding thru the countryside.  At the end of the Third Age, it is commonly thought that some hobbits left for Tol Eressa.  The truth is however, the elven ships were actually from far into the future and took them here, to Arda.</desc>
+      <exits se='328' s='327' sw='326' w='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits n='262' ne='263' e='327' se='391' s='390' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits n='263' e='328' s='391' sw='390' w='326' nw='262' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='slp'>
+      <name>Urland Link</name>
+      <desc>The link to the rest of space is located here.  The planet Hobbitat is to the northwest.</desc>
+      <exits sw='391' w='327' nw='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='390' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space.  Nothing to see.</desc>
+      <exits n='326' ne='327' e='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391' flags='s'>
+      <name>Wormhole</name>
+      <desc>Thru the wormhole your scanners detect a small asteroid.  You can go in to take a look.</desc>
+      <exits n='327' ne='328' w='390' nw='326' in='456' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='456' flags='sp'>
+      <name>Hobbiton Agri Colony</name>
+      <desc>You have arrived at the agri colony of Hobbiton.  Below you note several encampments but only one with a landing pad large enough for your ship.</desc>
+      <exits out='391' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Darkness' version='6' editor='standard' from='394' to='End.End Space.264'>
+
+   <location num='330' flags='hi'>
+      <name>Hospital</name>
+      <desc>If you woke up here, you&apos;d better get some insurance!</desc>
+      <exits s='394'/>
+   </location>
+
+   <location num='393' flags='yr'>
+      <name>Ships</name>
+      <desc>Peering into the dark, you can make out the outline of a number of different sized ships. The exit is east.</desc>
+      <exits e='394'/>
+   </location>
+
+   <location num='394'>
+      <name>Darkness welcomes you</name>
+      <desc>Small rustling sounds eminate seemingly from everywhere around you. Small movements can be detected from your peripheral vision. Neon signs buzz indicating an exchange to the east, shipyard to the west, hospital to the north and a bar to the south.</desc>
+      <exits n='330' e='395' s='458' w='393'/>
+   </location>
+
+   <location num='395' flags='eb'>
+      <name>Darkness Exchange</name>
+      <desc>The exchange&apos;s computers sputter and flicker, but they seem to still be in working order. The exit is west.</desc>
+      <exits sw='458' w='394'/>
+   </location>
+
+   <location num='458' flags='b'>
+      <name>The Darkness Bar</name>
+      <desc>Girls dance. Boys whistle. Bartenders busily make sure everyone has something in front of them. The way out is north or the exchange is northeast.</desc>
+      <exits n='394' ne='395'/>
+   </location>
+
+</fed2-map>

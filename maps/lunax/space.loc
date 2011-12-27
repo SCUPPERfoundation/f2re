@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<fed2-map title='Lunax Space' version='10' editor='standard'>
+
+   <location num='396' flags='s'>
+      <name>Mysterious Reigon</name>
+      <desc>This area of space is not safe, it is wise to head back south as the asteroid field is to large to manuver.</desc>
+      <exits se='461' s='460' sw='459'/>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Mysterious Region</name>
+      <desc>This area of space is not safe, it is wise to head back east as the asteroid field is to large to manuver.</desc>
+      <exits ne='396' e='460' se='524'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   As you enter the ancient system of Lunax, a voice speaks into your mind &quot;You have entered the system protected by the Lunar Knights and there Guardians. The Great Lunar Mystic Lester Truewind welcomes you and has approved your landing. Proceed with honor and justice and your way will be lit for you&quot;</desc>
+      <desc>   One might as them self just what magic is at work here. You may board your shuttle and land at any time.</desc>
+      <desc>  Your sensors pickup ion storms to the north, south, east and west of your current position so it may not be wise to travel in them directions untill the storms clear.</desc>
+      <exits n='396' e='461' s='524' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Mysterious Region</name>
+      <desc>This area of space is not safe, it is wise to head back west as the asteroid field is to large to manuver.</desc>
+      <exits sw='524' w='460' nw='396'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Mysterious Region</name>
+      <desc>This area of space is not safe, it is wise to head back North as the asteroid field is to large to manuver.</desc>
+      <exits n='460' ne='461' nw='459'/>
+   </location>
+
+</fed2-map>

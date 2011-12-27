@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<fed2-map title='Pearl' version='2' editor='standard' from='198' to='Sol.Sol Space.1109'>
+
+   <location num='0'>
+      <name>storage room</name>
+      <desc>pearl storage room</desc>
+   </location>
+
+   <location num='134' flags='ta'>
+      <name>Shrine of the Sunbeam</name>
+      <desc>   In a simple alcove, on a stark black lacquered altar table, is the Shrine of the Sunbeam. Yohkoh is Japanese for &quot;sunbeam&quot;, and it is from this that the Guild and its members take their name. The shrine is to honor their ancestresses; a long line of courageous women stretching back in time into the mists of a tiny island on ancient Earth. Small cushions before the altar to ease those who pause and kneel to pay their respects. Low tables on the tatamis for study and contemplation. A space for a moment of personal privacy. On a wall is a holo of Under the Great Wave Off Kanagawa by Katsushika Hokusai. Ancient, hand woven fiber fishing nets drape around it. Entwined in the nets are hand forged metal knives, once actively used by Guild members to gather the precious pearls.</desc>
+      <exits se='199'/>
+      <events enter='moves.rooms.1'/>
+   </location>
+
+   <location num='135' flags='t'>
+      <name>Gravshaft - Level 1</name>
+      <desc>   This small extension of the atrium serves as the main level of a gravshaft, which runs through the core of The Pearl. You may take it down to Levels 2, 3, and 4.</desc>
+      <desc>   The low wooden bridge leading back to the main Atrium is south.</desc>
+      <exits s='199' down='205' out='199'/>
+      <events enter='moves.rooms.1'/>
+   </location>
+
+   <location num='136' flags='t'>
+      <name>Yohkoh Solar Observatory</name>
+      <desc>   The satellite carries four instruments - a Soft X-ray Telescope (SXT), a Hard X-ray Telescope (HXT), a Bragg Crystal Spectrometer (BCS), and a Wide Band Spectrometer (WBS).</desc>
+      <desc>   This combination of simultaneous hard and soft x-ray imaging from the SXT and the HXT along with spectroscopy from the BCS and WBS, makes the Yohkoh satellite a unique and powerful tool for studying the Sun. These four instruments cover a wide energy range of the high energy solar spectrum and are extremely useful for studying solar flares, Yohkoh&apos;s primary objective.</desc>
+      <desc>   Direct observation of the Sun itself is neither practical, nor wise.</desc>
+      <exits sw='199' out='199'/>
+      <events enter='moves.rooms.1'/>
+   </location>
+
+   <location num='141' flags='et'>
+      <name>The Pearl Exchange</name>
+      <desc>   Wall displays circle the room, commodity figures constantly updating as the merchants buy and sell. Traders watch the figures, consult the weather and newsfeeds for events that will affect their contracts. Occasionally one will triumphantly shout, &quot;Oni ni kana-bo!&quot; and sweep off to the teahouse to celebrate with her friends.</desc>
+      <desc>      The restless movement and shouting evoke the feel of the original rice market which made Osaka (then known as Kamigata) the rice loft of Japan, Old Earth. Where Edo represented style and elegance, Kamigata stood for delicacy and sense of humor, sometimes almost caricatured. Scrolls depicting Oni in his many guises, all managing to look vaguely like the infamous deposed Emperor Ming, add to the exotic scene.</desc>
+      <exits s='205' out='205'/>
+   </location>
+
+   <location num='145' flags='t'>
+      <name>Captain&apos;s quarters</name>
+      <desc>   The captain&apos;s doctorate from the University of Glasgow is proudly framed and displayed beside an ancient photograph of her ancestor of the same name standing beside his mentor and friend, Lord Kelvin. Displayed below in a glazsteel case, is a matched set of large black pearls, strung on a silk cord and clasped with a silver catch, two antique netsuke, a black carved wood tanuki no hara tsuzumi and an ivory carving of Oni the taxman selling permits to hell, and a few other objects you can&apos;t identify.</desc>
+      <desc>   The Captain&apos;s desk is a broad sweep of polished wood with a comm unit set flush in its surface, a tiny carved jade cat beside it. An assortment of seating units suitable for various species is drawn up before the desk.</desc>
+      <desc>   A large holoscreen on the wall silently displays a live feed from the solar observatory. On the facing wall is a collection of fans.</desc>
+      <exits se='210' out='210'/>
+   </location>
+
+   <location num='147' flags='t'>
+      <name>Research and production labs</name>
+      <desc>   Like the other technical areas, you are restricted here to a safety shielded viewing area. In one section of the facility, at hooded lab benches, entangled TQuarks are carefully separated and packed without breaking their linkage. In another, technicians in rose colored lab coats supervise the production on non-toxic Nanos and NanoFabrics. A linked series of elaborate machines churns out GAsChips. Droids stack the crates onto mobile pallets and rush them away.</desc>
+      <desc>   On the other side of the lab, behind a transparent safety wall, researchers chip away at the unknown. Groundbreaking work in quantum physics is an old tradition here. You recognize the MRI machine, and the roto-vaps lined up on the lab bench. Two of the scientists, safety visors lowered, scrutinize the glowing contents of a Klien flask, each rapidly taking notes. A droid rolls up, taps one on her shoulder, and makes pouring motions with its hand. She nods in response and the droid silently rolls away.</desc>
+      <exits sw='210' out='210'/>
+   </location>
+
+   <location num='151' flags='t'>
+      <name>Anti-matter production room</name>
+      <desc>   A unique split-phase glazsteel pod has been let into the wall here to allow a view of the anti-matter production chamber below. The chamber exists inside a double isolation field. A bed of monopoles covers the lower surface, above a matching array of anti-monopoles. Between the two, the forces of creation are remotely manipulated. Despite the layers of phased radiation shielding and protection, the chaotic glare is unbearable for more than a few moments.</desc>
+      <exits s='215' out='215'/>
+      <events enter='keepout.anti.1'/>
+   </location>
+
+   <location num='198'>
+      <name>The Pearl - Shuttle Bay</name>
+      <desc>   The massive shuttle bay doors, when closed, display a mural of the rising sun with a large black kanji character on either side, brushed onto the white interior cladding.</desc>
+      <desc>   Visitors&apos; shuttles are berthed here, convenient to the main entry airlocks, waiting to take their owners back up to their ships in orbit. The station&apos;s communal staff shuttles are off to one side. They make a fascinating sight with their ritual icons and kanji slogans.</desc>
+      <desc>   The main entrance to The Pearl is east.</desc>
+      <exits e='199' in='199'/>
+      <events enter='moves.exit.1'/>
+   </location>
+
+   <location num='199' flags='t'>
+      <name>Atrium</name>
+      <desc>   You step into the atrium entry of The Pearl. A solemn woman in a deep blue silk kimono stands behind a low counter graced with a small juniper bonzai and a brass gong. She seems to be engaged in bowing and murmuring to everyone who passes by. Visitors step up to the counter, bow to her, and ask for directions.</desc>
+      <desc>   Arches with open shoji screens are to the northwest, northeast, southwest, and southeast. The entrance to the shuttle bay is west.</desc>
+      <desc>   A gravshaft to the north is reached by a low wooden bridge; inches above a shallow pond, it gives the illusion of walking on water.</desc>
+      <exits n='135' ne='136' se='264' sw='262' w='198' nw='134'/>
+      <events enter='moves.entry.1' in-room='moves.entry.3'/>
+   </location>
+
+   <location num='204' flags='bt'>
+      <name>The Bridge</name>
+      <desc>    A low, gracefully curved railing prevents you from advancing into the control center of the satellite while allowing a full view of operations.</desc>
+      <desc>   The walls follow the natural curve of the satellite. Pinpoint lights twinkle in a cryptic pattern on arrays of display holos. A counter runs along the perimeter of the room, inset with arrays of control touchpads. Sunbeams (traditional name for the crew of The Pearl) sit at command seats spaced along the counter, eyes scanning banks of data displays. In the center of the Bridge, the Comm chair is fixed on a slightly raised central platform, on it lies a copy of Chushingura, The Storehouse of Loyalty - Drama of the 47 Ronin. On a plinth nearby is a celestial armamentarium.</desc>
+      <desc>   The Commander of the Watch sits before a bank of display terminals, eyes focused on the screens, sturdy fingers flickering like butterflies over the control touchpads. A droid silently rolls about the cabin refilling tea cups from a black Tanaka raku teapot.</desc>
+      <exits e='205' out='205'/>
+      <events in-room='objects.kitten.2'/>
+   </location>
+
+   <location num='205' flags='t'>
+      <name>Gravshaft - Level 2</name>
+      <desc>   The gravshaft will take you up to Level 1. You may also take it down to Levels 3 and 4.</desc>
+      <desc>   Exits to Level 2 are north, south, east, and west.</desc>
+      <exits n='141' e='206' s='269' w='204' up='135' down='210'/>
+   </location>
+
+   <location num='206' flags='tc'>
+      <name>Armstrong Cuthbert</name>
+      <desc>   The local Armstrong Cuthbert agent weighs roughly half a ton, possesses six short, thick flexible appendages which serve both as arms or legs, and has a hide like gray, flexible armor plate. Despite such ruggedness, she gives off a distinctly feminine air. Pristine white tabi and stylish geta grace her three lower appendages and eliminate the need for a chair.</desc>
+      <desc>   Without moving from her position behind her desk, she gives the impression of bowing to you, while her upper appendages continue to rapidly shuffle cargo delivery printouts into piles.</desc>
+      <desc>   &quot;Konnichi-wa&quot; booms the comm unit hanging suspended from a pink cord draped across her torso. She stares pointedly at you, taps the comm unit, &quot;Drat this Standard Galactic English!&quot; An appendage sharply taps a pile of contracts. &quot;Are you here for work?&quot;</desc>
+      <desc>   The stevedores, off to the side lounging on folding chairs, sipping tea, gaze into their cups and quietly snicker. A stern glance from Madame Mitzu silences them.</desc>
+      <exits w='205' out='205'/>
+   </location>
+
+   <location num='210' flags='t'>
+      <name>Gravshaft - Level 3</name>
+      <desc>The gravshaft will take you up to the Main Level and Level 2.</desc>
+      <desc>You may also take it down to Level 4.</desc>
+      <desc>Exits to Level 3 are northwest, northeast, southwest, and southeast.</desc>
+      <exits ne='147' se='275' sw='273' nw='145' up='205' down='215'/>
+   </location>
+
+   <location num='214' flags='t'>
+      <name>Research Labs</name>
+      <desc>    The workspace is filled with clusters of desks and data units. In the solar wind dynamics group, polar plumes are being modelled. The simulations are described in a recent paper titled &quot;Can Kelvin-Helmholtz instabilities of jet-like structures and plumes cause solar wind fluctuations at 1 AU?&quot;</desc>
+      <desc>   Another group is investigating sunspot cycle predictions. Planning for satellite orbits and space traffic flow requires knowledge of solar activity levels years in advance. A third group investigates how magnetic shear (twisting of the Sun&apos;s magnetic field), is related to solar flares. Their H-alpha telescope is sensitive to the spectral line at 656.3 nanometers, originating in the Sun&apos;s chromosphere.</desc>
+      <desc>   A long term project is studying the solar dynamo. Recent discoveries relating to the reversal of the polar magnetic fields near the time of cycle maximum as seen in the magnetic butterfly have created great excitement in the scientific community.</desc>
+      <exits e='215' out='215'/>
+   </location>
+
+   <location num='215' flags='t'>
+      <name>Gravshaft - Level 4</name>
+      <desc>     The gravshaft will take you up to Levels 1, 2, and 3. Exits to Level 4 are north, south, east, and west.</desc>
+      <exits n='151' e='216' s='279' w='214' up='210'/>
+   </location>
+
+   <location num='216' flags='ta'>
+      <name>Power broadcast room</name>
+      <desc>   Power broadcasting units fill the room, beaming collected solar power to the entire system. Here is the source of the power that maintains and runs the comm units, vacuum suits, and other small items in everyday use. There is a limit to the power that any one device can draw on safely from general broadcast power, so the giant gateways are powered elsewhere.</desc>
+      <desc>   The machines are a far cry from the primitive, original inventions of Nikola Tesla but operate on his fundamental principles. The room is filled with a constant hum and the Sunbeams wear protective gear that allows them hands free communication as well as a choice of music.</desc>
+      <desc>   Near the door is the control area for this room, a Sunbeam on constant duty monitoring the flow of power through the solar system.</desc>
+      <exits w='215'/>
+      <events in-room='objects.kitten.2'/>
+   </location>
+
+   <location num='262' flags='t'>
+      <name>Scholar&apos;s garden</name>
+      <desc>   To one side a rock garden transforms sand and stones into a personal landscape of graceful simplicity. Modeled after the garden at Ryoanji Temple, it&apos;s a rectangle surrounded by earthen walls on three sides and a wooden veranda on the fourth. Inside the rectangle is a vista of white pebbles and 15 rocks. The white gravel that surrounds the rocks is raked every day; perfect circles around the rocks, perfectly straight lines in the rest of the space. The rocks are arranged so that no matter where you stand, only 14 can be seen.</desc>
+      <desc>   Facing the garden is a pavilion serving as a scholar&apos;s study. A bonsai collection of pine, maple, and juniper is displayed on a set of tables. Some of these prized specimens are hundreds of years old; being passed from generation to generation, admired for their age, and revered as a reminder of those who have cared for them over the centuries.</desc>
+      <desc> The garden calms the senses, clears the mind, and melts away daily stress.</desc>
+      <exits ne='199' out='199'/>
+      <events enter='moves.rooms.1' in-room='objects.kitten.2'/>
+   </location>
+
+   <location num='264' flags='bt'>
+      <name>Pearl Teahouse</name>
+      <desc>   On the wall is a holo of Yoshida on the Tokaido Road - a scene of a roadside teahouse in Yoshida. One result of teahouses is equality through capitalism. Anyone who arrives and can pay gets to join the society of the roadside teahouse. Mounted high on one wall hangs a woman&apos;s chirimen silk jacket, with a stenciled wave motif, its subtle grays and blues reflecting calmly on the room. Low tables with cushions are arranged around the room, spaced to allow private conversation. Silent droids roll about, refilling tea cups.</desc>
+      <exits nw='199'/>
+      <events enter='moves.rooms.1'/>
+   </location>
+
+   <location num='269' flags='ta'>
+      <name>Manufacturing Facility</name>
+      <desc>lines lie before you, rollers spinning, seam welding arms glinting, chambers rotating, churning out an endless supply of high technology goods for the markets of Sol. Specialized droids stand at stations along the line, performing random quality checks. A run of droids roll off their assembly line and march in orderly lines to their 75 ton shipping pods. Other lines use huge sets of waldoes to lift crates of controllers, electros, and lasers onto motorized pallets, which roll them to waiting pods.</desc>
+      <desc>   Two Sunbeams, dressed in immaculate buttercup coveralls, their hair in prim braids, stand by as the pods are filled. As the pods are rapidly filled, each Sunbeam makes a note on her tablet, swiftly slaps a bonded seal on the pod, presses her signet ring into the seal, and moves on to the next pod. Droids rush up and move the pods out for pickup.</desc>
+      <exits n='205' out='205'/>
+   </location>
+
+   <location num='273' flags='ta'>
+      <name>Crew&apos;s quarters</name>
+      <desc>   Rows of sleeping cubicles are set into the walls, shoji screens covered with a thin rice paper, slid closed. A faint light glows through the paper here and there.</desc>
+      <desc>   Tatami mats on the highly polished floor. A small Tokonoma alcove with a doll dressed in traditional kimono and elaborate wig, strings of pearls wound through the raven strands. On the walls, holos of all male Kabuki actors in their kimono, much appreciated by the female audience.</desc>
+      <desc>   A kitten scampers its way across the mats, skitters up to a cubicle, and slips in through a narrow gap in the shoji screens.</desc>
+      <exits ne='210' out='210'/>
+   </location>
+
+   <location num='275' flags='ta'>
+      <name>Off duty lounge</name>
+      <desc>   A painting by Joan Miro, Woman in Front of the Sun. In an alcove, a celedon vase with a single spray of ginger blossoms. The faint spicy fragrance teases your senses. A low ebony table, lovingly polished by countless generations of strong female hands. Sliding fusuma doors covered with a thick opaque paper painted with beautiful natural scenery define the space; tatami mats cover the floor. A red violin and a silver flute, gently laid aside on a lacquered cabinet. A mechanical puppet theater, its silk curtains pulled closed.</desc>
+      <desc>   Off to the side is a carved ivory table, its age evident by its creamy patina. On it sits a Go board, obviously in mid-game. The stones are large white and black pearls.</desc>
+      <exits nw='210' out='210'/>
+      <events in-room='objects.kitten.2'/>
+   </location>
+
+   <location num='279' flags='t'>
+      <name>Power collection room</name>
+      <desc>   The enormous room follows the natural curves of the station. Near the door is a control area; one of the Sunbeams sits at her station, remotely monitoring the equipment that collects the vast energies of the Sun. On a whiteboard appear to be several interesting calculations and theories that can help release amazing amounts of power from the photovoltaic collectors. Another Sunbeam slowly moves from machine to machine, tablet in hand, double checking conditions on the direct readout dials.</desc>
+      <desc>   The machines are huge, dwarfing the women who work here. They sit in gleaming rows, backed up to the outer hull where they connect to the external collector arrays. With no moving parts to the collectors, the room is silent except for the soft music playing at the control desk, a laid back jazz station, broadcast from The Lattice via the power originating here.</desc>
+      <exits n='215' out='215'/>
+   </location>
+
+</fed2-map>

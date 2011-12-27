@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='system' version='1.00'>
+
+   <location num='0'>
+      <name>System messages</name>
+      <desc>Location to handle game system messages.</desc>
+   </location>
+
+</fed2-map>

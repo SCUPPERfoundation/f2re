@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+
+<event-list version='43'>
+
+ <category name='move'>
+
+  <section name='lab'>
+
+   <event num='1'>
+    <comment>moves to clinic from bio labs</comment>
+    <message type='text' where='com' who='individual'>Two droids rush towards you and quickly encase your entire being in a hardening polymer.  One of them tags you with a teleport tag and you are instantly whisked to the clinic, where you are injected with several doses of antibiotics that leave you feeling sick.</message>
+    <move what='player' who='individual' loc='396'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='obj'>
+
+  <section name='boulder'>
+
+   <event num='1'>
+    <comment>sit on boulder message</comment>
+    <message type='text' where='com' who='individual'>You take a seat on the boulder for a moment then decide to move in case you get caught loafing here. As you stand you notice that you have knocked some dirt off the top of the stone revealing some etched words, "The door opens with a word. If you sought us in Freedom, the writing was on the wall."</message>
+   </event>
+
+  </section>
+
+  <section name='destroy'>
+
+   <event num='1'>
+    <comment>destroys objects loc 205</comment>
+    <destroyobject where='inventory' map='home' id-name='employee tag'/>
+    <destroyobject where='inventory' map='home' id-name='lighter'/>
+    <destroyobject where='inventory' map='home' id-name='oily rag'/>
+   </event>
+
+  </section>
+
+  <section name='form'>
+
+   <event num='1'>
+    <comment>read form messages in loc 398</comment>
+    <message type='multi' where='com' who='individual' lo='objects.form.1' hi='objects.form.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>sign form loc 398 creates employee tag</comment>
+    <message type='text' where='com' who='individual'>You sign the form in the appropriate place and hand it back to Tammy, who looks it over quickly. She hands you an employee tag with your name upon it and ushers you out of the door... "Off you go then.  You can start right away by going through the employee entrance right there"</message>
+    <createobject where='inventory' home-map='home' id='obj_tag'/>
+    <move what='player' who='individual' loc='397'/>
+    <message type='text' where='com' who='individual'>Tammy steps back through the door to the recruitment office and immediately puts up a "Gone to Lunch" sign.</message>
+   </event>
+
+  </section>
+
+  <section name='gloves'>
+
+   <event num='1'>
+    <comment>loc 332 creates rubber gloves from static gloves</comment>
+    <createobject where='inventory' home-map='home' id='obj_gloves'/>
+    <message type='text' where='com' who='individual'>You dig deep into your pocket and hand over the 10ig for a pair of gloves. The store clerk hands them over to you after carefully counting the groats.</message>
+   </event>
+
+   <event num='2'>
+    <comment>use gloves messages</comment>
+    <message type='text' where='com' who='individual'>You slip the rubber gloves on your hands (or equivalent) and immediately feel more protected against all the cooties that other people carry. You have a strong urge to clean something really nasty.</message>
+    <message type='text' where='com' who='room_ex'>Looks like someone is in the mood for cleaning. %s puts on some rubber gloves and starts poking into every corner looking for dirt.</message>
+   </event>
+
+   <event num='3'>
+    <comment>blow gloves event</comment>
+    <message type='text' where='com' who='individual'>You blow into one of the rubber gloves, then stretch it onto your head with the inflated fingers sticking up, and strut around flapping your arms (or equivalent) and making chicken noises.</message>
+    <message type='text' where='com' who='room_ex'>Bawk! Bawk! %s blows into a rubber glove to inflate it, then wears it like a hat and struts around with much bobbing, flapping and making of chicken noises.</message>
+   </event>
+
+   <event num='4'>
+    <comment>snap gloves message</comment>
+    <message type='text' where='com' who='individual'>Snapping the cuffs the rubber gloves makes you feel just like a doctor about to perform an examination on someone.  Pass the lube!</message>
+    <message type='text' where='com' who='room_ex'>You hear a loud snap! %s has put on some rubber gloves and looks about to perform some sort of medical examination on the first willing, or unwilling person for that matter. %s shouts "Someone pass me the lube!"</message>
+   </event>
+
+   <event num='5'>
+    <comment>destroy gloves on drop</comment>
+    <destroyobject where='inventory' map='home' id-name='rubber gloves'/>
+    <message type='text' where='com' who='individual'>You drop the rubber gloves.  A passing droid picks them up and hurries off before you have a chance to stop it.</message>
+   </event>
+
+  </section>
+
+  <section name='humidor'>
+
+   <event num='1'>
+    <comment>get humidor message</comment>
+    <message type='text' where='com' who='individual'>Stealing what is obviously a prized possession of the division head of Universal Salvage would certainly result in termination of employment.  You had better leave it where it is.</message>
+   </event>
+
+   <event num='2'>
+    <comment>open humidor creates lighter in inv</comment>
+    <message type='text' where='com' who='individual'>You open the humidor and discover to your dismay that there are no cigars in it. There is however, a small silver lighter which you quickly pocket. Honestly.. is nothing safe these days?</message>
+    <createobject where='inventory' home-map='home' id='obj_lighter'/>
+   </event>
+
+   <event num='3'>
+    <comment>check inv for lighter</comment>
+    <checkinventory map='home' id-name='lighter' found='obj.humidor.4' not-found='obj.humidor.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>lighter found</comment>
+    <message type='text' where='com' who='individual'>You open the humidor and not surprisingly find that it is empty.</message>
+   </event>
+
+  </section>
+
+  <section name='letter'>
+
+   <event num='1'>
+    <comment>destroy letter on drop</comment>
+    <destroyobject where='inventory' map='home' id-name='letter'/>
+    <message type='text' where='com' who='individual'>You carelessly drop the vitally important letter and it it snapped up by a passing garbage droid.</message>
+   </event>
+
+  </section>
+
+  <section name='lighter'>
+
+   <event num='1'>
+    <comment>drop destroys lighter</comment>
+    <message type='text' where='com' who='individual'>The lighter slips from your fingers and breaks as it hits the floor.  A diligent droid quickly clears up the mess and trundles off.</message>
+    <destroyobject where='inventory' map='home' id-name='lighter'/>
+   </event>
+
+   <event num='2'>
+    <comment>flick lighter</comment>
+    <message type='text' where='com' who='individual'>You flick the top of the lighter and a small flame sprouts from the gas jet. Unfortuantely this action sets off the sensitive sprinkler system and both you and the lighter are soon extinguished and soggy.</message>
+   </event>
+
+  </section>
+
+  <section name='memo'>
+
+   <event num='1'>
+    <comment>read memo message</comment>
+    <message type='text' where='com' who='individual'>To.. Director Univ.Sal. Penance Div.  From.. Security Chief... I regret to say that the vault door has resisted all attempts to open it without the password. Since we have no idea what hazards might lie behind it, I respectfully suggest that we leave it alone until we can safely assess the hazards.</message>
+   </event>
+
+  </section>
+
+  <section name='rag'>
+
+   <event num='1'>
+    <comment>get oily rag check inv</comment>
+    <checkinventory map='home' id-name='oily rag' found='obj.rag.2' not-found='obj.rag.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>rag found message</comment>
+    <message type='text' where='com' who='individual'>One oily rag in your pocket is bad enough.  You really don&apos;t want two of them.</message>
+   </event>
+
+   <event num='3'>
+    <comment>rag not found creates rag in inv</comment>
+    <message type='text' where='com' who='individual'>You carefully take an oily rag from the bucket, trying to get as little grunge as possible on your hands (or equivalent) and clothing.</message>
+    <createobject where='inventory' home-map='home' id='obj_rag'/>
+   </event>
+
+   <event num='4'>
+    <comment>light rag checks inv for lighter</comment>
+    <checkinventory map='home' id-name='lighter' found='obj.rag.6' not-found='obj.rag.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>light rag lighter not found</comment>
+    <message type='text' where='com' who='individual'>You don&apos;t have anything to light the oily rag with.</message>
+   </event>
+
+   <event num='6'>
+    <comment>light rag lighter found</comment>
+    <checkmap map='home'  pass='obj.rag.8' fail='obj.rag.7' loc='1107'/>
+   </event>
+
+   <event num='7'>
+    <comment>light rag lighter found loc fail</comment>
+    <message type='text' where='com' who='individual'>You flick the lighter into operation and hold the oily rag over the flame but before it can ignite, the Penance fire surpression system springs into action and smothers you with thick cloying foam from nozzles hidden in the wall. You have been extinguished!</message>
+   </event>
+
+   <event num='8'>
+    <comment>light rag with lighter and loc 1107</comment>
+    <message type='text' where='com' who='individual'>You flick the lighter and hold the oily rag over the resulting flame. The rag ignites sending a plume of thick black smoke towards the over head smoke detectors.</message>
+    <message type='text' where='com' who='room'>Whooop! Whooop! An alarm sounds! "This is not a drill... This is not a drill.  All droid and biological personnel proceed at once to Alpha Rock. This is not a drill"</message>
+    <announce type='text' loc='1032'>Whooop! Whooop! An alarm sounds! "This is not a drill... This is not a drill.  All droid and biological personnel proceed at once to Alpha Rock. This is not a drill"</announce>
+    <move what='object' id-name='mob_gord' loc='0'/>
+    <changelink loc='1032' exit='south' action='add' new-loc='1096'/>
+    <call event='obj.rag.9'/>
+   </event>
+
+   <event num='9'>
+    <comment>delay to move gord back and remove link</comment>
+    <delayevent delay='100' event='obj.rag.10' logoff='obj.rag.10'/>
+   </event>
+
+   <event num='10'>
+    <comment>alarm off return gord</comment>
+    <message type='text' where='com' who='individual'>An announcement comes over the PA system "Emergency has been contained.  All personnel return to stations"</message>
+    <changelink loc='1032' exit='south' action='remove' />
+    <move what='object' id-name='mob_gord' loc='1032'/>
+   </event>
+
+  </section>
+
+  <section name='sign'>
+
+   <event num='1'>
+    <comment>read sign in warehouse</comment>
+    <message type='text' where='com' who='individual'>Sprinkler system does not function in this warehouse due to the nature of the goods stored here. Smoke detectors in operation. Alarm will sound if smoke detected!</message>
+   </event>
+
+  </section>
+
+  <section name='tag'>
+
+   <event num='1'>
+    <comment>tag found refused entry to recruitment office 398</comment>
+    <checkinventory map='home' id-name='employee tag' found='obj.tag.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>refuse entry tag found</comment>
+    <move what='player' who='individual' loc='397'/>
+    <message type='text' where='com' who='individual'>You attempt to enter the recruitment office but the door is locked. A sign on the door reads "Gone to Lunch.. back sometime"</message>
+   </event>
+
+   <event num='3'>
+    <comment>check inv employee tag loc 461 offices</comment>
+    <checkinventory map='home' id-name='employee tag' not-found='obj.tag.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>check last loc if tag not found loc 461</comment>
+    <checklastloc loc='397' pass='obj.tag.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>refuse entry if loc 397 without tag</comment>
+    <move what='player' who='individual' loc='397'/>
+    <message type='text' where='com' who='individual'>You feel the slight tingle of a scan as you touch the door. The "Employees Only" sign lights up in lurid red neon and you fing you are unable to pass.</message>
+   </event>
+
+   <event num='6'>
+    <comment>destroys tag on drop</comment>
+    <destroyobject where='inventory' map='home' id-name='employee tag'/>
+    <message type='text' where='com' who='individual'>You drop the employee tag and it is instantly cleared away by a passing maintenance droid.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='talk'>
+
+  <section name='comp'>
+
+   <event num='1'>
+    <comment>comp conversation</comment>
+    <match phrase='hello' id-name='mob_comp' lo='mob.comp.1'/>
+    <match phrase='who' id-name='mob_comp' lo='mob.comp.2'/>
+    <match phrase='ritual' id-name='mob_comp' lo='mob.comp.3' hi='mob.comp.6'/>
+    <match phrase='solution' id-name='mob_comp' lo='mob.comp.7'/>
+    <match phrase='task' id-name='mob_comp' lo='mob.comp.8'/>
+    <match phrase='zardoz' id-name='mob_comp' lo='mob.comp.9'/>
+    <match phrase='agree' id-name='mob_comp' event='talk.comp.2'/>
+    <nomatch id-name='mob_comp' lo='mob.comp.10'/>
+   </event>
+
+   <event num='2'>
+    <comment>check inv for letter</comment>
+    <checkinventory map='home' id-name='letter' found='talk.comp.3' not-found='talk.comp.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>letter found</comment>
+    <message type='text' where='com' who='individual'>You have already agreed to take the letter to Jezz&apos;s office on Ritual.</message>
+   </event>
+
+   <event num='4'>
+    <comment>letter not found create letter</comment>
+    <createobject where='inventory' home-map='home' id='obj_letter'/>
+    <message type='text' where='com' who='individual'>The companion takes a letter from her pocket and gives it to you "Be sure.. take it to Jezz&apos;s office and tell nobody what it contains or where it came from. Please hurry."</message>
+   </event>
+
+  </section>
+
+  <section name='gord'>
+
+   <event num='1'>
+    <comment>gord hello</comment>
+    <match phrase='hello' id-name='mob_gord' lo='mob.gord.1'/>
+    <nomatch id-name='mob_gord' lo='mob.gord.2'/>
+   </event>
+
+  </section>
+
+  <section name='joey'>
+
+   <event num='1'>
+    <comment>joey loc 331 conversation</comment>
+    <match phrase='hello' id-name='mob_joey' lo='mob.joey.1'/>
+    <match phrase='wine' id-name='mob_joey' lo='mob.joey.2'/>
+    <match phrase='drink' id-name='mob_joey' lo='mob.joey.2'/>
+    <match phrase='luca' id-name='mob_joey' lo='mob.joey.3'/>
+    <match phrase='rift' id-name='mob_joey' lo='mob.joey.4'/>
+    <match phrase='liberty' id-name='mob_joey' lo='mob.joey.5'/>
+    <match phrase='jezz' id-name='mob_joey' lo='mob.joey.6'/>
+    <match phrase='zardoz' id-name='mob_joey' lo='mob.joey.7'/>
+    <match phrase='universal' id-name='mob_joey' lo='mob.joey.8'/>
+    <match phrase='salvage' id-name='mob_joey' lo='mob.joey.8'/>
+    <match phrase='accident' id-name='mob_joey' lo='mob.joey.9'/>
+    <match phrase='penance' id-name='mob_joey' lo='mob.joey.10'/>
+    <match phrase='bye' id-name='mob_joey' lo='mob.joey.11'/>
+    <nomatch id-name='mob_joey' lo='mob.joey.12'/>
+   </event>
+
+  </section>
+
+  <section name='tammy'>
+
+   <event num='1'>
+    <comment>mob tammy conversation</comment>
+    <match phrase='hello' id-name='mob_tammy' lo='mob.tammy.1'/>
+    <match phrase='work' id-name='mob_tammy' lo='mob.tammy.2'/>
+    <match phrase='job' id-name='mob_tammy' lo='mob.tammy.2'/>
+    <match phrase='joey' id-name='mob_tammy' lo='mob.tammy.3'/>
+    <match phrase='penance' id-name='mob_tammy' lo='mob.tammy.4'/>
+    <match phrase='pay' id-name='mob_tammy' lo='mob.tammy.5'/>
+    <match phrase='wage' id-name='mob_tammy' lo='mob.tammy.5'/>
+    <match phrase='benefit' id-name='mob_tammy' lo='mob.tammy.6'/>
+    <nomatch id-name='mob_tammy' lo='mob.tammy.7'/>
+   </event>
+
+  </section>
+
+  <section name='type'>
+
+   <event num='1'>
+    <comment>type password loc 1161</comment>
+    <match phrase='forgiveness' id-name='mob_type' event='talk.type.2' lo='mob.type.1'/>
+    <nomatch id-name='mob_type' lo='mob.type.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>opens door link south 1161 to 1225</comment>
+    <message type='text' where='com' who='individual'>With a loud groan and much creaking, the huge metal door begins to slide sideways into the surrounding rock wall, allowing you to pass.</message>
+    <changelink loc='1161' exit='south' action='add' new-loc='1225'/>
+    <announce type='text' loc='1225'>With a loud groan and much creaking, the huge door begins to slide sideways into the rock wall, allowing you to pass.</announce>
+    <changelink loc='1225' exit='north' action='add' new-loc='1161'/>
+    <call event='talk.type.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>delay for closing door</comment>
+    <delayevent delay='20' event='talk.type.4' logoff='talk.type.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>closes door after 20 secs</comment>
+    <message type='text' where='com' who='individual'>With a loud groan and much creaking, the huge door begins to slide closed</message>
+    <announce type='text' loc='1225'>With a loud groan and much creaking, the huge door begins to slide closed.</announce>
+    <changelink loc='1161' exit='south' action='remove' />
+    <changelink loc='1225' exit='north' action='remove' />
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+

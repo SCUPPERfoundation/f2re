@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<fed2-map title='Jungle Space' version='1.00' editor='standard'>
+
+   <location num='262' flags='slp'>
+      <name>Jungle Interstellar Link</name>
+      <desc>   As you come out of hyperspace you literally have to throw on the reverse thrusters to avoid crashing headlong into an orbital space station. A double row of bright flashing lights direct you south to the glide path.</desc>
+      <exits s='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='sp'>
+      <name>Entering Lyon Orbit</name>
+      <desc>   You see the lush green planet of Lyon below and marvel at the extensive jungles. The aqua-marine oceans promise many pleasures to those with the calling to visit.</desc>
+      <desc>   Your comm unit signals a tight beam message from Orbital Control Center, &quot;Proceed southeast toward the docking platform.&quot;</desc>
+      <exits se='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327' flags='sp'>
+      <name>Launch Path</name>
+      <desc>   Your ship gains speed as you&apos;re caught in some sort of gravity field acting with a slingshot affect, hurling you northwest towards the Interstellar Link. You pass the space station on your way out and notice that several fighters are poised watching your path.</desc>
+      <exits nw='262' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='391' flags='sp'>
+      <name>Lyon Glide Path</name>
+      <desc>   As you skim the surface of the planet as a mountain looms before you. Narrowly missing the top you climb as two armed Guardian class fighters pull along side of you as an escort you to the Docking Platform.</desc>
+      <desc>   Your comm unit signals a tight beam message from Fighter, &quot;Proceed east to the docking platform.&quot;</desc>
+      <exits e='392' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='392' flags='sp'>
+      <name>Docking Platform</name>
+      <desc>   You begin your docking sequence as instructed by the control center and ease your ship into an empty docking bay. Upon exiting your ship to see a notice atached to a pole in the center of the platform informing visitors that Lyon doesn&apos;t allow private ships to land on the planet surface. This is due to the costly rebuilding of the previous landing area after many botched landings by intoxicated pilots. Dodgeing a scurrying worker you narrowly miss stepping over the edge and catch yourself just in time. The worker looks back at you and grins saying &quot;Take care my friend, that&apos;s a mighty long way down.&quot;</desc>
+      <desc>   You can board the shuttle to the surface or launch northwest toward the link.</desc>
+      <exits nw='327' no-exit='moves.noexit.4'/>
+   </location>
+
+</fed2-map>

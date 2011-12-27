@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<fed2-map title='Esperanza Space' version='5' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>storeroom</name>
+      <desc>Rosy red clouds and blue seas mingle below you. Welcome to the planet Hope!</desc>
+   </location>
+
+   <location num='64' flags='s'>
+      <name>Boston Market</name>
+      <desc>The Orbit to Esperanza&apos;s Bio Labs on Boston. The link is east from here.</desc>
+      <exits e='65'/>
+   </location>
+
+   <location num='65' flags='sl'>
+      <name>Hope&apos;s home</name>
+      <desc>Welcome to Hope. Below the planet waits patiently for you to find her. Land and enjoy or you can continue east to the Hopeless orbit or go west to the labs on Boston.</desc>
+      <exits e='66' w='64'/>
+   </location>
+
+   <location num='66' flags='s'>
+      <name>You&apos;ve abandoned hope and entered Hopeless.</name>
+      <desc>You are in orbit above a planet covered in clouds. Board your shuttle, and the Orbit Control will guide you down to the LP.</desc>
+      <desc>The link and Hope orbit are to the west.</desc>
+      <exits w='65'/>
+   </location>
+
+</fed2-map>

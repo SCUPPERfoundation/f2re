@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<fed2-map title='Dryland Space' version='7' editor='standard'>
+
+   <location num='272' flags='slp'>
+      <name>Dryland System</name>
+      <desc>As you emerge from the hyperspace link you are surronded by astoroids in all directions.  As you look over the planet directly below you, you are astonished at the lush green and blues that cover the surface of Highland.   Guidence becaons direct you to land and enjoy the planet of Highland.</desc>
+      <desc>A small path has been cleared to the east to navigate through the astorids.</desc>
+      <exits e='273'/>
+   </location>
+
+   <location num='273' flags='sp'>
+      <name>Lowland Orbit</name>
+      <desc>You have arrived at the second planet in the Dryland system.  This planet was constructed by using astorids.   This also helped clear a path to Lowland.</desc>
+      <desc>You may land or head back west to Highland and the Dryland Link.</desc>
+      <exits w='272'/>
+   </location>
+
+</fed2-map>

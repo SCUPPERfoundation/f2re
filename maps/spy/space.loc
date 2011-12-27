@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Spy Space' version='18' editor='standard'>
+
+   <location num='2206' flags='sl'>
+      <name>Spy Interstellar Link and Covert Orbit</name>
+      <desc>Examine all vidscreens carefully and make sure you haven&apos;t been followed.  If you&apos;re absolutely certain you&apos;re alone, board the special, cloaked shuttle which has just docked with your ship for landing on Covert.   Exercise caution.  To the south, you can barely make out what looks like a space lane to Overt.  A space lane to Brig lies to the SW.</desc>
+      <exits s='2270' sw='2269'/>
+   </location>
+
+   <location num='2269' flags='s'>
+      <name>Brig Orbit</name>
+      <desc>Below you see quite a small, largely brown planet.  There seems to be a good bit of space traffic, the ships mainly official planetary transports.  Fortunately you won&apos;t have to wait because visitors are awarded priority clearance for shuttle landing.  Overt&apos;s orbit is East.  Covert&apos;s orbit and the Spy Link are NE.</desc>
+      <exits ne='2206' e='2270'/>
+   </location>
+
+   <location num='2270' flags='s'>
+      <name>Overt Orbit</name>
+      <desc>The planet below you fills your vidscreen with its enormity.  You see huge masses of green land and blue ocean.  Overt&apos;s days are short, so don&apos;t waste time boarding your shuttle if you wish to land.  Brig&apos;s Orbit is West.  Covert&apos;s orbit and the Spy Link is due north.</desc>
+      <exits n='2206' w='2269'/>
+   </location>
+
+</fed2-map>

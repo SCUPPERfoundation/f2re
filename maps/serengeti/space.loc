@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<fed2-map title='Serengeti Space' version='1.00' editor='standard'>
+
+   <location num='201' flags='slp'>
+      <name>Serengeti Link and Masai Orbit</name>
+      <desc>    Welcome to the Serengeti link and Masai Orbit. The planet below is very simular to the mother planet Earth with great seas, rich furtile plains, ,jungles, mountains and volcanoes. Puffy white clouds dot the skys like large pads of cotten wool.</desc>
+      <desc>    You are entering the planet of big game hunting, band aids will do you no good here so make sure you have your backpack and gun and make sure you come back with a trophy head and not without yours....HeHe!!!</desc>
+      <exits no-exit='space.noexit.1'/>
+   </location>
+
+</fed2-map>
+

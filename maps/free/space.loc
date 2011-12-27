@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<fed2-map title='Free Space' version='13' editor='standard'>
+
+   <location num='718' flags='s'>
+      <name>Freedom</name>
+      <desc>Freedom orbit, below you is a planet that appears to be leaning to the right.</desc>
+      <exits s='782'/>
+   </location>
+
+   <location num='781' flags='s'>
+      <name>Tea Party</name>
+      <desc>   Welcome to the Tea Party.</desc>
+      <exits e='782'/>
+   </location>
+
+   <location num='782' flags='sl'>
+      <name>Free Link</name>
+      <desc>Welcome to Free, home of right minded people and very friendly ladies.  Never a tax here, feel free to stay and enjoy yourself.</desc>
+      <exits n='718' e='783' w='781'/>
+   </location>
+
+   <location num='783' flags='s'>
+      <name>Enterprise Orbit</name>
+      <desc>   Welcome to the planet Enterprise. Absolutely beautiful with all the modern technology available. Enjoy Enterprise, and feel free to trade all you wish thorugh all of Free. Free Enterprise, enjoy it!</desc>
+      <exits w='782'/>
+   </location>
+
+</fed2-map>

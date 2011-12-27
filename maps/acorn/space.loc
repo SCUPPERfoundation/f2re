@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<fed2-map title='Acorn Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='sp'>
+      <name>Space Storage</name>
+      <desc>Space Junk is scattered about here.</desc>
+   </location>
+
+   <location num='260' flags='slp'>
+      <name>Interstellar Link</name>
+      <desc>     &quot;Welcome to the system of Acorn!&quot; your comm unit chatters.  &quot;The planet Oak is located to the southeast.  Please stay within the authorized space lanes.  The last poor sap who did that... uh... Planet&apos;s to the southeast!&quot;</desc>
+      <exits  se='325'/>
+   </location>
+
+   <location num='325' flags='sp'>
+      <name>Oak Orbit</name>
+      <desc>     Floating below your ship, a planet speckled with greens and yellows rotates slowly in your viewscreen.  As you check the readouts, you notice that the planet&apos;s surface is covered almost entirely with a single forest.  The largest body of water can only be classified as a lake, although a fairly big lake anyways.</desc>
+      <exits nw='260'/>
+   </location>
+
+</fed2-map>

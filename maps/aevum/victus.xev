@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+
+<event-list version='18' editor='Version 1.35'>
+   <category name='food'>
+      <section name='lounge'>
+
+      <event num='1'>
+         <comment>checkmoney</comment>
+         <checkmoney amount='10' higher='food.lounge.3' equals='food.lounge.3' lower='food.lounge.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>can&apos;t afford</comment>
+         <message type='text' where='com' who='individual'>The waiter gives you a withering look when it becomes clear that you can&amp;apos;t afford the meal.</message>
+      </event>
+
+      <event num='3'>
+         <comment>deliver</comment>
+         <changemoney amount='-10'/>
+         <changeplayer sta='5'/>
+         <message type='text' where='com' who='individual'>Your mouth waters as a perfectly prepared portion of filet mignon is set in front of you. It is tender, juicy and delicious.</message>
+      </event>
+
+      </section>
+   </category>
+   <category name='forest'>
+      <section name='boat'>
+
+      <event num='1'>
+         <comment>go to lake</comment>
+         <move what='player' who='individual' loc='324'/>
+      </event>
+
+      </section>
+      <section name='gear'>
+
+      <event num='1'>
+         <comment>fish</comment>
+         <message type='multi' where='com' who='individual' lo='forest.gear.1' hi='forest.gear.2'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='general'>
+      <section name='alert'>
+
+      <event num='1'>
+         <comment>Leaving hospital - checklastoc</comment>
+         <checklastloc loc='2081' pass='general.alert.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>Leaving hospital - checkinsurance</comment>
+         <checkinsurance fail='general.alert.3'/>
+      </event>
+
+      <event num='3'>
+         <comment>Leaving hospital - no insurance msg</comment>
+         <message type='text' where='com' who='individual'>WARNING: You have left the hospital without insuring, proceed at your own risk.</message>
+      </event>
+
+      </section>
+      <section name='jewells'>
+
+      <event num='1'>
+         <comment>Jewells office - loc 3871 - enter msg</comment>
+         <message type='text' where='com' who='individual'>As you arrive, the cats Pirate and Ella glance at you briefly and then go back to what they were doing (or not doing).</message>
+         <percent value='50' higher='general.jewells.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>Jewells office - loc 3871 - msg picker</comment>
+         <call event='general.jewells.random[3-6]'/>
+      </event>
+
+      <event num='3'>
+         <comment>Cat msg 1</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.1'/>
+      </event>
+
+      <event num='4'>
+         <comment>Cat msg 2</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.2'/>
+      </event>
+
+      <event num='5'>
+         <comment>Cat msg 3</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.3'/>
+      </event>
+
+      <event num='6'>
+         <comment>Cat msg 4</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.4'/>
+      </event>
+
+      <event num='7'>
+         <comment>Kick - check insurance</comment>
+         <checkinsurance pass='general.jewells.9' fail='general.jewells.8'/>
+      </event>
+
+      <event num='8'>
+         <comment>Kick - no insurance, move to hospital</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.5'/>
+         <move what='player' who='individual' loc='2081'/>
+      </event>
+
+      <event num='9'>
+         <comment>Kick - insurance good - msg and -stam</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.6'/>
+         <changeplayer sta='-3'/>
+      </event>
+
+      <event num='10'>
+         <comment>Call Pirate</comment>
+         <message type='text' where='com' who='individual'>You call out Pirate&apos;s name and he comes running.</message>
+      </event>
+
+      <event num='11'>
+         <comment>Call Ella</comment>
+         <message type='text' where='com' who='individual'>You call out Ella&apos;s name and, after waiting long enough to make it look like her idea, she comes to you.</message>
+      </event>
+
+      <event num='12'>
+         <comment>Pet</comment>
+         <message type='text' where='com' who='individual'>You reach out to the nearest cat and stroke it gently. You are rewarded with a look of pleasure and a loud purr.</message>
+         <changeplayer sta='+1'/>
+      </event>
+
+      <event num='13'>
+         <comment>Sit</comment>
+         <message type='single' where='com' who='individual' lo='general.jewells.7'/>
+         <changeplayer sta='+1'/>
+      </event>
+
+      <event num='14'>
+         <comment>Pet Pirate</comment>
+         <message type='text' where='com' who='individual'>Pirate enjoys your attention so much that he gets a little worked up and tries to give you some love nibbles.</message>
+         <changeplayer sta='1'/>
+      </event>
+
+      <event num='15'>
+         <comment>Pet Ella</comment>
+         <message type='text' where='com' who='individual'>Ella begins to purr and thoroughly enjoys being stroked, she&apos;s a picture of pure contentment.</message>
+         <changeplayer sta='1'/>
+      </event>
+
+      </section>
+      <section name='keepout'>
+
+      <event num='1'>
+         <comment>Repair office - 2077</comment>
+         <message type='single' where='com' who='individual' lo='general.keepout.1'/>
+         <move what='player' who='individual' loc='2013'/>
+      </event>
+
+      <event num='2'>
+         <comment>Quarters 223 - check last - not needed now</comment>
+         <checklastloc loc='1759' pass='general.keepout.3'/>
+      </event>
+
+      <event num='3'>
+         <comment>Quarters 223 - checkforowner</comment>
+         <checkforowner owner='general.keepout.5' visitor='general.keepout.4'/>
+      </event>
+
+      <event num='4'>
+         <comment>Quarters 223 - block non owner</comment>
+         <message type='text' where='com' who='individual'>That way is private, for the planet owner only.</message>
+         <move what='player' who='individual' loc='1759'/>
+      </event>
+
+      <event num='5'>
+         <comment>Quarters 223 - move owner</comment>
+         <move what='player' who='individual' loc='223'/>
+      </event>
+
+      </section>
+      <section name='pq_keypad'>
+
+      <event num='1'>
+         <comment>private quarters keypad</comment>
+         <match id-name='pq_type' phrase='jpe1704tks' event='general.pq_keypad.2'/>
+         <nomatch id-name='pq_type' lo='general.pq_keypad.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>good code</comment>
+         <message type='text' where='com' who='individual'>There is a beep and the small green light illuminates, allowing you to proceed.</message>
+         <move what='player' who='individual' loc='223'/>
+      </event>
+
+      <event num='3'>
+         <comment>press - push</comment>
+         <message type='text' where='com' who='individual'>Randomly pressing on the keypad results only in an angry buzz, if you know the code, type it.</message>
+      </event>
+
+      </section>
+   </category>
+   <category name='moves'>
+      <section name='ports'>
+
+      <event num='1'>
+         <comment>to Jewells</comment>
+         <move what='player' who='individual' loc='3871'/>
+      </event>
+
+      <event num='2'>
+         <comment>to Lounge</comment>
+         <move what='player' who='individual' loc='1055'/>
+      </event>
+
+      <event num='3'>
+         <comment>to Exchange</comment>
+         <move what='player' who='individual' loc='1951'/>
+      </event>
+
+      <event num='4'>
+         <comment>to Hospital</comment>
+         <move what='player' who='individual' loc='2081'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='teleport'>
+      <section name='beach'>
+
+      <event num='1'>
+         <comment>to beach</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='3835'/>
+      </event>
+
+      <event num='2'>
+         <comment>from beach</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='1888'/>
+      </event>
+
+      </section>
+      <section name='desert'>
+
+      <event num='1'>
+         <comment>to desert</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='3780'/>
+      </event>
+
+      <event num='2'>
+         <comment>from desert</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='1886'/>
+      </event>
+
+      </section>
+      <section name='forest'>
+
+      <event num='1'>
+         <comment>to forest</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='260'/>
+      </event>
+
+      <event num='2'>
+         <comment>from forest</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='1822'/>
+      </event>
+
+      </section>
+      <section name='slope'>
+
+      <event num='1'>
+         <comment>to slope</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='315'/>
+      </event>
+
+      <event num='2'>
+         <comment>from slope</comment>
+         <message type='single' where='com' who='individual' lo='general.teleport.1'/>
+         <move what='player' who='individual' loc='1824'/>
+      </event>
+
+      </section>
+   </category>
+</event-list>
+

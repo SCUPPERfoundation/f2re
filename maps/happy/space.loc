@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fed2-map title='Happy Space' version='1.00' editor='standard'>
+
+   <location num='330' flags='sl'>
+      <name>Happy Interstellar Link</name>
+      <desc>  You have arrived at the Happy Interstellar Link. As you look into space, you notice that there are many moons. As you gaze at them, you realize that they are smiling at you. In fact, they all look like smiley faces!</desc>
+      <desc>  You see what appears to be a space lane to the east, defined by what appears to be a row of colorful helium balloons. A particularly large balloon indicates that this is the way to Smile.</desc>
+      <exits e='331'/>
+   </location>
+
+   <location num='331' flags='s'>
+      <name>Smile Orbit</name>
+      <desc>  You are in orbit around the planet Smile. It looks inviting, so you board the shuttle for a ride down to the surface.</desc>
+      <exits w='330'/>
+   </location>
+
+</fed2-map>

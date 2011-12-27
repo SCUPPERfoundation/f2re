@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<fed2-map title='Gervais' version='19' editor='standard' from='2271' to='Gaul.Gaul Space.2074'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>This room is set aside for the events and objects Merepoule plans to use when she promotes.</desc>
+   </location>
+
+   <location num='1885' flags='b'>
+      <name>The Ritz - Room 555</name>
+      <desc>The solid carved door shuts with a whisper behind you as you enter a spacious, elegant room decorated in deep reds and white.  All the modern conveniences are artfully hidden behind more classic designs.  A hand-knotted thick woolen rug covers a high-gloss wooden floor.  The snow-white quilting on the bed is thick, the pillows piled high.  A  red rose and a chocolate has been placed on each pillow.  A french door leads to a fully screened-in balcony where you can sit and bask in Gervais&apos; warmth, free of the ubiquitous insects on this planet.  You see a vast marbled bathroom with gold fixtures, complete with jacuzzi, bidet and vanity, plush white terry robes at the ready.  If you ever want to leave all this, go back out.</desc>
+      <exits out='2014'/>
+   </location>
+
+   <location num='1887' flags='b'>
+      <name>Dixiana Room - 23rd floor</name>
+      <desc>You are grateful as your access door slides shut, lessening the noise level.  You glance around and see a tastefully appointed room, furnished with entertainment and business docks, a refreshment bar and comfortable seating arrangements.  The vidscreen is set to a channel extolling the many biological materials produced here in Gervais, obviously geared to guests here on business.  You enter the inner chamber which contains a large low grav bed and plenty of storage room.  Your glimpse of the bathroom is reassuring as you see plush towels and toiletries all arrayed for your convenience in addition to the more traditional drying and cleansing chambers.  You go to the far side of the chamber, the hotel&apos;s outer wall,  wave your hand over the sensor to de-shade the window and look out.  One of Gervais&apos; infamous tropical storms is gathering force, and you&apos;re grateful to be indoors.  You can go OUT.</desc>
+      <exits out='1951'/>
+   </location>
+
+   <location num='1889'>
+      <name>Pennypincher Hotel Room</name>
+      <desc>OK, well here we are in the room, all brown tones, probably to hide the wear.  You keep telling yourself what a bargain it was as you take its measure.  You notice there are no windows, just a vidscreen with scenic views of Gervais.  The room is a little warm, so you look for the thermostat which seems loose and inoperative.  You check out the bathroom and discover a standard drying station, but no towels at all.  You seem to have some inconsiderate neighbors, one has the holovision cranked up and people on the other side are in a screaming match.  Well, you&apos;re here to sightsee, not sit in the room right?  You decide to go out.</desc>
+      <exits out='1952'/>
+   </location>
+
+   <location num='1947' flags='b'>
+      <name>Boudoir</name>
+      <desc>This is where Merepoule and Jfour enjoy their private moments and sometimes entertain intimate friends like Dagny and Amalfi.  A small but exquisite supply of wine awaits in a refrigerated cellar.  Two gaming computers are set up side by side.  A hexaphonic sound system regales them with everything from Mozart&apos;s Requiem to Ecstacy of Gold by Ennio Morricone.  Ahhhh...the good life.  Exit EAST or out to the LP.</desc>
+      <exits e='1948' out='2271'/>
+   </location>
+
+   <location num='1948' flags='b'>
+      <name>Merepoule&apos;s Suite</name>
+      <desc>At first sight, this suite appears sparse, but you soon realize this is intentional so as not to detract from the thick, flowering foliage and trees towering higher than the height of this room seen through the picture windows.  There are two three-dimensional representations suspended from the ceiling, one of Provence and one of Lutece.  A portrait of Jfour holding Achilles is behind the desk.  Financial data streams across one wall, but the suede peach colored chairs and divans invite you to relax.  In one corner are a pair of oil paintings and another alcove is specially designed for listening to music in a high quality acoustical environment.  One door leads to Merepoule&apos;s boudoir.  The gravlift leads down to the Ritz lobby.</desc>
+      <exits w='1947' down='2014' out='2271'/>
+   </location>
+
+   <location num='1951' flags='b'>
+      <name>Dixiana Suites</name>
+      <desc>You see an atrium which is bustling with families, business travelers and tour groups.  A vaulted ceiling with stained glass skylights casts colored shapes upon the white ceramic floor.  The ceiling is 90 meters above you, 25 stories of guest rooms encircling the atrium.  There&apos;s a pear-shaped pool in the center, a cafe off to one side, a fitness room, and a reception area where guests wait in thankfully short lines to register.  The atrium echoes with the noice of shouting groups of children in the pool and knots of people trying to make themselves heard over the din.  Four sets of glassed grav lifts take guests to their rooms.  If you&apos;re going to your room, go IN or go back DOWN.</desc>
+      <exits down='2079' in='1887'/>
+   </location>
+
+   <location num='1952' flags='b'>
+      <name>Pennypincher Hotel</name>
+      <desc>A non-descript entryway leads you to an automated reception desk.  You are efficiently processed and as you glance around, you see a small alcove which apparently serves a spartan breakfast in the mornings.  You press a button on your key card to activate the lighted pathway which leads to your room.  The hover tote for luggage is whining, but it looks like it will make it to the room.  You have to pass your key several times before the scanner before you hear the lock disengage.  Walk IN to your room or return UP to the Promenade.</desc>
+      <exits up='2079' in='1889'/>
+   </location>
+
+   <location num='2014' flags='b'>
+      <name>The Ritz</name>
+      <desc>A dignified-looking uniformed greeter welcomes you to the Ritz.  You are escorted with great warmth and ceremony to a reception lounge, handed a glass of champagne as you sit in a plush burgundy leather chair.   A charming clerk handles your registration, sees that your luggage is delivered promptly to your room and calls over the concierge who offers to make reservations, arrange for transportation, whatever Monsieur or Madame desires.  Shall we book you a table in our 3-star restaurant tonight?  Want a massage?  Don&apos;t hesitate to ask.  You feel in your pocket for some groats for a tip, wondering if 1,000 is sufficient.  You&apos;ve heard Merepoule has a permanent suite of rooms somewhere on the upper floor of this hotel for when she is on Gervais.  You can go IN to your room or go SE.</desc>
+      <exits se='2079' up='1948' in='1885'/>
+   </location>
+
+   <location num='2016' flags='b'>
+      <name>To your health!</name>
+      <desc>Large windows overlook the lush greenery of Gervais, the room&apos;s decor fresh and inviting.  This is a popular dining destination for health-minded tourists who want to taste southern-Gallic cooking without inviting heart attacks.  Specializing in vegetables does not limit a delicious menu which boasts sweet potatoes, red beans and rice and ramps, a wild leek.  Crowder peas, black-eyed peas, turnip greens and mustard greens are all prepared with skill and seasoned to perfection.  Carrot cake rounds out a satisying meal at a reasonable price.  Exit SOUTH.</desc>
+      <exits s='2080'/>
+   </location>
+
+   <location num='2017' flags='b'>
+      <name>The Stewpot</name>
+      <desc>You can&apos;t mistake the fare here as you walk in, the smell of seafood is pungent.  The specialties here are Brunswick Stew and Frogmore Stew, variations of what&apos;s known as low country boil.  This usually includes some combination of sausage, potatoes, corn, shrimp and sausage.  With a nod to its Gallic roots, Etouffee is also served, a stew made with crawfish, okra, chicken and sausage.  Terrapin stew tempts a few, and most start with a bowl of she-crab soup.  Round it out with some fresh-baked yeasty bread for sopping, and most customers go away quite satisfied.  Exit SW.</desc>
+      <exits sw='2080'/>
+   </location>
+
+   <location num='2019'>
+      <name>le Provencale</name>
+      <desc>A 3-star restaurant, the best in Gervais, you are greeted by a maitre d&apos; in formal attire who escorts you to a charming table covered in white linen, positioned beside a window overlooking lush foliage and spectacularly large flowers.  You admire the fine gold-plated utensils and stemmed crystal and suspect you are about to eat well.  Your head waiter arrives, a rotund gentleman who nevertheless manages to look quite distinguished as he recites and describes the specialties of the house.  Shall it be the bouillabaisse made from local seafood, the Pissaladiere which is an onion tart akin to pizza, or maybe the vegetarian ratatouille?  You decide to order some sparkling white wine to give you time to decide.  When you leave, take the grav lift back DOWN to the food court.</desc>
+      <exits down='2080'/>
+   </location>
+
+   <location num='2078' flags='b'>
+      <name>Magnolia Theme Park</name>
+      <desc>Popular with locals as well as with tourists, this amusement park combines fun and entertainment with a decided nod to the origins of Gervais&apos; population.  The gravity-free rides always draw the biggest crowds, and the variety of laser tag scenarios are a close second.  Plantation Adventure, Hook that Fish and Dragonfly Frenzy are some of the more notorious and electrifying attractions. Families enjoy the more leisurely zoological boat rides that take them in close proximity to Gervais&apos; fauna.  The boats are air conditioned, completely encased in a plexiglass shielding that allows viewing from safety and comfort.  Arcades of games of chance and skill are scattered among the attractions as are food vendors offering all kinds of sausages in buns, piled high with onions and peppers.  Pod tracks are SOUTH.  Huger Plaza is SE.</desc>
+      <exits se='2143' s='2142'/>
+   </location>
+
+   <location num='2079' flags='b'>
+      <name>Hotel Promenade</name>
+      <desc>An incredibly broad avenue stretches before you, completely enclosed to maintain air conditioned comfort, the transparent dome polarized to further keep things cool.  You notice a large number of colorful birds vaulting from tree to tree above the dome.  Here, moving walkways branch off to a network of lodgings ranging from luxurious to business class to budget.  These hotels are an important source of income to Merepoule&apos;s treasury as well as for the locals who staff them.  Discreet ads touting each hotel&apos;s features hover at eye level along the walkways.  Pennypincher Hotel is DOWN the walkway.  Take the UP walkway to Dixiana Suites.  You notice the elegant crowd headed NW.  Exit SOUTH to Huger Plaza.</desc>
+      <exits s='2143' nw='2014' up='1951' down='1952'/>
+   </location>
+
+   <location num='2080' flags='b'>
+      <name>Charlesville Food Court</name>
+      <desc>The people of Gervais love their food courts.  It may be because they were denied choices for so long after the Deportation Act.  Regardless, food courts offer something for every taste and tourists will find they can get a full belly for very few groats.  Feel free to browse among the eateries which are  N, NE, E, SE or you can go UP for finer dining, and DOWN to the cafeteria.  Huger Plaza is SW.</desc>
+      <exits n='2016' ne='2017' e='2081' se='2145' sw='2143' up='2019' down='2083'/>
+   </location>
+
+   <location num='2081' flags='b'>
+      <name>Cluck Cluck&apos;s</name>
+      <desc>If you like chicken, you&apos;ve come to the right place.  Mmmmm, you can smell it frying up.  Come right on in and find a table that suits you.  The piles of paper napkins on each table tells you, it may get messy.  Blackboard menus are scattered around to help you choose, the items that are sold out have a line chalked through them.  Fried chicken is the big seller, but other favorites include fried chicken gizzards, and spicy chicken cooked in lard and pepper.  Baskets of piping hot biscuits are brought to each table.  Slab on the butter!  Exit WEST.</desc>
+      <exits w='2080'/>
+   </location>
+
+   <location num='2083'>
+      <name>Saluda Cafeteria</name>
+      <desc>If &quot;All you can Eat&quot; is your priority, you&apos;ve come to the right place.  Grab a tray and take what you want from the long buffet of food.  There&apos;s pulled pork, hash, chit&apos;lins and maw, country fried steak and very, very well cooked vegetables from leafy greens to corn.  Don&apos;t forget to heap the gravy on.  The dessert buffet has banana pudding and a kaleidoscope of cubes of jello.  Go back for seconds.  Go back for thirds if you can.  You can waddle back to the food court by going UP the stairs.  You can use the exercise.</desc>
+      <exits up='2080'/>
+   </location>
+
+   <location num='2142' flags='b'>
+      <name>Pod Tracks</name>
+      <desc>Two pod tracks dominate this vast facility. The first is indoors, a pretzel-shaped oval.  It&apos;s a carefully controlled three-dimensional track that allows individuals to race a pod over, under, around and through obstacles, magnetic force fields keeping the pod from hurtling off the track.  The second track is outdoors, although air-conditioned grandstands surround the track for the comfort of spectators.  Here, daring racers compete in the sweltering heat in mock stock pod races, a tribute to the genuine stock pod races popular in Gervais.  These pods have been modified for the safety of visitors.  Refreshment stands offer megasized iced drinks and shredded meat in gooey sweet sauce.  Magnolia Theme Park is NORTH.  Huger Plaza is back EAST.</desc>
+      <exits n='2078' e='2143'/>
+   </location>
+
+   <location num='2143'>
+      <name>Huger Plaza</name>
+      <desc>This is a central nexus for tourists, with hotels, restaurants and tourist attractions branching in several directions.   It is completely open to the elements, although many shady areas are provided for those unused to the heat.  The humidity is wearing and you find yourself swatting countless opportunistic insects.  There is a heady fragrance in the air, a mixture of alien smells which remind you half of perfume and half of rot.  Tourist facilities lie E, NE, N, NW, SW and W. An inclining moving walkway leads UP to the nearest medical facility.  The walkway to the LP is SOUTH.</desc>
+      <exits n='2079' ne='2080' e='2144' s='2207' sw='2206' w='2142' nw='2078' up='2205'/>
+   </location>
+
+   <location num='2144' flags='b'>
+      <name>Myrtle Water Park</name>
+      <desc>Screams of delight fill your ears as you venture into the largest water park you can remember seeing.  Although set outdoors, the bounty of water jets that crisscross paths to all the attractions make the heat bearable.  Wave pools rumble and thrill the crowd.  Chairlifts convey visitors to high structures disguised as mammoth trees where the water slides begin and take the riders through a manicured jungle of flora.  Specialty attractions like adventure showers and corkscrew rapids guarantee more fun.  Snack stations are plentiful and feature flavored ices, warm pretzels, fried chicken and Gaul&apos;s ever present frites.  Huger Plaza is WEST.</desc>
+      <exits w='2143'/>
+   </location>
+
+   <location num='2145' flags='b'>
+      <name>True Grit</name>
+      <desc>This restaurant does a brisk business as it seats customers in rows of benched tables, servers slapping down utensils and drinks and taking orders quickly.  This is where to come if you like grits, the most popular dish being the shrimp and grits, spicy or mild.  Hoppin John with grits (black eyed peas with rice) and collards, grits casserole with sweet pepper relish and plain cheese grits are for the taking.  Fried green tomatoes are a special treat.  There&apos;s lots of beer to wash it all down.  Exit NW.</desc>
+      <exits nw='2080'/>
+   </location>
+
+   <location num='2205' flags='hi'>
+      <name>Clinique Gauloise</name>
+      <desc>You arrive in a small, but spotless medical facility that mainly services tourists in Gervais.  Signs in several languages direct you to one of three reception kiosks:  Insect Bites, Heat Exhaustion, All Other Ailments.  You make a note to invest in some powerful insect repellent while here.  Don&apos;t forget to insure if you&apos;ve just been revived.  Huger Plaza is DOWN the autoincline.</desc>
+      <exits down='2143'/>
+   </location>
+
+   <location num='2206'>
+      <name>Darkness Miniature Golf</name>
+      <desc>Screened in against insects, groups of families are tackling the holes in this course based on sights in the Darkness Cartel.  No full-sized golf courses exist yet on Gervais because no way has been found to shield players from nature&apos;s dangers.   The holes here are intricate and fun to play.  The first hole has gremlins which challenge you at intervals, who can knock your balls back down the ramp.  The hole modeled on Stick has swampy hazards you want to avoid.  One hole has humorously ugly feet blocking the clear way for the ball.  Fatcat,Wellman - all of Darkness is well represented.  For the last hole, you must aim for the center of a carniverous flower.  Make a hole in one there....and you get another free round.  But don&apos;t reach your hand in to retrieve the ball.  Exit NE.</desc>
+      <exits ne='2143'/>
+   </location>
+
+   <location num='2207'>
+      <name>Sliding Walkway between LP and Huger Plaza</name>
+      <desc>Ten broad sliding walkways in each direction connect between Huger Plaza and the LP.  Although outside, blasts of cold air directed to the walkways keep the tourists comfortable and protected from the annoying array of insects thriving in Gervais.  Hotels, restaurants and entertainment are straight ahead NORTH, and the LP is due SOUTH.</desc>
+      <exits n='2143' s='2271'/>
+   </location>
+
+   <location num='2210'>
+      <name>GallyWorld</name>
+      <desc>You have arrived at the largest store on Gervais.  Everything you can think of and more is sold here, from food to clothing, from hardware to toys.  The aisles are crowded with shoppers guiding gravcarts, the overhead lights almost blindingly bright.  It&apos;s challenging to navigate around everyone and you can&apos;t help but notice that a lot of the people here are really heavy.  Many of them are riding in gravscooters, some elderly but many not, holding children in their laps, offering them candy.  Go back SW.</desc>
+      <exits sw='2273'/>
+   </location>
+
+   <location num='2213'>
+      <name>Industrial District</name>
+      <desc>Ahead of you as far as the eye can see are manufacturing facilities, the heart of Gervais&apos; biological materials economy.  They are intricately interdependent, but you cannot proceed further, the road is barred except for authorized personnel.  You consider bribing the security guard, but decide it&apos;s not worth the trouble, and turn back SW.</desc>
+      <exits sw='2276'/>
+   </location>
+
+   <location num='2270' flags='e'>
+      <name>Exchange - Bourse de Gervais</name>
+      <desc>On a planet expressly terraformed to produce biological commodities, the exchange represents the heart of Gervais&apos; economic wellbeing.  Screens with constantly changing numbers encircle you and the tension among traders is contagious.  Merepoule keeps the exchange&apos;s profits reasonable to encourage offworld trading.  LP is EAST.</desc>
+      <exits e='2271'/>
+   </location>
+
+   <location num='2271' flags='yrb'>
+      <name>Gervais Landing Pad</name>
+      <desc>A moment after you emerge from air conditioning, the heat and humidity of Gervais assaults you.  The strategically positioned giant fans do little to diminish the impression that the heavy air you are breathing is mostly water vapor and you already feel drenched.  Icy beverages are on sale at multiple vending stations, but most visitors seem pressed to escape into any direction they believe offers climate control.  The exchange is WEST.  Accommodations and tourist attractions are NORTH, Gervais&apos; Heritage Hall is SOUTH.  Crucial Orientation discussing the planet&apos;s dangers is on the lower level.  If you want a firsthand look at how the locals live, go EAST.</desc>
+      <exits n='2207' e='2272' s='2335' w='2270' down='2528'/>
+   </location>
+
+   <location num='2272'>
+      <name>Main Street</name>
+      <desc>This is the main drag for the locals.  Most of the shopping is along this four-lane road, but don&apos;t be in a hurry because traffic tends to creep.  It&apos;s a good thing too, because no one seems to remember to use turn signals, and if the torrential downpours come, a good number of people will abandon their vehicles in the middle of the road, blocking all traffic.  Still, it&apos;s good to see the activity, confirming the prosperity developing here as more of this planet&apos;s work becomes mechanized, freeing the locals for leisure activities, their favorites being hunting and fishing.  Continue EAST or return to the LP WEST.</desc>
+      <exits e='2273' w='2271'/>
+   </location>
+
+   <location num='2273'>
+      <name>Sunrise Highway</name>
+      <desc>As one community bleeds into another, the road name changes, but the scenery remains the same.  There&apos;s one energy-filling station after another, biofuels being the energy of choice here on Gervais.  Pod parts stores abound, as do libs (not libraries, but libation stores of the alcoholic variety).  In between are scatterings of Zippy food outlets, heavy equipment outlets, flea markets and a lot of pre-schools and ordinary schools....there&apos;s a real baby boom here.</desc>
+      <desc>GallyWorld is NE, the burbs SE and the highway continues EAST.</desc>
+      <exits ne='2210' e='2274' se='2338' w='2272'/>
+   </location>
+
+   <location num='2274'>
+      <name>Columbia Highway</name>
+      <desc>More stores, more used pod lots, more megapottery stores, megabuilding supply stores, megasportsman stores, megashoestores, and unigroat stores (where nothing costs more than a groat).  Continue EAST across the tracks or return WEST.</desc>
+      <exits e='2275' w='2273'/>
+   </location>
+
+   <location num='2275'>
+      <name>Freight Tracks</name>
+      <desc>Freight is efficiently hauled over magnetic tracks across the planet, but many of these tracks still cross major highways which cause traffic tie-ups.  Look both ways and hope that if a train comes by and you have to wait, that it&apos;s not a long, slow one.  Go UP over the bridge or return W.</desc>
+      <exits w='2274' up='2276'/>
+   </location>
+
+   <location num='2276'>
+      <name>Loire Bridge</name>
+      <desc>This suspension bridge spans the Loire River, its white cables sparkle when there&apos;s sun.  Your vehicle rumbles as it crosses, the road surface intentionally roughened to prevent slippery conditions during the frequent rainfalls.  The river and tracks divide the more prosperous districts from the less prosperous districts.  You could say you&apos;re now on the wrong side of the tracks.  Industrial area is NE, neighborhoods SE, the jailhouse is UP the hill and you can return DOWN to the tracks.</desc>
+      <exits ne='2213' se='2341' up='2277' down='2275'/>
+   </location>
+
+   <location num='2277'>
+      <name>Jailhouse</name>
+      <desc>At first glance the jailhouse looks like any modern government building, sleek granite walls punctuated with large windows overlooking the greenery.  However, you notice the surrounding foliage has a menacing look.  The only access to the entry is through a closely guarded and secure underground tunnel.  The extremely dense poisonous vegetation serves as better security than bars could, and nobody would dare try to cross to freedom through it.   Most of the inmates serve out their time philosophically.  At least there&apos;s air conditioning and food and they don&apos;t have to worry about eluding creditors and finding the groats to pay for electric and water bills.  When you&apos;ve seen enough, go back DOWN the hill.</desc>
+      <exits down='2276'/>
+   </location>
+
+   <location num='2281'>
+      <name>Livestock Central</name>
+      <desc>Animals are being raised and bred here, with new hybrid breeds being developed regularly.  Merepoule believes in humane treatment of animals, even those eventually destined for slaughter.  They are given space to move, eat and rest without being squeezed against hundreds of other animals, greatly reducing the need to medicate them and indirectly, medicate those who consume them.  She strongly believes such animals are not only happier while they live, but are healthier specimens as well.  Gaul prides itself on its excellent food, which requires high quality ingredients.  Gervais&apos; farms supply a great deal of that demand.  You can go back SW which will also lead you to the LP, or visit the labs to the SOUTH.</desc>
+      <exits s='2345' sw='2344'/>
+   </location>
+
+   <location num='2334' flags='b'>
+      <name>Gallery of Tomorrow</name>
+      <desc>This gallery is octagonal, quickly changing images of children&apos;s faces, dancers, musicians and artists flicker around you.  Having successfully populated Gervais, its burgeoning economy is now beginning to show promise.  Merepoule is laying the groundwork to refine the planet&apos;s education system and raise the population&apos;s cultural literacy.  In order to encourage families to promote higher learning for their children, magnet schools are being created which offer exciting activities for the students&apos; families as well.  Merit-based opportunities are the foundation of her programs.  Heritage Hall is EAST, the other galleries are SOUTH and SE.</desc>
+      <exits e='2335' se='2399' s='2398'/>
+   </location>
+
+   <location num='2335'>
+      <name>Heritage Hall</name>
+      <desc>The multiple galleries here promise to describe Gervais&apos; abbreviated history, its creation and the background on its inhabitants who agreed to populate a newly terraformed world.  You sigh in relief as you enter this air conditioned  chamber, and touch the coolness of the green and copper speckled polished granite walls.  Here you can watch a video as Merepoule describes her vision of what eventually became Gervais and her foresight in understanding the Federation&apos;s increasing demand for biological commodities.  The LP is NORTH.  More galleries are to the EAST, SE, SOUTH, SW and WEST.</desc>
+      <exits n='2271' e='2336' se='2400' s='2399' sw='2398' w='2334'/>
+   </location>
+
+   <location num='2336'>
+      <name>Terraforming Gallery</name>
+      <desc>You enter another pleasantly cool chamber, the polished granite in a somewhat deeper color combination.  The tourbug in your ear intones:  Gervais was originally so hot and wet that although ideal for producing tens of thousands of varieties of useful biological products, it was simply not practically inhabitable by humans.  Through delicate planetary engineering at enormous expense, the planet&apos;s topography, climate and ecology were altered just enough to make it tolerable for humans.  Astrobiologists combined with experts who were able to sequester the atmospheric carbon and together with thousands of engineers, Gervais was created.  Back WEST to Heritage Hall or SOUTH or SW to adjoining galleries.</desc>
+      <exits s='2400' sw='2399' w='2335'/>
+   </location>
+
+   <location num='2338'>
+      <name>Brice Grove</name>
+      <desc>You&apos;ve reached a residential community, what the locals call a professional neighborhood.  You see neat rows of one story houses, the lawns green, the landscaping lush thanks to the bounty of Gervais&apos; rains and sun, one cul de sac connecting another and another.  Community recreational fields and similar styling add a cohesion but also a certain monotony.  Most of the houses have individual pools, the entire pool and patio areas are screened in.  The hum of heavy duty air conditioning units permeate the air.  Continue East or go back NW.</desc>
+      <exits e='2339' nw='2273'/>
+   </location>
+
+   <location num='2339'>
+      <name>Tranquil Meadows</name>
+      <desc>Yet another residential community appears before you.  This one features very modern housing geared towards communal living, a recent vogue on Gervais.  Most feature central living areas and kitchens with spokes leading to more private rooms.  A more economical way to live, but the police report they are called to domestic disturbances much more frequently in these communal neighborhoods.  Still, the architecture is appealing, much built in natural stained woods mixed with stone.  Continue E or return W.</desc>
+      <exits e='2340' w='2338'/>
+   </location>
+
+   <location num='2340'>
+      <name>Botany Village</name>
+      <desc>A mixture of denser housing makes up Botany Village including town houses, patio homes and apartments.  New families starting out, students or retired people tend to live here.  Some grocery stores, an urgent care facility, pizza parlors and even a bark park impart a truly village-like feel to the community.  Residents enjoy the mixture of different aged people, walking to shop, winding pathways and little ponds to gently hike on.  Return WEST.</desc>
+      <exits w='2339'/>
+   </location>
+
+   <location num='2341'>
+      <name>Meadow Estates</name>
+      <desc>What you see is not exactly what you think of as an estate.  These modular homes are lined up one after another, sad one-story rectangles on small plots shielded from the elements with heavy duty plastic siding and roofing.  Small attempts are made by some at landscaping, pod wheels and discarded appliances serving as planters.  Children&apos;s toys lay scattered everywhere and packs of menacing dogs roam.  Still, you notice they all have air conditioning units and vehicles parked beside them, so life is bearable.  More neighborhoods lie to the EAST and the bridge is NW.</desc>
+      <exits e='2342' nw='2276'/>
+   </location>
+
+   <location num='2342'>
+      <name>Pine Manors</name>
+      <desc>The fancier the name, the more spartan the surroundings.  Here are more rows of manufactured houses laid out with gridlike precision.  Long and narrow, many seem to be rotting.  Quite a few have uneven fences, constructed of scrap material which separates them, as if to isolate each residence from its neighbors.  Inoperable vehicles being farmed for parts are piled in the backyards, bags of trash piled on top of them.  You can hear music playing loudly coming from several directions.  Gervais&apos; blossoming prosperity has not yet reached this district, it is clear.  There are bands of young people strutting around, and you consider it wise to steer clear and leave, east or west.</desc>
+      <exits e='2343' w='2341'/>
+   </location>
+
+   <location num='2343'>
+      <name>Idlewood Plantation</name>
+      <desc>Looking at the ramshackle shacks, you chuckle at the ironic misnomer of &quot;plantation&quot;.  Unlike most of Gervais&apos; residential communities where people stay indoors in climate controlled comfort, people are sitting on porches and couches dragged outside, fanning themselves.   Some are gaunt, some are obese and most look very unhealthy, perhaps from exposure to venomous creatures.  For a planet with almost full employment, you wonder why these people live in such poverty until you catch your first whiff of what many are smoking and you begin to understand.</desc>
+      <desc>Saddened at the misery you see, you leave, E or W.</desc>
+      <exits e='2344' w='2342'/>
+   </location>
+
+   <location num='2344'>
+      <name>Pelion Farms</name>
+      <desc>You&apos;ve reached the countryside, where it&apos;s clear significant effort has been made to clear huge swaths of land, freeing areas from native vegetation in order to grow crops and raise livestock.  Gigantic machines roll over the fields, harvesting year round thanks to Gervais continual warmth and generous rainfall.  Drones spray the croplands with pesticides.  In the distance you can see processing plants skirting the farms, at the ready to handle the food fresh from harvesting.  Straight ahead you see the freight landing area where produce and meat can be flown directly OUT to the LP.  Experimental Labs are E and the Livestock area is NE.</desc>
+      <exits ne='2281' e='2345' w='2343' out='2271'/>
+   </location>
+
+   <location num='2345'>
+      <name>Experimental Labs</name>
+      <desc>From afar you see dozens of huge ultra -modern domed buildings connected by moving walkways housed in transparent tubes.  Vast greenhouses are scattered among the buildings.  This is the heart of Gervais&apos; prosperity, where innovative biological products are developed and sold to planets in systems across the Federation.  Security is tight here, both to prevent industrial espionage and contamination of the experiments inside.  If you don&apos;t have a reason to be here, you&apos;ll never make it past security.  You can go back WEST which will also lead you to the LP, or visit the livestock facilities to the NORTH.</desc>
+      <exits n='2281' w='2344'/>
+   </location>
+
+   <location num='2398'>
+      <name>Gallery of Achievement</name>
+      <desc>Triumphant music greets you here and the climate control is working overtime, seemingly to make you forget what heat awaits outdoors.  Instead of granite, the walls are floor to ceiling plexiglass, the lush greenery of Gervais surrounding this chamber.  Here are featured a series of testimonials from the resettled Gervais citizens, giving their personal, first hand stories of how the lives of them and their families have been transformed.  Images of raw material collection and processing, as well as citizens&apos; housing and recreational facilities parade before your eyes.  Return NE to Heritage Hall or go E, N or SE to adjoining galleries.</desc>
+      <exits n='2334' ne='2335' e='2399' se='2463'/>
+   </location>
+
+   <location num='2399'>
+      <name>Resettlement Gallery </name>
+      <desc>The polished granite chosen for this gallery&apos;s walls has lightened in color to a silver and slate hue.  The tourbug continues to narrate as you take in the holograms, videos and charts on display.  As the effects of the Great Economic Doom mitigated, guilt over the treatment of the victims of the Deportation Act increased until societies began expressing a willingness to fund a solution to this embarrassment.  Merepoule&apos;s terraforming project was nearly complete, and she saw an opportunity to both fulfill her need to populate Gervais coupled with a desire to offer an opportunity to these devastated families.  Continue SOUTH to Migration Gallery, return NORTH to Heritage Hall or go E, W, NE or NW to adjoining galleries.</desc>
+      <exits n='2335' ne='2336' e='2400' s='2463' w='2398' nw='2334'/>
+   </location>
+
+   <location num='2400'>
+      <name>Deportation Gallery</name>
+      <desc>Still feeling a welcome chill on your skin, you notice the granite walls are almost black here, with sparse coppery and green speckling.  The presentation material explains that what became the core population of Gervais resulted from the Deportation Act following the Great Economic Doom when planets across the Federation were thrust into sudden poverty as a result of the total interplanetary economic collapse.   The resulting popular rejection of non-productive members of society resulted in the Deportation Act in which families with generational histories of public assistance were gathered and confined in inhospitable camps.  Return NW to Heritage Hall or NORTH,  SW or WEST to adjoining galleries.</desc>
+      <exits n='2336' sw='2463' w='2399' nw='2335'/>
+   </location>
+
+   <location num='2463'>
+      <name>Migration Gallery</name>
+      <desc>You notice some soft music playing here, that you hadn&apos;t noticed in the other galleries, an upbeat melody which makes you smile.  In this gallery, now a light green-colored chamber, the various media help you learn how Merepoule&apos;s representatives selected those families who were provided transportation to Gervais in order to begin new lives.  Cognizant of the extremely high humidity and temperatures on Gervais, and wanting to insure success of the resettlement, families were chosen who had originated from similar climates.  An additional criterion was familiarity with Gallic customs, since they would now be residents of Gaul.  Return NORTH, NW or NE to adjoining galleries.</desc>
+      <exits n='2399' ne='2400' nw='2398'/>
+   </location>
+
+   <location num='2528'>
+      <name>Orientation</name>
+      <desc>A slick 10-minute presentation which continually loops is being shown on a screen wrapping 180 degrees around you.   You take a seat, a little sceptical of how useful this information will be.  It begins with a view from space of Gervais, quickly zooming in closer and closer until you&apos;re in a hospital ward, where patients in obvious pain are moaning.  &quot;Gervais----like a lovely woman, beautiful but dangerous&quot; intones the narrator.  A lot more alert now, you pay attention.  You learn that since Gervais was created with biological manufacturing in mind, it was necessary to allow numerous perilous plants and organisms to develop.  There are jiggers which cause fatal flesh rot, so shoes are not an option on Gervais.  Some of the venomous dangers here can kill instantly, from lilies and jellyfish to innocuous-looking caterpillars.  Despite the heat, it&apos;s recommended that you cover up when outside.  You grab a brochure and return UP to the LP.</desc>
+      <exits up='2271'/>
+   </location>
+
+</fed2-map>

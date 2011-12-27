@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<event-list version='8'>
+
+ <category name='objects'>
+
+  <section name='brochure'>
+
+   <event num='1'>
+    <comment>Get/read/ex brochure</comment>
+    <message type='multi' where='com' who='individual' lo='objects.brochure.1' hi='objects.brochure.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.brochure.5'/>
+   </event>
+
+  </section>
+
+  <section name='nena'>
+
+   <event num='1'>
+    <comment>buy nena9000</comment>
+    <checkstat who='individual' money='99' higher='objects.nena.3' equals='objects.nena.3' lower='objects.nena.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Can&apos;t afford the nena9000</comment>
+    <message type='single' where='com' who='individual' lo='objects.nena.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Successful purchase</comment>
+    <message type='single' where='com' who='individual' lo='objects.nena.2'/>
+    <changestat who='individual' money='-99' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='home' id='obj_nena'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='stam'>
+
+  <section name='boost'>
+
+   <event num='1'>
+    <comment>Loc 2077 - stam boost</comment>
+    <message type='single' where='com' who='individual' lo='stam.boost.1'/>
+    <changestat who='individual' stamina='999' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='drain'>
+
+   <event num='1'>
+    <comment>Stam drain version 1</comment>
+    <checkinventory map='home' id-name='nena9000' found='stop'/>
+    <message type='single' where='com' who='individual' lo='stam.drain.1'/>
+    <changestat who='individual' stamina='-5' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>Stam drain version 2</comment>
+    <checkinventory map='home' id-name='nena9000' found='stop'/>
+    <message type='single' where='com' who='individual' lo='stam.drain.2'/>
+    <changestat who='individual' stamina='-10' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>Stam drain version 3</comment>
+    <checkinventory map='home' id-name='nena9000' found='stop'/>
+    <message type='single' where='com' who='individual' lo='stam.drain.3'/>
+    <changestat who='individual' stamina='-15' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

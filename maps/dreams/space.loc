@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Dreams Space' version='8' editor='standard'>
+
+   <location num='329' flags='sl'>
+      <name>Sweet Orbit</name>
+      <desc>   The planet below you is a swirling mix of colors, cradled in a blanket of fluffy white clouds.  You can tell at one glance, this is a place where all your sweet dreams and wishes actually do come true!  You can hardly wait to Board your ship and have a look around the planet.</desc>
+   </location>
+
+</fed2-map>

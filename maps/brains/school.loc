@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<fed2-map title='School' version='2' editor='standard' from='397' to='Brains.Brains Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   It&apos;s full of rocks. And mud. That&apos;s all.</desc>
+   </location>
+
+   <location num='397' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   The landscape is bleak, nothing but bare, empty rock. It doesn&apos;t even form any interesting shapes; there&apos;s nothing at all to relieve the eye.</desc>
+      <desc>   Next to your shuttle is a small view screen for you to order any ship services you need, install new equipment, replenish your weapons or replace faulty electronics, or if you need to you can buy a completely new ship.</desc>
+      <desc>   The entrance to a cave system leads underground to the south.</desc>
+      <exits s='461' in='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='e'>
+      <name>Scholastic Exchange</name>
+      <desc>   This is where the students learn the finer arts of the futures markets and of the pricipals of buying low and selling high, lessons in exportations of surpluses and filling deficits are regularly taught here, and to ensure the best educational standards are maintained, traders and merchants as well as planet owners mingle amonst the students, either passing on tips or trying to glean a little extra information for their own benefit!! The exit is East.</desc>
+      <exits e='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Cave entrance</name>
+      <desc>   This small cave has tunnels leading off to other caves. The rocky ceiling is low so mind your head. Claustrophics are not advised to visit this planet!</desc>
+      <desc>   A small entrance to the north leads out to the landing pad. A west tunnel leads to the trading exchange, east to the medical facilities, and south to a bar. The southwest tunnel leads to the School Complex.</desc>
+      <exits n='397' e='462' s='525' sw='524' w='460' down='524' out='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='hi'>
+      <name>Teaching Hospital</name>
+      <desc>   The medical facilities here not only deal with day to day injuries, but also serve as the base for a scientific team to research medical breakthroughs, the students of course make up the vast majority of the members of this team. To keep their hand in though they will cater to your medical needs. They do have a modern automatic insurance machine so you can ensure any injuries you do sustain are not fatal.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Tunnel</name>
+      <desc>   The tunnel here is decorated with pictures of past students who have excelled at various subjects, both academic and sporting. You can further Up the tunnel or down to the School Area</desc>
+      <exits ne='461' sw='587' up='461' down='587' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='b'>
+      <name>Science and Math</name>
+      <desc>   This is the only place on this planet of learning where the students can let their hair down, on the rare occasions they are permitted to enter.</desc>
+      <desc>   You can leave the bar by going north.</desc>
+      <exits n='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='587'>
+      <name>School Entrance</name>
+      <desc>   This is the entrance to a grand school, only the highest fee paying students can attend here. The School descends into the rock, to enter simply go down, or you can head to the commercial area by going up.</desc>
+      <exits ne='524' up='524' down='651' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='651'>
+      <name>School Corridor</name>
+      <desc>   The School corridor extends to the East and the West, though access to these areas has been barred and a sign informs you that the school is presently closed for refurbishment, there is an open exit up to the school entrance or to the South.</desc>
+      <exits s='715' up='587' down='715' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='715'>
+      <name>Head Masters Office</name>
+      <desc>   The Head Masters office is a mass of book shelves containing refence books on just about every imaginable subject. At the top of the room is an old earth teak wood desk. Above the desk are a large amount of diplomas indicating the high educational standard of the school principal.</desc>
+      <exits n='651' up='651' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,1220 @@
+<?xml version="1.0"?>
+
+<event-list version='50'>
+
+ <category name='actions'>
+
+  <section name='break'>
+
+   <event num='1'>
+    <comment>cant break object - any loc</comment>
+    <message type='text' where='loc' who='individual'>You look around for something that will enable you to do that, and whilst doing so you come to the conclusion that perhaps this is not one of your better ideas.</message>
+   </event>
+
+  </section>
+
+  <section name='close'>
+
+   <event num='1'>
+    <comment>Close Locker  - loc 584 - Maintenance shed</comment>
+    <message type='text' where='com' who='individual'>You try and close the door, but it seems your efforts in opening the locker door have now rendered the door immobile, you decide against wasting your energy further on such a needless task.</message>
+   </event>
+
+  </section>
+
+  <section name='death'>
+
+   <event num='1'>
+    <comment>death by radiation poisoning locs 843 &amp; 971</comment>
+    <message type='text' where='com' who='individual'>You start to sweat profusely and feel decidedly queasy, your head starts to spin and you drop to your knees as you start to throw up you begin to lose consciousness, on reflection entering a radioactive area against the advice of the warning signs was not one of your better ideas!</message>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>death if carrying rod and not wearing suit - locs 845 &amp; 907/8</comment>
+    <message type='text' where='com' who='individual'>You start to sweat profusely and feel decidedly queasy, your head starts to spin and you drop to your knees as you start to throw up you begin to lose consciousness, removing the suit that was protecting you from the radiation emissions from the Plutonium Rod was sheer folly!</message>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>death if carrying rod and not wearing suit - locs 845 &amp; 907/8</comment>
+    <message type='text' where='com' who='individual'>You start to sweat profusely and feel decidedly queasy, your head starts to spin and you drop to your knees as you start to throw up you begin to lose consciousness, removing the suit that was protecting you from the latent radiation held within the Locking Cap has proven to be your downfall!</message>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='drop'>
+
+   <event num='1'>
+    <comment>drop key - destroys object</comment>
+    <destroyobject where='inventory' map='home' id-name='key'/>
+    <message type='text' where='com' who='individual'>You drop the Key, before it has bounced off the floor more than once, a cleaning droid appears from nowhere takes out a dustpan and brush, sweeps the key up, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='2'>
+    <comment>drop Protection suit - destroys object</comment>
+    <destroyobject where='inventory' map='home' id-name='protection suit'/>
+    <message type='text' where='loc' who='individual'>You drop the Protection suit into a crumpled heap on the floor, before you get the chance to move, a cleaning droid rushed in towing a portable shredder. It gathers the suit and feeds it into the shredder, before dashing off out of sight</message>
+   </event>
+
+   <event num='3'>
+    <comment>can&apos;t drop Protection suit - still wearing it</comment>
+    <message type='text' where='com' who='individual'>You cannot drop the suit, you are still wearing it!!</message>
+   </event>
+
+   <event num='4'>
+    <comment>Drops torch - destroys object - any loc</comment>
+    <destroyobject where='inventory' map='home' id-name='torch'/>
+    <message type='text' where='com' who='individual'>You drop the Torch, before it has bounced off the floor more than once, a cleaning droid appears from nowhere and grabs the torch, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='5'>
+    <comment>drops spanner - destroys object - any loc</comment>
+    <destroyobject where='inventory' map='home' id-name='spanner'/>
+    <message type='text' where='com' who='individual'>You drop the Spanner, and it clatters loudly on the floor, a cleaning droid wearing a protective radiation suit speeds in, picks up the spanner, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='6'>
+    <comment>Drops hammer - destroys object - any loc</comment>
+    <destroyobject where='inventory' map='home' id-name='hammer'/>
+    <message type='text' where='com' who='individual'>You drop the Hammer and it hits the floor narrowly missing your foot, a cleaning droid appears from nowhere and grabs it, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='7'>
+    <comment>Drops rod - destroys object - any loc</comment>
+    <destroyobject where='inventory' map='home' id-name='rod'/>
+    <message type='text' where='com' who='individual'>You drop the Rod and it hits the floor narrowly missing your foot, a cleaning droid apprears in full radioactive protection, grabs it, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='8'>
+    <comment>Drops cap - destroys object - any loc</comment>
+    <destroyobject where='inventory' map='home' id-name='cap'/>
+    <message type='text' where='com' who='individual'>You drop the Cap and it hits the floor narrowly missing your foot, a cleaning droid apprears in full radioactive protection, grabs it, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='9'>
+    <comment>drop redpass - destroys object</comment>
+    <destroyobject where='inventory' map='home' id-name='red door pass'/>
+    <message type='text' where='com' who='individual'>You drop the Red Door Pass, before it has bounced off the floor more than once, a cleaning droid appears from nowhere takes out a dustpan and brush, sweeps the it up, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='10'>
+    <comment>drop yellowpass - destroys object</comment>
+    <destroyobject where='inventory' map='home' id-name='yellow door pass'/>
+    <message type='text' where='com' who='individual'>You drop the Yellow Door Pass, before it has bounced off the floor more than once, a cleaning droid appears from nowhere takes out a dustpan and brush, sweeps the it up, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='11'>
+    <comment>drop blue pass - destroys object</comment>
+    <destroyobject where='inventory' map='home' id-name='blue door pass'/>
+    <message type='text' where='com' who='individual'>You drop the Blue Door Pass, before it has bounced off the floor more than once, a cleaning droid appears from nowhere takes out a dustpan and brush, sweeps the it up, and leaves as quickly as it came in.</message>
+   </event>
+
+   <event num='12'>
+    <comment>drop green pass - destroys object</comment>
+    <destroyobject where='inventory' map='home' id-name='green door pass'/>
+    <message type='text' where='com' who='individual'>You drop the Green Door Pass, before it has bounced off the floor more than once, a cleaning droid appears from nowhere takes out a dustpan and brush, sweeps the it up, and leaves as quickly as it came in.</message>
+   </event>
+
+  </section>
+
+  <section name='exit584'>
+
+   <event num='1'>
+    <comment>Door closes on leaving loc 584</comment>
+    <checklastloc loc='584' pass='actions.exit584.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Door closes on leaving loc 584</comment>
+    <message type='text' where='com' who='individual'>As you step over the threshold, the door slams shut behind you automatically locking itself.</message>
+    <checkinventory map='home' id-name='key' found='actions.exit584.3' not-found='actions.exit584.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Message have key</comment>
+    <message type='text' where='loc' who='individual'>Bet you are glad you kept hold of that key.</message>
+   </event>
+
+   <event num='4'>
+    <comment>message no key</comment>
+    <message type='text' where='com' who='individual'>Bet you wish you had kept hold of that key</message>
+   </event>
+
+  </section>
+
+  <section name='get'>
+
+   <event num='1'>
+    <comment>Get Key - loc 909 - Canteen</comment>
+    <get id-name='obj1_key'/>
+    <message type='text' where='com' who='individual'>You pick up the Key</message>
+   </event>
+
+   <event num='2'>
+    <comment>Cant get console - loc 845</comment>
+    <message type='text' where='loc' who='individual'>You approach the console and squat before it with your arms wrapped around it, you strain as you try to take the weight of it, but it just won&apos;t budge, after a while you realise the futility of this action.</message>
+   </event>
+
+   <event num='3'>
+    <comment>get protection suit - location 973</comment>
+    <get id-name='obj1_suit'/>
+    <message type='text' where='com' who='individual'>You carefully take the Protection Suit</message>
+   </event>
+
+   <event num='4'>
+    <comment>action on Get door command - loc 583</comment>
+    <message type='text' where='loc' who='individual'>I dont think getting the door is a particularly good idea, besides it is locked.</message>
+   </event>
+
+  </section>
+
+  <section name='lever'>
+
+   <event num='1'>
+    <comment>decontamination,check for worn suit  - loc 906</comment>
+    <checkvariable name='cloud' key='suit' value='worn' equals='actions.lever.2'/>
+    <message type='text' where='com' who='individual'>All of a sudden plumes of vapour errupt from hidden jets located in the walls and ceilings, the decontamination process will erradicate any stray radiation particles you may have inadvertently picked up along the way and ensure your well being. The lights start flashing and all of a sudden you are teleported out of the power plant complex.</message>
+    <move what='player' who='individual' loc='841'/>
+   </event>
+
+   <event num='2'>
+    <comment>loc 906 destroy protection suit worn</comment>
+    <destroyobject where='inventory' map='home' id-name='protection suit (worn)'/>
+    <message type='text' where='com' who='individual'>Clamps appear from the walls and ceiling as a laser beam sweeps across your body, with each sweep you notice the protection suit is being disolved from your body.</message>
+    <setvariable name='cloud' key='suit' value='notworn'/>
+   </event>
+
+  </section>
+
+  <section name='move'>
+
+   <event num='1'>
+    <comment>no lights, no entry to loc 838 - move to loc 775</comment>
+    <message type='text' where='com' who='individual'>You ponder the sensibility of heading into a dark corridor with no means of illumination, you wisely decide against doing that and decide to try and get the lights powered up instead.</message>
+    <move what='player' who='individual' loc='775'/>
+   </event>
+
+   <event num='2'>
+    <comment>no lights, no entry to loc 712 - move to loc 649</comment>
+    <message type='text' where='com' who='individual'>You ponder the sensibility of heading into a dark corridor with no means of illumination, you wisely decide against doing that and decide to try and get the lights powered up instead.</message>
+    <move what='player' who='individual' loc='712'/>
+   </event>
+
+   <event num='3'>
+    <comment>move from loc 523 to 525</comment>
+    <message type='text' where='com' who='individual'>You press your hand onto the touchpad, all of a sudden the room begins to blur. In an instant feature become clearer again and you can see that you have teleported into the accomodation area of Wisp.</message>
+    <move what='player' who='individual' loc='525'/>
+   </event>
+
+   <event num='4'>
+    <comment>move from loc 964 to 1092</comment>
+    <message type='text' where='com' who='individual'>You press your hand onto the touchpad, all of a sudden the room begins to blur. In an instant features become clearer again and you can see that you have teleported into the leisure area of Wisp.</message>
+    <move what='player' who='individual' loc='1092'/>
+   </event>
+
+   <event num='5'>
+    <comment>move from loc 525 to 523</comment>
+    <message type='text' where='com' who='individual'>You press your hand onto the touchpad, all of a sudden the room begins to blur. In an instant feature become clearer again and you can see that you have teleported into the accomodation area of Wisp.</message>
+    <move what='player' who='individual' loc='523'/>
+   </event>
+
+   <event num='6'>
+    <comment>move from loc 1092  to 964</comment>
+    <message type='text' where='com' who='individual'>You press your hand onto the touchpad, all of a sudden the room begins to blur. In an instant feature become clearer again and you can see that you have teleported into the leisure area of Wisp.</message>
+    <move what='player' who='individual' loc='964'/>
+   </event>
+
+  </section>
+
+  <section name='open'>
+
+   <event num='1'>
+    <comment>checks locker status - loc 584 - Maintenance shed</comment>
+    <checkvariable name='cloud' key='locker' value='closed' equals='actions.open.2' not-equal='changevariable.locker.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>locker already open - loc 584 - Maintenance shed</comment>
+    <message type='text' where='com' who='individual'>The locker is already open!!</message>
+   </event>
+
+  </section>
+
+  <section name='press'>
+
+   <event num='1'>
+    <comment>cmd press red button - change variable to power - loc 845</comment>
+    <setvariable name='cloud' key='reactor' value='power'/>
+    <setvariable name='cloud' key='lights' value='on'/>
+   </event>
+
+  </section>
+
+  <section name='radioactive'>
+
+   <event num='1'>
+    <comment>prevents entry to loc 906</comment>
+    <move what='player' who='individual' loc='907'/>
+    <message type='text' where='com' who='individual'>A Warning alarm sounds as a speaker announcement informs you that radioactive substances and reactor components cannot be taken into the decontamination area.</message>
+   </event>
+
+  </section>
+
+  <section name='remove'>
+
+   <event num='1'>
+    <comment>remove suit, change variable and change status in inventory</comment>
+    <checkinventory map='home' id-name='protection suit (worn)' found='changevariable.suit.2'/>
+   </event>
+
+  </section>
+
+  <section name='wear'>
+
+   <event num='1'>
+    <comment>wear suit - enables safe entry to locs 843 and 971</comment>
+    <checkinventory map='home' id-name='protection suit' found='changevariable.suit.1' not-found='message.notininv.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='changevariable'>
+
+  <section name='bomb'>
+
+   <event num='1'>
+    <comment>clear variables for testing purposes</comment>
+    <clearvariable name='cloud'/>
+    <message type='text' where='com' who='individual'>All vairables have been reset</message>
+   </event>
+
+  </section>
+
+  <section name='locker'>
+
+   <event num='1'>
+    <comment>open door and create objects and chg locker value to open - loc 584 - Maintenance shed</comment>
+    <createobject where='room' home-map='home' id='obj1_torch' dest-map='current' dest-loc='584'/>
+    <createobject where='room' home-map='home' id='obj1_hammer' dest-map='current' dest-loc='584'/>
+    <createobject where='room' home-map='home' id='obj1_spanner' dest-map='current' dest-loc='584'/>
+    <message type='text' where='loc' who='individual'>You turn the locker handle and open the door, at first it will not move as the hinges appear to have siezed, but after a little perserverance and some brute force, it finally opens with a loud screech</message>
+    <setvariable name='cloud' key='locker' value='open'/>
+    <message type='text' where='com' who='individual'>Peering into the locker you can see a torch, a hammer and a spanner</message>
+   </event>
+
+  </section>
+
+  <section name='power'>
+
+   <event num='1'>
+    <comment>Changes variable power from idle to accom - loc 845</comment>
+    <setvariable name='cloud' key='power' value='accom'/>
+    <message type='text' where='com' who='individual'>You press the blue button and dials spring into life, a hidden speaker in the console advises you that power is now routed to the Accommodation area.</message>
+   </event>
+
+   <event num='2'>
+    <comment>Changes variable power from accom to leisure - loc 845</comment>
+    <setvariable name='cloud' key='power' value='leisure'/>
+    <message type='text' where='com' who='individual'>You press the blue button and a hidden speaker in the console advises you that power is now routed to the Leisure area.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Changes variable power from leisure to all  - loc 845</comment>
+    <setvariable name='cloud' key='power' value='all'/>
+    <message type='text' where='com' who='individual'>You press the blue button and a hidden speaker in the console advises you that power is now routed to all areas of the planet.</message>
+    <delayevent delay='1' event='changevariable.power.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Changes variable power from all to idle  - loc 845</comment>
+    <setvariable name='cloud' key='power' value='idle'/>
+    <message type='text' where='com' who='individual'>An alarm sounds for a few seconds and lights flash frantically on the board, the speaker announces that the reactor is not operating at its optimum efficiency and cannot provide power planet wide. The lights stop flashing and the dials indicate that the power routing has been set at idle.</message>
+   </event>
+
+  </section>
+
+  <section name='progress'>
+
+   <event num='1'>
+    <comment>set to nomatch to enable initial settings of variables once done nomatch set</comment>
+    <checkvariable name='cloud' key='progress' value='nomatch' not-equal='changevariable.progress.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>initialises variables used in the puzzle</comment>
+    <setvariable name='cloud' key='reactor' value='off'/>
+    <setvariable name='cloud' key='lights' value='off'/>
+    <setvariable name='cloud' key='power' value='off'/>
+    <setvariable name='cloud' key='progress' value='nomatch'/>
+   </event>
+
+  </section>
+
+  <section name='reactor'>
+
+   <event num='1'>
+    <comment>changes reactor status to rod - loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='rod'/>
+    <message type='text' where='com' who='individual'>You carefully place the Plutonium Rod into the Reactor until it sits in place.</message>
+    <destroyobject where='inventory' map='home' id-name='rod'/>
+   </event>
+
+   <event num='2'>
+    <comment>changes reactor status to capthree - loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='capthree'/>
+    <message type='text' where='com' who='individual'>You carefully fit the spanner onto the locking cap and tighten it.</message>
+    <destroyobject where='inventory' map='home' id-name='cap'/>
+   </event>
+
+   <event num='3'>
+    <comment>changes reactor status to captwo - loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='captwo'/>
+    <message type='text' where='com' who='individual'>You carefully fit the spanner onto the locking cap and tighten it.</message>
+   </event>
+
+   <event num='4'>
+    <comment>changes reactor status to capone - loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='capone'/>
+    <message type='text' where='com' who='individual'>You carefully fit the spanner onto the locking cap and tighten it.</message>
+    <destroyobject where='inventory' map='home' id-name='cap'/>
+   </event>
+
+   <event num='5'>
+    <comment>changes reactor status to ready - loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='ready'/>
+    <message type='text' where='com' who='individual'>You carefully fit the spanner onto the locking cap and tighten it.</message>
+   </event>
+
+   <event num='6'>
+    <comment>changes reactor status to power and turn corridor lights on- loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='power'/>
+    <message type='text' where='com' who='individual'>You hit the button and the dials spring into life as in the reactor room the reactor starts to generate power for the first time in eons, the dials show that the reactor is operating at only 65% efficiency, time has told on this relic.</message>
+    <setvariable name='cloud' key='lights' value='on'/>
+    <setvariable name='cloud' key='power' value='idle'/>
+   </event>
+
+   <event num='8'>
+    <comment>changes reactor status to ready and turn corridor lights off- loc 971</comment>
+    <setvariable name='cloud' key='reactor' value='ready'/>
+    <message type='text' where='com' who='individual'>You hit the button and a hidden speaker in the console advises you that the reactor is powering down.</message>
+    <setvariable name='cloud' key='lights' value='off'/>
+    <setvariable name='cloud' key='power' value='off'/>
+   </event>
+
+  </section>
+
+  <section name='suit'>
+
+   <event num='1'>
+    <comment>Wear suit - change variable to worn and change suit in inv.</comment>
+    <setvariable name='cloud' key='suit' value='worn'/>
+    <message type='text' where='com' who='individual'>You step into the one piece suit and zip it up. You note it is a bit on the baggy side until you notice the drawstring labelled one size fits all. You pull the drawstring and the suit shrinks around you as if it was a second skin. You note you can now move freely as if it was not there at all, but with the reassurance that you are now protected from all forms of radiation.</message>
+    <destroyobject where='inventory' map='home' id-name='protection suit'/>
+    <createobject where='inventory' home-map='home' id='obj1_suitworn'/>
+   </event>
+
+   <event num='2'>
+    <comment>remove suit, change variable and change status in inventory</comment>
+    <setvariable name='cloud' key='suit' value='notworn'/>
+    <message type='text' where='loc' who='individual'>You pull the quick release tab and step out of the protection suit. A cleaning droids rushes by picking up the discarded suit</message>
+    <destroyobject where='inventory' map='home' id-name='protection suit (worn)'/>
+    <createobject where='inventory' home-map='home' id='protection suit'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='check'>
+
+  <section name='cap'>
+
+   <event num='1'>
+    <comment>check inv for cap and rod on entering loc 843</comment>
+    <checkinventory map='home' id-name='cap' not-found='create.cap.1'/>
+    <checkinventory map='home' id-name='rod' not-found='create.rod.1'/>
+   </event>
+
+  </section>
+
+  <section name='console'>
+
+   <event num='1'>
+    <comment>checks variable reactor - loc 845</comment>
+    <checkvariable name='cloud' key='reactor' value='power' equals='check.console.2' not-equal='message.console.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>checks variable power - loc 845</comment>
+    <checkvariable name='cloud' key='power' value='idle' equals='message.console.2'/>
+    <checkvariable name='cloud' key='power' value='accom' equals='message.console.3'/>
+    <checkvariable name='cloud' key='power' value='leisure' equals='message.console.4'/>
+   </event>
+
+  </section>
+
+  <section name='key'>
+
+   <event num='1'>
+    <comment>check inv for key on entering loc 909</comment>
+    <checkinventory map='home' id-name='key' not-found='create.key.1'/>
+   </event>
+
+  </section>
+
+  <section name='lights'>
+
+   <event num='1'>
+    <comment>checks variable lights to allow entry - loc 838</comment>
+    <checkvariable name='cloud' key='lights' value='on' not-equal='actions.move.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>check var lights to allow entry loc 649</comment>
+    <checkvariable name='cloud' key='lights' value='on' not-equal='actions.move.2'/>
+   </event>
+
+  </section>
+
+  <section name='locker'>
+
+   <event num='1'>
+    <comment>Check locker status - loc 584</comment>
+    <checkvariable name='cloud' key='locker' value='open' equals='locker.open.1' not-equal='locker.closed.1'/>
+   </event>
+
+  </section>
+
+  <section name='power'>
+
+   <event num='1'>
+    <comment>cmd press blue button checks reactor state -  - loc 845</comment>
+    <checkvariable name='cloud' key='reactor' value='power' equals='check.power.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>checks power state - changes variable accordingly - loc 845</comment>
+    <checkvariable name='cloud' key='power' value='leisure' equals='changevariable.power.3'/>
+    <checkvariable name='cloud' key='power' value='accom' equals='changevariable.power.2'/>
+    <checkvariable name='cloud' key='power' value='idle' equals='changevariable.power.1'/>
+   </event>
+
+  </section>
+
+  <section name='radioactive'>
+
+   <event num='1'>
+    <comment>no radioactive materials can be removed - loc 906</comment>
+    <checkinventory map='home' id-name='rod' found='actions.radioactive.1'/>
+    <checkinventory map='home' id-name='cap' found='actions.radioactive.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>check to see if suit is being worn locs 907 &amp; 908</comment>
+    <checkvariable name='cloud' key='suit' value='worn' not-equal='check.radioactive.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>check for cap and/or rod - if held - death - locs 907 &amp; 908</comment>
+    <checkinventory map='home' id-name='rod' found='actions.death.2'/>
+    <checkinventory map='home' id-name='cap' found='actions.death.3'/>
+   </event>
+
+  </section>
+
+  <section name='reactor'>
+
+   <event num='1'>
+    <comment>checks reactor status and displays appropriate message - loc 971</comment>
+    <checkvariable name='cloud' key='reactor' value='power' equals='message.reactor.1'/>
+    <checkvariable name='cloud' key='reactor' value='ready' equals='message.reactor.2'/>
+    <checkvariable name='cloud' key='reactor' value='capone' equals='message.reactor.3'/>
+    <checkvariable name='cloud' key='reactor' value='captwo' equals='message.reactor.4'/>
+    <checkvariable name='cloud' key='reactor' value='capthree' equals='message.reactor.5'/>
+    <checkvariable name='cloud' key='reactor' value='rod' equals='message.reactor.6'/>
+    <checkvariable name='cloud' key='reactor' value='off' equals='message.reactor.7'/>
+   </event>
+
+   <event num='2'>
+    <comment>Cmd fit rod - check for rod - check status of reactor - loc 971</comment>
+    <checkinventory map='home' id-name='rod' not-found='message.rod.1'/>
+    <checkvariable name='cloud' key='reactor' value='off' equals='changevariable.reactor.1' not-equal='message.reactor.9'/>
+   </event>
+
+   <event num='3'>
+    <comment>Cmd tighten cap - check for cap - check status of reactor - loc 971</comment>
+    <checkinventory map='home' id-name='spanner' found='check.reactor.5' not-found='message.cap.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>Cmd fit cap - check for cap - check status of reactor - loc 971</comment>
+    <checkinventory map='home' id-name='cap' not-found='message.cap.1'/>
+    <checkvariable name='cloud' key='reactor' value='rod' equals='changevariable.reactor.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Cmd tighten cap -  check status of reactor - change variable accordingly - loc 971</comment>
+    <checkvariable name='cloud' key='reactor' value='capthree' equals='changevariable.reactor.5'/>
+    <checkvariable name='cloud' key='reactor' value='captwo' equals='changevariable.reactor.2'/>
+    <checkvariable name='cloud' key='reactor' value='capone' equals='changevariable.reactor.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>check reactor variable is ready - loc 845</comment>
+    <checkvariable name='cloud' key='reactor' value='power' equals='changevariable.reactor.8'/>
+    <checkvariable name='cloud' key='reactor' value='ready' equals='changevariable.reactor.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>check reactor variable is power - loc 845</comment>
+    <checkvariable name='cloud' key='reactor' value='power' equals='changevariable.power.1' not-equal='message.reactor.10'/>
+   </event>
+
+  </section>
+
+  <section name='suit'>
+
+   <event num='1'>
+    <comment>check inv for suit on entering loc 909</comment>
+    <checkinventory map='home' id-name='protection suit' not-found='check.suitworn.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>check if suit worn on entry to locs 843 and 971</comment>
+    <checkvariable name='cloud' key='suit' value='worn' not-equal='actions.death.1'/>
+   </event>
+
+  </section>
+
+  <section name='suitworn'>
+
+   <event num='1'>
+    <comment>check inv for suitworn on entering loc 909</comment>
+    <checkvariable name='cloud' key='suit' value='worn' not-equal='create.suit.1'/>
+   </event>
+
+  </section>
+
+  <section name='touchpad'>
+
+   <event num='1'>
+    <comment>check variable power to accom to operate teleport - loc 523</comment>
+    <checkvariable name='cloud' key='power' value='accom' equals='actions.move.3' not-equal='message.touchpad.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>check variable power to leisure to operate teleport - loc 523</comment>
+    <checkvariable name='cloud' key='power' value='leisure' equals='actions.move.4' not-equal='message.touchpad.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='create'>
+
+  <section name='cap'>
+
+   <event num='1'>
+    <comment>create cap on entry to canteen loc 843</comment>
+    <createobject where='inventory' home-map='home' id='obj1_cap'/>
+    <message type='text' where='com' who='individual'>You see the locking cap and pick it up.</message>
+   </event>
+
+  </section>
+
+  <section name='key'>
+
+   <event num='1'>
+    <comment>create key on entry to canteen loc 909</comment>
+    <createobject where='inventory' home-map='home' id='obj1_key'/>
+    <message type='text' where='com' who='individual' id-name='obj1_key'>You see a key and quickly pick it up.</message>
+   </event>
+
+  </section>
+
+  <section name='rod'>
+
+   <event num='1'>
+    <comment>create rod on entry to canteen loc 843</comment>
+    <createobject where='inventory' home-map='home' id='obj1_rod'/>
+    <message type='text' where='com' who='individual'>You see the rod and take it before anyone else can grab it.</message>
+   </event>
+
+  </section>
+
+  <section name='suit'>
+
+   <event num='1'>
+    <comment>create suit on entry to canteen loc 973</comment>
+    <createobject where='inventory' home-map='home' id='obj1_suit'/>
+    <message type='text' where='com' who='individual'>You can see a Radiation Protection suit, you grab it quickly while no one is looking.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='curator'>
+
+  <section name='bookcase'>
+
+   <event num='1'>
+    <comment>Creates Diary upon search command loc 1222</comment>
+    <createobject where='inventory' home-map='home' id='obj1_diary'/>
+    <setvariable name='cloud' key='diary' value='found' temporary='true'/>
+   </event>
+
+  </section>
+
+  <section name='diary'>
+
+   <event num='1'>
+    <comment>displays diary entry based upon variable setting (cloud.diary)</comment>
+    <checkvariable name='cloud' key='diary' value='r5' equals='curator.diarymessage.1'/>
+    <checkvariable name='cloud' key='diary' value='r4' equals='curator.diarymessage.2'/>
+    <checkvariable name='cloud' key='diary' value='r3' equals='curator.diarymessage.3'/>
+    <checkvariable name='cloud' key='diary' value='r2' equals='curator.diarymessage.4'/>
+    <checkvariable name='cloud' key='diary' value='r1' equals='curator.diarymessage.5'/>
+    <checkvariable name='cloud' key='diary' value='found' equals='curator.diarymessage.6' not-equal='curator.diarymessage.7'/>
+   </event>
+
+  </section>
+
+  <section name='diarymessage'>
+
+   <event num='1'>
+    <comment>Diary entries based upon variable setting -Variable = r5</comment>
+    <message type='text' where='com' who='individual'>The entry reads, &apos;Today a light from the darkness, I have heard word that a famiy who go by the name Flump, are behind the theft of the sacred idol, their whereabouts are not known to me, but it is my intention to make investigation once I get to Cumulus. The last of the shipments is packaged and ready to go, I now head to my quarters to pack my personal belongings before clearing the office</message>
+   </event>
+
+   <event num='2'>
+    <comment>Diary entries based upon variable setting -Variable = r4</comment>
+    <message type='text' where='com' who='individual'>The entry reads, &apos;My worst fears have been realised, the sacred idol has been stolen, the most valuable and revered of all our exhibits, my warnings were of no avail and whilst I have a clear conscience, I cannot help but feel guilty as the security of all the exhibits was my responsibility. As a secirity precaution, I have changed my door entry combination to 277465.&apos;</message>
+    <setvariable name='cloud' key='diary' value='r5' temporary='true'/>
+   </event>
+
+   <event num='3'>
+    <comment>Diary entries based upon variable setting -Variable = r3</comment>
+    <message type='text' where='com' who='individual'>The entry reads, &apos;It seems that my concerns are valid, the authorities today apprehended a cargo ship that had been loaded with exhibits from the museum that had gone astray. We have been fortunate this time, but the catalgue is too large to account for every item at this time with so many of them in transit, we can&apos;t be sure that this was the only incident at this time&apos;</message>
+    <setvariable name='cloud' key='diary' value='r4' temporary='true'/>
+   </event>
+
+   <event num='4'>
+    <comment>Diary entries based upon variable setting -Variable = r2</comment>
+    <message type='text' where='com' who='individual'>The entry reads, &apos;I have had to employ many temporary workers to complete the task, and while things seem to be going well, I have suspiscions about the integrity of some of these workers, due to the short notice of the move and the lack of people to fulfill various tasks across the planet, I have had to employ many who normally I would have naturally overlooked.&apos;</message>
+    <setvariable name='cloud' key='diary' value='r3' temporary='true'/>
+   </event>
+
+   <event num='5'>
+    <comment>Diary entries based upon variable setting -Variable = r1</comment>
+    <message type='text' where='com' who='individual'>The entry reads, &apos;Work is going well, we have transported many of the exhibits to Cumulus, in fact we are ahead of schedule, for the time being they are going into storage, but I have been told that once this task is complete, I am to oversee the building of a new museum on Cumulus. I can&apos;t wait!!&apos;</message>
+    <setvariable name='cloud' key='diary' value='r2' temporary='true'/>
+   </event>
+
+   <event num='6'>
+    <comment>Diary entries based upon variable setting -Variable = found</comment>
+    <message type='text' where='com' who='individual'>The entry reads, &apos;I have created these entries to cover my final few days here on Wisp. We are evacuating our homeworld as it has become unstable and dangerous, so we head for Cumulus our new home. I have been tasked with transferring all the exhibits from the museum here and shipping them to Cumulus, this diary will record my progress in this task&apos;</message>
+    <setvariable name='cloud' key='diary' value='r1' temporary='true'/>
+   </event>
+
+   <event num='7'>
+    <comment>Diary entries based upon variable setting</comment>
+    <message type='text' where='com' who='individual'>Errrr, what Diary would that be?</message>
+   </event>
+
+  </section>
+
+  <section name='letter'>
+
+   <event num='1'>
+    <comment>reads the content of the letter if held</comment>
+    <checkinventory map='home' id-name='obj1_letter' found='message.letter.1' not-found='message.letter.2'/>
+   </event>
+
+  </section>
+
+  <section name='search'>
+
+   <event num='1'>
+    <comment>Creates letter upon search command loc 1222</comment>
+    <createobject where='inventory' home-map='home' id='obj1_letter'/>
+    <setvariable name='cloud' key='letter' value='found' temporary='true'/>
+    <message type='text' where='com' who='individual'>You tentatively search the body and discover a letter the curator had written before his untimely death.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='dino'>
+
+  <section name='chat'>
+
+   <event num='1'>
+    <comment>Talk to Dino</comment>
+    <match phrase='hello' id-name='mob1_dino' lo='dino.chat.1'/>
+    <match phrase='who' id-name='mob1_dino' lo='dino.chat.2'/>
+    <match phrase='dino' id-name='mob1_dino' lo='dino.chat.2'/>
+    <match phrase='where' id-name='mob1_dino' lo='dino.chat.3'/>
+    <match phrase='bar' id-name='mob1_dino' lo='dino.chat.3'/>
+    <match phrase='wisp' id-name='mob1_dino' lo='dino.chat.4'/>
+    <match phrase='cumulus' id-name='mob1_dino' lo='dino.chat.5'/>
+    <match phrase='cloudbase' id-name='mob1_dino' lo='dino.chat.6'/>
+    <match phrase='nimbus' id-name='mob1_dino' lo='dino.chat.7'/>
+    <match phrase='cloudarian' id-name='mob1_dino' lo='dino.chat.9'/>
+    <match phrase='cloud' id-name='mob1_dino' lo='dino.chat.8'/>
+    <match phrase='museum' id-name='mob1_dino' lo='dino.chat.10'/>
+    <match phrase='curator' id-name='mob1_dino' lo='dino.chat.11'/>
+    <match phrase='reactor' id-name='mob1_dino' lo='dino.chat.12'/>
+    <match phrase='challenge' id-name='mob1_dino' lo='dino.chat.13'/>
+    <match phrase='puzzle' id-name='mob1_dino' lo='dino.chat.13'/>
+    <match phrase='quest' id-name='mob1_dino' lo='dino.chat.13'/>
+    <match phrase='mission' id-name='mob1_dino' lo='dino.chat.13'/>
+    <match phrase='task' id-name='mob1_dino' lo='dino.chat.13'/>
+    <match phrase='red door pass' id-name='mob1_dino' lo='dino.chat.14'/>
+    <match phrase='blue door pass' id-name='mob1_dino' event='dino.create.1'/>
+    <match phrase='yellow door pass' id-name='mob1_dino' event='dino.create.2'/>
+    <match phrase='green door pass' id-name='mob1_dino' event='dino.create.3'/>
+    <match phrase='door pass' id-name='mob1_dino' lo='dino.chat.18'/>
+    <match phrase='food' id-name='mob1_dino' lo='dino.chat.19'/>
+    <match phrase='drink' id-name='mob1_dino' lo='dino.chat.20'/>
+    <nomatch id-name='mob1_dino' lo='dino.chat.21'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='examine'>
+
+  <section name='sign'>
+
+   <event num='1'>
+    <comment>Sign detail upon command examine - loc 647 - customs area</comment>
+    <message type='single' where='com' who='individual' lo='read.sign.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='locker'>
+
+  <section name='closed'>
+
+   <event num='1'>
+    <comment>message if locker closed - loc 584</comment>
+    <message type='single' where='com' who='individual' lo='locker.closed.1'/>
+   </event>
+
+  </section>
+
+  <section name='open'>
+
+   <event num='1'>
+    <comment>message if locker open loc 584</comment>
+    <message type='single' where='com' who='individual' lo='locker.open.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='message'>
+
+  <section name='cap'>
+
+   <event num='1'>
+    <comment>no cap in Inv</comment>
+    <message type='text' where='com' who='individual'>You don&apos;t have the Locking Cap to fit it to anything!.</message>
+   </event>
+
+   <event num='2'>
+    <comment>cant fit cap to reactor</comment>
+    <message type='text' where='com' who='individual'>I am sorry, but that is not possible at the moment.</message>
+   </event>
+
+   <event num='3'>
+    <comment>no spanner to tighten locking cap on reactor</comment>
+    <message type='text' where='com' who='individual'>You need a spanner to tighten that, and you do&apos;t have one!</message>
+   </event>
+
+  </section>
+
+  <section name='console'>
+
+   <event num='1'>
+    <comment>reactor  not powered up - loc 845</comment>
+    <message type='text' where='com' who='individual'>The dials on the console are all at zero, the reactor is clearly not in operation at this time.</message>
+   </event>
+
+   <event num='2'>
+    <comment>reactor powered up route idle- loc 845</comment>
+    <message type='text' where='com' who='individual'>The dials on the console indicate the reactor is running, albeit at a reduced capacity and that power is not yet routed to any area.</message>
+   </event>
+
+   <event num='3'>
+    <comment>reactor powered up route accom - loc 845</comment>
+    <message type='text' where='com' who='individual'>The dials on the console indicate the reactor is running, albeit at a reduced capacity and that power is routed to the Accommodation area.</message>
+   </event>
+
+   <event num='4'>
+    <comment>reactor powered up route leisure - loc 845</comment>
+    <message type='text' where='com' who='individual'>The dials on the console indicate the reactor is running, albeit at a reduced capacity and that power is routed to the Leisure area.</message>
+   </event>
+
+  </section>
+
+  <section name='notiniv'>
+
+   <event num='1'>
+    <comment>Not in inventory message</comment>
+    <message type='text' where='com' who='individual'>You don&apos;t have that</message>
+   </event>
+
+  </section>
+
+  <section name='reactor'>
+
+   <event num='1'>
+    <comment>reactor message loc 971 variable =  power</comment>
+    <message type='text' where='com' who='individual'>The reactor is humming quiety and producing power for the planet.</message>
+   </event>
+
+   <event num='2'>
+    <comment>reactor message loc 971 variable =  ready</comment>
+    <message type='text' where='com' who='individual'>Checking out the reactor you can see the Plutonium Rod has been fitted and the Locking Cap properly tightened, looks like she is ready to fire up and start generating power.</message>
+   </event>
+
+   <event num='3'>
+    <comment>reactor message loc 971 variable =  cap1</comment>
+    <message type='text' where='com' who='individual'>Checking out the reactor you can see the Plutonium Rod has been fitted and the Locking Cap fitted with a single thread still visible.</message>
+   </event>
+
+   <event num='4'>
+    <comment>reactor message loc 971 variable =  cap2</comment>
+    <message type='text' where='com' who='individual'>Checking out the reactor you can see the Plutonium Rod has been fitted and the Locking Cap fitted with two threads still visible.</message>
+   </event>
+
+   <event num='5'>
+    <comment>reactor message loc 971 variable =  cap3</comment>
+    <message type='text' where='com' who='individual'>Checking out the reactor you can see the Plutonium Rod has been fitted and the Locking Cap fitted with three threads still visible.</message>
+   </event>
+
+   <event num='6'>
+    <comment>reactor message loc 971 variable =  rod</comment>
+    <message type='text' where='com' who='individual'>Checking out the reactor you can see the Plutonium Rod has been fitted.</message>
+   </event>
+
+   <event num='7'>
+    <comment>reactor message loc 971 variable =</comment>
+    <message type='text' where='com' who='individual'>Checking out the reactor you can see there is an empty space where the Plutonium Rod should be fitted.</message>
+   </event>
+
+   <event num='8'>
+    <comment>Reactor not here</comment>
+    <message type='text' where='com' who='individual'>You are not in the reactor room, so there is obviously, no reactor here!</message>
+   </event>
+
+   <event num='9'>
+    <comment>reactor - not possible message</comment>
+    <message type='text' where='com' who='individual'>I am sorry, but that is not possible at the moment.</message>
+   </event>
+
+   <event num='10'>
+    <comment>reactor - not possible message</comment>
+    <message type='text' where='com' who='individual'>You press the button, but nothing seems to happen, it seems the reactor needs to be powered up before this button has any effect.</message>
+   </event>
+
+  </section>
+
+  <section name='rod'>
+
+   <event num='1'>
+    <comment>no Rod in Inv</comment>
+    <message type='text' where='com' who='individual'>You don&apos;t have the Plutonium Rod to fit it or insert it into anything.</message>
+   </event>
+
+   <event num='2'>
+    <comment>cant fit rod into reactor</comment>
+    <message type='text' where='com' who='individual'>I am sorry, but that is not possible at the moment.</message>
+   </event>
+
+  </section>
+
+  <section name='touchpad'>
+
+   <event num='1'>
+    <comment>No power message locations 523 &amp; 964</comment>
+    <message type='text' where='com' who='individual'>You press the touchpad and nothing happens, it seems that whilst there is power, none has been routed to this system at the moment.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='move'>
+
+  <section name='blue'>
+
+   <event num='1'>
+    <comment>loc1094 if blue pass held, move to 1158</comment>
+    <move what='player' who='individual' loc='1158'/>
+    <message type='text' where='com' who='individual'>You swipe the blue pass through the reader, there is a brief hum as the door opens and you carefully step through it.</message>
+   </event>
+
+  </section>
+
+  <section name='door'>
+
+   <event num='1'>
+    <comment>checks variable cloud.diary is at r5</comment>
+    <checkvariable name='cloud' key='diary' value='r5' equals='move.door.2' not-equal='move.door.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>loc 527 moves to loc 591</comment>
+    <move what='player' who='individual' loc='591'/>
+    <message type='text' where='com' who='individual'>You carefully type in the numbers onto the keypad, the door swishes open and you step through.</message>
+   </event>
+
+   <event num='3'>
+    <comment>no entry to 591</comment>
+    <message type='text' where='com' who='individual'>I am sorry, the keypad does not seem to be working at this time</message>
+   </event>
+
+  </section>
+
+  <section name='green'>
+
+   <event num='1'>
+    <comment>loc1094 if green pass held, move to 1157</comment>
+    <move what='player' who='individual' loc='1157'/>
+    <message type='text' where='com' who='individual'>You swipe the green pass through the reader and the door swished open, you tentaively step through the open door.</message>
+   </event>
+
+  </section>
+
+  <section name='red'>
+
+   <event num='1'>
+    <comment>loc1094 if red pass held, move to 1031</comment>
+    <move what='player' who='individual' loc='1031'/>
+    <message type='text' where='com' who='individual'>You fish out the red door pass, look around you then swipe the card through the card reader. The door slides open and you causally step through.</message>
+   </event>
+
+  </section>
+
+  <section name='yellow'>
+
+   <event num='1'>
+    <comment>loc1094 if yellow pass held, move to 1030</comment>
+    <move what='player' who='individual' loc='1030'/>
+    <message type='text' where='com' who='individual'>You quickly swipe the yellow door pass through the card reader and hop through the open door.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='reader'>
+
+  <section name='blue'>
+
+   <event num='1'>
+    <comment>loc1094 check blue door pass, move to 1222 if held</comment>
+    <checkinventory map='home' id-name='obj1_bluepass' found='move.blue.1' not-found='message.blue.1'/>
+   </event>
+
+  </section>
+
+  <section name='green'>
+
+   <event num='1'>
+    <comment>loc1094 check green door pass, move to 1157 if held</comment>
+    <checkinventory map='home' id-name='obj1_greenpass' found='move.green.1' not-found='message.green.1'/>
+   </event>
+
+  </section>
+
+  <section name='red'>
+
+   <event num='1'>
+    <comment>loc1094 check red door pass, move to 967 if held</comment>
+    <checkinventory map='home' id-name='obj1_redpass' found='move.red.1' not-found='message.red.1'/>
+   </event>
+
+  </section>
+
+  <section name='yellow'>
+
+   <event num='1'>
+    <comment>loc1094 check yellow door pass, move to 1030 if held</comment>
+    <checkinventory map='home' id-name='obj1_yellowpass' found='move.yellow.1' not-found='message.yellow.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='test'>
+
+  <section name='move'>
+
+   <event num='1'>
+    <comment>test teleporter to accom area</comment>
+    <message type='text' where='com' who='individual'>Moving to accom area</message>
+    <move what='player' who='individual' loc='1092'/>
+   </event>
+
+   <event num='2'>
+    <comment>test teleporter to leisure area</comment>
+    <message type='text' where='com' who='individual'>Moving to leisure area</message>
+    <move what='player' who='individual' loc='525'/>
+   </event>
+
+  </section>
+
+  <section name='variables'>
+
+   <event num='1'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.power set to accom</message>
+   </event>
+
+   <event num='2'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.power set to leisure</message>
+   </event>
+
+   <event num='3'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.power set to all</message>
+   </event>
+
+   <event num='4'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.power set to idle</message>
+   </event>
+
+   <event num='5'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.power set to off</message>
+   </event>
+
+   <event num='6'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.lights set to on</message>
+   </event>
+
+   <event num='7'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.lights set to off</message>
+   </event>
+
+   <event num='8'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.progress set to nomatch</message>
+   </event>
+
+   <event num='9'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to rod</message>
+   </event>
+
+   <event num='10'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to capthree</message>
+   </event>
+
+   <event num='11'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to captwo</message>
+   </event>
+
+   <event num='12'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to capone</message>
+   </event>
+
+   <event num='13'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to ready</message>
+   </event>
+
+   <event num='14'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to power</message>
+   </event>
+
+   <event num='15'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.suit set to worn</message>
+   </event>
+
+   <event num='16'>
+    <comment>display variables</comment>
+    <checkvariable name='cloud' key='power' value='accom' equals='test.variables.1'/>
+    <checkvariable name='cloud' key='power' value='leisure' equals='test.variables.2'/>
+    <checkvariable name='cloud' key='power' value='all' equals='test.variables.3'/>
+    <checkvariable name='cloud' key='power' value='idle' equals='test.variables.4'/>
+    <checkvariable name='cloud' key='power' value='off' equals='test.variables.5'/>
+    <checkvariable name='cloud' key='lights' value='on' equals='test.variables.6'/>
+    <checkvariable name='cloud' key='lights' value='off' equals='test.variables.7'/>
+    <checkvariable name='cloud' key='progress' value='nomatch' equals='test.variables.8'/>
+    <checkvariable name='cloud' key='reactor' value='rod' equals='test.variables.9'/>
+    <checkvariable name='cloud' key='reactor' value='capthree' equals='test.variables.10'/>
+    <checkvariable name='cloud' key='reactor' value='captwo' equals='test.variables.11'/>
+    <checkvariable name='cloud' key='reactor' value='capone' equals='test.variables.12'/>
+    <checkvariable name='cloud' key='reactor' value='ready' equals='test.variables.13'/>
+    <checkvariable name='cloud' key='reactor' value='power' equals='test.variables.14'/>
+    <checkvariable name='cloud' key='suit' value='worn' equals='test.variables.15'/>
+    <checkvariable name='cloud' key='suit' value='notworn' equals='test.variables.17'/>
+    <checkvariable name='cloud' key='reactor' value='off' equals='test.variables.18'/>
+   </event>
+
+   <event num='17'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud.suit set to notworn</message>
+   </event>
+
+   <event num='18'>
+    <comment>display variables</comment>
+    <message type='text' where='com' who='individual'>Cloud reactor set to off</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='unlock'>
+
+  <section name='door'>
+
+   <event num='1'>
+    <comment>unlock command, check for Key - loc 583</comment>
+    <checkinventory map='home' id-name='key' found='unlock.door.2' not-found='unlock.door.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>unlock door - loc 583 - move to location 584</comment>
+    <move what='player' who='individual' loc='584'/>
+    <message type='text' where='com' who='individual'>You place the key in the lock and turn it, as the door swings open you quickly place the key back into your pocket as you carefully step into the room.</message>
+   </event>
+
+   <event num='3'>
+    <comment>unlock door  no key message - loc 583</comment>
+    <message type='text' where='com' who='individual'>You do not have anything to unlock the door with!!</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

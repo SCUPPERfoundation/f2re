@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='73'>
+
+   <object type='static' start='719' visibility='100' size='1' weight='1' flags='ip'>
+      <name>barbells</name>
+      <id>obj_barbells</id>
+      <desc>They look VERY heavy - hernia class at least!</desc>
+      <vocab cmd='get' event='objects.barbells.1'></vocab>
+      <vocab cmd='take' event='objects.barbells.1'></vocab>
+      <vocab cmd='lift' event='objects.barbells.1'></vocab>
+   </object>
+
+   <object type='static' start='530' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>obj_button1</id>
+      <desc>Press the button, and the elevator will take you down to the lower level.</desc>
+      <vocab cmd='press' event='moves.elevator.1'></vocab>
+      <vocab cmd='push' event='moves.elevator.1'></vocab>
+   </object>
+
+   <object type='static' start='600' visibility='0' size='1' weight='1' flags='i'>
+      <name>button</name>
+      <id>obj_button2</id>
+      <desc>Press the button, and the elevator will take you down to the lower level.</desc>
+      <vocab cmd='press' event='moves.elevator.2'></vocab>
+      <vocab cmd='push' event='moves.elevator.2'></vocab>
+   </object>
+
+   <object type='static' start='859' visibility='0' size='1' weight='1' flags='d'>
+      <name>about navcomp software</name>
+      <id>obj_nav1</id>
+      <desc>Can't see anything with that name - mind you given the state of the shop, that's not surprising!</desc>
+      <vocab cmd='ask' event='navcomp.about.1'></vocab>
+   </object>
+
+   <object type='static' start='859' visibility='0' size='1' weight='1' flags='d'>
+      <name>navcomp software</name>
+      <id>obj_nav2</id>
+      <desc>0100111010001011110010101010000100101010...</desc>
+      <vocab cmd='buy' event='navcomp.buy.1'></vocab>
+   </object>
+
+   <object type='static' start='859' visibility='0' size='1' weight='1'>
+      <name>customs certificate</name>
+      <id>obj_custcert</id>
+      <desc>This ornate certificate confirms that you are a bonded carrier and as such exempt from customs checks.</desc>
+      <vocab cmd='obtain' event='customscert.obtain.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>cross</name>
+      <id>obj_gift_cross</id>
+      <desc>The small Christian-style cross is of plain silver and is hung on an equally plain chain.</desc>
+      <vocab cmd='buy' event='objects.cross.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>ankh</name>
+      <id>obj_gift_ankh</id>
+      <desc>The ancient Egyptian symbol of life is made of pewter and is clipped onto a rope design of Xmetal chain.</desc>
+      <vocab cmd='buy' event='objects.ankh.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>pentagram</name>
+      <id>obj_gift_pentagram</id>
+      <desc>The five pointed star is made from lapis lazuli and hangs from a chain made from small lapis lazuli beads.</desc>
+      <vocab cmd='buy' event='objects.pentagram.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>pegasus</name>
+      <id>obj_gift_pegasus</id>
+      <desc>The polished obsidian medallion shows a pegasus rampant. This ancient symbol of arbitrary violence is believed to provide some protection against pirates. It hangs on a white gold chain.</desc>
+      <vocab cmd='buy' event='objects.pegasus.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>marillion</name>
+      <id>obj_gift_marillion</id>
+      <desc>The tigers eye has been carved to depict a marillion between a pair of cupped hands. It comes with an Xmetal chain.</desc>
+      <vocab cmd='buy' event='objects.marillion.1'></vocab>
+   </object>
+
+   <object type='static' start='722' visibility='100' size='1' weight='1' flags='d'>
+      <name>assistant</name>
+      <id>obj_assistant</id>
+      <desc>The assistant is, as you would expect, smartly dressed and alert. As you look at him he slides something almost furtively under the counter.</desc>
+      <vocab cmd='assistant' event='family-jewels.assistant.1'></vocab>
+      <vocab cmd='bribe' event='family-jewels.assistant.2'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>medallion</name>
+      <id>obj_gift_medallion</id>
+      <desc>The assistant is showing you a number of different medallions.</desc>
+      <vocab cmd='buy' event='objects.medallion.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>celtic cross</name>
+      <id>obj_gift_celtic</id>
+      <desc>The cross is of silver and both the arms of the cross and the circle feature intricately worked representations of knots. The cross is hung from a leather thong.</desc>
+      <vocab cmd='buy' event='objects.celtic.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>yin-yang symbol</name>
+      <id>obj_gift_yinyang</id>
+      <desc>The ancient Chinese symbol has been enameled onto the medallion, which is hung on a hammered gunmetal chain.</desc>
+      <vocab cmd='buy' event='objects.yinyang.1'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>star of david</name>
+      <id>obj_gift_david</id>
+      <desc>Silver filigree has been shaped into a Star of David and hung from an undecorated silver chain.</desc>
+      <vocab cmd='buy' event='objects.david.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>casino chip</name>
+      <id>obj_casinochip</id>
+      <desc>The chip is a 1 Meg chip made from green Rigellian ivory. Unfortunately, the word 'SAMPLE' inscribed in it makes it worthless in monetary terms.</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='static' start='390' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>The food on sale in the cafe is cannoli and coffee.</desc>
+      <vocab cmd='buy' event='food.cafe.1'></vocab>
+   </object>
+
+   <object type='static' start='847' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>The house dish is spaghetti and meatballs, made to the traditional recipe that has been passed down from mother to daughter, currently held by Mario's wife.</desc>
+      <vocab cmd='buy' event='food.mario.1'></vocab>
+   </object>
+
+   <object type='static' start='854' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_3food</id>
+      <desc>Today's meal is lasagna with garlic bread.</desc>
+      <vocab cmd='buy' event='food.canteen.1'></vocab>
+   </object>
+
+   <object type='static' start='908' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_4food</id>
+      <desc>The only food on offer here is popcorn, sold in family-sized bags.</desc>
+      <vocab cmd='buy' event='food.alhambra.1'></vocab>
+   </object>
+
+   <object type='static' start='973' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_5food</id>
+      <desc>Food is available in the casino, in the form of high-energy pretzels, but it's of only minimal importance to the serious gamblers who don't want their play to be interrupted.</desc>
+      <vocab cmd='buy' event='food.casino.1'></vocab>
+   </object>
+
+   <object type='static' start='972' visibility='0' size='1' weight='1'>
+      <name>pack of cards</name>
+      <id>obj_packcards</id>
+      <desc>Some of the packs are new, the cards sealed in cellophane, ready to be used on the tables, and some are unsealed used packs that have been used and are ready to be discarded.</desc>
+      <vocab cmd='get' event='objects.cards.1'></vocab>
+      <vocab cmd='take' event='objects.cards.1'></vocab>
+   </object>
+
+   <object type='static' start='972' visibility='0' size='1' weight='1'>
+      <name>cards</name>
+      <id>obj_1packcards</id>
+      <desc>Some of the packs are new, the cards sealed in cellophane, ready to be used on the tables, and some are unsealed used packs that have been used and are ready to be discarded.</desc>
+      <vocab cmd='get' event='objects.cards.1'></vocab>
+      <vocab cmd='take' event='objects.cards.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>cards</name>
+      <id>obj_cards</id>
+      <desc>It's a standard pack containing 52 cards. The reverse of each card is printed with the logo of the casino on the moon.</desc>
+      <vocab cmd='drop' event='objects.cards.2'></vocab>
+      <vocab cmd='deal' event='objects.cards.3'></vocab>
+      <vocab cmd='shuffle' event='objects.cards.7'></vocab>
+      <vocab cmd='cut' event='objects.cards.11'></vocab>
+   </object>
+
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='d'>
+      <name>Fedberge egg</name>
+      <id>obj_egg</id>
+      <desc>The exquisite miniature egg is made from an iridescent nacre-like material that shines and flashes in different colors depending on how the light hits it.</desc>
+      <vocab cmd='buy' event='keyring.egg.1'></vocab>
+      <vocab cmd='ex' event='keyring.egg.8'></vocab>
+      <vocab cmd='examine' event='keyring.egg.8'></vocab>
+   </object>
+
+   <object type='dynamic' start='539' visibility='100' size='1' weight='5' flags='it'>
+      <name>sonic wrench</name>
+      <id>obj_wrench</id>
+      <desc>The wrench is an ingenious device used to grip and turn such things as nuts, without actually having to touch them. It is quite low-powered and will operate from a distance of about six inches.</desc>
+      <vocab cmd='get' event='objects.wrench.1'></vocab>
+      <vocab cmd='take' event='objects.wrench.1'></vocab>
+      <vocab cmd='drop' event='objects.wrench.2'></vocab>
+      <vocab cmd='use' event='objects.wrench.5'></vocab>
+   </object>
+
+   <object type='static' start='348' visibility='0' size='1' weight='1'>
+      <name>holo-card</name>
+      <id>obj_1holocard</id>
+      <desc>The holo-cards are a religious icon for the cult members, who carry one with them at all times.</desc>
+      <vocab cmd='get' event='objects.holocard.1'></vocab>
+      <vocab cmd='take' event='objects.holocard.1'></vocab>
+   </object>
+
+   <object type='static' start='348' visibility='0' size='1' weight='1'>
+      <name>holo-cards</name>
+      <id>obj_2holocard</id>
+      <desc>The holo-cards are a religious icon for the cult members, who carry one with them at all times.</desc>
+      <vocab cmd='get' event='objects.holocard.1'></vocab>
+      <vocab cmd='take' event='objects.holocard.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='3' weight='1' flags='is'>
+      <name>holo-card</name>
+      <id>obj_holocard</id>
+      <desc>It is a religious icon for members of the Cult of Gaelaan, displaying an image which they consider holy. To see the image, squeeze the holo-card.</desc>
+      <vocab cmd='squeeze' event='objects.holocard.4'></vocab>
+      <vocab cmd='drop' event='objects.holocard.10'></vocab>
+      <vocab cmd='recharge' event='objects.holocard.7'></vocab>
+   </object>
+
+   <object type='static' start='348' visibility='0' size='1' weight='1'>
+      <name>recharger</name>
+      <id>obj_recharger</id>
+      <desc>The recharger will power up holo-cards which have run out of juice. The unit's light is glowing green. If you have a non-working holo-card, you can recharge it here.</desc>
+   </object>
+
+   <object type='static' start='847' visibility='100' size='1' weight='1'>
+      <name>Krystal</name>
+      <id>obj_krystal</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='examine' event='objects.krystal.1'></vocab>
+      <vocab cmd='ex' event='objects.krystal.1'></vocab>
+      <vocab cmd='kiss' event='objects.krystal.2'></vocab>
+      <vocab cmd='hug' event='objects.krystal.2'></vocab>
+      <vocab cmd='grope' event='objects.krystal.2'></vocab>
+      <vocab cmd='krystal' event='objects.krystal.3'></vocab>
+   </object>
+
+   <object type='static' start='919' visibility='100' size='1' weight='1'>
+      <name>Menella</name>
+      <id>obj_menella</id>
+      <desc>Menella Bute Smedley IV is the local project planner. She has a penchant for name dropping and likes to give the impression she is at the center of things.</desc>
+      <vocab cmd='menella' event='objects.menella.1'></vocab>
+   </object>
+
+</object-list>

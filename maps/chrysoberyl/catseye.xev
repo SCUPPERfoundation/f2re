@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+
+<event-list version='37'>
+
+ <category name='changes'>
+
+  <section name='alley'>
+
+   <event num='1'>
+    <comment>Loc 645-Catfight alley Special food script</comment>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>A waitress--feline, of course--clad in a skimpy black dress with a frilly white apron approaches you with a tray covered with a lace cloth.  In the center of the tray is a crystal goblet of foamy spiked cream with an object floating in the foam.  She sets the goblet onto your table and pockets a 5-groat piece, then rushes off to serve another customer.</message>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='cruisers'>
+
+   <event num='1'>
+    <comment>Loc 846-Kitty Cruisers-Set stamina to 60 (will change this to add 5 after testing it)</comment>
+    <changestat who='individual' stamina='60' change='set' cur-max='current'/>
+    <message type='text' where='com' who='individual'>A strutting salesman in a business suit and sporting a large fake mustache rushes to you with a platter of gooey hotdogs and barbecue sandwiches and says, "Here, have a good meal while you check out the great deals we have on our special top-of-the-line Kitty Cruisers!"</message>
+   </event>
+
+  </section>
+
+  <section name='dump'>
+
+   <event num='1'>
+    <comment>Loc 1031-Toxic Dump Ground-Removes 2 stamina</comment>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>The fumes of the toxic materials are so strong you feel slightly weakened and a little wobbly.</message>
+   </event>
+
+  </section>
+
+  <section name='pub'>
+
+   <event num='1'>
+    <comment>Loc 646-Pub-Special food script</comment>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>A waitress--feline, of course--clad in a skimpy black dress with a frilly white apron approaches you with a tray covered with a lace cloth.  In the center of the tray is a large platter with a good-sized grilled tuna resting on a bed of seasoned rice.  She sets the platter onto your table and pockets a 10-groat piece, then rushes off to serve another customer.</message>
+    <changestat who='individual' stamina='4' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='death'>
+
+  <section name='temple'>
+
+   <event num='1'>
+    <comment>Loc 1154-Death Location under the temple--THIS WILL NOT STAY</comment>
+    <message type='text' where='com' who='individual'>You turn on your heel and run for the stairs, just as a sharp pain explodes in your back, and your vision starts to fade as you drop to the floor with the dagger still in your back.</message>
+    <changestat who='individual' stamina='0' change='set' cur-max='current'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='extras'>
+
+  <section name='alley'>
+
+   <event num='1'>
+    <comment>Loc 645-Catfight Alley message in room</comment>
+    <message type='text' where='com' who='room'>A loud knock is heard at the door just before a group of felines in police uniforms rush into the room waving their nightsticks into the air.  It&apos;s a raid!</message>
+   </event>
+
+  </section>
+
+  <section name='class'>
+
+   <event num='1'>
+    <comment>Loc 714-Classroom message from file</comment>
+    <message type='multi' where='com' who='individual' lo='extras.class.1' hi='extras.class.2'/>
+   </event>
+
+  </section>
+
+  <section name='pub'>
+
+   <event num='1'>
+    <comment>Loc 646-message to room except individual in pub</comment>
+    <message type='text' where='com' who='individual'>A drunk feline staggers up to you and gazes at you adoringly through bleary eyes.  Before you can speak, the feline slumps to the floor at your feet, unconscious.</message>
+    <message type='text' where='com' who='room_ex'>A drunk feline staggers up to %s and gazes adoringly through bleary eyes.  Before anyone can speak, the feline slumps to the floor, unconscious.</message>
+   </event>
+
+  </section>
+
+  <section name='shuttle'>
+
+   <event num='1'>
+    <comment>Loc 260, 261, 263. 265-message between shuttle stops</comment>
+    <message type='text' where='com' who='individual'>As the shuttle picks up speed, the wind blows through your fur--or hair--and you hang onto your seat.  At one point, the shuttle moves so fast you are pressed back into your seat.</message>
+   </event>
+
+  </section>
+
+  <section name='studio'>
+
+   <event num='1'>
+    <comment>Loc 522-Sound booth announcement heard in 585</comment>
+    <announce type='text' loc='585'>DJ Archer is broadcasting live from the sound booth on Catseye for your listening pleasure.  Be sure to make faces at him through the glass as he works.</announce>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='checkins'>
+
+   <event num='1'>
+    <comment>Loc 649-Vet Clinic-msg if try to leave without insurance</comment>
+    <checkflag who='individual' flag ='insured'  unset='moves.checkins.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Loc 649-Vet Clinic-msg if try to leave without insurance</comment>
+    <message type='text' where='com' who='individual'>A nurse runs up behind you waving your file and shouting, "Wait!  You can&apos;t leave yet!  Your insurance has expired!"</message>
+   </event>
+
+  </section>
+
+  <section name='checkit'>
+
+   <event num='1'>
+    <comment>Loc 714-Classroom-Keep out non-POs (move to 713)</comment>
+    <checkstat who='individual' rank='9' lower='moves.checkit.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Loc 714-Classroom-Moves non-Planet Owners to 713</comment>
+    <move what='player' who='individual' loc='713'/>
+    <message type='text' where='com' who='individual'>As you try to enter the classroom, the instructor blocks the doorway and lifts her nose as she speaks, "Only planet owners are allowed in -my- classroom!"  Muttering to yourself, you turn away from the door, and behind you the door slams shut.</message>
+   </event>
+
+  </section>
+
+  <section name='elevator'>
+
+   <event num='1'>
+    <comment>Loc 586-Used when an elevator button is pressed-Moves to Lobby 649</comment>
+    <message type='text' where='com' who='individual'>The elevator doors close and the elevator slowly begins to move, stopping when the lobby is reached.  The doors slide open and you find yourself in the office lobby.</message>
+    <move what='player' who='individual' loc='649'/>
+   </event>
+
+   <event num='2'>
+    <comment>Loc 586-Used when an elevator button is pressed-Moves to Radio Station 585</comment>
+    <message type='text' where='com' who='individual'>The elevator doors close and the elevator slowly begins to move, stopping when the lobby is reached.  The doors slide open and you find yourself in the radio station lobby.</message>
+    <move what='player' who='individual' loc='585'/>
+   </event>
+
+   <event num='3'>
+    <comment>Loc 586-Used when an elevator button is pressed-Moves to SPCA 130</comment>
+    <message type='text' where='com' who='individual'>The elevator doors close and the elevator slowly begins to move, stopping when the lobby is reached.  The doors slide open and you find yourself in the SPCA.</message>
+    <move what='player' who='individual' loc='130'/>
+   </event>
+
+   <event num='4'>
+    <comment>Loc 586-Used when an elavator button is pressed-Moves to IKR 132</comment>
+    <message type='text' where='com' who='individual'>The elevator doors close and the elevator slowly begins to move, stopping when the lobby is reached.  The doors slide open and you find yourself in the Intergalactic Kitty Rescue lobby.</message>
+    <move what='player' who='individual' loc='133'/>
+   </event>
+
+  </section>
+
+  <section name='keepout'>
+
+   <event num='1'>
+    <comment>Loc 130-Catnip Storage-Returns to Flush Toilet (582)</comment>
+    <move what='player' who='individual' loc='582'/>
+    <message type='text' where='com' who='individual'>A burly feline in a police uniform drags you kicking and screaming back though the hidden ceiling duct and dumps you unceremoniously onto the toilet seat.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='toilet'>
+
+   <event num='1'>
+    <comment>Location 582-Flushing toilet message announcement in pub-646</comment>
+    <message type='text' where='com' who='individual'>Avoiding a few paw slaps, you push aside several furry bodies and manage to press the handle to flush the toilet.  A loud purring echoes as the felines gaze mezermized into the bowl at the swirling water.  You would be wise to leave them to their entertainment....</message>
+    <announce type='text' loc='646'>A loud flushing noise can be heard through the closed bathroom door, a sound which is quickly drowned out by a loud purring noise</announce>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='transport'>
+
+  <section name='cab'>
+
+   <event num='1'>
+    <comment>Loc 648-Cab ride from Vet Clinic to Shuttle Pad (260)-called on HAIL CAB</comment>
+    <message type='text' where='com' who='individual'>Outside the Vet Clinic is a long line of cabs.  Raising your arm--or paw--you flag one down.  A cigar-chewing cabbie leans out the cab window and grins at you.</message>
+    <checkstat who='individual' money='50' higher='transport.cab.3' equals='transport.cab.3' lower='transport.cab.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Loc 648-Cab Ride-Not enough money for the cab ride</comment>
+    <message type='text' where='com' who='individual'>The cab driver frowns at you and drawls, "Sorry, Buddy, you&apos;re too poor to hire a cab.  Afraid you&apos;ll have to hoof it!" then pulls his head back into the cab and picks up his newspaper.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Loc 648-Cab ride from Vet Clinic to Shuttle Pad (260)-has enough money</comment>
+    <message type='text' where='com' who='individual'>After handing over the 50-groat fare, you climb into the cab.  The driver tosses his newspaper aside and shouts, "Hang on!" before putting the cab into gear.  He dodges pedestrians and other vehicles, sometimes coming so close you are certain a crash is imminent, before pulling up next to your shuttle and opening the door for you.  "Thanks for the business, Buddy.." he drawls as you climb out.</message>
+    <changestat who='individual' money='-50' change='add' cur-max='current'/>
+    <move what='player' who='individual' loc='260'/>
+   </event>
+
+  </section>
+
+  <section name='chute'>
+
+   <event num='1'>
+    <comment>Loc 583-Moving from Exchange to Shuttle Pad (260)</comment>
+    <message type='multi' where='com' who='individual' lo='extras.chute.1' hi='extras.chute.3'/>
+    <move what='player' who='individual' loc='260'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+
+
+

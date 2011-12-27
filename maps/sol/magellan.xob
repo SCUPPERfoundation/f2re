@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<object-list next_number='2' version='34'>
+
+   <object type='static' start='777' visibility='0' size='1' weight='1'>
+      <name>champagne</name>
+      <id>obj_champagne</id>
+      <desc>Champagne is available by the bottle - only a complete tightwad would want to buy it by the glass!</desc>
+      <vocab cmd='buy' event='food.champers.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>customs voucher</name>
+      <id>obj_customsvoucher</id>
+      <desc>The customs voucher entitles you to a ten day certificate of bonding from customs, or a ten day extension to any existing certificate. You note it expires shortly.</desc>
+   </object>
+
+   <object type='static' start='521' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>The lack of current exploration means that the Society has an enormous stockpile of standard ration packs - and that's what is on offer here.</desc>
+      <vocab cmd='buy' event='food.society.1'></vocab>
+   </object>
+
+   <object type='static' start='777' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>The food here is caviar - of course!</desc>
+      <vocab cmd='buy' event='food.caviar.1'></vocab>
+   </object>
+
+   <object type='static' start='1035' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_3food</id>
+      <desc>On sale here are assorted nibbles - known as finger-food, although we are assured there are no real fingers included - easy to eat without too much effort.</desc>
+      <vocab cmd='buy' event='food.spin.1'></vocab>
+   </object>
+
+   <object type='static' start='1355' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_4food</id>
+      <desc>The food being sold here today is a croque monsieur.</desc>
+      <vocab cmd='buy' event='food.blanc.1'></vocab>
+   </object>
+
+   <object type='static' start='1355' visibility='0' size='1' weight='1'>
+      <name>absinthe</name>
+      <id>obj_absinthe</id>
+      <desc>Absinthe is incredibly alcoholic, and even though the version sold here is guaranteed non-toxic, it'll still get you very drunk very quickly.</desc>
+      <vocab cmd='buy' event='food.absinthe.1'></vocab>
+   </object>
+
+   <object type='static' start='1417' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_5food</id>
+      <desc>The "specialite de la maison" is steak frite.</desc>
+      <vocab cmd='buy' event='food.camile.1'></vocab>
+   </object>
+
+   <object type='static' start='1419' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_6food</id>
+      <desc>If you want to eat here, you can buy a baguette spread with camembert.</desc>
+      <vocab cmd='buy' event='food.chaud.1'></vocab>
+   </object>
+
+   <object type='static' start='1545' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_7food</id>
+      <desc>A continental breakfast is available here at any time of day.</desc>
+      <vocab cmd='buy' event='food.hotel.1'></vocab>
+   </object>
+
+   <object type='static' start='1994' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_8food</id>
+      <desc>The observation bar's food is a very well constructed club sandwich.</desc>
+      <vocab cmd='buy' event='food.observe.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>cocktail stick</name>
+      <id>obj_stick</id>
+      <desc>This silver plastic cocktail stick has the words "Magellan Space Station" written along the side.</desc>
+      <vocab cmd='use' event='objects.stick.1'></vocab>
+   </object>
+
+   <object type='static' start='905' visibility='100' size='1' weight='1'>
+      <name>Blythe</name>
+      <id>obj_blythe</id>
+      <desc>Blythe is an androgynous human with such perfect, symmetrical features that its face goes beyond beauty. It is here to cater to your business needs of all kinds - just tell it what you require.</desc>
+      <vocab cmd='kiss' event='objects.blythe.1'></vocab>
+      <vocab cmd='blythe' event='objects.blythe.2'></vocab>
+   </object>
+
+   <object type='static' start='905' visibility='0' size='1' weight='1'>
+      <name>stamina</name>
+      <id>obj_stamina</id>
+      <desc>You can increase your stamina by 1 point for 1 slithy, up to a limit of 150, with BUY STAMINA. However, you can only increase a stat once each day.</desc>
+      <vocab cmd='buy' event='stats.stamina.1'></vocab>
+   </object>
+
+   <object type='static' start='521' visibility='100' size='1' weight='1'>
+      <name>Bellman</name>
+      <id>obj_bellman</id>
+      <desc>Helim von Bellman is an aristocrat explorer of the old order. Impeccably attired, he examines you through a monacle.</desc>
+      <vocab cmd='bellman' event='snark.bellman.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='s'>
+      <name>schedule</name>
+      <id>obj_schedule</id>
+      <desc>The complex schedule expands out to nine cubes of 3-D timelines. Unfortunately, because of encryption you can't figure out what it refers to, although whatever is being produced seems very bulky.</desc>
+      <vocab cmd='drop' event='snark.schedule.1'></vocab>
+      <vocab cmd='give' event='snark.schedule.1'></vocab>
+      <vocab cmd='destroy' event='snark.schedule.2'></vocab>
+      <vocab cmd='show' event='snark.schedule.3'></vocab>
+   </object>
+
+</object-list>

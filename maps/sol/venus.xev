@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+
+<event-list version='66'>
+
+ <category name='food'>
+
+  <section name='spaceman'>
+
+   <event num='1'>
+    <checkstat who='individual' money='10' higher='food.spaceman.2' equals='food.spaceman.2' lower='food.spaceman.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.spaceman.1'/>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle (loc 1104)</comment>
+    <checkvariable name='newbod' key='clue' value='ten' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does the player already have a firestone?</comment>
+    <checkinventory map='home' id-name='firestone' found='stop'/>
+    <createobject where='inventory' home-map='sol/venus' id='obj_firestone'/>
+    <message type='single' where='com' who='individual' lo='newbod.message.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Drop event for the firestone</comment>
+    <message type='text' where='com' who='individual'>Good grief! No one, but no one throws away a firestone, even if it&apos;s already imprinted. It&apos;s likely to be a long time before you get a chance to handle one again. Suppress that destructive impulse now!</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='adverts'>
+
+   <event num='1'>
+    <comment>Examine adverts - loc 518 - call random</comment>
+    <call event='objects.adverts.random[2-11]'/>
+   </event>
+
+   <event num='2'>
+    <comment>adverts - 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>adverts - 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>adverts - 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>adverts - 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>adverts - 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>adverts - 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.7'/>
+   </event>
+
+   <event num='8'>
+    <comment>adverts - 7</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.8'/>
+   </event>
+
+   <event num='9'>
+    <comment>adverts - 8</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.9'/>
+   </event>
+
+   <event num='10'>
+    <comment>adverts - 9</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.10'/>
+   </event>
+
+   <event num='11'>
+    <comment>adverts - 10</comment>
+    <message type='single' where='com' who='individual' lo='objects.adverts.1'/>
+    <message type='single' where='com' who='individual' lo='objects.adverts.11'/>
+   </event>
+
+  </section>
+
+  <section name='burbage'>
+
+   <event num='1'>
+    <comment>Burbage speech - nomatch which calls the variable check</comment>
+    <nomatch id-name='obj_burbage' event='objects.burbage.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Check variables for Burbage speech</comment>
+    <checkvariable name='burbage' key='hamlet' value='finish' equals='objects.burbage.12'/>
+    <checkvariable name='burbage' key='hamlet' value='7' equals='objects.burbage.10'/>
+    <checkvariable name='burbage' key='hamlet' value='6' equals='objects.burbage.9'/>
+    <checkvariable name='burbage' key='hamlet' value='5' equals='objects.burbage.8'/>
+    <checkvariable name='burbage' key='hamlet' value='4' equals='objects.burbage.7'/>
+    <checkvariable name='burbage' key='hamlet' value='3' equals='objects.burbage.6'/>
+    <checkvariable name='burbage' key='hamlet' value='2' equals='objects.burbage.5'/>
+    <checkvariable name='burbage' key='hamlet' value='1' equals='objects.burbage.4'/>
+    <checkvariable name='burbage' key='hamlet' value='unknown' equals='objects.burbage.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>If variable is set to unknown</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.1'/>
+    <setvariable name='burbage' key='hamlet' value='1' temporary='true'/>
+   </event>
+
+   <event num='4'>
+    <comment>If variable is set to 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.2'/>
+    <setvariable name='burbage' key='hamlet' value='2' temporary='true'/>
+   </event>
+
+   <event num='5'>
+    <comment>If variable is set to 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.3'/>
+    <setvariable name='burbage' key='hamlet' value='3' temporary='true'/>
+   </event>
+
+   <event num='6'>
+    <comment>If variable is set to 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.4'/>
+    <setvariable name='burbage' key='hamlet' value='4' temporary='true'/>
+   </event>
+
+   <event num='7'>
+    <comment>If variable is set to 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.5'/>
+    <setvariable name='burbage' key='hamlet' value='5' temporary='true'/>
+   </event>
+
+   <event num='8'>
+    <comment>If variable is set to 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.6'/>
+    <setvariable name='burbage' key='hamlet' value='6' temporary='true'/>
+   </event>
+
+   <event num='9'>
+    <comment>If variable is set to 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.7'/>
+    <setvariable name='burbage' key='hamlet' value='7' temporary='true'/>
+   </event>
+
+   <event num='10'>
+    <comment>If variable is set to 7</comment>
+    <message type='multi' where='com' who='individual' lo='objects.burbage.8' hi='objects.burbage.10'/>
+    <setvariable name='burbage' key='hamlet' value='finish' temporary='true'/>
+   </event>
+
+   <event num='11'>
+    <comment>Enter event on 581 - outside theatre - to clear variable</comment>
+    <clearvariable name='burbage'/>
+   </event>
+
+   <event num='12'>
+    <comment>Burbage has finished his speech</comment>
+    <message type='single' where='com' who='individual' lo='objects.burbage.11'/>
+   </event>
+
+  </section>
+
+  <section name='castle'>
+
+   <event num='1'>
+    <comment>Bouncy castle - random pic</comment>
+    <call event='objects.castle.random[2-6]'/>
+   </event>
+
+   <event num='2'>
+    <comment>Bounce 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.castle.1'/>
+    <message type='single' where='com' who='room_ex' lo='objects.castle.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Bounce 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.castle.3'/>
+    <message type='single' where='com' who='room_ex' lo='objects.castle.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Bounce 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.castle.5'/>
+    <message type='single' where='com' who='room_ex' lo='objects.castle.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Bounce 4</comment>
+    <message type='multi' where='com' who='individual' lo='objects.castle.7' hi='objects.castle.8'/>
+    <message type='multi' where='com' who='room_ex' lo='objects.castle.9' hi='objects.castle.10'/>
+   </event>
+
+   <event num='6'>
+    <comment>Bounce 5</comment>
+    <message type='multi' where='com' who='individual' lo='objects.castle.11' hi='objects.castle.12'/>
+    <message type='multi' where='com' who='room_ex' lo='objects.castle.13' hi='objects.castle.14'/>
+   </event>
+
+   <event num='7'>
+    <comment>Get bouncy castle</comment>
+    <message type='single' where='com' who='individual' lo='objects.castle.15'/>
+   </event>
+
+   <event num='8'>
+    <comment>Pop/puncture/deflate bouncy castle</comment>
+    <message type='single' where='com' who='individual' lo='objects.castle.16'/>
+    <message type='single' where='com' who='room_ex' lo='objects.castle.17'/>
+   </event>
+
+  </section>
+
+  <section name='donut'>
+
+   <event num='1'>
+    <comment>get donut - in loc 326 - random call</comment>
+    <call event='objects.donut.random[2-8]'/>
+   </event>
+
+   <event num='2'>
+    <comment>Donut 1</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.1'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>Donut 2</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.2'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='4'>
+    <comment>Donut 3</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.3'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='5'>
+    <comment>Donut 4</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.4'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='6'>
+    <comment>Donut 5</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.5'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='7'>
+    <comment>Donut 6 - the radioactive one!</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.6'/>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='8'>
+    <comment>Donut 7</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donut.7'/>
+    <changestat who='individual' stamina='4' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='donutbox'>
+
+   <event num='1'>
+    <comment>get box of donuts - loc 326</comment>
+    <message type='single' where='loc' who='individual' lo='objects.donutbox.1'/>
+   </event>
+
+  </section>
+
+  <section name='marsrat'>
+
+   <event num='1'>
+    <comment>Spot marsrat event on Urban Spaceman bar 453</comment>
+    <checkinventory map='sol/mars' id-name='marsrat' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='objects.marsrat.1'/>
+   </event>
+
+  </section>
+
+  <section name='pegasus'>
+
+   <event num='1'>
+    <comment>Ride Pegasus - object in loc 588</comment>
+    <message type='single' where='com' who='individual' lo='objects.pegasus.1'/>
+    <message type='single' where='com' who='room_ex' lo='objects.pegasus.2'/>
+   </event>
+
+  </section>
+
+  <section name='priest'>
+
+   <event num='1'>
+    <comment>talk to the priest</comment>
+    <match phrase='hello' id-name='obj_priest' lo='objects.priest.1'/>
+    <match phrase='worship' id-name='obj_priest' lo='objects.priest.2'/>
+    <match phrase='job' id-name='obj_priest' lo='objects.priest.2' hi='objects.priest.3'/>
+    <match phrase='work' id-name='obj_priest' lo='objects.priest.2' hi='objects.priest.3'/>
+    <match phrase='priest' id-name='obj_priest' lo='objects.priest.2' hi='objects.priest.3'/>
+    <match phrase='temple' id-name='obj_priest' lo='objects.priest.4'/>
+    <match phrase='martian' id-name='obj_priest' lo='objects.priest.4'/>
+    <match phrase='cult' id-name='obj_priest' lo='objects.priest.5' hi='objects.priest.6'/>
+    <match phrase='gaelaan' id-name='obj_priest' lo='objects.priest.7'/>
+    <match phrase='venus' id-name='obj_priest' lo='objects.priest.8'/>
+    <match phrase='bye' id-name='obj_priest' lo='objects.priest.9'/>
+    <nomatch id-name='obj_priest' lo='objects.priest.10'/>
+   </event>
+
+  </section>
+
+  <section name='spittoon'>
+
+   <event num='1'>
+    <comment>Get/take spittoon - loc 452 - Urban Spaceman bar</comment>
+    <message type='single' where='com' who='individual' lo='objects.spittoon.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Spit command on loc 453</comment>
+    <message type='single' where='com' who='individual' lo='objects.spittoon.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.spittoon.3'/>
+   </event>
+
+  </section>
+
+  <section name='zork'>
+
+   <event num='1'>
+    <comment>talk to droid zork857</comment>
+    <match phrase='profession' id-name='zork857' lo='objects.zork.6' hi='objects.zork.7'/>
+    <match phrase='insurance' id-name='zork857' lo='objects.zork.8'/>
+    <match phrase='beverage' id-name='zork857' lo='objects.zork.13'/>
+    <match phrase='coffee' id-name='zork857' lo='objects.zork.13'/>
+    <match phrase='stevedor' id-name='zork857' lo='objects.zork.16'/>
+    <match phrase='cockney' id-name='zork857' lo='objects.zork.4'/>
+    <match phrase='gaelaan' id-name='zork857' lo='objects.zork.14'/>
+    <match phrase='london' id-name='zork857' lo='objects.zork.9' hi='objects.zork.11'/>
+    <match phrase='lundun' id-name='zork857' lo='objects.zork.9' hi='objects.zork.11'/>
+    <match phrase='pearly' id-name='zork857' lo='objects.zork.5'/>
+    <match phrase='gaylin' id-name='zork857' lo='objects.zork.14'/>
+    <match phrase='venus' id-name='zork857' lo='objects.zork.12'/>
+    <match phrase='thwap' id-name='zork857' lo='objects.zork.15'/>
+    <match phrase='union' id-name='zork857' lo='objects.zork.15'/>
+    <match phrase='hello' id-name='zork857' lo='objects.zork.1'/>
+    <match phrase='work' id-name='zork857' lo='objects.zork.6' hi='objects.zork.7'/>
+    <match phrase='ming' id-name='zork857' lo='objects.zork.17'/>
+    <match phrase='bye' id-name='zork857' lo='objects.zork.2'/>
+    <match phrase='job' id-name='zork857' lo='objects.zork.6' hi='objects.zork.7'/>
+    <nomatch id-name='zork857' lo='objects.zork.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>bribe the droid to reduce the number of deaths recorded</comment>
+    <checkslithy value='1' pass='objects.zork.4' fail='objects.zork.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>no slithy</comment>
+    <message type='single' where='com' who='individual' lo='objects.zork.20'/>
+   </event>
+
+   <event num='4'>
+    <comment>has a slithy - message and freeze</comment>
+    <freeze />
+    <message type='single' where='com' who='individual' lo='objects.zork.18'/>
+    <delayevent delay='5' event='objects.zork.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>has a slithy - release and do stuff</comment>
+    <release />
+    <message type='single' where='com' who='individual' lo='objects.zork.19'/>
+    <changestat who='individual' killed='0' change='add' cur-max='current'/>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - insurance_reduction</log>
+   </event>
+
+   <event num='6'>
+    <comment>player tries to enter loc 206</comment>
+    <message type='single' where='com' who='individual' lo='objects.zork.21'/>
+    <move what='player' who='individual' loc='270'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='shuttle'>
+
+  <section name='cargon'>
+
+   <event num='1'>
+    <comment>Shuttle leaves cargon for Nisrik</comment>
+    <announce type='single' loc='778' lo='shuttle.general.1'/>
+    <announce type='single' loc='778' lo='shuttle.general.2'/>
+    <announce type='single' loc='713' lo='shuttle.general.1'/>
+    <announce type='single' loc='713' lo='shuttle.general.3'/>
+    <changelink loc='778' exit='out' action='remove' />
+    <changelink loc='713' exit='in' action='remove' />
+    <delayevent delay='10' logoff='shuttle.nisrik.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Arrival</comment>
+    <announce type='single' loc='713' lo='shuttle.cargon.1'/>
+    <announce type='single' loc='713' lo='shuttle.general.4'/>
+    <announce type='single' loc='778' lo='shuttle.cargon.2'/>
+    <changelink loc='713' exit='in' action='add' new-loc='778'/>
+    <changelink loc='778' exit='out' action='add' new-loc='713'/>
+    <delayevent delay='10' logoff='shuttle.cargon.1'/>
+   </event>
+
+  </section>
+
+  <section name='harrington'>
+
+   <event num='1'>
+    <comment>Shuttle leaves Harrington for Scargill</comment>
+    <announce type='single' loc='778' lo='shuttle.general.1'/>
+    <announce type='single' loc='778' lo='shuttle.general.2'/>
+    <announce type='single' loc='728' lo='shuttle.general.1'/>
+    <announce type='single' loc='728' lo='shuttle.general.3'/>
+    <delayevent delay='10' logoff='shuttle.scargill.2'/>
+    <changelink loc='778' exit='out' action='remove' />
+    <changelink loc='728' exit='in' action='remove' />
+   </event>
+
+   <event num='2'>
+    <comment>Arrival</comment>
+    <announce type='single' loc='728' lo='shuttle.harrington.1'/>
+    <announce type='single' loc='728' lo='shuttle.general.4'/>
+    <announce type='single' loc='778' lo='shuttle.harrington.2'/>
+    <changelink loc='728' exit='in' action='add' new-loc='778'/>
+    <changelink loc='778' exit='out' action='add' new-loc='728'/>
+    <delayevent delay='10' logoff='shuttle.harrington.1'/>
+   </event>
+
+  </section>
+
+  <section name='hobbsend'>
+
+   <event num='1'>
+    <comment>Shuttle leaves Hobbs End for Cargon</comment>
+    <announce type='single' loc='778' lo='shuttle.general.1'/>
+    <announce type='single' loc='778' lo='shuttle.general.2'/>
+    <announce type='single' loc='969' lo='shuttle.general.1'/>
+    <announce type='single' loc='969' lo='shuttle.general.3'/>
+    <changelink loc='778' exit='out' action='remove' />
+    <changelink loc='969' exit='in' action='remove' />
+    <delayevent delay='10' logoff='shuttle.cargon.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Arrival</comment>
+    <announce type='single' loc='969' lo='shuttle.hobbsend.1'/>
+    <announce type='single' loc='969' lo='shuttle.general.4'/>
+    <announce type='single' loc='778' lo='shuttle.hobbsend.2'/>
+    <changelink loc='969' exit='in' action='add' new-loc='778'/>
+    <changelink loc='778' exit='out' action='add' new-loc='969'/>
+    <delayevent delay='10' logoff='shuttle.hobbsend.1'/>
+   </event>
+
+  </section>
+
+  <section name='nisrik'>
+
+   <event num='1'>
+    <comment>Shuttle leaves Nisrik for Harrington</comment>
+    <announce type='single' loc='778' lo='shuttle.general.1'/>
+    <announce type='single' loc='778' lo='shuttle.general.2'/>
+    <announce type='single' loc='154' lo='shuttle.general.1'/>
+    <announce type='single' loc='154' lo='shuttle.general.3'/>
+    <changelink loc='778' exit='out' action='remove' />
+    <changelink loc='154' exit='in' action='remove' />
+    <delayevent delay='10' logoff='shuttle.harrington.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Arival</comment>
+    <announce type='single' loc='154' lo='shuttle.nisrik.1'/>
+    <announce type='single' loc='154' lo='shuttle.general.4'/>
+    <announce type='single' loc='778' lo='shuttle.nisrik.2'/>
+    <changelink loc='154' exit='in' action='add' new-loc='778'/>
+    <changelink loc='778' exit='out' action='add' new-loc='154'/>
+    <delayevent delay='10' logoff='shuttle.nisrik.1'/>
+   </event>
+
+  </section>
+
+  <section name='scargill'>
+
+   <event num='1'>
+    <comment>Shuttle leaves Scargill for Hobbs End</comment>
+    <announce type='single' loc='778' lo='shuttle.general.1'/>
+    <announce type='single' loc='778' lo='shuttle.general.2'/>
+    <announce type='single' loc='1170' lo='shuttle.general.1'/>
+    <announce type='single' loc='1170' lo='shuttle.general.3'/>
+    <changelink loc='778' exit='out' action='remove' />
+    <changelink loc='1170' exit='in' action='remove' />
+    <delayevent delay='10' logoff='shuttle.hobbsend.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Arrival</comment>
+    <announce type='single' loc='1170' lo='shuttle.scargill.1'/>
+    <announce type='single' loc='1170' lo='shuttle.general.4'/>
+    <announce type='single' loc='778' lo='shuttle.scargill.2'/>
+    <changelink loc='1170' exit='in' action='add' new-loc='778'/>
+    <changelink loc='778' exit='out' action='add' new-loc='1170'/>
+    <delayevent delay='10' logoff='shuttle.scargill.1'/>
+   </event>
+
+  </section>
+
+  <section name='wait'>
+
+   <event num='1'>
+    <comment>WAIT on the shuttle stations - 154, 728, 969, 1170, 713</comment>
+    <message type='single' where='com' who='individual' lo='shuttle.wait.1'/>
+    <message type='single' where='com' who='room_ex' lo='shuttle.wait.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>WAIT on the shuttle - 778</comment>
+    <message type='single' where='com' who='individual' lo='shuttle.wait.3'/>
+    <message type='single' where='com' who='room_ex' lo='shuttle.wait.4'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='start'>
+
+  <section name='start'>
+
+   <event num='1'>
+    <comment>Startup for Venus mines shuttle</comment>
+    <delayevent delay='10' logoff='shuttle.cargon.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

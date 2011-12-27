@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<fed2-map title='Halloween' version='5' editor='standard' from='136' to='Transylvania.Transylvania Space.395'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>What? How did you get in here?  This is just a dusty old storage room</desc>
+   </location>
+
+   <location num='5'>
+      <name>The Jacuzzi</name>
+      <desc>Hot water bubbles all about you as you relax in the jacuzzi.  The temperature is in sheer contrast to the night air and creates a mist that envelops you as you lean back and enjoy the sensation of slowly being cooked.</desc>
+      <desc>A small ledge frames the back edge of the jacuzzi and there is a small fridge and table to hold glasses and snacks.</desc>
+      <exits out='6' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='6'>
+      <name>The Balcony</name>
+      <desc>A soft breeze blows across the landscape, adding to the chill of the night air.  The view to the north reveals much of what once made up the inhabited regions of Halloween before the crisis forced the town to relocate.  It blends into the trees and foliage and if one didn&apos;t know what it was, it would appear to be natural formations of earth and rock.</desc>
+      <desc>The sky is awash with a sea of stars, as if someone took a handful of glitter and tossed it across a canvas of dark velvet.  A jacuzzi is bubbling on the far edge of the balcony.  Climb on IN.</desc>
+      <exits s='70' in='5' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='70' flags='b'>
+      <name>The Bedroom</name>
+      <desc>At the center of the bedroom is a rather large four-post bed with a deep, dark red cloth canopy.  Attached to rails along the bottom edge of the canopy are privacy curtains made of the same material.  The bed itself has assorted pillows resting here and there on silken sheets and a soft down comforter.  Lamps on the night tables hiss softly as they cast their light about the room revealing ancient dark wood panels and a rather large wardrobe.</desc>
+      <desc>Curtains blow gently as a breeze comes in from where they hang over an exit to the NORTH.  A door leads out to the SOUTH into the hall.</desc>
+      <exits n='6' s='134' sw='133' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='72' flags='b'>
+      <name>Club 31</name>
+      <desc>The club has been decorated for a swinging Monster Bash!  The wood paneled walls are covered in bright orange, purple and black cobwebs and seem to flicker a green hue along to the beat of the rather loud music - loud enough to wake the dead!  Party streamers hang loosely from the sconces and stretch across the club, back and forth in no observable pattern.  On the far wall, near the bar, is a banner that says, &quot;HAPPY HALLOWEEN.&quot;  The ghosts of celebrities and members past are mingling with the other party guests.  Avoid herecy and order a round of free drinks for the room then find yourself a comfortable seat in one of the booths or overstuffed, comfortable chairs.  If you feel rather festive, you can kick up your heels and dance along to the beat of the music.</desc>
+      <desc>A special exit has been provided for you in the form of an open coffin.  Climb IN to exit</desc>
+      <exits up='137' in='136' out='73' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='73'>
+      <name>The Hollow</name>
+      <desc>A ghoul stands guard at a massive door inside a cavernously hollowed out tree trunk. The number 31 glows blood red in the wood of the door.  It almost seems as if the door was cut from the side of the tree itself with hinges nailed right to the spot.  The ghoul eyes you hungrily.  What do you want to do?</desc>
+      <desc>The only obvious exit is to the EAST.</desc>
+      <exits e='74' in='72' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='74'>
+      <name>Terminal Alley</name>
+      <desc>The alley leads WEST and EAST from here.  To the WEST it opens to a Hollow with a single tree and to the EAST it turns towards the town proper.</desc>
+      <exits e='75' w='73' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='75'>
+      <name>Halloween Town Morbid Road</name>
+      <desc>The cobblestone road makes a turn into an alley to the WEST and leads down into the heart of the town to the SOUTH.  To the EAST there is a wooden sign moving with a squeak in the night breeze.  On the sign is carved a large ghoul eating from a dark bowl.  One can only wonder what it is supposed to be eating.  The road to the NORTH is blocked by a rather large sign that reads: BOTTOMLESS PIT Closed for repairs.  We apologize for the inconvenience.</desc>
+      <exits e='76' s='139' w='74' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='76' flags='b'>
+      <name>The Hungry Ghoul Restaurant</name>
+      <desc>Here is what seems to be the brightest location in this dark town.  People are devouring wriggling masses of flesh, without a care at all.  They don&apos;t even seem to notice you walking in as they are busy with their meals. An ashen woman leads you to your table and gives you a menu.</desc>
+      <desc>Exits are WEST to the street outside and SOUTH to the pub.</desc>
+      <exits s='140' w='75' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='77'>
+      <name>Alley Terminus</name>
+      <desc>The alley is dark here and there is a definite foreboding chill in the air.  The only light cast is from a dim gas light on the building section SOUTH of here.  As your eyes get accustomed to the darkness, you can make out a frightening sight!  A snarling, horrible ghoul lurches in the darkness against the wall to the west.  As you regain your composure, as you are most certainly still alive and the ghoul has not made an attempt to make you its meal, you realize it is only a painting on the back door of the Hungry Ghoul Restaurant.</desc>
+      <desc>The building on the east side of the alley is dark and apparently abandoned and the wall to the north is too high and slime covered to climb.  Your only choices are to head back to the SOUTH or diagonally to the SOUTHEAST.</desc>
+      <exits se='142'/>
+   </location>
+
+   <location num='133'>
+      <name>The Bathroom</name>
+      <desc>This room lives up to its name as most of it is taken up by a rather large tub.  It could almost qualify as a swimming pool from its vast dimensions.  A small sink and water closet are off to the south corner and for those who do not like to take a bath, there is a shower stall next to the half moon window in the southeast corner of the room.  There are exits to the EAST and NORTHEAST.</desc>
+      <exits ne='70' e='134' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='134'>
+      <name>Hallway in the Private Suite</name>
+      <desc>The collection of paintings and photographs that are on display in the foyer continue down the hallway of the suite.  The gas light sconces flicker and hiss as energy is released to produce the soft glowing light that bathes the hallway.</desc>
+      <desc>The hall ends to the WEST and there are doors to the NORTH and SOUTH.</desc>
+      <exits n='70' e='135' s='198' w='133' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='135'>
+      <name>Entrance to a Private Suite</name>
+      <desc>The foyer to the private suite of the planet owner is lined with photographs and paintings recovered from Old Halloween before the Great Crisis.  On the wall to the right, an extravegant, hand-painted map displays how the planet was laid out over 100 years ago.  Studying it closely would reveal it was crafted exclusively for Vlad by Halloween Cartographers on Stardate:212340.</desc>
+      <desc>To the WEST a hallway connects to the foyer.  To the SOUTHEAST a red velvet curtain hangs over the exit, keeping this room private from Vlad&apos;s Office.</desc>
+      <exits se='137' w='134' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='136'>
+      <name>Into the Expanding Room (Shuttle Pad)</name>
+      <desc>You seem to have landed your shuttle inside a haunted house!  &quot;Welcome, foolish mortals, to Halloween!  I am your host, your Ghost Host.  Kindly step all the way in please, and make room for everyone. There&apos;s no turning back now,&quot; an eerie voice says, echoing through the walls of this room.  You wonder how you managed to land inside this room and mentally note to have the nav computers looked at soon.</desc>
+      <desc>A door opens to a staircase leading DOWN to the floor below.</desc>
+      <exits up='137' down='264' no-exit='moves.noexit.3'/>
+      <events in-room='extras.shuttlepad.1'/>
+   </location>
+
+   <location num='137' flags='b'>
+      <name>Vlad&apos;s Office</name>
+      <desc>Candlelight flickers on the walls, casting eerie shadows that dance upon the cold rock.  As your eyes adjust to the low light, you see a coffin shaped desk with a picture of Sissy in an ancient frame. There sits a plush wood &amp; cloth, high back chair behind it.  Book shelves stocked with a vast collection of rare tomes and volumes line most of the rock walls.  Every subject you could think of as well as some you would never think of are contained in this private library.</desc>
+      <desc>  A small television &amp; stereo rest on a cabinet which is on top of a small refrigerator that acts as a bar.  Next to this is a plush, red, over-stuffed sofa.  On a shelf to the right you can spot an old, dust covered trophy.  Through the dust you can just make out the words Tungsten Tourist Trap Trophy Stardate:212379...very ancient, indeed.</desc>
+      <exits down='72' out='136' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='138'>
+      <name>Youth In Asia</name>
+      <desc>A single lantern lights the room.  A man behind the counter winks at you and gives you a map.  Looking at the map you see it gives you directions to a dock that is north of town. He almost giggles as he says, &quot;This will lead you to your final destination.&quot;</desc>
+      <desc>  Posters of people happily jumping into a dark hole cover the walls.  On the counter, next to the lantern and the maps are more pamphlets of the bottomless pit.</desc>
+      <desc>A stack of applications sit on a small table by the door.</desc>
+      <exits e='139' s='202' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='139'>
+      <name>Halloween Town Morbid Road</name>
+      <desc>Morbid Road&apos;s cobblestones clatter under your feet, as if the stones are not inserted too well into the ground below.  To your EAST is a stone building with a sign swinging in the fog and breeze.  The Laughing Skull Pub.  Below the words is a skull apparently laughing, although you really can&apos;t tell other than its jaw is open.  To the WEST is a building with the words YOUTH in ASIA painted in large red letters on the windows.  The road leads NORTH and SOUTH.</desc>
+      <exits n='75' e='140' s='203' w='138' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='140' flags='b'>
+      <name>The Laughing Skull Pub</name>
+      <desc>Everyone stops and turns to look at you as you walk in.  Then after a moment of silence, they turn back and continue on doing what they were doing before you came in. A large wooden bar takes up the eastern wall.  There is a fireplace to the south with chairs and tables scattered in no obvious pattern throughout the rest of the bar. A chair with a guitar resting on it sits by the fire as if waiting for some performer to return from a break.</desc>
+      <desc>To the NORTH is an archway leading to what appears to be a restaurant.</desc>
+      <exits n='76' e='141' w='139' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='141'>
+      <name>Alley Behind the Laughing Skull Pub</name>
+      <desc>The alley is dimly lit by flickering gas lamps hanging from the wall of the building to the west.  Stacks of wooden crates rest against the wall as rats and other creatures scavenge for food.  The alley continues NORTH and EAST.</desc>
+      <exits n='77' e='142' w='140'/>
+   </location>
+
+   <location num='142'>
+      <name>The Alley</name>
+      <desc>The serivce alley to the buildings of Halloween Town leads diagonally to the NORTHWEST, WEST and SOUTHEAST.  A ground huggy fog makes the air smell rather dank and musty...with a hint of meat and stale beer.  They should bottle it and sell it as it is a rather distinct aroma.</desc>
+      <exits se='207' w='141' nw='77'/>
+   </location>
+
+   <location num='198' flags='b'>
+      <name>Sitting Room</name>
+      <desc>As this room isn&apos;t used very much, if at all, all of the furniture is covered by dust cloths and the lights are turned down low.  A large picture window overlooks the town below and the sea beyond the Haunted Forest.</desc>
+      <exits n='134' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='200' flags='hi'>
+      <name>Rest In Pieces Hospital and Insurance Broker</name>
+      <desc>Meet an untimely doom here?  Aw, that is too bad.  Now to insure that you don&apos;t become a permanent spook here with us, we would really advise you to insure yourself.  A skeletal doctor sits behind a desk smoking a cigarette.  He stops his reading for a moment to flash a smile at you.  Was it a smile?  It is really quite hard to tell with skeletons you know.</desc>
+      <desc>There are all kinds of weird and wondrous instruments that line the walls.  Some you recognize, others, you don&apos;t even wanna know what they are used for.</desc>
+      <exits s='264' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='201'>
+      <name>Outside of the Mortician&apos;s Mall</name>
+      <desc>A neon sign glows in an eerie green color, casting a dull splash of color to the trees and plants surrounding the entrance to the Mortician&apos;s Mall.  Every so often the sign flickers with an obvious hum and shower of sparks.    When this happens, not all of the letters reappear at once and for a brief moment, the sign only reads &quot;Mr i c all.&quot;  The entrance to the mall is to the SOUTHWEST.  A cobblestone path leads off to the SOUTHEAST.</desc>
+      <exits se='266' sw='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='202'>
+      <name>Halloween Town Mayor</name>
+      <desc>This is the office of the mayor of Halloween Town.  You can see him in the far corner behind his desk, apparently busy doing whatever a mayor would be doing in a town that is seemingly empty.  Cobwebs cover the shelves of books on each side of the office.  Dust covers all the file cabinets and barristers bookcases.  There is a darkened doorway to the NORTH with the initials Y.I.A. on them in red paint.</desc>
+      <exits n='138' e='203' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='203'>
+      <name>Halloween Town Morbid Road</name>
+      <desc>A large sign greets you ahead.</desc>
+      <desc>                                                           WELCOME TO HALLOWEEN TOWN</desc>
+      <desc>                                                 Home of the Universally Famous Bottomless Pit</desc>
+      <desc>The cobblestone road stretches out in front of you to the NORTH.  The dark grey color of the stones glisten with some kind of moisture, but what it is exactly is hard to tell.  Old stone buildings line the road, but the windows seem too dark for anything to be open. A big, looming hall is to your EAST...straight out of an old New England Village.  An office with a sign saying MAYOR is to your WEST.  To the SOUTHEAST an ivy covered building stands among some old, gnarled trees.</desc>
+      <exits n='139' e='204' se='268' s='267' w='202' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='204'>
+      <name>Halloween Town Hall</name>
+      <desc>Wooden rafters hang high above you supporting the old panels of the ceiling.  Skylights offer a glimpse of the sky, the light filtering down casting a soft, eerie glow.  Ahead of you is a stage with a podium and on each side there are rickety steps lead up to its wooden floor. Draped across the back wall is a large flag with the official crest of Halloween.  Rows upon rows of chairs line up from the stage to the back of the hall.  There is a notice board in the back, as well as pamphlets about the Bottomless Pit.</desc>
+      <exits w='203' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='207'>
+      <name>Coldmanor Lane North End</name>
+      <desc>Coldmanor Lane ends here at North End.  The gates are locked to the manor home to the north, but there is a small alley to the NORTHWEST.  Coldmanor Lane continues to the SOUTH.</desc>
+      <exits s='271' nw='142'/>
+   </location>
+
+   <location num='263' flags='yr'>
+      <name>The Headless Carriage</name>
+      <desc>Sounds of metal on metal fill your ears as you enter.  It stops when your eyes meet that of the.....thing....pounding hammer to metal. His eyes peering out from the slits in his shroud.  You wonder what else he does on this world. Here you can order a ship, repair your ship or buy anything you need.  Just don&apos;t linger too long around the hammer or you may find it striking you where you wouldn&apos;t want to be struck.</desc>
+      <exits e='264' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='264'>
+      <name>Mortician&apos;s Mall</name>
+      <desc>You step down to see you are now inside what appears to be a mall.  There are several shops all around you, exits to the SOUTHWEST  and NORTHEAST and you can go UP to get back to your shuttle.</desc>
+      <desc>Creeps of all kinds seem to fade in and out of view and they all are carrying some kind of shopping bag.</desc>
+      <desc>There is a directory sign in front of you:</desc>
+      <desc>EAST - Rigor Mortis - Come on in for a stiff drink</desc>
+      <desc>SOUTH - The Soul Exchange</desc>
+      <desc>NORTH - Rest In Pieces Hospital and Insurance Brokers</desc>
+      <desc>WEST - The Headless Carriage Ship Builders, Repair and General Store</desc>
+      <desc>SOUTHEAST - Madame Friekette&apos;s Trinkets</desc>
+      <exits n='200' ne='201' e='265' se='329' s='328' sw='327' w='263' up='136' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='265' flags='b'>
+      <name>Rigor Mortis Pub</name>
+      <desc>Come on in and pull up a slab!  You&apos;ve come to the right place if you need a stiff drink!  All the booths are genuine oak coffins with the tables being the lids.  Spooks and goblins, creeps and kooks, ghouls and ghosts of all kind come in to share stories of their haunted day.</desc>
+      <desc>We serve all kinds in here so please don&apos;t stare!</desc>
+      <exits w='264' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='266'>
+      <name>Path Between the Mall and Town</name>
+      <desc>The stones of the path are overgrown with weeds, making it hard to navigate.  Overgrown hedges loom up from the ground, swaying in the cold night breeze.  The path leads to the NORTHWEST and EAST.</desc>
+      <exits e='267' nw='201' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='267'>
+      <name>Path to Halloween Town</name>
+      <desc>The fog lifts up from the ground, forming shapes and drifting around your feet, making it hard for you to see the path.  It leads off to the NORTH into the town proper and to the SOUTH, in the darkness, a swarm of glowing yellow cuts through the night like fireflies.  To the WEST there is an opening in the hedges and a painted sign, faded from exposure reads simply, MALL.</desc>
+      <exits n='203' s='331' w='266' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268'>
+      <name>Halloween Town Library</name>
+      <desc>Brass lanterns illuminate the dusty old library.  Cobwebs extend across the shelves of books that stretch unused into the far dark corners.  Tall windows, from floor to ceiling would illuminate the vast repository of books from the gas lamps outside if it wasn&apos;t for the fact that they were covered with a thick layer of grime.  The branches from the trees surrounding the building scratch at the windows, the sound echoing off the high ceiling above.  Wooden stairs with ornate carvings in the hand rails lead to the floor above.  Lining the floor above where the darkness is even deeper is a similarly carved wooden railing.  Some of the dowel slats are missing here and there but otherwise the rail is sound and intact.</desc>
+      <desc>In the center of the ground floor is a grand counter.  Every so often a ghostly figure appears behind the counter.  It stretches and yawns before disappearing again.</desc>
+      <desc>The exit is to the NORTHWEST.</desc>
+      <exits nw='203' up='269' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='269'>
+      <name>Halloween Town Library Second Floor</name>
+      <desc>The floor boards creak with every step on the second floor of the library.  Dust covers the ancient wood slats that make up the floor as cobwebs stretch upwards to the rows and rows of shelves housing old, long forgotten tomes.  The windows on this floor are just as grimy and opaque as the ones on the level below.  The tree branches sway back and forth outside making dark silhouettes that appear to be gnarled and bony claws.  At random intervals, books move from shelf to shelf as if being sorted by unseen hands.  As they move they don&apos;t seem to disturb the thick ropes of dust that cling to every surface.</desc>
+      <desc>The shelves go off in rows into the darkness in every cardinal direction and the exit is DOWN the stairs to the floor below.</desc>
+      <exits down='268' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='271'>
+      <name>Coldmanor Lane</name>
+      <desc>The lane continues NORTH and SOUTH from this location.  Towards the north you see the outline of an old English manor home, silhouetted against the night sky.  Ancient trees frame the structure and every so often, something flutters by the uppermost window.  To the south, the lane stretches off towards a turn to the east.  High hedges, somewhat overgrown, fence off both sides of the lane, so one&apos;s choice of direction is quite limited.</desc>
+      <exits n='207' s='335'/>
+   </location>
+
+   <location num='327'>
+      <name>The Haunted Forest</name>
+      <desc>All around you the trees seem to be closing in.  You can just make out the full moon through the branches and its light casts eerie shadows on the ground.  The trail leads off into the darkness to the SOUTHWEST and the mall lays to the NORTHEAST.</desc>
+      <exits ne='264' sw='390' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='e'>
+      <name>Soul Exchange</name>
+      <desc>Spirits fly all around you, as if trying to enter your body!  Ghostly moans fill your ears as wind rushes past you...Then you realize they are not trying to enter your body, but to get past you to a trading terminal....seems even the dead need to make transactions!</desc>
+      <exits n='264' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='329'>
+      <name>Madame Friekette&apos;s Trinkets</name>
+      <desc>As you pass through the beaded curtain you see an old gypsy woman behind a counter.  She smiles at you with a gnarled, toothless grin.  The room is lit only by candlelight and there is a thick layer of dust and cobwebs clinging to everything on the shelves and racks of items for sale.  The gypsy woman caresses a crystal ball and asks you to step forward to conduct your business.  Better not try anything tricky as she can see your past, present and future in the glass orb.</desc>
+      <exits nw='264' no-exit='moves.noexit.2'/>
+      <events enter='moves.keepout.1'/>
+   </location>
+
+   <location num='331'>
+      <name>The Pumpkin Patch</name>
+      <desc>All around you glow the candles inside the Jack-O-Lanterns carved into the surface of the pumpkins.  Suddenly they arise from the ground with bodies attached and dance a macabre dance with ghostly music accompanying them.</desc>
+      <desc>&quot;Pumpkins rise and there they writhe, it&apos;s Happy Halloween....</desc>
+      <desc>Ghost and ghouls drink witch&apos;s brew, it&apos;s Happy Halloween.</desc>
+      <desc>Don&apos;t be afraid of Halloween, it&apos;s just some wholesome fun!</desc>
+      <desc>It makes you laugh and run and shout, it&apos;s Happy Halloween.</desc>
+      <desc>So when you see on Halloween, a happy Jack-o-lantern, remember back to years gone past and love the memories!&quot;</desc>
+      <desc>As sudden as they started, the pumpkins return back to the ground.</desc>
+      <desc>The patch has exits to the NORTH and SOUTH from here.</desc>
+      <exits n='267' s='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='335'>
+      <name>Coldmanor Lane</name>
+      <desc>The halfway mark of Coldmanor Lane is marked by a rather abrupt rut in the road.  The bottom of the rut is not visible due to a rather thick layer of mist.  The roadway stretches to the NORTH and SOUTH which are the only ways to go as the high hedges are too thick to pass through.</desc>
+      <exits n='271' s='399'/>
+   </location>
+
+   <location num='389'>
+      <name>Cemetery Gates</name>
+      <desc>The trail ends at the locked gates of the Halloween Cemetery.  Peering through you can see rows upon rows of tombstones and crypts which seem to go on for miles in each direction, over hill and dale.  Spirits float about as if visiting one another but for now you cannot do the same.</desc>
+      <desc>The only exit is to the SOUTH.</desc>
+      <exits s='453' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='390'>
+      <name>The Haunted Trail</name>
+      <desc>The trail is dark and a chill is in the air.  The wind blowing through the trees creates a mournful wail and the rustling branches give rise to the imagination making it appear as if something was moving about out there.  The trail continues into the darkness to the SOUTHWEST and towards the light to the NORTHEAST.</desc>
+      <exits ne='327' sw='453' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='395'>
+      <name>A Bend in the Path</name>
+      <desc>The path makes a sharp turn from the NORTH to the SOUTHWEST deeper into the forest.  A sudden movement catches your eye off to the right.  Was it just your vivid imagination?</desc>
+      <exits n='331' sw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='399'>
+      <name>Coldmanor Lane</name>
+      <desc>The roadway continues to the NORTH and SOUTH from here.  The high hedges block you from moving in any other direction.  The sound of the rustling leaves and branches doesn&apos;t lend itself to lingering in the darkness.</desc>
+      <exits n='335' s='463'/>
+   </location>
+
+   <location num='453'>
+      <name>The Haunted Crossroads</name>
+      <desc>The forest opens to a clearing here as the trail splits in three directions at this junction: NORTH, NORTHEAST and SOUTH.  The moon is full and bright overhead and it is your only source of light.</desc>
+      <exits n='389' ne='390' s='517' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>The Haunted Forest</name>
+      <desc>The trail leads NORTHEAST and SOUTHWEST.  The trees of the forest are thick here giving the traveler no way of venturing off the trail.  Not that anyone would want to leave the trail to try as the forest seems alive with the wails and moans of all that is unseen.</desc>
+      <exits ne='395' sw='521' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='463'>
+      <name>Coldmanor Lane South End</name>
+      <desc>The southern terminus of Coldmanor Lane turns sharply from the NORTH to the EAST. From here, a Victorian Gothic Manor is visible at the far end, outlined against the night sky.</desc>
+      <exits n='399' e='464'/>
+   </location>
+
+   <location num='464'>
+      <name>Coldharbor Lane</name>
+      <desc>Coldharbor Lane leads off to the EAST towards the suburbs of Halloween Town proper.  To the WEST it turns into Coldmanor Lane.</desc>
+      <exits e='465' w='463'/>
+   </location>
+
+   <location num='465'>
+      <name>Intersection of Coldharbor Lane and Halesowen Way</name>
+      <desc>The streets form a T, with Halesowen Way heading off towards the SOUTH and Coldharbor Lane continuing off towards the EAST.  The streets turn from worn earth and grassy swales to sidewalks and old cobblestones.  There are black, cast-iron, gas street lights at regular intervals on both sides of the street.</desc>
+      <exits e='466' s='529' w='464'/>
+   </location>
+
+   <location num='466'>
+      <name>Coldharbor Manor Gates</name>
+      <desc>The iron gates are locked, allowing no entry that is obvious.  The Victorian-style Gothic Manor is impressively well preserved and ivy covers most of the lower floors.  A single rocking chair moves back and forth slightly in the breeze.  The street to the WEST is the only way you can go from here.</desc>
+      <exits w='465'/>
+   </location>
+
+   <location num='516'>
+      <name>A Cabin in the Woods</name>
+      <desc>A tidy log cabin lies nestled between the trees.  It once served as the home for the caretaker of the castle proper.  Now it sits abandoned and boarded up, its secrets locked away from the time when Halloween was a duchy.  A few paces from the house, there is a stone well, its rocks covered by centuries of moss and weeds, the handle to the crank to raise and lower the bucket for water has long since broken off and rests to the side, useless.</desc>
+      <desc>There sits on the edge of the well a little girl plucking petals off a flower one by one and casting them into the well.  She hums a little tune to herself and seems innocent enough until approached when she places her flower down and her eyes glow a deep blood red.</desc>
+      <desc>The path leads EAST to the front of the castle.</desc>
+      <exits e='517' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='517'>
+      <name>In front of the Castle</name>
+      <desc>Rising above the surrounding landscape is a tall ancient castle.  Its ramparts stretch from tower to tower and the ancient stone shows its age as moss and ivy grow to cover its fading luster.  The tall, wooden door at the top of the stairs is bound by an enormous chain and lock, not allowing any entrance to the structure.  The main path leads off to the NORTH from here and there is a sign before a path to the EAST that reads &quot;Haunted Forest Path: DANGER.&quot;</desc>
+      <exits n='453' e='518' w='516' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='518'>
+      <name>An Overgrown Path</name>
+      <desc>The brush grows thick and it is hard to move in any direction.  It seems to be thinner to the EAST and WEST.</desc>
+      <exits e='519' w='517' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='519'>
+      <name>The Overgrown Path</name>
+      <desc>Branches from overgrown bushes tear at your clothing as the trees seem to lean in and leave brambles in your hair.  Pushing hard in any direction only seems to have any effect to the EAST and WEST.</desc>
+      <exits e='520' w='518' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='520'>
+      <name>A Clearing in the Haunted Forest</name>
+      <desc>Trees enclose a clearing in the forest.  They form a ring around the cold, damp ground that has a thin layer of mist clinging to it, filling your nose with a musty aroma. A path opens up to the EAST and a bush that seems to have bits of cloth clinging to its branches is to the WEST.</desc>
+      <exits e='521' s='584' w='519' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='521'>
+      <name>The Haunted Forest Path</name>
+      <desc>The forest path makes a dogleg turn here.  To the NORTHEAST the trail leads off deeper into the woods and to the WEST the forest opens up to a small clearing.</desc>
+      <exits ne='458' w='520' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='528' flags='b'>
+      <name>Kelley&apos;s Pub</name>
+      <desc>The lighting is dim in this old country pub.  The locals look up from their drinks, stopping their conversations at the sight of an outsider.  Behind the bar is a handsome lass, with flowing locks of reddish brown curls.  She looks your way and you swear there was a momentary red glow to her eyes.  You dismiss it as your eyes adjusting to the light.</desc>
+      <desc>The pub is sparcely decorated but very functional.  The tables and chairs don&apos;t match, but the locals don&apos;t seem to mind.  On each table a single lantern rests, illuminating the wooden surface.  Find a seat and order a round to warm up the locals.  Outsiders are well to remain cautious, but a good drink is a nice offering to ease their tensions.  Perhaps you can become a regular and soak up local culture.</desc>
+      <desc>The exit is to the EAST</desc>
+      <exits e='529'/>
+   </location>
+
+   <location num='529'>
+      <name>Halesowen Way</name>
+      <desc>The street leads NORTH and SOUTH.  The sidewalks are worn from years of use and the streetlights hiss as the gas is ignited to flame.  The sound of your footsteps echo against the walls of the buildings lining this portion of the street.  The only doorway open is to the WEST.  The carved sign swinging in the breeze has the likeness of a woman with reddish brown hair holding a mug in her hand around this in a ring are the words KELLEY&apos;s PUB.</desc>
+      <exits n='465' s='593' w='528'/>
+   </location>
+
+   <location num='584'>
+      <name>The Southern Path in the Haunted Forest</name>
+      <desc>The Southern Path leads SOUTH towards the pirate village of Port Royale.  The trees of the forest form a tight barrier on both sides of the path making it difficult to go anywhere but where the trail leads.  The lilting sound of a concertina playing a salty jig fills the air but the path SOUTH is blocked by a watchman smoking a small pipe.  He grins and points towards the NORTH where the trees give way to a clearing.</desc>
+      <exits n='520' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='593'>
+      <name>Halesown Way </name>
+      <desc>The road stops at a roadblock put up by the local townfolks.  Beyond it to the south you can see the road continues on to small, quaint homes, here and there, each surrounded by a garden.  What could they possibly he keeping out...or in?   The only way you can go from here is NORTH.</desc>
+      <exits n='529'/>
+   </location>
+
+</fed2-map>

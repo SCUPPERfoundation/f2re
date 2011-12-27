@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Rica Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>  Orbiting around Puravida, the view screen exhibits aqua blue waters, velvety black sand beaches, near the active volcanoes, and whitish pink coral beaches on the northern shores. Lush vibrant green jungles full of exotic flora and fauna spread throughout this dynamic planet.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

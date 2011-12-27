@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Eridani Space' version='9' editor='standard'>
+
+   <location num='588' flags='slp'>
+      <name>Eridani Interstellar Link</name>
+      <desc>The link for the 40 Eridani A system glistens in a metallic red.  It glows from the main star of the trinary system, a bright red-orange main sequence dwarf.  Off to the side, are its companions, a white dwarf and a red flare dwarf.  Your navigation computers shows you the path towards the capital planet of Vulcan and its twin, T&apos;Kut towards the south.  The Vulcan Homeworld Space Transit Authority grants you permission to enter the system wishing you to live long and prosper.</desc>
+      <exits s='652'/>
+   </location>
+
+   <location num='652' flags='sp'>
+      <name>40 Eridani Space Pathway</name>
+      <desc>You are on the main space pathway for the 40 Eridani System.  To the NORTH is the Interstellar Link and to the SOUTH is the planet Vulcan.</desc>
+      <exits n='588' s='716'/>
+   </location>
+
+   <location num='716' flags='sp'>
+      <name>Vulcan Orbit</name>
+      <desc>The planet below glows in the red-orange light of its main star.  The arid surface is covered with many mountains, canyons and dusty plains.  Its cities spread out in geometric shapes along the surface, connected by straight paths, form a logical layout, efficient and orderly with nothing wasted.  The main shuttle pad beacon flashes steadly, inviting you to BOARD to explore the surface.</desc>
+      <exits n='652'/>
+   </location>
+
+</fed2-map>

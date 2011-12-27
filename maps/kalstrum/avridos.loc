@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<fed2-map title='Avridos' version='13' editor='standard' from='1950' to='Kalstrum.Kalstrum Space.266'>
+
+   <location num='0' flags='pt'>
+      <name>Junkroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1629'>
+      <name>Capitol Building, Mythic&apos;s Office</name>
+      <desc>Obvious exits: east</desc>
+      <exits e='1630'/>
+   </location>
+
+   <location num='1630'>
+      <name>Capitol Building, 20th Floor</name>
+      <desc>Obvious exits: east, west, down</desc>
+      <exits e='1631' w='1629' down='1694'/>
+   </location>
+
+   <location num='1631'>
+      <name>Capitol Building, Unused Office</name>
+      <desc>Obvious exits: west</desc>
+      <exits w='1630'/>
+   </location>
+
+   <location num='1693'>
+      <name>Capitol Building, Police Office</name>
+      <desc>Obvious exits: east</desc>
+      <exits e='1694'/>
+   </location>
+
+   <location num='1694'>
+      <name>Capitol Building, Entrance Lobby</name>
+      <desc>Obvious exits: east, south, west, up</desc>
+      <exits e='1695' s='1758' w='1693' up='1630'/>
+   </location>
+
+   <location num='1695'>
+      <name>Capitol Building, Museum</name>
+      <desc>Obvious exits: west</desc>
+      <exits w='1694'/>
+   </location>
+
+   <location num='1757'>
+      <name>Avridos Government District</name>
+      <desc>  Nondescript buildings bearing the crest of the Kalstrum system line the road.  Official looking people walk out of one building and mill about only briefly before entering another.  There is far less of a presence of sand and a greater amount of greenery in the district then what appeared to exist in other section of the city.  The wealth to maintain this section of the city must be several times that of any other district.</desc>
+      <desc>  Jutting up from the skyline to the east stands the largest building on Avridos, the capitol building.</desc>
+      <desc>Obvious exits: east, southwest</desc>
+      <exits e='1758' sw='1820'/>
+   </location>
+
+   <location num='1758'>
+      <name>Avridos Government District</name>
+      <desc>  A steady stream of people from all walks ebb and flow through the doors of the capitol.  The large windowed tower juts up from the</desc>
+      <desc>Obvious exits: north, east, west</desc>
+      <exits n='1694' e='1759' w='1757'/>
+   </location>
+
+   <location num='1759'>
+      <name>Avridos Government District</name>
+      <desc>  Nondescript buildings bearing the crest of the Kalstrum system line the road.  Official looking people walk out of one building and mill about only briefly before entering another.  There is far less of a presence of sand and a greater amount of greenery in the district then what appeared to exist in other section of the city.  The wealth to maintain this section of the city must be several times that of any other district.</desc>
+      <desc>  Jutting up from the skyline to the west stands the largest building on Avridos, the capitol building.</desc>
+      <desc>Obvious exits: east, southwest</desc>
+      <desc>Obvious exits: southeast, west</desc>
+      <exits se='1824' w='1758'/>
+   </location>
+
+   <location num='1820'>
+      <name>Avridos, Road</name>
+      <desc>   The road comes to a T with a split linking the spaceport to the government and residential districts.</desc>
+      <desc>Obvious exits: northeast, southeast, southwest</desc>
+      <exits ne='1757' se='1885' sw='1883'/>
+   </location>
+
+   <location num='1824'>
+      <name>Avridos, Road</name>
+      <desc>   The road comes to a T with a split linking the spaceport to the government and business districts.  There is a distinct lack of sound from the northwest in comparison to the cries of sellers to the southeast.  Towards the middle of the city a few shuttles are launching and landing.</desc>
+      <desc>Obvious exits: southeast, southwest, northwest</desc>
+      <exits se='1889' sw='1887' nw='1759'/>
+   </location>
+
+   <location num='1883'>
+      <name>Avridos Residential District</name>
+      <desc>  Wealthy homes go here.</desc>
+      <desc>Obvious exits: northeast, south</desc>
+      <exits ne='1820' s='1947'/>
+   </location>
+
+   <location num='1885'>
+      <name>Avridos, Road</name>
+      <desc>   The dusty road connects the spaceport to the government and residential districts.  A few people walk along with you but they pay you no heed as they skurry on about their own business.</desc>
+      <desc>Obvious exits: northwest, southeast</desc>
+      <exits se='1950' nw='1820'/>
+   </location>
+
+   <location num='1887'>
+      <name>Avridos, Road</name>
+      <desc>   The well-used road connects the spaceport to the government and business districts.  A few people walk along with you and give a courteous nod whenever eye contact is made.</desc>
+      <desc>Obvious exits: northeast, southwest</desc>
+      <exits ne='1824' sw='1950'/>
+   </location>
+
+   <location num='1889'>
+      <name>Avridos Business District</name>
+      <desc>Obvious exits: east, south, northwest</desc>
+      <exits e='1890' s='1953' nw='1824'/>
+   </location>
+
+   <location num='1890'>
+      <name>Avridos Business District, Software Vendor</name>
+      <desc>Obvious exits: west</desc>
+      <exits w='1889'/>
+   </location>
+
+   <location num='1947'>
+      <name>Avridos Residential District</name>
+      <desc>  Middle class homes are here.</desc>
+      <desc>Obvious exits: north, south</desc>
+      <exits n='1883' s='2011'/>
+   </location>
+
+   <location num='1949' flags='yrhi'>
+      <name>Avridos Spaceport, Services</name>
+      <desc>   Several kiosks are placed against the walls in this bland looking building.  One kiosk reads, &quot;Avridos Shipyards - Accepting Orders and Repairs&quot;.  Another kiosk is just a direct line to the local insurance office.  An attendant has opened up the front panel of one of the machines and is cursing loudly.  You hear him complain about sand getting everywhere in the machines and even his crotch on this outback planet.</desc>
+      <desc>Obvious exits: east</desc>
+      <exits e='1950' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1950'>
+      <name>Avridos Spaceport, Landing Pad</name>
+      <desc>   A dry wind whistles over the raised landing pad clouding the air with dust.  From this high up vantage point you can make out a circular city crammed full of dirty metal buildings.  Off towards the north one building stands tall above all others, probably the capitol of Avridos.</desc>
+      <desc>   A group of well dressed business men have placed their hands over their mouths and are trodding towards a set of stairs to the east.  To the south a shoddy looking durasteel building flanked by withered trees rests with a sign overhead which reads, &quot;Visitor&apos;s Center&quot;.</desc>
+      <desc>Obvious exits: northwest, northeast, east, southeast, south, southwest, west</desc>
+      <exits ne='1887' e='1951' se='2015' s='2014' sw='2013' w='1949' nw='1885' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1951' flags='eb'>
+      <name>Avridos, Exchange</name>
+      <desc>   The exchange is quite clean and civilized considering that just outside the door the rough winds are sprinkling a fine sand against the doors.  Inside most people are going about their business of local and intergalatic trade.  A group of burly men in dark suits stand in one corner of the exchange watching the goings on with an unblinking stare.  Behind them a finely dressed man in his mid 50s sits drinking some coffee while watching a news vid.  He glances away from the screen towards you, but then goes back to his program.</desc>
+      <desc>   Dozens of consoles line the main trading pit, many of them available, with plush seating and plenty of desk room.  You note that a busty young women is leaning over a group of men at a console serving drinks.  They stare without abandon at cleavage that bubbles out of her overly tight top.</desc>
+      <desc>Obvious exits: west</desc>
+      <exits w='1950'/>
+   </location>
+
+   <location num='1953'>
+      <name>Avridos Business District</name>
+      <desc>Obvious exits: north, south</desc>
+      <exits n='1889' s='2017'/>
+   </location>
+
+   <location num='2011'>
+      <name>Avridos Residential District</name>
+      <desc>  Poor homes go here.</desc>
+      <desc>Obvious exits: north, southeast</desc>
+      <exits n='1947' se='2076'/>
+   </location>
+
+   <location num='2013'>
+      <name>Avridos, Road</name>
+      <desc>   The grungy road connects the spaceport to the residential and entertainment districts.  To the side of the streets are bits of random garbage and many, many empty beer bottles.  People bustle about but give you at best looks of indifference and at worst glare at you threateningly.</desc>
+      <desc>Obvious exits: northeast, southwest</desc>
+      <exits ne='1950' sw='2076'/>
+   </location>
+
+   <location num='2014'>
+      <name>Avridos Spaceport, Visitor&apos;s Center</name>
+      <desc>  As you walk into the Visitor&apos;s Center lobby a woman sitting at a desk looks up from a holo before pointing towards a datapad link sitting on the counter.  She rudely dismisses you with a frown and turns back to her holo.  You pull out your datapad and connect it to the link, moments later the screen flashes that downloading is complete. Glancing around you see that the only chairs are made of uncomfortable looking plastic.</desc>
+      <desc>  &quot;All production commods are set to high maximums and low spreads to promote trading.  You are free to buy as much as you&apos;d like; however, only sell the standard 5 bays at a time.  Anyone caught selling on a mixed buy/share will be exiled.  The Regent of Avridos, Mythic, is the final word on factories.  It is in your best interest to ask permission before building.&quot;</desc>
+      <desc>  Your datapad has this information and trading assistance programs stored, you can access it at anytime at www.geocities.com/fedmythic.</desc>
+      <desc>Obvious exits: north</desc>
+      <exits n='1950' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='2015'>
+      <name>Avridos, Road</name>
+      <desc>   The grungy road connects the spaceport to the pleasure and business districts.  This road is mostly full of seedy looking individuals who speed about on their own business.</desc>
+      <desc>Obvious exits: northwest, southeast</desc>
+      <exits se='2080' nw='1950'/>
+   </location>
+
+   <location num='2017'>
+      <name>Avridos Business District</name>
+      <desc>Obvious exits: north, east, southwest</desc>
+      <exits n='1953' e='2018' sw='2080'/>
+   </location>
+
+   <location num='2018'>
+      <name>Avridos Business District, Arms Salesman</name>
+      <desc>Obvious exits: west</desc>
+      <exits w='2017'/>
+   </location>
+
+   <location num='2076'>
+      <name>Avridos, Road</name>
+      <desc>   The road comes to a T with a split linking the spaceport to the pleasure and residential districts.</desc>
+      <desc>Obvious exits: northeast, southeast, northwest</desc>
+      <exits ne='2013' se='2141' nw='2011'/>
+   </location>
+
+   <location num='2080'>
+      <name>Avridos, Road</name>
+      <desc>   The road comes to a T with a split linking the spaceport to the pleasure and residential districts.</desc>
+      <desc>Obvious exits: northeast, southwest, northwest</desc>
+      <exits ne='2017' sw='2143' nw='2015'/>
+   </location>
+
+   <location num='2141'>
+      <name>Avridos Pleasure District</name>
+      <desc>Obvious exits: east, northwest</desc>
+      <exits e='2142' nw='2076' in='2204'/>
+   </location>
+
+   <location num='2142'>
+      <name>Avridos Pleasure District</name>
+      <desc>   Shady types are all around.  Some people sit on the curb with a glassy unfocused look in their eyes yet they don&apos;t seem as if they have been drinking.  A woman wearing mostly fishnet clothing and gaudy red boots is leaning one hand against a wall.  Talking with her is a nervous looking middle aged man who looks out of place in comparison to everyone else.</desc>
+      <desc>  An inconspicuous building to the south would otherwise not draw attention except for the two burly looking men with lasers who are guarding the door.</desc>
+      <desc>Obvious exits: east, west</desc>
+      <exits e='2143' w='2141'/>
+   </location>
+
+   <location num='2143'>
+      <name>Avridos Pleasure District</name>
+      <desc>  Bits of colorful refuse dance through the air.  The source of this additional garbage to the already filthy streets appears to be a holo complex to the south of your position.  One of the papers lands at your feet and you notice pictures of wholesome children&apos;s movies next to raunchy alien pornography.  The people on the street seem to ignore the papers as if they are a common occurence. Around the complex a ticker scrolls by the names of the newest releases and a crowd has gathered underneath to take note of the offered movies and show times.</desc>
+      <desc>Obvious exits: northeast, south, west</desc>
+      <exits ne='2080' s='2207' w='2142'/>
+   </location>
+
+   <location num='2204'>
+      <name>Avridos, Slums</name>
+      <desc>Congrats on finding this... I&apos;m not done yet.</desc>
+      <desc>JUST GO NORTHEAST</desc>
+      <exits ne='2141' up='2205'/>
+   </location>
+
+   <location num='2205'>
+      <name>Avridos, Slums</name>
+      <desc>Okay.. I get it you&apos;re persistent.  Get out of here...</desc>
+      <desc>GO WEST</desc>
+      <exits w='2204'/>
+   </location>
+
+   <location num='2206' flags='b'>
+      <name>The Cottonmouth Bar</name>
+      <desc>xxx</desc>
+      <exits n='2142'/>
+   </location>
+
+   <location num='2207'>
+      <name>Avridos Pleasure District, Vid Compex</name>
+      <desc>Obvious exits: North</desc>
+      <exits n='2143'/>
+   </location>
+
+</fed2-map>

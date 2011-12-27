@@ -1,0 +1,430 @@
+<?xml version="1.0"?>
+<fed2-map title='Aekonia' version='1.00' editor='standard' from='462' to='Soed.Soed Space.396'>
+
+   <location num='0' flags='kt'>
+      <name>Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='207'>
+      <name>Gravtube - Ground Floor</name>
+      <desc>Ground Floor</desc>
+      <desc>     South to Lobby</desc>
+      <desc>     Up to higher floors</desc>
+      <desc>     Down to Basement</desc>
+      <exits s='271' up='539' down='393' out='271'/>
+   </location>
+
+   <location num='270' flags='b'>
+      <name>O&apos;Kole&apos;s Irish Saloon</name>
+      <desc>O&apos;Kole&apos;s Saloon is a bar where you can drink until you fall on your okole.  The bar is lined with dark wood, and a cloud of stale smoke hangs like a cloud over the patrons&apos; heads.  As you walk in, you feel all eye&apos;s turn to size you up, and then turn away with a shrug, as if you are not worth neglecting the important task at hand.  And the tools available to assist the patrons with this task are varied.  There are Deosian Sweet Wines, and whiskey imported from Ainokea.  One sip of this whiskey,and the drinker says with a satisfied smile, &quot;Ainokea.&quot;  There are dart boards and video game units to amuse the patrons while they sample the many fine ales and liquors.  On the shelf you even see from Aliment a bottle of their finest Takillya.  This is a bar made for wasting away long hours and quietly drinking until you  are flat on your okole.</desc>
+      <exits e='271' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='271'>
+      <name>Aekonia Professional Building Lobby</name>
+      <desc>The lobby of Aekonia Professional Building is made of marble.  Each step echos throughout the room.  To the west is the famous O&apos;Kole&apos;s Irish Saloon, a favorite watering hole and hide out for office workers who would wish to escape the rigors of their job, and have a few &quot;cold ones&quot;.  To the north is a Gravtube.  Against the wall is a Directory that reads:</desc>
+      <desc>     Suite 200 - Unlimited Ltd.</desc>
+      <desc>     Suite 201 - Nibelheim Trading Co.</desc>
+      <desc>     Suite 202 - Carpathian Cargo Company</desc>
+      <desc>     Suite 203 - Ooryl Qrygg</desc>
+      <desc>     Suite 300 - Available For Lease</desc>
+      <desc>     Suite 301 - Available For Lease</desc>
+      <desc>     Suite 302 - Available For Lease</desc>
+      <desc>     Suite 303 - Simlish Translators Inc.</desc>
+      <desc>     Suite 400 - Planet Administration</desc>
+      <desc>     PH - Chez Zippe Fine Dining</desc>
+      <desc>     Space Available for Lease - See Planet Administrator for Details</desc>
+      <exits n='207' s='335' w='270' in='207'/>
+   </location>
+
+   <location num='272'>
+      <name>North End of Mall</name>
+      <desc>This is the north end of the mall.  To the east is a door with a sign that says &quot;Unlimited Ltd. Stoneworks.&quot;  To the south is the rest of the mall.</desc>
+      <exits e='273' s='336'/>
+   </location>
+
+   <location num='273'>
+      <name>Unlimited Ltd.</name>
+      <desc>Unlimited Ltd. specializes in great stone artifacts.  In fact, their expertise in stone work has established their reputation as the biggest stoners in the galaxy.  The imense size of the artifacts prevent any actual samples from being displayed, but photos of their work are arrayed on the walls.  There are pictures of the Sphinx, the heads on Easter Island, and a large floating stone head.</desc>
+      <exits w='272'/>
+   </location>
+
+   <location num='329'>
+      <name>Basement Archives</name>
+      <desc>The basement area is a jumble of junk amassed by the office building&apos;s tenants.  You see boxes of apparently worthless securities in companies such as Head on Fire Incorporated, Hon&apos;s Alluring Brownies, Llc, Red October Industries, and Diet Evil Enterprises.  After much consideration, the owner of the shares determined that the likelihood of these CEOs EVER promoting was equal to the chance of survival of a snowball in hell.  In the corner is a box, with a label that says, &quot;I must love her&quot;.  Inside the box are 3,000 shares of Strom Universal.</desc>
+      <exits s='393'/>
+   </location>
+
+   <location num='333'>
+      <name>Aekonia Memorial Park - Small Koi Pond</name>
+      <desc>A path leads to a small pond.  Swimming in the pond are a some large Koi.  The water gurgles as it leads away down a small waterfall.  There is a small bench here to sit and think in quiet solitude.</desc>
+      <exits se='398' down='1301'/>
+   </location>
+
+   <location num='334' flags='hi'>
+      <name>Aekonia Hospital</name>
+      <desc>The white walls and clean floors of this building indicate it is a hospital.  Travelers who are mortally wounded are brought here, and through the miracle of modern cloning are brought back to life.  There is a large sign above the doorway that reads:</desc>
+      <desc>     HEY LOLO.... NO FORGETS TO REINSURE!!!</desc>
+      <desc>A duck walks by and says, &quot;KALFA.&quot;</desc>
+      <exits e='335'/>
+   </location>
+
+   <location num='335'>
+      <name>Town Square</name>
+      <desc>The central square of Downtown Aekonia is the connecting point for various planet offerings.  In the center of the square is a large statue.  A bronze plaque on the statue reads, &quot;Tbarranch - Beloved Duke&quot;.</desc>
+      <desc>     To the west is the Hospital, to the southwest is a small park, to the east is a shopping area, and to the north is an office complex.  To the south is a road that leads to the spaceport and exchange.</desc>
+      <exits n='271' e='336' s='399' sw='398' w='334' up='1119' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='336'>
+      <name>Aekonia Trading Mall</name>
+      <desc>The Aekonia Trading Market offers various off-world companies a place to display their goods.  To the east is a shop with a sign reading, &quot;Carpathian Cargo Company, Plebotomist Supplies.&quot;  The Mall continues to the north and south.  The town square is to the west.</desc>
+      <exits n='272' e='337' s='400' w='335'/>
+   </location>
+
+   <location num='337' flags='b'>
+      <name>Carpathian Cargo Company</name>
+      <desc>The Carpathian Cargo Company offers a variety of Do-it-yourself kits for the aspiring amature plebotomist.  There are needle kits, transfusion lines, plasma centrifuges, and tourniquits.  Strangely enough, on a shelf behind the counter are displays of crystal stem ware.</desc>
+      <exits w='336'/>
+   </location>
+
+   <location num='346' flags='bt'>
+      <name>Sephiroth&apos;s Office</name>
+      <desc>This is the private office of the CEO of Nibelheim Trading Co.  Sephiroth, the CEO, is a notorious swordsman who is always armed with his Masamune Sword.  Sephiroth has pledged his fealty, his sword, and is life to the House of Doz.  On the walls are various swords and weaponry, ranging from Sai to Tonfa.  There is a desk that is very neat with not even a paperclip out of place.  A computer terminal is on the desk displaying the latest share holdings of companies throughout Federation.</desc>
+      <exits s='410' out='462'/>
+   </location>
+
+   <location num='348' flags='bt'>
+      <name>Zardoz&apos;s Office - Senior Member of the House of Doz</name>
+      <desc>The office of Zar D. Oz is furnished in fine Ainokean woods.  The Office windows overlook the planet scenery and you see  waves break upon the beach.  On the walls are pictures of CEOs that Unlimited Ltd. has assisted over the cycles.  In one corner is a guitar, a bass, and a large amplifier with volume knobs turned to 11.  On the desk are notes, instructions, an Idiot&apos;s guide to Federation, and an Idiot&apos;s guide to Idiot&apos;s guides.  There is a large leather sofa against one wall, and a well stocked wet bar against the other.  On the desk, in a silver frame is a picture of Zardoz&apos;s true love, and wife, Sephorin.</desc>
+      <exits s='412' out='462' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='353' flags='bk'>
+      <name>Vacant office</name>
+      <desc>The Office is furnished with a desk and a refreshment stand.  The office can be redecorated to reflect the renters tastes and requirements.</desc>
+      <exits s='417' out='462'/>
+   </location>
+
+   <location num='355'>
+      <name>Vacant Office</name>
+      <desc>The Office is furnished with a desk and a refreshment stand.  The office can be redecorated to reflect the renters tastes and requirements.</desc>
+      <exits s='419' out='462'/>
+   </location>
+
+   <location num='359'>
+      <name>Aekonia Exports Marketing Department</name>
+      <desc>Aekonia is a planet devoted to free trade.  Posted here will be a listing of commodities where export is encouraged.</desc>
+      <desc>    Aekonia produces Monos and Droids in signicant quantities.  Production runs of other commods can be made in response to requests.  Please see PO to schedule production and delivery requirements.</desc>
+      <exits s='423' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='361' flags='bt'>
+      <name>Conference Room</name>
+      <desc>In the center of the room is a large table with com link screens built into the surface.  Large comfortable chairs surround the table and a view screen takes up an entire wall.  The curtains are open and reveal windows that offer a spectacular view of the planet&apos;s tropical vegetation.  A mini-bar is available for meetings that continue through meal periods.</desc>
+      <exits s='425' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Gravtube - Basement</name>
+      <desc>Basement</desc>
+      <desc>     North to Archives</desc>
+      <desc>     Up to higher floors</desc>
+      <exits n='329' up='207'/>
+   </location>
+
+   <location num='397'>
+      <name>Otter Memorial</name>
+      <desc>In a sheltered area of the park is a statue of an Otter.  There is a plaque which reads, &quot;In Memory of a Friend, Otter.  I&apos;ll never forget you brah.&quot;</desc>
+      <desc>    There is a note which reads, &quot;Dude, you were the best player in Fed.  You were ten times smarter, ten times funnier, and ten times the friend.  I was bummed when you left.  If you happen to come by to visit, look me up.  We can talk about old movies.;) --- Zardoz.&quot;</desc>
+      <exits e='398' up='1119' down='1144' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='398'>
+      <name>Aekonia Memorial Park</name>
+      <desc>Aekonia Memorial Park is a quiet refuge from the clamor of the city.  The sounds of the city, the cars, the transports, the shuttles, fade away..  The surrounding trees and flowers create a serene contemplative mood.  There are benches at select points in the park upon which on can sit and reflect upon the day, the week, or even the year..  To the west is a small memorial to a friend.</desc>
+      <exits ne='335' w='397' nw='333' up='1119' down='1144' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='399'>
+      <name>Road</name>
+      <desc>This is a road that connects the space port to the downtown area.  To the north is Downtown.  To the Southwest is the space port.  Directly south is the planet&apos;s exchange.</desc>
+      <exits n='335' s='463' sw='462'/>
+   </location>
+
+   <location num='400'>
+      <name>South End of Mall</name>
+      <desc>This is the south end of the mall.  To the east is a door with a sign that says &quot;Nibelheim Trading Company, Arms Merchant.&quot;  To the north is the rest of the mall.</desc>
+      <exits n='336' e='401'/>
+   </location>
+
+   <location num='401'>
+      <name>Nibelheim Trading Company</name>
+      <desc>Nibelheim Trading Company specializes in the manufacture and distribution of weapons.  In display cases are examples of the finest swords, each with a finely honed razor sharp blade.  The styles of swords offered are diverse and range from gleaming Katanas to ornate sabers.  On the wall behind the counter are mounted an assortment of firearms ranging from an antique flintlock to a BFG-5000.</desc>
+      <exits w='400'/>
+   </location>
+
+   <location num='410'>
+      <name>Nibelheim Trading Co. Reception Area</name>
+      <desc>The reception area of Nibelheim Trading Co.is lined with books.  Several titles indicate an interest in something called &quot;The Jenova Project&quot;.  On the walls are various military decorations and awards from SOLDIER.  On the receptionist&apos;s desk are pamphlets describing vacations at The Gold Saucer and Costa Del Sol.  Nibelheim Trading Co. is a proud member of the House of Doz.</desc>
+      <desc>     To the north is a door with gold lettering which reads, &quot;Sephiroth, Proprietor.&quot;  There is an exit to the east.</desc>
+      <exits n='346' e='411' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='411'>
+      <name>End of the Second Floor Hallway</name>
+      <desc>To the east are the Offices of Unlimited Ltd, and to the west are the Offices of Nibelheim Trading Co.</desc>
+      <exits e='412' s='475' w='410' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='412'>
+      <name>Unlimited Ltd Reception Area</name>
+      <desc>This is the local office of Unlimited Ltd., a financing company and the lead organization of the House of Doz.  Unlimited Ltd. offers favorable financing terms to CEOs, and is available for business strategy consultations as well.  The walls of the office area are lined with the finest Ainokea woods, and the receptionist&apos;s station is constructed of smooth polished aluminum.  The com lines blink with messages from CEOs requesting the return of shares, and the receptionist scrambles to field them all.  A comfortable couch is against the wall with back issues of the FedStar for visitors to read as they wait for their appointment.  To the north is an office door.  Written in gold is the name, Zar D. Oz, Proprietor.  To the west is the exit to the hallway.</desc>
+      <exits n='348' w='411' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='417'>
+      <name>Suite 301 - Currently Vacant</name>
+      <desc>This is a vacant office and is available for lease.</desc>
+      <exits n='353' e='418'/>
+   </location>
+
+   <location num='418'>
+      <name>End of the Third Floor Hallway</name>
+      <desc>This is the end of the Third Floor Hallway.  To the east is Suite 300, which is currently vacant.  To the west is Suite 301 which is also vacant.</desc>
+      <exits e='419' s='482' w='417'/>
+   </location>
+
+   <location num='419'>
+      <name>Suite 300 - Currently Vacant</name>
+      <desc>This is a vacant office and is available for lease.</desc>
+      <exits n='355' w='418'/>
+   </location>
+
+   <location num='423'>
+      <name>Aekonia Purchasing Department</name>
+      <desc>The people of Aekonia are renowned gluttons.  Posted here will be a list of the commodities most in demand.  Merchants and Planet Representatives are encouraged to sell to the exchange, where a fair price will be offered.</desc>
+      <desc>    - Aekonia desires Furs, Generators, Props, Musiks, and all Biologicals.  Please see PO for pricing and delivery information.</desc>
+      <exits n='359' s='487' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='424' flags='bt'>
+      <name>Zodbot Charging Station</name>
+      <desc>This is a charging station to regenerate the batteries of the Planet&apos;s robot, Zodbot.  Zodbot is a fully functional (in all respects) robot and is used to service the planet.  Zodbot is owned by Zardoz, but has been lent to the planet for the time being.  The charging station is hooked into the Planet&apos;s network, and Zodbot can monitor the various areas for which he is responsible while he is regenerating his power cells.</desc>
+      <exits s='488' out='462' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='425' flags='bt'>
+      <name>Private Office of Zodraz</name>
+      <desc>Zodraz&apos;s office is furnished in polished steel and glass.  The window has an unobstructed view of the Enimamard Sea.  The inviting beach below obviously creates some difficulty concentrating on work, hence the thick curtains on both sides of the window.  On one wall is a large video panel displaying planetary statistics and exchange data.  There is a soft leather couch suitable for naps against the other wall.</desc>
+      <exits n='361' s='489' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='438' flags='b'>
+      <name>Private Table</name>
+      <desc>Behind a partition, away from the main dining area, is a private table.  The view from the table of the lights of the city and the spaceport beyond is spectacular.  On this night you see the stars abounding in the sky and as you gaze off into the horizon, you see the stars almost mesh with the twinkling of lights from the planet homes in the distance.  Soft music drifts in from hidden speakers, and the flickering light of candles set a mood of relaxation and quiet conversation.  Waitdroids hover discretely in the distance ready to meet your immediate needs.</desc>
+      <exits s='502' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='462'>
+      <name>Aekonia Shuttle Pad</name>
+      <desc>The warm tropical air is filled with the scent of flowers.  The Sun&apos;s warm rays break through the scattered clouds and work a sort of magic on your skin.  The landing pad is awash with activity.  Pallets of cargo are being prepped for shipment.  Droids rush about to move pallets of commodities imported from other worlds.  A large sign is erected on the southern portion of the pad that reads, &quot;emocleW ot aekoniA.  yojnE rouY yatS.&quot;</desc>
+      <desc>     To the southwest is the shipyard.  To the east is the Exchange.  A road to town is to the northeast.</desc>
+      <exits ne='399' e='463' sw='525' up='1119' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='463' flags='e'>
+      <name>Aekonia Exchange</name>
+      <desc>This is the Aekonian Exchange.  Merchants are huddled over terminals checking prices and ordering and selling bays.  In the corner, a group of traders are whipping out calculators and arguing over the merits of the spreads on the various commodities.  Clerkdroids rush up and confirm orders and tb messages out to the porters for the loading and unloading of goods bought and sold through the exchange.  The floor manager stands up and yells, &quot;Buy High, Sell Low...errr... or was it High Buy, Low Blow....errr..&quot;, and is promptly ushered from the room.</desc>
+      <desc>     To the west is the exit outside.  To the east is The Trading Watering Hole.  To the North is a road into town.</desc>
+      <exits n='399' e='464' w='462' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='464' flags='b'>
+      <name>The Trading Watering Hole</name>
+      <desc>An oasis from the frantic activity of the trading floor, The Trading Watering Hole is here to service visitors doing business on Aekonia.  In one corner a table of merchants sit together bragging about the number of wares they have amassed.  In another corner, a group of traders weep and moan for the days of hauling ak jobs.  In yet another corner, shunned by the rest of the customers, sits a lone financier.  If you watch carefully, you&apos;ll notice that the bartender will spit in the financier&apos;s drink.  This must explain why some financiers never leave Starbase1.</desc>
+      <desc>     The bar itself is stocked with an ample supply of liquid refreshments, and food is available.  Management wishes you a profitable trading experience.  The exit to the exchange is to the west.</desc>
+      <exits w='463' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='474' flags='b'>
+      <name>Suite 203 - Ooryl Qrygg</name>
+      <desc>A boxy metal desk occupies most of this office. Sitting to one side and barely visible under mountains of paperwork is a dingy work terminal, currently displaying exchange prices. In one corner next to the door is a small, freestanding waterfall, complete with miniature trees and a small lake, which might be the cause of the slightly fishy smell. Lying open on the battered coffee table in the center of the room is a copy of The Idiot&apos;s Guide to Being a Gand. Both pages appear to be mostly indecipherable diagrams with hastily scribbled notes in the margins. Next to the table is a tweed futon, with not-so-matching plaid cushions. A large display hangs on the wall over the futon, streaming video of some distant, cloud shaped, red-blue nebula. Gritty, fast-paced, metallic music emanates from somewhere in the mess on top of the desk.</desc>
+      <desc>    A sticky note on the door reads: Qrygg, Don&apos;t make me crash the universe again. Keep it to a dull roar. -Z</desc>
+      <exits e='475' out='462' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='475'>
+      <name>Second Floor Hallway</name>
+      <desc>The Second floor is occupied by various tenants.  To the east is Suite 202, currently rented by Carpathian Cargo Company.  To the west is Suite 203, currently rented by Ooryl Qrygg.  The Hallway continues to the north and the gravtube is to the south.</desc>
+      <exits n='411' e='476' s='539' w='474' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='476' flags='b'>
+      <name>Suite 202 - Carpathian Cargo Co. - Member of the House of Doz</name>
+      <desc>This is the office of the Aeknoian Branch of the Carpathian Cargo Company.  The office is dimly lit.  Heavy black curtains prevent any sunlight from entering the room.  The only light comes from several red candles.  In the center of the room is a black coffin with a blood red interior lining.  There is a growing sense of foreboding permeating the room.  It might be a good idea to leave right now!</desc>
+      <exits w='475' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='481' flags='bkt'>
+      <name>Suite 303 Simlish Translators Inc.</name>
+      <desc>The Office of Royalsims is sparsely furnished.  Currently, the company is managed under trust by Unlimited Ltd.  But occasionally, Royal has been known to drop by to check his mail.  Simlish Translators Inc., is an investment company specializing in assisting the small investors in reacquiring their shares.  The instructions to the Trustee provide for very favorable return policies.</desc>
+      <exits e='482' out='462'/>
+   </location>
+
+   <location num='482'>
+      <name>Third Floor Hallway</name>
+      <desc>The Third Floor is occupied by various tenants.  To the east is Suite 302, currently vacant, and available for lease.  To the west is Suite 303, currently rented by Simlish Translators Inc.  The Hallway continues to the north and the gravtube is to the south.</desc>
+      <exits n='418' e='483' s='546' w='481'/>
+   </location>
+
+   <location num='483'>
+      <name>Suite 302 - Currently Vacant</name>
+      <desc>The Office is furnished with a desk and a refreshment stand.  The office can be redecorated to reflect the renters tastes and requirements.</desc>
+      <exits w='482' out='462'/>
+   </location>
+
+   <location num='487'>
+      <name>Aekonia Immigration Department</name>
+      <desc>Should the warm friendly air of Aekonia suit you, and you desire to build a factory and/or kick back and put your feet up here, we would welcome you.  Posted here will be a listing of available factory slots.</desc>
+      <desc>   - Currently all slots are filled.  Please see PO for requests for special consideration.</desc>
+      <exits n='423' e='488' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='488'>
+      <name>Aekonia Planet Administration - Reception Area</name>
+      <desc>Welcome to Aekonia Planet Administration.  Aekonia is a proud member of the House of Doz.  To the west are the various operating departments.  To the east are the offices of the planet administrator.  To the north is a Droid charging station.</desc>
+      <exits n='424' e='489' s='552' w='487' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='489'>
+      <name>Secretary to the Planet Administrator</name>
+      <desc>The Secretary to the Planet Administrator is an attractive woman with two very large ... ear rings.  As she bends over to pick up a dropped file, you see her curvaceous, shapely, ... ankle.  She looks up and smiles at you and says, &quot;The boss&apos;s office is to the north.&quot;</desc>
+      <exits n='425' w='488' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='502' flags='b'>
+      <name>Che Zippe Restaurant</name>
+      <desc>Chez Zippe is renowned for its cuisine.  In fact, Extraterrestrial Psychology Today credited it with the creation of a new condition, the Edible Complex, The Head Chef, Octugaran the Obese, is a seven armed mollusk, who by using his arms simultaneously, is able to create dishes with flavors that take the diner to levels of pleasure that border on orgasmic.  Octugaran once had eight arms, but on a busy night, with five arms busy chopping ingredients for a visiting party of distinguished gourmands and restaurant critics, a knife slipped and sliced off one of Octugaran&apos;s arms.  The arm fell onto a steaming platter of noodles just as it was carried out the door to be served to the guests.  The rave reviews that followed resulted in the creation of a new dish that is served each time Octugaran regenerates an arm.  Customers flock from all over the galaxy to dine at the table of the Chef that puts more of himself into the dishes than any other.  To the north is a private table.</desc>
+      <exits n='438' s='566' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='525' flags='yr'>
+      <name>Aekonia Shipyard</name>
+      <desc>Aekonia Shipyard is a bustle of activity as the workers manufacturer new cargo ships.  Cranes carry large prefabricated hull sections from one assembly area to a massive assembly dock.  Droids move from seam to seam laying bead after bead of fresh welds.  You can buy a ship here at reduced rates.</desc>
+      <exits ne='462'/>
+   </location>
+
+   <location num='539'>
+      <name>Gravtube - Second Floor</name>
+      <desc>Second Floor - Tenant Offices</desc>
+      <desc>     North to Tenant Offices</desc>
+      <desc>     Up to higher floors</desc>
+      <desc>     Down to lower floors</desc>
+      <exits n='475' up='546' down='207' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='546'>
+      <name>Gravtube - Third Floor</name>
+      <desc>Third Floor - Tenant Offices</desc>
+      <desc>     North to Tenant Offices</desc>
+      <desc>     Up to higher floors</desc>
+      <desc>     Down to lower floors</desc>
+      <exits n='482' up='552' down='539'/>
+   </location>
+
+   <location num='552'>
+      <name>Gravtube - Fourth Floor</name>
+      <desc>Fourth Floor - Planet Administration</desc>
+      <desc>    North to Planet Administration Offices</desc>
+      <desc>    Up to Roof</desc>
+      <desc>    Down to Lower floors</desc>
+      <exits n='488' up='566' down='546' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='566'>
+      <name>Gravtube - Roof Level</name>
+      <desc>Roof Level - Chez Zippe Fine Cuisine.</desc>
+      <desc>   North to the restaurant</desc>
+      <desc>   Down to the lower floors</desc>
+      <exits n='502' down='552' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='980' flags='bt'>
+      <name>Teahouse</name>
+      <desc>The interior of the Teahouse is made of fine grained Aekonian Hardwood.  The tatami mat is imaculate.  A small stove is in the corner to heat the water.  In the center of the room on a black tray is an unusually designed tea set of glazed celadon pottery.  The tea set at first looks crude and simple, but as you gaze at it from different angles, you see that the artist created through the use of different glazes, the effect that it changes color.  You realize that the tea set is actually quite sophisticated.  In this Teahouse, Zard and Sephy come to relax and quietly think of the complexities of life, that lie beneath the simple explanation.</desc>
+      <exits s='1044' out='1044'/>
+   </location>
+
+   <location num='1043'>
+      <name>Bathhouse</name>
+      <desc>The bathhouse is lined with fine grained Aekonian Hardwood that has been stained a golden brown.  In the center of the room are two tubs.  The tubs are placed in such away that the users would be sitting next to and facing the opposite direction of each other.  This arrangement was chosen to accomodate Seph.  Since she is a Strom, she is used to temperatures far in excess of that which Zard could endure.  By having two tubs, Zard and Seph can take their evening baths together, hold hands, and talk, and both enjoy a water temperature that is to their comfort and enjoyment.  There are soft robes and towels hanging from wooden pegs on the wall.</desc>
+      <exits s='1107'/>
+   </location>
+
+   <location num='1044' flags='t'>
+      <name>Zard and Sephy&apos;s Tea Garden</name>
+      <desc>Zard and Sephy&apos;s house surrounds a small Japanese garden.  The garden is constantly attended to by garden droids, and there is not even one leaf that is out of place.  The dark green of the garden contrasts with the white shoji doors of the house and the effect is to magnify the sense of greenery and nature in the garden.  Bamboo screens are strategically placed to partition areas of the garden so that one must take the time to pause and reflect with each step.  Clearly this is a place designed to slow one&apos;s mood, and relax one&apos;s mind.  To the north is a small Tea House.</desc>
+      <exits n='980' s='1108'/>
+   </location>
+
+   <location num='1045'>
+      <name>Sephy&apos;s Studio</name>
+      <desc>When Zard received the title to this land, he commissioned architects and builders to build this house right away.  He instructed them to build one room for the exclusive use of his bride, Sephorin.  Zard has always adored Seph&apos;s artwork.  Seph is one of the finest wordsmiths in Fed and can craft beautiful images with just words.  Zard set this room for her to work and create her beautiful images.  The room has a tatami mat floor and an easel is set up on one side.  There are watercolors and inks available for Seph to work with.  The shoji doors open on the west, east, and north sides to provide inspirational views of the gardens.  In the center of the room, on a white silk handkerchief, is a long-stemmed red rose and a note.  The note says, &quot;For my lovely wife, who I so adore, I will forever be yours, Zardoz&quot;.</desc>
+      <exits s='1109'/>
+   </location>
+
+   <location num='1107' flags='bt'>
+      <name>Zard and Sephy&apos;s Bedroom</name>
+      <desc>In the center of the room is a large bed with an excess of pillows.  There are comm units, and portable computer terminals on the night stands.  On one night stand, in a silver frame, is a picture of Sephorin on her wedding day.  The pillows are in sufficient number for creating comfortable sitting positions for the mornings that Zard and Sephy want to spend time together, and allow them to conduct their business side by side, while never leaving the bedroom.</desc>
+      <exits n='1043' e='1108'/>
+   </location>
+
+   <location num='1108' flags='bt'>
+      <name>Zard and Sephy&apos;s House - Living Room</name>
+      <desc>The entryway into Zard and Sephy&apos;s house leads immediately into the living area.  There are comfortable futon pillows to sit on, and there are snacks, and drinks available.  The living area is sparsely decorated reflecting its ability to be used in a variety of situations.  The walls are decorated with some fine examples of calligraphy and some water color landscapes.  There is some soft music playing, and panels can be moved to provide computer displays so Zard and Sephy can work, while they relax at home with each other.  There are rooms to the east and west, as well as a garden to the north.</desc>
+      <exits n='1044' e='1109' s='1172' w='1107' out='1172'/>
+   </location>
+
+   <location num='1109' flags='bt'>
+      <name>Zard and Sephy&apos;s Home Office</name>
+      <desc>Zard and Sephy have positioned their desks so they face each other.  This gives them the chance to talk and plan together as they conduct their business.  They used to have the desks side by side, but Sephy told Zard that his constant kisses were making her lose her concentration, so they settled on the present arrangement.  Actually, Zard will be the first to admit that he prefers this arrangement.  Zard has always enjoyed not only his wife&apos;s beauty, but her wit and intelligence as well.  Zard has said that by working with Sephy, he makes better decisions, because she brings a level of skills and insight that he totally lacks.  On the wall are pictures of Zard and Sephy from their wedding, and in a glass case, a small girl devil doll is on display.</desc>
+      <exits n='1045' w='1108'/>
+   </location>
+
+   <location num='1119'>
+      <name>Aekonia University Physics Class</name>
+      <desc>You are transported to the Physics classroom at Aekonia University, where Professor Fig Newton is explaining the concepts of gravity.  As he lectures on the natural phenomenom of attraction between physical objects with mass, he fixes you with his gaze and says loudly, &quot;Thus class, you cannot fly.&quot;</desc>
+      <desc>     The student next to you whispers, &quot;You too, eh?  I heard you can escape the class if you type OUT.&quot;</desc>
+      <exits out='462' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1144'>
+      <name>Groundskeeper&apos;s Office</name>
+      <desc>You are transported to the office of the Head Groundskeeper.  The smell of dirt, fertilizer, and mulch permeates the room.  As the Groundskeeper rises from behind his desk, a fresh blast of aroma hits you and you realized that the smell does not permeate the room, it permeates the Groundskeeper.</desc>
+      <desc>     The Groundskeeper fixes you with his gaze and lectures you on the importance of not making holes in his garden.  After quickly looking around the office, you realized that you can escape by typing OUT.</desc>
+      <exits out='462' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1172'>
+      <name>Zard and Sephy&apos;s House</name>
+      <desc>To celebrate the wedding of his brother Zardoz, Zodraz set aside some land for Zard and Sephy to build a small house.  Upon receipt of the deed, Zardoz immediately commissioned the construction of this dwelling for his bride.  The design and decorations were picked by him as a gift for his one true love.</desc>
+      <desc>     Nestled in the grove of Japanese pine trees is a small white house.  The house&apos;s flat roof design, black trim, and sliding shoji doors show a definite Japanese influence in its design and construction.  The front door is bordered by two stone lanterns, and there are Bonsai gardens on both sides of the path leading to the door.</desc>
+      <exits n='1108' s='1236' in='1108'/>
+   </location>
+
+   <location num='1236'>
+      <name>Path</name>
+      <desc>This is a small path leading from a grove a cherry blossom trees in the southeast to a grove of Japanese pine trees to the north.</desc>
+      <exits n='1172' se='1301'/>
+   </location>
+
+   <location num='1301'>
+      <name>Bottom of Waterfall</name>
+      <desc>The waterfall leads down to a small trail that heads northwest through a grove of Cherry Blossom trees.</desc>
+      <exits nw='1236' up='333'/>
+   </location>
+
+</fed2-map>
+

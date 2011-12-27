@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<fed2-map title='Brightstar' version='3' editor='standard' from='266' to='Jaguar.Jaguar Space.131'>
+
+   <location num='0' flags='t'>
+      <name>Object box</name>
+      <desc>For all the unused toys</desc>
+   </location>
+
+   <location num='202' flags='hi'>
+      <name>Mickey&apos;s Boo-Boo remover</name>
+      <desc>A Mouse doctor inspects you upon entry and determines the correct answer to your health troubles. As he finishes, he touches you up with a bit of makeup and hands you a refreshing beverage. Do you feel healthier? Wait til you see his bill!  The LP is south.</desc>
+      <exits s='266'/>
+   </location>
+
+   <location num='265' flags='yr'>
+      <name>Jerry&apos;s used space craft</name>
+      <desc>Old mouldy wheels of some sort of red cheese are strewn about. Some half eaten, some not. Above the structure&apos;s door is mounted the figure of a cat. You peer carefully, the blue creature appears to be an actual stuffed cat!</desc>
+      <desc>The LP is east.</desc>
+      <exits e='266'/>
+   </location>
+
+   <location num='266'>
+      <name>Welcome to Brightstar</name>
+      <desc>This is the home of the largest dairy facility within 10 planet systems. All around you are cheese related items. Walls, floors, transportation, serverdroids, everything gives the appearance of being some form of cheese.</desc>
+      <desc>East is the exchange, south is a bar, to the west is a shipyard and north is a hospital.</desc>
+      <exits n='202' e='267' s='330' w='265'/>
+   </location>
+
+   <location num='267' flags='eb'>
+      <name>Cheesy Exchange</name>
+      <desc>All sorts of cheese futures are prominently bought and sold here along with the usual planet commodities.</desc>
+      <desc>The LP is west.</desc>
+      <exits w='266'/>
+   </location>
+
+   <location num='330' flags='b'>
+      <name>Minnie&apos;s Refreshments</name>
+      <desc>Assorted flavors of cheese are on display for sampling. If you&apos;d like some whine with your cheese, please be sure ask your waiter/waitress. The staff aims to please!</desc>
+      <desc>The LP is north.</desc>
+      <exits n='266'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<fed2-map title='Tachi' version='2' editor='standard' from='2205' to='Kiddo.Kiddo Space.2266'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Objects and mobiles live here.</desc>
+   </location>
+
+   <location num='2015' flags='b'>
+      <name>Blades Steakhouse</name>
+      <desc>What&apos;s unusual in this restaurant is the seating.  All the tables seat one or two diners, none are larger.  The bulk of the customers are sitting alone.  The steaks here are well prepared and tender, although true to its name, the establishment furnishes well honed steakknives.  There is little conversation heard, save for the interaction between diner and server.   Haunting music is playing softly.  You may return to the hotel district up the road.</desc>
+      <exits up='2143'/>
+   </location>
+
+   <location num='2143'>
+      <name>Hotel District</name>
+      <desc>You step into a brutal desert climate, and the heat assaults you, making drawing a breath an effort.  A large assortment of hotels and restaurants encircle you.  They seem to cater to every wallet.  You see some lodgings and restaurants with open windows, clearly not equipped with climate control.   Although none could be described as luxurious, you head towards those that at least offer relief from the heat.  There seems to be a restaurant down the road or you can exit SW.</desc>
+      <exits sw='2206' down='2015'/>
+   </location>
+
+   <location num='2144'>
+      <name>Conciliatory Center</name>
+      <desc>For those wishing to end amorous or marital relationships in a peaceful manner, there are experts here to help.  Psychologists, Life Coaches and Philosophers mediate between you and the other partner in a manner designed to convince you both that you are making a good decision.  Exit is SW.</desc>
+      <exits sw='2207'/>
+   </location>
+
+   <location num='2204' flags='eb'>
+      <name>Tachi Exchange</name>
+      <desc>The standard exchange vidscreens are here, and there are plenty of traders.  Oddly, an ice cream parlor is set up in one corner and every table seems to be taken.  The customers are ordering outlandish concoctions and you wonder how they can eat so much ice cream at one setting.  Even stranger, along one wall are gambling machines, and nearly every one is occupied.  The LP is through the arch to the East.</desc>
+      <exits e='2205'/>
+   </location>
+
+   <location num='2205' flags='yrb'>
+      <name>Tachi Landing Pad</name>
+      <desc>The air near the landing pad is scorching, and you&apos;re eager to find a climate controlled building.  You enter the welcome center, which is indeed air conditioned, but just barely.  You hear a local say, &quot;Yes, but it&apos;s a dry heat&quot; and want to slug him.  The exchange is through the arch to the West.  If you&apos;re willing to exit the building and brave the heat, there&apos;s an exit East as well.</desc>
+      <exits e='2206' w='2204'/>
+   </location>
+
+   <location num='2206'>
+      <name>Tachi Directory</name>
+      <desc>A large color coded electronic directory is in a shaded open walled building.  The choices are limited to lodging, marital aids and personnel, with several puzzling subcategories.  The arrows point NE, SE and East, or you can return West to the LP.</desc>
+      <exits ne='2143' e='2207' se='2271' w='2205'/>
+   </location>
+
+   <location num='2207'>
+      <name>Marital Aids</name>
+      <desc>You are grateful this building is cool, at least relatived to the outside temperature.  You see three archways with lettering above each one, the meanings unclear.  Conciliatory is NE, Reasonable is East and Final is SE.  You may also return towards the LP to the West.</desc>
+      <exits ne='2144' e='2208' se='2272' w='2206'/>
+   </location>
+
+   <location num='2208'>
+      <name>Reasonable Negotiator, Inc.</name>
+      <desc>Also known as the Shark Tank, the legal wizards here are known for their acumen at negotiating highly favorable separation and divorce agreements.  The pressures they apply and the leverage they utilize serve their clients well and profitably.  Exit West.</desc>
+      <exits w='2207'/>
+   </location>
+
+   <location num='2271'>
+      <name>Tachi Employment Agency</name>
+      <desc>This spacious room contains scores of computerized kiosks.  Apparently, would be employers come here looking to hire, using the kiosks to scan applicants who fit their needs.  If you&apos;re curious, step down into a kiosk.  Otherwise, go NW.</desc>
+      <exits nw='2206' down='2399'/>
+   </location>
+
+   <location num='2272'>
+      <name>Let&apos;s Make it Final, Ltd.</name>
+      <desc>This business does not advertise.  Its clientele is strictly word of mouth.  Its agents assure that spouses who wish to be freed from their partners never have to fear from reprisal or undue hardship.  The details of how this is accomplished are whispered but not discussed openly.  Exit NW.</desc>
+      <exits nw='2207'/>
+   </location>
+
+   <location num='2399'>
+      <name>Employment Kiosk</name>
+      <desc>As you search through resumes, you begin to see a pattern.  All the applicants are highly trained in martial arts and other survival skills.  Their curriculum vitae include long lists of skills, but the accomplishments are vague and the references non existent.  Photographs of the applicants are included and all, male or female, look lean and hard.  You begin to daydream about how their skills might be utilized to your personal advantage.  You can return up to the agency main room.</desc>
+      <exits up='2271'/>
+   </location>
+
+</fed2-map>

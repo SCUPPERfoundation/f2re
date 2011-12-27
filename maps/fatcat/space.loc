@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Fatcat Space' version='12' editor='standard'>
+
+   <location num='136' flags='s'>
+      <name>Sinta Orbit</name>
+      <desc>This planet is under construction. Board and use its facilities or wait around until construction is finished to see a real description.</desc>
+      <exits se='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='138' flags='s'>
+      <name>Mizhu Orbit</name>
+      <desc>This planet is under construction. Board and use its facilities or wait around until construction is finished to see a real description.</desc>
+      <exits sw='201' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='201' flags='slp'>
+      <name>Piscin Orbit</name>
+      <desc>You are in orbit around a very large green planet. Upon closer inspection you realize the entire planet is made of catnip. Some parts of the planet the catnip is still flowering and colorful while other parts the planet is dry as a bone and the catnip is flaky. If you are of the feline persuasion you might be able to pick up the intoxicating smell and if you are that is very unfortunate for you.</desc>
+      <exits ne='138' nw='136' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

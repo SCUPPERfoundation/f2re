@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Demeter' version='7' editor='standard' from='1100' to='Gliese581.Gliese581 Space.140'>
+
+   <location num='0'>
+      <name>Nothing Here</name>
+      <desc>storage room.</desc>
+   </location>
+
+   <location num='908' flags='yr'>
+      <name>Shipyard</name>
+      <desc>All around there are a mix of partially build starships, and those that need repairs. Various creatures in overalls swarm over the ships working to get their quota done before the shift ends. The foreman is here if you wish to have a ship built or repaired.</desc>
+      <exits s='972'/>
+   </location>
+
+   <location num='972' flags='hi'>
+      <name>Demeter Hospital</name>
+      <desc>Here there are various contraptions used in the healing and revival of all sorts of beings. Doctors work to diagnose and heal those who are here. There is also a small console for you to buy insurance.</desc>
+      <exits n='908' s='1036'/>
+   </location>
+
+   <location num='1036' flags='e'>
+      <name>Demeter Exchage</name>
+      <desc>A crowd of people are here, selling and buying commodities and futures. There are multiple consoles that could be used for trade.</desc>
+      <exits n='972' s='1100'/>
+   </location>
+
+   <location num='1100'>
+      <name>Landing Pad</name>
+      <desc>A large concrete pad has been made here for the ships visiting the planet. To the west it&apos;s sun hovers just above the horizon blanketing this area of Demeter in eternal twilight. On the corner of the pad there&apos;s a small Armstrong Cuthberk kiosk where you can pick up or deliver cargo. To the north is an exchange, and to the south there is a bar.</desc>
+      <exits n='1036' s='1164'/>
+   </location>
+
+   <location num='1164' flags='b'>
+      <name>Side of The World Bar</name>
+      <desc>This bar looks far too cheery and bright. It seems to be specifically for tourists. The few patrons who are here seem bored. The walls display various things from the past of the planet. Apparently this planet used to be called Gliese 581  g when it was discovered.</desc>
+      <exits n='1100'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<fed2-map title='Paradise' version='2' editor='standard' from='457' to='Sol.Sol Space.976'>
+
+   <location num='0' flags='t'>
+      <name>Storage room</name>
+      <desc>   This is where the bodies are kept.</desc>
+   </location>
+
+   <location num='452'>
+      <name>Ion drive</name>
+      <desc>   A split-phase glazsteel pane has been let into the wall here to allow a view of the ion drive. Large floodlights shed an actinic glare on the scene as space suited figures crawl over the drive port. Huge engines and fittings hang from makeshift cranes and booms, haphazardly fixed to the pitted surface of the station. A red light over the airlock flashes as the repair crew moves between the station interior and the busy worksite outside.</desc>
+      <exits se='517'/>
+      <events in-room='sleaze.vendor.4'/>
+   </location>
+
+   <location num='453' flags='ba'>
+      <name>Knobs and Knockers</name>
+      <desc>   A long genuine wood bar stretches across the entire side wall of the pub. The walls are covered with a mad collection of doorknobs and knockers, snaffled from entryways all over known space. Battered wooden tables fill the room, most occupied by stevedores in stained coveralls.</desc>
+      <exits s='517'/>
+   </location>
+
+   <location num='454'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. A doorway to the south is slightly ajar.</desc>
+      <exits se='519' s='518' sw='517'/>
+   </location>
+
+   <location num='455' flags='e'>
+      <name>Paradise Commodities Market</name>
+      <desc>   The commodity displays are slapped together from bits and pieces of ancient and scavenged exchange equipment. Fumes of grease and oil pervade the room. A row of battered machines with glass domes clatter incessantly as they spew snakes of perforated paper tape into heaps on the floor. A parade of droids with coal filled sacks on their backs shuffle in, dump their loads into a chute on a huge copper boiler, and exit out a steep ramp passing through the side wall. The ancient gears of the machines groan and crash and periodically, loudly graunch to a halt with entire rows of antique cathode ray screens going dark. Merchants and Traders amble through the door to the south.</desc>
+      <exits s='519' out='519'/>
+   </location>
+
+   <location num='456'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. The parts stores are to the south.</desc>
+      <exits se='521' s='520' sw='519'/>
+   </location>
+
+   <location num='457'>
+      <name>Mother Truckers Service Station and Mall</name>
+      <desc>   The shuttle pad of Mother Trucker&apos;s Mobile Service Station and Surplus Goods Exchange is formed from discarded and salvaged panels welded and patched together. Cranes, booms, and tethers of a thousand and one different kinds are scattered about the surface. A hut constructed of plazsteel panels is plastered with a large sign that proclaims, &quot;Park At Your Own Risk!&quot;</desc>
+      <exits s='521'/>
+   </location>
+
+   <location num='458'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. To the south is a doorway.</desc>
+      <exits se='523' s='522' sw='521'/>
+   </location>
+
+   <location num='459' flags='a'>
+      <name>Arnie&apos;s Surplus</name>
+      <desc>   Narrow pathways snake between the canyons of piled up crates and cartons. At the far end of the room, seated around a desk, three women are playing a complicated card game. A comm unit blares out a plaintive tune about some unlucky spacer losing his woman, his droid, and his shuttle. Robots move about the room stacking and shifting boxes.</desc>
+      <exits s='523'/>
+   </location>
+
+   <location num='460'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. To the south is a doorway.</desc>
+      <exits se='525' s='524' sw='523'/>
+   </location>
+
+   <location num='461'>
+      <name>Three Ethnics and a Wasp, Ltd.</name>
+      <desc>   &quot;RING BELL for water, ice, legal documents&quot;</desc>
+      <desc>   Four large desks occupy the office. Behind each desk, seated in commodious chairs, a being in the customary business attire of its culture. Comm units are scattered about, holo display screens&apos; speakers blare. Cartons overflowing with flotsam and jetsam are piled in a corner. All four salesmen are shouting into their comm units in various accents.</desc>
+      <exits s='525'/>
+   </location>
+
+   <location num='462'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. To the south is a doorway, to the southeast, a sliding panel has been left open.</desc>
+      <exits se='527' s='526' sw='525'/>
+   </location>
+
+   <location num='517'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. A doorway opens into a service pod to the north and a portal is northwest.</desc>
+      <exits n='453' ne='454' nw='452'/>
+   </location>
+
+   <location num='518'>
+      <name>Raiders of the Lost Art</name>
+      <desc>   Holo displays are stacked against the walls between pillars of precariously balanced cartons. Large nets hang from the ceiling filled with lumpy sacks and pods. Crates line the back wall, some with panels levered partially open to reveal the contents. A collection of diminutive frames hang clustered together, a smudged card tacked to the wall beside them. On a metal desk, splotchy with rust, a pyramid of scrolls threatens to spill onto the floor. Rough storage units are filled with crates covered with customs stamps.</desc>
+      <exits n='454'/>
+   </location>
+
+   <location num='519'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. The loud cacophony of the station&apos;s market pours through the open doorway to the north.</desc>
+      <exits n='455' ne='456' nw='454' in='455'/>
+   </location>
+
+   <location num='520' flags='a'>
+      <name>Pump -N- Munch</name>
+      <desc>   &gt;&gt;&gt;&gt;&gt;&gt;&gt;We&apos;re happy to show you our parts&lt;&lt;&lt;&lt;&lt;&lt;&lt;</desc>
+      <desc>   Huge pods of fuel in staggered lines are tethered here. Silksteel clad hoses snake over the surface and exit through gasketed ports. A row of battered vending machines offers a variety of dubious treats. At the counter, a gastropod in a serviceable coverall with greasy stains and a waterfall of military service ribbons presides over the parts catalogues. Two assistants are busily engaged in switching price tags and making notes on their comm units.</desc>
+      <exits n='456'/>
+   </location>
+
+   <location num='521'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. The shuttle pad opens to the north.</desc>
+      <exits n='457' ne='458' nw='456'/>
+   </location>
+
+   <location num='522' flags='c'>
+      <name>Mother&apos;s Express Deliveries</name>
+      <desc>   This remote branch office of Armstrong Cuthbert is franchised and run by the Disabled Veteran Stevedores&apos; Union. Vast numbers of cargo pods are trans-shipped through this station. A sign over the large plazsteel door in the back wall reads, &quot;GA Bonded Storage&quot;. The door is wedged open to allow stevedores to conveniently guide floaters loaded with crates in and out. An assignment board holds order slips for pending Akaturi courier jobs. The Armstrong Cuthbert agent is easily identified by the familiar green coverall.</desc>
+      <exits n='458'/>
+   </location>
+
+   <location num='523'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. An airlock to the north is jammed open with a twisted metal bar.</desc>
+      <exits n='459' ne='460' nw='458'/>
+   </location>
+
+   <location num='524' flags='a'>
+      <name>A Pane in the Glass</name>
+      <desc>   This pod is constructed entirely of glazsteel and filled with rows of stacked growing trays. Strings of lights form a cobweb overhead and snake down and through the racks. Arachnid workers slowly make their way along the rows, tending to the precious seedlings. Overhead, a Xiphosuran hangs from a slender strand of silk overseeing production. A small counter by the entrance displays flowering spaceblooms for sale.</desc>
+      <exits n='460'/>
+   </location>
+
+   <location num='525'>
+      <name>Walkway</name>
+      <desc>   A seedy, dusty central walkway snakes through the station from end to end. You step carefully to avoid the various stains and puddles on the floor. To the north is a doorway.</desc>
+      <exits n='461' ne='462' nw='460'/>
+   </location>
+
+   <location num='526' flags='a'>
+      <name>Arnie&apos;s Museum of Improbable Inventions</name>
+      <desc>   Tall glaz-fronted cabinets line the walls, filled with machines and fancies and clockwork mechanisms. Plinths display prize pieces safely surrounded by protective force fields. From a flamboyantly carved and gilded frame, a portrait of the original Arnie smiles benevolently.</desc>
+      <exits n='462'/>
+   </location>
+
+   <location num='527'>
+      <name>Ion Drive</name>
+      <desc>   A split-phase glazsteel pane has been let into the wall here to allow a view of the ion drive. Despite the layers of phased radiation shielding, the actinic glare, when the drive is active, would be almost unbearable. But alas as you look out the window, there is only the dim light of a string of service safety lanterns. The ion drives failed some time past, explaining the station&apos;s stationary orbit of Venus.</desc>
+      <exits nw='462'/>
+   </location>
+
+</fed2-map>

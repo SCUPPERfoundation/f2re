@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<event-list version='5'>
+
+ <category name='exchange'>
+
+  <section name='display'>
+
+   <event num='1'>
+    <comment>Random messages for exchange - loc 335</comment>
+    <call event='exchange.display.random[2-12]'/>
+   </event>
+
+   <event num='2'>
+    <message type='single' where='com' who='individual' lo='exchange.display.1'/>
+   </event>
+
+   <event num='3'>
+    <message type='single' where='com' who='individual' lo='exchange.display.2'/>
+   </event>
+
+   <event num='4'>
+    <message type='single' where='com' who='individual' lo='exchange.display.3'/>
+   </event>
+
+   <event num='5'>
+    <message type='single' where='com' who='individual' lo='exchange.display.4'/>
+   </event>
+
+   <event num='6'>
+    <message type='single' where='com' who='individual' lo='exchange.display.5'/>
+   </event>
+
+   <event num='7'>
+    <message type='single' where='com' who='individual' lo='exchange.display.6'/>
+   </event>
+
+   <event num='8'>
+    <message type='single' where='com' who='individual' lo='exchange.display.7'/>
+   </event>
+
+   <event num='9'>
+    <message type='single' where='com' who='individual' lo='exchange.display.8'/>
+   </event>
+
+   <event num='10'>
+    <message type='single' where='com' who='individual' lo='exchange.display.9'/>
+   </event>
+
+   <event num='11'>
+    <message type='single' where='com' who='individual' lo='exchange.display.10'/>
+   </event>
+
+   <event num='12'>
+    <message type='single' where='com' who='individual' lo='exchange.display.11'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='rama'>
+
+   <event num='1'>
+    <comment>Buy food - Rama Bar - loc 462</comment>
+    <checkstat who='individual' money='10' higher='food.rama.2' equals='food.rama.2' lower='food.rama.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='food.rama.1' hi='food.rama.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.rama.3'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

@@ -1,0 +1,1187 @@
+<?xml version="1.0"?>
+<fed2-map title='Sumatra' version='3' editor='standard' from='1027' to='Sol.Sol Space.720'>
+
+   <location num='0'>
+      <name>storeroom</name>
+      <desc>A cavernous dusty room filled with the flotsam and jetsam of the planetoid.</desc>
+   </location>
+
+   <location num='18' flags='t'>
+      <name>manufacturing</name>
+      <desc>xxx</desc>
+      <exits s='82'/>
+   </location>
+
+   <location num='20' flags='t'>
+      <name>Kitchen</name>
+      <desc>xxx</desc>
+      <exits e='21'/>
+   </location>
+
+   <location num='21' flags='t'>
+      <name>Circles dining room</name>
+      <desc>   You enter a long narrow room partitioned by a long breakfast-type bar running right down the middle seperating the tables from the kitchen. The floor is a pattern of large circles each surrounded by three or four smaller circles. The circles rise to become tables and stools, lower to be cleaned in a single continous pass.</desc>
+      <exits s='85' w='20'/>
+   </location>
+
+   <location num='22' flags='t'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits e='23' s='86' sw='85'/>
+   </location>
+
+   <location num='23' flags='t'>
+      <name>hall</name>
+      <desc>xxx</desc>
+      <exits e='24' s='87' w='22'/>
+   </location>
+
+   <location num='24' flags='t'>
+      <name>hall</name>
+      <desc>xxx</desc>
+      <exits e='25' se='89' s='88' w='23'/>
+   </location>
+
+   <location num='25' flags='t'>
+      <name>Dormitory</name>
+      <desc>xxx</desc>
+      <exits w='24'/>
+   </location>
+
+   <location num='70'>
+      <name>XenoGeology field office</name>
+      <desc>   The desks have all been pushed into a line against one wall. Boxes of rock samples are piled haphazardly in corners. The center of the room is filled with a large, lumpy brown sofa and several soiled, plump club chairs, drawn up around a low table covered with playing cards, beer bottles, and small piles of groats. Staff dressed in mud soiled coveralls are sprawled on the furniture, cards clutched in hands, eyes glued to the cards.</desc>
+      <desc>   On your approach, they start calling out, &quot;Not now!&quot;, &quot;Tell them we all died&quot;, &quot;No kibbitzers!&quot;, &quot;Get out!&quot;. A crumpled, greasy sandwich wrapper is tossed toward the office door to the southeast.</desc>
+      <exits se='135' out='135'/>
+   </location>
+
+   <location num='71'>
+      <name>Cultural Anthropology Consortium</name>
+      <desc>   A handful of chairs are roughly lined up to bisect the room, a soiled length of twine knotted and stretched between them to enforce the division. The desks have been shoved to either side of the impromptu DMZ.</desc>
+      <desc>   On one side stands Professor Igor Fonari, defender of Psychotechnologies of Active Self-Regulation, shouting, &quot;It was a HORSE!&quot;</desc>
+      <desc>   A brace of teaching assistants surrounding him echo, &quot;horse, horse, horse&quot;.</desc>
+      <desc>   On the other side, Professor Krishnaswami Alladi, leading proponent of Social Thought and Analysis of Elite Marginality, has climbed onto her desktop and shouts back, &quot;It was a COW!&quot;.</desc>
+      <desc>   Her shield wall of grad students chants, &quot;cow, cow, cow&quot;.</desc>
+      <desc>   Escape is at hand through the door to the south. You slowly back out.</desc>
+      <exits s='135' out='135'/>
+      <events in-room='announce.anthro.3'/>
+   </location>
+
+   <location num='72'>
+      <name>Office of Professor Art Nouveau</name>
+      <desc>   You are in the field office of the very distinguished historian and gadget collector Professor Art Nouveau. A large folding desk has been set up in the center of the room upon which are scattered an assortment of secret maps, Egyptian board games, and a variety of machines that remove the shells from hard-boiled eggs. His collection of fake diplomas from Brooklyn College, Oxford, Princeton, and the University of Mars are impressively framed and hang on the walls. A silver tea service sits on a small side table.</desc>
+      <desc>   Professor Art Nouveau was recently given an Honorary Degree for his work on 14th century mating rituals among the natives on the island of Rockall. His mission on Sumatra is to investigate the curious ruins of a temple in the native village here.</desc>
+      <desc>   The office door is to the south.</desc>
+      <exits s='136' out='136'/>
+   </location>
+
+   <location num='73' flags='b'>
+      <name>Break room</name>
+      <desc>   A graveyard for unwanted furniture, the room is filled with teetering chairs, unstable tables, lumpy sofas. University staff are draped on the various bits, more or less relaxing, reading, talking, and sleeping. A few droids are slowly collecting dirty dishes and glasses; another emerges from the commissary with a platter of gray looking meat and gravy and sets it on a table with a clatter.</desc>
+      <desc>   A student switches on the holo and a historical docu-western starts to play. As the opening credits roll; a cowboy, mounted on his trusty dinosaur, begins to sing of the Chisolm Trail. Groans emerge from all over the room at the familiar chestnut.</desc>
+      <desc>   Staff begin to slip out the door to the southwest.</desc>
+      <exits sw='136' out='136'/>
+   </location>
+
+   <location num='81' flags='t'>
+      <name>manufacturing</name>
+      <desc>xxx</desc>
+      <exits e='82'/>
+   </location>
+
+   <location num='82' flags='t'>
+      <name>hall</name>
+      <desc>xxx</desc>
+      <exits n='18' e='83' s='146' w='81'/>
+   </location>
+
+   <location num='83' flags='t'>
+      <name>Lab</name>
+      <desc>xxx</desc>
+      <exits w='82'/>
+   </location>
+
+   <location num='85' flags='t'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='21' ne='22' s='149' sw='148'/>
+   </location>
+
+   <location num='86' flags='t'>
+      <name>Lounge</name>
+      <desc>xxx</desc>
+      <exits n='22'/>
+   </location>
+
+   <location num='87' flags='t'>
+      <name>dormitory</name>
+      <desc>xxx</desc>
+      <exits n='23'/>
+   </location>
+
+   <location num='88' flags='t'>
+      <name>dormitory</name>
+      <desc>xxx</desc>
+      <exits n='24'/>
+   </location>
+
+   <location num='89' flags='t'>
+      <name>Living quarters</name>
+      <desc>xxx</desc>
+      <exits nw='24'/>
+   </location>
+
+   <location num='134' flags='a'>
+      <name>Ethnobotanist Group</name>
+      <desc>   Through a large set of closed glazsteel doors at the far end, you can see a light-flooded atrium filled with a fantastic variety of plants. People in white coveralls move purposefully between the plants. The room itself has several desks and tables covered with collections of plants in clusters of small, salvaged containers. Growing in a large tub, a magnificent specimen of the Cormathy spacebloom emits its unique multichannel fragrance. The door to the corridor breaks the endless array of storage shelves on the east wall.</desc>
+      <desc>   Knocking on the glazsteel doors fails to draw anyone&apos;s attention.</desc>
+      <exits e='135' out='135'/>
+   </location>
+
+   <location num='135'>
+      <name>Hallway</name>
+      <desc>   Rows of lockers alternating with doors line the sides of this corridor, which extends to the east. The artificial lighting is obvious here, no attempt being made to disguise the wires connecting the bare LEDs.</desc>
+      <desc>   Voices can be heard from behind the various doors.</desc>
+      <exits n='71' e='136' s='199' w='134' nw='70'/>
+      <events in-room='announce.anthro.1'/>
+   </location>
+
+   <location num='136'>
+      <name>Hallway</name>
+      <desc>   Rows of lockers alternating with doors line the sides of this corridor, which extends to the west. The artificial lighting is obvious here, no attempt being made to disguise the wires connecting the bare LEDs.</desc>
+      <desc>   Voices can be heard from behind the various doors.</desc>
+      <exits n='72' ne='73' e='137' s='200' w='135'/>
+      <events in-room='announce.anthro.2'/>
+   </location>
+
+   <location num='137'>
+      <name>Office of Miss Maria Simpson</name>
+      <desc>   You are in the field office of Miss Maria Simpson, distinguished xenoarcheologist. Her doctoral thesis, popularly published as &quot;A Briefer History of Time&quot;, was the surprise best seller of the year. Her fascination with billiards and photography resulted in her most recent publication, a study of the later early period artifacts of The Lattice.</desc>
+      <desc>   Tall shelves filled with labeled objects line the walls. Long tables hold protective plaster casts enclosing fragile artifacts retrieved from the research site here. A collection of small hand operated kitchen gadgets is displayed in glass shadow boxes along a side table.</desc>
+      <desc>   The office door is to the west.</desc>
+      <exits w='136' out='136'/>
+   </location>
+
+   <location num='145' flags='t'>
+      <name>workshop</name>
+      <desc>xxx</desc>
+      <exits e='146'/>
+   </location>
+
+   <location num='146' flags='t'>
+      <name>Entrance to underground area</name>
+      <desc>xxx</desc>
+      <exits n='82' e='147' sw='209' w='145'/>
+   </location>
+
+   <location num='147' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='148' s='211' w='146'/>
+   </location>
+
+   <location num='148' flags='t'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits ne='85' se='213' w='147'/>
+   </location>
+
+   <location num='149' flags='t'>
+      <name>Reception Room</name>
+      <desc>xxx</desc>
+      <exits n='85'/>
+   </location>
+
+   <location num='151'>
+      <name>Lab</name>
+      <desc>xxx</desc>
+      <exits s='215'/>
+   </location>
+
+   <location num='152'>
+      <name>lab</name>
+      <desc>xxx</desc>
+      <exits s='216'/>
+   </location>
+
+   <location num='195' flags='b'>
+      <name>Muddy Waters Lounge</name>
+      <desc>   The lighting is low, the drinks are cool, and the music is hot. Clusters of comfortable seating drawn up around small tables dot the room. Under a spotlight, sound pickups and a pair of chairs are arranged ready for the night&apos;s jazz set. Waitdroids silently glide about the room.</desc>
+      <desc>   The exit is to the southeast.</desc>
+      <exits se='260' out='260'/>
+   </location>
+
+   <location num='196' flags='b'>
+      <name>The King of Corsica</name>
+      <desc>   Tatty, naff, old, and unfriendly. The perfect spot to meet your mates after a hard shift and hoist a few pints. The so-called German Lager is probably &quot;Ayingerbrau&quot;, which is actually brewed by Sumatra Smith Brewery, and doesn&apos;t exist anywhere else in the Solar System, except in this pub. Thank goodness!</desc>
+      <desc>   The decor is the usual; lots of copper pots, dead animals, and paintings. A bit dark. Noisy holo mounted over the bar, playing one of those ancient Earth revivals about a cat and a security guard. Never seem to be enough chairs to go around. This may be due to the novelty of this pub having all young and attractive live serving staff or the briefness of the uniforms. In fact, you notice there are no droids in this place at all.</desc>
+      <desc>   The pub door is south.</desc>
+      <exits s='260' out='260'/>
+   </location>
+
+   <location num='197' flags='b'>
+      <name>Sumatra Brasserie</name>
+      <desc>   You step into the Brasserie and pause for a moment to inhale the warm, spicy scents wafting from the kitchen. Decorated in serene blues and cream, there&apos;s a wide choice of seating available, from cozy tables for two to large round tables for eight to a long refectory table that looks like it could seat 20 diners comfortably.</desc>
+      <desc>   The well-dressed host, a native Venusian in a stylish dinner suit, approaches you and inquires which department you are associated with. At your baffled look, he hastens to explain the seating protocol here. &quot;The University staff will only sit near other University staff tables,&quot; he explains in a low voice, &quot;And even then the archeologists refuse to share their table with the geologists who refuse to sit with the botanists. The Union members refuse to sit with Greens and BEEBs and they in turn refuse to sit near the Pan Galactic Missionaries.&quot; Another sigh, &quot;And no one will sit near the Theme Park crew!&quot;</desc>
+      <desc>   The door is southwest.</desc>
+      <exits sw='260' out='260'/>
+   </location>
+
+   <location num='198'>
+      <name>Walkway</name>
+      <desc>   You are standing on the side of a walkway that turns from the south to east, running up to the entrance to a cluster of modular gray structures.</desc>
+      <exits e='199' s='262'/>
+   </location>
+
+   <location num='199'>
+      <name>South Polar University Field Expedition</name>
+      <desc>   You stand amid rows and rows of friendly brown plazsteel desks and bookshelves in the main office of the South Polar University Field Expedition. By the door is a desk messily piled high with assignments and notes. A most peculiar small Romanesque sculpture props open the door to the north. You can hear distant voices from the academic offices beyond.</desc>
+      <desc>   An ornate banner of dark blue satin with a scattering of gold stars is draped over the exit doors to the west.</desc>
+      <exits n='135' w='198'/>
+   </location>
+
+   <location num='200'>
+      <name>Venus Polytechnic University Vulcanology Project</name>
+      <desc>   The Venus Polytechnic University Vulcanology Project is an effort involving over 80 scientists from across the solar system. Founded in the waning years of the 20th century as the Hawaii Center for Vulcanology, they are now the primary organization investigating and monitoring volcanos in the solar system.</desc>
+      <desc>   A rack by the door holds insulated suits, heavy safety gauntlets, environmental helmets, and lined up below, insulated boots. Shallow trays of core samples are stacked on tables. Crates of sensor units and rock hammers are piled on a small autonomous cart, ready to be deployed.</desc>
+      <desc>   A group of scientists bends over a map spread out on a large study table, lost in animated discussion.</desc>
+      <desc>   To the east is a locked closet door and to the north the door out.</desc>
+      <exits n='136' out='136'/>
+   </location>
+
+   <location num='202'>
+      <name>Lost Civilizations Theme Parks, Ltd.</name>
+      <desc>   A massive sign of three interlocking black circles is mounted over the open gates to Lost Civilizations Theme Parks, Ltd. An official notice with embossed seals is tacked to the gatepost. Heavy trucks and massive construction machinery are parked in a large side yard.</desc>
+      <desc>   The road bends from the southwest leading to a series of modular, utilitarian buildings in the east. Piles of construction supplies are lashed to pallets and waiting by the side of the road to be transported to the construction site. But instead of the expected loud hustle and bustle, the site is curiously silent. Construction workers in clean coveralls are lounging on the synthograss lawn, quietly talking, beer bulbs in hand.</desc>
+      <desc>   By the entry guard booth a woman in a smart, formal blue coverall with the black tri-circle logo, is arguing with a man in rumpled construction coveralls. She points to her clipboard, tapping it with a well manicured finger. He scowls back at her, pointing to the notice on the gatepost.</desc>
+      <exits e='203' sw='265'/>
+   </location>
+
+   <location num='203' flags='t'>
+      <name>Lost Civilizations Construction office</name>
+      <desc>   The MagicPlanetWorks project managers have lost their usual happy smiles and sit glumly at their desks shuffling papers and talking on their comm units. A Lost Civilizations Corporation manager sits in a chair beside the project accountant&apos;s desk, their heads close together as they go over a gannt chart covered with ominous red delay alerts.</desc>
+      <desc>   The whiteboard, to the left of the door in the south wall, usually covered with cheery motivational messages of the day, reads, &quot;Construction Site Closed Till Further Notice&quot;.</desc>
+      <desc>   The corkboard, to the right of the door, is covered with official looking notices bearing the seals of various authorities, all with the same message. All work at the theme park construction site is to stop until a complete evaluation by historical, archeological, religious, botanical, environmental, and military authorities has been completed.</desc>
+      <desc>   Administrative assistants scurry in and out the front door to the west and the site entry to the south.</desc>
+      <exits s='267' w='202'/>
+   </location>
+
+   <location num='209' flags='t'>
+      <name>tunnel</name>
+      <desc>xxx</desc>
+      <exits ne='146' sw='272'/>
+   </location>
+
+   <location num='211' flags='t'>
+      <name>office</name>
+      <desc>xxx</desc>
+      <exits n='147'/>
+   </location>
+
+   <location num='213'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits se='278' nw='148'/>
+   </location>
+
+   <location num='215'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='151' e='216' sw='278'/>
+   </location>
+
+   <location num='216'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='152' w='215'/>
+   </location>
+
+   <location num='260'>
+      <name>Leisure complex patio</name>
+      <desc>   You are standing on the entry patio to the Sumatra Leisure complex. Inside are cafes and a pub; local rumor is that some of the hottest live jazz in the solar system can be heard in the Lounge.</desc>
+      <desc>   This is a pleasant place to linger; clusters of large planters display magnificent spaceblooms and their heady perfume fills the air. Low plantings around the edge of the terrace and around the buildings&apos; foundations disguise the gray plazsteel construction.</desc>
+      <desc>   Leisure complex building entrances are to the northwest, north, and northeast. To the south is the entrance of the Galactic Heritage Foundation executive offices.</desc>
+      <exits n='196' ne='197' e='261' s='324' nw='195'/>
+   </location>
+
+   <location num='261'>
+      <name>Lane to Leisure complex</name>
+      <desc>   You are on a lane running from the main walkway in the southeast to an attractive complex of low buildings and flower gardens in the west.</desc>
+      <exits se='326' w='260'/>
+   </location>
+
+   <location num='262'>
+      <name>Walkway</name>
+      <desc> You are standing on the side of a walkway that runs south to north. To the north, in the distance you can see gray structures of another facility.</desc>
+      <exits n='198' s='326'/>
+   </location>
+
+   <location num='265'>
+      <name>Lost Civilizations Theme Parks, Ltd.</name>
+      <desc>   The walkway runs from the southwest, becoming a rough construction road, as it continues northeast. A large curiously shaped sign can be clearly seen ahead.</desc>
+      <desc>   The walkway also branches off to the east where the dome begins to slope toward its perimeter. Occasional rumbles of large heavy machinery can be heard in the distance.</desc>
+      <exits ne='202' e='266' sw='328'/>
+   </location>
+
+   <location num='266'>
+      <name>Walkway</name>
+      <desc>   The walkway runs from the west to the airlock in the east with heavy construction machines parked along both sides.</desc>
+      <exits e='267' w='265'/>
+   </location>
+
+   <location num='267' flags='t'>
+      <name>East dome interior airlock</name>
+      <desc>   A small airlock is set into the glazsteel dome wall here. A touchpad glows softly beside the airlock indicating it is operational while the sign next to it displays instructions.</desc>
+      <desc>   Blocking the airlock, seated behind a simple desk, a burly security guard is precariously leaning back in her chair, immersed in her glossy issue of Tentacles and Tails magazine.</desc>
+      <desc>   Corridors open to the west and north here.</desc>
+      <desc>   At your approach, she stares through you vacantly and says in an utterly bored voice, &quot;No-admission-past-this-point-without-a-pass-you-don&apos;t-gatta-pass-you-don&apos;t-get-past&quot;. She sniggers to herself at her wit and resumes admiring Mr Tentacle&apos;s sleek physique.</desc>
+      <exits n='203' w='266' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits se='333'/>
+   </location>
+
+   <location num='269' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits s='333'/>
+   </location>
+
+   <location num='270' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits s='334'/>
+   </location>
+
+   <location num='271' flags='t'>
+      <name>Temple</name>
+      <desc>xxx</desc>
+      <exits e='272' s='335'/>
+   </location>
+
+   <location num='272' flags='t'>
+      <name>tunnel</name>
+      <desc>xxx</desc>
+      <exits ne='209' w='271'/>
+   </location>
+
+   <location num='278'>
+      <name>Hall- Airlock</name>
+      <desc>xxx</desc>
+      <exits ne='215' e='279' nw='213'/>
+   </location>
+
+   <location num='279'>
+      <name>Storage room</name>
+      <desc>xxx</desc>
+      <exits w='278'/>
+   </location>
+
+   <location num='323'>
+      <name>Director&apos;s Office</name>
+      <desc>   You step into the hushed atmosphere of the private office of The Honorable Richard Alexander Walter George Gloucester, GCVO, KG, RIBA, commissioner of the Historic Building and Monuments Commission of the Galactic Administration.</desc>
+      <desc>   On a sideboard are a cluster of small silver framed holos. One is of Sir Richard receiving the Grand Cross of the Order of St. Olav, another of his receiving the Grand Cross of the Order of the Dying Star. Among them is a portrait study of Sir Richard as a young student at Magdalene College. Across the bottom of the portrait, in a delicately feminine hand is written, &quot;with fondest memories, Fredericka&quot;.</desc>
+      <desc>   The large desk is genuine, hand rubbed rosewood; gleaming softly with the patina of generations. A high backed leather chair is drawn up close behind it with a small orange cat fast asleep on it. You stare at the cat, wondering how anyone here managed to get a permit for a dependent domestic animal.</desc>
+      <exits e='324' out='324'/>
+   </location>
+
+   <location num='324' flags='a'>
+      <name>Galactic Heritage Foundation executive offices</name>
+      <desc>   You are standing in the front office of the Galactic Heritage Foundation executive offices. A compact tidy space; there&apos;s no one behind the reception desk but the open documents and stylus carelessly dropped beside them imply that someone may be around nearby. A pile of Galactic Geographic magazines stand in a rack by the door and a bowl of fruit is in the center of the low table drawn up before a small seating area.</desc>
+      <desc>   There&apos;s an open door in the west wall and the front door is to the north.</desc>
+      <exits n='260' w='323' in='323' out='260'/>
+   </location>
+
+   <location num='325'>
+      <name>Abd-al-Kadir Lane</name>
+      <desc>   You&apos;ve reached the entrance to a private road leading to the personal homes of many Sumatra residents. There is a barrier across the road preventing you from going any farther. The touchpad on the barrier post doesn&apos;t respond to you and all you can do is turn east, back to the main path.</desc>
+      <exits e='326' out='326'/>
+   </location>
+
+   <location num='326'>
+      <name>Walkway</name>
+      <desc>   You are standing on the side of a walkway that runs south to north. To the west Abd-al-Kadir Lane branches off the main walkway and another lane leading northwest runs to an attractive complex of low buildings and flower gardens. You can see people entering and leaving the buildings in small groups, all looking relaxed and pleased. To the north, in the distance you can see gray structures of another facility.</desc>
+      <exits n='262' s='390' w='325' nw='261'/>
+   </location>
+
+   <location num='328'>
+      <name>Walkway</name>
+      <desc>    The walkway runs from the southwest to the northeast; a rough work road curves off to the east. Several small buildings to the east have utility vehicles drawn up in front of them. To the northeast is a large curiously shaped sign by the side of the walkway. In the distance, behind the sign, are the first tall structures you&apos;ve seen so far on Sumatra. It looks like the skeleton of a large building under construction.</desc>
+      <exits ne='265' e='329' sw='391'/>
+   </location>
+
+   <location num='329'>
+      <name>IEF Cycling Camera Corps</name>
+      <desc>   The IEF Cycling Camera Corps has neither bicycles nor cameras, having replaced them several centuries ago with holocams and skimmers. But being a bastion of tradition, the IEF maintains the name along with a collection of historically significant equipment. The CCC are the documentation specialists of the IEF; venturing into known hostile regions and the unknown, armed only with holocam, skimmer, and an educated eye. Many of their award winning holos are on display at The Lattice Shrine to Photojournalism.</desc>
+      <desc>   A red lacquered bicycle hangs on the wall with a small card identifying it as used in the battle of Venus Prime. A time line of cameras is displayed in a glass doored cabinet. Another cabinet displays a series of black bordered holo portraits.</desc>
+      <desc>   A corporal lounges against the frame of the open door to the west. To the south is the door to the engineering office. Above each door a red LED periodically glows and goes dark. Another tradition whose meaning has been lost.</desc>
+      <exits s='393' w='328'/>
+   </location>
+
+   <location num='331' flags='t'>
+      <name>Airlock</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='332' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits e='333' s='396'/>
+   </location>
+
+   <location num='333' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='269' e='334' s='397' w='332' nw='268'/>
+   </location>
+
+   <location num='334' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='270' e='335' s='398' w='333'/>
+   </location>
+
+   <location num='335' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='271' s='399' w='334'/>
+   </location>
+
+   <location num='342' flags='t'>
+      <name>Airlock</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='343' flags='t'>
+      <name>airlock</name>
+      <desc>xxx</desc>
+      <exits e='344'/>
+   </location>
+
+   <location num='344' flags='t'>
+      <name>Derelict spaceport</name>
+      <desc>xxx</desc>
+      <exits e='345' se='409' s='408' w='343'/>
+   </location>
+
+   <location num='345' flags='t'>
+      <name>Derelict spaceport</name>
+      <desc>xxx</desc>
+      <exits s='409' sw='408' w='344'/>
+   </location>
+
+   <location num='385' flags='t'>
+      <name>Hall to Pub</name>
+      <desc>An empty hallway to the pub.</desc>
+      <exits out='450'/>
+      <events enter='objects.toilet.3'/>
+   </location>
+
+   <location num='386' flags='t'>
+      <name>Toilet</name>
+      <desc>   Only a single small room for all sexes, with shiny plazsteel walls, and a standard plastic-topped ceramic toilet. The sink actually has hot and cold water, soap provided, and working auto-hand dryers. Always guaranteed to be clean, it even has a waste basket, and nice piped-in music from the pub.</desc>
+      <desc>   A large sign on the wall reminds you to FLUSH THE TOILET and WASH YOUR HANDS.</desc>
+      <desc>   The door out is south.</desc>
+      <exits s='385' out='385'/>
+   </location>
+
+   <location num='387' flags='t'>
+      <name>Fountain</name>
+      <desc>You are sitting inside the lowest basin of a fountain. A curtain of water cascades from the basin above. You can see the entire Common over the rim of the fountain and are similarly visible yourself. The water is surprisingly deep and chilly and you splash it with your fingertips, idly thinking about how to get out.</desc>
+      <exits out='515' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='390'>
+      <name>Dome connector hub</name>
+      <desc>You are standing in a hub that connects the north, south, and east domes. Walkways branch from here in those directions. A small speaker mounted on the wall softly broadcasts a music program from The Lattice.</desc>
+      <exits n='326' e='391' s='454'/>
+   </location>
+
+   <location num='391'>
+      <name>East dome walkway</name>
+      <desc>   You are standing by the entrance to the East dome. A walkway runs to the northeast from here and a rough work road curves off to the southeast. You can see several small buildings to the east with utility vehicles drawn up in front of them. Curiously you notice there are no skimmers among them.</desc>
+      <desc>   To the west is the dome complex hub.</desc>
+      <exits ne='328' se='456' w='390'/>
+   </location>
+
+   <location num='393'>
+      <name>Engineering and drafting office</name>
+      <desc>   Rows of AutoDraft machines and data units line one side of the room, while on the other, a series of HoloCad units are in use. Officers in the drab fatigue coveralls of the IEF Corps of Engineers point their drawing wands at the units, creating the usual shining lines of a holofield display.</desc>
+      <desc>   In one corner stands an antique drafting table. An engineer leans over it, straightedge held firmly in place with one hand, pencil in the other. Her face is drawn with lines of concentration and she&apos;s worrying at her lower lip with her teeth. The pencil makes a soft little snick sound as she quickly lays out a series of lines.</desc>
+      <desc>   Clerks from the main office to the southwest shuffle in with papers to be read and initialed or added to the stacks of other papers on the desks. A red LED over the door to the north periodically glows brightly and then turns dark and the door opens slightly.</desc>
+      <exits n='329' sw='456'/>
+   </location>
+
+   <location num='395' flags='t'>
+      <name>Village dome airlock</name>
+      <desc>xxx</desc>
+      <exits sw='458'/>
+   </location>
+
+   <location num='396' flags='t'>
+      <name>Interior airlock of Dalu-Dalu</name>
+      <desc>xxx</desc>
+      <exits n='332'/>
+   </location>
+
+   <location num='397' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='333'/>
+   </location>
+
+   <location num='398' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+      <exits n='334'/>
+   </location>
+
+   <location num='399' flags='t'>
+      <name>Airlock</name>
+      <desc>xxx</desc>
+      <exits n='335'/>
+   </location>
+
+   <location num='400' flags='t'>
+      <name>Airlock at the base of the volcano</name>
+      <desc>   You are standing at the base of the great volcano, Krakatoa. A jagged, twisted trail leads up the slope to the crater. Underfoot you feel the rocks shake from the violent subterranean forces.</desc>
+      <exits se='465'/>
+   </location>
+
+   <location num='405' flags='t'>
+      <name>Krakatoa&apos;s crater Rim</name>
+      <desc>   You are on the edge of a breath-taking view. Below you is the crater of an active volcano, from which great gouts of molten lava come surging out, cascading back down into the depths. The glowing rock fills the farthest reaches of the crater with a blood-red glare, giving everything an eerie, macabre appearance.</desc>
+      <desc>   The air is filled with flickering sparks of ash and a heavy smell of brimstone. The rock beneath your feet is hot to the touch, and the thundering of the volcano drowns out all other sounds</desc>
+      <exits sw='468'/>
+   </location>
+
+   <location num='408' flags='t'>
+      <name>Derelict spaceport</name>
+      <desc>xxx</desc>
+      <exits n='344' ne='345' e='409'/>
+   </location>
+
+   <location num='409' flags='t'>
+      <name>Derelict spaceport</name>
+      <desc>xxx</desc>
+      <exits n='345' w='408' nw='344'/>
+   </location>
+
+   <location num='449'>
+      <name>Beings for the Ethical Entitlement of Beings</name>
+      <desc>   A large sign across the wall of this office proclaims, &quot;All Beings Are Equal&quot;. A pudgy young man in a shapeless coverall is earnestly wielding a scrub brush attempting to remove the graffiti scrawled under it that reads, &quot;But Some Beings Are More Equal Than Others&quot;.</desc>
+      <desc>   A small laser printer on a long metal table is churning out copies of a flyer that features a rather fetching green Rigellian lady marked with the familiar black cut lines of a butcher shop. Metal folding chairs are parked around the long table.</desc>
+      <desc>   A beat up sofa has been pushed against the wall and a low worktable in front of it is covered with neat rows of small pots all growing some sort of very green grass.</desc>
+      <desc>   The young man pauses in his work and cheerfully calls to you, &quot;They&apos;re all down at the theme park site protest; grab some flyers and help educate them!&quot;</desc>
+      <desc>   You notice the exit door in the southeast corner of the room.</desc>
+      <exits se='514'/>
+   </location>
+
+   <location num='450' flags='b'>
+      <name>Chez Guevarra</name>
+      <desc>   You are in a comfortable looking bar whose walls are hung with the most extensive collection of cowbells you have ever seen. On a small stage, in the glow of a blue spotlight, a droid band is playing &quot;Don&apos;t Fear the Reaper&quot;. Another droid is hopping about behind them banging away on a cowbell. Periodically the landlord shouts out, &quot;Needs more cowbell!&quot;</desc>
+      <desc>   Clusters of comfortable club chairs are drawn up around tables. Servingdroids discreetly move about serving drinks and snacks to the patrons. Gazing around, you see people sitting at tables, drinking and animatedly chatting, hands moving and emphasizing as they explain details. Some patrons are sitting alone, relaxed in a comfortable chair, quietly reading, coffee bulb close at hand.</desc>
+      <desc>   The door to the toilets is north, the way out is to the south.</desc>
+      <exits n='386' s='514' out='514'/>
+      <events in-room='announce.welcome.1'/>
+   </location>
+
+   <location num='451' flags='a'>
+      <name>Sumatra Water Authority</name>
+      <desc>   The office is not one to brag about. It used to be a store and a 10-foot &quot;Polka Cola&quot; sign still decorates the west wall. A counter divides the room displaying a simple sign in about two inch type, &quot;Sumatra Water Authority&quot;.</desc>
+      <desc>   Behind the counter a clerk sits hunched at his desk shuffling through a bulging folder and carrying on a conversation over his desk comm unit. Even at this distance you can make out the strident, sarcastic tones of his caller. He glances briefly in your direction and distractedly waves towards the woman seated at the other desk.</desc>
+      <desc>   The woman is operating a complicated little machine that seems to stagger about a large sheet of heavy paper spread out on her desk. She pokes at its tiny jointed legs with a pencil each time it halts. She pointedly ignores your throat clearing and other subtle attempts to gain her attention.</desc>
+      <desc>   Finally she points at the door behind you in the south wall without interrupting her pencil poking.</desc>
+      <exits s='515' out='515'/>
+   </location>
+
+   <location num='452'>
+      <name>Galactic Alliance for Peace and Justice</name>
+      <desc>   You are standing in a pleasant office decorated in soothing shades of sage green, russet, cream, and white. A popular music broadcast from The Lattice is playing some cool jazz that sounds familiar.</desc>
+      <desc>   Simply framed antique posters of famous revolutionary heroes of peace and justice decorate the walls. Their noble profiles are an inspiration to the workers here.</desc>
+      <desc>   Several workers are busy at their desks, writing or talking on comm units. A few workers cluster around a design screen working on what appears to be some document&apos;s layout. A lively discussion is ongoing.</desc>
+      <desc>   There is a door to the southwest.</desc>
+      <exits sw='515'/>
+   </location>
+
+   <location num='454'>
+      <name>Path</name>
+      <desc>Passing thru a set of double doors, the walkway runs from the south dome to the hub in the north.</desc>
+      <exits n='390' s='518'/>
+   </location>
+
+   <location num='456'>
+      <name>IEF Corps of Engineers - Sumatra Headquarters</name>
+      <desc>   The office is militarily neat and organized, appropriate for the supreme authority on the planetoid. Uniformed clerks are busily at work shuffling papers and answering buzzing comm units. Dispatches are hand delivered to the Officer of the Day in the main colony dome office. Although the rest of the solar system has entirely migrated to hyper-communications, the IEF still maintains the tradition of genuine paperwork.</desc>
+      <desc>   Seated at his desk, Col. Athelstane Rhys-Jones is engrossed in sorting official complaints from all the civilian authorities regarding the outrages, real and imagined, of the theme park operation.</desc>
+      <desc>   Adjutants and clerks file in and out of the doors to the northwest and northeast, pushing past you with a muttered, &quot;pardon me&quot;.</desc>
+      <exits ne='393' nw='391'/>
+   </location>
+
+   <location num='458' flags='t'>
+      <name>Skimmer yard</name>
+      <desc>xxx</desc>
+      <exits ne='395'/>
+   </location>
+
+   <location num='465' flags='t'>
+      <name>Volcano path</name>
+      <desc>xxx</desc>
+      <exits se='530' nw='400'/>
+   </location>
+
+   <location num='468' flags='t'>
+      <name>Upper slope of Krakatoa</name>
+      <desc>   You are climbing along a deep gorge, filled with a bizarre chaos of tortured rock, which seems to have been crafted by the devil himself. An immense river of fire crashes out from the depths of the volcano, burns its way through the gorge, and plummets down the eastern slope of the volcano.</desc>
+      <desc>   Buffeted by blasts of infernal heat and poisonous gases you question the wisdom of proceeding further. Safety lies behind you down slope; to go on is to risk your life. Even now you feel your limbs trembling from the violent assault of unbound nature. Can the thrill of gazing into the abyss be so great?</desc>
+      <exits ne='405' sw='531'/>
+   </location>
+
+   <location num='513' flags='a'>
+      <name>Green Freedom</name>
+      <desc>   You&apos;re standing in the office of Green Freedom, one of the oldest environmental protection organizations in the Solar System. All the furniture is made from recycled discards and unfortunately this is painfully obvious.</desc>
+      <desc>   The desks and chairs are cobbled together from old crates and discarded bits of gray plazsteel. Piles of used forms and printout are stacked on each desk for thrifty reuse. Shelves of more discarded plazsteel supported by small used crates hold assorted objects waiting to be reused or recycled. A row of large balls of twine, composed of small lengths knotted together, sit next to heaps of paperclip chains. Broken maintenance droids are piled in a crate in one corner. Discarded coffee bulbs fill sacks in another corner with a hand written sign taped to the wall above them, &quot;TOXIC WASTE&quot;.</desc>
+      <desc>   An old tarp has been hastily thrown over a number of skimmers parked just inside the door to the east.</desc>
+      <exits e='514'/>
+   </location>
+
+   <location num='514'>
+      <name>Service dome Common</name>
+      <desc>  You are standing on the synthograss lawn in the northwest corner of the Common. Utilitarian buildings surround the Common on all sides, serving as offices for the various organizations active on Sumatra.</desc>
+      <exits n='450' e='515' se='579' s='578' w='513' nw='449'/>
+   </location>
+
+   <location num='515'>
+      <name>Service dome Common</name>
+      <desc>  You are standing on the synthograss lawn in the northeast corner of the Common. Utilitarian buildings surround the common on all sides, serving as offices for the various organizations active on Sumatra. An elegantly simple fountain with a series of basins, water splashing over the edges into the next lower, provides a refreshing touch to the Common here.</desc>
+      <exits n='451' ne='452' e='516' s='579' sw='578' w='514'/>
+   </location>
+
+   <location num='516'>
+      <name>Pan-Galactic Missionary Society</name>
+      <desc>   You step into the cool, hushed chambers of the Pan-Galactic Missionary Society. The walls have been softly curtained in white velvet giving the impression of a circular space. In the center of the room is a white marble plinth surmounted with a wooden crate. Low white sofas circle the room and there is a faint murmur of soothing music.</desc>
+      <desc>   A white refectory table serves as a desk for several staff as evidenced by several chairs, a trio of recessed data units in its top, and assorted comm units on it. A small sign on the table says, &quot;Approach And Be Helped&quot;.</desc>
+      <exits w='515' out='515'/>
+   </location>
+
+   <location num='518'>
+      <name>Path</name>
+      <desc>The walkway runs from the southwest to the north along the perimeter of the small dome.</desc>
+      <exits n='454' sw='581'/>
+   </location>
+
+   <location num='530' flags='t'>
+      <name>Trail along the slope of Krakatoa</name>
+      <desc>   You are climbing along the trail up the slope of the volcano. To either side of you sulfurous fumaroles, which bubble ominously, vent malodorous, poisonous gases.</desc>
+      <exits e='531' nw='465'/>
+   </location>
+
+   <location num='531' flags='t'>
+      <name>Trail up the slope of Krakatoa</name>
+      <desc>     You are climbing up the steep slope of Krakatoa along a deep, jagged gorge. To the west, an immense geyser of blistering steam erupts continuously. A dark, foreboding fear fills you at this foolish expedition you have undertaken.</desc>
+      <exits ne='468' w='530'/>
+   </location>
+
+   <location num='577' flags='a'>
+      <name>Stevedores and Shuttleport Workers Union, local 2858</name>
+      <desc>   The large union hall is crowded with rows of gray plazsteel desks near the entrance; each with a worker seated behind it and most with someone in the visitor&apos;s chair beside it. In the rear, an area has been left open where plain chairs are lined up before a rostrum. A large satin banner behind the rostrum proudly proclaims, &quot;Stevedores and Shuttleport Workers Union, local 2858&quot;.</desc>
+      <desc>   The desks are battered and scarred. Small burns and coffee rings mar the surfaces. Pamphlets and forms and cards are piled up higgledy-piggledy on desks and small bookcases against the wall. Posters proclaiming the virtues of the Union are taped haphazardly to the walls along with assorted pages of pin-up cuties torn from magazines.</desc>
+      <desc>   A worker in a red coverall with a security armband lounges by the door to the east, sergeant at arms for the day.</desc>
+      <exits e='578'/>
+   </location>
+
+   <location num='578'>
+      <name>Service dome Common</name>
+      <desc>  You are standing on the synthograss lawn in the southwest corner of the Common. Utilitarian buildings surround the Common on all sides, serving as offices for the various organizations active on Sumatra.</desc>
+      <exits n='514' ne='515' e='579' s='642' sw='641' w='577'/>
+   </location>
+
+   <location num='579'>
+      <name>Service dome Common</name>
+      <desc>   You are standing on the synthograss lawn in the southeast corner of the Common. While the Common gives visitors an impression of verdant welcoming nature, the residents know otherwise.</desc>
+      <desc>   Synthograss was developed by Doris BioLabs in the early years of the past century. BioDesigned to grow under extreme, hostile conditions with little upkeep, its green lushness is brittle, the grass blades sharp with barbed edges. This may account for the lack of &quot;keep off the grass&quot; signs.</desc>
+      <desc>   Utilitarian buildings surround the Common on all sides, serving as offices for the various organizations active on Sumatra. The dome airlock is to the south.</desc>
+      <exits n='515' e='580' s='643' w='578' nw='514'/>
+   </location>
+
+   <location num='580'>
+      <name>Lansky Construction Corporation</name>
+      <desc>A massive floor-to-ceiling stone fireplace dominates the north wall and serves no visible purpose as the dome is a sealed environment and climate controlled. Thick dark walnut planks panel the walls and a square panel real glass chandelier on a dimmer sets the mood for this elegant office of the venerable Lansky Construction Corporation. A dignified portrait of the founding father hangs on the wall behind the enormous walnut partners&apos; desk. In the corner a large antique globe of the Earth sits in its gleaming brass mounting.</desc>
+      <exits w='579' out='579'/>
+   </location>
+
+   <location num='581'>
+      <name>Path to Protected Area</name>
+      <desc>The walkway runs from the southwest to the northeast along the perimeter of the small dome.</desc>
+      <exits ne='518' sw='644'/>
+   </location>
+
+   <location num='641' flags='a'>
+      <name>Galactic Consolidated News Service</name>
+      <desc>   You step into the chaos of the newsroom. People push past you waving printouts and data-sticks. Others are seated at desks and pounding away at data inputs, frowns of concentration creasing their faces (or equivalent). Their tentacles (or equivalent) wave in agitation as they shout copy into their comm units.</desc>
+      <desc>   Large holoscreens are mounted on several walls displaying video inputs from news scenes all over the Solar System. In one corner several beings, obviously of assorted planetary origins, have found common ground in a card game amid the din.</desc>
+      <desc>   There&apos;s constant movement through the entrance to the northeast.</desc>
+      <exits ne='578' out='578'/>
+   </location>
+
+   <location num='642'>
+      <name>Construction Workers Union, District 7</name>
+      <desc>    You are in a beige-walled, white-ceilinged, gray-floored room filled with rows of desks. Lockers line the side walls. At the far end of the room, a long wall mounted blackboard faces a series of semi-circularly arranged folding chairs. Informative displays of incomprehensible construction details seem to interest the workers standing about them and chatting.</desc>
+      <desc>   A message board by the door to the north lists projects and items of interest to District 7 workers.</desc>
+      <exits n='578'/>
+   </location>
+
+   <location num='643' flags='t'>
+      <name>South Dome Interior Airlock</name>
+      <desc>   A small airlock is set into the glazsteel dome wall here. A touchpad glows softly beside the airlock indicating it is operational while the sign next to it displays instructions. Northwards a central commons lawn of synthograss looks welcoming with small benches spaced along the perimeter.</desc>
+      <desc>   Set around the Common are small modular, utilitarian plazsteel buildings; these house the various service organizations&apos; operations and offices. To the east a walkway runs along the interior of this dome leading to further domes of the complex.</desc>
+      <exits n='579' e='644'/>
+   </location>
+
+   <location num='644' flags='t'>
+      <name>Skimmer yard</name>
+      <desc>The walkway runs from the west to the northeast along the perimeter of the small dome. You notice more parked skimmers leaning against the side of the dome.</desc>
+      <exits ne='581' w='643'/>
+   </location>
+
+   <location num='706' flags='t'>
+      <name>Airlock</name>
+      <desc>   The small dimensions of the airlock are obviously meant only for beings class 9 or lower to pass into and out of the colony dome. You hear a hiss that modulates rapidly in tone and volume, accompanied with an almost familiar tingling. A red backlit sign flashes brightly, &quot;DUST REMOVAL IN PROGRESS&quot;.</desc>
+      <events in-room='objects.touchpad2.5'/>
+   </location>
+
+   <location num='707' flags='t'>
+      <name>South Dome Exterior Airlock</name>
+      <desc>   You are standing at the airlock to a small glazsteel dome. A touchpad at the side of the airlock glows softly indicating it is operational. The sign next to it displays instructions.</desc>
+      <desc>   Maintenance droids roll about carrying gray hardened plazsteel structural beams or crates covered with exotic customs inspection stamps. Underfoot the ever-present rock dust is trampled almost level by the constant traffic through the airlock. Footprints in the dust lead east back to the main Colony dome. A few skimmers are haphazardly parked here.</desc>
+      <exits e='708'/>
+   </location>
+
+   <location num='708'>
+      <name>Path to Field Services Dome</name>
+      <desc>A utilitarian path has been tramped through the rock dust from the southeast. Pale light shines through the plazsteel dome to the west illuminating your way.</desc>
+      <exits se='773' w='707'/>
+   </location>
+
+   <location num='711'>
+      <name>Catwalk</name>
+      <desc>The secondary hydrocyclone further classifies the particles. A trash screen removes waste material from the old workings that may have found its way into the processing circuit. At the terminus of the extraction circuit the various mineral particles pour into standard 75 ton cargo pods which pass under the fill chutes borne along on their own series of moebius strips.</desc>
+      <desc>   Through the haze of rock dust particles you see the catwalk continues to the south.</desc>
+      <exits s='775' in='775' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='712'>
+      <name>Catwalk</name>
+      <desc>The oversize rock passes through the SCATS cone crusher, prior to passing once again into the SAG mill for further grinding. A series of moebius strips moves the material into the primary hydrocyclone, which classifies the ground rock particles according to size - using centrifugal and gravitational forces to split the fine particles from the coarse particles. The fine particles are pumped to a secondary hydrocyclone, and the larger particles return to the SAG mill for further grinding.</desc>
+      <desc>   Squinting through the haze of rock dust particles you see the catwalk continues to the west.</desc>
+      <exits w='711' in='711'/>
+   </location>
+
+   <location num='713'>
+      <name>Catwalk</name>
+      <desc>   The SAG mill is a large revolving cylinder. Rock is ground by the turning action of the mill, and impact from the hardened steel balls and the rock itself. In order to ensure that the rock is ground finely enough the SAG mill has a trommel screen, which acts like a large sieve. The oversize rock (SCATS) is caught by the trommel, along with the worn hardened steel balls. This material is fed past a magnet to separate out the steel balls.</desc>
+      <desc>   In the far corner, workers skillfully manipulate a set of large waldoes to maneuver a replacement cylinder into place on a momentarily halted processing line. A short man in a white G.O.S.H.A. coverall watches their every movement, comm unit in hand, taking notes. A shop steward in red coverall stands beside him, scowling and taking notes on his own comm unit.</desc>
+      <desc>   Peering through the haze of rock dust particles you see the catwalk continues to the west.</desc>
+      <exits w='712' in='712'/>
+   </location>
+
+   <location num='773'>
+      <name>Path to Field Services Dome</name>
+      <desc>A utilitarian path has been tramped through the rock dust from the southeast to the northwest.</desc>
+      <exits se='838' nw='708'/>
+   </location>
+
+   <location num='775'>
+      <name>Catwalk</name>
+      <desc>   Down below this section of the catwalk, massive autonomous hod carriers wait in line to be loaded with the filled 75 ton cargo pods which they will transport to the holds of the cargo shuttles waiting on the spaceport field. Several workers stand in a knot by the head of the hod carrier line visibly arguing  with a woman in the red coverall and badges of a shop steward. Their voices can&apos;t be heard over the pounding din of the machines and you wonder what issue angers them so.</desc>
+      <desc>   You spot the enormous cargo airlock and stare in fascination as the giant iris dilates open permitting a filled carrier to pass through into the airlock.</desc>
+      <desc>   Cursing the haze of rock dust particles you see the catwalk continues to the southeast bringing you back to the catwalk entrance.</desc>
+      <exits se='840' in='840'/>
+   </location>
+
+   <location num='777'>
+      <name>Catwalk</name>
+      <desc>   Ore processing is a 25 hour a day operation here. Ore is stockpiled at this processing facility, and the process begins by feeding the ore into a hopper with a loader. The ore is conveyed down the line on a series of moebius strips. Following crushing through a jaw crusher, the ore is fed into the semi autogenous grinding (SAG) mill along with steel balls. Workers in green utility coveralls and hard hats stand along the line observing the process, watching for anything unexpected.</desc>
+      <desc>   You gaze in awe at the constant motion on the floor far below, resting your weight against the railing to get the best possible view.</desc>
+      <desc>   Through the haze of rock dust particles you see the catwalk continues to the north.</desc>
+      <exits n='713' in='713' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='778'>
+      <name>Xmetals lode</name>
+      <desc>   Looking carefully at the rock face, you see the sparkle of raw xmetals. These valuable metals are rare in most of the system but plentiful on Sumatra. Miners press armored hand drills close to the rock face, their laser cutting beams rough out large chunks. Rock dust swirls through the air covering everything. A shop steward stands nearby making notes on a tablet and periodically glancing around.</desc>
+      <desc>   The tunnel south leads back to the main mine area.</desc>
+      <exits s='842' no-exit='moves.noexit.6'/>
+      <events in-room='mines.union.2'/>
+   </location>
+
+   <location num='838'>
+      <name>Skimmer yard</name>
+      <desc>   A hodgepodge of small utility vehicles are parked here. Some are clearly marked with university sigils or corporate logos while others are drab standard skimmers, their surfaces dulled by a coating of rock dust. Peering about you spot some highly eccentric looking vehicles. A sign at the entrance gate states that no public skimmers are available today.</desc>
+      <desc>   Resigning yourself to a long walk regardless of where you wish to go, you look about the skimmer yard for the way out. You spy an open gate to the northwest marked, &quot;Field Services Dome&quot;, and another to the southwest marked, &quot;Sumatra Colony Dome&quot;.</desc>
+      <exits sw='901' nw='773' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='839'>
+      <name>G.O.S.H.A.</name>
+      <desc>   The Galactic dept. of labor&apos;s Occupational Safety &amp; Health Administration&apos;s mission is to assure the safety and health of the GA&apos;s workers by setting and enforcing standards; providing training, outreach, and education; establishing partnerships; and encouraging continual improvement in workplace safety and health.</desc>
+      <desc>   The GOSHA officer&apos;s office, with barely room for a desk, filing cabinets, and a small plastic visitor&apos;s chair, precisely meets the minimum regulated floor space for a single office. The walls are covered with regulation lists, certifications, and motivational posters all neatly framed and hung exactly level on the bare gray plastic walls. The triple glazed door to the east shuts out much of the work floor din although not enough to allow music to be played here without exceeding the decibel regulations. A tower of forms are violation reports of unauthorized coffee consumption.</desc>
+      <desc>  You notice a sign on the desk informing you that the safety inspector is out on rounds.</desc>
+      <exits e='840' out='840' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='840' flags='t'>
+      <name>Extraction and processing facility entrance</name>
+      <desc>   You are standing on a narrow catwalk that runs high along the wall of the huge natural cavern where the extraction and processing facility is located. This cavern is a major source of the rock dust that pervades the colony; the air is filled with fine particles. Holding tightly to the railing, you gaze down at the gigantic machines tethered far below with massive grapples. The din of the processing floor carries upward to make conversation impossible. A huge sign fixed to the wall lists safety rules for this area. There is a small door to the west.</desc>
+      <desc>   Per G.O.S.H.A. safety regulations, all traffic on the catwalk is one way. The catwalk continues to the northeast. The way out is south.</desc>
+      <exits ne='777' s='904' w='839' out='904'/>
+   </location>
+
+   <location num='842'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor running from the southwest to the north, roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor.</desc>
+      <exits n='778' sw='905' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='901'>
+      <name>Dome perimeter path</name>
+      <desc>A utilitarian path running from the south along the colony dome perimeter is tramped through the rock dust. To the northeast are the gates of a skimmer yard. A security droid stands along the path.</desc>
+      <exits ne='838' s='965' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='903' flags='a'>
+      <name>Managing Director&apos;s office</name>
+      <desc>   The office is filled with junk and broken parts, filing cabinets, several data units, and a beat-up oak desk. Empty coffee bulbs are piled in a waste basket and scattered over the desk.</desc>
+      <desc>   A tall bookcase with closed glass doors holds a collection of antique paper books. The precious volumes are bound in leather with gold embossing or glossy paper bindings with lurid illustrations.</desc>
+      <desc>   The door out is in the south wall.</desc>
+      <exits s='967' out='967'/>
+   </location>
+
+   <location num='904'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor running from the mine entrance in the south to the extraction facility in the north, the din of extraction processing machines can be heard. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor. A glazsteel door is set into the north wall with a sign warning that you are leaving the class 9 environmental area.</desc>
+      <exits n='840' s='968'/>
+   </location>
+
+   <location num='905'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor running from the southwest to the northeast, roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor. A side tunnel branches off to the southeast here.</desc>
+      <exits ne='842' se='970' sw='968' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='963'>
+      <name>Field Operations Office</name>
+      <desc>   The shed is unpressurized, rock dust piled thick in the corners. Safe behind locked glazsteel doors, status lights twinkle cryptically in the control panels that line the small room.  A discarded coffee bulb, half hidden in the dust under one of the panels, displays the distinctive yellow and black toxic coffee warning label. A red glow panel over the door in the south wall marks the exit.</desc>
+      <exits s='1027' out='1027' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='965'>
+      <name>Dome perimeter path</name>
+      <desc>A utilitarian path along the colony dome perimeter is tramped through the rock dust. To the east, the colony&apos;s lights shine through the glazsteel dome. To the west at the far end of the crater you can see the lights of the shuttleport. The path runs north from the airlock in the south.</desc>
+      <exits n='901' s='1029' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='966' flags='t'>
+      <name>Airlock</name>
+      <desc>   The small dimensions of the airlock are obviously meant only for beings class 9 or lower to pass into and out of the colony dome. Touchplates by the irises provide access.</desc>
+      <events in-room='objects.touchpad.5'/>
+   </location>
+
+   <location num='967' flags='a'>
+      <name>Tamarack and Custer Consolidated Mining and Extraction Corp.</name>
+      <desc>   A gray plastic counter here has been polished to an elegant gleam. Workers pass through reporting to their station in the mine or leaving at end of shift, tramping ever more rock dust onto the floors. Engineers in white coveralls cluster around a freestanding HoloCad station, their slender drawing wands create shining lines in the holofield display.</desc>
+      <desc>   An engraved brass nameplate is bolted to the door in the north wall. To the east a revolving mantrap leads to the mines, a touchpad and sign are mounted on the wall beside it.</desc>
+      <exits n='903' s='1031' in='903' out='1031' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='968' flags='ta'>
+      <name>Mine Entrance</name>
+      <desc>   You are standing at the entrance to the Sumatra mines. Due to this moon&apos;s volcanically active history a wide range of valuable minerals are found here. Mining and extracting operations continue around the clock. This is a union facility under contract with the Solar Federation of Miners, local 6. A shop steward stands by the entrance checking workers badges and ticking off their names on his tablet. Looking up he spots you, scowls, and makes a note on his tablet.</desc>
+      <desc>   The tunnels in the rock to the northeast and the southeast lead to the mining areas, a tunnel to the north leads to the extraction facilities and cargo airlocks. The way out of the mines is to the west; a touchpad and sign are embedded in the rock beside the revolving mantrap.</desc>
+      <exits n='904' ne='905' se='1033' up='967' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='970'>
+      <name>Monopole lode</name>
+      <desc>   Looking carefully at the rock face, you see the dark veins of the monopole lode. These precious monopoles are extremely rare in most of the system but plentiful on Sumatra due to the combination of its volcanic activity and Jupiter&apos;s pervasive magnetosphere. Miners use a large drilling unit close to the rock face, the laser beams cutting out large chunks. Rock dust swirls through the air covering everything. A shop steward stands nearby making notes on a tablet and periodically glancing around.</desc>
+      <desc>   The tunnel northwest leads back to the main mine area.</desc>
+      <exits nw='905' no-exit='moves.noexit.6'/>
+      <events in-room='mines.union.4'/>
+   </location>
+
+   <location num='1026'>
+      <name>Control Shed</name>
+      <desc>   A large sign across the back wall of the shed reads WELCOME TO SUMATRA (S/2002 J 1). In smaller letters below it reveals that Sumatra is a leasehold of the Tamarack &amp; Custer Consolidated Mining and Extraction Corporation, authorized by the Interstellar Expeditionary Force. It also informs you that this is a union shop planet under contract with the Solar Federation of Miners, local 6.</desc>
+      <desc>   On the gray plastic counter in the center of the room are some powered down data display units, their power buttons glowing a dull red waiting to be reactivated, and a rack with a manual clamped on it. Alone in the room, you contemplate the opportunity to snoop around. Your eyes shift from the alluring data unit waiting to be activated to the exit door in the east.</desc>
+      <exits e='1027' out='1027' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1027'>
+      <name>Sumatra shuttle pad</name>
+      <desc>   The spaceport terminal on the western rim of the crater is surrounded by a huddled cluster of gray plastic buildings, connected by covered walkways. The buildings themselves are modular and utilitarian, their plainness speaking of the era of their construction, the early days of this world&apos;s colonization.</desc>
+      <desc>   At the far side of the field is the company parking area. Mining shuttles&apos; angular black cylinders wrapped in the filigree of fine silver wires and thumbnail-sized nodes of dull copper of their scanner units stand in rows. Nearby, mammoth cargo shuttles stand with open loading hatches as crews direct a never ceasing line of automated hod carriers delivering the extracted minerals to the waiting fleet. A layer of rock dust clings to every horizontal surface.</desc>
+      <desc>   Small sheds are to the north and west, a souvenir shop to the south. A broad road descends from the crater rim to the main dome&apos;s airlock in the east.</desc>
+      <exits n='963' e='1028' s='1091' w='1026' no-exit='moves.noexit.1'/>
+      <events in-room='announce.landing.1'/>
+   </location>
+
+   <location num='1028'>
+      <name>Spaceport road</name>
+      <desc>   As you approach the glazsteel dome, you watch the smear of evening citylight expand, brightening and separating into distinct patches marking boroughs, then neighborhoods, then individual streets as you follow the descending road towards the city&apos;s core.</desc>
+      <desc>   The road ascends to the shuttle port in the west and descends to the airlock of the main dome in the east. Automated contaminated material carriers turn off the main spaceport road to the toxic waste disposal area to the south.</desc>
+      <exits e='1029' s='1092' w='1027' in='1092' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1029' flags='t'>
+      <name>Exterior Airlock to Colony</name>
+      <desc>   Maintenance droids are repairing the wall surrounding the airlock where the gray hardened plazsteel structural beams have apparently succumbed to the stresses of particle bombardment and constant use.  A touchpad at the side of the airlock glows softly indicating it is operational. The sign next to it displays instructions.</desc>
+      <desc>   Underfoot the ever-present rock dust is trampled almost level by the constant traffic through the airlock. Distinct patterns of footprints in the dust along the perimeter of the dome lead north. In the distance you can see the lights of another dome complex.</desc>
+      <desc>   The main road rises to the west leading to the shuttle port.</desc>
+      <exits n='965' w='1028' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1030' flags='t'>
+      <name>Interior Airlock</name>
+      <desc>   A personnel grade airlock is set into the glazsteel dome wall here. To the east is the reception area of the colony. A touchpad glows softly beside the airlock indicating it is operational, the sign next to it displays instructions.</desc>
+      <desc>   Clusters of planters nearby are filled with a carefully tended assortment of exotic spaceblooms. The inkigo is in bloom, its three green lattice-textured, oval-shaped cylinders arranged equiangularly around a shiny, dark green coroot. The intoxicating sweet scent fills the area. Someone has crudely scrawled across the largest planter, &quot;look for the union label!&quot;</desc>
+      <exits e='1031' in='1031'/>
+   </location>
+
+   <location num='1031' flags='a'>
+      <name>Sumatra Colony reception area</name>
+      <desc>   Softly upholstered low seating units clustered in front of a gray plastic counter define the reception area. A stack of security badges lies beside a data display unit that a blonde young woman, in what seems to be an excessively tight coverall, is rapidly tapping away at. A man in a black security coverall sporting numerous badges lounges back in the chair beside her, his feet propped up on the counter, vacantly staring at a dog-eared copy of Interstellar Geographic.</desc>
+      <desc>   A door to the south is marked Armstrong Cuthbert Office, to the north is an archway with a sign warning that the mines area is beyond, hard hats required. A passageway east is marked Residential Area and an airlock is to the west. A ramp to the southwest winds down to the lower level. A faint drift of rock dust is visible on most surfaces despite the air filters.</desc>
+      <exits n='967' e='1032' s='1095' sw='1094' w='1030' down='1094'/>
+   </location>
+
+   <location num='1032'>
+      <name>Corridor</name>
+      <desc>   You are at the north end of a long corridor leading to the residential area of the Sumatra colony. Built by the mining corporation under terms negotiated with the mineworkers union, the residential area is minimalist but displays a certain level of comfort. Although there&apos;s no escape from the rock dust even in this sector, the high end air filters keep it to a minimum.</desc>
+      <desc>   The gray plastic walls are relieved by brightly colored holos on the walls. The corridor continues to the south and west.</desc>
+      <exits s='1096' w='1031'/>
+   </location>
+
+   <location num='1033'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor running from the northwest to the southeast, roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor.</desc>
+      <exits se='1098' nw='968' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1034'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. The tunnel turns here from the south to the east. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor.</desc>
+      <exits e='1035' s='1098' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1035'>
+      <name>Drill face</name>
+      <desc> You step into an area where the rock to the east is being actively mined. One miner sits in a drilling machine that savagely grinds into the exposed rock face. Other miners ignore you as they busily go about their dangerous work. You try to shout questions at the miners over the noise, drawing the attention of the shop steward. The tunnel runs back toward the west.</desc>
+      <exits w='1034' no-exit='moves.noexit.6'/>
+      <events in-room='mines.union.6'/>
+   </location>
+
+   <location num='1091' flags='ta'>
+      <name>Sumatra Souvenirs</name>
+      <desc>     The display shelves on the east wall are filled with miniature model hod carriers and rock drills, an assortment of jewelry and key chains featuring local crystals, and pottery painted with the corporate crest of Tamarack &amp; Custer. The west wall offers a variety of t-shirts with witty sayings like, &quot;My mom visited Sumatra and all I got was this lousy t-shirt&quot; and &quot;Welcome to Sumatra, Now go home!&quot; There are racks of ties, caps, umbrellas, tote bags, and mugs all imprinted with sentiments of Sumatra. One display is entirely devoted to gaily colored refrigerator monopoles. A long glazsteel counter to the south carefully displays rare Sumatran fire opals at shocking prices.</desc>
+      <desc>     An elderly clerk in a lavender coverall is taping a sign to the back wall warning would be customers that the shop is closed pending certification by the Galactic Heritage Foundation and that a courtesy souvenir, one per person, is available to all visitors.</desc>
+      <exits n='1027' out='1027'/>
+      <events in-room='objects.bottle1.1'/>
+   </location>
+
+   <location num='1092' flags='t'>
+      <name>Toxic coffee grounds disposal area</name>
+      <desc>   A high ferroconcrete wall, topped with razor wire and dotted with the familiar bright yellow and black toxic symbol signs, surrounds the toxic coffee grounds disposal area. Automated contamination containment carriers drive in to dump their contents on the rapidly growing mountain of used coffee grounds and discarded coffee bulbs and out again through a decontamination unit.</desc>
+      <desc>   While the dangers of coffee have long been understood and accepted by most socially responsible authorities, the effects of second hand exposure to toxic coffee grounds waste has only recently been recognized and is still in some dispute. On Sumatra, the Galactic Heritage Foundation has pursued an aggressively protectionist environmental policy.</desc>
+      <exits n='1028' out='1028' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1093' flags='a'>
+      <name>Interstellar Expeditionary Force office</name>
+      <desc>   Created by the Emperor Ming to explore and claim Unknown Space as the Imperial Expeditionary Force. After the fall of the Empire, the Galactic Administration decided the role of the IEF was valuable to the Pax Galactica, the name was changed, and it continued its voyages as the Interstellar Expeditionary Force. The first ventures of the IEF were to the planets and moons of the Solar System before moving into the asteroid belt.</desc>
+      <desc>   Sumatra, designated as &quot;S/2002 J1&quot; at the time, was explored by the IEF and renamed for its extensive volcanoes. The IEF is still the ultimate authority on Sumatra although mining rights were sold to a private corporation, a permit for a tourist facility was sold to another, a university was granted a permit to excavate certain ruins, and the Galactic Heritage Commission claimed authority to review everything due to the nature of the ruins.</desc>
+      <desc>   The Officer of the Day is sitting behind a gray plastic desk signing papers and pointedly ignoring you.</desc>
+      <exits e='1094' out='1094'/>
+   </location>
+
+   <location num='1094'>
+      <name>Lower level hub</name>
+      <desc>   You are standing in the lower level hub with doors to the west, south, and southwest leading to offices. To the northeast is the ramp leading to the main level of the colony.</desc>
+      <desc>   The walls are a utilitarian gray plastic with soft concealed lighting. It&apos;s quiet here away from the bustle of the main level and people politely avoid you as they pass through the hub. A maintenance droid slowly makes regular passes around the area hoovering up the rock dust.</desc>
+      <exits ne='1031' s='1158' sw='1157' w='1093' up='1031' out='1031'/>
+   </location>
+
+   <location num='1095' flags='tc'>
+      <name>Armstrong Cuthbert office</name>
+      <desc>   Sumatra&apos;s Armstrong Cuthbert branch office is remarkably small and spare, with a broad desk no larger than that of a middle-level manager in any of the star-spanning corporations of Earth.  A series of comm screens are installed flush in the wall behind the desk and flicker slightly with a constantly refreshing display. A plazsteel door in the north wall leads out.</desc>
+      <desc>   The appointments are simple but elegant; the chairs sensible but elaborately handcrafted and covered in exquisite hand stitching. Most of the pictures are old master originals of the 23rd century. The one exception is the most famous. &quot;The Lady in Waiting&quot; is a painting from life of Tiffany Diamond during the &quot;Dying Star Years&quot; and the artist has captured his subject perfectly.</desc>
+      <desc>   A young woman wearing the semi-formal dark green Armstrong Cuthbert business suit, grade 3 looks up from her display screen, brushes a speck of rock dust from her cuff, and gazes seriously at you.</desc>
+      <exits n='1031' out='1031'/>
+      <events in-room='announce.armstrong.1'/>
+   </location>
+
+   <location num='1096'>
+      <name>Corridor</name>
+      <desc>You are walking down a long corridor in the residential section of the colony. To the east is the entrance to the Mine Workers Union office. The corridor continues north and south. A maintenance droid rolls by on its eternal hoovering loop leaving a briefly rock dust free path behind it.</desc>
+      <exits n='1032' e='1097' s='1160' in='1097'/>
+   </location>
+
+   <location num='1097' flags='a'>
+      <name>Solar Federation of Miners Local 6</name>
+      <desc>   You are standing in the Sumatra branch office of the Solar Federation of Miners, local 6. The plain gray plastic compartment is cluttered with file cabinets and cartons of leaflets. Large holo screens display recreations of historic union posters.  Several desks line the walls with union organizers seated before their data display units. At a long central table, union officials are meeting to discuss a serious contract violation by the staff of the Heritage Foundation. You can&apos;t hear their muted conversation clearly but some angry words like dork and ligger and blacklegs are clearly heard. The slight coating of rock dust on the floor muffles your footsteps as you draw closer to eavesdrop.</desc>
+      <desc>   You notice a path has been trampled in the dust by all the foot traffic through the door to the west.</desc>
+      <exits w='1096' out='1096' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1098'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. Corridors branch out to the northwest, north, and south here. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor.</desc>
+      <exits n='1034' s='1162' nw='1033' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1157' flags='a'>
+      <name>Data Center</name>
+      <desc>   This suite of rooms is brightly lit and kept at a constant low temperature to accommodate the rows of racked data servers and other equipment you can view through the glazsteel door to the southwest. This is the one dust free environment in the colony and you can hear the wasplike buzz of the special air filters needed to accomplish the Augean task.</desc>
+      <desc>   Against the west wall is a large desk with several monitors displaying data and one displaying a colorful layout of some sort. Books are carelessly stacked on it and empty coffee bulbs peek from beneath printouts. A large hand lettered sign has been stuck to the wall.</desc>
+      <desc>   File cabinets cover the east wall and a battered sofa fills most of the space on the south wall. Loud music blares from hidden speakers.</desc>
+      <exits ne='1094' sw='1220' in='1220' out='1094'/>
+   </location>
+
+   <location num='1158' flags='a'>
+      <name>Galactic Heritage Commission office</name>
+      <desc>   It is our job at Galactic Heritage to make sure that the historic environment of the Solar System is properly maintained and cared for. By employing some of the system&apos;s very best architects, archaeologists and historians, we aim to help people understand and appreciate why the historic buildings and landscapes around them matter. From the first traces of civilization, to the most significant buildings of the current century, we want every important historic site to get the care and attention it deserves.</desc>
+      <desc>   The room is tastefully decorated in simple but genuine woods and natural fabric products of the Solar System. There are several desks with earnest looking people busily working or quietly murmuring into a communication unit. An arrangement of comfortable seating for visitors features a large low table covered with books filled with magnificent photos of protected sites. It&apos;s obvious that a Herculean effort is made to wage war against the rock dust here.</desc>
+      <exits n='1094' out='1094' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1159' flags='e'>
+      <name>Sumatra Commodities Exchange</name>
+      <desc>The cacophony of the exchange buffets your sensibilities. Vast banks of display screens line the walls. Clerks and Traders stand staring at the screens shouting into their comm units or rush about on their business. The exit door is to the east.</desc>
+      <exits e='1160' out='1160'/>
+   </location>
+
+   <location num='1160'>
+      <name>Corridor</name>
+      <desc>You are walking down a long corridor in the residential section of the colony. To the east is the entrance to Custer&apos;s Last Stand, the local pub and to the west is the colony&apos;s exchange. The corridor continues north and south.</desc>
+      <exits n='1096' e='1161' s='1224' w='1159'/>
+   </location>
+
+   <location num='1161' flags='ba'>
+      <name>Custer&apos;s Last Stand</name>
+      <desc>   This cozy pub, like the rest of the colony, never closes and always has at least a few residents relaxing here regardless of the hour. During busy times, the place is crowded with workers and the flotsam and jetsam of the Solar system population.</desc>
+      <desc>   Mementoes of the travels and professions of its customers are tacked high on the walls and hang from the ceiling. Many, like the mournful faced stag head adorned with sunglasses and a red peaked cap that hangs over the back bar, defy explanation. Most are filmed with a layer of the inescapable rock dust.</desc>
+      <desc>   Holos of famous guests and the pub&apos;s sponsored sports teams hang on the lower walls. A framed certificate by the main door in the west wall, covered with official stamps and seals, certifies that this establishment is a licensed coffee vendor and it may be consumed only on premises. A dim light shines from behind an unmarked door to the southeast.</desc>
+      <exits se='1226' w='1160' out='1160' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1162'>
+      <name>Tunnel branch</name>
+      <desc>   You are in a rock corridor roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. The tunnel branches here from the north running to the southwest and southeast. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor.</desc>
+      <exits n='1098' se='1227' sw='1225' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1220'>
+      <name>Data Center - clean room</name>
+      <desc>   Rows and rows of racks filled with servers and other data and communications equipment fill the data center&apos;s clean room. Immaculate, not a speck of dust can be seen. Overhead are cable guides where neatly bundled color-coded cables are run between the machines. Underfoot, the floor is perforated tiles set in a support grid; frigid air rushes up from below. The temperature is too chilly for human comfort and the sound of the air filters competes with the ancient music of the semi-legendary Earth composer Bach&apos;s Coffee Cantata.</desc>
+      <desc>   The only visible way out is northeast though the glazsteel door.</desc>
+      <exits ne='1157' out='1157'/>
+   </location>
+
+   <location num='1223' flags='a'>
+      <name>Company Store</name>
+      <desc>   The Tamarack &amp; Custer Consolidated Mining and Extraction Corporation maintains the colony&apos;s company store. Everything you can imagine needing is sold here as well as some things whose purpose you can&apos;t even begin to imagine. You gaze about in awe at the stocked shelves rising to the ceiling. A long counter bisects the store to the west. Clerks behind the counter stand ready to fulfill your requests. The prices seem high but this is a remote outpost and it is the only store on the planet. A few clerks armed with various handheld devices battle the fine layer of dust everywhere.</desc>
+      <exits e='1224' out='1224' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1224'>
+      <name>Corridor</name>
+      <desc>You are walking down a long corridor in the residential section of the colony. To the west is the entrance to the company store. The corridor continues north and south. You pause to check where you are and notice someone has &quot;written&quot; clean me in the fine layer of rock dust clinging to the gray plastic wall.</desc>
+      <exits n='1160' s='1288' w='1223' in='1223'/>
+   </location>
+
+   <location num='1225'>
+      <name>Rock face</name>
+      <desc>   You are in a rock corridor where it ends abruptly in a sheer rock face. This area is not yet in production and only a solitary light dimly illuminates it.</desc>
+      <desc>   The rock dust here is deep and pebbles and small boulders are scattered here.</desc>
+      <desc>   To the northeast the light is brighter and the corridor continues back to the active areas.</desc>
+      <exits ne='1162' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1226' flags='b'>
+      <name>Back room</name>
+      <desc>   The gray plastic walls are largely hidden by stacked cartons and crates. In the center of the room, under a single utility light fixture dangling from a bright yellow extension cord, is an ancient battered round table covered with playing cards, papers, and leaflets. A few workers lounge around the table on an assortment of boxes, chairs, stools, and whatever else is to hand.</desc>
+      <desc>   To the northwest the noise of the pub can be dimly heard through the door.</desc>
+      <exits nw='1161' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1227'>
+      <name>Rock corridor</name>
+      <desc>   You are in a rock corridor roughly drilled out of the asteroid by the colony&apos;s massive drilling machines. The tunnel bends from the northwest to the east. Overhead a utility strip has light fixtures at regular intervals alternating with power mains tap boxes. Sunk into the floor surface down the center of the corridor is a guide rail for utility vehicles.</desc>
+      <desc>    The rock dust here is deep enough to muffle the sound of your footsteps on the rock floor.</desc>
+      <exits e='1228' nw='1162' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1228' flags='a'>
+      <name>Opal rock face</name>
+      <desc>   Until mining began on Sumatra, the finest fire opals in the Solar System were found on Venus. Following early test core examinations, a spectacularly fine lode of fire opals was discovered here. Looking carefully at the rock face, you can see a few sparkles of the opaline material in its native matrix. The opal matrix requires delicate hand mining by experts to retain the integrity of the opals. Small tools are strewn around the floor while a lone miner silently taps away at a spot on the rock wall with a small probe.</desc>
+      <desc>   The tunnel west leads back to the main mine area.</desc>
+      <exits w='1227' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1287' flags='ba'>
+      <name>Workingmen&apos;s Club</name>
+      <desc>   Workers sit around small tables playing cards or various games invariably involving betting. Waitdroids scurry about delivering drinks including unregulated coffee service. A dart board on the west wall sports a large portrait of a dignified elderly woman wearing a large fussy hat; a single dart pierces the tip of her nose. There&apos;s rock dust everywhere. The light fixtures are filmed with dust, drifted high in the corners. A less-deposited imprint is visible where glasses have been removed from the shelves. No one seems to notice the dust or care if they do.</desc>
+      <desc>   This club is open to colony workers and subsidized by the Mine Workers Union, local 6. You notice a large ancient bell hanging above the bar to the west with a stout rope hanging from it. Whenever an executive, IEF, or Heritage Foundation staffer wanders in, they are greeted with a loud ringing of the bell accompanied by catcalls from all present. They make a hasty retreat out the front door to the east.</desc>
+      <exits e='1288' out='1288' no-exit='moves.noexit.7'/>
+      <events in-room='announce.random.1'/>
+   </location>
+
+   <location num='1288'>
+      <name>Butler Square</name>
+      <desc>   You are standing in a large open park area designed as a village green for the residents of the colony. There is a large lawn and benches and a play area for the few children here. Small formal plantings are filled with fragrantly blooming flowering plants and one is a replica of a knot garden planted all to herbs. In the center of the park is a bronze statue of Jim Butler, described by his contemporaries as the laziest mining tycoon of all time.</desc>
+      <desc>   The paths lead out of the park to the east, west, south, southeast, and southwest.</desc>
+      <exits n='1224' e='1289' se='1353' s='1352' sw='1351' w='1287'/>
+   </location>
+
+   <location num='1289'>
+      <name>Director&apos;s residence</name>
+      <desc>The entry to the Director&apos;s residence is a large set of wooden double doors with light fixtures on either side. Large plastic tubs here have been planted with exotic flowering plants that flourish under the full spectrum light. A comm unit is set into the wall beside the door but it goes unanswered no matter how much you press the attention button. You wonder if no one is at home or are they ignoring you. When you give up, the way back to the residential hub is west.</desc>
+      <exits w='1288' out='1288'/>
+   </location>
+
+   <location num='1351' flags='a'>
+      <name>DeBeers Dormitory</name>
+      <desc>   This large facility contains basic housing for workers. Corridors lead off to simple living units, a communal dining hall, a recreation and exercise facility, and restricted maintenance areas. In a corner a maintenance droid is propped upside down.  A repairman violently bangs at it with a spanner trying to dislodge a discarded coffee bulb that has managed to wedge itself in the droid&apos;s dust intake vent.</desc>
+      <desc>   There is an accommodations desk in the entry here. A sign next to the desk informs you that this is a private area and restricted to residents and their guests. A young man in a violently purple coverall sits behind the desk speaking on his communicator and doodling something vaguely obscene on a small digital tablet. When you attempt to speak with him, he gestures towards the door northeast and returns to his conversation.</desc>
+      <exits ne='1288' out='1288'/>
+   </location>
+
+   <location num='1352' flags='ba'>
+      <name>Cafeteria</name>
+      <desc>   You are standing in a large cafeteria. Cheerfully decorated in bold primary colors, there are striking bright red panels suspended from the ceiling to help dampen the noise and matching bold tablecloths. A circular stair near the curved glazsteel dome wall leads to a wide balcony area that is particularly charming and popular late at night when the lights in here are lowered.</desc>
+      <desc>   Waitdroids swiftly move between the tables and kitchen, efficiently taking orders and delivering meals. Although recorded music is softly playing on hidden speakers, there is also a grand piano spotlighted off to the side.</desc>
+      <desc>   The scent of the warm spices of Earth&apos;s famous Asian cooking mixes with the sweet peppery tang of The Lattice&apos;s unique cuisine and wafts around you to delicious effect.</desc>
+      <desc>   A steady flow of diners moves through the main double doors to the north.</desc>
+      <exits n='1288' out='1288'/>
+   </location>
+
+   <location num='1353' flags='a'>
+      <name>Livingston House</name>
+      <desc>   You push through the front door and find yourself in an elegant foyer. The walls are painted with murals of scenes you assume are from remote areas of the planet. A maintenance worker in a brown coverall is carefully wiping rock dust off the huge leaves of a potted elephant plant in the corner.</desc>
+      <desc>   This building was constructed to provide private living space for colony executives and IEF officers. The Heritage Foundation staff prefers to reside here as well. The suites are rumored to be surprisingly spacious with luxurious appointments. You see a wide archway to the east with a touchpad on the wall beside it. A small sign informs you that entrance is limited to residents of Livingston House and their guests.</desc>
+      <desc>   To the south is an expansive glazsteel counter; the woman seated behind it is engrossed in watching a holodrama. You watch her discreetly wipe away a tear and consider what to say to attract her attention.</desc>
+      <desc>    The front door to the northwest leads back to Butler Square.</desc>
+      <exits nw='1288' out='1288' no-exit='moves.noexit.7'/>
+   </location>
+
+</fed2-map>
+

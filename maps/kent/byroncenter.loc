@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<fed2-map title='Byron Center' version='1.00' editor='standard' from='392' to='Kent.Kent Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storage Location</name>
+      <desc>   There are a number of items stored here in this location.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='266'>
+      <name>Byron Center High School</name>
+      <desc>Apparently there are a lot of farm students who attend this school.  This is evident because of all the Tractors that are parked in the School Parking lot.  The Students must have plowing duties after they finish school. The exit is East.</desc>
+      <exits e='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='267'>
+      <name>Byron Center Boulevard North</name>
+      <desc>To your West is Byron Center High School.  The Road Ends here. The way back is South.</desc>
+      <exits s='331' w='266' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268' flags='bt'>
+      <name>Meijerman&apos;s  Office</name>
+      <desc>Located in the Middle of the Room is a large Mahogany Desk.  Inlaid into the desk are monitors showing the daily activities of the planet.  There is a Menu screen near the desk where the planet owner can order what ever food or drink they would like. The way out is South.</desc>
+      <exits s='332' out='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='269' flags='b'>
+      <name>Traders Lounge</name>
+      <desc>The Lounge is equipped with Leather Reclining Chairs.  On the South wall are monitors showing all of the trading action that is taking place in the exchange. On the north wall are screens showing all of the sports events taking place throughout the galaxy.  Oddly enough most everyone is watching the Mud Wrestling Channel. Go Figure.  The way out is SouthWest.</desc>
+      <exits sw='332' out='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='y'>
+      <name>Skeeter&apos;s Shipyards</name>
+      <desc>Welcome to Skeeter&apos;s Shipyards.  Here you can buy your ship. We have some real good deals here for you. We have lots of low mileage spaceships available for your space cruising pleasure. We can even custom build one for you.  Just type order ship to begin.  The Spaceport is to your south.</desc>
+      <exits s='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Robert Nickels Intermediate School</name>
+      <desc>Welcome to Robert Nickels Middle School.  Or as the students like to call it Welcome to or Daily prison.  Where the kids are on a work release program. They show up to do the schoolwork and get a release if they are good at the end of the day. If they aren&apos;t good then they will have to extend their daily prison sentence with Detention. The way out is East</desc>
+      <exits e='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331'>
+      <name>Byron Cemter Boulevard North</name>
+      <desc>You are on Byron Center Boulevard North.  To your West is Robert Nickels Intermediate School. The Street continues to the North and South.</desc>
+      <exits n='267' s='395' w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332' flags='eb'>
+      <name>Byron Center Exchange</name>
+      <desc>You have just entered the Planets Exchange.  All around you people are gathered around monitors showing the days transactions for all the planets Commodities.  There are waitdroids roaming around the room as well bring the patrons something to drink or eat while they ponder if their investment will make money or lose money. To the NorthEast is the Traders Lounge where you can relax in private from the hustle and bustle of this room. To the North is the office of the Panet Owner. The exit is to your SouthWest.  You may also go OUT through the portal directly to the Landing Pad.</desc>
+      <exits n='268' ne='269' sw='395' out='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='b'>
+      <name>Happyness Is Restaurant</name>
+      <desc>In the front of the restauarant are tables complete with elegant tablecloths and candles. In the back you see a old style Ice Cream counter With wooden bench booths. It appears that this is a high scale restauarant but also one where kids can enjoy and be kids at the same time.  Waitdroids are moving around the rooms bringing everyone their food and drink orders.  The way out is South.</desc>
+      <exits s='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391' flags='hi'>
+      <name>Byron Medical Physician Center</name>
+      <desc>Welcome to the Byron Medical Center. We hope you are feeling well today.  If not please see the receptionist at the desk and she will have a Doctor check you over.  If Your medical condition is near dying then we recomend that you see the insurance agent located at the desk in the corner to insure your health needs.  Just type Insure to receive full coverage.  We don&apos;t want you to die without being able to pay your medical bills now would we.  The Spaceport is located to your east.</desc>
+      <exits e='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392'>
+      <name>Byron Center Spaceport</name>
+      <desc>You have just landed at Byron Center&apos;s Spaceport.  The town is located down the road to the East. To your North is the Shipyards. To the West is Medical Clinic.  You can follow the road into to town to get to the Exchange or just walk IN the portal to the Exchange. There is the Space Trucking Cafe to your SouthWest. To your South is located Tim&apos;s Standard Ship Repairs.</desc>
+      <exits n='328' e='393' s='456' sw='455' w='391' in='332' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Spaceport Way</name>
+      <desc>You are walking along Spaceport Way the Town is located off to the East. The Spaceport is back to your West.</desc>
+      <exits e='394' w='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Spaceport Way</name>
+      <desc>The Town of Byron Center is off to the East. The Spaceport is to your West.  To your South is Douglas Walker Park.  </desc>
+      <exits e='395' s='458' w='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Edge of Town</name>
+      <desc>You are standing at the edge of town. To your NorthEast  is the planets Exchange. To your North and South is Byron Center Boulevard. The town continues to the East.</desc>
+      <exits n='331' ne='332' e='396' s='459' w='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396'>
+      <name>Main Street</name>
+      <desc>You are walking down the west side of Main street the road continues to your West and East.</desc>
+      <exits e='397' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397'>
+      <name>Main Street</name>
+      <desc>You are standing on Main Street in the Middle of Town. to your North is Happyness Is Restaurant.  To your South is Byron Family Restaurant. The road continues to your West and East.</desc>
+      <exits n='333' e='398' s='461' w='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398'>
+      <name>Main Street</name>
+      <desc>You have come to the End of Main Street. To your South is the Byron Center Hotel.  Standing in front of the Hotel is a Giant 12&quot; Chicken.  The road continues to you West.</desc>
+      <exits s='462' w='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='455' flags='b'>
+      <name>Space Trucker Cafe</name>
+      <desc>As you walk into the doors of the Space Trucker Cafe you see a conveince store on one side of the building. The other half of the building is The Space Truckers Cafe.  Where tired haulers can stop, sit down, have something to eat, listen to the jukebox located at every table, or just watch the exchange prices on monitors at each booth.  Over the speakers in the restaurant they are playing Deep Purple&apos;s Space Trucking.  The Spaceport is located to your NorthEast.</desc>
+      <exits ne='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='456' flags='r'>
+      <name>Tim&apos;s Standard Ship Repairs</name>
+      <desc>You walk into the lobby of Tim&apos;s Stanard Ship Repairs.  Along the back wall is a waiting room for ship owners to wait while their spaceship is being repaired.  The Waiting room is equippedd with state of the art reclining massage chairs.  Attached to each massage chair is a monitor showing the status of the repair, and the video of the repairmen working on the ship.  This is so that you know you arent being overcharged for some needless repair when the repairman has to show you why its broke to the camera.  The spaceport is to your North.</desc>
+      <exits n='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>Douglas Walker Park</name>
+      <desc>As you walk into the park you see Ballfields, picnic areas, playground equipment, soccer field, even a Polo field. There are benches near each field so people can cheer on everyone playing the game, or to watch their children playing on the playground equipment. The Exit is to the North.</desc>
+      <exits n='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>Byron Cemter Boulevard South</name>
+      <desc>To your East you see Byron Township Library. The road continues to your North and South.</desc>
+      <exits n='395' e='460' s='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Byron Center Township Library</name>
+      <desc>You have just walked into a large Library.  The first thing you notice about this Library is that you don&apos;t see any books at all in this library.  All you see around you are booths with video screens in each one.  The librarian informs you that all the books have been scanned into the computer system of the planet so you anyone can read anybook from the monitors in the booths.  Thus eliminating the need for multiple copies of some popular books.  If per chance you are unable to finish your book you may it downloaded to your library card microchip. Once downloaded you can insert the chip into any computer and continue reading where you left off.  The way out is West.</desc>
+      <exits w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='b'>
+      <name>Byron Family Restaurant</name>
+      <desc>As you walk into the restaurant you notice that it looks like a old diner.  The waitress tells you that you may sit anywhere you like. You can smell the aroma of Home Cooked meals coming from the kitchen. Your mouth begins to water from the smell as you take a seat near the back of the room. The waitress brings you a glass of water and tells you she will be back to get your order in just a minute.  The way out is to your North.</desc>
+      <exits n='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='b'>
+      <name>Byron Center Hotel</name>
+      <desc>As you walk into the Hotel it becomes apparrent why the Chicken is standing outside the building.  It is to advertise the Hotel&apos;s Outstanding Fried Chicken Dinners that are held each and every night.  The restaraunt is filled as people wait to be seated. There Are others at the Bar getting some liquid refreshments before they partake of dinner. They all seem to be avoiding the Hotel clerk who looks board at his post waiting for someone to check in to the hotel and not the restaurant.  The way out is to the North.</desc>
+      <exits n='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Byron Center Boulevard South</name>
+      <desc>You have come to the southern most end of the Boulevard.  To your East is the Township Recreational Facilities. The road continues to your North.</desc>
+      <exits n='459' e='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Recreational Facilities</name>
+      <desc>You are in the townships Recreational Facilities.  There are Lots of rooms in this building but nothing seems to be in them.  A worker informs you that each room can instantly be set up for what ever indoor sport that you wish to partake of.  There are also 6 outdoor arenas that are the same way.  You wonder where they store all the equipment neccessarry for each and every sport available.  The way out is West.</desc>
+      <exits w='523' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

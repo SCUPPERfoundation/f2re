@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<fed2-map title='Mixed Space' version='5' editor='standard'>
+
+   <location num='396' flags='sp'>
+      <name>Frosty Orbit</name>
+      <desc>Below, you see a very large ice cube, with a landing pad ssticking out of it.  Feel free to board from here.</desc>
+      <exits s='460'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Mixed System Link</name>
+      <desc>   You are at an empty point in space with only the jump device to keep you company.</desc>
+      <desc>   You notice two planets nearby, one east and one north of your position.</desc>
+      <desc>   Please proceed East to Crispy and North to Frosty,</desc>
+      <exits n='396' e='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>Crispy Orbit</name>
+      <desc>You see a dark and ashen planet down below.  You can board from here to land on Crispy.</desc>
+      <exits w='460'/>
+   </location>
+
+</fed2-map>

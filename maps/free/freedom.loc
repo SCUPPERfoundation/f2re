@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<fed2-map title='Freedom' version='24' editor='standard' from='840' to='Free.Free Space.718'>
+
+   <location num='327'>
+      <name>Tell a tale corner.</name>
+      <desc>Tell a tale corner?  Hmmm is that Vice President Biden in the photo?  Better make a decision quick, and stick to it, he always changes his mind especially if it a big F&apos;en deal.</desc>
+      <exits e='328'/>
+   </location>
+
+   <location num='328' flags='t'>
+      <name>Flip Flop Room</name>
+      <desc>What is this?  A room full of flip flops?  Who could possible need all these shoes?</desc>
+      <exits e='329'/>
+   </location>
+
+   <location num='329' flags='t'>
+      <name>House of Wright</name>
+      <desc>Hey, this looks like a church, better be respectful.  The man at the pulpit looks somewhat familiar.  OMG  he just said God Da** America three times, lets get out of here.</desc>
+      <exits e='330'/>
+   </location>
+
+   <location num='330' flags='t'>
+      <name>Red hot hallway</name>
+      <desc>This hallway is hot as Hell.  Lets get out of here now.</desc>
+      <exits e='331'/>
+   </location>
+
+   <location num='331' flags='t'>
+      <name>Ice cold room</name>
+      <desc>Wow what a difference!  Now you are standing in the middle of an ice cold room.  How can it get this cold so quickly?  Thank God for global warming!</desc>
+      <exits e='332'/>
+   </location>
+
+   <location num='332' flags='t'>
+      <name>Green Room</name>
+      <desc>Green green everywhere.  A photo here of something called a Green Energy Zar.  Van Jones?  Shouldn&apos;t he be in a red room?</desc>
+      <exits e='333'/>
+   </location>
+
+   <location num='333' flags='t'>
+      <name>Union Hall</name>
+      <desc>Union Hall for local 666 of the United Climate Change Workers of America.  Doors in each direction, wonder if anyone knows where any of them go?</desc>
+      <exits s='397'/>
+   </location>
+
+   <location num='391' flags='t'>
+      <name>Harrys place.</name>
+      <desc>Hey more signs of life, sort of.  Here is a photo of an old man and there is a bottle head in his likeness here, does this bobblehead ever stop bobbing?</desc>
+      <exits n='327'/>
+   </location>
+
+   <location num='397' flags='t'>
+      <name>Regulatory Czar Room</name>
+      <desc>Pepto?   Who could ever need this much of the pink stuff?</desc>
+      <exits s='461'/>
+   </location>
+
+   <location num='455' flags='t'>
+      <name>Nancys room.</name>
+      <desc>Hey, is this a sign of civilization?  There is a picture of a woman here, she is old and shows signs of botox poisening, must be from california.  Looking around this must be a simple minded person.  Upon further examination, why is her nose sooooooooooooo large in this photo?</desc>
+      <exits n='391'/>
+   </location>
+
+   <location num='461' flags='t'>
+      <name>Dunn Room</name>
+      <desc>What a wierd mix.  Two photos, one of Mao and one of Mother Threasa.  Huh?  I don&apos;t get it.</desc>
+      <exits s='525'/>
+   </location>
+
+   <location num='519' flags='t'>
+      <name>Dusty hall</name>
+      <desc>Wow dust everywhere.  Guess most people are smart enough to read the signs and not go left, silly you!</desc>
+      <exits n='455'/>
+   </location>
+
+   <location num='525' flags='t'>
+      <name>Safe School Czar room</name>
+      <desc>Oh no!  I can not even begin to explain the articles in this room.  This man is the Safe School Czar?  You have got to be kidding!</desc>
+      <exits s='589'/>
+   </location>
+
+   <location num='583' flags='t'>
+      <name>Straight and narrow.</name>
+      <desc>This room is actually a narrow hallway, what could possibly be ahead?  Dare we turn here?  Hmmm,</desc>
+      <exits n='519'/>
+   </location>
+
+   <location num='589' flags='t'>
+      <name>Science Czar Room</name>
+      <desc>Is it just me or are the a lot of Czars in America at the moment.  Wonder what this book he wrote is all about?  Ecoscience.  Sounds like something I will skip reading.  Hey, just realized, all these rooms and I have not seen even one Bible.  Odd.</desc>
+      <exits s='653'/>
+   </location>
+
+   <location num='647' flags='t'>
+      <name>The mirror room.</name>
+      <desc>What the heck is this place?  Fun house mirrors everywhere.  Man, do you look that funny in real life?</desc>
+      <exits n='583'/>
+   </location>
+
+   <location num='653' flags='t'>
+      <name>Nothing here</name>
+      <desc>Just a hallway, wonder where it goes?  Wow, one wrong turn and I get stuck in this horrible tour of silly people places and things.</desc>
+      <exits s='717'/>
+   </location>
+
+   <location num='711' flags='t'>
+      <name>Is this step two?</name>
+      <desc>Well there is a door on the north side of the room.</desc>
+      <exits n='647'/>
+   </location>
+
+   <location num='713'>
+      <name>Cluttered hall</name>
+      <desc>Pardon the mess, more to come.Turn east and follow back to the LP.</desc>
+      <exits e='714'/>
+   </location>
+
+   <location num='714'>
+      <name>long hall</name>
+      <desc>Someone is working here, must be a lot of work going on. continue south two times.</desc>
+      <exits s='778'/>
+   </location>
+
+   <location num='717' flags='t'>
+      <name>Barnys Room</name>
+      <desc>I was expecting purple dinosdaurs everywhere, but I do not see a single one.  Who is that guy on the TV who speaks out of both sides of his mouth and spits every third word?  Maybe he needs a bail out!</desc>
+      <exits s='781'/>
+   </location>
+
+   <location num='775' flags='t'>
+      <name>Is this the only way out?</name>
+      <desc>Well, thats one now where?</desc>
+      <exits n='711'/>
+   </location>
+
+   <location num='776' flags='b'>
+      <name>Tea Party Sports Bar</name>
+      <desc>Welcome to an friendly sports bar.  A place where everybody knows your name.  Eat, drink, be merry and enjoy all that is good.  When you decide to depart just remember our golden rule, never even think about turning left.  We do not go that way, not ever. To the east is another bar, one not for the sensative or anyone who says they are PC.   We believe PC  stands for positively corrupt.</desc>
+      <exits e='777' s='840'/>
+   </location>
+
+   <location num='777'>
+      <name>Miss Kittys Escort Bar</name>
+      <desc>Wanna play?  If so you have come to the right place.  Our escort bar is not completed yet, and it will take quite some time until we can do all that we want to do.  Relax, I promise, the wait will be woth the effort.For now the only way out is a series of right turns after you leave here going only north.</desc>
+      <exits n='713'/>
+   </location>
+
+   <location num='778'>
+      <name>Long hall continues</name>
+      <desc>Middle of a long hallway.</desc>
+      <exits s='842'/>
+   </location>
+
+   <location num='781' flags='t'>
+      <name>Curiosity Room</name>
+      <desc>This room is completely bland.  Take a break on the bench on the south wall and reflect, have I seen anything good today?  Hmmm</desc>
+      <exits s='845'/>
+   </location>
+
+   <location num='839' flags='t'>
+      <name>Tribute to President Obama</name>
+      <desc>You turned left?  Silly you!    We never go left here.  If we are to put up a tribute to any President of the United States, it most certainly will be the Ronald Reagan libruary, maybe someday.  Now to get out of here....................Good luck.  There is only one way out and porting is not possible.</desc>
+      <exits n='775'/>
+   </location>
+
+   <location num='840' flags='eyhi'>
+      <name>LP   </name>
+      <desc>Full service LP.  As functional as you will ever find.  Of course no taxes here in this system or in this cartel.  We do things thr right way.  Enjoy your stay here, look around and so long as you remember we never go left, you are always safe here.  Enjoy our Liberty Bar just to the north.  The exchange is right here on the LP.</desc>
+      <exits n='776' w='839'/>
+   </location>
+
+   <location num='841'>
+      <name>Middle of hallway</name>
+      <desc>You continue back to the LP.  West one more time.</desc>
+      <exits w='840'/>
+   </location>
+
+   <location num='842'>
+      <name>End of the hall</name>
+      <desc>The hall ends here and the west is the only way to go, a ways further you see a light and hear people trading.</desc>
+      <exits w='841'/>
+   </location>
+
+   <location num='845' flags='t'>
+      <name>Messiah Room</name>
+      <desc>The name on the door says The Messiah, but as you wonder in you begin to wonder Messiah or just one big Mess?</desc>
+      <exits s='909'/>
+   </location>
+
+   <location num='904'>
+      <name>Bright Light!</name>
+      <desc>Hey, I can see the light!  I can see that one step to the north and I will be back at the LP.  Boy, have I learned my lesson, never go left on this planet.  Go forth and best wishes in your everyday decisions.  And remember, here on Freedom, In God We Trust.</desc>
+      <exits n='840'/>
+   </location>
+
+   <location num='905' flags='t'>
+      <name>Darkness</name>
+      <desc>Total complete darkness.  Whish way to go?  Could this be due to some cap and trade happening?  Could someone not afford to pay the energy bill?</desc>
+      <exits w='904'/>
+   </location>
+
+   <location num='906' flags='t'>
+      <name>Empty Promise Hall</name>
+      <desc>What?  This is not the end?  Yet another empty promise. or just another lie?  Onward.</desc>
+      <exits w='905'/>
+   </location>
+
+   <location num='907' flags='t'>
+      <name>Is this the end?</name>
+      <desc>Could it be we have come to the end of our journey?  Lets go west and see.......</desc>
+      <exits w='906'/>
+   </location>
+
+   <location num='908' flags='t'>
+      <name>Animal Hell?</name>
+      <desc>Have I died?  No wait!  These are all dead animals, looks as if they fell to their death due to oil contamination.  Move on!</desc>
+      <exits w='907'/>
+   </location>
+
+   <location num='909' flags='t'>
+      <name>Oil Room</name>
+      <desc>Ouch!  You fall as you slide on the oil.  By the smell in the air, both oil and salt, or is it dead fish?  Have we been sent to the Gulf?</desc>
+      <exits w='908'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<fed2-map title='Ritual' version='58' editor='standard' from='260' to='The Rift.The Rift Space.200'>
+
+   <location num='0'>
+      <name>store room</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='141'>
+      <name>The Sample Room</name>
+      <desc>Like exhibits at a zoo, creatures ranging from large toothy worms to something that looks like a green paper airplane inhabit clear cells, separated by a walkway. A light blinks over the cell at the end of the row. As you approach movement from the cell opposite catches your attention.</desc>
+      <desc>A beautiful humanoid female with long coppery hair, wearing a rough woven wrap and several bruises on her body is gesticulating wildly at you. The only thing in the other cell is a white shoe.</desc>
+      <desc>     The universal translator on the cell door display begins to scroll a string of words. &quot;wall eat he not quiet go in waste you me let go feed people marks tell me food I dead not waste&quot; You surmise it is translating body movement as the female has not uttered a sound. On a hunch you tap the glass of the empty cell.  A distortion on the wall of the cell suddenly becomes a mass of teeth on a large kite shaped body that hits the glass hard where you tapped.</desc>
+      <desc>    &quot;Wall eat&quot; she nods.</desc>
+      <desc>The exit is South.</desc>
+      <exits s='205' no-exit='ritual.station.8'/>
+   </location>
+
+   <location num='203' flags='hikt'>
+      <name>Recovery Room</name>
+      <desc>You awake slowly on a gurney to the sound of snickering.  A middle-aged man in a lab coat and a young nurse in a very short uniform have their backs to you and are looking at something on a monitor.. something apparently quiet hilarious.  The nurse notices you stirring and taps the man on the shoulder.  He quickly flicks off the monitor and turns towards you.</desc>
+      <desc>     &quot;Welcome back to the land of the living! Pleasure having you here&quot; His smile and the large tub of lubricant on the desk are enough to give you a slightly uneasy feeling.  &quot;Now you&apos;ll need to take it easy for a day or so.  A little stiffness or soreness is normal after cloning.  Come back and see me if you have any questions.&quot;</desc>
+      <desc>    The nurse giggles and begins to load implements, including a large speculum and several probes into an autoclave while the Doctor busies himself with packing away the cameras.</desc>
+      <desc>    The exit is east...  wait!....  cameras???</desc>
+      <exits e='204' no-exit='ritual.station.8'/>
+   </location>
+
+   <location num='204'>
+      <name>Corridor</name>
+      <desc>A grav-shaft leads up from this featureless corridor.  Two doors, one to the east and one to the west, bear signs which read -Authorized Personnel Only- A curious mixture of sounds, squelching, giggling, metallic clangs and muffled moans, emminates from the western door but it&apos;s locked tight.   Perhaps you should leave.</desc>
+      <exits e='205' up='460' no-exit='ritual.station.8'/>
+   </location>
+
+   <location num='205'>
+      <name>Research Lab</name>
+      <desc>coloured dots and digital notations that only the originator could decipher. One chart appears to be genetic information for some species or other.  The words -Prob. Nat. Sel. Zero- have been scribbled across one corner and -Non-Indigenous- on another.</desc>
+      <desc>     Along one wall is a glass incubator containing hundreds of small plant seedlings, each neatly labeled with a file number. At the far end of the room is what appears to be a clean room complete with all the analytical equipment a modern scientist could wish for. The one occupant of the cleanroom is staring at a monitor and shaking his head but you cannot hear what he is muttering through the partition and he doesn&apos;t notice your presence.</desc>
+      <desc>    A red light blinks over a doorway to the north. Another winks at you from a panel on the desk closest to you where a cup of coffee sits half drunk and still steaming. The Exit is West.</desc>
+      <exits n='141' w='204' no-exit='ritual.station.8'/>
+   </location>
+
+   <location num='260'>
+      <name>Eye of the Storm Launch Pad</name>
+      <desc>Standing on the shuttle platform just below a huge round crystal aperture, the swirling storm walls of the research station curving outwards and down around you, feels like standing just below the neck of a giant fishbowl.   In a chandelier of glittering light, crystal stalactites hang from the rim of the launch aperture, projecting the holo-hurricane which disguises this Federation outpost from the planet&apos;s inhabitants.</desc>
+      <desc>A klaxon sounds!  Green lightning from several stalactites strobes over a small shuttle entering the station and for a moment a dark sinister shape can be seen detaching from the hull and drifting up through open column in the center of the Holo-storm.</desc>
+      <desc>One of the guards mutters &quot;Mantras are getting smarter&quot; under his breath before turning back to directing a trader towards the grav-tube which leads down to the station proper.</desc>
+      <desc>     &quot;Move along now... nothing to see here&quot;</desc>
+      <exits down='525' no-exit='ritual.station.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Medical and Research Department</name>
+      <desc>     &quot;Aha! there you are.  I&apos;ve been waiting for you to show up here&quot; a rather large matron in a crisp uniform and white cap greets you with a smile and a large hypodermic syringe. Before you have time to respond, you feel a sharp pain in your left buttock and the matron&apos;s smile grows wider.</desc>
+      <desc>     &quot;That should tide you over for a week or so... now shoo!  I have patients coming in from the tunnels&quot;  She turns and hurries off towards a grav shaft at the back of the room, giving orders to anyone she sees along the way.  As she drops slowly from view she turns back to you &quot;Don&apos;t drink the water now, you hear?&quot;.  And with that she is gone.</desc>
+      <desc>     The exit is south east.</desc>
+      <exits se='525' down='204' no-exit='ritual.station.8'/>
+   </location>
+
+   <location num='461' flags='yr'>
+      <name>Honest Bob&apos;s Shipyard and Import Repair</name>
+      <desc>A salesman with slicked-back hair, a thin mustache and a gaudy tartan suit tells you he has just what you&apos;re looking for before pointing out what he calls &quot;The Cadillac of fusion driven transportation&quot;.  It takes a moment to realize he&apos;s pointing to a dented and rusty shuttle craft in Mary-Kay pink.  If that doesn&apos;t appeal to you, he also has a shuttle that&apos;s painted black with red and yellow flames on the side with dingle berries around the view ports.  Apparently the desirable feature of this model is the addition of extra attitude jets on the nose that make the front end bounce up and down in a ridiculous manner while in a holding pattern over the landing pad.</desc>
+      <desc>     As the salesman runs of to get the paperwork ready you look around at some of the other unsavory offerings.  Perhaps a new ship would suit you better after all.</desc>
+      <exits s='525' no-exit='ritual.station.11'/>
+   </location>
+
+   <location num='462'>
+      <name>Orientation Building</name>
+      <desc>Your footsteps echo on the smooth marbled floor of the orientation building.  Numbered holo displays recite information as you move from one to the next. Details about the holo-storm that disguises the research station, so that the native humanoids remain unaware of its presence, offer no explanation for why it has to be a secret. Other displays detail the geology of the planet and more tell you of the dangers facing anyone who leaves the safety of the Research Station.</desc>
+      <desc>    Half listening to the class, you manage to gather some facts.  The planet is mineral poor. Indigenous fauna and flora is either toxic or lacks the minerals to sustain a human population for long.  No large land masses means tropical storms can last for years over the vast oceans.  There is a particularly nasty pathogen in the water which invades blood cells and lies dormant for years before breaking down your vascular system. A few steps lead down to more displays.  The exit is southeast.</desc>
+      <exits sw='525' down='465' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='465'>
+      <name>Orientation Second Level</name>
+      <desc>Info-displays on this level talk about some of the life indigenous life forms of the planet... most notably a large predator named a Mantra.  The info-holo shows a three legged, smooth skinned creature the size of a large dog, tethered to a steak and growing more frantic by the second.  A section of the rock wall behind the creature suddenly seems to peel away and envelope the hapless beast like a giant sea ray wrapping itself around its victim. Time lapse holography speeds up the gruesome digestion process and you witness the mantra slowly uncurl and take flight.</desc>
+      <desc>    The unemotional voice of the info-holo informs you that the name &quot;Mantra&quot; was chosen partly for the creature&apos;s resemblance to the manta ray and partly because of the words repeated over and over by the first explorers to witness an attack by the predator. &quot;Don&apos;t let it get me! Don&apos;t let it get me!&quot;</desc>
+      <desc>     There&apos;s a small coffee shop to the south and stairs leading up to Orientation Level 1.</desc>
+      <exits s='529' up='462' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='468'>
+      <name>Dim Dusty Tunnel</name>
+      <desc>Your inner compass tells you the tunnel runs more or less north and south with plenty of rocks and boulders to trip or turn your ankle on.  There are dark holes, possibly ancient volcanic vents, in the floor which luckily is lit by just one or two flickering light strings still.  If you were to fall into one of the holes your chances of being found are slim to none. The north end of the tunnel is completely blocked by fallen rock and the south looks almost as bad.</desc>
+      <exits s='532' down='469' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='469'>
+      <name>The Cavern</name>
+      <desc>You drop into complete darkness, cursing your luck.  But as your feet hit the bottom of the hole an eerie light flickers somewhere above you and you find yourself standing in a large cavern. Against the far wall is a rocky shelf with the dessicated remains of what might have once been cloth strewn upon it.  A table in the center of the cavern sits thick with dust except for an almost dust free rectangular space.  Small but fresh looking footprints can be seen on the floor. Whoever was here walked around the room several times and stopped at the table before climbing back up to the tunnel.  A fine sheet of some sort of high tech lies on the floor near the entrance.</desc>
+      <exits up='468' down='470' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='470' flags='kt'>
+      <name>The Message</name>
+      <desc>Stooping down and looking closely at the sheet you can make out some words.</desc>
+      <desc>  ... thought we were going to find freedom and instead we are trapped.  We trapped the companion with us, may He forgive us all for what we&apos;ve done to her.  If there is only the slightest chance that he will find our messengers, our children, then perhaps we can make amends.  The labs are shut down now so we can make no more changes.  The race will have to survive as it is.  The power packs are all drained except those in the cryo-bed and the shuttle.  I&apos;m moving from here soon.  I want to spend the last of my days closer to our creation.  I see the companion in each of them.  The droid says it will be more than two thousand years.  Even he will not last that long.  I hope She doesn&apos;t dream...</desc>
+      <desc>     As you reach out to touch the sheet it crumbles to dust. Perhaps you should stand up and get out of here before there is another rock fall.</desc>
+      <exits up='469' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='512' flags='bt'>
+      <name>Jezz&apos;s Private Apartment</name>
+      <desc>The private apartment is one room hewn from solid rock, but tastefully decorated. A holo of Zardoz &quot;himself&quot; holding Jezz in his arms hangs above a small fireplace in front of which is a large soft couch. Candle light flickers on the rock walls, making the mica specks in the granite glint and sparkle.  A wrought iron bed with heavy fur covers occupies one end of the room and a small but efficiently modern kitchen makes up the other.</desc>
+      <exits out='260' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='522' flags='kt'>
+      <name>Into the Fire!</name>
+      <desc>Are you crazy? Flames from the fire lick at your lower legs. Your footwear begins to melt to your toes and the soles of your feet. There&apos;s a sizzling sound as the fibres of your nano-chameleon clothes ignite, then a bright flash as flames leap around you.  Blood boils from the cracks opening in your blackened, crispy skin....</desc>
+      <desc>Fortunately, you lose consciousness at this point and the Universe fades to black.</desc>
+      <exits n='203' ne='203' e='203' se='203' s='203' sw='203' w='203' nw='203' up='203' down='203' in='512' out='203' no-exit='ritual.station.10'/>
+   </location>
+
+   <location num='523' flags='bkt'>
+      <name>Planetary Governor&apos;s Office</name>
+      <desc>The office is simply decorated without being austere.  On the large desk is a terminal and keypad, a holo of The Rift with Ritual in the foreground, a holo of Jezz and Zardoz and several data discs.  To the south of the room is a more comfortable looking arrangement of arm chairs and a coffee table in front of a large fireplace.</desc>
+      <desc>          The window looks out over the storm-tossed Ritual Ocean, speckled with whitecaps and surging like a living thing.  For a brief moment some grey leviathan from the depths breaks the surface then disappears.  In the distance massive thunderheads rise thousands of feet into the atmosphere and lightning strobes between clouds and sea. Something coppery colored and very fast streaks across the window as if right next to the glass and it&apos;s then that you realize you&apos;re looking at a view screen and a feed from outside the station.</desc>
+      <desc>Reception is Up using the grav-shaft.</desc>
+      <exits up='524' in='522' no-exit='ritual.station.9'/>
+      <events in-room='prize.letter.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Admin Reception</name>
+      <desc>A pretty blond receptionist in a bright red suit and matching lipstick and nails sits behind a desk chatting with a security guard.  After a moment or two she deigns to look up and acknowledge your presence. In a well practiced mono tonal voice she informs you that Governor Jezz is not taking appointments today and adds that all new arrivals must report to Medical and Research.  She then turns back to the guard with a smile.</desc>
+      <desc>On one side of the room is a grav-tube with an illuminated down arrow and a sign saying &quot;Governor&apos;s Office&quot; on the wall behind it.  The exit is east.</desc>
+      <exits e='525' down='523' no-exit='ritual.station.7'/>
+   </location>
+
+   <location num='525'>
+      <name>Center Point</name>
+      <desc>The launch pad is suspended high above you like the clanger of a great crystal bell under the clear eye of the storm.  The natural rock floor of Center Point has been polished to a glassy finish.  Cream coloured striations marble the smooth grey surface.  Around this large open space the crystal walls of the station tower upwards with the projected clouds swirling and spinning at breakneck speed. Most people here seem to avoid looking at the walls and instead focus on the lower elevations where Center Point is ringed with neat grey buildings of varying sizes.</desc>
+      <desc>Planters filled with exotic blooms line the smooth pathways from a signpost in the middle of the space and large potted trees provide park-like relief from the tumultuous vista beyond.</desc>
+      <desc>The sign reads: Exchange East, Theatre South East, Restaurant South, Security South West, Admin West, Medical and Research North West, Ship Yard North, Orientation North East.</desc>
+      <exits n='461' ne='462' e='526' se='590' s='589' sw='588' w='524' nw='460' up='260' no-exit='ritual.station.2'/>
+   </location>
+
+   <location num='526' flags='eb'>
+      <name>Ritual Exchange</name>
+      <desc>The interior walls of the cavernous building are lined with booths, all displaying samples of their wares. Some have vidi-screens showing happy consumers receiving the goods on offer.  Others have opted to suggest that the scantily clad models that are draped and purring over the display would worship you if you bought that particular commodity. All the booths seem to have handsome, smiling salesmen just begging to explain to you the advantages of buying their superior goods. The smell of fresh baked pastries and the rich aroma of Sumatran coffee waft from the back of the hall but to reach the refreshments you&apos;ll have to run the gauntlet of obsequious salesmen. Did they plan it that way?</desc>
+      <desc>          The exit is West.</desc>
+      <exits w='525' no-exit='ritual.station.3'/>
+      <events enter='ritual.exchange.1'/>
+   </location>
+
+   <location num='529' flags='b'>
+      <name>Hole in the Wall Cafe</name>
+      <desc>Red and white gingham tablecloths contrast with the rough rock walls of this subterranean cafe. Perfect cappuccinos appear with a puff of steam under the spout of a coffee machine that gurgles and hisses unnecessarily. But the noise adds to the ambiance of the cafe.  A terracotta planter of imported asparagus sings farewell to customers as they leave.</desc>
+      <desc>   Two lab-coated scientists sit hunched over a table, whispering coarsely.  You manage to catch a snippet of conversation as you pass.</desc>
+      <desc>    &quot;I&apos;m telling you there&apos;s something down there she doesn&apos;t want us to see! ... and the Gov was just down there yesterday.&quot;</desc>
+      <desc>    &quot;Coincidence?  It&apos;s a dangerous place.&quot;</desc>
+      <desc>    &quot;That happens at the same time she stops exploration? Too many...&quot;</desc>
+      <desc>Both men glance towards a darkened tunnel entrance at the back of the cafe. A heavy red rope on stanchions decoratively blocks the entrance to the tunnel but you might be able to squeeze past.</desc>
+      <desc>The exit is north.</desc>
+      <exits n='465' in='593' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='532'>
+      <name>A Tight Squeeze!</name>
+      <desc>Talk about being between a rock and a hard place!  The narrow gap at the top of the rock slide is only just big enough for you to wiggle through. If another cave in were to happen now you&apos;d be shipped home in a matchbox. there&apos;s a faint glow from the bottom of the rock slide and another to the north.</desc>
+      <exits n='468' down='596' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='588'>
+      <name>Security Control</name>
+      <desc>Behind the steel counter sits a uniformed guard who appears not to notice your presence.  He&apos;s talking into a comm unit in a hushed but brusque tone while scanning a large bank of security monitors. Two of the monitors show swirling grey dust in some sort of dimly lit tunnel.</desc>
+      <desc>     &quot;Damn it, Mord.. I said keep them out of there... no I don&apos;t care what the scientists want this time.  That&apos;s the third rock slide in two weeks.  Nobody goes down there till further notice.  Got it?&quot;</desc>
+      <desc>     This doesn&apos;t seem like a good time to visit.  Perhaps you should come back later.</desc>
+      <exits ne='525' no-exit='ritual.station.6'/>
+   </location>
+
+   <location num='589' flags='b'>
+      <name>The Cove Restaurant</name>
+      <desc>Natural rock walls blend almost seamlessly with the holo of a sunlit beach. A waterfall plays merrily over rocks in an alcove, splashing into a slightly too-blue pool.  Synthetic palms and nan-fab ferns wave in the light artificial breeze and recorded birdsong mingles with soft music to create a pleasant if not totally convincing atmosphere.</desc>
+      <desc>Several customers are helping themselves to the luau style buffet or chatting at the cozy wooden tables. Hula-skirted droids circulate amongst the diners, willingly taking orders for items not on the buffet and serving drinks. The droids&apos; programming seems sophisticated enough for them to snub any customers who make jokes about getting lei-ed.</desc>
+      <exits n='525' no-exit='ritual.station.5'/>
+   </location>
+
+   <location num='590'>
+      <name>Ritual Holo Theatre</name>
+      <desc>Illuminated and animated posters announce that this weeks featured presentations are:</desc>
+      <desc>     Future Shock... a gritty docu-drama about the seedy, down and out lifestyle of a group of traders and the desperate measures they take to get enough credits to leave it all behind.</desc>
+      <desc>     Me, Myself and I and I and I...  an alternative lifestyle comedy from the same minds that created all those people you wondered about but weren&apos;t sure.</desc>
+      <desc>     Scald Face... a steamy crime and punishment film about Al Cappuccino, the Mocha Mob and one man&apos;s quest to in-filter-ate the coffee-head gangs of Sludge and find grounds for arresting the Big Bean himself.</desc>
+      <desc>Unfortunately, all the performances appear to be sold out. The exit is northwest.</desc>
+      <exits nw='525' no-exit='ritual.station.4'/>
+   </location>
+
+   <location num='593'>
+      <name>Tunnel</name>
+      <desc>Light from the cafe just outside the tunnel, illuminates the jagged rock walls and casts dark shadows over the grey stone. Dust swirls around your feet as you move.  The tunnel bends slowly to the southeast with a downwards gradient away from the light and the smell of freshly brewed Sumatran coffee.</desc>
+      <exits se='658' out='529' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='596'>
+      <name>Dark Tunnel</name>
+      <desc>The lighting strips have gone out in this tunnel section but enough illumination shines from the cavern south west of here to allow you to see the great boulders that have fallen from the tunnel ceiling. Losing your footing amongst the rubble would be easy and disastrous.  The dust clings to your clothing, clogs your nostrils and sticks in your throat leaving a bitter earthy taste in your mouth.</desc>
+      <desc>   At the northeast end of this tunnel is a mountain of tumbled boulders that block the way. Trying to climb the boulders would be extremely foolhardy. It looks as though the tunnel is completely blocked.</desc>
+      <exits sw='659' up='532' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='658'>
+      <name>In the Tunnel</name>
+      <desc>Strings of light pearls mark the edge of the relatively smooth tunnel floor and throw enough light upwards for you to see the that the tunnel bends east and northwest from here. Dust motes dance in the hazy glow around your feet. The slightest wisp of a breeze from the northwest brings the faint smell of coffee with it.</desc>
+      <exits e='659' nw='593' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='659'>
+      <name>The Junction</name>
+      <desc>The meeting point of three tunnels, one each to the west, northeast and southeast, this small cavern shows the marks of design in its construction. Regular and equally spaced grooves upon the walls could not be a natural formation. Water trickles slowly down some of the grooves, leaving behind the pale streaks and ridges of a millennium of calcification. A generator hums softly by the wall, powering a light that is too bright after the dim tunnels.</desc>
+      <exits ne='596' se='724' w='658' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='724'>
+      <name>Tunnel</name>
+      <desc>The tunnel runs from northwest to southeast. A salty breeze wafts up the tunnel from the south easterly direction.  To the southwest is an alcove in the rock wall.</desc>
+      <exits se='789' sw='787' nw='659' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='787'>
+      <name>Small Alcove</name>
+      <desc>Upon the wall of the alcove is a message that has been burned into the rock.  It must have taken a precise and powerful laser to etch it there but it looks... ancient.</desc>
+      <desc>-- He will know you when he comes.  For as much as you are my blood so are you His and that blood will be your freedom.  Return the Companion and he will save you from the punishment this place brings.  The wrong was not yours but you carry the burden.  He will come.--</desc>
+      <exits ne='724' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='789'>
+      <name>The Shelf</name>
+      <desc>Wind batters your face as you stand on the ledge above a churning grey sea but not of the strength that the projected storm would have your eyes believe. Turning to the cliff behind you, you can see the glistening crystal walls of the research station rising atop the cliff within the maelstrom.  Looking out to sea you can make out a thin line at the horizon.  Land.</desc>
+      <desc>     A small flitter is perched next to you on the rock shelf with a note stuck on the windscreen. -No Flights to The Island Until The Gov Says So!-</desc>
+      <exits nw='724' in='853' no-exit='ritual.station.13'/>
+   </location>
+
+   <location num='853'>
+      <name>The Flitter</name>
+      <desc>The seat conforms comfortably to your body as you climb into the small flitter and take a look at the controls... or should I say the control?  There is one button on the dashboard that hasn&apos;t been stripped out. A green blinking arrow on the heads up display points towards the line of land upon the southern horizon.  It seems you have only two options.  Hit the button or get out.</desc>
+      <exits s='1237' out='789' no-exit='ritual.station.14'/>
+   </location>
+
+   <location num='854'>
+      <name>Flitter Ride</name>
+      <desc>No sooner have you hit the button than you are thrown back into your seat as the flitter lifts a hands breadth off the shelf and accelerates at breakneck speed.  The ocean flashes below you, becoming a blur of grey and white.  Within minutes massive storm clouds then a bleak dark cliff face looms before you.  In a gut wrenching turn, the small flitter aligns itself to look seaward and settles gently to a rocky shelf, extremely similar in nature to the one you just vacated.</desc>
+      <exits out='789' no-exit='ritual.station.14'/>
+   </location>
+
+   <location num='1237'>
+      <name>Flitter Ride</name>
+      <desc>No sooner have you hit the button than you are thrown back into your seat as the flitter lifts a hands breadth off the shelf and accelerates at breakneck speed.  The ocean flashes below you, becoming a blur of grey and white.  Within minutes a bleak dark cliff face looms before you.  In a gut wrenching turn, the small flitter aligns itself to look seaward and settles gently to a rocky shelf, extremely similar in nature to the one you just vacated.</desc>
+      <exits out='1301' no-exit='ritual.station.14'/>
+   </location>
+
+   <location num='1238'>
+      <name>The Flitter</name>
+      <desc>The seat conforms comfortably to your body as you climb into the small flitter and take a look at the controls... or should I say the control?  There is one button on the dashboard that hasn&apos;t been stripped out. A green blinking arrow on the heads up display points towards the huge raging storm upon the northern horizon.  It seems you have only two options.  Hit the button or get out.</desc>
+      <exits n='854' out='1301' no-exit='ritual.station.14'/>
+   </location>
+
+   <location num='1301'>
+      <name>A Shallow Cave in a Cliff</name>
+      <desc>This rocky shelf half way up a towering cliff is not dissimilar to the one at the research station. Grey waves surge and churn below you, throwing salt spray high as they crash against the rocks.  This perch would be quite impossible to reach by foot from the seaward side, and just as impossible to leave that way.  The flitter nestles under an overhang and is therefore protected from view from the cliff top.  For a moment it seems a small patch of the cliff face below you ripples and settles back to stone again.  A narrow slit at the back of the shallow cave looks big enough to squeeze through.</desc>
+      <exits s='1365' in='1238' no-exit='ritual.station.13'/>
+   </location>
+
+   <location num='1364'>
+      <name>The Thicket</name>
+      <desc>The sun shines brightly overhead and self-determining green paper airplanes zip back and forth between large yellow blossoms on the fleshy leaved plants.  Only the roar of the distant surf and the very faint hum of the &quot;planes&quot; breaks the silence.</desc>
+      <desc>  Perhaps a hundred meters away on a mossy plain, a group of golden tanned children are playing a game of tag under the watchful eye of an adult carrying what looks like a wooden spear and a very large horn on a shoulder strap. The bright smiles and wild gesticulations belie the somber silence in which they play.</desc>
+      <desc>    There is a dark hole at your feet, well hidden by the underbrush and a barely discernible track that leads southwest through the trees.</desc>
+      <exits sw='1427' down='1365' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1365'>
+      <name>A Dark Place</name>
+      <desc>The air is damp and musty.  Small squelching and slithering sounds surround you in the darkness. Your hand finds the cold metal of a ladder leading upwards.  There&apos;s a crack of light to the north and the smell of brine wafts from that direction.</desc>
+      <exits n='1301' up='1364' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='1427'>
+      <name>Shaded Track</name>
+      <desc>The narrow track leads northeast towards a flowery thicket of shrubs and south through tall silver barked trees.  The canopy overhead is a mottled mass of green and purple. Dust motes sparkle in the dappled sunlight that breaks through the canopy.  That is you thought they were dust motes until they seemed to bunch together and fly towards a thumb-sized jelly blob slowly climbing a tree trunk. The blob is soon covered in motes and rapidly shrinks in size until only a damp stain is left.  The urge to scratch becomes almost unbearable.</desc>
+      <exits ne='1364' s='1491' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1491'>
+      <name>The Fork</name>
+      <desc>The track forks here.  To the north is a shaded path. To the southwest the path becomes more rocky and climbs steadily. Southeast the way is smoother and seems well worn as it meanders down a slope.</desc>
+      <exits n='1427' se='1556' sw='1554' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1493'>
+      <name>The Men&apos;s Barrow</name>
+      <desc>The interior of the barrow is dimly lit and has a musty odor about it. Beds seem to be haphazardly arranged into small groups. A small central hearth holds the embers of a fire from which smoke curls slowly upwards towards an opening in the roof.  A few young men and adolescent boys sit around the fire, talking softly.  Others are working on stone tools or weaving containers from long reeds.</desc>
+      <desc>    The exit is to the south.</desc>
+      <exits s='1557' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='1494'>
+      <name>The Creche</name>
+      <desc>Rambunctious youngsters tumble and play around the central area in the barrow, watched by older children who look to be in their early teens.  Boys and girls of various ages are engaged in craft lessons or engrossed in stories being told by the only two adults in the barrow, both obviously pregnant women.</desc>
+      <desc>  The door is southwest.</desc>
+      <exits sw='1557' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='1553'>
+      <name>The Canyon</name>
+      <desc>The path bends upwards through a narrow gorge to the south and down to the east.  An eery stillness hangs in the canyon.  Grey moss cushions your footsteps and contrasts with the sandy walls. There is almost a palpable sense of expectation in the air.</desc>
+      <exits e='1554' s='1617' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1554'>
+      <name>Rocky Path</name>
+      <desc>This rocky path traverses a steep hillside curving from the west to northeast.  The stones have been worn smooth in places, presumably from centuries of traffic. Two figures move slowly through knee-high maroon vegetation to the west.  The plants grow in fan-shaped dark fleshy curves, similar to some fungi on Earth but much larger.  One figure is that of a male whose hair is a mane of red.  he carries a horn and seems to be engaging in a continual dance of graceful movement while the much smaller figure ladles a thick red-brown liquid from a barrel around the base of each plant. Every ladle full appears to be a ceremony in it&apos;s own right. The boy accidentally strikes the side of the barrel with the ladle and freezes at the hollow clunking sound. A few meters ahead of him the ground begins to ripple. Immediately the man raises the horn to his lips and an ear-shattering note ensues. The mantra flaps awkwardly away and the sound dies. An acrid coppery odor drifts from the barrel.</desc>
+      <exits ne='1491' w='1553' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1556'>
+      <name>Pastoral Vista</name>
+      <desc>From your vantage point on the path you can see a village nestled in a sunlit valley. On the far side of the valley young people are goading a few six-legged shaggy beasts with huge horns towards a shelter.  In the village, golden tanned people with copper and chestnut hair are going about daily tasks, waving greetings to one another and soundlessly engaging in body-language conversations.  Many of them carry the large horns slung by a cord over one shoulder. Surveying the scene, you notice that nobody looking older than about thirty standard years is in evidence. One or two of the adults sport dark bruises and appear to be treated with great deference by all who greet them.</desc>
+      <desc>     The path descends into the village to the east and climbs gently to the northwest.</desc>
+      <exits e='1557' nw='1491' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1557'>
+      <name>The Village Center</name>
+      <desc>Several long-barrow style earth-covered structures with stone capped doorways face onto the central area of the village, forming a communal square of sorts. Various wooden and stone tools lie in neat piles at the entrances to the barrows.  The hides that cover each door are heavily decorated with painted designs. A few natives are tending a large cooking fire in the center of the square.</desc>
+      <desc>The dwelling to the south has a particularly ornate doorway.  A narrow track heads southeast and a large path leaves the valley to the west.</desc>
+      <exits n='1493' ne='1494' e='1558' se='1622' s='1621' w='1556' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1558'>
+      <name>The Women&apos;s Barrow</name>
+      <desc>Wooden beds are arranged roughly into groups around a central hearth, each one sports some individual item of decoration. The young women who occupy the barrow are talking quietly, working on tools and other projects with their hands, or decorating each others bodies with yellow and red ocher. Their similar faces are difficult to tell apart at a glance but a closer looks reveals slight differences in skin tone and features. The women and teenage girls also seem remarkably similar in their superb physique.</desc>
+      <desc>   The door is to the west.</desc>
+      <exits w='1557' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='1617'>
+      <name>The Mouth</name>
+      <desc>At the southern part the box canyon ends in a vertical wall of rock into which is carved an enormous stone head.  The mouth is agape in a silent cry of rage and large enough for you to walk through without stooping. The stone brow is heavy over the cold grey eyes.  From the outer corner of one rocky eyelid a small spring issues forth and trickles over a jagged cheek to a pool below.  A gust of wind suddenly ruffles your clothing and a low agonized moan sounds within the great open maw.</desc>
+      <desc>    You may walk south into the mouth or head back through the canyon to the north.</desc>
+      <exits n='1553' s='1681' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1621'>
+      <name>The Shaman&apos;s Barrow</name>
+      <desc>The interior of this barrow is dimly lit.  A blackened pot sits over a small hearth in the central area and smoke curls slowly up to the opening in the ceiling. The pungent odor from the pot is stifling.  The walls of the barrow are hung with implements and drying plants.</desc>
+      <desc>A small group of naked men and women stand in a line before a man dressed in elaborately decorated hides.  He appears to be inspecting their bodies as an acolyte stands behind him holding a clay bowl.  The shaman stops in front of a woman with a large bruise on her shoulder and touches the bruise with his fingertip, then turns and dips a finger into the bowl.  He paints the woman&apos;s forehead with a red substance. Three lines, two horizontal and one that connects them diagonally, are placed upon her brow with great reverence. With a great deal of ceremony the woman is robed and shown through a door in the back of the barrow while the others leave to the north.</desc>
+      <exits n='1557' s='1685' no-exit='ritual.station.9'/>
+   </location>
+
+   <location num='1622'>
+      <name>Narrow Track</name>
+      <desc>The narrow dirt track bends upwards towards a copse of trees to the east and down towards the village center in the northwest. Angular green shapes flit past you with a buzzing sound. To the south is a pasture where slow-moving shaggy beasts with six legs and impressive rows of spines that run from tail tip to nose, graze contentedly on the vegetation. To the southwest, great granite crags rise above the surrounding countryside.  A stiff breeze bows the grasses around you and and chills the air despite the bright sunlight.</desc>
+      <exits e='1623' nw='1557' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1623' flags='t'>
+      <name>The Pool</name>
+      <desc>In the midst of the sheltering copse of trees is a delightfully clear pool. Dappled sunlight reflects upon the surface of the water in a myriad tiny sparkles.  Drying racks near the pool hold a variety of garments and hides that look freshly washed. Footprints in the soft sand at the edge of the pool indicate that this might be a favorite swimming spot.</desc>
+      <exits w='1622' in='1624' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1624' flags='t'>
+      <name>In the Pool</name>
+      <desc>The water is warm and refreshing but has a slightly sulfurous odor. A bubbling spring feeds the pool which drains into a small brook. Brightly coloured blooms nod their heads in the slight breeze around the pool and fill the air with a delicate scent.  To one side of the pool is a large flat boulder that makes an idea places to sit with your feet dangling in the water.</desc>
+      <exits out='1623' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1681' flags='b'>
+      <name>Within the Mouth</name>
+      <desc>walls and a darker crevice to the east. Fibrous woven mats are scattered over the floor along with clay bowls, some still holding a trace of liquid.  The bowl contents have a sweet and slightly pharmacutical scent. items of clothing, wilted flowers and the remnants of a meal are strewn on the mats. At the Southern end of the cave is a great stone slab that bears dark stains upon its titled surface. Channels carved into the slab would direct any fluid on it into a groove that empties into a barrel beneath the lower end. As you draw nearer to the slab you see a slight indentation on the surface... an indentation in a humanoid shape.</desc>
+      <desc>  On the wall behind the slab are some markings that you can just make out in the flickering torchlight.</desc>
+      <desc>  - I give you my body that you may live to return the Companion to Him.  Return the Companion and He will know you  and set you free-</desc>
+      <exits n='1617' e='1682' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1682' flags='kt'>
+      <name>The Message</name>
+      <desc>There are holes in the rock wall here through which the wind blows and creates the moaning that you heard from outside the cavern.  There is also a message.</desc>
+      <desc>  All creation may not forgive us now. We sort freedom and found pain. We took the Companion to ensure our safety and cannot give her back.  We are trapped here and now.  The accident took us into a past we cannot escape. We will not exist for over two thousand years. We created progeny from our own cells and those of the companion and changed them to allow them to survive where we cannot.  The pathogen lives in everything here but we increased the resistance enough to allow our progeny to breed.  Now the Mok has taken her. I don&apos;t know where. May he be damned as I am for what I have done. To pass the message through millennia I burdened our children with a saviour who may never come. The plants are the only solution to the nutrition this world lacks. The people must live. The companion must be returned. Forgive me.</desc>
+      <exits w='1681' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1685'>
+      <name>The Garden</name>
+      <desc>Shaded by huge trees and filled with bright bright blossoms, the garden is tranquil and soothing. A stream meanders through the space, bubbling over water-polished stones. A man in a red woven robe greets the woman who emerges from the back of the Shaman&apos;s barrow and lightly brushes away a tear on her cheek. Bowls of flat-bread and fruit are laid out on tables tended by two very respectful youngsters who seem in awe of the adults in red robes.</desc>
+      <desc>Horns suddenly sound loudly in village and the shaman steps into the garden.  He approaches a woman who sits by herself under a wooden arbor.  She is adorned with flowers and despite heavy bruising on her limbs she is still quite beautiful. The interaction seems very ritualistic as he bows and hands her a clay cup.  She drinks the contents and with as much ceremony hands the cup back. She seems to stagger slightly as they walk together down a narrow path to the southwest.</desc>
+      <exits n='1621' sw='1748' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1745' flags='kt'>
+      <name>The Cave</name>
+      <desc>There is a slightly larger hole in the wall here and and through it you can see a little more.  A large stone covers a doorway through to the other cavern and it&apos;s doubtful that you could move it alone. Drums beat faster on the other side of the wall. Through the hole you can see the shaman as he holds a cup to the lips of the woman you saw earlier in the garden. She seems to be lying on a large stone surrounded by flowers. Shadows of people dance wildly on the walls, flickering and twisting in the torch light. You can see no more than the impression of many bodies, coming together, embracing, dancing.. that and the face of the woman who drank from the cup. As the drumming slows and the dancers collapse in each others arms she is completely still.  Her face is frozen in an expression of ecstasy but her eyes no longer blink and no breath passes her lips.</desc>
+      <exits e='1746' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1746'>
+      <name>The Cave</name>
+      <desc>The wind whistles through the narrow crevice by which you entered the cave and there is just enough light for you to make out several natural holes in the cave wall to the north.  You can hear rhythmic drumming from the other side of the wall and trying to peer through the holes you can see flickering shadows and moving bodies in a cavern there. The holes are too small to give you a clear view.  A passageway leads off to the south but it is dark and the smell of death creeps from its mouth.</desc>
+      <exits s='1810' w='1745' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1747' flags='kt'>
+      <name>Cliff Face</name>
+      <desc>To the east a narrow trail leads towards the village. The cliff face to the west is covered with paintings in red and yellow ochre with charcoal black details.  The pictures seem very stylized but but one of them could almost be a shuttle.  Another picture is simply made up of circles but on closer inspection it looks like the map of a star system.  There is one red circle with a yellow one below it, another yellow circle diagonally down and left of the first, and a third further down and to the right. A crevice in the cliff face splits a cartouche of humanoid figures. On one side of the crevice is a male figure who seems to reach out to the female figure and several smaller male figures on the other side.</desc>
+      <exits e='1748' in='1746' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1748'>
+      <name>Rough Track</name>
+      <desc>The dirt track bends from the west to the northeast. What could only be described as stone &quot;shrines&quot; have been erected on both sides of the path.  Each small stone structure holds a single artifact,  pieces of technology far beyond the simple lives of these people. You recognize the face panel of a communicator in one niche and  a broken display screen in another.</desc>
+      <exits ne='1685' w='1747' no-exit='ritual.station.15'/>
+   </location>
+
+   <location num='1810' flags='kt'>
+      <name>The Rendering Room</name>
+      <desc>A great millstone sits in the middle of this cavern. The stench of death hangs heavy in the air and assaults your nostrils. A collection trough runs around the edge of the lower stone and feed into a large wooden container.  A glimpse at the trough is enough to turn your stomach as small pieces of bone and a few clumps of matted hair are immediately visible.  The trough is darkly stained and the whole set up looks centuries old.  Part of the floor in one corner seems to have collapsed, and peering through the hole it&apos;s impossible to tell how deep it is or how large the space beneath might be.  It&apos;s doubtful you would be able to climb back out if you fell in.</desc>
+      <exits n='1746' down='1874' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1874' flags='kt'>
+      <name>Ouch! That Hurt!</name>
+      <desc>It&apos;s pitch black down here and the sharp pain shooting from your ankle to your hip does nothing to improve your situation. There seems nothing for it but to grope your way along the walls looking for an exit.</desc>
+      <exits s='1938' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1935' flags='t'>
+      <name>The recording continues...</name>
+      <desc>&quot;... Mok became increasingly... disagreed with the others.  Three of them now had the bruises, signs that the disease was progressing and... stole her and most of the fuel. ... shuttle, we don&apos;t know where but he cannot make it out of the...</desc>
+      <desc>&quot;I am the only one left here now... seem to be surviving and multiplying sucessfully.  I will take the rest of the fuel and the last shuttle to attempt to... maybe adjust the decaying orbit.  .. stay here the last power pack will not last me..&quot;</desc>
+      <desc>&quot;...get this message to... not be too late to stop us. But if he stops us then... will never have existed.&quot;</desc>
+      <desc>   The rest of the message is nothing but static.  Press up to end it.</desc>
+      <exits up='1937' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='1936' flags='t'>
+      <name>You press the down button...</name>
+      <desc>&quot;... woke up from the cold sleep and we told her that we... because the pathogen is in everything here. We searched for a cure but... lies dormant in platelets for a variable... inhibitor gene will provide 25 to 35 years in future generations.  To compensate for the short life... accelerated maturity to maximize breeding cap.. death is agonizing but inevitable. Also we could not overcome the lack of necessary minerals without using... the Mok found... will absorb the minerals when used as a fertil... pleasant option than the disease..  It was the idea of the... the religion that will keep them alive.. purpose to fulfill and he will recognize them as his children if he.. (pause)</desc>
+      <desc>&quot;The companion refused. She said the carbon life forms simply wanted to ensure the survival of their own genetic... cold sleep and enslaved her more than we had ever been.&quot;</desc>
+      <desc>   Press down to continue and up to end the recording.</desc>
+      <exits up='1937' down='1935' no-exit='ritual.station.12'/>
+   </location>
+
+   <location num='1937' flags='t'>
+      <name>The Lab</name>
+      <desc>This cavern is enormous and filled with equipment, some of which seems to have survived the ages reasonably intact. The cradle for a cold-sleep unit sits fairly centrally.  Other equipment seems to be more of a genetic research/manipulation or medical nature. The capsule from the cold-sleep unit is missing and was obviously what was dragged to the other cavern. As you step further into the room a flickering holo comes to life, a rather sinister looking droid begins to speak. The recording is so ancient that it has begun to degrade and crackles unintelligably at times.</desc>
+      <desc>    &quot;Greetings. I a... message for Himself.  We felt that we were in bondage and we planned to... accident after the nova threw us back.  We didn&apos;t... 2005 years as far as we can... took her because we thought she would help us but now we cannot return return.  We are trapped here in our past with no hope... Liberty too damaged... interstellar links will not be invented for.. &quot;</desc>
+      <desc>     Press down to continue.</desc>
+      <exits e='1938' down='1936' no-exit='ritual.station.17'/>
+   </location>
+
+   <location num='1938' flags='kt'>
+      <name>You fall through another hole in the dark as soon as you move.</name>
+      <desc>Slowly regaining consciousness, you realise you are in a large carvern with an opening at the south end.  The cavern is big enough to be a shuttle bay and the signs of past use are everywhere.  Empty fuel cans are piled against one wall along with spent power packs.  There are high-tech maps on the laser cut walls but they are covered with dust and almost completely faded. The wall to the east has collapsed in a rockfall to reveal what might have once been sleeping quarters.  The plas-steel frames of bunks remain but soft furnishings have long since turned to dust.</desc>
+      <desc>   There are gouges on the floor where something heavy was dragged from a room to the west.  The scrapes stop in the middle of the cavern where tell-tale heat marks of shuttle boosters mark the floor. Looking through the opening in the rockface, you discover the cavern is halfway up a sheer cliff.  There is no way to climb up or down given your injuries from two falls.  To try would certainly be fatal.</desc>
+      <exits w='1937' out='203' no-exit='ritual.station.17'/>
+   </location>
+
+</fed2-map>
+

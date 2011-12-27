@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+
+<event-list version='17'>
+
+ <category name='food'>
+
+  <section name='burger'>
+
+   <event num='1'>
+    <comment>Buy burger - object in loc 456 - check funds</comment>
+    <checkstat who='individual' money='10' higher='food.burger.2' equals='food.burger.2' lower='food.burger.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Sell the burger</comment>
+    <message type='multi' where='loc' who='individual' lo='food.burger.1' hi='food.burger.2'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>No funds for burger</comment>
+    <message type='single' where='loc' who='individual' lo='food.burger.3'/>
+   </event>
+
+  </section>
+
+  <section name='madhouse'>
+
+   <event num='1'>
+    <comment>Buy food - Jeritts Mad House - loc 265</comment>
+    <checkstat who='individual' money='10' higher='food.madhouse.2' equals='food.madhouse.2' lower='food.madhouse.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='food.madhouse.1' hi='food.madhouse.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.madhouse.3'/>
+   </event>
+
+  </section>
+
+  <section name='milk'>
+
+   <event num='1'>
+    <comment>Buy milk - object in loc 456 - check funds</comment>
+    <checkstat who='individual' money='10' higher='food.milk.2' equals='food.milk.2' lower='food.milk.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Sell the milk</comment>
+    <message type='multi' where='loc' who='individual' lo='food.milk.1' hi='food.milk.2'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>No funds for milk</comment>
+    <message type='single' where='loc' who='individual' lo='food.milk.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>Buy carton of milk - check funds</comment>
+    <checkstat who='individual' money='25' higher='food.milk.5' equals='food.milk.5' lower='food.milk.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Sell carton of milk</comment>
+    <message type='single' where='com' who='individual' lo='food.milk.4'/>
+    <changestat who='individual' money='-25' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='home' id='obj_milk'/>
+   </event>
+
+   <event num='6'>
+    <comment>No funds for carton</comment>
+    <message type='single' where='com' who='individual' lo='food.milk.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Examine milk - check how many drinks left</comment>
+    <checksize id-name='milk' value='1' more='food.milk.8' equal='food.milk.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Milk desc - more than 1 drink</comment>
+    <displaysize id-name='milk'>The carton contains %d drinks of fermented llama milk, the favorite beverage on Brass.</displaysize>
+   </event>
+
+   <event num='9'>
+    <comment>Milk desc - 1 drink left</comment>
+    <displaysize id-name='milk'>The carton contains %d drink of fermented llama milk, the favorite beverage on Brass.</displaysize>
+   </event>
+
+   <event num='10'>
+    <comment>Check how many drinks are left in carton</comment>
+    <checksize id-name='milk' value='1' more='food.milk.11' equal='food.milk.12'/>
+   </event>
+
+   <event num='11'>
+    <comment>Drink milk - more than 1 drink left</comment>
+    <message type='single' where='com' who='individual' lo='food.milk.6'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+    <changesize id-name='milk' amount='-1' change='add' max-size='3' destroy='yes'/>
+   </event>
+
+   <event num='12'>
+    <comment>Drink milk - last drink</comment>
+    <message type='multi' where='com' who='individual' lo='food.milk.7' hi='food.milk.8'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+    <destroyobject where='inventory' map='home' id-name='milk'/>
+   </event>
+
+   <event num='13'>
+    <comment>Drop milk</comment>
+    <message type='single' where='com' who='individual' lo='food.milk.9'/>
+    <message type='single' where='com' who='room_ex' lo='food.milk.10'/>
+    <destroyobject where='inventory' map='home' id-name='milk'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle (loc 136)</comment>
+    <checkvariable name='newbod' key='clue' value='eleven' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does player arleady have a sample - if not then give him one</comment>
+    <checkinventory map='home' id-name='sample' found='stop'/>
+    <createobject where='inventory' home-map='sol/brass' id='obj_sample'/>
+    <message type='text' where='com' who='individual'>The small boy spots you and bounces down off the pile of carpets. "Ah! A Magellan Society candidate," he says. You wonder how he knew, but before you can ask he produces a small carpet sample and hands it to you. "Give that to my friend Victor," he tells you.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Drop event for sample</comment>
+    <message type='text' where='com' who='individual'>I don&apos;t think so - you were asked by the boy to give this to Victor at the starport on Earth.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

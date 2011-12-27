@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<fed2-map title='Vagus' version='9' editor='standard' from='464' to='Casino.Casino Space.592'>
+
+   <location num='133' flags='b'>
+      <name>Jacuzzi</name>
+      <desc>The jacuzzi is shaded for privacy under a giant, hand carved, marble gazebo. Vines of Space Blooms hang high atop the marble structure. The water is a special mineral water brought in from a spring near the beach on Jollyrodger. A young woman, named Tanya, stands ready to take your clothes because swim suits are not allowed in the jacuzzi.  Tanya will dry you off and return your freshly cleaned and pressed clothes when you are finished. As you step into the very warm water you become so relaxed you fall into a deep sleep. Wake up when you are ready. Tanya will be waiting.</desc>
+      <exits s='197' out='464' no-exit='move.noexit.3'/>
+   </location>
+
+   <location num='196' flags='b'>
+      <name>Impy&apos;s Private Office</name>
+      <desc>Since your here you might as well swipe some booze. Take your pick, there is nothing in the universe that isn&apos;t here. You walk over and examine thousands of bottles of the universe&apos;s rarest bottles of fine spirits stored in a maple wood cabinet that matches the kidney spaced desk. Implantguy is the head of the gaming administration and the Don of the underground. The mob here controls the security. Behave and you won&apos;t end up in a hole in the desert. Head east for some fun! If you are here and can&apos;t find your way out, tough ship.</desc>
+      <exits e='197' down='464' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='197' flags='b'>
+      <name>Pool Area</name>
+      <desc>This massive pool can only be afforded by the richest executives of the universe. Or stolen. Either way, this is the most impressive pool you have ever seen. There are granite statues lining the huge swimming area and servents dressed in white waiting on your every need. Have a drink poolside before heading north to the jacuzzi.</desc>
+      <exits n='133' w='196' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='320'>
+      <name>storage</name>
+      <desc>Just storage for dead bodies. This IS the hole in the desert</desc>
+   </location>
+
+   <location num='396'>
+      <name>Hotel Reservations</name>
+      <desc>You walk up to the counter and introduce yourself. The reservation droid peruses the reservation list. &quot;You don&apos;t seem to have a reservation, sorry&quot; she states. Maybe you need to try another way to get a room! Exit is south.</desc>
+      <exits s='460' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='398' flags='b'>
+      <name>The Atmosphire Casino </name>
+      <desc>As you rematerialize and seem to be all in order you look about and think that this place is much larger than it looks from 1000 meters below. Hundreds of people are playing their favorite table games such as &quot;31&quot;, Jollyrodger Hold &apos;em and my personal favorite &quot;Spin the ball on the big numbered wheel and hope you have your credits on the right number on the big felt thingie&quot;. Love that game! Ok, well buy yourself a drink, have a seat and see what happens next! To exit you&apos;ll need to go down!</desc>
+      <exits down='462' out='196' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='400' flags='rb'>
+      <name>Oscar&apos;s Ship Repair and Escort Service</name>
+      <desc>As you enter a humaniod with a showgirl on each arms emerges from a security door. After it closes behind him he asks &quot;What can I get you today, a basketball team, cheerleader, key to the city?&quot; You read a sign the says &quot;Ships must be purchased on Jollyrodger. We have a pact. No casino gaming there, no ships for sale here. But we fix &apos;em!&quot; and another &quot; NO CHECKS&quot; You see a wallet on the floor. Exit south.</desc>
+      <exits s='464' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>The Hokus Pokus Casino </name>
+      <desc>This is another casino that has been around forever. If you need a room please go north to the Hotel Reservation Desk. Exit to the south or get yourself a drink and play same cards!</desc>
+      <exits n='396' s='524' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>The Atmosphire Casino</name>
+      <desc>The Atmosphire Casino hoovers high above you. You are standing in a teleporter that will take you up to the casino. Head south if you would like to return to The Strip.</desc>
+      <exits s='526' up='398' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='463' flags='hi'>
+      <name>UMC</name>
+      <desc>How fancy is this place? Easy in, easy out for even the most serious illnesses. Buy insurance, get stitches or have an adadictome proceedure. Breast inhancements are &quot;handled&quot; by Implantguy himself by appointment only.</desc>
+      <exits s='527' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='464'>
+      <name>Los Vagus LP and McCrayon Interseller Spaceport</name>
+      <desc>Pandimonium! Complete and utter kaos everywhere you look! This spaceport is slammed with people and the likes and it&apos;s so loud with chatter and footsteps of people, the clanging of slot machines and droids rushing every direction. Board to get out of here or head southwest out of the spaceport. Don&apos;t forget your luggage. Luggage retrieval area is to the east. Oscar&apos;s ship repair is to the north.</desc>
+      <exits n='400' e='465' sw='527' no-exit='move.noexit.3'/>
+   </location>
+
+   <location num='465'>
+      <name>Luggage Area</name>
+      <desc>This area is huge with jillions of luggage bags stacked to the 20 meter ceiling! Every shape and color you could imaging is jammed into huge stacks. How you would possibly find yours amoung this mess is inconcievable! Just find a shop and buy new stuff. Space travel, great! Let&apos;s do that again... Hey smile, exit is west!</desc>
+      <exits w='464' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='522' flags='b'>
+      <name>Plunder Island</name>
+      <desc>This casino was raided and taken over by pirates! They can be seen nightly practicing their trade in the front of the hotel. There is a giant marble statue of Capt. Dinger in the front. What, another bar? sheesh! I love this planet! A Dinger favorite!</desc>
+      <exits se='587' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Strip bend</name>
+      <desc>From here the Strip bends to the south west, east to the spaceport. To the north is the Hokus Pokus casino! Check it out with carnival acts all day and night!</desc>
+      <exits n='460' e='525' sw='587' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>The Strip continues</name>
+      <desc>Not much to see here but it is getting a bit warm here so let&apos;s get moving. West continues on the strip, south is your next casino. A relic of years passed. East is back to the spaceport.</desc>
+      <exits e='526' s='589' w='524' no-exit='move.noexit.3'/>
+   </location>
+
+   <location num='526'>
+      <name>East end of The Strip</name>
+      <desc>As you walk along you can see towering hotels and casinos on both sides of the pedway. The pedway is a self moving &quot;sidewalk&quot; that runs east and west for what is known as The Strip. Go look around, have some fun! Remember, what happens in Vagus, stays in Vagus! The way back to the spaceport is east, continue west on the strip or north to your first casino!</desc>
+      <exits n='462' e='527' w='525' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='527'>
+      <name>Los Vagus Blvd</name>
+      <desc>Ah, much better. Though the streets are full the noise level is much easier to take. You realize that the spaceport was air conditioned whereas it is not out here. The sun begins to make you feel uncomfortable so you better get moving. This is Vagus baby so let&apos;s go have some fun! If you just came to trade head south. If you came to see the sights, the tramway heads east to &quot;Downtown&quot; or west to &quot;The Strip&quot;. UMC Hospital is to the north. Return to the spaceport is northeast.</desc>
+      <exits n='463' ne='464' e='528' s='591' w='526' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='528'>
+      <name>Breemont Street</name>
+      <desc>Under construction Please turn back west and visit The Strip</desc>
+      <exits w='527' no-exit='move.noexit.3'/>
+   </location>
+
+   <location num='587'>
+      <name>More of The Strip</name>
+      <desc>As you continue your tour/walk you can see the popular Plunder Island on the northwest side. The spaceport is towards the northeast, the Strip continues to the southwest.</desc>
+      <exits ne='524' sw='650' nw='522' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='589' flags='b'>
+      <name>The Raviara Casino</name>
+      <desc>This casino has been here since the planet was founded. The air condition smells like it. Local mob types still frequent this establishment. Probably because of the Italiano fare it serves up in the dining room, which is southeast. Stairs down head to the table gaming and sportsbook area. (Currently being remodeled and closed to the public)</desc>
+      <exits n='525' se='654' down='653' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='591' flags='e'>
+      <name>Casino Exchange</name>
+      <desc>A wait droid escorts you over to a private booth. As you slide on over closer to the trade terminal a glass door seals off the booth for privacy. If you don&apos;t find what your looking for here, we can get it! Try our sister locations at Rapier, Buttered Rum and Jollyrodger. The glass door will open automatically when you log off the terminal. Happy Trading!</desc>
+      <exits n='527' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='650'>
+      <name>Continue to the south</name>
+      <desc>The Strip turns to the south here. Return to the spaceport to the northeast.</desc>
+      <exits ne='587' s='714' no-exit='move.noexit.2'/>
+   </location>
+
+   <location num='653'>
+      <name>The Raviara Casino Sports book</name>
+      <desc>Workman everywhere. Mostly standing around drinking coffee. Must be a union job. Where&apos;s Jimmy?</desc>
+      <exits up='589' no-exit='move.noexit.3'/>
+   </location>
+
+   <location num='654' flags='bt'>
+      <name>Mama Luke&apos;s</name>
+      <desc>One of Vagus&apos; finest Italian joints. As you push through a heavy curtain you stop to let your eye&apos;s adjust. It&apos;s very dark in here with only small candles at each table. A hot looking waitdroidess excorts you over to a table in the corner and you peruse the menu. Order what you like, but stay on the menu. The chef is a retired hitman. When you&apos;ve finished your meal, head northwest to exit. What? you talking to me?</desc>
+      <exits nw='589' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='714'>
+      <name>End of the road</name>
+      <desc>This is all for now. Hope you enjoyed your visit. Come back in a month or two for a much larger tour of the planet. Management thanks you! Return to the north and you&apos;ll find your way back to the spaceport.</desc>
+      <exits n='650' no-exit='move.noexit.3'/>
+   </location>
+
+</fed2-map>

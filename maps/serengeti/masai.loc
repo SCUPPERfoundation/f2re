@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<fed2-map title='Masai' version='1.00' editor='standard' from='778' to='Serengeti.Serengeti Space.201'>
+
+   <location num='0' flags='t'>
+      <name>storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='649' flags='b'>
+      <name>Arackato&apos;s Private Office</name>
+      <desc>    Arackato has designed his office like a hunting lodge with wood log walls adorned with his hunting trophys A large bladed fan hangs from an open beamed ceiling, while a black leather office chair sits behind Arackato&apos;s large oak desk. the leather couch infront of a wood burning fire gives him time to relax and read a good book from his well stocked library</desc>
+      <desc>    Exit southeast.</desc>
+      <exits se='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='650'>
+      <name>Livingstone Station</name>
+      <desc>    You are on a long wooden platform stacked high with supplies which does not leave much room for passengers. Wooden benches are placed at intervals but give very little comfort while you wait for the train.</desc>
+      <desc>    A ticket counter by the door in the south has a sign informing you that due to a derailment the train service has been suspended till further notice.</desc>
+      <exits s='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='651' flags='hi'>
+      <name>Kalahari Hospital</name>
+      <desc>A leading hospital in the galaxy with highly trained doctors and nurses who are over worked and under paid. The game reserve keeps them busy from gunshot wounds to mauling from wild animals, usualy because they have failed to follow instructions from the guides, or strayed from the designated paths.</desc>
+      <desc>    Exit southwest and southeast</desc>
+      <exits se='716' sw='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='713'>
+      <name>Big Tims Game Supplies</name>
+      <desc>    Big Tim sits behind the counter at the door laughing and joking with the customers. &quot;Mind yer head squire he shouts&quot; as you make your way through the managery of items that hang from the ceiling and clutter the counters and floor.</desc>
+      <desc>    &quot;Make sure you get a good gun&quot; he advises and directs you to a wall full of guns and ammo. Guns for elephant and rhino to guns for bird shooting he has them all.</desc>
+      <desc>    &quot;Apart from the guns you need a good bacpack and a water flask the latter you will be thankful off in the noon sun&quot; he says</desc>
+      <desc>    Exit east</desc>
+      <exits e='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='714'>
+      <name>Arrival and Departure Lounge</name>
+      <desc>    Large posters and murals adorn the walls depicting the various safaris available here on Masai. While holographic images through out the room of wild animals, give a reality to what is in store for you.</desc>
+      <desc>    There is a line behind the counter in the center of the room, where a tour guide gives information on all available safaris.</desc>
+      <desc>    There are doors in this circular room leading to all the cardinal points.NE..Kalahari Hospital, E..Rhino Exchange, SE..The Elephant and Gun, S..The Shuttle Port, SW..Sanburu Yards, W..Big Tims Game Supplies, NW..Private Office and N..Livingstone Station.</desc>
+      <exits n='650' ne='651' e='715' se='779' s='778' sw='777' w='713' nw='649' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='715' flags='e'>
+      <name>Rhino Exchange</name>
+      <desc>    The Bull Market where prices are aggresive as well as the punters. Be sure to keep abreast of what is developing as stock and Futures are changing hands very quickly. The old saying is still true &quot;You snooze you lose&quot;</desc>
+      <desc>    Exit west</desc>
+      <exits w='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='716' flags='hi'>
+      <name>Emergency Ward</name>
+      <desc>    The room is filled with elaborate equipment, as you take a closer look you relize they are cloning machines, a shiver goes up and down your spine, and you decide to make a hasty exit northwest from the room, but it makes you check if your insurance is up to date first</desc>
+      <exits nw='651' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='777' flags='yr'>
+      <name>Samburu Yards</name>
+      <desc>    Like the leopards the ships here are built for speed and agility from the smallest harrier to the largest Imperial ship. We sell them all, please inquire about our discounts for all the ships that fly under the Masai Fleet.</desc>
+      <desc>    Exit northeast</desc>
+      <exits ne='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='778'>
+      <name>Masai Shuttle Port</name>
+      <desc>    Your shuttle is directed to docking station 6B, where droids and personell refuel, clean and restock your shuttle for an early departure.</desc>
+      <desc>    Crews and passengers from various shuttles make their way north to the Visitors Arrival and Departure Lounge</desc>
+      <exits n='714' no-exit='city.noexit.1'/>
+   </location>
+
+   <location num='779' flags='b'>
+      <name>The Elephant and Gun</name>
+      <desc>    As you enter you think you are on safari already as the whole decor brings you into the wild theme of the bush. a small restaurant in the south end of the room is set to a jungle scene with young native girls serving food and wine.</desc>
+      <desc>    Up front customers stand at a long bar shooting the breeze with each other while the barman serves that quick pizza and ice cold beer.</desc>
+      <desc>    Exit northwest</desc>
+      <exits nw='714' no-exit='city.noexit.1'/>
+   </location>
+
+</fed2-map>
+

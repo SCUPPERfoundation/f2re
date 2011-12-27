@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<object-list version='59' editor='Version 1.37'>
+   <object type='static' start='326' visibility='0' size='1' weight='1' flags='i'>
+      <name>donut</name>
+      <id>obj_1box</id>
+      <desc>The donut box contains a selection of different kinds of yummy-looking donuts.</desc>
+      <vocab cmd='get' event='objects.donut.1'></vocab>
+      <vocab cmd='take' event='objects.donut.1'></vocab>
+      <vocab cmd='eat' event='objects.donut.1'></vocab>
+      <vocab cmd='steal' event='objects.donut.1'></vocab>
+   </object>
+
+   <object type='static' start='398' visibility='0' size='1' weight='1'>
+      <name>on bouncy castle</name>
+      <id>obj_1castle</id>
+      <desc>The huge bouncy castle is an inflatable edifice that looks just like a castle, complete with crennellated walls, pointy turrets and a drawbridge. You can climb on it and bounce around, as if it was a trampoline.</desc>
+      <vocab cmd='climb' event='objects.castle.1'></vocab>
+      <vocab cmd='bounce' event='objects.castle.1'></vocab>
+      <vocab cmd='get' event='objects.castle.7'></vocab>
+      <vocab cmd='pop' event='objects.castle.8'></vocab>
+      <vocab cmd='puncture' event='objects.castle.8'></vocab>
+      <vocab cmd='deflate' event='objects.castle.8'></vocab>
+   </object>
+
+   <object type='static' start='518' visibility='100' size='1' weight='1' flags='i'>
+      <name>advert</name>
+      <id>obj_advert</id>
+      <desc>The advert shows a selection of commercial messages from various organizations and companies on Venus.</desc>
+      <vocab cmd='examine' event='objects.adverts.1'></vocab>
+      <vocab cmd='ex' event='objects.adverts.1'></vocab>
+   </object>
+
+   <object type='static' start='326' visibility='100' size='1' weight='1' flags='i'>
+      <name>box of donuts</name>
+      <id>obj_box</id>
+      <desc>The box is open. Inside it you can see a selection of different kinds of yummy-looking donuts.</desc>
+      <vocab cmd='get' event='objects.donutbox.1'></vocab>
+   </object>
+
+   <object type='static' start='582' visibility='100' size='1' weight='1'>
+      <name>Burbage</name>
+      <id>obj_burbage</id>
+      <desc>It is the leading actor in the Droid Theatre troupe and will be playing Hamlet here tonight. It strides back and forth across the stage, muttering its lines to itself.</desc>
+      <vocab cmd='burbage' event='objects.burbage.1'></vocab>
+   </object>
+
+   <object type='static' start='398' visibility='100' size='1' weight='1' flags='i'>
+      <name>bouncy castle</name>
+      <id>obj_castle</id>
+      <desc>The huge bouncy castle is an inflatable edifice that looks just like a castle, complete with crennellated walls, pointy turrets and a drawbridge. You can climb on it and bounce around, as if it was a trampoline.</desc>
+      <vocab cmd='climb' event='objects.castle.1'></vocab>
+      <vocab cmd='bounce' event='objects.castle.1'></vocab>
+      <vocab cmd='get' event='objects.castle.7'></vocab>
+      <vocab cmd='pop' event='objects.castle.8'></vocab>
+      <vocab cmd='puncture' event='objects.castle.8'></vocab>
+      <vocab cmd='deflate' event='objects.castle.8'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>firestone</name>
+      <id>obj_firestone</id>
+      <desc>In the flickering flames at the heart of the red jewel you can see an image of the Magellan Society&apos;s crest.</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='static' start='453' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>People come here to drink not eat, so the only food on offer is a chili-dog covered with cheese.</desc>
+      <vocab cmd='buy' event='food.spaceman.1'></vocab>
+   </object>
+
+   <object type='static' start='588' visibility='100' size='1' weight='1'>
+      <name>Pegasus</name>
+      <id>obj_pegasus</id>
+      <desc>You see a winged horse - what were you expecting? The beast has been stuffed and mounted on a plinth in a heroic pose, rearing up with wings spread wide.</desc>
+      <vocab cmd='ride' event='objects.pegasus.1'></vocab>
+   </object>
+
+   <object type='static' start='461' visibility='100' size='1' weight='1' flags='d'>
+      <name>priest</name>
+      <id>obj_priest</id>
+      <desc>The priest is wearing the traditional rainment of a priest of Gaelaan, an old fashioned worker&apos;s coverall with a Gaelaan symbol over the left breast. He glances in your direction and then resumes his contemplation of the altar.</desc>
+      <vocab cmd='priest' event='objects.priest.1'></vocab>
+   </object>
+
+   <object type='static' start='453' visibility='100' size='1' weight='1' flags='i'>
+      <name>spittoon</name>
+      <id>obj_spittoon</id>
+      <desc>It&apos;s here to cater for those who have latched onto the latest fad: cud-chewing, a less toxic substance than tobacco, but no less messy. From time to time someone turns towards the spittoon and hawks their discarded cud into it.</desc>
+      <vocab cmd='get' event='objects.spittoon.1'></vocab>
+      <vocab cmd='take' event='objects.spittoon.1'></vocab>
+   </object>
+
+   <object type='static' start='270' visibility='100' size='1' weight='1'>
+      <name>zork857</name>
+      <id>obj_zork</id>
+      <desc>The battered looking droid appears to be drinking a mixture of coffee and machine oil.</desc>
+      <vocab cmd='zork857' event='objects.zork.1'></vocab>
+      <vocab cmd='bribe' event='objects.zork.2'></vocab>
+   </object>
+
+</object-list>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<fed2-map title='Angelas' version='8' editor='standard' from='460' to='Wellman.Wellman Space.394'>
+
+   <location num='65'>
+      <name>Storeroom</name>
+      <desc>empty</desc>
+   </location>
+
+   <location num='268'>
+      <name>Shrine</name>
+      <desc>Under Construction</desc>
+      <exits sw='331'/>
+   </location>
+
+   <location num='330'>
+      <name>Private Study</name>
+      <desc>A room full of clutter for now.  The exit is East.</desc>
+      <exits e='331'/>
+   </location>
+
+   <location num='331'>
+      <name>Sjw&apos;s Room</name>
+      <desc>This room is currently being renovated.</desc>
+      <exits ne='268' s='395' w='330'/>
+   </location>
+
+   <location num='394'>
+      <name>Angelas Room</name>
+      <desc>Not done yet. Come back again.</desc>
+      <exits e='395'/>
+   </location>
+
+   <location num='395'>
+      <name>Entrance To the Wellman Residence</name>
+      <desc>You are at the entrance of the Wellman Home. Doors lead off to the North,West and Southwest.</desc>
+      <exits n='331' se='460' sw='458' w='394'/>
+   </location>
+
+   <location num='396'>
+      <name>Memory Hall</name>
+      <desc>Check back for Details later</desc>
+      <exits s='460'/>
+   </location>
+
+   <location num='458'>
+      <name>Stevens Room</name>
+      <desc>He is currently off at school.  Exit is NE.</desc>
+      <exits ne='395'/>
+   </location>
+
+   <location num='460' flags='yr'>
+      <name>Angelas Landing Pad</name>
+      <desc>Welcome!  We are glad to have you here.  Please feel free to roam around the planet or head EAST to the Exchange.  SW is the Lazy E.</desc>
+      <exits n='396' e='461' s='524' sw='523' nw='395'/>
+   </location>
+
+   <location num='461' flags='e'>
+      <name>Angelas Trading Exchange</name>
+      <desc>This room is cluttered with all kinds of scraps of paper that the traders have dropped in a hurry to get better deals on the current commodities available.  Have fun and trade well,</desc>
+      <exits w='460'/>
+   </location>
+
+   <location num='523' flags='b'>
+      <name>Lazy E Bar and Grille</name>
+      <desc>Walking thru the door you have to let your eyes adjust to the darkened room and look for a stool or table to sit at.  You cna order a drink or have one of the green eyed waitresses take your order.  You notice a menu encouraging you to try the house special a Bounty Sandwich.</desc>
+      <exits ne='460'/>
+   </location>
+
+   <location num='524' flags='hi'>
+      <name>Jameson Hospital</name>
+      <desc>This is the newly remodelled hospital.  Doctors and nurses are lounging about but will rush to your aid if you should need their services.</desc>
+      <exits n='460'/>
+   </location>
+
+</fed2-map>

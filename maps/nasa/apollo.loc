@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<fed2-map title='Apollo' version='146' editor='standard' from='332' to='Nasa.Nasa Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>It sure is empty here.</desc>
+   </location>
+
+   <location num='76'>
+      <name>Grissom Memorial Room</name>
+      <desc>   The closest thing the planet Apollo has to a chapel is the Grissom Memorial Room. Named in honor of Virgil I. &quot;Gus&quot; Grissom, the room is a place of peace and reflection.</desc>
+      <desc>   Gus Grissom was one of the few men to have served in NASA&apos;s Mercury, Gemini and Apollo programs. He died in a launch pad fire during an early Apollo test mission on January 27, 1967 along with his crewmates, Ed White and Roger Chaffee. Gus Grissom was that mission&apos;s Commander.</desc>
+      <desc>   Flowers are placed below the portraits of Grissom, White and Chaffee near the north wall ... with no names attached to the arrangements. The flowers seem fresh and new .... as if they are replaced on an almost daily basis by some unknown admirer.</desc>
+      <desc>   A small sign by the south door reads &quot;Take some time to sit and reflect. Others died so that we may continue to explore.&quot;</desc>
+      <desc>   Below the portrait of Grissom is a door which will take you DOWN a winding staircase to a secret area.</desc>
+      <desc>   The normal exit is to the SOUTH.</desc>
+      <exits s='140' down='460'/>
+   </location>
+
+   <location num='140' flags='hi'>
+      <name>Apollo Clinic</name>
+      <desc>   A place for recuperation should you ever suffer an accident while here on Apollo ... which you won&apos;t.</desc>
+      <desc>   A sign on the wall reminds you: &quot;Since the ill-fated Apollo 1 test, no fatal accident ever again befell Program Apollo. Your safety is our main concern. All exits are clearly marked and there are no hidden traps here on planet Apollo. Feel free to explore.&quot;</desc>
+      <desc>   SOUTH is the main corridor.</desc>
+      <desc>   SOUTHWEST is the planet Exchange.</desc>
+      <desc>   SOUTHEAST is the Tang Bar &amp; Grill.</desc>
+      <desc>   NORTH is a plain wooden door, always unlocked ... a small plaque on the door reads &quot;Grissom Memorial Room&quot;. The door is slightly ajar.</desc>
+      <exits n='76' se='205' s='204' sw='203'/>
+   </location>
+
+   <location num='203' flags='e'>
+      <name>Apollo Exchange</name>
+      <desc>   In this room the hustle and bustle of Apollo&apos;s business takes place. The screens about the room look like something out of Mission Control of the 1960&apos;s &amp; 1970&apos;s (probably because they were moved to this planet to serve this very function).</desc>
+      <desc>   Most of the resident traders here are dressed in horn-rimmed glasses, short-sleeved white-collar shirts with ties and the appropriate pocket-protector (including slide rules). It&apos;s almost as if you&apos;ve stepped back in time to a technology long forgotten. Very peculiar.</desc>
+      <desc>   EAST is the Main Corridor.</desc>
+      <desc>   NORTHEAST is the Clinic.</desc>
+      <desc>   SOUTH is the Museum Curator&apos;s Office.</desc>
+      <exits ne='140' e='204' s='267'/>
+   </location>
+
+   <location num='204'>
+      <name>Corridor Intersection</name>
+      <desc>   This corridor branches north, south, east and west.</desc>
+      <desc>   At this point you can see a door to the EAST labeled &quot;Tang Bar &amp; Grill&quot;.</desc>
+      <desc>   You also see a door to the WEST labeled &quot;Exchange&quot;.</desc>
+      <desc>   To the NORTH lies the Apollo Clinic and the Grissom Memorial Room.</desc>
+      <desc>   The launch pad appears in the distance to the SOUTH.</desc>
+      <exits n='140' e='205' s='268' w='203'/>
+   </location>
+
+   <location num='205' flags='b'>
+      <name>Tang Bar &amp; Grill</name>
+      <desc>   Famous for it&apos;s orange-flavored drink, the Tang Bar &amp; Grill is open 24 hours a day. All food and beverages served here are either freeze-dried or powdered and can be reconstituted by simply adding water. Enjoy!!</desc>
+      <desc>   WEST is the main corridor.</desc>
+      <desc>   NORTHWEST is the Clinic.</desc>
+      <desc>   SOUTH is the Apollo Gift Shop.</desc>
+      <exits s='269' w='204' nw='140'/>
+   </location>
+
+   <location num='267' flags='y'>
+      <name>Museum Curator&apos;s Office &amp; Shipyard</name>
+      <desc>   The Apollo Museum Curator spends very little of his free time here (he has a Secret Study elsewhere here on Apollo). The desk here is cluttered with his latest finds of the ancient Nasa Apollo Space Program. Soon these items (along with the ones stored in various air-lock vaults scattered about the room) will be on display in the Museum at the south end of the planet. The room appears a disorganized mess.</desc>
+      <desc>   There is a name plate on the cluttered desk that reads &quot;Fletcher&quot; (though most galactic travelers just refer to the Apollo Museum Curator simply as &quot;Fletch&quot;). Next to the name plate is a note that reads &quot;I will return ... eventually. PS: If you are here to buy a ship, just type BUY SHIP and a sales-droid will help you. Fletch&quot;</desc>
+      <desc>   The only exit is NORTH.</desc>
+      <exits n='203'/>
+   </location>
+
+   <location num='268'>
+      <name>Corridor</name>
+      <desc>   Following this corridor NORTH will lead you to the Tang Bar &amp; Grill, the Exchange, the Planet Clinic and the Grissom Memorial Room.</desc>
+      <desc>   SOUTH will return you to the landing pad.</desc>
+      <exits n='204' s='332'/>
+   </location>
+
+   <location num='269'>
+      <name>Apollo Gift Shop</name>
+      <desc>   You look around at all the souvenirs and think about buying one. But somehow you just can&apos;t see paying an outrageous price for a T-shirt that says &quot;My friend visited Apollo and all they got me was this stupid T-shirt&quot;.</desc>
+      <desc>   Instead, you grab a complimentary moon rock by the door (which look pretty much like the rocks everywhere else in the universe) and leave by exiting NORTH.</desc>
+      <exits n='205'/>
+   </location>
+
+   <location num='332'>
+      <name>Apollo Launch Pad</name>
+      <desc>   Relics of NASA&apos;s Launch Pad 39 are visible in the distance through the many windows of this launch pad. From this site, many forays into space were launched by the ancient explorers from Earth&apos;s NASA.</desc>
+      <desc>   These relics were moved here to planet Apollo late in the 22nd Century ... much in the same way the London Bridge was moved to Arizona ages and ages ago ... brick by brick.</desc>
+      <desc>   This is a common tourist destination for those traveling out of Sol and looking to learn about space travel from a time long since past.</desc>
+      <desc>   NORTH lies the Apollo Exchange, Tang Bar &amp; Grill, the Apollo Clinic and the Grissom Memorial Room.</desc>
+      <desc>   SOUTHWEST is a door marked &quot;Apollo History Complex&quot;. It houses a tour (and brief history) of NASA&apos;s Apollo Project.</desc>
+      <exits n='268' sw='395'/>
+   </location>
+
+   <location num='395'>
+      <name>Apollo History Complex</name>
+      <desc>   An ornate planetarium on the ceiling lets you know that this room is something special. The walls are decorated with photos of NASA&apos;s successes and failures. A video of JFK challenging Americans to send a man to the moon (and back) by the end of the 1960&apos;s plays on a monitor on the west wall in a continuous loop.</desc>
+      <desc>   To the South is an entrance where you can enjoy the ancient history of NASA&apos;s Apollo Program. It is a one-way path that will lead you back to the main Launch Pad.</desc>
+      <desc>   The One-Way Apollo Tour is to the SOUTH.</desc>
+      <desc>   If you wish to forego the Tour for now, the exit is to the NORTHEAST.</desc>
+      <exits ne='332' s='459'/>
+   </location>
+
+   <location num='396'>
+      <name>Greenhouse</name>
+      <desc>   Artificially lit and temperature controlled, this greenhouse is filled with pots upon pots of beautiful blooming plants: Roses, Irises, Tulips, Hyacinths, Carnations, Daffodils and more. They must have been originally imported here from planet Earth in the Sol system.</desc>
+      <desc>   You notice a pair of ancient steel pruning shears on a table. These far outdate the laser pruners you are used to seeing. The pruning shears are engraved &quot;Fletch&quot;. Apparently, it is the Museum Curator&apos;s hobby to grow such wonderful things. You guess that he must also be the one who makes certain the flowers placed in the Grissom Memorial Room are replenished and always kept looking fresh and new.</desc>
+      <desc>   For a moment, you think of snipping a flower bud for the lapel on your spacesuit ... but then you remember the intended use of the flowers and decide to leave the room just as it is.</desc>
+      <desc>   The only exit is to the SOUTH.</desc>
+      <exits s='460'/>
+   </location>
+
+   <location num='397'>
+      <name>Apollo 17 Room</name>
+      <desc>   Apollo 17 was the eleventh manned Apollo mission and the sixth (and final) lunar landing mission of the Apollo program.</desc>
+      <desc>   Crew: Eugene A. Cernan (Commander), Harrison H. Schmitt, Ronald E. Evans</desc>
+      <desc>   Cernan and Schmitt became the 11th and 12th humans to set foot on the moon.</desc>
+      <desc>   As he left the lunar surface, Gene Cernan stated, &quot;As I take man&apos;s last step from the surface, back home for some time to come, but we believe not too long into the future, I&apos;d like to just say what I believe history will record: That America&apos;s challenge of today has forged man&apos;s destiny of tomorrow. And, as we leave the Moon at Taurus-Littrow, we leave as we came and, God willing, as we shall return, with peace and hope for all mankind. Godspeed the crew of Apollo 17.&quot;</desc>
+      <desc>   The Tour is concluded. A small plaque by the exit reminds you to visit the Grissom Memorial Room at the North end of the planet.</desc>
+      <desc>   The Exit is NORTHWEST.</desc>
+      <exits nw='332'/>
+   </location>
+
+   <location num='459'>
+      <name>Apollo Un-manned Mission Room.</name>
+      <desc>   A plaque in the center of the room reminds you that Apollo 1 was actually manned and that three NASA astronauts met their untimely death in a launch pad fire during that test.</desc>
+      <desc>   Apollo 2 through Apollo 6 were indeed un-manned missions to test rocket systems and the new Lunar Module. Spectacular photos and films of these test flights fill the room.</desc>
+      <desc>   The Tour continues SOUTH.</desc>
+      <exits s='523'/>
+   </location>
+
+   <location num='460'>
+      <name>Secret Study</name>
+      <desc>   You&apos;ve entered Fletcher&apos;s secret study ... where most of the real work gets done here on Apollo.</desc>
+      <desc>   Monitors cover most of the walls. From here, all of planet Apollo can be seen. Music plays on an unseen stereo system. Somehow, it only plays songs you like, as if it has some sort of artificial intelligence.</desc>
+      <desc>   In the center of the room lies a crescent-shaped marble floating desktop. Behind it is a beautiful antique office chair. It appears to be made of oak, with leather upholstery and hand-trimmed with a gold-hued woven silk piping.</desc>
+      <desc>   On the wall behind the chair is a plaque which reads &quot;Remember, Fletcher. There&apos;s no wrong way to be a planet owner, unless you don&apos;t know what you&apos;re fedding doing or why. Have lots of fun. Jezz.&quot; This is obviously a gift from the Founder of THE RIFT system.</desc>
+      <desc>   Additional rooms of this secret area of Apollo lie NORTH and SOUTH.</desc>
+      <desc>   You can return to the Grissom Memorial Room by going back UP the winding staircase.</desc>
+      <exits n='396' s='524' up='76'/>
+   </location>
+
+   <location num='461'>
+      <name>Apollo 16 Room</name>
+      <desc>   Apollo 16 was the tenth manned mission in the Apollo program and the fifth mission to land on the Moon, the first to land in the highlands area. The mission was launched on April 16, 1972, and concluded on April 27.</desc>
+      <desc>The Commander (John Young) would later serve as the Commander of the first Space Shuttle.</desc>
+      <desc>   Crew: John W. Young (Commander), Charles M. Duke Jr, T. Kenneth Mattingly Jr.</desc>
+      <desc>   John Young and Charles Duke became the 9th and 10th humans to set foot on the moon.</desc>
+      <desc>   The Tour continues to the NORTH.</desc>
+      <exits n='397'/>
+   </location>
+
+   <location num='523'>
+      <name>Apollo 7 Room</name>
+      <desc>   Apollo 7 was the first manned mission in the Apollo program to be launched. It was an eleven-day Earth-orbital mission, the first manned launch of the Saturn IV launch vehicle, and the first three-man American space mission.</desc>
+      <desc>   Crew: Walter M. Schirra (Commander), Donn F. Eisele, R. Walter Cunningham</desc>
+      <desc>   The Tour continues SOUTH.</desc>
+      <exits s='587'/>
+   </location>
+
+   <location num='524'>
+      <name>Sleeping Quarters</name>
+      <desc>   This room is obviously the sleeping quarters of the Museum Curator, Fletcher.</desc>
+      <desc>   The furnishings are fairly sparse, but quaint ... an anti-gravity bed (queen size) floats in the middle of the room ... the walls are adorned by holographic pictures of family members ... there is an ancient (maybe from the 1960&apos;s) Earth-made cedar chest at the foot of the bed.</desc>
+      <desc>   On either side of the bed there is a floating nightstand. On one nightstand a small alarm clock blinks the time &quot;4:30am&quot; on and off (you surmise that this must be Fletcher&apos;s waking time). On the other nightstand a pair of reading glasses rests on top of a book ... an actual printed book no less!!! You&apos;ve only read about printed books in history lessons on your digital thought-pad. The book is titled &quot;Moon Shot&quot; by Alan Shepard and Deke Slayton.</desc>
+      <desc>   You think to yourself &quot;Wow, Fletch really has some weird old Earth stuff. Interesting. Strange ... but interesting.&quot;</desc>
+      <desc>   The only exit is NORTH.</desc>
+      <exits n='460'/>
+   </location>
+
+   <location num='525'>
+      <name>Apollo 15 Room</name>
+      <desc>   Apollo 15 was the ninth manned mission in the Apollo program and the fourth mission to land on the Moon. It was the first of what were termed &quot;J missions&quot;, long duration stays on the Moon with a greater focus on science than had been possible on previous missions. This mission was the first to employ the &quot;Lunar Rover&quot;. The mission began on July 26, 1971, and concluded on August 7th.</desc>
+      <desc>   Crew: David R. Scott (Commander), James B. Irwin, Alfred M. Worden</desc>
+      <desc>   David Scott and James Irwin became the 7th and 8th humans to set foot on the moon.</desc>
+      <desc>   The Tour continues to the NORTH.</desc>
+      <exits n='461'/>
+   </location>
+
+   <location num='587'>
+      <name>Apollo 8 Room</name>
+      <desc>   Apollo 8 was the first manned voyage to a celestial body. Its three-man crew became the first humans to see the far side of the Moon. The mission also involved the first manned launch of a Saturn V rocket, and was the second manned mission of the Apollo Program.</desc>
+      <desc>   Crew: Frank F. Borman II (Commander), James A. Lovell Jr,  William A. Anders</desc>
+      <desc>   The Tour continues to the SOUTHWEST.</desc>
+      <exits sw='650'/>
+   </location>
+
+   <location num='588'>
+      <name>Apollo 11 Room</name>
+      <desc>   You have now entered a grand open sky lit expanse - The Apollo 11 room - midway through your tour.</desc>
+      <desc>   The Apollo 11 mission was the first manned mission to land on the Moon. It was the fifth human space flight of Project Apollo and the third human voyage to the Moon. It was also the second all-veteran crew in manned space flight history. It was launched on July 16, 1969. On July 20, 1969 humans first set foot on the moon.</desc>
+      <desc>   The mission fulfilled President John F. Kennedy&apos;s goal of reaching the moon by the end of the 1960s, which he expressed during a speech given on September 12, 1962 at Rice University Stadium in Houston, Texas:</desc>
+      <desc>&quot;I believe that this nation should commit itself to achieving the goal, before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&quot;</desc>
+      <desc>   Crew: Neil Alden Armstrong (Commander), Edwin E. &quot;Buzz&quot; Aldrin Jr, Michael Collins</desc>
+      <desc>   The Tour continues to the SOUTHEAST.</desc>
+      <exits se='653'/>
+   </location>
+
+   <location num='589'>
+      <name>Apollo 14 Room</name>
+      <desc>   Apollo 14 was the eighth manned mission in the Apollo program and the third mission to land on the Moon, touching down on February 5, 1971.It&apos;s commander (Alan Shepard) became the first and only of the original Mercury 7 astronauts to set foot on the moon.</desc>
+      <desc>   Shepard and his crewmate Mitchell became the 5th and 6th humans to step foot on the moon.</desc>
+      <desc>   Crew: Alan B. Shepard, Jr (Commander), Edgar D. Mitchell, Stuart A. Roosa</desc>
+      <desc>   The Tour continues to the NORTH.</desc>
+      <exits n='525'/>
+   </location>
+
+   <location num='650'>
+      <name>Apollo 9 Room</name>
+      <desc>   Apollo 9 was the first manned flight of the Command/Service Module (CSM) along with the Lunar Module (LM) . Its three-person crew tested several aspects critical to landing on the moon including the LM engines, backpack life support systems, navigation systems, and docking maneuvers. The mission was the second manned launch of a Saturn V rocket, and was the third manned mission of the Apollo Program.</desc>
+      <desc>   Crew: James A. McDivitt (Commander), David R. Scott, Russell L. Schweickart</desc>
+      <desc>   The Tour continues to the EAST.</desc>
+      <exits e='651'/>
+   </location>
+
+   <location num='651'>
+      <name>Apollo 10 Room</name>
+      <desc>   Apollo 10 was the fourth manned mission in the Apollo program. The mission included the second crew to orbit the Moon and an all-up test of the lunar module (LM) in lunar orbit. The LM came to within 8.4 nautical miles (15.6 km) of the lunar surface during practice maneuvers.</desc>
+      <desc>   Crew: Thomas P. Stafford (Commander), John W. Young, Eugene A. Cernan</desc>
+      <desc>   The Tour continues to the NORTHEAST.</desc>
+      <exits ne='588'/>
+   </location>
+
+   <location num='653'>
+      <name>Apollo 12 Room</name>
+      <desc>   Apollo 12 was the sixth manned mission in the Apollo program and the second to land on the Moon. It launched during rain and it&apos;s Saturn V rocket body was actually struck by a bolt of lightning 36 seconds after lift-off.</desc>
+      <desc>   Charles &quot;Pete&quot; Conrad and Alan Bean followed Armstrong &amp; Aldrin, becoming the 3rd and 4th humans to set foot on the moon.</desc>
+      <desc>   Crew: Charles &quot;Pete&quot; Conrad, Jr (Commander), Alan L. Bean, Richard F. Gordon, Jr.</desc>
+      <desc>   The Tour continues to the EAST.</desc>
+      <exits e='654'/>
+   </location>
+
+   <location num='654'>
+      <name>Apollo 13 Room</name>
+      <desc>   Apollo 13 is known as NASA&apos;s &quot;successful failure&quot;.</desc>
+      <desc>   Two days after the launch, the Apollo 13 spacecraft was crippled by an explosion, caused by a fault in an oxygen tank. The explosion damaged the Service Module, resulting in a loss of oxygen and electrical power. The crew used the Lunar Module as a &quot;lifeboat&quot; in space. The crew returned safely to Earth 4 days after the explosion.</desc>
+      <desc>   Crew: James A. Lovell, Jr (Commander), John L. Swigert, Fred W. Haise, Jr</desc>
+      <desc>   The Tour continues to the NORTHWEST.</desc>
+      <exits nw='589'/>
+   </location>
+
+</fed2-map>
+

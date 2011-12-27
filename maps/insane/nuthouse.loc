@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<fed2-map title='Nuthouse' version='1.00' editor='standard' from='396' to='Insane.Insane Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Just a storeroom full of shelves with boxes.</desc>
+   </location>
+
+   <location num='130'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits e='131' se='195' s='194' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='131'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits e='132' se='196' s='195' sw='194' w='130' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='132'>
+      <name>Path</name>
+      <desc>The path curves from the SouthWest to the SouthEast.</desc>
+      <exits e='133' se='197' s='196' sw='195' w='131' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='133'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits s='197' sw='196' w='132' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='135'>
+      <name>Fallen Tree</name>
+      <desc>Tree is angled to the SouthEast.</desc>
+      <exits se='200' down='198' no-exit='tree.noexit.1'/>
+   </location>
+
+   <location num='142' flags='b'>
+      <name>Empty Factory Owner&apos;s office</name>
+      <desc>All there is in this office is a huge desk,with a computer terminal on it with the monitor facing you with the words &quot;OFFICE FOR RENT PLEASE SEE NUT&quot;.</desc>
+      <exits s='206' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='194'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits n='130' ne='131' e='195' se='259' s='258' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='195'>
+      <name>Path</name>
+      <desc>The long path is running SouthWest uphill to the Northeast.</desc>
+      <exits n='131' ne='132' e='196' se='260' s='259' sw='258' w='194' nw='130' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='196'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits n='132' ne='133' e='197' se='261' s='260' sw='259' w='195' nw='131' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='197'>
+      <name>Path</name>
+      <desc>The path bends from the NorthWest to the East.</desc>
+      <exits n='133' e='198' s='261' sw='260' w='196' nw='132' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='198'>
+      <name>Clearing</name>
+      <desc>You have entered a clearing.</desc>
+      <desc>To the west is a wide path.to the north an south of the path is just open field as far as the eye can see</desc>
+      <desc>There is a fallen tree u can climb up on.</desc>
+      <exits sw='261' w='197' nw='133' up='135' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='199'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='200'>
+      <name>Fallen Tree</name>
+      <desc>The angle of the tree is heading NorthWest, or you may climb down to a Dirt Path</desc>
+      <exits nw='135' down='265' no-exit='tree.noexit.1'/>
+   </location>
+
+   <location num='202'>
+      <name>Bend in Dirt Path</name>
+      <desc>There is a bend in the path that goes from the Southeast to the Southwest</desc>
+      <exits se='267' sw='265' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='206'>
+      <name>Lobby</name>
+      <desc>This building is currently under cunstruction, the main level is the only level open to the public at this time.</desc>
+      <desc>There are two doors one north an one east.</desc>
+      <exits n='142' e='207' sw='269' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='207' flags='b'>
+      <name>Empty Factory Owner&apos;s office</name>
+      <desc>All there is in this office is a huge desk,with a computer terminal on it with the monitor facing you with the words &quot;OFFICE FOR RENT PLEASE SEE NUT&quot;.</desc>
+      <exits w='206' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='258'>
+      <name>Path</name>
+      <desc>The path from the NorthEast turns into a laneway running South.</desc>
+      <exits n='194' ne='195' e='259' s='322' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='259'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits n='195' ne='196' e='260' w='258' nw='194' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='260'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits n='196' ne='197' e='261' w='259' nw='195' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='261'>
+      <name>Field</name>
+      <desc>Just an open field with long grass as far as the eye can see.</desc>
+      <exits n='197' w='260' nw='196' no-exit='noexit.field.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Fallen Tree </name>
+      <desc>There is a fallen tree.</desc>
+      <desc>Dirt Path leads to the North East</desc>
+      <exits ne='202' up='200' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='267'>
+      <name>Dirt Path</name>
+      <desc>To follow this path u must climb over fallen trees an walk around huge holes in the path.</desc>
+      <desc>Path goes NorthWest as well as SouthEast</desc>
+      <exits se='332' nw='202' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='269'>
+      <name>Nuthouse Management Security an Reception </name>
+      <desc>As you enter you feel something comeover you as if you are being scaned or xrayed. Intercom &quot;Clear you may now enter&quot;. North East leads into the building South West leads back towards the fork in the road.</desc>
+      <exits ne='206' sw='332' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='322'>
+      <name>FunnyFarm Enterance</name>
+      <desc>There is a huge sign beside the laneway. &quot;Welcome to Funny Farm. Please dont pickup hitchhikers.&quot;</desc>
+      <desc>To the south you see a huge building that looks like an old hospital.</desc>
+      <desc>At the end of the laneway to the north is a path.</desc>
+      <exits n='258' s='386' no-exit='noexit.enterance.1'/>
+   </location>
+
+   <location num='332'>
+      <name>Fork In the Road</name>
+      <desc>There is a sign post here that reads.</desc>
+      <desc>Nuthouse Management Offices to the North East.</desc>
+      <desc>Shuttle Pad to the South</desc>
+      <desc>Thank You Come again.</desc>
+      <desc>You also notice a dirt path that leads off to the North West that has no sign, an does not look like its been used recently with the amount of fallen trees across the path.</desc>
+      <exits ne='269' s='396' nw='267' no-exit='noexit.path.1'/>
+   </location>
+
+   <location num='334' flags='b'>
+      <name>Doctor Nuts Office</name>
+      <desc>On the wall there are lots an lots of certificates, but no mater how close u get to them you cant read the</desc>
+      <desc>blurred writing. In the Middle of the room is a huge oak desk with Dr. Nut&apos;s huge leather chair behind, an two</desc>
+      <desc>smaller chairs sitting in front of his desk. Off to the side is his examinatin table,with the white paper cloth covering</desc>
+      <desc>most of the table.</desc>
+      <desc>Exit is South West.</desc>
+      <exits sw='397' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='385'>
+      <name>Waiting Room</name>
+      <desc>Just a room lined with dust covered chairs. The tables in the corners have what looks like magazinzes an books.</desc>
+      <desc>Everything in room is just covered with dust.</desc>
+      <desc>Reception is to the East.</desc>
+      <exits e='386' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='386'>
+      <name>Security and Reception</name>
+      <desc>There is a sign on the door covered in dust. After you wipe it off you can read the words</desc>
+      <desc>&quot;Security/Reception all visitors must sign the visitor book an report to reception&quot;</desc>
+      <desc>There are doors to the east an west an a hallway that is to the south.</desc>
+      <exits n='322' e='387' s='450' w='385' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='387'>
+      <name>Managers Office</name>
+      <desc>You have just entered an old office, with a desk an shelves except for the dust things are neatly kept.</desc>
+      <desc>Seems like no one has used this office for some time now, but looks like when they left they left very</desc>
+      <desc>quickly seeing that there are pictures an certificates on the walls.</desc>
+      <desc>Reception is West.</desc>
+      <exits w='386' out='396' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='395' flags='e'>
+      <name>The Nutty Stock Exchange</name>
+      <desc>This room is a mess, thre are pieces of paper thrown everywhere from Traders an Financiers trying</desc>
+      <desc>to figure out Nuts Futures. There is a digital sign with words scrolling across.</desc>
+      <desc>&quot;Exchange is open for buying an selling. Futures come an go. Factory Owners becareful, things disappear&quot;</desc>
+      <desc>There is a huge display on the north wall with the stock prices continously scrolling.</desc>
+      <desc>Shuttle Pad is East</desc>
+      <exits e='396' no-exit='noexit.exchange.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Shuttle Pad</name>
+      <desc>As you enter the Shuttle area.  You hear a voice&quot;Welcome to Nuthouse Shuttle Pad.  If you are a Manufacturer or Industrialist, please contact Nut regarding safe places for Factories to be built, Factories on Nuthouse have been know to disappear an never to be seen again if built in wrong areas. Please enjoy your stay.</desc>
+      <desc>Areas of Interest.</desc>
+      <desc>Exchange is to the West.</desc>
+      <desc>S.O.S. Bar an Grill to the South.</desc>
+      <desc>Hospital is to the East.</desc>
+      <desc>Ship sales an sevice on Shuttle Pad.</desc>
+      <desc>The path to the north leads to exploration of planet Nuthouse.</desc>
+      <exits n='332' e='397' s='460' w='395' down='652' in='460' no-exit='noexit.spad.2'/>
+   </location>
+
+   <location num='397'>
+      <name>Nuthouse Walkin Clinic Reception</name>
+      <desc>You have just entered the Nuthouse Walkin Clinic. The office is fully automated, there is a droid sitting behind the main desk. The Droid looks up an says, &quot;Welcome to Nuthouse Clinic, do you have coverage or are you paying cash?&quot;. Before asking for your answer the droid says,&quot;Dr. Nut is out playing golf. You can enter the x-scan room an we will analyse your problem, please put on this paper gown.&quot; The droid hands you a little paper envelope that you unfold into a little gown ,just basically big enough to cover your main areas.&quot;You can change in there as it points to the examination room to the east.&quot;</desc>
+      <desc>Examination Room is EAST</desc>
+      <desc>X-Scan Room is South East</desc>
+      <desc>Dr. Nut&apos;s Office is North East</desc>
+      <desc>Shuttle Pad is West</desc>
+      <exits ne='334' e='398' se='462' w='396' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='398' flags='hi'>
+      <name>Examination Room</name>
+      <desc>In this room there is only a table in the corner with a keyboard an monitor on it.</desc>
+      <desc>A stainless steel table is against the east wall with an air conditioning vent directly overhead</desc>
+      <desc>(Always wonder why the did that) A small table of utensils an other objects on a table with wheels</desc>
+      <desc>sitting at the head of the bigger table. With a sign over head. Dr. Nut is always willing to take a look.</desc>
+      <desc>Reception is West</desc>
+      <exits w='397' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='449' flags='b'>
+      <name>Cafeteria</name>
+      <desc>Rows an rows of tables an chairs, very clean an orderly. There is a stack of trays beside a long rail that heads</desc>
+      <desc>towards the open window of the kitche. There is a cleaning droid scurring around the room sweeping the floor</desc>
+      <desc>and wiping tables. You hear it muttering to itself, surprise inspection... surprise inspection.. gotta clean .. gotta</desc>
+      <desc>clean.. The room looks like you could order food an have a seat.</desc>
+      <desc>Door to Hallway is to the East.</desc>
+      <exits e='450' no-exit='noexit.cafeteria.1'/>
+   </location>
+
+   <location num='450'>
+      <name>Hallway</name>
+      <desc>Hallway runs North an South.</desc>
+      <desc>Doors to the East an West.</desc>
+      <exits n='386' e='451' s='514' w='449' no-exit='noexit.hallway.1'/>
+   </location>
+
+   <location num='451'>
+      <name>Work Room</name>
+      <desc>Looks like a telemarketing room, there are cubicles that are everywhere that have computer terminal</desc>
+      <desc>an telephones with headsets everywhwere. There is a huge computer terminal on the wall with</desc>
+      <desc>DO NOT CALL written above the scree.</desc>
+      <desc>Door to Hallway is to the West.</desc>
+      <exits w='450' no-exit='noexit.workroom.1'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>South of Shuttle Pad Bar and Grill</name>
+      <desc>As you enter, you feel welcome. There are plenty of tables around the outside of the room.</desc>
+      <desc>There are a few pool tables, some dart boards, but as you get closer to these you realize</desc>
+      <desc>they are actual holograms of the items that can be played. There is along U shaped bar</desc>
+      <desc>with bowls of assorted nuts, along with bottles of chocolate sauce. There is a huge dance</desc>
+      <desc>floor that is to the right of the bar, that has a DJ on at nite, with a digital music machine</desc>
+      <desc>during the day. Behind the robotic bartender is a door marked Private Keep Out.</desc>
+      <desc>Exit to Suttle Pad is NORTH</desc>
+      <exits n='396' s='524' no-exit='noexit.sos.1'/>
+   </location>
+
+   <location num='462'>
+      <name>X-Scan Room</name>
+      <desc>As you walkin the door behind you automatically closes, the lights dim. You hear a voice &quot;Please take</desc>
+      <desc>deep breath an hold for 10 seconds.&quot;. As you follow the instructions you feel weird as if something is</desc>
+      <desc>running over you from head to toe.&quot;Ok time is up, you may breath regularly now. Dr will look at scan</desc>
+      <desc>an contact you if there is any problems. Please pay at reception. Thank you come again&quot;</desc>
+      <desc>Reception is North West</desc>
+      <exits nw='397' no-exit='noexit.room.1'/>
+   </location>
+
+   <location num='513'>
+      <name>Male Patients Dorm</name>
+      <desc>The room is lined with beds along both walls. There is a shower room against the east wall.</desc>
+      <desc>There are pictures above alot of the beds some look are of women torn out of magazines.</desc>
+      <desc>Door to the Hallway is to the East</desc>
+      <exits e='514' no-exit='noexit.mdorm.1'/>
+   </location>
+
+   <location num='514'>
+      <name>Hallway</name>
+      <desc>Hallway runs North an South.</desc>
+      <desc>Doors to the East an West.</desc>
+      <exits n='450' e='515' s='578' w='513' no-exit='noexit.hallway.1'/>
+   </location>
+
+   <location num='515'>
+      <name>Female Patients Dorm</name>
+      <desc>The room is lined with beds along both walls. There is a shower room against the east wall.</desc>
+      <desc>There are pictures above alot of the beds some look like family pictures , others are of men</desc>
+      <desc>torn out of magazines.</desc>
+      <desc>Door to the Hallway is to the West</desc>
+      <exits w='514' no-exit='noexit.fdorm.1'/>
+   </location>
+
+   <location num='524' flags='b'>
+      <name>Backroom</name>
+      <desc>Nuts private storeroom. Has shelves an shelves of spirits an beverages, along with edible commodities for</desc>
+      <desc>anyones liking. There is a cooler against the back wall for things that have to be kept cool.  There is a card table</desc>
+      <desc>tucked away in the corner for Nuts poker games, along with an old Slot Machine that isnt pluged in.</desc>
+      <exits n='460' down='652' no-exit='noexit.sos.1'/>
+   </location>
+
+   <location num='577'>
+      <name>Infirmary</name>
+      <desc>A few hospital bed,line the outer walls with the curtains pulled back, the beds are all</desc>
+      <desc>setup with blankets an pillows.</desc>
+      <desc>Exit to hallway is East.</desc>
+      <exits e='578' no-exit='noexit.infirmary.1'/>
+   </location>
+
+   <location num='578'>
+      <name>Hallway</name>
+      <desc>Hallway runs North.</desc>
+      <desc>Doors to the East an West,and old Nurse Station to the South.</desc>
+      <exits n='514' e='579' s='642' w='577' no-exit='noexit.hallway.1'/>
+   </location>
+
+   <location num='579'>
+      <name>Padded Cell Ward</name>
+      <desc>This seems to be a place where they must have kept the patients that didnt want to follow an obey the rules.</desc>
+      <desc>Seems like a very quiet an secluded place, looks like something went on here, there is chairs, beds, tables</desc>
+      <desc>thrown everywhere. There are footsteps on the dust covered floor that leads into one of the room.</desc>
+      <exits w='578' in='580' no-exit='noexit.padded.1'/>
+   </location>
+
+   <location num='580'>
+      <name>Open Cell</name>
+      <desc>As you walk into the open cell, you notice alot of graffati covering the walls. The one thing that catches</desc>
+      <desc>your eyes is in the far corner which say,&quot;I&apos;m not a doctor but I&apos;ll look anyway.signed Nut&apos;.</desc>
+      <desc>The exit out is to the West.</desc>
+      <exits w='579' out='579' no-exit='noexit.cell.1'/>
+   </location>
+
+   <location num='642'>
+      <name>Nurses Station</name>
+      <desc>The nurses station has cabinets full of rubber gloves an medical supplies. There are monitors along the south</desc>
+      <desc>wall that are  turned on an you can see every hall an room in the place as if someone has</desc>
+      <desc>been watching you,</desc>
+      <exits n='578' no-exit='noexit.station.1'/>
+   </location>
+
+   <location num='652' flags='bt'>
+      <name>Hide-away</name>
+      <desc>The room is very dary, only red lights light up the room.  You see alot of recliners around the room facing a huge screen that is playing old movies from earth. Today looks like Star Wars II is playing.</desc>
+      <desc>Have a seat relax, order some food or drink.  What ever it is that brought you to Nuthouse can wait.</desc>
+      <desc>Have a nice day.</desc>
+      <exits up='396' no-exit='noexit.room.1'/>
+   </location>
+
+</fed2-map>
+

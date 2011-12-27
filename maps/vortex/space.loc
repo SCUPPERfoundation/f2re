@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<fed2-map title='Vortex Space' version='13' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>Object Holding Pattern</name>
+      <desc>You can leave by going Out.</desc>
+      <exits out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='66' flags='sp'>
+      <name>Vortex Micro-Relay (TM)</name>
+      <desc>You are in orbit of the Vortex Micro-Relay (TM).</desc>
+      <desc>This Relay is designed to send those who are lazy, or scared of navigating a cluster of active singularities to their preferred destination.</desc>
+      <exits n='135' e='784' s='657' nw='460' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='135' flags='s'>
+      <name>The Pirate Ship Rayler</name>
+      <desc>You are inside of the pirate ship Rayler, dead husks of various ships reside in here, fortunately, it looks like the exit doors are malfunctioning, and you can go Out at any time through the gaping hole.</desc>
+      <desc>The Rayler has also swallowed a Micro-Relay, which lies above you.</desc>
+      <exits up='66' out='593' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to the South.</desc>
+      <exits n='908' ne='909' e='397' se='461' s='460' sw='467' w='403' nw='915' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to the Southwest.</desc>
+      <exits n='909' ne='910' e='398' se='462' s='461' sw='460' w='396' nw='908' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='910' ne='911' e='399' se='463' s='462' sw='461' w='397' nw='909' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='399' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='911' ne='912' e='400' se='464' s='463' sw='462' w='398' nw='910' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='400' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='912' ne='913' e='401' se='465' s='464' sw='463' w='399' nw='911' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='401' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='913' ne='914' e='402' se='466' s='465' sw='464' w='400' nw='912' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='402' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='914' ne='915' e='403' se='467' s='466' sw='465' w='401' nw='913' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='403' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to your Southeast.</desc>
+      <exits n='915' ne='908' e='396' se='460' s='467' sw='466' w='402' nw='914' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Vortex Relay</name>
+      <desc>Sensors detect a massive gravitational mass to the Southeast.  Closer inspection reveals it to be a dense cluster of countless black holes.</desc>
+      <desc>A sign floating in space informs you that both of the systems planets are deep inside the cluster of black holes.  Such an inviting place to be!</desc>
+      <desc>The Vortex Micro-Relay (TM) is above you.</desc>
+      <exits n='396' ne='397' e='461' se='525' s='524' sw='531' w='467' nw='403' up='66' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to the West.</desc>
+      <exits n='397' ne='398' e='462' se='526' s='525' sw='524' w='460' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='398' ne='399' e='463' se='527' s='526' sw='525' w='461' nw='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='463' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='399' ne='400' e='464' se='528' s='527' sw='526' w='462' nw='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='464' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='400' ne='401' e='465' se='529' s='528' sw='527' w='463' nw='399' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='465' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is South of you.</desc>
+      <exits n='401' ne='402' e='466' se='530' s='529' sw='528' w='464' nw='400' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='466' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is Southwest of you.</desc>
+      <exits n='402' ne='403' e='467' se='531' s='530' sw='529' w='465' nw='401' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='467' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to your East.</desc>
+      <exits n='403' ne='396' e='460' se='524' s='531' sw='530' w='466' nw='402' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the relay is North of you, the Pharynx cluster lies to the East, and there appears to be a safe passage into the heart of the cluster a bit further East of you.</desc>
+      <exits n='460' ne='461' e='525' se='589' s='588' sw='595' w='531' nw='467' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the northwest edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to your Northwest, and there appears to be a safe passage into the heart of the cluster a bit further South of you.</desc>
+      <exits n='461' ne='462' e='526' s='589' sw='588' w='524' nw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the northwest edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The Cluster itself lies to the south of you.</desc>
+      <desc>The relay is to the West.</desc>
+      <exits n='462' ne='463' e='527' sw='589' w='525' nw='461' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='527' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are presently orbiting the Pharynx cluster, which lies to the south.</desc>
+      <desc>The relay is Westward.</desc>
+      <exits n='463' ne='464' e='528' w='526' nw='462' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='528' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are presently orbiting the Pharynx cluster, which lies to the south.</desc>
+      <desc>The relay is towards the West.  Sensors detect a safe entrance into the Custer to the Southeast.</desc>
+      <exits n='464' ne='465' e='529' se='593' w='527' nw='463' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='529' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the south of you.</desc>
+      <exits n='465' ne='466' e='530' se='594' w='528' nw='464' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='530' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <exits n='466' ne='467' e='531' se='595' s='594' w='529' nw='465' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='531' flags='s'>
+      <name>Empty Space</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is to your Northeast.</desc>
+      <exits n='467' ne='460' e='524' se='588' s='595' sw='594' w='530' nw='466' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='588' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the relay is North of you, and the Pharynx cluster lies to the East.</desc>
+      <exits n='524' ne='525' e='589' se='653' s='652' sw='659' w='595' nw='531' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are presently orbiting the Pharynx cluster, which lies to your east.</desc>
+      <desc>Sensors detect a safe entrance into the cluster to your east - or at least as safe as it ever is to enter a cluster of tightly packed black holes.</desc>
+      <desc>The relay is North-Northwest of your current position.</desc>
+      <exits n='525' ne='526' e='590' s='653' sw='652' w='588' nw='524' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='590' flags='s'>
+      <name>Entrance of the Cluster</name>
+      <desc>You are inside the cusp of the Pharynx Cluster.  The gravitational forces around you have managed to come to a perfect balance here, the tidal forces acting against each other and, just barely, keeping your ship from being sucked into one of the many singularities.</desc>
+      <desc>Sensors tell you that you that you can exit the cluster by going West, or go further in to your Southwest.</desc>
+      <exits se='655' w='589' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='593' flags='s'>
+      <name>Dead End</name>
+      <desc>You are in a small pocked of the Pharynx Cluster where the black holes balance each other out, preventing you from being sucked into one of the many singularities.</desc>
+      <desc>You can go back outside the Cluster by heading Northwest.</desc>
+      <exits nw='528' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='594' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the northeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the west of you.</desc>
+      <exits n='530' ne='531' e='595' se='659' s='658' nw='529' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='595' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the West.</desc>
+      <exits n='531' ne='524' e='588' se='652' s='659' sw='658' w='594' nw='530' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='652' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the East.</desc>
+      <exits n='588' ne='589' e='653' se='717' s='716' sw='723' w='659' nw='595' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='653' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the west edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>Sensors inform you that the relay is North-Northwest of your present location, and there appears to be a safe passage into the heart of the cluster a bit further North of you.</desc>
+      <exits n='589' s='717' sw='716' w='652' nw='588' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='655' flags='s'>
+      <name>Inside the Cluster</name>
+      <desc>You are just inside the outer edge of the Pharynx cluster.</desc>
+      <desc>Sensors detect that you can go Northwest and East safely.</desc>
+      <exits e='656' nw='590' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='656' flags='s'>
+      <name>Asteroid Leucothea</name>
+      <desc>You are on the west side of a large chunk of rock that is blocking your path inward.</desc>
+      <desc>There appears to be a large cavern In the asteroid that resembles a docking bay.</desc>
+      <desc>You can go either Up or Down to go around it.  Sensors detect a clear path through the gravity well to the West.</desc>
+      <exits w='655' up='720' down='720' in='657' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='657' flags='s'>
+      <name>Inside the Asteroid Leucothea</name>
+      <desc>You are inside the docking bay of Leucothea.  Shuttles wait to take you inside the asteroid.</desc>
+      <desc>You can access the Micro-Relay (TM) by going Up, or go back Out to the system.</desc>
+      <exits up='66' out='656' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='658' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the east edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the west of you.</desc>
+      <exits n='594' ne='595' e='659' se='723' s='722' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='659' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the West.</desc>
+      <exits n='595' ne='588' e='652' se='716' s='723' sw='722' w='658' nw='594' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='716' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the East.</desc>
+      <exits n='652' ne='653' e='717' se='781' s='780' sw='787' w='723' nw='659' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='717' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the west edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the east. The relay is Northward.</desc>
+      <exits n='653' s='781' sw='780' w='716' nw='652' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='720' flags='s'>
+      <name>Asteroid Leucothea</name>
+      <desc>You are on the east side of a large asteroid, known as Leucothea.</desc>
+      <desc>You can go either up or down to go around it.  Sensors detect a clear path towards the south-east.</desc>
+      <exits se='785' up='656' down='656' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='722' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the east edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies westward.</desc>
+      <exits n='658' ne='659' e='723' se='787' s='786' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='723' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the West.</desc>
+      <exits n='659' ne='652' e='716' se='780' s='787' sw='786' w='722' nw='658' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='780' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the East.</desc>
+      <exits n='716' ne='717' e='781' se='845' s='844' sw='851' w='787' nw='723' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='781' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the southwest edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the west, while the  system relay is North of you.</desc>
+      <exits n='717' se='846' s='845' sw='844' w='780' nw='716' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='784' flags='sp'>
+      <name>Outside Pharynx Station</name>
+      <desc>In front of you is the massive station named after the cluster of singularities that it resides in.</desc>
+      <desc>Your comm unit signals a message from the control tower, informing you that you are cleared to Board your Shuttle to proceed into the station.</desc>
+      <desc>You can get to the Vortex Micro-Relay (TM) by going Up.</desc>
+      <exits e='785' up='66' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='785' flags='s'>
+      <name>Interior of the Pharynx Cluster</name>
+      <desc>You are deep inside the Pharynx Cluster.  Here, a large eddy has formed, creating a safe pocket inside the roiling mass of singularities.  To the West, you can see Pharynx Station, and sensors detect a safe path through the mass to the Northwest.</desc>
+      <exits w='784' nw='720' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='786' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the southeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the west of you.</desc>
+      <exits n='722' ne='723' e='787' se='851' s='850' sw='849' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='787' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the West.</desc>
+      <exits n='723' ne='716' e='780' se='844' s='851' sw='850' w='786' nw='722' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='844' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the East.</desc>
+      <exits n='780' ne='781' e='845' se='909' s='908' sw='915' w='851' nw='787' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='845' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the northwest edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <exits n='781' e='846' se='910' s='909' sw='908' w='844' nw='780' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='846' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the southwest edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies northward.</desc>
+      <exits e='847' se='911' s='910' sw='909' w='845' nw='781' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='847' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the south edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies northward of you.</desc>
+      <exits e='848' se='912' s='911' sw='910' w='846' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='848' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the south edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies to the north of you.</desc>
+      <exits e='849' se='913' s='912' sw='911' w='847' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='849' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the southeast edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <desc>The cluster itself lies northward.</desc>
+      <exits ne='786' e='850' se='914' s='913' sw='912' w='848' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='850' flags='s'>
+      <name>Edge of the Pharynx Cluster</name>
+      <desc>You are at the northwest edge of the Pharynx cluster, a gaping maw of countless black holes.</desc>
+      <exits n='786' ne='787' e='851' se='915' s='914' sw='913' w='849' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='851' flags='s'>
+      <name>Empty Space</name>
+      <desc>There doesn&apos;t appear to be anything of note in this area.</desc>
+      <desc>Sensors tell you that the Pharynx cluster lies to the West.</desc>
+      <exits n='787' ne='780' e='844' se='908' s='915' sw='914' w='850' nw='786' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='908' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is Northeast of you.</desc>
+      <exits n='844' ne='845' e='909' se='397' s='396' sw='403' w='915' nw='851' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='909' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is North of you.</desc>
+      <exits n='845' ne='846' e='910' se='398' s='397' sw='396' w='908' nw='844' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='910' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is North of you.</desc>
+      <exits n='846' ne='847' e='911' se='399' s='398' sw='397' w='909' nw='845' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='911' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is North of you.</desc>
+      <exits n='847' ne='848' e='912' se='400' s='399' sw='398' w='910' nw='846' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='912' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is North of you.</desc>
+      <exits n='848' ne='849' e='913' se='401' s='400' sw='399' w='911' nw='847' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='913' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is North of you.</desc>
+      <exits n='849' ne='850' e='914' se='402' s='401' sw='400' w='912' nw='848' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='914' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is North of you.</desc>
+      <exits n='850' ne='851' e='915' se='403' s='402' sw='401' w='913' nw='849' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='915' flags='s'>
+      <name>Empty Space</name>
+      <desc>Sensors detect nothing of note in this sector.</desc>
+      <desc>The Pharynx cluster is Northwest of you.</desc>
+      <exits n='851' ne='844' e='908' se='396' s='403' sw='402' w='914' nw='850' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

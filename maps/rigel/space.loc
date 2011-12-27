@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<fed2-map title='Rigel Space' version='4' editor='standard'>
+
+   <location num='457' flags='sl'>
+      <name>Hyperspace Link</name>
+      <desc>   The gravitational stresses associated with the operation of the link are making your instruments give strange anomalous readings. You would be advised to be about your business as rapidly as possible, since too long an exposure will mean that the instruments will have to be re-callibrated - a slow and expensive job.</desc>
+      <desc>   The exit lane to Rigel 4 is to the east.</desc>
+      <exits e='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='s'>
+      <name>Space</name>
+      <desc>   The hyperspace link is to the west, and navigation bouys indicate that you need to go southeast to Rigel 4.</desc>
+      <exits se='523' w='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523' flags='s'>
+      <name>Space</name>
+      <desc>   Your instruments show that Rigel 4 lies to the southeast of your present position, while the hyperspace beacon seem to be to the northwest.</desc>
+      <exits se='588' nw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='588' flags='s'>
+      <name>Rigel 4 orbit</name>
+      <desc>   The planet passes beneath you as you orbit. The color is predominantly green, but there are a number of vivid streaks of yellow around the equatorial regions.</desc>
+      <desc>   The hyperspace link is somewhat northwest of your present position. You can see Rigel itself shining brightly several sectors away to the south.</desc>
+      <exits s='652' nw='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='652' flags='s'>
+      <name>Space</name>
+      <desc>   Your ship has flown very close to Rigel, the star that gives this system its name, which burns brightly to the south. If you venture any further south, your ship won&apos;t be able to take the heat. The safe route away is north, back towards the habitable planet.</desc>
+      <exits n='588' s='716' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='716' flags='s'>
+      <name>Dummy location</name>
+      <desc>Player almost flies into sun but is rescued at last minute. Hoorah!</desc>
+      <desc>You should not be able to see this message. If you do, please mail feedback@ibgames.net and report it.</desc>
+      <exits n='652'/>
+      <events enter='moves.sun.1'/>
+   </location>
+
+</fed2-map>

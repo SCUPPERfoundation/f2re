@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<fed2-map title='Zion' version='1.00' editor='standard' from='328' to='Chicago.Chicago Space.398'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='200' flags='yr'>
+      <name>Zion Ship Sales and Repair</name>
+      <desc>Expert craftsman await your needs.  Be it building a sporty new Harrier or a classic Imperial.  Also, repairs are made in short order. Exits to the outer pasageways are southeast and southwest and the landing pad is back toward the south.</desc>
+      <exits se='265' s='264' sw='263' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263'>
+      <name>Long Passage</name>
+      <desc>You are on the outer edge of the habitable areas of the planet.  Thoe pasageway runs northeast to southwest.</desc>
+      <exits ne='200' sw='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264'>
+      <name>Northern Passage</name>
+      <desc>This passage runs to the north and south.  South is the landing bay while north is the shipyard</desc>
+      <exits n='200' s='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265'>
+      <name>Long Passage</name>
+      <desc>You are on the outer edge of the habitable areas of the planet.  The passageways runs southeast to northwest.</desc>
+      <exits se='330' nw='200' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='b'>
+      <name>Tavern</name>
+      <desc>For all the space wanders, a place to refresh and relax. Exits to the outer pasageways are northeast and southeast and the landing back is back toward the east.</desc>
+      <exits ne='263' e='327' se='391' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='327'>
+      <name>Western Passage</name>
+      <desc>This corridor runs west to the Bar and east to the Landing Pad</desc>
+      <exits e='328' w='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328'>
+      <name>Zion Landing Pad</name>
+      <desc>This is the Zion Landing Pad.  The habitable areas of this moon are laid out in a circular fashion around the landing pad.  Thus, there are exits in the cardinal directions.  The exchange for Mimas is located to the east.</desc>
+      <exits n='264' e='329' s='392' w='327' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329' flags='e'>
+      <name>Zion Exchange</name>
+      <desc>Traders and Merchants are all about you.  This is one of the busier spots in this solar system.  A bar is to the east and the landing pad is west of here.</desc>
+      <exits e='330' w='328' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330' flags='b'>
+      <name>Serenity Bar</name>
+      <desc>Here you can look out on the vistas while soaking up on of the local drinks. Exits to the outer pasageways are northwest and southwest and the exchange is to the west.</desc>
+      <exits sw='393' w='329' nw='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391'>
+      <name>Long Passage</name>
+      <desc>You are on the outer edge of the habitable areas of the planet.  The passageway runs northwest to southeast.</desc>
+      <exits se='456' nw='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392'>
+      <name>Southern Passage</name>
+      <desc>This passage runs to the north and south.  South is the infirmary while north is the landing pad.</desc>
+      <exits n='328' s='456' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Long Passage</name>
+      <desc>You are on the outer edge of the habitable areas of the planet.  The passageway runs sourthwest to northeast.</desc>
+      <exits ne='330' sw='456' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='456' flags='hi'>
+      <name>Infirmary</name>
+      <desc>If you happen to be injured on Zion, you can get help here.  Exits to the outer pasageways are northeast and northwest and the landing pad is back toward the north.</desc>
+      <exits n='392' ne='393' nw='391' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<fed2-map title='Jennabug' version='8' editor='standard' from='267' to='Starlight.Starlight Space.461'>
+
+   <location num='143' flags='b'>
+      <name>Office of Jeffro Overlord of Jenna 5 and Lord of Jennabug</name>
+      <desc>You are in the office of the man himself. There is a bar on the western wall with a waiter droid waiting to serve your every need. There are clear balloon like couches that seem to just float in mid air, and a solid marble desk, in front of them. A door to the South leads the way OUT.</desc>
+      <exits s='207' in='396' out='267'/>
+   </location>
+
+   <location num='144' flags='b'>
+      <name>Office of Scottric Overlord of Quaoar</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are golden balloon like couches that seem to just float in mid air, and a solid Gold desk imported from Earth, in front of them. A door to the South leads the way OUT.</desc>
+      <exits s='208' in='396' out='267'/>
+   </location>
+
+   <location num='145' flags='b'>
+      <name>Office of Clyde</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are silver balloon like couches that seem to just float in mid air, and a solid silver desk imported from Earth, in front of them. A picture of Scottric and Von sits on his desk. A door to the SOUTH leads the way OUT.</desc>
+      <exits s='209' in='396' out='267'/>
+   </location>
+
+   <location num='206'>
+      <name>Hallway</name>
+      <desc>You are on the west end of an east west hallway. The hall way walls and floor are a dull grey. You may go back DOWN to the exchange or continue to the EAST.</desc>
+      <exits e='207' down='396'/>
+   </location>
+
+   <location num='207'>
+      <name>Hallway</name>
+      <desc>You are in the middle of an east to west hallway there are doors to the NORTH and SOUTH.</desc>
+      <exits n='143' e='208' s='271' w='206'/>
+   </location>
+
+   <location num='208'>
+      <name>Hallway</name>
+      <desc>You are in the middle of an east to west hallway there are doors to the NORTH and SOUTH.</desc>
+      <exits n='144' e='209' s='272' w='207'/>
+   </location>
+
+   <location num='209'>
+      <name>Hallway</name>
+      <desc>You are at the eastern end of an east west hallway there are doors to the NORTH and SOUTH.</desc>
+      <exits n='145' s='273' w='208'/>
+   </location>
+
+   <location num='267'>
+      <name>Docking bay</name>
+      <desc>You are in a Hanger that is big as several thousands of feet. At each end are openings where you can see into outer space and on the other end you can see the planet Jenna 5. There are force fields on each end keeping the atmosphere from flowing into space. The main part of the Habitat lies to your South. An open hanger door to your SOUTHWEST leads to the ship yard.</desc>
+      <exits s='331' sw='330'/>
+   </location>
+
+   <location num='271' flags='b'>
+      <name>Office of Von Overlord of Augusta</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are white balloon like couches that seem to just float in mid air, and a solid pearl desk imported from Earth, in front of them. A door to the North leads the way OUT.</desc>
+      <exits n='207' in='396' out='267'/>
+   </location>
+
+   <location num='272' flags='b'>
+      <name>Office of Anna Overlord of Zendra</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are red balloon like couches that seem to just float in mid air, and a solid ruby desk imported from Earth, in front of them. A picture of Von sits on her desk. A door to the North leads the way OUT.</desc>
+      <exits n='208' in='396' out='267'/>
+   </location>
+
+   <location num='273' flags='b'>
+      <name>Office of Zeek</name>
+      <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are Opal balloon like couches that seem to just float in mid air, and a solid Opal desk, in front of them. A door to the NORTH leads the way OUT.</desc>
+      <exits n='209' in='396' out='267'/>
+   </location>
+
+   <location num='330' flags='yr'>
+      <name>Ship Yard</name>
+      <desc>This hanger sits just off the main docking hanger and you see ships of all types and shapes. There are spare parts every where and an automated droid stand in the corner awaiting your order. A door in the SOUTHEAST wall leads back to the main lobby and an open hanger door to the NORTHEAST leads to the docking bay.</desc>
+      <exits ne='267' se='395'/>
+   </location>
+
+   <location num='331'>
+      <name>Main hatch </name>
+      <desc>You have passed through the Main hatch and now are standing just inside the hatch. UV rays and anti-bacteria mist is sprayed onto you to keep unwanted bacteria away. You can proceed SOUTH into the Habitat or return to the docking bay to through the main hatch NORTH.</desc>
+      <exits n='267' s='395'/>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Hospital</name>
+      <desc>Here there are clone machines in each corner. And an operating table in the center. A cleaning droid works spraying anti bacteria all over, and a nurse droids stands ready for any miss haps. A door to the SOUTHWEST leads back to the main lobby.</desc>
+      <exits sw='395'/>
+   </location>
+
+   <location num='394' flags='b'>
+      <name>Jennabug veggies and sprits</name>
+      <desc>This fast food store has a window viewing Jenna 5 surface its clouds against the blue oceans are breath taking. There are tables in the center that seems to just float along with chairs made of bubbles. A waiter droids awaits your every need. A door in the EAST wall leads back to the main lobby.</desc>
+      <exits e='395'/>
+   </location>
+
+   <location num='395'>
+      <name>Main Lobby</name>
+      <desc>You are in wonder at the vast complex. A vast dome rises thousands of feet. It appears to be made of triangular plexy glass supported buy an outer force field.    A sign in front of you reads Exchange - EAST. Jennabug Veggies and spirits-West. Ship Yard - Northwest. Hospital - Northeast.</desc>
+      <exits n='331' ne='332' e='396' w='394' nw='330'/>
+   </location>
+
+   <location num='396' flags='eb'>
+      <name>Jennabug Exchange</name>
+      <desc>Here you see monitors all over the walls and traders studying them hard trying to figure out which futures are best. There is ticker tape all over the floor and a cleaner droid working steady. A native woman from the planet Jenna 5 stands ready to take any orders you may need. A door in the WEST wall leads back to the main lobby and a sign on a door to the SOUTH reads traders lobby.</desc>
+      <exits s='460' w='395' up='206'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Traders Lobby</name>
+      <desc>Here you may check your futures and relax on one of the floating couches. A bar on the east wall serves all your needs. A door on the NORTH wall leads back to the exchange.</desc>
+      <exits n='396'/>
+   </location>
+
+</fed2-map>

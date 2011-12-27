@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Ohio Space' version='12' editor='standard'>
+
+   <location num='523' flags='slp'>
+      <name>Orbit and Interstellar Link</name>
+      <desc>Your sensors are picking up signals from what seems to be an ancient Earth VOR (Voice Omni Radio) and ILS Instrument Landing System. You can&apos;t imagine that anyone would be using such archaic navigational systems and dismiss the signals as the reflection of a late 20th century Earth signal off a far distant planet.  Just then, your comm unit comes to life: &apos;Hey, you coming down here or not?  I&apos;m holding a docking space for you.  So use it or get out of here. I got other guys needin&apos; a place to park!&apos;</desc>
+   </location>
+
+</fed2-map>

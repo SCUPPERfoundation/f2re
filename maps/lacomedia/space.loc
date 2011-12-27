@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<fed2-map title='La Comedia Space' version='17' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>Storage Closet</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='265' flags='s'>
+      <name>Purgatorio Orbit</name>
+      <desc>The ship&apos;s view screen is filled with the image of a water covered world with one single island.  Upon the island is built a single tower that rises out of the water and stretches towards the heavens.  Your ship receives a tight beam transmission from Purgatorio Ground Control, &quot;Greetings Traveler.  Purgatorio is not yet opened, but please visit at a later date.&quot;</desc>
+      <desc>     Your sensors detect another planet directly below.</desc>
+      <exits s='329' down='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='329' flags='sl'>
+      <name>La Comedia Link</name>
+      <desc>You have entered the passage to the afterlife.  The swirls of gaseous nebulae abound and provide a sureal view of the system.  The Comedia system is so named because it mirrors the divine comedy of life and the rewards and punishments that await departed souls.  Through the ship&apos;s view screen, beyond the swirling gasses, a trio of planets, in a horizontal line can be seen to the north.  The center planet appears to be covered in water.  Beneath it is a fiery, dark world, it&apos;s smoldering embers visible even from this distance.  The upper planet is shrouded in a soft mist, and it&apos;s green landscape peers through the mist which creates the appearance of a halo.</desc>
+      <exits n='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526' flags='s'>
+      <name>Inferno Orbit</name>
+      <desc>The dark fiery world of Inferno fills the ship&apos;s view screen.  It&apos;s dark sorrowful state is a testament to the dark sorrows experienced by it&apos;s inhabitants.</desc>
+      <exits up='265' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

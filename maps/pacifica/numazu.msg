@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<para-list version='2' editor='standard'>
+
+   <category name='moves'>
+
+      <section name='noexit'>
+
+         <para number='1' comment='ground default'>
+         With all respect, you can not go that way.
+         </para>
+
+      </section>
+
+   </category>
+
+</para-list>

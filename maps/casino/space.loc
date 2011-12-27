@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<fed2-map title='Casino Space' version='3' editor='standard'>
+
+   <location num='592' flags='sl'>
+      <name>Casino System</name>
+      <desc>Welcome to the Casino System! Prepare for a smooth ride down to the planet surface. You are currently in orbit above the planet Vagus. Board your shuttle once you are ready. Welcome to Fabulous Los Vagus!</desc>
+      <exits no-exit='space.noexit.1'/>
+   </location>
+
+</fed2-map>

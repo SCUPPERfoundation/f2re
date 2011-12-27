@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<fed2-map title='Centauri Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>Closet</name>
+      <desc>Empty by choice</desc>
+   </location>
+
+   <location num='264' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space here.</desc>
+      <exits e='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='265' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space here.</desc>
+      <exits se='330' w='264' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='267' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space here.</desc>
+      <exits e='268' sw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space here.</desc>
+      <exits w='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330' flags='slp'>
+      <name>Centauri Link</name>
+      <desc>This is the link between the planets of Centauri and the rest of space.  The planet P2X-787can be found to the southwest.</desc>
+      <exits ne='267' se='395' sw='393' nw='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='392' flags='s'>
+      <name>P2X-787 Orbit</name>
+      <desc>The planet P2X-787, capital planet of the Centauri system, is below you.</desc>
+      <exits e='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393' flags='s'>
+      <name>Space</name>
+      <desc>Nothing but space here.  The link can be found to the northeast and the planet P2X-787to the west.</desc>
+      <exits ne='330' w='392' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space here.</desc>
+      <exits e='396' nw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Space</name>
+      <desc>Just empty space here.</desc>
+      <exits w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

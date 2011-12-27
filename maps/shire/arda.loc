@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<fed2-map title='Arda' version='1.00' editor='standard' from='589' to='Shire.Shire Space.263'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>Empty closet</desc>
+   </location>
+
+   <location num='75'>
+      <name>Bag End Lane</name>
+      <desc>The homes (well hills anyway) are further apart here and appear to be higher than the ones you have seen so far.  The road continues to run to the southwest and back to the east.</desc>
+      <exits e='76' sw='138' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='76'>
+      <name>Bag End Lane</name>
+      <desc>All about you are small hills where hobbits and hobbit children are working in the yards and gardens.  The road continues to run to the west and back to the southeast.</desc>
+      <exits e='77' w='75' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='77'>
+      <name>Bag End Lane</name>
+      <desc>All about you are small hills where hobbits and hobbit children are working in the yards and gardens.  The road continues to run to the west and back to the east.</desc>
+      <exits e='78' w='76' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='78'>
+      <name>Bag End Lane</name>
+      <desc>All about you are small hills where hobbits and hobbit children are working in the yards and gardens.  The road continues to run to the west and back to the southeast.</desc>
+      <exits se='143' w='77' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='138'>
+      <name>Bag End Lane</name>
+      <desc>The hills are becming much higher now.  They have the appearance of much greener grass and the flower gardens are immense!.  The road continues to run to the south and back to the northeast.</desc>
+      <exits ne='75' s='202' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='143'>
+      <name>Bag End Lane</name>
+      <desc>All about you are small hills where hobbits and hobbit children are working in the yards and gardens.  The road continues to run to the northwest and back to the south.</desc>
+      <exits s='207' nw='78' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='202'>
+      <name>Bag End Estates</name>
+      <desc>An archway marks the entrance to Bag End Estates.  The hills have become very high here and roads lead off in most directions.  You cannot traverse those roads however as there are electonic gates barring the way.  The gates themselves are to the estates of wealthy hobbits.  For instance on your left it says, &quot;Gamgee Mansion&quot; which you take to be the way to Samwise&apos;s home.  The road continues to the south and back to the north.</desc>
+      <exits n='138' s='266' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='207'>
+      <name>Bag End Lane</name>
+      <desc>All about you are small hills where hobbits and hobbit children are working in the yards and gardens.  The road continues to run to the north and back to the southwest.</desc>
+      <exits n='143' sw='270' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='266'>
+      <name>Bag End Estates</name>
+      <desc>An archway marks the entrance to Bag End Estates.  The hills have become very high here and roads lead off in most directions.  You cannot traverse those roads however as there are electonic gates barring the way.  The gates themselves are to the estates of wealthy hobbits.  For instance on your left it says, &quot;Took Nest&quot; which you take to be the way to Pippin&apos;s home.  The road continues to the south and back to the north.</desc>
+      <exits n='202' s='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268'>
+      <name>Bilbo&apos;s House</name>
+      <desc>Bilbo&apos;s not home but the construction works who are adding to the place ask you to leave.</desc>
+      <exits out='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='270'>
+      <name>Bag End Lane</name>
+      <desc>All about you are small hills where hobbits and hobbit children are working in the yards and gardens.  The road continues to run northeast to southwest.</desc>
+      <exits ne='207' sw='333' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Bag End Estates</name>
+      <desc>An archway marks the entrance to Bag End Estates.  The hills have become very high here and roads lead off in most directions.  You cannot traverse those roads however as there are electonic gates barring the way.  The gates themselves are to the estates of wealthy hobbits.  For instance the road to the southwest says, &quot;Brandybuck Plantation&quot; which you take to be the way to Meriadoc&apos;s home.  The road continues to the east and back to the north.</desc>
+      <exits n='266' e='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331'>
+      <name>End of Bag End</name>
+      <desc>You have arrived at the entrance to Bilbo&apos;s estate.  Go ahead on in and see if he&apos;s hime!</desc>
+      <exits w='330' in='268' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333'>
+      <name>Bag End</name>
+      <desc>The road to Bilbo&apos;s House is runs to the northeast while the road back to down runs to the southeast.</desc>
+      <exits ne='270' se='398' in='268' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398'>
+      <name>Residential Lane</name>
+      <desc>There is nothing remarkable about the lane which runs northwest to southeast.  You can see many low lying mounds that are certain to be hobbit homes.</desc>
+      <exits se='463' nw='333' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='401'>
+      <name>Hobbit Home</name>
+      <desc>The home is empty.</desc>
+      <exits out='465' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='404'>
+      <name>Hobbit Home</name>
+      <desc>The home is empty.</desc>
+      <exits out='467' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='463'>
+      <name>Fork in the road</name>
+      <desc>The road splits here.  To the northwest is the traditional home of Bilbo while to the east is a more residential area.</desc>
+      <exits e='464' sw='589' nw='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='464'>
+      <name>Residential Lane</name>
+      <desc>There is nothing remarkable about the lane which runs northwest to southeast.  You can see many low lying mounds that are certain to be hobbit homes.</desc>
+      <exits e='465' w='463' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='465'>
+      <name>Residential Lane</name>
+      <desc>There is nothing remarkable about the lane which runs northwest to southeast.  You can see many low lying mounds that are certain to be hobbit homes.</desc>
+      <exits e='466' w='464' in='401' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='466'>
+      <name>Residential Lane</name>
+      <desc>There is nothing remarkable about the lane which runs northwest to southeast.  You can see many low lying mounds that are certain to be hobbit homes.</desc>
+      <exits e='467' w='465' in='530' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='467'>
+      <name>Residential Lane</name>
+      <desc>There is nothing remarkable about the lane which runs northwest to southeast.  You can see many low lying mounds that are certain to be hobbit homes.</desc>
+      <exits w='466' in='404' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='y'>
+      <name>Harfoot Haulers</name>
+      <desc>This showroom features all of the latest Hobbit ships for sale.  Ideally suited for the less than full-size patrons, the hobbit ships are known to be the most reliable in the galaxy.  &quot;Always gets the job done&quot; is the motto here.  The exit is to the southeast.</desc>
+      <exits se='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='r'>
+      <name>Took&apos;s Ship Repair</name>
+      <desc>You can see Pippin in the back of the hanger talking with some of his workers.  These mechanics will fix your ship up  quickly.  The exit is to the south.</desc>
+      <exits s='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='530'>
+      <name>Hobbit Home</name>
+      <desc>The home is empty.</desc>
+      <exits out='466' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589'>
+      <name>Arda Landing Pad</name>
+      <desc>This is the main landing pad for Arda.  The hobbits (or halflings) have built up a very profitable world for themselves and many have their own private landing pads.  This one is the municipal landing pad and is used by hobbits and visitors alike.  To the northwest is a largish showroom for new spaceships.  To the north is a hanger where you you can get quick repairs.  You can follow other traders to the exchange by heading south.</desc>
+      <exits n='525' ne='463' s='653' nw='524' in='653' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='653'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  To your east you can go into a pub.  (Hobbits still love a good drink!)</desc>
+      <exits n='589' e='654' s='717' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='654' flags='b'>
+      <name>Tookbank Tavern</name>
+      <desc>You have to bend a bit to get thru the smallish door.  Inside, hobbits are milling about.  There is a great deal of laughter and chatter as well as singing coming from the corner.  Reminds you of an old time tavern back home...just smaller!  The exit out is to the west.</desc>
+      <exits w='653' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='716' flags='e'>
+      <name>The Baggins Bank and Trading Exchange</name>
+      <desc>Typical of most halfling buildings, this one is built into the side of a hill.  Unlike what you would expect, a very large chamber opens up to you.  There are hobbits milling about in front of 60 or so monitors.  They are examining the fluctuating prices of galactic commodities for trade.</desc>
+      <exits e='717' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='717'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  To your west you can go into the planet&apos;s exchange.</desc>
+      <exits n='653' s='781' w='716' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='781'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  There is really nothing remarkable about it save the rows and rows of tobacco on either side of the lane.</desc>
+      <exits n='717' s='845' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='845'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  There is really nothing remarkable about it save the rows and rows of tobacco on either side of the lane.  The hospital is to the east.</desc>
+      <exits n='781' e='846' s='909' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='846' flags='hi'>
+      <name>Scary Hospital</name>
+      <desc>If you get hurt here on Arda, the hospital will fix you up right quick.  Don&apos;t forget to see the insurance man before you leave!</desc>
+      <exits w='845' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='909'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  There is really nothing remarkable about it save the rows and rows of tobacco on either side of the lane.  Small lanes lead southwest and southeast toward what appear to be long low mounds in the distance on either side of the lane.</desc>
+      <exits n='845' se='1039' s='973' sw='1035' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='973'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  There is really nothing remarkable about it save the rows and rows of tobacco on either side of the lane.</desc>
+      <exits n='909' s='1037' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1035'>
+      <name>Took&apos;s Tokes</name>
+      <desc>Something Merdioc thought up, Took&apos;s Tokes combines the the smoothness of Old Toby with the bite of Longbottom Leaf for an entire new taste.</desc>
+      <exits ne='909' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1037'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  There is really nothing remarkable about it save the rows and rows of tobacco on either side of the lane.</desc>
+      <exits n='973' s='1101' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1039'>
+      <name>Southern Star Tobaaco HQ and Sundries Store</name>
+      <desc>Southern Star is a company recently started by Samwise.  It has yet to find it&apos;s niche in the market but is expected to do well.</desc>
+      <exits nw='909' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1101'>
+      <name>Commercial Lane</name>
+      <desc>This north to south lane rambles thru the rolling countryside.  There is really nothing remarkable about it save the rows and rows of tobacco on either side of the lane.  Small lanes lead southwest and southeast toward what appear to be long low mounds in the distance on either side of the lane.</desc>
+      <exits n='1037' se='1231' sw='1227' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1227'>
+      <name>Old Toby Tobacco Company HQ</name>
+      <desc>Old Toby is the most successful of all the tobacco companies.  It was started by Frodo.  Rumour has it tobacco isn&apos;t the only component of this leaf.  It may in fact have been cross-bred with several other leafs giving it a distinctive sweet oder.</desc>
+      <exits ne='1101' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1231'>
+      <name>Longbottom Leaf Company HQ</name>
+      <desc>A close second behind Old Toby, Longbottom Leaf tends to be preferred by the &quot;workingman&quot;.  Remember the Marlboro Man?  Now think half his size...:)</desc>
+      <exits nw='1101' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

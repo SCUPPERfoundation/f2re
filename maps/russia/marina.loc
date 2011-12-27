@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<fed2-map title='Marina' version='22' editor='standard' from='720' to='Russia.Russia Space.259'>
+
+   <location num='0' flags='t'>
+      <name>Storage</name>
+      <desc>If you are in here, you are wrong.</desc>
+      <exits no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='402'>
+      <name>Outer Office</name>
+      <desc>As a salute to his planet in Classic Fed, Dj has brought some of his office space from there to Fed II.As you look around, see huge bay window over looking the water front.The first thing you noitice when you walk into the Office is the 1977 Harley Davidson Fatboy sitting in the corner. Over the desk there is a plaque that says &quot;SUCCESS IS NOT HOW HIGH YOU CLIMB, BUY HOW YOU CLIMB AFTER YOU HAVE FALLEN&quot;. General George S. Patton.  You also notice the lovely pictures on the wall of the Ladies of Lothlorien and a picture of Catatonix too. There is a cozy looking couch in front of a fireplace that looks like a good place to put your feet up and forget about your troubles for awhile. There is a Droid who awaits your orders for a drink, some food or anything else you might like.</desc>
+      <desc>To the east is Dj&apos;s office.</desc>
+      <exits e='403' down='465' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='403' flags='b'>
+      <name>My Place</name>
+      <desc>The first thing that you noticed when you first enter is the map of the Lothlorien Duchy.</desc>
+      <desc>You see a simple desk and chair set up that makes you wonder what DJ spends his money on. (Don&apos;t feel left out. He wonders also.:)) To tell the truth he spend most of it on his planet and his never ending supply of roses.</desc>
+      <exits w='402' up='788' down='720' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='464'>
+      <name>The Cathedral of the Archangel Michael</name>
+      <desc>This most Italianate of the Kremlin&apos;s churches, the last of Ivan the Great&apos;s contributions to Cathedral Square, is the burial place of the early Tsars and their predecessors, the princes of Moscow. Commissioned in 1505 and built by the Venetian architect Alevisio, its notably foreign features include the scallop-shell decoration of its gables and the ornate Corinthian capitals of its columns. With the notable exception of Boris Godunov (buried at the Trinity Monastery of St. Sergei), the Cathedral houses the remains of everyone from Grand Prince Ivan Kalita (1325-41) to Tsar Ivan V (1682-96). Unfortunately, the tombs themselves do little to convey the passage of history, as all of the stone sarcophagi date from the 17th century and their bronze covers from the beginning of the twentieth.</desc>
+      <desc>   Southeast leads back to the entry way.</desc>
+      <exits se='529' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='465'>
+      <name>The State Kremlin Palace</name>
+      <desc>This modern glass and concrete structure, completed in 1961, is the Kremlin&apos;s most recent edifice. It was built during the halcyon days of the Khruschev administration to host Communist Party congresses and was executed in appropriately magnificent style. The palace&apos;s most prominent feature was its huge auditorium (6000 seats), the stage of which was surmounted by a monumental bas-relief head of Lenin surrounded by gilded rays.</desc>
+      <exits s='529' up='402' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='466'>
+      <name>Tsar Cannon and Bell</name>
+      <desc>These two curiosities form an oddly appropriate pair. Both are among the largest of their kind in the world, and neither has ever worked. The 40-ton Tsar Cannon, built during the reign of Ivan the Terrible&apos;s imbecilic son Fyodor in 1586, possesses a barrel in excess of five meters long and a calibre of 890 mm. The gun should in theory have been capable of smiting foolish attackers with projectiles the size of wine casks. As if the cannon&apos;s sheer size were not inspiring enough, the barrel and carriage are adorned with a relief of the redoubtable Fyodor as well as a scene in which a fierce Russian lion devastates a snake symbolizing Russia&apos;s enemies.</desc>
+      <desc>The two hundred ton Tsar Bell, though the largest in the world, was never successfully completed, much less rung. A smaller predecessor (weighing in at a mere 130 tons) was built in the middle of the 17th century but was destroyed in the Moscow fire of 1701.</desc>
+      <exits sw='529' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='527'>
+      <name>The Diamond Treasury</name>
+      <desc>The exhibition opens with showcases of natural diamonds, mined in Soviet times. These include the largest, named Friendship of Peoples. Builder, Yuri Gagarin. Valen-tina Tereshkova and Maria (named after a woman who worked for many years in diamond mining). The largest gem-quality diamond found in the Soviet Union is the Star of Yakutia (232.1 carats).</desc>
+      <desc>The historical section of the exhibition contains the &quot;Seven Wonders&quot; of the Diamond Collection, precious stones which are world famous.</desc>
+      <desc>Behind a very secure area, visitors can catch a glimpse of the infamous 190-carat Orlov Diamond.</desc>
+      <exits e='528' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='528' flags='t'>
+      <name>The Armory</name>
+      <desc>The Armory began in the early 16th century as a purely functional storehouse for the Kremlin&apos;s weaponry. In 1813, following Napoleon&apos;s invasion, the Armory building became an exhibition hall and museum, though the Imperial arms and regalia had long since been removed by Peter the Great to St. Petersburg. It was only in 1851 that the collection was returned to Moscow, where it was installed in the current building, then new. Despite the loss of significant items in the collection during the early nineteenth century, the treasures contained within the Armory are overwhelming. From the chalice of Yuri Dolgoruky and the helm and armor of Boris Godunov to a stupendous collection of over fifty Faberge eggs, visitors are presented with an array of objects that is staggering in its historical interest and spectacular richness. Next door, at the Diamond Treasury, visitors can catch a glimpse of the infamous 190-carat Orlov Diamond.</desc>
+      <desc>The entry way is east.</desc>
+      <exits e='529' w='527' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='529'>
+      <name>Entry way</name>
+      <desc>From here you will be able to explore all the different areas of the Kremlin.</desc>
+      <desc>Offices are to the North.</desc>
+      <desc>The Armory is to the West.</desc>
+      <desc>The Tower is to the East.</desc>
+      <desc>The Arsenal is to the Southeast.</desc>
+      <desc>The Cathedral of the Archangel Michael is Northwest.</desc>
+      <desc>The Tsar Cannon and Bell is to the Northeast.</desc>
+      <exits n='465' ne='466' e='530' se='594' s='593' w='528' nw='464' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='530'>
+      <name>Ivan the Great Belltower</name>
+      <desc>Dominating not only Cathedral Square but the entire Kremlin is the gleaming gilt dome of the Ivan the Great Belltower, long the tallest structure in all of Russia. Constructed of bright white stone and soaring to a height of over eighty meters, the bell tower was begun in the early 16th century and completed in 1600, during the reign of Boris Godunov. In the adjacent belfrey hangs the massive 64-ton Resurrection Bell, dating from the nineteenth century.</desc>
+      <desc>West is the entry way.</desc>
+      <exits w='529' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='592'>
+      <name>Path 2</name>
+      <desc>The office complex is to the east.</desc>
+      <desc>South leads back the the LP</desc>
+      <exits e='593' s='656' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='593'>
+      <name>Office Complex</name>
+      <desc>The Kremlin is Russia&apos;s mythic refuge, a self contained city with a multitude of palaces, armories, and churches, a medieval fortress that links the modern nation to its legendary past in the ancient state of Kievan Rus&apos;. As the dominance of Kiev faded and its empire fragmented under the weight of foreign invasion and internecine strife in the 11th and 12th centuries, regional princes gained power. In 1147, as Kievan Rus&apos; was experiencing its final death throes, a chronicler recorded that a feast was held at the hunting lodge of Prince Yuri Dolgorukiy, ruling prince of Rostov and Suzdal. The lodge was perfectly situated atop a hill overlooking the Moskva and Neglina rivers, prompting its development (in such troubled times) as a fortified town, or Kremlin.</desc>
+      <desc>   I&apos;ve chosen the Kremlin as my office complex because of the history behind this beautiful building.</desc>
+      <desc>North takes you into the complex.</desc>
+      <desc>West leads to the LP</desc>
+      <exits n='529' w='592' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='594'>
+      <name>The Arsenal</name>
+      <desc>The Kremlin Arsenal was commissioned by Peter the Great to serve as a weapons depot and manufactory. After Napoleon&apos;s disastrous retreat from Moscow this building became a museum commemorating the Russian victory. Most of the cannons arrayed along its side were captured from the fleeing, tattered remains of Bonaparte&apos;s Grande Armee. The Arsenal is now the headquarters of the Kremlin Guard.</desc>
+      <exits nw='529' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='655'>
+      <name>The Russian Orthodox Church</name>
+      <desc>The Russian Orthodox Church is organized in a hierarchical structure. Every church building and its attendees constitute a parish (prikhod). There are over 27,000 parishes in the Church. The Russian Church numbers over 145 million members world wide, thus making it the second largest local church after Rome.</desc>
+      <desc>All parishes in a geographical region belong to an eparchy (eparkhiya#equivalent to a Western diocese). Eparchies are governed by bishops (episkope). There are around 130 Russian Orthodox eparchies worldwide.</desc>
+      <desc>Further, some eparchies are organized into exarchates, or autonomous churches. Currently these include the Orthodox Churches of Belarusian exarchate; the Latvian, the Moldovan, and the Estonian Orthodox Church of Moscow Patriarchate.</desc>
+      <desc>It should be noted that although the Patriarch of Moscow does have extensive powers, unlike the pope, he is not considered infallible.</desc>
+      <desc>If you would like, you can be married here.</desc>
+      <exits se='720'/>
+   </location>
+
+   <location num='656'>
+      <name>Path</name>
+      <desc>Traveling on this path will take you to other locations on this planet.</desc>
+      <exits n='592' s='720' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='718' flags='e'>
+      <name>The Local Market</name>
+      <desc>Russia contained about 1/2 of the known deposits of Iron, 1/5 of the world&apos;s hard coal deposits, and was one of the world&apos;s largest producers of oil. Potentially, Russia was the richest country in the world. The main problem that caused the economy of this grand nation to fail was the mismanagement by the leaders. Dj has learned (he hopes) from their mistakes and hopes that he doesn&apos;t make the same mistakes that they did.</desc>
+      <desc>To leave, go East.</desc>
+      <exits e='719' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='719'>
+      <name>Exchange Route</name>
+      <desc>Follow the path west to the Exchange. East will take you back to the Landing field.</desc>
+      <exits e='720' w='718' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='720' flags='yr'>
+      <name>Kapustin Yar Cosmodrome (Landing Pad)</name>
+      <desc>Birth of the Soviet missile development program in the aches of the World War II predetermined the creation of the Kapustin Yar test range. The 1946 decree, officially founding the rocket industry in the country, directed the Ministry of Armed Forces led by Bulganin to propose the location for the Central Test Range for all jet-propelled weapons. The major factors which favored Kapustin Yar over other locations were the access by railroad, relative proximity to industrial infrastructure of the city of Stalingrad (Volgograd) on Volga River and land availability for the construction of the range.</desc>
+      <desc>To the Southeast is the Local Bar.</desc>
+      <desc>The Exchange is to the West.</desc>
+      <desc>To the South is Prijut Comediantov and other areas on Marina.</desc>
+      <desc>East is the Hospital.</desc>
+      <desc>Southwest is the Gift Shop.</desc>
+      <desc>The Russian Church is to the Northwest.</desc>
+      <exits n='656' e='721' se='785' s='784' sw='783' w='719' nw='655' down='788' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='721' flags='hi'>
+      <name>Russian State Medical University </name>
+      <desc>The Russian State Medical University (formerly the 2nd Moscow State Medical Institute) is one of the oldest Russian medical schools, and one of the most prominent and respectful in the country and abroad. At present University is a very prestigious establishment, which provides the best medical education.</desc>
+      <desc>The University was founded in 1906. Since its founding, the RSMU has been a leader in developing medical science and medical education. Today, at the beginning of the third millennium, the University is a large medical scientific, research and educational center, noted for its extensive clinical and laboratory base and a brilliant teaching staff. This staff has unique pedagogical experience in training students and postgraduates from all over the world and is always happy to pass on their knowledge and experience.</desc>
+      <desc>The Landing field is to the west.</desc>
+      <exits w='720' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='722'>
+      <name>The Vampire Closet</name>
+      <desc>In here you will find the normal cleaning supplies that is normally found in a cleaning closet. It is dark, damp, and slightly dusty....perfect for a sleeping vampire.</desc>
+      <exits sw='785' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='725'>
+      <name>Bathroom</name>
+      <desc>This is just what it says, a bathroom.</desc>
+      <desc>Leave by going Southwest</desc>
+      <exits sw='788' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='783'>
+      <name>Gift Shop</name>
+      <desc>Welcome to the Gift Shop for Marina. Currently, there is only one item for sale here, a Matryoshka, also known as a Nesting Doll. As time progresses, there will be more works of Art for sale. Ivan, who runs the gift shop, is busy arranging the Famous Figures of Federation dolls on a shelf so they form a perfectly straight line.</desc>
+      <exits ne='720' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='784'>
+      <name>Road</name>
+      <desc>To the south, you hear the sounds of laughter and the smell of food. To the southwest, you see another trail leading off into the distance.</desc>
+      <desc>North leads back to the LP</desc>
+      <exits n='720' s='848' sw='847' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='785' flags='b'>
+      <name>The Mustange Club</name>
+      <desc>Back in the year 2003, the planet owner was stationed in Korea. While there, he met the person for whom he named his planet after, Marina. She stood about 5&quot;5&apos;, had red hair and had the prettiest blue eyes that he had ever seen. The Mustange Club is where he met her at, and is where he spent his time when he was able to. The other ladies that worked here were all from Russia. Lured by the promise of easy money, the girls agreed to come here to work, so that they could help their familes back home. In the background, you can hear classic hits from the artists of the day. Such as 50 cent, Luda, Nelly and Sean Paul.</desc>
+      <desc>You can leave by heading northwest, or you can visit the back room by going east.</desc>
+      <desc>Northeast is the closet.</desc>
+      <desc>To the Southeast, you see a door.</desc>
+      <exits ne='722' e='786' se='850' nw='720' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='786' flags='b'>
+      <name>Back Room</name>
+      <desc>The back rooms in the local clubs in Korea were off limits to soldiers because of the chance that they could be robbed, or engage in acts that weren&apos;t allowed by the military. There were a few times that Dj had to spend the night here. This was due to the curfew that was imposed on all soldiers stationed in Korea. When he had to spend the night here, Marina would also keep him company. During the times that he had to stay here, he never did anything that would have gotten him into trouble.</desc>
+      <exits w='785' up='403' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='787'>
+      <name>Bedroom</name>
+      <desc>Well, this is their bedroom. What more do you want to know about it. Also, get your mind out of the gutter.</desc>
+      <desc>You can leave by going East.</desc>
+      <exits e='788' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='788'>
+      <name>The apartment</name>
+      <desc>You&apos;ve entered into the apartment in Korea of Djentsch and Marina. As with most apartments in Korea, it is a small place. The living room and dining room are combined with the fridge sitting in here along with the couch, with the kitchen off the the East in a small alcove. The bathroom is to the Northeast and the bedroom is to the West. You can leave by going Southwest.</desc>
+      <exits ne='725' e='789' sw='851' w='787' up='403' down='720' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='789' flags='b'>
+      <name>Kitchen</name>
+      <desc>Korean kitchens aren&apos;t much too look at. As you look around, you notice that there is only a two burner stove that sits on a counter, a one basin sink, and a few cabinets.</desc>
+      <desc>You can leave by going West.</desc>
+      <exits w='788' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='844'>
+      <name>The Far East Artist Museum</name>
+      <desc>The Far-Eastern Museum of Fine Arts is the biggest Russian state collection of the works of fine arts in the western part of the Pacific region.</desc>
+      <desc>Set up in 1931 with various donations from the store-rooms of the State Tretiakov&apos;s Gallery, State Russian Museum, State Hermitage, State Historical Museum, Pushkin&apos;s State Museum of Fine Arts, and the best other home collections the Museum of Fine Arts in the city of Khabarovsk has immediately become the center of the city&apos;s cultural life. In the following decades the efforts of the Museum&apos;s researchers and collectors of the works of fine arts have replenished the Museum&apos;s collection with new exhibits: works by ancient Russian icon-painters, beautiful samples of the Russian and West European portrait painting of the 18th-19th centuries.</desc>
+      <desc>Southeast leads back to Khabarovsk.</desc>
+      <exits se='909' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='847'>
+      <name>Trail to somewhere</name>
+      <desc>Along this trail, you will see many different areas of the country of Old Russia. Painfully recreated by the planet owner.</desc>
+      <desc>You can go either Northeast or Southwest.</desc>
+      <exits ne='784' sw='910' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='848' flags='b'>
+      <name>Prijut Comediantov</name>
+      <desc>In the 1920&apos;s this place was known as Prijut Comediantov (The Shelter for Comedians), the favorite hangout for poets, writers, artists and actors, who were spending sleepless nights there, Mayakovsky, Akhmatova and Blok being regular visitors. It would be really stupid to open a club in exactly the same basement and not mention the historical value of its predecessor. Now the full name sounds like Prival comediantov which still emphasizes connection with the past. A good restaurant and a coffee shop during the day and little cozy nightclub after 7 p.m. With an interior tending to copy original turn of the 20th century design, you notice the old photographs lining the walls.</desc>
+      <desc>The exit is North.</desc>
+      <exits n='784' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='850'>
+      <name>Alley</name>
+      <desc>You are currently in an alleyway and there is no clue as to where it leads.</desc>
+      <desc>Go East to go on, or Northwest to enter the club again.</desc>
+      <exits e='851' nw='785' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='851'>
+      <name>Alley</name>
+      <desc>The alley leads to the Northeast.</desc>
+      <desc>Or you can return to the West.</desc>
+      <exits ne='788' w='850' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='908'>
+      <name>The Military-Historical Museum</name>
+      <desc>The military-historical museum of the Far-Eastern military district has more than 12 thousand exhibits, telling about the history of the district from the moment of its creation till today.</desc>
+      <desc>The museum is located in the ancient building on the Amur riverside in the historical city center. The building is an architecture monument of federal significance. The construction works began in 1904 and were finished in 1907 under the guidance of the project authors - engineers N.Alexandrov and L.Chaikovsky. It functioned as the State Bank till 1930 and since 1983 it has become the Military history museum of the Far-Eastern military district.</desc>
+      <desc>There is a collection of battle banners of the civil and the Great Patriotic wars periods, both domestic and foreign fire and cold weapon, USSR awards and medals, regimentals and equipment, samples of military equipment, military picture works and war-political posters.</desc>
+      <desc>East leads back to Khabarovsk</desc>
+      <exits e='909' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='909'>
+      <name>Khabarovsk</name>
+      <desc>Strategically located on the hills overlooking the Amur River, Khabarovsk was founded as a military outpost in 1651, during the first wave of Russian colonization. The town gained importance during the nineteenth century as a trading outpost, and today it is one of the most important and promising cities of the Russian Far East. Khabarovsk is a pleasant city, with wide, tree-lined boulevards, a popular beach, and an interesting museum of ethnography and local history.</desc>
+      <desc>Khabarovsk has sister-cities: Niigata in Japan, Portland in the USA, Victoria in Canada, Harbin in Peoples Republic of China.</desc>
+      <desc>Khabarovsk has several museums located in the city. The Far East Artist Museum, the Geological Museum, the Military-Historical Museum, and the State Museum of the Far East, which is named after N.I. Grodecov.</desc>
+      <desc>East leads back in the direction of the LP.</desc>
+      <desc>The Far East Artist Museum is to the Northwest.</desc>
+      <desc>The Military-Historical Museum is to the west.</desc>
+      <exits e='910' sw='972' w='908' nw='844' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='910'>
+      <name>Gateway</name>
+      <desc>With the dissolution of the Soviet Union there has been an enormous resurgence of interest in Russia&apos;s pre-Soviet past, as well as a great deal of debate and reconsideration of the Soviet era itself. This shift has not resulted in a simple vilification of everything Soviet or a naive embrace of all that preceded it, but it has spurred an unprecedented effort to regain the ancient Russian national heritage. Churches are being restored all across the country, great Russian writers and artists whose works were banned are once again being honored, and the individual character of ancient cities and communities is once again becoming established.</desc>
+      <desc>To the west is the city of Khabarovsk. To the southwest, you hear the sound of running water.</desc>
+      <desc>Northeast leads back to the LP.</desc>
+      <exits ne='847' e='911' sw='973' w='909' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='911'>
+      <name>Red Square</name>
+      <desc>For most visitors, Red Square is indelibly associated with images of stonefaced Soviet leaders standing in the bitter cold as a panoply of military might rumbles past their review stand atop Lenin&apos;s Mausoleum. Although the Square is no longer witness to the imposing parades of May Day, it remains a profoundly impressive space. Delimited by the stark severity of the mausoleum, the expansive facade of the world-famous GUM department store, and the exuberant colors of St. Basil&apos;s Cathedral, Red Square is, and deserves to be, the requisite first stop for any visitor to Moscow.</desc>
+      <desc>West leads back towards the LP.</desc>
+      <desc>Southeast will take you to Lenin&apos;s Mausoleum.</desc>
+      <desc>South will take you to the St. Basil&apos;s Cathedral.</desc>
+      <exits se='976' s='975' w='910' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='972'>
+      <name>The State Museum of the Far East</name>
+      <desc>Russian geographic society. The outstanding scientists, public figures, enthusiasts, such as P.Shmidkevitch, V.Margaritov, V.Rudakov, N.Grodekov, N.Desulavin, S.Vankov, took part in creation and accumulation of museum collections. In 1910-1918 and in 1925-1926 V.Arseniev - the Far East researcher and writer - was the director of the museum.</desc>
+      <desc>In its centenary the museum was named after N.Grodekov - general-governor, honorary citizen of Khabarovsk, who took part in foundation of the museum.</desc>
+      <desc>In 1975 a new building was attached to the museum. The exposition devoted to the history of the Soviet society and the panorama &quot;Volotchaevskaya Battle&quot; is homed here. Today, the museum haas more than 200 thousand unique exhibits, telling about natural features and resources of the Khabarovsk region, life and customs of the indigenous people, and the history of the region.</desc>
+      <desc>Khabarovsk is NE</desc>
+      <exits ne='909' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='973'>
+      <name>Bank of the Amur River.</name>
+      <desc>One of the largest rivers in the world formed by the merge of the Shilka and Argun rivers. The river runs through Amur lagoon into the Tatar strait and Sakhalin gulf in the Okhotsk sea. The length from the merge of Shilka and Argun makes 2824 km, from the spring of Argun - 4440 km, within the limits of Khabarovsk territory - 1534 km.</desc>
+      <desc>The Amur river flows across 6 regions of the Khabarovsk Territory: Khabarovsky, Nanaisky, Amursky, Komsomolsky, Ulchsky and Nikolaevsky. The biggest tributaries of the Amur river within the Khabarovsk Territory are Amgun, Anuy, Tunguska, Bureya and Ussuri. The frontier with the People&apos;s Republic of China goes along Kazakevichevo water way and along the Ussuri river for 265 km long. The valley of the Amur river in Khabarovsk Territory is characterized by a large variety of nature, presence of archeological and historical objects.</desc>
+      <desc>Northeast for the LP.</desc>
+      <desc>S for the road.</desc>
+      <desc>SW for Komsomolsky.</desc>
+      <exits ne='910' s='1037' sw='1036' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='975'>
+      <name>St. Basil&apos;s Cathedral</name>
+      <desc>St. Basil&apos;s rises from Red Square in an irresistible profusion of colors and shapes. Its montage of domes, cupolas, arches, towers, and spires, each bearing a distinctive pattern and hue, have fascinated the eyes of visitors since its construction in the 1550s. Although St. Basil&apos;s was built to commemorate Ivan the Terrible&apos;s capture of the Mongol stronghold of Kazan and is properly named Cathedral of the Intercession, its popular name has long associated it with a ragged prophet who foretold the Moscow fire of 1547. The appeal of St. Basil&apos;s is best appreciated by a leisurely stroll around its perimeter, as its wondrous exterior decoration belies a remarkably plain and cramped interior.</desc>
+      <desc>The Red Square is North.</desc>
+      <exits n='911' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='976'>
+      <name>Lenin&apos;s Mausoleum</name>
+      <desc>Avant-Garde had not yet been decimated by Stalin&apos;s enforced return to heroic realism and conservative classicism. As a result, the founder of the Soviet state is blessed with a resting place that is a rare masterpiece of modern architectural simplicity. Faced with red granite (for Communism) and black labradorite (for mourning), the mausoleum is essentially a pyramid composed of cubes. Although the mausoleum has been stripped of the honor guard that once flanked its entrance, announced plans to remove Lenin&apos;s body seem to have lost their impetus in the last couple of years. The once lengthy line for admission has dropped off considerably, and a visit today is accompanied by a rather bizarre sense of having entered a place that has been forgotten by time. Lenin lies still in his crystal casket, seemingly unaffected by the vast changes that have swept over Russia.</desc>
+      <desc>NW leaves.</desc>
+      <exits nw='911' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='1036'>
+      <name>Komsomolsk-na-Amur (City on the river)</name>
+      <desc>served by the Baikal-Amur Railroad, a branch of the Trans-Siberian Railroad. Manufactured goods include ships, steel, forest products, and refined petroleum. Founded in 1932, the city was built largely by members of Komsomol, the Communist youth organization. It expanded greatly after World War II (1939-1945). Population (1995) 355,634.</desc>
+      <desc>Because of the sectret nature of the work there, and the fact that it was a &quot;closed&quot; city for almost its entire exsistence, foreign tourists may not feel the same welcomeness that they would feel in other cities.</desc>
+      <desc>Having said this, there is still many interesting and unique reasons to visit Komsomolsk na Amur. Because of its remoteness, this was a natural area to house prisioners of all stripes, but during the Stalin era as many as 40 prison camps were established in the region.</desc>
+      <desc>Northeast leads back towards the LP.</desc>
+      <desc>South leads towards Khurba.</desc>
+      <exits ne='973' s='1100' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='1037'>
+      <name>Roadway</name>
+      <desc>This road leads to the city of Komsomolsky.</desc>
+      <desc>N leads back towards the LP.</desc>
+      <desc>E leads to the Komsomolsky Nature Reserve.</desc>
+      <exits n='973' e='1038' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='1038'>
+      <name>The Komsomolsky Nature Reserve</name>
+      <desc>This peculiar territory of the Lower Priamurye has the only nature reserve where the flood-lands of the Amur River are under protection. The Komsomolsky Nature Reserve was founded in 1963, it is located in the central part of the Khabarovski region and presently covers the territory on the left bank of the river Amur, in the basin of its sizeable tributary, the river Gorin. The Reserve covers over 64 000 hectares and includes both river lowlands and mountain landscapes which prevail.</desc>
+      <desc>Forests cover about 80 % of the territory. About five species of local flora, Japanese yew, caltrop, Cyprideum macranthon, Pagonia japonica, and Gastroida elata are located here and there are also many species rare for Far Eastern flora. Musk deer and sable, elk and brown bear inhabit the reserve. Among mammals there are wild boar, raccoon dog, Indian marten, Asiatic Black Bear, etc. About 200 bird species live in the Reserve and 44 species of fish inhabit the rivers.</desc>
+      <desc>W leads back to the road.</desc>
+      <exits w='1037' no-exit='marina.planet.2'/>
+   </location>
+
+   <location num='1100'>
+      <name>Khurba</name>
+      <desc>Khurba (also given as Komsomolsk South, Khurba, Hurba, Uchastok, and Kalinovka) (ICAO: UHKK) is an air base in Amur Oblast, Russia 17 km south of Komsomolsk-na-Amure. This medium-sized base has considerable tarmac space and an extended area of revetments. It handles medium-sized airliners.</desc>
+      <desc>Not much is known about this place. As I learn more about where my wife is from, I will update this area.</desc>
+      <desc>N leads towards the LP.</desc>
+      <exits n='1036' no-exit='marina.planet.2'/>
+   </location>
+
+</fed2-map>

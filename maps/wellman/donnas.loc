@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Donnas' version='8' editor='standard' from='329' to='Wellman.Wellman Space.330'>
+
+   <location num='65'>
+      <name>Storeroom</name>
+      <desc>for future use</desc>
+   </location>
+
+   <location num='329'>
+      <name>Donnas Landing Pad</name>
+      <desc>Welcome to Donnas.  Small but quaint.  The Exchange is East and all other facilities can be found to the Southwest,</desc>
+      <exits e='330' sw='392'/>
+   </location>
+
+   <location num='330' flags='e'>
+      <name>Donnas Bio Exchange</name>
+      <desc>This is where your trading needs are met.  Happy trading</desc>
+      <exits w='329'/>
+   </location>
+
+   <location num='392' flags='yrb'>
+      <name>Donnas Hideaway</name>
+      <desc>This is where all planet functions save trading can be found</desc>
+      <exits ne='329'/>
+   </location>
+
+</fed2-map>

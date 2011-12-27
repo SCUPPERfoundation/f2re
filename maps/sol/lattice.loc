@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<fed2-map title='The Lattice' version='8' editor='standard' from='2077' to='Sol.Sol Space.2704'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   A jumble of spare equipment is stored here when it&apos;s not being used.</desc>
+   </location>
+
+   <location num='1443'>
+      <name>Shrine to photojournalism</name>
+      <desc>   Dedicated to the idea that the media is greater than the twin laser, the room is a simple progression of classic photojournalist images. The display starts with black and white photographs in the pre-atomic era - Alexander Gardner&apos;s &quot;Home of a rebel sharpshooter, Gettysburg&quot;, Robert Capa&apos;s &quot;Death of a Loyalist soldier&quot;, and George Roger&apos;s pictures of Bergen-Belsen concentration camp.</desc>
+      <exits se='1508' out='1508'/>
+      <events in-room='extras.locations.1'/>
+   </location>
+
+   <location num='1444'>
+      <name>Zen Room</name>
+      <desc>   The room is an oasis of calm at the heart of the Lattice. In the center of the room is a replica of the famous Zen stone garden at Ryoanji Temple. Facilities are provided to sit and contemplate, and it is said that many famous Lattice artists and performers come here to meditate when working on Lattice&apos;s products. Around the walls are a fine selection of Japanese prints and triptychs dating from the pre-atomic era. The exit is through a door in the south wall.</desc>
+      <exits s='1508' out='1508'/>
+      <events in-room='newbod.message.1'/>
+   </location>
+
+   <location num='1508'>
+      <name>Lattice Leisure Complex</name>
+      <desc>   The room is the center of Lattice&apos;s leisure and tourist facilities. The walls, floor and ceiling are all of a transparent material, giving the feeling of floating unprotected in space. Quite a lot of people stay well clear of this particular room. There is a faint smell of carbolic soap which the air scrubbers have been unable to completely remove! In one corner are white, blue, and gold teleporter disks. There are normal exits to the east, south, north, northwest and southwest.</desc>
+      <exits n='1444' e='1509' s='1572' sw='1571' nw='1443'/>
+   </location>
+
+   <location num='1509' flags='ba'>
+      <name>Breakfast in Fur</name>
+      <desc>   The cafe-bar is weird. It&apos;s a strange shape and everything - but everything - is covered in a greyish-brown fur. You watch a patron slop some beer onto the table. It is absorbed immediately and without leaving a trace. Must be some sort of self-cleaning fur. It&apos;s not until you have sat down and thought about it for a while that you realize that the room is a giant replica of Meret Oppenheim&apos;s surrealist fur lined teacup, &apos;Breakfast in Fur&apos;. The exit is west, near the fur lined spoon.</desc>
+      <exits w='1508' out='1508'/>
+   </location>
+
+   <location num='1571' flags='a'>
+      <name>Maya&apos;s Art House</name>
+      <desc>   Maya&apos;s Art House is a holo-theatre that shows previews of the latest cult movies. It is unique in that it always shows three holos at once - all in the same theatre.</desc>
+      <exits ne='1508' out='1508'/>
+      <events in-room='extras.locations.2'/>
+   </location>
+
+   <location num='1572' flags='t'>
+      <name>Steam Driven Orrery</name>
+      <desc>   The room is a globe over a hundred feet across. The whole room is a huge steam driven orrery, with an observation platform - on which you stand - in the center.</desc>
+      <desc>   The inner surface of the globe is studded with colored lights representing the fixed stars. The planets are intricately carved balls of brass pursuing their appointed orbits around the sun which towers above you, and provides the room&apos;s light.</desc>
+      <desc>   The whole assemblage is driven by a steam engine somewhere in the depths. Wisps of escaped steam float around the orrery making it look somehow mysterious and slightly ethereal.</desc>
+      <desc>   The exit is along a catwalk leading north, and there is a small door labeled &apos;Emily&apos;s Emporium&apos; in the south-east corner.</desc>
+      <exits n='1508' se='1637'/>
+   </location>
+
+   <location num='1637' flags='t'>
+      <name>Emily&apos;s Emporium of Mechanical Delights &amp; Electronic Wizardry</name>
+      <desc>   Emily&apos;s Emporium reeks of a cocktail of steam, oil, hot metal, and overheated plastic insulation. It&apos;s difficult to see what the shop is selling, because the whole area is blanketed with steam. As you wander around the room, strangely shaped devices loom up out of the gloom. Some you recognize, some you don&apos;t. Most of them would probably be illegal in any space controlled by the Galactic Administration. An illuminated sign proclaims &apos;Teleporters rented - one slithy a month. Merchants and above only&apos;. To obtain one type &apos;rent teleporter&apos;.</desc>
+      <desc>   The exit is through a rust streaked iron door in the north-west wall.</desc>
+      <exits nw='1572' out='1572'/>
+   </location>
+
+   <location num='1958'>
+      <name>Transfer node</name>
+      <desc>   The node is a featureless, irregularly shaped, room with pale green walls. Set into the floor are three teleporter disks -  blue, green and white.</desc>
+   </location>
+
+   <location num='2068' flags='e'>
+      <name>Lattice Exchange</name>
+      <desc>   The exchange is tastefully decorated in muted pastels, and even the display boards are less garish than usual. It&apos;s not really that surprising when you think about it. The inhabitants of the Lattice are people for whom visual production values are everything.</desc>
+      <desc>   A broad set of doors in the eastern wall are currently thrown open, leading out to the lobby.</desc>
+      <exits e='2069' out='2069'/>
+   </location>
+
+   <location num='2069'>
+      <name>Trading lobby</name>
+      <desc>   The lobby to the trading area is crowded with traders muttering into their comm units and consulting data units. To the west, a pair of wide doors lead into the exchange itself, and you can hear the muted roar of the buying and selling frenzy, without being able to make out which commodities are being bought and sold.</desc>
+      <desc>   Through a gap in the crowd you can just see part of a white teleporter disk.</desc>
+      <exits w='2068' in='2068'/>
+   </location>
+
+   <location num='2076'>
+      <name>Storeroom</name>
+      <desc>   Equipment, scenery, props and costumes used for tours, outside broadcasts and location filming are stored here in between outings. They used to be always transported back to the main studios, but the workdroids got fed up of carting them across the planet, particularly since some of the items are very unwieldy and don&apos;t fit easily on the transporter disks.</desc>
+      <desc>   The new system is much easier, even if the likelihood of items getting lost or appropriated by unauthorized persons is a bit higher!</desc>
+      <desc>   The door to the shuttle pad is east.</desc>
+      <exits e='2077'/>
+   </location>
+
+   <location num='2077'>
+      <name>Shuttle Bay</name>
+      <desc>   You are in the Lattice shuttle bay. In one wall shuttle craft are being auto-loaded into a series of airlocks to enable them to leave, while on the opposite wall more locks are disgorging incoming shuttles. The east wall has a series of elaborate interlocking airtight doors leading to the main part of the Lattice. A door to the west leads to a storeroom.</desc>
+      <exits e='2078' w='2076'/>
+   </location>
+
+   <location num='2078' flags='a'>
+      <name>Lattice reception area</name>
+      <desc>   Easy chairs are spread around, seemingly at random, but in a restful pattern. Set into the floor, also apparently at random, are a series of colored disks, each about three feet in diameter. From where you are standing you can see yellow, black, blue and green disks. In the middle of the room is a fountain that changes color at intervals. The only doors seem to be a complex looking set in the west wall.</desc>
+      <exits w='2077'/>
+   </location>
+
+   <location num='2393' flags='a'>
+      <name>Grant Studios</name>
+      <desc>   This is the visitors area of Grant Studios, &quot;Purveyors of fine studios to the galaxy&quot;, where a tech and sales droid are demonstrating their latest creation. The room is painted a special blue that doesn&apos;t register on cameras (known for some reason lost in the mists of time as &apos;Screen of Death Blue&apos;) and the scenery is created holographically by the studio.</desc>
+      <exits s='2457' out='2457'/>
+      <events in-room='extras.locations.3'/>
+   </location>
+
+   <location num='2406' flags='c'>
+      <name>Armstrong Cuthbert</name>
+      <desc>   This office is the center of Armstrong Cuthbert&apos;s asteroid operation. Half the room is given over to chairs, sofas, and a white teleporter disk. The other half is a large open plan office full of manically working employees. Hanging over this hive of activity is a massive screen displaying the status and movement of cargos in the asteroid belt.</desc>
+   </location>
+
+   <location num='2456' flags='a'>
+      <name>Bali Games</name>
+      <desc>   You slip into one of the meeting rooms of Bali Games. A games designer has been explaining what it is he wants. The lead programmer looks up from her game of Free Cell and says, &quot;No chance. Apart from the fact that Ratri is not the goddess of fortune, she is the goddess of the night and of thieves, it would take an extra six months to write the code.&quot; There is silence for a moment and then the only person in the room wearing a suit says flatly, &quot;Unacceptable, this game has to be available to show at the E3D convention.&quot; The argument continues in a desultory fashion. You look round to see what else there is, but the only exit is the door in the east wall, through which you entered.</desc>
+      <exits e='2457' out='2457'/>
+   </location>
+
+   <location num='2457'>
+      <name>Lattice production complex</name>
+      <desc>   This is the center of the Lattice&apos;s leisure commodity production. Lattice holos, musiks and games are much sought after and older examples frequently command a premium price. Around the walls holo-projectors show the processes involved. One shows the production of a lavish period costume drama for hyperspace broadcast. It seems to be about the fall of Emperor Ming. White and grey transfer disks grace the center of the room and there are regular exits to the southeast, west and north.</desc>
+      <exits n='2393' se='2522' w='2456'/>
+   </location>
+
+   <location num='2522'>
+      <name>Corridor</name>
+      <desc>   The walls of the corridor have been carved out of solid rock by a craftsman. The cutter has left intriguing patterns somewhat reminiscent of the designs in the Martian ruins. Some of the features have been painted in greens and blues, their highlights picked out in gold leaf. To the northwest is the teleport node for this section of the Lattice, while the corridor continues to the southeast.</desc>
+      <exits se='2587' nw='2457'/>
+   </location>
+
+   <location num='2524'>
+      <name>Almond Studios Viewing Gallery #1</name>
+      <desc>   Standing in the gallery you look through the thick window at a group of exhibs (Floyds from the look of them) doing a sound check. The sound tech&apos;s hands race over the mixing desk and in response sound baffles and reflectors move, twist and adjust until the band has the acoustic feel it wants.</desc>
+      <exits sw='2587' out='2587'/>
+   </location>
+
+   <location num='2587'>
+      <name>Corridor</name>
+      <desc>   Your footsteps are curiously muted as you move along the corridor. The whole of this section is lined with vibration absorbing fields. To the northeast is a door marked &quot;Almond Studios&quot;, southwest is a door marked &quot;Springfield Productions&quot;, and to the northwest the corridor continues.</desc>
+      <exits ne='2524' sw='2650' nw='2522'/>
+   </location>
+
+   <location num='2589'>
+      <name>Transfer node</name>
+      <desc>   The node is a featureless, round room with pale blue walls. Set into the floor are three teleporter disks -  yellow, black and white.</desc>
+   </location>
+
+   <location num='2642'>
+      <name>Studio 1</name>
+      <desc>   This is the studio from which many of the programs beamed to the Solar System are broadcast live. One wall has a large 2D screen built into it. The main part of the screen shows the control room for the studio, the remaining section shows status information about the studio facilities.</desc>
+      <desc>   One half of the studio is currently set up with easy chairs for chat style shows; the other for game shows. On the game show side, each chair has a buzzer in one side, which contestants press when they want to answer a question.</desc>
+      <desc>   There is a door to the south.</desc>
+      <exits s='2706'/>
+   </location>
+
+   <location num='2650'>
+      <name>Viewing Gallery - Springfield Productions</name>
+      <desc>   A red light indicates that a musik recording is in progress. You notice that the voys making up the audience are all organic - no AIs are visible. The music is contemporary electronic - neo-ambient as it is called. The audience seems to be half asleep. Looking closely you realize that they are being fed intravenous drugs through tubes attached to their seats. You frown and then remember that Lattice is a free port and not subject to the laws of the GA. You make a mental note not to go to any concerts while you are here.</desc>
+      <exits ne='2587' out='2587'/>
+   </location>
+
+   <location num='2706' flags='a'>
+      <name>Annex - Production Complex</name>
+      <desc>   The spacious annex is tastefully decorated (but what else would you expect?) in pale greys and blues. Techies and exhibs bustle around, and no one seems to have time to take any notice of you. There is a door to the north, marked &apos;Studio 1&apos;, and one to the south, marked &apos;Private&apos;. In one corner of the annex a grey disk has been let into the floor.</desc>
+      <exits n='2642' s='2770'/>
+   </location>
+
+   <location num='2770' flags='t'>
+      <name>Private studio</name>
+      <desc>   This studio is for closed broadcasts, where it is important that unauthorized personnel don&apos;t wander in without permission.</desc>
+      <desc>   The stage is set with brightly-colored sofas, left over from the last show broadcast here.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='2706'/>
+      <events enter='objects.pass.4'/>
+   </location>
+
+</fed2-map>

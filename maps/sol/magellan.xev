@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+
+<event-list version='45'>
+
+ <category name='food'>
+
+  <section name='absinthe'>
+
+   <event num='1'>
+    <comment>Buy absinthe - Cafe Blanc - 1355</comment>
+    <checkstat who='individual' money='5' higher='food.absinthe.2' equals='food.absinthe.2' lower='food.absinthe.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.absinthe.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.absinthe.2'/>
+   </event>
+
+  </section>
+
+  <section name='blanc'>
+
+   <event num='1'>
+    <comment>Buy food - Cafe Blanc - 1355</comment>
+    <checkstat who='individual' money='10' higher='food.blanc.2' equals='food.blanc.2' lower='food.blanc.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.blanc.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.blanc.2'/>
+   </event>
+
+  </section>
+
+  <section name='camile'>
+
+   <event num='1'>
+    <comment>Buy food - Brasserie Camile Saint Saens - 1417</comment>
+    <checkstat who='individual' money='10' higher='food.camile.2' equals='food.camile.2' lower='food.camile.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='food.camile.1' hi='food.camile.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.camile.2'/>
+   </event>
+
+  </section>
+
+  <section name='caviar'>
+
+   <event num='1'>
+    <comment>Buy food - Minnie/Maxie - 777</comment>
+    <checkstat who='individual' money='10' higher='food.caviar.2' equals='food.caviar.2' lower='food.caviar.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.caviar.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.caviar.2'/>
+   </event>
+
+  </section>
+
+  <section name='champers'>
+
+   <event num='1'>
+    <comment>Buy champagne in Minnie and Maxie bar - loc 777 - check funds</comment>
+    <checkstat who='individual' money='100' higher='food.champers.2' equals='food.champers.2' lower='food.champers.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Sell champagne</comment>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.champers.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff cash for champers</comment>
+    <message type='single' where='com' who='individual' lo='food.champers.2'/>
+   </event>
+
+  </section>
+
+  <section name='chaud'>
+
+   <event num='1'>
+    <comment>Buy food - Le Club Chaud - 1419</comment>
+    <checkstat who='individual' money='10' higher='food.chaud.2' equals='food.chaud.2' lower='food.chaud.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.chaud.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.chaud.2'/>
+   </event>
+
+  </section>
+
+  <section name='hotel'>
+
+   <event num='1'>
+    <comment>Buy food - Hotel Francois - 1545</comment>
+    <checkstat who='individual' money='10' higher='food.hotel.2' equals='food.hotel.2' lower='food.hotel.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.hotel.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.hotel.2'/>
+   </event>
+
+  </section>
+
+  <section name='observe'>
+
+   <event num='1'>
+    <comment>Buy food - Observe Bar - 1994</comment>
+    <checkstat who='individual' money='10' higher='food.observe.2' equals='food.observe.2' lower='food.observe.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='multi' where='com' who='individual' lo='food.observe.1' hi='food.observe.2'/>
+    <createobject where='inventory' home-map='sol/magellan' id='obj_stick'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.observe.2'/>
+   </event>
+
+  </section>
+
+  <section name='society'>
+
+   <event num='1'>
+    <comment>Buy food - Magellan Society Members Room - 521</comment>
+    <checkstat who='individual' money='10' higher='food.society.2' equals='food.society.2' lower='food.society.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.society.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.society.2'/>
+   </event>
+
+  </section>
+
+  <section name='spin'>
+
+   <event num='1'>
+    <comment>Buy food - Spinning Wheel Bar - 1035</comment>
+    <checkstat who='individual' money='10' higher='food.spin.2' equals='food.spin.2' lower='food.spin.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.spin.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.spin.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='keepout'>
+
+   <event num='1'>
+    <comment>MagSoc members room - loc 521 - check for membership</comment>
+    <checkflag who='individual' flag ='newbod'  set='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.keepout.1'/>
+    <move what='player' who='individual' loc='522'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='president'>
+
+   <event num='1'>
+    <comment>loc 459 - see if the player needs awarding Magellan Soc membership</comment>
+    <checkvariable name='newbod' key='clue' value='fifteen' not-equal='stop'/>
+    <flipflag who='individual' flag ='newbod'/>
+    <clearvariable name='newbod'/>
+    <message type='multi' where='com' who='individual' lo='newbod.president.1' hi='newbod.president.4'/>
+    <changestat who='individual' money='2500' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='home' id='obj_customsvoucher'/>
+    <checkstat who='individual' rank='2' equals='newbod.president.2' lower='newbod.president.2'/>
+    <message type='single' where='com' who='individual' lo='newbod.president.6'/>
+    <posttoreview>%s has become a member of the Magellan Society.</posttoreview>
+   </event>
+
+   <event num='2'>
+    <comment>player is commander of captain</comment>
+    <changestat who='individual' tc='50' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='newbod.president.5'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='blythe'>
+
+   <event num='1'>
+    <comment>Rotary offices - loc 905 - kiss blythe</comment>
+    <message type='single' where='com' who='individual' lo='objects.blythe.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Blythe chat</comment>
+    <match phrase='hello' id-name='obj_blythe' event='objects.blythe.3'/>
+    <match phrase='blythe' id-name='obj_blythe' lo='objects.blythe.5'/>
+    <match phrase='who' id-name='obj_blythe' lo='objects.blythe.5'/>
+    <match phrase='rotary' id-name='obj_blythe' lo='objects.blythe.6'/>
+    <match phrase='where' id-name='obj_blythe' lo='objects.blythe.6'/>
+    <match phrase='office space' id-name='obj_blythe' lo='objects.blythe.7'/>
+    <match phrase='offices' id-name='obj_blythe' lo='objects.blythe.7'/>
+    <match phrase='secretarial' id-name='obj_blythe' lo='objects.blythe.8'/>
+    <match phrase='clerical' id-name='obj_blythe' lo='objects.blythe.8'/>
+    <match phrase='services' id-name='obj_blythe' lo='objects.blythe.8'/>
+    <match phrase='esoteric' id-name='obj_blythe' lo='objects.blythe.9'/>
+    <match phrase='specialist' id-name='obj_blythe' lo='objects.blythe.9'/>
+    <match phrase='odd' id-name='obj_blythe' lo='objects.blythe.9'/>
+    <match phrase='executive' id-name='obj_blythe' lo='objects.blythe.9'/>
+    <match phrase='espionage' id-name='obj_blythe' lo='objects.blythe.10'/>
+    <match phrase='spying' id-name='obj_blythe' lo='objects.blythe.10'/>
+    <match phrase='spies' id-name='obj_blythe' lo='objects.blythe.10'/>
+    <match phrase='spynet' id-name='obj_blythe' lo='objects.blythe.11'/>
+    <match phrase='sex' id-name='obj_blythe' lo='objects.blythe.12'/>
+    <match phrase='magellan' id-name='obj_blythe' lo='objects.blythe.13'/>
+    <match phrase='earth' id-name='obj_blythe' lo='objects.blythe.14'/>
+    <match phrase='galactic admin' id-name='obj_blythe' lo='objects.blythe.15' hi='objects.blythe.16'/>
+    <match phrase='ga' id-name='obj_blythe' lo='objects.blythe.15' hi='objects.blythe.16'/>
+    <match phrase='stat' id-name='obj_blythe' lo='objects.blythe.17' hi='objects.blythe.18'/>
+    <match phrase='stamina' id-name='obj_blythe' lo='objects.blythe.19' hi='objects.blythe.21'/>
+    <nomatch id-name='obj_blythe' lo='objects.blythe.22'/>
+   </event>
+
+   <event num='3'>
+    <comment>hello - check gender of player</comment>
+    <checkgender male='objects.blythe.4' female='objects.blythe.5' neuter='objects.blythe.6'/>
+   </event>
+
+   <event num='4'>
+    <comment>hello boys</comment>
+    <message type='single' where='com' who='individual' lo='objects.blythe.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>hello girls</comment>
+    <message type='single' where='com' who='individual' lo='objects.blythe.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>hello things</comment>
+    <message type='single' where='com' who='individual' lo='objects.blythe.4'/>
+   </event>
+
+  </section>
+
+  <section name='stick'>
+
+   <event num='1'>
+    <comment>Use cocktail stick</comment>
+    <message type='single' where='com' who='individual' lo='objects.stick.1'/>
+    <message type='single' where='com' who='room_ex' lo='objects.stick.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='snark'>
+
+  <section name='bellman'>
+
+   <event num='1'>
+    <comment>See if player can talk to von Bellman</comment>
+    <checkvariable name='snark' key='bellman' value='start' equals='snark.bellman.2' not-equal='snark.bellman.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Talk to the Bellman</comment>
+    <match phrase='assignment' id-name='obj_bellman' lo='snark.bellman.1' hi='snark.bellman.4'/>
+    <match phrase='sensitive' id-name='obj_bellman' lo='snark.bellman.6' hi='snark.bellman.8'/>
+    <match phrase='accept' id-name='obj_bellman' event='snark.bellman.4'/>
+    <match phrase='dni' id-name='obj_bellman' lo='snark.bellman.15'/>
+    <match phrase='naval intel' id-name='obj_bellman' lo='snark.bellman.15'/>
+    <match phrase='bye' id-name='obj_bellman' lo='snark.bellman.20' hi='snark.bellman.21'/>
+    <nomatch id-name='obj_bellman' lo='snark.bellman.35'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not allowed to talk to von Bellman</comment>
+    <message type='text' where='com' who='individual'>Helim von Bellman glares at you for your impertinence. Aristocrats of von Bellman&apos;s standing need to be shown a suitable introduction before they would condescend to converse with the likes of you!</message>
+   </event>
+
+   <event num='4'>
+    <comment>Accept the assignment</comment>
+    <message type='multi' where='com' who='individual' lo='snark.bellman.10' hi='snark.bellman.13'/>
+    <createobject where='inventory' home-map='home' id='obj_schedule'/>
+   </event>
+
+   <event num='10'>
+    <comment>Check to see if player has come from members lounge</comment>
+    <checklastloc loc='521' pass='snark.bellman.11'/>
+   </event>
+
+   <event num='11'>
+    <comment>Have they been talking to von Bellman...</comment>
+    <checkvariable name='snark' key='bellman' value='start' equals='snark.bellman.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>...check for the schedule</comment>
+    <checkinventory map='home' id-name='schedule' found='snark.bellman.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>...set the von Bellman talking variable indicate conversation</comment>
+    <setvariable name='snark' key='bellman' value='assignment' temporary='true'/>
+   </event>
+
+  </section>
+
+  <section name='schedule'>
+
+   <event num='1'>
+    <comment>Attempt to drop or give the schedule</comment>
+    <message type='text' where='com' who='individual'>That would be most inadvisable. This is an important object and losing it in that way could have serious consequences. If you are really desperate to get rid of it, then I guess you could try to destroy it.</message>
+   </event>
+
+   <event num='2'>
+    <comment>Destroy the schedule (not wise, but some people...)</comment>
+    <message type='text' where='com' who='individual'>Taking out a phial of WD842 universal solvent you gingerly add a drop or two to the schedule&apos;s holo crystal, and its molecular bonds dissolve leaving only a mono-molecular dust that wafts away on a passing air current. By the way, have you ever wondered what sort of material a container for a universal solvent is made of?</message>
+    <destroyobject where='inventory' map='home' id-name='schedule'/>
+   </event>
+
+   <event num='3'>
+    <comment>Placeholder for show-ing the schedule to various people</comment>
+    <message type='text' where='com' who='individual'>Placeholder for show-ing the schedule to various people</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='start'>
+
+  <section name='start'>
+
+   <event num='1'>
+    <comment>start rotation of observation deck</comment>
+    <call event='view.loop.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='stats'>
+
+  <section name='stamina'>
+
+   <event num='1'>
+    <comment>Rotary Offices - loc 905 - buy stamina - check for slithy</comment>
+    <checkslithy value='1' pass='stats.stamina.3' fail='stats.stamina.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>No slithy</comment>
+    <message type='multi' where='com' who='individual' lo='stats.stamina.1' hi='stats.stamina.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Has got slithy so send basic msg and check if already done a stat today</comment>
+    <message type='single' where='com' who='individual' lo='stats.stamina.3'/>
+    <checkflag who='individual' flag ='slithy2stat'  set='stats.stamina.4' unset='stats.stamina.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Already done a stat today</comment>
+    <message type='single' where='com' who='individual' lo='stats.stamina.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not already done so check if stamina is maxed, or almost maxed</comment>
+    <checkstat who='individual' stamina='149' higher='stats.stamina.6' equals='stats.stamina.7' lower='stats.stamina.8'/>
+   </event>
+
+   <event num='6'>
+    <comment>Stamina is already maxed</comment>
+    <message type='single' where='com' who='individual' lo='stats.stamina.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Stam is 149 so call stam increase event, and send final warning</comment>
+    <call event='stats.stamina.8'/>
+    <message type='single' where='com' who='individual' lo='stats.stamina.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Increase stam</comment>
+    <message type='multi' where='com' who='individual' lo='stats.stamina.6' hi='stats.stamina.8'/>
+    <changeslithy value='-1' change='add'/>
+    <changestat who='individual' stamina='1' change='add' cur-max='maximum'/>
+    <changestat who='individual' stamina='99' change='add' cur-max='current'/>
+    <flipflag who='individual' flag ='slithy2stat'/>
+    <log>SLITHY - %s has bought a stamina point.</log>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='view'>
+
+  <section name='loop'>
+
+   <event num='1'>
+    <comment>1st view from observation window - locs 1930 and 1994</comment>
+    <announce type='single' loc='1930' lo='view.loop.1'/>
+    <announce type='single' loc='1994' lo='view.loop.1'/>
+    <delayevent delay='600' logoff='view.loop.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>2nd view from observation window - locs 1930 and 1994</comment>
+    <announce type='single' loc='1930' lo='view.loop.2'/>
+    <announce type='single' loc='1994' lo='view.loop.2'/>
+    <delayevent delay='600' logoff='view.loop.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>3rd view from observation window - locs 1930 and 1994</comment>
+    <announce type='single' loc='1930' lo='view.loop.3'/>
+    <announce type='single' loc='1994' lo='view.loop.3'/>
+    <delayevent delay='600' logoff='view.loop.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>4th view from observation window - locs 1930 and 1994</comment>
+    <announce type='single' loc='1930' lo='view.loop.4'/>
+    <announce type='single' loc='1994' lo='view.loop.4'/>
+    <delayevent delay='600' logoff='view.loop.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>5th view from observation window - locs 1930 and 1994</comment>
+    <announce type='single' loc='1930' lo='view.loop.5'/>
+    <announce type='single' loc='1994' lo='view.loop.5'/>
+    <delayevent delay='600' logoff='view.loop.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

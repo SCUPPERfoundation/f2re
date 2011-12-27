@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<fed2-map title='Tracker' version='1.00' editor='standard' from='460' to='Stalker.Stalker Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storage Shed</name>
+      <desc>This is the planets Storage Shed. Unneeded items are stored in here away from the general public.</desc>
+   </location>
+
+   <location num='70'>
+      <name>#6 &quot;I think i can I thnk i can.&quot;</name>
+      <desc>    You are standing at the base of a very steep hill.  Alongside the fairway is a escalator going up the hill. This apparenly is for those who are too tired to climb this very steep hill.  The Hole name reminds you of the little train engine trying to climb the hill. &quot;I think I can I think I can.&quot;  The basket is at the top of the hill to the South. The path back is to the East.</desc>
+      <exits e='71' s='134' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='71'>
+      <name>#5 &quot;Water Water Everywhere&quot;</name>
+      <desc>     You are standing on a very narrow peninsula.  The basket is located on the far end completely surrounded by water.  The other end of the peninsula leads to the base of a very large hill off to the West.  The bridge back is to the SouthEast.</desc>
+      <exits se='136' w='70' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='74'>
+      <name>Sun Baked</name>
+      <desc>Caution the basket seems very hot. Sitting out here baking in the hot sun. Off to the SouthWest you see a beach.  Or you could head to the Oasis to the East.</desc>
+      <exits e='75' sw='137' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='75'>
+      <name>Oasis</name>
+      <desc>You have arrived at the Oasis.  You relax under the shade of the trees for a minute.  It feels great to get out of that hot sun.  There is a small pond which looks so tempting to go take a swim in. Near the pond is a drinking fountain.  You get a quick drink before you continue on to the West or go back to the East.</desc>
+      <exits e='76' w='74' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='76'>
+      <name>#4 &quot;Dessert Sands&quot;</name>
+      <desc>     As you approach the tee all you see around you is sand dunes.  You can see the basket off to the west on top of a giant sand dune.  You can also make out what appears to be a oasis just to your West.  The path back is to the SouthEast.</desc>
+      <exits se='141' w='75' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='134'>
+      <name>&quot;Are we there Yet?&quot;</name>
+      <desc>    You are only half way up the hill.  You are already asking yourself the question &quot;Are we there Yet?&quot;  Thank goodness the escalator goes all the way up the hill to the South.  Or you could always walk back down the hill to the North.</desc>
+      <exits n='70' s='198' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='136'>
+      <name>Mulligan Island</name>
+      <desc>   The island is aptly named this for all of the mulligans that people have taken when they didn&apos;t clear the water hazard on their first try.  There is another bridge leading to a peninsula stye land mass where the basket is located.  You can take the Bridge to the hole to the NorthWest or the bridge back to the East.</desc>
+      <exits e='137' nw='71' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='137'>
+      <name>Hole #5 &quot;Island Hopping&quot;</name>
+      <desc>   You are standing on the tee. All around you is beach sand.  You see the hole off in the distance.  The only visible way to get to the hole is by walking on the bridge that is floating on the water.  It leads to a island where you hope your disc will land. From there it appears that you must throw to another island.  The bridge to the island is to the West. the path back is NorthEast.</desc>
+      <exits ne='74' w='136' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='141'>
+      <name>Ring of Flames</name>
+      <desc>Upon Reaching the Basket you discover that the trees that appear to be on fire. Are just holographic images of flames and that no heat is radiating from them at all. The path to the next hole is NorthWest. The path back is East.</desc>
+      <exits e='142' nw='76' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='142'>
+      <name>#3 &quot;Ring of Fire&quot;</name>
+      <desc>The Tee sign for this Hole reads &quot;Ring of Fire&quot;.  When you look towards the Hole to the West you see the basket surrounded with a circle of large trees.  Each tree appears to be engulfed in flames.  The Way back is South.</desc>
+      <exits s='206' w='141' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='198'>
+      <name>6th Hole &quot;I made it&quot;</name>
+      <desc>    You finally make it to the top of the hill where the basket is.  Off to the side of the basket is a bench.  Next to the bench is what appears to be a oxygen tank.  You can sit down on the bench and take a few breaths of oxygen before you continue on to the next hole to the SouthEast.  There is a gentle winding path you notice going down the hill to the North.</desc>
+      <exits n='134' se='263' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='201'>
+      <name>7th Hole &quot;Watch out for that Tree&quot;</name>
+      <desc>    The basket is tucked into the middle of a group of trees.  How someone can throw the disc and miss all the trees you tend to wonder.  The path leads up the hill to the SouthWest or off to the East.</desc>
+      <exits e='202' sw='264' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='202'>
+      <name>8th &quot;Down in the Valley&quot;</name>
+      <desc>    You feel a nice little breeze as you approach the tee.  This hole stands at the top of a hill and ends up in a deep valley below.  From here you think your disc will fly forever since it is all downhill from here.  You stand and admire the view of the planet. Off in the distance you can see ships taking off and landing.  The hole continues to the East or there is a Path to the West.</desc>
+      <exits e='203' w='201' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='203'>
+      <name>Picnic Plateau</name>
+      <desc>     The hole must also be a destination for the natives to hold picnics.  You can definately see why. All the lush green grass, fresh air and wonderfull view make this a excellant location.  There are some natives having a picnic at one of the tables nearby.  At one of tables near the hole&apos;s fairway sits a native with a box of used discs he sells to passers by. The path goes back to the West or you can do down the hill to the SouthEast.</desc>
+      <exits se='268' w='202' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='206'>
+      <name>#2 &quot;Left it on the Edge&quot;</name>
+      <desc>The basket for this hole just happens to be positioned right next to the ravine.  You hope and pray that if you throw at the basket you don&apos;t overshoot and end up landing in the ravine.  The next tee is North.  The way back is South.</desc>
+      <exits n='142' s='270' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='263'>
+      <name>7th &quot;i knew i could i knew i could&quot;</name>
+      <desc>     You are standing at the Highest point on the Course. >From here you can see the tops of all the buildings. Off in the distance you are barely able to see ships coming and going from the Landing Pad.  >From this point on you feel that it is all downhill from here.  The Basket is located down the hill and to the left. The path along the Fairway goes East. You can also go on the path to the NorthWest.</desc>
+      <exits e='264' nw='198' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='264'>
+      <name>7th &quot;Bend in the Road&quot;</name>
+      <desc>    You have reached the bend in the fairway.  The basket is located down the hill to the NorthEast. You can also go up the hill to the West.</desc>
+      <exits ne='201' w='263' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='267'>
+      <name>9th &quot;Into the dark night&quot;</name>
+      <desc>   This spectacular cavern has been carved out of the rock by the natives. The walls are carved with strange symbols and devices, some of which almost look like faces.</desc>
+      <desc>   It continues to the South where in the distance you can see a tall totem pointing towards the basket. The path back to the previous hole is East.</desc>
+      <exits e='268' s='331' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268'>
+      <name>Valley Below</name>
+      <desc>   You are standing next to the basket which is located at the very bottom of a deep valley.  The air is filled with the scent of sweet flowers that are growing all around.  There are even wild strawberry plants growing near the basket.  You pick one and eat it before you continue on.  To the West is a Large Cavern or you can climb back up the hill to the NorthWest.</desc>
+      <exits w='267' nw='203' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='270'>
+      <name>#2 &quot;Ridge Runner&quot;</name>
+      <desc>Hole 2 is a 210 foot hole with a deep ravine running down the entire right hand side.  You hope and pray that if you throw your disc that it doesnt end up down there at all. It looks like it could be very dangerous to retrieve.  The Basket is to the North. The way back is SouthWest.</desc>
+      <exits n='206' sw='333' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331'>
+      <name>Totem Corner</name>
+      <desc>   This monumental Totem stretches upwards towards the roof of the cavern. It too is covered with carvings that you are sure have some meaning... after staring at them for a while, you realise that this totem is a really a guestbook.  You take the laser etcher that is attached to the totem and crudely carve your face and intials into the totem.  Placing your image near images of others who have come and played this course.  The Hole is to the SouthEast. The way back is to the North.</desc>
+      <exits n='267' se='396' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333'>
+      <name>Hole 1 basket.</name>
+      <desc>   You near the basket for Hole 1.  There is a metal pole with a basket attached near the middle of the pole. There is a flay steel spoked top to the pole from which chains hang down from the different points of the spoke. Hole #2 is NorthEast.  The way back is South.</desc>
+      <exits ne='270' s='397' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396'>
+      <name>9th hole</name>
+      <desc>    The basket post for this hole resembles the totem that is located in the cavern to the NorthWest.  It is located just outside of the deep cavern.  From here you can see the First Tee off to the East. Buzz&apos;s Disc Golf Emporium is located to your SouthEast.  The Landing Pad is to your South.</desc>
+      <exits e='397' se='461' s='460' nw='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397'>
+      <name>Hughes Hole #1</name>
+      <desc>   You have arrived at the Tee Pad for hole #1 of Hughes disc golf course. The disc shop is to your South while the LP is back to your SouthWest.  #9 Basket is to the West.</desc>
+      <desc>    </desc>
+      <desc>     The tee pad is beautifully designed ouf of mosiac tiles.  All the tiles laid together make a picture of how the hole is laid out. From the Information screen on the monitor next to the hole, this is a Par 3 hole. The basket that the disc must go into is sitting right neear a tree about 200 feet in front of you. You realize by looking at the monitor that there is a blinking light on the screen and that your disc is blinking also.  This course must be really high tech. They have placed GPS devices into the disc so that whereever they go you will be able to find them. No more searching for long periods of time looking for missing discs.</desc>
+      <desc>    There is a notice near the tee sign that reads. For those who are tired from the walk round the course. They may go Out to the Landing Pad at anytime.</desc>
+      <exits n='333' s='461' sw='460' w='396' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458' flags='bt'>
+      <name>Rasman&apos;s Office</name>
+      <desc>    You have stepped into the planetary offices of Rasman.  There is a marble topped desk with monitors inlaid into them against the back wall.  One of the wall there is a Food/Beverage screen where food or drinks can be ordered.  Beside that is a large meeting room like table where you guess he either eats or holds Planetary business meetings.  On the other wall is a spiral staircase that leads Down into the Exchange. You can go back to the lobby to the East.</desc>
+      <exits e='459' down='523' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>Lobby</name>
+      <desc>    You are standing in the lobby of the Planetary Offices of Rasman.  His office is located to the West.  There is another office to the SouthWest that is for rent.  The way Out is East.</desc>
+      <exits e='460' sw='522' w='458' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='yr'>
+      <name>Tracker LP</name>
+      <desc>   You step off your ship onto the Landing Pad.  The Landing Pad resembles a Giant Disc Golf Disc.  With the word Tracker in big letters in the center of the Landing Pad.</desc>
+      <desc>   A small droid, with discs mounted around its head, trundles up and offers to sell you a new ship.</desc>
+      <desc>    To your SouthWest is the planets Trading Exchange. South Is the Cryztal Avenger Hotel.  East is the Buzz disc golf Emporium shop.  NorthEast is the first tee of disc golf Course, and West is the Planetary Offices of Rasman.</desc>
+      <exits n='396' ne='397' e='461' s='524' sw='523' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Buzz Disc Golf Emporium</name>
+      <desc>   Visitors to this planet can purchase souveiners of their trip to this planet. They can also purchase discs to use on the planets disc golf courses.  For those that may get injured while playing disc golf there is a hospital tent to the south.  The LP is back to the West. To the North is the Tee pad for Hole 1.</desc>
+      <exits n='397' s='525' w='460' nw='396' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522' flags='b'>
+      <name>Office For Rent</name>
+      <desc>    This office space is for rent.  There is a ornate desk near one wall with the exchange monitors inlaid in it.  Next to the desk is a Food/Beverage screen where you can have food ordered and delivered right to your desk.  In one corner of the room is a staircase that leads Down to the Exchange.  You can go back to the Lobby to the NorthEast or Out to the LP through the Fire Exit door.</desc>
+      <exits ne='459' down='523' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523' flags='eb'>
+      <name>Tracker Trading Exchange</name>
+      <desc>   Technology melds with Disc Golf. The layout is that of a disc golf basket with trading cubicles setting in a circle around a steel column in the middle. Chains hang from the ceiling down into the tops of monitors in each cubicle, letting you buy and sell commodities, or order a variety of useful goods.</desc>
+      <desc>   Natives of the planet cluster around the screens, clothed in T Shirts and Shorts.  There are wait droids going from cubicle to cubicle bringing drinks and food to any hungry or thirsty trader.  In the corner of the room there is a practice basket set up for those that wish to practice their disc golf putting while waiting to cash in on any futures they may have or if they are just tired of trading.</desc>
+      <desc>    The LP is to the NorthEast or you can go IN to the Planetary Office Building.</desc>
+      <exits ne='460' in='459' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='b'>
+      <name>Cryztal Avenger Hotel</name>
+      <desc>   This hostel&apos;s owner, an elegant albino man, smiles a welcome to you and offers you a steaming mug of what passes for coffee on this planet.</desc>
+      <desc>   There&apos;s a roaring fire in the centre of lobby, making. the flames from the fire reflect off of the cryztal chandalier. Thus making the whole lobby sparkle from the reflections off of the cryztals.</desc>
+      <exits n='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='hi'>
+      <name>Medical Tent</name>
+      <desc>You have just arrived in the Medical Tent.  There is a nurse here ready to attend to any injury you may have.  If your injury just happened to be fatal then there is a insurance agent, in the corner of the tent. Who is desperately waiting to sell his next insurance policy.</desc>
+      <exits n='461' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

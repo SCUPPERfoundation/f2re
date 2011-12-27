@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<fed2-map title='Crazy Space' version='4' editor='standard'>
+
+   <location num='395' flags='slp'>
+      <name>Crazy Link</name>
+      <desc>Welcome to the Crazy System. Things can get pretty crazy around here so best fly over to planet Golf which you can see on your ships scanners in a southeast direction. Your scanners also indicate a second planet to the east.</desc>
+      <exits e='396' se='460'/>
+   </location>
+
+   <location num='396' flags='sp'>
+      <name>Putt Orbit</name>
+      <desc>Below you is planet Putt. From orbit you can see great swathes of sandy beaches. Looks like a nice place to visit so pull on your swimwear, grab a putter and a ball and head for the landing pad. Your scanners indicate planet Golf to the south and the Link to the west.</desc>
+      <exits s='460' w='395'/>
+   </location>
+
+   <location num='459' flags='sp'>
+      <name>Real Estate Space</name>
+      <desc>This location will be the orbit for a future biological facility. Your sensors indicate planet Golf to the east and planet Putt to the north east.</desc>
+      <exits e='460'/>
+   </location>
+
+   <location num='460' flags='sp'>
+      <name>Golf Orbit</name>
+      <desc>Below you is the terraformed planet Golf. From orbit you can see great swaths of terra-firma being sculptured into what will be a golf course, a crazy golf course. Your scanners indicate the a second planet to the north and the Link to the northwest.</desc>
+      <exits n='396' w='459' nw='395'/>
+   </location>
+
+</fed2-map>

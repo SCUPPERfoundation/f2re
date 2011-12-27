@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<fed2-map title='Sanitaria' version='95' editor='standard' from='2079' to='Asylum.Asylum Space.2079'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Here is where the arch-tyrant, monodefuego, stores devious devices and toys for future implementation. Bad monkey!</desc>
+   </location>
+
+   <location num='315' flags='kt'>
+      <name>Happy Place</name>
+      <desc>You feel yourself start to panic. You shut your eyes tightly and start muttering to yourself, &quot;Happy Place... Go to your happy place... Just like the doctors said... Happy... Happy... Happy...&quot; You trail off and everything is dark for a moment, but then there is a brilliant light! You&apos;ve made it! Your happy place! All around you are beds, shopping malls, free beer stands, swimming pools laden with scantily clad members of the opposite sex, and bands playing your favorite music! Everything your heart could ever desire is within arm&apos;s reach! You walk about happily as a group of firemonkeys play ring around the rosie. Wait a minute, firemonkeys? What are they doing in your happy place? They peel off of their circle laughing and setting fire to everything! Grandma runs past, her hair and skirt flaming! The band is diving for cover! The sheets of the beds are hot in ways you didn&apos;t intend! This isn&apos;t your happy place!</desc>
+      <exits n='1252' ne='1252' e='1252' se='1252' s='1252' sw='1252' w='1252' nw='1252' up='1252' down='1252' in='1252' out='1252'/>
+   </location>
+
+   <location num='763' flags='kt'>
+      <name>Happy Place</name>
+      <desc>You feel yourself start to panic. You shut your eyes tightly and start muttering to yourself, &quot;Happy Place... Go to your happy place... Just like the doctors said... Happy... Happy... Happy...&quot; You trail off and everything is dark for a moment, but then there is a brilliant light! You&apos;ve made it! Your happy place! All around you are beds, shopping malls, free beer stands, swimming pools laden with scantily clad members of the opposite sex, and bands playing your favorite music! Everything your heart could ever desire is within arm&apos;s reach! You walk about happily as a group of firemonkeys play ring around the rosie. Wait a minute, firemonkeys? What are they doing in your happy place? They peel off of their circle laughing and setting fire to everything! Grandma runs past, her hair and skirt flaming! The band is diving for cover! The sheets of the beds are hot in ways you didn&apos;t intend! This isn&apos;t your happy place!</desc>
+      <exits n='1252' ne='1252' e='1252' se='1252' s='1252' sw='1252' w='1252' nw='1252' up='1252' down='1252' in='1770' out='1252'/>
+   </location>
+
+   <location num='1252' flags='kt'>
+      <name>Holding Cells</name>
+      <desc>&quot;Not my happy place... Not my happy place...&quot; You open your eyes and find yourself lying on a bed in a small but comfortable white room. You bring your head up off the pillow and observe several other small rooms containing well dressed individuals who look very uptight being hugged firmly by friendly whitecoats. A whitecoat notices that you&apos;ve come to and immediately wraps you up in a hug. &quot;There there, sir.&quot; She says, &quot;It&apos;s all over now. You&apos;re safe in the holding cells.&quot; She holds you for quite some time, encouraging you to let it all out, before she finally lets you go and hands you a document certifying your sanity and worth. You feel better and are now free to exit to the southeast.</desc>
+      <exits se='1317' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1253'>
+      <name>Shock Treatment</name>
+      <desc>In this room are several well-to-do individuals, strapped to chair and tables and looking very ill at ease. Electrical noise crackles through the shock treatment room. Here patients are administered electric shocks of varying amplitudes in an effort to realign some of those misplaced neurons. Or whatever. However shock is not limited to electricity here. Several whitecoats are running around the room, dashing up to people and yelling, &quot;Boo!&quot; Occasionally cold water is tossed on a patient, or they are forced to see a scary scene from a movie, or their feet are tickled. All sorts of different shocks going on here, and people pay big money for the service! Of course, these people are nutjobs, so that goes a long way in explaining it. Anyway, this doesn&apos;t look like fun. The exit is south.</desc>
+      <exits s='1317' up='315' down='315' in='1831' out='315' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1254'>
+      <name>Virtual Reality Replay Room</name>
+      <desc>This room is about half full of dozens of incredibly rich individuals from all corners of the galaxy who sit calmly wearing full tactile suits and large virtual reality devices over their heads. The units can simulate to near perfection sights, sounds, smells and tastes while the suit actually allows you to feel as well! Several whitecoats stroll about, monitoring the condition of the patients and occasionally feeding them some orange fluid from a tube, which admittedly seems a bit unusual. There is an exit to the southwest.</desc>
+      <exits sw='1317' up='315' down='315' in='1705' out='315' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1316' flags='kt'>
+      <name>A Strange Shop</name>
+      <desc>The room around you twists and bends before reassembling itself quite differently. You are inside a small shop dimly lit by torches on the wall. Trinkets, gadgets and vaguely frightening items lie about the room, priced using a system you can&apos;t understand. A goblin pops his head up from behind the counter and says, &quot;Oi! Have a looksee, ay? Everythin&apos;s for sale.&quot; Indeed, there are some interesting items for sale here if you&apos;re willing to go through the right channels. A slithy bribe to the right individual might just be enough to net you one of these. Available now are:</desc>
+      <desc>Testing&apos;s Patented Irresistible Love Potion</desc>
+      <desc>The Still-Burning Paw of a Firemonkey</desc>
+      <desc>An Automatically Updating Map of the Asylum</desc>
+      <desc>A large, empty aquarium with mermaid-catching gear</desc>
+      <desc>A portable hole</desc>
+      <desc>Sanitaria Office Space</desc>
+      <desc>A constantly shifting doorway is to the east. Oh, but that&apos;s free if you want to use it.</desc>
+      <exits e='1317' no-exit='noexit.asylum.13'/>
+   </location>
+
+   <location num='1317'>
+      <name>VIP Evaluations</name>
+      <desc>This room contains several well-dressed and highly stressed people. At one desk you see a planet owner in tears, at another a Technocrat incessantly chirping like a bird, and at still another a Mogul smoking his lawyer&apos;s necktie. Despite some people&apos;s best efforts to the contrary, the order of the universe is that the richest people get the best care, and here wealthy nutjobs are carefully evaluated, diagnosed and then sent for treatment. You&apos;re rich enough to be in here, so maybe you&apos;re rich enough to afford an appointment with one of the universe&apos;s great psychologists. Or maybe you snuck in here and are about to be thrown back in with the rest of the lowlifes. But if I don&apos;t know whether you&apos;re rich or poor, chances are the whitecoats don&apos;t either, and that puts you in pretty good shape. You sly dog, you.</desc>
+      <desc>If you have a prescription you can head north, northeast or east. Otherwise the exit is to the southeast.</desc>
+      <exits n='1253' ne='1254' e='1318' se='1382' up='315' down='315' in='315' out='315' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1318' flags='b'>
+      <name>VIP Exchange</name>
+      <desc>Excitement! You&apos;ve finally made it to the big times and been allowed inside of Sanitaria&apos;s highly elite VIP Exchange, where the most successful people in the galaxy come to do business with the planet. Your name is taken by a whitecoat at the entrance and a personal desk, complete with name placard, is assigned to you. You trapse happily over to it, plop down, and immediately realize that something is wrong. The screen isn&apos;t telling you the exchange prices; it&apos;s telling you to breathe and relax while it reassures you of your successfulness and worth. This isn&apos;t an Exchange! It&apos;s a VIP Treatment center for trading addicts and Federation junkies! Well of all the nerve! You certainly don&apos;t need to be here! You aren&apos;t an addict, you can quit trading and Fed any time you want! You just don&apos;t want to! Nevermind that you&apos;re working on Technocrat and have 9 alts. You may as well leave these losers and head out one of the exits to the south or west.</desc>
+      <exits s='1382' w='1317' up='315' down='315' in='315' out='315' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1319'>
+      <name>Asylum Official Offices</name>
+      <desc>While the Asylum is predominately for the care of the mentally ill, the sheer size of the building makes it a practical location for the administration of the entire system. Most of the major political officials, as well as the top administrators of this facility, have beautiful offices here. You, however, are not one of them. No office for you. The exit is to the southwest. Use it.</desc>
+      <exits sw='1382' up='315' down='315' in='315' out='763' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1381' flags='bt'>
+      <name>The Five</name>
+      <desc>This enormous board room is dominated by a gargantuan, round table. The table itself is dark mahogany and matches the walls and carpeting. The ceiling is black and set with only a few lighting fixtures so that the entire room has a dim, darkened quality. Five chairs are evenly spaced around the table, each one drastically different in design. Before each chair is a little plaque, bearing a name and a list of titles and accomplishments.</desc>
+      <desc>   Testing: DG Founder, LMS at Zinj, FMI at Monarchy, Pope at Rancagua (WCC), &quot;Little Bird&quot;</desc>
+      <desc>   Monodefuego: FMI at TAGOC, LHE at Makar, Hacked Lightforge, LMS at The Guild</desc>
+      <desc>   Roneth: Warlord at Makar (LMS), Pope at Rancagua (LMS), FMI at Oash, Mapper</desc>
+      <desc>   DOA: Warlord at Makar (ECC), Cardinal at Rancagua, Scout Head</desc>
+      <desc>   James de Monet: Top Gen, FMI at DibII, FMI at Kurac, LMS at Arm</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='1382' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1382' flags='t'>
+      <name>VIP Evaluations, Exchanges and Offices</name>
+      <desc>Ever wonder where the elite go for mental aid? This is it. A beautiful, green marble hall stretches down a row of immaculate offices, the entrance for each immediately soothing to view. You can&apos;t tell if any doctors are in with patients, but there is not much visible movement here.</desc>
+      <desc>  A museum rests to the east and a board room is to the west. To the northwest is VIP Evaluations, to the northeast are the offices for some of the more important Asylum administrators and directly to the north is the VIP exchange! An impressive elevator can take you up.</desc>
+      <exits n='1318' ne='1319' e='1383' s='1446' w='1381' nw='1317' up='1833' in='315' out='315' no-exit='noexit.asylum.12'/>
+      <events enter='moves.vip.1'/>
+   </location>
+
+   <location num='1383' flags='t'>
+      <name>DisGuild Museum</name>
+      <desc>This quiet museum is apparently dedicated to an organization known as the DisGuild. Looking through some of the plaques and exhibits it gradually becomes clear that the loosely organized group is dedicated to preserving the sanctity of self over and against organizations, particularly large guilds and clans who would attempt to railroad in members. Numbered displays of the organization&apos;s various victories stand around the room.</desc>
+      <desc>   1. Depicts a large mech battle between neutral forces and the Zinj Kingdom.</desc>
+      <desc>   2. Depicts an enormous army engaging a force labeled TAGOC while a small, grey-coated group sneaks around behind.</desc>
+      <desc>   3. Depicts the assassination of the head of House Borsail.</desc>
+      <desc>   4. Depicts a single, hooded warrior dragging multiple men out of a lair labeled, &quot;The Guild.&quot;</desc>
+      <desc>   5. Depicts a maniacally grinning monkey wielding a glowing sword.</desc>
+      <desc>   6. Depicts a holy man and a barbarian, standing back to back and grinning at one another.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='1382' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.12'/>
+   </location>
+
+   <location num='1445' flags='t'>
+      <name>Re-evaluation Lobby</name>
+      <desc>At the desk is a disheveled Trader, furiously insisting that he&apos;s not insane and that all he wanted was to find out what was inside the fountain. A disinterested whitecoat leans on her hand, punctuating his tirade with, &quot;Uh huh...  yep... I see... I understand... Whoa... No kidding?&quot; The Trader&apos;s rant begins to lose steam as he gradually becomes aware of the whitecoat&apos;s utter lack of interest. She finally informs him he will need to schedule an appointment for a re-evaluation. Right now the wait list is two and a half years long. He shrieks a few more verbally-abusive sentences, turns and storms out. Her gaze shifts over to you. She shoots you a bored and annoyed, &quot;Can I help you?&quot; She probably can&apos;t, actually. The exit is to the east.</desc>
+      <exits e='1446' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1446' flags='t'>
+      <name>Asylum Reception</name>
+      <desc>Comfortable looking couches ring this fancy reception area which overlooks the Asylum foyer below. A brightly smiling whitecoat behind a desk speaks quietly with a well-dressed individual before buzzing him through a heavily guarded doorway to the north. A directory indicates that inmates will need to head downstairs to get to the Loon&apos;s Refuge, east to enroll in the Asylum workers program, and west for psychiatric re-evaluation. All attempts to move north are brusquely rebuffed by the whitecoated guards. They inform you that you will need either an appointment or a pass to enter the administrators&apos; offices.</desc>
+      <exits n='1382' e='1447' w='1445' up='1864' down='1759' in='1382' out='1864' no-exit='noexit.asylum.8'/>
+   </location>
+
+   <location num='1447' flags='t'>
+      <name>Worker&apos;s Program Enrollment</name>
+      <desc>A few sedate-looking patients sit patiently in chairs about this room waiting for an interview to determine their fitness to leave the Asylum proper and work on the planet under supervision. These positions are hotly desired by many of the inmates of the Asylum as they allow for considerable freedom to move about the planet and often prove to be the fast-track to a coveted release at re-evaluation time. Upon examining the books, however, you find that there are people here who have been waiting since the Carter administration. Unless you have a few years to sit around this office waiting to enroll in the program you&apos;d probably be best served by heading west.</desc>
+      <exits w='1446' up='1864' down='1864' in='1896' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1502' flags='t'>
+      <name>Special Care Ward Entrance</name>
+      <desc>This large room is devoid of any inmates (save yourself, now) but contains fifteen or so whitecoats, all of whom are armed to the teeth with a terrifying array of weaponry and face an enormous, solid steel gate on the western side of the room. Glancing at some of the documentation in the room you deduce that this is the &quot;Special Care&quot; ward, dedicated to holding inmates deemed &quot;exceptionally dangerous.&quot; Most beings over eight meters in height are sent to this ward for observation just in case they prove to be violent, though many smaller inmates of surpassing strength and aggressiveness are likely held behind those doors. One of the whitecoats catches notice of you and hurries over, putting his arm around you and escorting you out to the east. &quot;This area is off-limits,&quot; he says soothingly, &quot;why don&apos;t you go find somewhere else to play, k?&quot;</desc>
+      <exits e='1503' out='1503' no-exit='noexit.asylum.2'/>
+   </location>
+
+   <location num='1503' flags='t'>
+      <name>A Disturbing Hallway</name>
+      <desc>Everything about this hallway is disturbing. To the north and south it seems as though this hallway stretches on forever and produces a steady stream of patients. To the east frantic screams, maniacal laughter and uncontrollable sobbing eminates from behind stubbornly locked doors. To the west there is an oversized door that reads &quot;Licensed Asylum Staff only&quot; behind which shockingly loud roaring can be heard.</desc>
+      <exits n='1761' s='1567' w='1502' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1505' flags='t'>
+      <name>Hallway</name>
+      <desc>The hallway continues here, disappearing into the distance both to the north and south. Mercifully traffic is a little bit lighter here than some of the other portions of the Asylum, though most find that walking through a hallway containing only a few psychotic inmates is just as disturbing as one packed with them. You can head north or south, but either direction looks like it will provide more witnesses.</desc>
+      <exits n='1631' s='1569' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1506' flags='kt'>
+      <name>A Deep Pit</name>
+      <desc>You open your eyes and find yourself lying on the floor in a deep pit. Gone is the noisy room and its cruel overseer, and you can&apos;t tell whether you were carried here or whether you fell straight through the floor of the Bureaucracy Building. Not that it really matters now. The bones of past victims litter the floor. You run your hand along the damp stone walls of the pit and find they would be tremendously difficult to climb. Staring up you can&apos;t even see the top of the pit, it seems you may never get out of here. Oh, unless you take the door to your west that is.</desc>
+      <exits w='1505' no-exit='noexit.asylum.15'/>
+   </location>
+
+   <location num='1567' flags='t'>
+      <name>An Endless Hallway</name>
+      <desc>This hallway stretches as far as you can see to both the north and the south, disappearing into darkness in both directions. It reeks of the bodily fluids of a thousand different species, a stench which is amplified by the unpleasant burning smell eminating from scorched firemonkeys drawn on the walls, and you are pushed around easily by the huge number of inmates flooding through here. Every so often the crowd parts to allow a whitecoat to pass easily through and though not unfriendly, they are not receptive to your claims of sanity.</desc>
+      <exits n='1503' s='1631' up='1864' down='1864' in='1864' out='2696' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1568' flags='t'>
+      <name>The Only Pleasant-Smelling Hall in the Asylum</name>
+      <desc>Standing away from the traffic of the Asylum, a group of lightly armed whitecoats examine incoming and outgoing carts carefully, sniffing occasionally at foodstuffs or bottles and passing impressive-looking scanner devices over the serving inmates. Most of the carts are heading to the south, where a fantastic smell overpowers the general stench of the Asylum. Occasionally a whitecoat will quickly push a cart out to the eastern hallway and disappear amongst the throng in that direction. A very wide staircase here has been divided into lanes for walking up, walking down, running up, running down and, oddly enough, falling up and down. To your amazement several inmates have mastered the art of falling up. You can too! At least you could, if the staircase didn&apos;t lead directly to the ceiling, Winchester Mansion style.</desc>
+      <exits e='1569' s='1632' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1569' flags='t'>
+      <name>Frantic Hallway</name>
+      <desc>Activity in this part of the hallway is at a fever-pitch, and like much of the rest of the Asylum it looks as though at one time it was quite fancy but now is in sorry shape. The red carpet on the floors is stained with unknown substances, claw marks trace across the pressed tin ceiling and someone has doodled obscene limericks on the walls. Gurneys head south into the distance of this seemingly endless hall while tides of inmates push through to both the north and south. Carts come in and out from the west where an open entryway produces sounds of clanking and clamor rather than the shrieking and yelling associated with the rest of the Asylum.</desc>
+      <exits n='1505' s='1633' w='1568' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1630' flags='kt'>
+      <name>Observation Room</name>
+      <desc>Two overly-friendly whitecoats bring you through the halls of Asylum and place you in a room for &quot;observation.&quot; &quot;You just relax in here and try not to hurt yourself. We&apos;ll have an appointment with the doctors for you soon,&quot; the whitecoats say soothingly. &quot;Don&apos;t worry, we&apos;ll be watching.&quot; Upon heading inside, however, you are immediately set back on edge as there are hundreds of enormous, staring eyes watching from the padded walls. They dart about, peering at the couple dozen extremely depressed and anxious looking Traders about the room, none of whom dares move a muscle. A door to the east provides the only exit, and from your position in the room you&apos;re relatively certain that if you wait for an opportune moment you can make a mad dash and get out before the eyes see who you are... Well, you hope anyway.</desc>
+      <exits e='1631' no-exit='noexit.asylum.3'/>
+   </location>
+
+   <location num='1631' flags='t'>
+      <name>A Narrow Hallway</name>
+      <desc>Screaming, laughing and crying noises eminate from behind locked doors on either side of this narrow hallway, which stretches seemingly interminably to the north and south. You envy the inmates with sticky or sharp enough appendages to crawl along the ceiling since moving about the floor is a very difficult endeavor indeed as your are jostled, shoved and snarled at by all the lunatics roaming the halls. No clues aid you in discerning what lies in either direction.</desc>
+      <exits n='1567' s='1695' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1632' flags='t'>
+      <name>Loon&apos;s Refuge Kitchens</name>
+      <desc>Sedate looking inmates and whitecoats scurry about this area, cooking food, flipping burgers, frying fries, and feeding alcohol into large machines which apparently bump it into the other room. It smells fantastic in here, a welcome change from much of the rest of the Asylum, and despite everything you&apos;ve seen in the rest of the facility the food looks very appetizing. The patients working in this area are a far cry from the majority that you encountered in the hallways, as they by and large seem friendly, if not a bit distractable. The whitecoats gently keep them on task and direct the flow of carts to the south into a raucous (though not unpleasant) room. Every now and then a bell will ring and a ticket pop out of a socket on the wall. Whitecoats examine these, load up carts, and take them themselves to the north. The north and south doors are the only apparent exits to the room.</desc>
+      <exits n='1568' s='1696' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1633' flags='t'>
+      <name>Neverending Hallway</name>
+      <desc>Neverending Haaaallllwaaaaaay! Ah ah ah, ah ah ah, ah ah ah...  Neverending Haaaallllllwaaaaaayyy! Ah ah ah, ah ah ah, ah ah ah. Your singing draws curious looks from the other lunatics, so you quiet down to just a hum. Every now and then a gurney comes speeding past and disappears through a doorway on the east side of the hall, briefly filling the hallway with the sounds of drilling, sawing, moaning and screaming, but a pair of stern-looking whitecoats wielding batons prevent you from entering to see what&apos;s going on in there. Unless you get yourself on a gurney, the only directions available for you to head are north and south.</desc>
+      <exits n='1569' s='1697' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1634' flags='kt'>
+      <name>Operating Rooms</name>
+      <desc>The doctor cracks a smile beneath his operating mask as you climb onto a gurney. He wheels you out of the room and into a massive operating and recovery room which appears to be serving patients who have taken serious external wounds. Suddenly you&apos;re being wheeled through the Asylum&apos;s halls and deposited in a totally different area of the facility. This new room is smaller and quieter, with doctors clicking instruments over mostly unconscious patients. An open window to the east helps cool this room and rid it of some of the horrible stink, but it is still uncomfortably hot and foul smelling. &quot;Don&apos;t worry,&quot; your doctor says, &quot;Everything will be fine once I&apos;ve had a little poke around your brain.&quot; He fumbles through some terrifying looking instruments and exclaims, &quot;My hacksaw! Where&apos;s my hacksaw?&quot; He holds a finger up in your face and smiles again beneath his mask, &quot;Don&apos;t go anywhere now.&quot; When he&apos;s gone, you should be able to make for the western exit.</desc>
+      <exits e='1702' w='1633' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.7'/>
+   </location>
+
+   <location num='1694' flags='kt'>
+      <name>A Padded Cell</name>
+      <desc>A couple of whitecoats throw you into a room in the Asylum, but instead of getting the wind knocked out of you on impact with the floor it feels like landing on pillows. Wet, soggy, kind of sticky pillows but pillows nonetheless. The door slams shut and you struggle to your feet, finding that you are under scrutiny by many different creatures in the room, each studying you quietly. You are beginning to fear for your safety when an amorphous, hairy, gasping creature says, &quot;Jumped into the fountain, eh?&quot; You nod slowly and a general murmur of understanding ripples through the room. A fairly well-to-do looking lobster chimes in &quot;Happens to the best of us.&quot; You struggle to your feet and head east towards the only exit. &quot;Whoa, you can&apos;t open that!&quot; an enormous, cyclopean monstrosity says. &quot;Can&apos;t you hear what&apos;s out there?&quot; Indeed, the whole room is filled with disturbing screams and shrieks from outside, but there is no other way out...</desc>
+      <exits e='1695' no-exit='noexit.asylum.4'/>
+   </location>
+
+   <location num='1695' flags='t'>
+      <name>A Narrow Hallway</name>
+      <desc>The walls feel like they are closing in on you as you walk down this interminably long, narrow hallway. Scratches decorate every wall and inmates push past you, hurrying through the area as though there were some important place that they absolutely had to be soon. You&apos;re certain that some of these were former Captains, Adventurers and Traders driven mad by the endless tasks they were forced to perform for minimal reward.</desc>
+      <desc>   To the south the hall opens up into the Asylum&apos;s grand Foyer, while to the east a large double door hangs off its hinges and the sounds of shouting, swearing and singing can be heard amidst general clatter. The hall continues to the north.</desc>
+      <exits n='1631' e='1696' s='1759' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1696' flags='bt'>
+      <name>Loon&apos;s Refuge</name>
+      <desc>Surprisingly situated within the Asylum, Loon&apos;s Refuge was once the facility&apos;s cafeteria, but was taken over by the inmates and now serves as a tavern and diner for the denizens of this madhouse. The place is packed with creatures of every size, shape and grasp on reality. A bard on a raised platform blows forcefully into a bedpan and though it produces no sound several inmates are dancing on a cleared floor before him. The floor, tables, walls and even ceiling are coated in a thick, unappetizing grime. Fires have been started around the room and some inmates are cooking over them, their light oddly off-setting the flickering fixtures above. Despite the overall grodiness of the joint the food does actually smell very good, and any alcohol that leaves so dedicated a mark in the floor must be worth drinking.</desc>
+      <desc>   Exits are to the west, south and east. A whitecoat guards a door to the north, through which there is considerable cart traffic.</desc>
+      <exits e='1697' s='1760' w='1695' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1697' flags='t'>
+      <name>A Lengthy Hallway</name>
+      <desc>To the north and south this hallway goes on apparently forever, doors branching off on either side. Inmates walk, stalk, crawl, slither, run, fly and conga unceasingly through here, and it makes movement difficult. A particularly large crowd of inmates presses in around a large set of doors to the west, from which a generally happy din can be heard.</desc>
+      <exits n='1633' s='1761' w='1696' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1701' flags='kt'>
+      <name>Front of the Queue</name>
+      <desc>You see no other option. You yell at the top of your lungs, &quot;MOSH PIT!&quot; and immediately the lights go out, strobes and lasers come on and the whole room is filled with the sound of heavy metal. Suddenly everyone in the queue is jumping up and down in unison, slamming into one another and thrashing about roughly in time with the music. The clerks at the front dance lewdly in their cages as undergarments are hurled at them from various points in the room. You leap up above the fray and crowd surf along, yelling and shouting with abandon before getting dropped right in front of the clerks. Abruptly the music stops, the lights come on, and everything is precisely as it was. The clerk before you, her hair in a tight bun, checks your papers, stamps your hand and waves you past. You&apos;re wondering whether this place is getting to you and the whole experience was a fantasy when you see a glow stick poking up out of a clerk&apos;s back pocket.</desc>
+      <desc>   The exit leads out of customs.</desc>
+      <exits out='1823' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1702' flags='kt'>
+      <name>Belfry</name>
+      <desc>Darting past inmates, whitecoats and doctors you leap through the open window to freedom. Unfortunately, freedom is fifteen stories above the ground. How in the world did you get so high?! Yellow clouds whip past you as you plummet, when suddenly you are shaken hard. You crash through a flimsy roof, through a flimsy floor, and land on an enormous metal bell, which tolls out a loud, low note. Your ears ring as you slide down to the floor, rub your head and catch your breath. Bats, apparently startled by the commotion, fly panic-stricken around the room, brushing against you and filling your ears with a frantic pulsing noise. It appears that you are high, high up in Areinay Chapel&apos;s belfry. The situation does not look good, however, as there are no immediately apparent exits save for a hole in the floor with a rope attached to the bell. When you catch your breath, you might be able to swing down Quasimodo-style on it.</desc>
+      <exits down='1953' no-exit='noexit.sanitaria.4'/>
+   </location>
+
+   <location num='1703' flags='kt'>
+      <name>Grave</name>
+      <desc>You wait until the capacitor is just about to discharge and then leap. For a moment you&apos;re in free fall, plummeting towards Sanitaria, when suddenly the capacitor discharges. Of course, it&apos;s not a matter transference beam, and you are immediately disintegrated. Highly efficient Sanitaria work-release inmates gather up your molecules and bury them in a nice plot in the graveyard. All that remains is a pile of dust, your left eye, and a bit of finger. When your eye adjusts to the gloom of the grave, you use your bit of finger to start piecing yourself back together. Molecule by molecule your finger painstakingly reassembles your individual atoms until at long last you have been put back together, though you can&apos;t help but feel shorter. The effort took you a very long time, though, and you don&apos;t have much air left. You&apos;d better get out of this grave.</desc>
+      <exits up='1950' out='1950' no-exit='noexit.sanitaria.9'/>
+   </location>
+
+   <location num='1704'>
+      <name>A Death-Defying Position Half a Mile Above the Ground!</name>
+      <desc>Evel Knievel, the great American stuntman, once jumped 13 buses in front of a crowd of more than 100,000 people. He broke four bones, of course, but what a show! You, on the other hand, are presently standing several hundred buses up in the air, balanced precariously on a perpetually shifting, rotating ring with a total audience of 0. You can continue your performance by heading either southeast or southwest, or you can head south across a platform to the central capacitor, which even now looks like it&apos;s ready to discharge a massive blast of energy.</desc>
+      <exits se='1769' s='1768' sw='1767' no-exit='noexit.sanitaria.11'/>
+   </location>
+
+   <location num='1705' flags='kt'>
+      <name>In a Virtual Reality Machine</name>
+      <desc>You sit at a console and a whitecoat hurries over. She asks you when your troubles began, and you reply that you&apos;ve been feeling pretty batty every since landing on Sanitaria. She nods and types some information into her computer. &quot;Alright,&quot; she says, handing you the VR suit, &quot;please put this on.&quot; You slip the fairly lightweight electronic garment on. She runs some tests, having the suit pinch you a few times, simulate the feel of walking, it&apos;s all very disturbingly realistic. Finally she slips the helmet over your head and all goes black. Suddenly you realize you never asked how you get out of this thing! Ah well, surely someone will notice when you&apos;ve been here a while. Now to work out those unresolved mental issues you&apos;ve had since arriving. A tunnel takes you northward where you can see a light, that must be the start of your virtual reality therapy! As you draw close you see it&apos;s a reconstruction of the Asylum LP. Intriguing...</desc>
+      <exits n='2079' out='1706' no-exit='noexit.sanitaria.12'/>
+   </location>
+
+   <location num='1706' flags='kt'>
+      <name>A Very Sticky Place</name>
+      <desc>Looking at the light at the end of the tunnel you panic, you certainly don&apos;t want to start your trip here over again! You start to struggle against your restraints, pulling, tearing and grasping. Finally you tear the helmet off of your head and find yourself naked, suspended in nasty orange goo with a tube shoved deep into your throat. You push through the top of the little pod that contains you and quickly remove the various wires connected to you. You thought you were just in for a little Virtual Reality tour! Suddenly the bottom of your pod drops out dumping you (and all your goo) down a long sluice. You slide rapidly for what seems like an hour before you see an outlet quickly approaching. This might hurt when it spits you out.</desc>
+      <exits out='1821' no-exit='noexit.asylum.14'/>
+   </location>
+
+   <location num='1758' flags='kt'>
+      <name>Infirmary</name>
+      <desc>Your eyes adjust to the bright lights of the room. Beeping noises surround you and you raise your head (or equivalent) painfully off of the bed you are strapped to. A whitecoat orderly notices you stirring and hurries over. &quot;You sure were lucky there were so many whitecoats near you, some of your other inmates were ready to turn you into a midnight snack.&quot; She says in a surprisingly soothing voice. &quot;You be more careful now, ok?&quot; You try to explain to her that you were just trying to get out, that you didn&apos;t think the wall was actually there, but she just agrees condescendingly and hurries you out the eastern doors. At least she didn&apos;t look like Leonard Nimoy.</desc>
+      <exits e='1759' out='1759' no-exit='noexit.asylum.5'/>
+   </location>
+
+   <location num='1759' flags='t'>
+      <name>Asylum Foyer</name>
+      <desc>This place is bedlam. It appears that at the time of construction this would have been a beautiful bit of architecture. The ceiling is several stories above you and carvings still manage to poke out of various points on the wall. A tapered staircase bends gracefully up and the floors appear to be marble. However, all this beauty is utterly shattered by the environment. Stains and refuse cover every surface. A portion of the staircase has fallen away and the handrails bend upwards into curly spirals at the ends. Scratches and claw marks mar the walls. Patients of every imaginable race run screaming, spitting and cursing through this area as whitecoats look on, attentive but apparently unconcerned at the chaos everywhere. Perhaps most disturbingly, however, is the perpetual sound of tortured screams and maniacal laughter that can be heard just underneath the noise of the room. The doors to the south are locked, so you can only go up the stairs or north into a hall.</desc>
+      <exits n='1695' up='1446' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1760' flags='t'>
+      <name>Operating Room Entryway</name>
+      <desc>You hope beyond hope that this is not where Loon&apos;s Refuge procures their meat. Doctors with a dubious hold on reality wheel gurneys around this room in a circle as though attached to some invisible track. Every so often a little bell will ring, a patient will get onto a gurney and be wheeled through a set of swinging doors into the next room. Only the doctors emerge once again. Blood mixed with a variety of other fluids seeps under the doors and onto the floor here, causing the gurneys to leave a circular, muddy looking trail in the center of the room.</desc>
+      <desc>   The bell rings and a narrow-eyed doctor gestures helpfully to his empty gurney. Every remaining sane part of you implores you to go NORTH back to the Loon&apos;s Refuge, since getting on that gurney will take you IN to the Operating Rooms. There&apos;s also a door to what appears to be a shop to the south.</desc>
+      <exits n='1696' s='1824' up='1864' down='1864' in='1634' out='1696' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1761' flags='t'>
+      <name>A Filthy Hallway</name>
+      <desc>You can&apos;t help but have flashbacks upon entering this stretch of hall. Your mother would be furious if she were to see the state of it! It&apos;s a pigpen! It looks like a tornado came through! You&apos;d better pick it up right this instant or there&apos;ll be no dessert for a week young...</desc>
+      <desc>   You snap out of the revelry just in time to keep yourself from scrubbing some matter of dubious origin from one of the walls, uncertain as to whether you were replaying your own childhood or something off of a bad 70&apos;s earth sitcom.</desc>
+      <desc>   The hall stretches into the distance both to the north and south.</desc>
+      <exits n='1697' s='1503' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.1'/>
+   </location>
+
+   <location num='1765' flags='kt'>
+      <name>Qrygg&apos;s Desk</name>
+      <desc>You ascend a long, rickety staircase to a desk overlooking the financial trasactions taking place below. The desk itself is very ornate and a golden placard bears the simple inscription &quot;Qrygg, finemeister&quot;. The chair is turned away from you so only a large gloved hand drumming the arm is visible. A lawyer-looking type stands next to the seat and leans in, as if being whispered to. &quot;Finemeister Qrygg has found you in violation of no less than 27 system laws, including space lane parking violations and disturbing the peace by ascending his rickety staircase and causing undue mental anguish to those worried for your safety. You may pay your accumulated fines of 1,857,220,000 ig at any window below.&quot; You say these laws are madness. &quot;Madness?&quot; says the lawyer, &quot;THIS IS SANITARIA!&quot; He pulls a lever and a boot kicks you square in the chest, sending you falling backwards off the narrow ledge and plummeting to the ground.</desc>
+      <exits down='1506' no-exit='noexit.sanitaria.8'/>
+   </location>
+
+   <location num='1766' flags='bt'>
+      <name>Monodefuego&apos;s Throne Room</name>
+      <desc>This round room is the topmost in the Asylum. It affords a 360 degree view, though the majority of that view is simply yellow clouds. Below the Asylum churns away, but high above it all, in this posh chamber, it is easy not only to relax, but to have a sense of power over it all. The room is predominately polished gold metal, though set in the floor is a giant acquarium containing two mermaids. Waitdroids constantly polish all surfaces and serve food and drinks.</desc>
+      <desc>   An impressive throne stands near the center of the room, and various consoles and monitors surround it. An apparatus resembling a gigantic, over elaborate telescope dominates a part of the room, and it quickly becomes apparent that this is a salvaged Spybeam! This truly is the nexus of monodefuego&apos;s commercial and planetary empire.</desc>
+      <desc>  An elevator can take you down to the offices, or a shuttle can deliver you directly outside the gates of the Asylum.</desc>
+      <exits down='1382' out='1887' no-exit='noexit.asylum.9'/>
+   </location>
+
+   <location num='1767'>
+      <name>A Crackling Halo</name>
+      <desc>You hotstep your way along the narrow, rotating disc, dodging lightning strikes and rapid discharges of electricity at your feet while periodically dropping to brace yourself when the ring&apos;s core fires energy down to the planet below. A brief part in the clouds allows you a glimpse at the topmost room of the Asylum, where a serious fire seems to be burning up some poor creature. You think he catches sight of you just as the halo is rocked by another massive blast and you hurry along your way. You can go northeast, southeast, or plunge to your death.</desc>
+      <exits ne='1704' se='1832' no-exit='noexit.sanitaria.11'/>
+   </location>
+
+   <location num='1768'>
+      <name>Central Platform</name>
+      <desc>You are standing on a platform immediately in front of a huge, blue, glowing chamber which periodically fills up with energy that is then blasted down to the planet below, providing for all of Sanitaria&apos;s power needs. The rocking of the halo is not nearly so intense here so you have a chance to think: maybe this is actually a matter transference beam! Perhaps by jumping into this at exactly the right moment you&apos;ll instantly be teleported to the ground! A tiny voice in the back of your mind says, &quot;Hey! This is your sanity speaking! This is obviously NOT a matter transference beam! It is a huge capacitor! If you jump in, you will die!&quot; You irritably shush the persistent voice and eye the glowing charge again. &quot;It doesn&apos;t look so dangerous...&quot; says a considerably louder voice in your head as enough energy to power the planet is blasted downwards with a shrieking electrical snap. Either jump in or head north again to the spinny wheel of death.</desc>
+      <exits n='1704' in='1703' no-exit='noexit.sanitaria.11'/>
+   </location>
+
+   <location num='1769'>
+      <name>An Unpleasant Place</name>
+      <desc>Really, this particular spot does not have much going for it, even by the rather loose standards of the Asylum. You are half a mile above the ground, the platform you are standing on is wobbly, narrow, and rotating. Lightning periodically strikes very close to you and live, exposed current flows right by your feet. The view isn&apos;t much either, there are yellow clouds whipping past, electrical discharges in the air, and the fried remains of what appears to have once been a human. He is clutching a tool shaped like a spade and a bucket and is hanging over the edge of the ring. Perhaps there will be a more pleasant place to the northwest or southwest. Not likely, but you never know.</desc>
+      <exits sw='1832' nw='1704' no-exit='noexit.sanitaria.11'/>
+   </location>
+
+   <location num='1770' flags='bt'>
+      <name>Monodefuego&apos;s Happy Place</name>
+      <desc>You come to inside a dark wood room with no windows and no doors. It&apos;s very ornate, certainly the most elaborately beautiful room you&apos;ve seen since arriving on Sanitaria, and by far the most quiet. Even straining you can&apos;t hear the screams or laughter to which you had almost become accustomed. Books line all the walls and a beautiful Staunton chess set stands ready for play on a small table flanked by large, comfortable lounge chairs in the center of the room (one of them burnt to a crisp). Two small waitdroids hover by a bar tucked off in a corner. A small machine shows an image of Catspaws and has two buttons below it: a green one labeled &quot;Marry&quot; and a red one reading, &quot;Divorce&quot;. They both look pretty worn and a little burnt. Screens quietly tick off fines due for greetings, illegal parking, and a variety of other insane Sanitaria laws.</desc>
+      <desc>When you&apos;re ready to leave just pull out the book titled, &quot;Walther&apos;s Law and Gospel.&quot;</desc>
+      <exits out='1953' no-exit='noexit.asylum.11'/>
+   </location>
+
+   <location num='1821' flags='kt'>
+      <name>In a Cardboard Box</name>
+      <desc>You come sliding out into a conveniently placed pile of cardboard boxes. Even more conveniently is the nearby clothing replicator. It appears you&apos;ve slid out into a back alley of the Asylum. You take a deep breath and fill your lungs with real air for the first time... Smells like sewage, actually. Well, now that you&apos;re pretty sure you&apos;re in the real world, feel free to take off and start exploring it! You can crawl out of the pile of boxes to the east.</desc>
+      <exits e='1822' no-exit='noexit.sanitaria.5'/>
+   </location>
+
+   <location num='1822'>
+      <name>An Alley Behind the Hospital</name>
+      <desc>Alright, the physicians of Asylum are top notch, but they&apos;re not necessarily top paid. Some of them make up for their lack of scruples with money made by &quot;prescribing&quot; medications here in the shadow of the Asylum. Here you can find a prescription for just about anything, provided you have the right amount of cash. It&apos;s a veritable back-alley med shopping mall! You can stick around, peruse the wares and make a few purchases, or you can exit to the south if you&apos;d prefer to not spend the rest of your life soaking in a vat of penicillin.</desc>
+      <exits s='1886' no-exit='noexit.sanitaria.6'/>
+   </location>
+
+   <location num='1823' flags='kt'>
+      <name>Behind the Asylum&apos;s Gates</name>
+      <desc>Four whitecoats escort you from customs to the gates of the Asylum. Upon arriving they seperate and insert keys into hidden slots about the room. Each whispers something into their collar and suddenly the firemonkey statue on the far side of the gate bursts into intense flames. Djentsch&apos;s I-beam turns slowly and unbars the gate, which roars menacingly as it opens. The other statues appear to struggle against the opening portal, but soon the firemonkey statue is facing free air, and its jovial smile suddenly looks more menacing. The whitecoats hurry you through the gates which begin closing almost immediately, playing out the whole automated dance again in reverse. Once they slam shut again you are startled to realize you forgot to ask how to get back out again! Ah well, surely SOMEONE here will notice that you&apos;re sane.</desc>
+      <desc>   Large metal knockers hang from the gargantuan main doorway to the Asylum, which is just to your north.</desc>
+      <exits n='1759' no-exit='noexit.asylum.6'/>
+   </location>
+
+   <location num='1824'>
+      <name>Cold Storage and Sales</name>
+      <desc>This area is something like a combination icebox and grocer&apos;s section. Doctors from around the galaxy push shopping carts around this chilly room, occasionally stopping to pick something up, examine it closely and either replace it or bag it and drop it into their carts. What are those things they&apos;re looking at anyway? Your blood (or equivalent fluid) runs cold when you see that these are various organs! Unscrupulous doctors from all over the universe must come here to find transplants for their wealthiest and neediest patients! You&apos;d better head north before someone realizes you shouldn&apos;t be here.</desc>
+      <exits n='1760' up='1864' down='1864' in='1864' out='1864' no-exit='noexit.asylum.16'/>
+   </location>
+
+   <location num='1829' flags='kt'>
+      <name>On a Heap of Corpses</name>
+      <desc>You can&apos;t take it anymore. The pressure of trading, your broken relationships, your meaningless and wasted life weedled away playing first person shooters, you run at the open window, determined to end it all now. You leap through the Exchange&apos;s suicide window and for a brief moment believe yourself to finally be free of the misery that was your horrible life. Unfortunately, it is a very brief moment, because you only fall about seven feet before landing on something unpleasant smelling and squishy. It seems you were not the first person to be overcome with the urge to launch out the window, and beneath you is a pile of suicidal traders hundreds of feet high. A whitecoat pokes his head out of the defenestration window, frowns and shouts behind him, &quot;We&apos;ve got another survivor! Let&apos;s get him to Observation!&quot; They grab you and haul you up, dragging you to the Asylum.</desc>
+      <exits up='1630' no-exit='noexit.sanitaria.2'/>
+   </location>
+
+   <location num='1830' flags='kt'>
+      <name>Inside the Fountain</name>
+      <desc>You are now standing in an enormous fountain right in the middle of the main plaza before the Asylum, visible to virtually all of Sanitaria&apos;s sane visitors. They smile appeasingly at you while elbowing any travelling companions and twirling their finger around their temples. Pfft, they think you&apos;re crazy! All you wanted was to see what was in the fountain, what&apos;s so crazy about that? The water is cold and dark, and frankly a little bit slimy. You slosh about for a few moments, but before you can bend over and grab a few of the groats tossed in two whitecoats snag you and haul your crazy butt out of there, dragging you north towards the Asylum.</desc>
+      <exits out='1694' no-exit='noexit.sanitaria.3'/>
+   </location>
+
+   <location num='1831' flags='kt'>
+      <name>Strapped to a Chair in the Shock Therapy Room</name>
+      <desc>Eagerly you hop into a chair and excitedly strap yourself down. Seriously, you thought this was a good idea? Read the room introduction again, moron, you are voluntarily strapped to a chair in the friggin&apos; shock therapy room! I can&apos;t believe you did this; you DO belong in the Asylum. Electrodes are hooked up to your body and you are shocked painfully at regular intervals while unnaturally gleeful whitecoats tickle your feet, splash you with cold water and show you scenes from Major Payne. Nothing could possilby be worse. You start demanding to be released, but naturally they don&apos;t comply. You feel your hold on reality getting increasingly tenuous. Now you&apos;re struggling against your bonds violently, even tearing at them with your teeth. Still the shocks and tickles and movies movies continue. Your eyes cross and the room starts to fade to black. Suddenly you feel weightless, the bonds feel like they&apos;re gone and the room melts away as you float up.</desc>
+      <exits up='1316' no-exit='noexit.sanitaria.10'/>
+   </location>
+
+   <location num='1832'>
+      <name>The Halo</name>
+      <desc>You are standing precariously balanced on a gargantuan, revolving halo which hovers via some unknown means half a mile above the Asylum, which is only barely visible below you through the thick, yellow clouds. A major electrical storm is raging around you and lightning regularly strikes the ring. Every minute or so a large device at the center of this rotating circle blasts down towards the Asylum an enormous rush of power which, while very cool, causes the entire halo to lurch violently. There are no guard rails, no hand rails, not even a lousy nose rail to protect you from a fall, and the electrical currents streaming all around you prevent you from trying to grab anything for balance. A note has been posted with the heading, &quot;Job Duties and Way Down&quot; but as you reach for it it blows away. The terror of this causes you to drop your spadebucket. You can walk along the ring to the northwest and northeast, any other direction is certain death.</desc>
+      <exits ne='1769' nw='1767' no-exit='noexit.sanitaria.11'/>
+   </location>
+
+   <location num='1833' flags='b'>
+      <name>Planetary Lounge</name>
+      <desc>Soothing music plays in this rotating restaurant, situated just about as high as you can get in the Asylum (although there was one pesky button in that elevator that you just couldn&apos;t get to work). Well within view is the Asylum&apos;s source of energy, an enormous halo which draws electrical energy from the atmosphere. Light flows easily through this area, a welcome change from the rest of the Asylum. Every table is window-side and the room is bright and cheerful, everyone looks quite happy and at ease as they dine here. For many it looks like this is may be the first time they have ever been relaxed. Peeking into the kitchen you think you see why, they pepper the food with sedatives. If that sounds like your cup of tea, have a seat! Otherwise you can take the elevator down.</desc>
+      <exits up='315' down='1382' in='1834' out='315' no-exit='noexit.asylum.10'/>
+   </location>
+
+   <location num='1834' flags='bkt'>
+      <name>In a Booth</name>
+      <desc>You plop into a booth eagerly, grab the silverware, and begin banging it up and down. &quot;Bring me food! Bring me food!&quot; You start chanting. Irritatingly this draws little attention, but eventually a waitdroid, rather unbecomingly clad in a white coat, wheels over to take your order. Moments later your food has arrived. It looks and smells delicious and you attack it with a gusto! Interestingly this is usually how you eat. No sooner to you consume the food than you start to feel... funny. Really funny, actually. Not &quot;ha ha&quot; funny either, more like &quot;I think my head isn&apos;t connected to my body anymore&quot; funny. The walls start melting and you feel weightless, like you&apos;re floating upward, as you lose consciousness.</desc>
+      <exits up='1316' no-exit='noexit.asylum.10'/>
+   </location>
+
+   <location num='1864' flags='kt'>
+      <name>Dementia</name>
+      <desc>Desperate to escape the Asylum, you eye a suspiciously solid looking wall. It&apos;s too solid to actually be there, you reason. It must be a clever trick by the administrators of this place! But you&apos;re not crazy! You&apos;re too smart for them! So you get a running start and take off sprinting for that fake wall. There is a brief moment of pain upon impact and then...</desc>
+      <desc>   The walls around you warp and twist. The faces of the people in the hall rearrange themselves, go blank, or take on a startling resemblance to Leonard Nimoy. The doors tell you to assassinate various political leaders in order to gain the attention of celebrities. You feel an intense physical attraction to the Prime Minister of England and start crying that your parents did not name you Billy-boy. You can feel yourself slipping into unconsciousness, and are filled with the overwhelming desire to flee, anywhere, before you descend completely into madness.</desc>
+      <exits n='1758' ne='1758' e='1758' se='1758' s='1758' sw='1758' w='1758' nw='1758' up='1758' down='1758' in='1758' out='1758'/>
+   </location>
+
+   <location num='1886' flags='hi'>
+      <name>Sanity&apos;s Wake Hospital</name>
+      <desc>As soon as you walk through the door, a medical professional is at your arm, speeding you through the sign-in and into a waiting room. You marvel at the efficiency of the place, as it&apos;s far beyond any system you&apos;ve encountered, though also very chaotic. Of course, the Asylum&apos;s hospital handles more cases than almost any other hospital in the galaxy, with a wider range of problems than most any other. Rookies sent to a posting here leave seasoned veterans, and anyone who has done a stint as an Asylum doctor is immediately afforded the respect of his peers. Yet, despite all this, as you watch the doctors literally sprint from room to room, the position hardly seems enviable.</desc>
+      <desc>   If you&apos;re going to explore the dangerous Asylum, you&apos;d better insure. When you&apos;re covered head southeast and make the doctors&apos; lives easier.</desc>
+      <exits n='1822' se='1951' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1887'>
+      <name>Gates of the Asylum</name>
+      <desc>The gates to the famous Asylum stand tall and imposing across the courtyard from you. Once again you are struck with wonder as to why this location was selected to build the galaxy&apos;s most prominent psychiatric and psychological research facilities, as the building and planet do not at all seem conducive to sanity. Miles above your head a massive metal ring slowly turns, attracting the constant electrical activity in the atmosphere and periodically blasting down a massive discharge of energy, which strikes the topmost spire of Asylum with a thunderous crack. The gate itself is held shut by five massive statues labeled &quot;Jessecka, Ferreri, Djentsch, Sleeperagent and Pianoman.&quot; The one labeled Djentsch wields a gigantic I-beam which bars the gates securely. On the other side of the gate a smaller statue of a monkey appears to struggle to get out. Oil is pumped through the creases in this smallest statue and lit so that it is perpetually wreathed in dancing flames.</desc>
+      <exits s='1951' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1888' flags='b'>
+      <name>Sanitarium Bar and Grill</name>
+      <desc>You enter the bar expecting the worst, but in fact it&apos;s not half bad. The establisment is relatively quiet, it&apos;s kept about as clean as any bar is, and the bartender shoots you a friendly, genuine smile as you walk in. A whitecoat armed with a cattle prod stands guard by an incredibly ornate door on the eastern wall.</desc>
+      <exits e='1889' sw='1951' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1889' flags='b'>
+      <name>The Firemonkey Lounge</name>
+      <desc>Ah the luxuries of the exclusive Firemonkey Lounge. It is lit entirely by fire, which is shaped using controlled oil spurts in various places throughout the room. In the flickering dim you can see the oil running down canals in the walls, or glistening up transparent tubing to fuel lights. A band is playing on a floating platform and the music is mellow but cheerful. Virtually every surface in the room is padded excessively with dark cushions and you can&apos;t help but chuckle at the irony of a padded lounge on a planet named Asylum. Still, considering the chaos outside you couldn&apos;t ask for a better environment.</desc>
+      <exits w='1888' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1896' flags='kt'>
+      <name>Lift to the Halo</name>
+      <desc>The receptionist watches you as you sign your name in the book. She has a... weird... look in her eyes. As you set the pen down her hand darts out and grabs you gently but insistently. &quot;I think I have... a special job for you.&quot; The other inmates in the room groan and complain as you shoot them a triumphant grin. The receptionist escorts you to a large service elevator. She pushes a button and immediately you feel like you weigh ten times more. The elevator rockets up the shaft before stopping abruptly. The receptionist smiles at you, hands you a tool that looks like a gardening spade with a bucket attached, and gives you a hard push on the back, forcing you out of the car to the north. Before you can ask her what you&apos;re supposed to do the door closes and the car disappears, rocketing downward and almost making you glad you are no longer on it.</desc>
+      <exits n='1832' no-exit='noexit.sanitaria.11'/>
+   </location>
+
+   <location num='1950'>
+      <name>Cemetery</name>
+      <desc>As you approach you wonder whether you&apos;ve made a wrong turn. The scarecrow indicated this was a garden but all you&apos;ve found is a vast cemetary. However, as you read the inscription &quot;Kirkegard&quot; on the large wrought iron gates it suddenly makes sense: &quot;church garden.&quot; If it were silent and empty this area would be beautiful, it is well landscaped and attractively laid out. However there is a din of wailing in the air and crowds of mourners shrieking at the sides of some tombs. Safer lunatics from the Asylum are allowed to tend the grounds here and there is only minimal supervision from the whitecoats, which also does not help set your mind at ease while standing surrounded by tombstones and markers. Three ancient men sit quietly on headstones and snore. East will take you back under the wrought iron gates and out to the plaza.</desc>
+      <exits e='1951' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1951'>
+      <name>Asylum Plaza</name>
+      <desc>Finally you aren&apos;t being pushed about by the surge of the crowd! The plaza is actually fairly open, though large groups of people still move about. A gigantic scarecrow stands next to a dark fountain in the center of the area. It has dozens of arms, each supporting a small, dangling sign and pointing in a different direction. You expect that once this scarecrow only had a few arms and made the plaza look somewhat charming but as more locations have been added the scarecrow has become increasingly unsettling in appearance. Examining its arms carefully you deduce that there is a bar to the northeast, a trading exchange to the southeast, a shipyard to the southwest, a sanctuary to the east, a hospital to the northwest, and a restaurant to the west. South will get you back to the Landing Pad and north will take you to the gates of the Asylum.</desc>
+      <exits n='1887' ne='1888' e='1952' se='2016' s='2015' sw='2014' w='1950' nw='1886' in='1830' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1952'>
+      <name>Areinay Chapel</name>
+      <desc>In the midst of the chaos surrounding the Asylum rests Areinay Chapel, and it is an unusual sight indeed. The yellow clouds that cover the rest of the planet are gone when you look up and replaced by a circle of perfectly blue sky. The churchyard maintains a small plot of grass despite the rocky ground and a pair of living trees out front. An elderly cleric is watering some smaller plants, and looks up at you with a friendly smile. You feel simultaneously relieved and horrified by this slice of sanity in a mad world.</desc>
+      <desc>   If you&apos;re feeling worshipful, the chapel is to the east. Otherwise the plaza is off to the west, heathen.</desc>
+      <exits e='1953' w='1951' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='1953'>
+      <name>Inside a Chapel</name>
+      <desc>Oddly, this chapel seems considerably larger on the inside than it looked outside. In fact, from in here you would think you were standing in a full-blown cathedral, not some little chapel tended by a single cleric. There are a few people quietly occupying the mostly empty pews, moving their lips silently or paging through intimidating-looking books. A massive pipe-organ occupies the front of the church along with an altar and a huge table of candles, many of which are lit. Once you feel fortified and refreshed, you can leave by heading west.</desc>
+      <exits w='1952' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2014' flags='y'>
+      <name>Asylum Shipyards</name>
+      <desc>Entering the Shipyard requires a battery of tests. You are checked for weapons, you are made to certify that you are not an inmate, you are required to show your licenses, permits, birth certificate, and take an inkblot test. Finally you are escorted into a spacious, well-kept, and mercifully air-conditioned room with small holographic models of various spacecraft set on pedestals. A large window bay overlooks the most secure ship-manufacturing facility this side of Sol, with ten whitecoats to every worker there. A smiling female whitecoat asks you in a soothing voice if she can help you make a decision on a ship today.</desc>
+      <desc>   To the south is a heavily secured repair facility.</desc>
+      <exits ne='1951' s='2078' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2015'>
+      <name>Outside the Bureau of Bureaucracy</name>
+      <desc>This area is heavily patrolled by gigantic men wearing white coats and each wielding a different, frightening looking weapon. They are polite when approached or questioned, but bear about them an extremely stern countenance. A massive crowd presses in on a plain building labeled &quot;Government Works,&quot; and you break into a sweat thinking that you might have to try and get through there. Thankfully a white coated man approaches you and says that unless you&apos;re planning on mingling with inmates, need to pay royalties or settle a fine, you can bypass customs and simply enter the facility. He gestures north to an open guardhouse which you can pass straight through. Of course, if you want you can head into the Bureau of Bureaucracy and face the mob.</desc>
+      <desc>   Heading south will take you back to the landing pad, and may heaven have mercy on your soul.</desc>
+      <exits n='1951' s='2079' in='2086' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2016' flags='eb'>
+      <name>The Asylum Trading Exchange</name>
+      <desc>This is the most chaotic, ludicrous trading exchange you have ever seen. There is ticker tape spewing out of randomly placed and angled slots in the walls, floating down and landing on a mass of people shrieking and bartering with one another. Multiple screens display information on goods in no particular order, and trying to follow along with the whole mess is an exercise in mental discipline and control. Adding to the chaos is the army of poorly maintained waitdroids attempting to move drinks and food through the mob of people, frequently spilling or comically unloading the contents of their trays onto aggressive brokers.</desc>
+      <desc>   As a courtesy, a large window has been provided overlooking a cliff, and traders who have lost everything are invited to throw themselves out and end it all right now. A sign advertising this service reads, &quot;Why wait? Defenestrate!&quot;</desc>
+      <exits nw='1951' out='1829' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2022'>
+      <name>Customs Queue</name>
+      <desc>You are now waiting in the most disorganized line in the galaxy along with what seems to be several thousand other people, most of whom look as though they should be inside the Asylum already. You&apos;re pretty sure that you see seven or eight seperate lines, all converging and diverging at various points along the way, and the eight or nine lethargic agents at the front can&apos;t seem to make it through more than two people before needing to take a break. If you&apos;re going to wait in this line, you&apos;d better be prepared to stand for a long, long time. Otherwise you can head south back to the Bureau&apos;s lobby.</desc>
+      <exits s='2086' up='1701' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2078' flags='r'>
+      <name>Asylum Repairs and Retrofitting</name>
+      <desc>The office here is well ordered... Too well ordered. The clerk looks friendly and cheerful... Too friendly and cheerful. The repairmen look alert and attentive... Too alert and attentive. As you begin to feel increasingly uncomfortable you see a whitecoat move through the room, injecting all of the workers there with something, and you realize this facility is primarily staffed by heavily medicated inmates. The receptionist practically drools out, &quot;Caaaan I heeeeelllp yooooouuu?&quot; Still, if the shuttles outside are able to fly after the beating they must take, these nutjobs must also be crazy good at their jobs!</desc>
+      <exits n='2014' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2079'>
+      <name>Landing Pad</name>
+      <desc>Massive search lights guide incoming shuttle traffic to this horrifyingly disorganized launch pad. Occasionally the yellow clouds disperse enough to reveal the source of these lights: the famous (if unimaginatively named) Asylum. The building itself resembles the castle of some fictional arch-tyrant. Gargoyles of all shapes and sizes watch shuttles descend past tall, narrow towers and long, sweeping bridges. This planet is renowned for caring for the mentally ill, and yet the entire place is less conducive to sanity than anywhere you have ever seen. Above you the clouds swirl and twist at dramatic speeds and electricity crackles about the atmosphere. Other ships are landing haphazardly everywhere, including one labeled &quot;Bubba&quot; that just seems to land and take off repeatedly in a cordoned area, so it would likely be best for you to move north if you plan on continuing your observation as a living creature.</desc>
+      <exits n='2015' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2086'>
+      <name>Bureau of Bureaucracy Lobby</name>
+      <desc>You knew it was a bad idea to come in here. The place is jam packed with angry, impatient, or crazy people, all moving in different directions in this horribly organized lobby. The largest crush of people pushes north into a cramped room marked &quot;Customs&quot;. To the south an angrier looking mob shuffles into a large room marked &quot;Fines and Royalty Payments&quot;.</desc>
+      <exits n='2022' s='2150' out='2015' no-exit='noexit.sanitaria.1'/>
+   </location>
+
+   <location num='2150'>
+      <name>Asylum Royalties &amp; Fines</name>
+      <desc>There are more irritable people here than you have ever seen in your life. Several lines have been set up for people owing various payments to monodefuego and his psychotic galactic empire. Of the many lines are such queues as &quot;Greeting Royalties&quot;, &quot;Orbital Parking Violations&quot;, and &quot;Space Fire Lane Fines&quot;. Towering high above the chaos is a single desk, standing on spindly legs and bearing huge amounts of money, paperwork and a placard reading, &quot;Qrygg, Finemeister&quot;. On the wall is a wanted poster bearing a picture and reading, &quot;WANTED: Trilleth. For outstanding greeting royalties in excess of 100 Mig. Should be considered disarming and friendly.&quot; Looking over the many categories, you begin to feel certain that you must have violated SOME law here in Asylum, and opt to leave quickly before one of the stern-looking whitecoats hauls you to some maniacal debtors prison. Luckily the exit is just to your north.</desc>
+      <exits n='2086' up='1765' no-exit='noexit.sanitaria.7'/>
+   </location>
+
+   <location num='2696' flags='kt'>
+      <name>Dementia</name>
+      <desc>Desperate to escape the Asylum, you eye a suspiciously solid looking wall. It&apos;s too solid to actually be there, you reason. It must be a clever trick by the administrators of this place! But you&apos;re not crazy! You&apos;re too smart for them! So you get a running start and take off sprinting for that fake wall. There is a brief moment of pain upon impact and then...</desc>
+      <desc>   The walls around you warp and twist. The faces of the people in the hall rearrange themselves, go blank, or take on a startling resemblance to Leonard Nimoy. The doors tell you to assassinate various political leaders in order to gain the attention of celebrities. You feel an intense physical attraction to the Prime Minister of England and start crying that your parents did not name you Billy-boy. You can feel yourself slipping into unconsciousness, and are filled with the overwhelming desire to flee, anywhere, before you descend completely into madness.</desc>
+      <exits n='1758' ne='1758' e='1758' se='1758' s='1758' sw='1758' w='1758' nw='1758' up='1758' down='1758' in='1766' out='1758'/>
+   </location>
+
+</fed2-map>

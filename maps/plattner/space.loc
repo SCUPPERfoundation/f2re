@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<fed2-map title='Plattner Space' version='4' editor='standard'>
+
+   <location num='459' flags='s'>
+      <name>Filby orbit</name>
+      <desc>   More blue seas, more sandy beaches, more exotic cocktails... the holiday continues on this world.</desc>
+      <desc>   If you&apos;ve had enough sunbathing, the link is east.</desc>
+      <exits e='460'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Morlock orbit and interstellar link</name>
+      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <desc>   The planet Filby is to the west, Moses is south, and Bond is east.</desc>
+      <exits e='461' s='524' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Bond orbit</name>
+      <desc>   The name is Bond... Planet Bond. It&apos;s a non-stop party in the sun on this world so come and join the fun. Or if fun&apos;s not your thing, there&apos;s always a bargain or two to be picked up in the exchange.</desc>
+      <desc>   Head west to go back to the link.</desc>
+      <exits w='460'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Moses orbit</name>
+      <desc>   There are areas of the planet below that are off limits due to contamination, but don&apos;t let that put you off from enjoying your stay - and picking up some bio bargain while you are there.</desc>
+      <desc>   The link is north.</desc>
+      <exits n='460'/>
+   </location>
+
+</fed2-map>

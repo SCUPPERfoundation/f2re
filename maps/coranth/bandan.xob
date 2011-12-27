@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='6'>
+
+   <object type='static' start='68' visibility='0' size='1' weight='1'>
+      <name>cigar</name>
+      <id>obj_1cigar</id>
+      <desc>Harlan, the bandanian barman will sell you one of the planet's fine cigars for 100 groats.</desc>
+      <vocab cmd='get' event='objects.cigar.1'></vocab>
+      <vocab cmd='take' event='objects.cigar.1'></vocab>
+      <vocab cmd='buy' event='objects.cigar.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1'>
+      <name>cigar</name>
+      <id>obj_cigar</id>
+      <desc>This bandanian cigar is very fine, and is guaranteed to give you an enjoyable smoke. It is self-igniting, so all you have to do is give it a shake and it will light.</desc>
+      <vocab cmd='light' event='objects.cigar.5'></vocab>
+      <vocab cmd='shake' event='objects.cigar.5'></vocab>
+      <vocab cmd='drop' event='objects.cigar.6'></vocab>
+   </object>
+
+</object-list>

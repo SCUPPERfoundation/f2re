@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<fed2-map title='Carpathia' version='1.00' editor='standard' from='457' to='Ardeliu.Ardeliu Space.267'>
+
+   <location num='0' flags='kt'>
+      <name>Storage Shed</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='393' flags='b'>
+      <name>Elk and Boar Inn</name>
+      <desc>A large fire roars in the fireplace.  Over the mantle are mounted the heads of an Elk, and a Boar.  The customers here are nervously sipping their drinks and warily eyeing each person that walks into the bar.  There is a tension that thickly runs through the place and is evident from the short nervous laughs of the customers to the too often dropped plate by the waithelp.</desc>
+      <exits e='394' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='394' flags='e'>
+      <name>Carpathian Village Exchange</name>
+      <desc>The Carpathian Exchange is deserted.  From the chaos and shambles of paper and overturned chairs, it appears that the exchange was abandoned in extreme haste.  The prices and status of the various commodities are written on large blackboards on one side of the room.  Order slips and confirmation receipts litter the floor.  On one black board, some one has written, &quot;With the coming of night, the Sleeper will awaken.&quot;</desc>
+      <exits s='458' w='393' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='406'>
+      <name>Base of Tower</name>
+      <desc>The tower is constructed of stone.  A circular stone stairway winds its way up the tower.  There is an exit to the south.</desc>
+      <exits s='470' up='414' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='408'>
+      <name>Tower base</name>
+      <desc>The tower is constructed of stone.  A circular stone stairway winds its way up the tower.  There is an exit to the southwest.</desc>
+      <exits sw='471' up='416' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='414'>
+      <name>Tower</name>
+      <desc>The stairs continue their climb from the top of the tower to the bottom.  Torches placed on the walls provide a modicum of light.</desc>
+      <exits up='422' down='406' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='416'>
+      <name>Tower</name>
+      <desc>The stairs continue their climb from the top of the tower to the bottom.  Torches placed on the walls provide a modicum of light.</desc>
+      <exits up='424' down='408' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='422'>
+      <name>Tower</name>
+      <desc>The tower has slits built into the walls.  Oak doors positioned to the south and to the east provide access to the Battlements of the castle.  There are stairs going down and up.</desc>
+      <exits e='423' s='486' up='430' down='414' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='423'>
+      <name>Battlement</name>
+      <desc>The view from the Battlement is breathtaking.  Far below, the chasm is just a small line now.  In the distance, the village can be seen.  To the east and west, doors lead to the towers.  To the south is a patio.</desc>
+      <exits e='424' s='487' w='422'/>
+   </location>
+
+   <location num='424'>
+      <name>Zard and Jezz&apos;s Retreat</name>
+      <desc>Zard and Jezz have a comfortable retreat provided for them in Castle Doz.  Count Nosferatu Doz, ever loyal to the House of Doz, bequeathed the space to them in the event of his demise.  Upon being informed that he was already dead, the Count said, &quot;Fine, its a wedding present then.&quot;  Whereby he promptly rolled over in his grave.</desc>
+      <desc>     The entry room appears to be like the rest of the castle, except it has a warmer, more inviting feel to it.  On the walls are various pictures of Zard and Jezz together.  An intricate rug from Brass is on the floor.  The spiral stairway goes both up and down, and there are doorways to the west and south.</desc>
+      <exits s='488' w='423' up='432' down='416' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='430' flags='b'>
+      <name>Tower Room</name>
+      <desc>The tower room surprisingly is quite modern.  There are hook ups for communication and data transmission.  It appears that this could be a nice office.  Perhaps if the Count is asked nicely, one can be built here.</desc>
+      <exits up='438' down='422' out='457' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='432' flags='bt'>
+      <name>Zard and Jezz&apos;s Quiet place</name>
+      <desc>Jezz let Zard do all the decorating of this room.  The floor is polished Aekonian hardwood, and contrasts perfectly with the dark grey  of the stone walls.  The normally small slits that are in the tower walls were expanded to provide a panoramic window with a view of the Carpathian horizon.  A comfortable leather couch is here for the times that Zard and Jezz just enjoy sitting together.</desc>
+      <desc>     There are stone steps going down and a flight of wooden steps going up.</desc>
+      <exits up='440' down='424' out='457' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='438'>
+      <name>Parapet</name>
+      <desc>The top of the tower offers a sweeping view of the landscape below.  The wind whips eddys and currents around the parapet and a soft mist is seen rising from the chasm.  The planet&apos;s dreaded nature contains a certain beauty that is visible from this vantage point.</desc>
+      <exits down='430' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='440' flags='bt'>
+      <name>Zard and Jezz&apos;s Tower</name>
+      <desc>The top of the tower affords a sweeping view of Carpathia.  >From this vantage point, the beauty of this strange red world is evident.  In the distance, the village can be seen with the tiny plumes of smoke rising from their chimneys.  Zard has placed two chairs, side-by-side, so he can watch the sunset with his beloved.  On a small table is a cup of steaming coffee for his beloved to enjoy.  On a stand is a classical guitar that Zard will play for his beloved as they watch the sunset together.</desc>
+      <exits down='432' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='457' flags='yr'>
+      <name>Carpathia Shuttle Landing Pad</name>
+      <desc>The blood red sky of Carpathia creates an eerie mood.  Unlike the bustle of activity that is common to Landing Pads on other worlds, Carpathia&apos;s Landing Pad is deserted.  In the distance, to the east, the sharp spires of Castle Doz reach for the sky like a dark claw.  Wind blows and howls across the landing pad.  Night is coming, and the Sleeper will awaken.</desc>
+      <desc>     A road to town is to the east.</desc>
+      <exits e='458' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='458'>
+      <name>Town Square</name>
+      <desc>The dusty road leads to a small town square.  As the wind howls in the distance, shutters and doors are quickly closed, and securely latched.  The darkening read sky casts a pale red hue on the town&apos;s buildings.</desc>
+      <desc>     To the north, a slowly swinging door marks the planet&apos;s exchange.  To the south is a wrought iron gate emblazoned with the seal of the planet Aekonia.  The road continues to the east towards Castle Doz.</desc>
+      <exits n='394' e='459' s='522' w='457' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>Road</name>
+      <desc>Castle Doz dominates the Eastern skyline.  Its massive stone walls stand over 100 feet tall and its four towers rise another 100 feet beyond that.  The walls are constructed of massive grey stone blocks which were expertly fitted together to create seams so tight that a piece of paper cannot pass between them.  The gothic construction, red sky, and dark grey stone create an ominous sense of foreboding.  The wind howls in the distance... or is it the wind?</desc>
+      <desc>     A bridge to the castle door is to the east, and the town is to the west.</desc>
+      <exits e='460' w='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Bridge</name>
+      <desc>Spanning a deep chasm is a hewn stone bridge.  The bridge connects the small town with the towering presence of Castle Doz.  The chasm is filled with a thick mist, and the bottom is not visible.  Small gnarled branches twist their way out of the cliff walls and their black shape is contrasted against the white mist and appear like tortured fingers.</desc>
+      <exits e='461' w='459' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='461'>
+      <name>Large Wooden Door - Entrance to Castle Doz</name>
+      <desc>The Door to Castle Doz is a massive slab of oak.  The door stands twenty feet high and towers over the entrance way.  Mid-way up the door is suspended a large iron ring that is six feet in diameter.  Carved in stone above the doorway are the letters &quot;DOZ&quot;.</desc>
+      <exits w='460' in='470' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='470'>
+      <name>Main Hall</name>
+      <desc>The Main Hall to the Castle Doz is a cavernous room made of stone.  Great torches line the walls illuminating swords and shields and other weaponry.  To the west a wide staircase makes its way up.  A thick red carpet, with intricately designed borders, runs down from the stairs and ends one meter from the door. On both sides of the room, large fireplaces that stand two meters high are located.  Within each, a large fire blazes.</desc>
+      <desc>    To the north and south are stairwells that go up the castle&apos;s towers.</desc>
+      <exits n='406' e='471' s='534' out='461' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='471'>
+      <name>Staircase</name>
+      <desc>The Staircase has two wooden railings coming down along side.  At the end of each railing, a large statue of a gargolye is perched.  The view up the stairs shows a large tapestry which contains troubling pictures of an ancient war, death, and gruesome treatment of the prisoners.  The flickering lights of the torches against the woven scenes creates an illusion that the scenes are coming to life.</desc>
+      <desc>     There are doors to the towers to the northeast and southeast, and a small door with steps leading down.</desc>
+      <exits ne='408' se='536' w='470' up='479' down='787' no-exit='moves.noexit. 2'/>
+   </location>
+
+   <location num='478' flags='b'>
+      <name>Banquet Room</name>
+      <desc>The Banquet Room is dominated by a long table covered with a red tablecloth.  Arrayed across the table are a variety of foods, Roasted Ainokean Beef (rare of course), sliced Aekonian Ahi, and Carpathian Blood Sausage.  There are two silver candelabras with lit candles and several decanters of wine (red of course) on the table.</desc>
+      <exits e='479' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='479' flags='b'>
+      <name>Parlor</name>
+      <desc>At the top of the stairs is a parlor, beyond which is the banquet room.  There are bookcases along the walls with rare first editions from publishing houses across the stars.  A fire is lit in the fireplace and there are comfortalbe chairs situated throughout the room.  On one wall is a painting of a man.  The painting appears quite old.  The man is young and full of vitality.  He has a familiar look about him.  In the flickering light of the fireplace, it appears almost as if his eyes are moving.</desc>
+      <desc>     The banquet room is to the west and the stairs lead down.</desc>
+      <exits w='478' down='471' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='486'>
+      <name>Battlement</name>
+      <desc>The view from the Battlement is breathtaking.  Far below, the chasm is just a small line now.  In the distance, the village can be seen.  To the north and south, doors lead to the towers.  To the east, is a patio.</desc>
+      <exits n='422' e='487' s='550' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='487' flags='b'>
+      <name>Patio</name>
+      <desc>In the center of the castle&apos;s rooftop is a hot tub and patio.  This addition was installed after Count Nosferatu Doz received several requests from his tenants and guests for some type of recreational facility.  The Count, after reviewing their request, thundered, &quot;Over my dead body!!&quot;  The Count&apos;s servants heard this and calculated that the hot tub would be placed directly over the Count&apos;s crypt.</desc>
+      <desc>     Deck chairs are placed around the patio, and torches are set in place for evening parties.</desc>
+      <exits n='423' e='488' s='551' w='486' in='999'/>
+   </location>
+
+   <location num='488'>
+      <name>Battlment</name>
+      <desc>The view from the Battlement is breathtaking.  Far below, the chasm is just a small line now.  In the distance, the village can be seen.  To the north and south, doors lead to the towers.  To the west, is a patio.</desc>
+      <exits n='424' s='552' w='487' no-exit='moves.noeixt.4'/>
+   </location>
+
+   <location num='522' flags='b'>
+      <name>Aekonia Embassy</name>
+      <desc>Aekonia&apos;s Embassy to Carpathia reflects the close relations the two members of the House of Doz have to each other.  The entry hall of the embassy has points of contact to review trader routes between the worlds, and resolve tax and tarriff issues.  On the wall is a large framed painting of the Senior Member of the House of Doz, Zardoz.  He is standing next to his beloved wife, Jezz.</desc>
+      <exits n='458' s='586' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='534'>
+      <name>Base of Tower</name>
+      <desc>The tower is constructed of stone.  A circular stone stairway winds its way up the tower.  There is an exit to the north.</desc>
+      <exits n='470' up='542' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='536'>
+      <name>Tower Base</name>
+      <desc>The tower is constructed of stone.  A circular stone stairway winds its way up the tower.  There is an exit to the northwest.</desc>
+      <exits nw='471' up='544' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='542'>
+      <name>Tower</name>
+      <desc>The stairs continue their climb from the top of the tower to the bottom.  Torches placed on the walls provide a modicum of light.</desc>
+      <exits up='550' down='534' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='544'>
+      <name>Tower</name>
+      <desc>The stairs continue their climb from the top of the tower to the bottom.  Torches placed on the walls provide a modicum of light.</desc>
+      <exits up='552' down='536' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='550'>
+      <name>Tower</name>
+      <desc>The tower has slits built into the walls.  Oak doors positioned to the north and to the east provide access to the Battlements of the castle.  There are stairs going down and up.</desc>
+      <exits n='486' e='551' up='558' down='542' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='551'>
+      <name>Battlement</name>
+      <desc>The view from the Battlement is breathtaking.  Far below, the chasm is just a small line now.  In the distance, the village can be seen.  To the east and west, doors lead to the towers.  To the north, is a patio.</desc>
+      <exits n='487' e='552' w='550' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='552'>
+      <name>Tower</name>
+      <desc>The tower has slits built into the walls.  Oak doors positioned to the north and to the west provide access to the Battlements of the castle.  There are stairs going down and up.</desc>
+      <exits n='488' w='551' up='560' down='544' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='558' flags='b'>
+      <name>Tower Room</name>
+      <desc>The tower room surprisingly is quite modern.  There are hook ups for communication and data transmission.  It appears that this could be a nice office.  Perhaps if the Count is asked nicely, one can be built here.</desc>
+      <exits up='566' down='550' out='457' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='560' flags='b'>
+      <name>Tower Room</name>
+      <desc>The tower room surprisingly is quite modern.  There are hook ups for communication and data transmission.  It appears that this could be a nice office.  Perhaps if the Count is asked nicely, one can be built here.</desc>
+      <exits up='568' down='552' out='457' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='566'>
+      <name>Parapet</name>
+      <desc>The top of the tower offers a sweeping view of the landscape below.  The wind whips eddys and currents around the parapet and a soft mist is seen rising from the chasm.  The planet&apos;s dreaded nature contains a certain beauty that is visible from this vantage point.</desc>
+      <exits down='558' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='568'>
+      <name>Parapet</name>
+      <desc>The top of the tower offers a sweeping view of the landscape below.  The wind whips eddys and currents around the parapet and a soft mist is seen rising from the chasm.  The planet&apos;s dreaded nature contains a certain beauty that is visible from this vantage point.</desc>
+      <exits down='560' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='586'>
+      <name>Ambassador&apos;s Office</name>
+      <desc>The ambassador&apos;s office is tastefully decorated with a variety of Aekonian products.  On his desk are a variety of Aekonian tourist brochures, and travel guides.  On one wall is the obligatory photograph of Zardoz and Jezz that seems to be on every wall in every government office on every Dozian world..</desc>
+      <exits n='522' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='723'>
+      <name>Abandoned Tomb</name>
+      <desc>This appears to be a tomb that was abandoned long ago.  There are two crypts here, one is still sealed, but the other is open.  A marker on the sealed one says, &quot;In Memory of Shebel96 - Gone, but never forgotten.&quot;  The open crypt has a marker that says, &quot;MooSol - Forgotten, but never gone.&quot;</desc>
+      <exits s='787' no-exit='moves.noexit 2'/>
+   </location>
+
+   <location num='724' flags='bkt'>
+      <name>Jezz&apos;s Office</name>
+      <desc>Jezz has set up an office in what was once a dungeon cell.  Shackles hang from the walls, and there is a variety of somwhat scary devices on a table which seem to be designed to convince someone of the error of their ways, and the need to tell all that they know.</desc>
+      <exits s='788' out='457' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='787'>
+      <name>Count Nosferatu Doz&apos;s Crypt</name>
+      <desc>The stone stairway leads down to a large stone room with high vaulted ceilings.  The only light is provided by stands of candles which are strategically placed around the room.  The flickering light of the candles is not bright enough to fully illuminate the recesses of the high ceiling and the shadows may provide a haven for all manner of creatures.  In the center of the room, on a stone pedestal is a black coffin.  The gold handles glisten in the reflected flickering candlelight.  Etched in gold on the lid of the coffin are the words, &quot;Count Nosferatu Doz.&quot;</desc>
+      <desc>     There are doorways to the north, south, and east, and stairs lead back up to the castle.</desc>
+      <exits n='723' e='788' s='851' up='471' in='1869' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='788'>
+      <name>Hallway</name>
+      <desc>Torches flicker in the dark and cast eerie shadows over the stone walls.  To the North and South are two doors, both thick, which have iron grills in them.</desc>
+      <exits n='724' s='852' w='787' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='851'>
+      <name>Embalming Room</name>
+      <desc>In this room, bodies are prepared for burial.  There are on the shelves all manner of chemicals and agents that the embalmer will use for his task.  There are two stone slabs available for the freshly dead.  Of course, if the fresh corpse had the common sense to insure themselves, then that lucky soul should leave soon before the embalmer arrives to perform his unpleasant task.</desc>
+      <exits n='787' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='852'>
+      <name>Dungeon Cell</name>
+      <desc>The darkness of the room reveals little except for a thin layer of straw on the floor, and iron shackles hanging from the wall.  This is not a room to be locked up in.</desc>
+      <exits n='788' out='457' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='915' flags='hi'>
+      <name>Coffin</name>
+      <desc>You are lying in a plush upholstered coffin with your head resting on silk pillow.  Obviously, something dreadful has happened to you.  You should take this opportunity to reflect in peace your choices and then reinsure yourself to protect yourself from further harm.  But don&apos;t take too long, the coffin may be interred soon, and then you will become a permanent part of Castle Doz.</desc>
+      <desc>To get on with your life, go OUT.</desc>
+      <exits out='851' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='999' flags='bkt'>
+      <name>Hot Tub</name>
+      <desc>The Hot Tub is warm and relaxing as the jets spray over your body and you can lie back and relax as the troubles of today fade away to yesterday and the dreams of tomorrow become the possibilities of today.</desc>
+      <exits out='487' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1869' flags='bt'>
+      <name>Nosferatu&apos;s Coffin</name>
+      <desc>The coffin is lined with red silk, and is surprisingly confortable.  As the lid closes you are surprised to see a display terminal is built into the lid, and gives updates on the planet&apos;s exchange and production figures.  As you move your arm, you realized that a food synthesizer is built into the coffin that provides sustenance to the weary.  You even find a setting for plasma, and all four major blood types.</desc>
+      <exits up='457' out='787'/>
+   </location>
+
+</fed2-map>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<fed2-map title='Oasis Space' version='1.00' editor='standard'>
+
+   <location num='777' flags='sl'>
+      <name>Oasis Link and Zandzabar Orbit</name>
+      <desc>       I hate to have to put this notice here but some can&apos;t seem to read it at the end so...</desc>
+      <desc>XX NOTICE XX Please ASK before building factories.  Those built without approval may be subject to liquidation without notice.  I can be contacted at &quot;Zand of Fed II@aol.com&quot;   That being said....</desc>
+      <desc>     Welcome!  You have successfully arrived at the Oasis System Link and Orbit for Planet Zandzabar.  Please board you shuttle and come down to our little planet for a visit, trade with us or plant your roots!  You ship should be safe here, for a while.</desc>
+      <desc>    There have been reports and numerous sightings of Pirates and Smugglers in the area and absoultly nothing is being done about it, and never will be, so take the precautions that you deem appropriate.</desc>
+      <desc>    We do not discriminate; all are welcome here, this is a Neutral Zone, if you take the meaning!  (Law Enforcement... Ye be warned!)</desc>
+   </location>
+
+</fed2-map>

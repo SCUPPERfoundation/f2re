@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+
+<event-list version='28'>
+
+ <category name='food'>
+
+  <section name='fedruckers'>
+
+   <event num='1'>
+    <comment>Buy food - Fedruckers - 265</comment>
+    <checkstat who='individual' money='10' higher='food.fedruckers.2' equals='food.fedruckers.2' lower='food.fedruckers.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.fedruckers.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.fedruckers.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='gifts'>
+
+  <section name='card'>
+
+   <event num='1'>
+    <comment>Loc 198 - get trading card</comment>
+    <message type='single' where='com' who='individual' lo='gifts.card.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>buy trading card</comment>
+    <message type='single' where='com' who='individual' lo='gifts.card.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>get current card</comment>
+    <message type='single' where='com' who='individual' lo='gifts.card.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>buy current card</comment>
+    <checkflag who='individual' flag ='catty'  set='gifts.card.5' unset='gifts.card.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player already has one</comment>
+    <message type='single' where='com' who='individual' lo='gifts.card.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player does not have one already, so check if she can afford it</comment>
+    <checkslithy value='1' pass='gifts.card.7' fail='gifts.card.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Sell the player a trading card</comment>
+    <flipflag who='individual' flag ='catty'/>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - card_catty</log>
+    <message type='single' where='com' who='individual' lo='gifts.card.5'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player has no slithy</comment>
+    <message type='single' where='com' who='individual' lo='gifts.card.6'/>
+   </event>
+
+  </section>
+
+  <section name='expired'>
+
+   <event num='1'>
+    <comment>Player tries to buy old card</comment>
+    <message type='single' where='com' who='individual' lo='gifts.expired.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='mobiles'>
+
+  <section name='clive'>
+
+   <event num='1'>
+    <comment>Loc 781 - get/hug/kiss clive</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.clive.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Clive chat</comment>
+    <match phrase='hello' id-name='obj_clive' lo='mobiles.clive.2'/>
+    <match phrase='bye' id-name='obj_clive' lo='mobiles.clive.3'/>
+    <match phrase='collectible' id-name='obj_clive' lo='mobiles.clive.4' hi='mobiles.clive.6'/>
+    <match phrase='merchandise' id-name='obj_clive' lo='mobiles.clive.4' hi='mobiles.clive.6'/>
+    <match phrase='thimble' id-name='obj_clive' lo='mobiles.clive.7'/>
+    <match phrase='snark' id-name='obj_clive' lo='mobiles.clive.8'/>
+    <match phrase='galactic admin' id-name='obj_clive' lo='mobiles.clive.9'/>
+    <match phrase='government' id-name='obj_clive' lo='mobiles.clive.9'/>
+    <match phrase='castillo' id-name='obj_clive' lo='mobiles.clive.10'/>
+    <match phrase='shop' id-name='obj_clive' lo='mobiles.clive.11'/>
+    <match phrase='plate' id-name='obj_clive' lo='mobiles.clive.12'/>
+    <match phrase='stamp' id-name='obj_clive' lo='mobiles.clive.13' hi='mobiles.clive.14'/>
+    <match phrase='coin' id-name='obj_clive' lo='mobiles.clive.15'/>
+    <match phrase='action' id-name='obj_clive' lo='mobiles.clive.16'/>
+    <match phrase='figure' id-name='obj_clive' lo='mobiles.clive.16'/>
+    <match phrase='card' id-name='obj_clive' lo='mobiles.clive.17'/>
+    <match phrase='emperor' id-name='obj_clive' lo='mobiles.clive.18'/>
+    <match phrase='comic' id-name='obj_clive' lo='mobiles.clive.19'/>
+    <match phrase='sam galaxy' id-name='obj_clive' lo='mobiles.clive.20'/>
+    <match phrase='promethius' id-name='obj_clive' lo='mobiles.clive.21'/>
+    <match phrase='frizz' id-name='obj_clive' lo='mobiles.clive.23'/>
+    <match phrase='zetian' id-name='obj_clive' lo='mobiles.clive.24'/>
+    <match phrase='ming' id-name='obj_clive' lo='mobiles.clive.25'/>
+    <match phrase='catty' id-name='obj_clive' lo='mobiles.clive.26'/>
+    <nomatch id-name='obj_clive' lo='mobiles.clive.22'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='elevator'>
+
+   <event num='1'>
+    <comment>Press button - lift goes up - loc 136</comment>
+    <message type='single' where='com' who='individual' lo='moves.elevator.1'/>
+    <move what='player' who='individual' loc='525'/>
+   </event>
+
+   <event num='2'>
+    <comment>Press button - elevator goes down - loc 525</comment>
+    <message type='single' where='com' who='individual' lo='moves.elevator.2'/>
+    <move what='player' who='individual' loc='136'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='box'>
+
+   <event num='1'>
+    <comment>Get box - living quarters - loc 329</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Open box - check if already got shoes</comment>
+    <checkinventory map='home' id-name='tap shoes' found='objects.box.3' not-found='objects.box.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Already got shoes</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Not got shoes - so pick them up</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.3'/>
+    <createobject where='inventory' home-map='sol/castillo' id='obj_shoes'/>
+   </event>
+
+  </section>
+
+  <section name='head'>
+
+   <event num='1'>
+    <comment>Get Zlitherworm head - object in loc 329</comment>
+    <message type='single' where='com' who='individual' lo='objects.head.1'/>
+   </event>
+
+  </section>
+
+  <section name='paperclips'>
+
+   <event num='1'>
+    <comment>Join paperclips - object in loc 263</comment>
+    <message type='single' where='com' who='individual' lo='objects.paperclips.1'/>
+   </event>
+
+  </section>
+
+  <section name='shoes'>
+
+   <event num='1'>
+    <comment>Drop shoes</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.1'/>
+    <destroyobject where='inventory' map='home' id-name='tap shoes'/>
+   </event>
+
+   <event num='2'>
+    <comment>Wear tap shoes - call random event</comment>
+    <call event='objects.shoes.random[3-8]'/>
+   </event>
+
+   <event num='3'>
+    <comment>Wear shoes - option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shoes.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>Wear shoes - option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shoes.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Wear shoes - option 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.6'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shoes.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Wear tap shoes - option 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.8'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shoes.9'/>
+   </event>
+
+   <event num='7'>
+    <comment>Wear tap shoes - option 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.10'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shoes.11'/>
+   </event>
+
+   <event num='8'>
+    <comment>Wear tap shoes - option 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.12'/>
+    <message type='single' where='com' who='room_ex' lo='objects.shoes.13'/>
+    <changestat who='individual' money='2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='thanks'>
+
+   <event num='1'>
+    <comment>Get list of clues for Thanksgiving scavenge hunt - Fedruckers - 265</comment>
+    <message type='multi' where='com' who='individual' lo='objects.thanks.1' hi='objects.thanks.20'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

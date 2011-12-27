@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+
+<event-list version='21'>
+
+ <category name='food'>
+
+  <section name='bistro'>
+
+   <event num='1'>
+    <comment>Buy food - Arts Bistro - 716</comment>
+    <checkstat who='individual' money='10' higher='food.bistro.2' equals='food.bistro.2' lower='food.bistro.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.bistro.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.bistro.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='asparagus'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle</comment>
+    <checkvariable name='newbod' key='clue' value='six' equals='newbod.asparagus.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does the player already have the asparagus?</comment>
+    <checkinventory map='home' id-name='asparagus' found='stop'/>
+    <createobject where='inventory' home-map='sol/rhea' id='obj_asparagus'/>
+    <message type='text' where='com' who='individual'>As you walk into the room, the technician grins with excitement, and gives you a sample of the singing asparagus!</message>
+   </event>
+
+   <event num='3'>
+    <comment>Drop event on the asparagus</comment>
+    <message type='text' where='com' who='individual'>The asparagus sings a sad song in a minor key. You are moved to relent, and decide not to drop it.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='rope'>
+
+   <event num='1'>
+    <comment>Use rope - check if player is the pit</comment>
+    <checkmap map='sol/rhea'  pass='objects.rope.2' fail='objects.rope.3' loc='789'/>
+   </event>
+
+   <event num='2'>
+    <comment>If player is in loc 789, the pit</comment>
+    <message type='single' where='com' who='individual' lo='objects.rope.1'/>
+    <move what='player' who='individual' loc='796'/>
+    <destroyobject where='inventory' map='home' id-name='rope'/>
+   </event>
+
+   <event num='3'>
+    <comment>Use rope in wrong place - random result</comment>
+    <call event='objects.rope.random[4-6]'/>
+   </event>
+
+   <event num='4'>
+    <comment>Use rope in wrong place - 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.rope.2'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use rope in wrong place - 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.rope.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Use rope in wrong place - 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.rope.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Climbing back up rope (either with climb back up command, or move up)</comment>
+    <message type='single' where='com' who='individual' lo='objects.rope.5'/>
+    <move what='player' who='individual' loc='789'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='shop'>
+
+  <section name='rope'>
+
+   <event num='1'>
+    <comment>Get some rope - in Joe Bob&apos;s, loc 910</comment>
+    <message type='single' where='loc' who='individual' lo='shop.rope.1' id-name='some rope'/>
+   </event>
+
+   <event num='2'>
+    <comment>Buy rope - check funds</comment>
+    <checkstat who='individual' money='1' higher='shop.rope.4' equals='shop.rope.4' lower='shop.rope.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>No funds for rope</comment>
+    <message type='single' where='loc' who='individual' lo='shop.rope.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Sell rope</comment>
+    <message type='single' where='loc' who='individual' lo='shop.rope.3'/>
+    <changestat who='individual' money='-2' change='add' cur-max='current'/>
+    <createobject where='inventory' home-map='sol/rhea' id='obj_rope'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='start'>
+
+  <section name='start'>
+
+   <event num='1'>
+    <comment>Startup event to fire off announcements in Art&apos;s Bistro - loc 716</comment>
+    <delayevent delay='10' logoff='tannoy.bistro.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='tannoy'>
+
+  <section name='bistro'>
+
+   <event num='1'>
+    <comment>Random call for tannoy announcements - loc 716</comment>
+    <call event='tannoy.bistro.random[2-8]'/>
+   </event>
+
+   <event num='2'>
+    <comment>Tannoy 1</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.1'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Tannoy 2</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.2'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+   <event num='4'>
+    <comment>Tannoy 3</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.3'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+   <event num='5'>
+    <comment>Tannoy 4</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.4'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+   <event num='6'>
+    <comment>Tannoy 5</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.5'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+   <event num='7'>
+    <comment>Tannoy 6</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.6'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+   <event num='8'>
+    <comment>Tannoy 7</comment>
+    <announce type='single' loc='716' lo='tannoy.bistro.7'/>
+    <delayevent delay='600' logoff='tannoy.bistro.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='xmas08'>
+
+  <section name='fruitcake'>
+
+   <event num='1'>
+    <comment>Static fruitcake - kick</comment>
+    <message type='single' where='com' who='individual' lo='xmas08.fruitcake.1'/>
+    <message type='single' where='com' who='room_ex' lo='xmas08.fruitcake.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Eat</comment>
+    <message type='single' where='com' who='individual' lo='xmas08.fruitcake.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Get - check if already got some</comment>
+    <checkinventory map='sol/earth' id-name='fruitcake' found='xmas08.fruitcake.4' not-found='xmas08.fruitcake.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Already got some</comment>
+    <message type='single' where='com' who='individual' lo='xmas08.fruitcake.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not got some, so give the player some cake</comment>
+    <message type='single' where='com' who='individual' lo='xmas08.fruitcake.5'/>
+    <message type='single' where='com' who='room_ex' lo='xmas08.fruitcake.6'/>
+    <createobject where='inventory' home-map='sol/earth' id='obj_cake'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

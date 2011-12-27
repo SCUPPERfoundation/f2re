@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<fed2-map title='Luna' version='7' editor='standard' from='335' to='Nitor.Nitor Space.335'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>   Huge clouds of noxious gas have been stored in here. You can&apos;t help wondering why, when there doesn&apos;t seem to be a shortage on the planet!</desc>
+   </location>
+
+   <location num='142'>
+      <name>Dark side of Luna</name>
+      <desc>   As you exit the cave you realize you&apos;re on the other side of Luna. It&apos;s completely dark and much cooler than the other side of the cave. You assume only one side of the planet must face the sun.</desc>
+      <desc>   All around you in the distance you can see a a glow of light that peeks over every horizon. There appears to be giant crystal spires that reach into the sky several yards to the south.</desc>
+      <exits s='206' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='143'>
+      <name>The depths of the cave</name>
+      <desc>   You&apos;re surrounded in total blackness, except for what appear to be faint glowing lights several yeards from one another. As you approach a light you notice it&apos;s actually a glowing face. As the hair on the back of your neck slowly comes back down, you notice that these people are in a meditative state.</desc>
+      <desc>   You see that there&apos;s only one way out, or you&apos;ll have to go back from where you came.</desc>
+      <exits se='208' out='142' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='206'>
+      <name>Crystal Spire</name>
+      <desc>   This monumental crystal pillar stretches upwards towards the sky. It too is covered with carvings that you are sure have some meaning... after staring at them for a while, you realize it&apos;s telling a story about rising above to enlightenment. You sit and think hard, perhaps this is the way out?</desc>
+      <exits n='142' up='335' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='208'>
+      <name>A cave</name>
+      <desc>   The cave walls have peculiar shapes etched into them, something akin to fingerprints. The footing is rocky with sudden holes, you can see why the hospital treats so many broken limbs!</desc>
+      <desc>   The cave disappears into toal darkness to the Northwest.</desc>
+      <exits s='272' nw='143' out='143' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='272'>
+      <name>The path</name>
+      <desc>   Outside the somewhat sheltered confines of the landing field to the southwest, the burning wind is so strong it almost knocks you off your feet. A light dusting of ash is falling, and it swirls around in gusts before forming small piles all around you.</desc>
+      <desc>   North is a cave.</desc>
+      <exits n='208' sw='335'/>
+   </location>
+
+   <location num='335' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   Looming clouds expand overhead, they act as a greenhouse keeping the intense heat upon the planet surface. The air is thick and hardly breathable. Glass domes house the planet&apos;s essential services.</desc>
+      <desc>   Southwest is the trading exchange, east is the hospital and a bar which serves lovely warming drinks is south. Northeast, a small path lets you venture out onto the barren wastes of the planet.</desc>
+      <desc>   A man with tattered clothes, no teeth, and a cigar butt hanging from his mouth, points to a near by hanger and offers to sell you a new ship.</desc>
+      <exits ne='272' e='336' s='399' sw='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='336' flags='hi'>
+      <name>Recovery Dome</name>
+      <desc>   Explorers are sent here from Pia to seek out the depths of who they are, and rid themselves of the ugliness that dwells within. This unfortunately leads to insanity and even death.</desc>
+      <desc>   If you need it, the staff here can arrange insurance for you.</desc>
+      <exits w='335' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398' flags='e'>
+      <name>Trading Dome</name>
+      <desc>   The temperature in here is extremely cold to keep the machinery operational. A video screen pops out of a nearby consol and positions itself directly in front of your face, a voice says, &quot;Speak your command please.&quot;</desc>
+      <desc>   Natives of the planet cluster around the screens. Thankfully the controls are voice-operated so the locals don&apos;t have to expend valuable strength from torturing heat outside.</desc>
+      <exits ne='335' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='399' flags='b'>
+      <name>Cafe Dome</name>
+      <desc>   This domes owner, an elegant and articulate man, greets you and offers you an icy cold latte.</desc>
+      <desc>   The air conditioning here is exhilarating, making you feel as if your very being has been given a jolt of energy.</desc>
+      <desc>   A man seeking inner truths is meditating in a far corner, he opens one eye to glance at you and he quickly closes it again.</desc>
+      <exits n='335' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

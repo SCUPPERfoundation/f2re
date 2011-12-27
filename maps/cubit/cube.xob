@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<object-list next_number='2' version='50'>
+
+   <object type='static' start='400' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>The dish being served here is a stew made from cubes of beef in a rich sauce.</desc>
+      <vocab cmd='buy' event='food.cafe.1'></vocab>
+   </object>
+
+   <object type='static' start='468' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>Cubes of soy-protein, in various colors, are on offer here.</desc>
+      <vocab cmd='buy' event='food.bar.1'></vocab>
+   </object>
+
+</object-list>

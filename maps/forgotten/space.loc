@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<fed2-map title='Forgotten Space' version='3' editor='standard'>
+
+   <location num='394' flags='slp'>
+      <name>A Forgotten Link in Space</name>
+      <desc>You somehow took a wrong jump and ended up here. WARNING a galactic storm has shifted the orbit of Wasteland to the south and has cleared a path to the moon of Wasteland in the southwest call Badlands. You also are getting a homing beacon from the southeast.</desc>
+      <exits se='459' s='458' sw='457'/>
+   </location>
+
+   <location num='457' flags='sp'>
+      <name>Badlands Orbit</name>
+      <desc>You try and gaze down upon the surface but can not see through the storm cloads.</desc>
+      <exits ne='394' e='458'/>
+   </location>
+
+   <location num='458' flags='sp'>
+      <name>Wasteland Orbit</name>
+      <desc>You gaze down upon a desert like planet all tan with sand. >From here you can no see no signs of life or buildings.</desc>
+      <exits n='394' e='459' w='457'/>
+   </location>
+
+   <location num='459' flags='sp'>
+      <name>Space Station</name>
+      <desc>You are holding position 50 metrons from the station. You see no movement from the station and no response from radio hails.</desc>
+      <exits w='458' nw='394'/>
+   </location>
+
+</fed2-map>
+

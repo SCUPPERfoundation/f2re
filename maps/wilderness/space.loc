@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<fed2-map title='Wilderness Space' version='36' editor='standard'>
+
+   <location num='96' flags='st'>
+      <name>Unstable Wormhole</name>
+      <desc>You are hurtling through sub-space within the confines of a trans-dimensional wormhole. Your ships shakes due to the unequal gravitation forces pulling your ship in multiple directions. Wormholes of this nature are unstable and could collapse at any time, thereby destroying your ship and killing you. You should attempt to leave the wormhole by firing your thrusters and exiting. Any direction will do, you just need to get out NOW!</desc>
+      <exits n='1952' ne='2017' e='2208' se='2145' s='2208' sw='2143' w='2078' nw='2015' out='3809' no-exit='nomove.space.4'/>
+   </location>
+
+   <location num='1951' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the northerly edge of the known system. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a large planetary mass in the southeasterly quadrant. Your navigational computer has sufficient data to plot courses to the east, southeast, south and southwest.</desc>
+      <exits e='1952' se='2016' s='2015' sw='2014' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='1952' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the northerly limits of the known system. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a large planetary mass in the southerly quadrant as well as subspace radio signals coming from the easterly quadrant. Your navigational computer has sufficient data to plot courses to the west, east, southeast, south and southwest.</desc>
+      <exits e='1953' se='2017' s='2016' sw='2015' w='1951' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='1953' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the northerly known limits of the Wilderness System. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a large planetary mass in the southwesterly quadrant. The research station WOLF comes into view through your frontal viewport. A short subspace message from the station crackles over your communitions. &quot;All visitors to WOLF Research Station shall board and direct their landing shuttles to Level 2 landing bay. All other landing facilities are not open to unauthorized personnel.&quot; If you do not wish to dock your navigational computer has sufficient data to plot courses to the west, southeast, south and southwest.</desc>
+      <exits se='2018' s='2017' sw='2016' w='1952' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2014' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the westerly edge of the known system. Short range sensors detect no planetary masses or anomolies in this  quadrant. Long range sensors detect no planetary masses in any adjacent quadrants. Your navigational computer has sufficient data to plot courses to the northeast, east, southeast and south.</desc>
+      <exits ne='1951' e='2015' se='2079' s='2078' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2015' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a large planetary mass in the easterly quadrant. The viewport to the southeast allows the light of the distant sun to flood your cockpit compartment. Your navigational computer has sufficient data to plot courses to the west, north, northeast, east, south and southwest.</desc>
+      <exits n='1951' ne='1952' e='2016' s='2079' sw='2078' w='2014' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2016' flags='st'>
+      <name>Wolf Orbit</name>
+      <desc>You are orbiting the planet that is in closest proximity to the sun in this system. Early explorers of the system called this planet Wolf. Initial reports indicated that orbital surface scans of the planet showed no indication of life signs or development. However, abnormal energy readings have been detected in a multitude of locations around the planet&apos;s surface. Early attempts to land on the planet have been unsuccessful as upon entering the outer atmosphere of the planet, all navigational and short-range sensors become ineffective, possibly due to the strange energy emanating from the planet. So far no attempt has been made to blindly land on the planet&apos;s surface. Mankind has become too reliant on technology and has lost the skill or daring to risk flying by the seat of their pants. Therefore, this planet remains shrouded in mystery. Your navigational computer has sufficient data to plot courses to the west, northwest, north, northeast, east, southeast and southwest.</desc>
+      <exits n='1952' ne='1953' e='2017' se='2081' sw='2079' w='2015' nw='1951' down='2035' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2017' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up large planetary masses in the westerly and southeasterly quadrants as well as subspace radio signals coming from the northerly quadrant. The viewport to the southwest allows the light of the distant sun to flood your cockpit compartment. Your navigational computer has sufficient data to plot courses to the west, northwest, north, east, southeast and south.</desc>
+      <exits n='1953' e='2018' se='2082' s='2081' w='2016' nw='1952' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2018' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the easterly limits of the known system. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a large planetary mass in the southerly quadrant as well as subspace radio signals coming from the northwesterly quadrant. Your navigational computer has sufficient data to plot courses to the west, northwest, south and southwest.</desc>
+      <exits s='2082' sw='2081' w='2017' nw='1953' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2035' flags='st'>
+      <name>Shuttle</name>
+      <desc>Boarding the shuttle you settle into the pilot&apos;s seat. &quot;Let&apos;s go,&quot; you tell the computer. You hear a dull &apos;clunk&apos; as the shuttle disengages. The ride down is, as usual, smooth. Suddenly all navigation systems and sensors shut down. You are flying blind! Warning lights and buzzers begin to go off on other systems in your shuttle. Will propulsion be next? Suddenly your shuttle begins to buffet around as your inertia dampeners have failed. Your shuttle is not designed to withstand this type of flight for long. You only chance to live through this is to stop your descent by firing your main thrusters and getting back up to your ship.</desc>
+      <exits up='2016' no-exit='nomove.space.3'/>
+   </location>
+
+   <location num='2078' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the westerly limits of the known system. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a small planetary mass in the southerly quadrant. Your navigational computer has sufficient data to plot courses to the north, northeast, east, southeast and south.</desc>
+      <exits n='2014' ne='2015' e='2079' se='2143' s='2142' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2079' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up large planetary masses in the southwesterly and northeasterly quadrants and the system&apos;s sun to the east. Your navigational computer has sufficient data to plot courses to the west, northwest, north, northeast, southeast, south and southwest.</desc>
+      <exits n='2015' ne='2016' se='2144' s='2143' sw='2142' w='2078' nw='2014' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2081' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up large planetary masses in the easterly and northwesterly quadrants and the system&apos;s sun to the west. Your navigational computer has sufficient data to plot courses to the northwest, north, northeast, east,southeast, south, and southwest.</desc>
+      <exits n='2017' ne='2018' e='2082' se='2146' s='2145' sw='2144' nw='2016' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2082' flags='st'>
+      <name>Rogue Orbit</name>
+      <desc>You are orbiting the forested planet Rogue which circles the system&apos;s sun along the outer fringes of the known system. Initial reports of this planet by early explorers of this world indicated that the planet was largely populated by tribes of peaceful hunting and farming communities who readily accept strangers into their fold. Since those initial contacts, some hardy off-world settlers have begun to come to Rogue to call it home. In harmony with the original populace and the peaceful natural surroundings, these early settlers have forged a new life here. If you wish you may visit the planet by boarding your shuttle and heading down to the planet&apos;s surface. If you do not wish to land your navigational computer has sufficient data to plot courses to the west, northwest, north, south and southwest.</desc>
+      <exits n='2018' s='2146' sw='2145' w='2081' nw='2017' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2118' flags='st'>
+      <name>Surface of Ofi Lusa</name>
+      <desc>WOW! Those reports of severe discomfort for foolhardy adventurers trying to prove something were not exaggerated. You feel nauseous, light-headed and have begun to notice a severe headache coming on. You walk around on the rocky surface of the planet and pick up a few small rocks for souvenirs but soon decide to climb back into your shuttle and leave this world. You hope you can maintain your focus long enough to get your shuttle back up to your ship. You place an oxygen mask over your face and inhale deeply. Your head begins to clear as you prepare to take off.</desc>
+      <exits up='2142' no-exit='nomove.space.2'/>
+   </location>
+
+   <location num='2142' flags='st'>
+      <name>Ofi Lusa Orbit</name>
+      <desc>You are in orbit around a small planetary mass circling this system through the outer-most regions of the system. Early orbital scans indicated that the planet&apos;s surface is inhospitable for life mainly due to a very low concentration of oxygen. Excursions onto the surface without support is possible but should be limited to short jaunts as the early explorers described feelings of shortness of breath, nausea, dizziness, and in some cases severe debilitating headaches. However, the symptoms usually abated within hours of receiving oxygen therapy and rest. As such, recreational or casual exploration of this planet is not recommended. However, a small and functioning biological research facility has been established on this planet and it does allow traders and travellers to all the non-sensative areas of the facility. If you do not wish to land your navigational computer has sufficient data to plot courses to the north, northeast, east and southeast.</desc>
+      <exits n='2078' ne='2079' e='2143' se='2207' down='2118' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2143' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a small planetary mass in the westerly quadrant and a homing beacon transmission emanating from the quadrant to the southeast. The viewport to the northeast allows the light of the distant sun to flood your cockpit compartment. Your navigational computer has sufficient data to plot courses to the west, northwest, north, east, southeast and south.</desc>
+      <exits n='2079' e='2144' se='2208' s='2207' w='2142' nw='2078' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2144' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pickup the system&apos;s sun to the north and a homing beacon transmission emanating from the quadrant to the south. Your navigational computer has sufficient data to plot courses to the west, northwest, northeast, east, southeast, south and southwest.</desc>
+      <exits ne='2081' e='2145' se='2209' s='2208' sw='2207' w='2143' nw='2079' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2145' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a large planetary mass in the northeasterly quadrant and a homing beacon transmission emanating from the quadrant to the southwest. The viewport to the northwest allows the light of the distant sun to flood your cockpit compartment. Your navigational computer has sufficient data to plot courses to the west, north, northeast, east, south and southwest.</desc>
+      <exits n='2081' ne='2082' e='2146' s='2209' sw='2208' w='2144' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2146' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space along the easterly edge of the known system. Short range sensors detect no planetary masses in this quadrant but do detect an unstable wormhole forming above your ship. Long range sensors do pick up a large planetary mass in the northerly quadrant. Your navigational computer has sufficient data to plot courses to the west, northwest, north and southwest.</desc>
+      <exits n='2082' sw='2209' w='2145' nw='2081' up='96' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2207' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the southerly edge of the known system. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a small planetary mass in the northwesterly quadrant and a homing beacon transmission emanating from the quadrant to the east. Your navigational computer has sufficient data to plot courses to the northwest, north, northeast and east.</desc>
+      <exits n='2143' ne='2144' e='2208' nw='2142' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2208' flags='slt'>
+      <name>Wilderness System Link</name>
+      <desc>You are in the Wilderness System along the southerly edge of the known system. Ahead of your ship is the interstellar link, which detects your proximity and begins transmitting its automated system response. Your ship&apos;s communication unit picks up the following. &apos;Greetings traveler, you are located at the Wilderness System Interstellar Link. From this quadrant you may JUMP to any open system in the galaxy or continue your travels in the system. Have a nice day.&apos; Your long range sensors do not detect any planetary masses in the adjoining quadrants. Your navigational computer has sufficient data to plot courses to the west, northwest, north, northeast and east.</desc>
+      <exits n='2144' ne='2145' e='2209' w='2207' nw='2143' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='2209' flags='st'>
+      <name>Space</name>
+      <desc>You are flying through space near the southerly limits of the known system. Short range sensors detect no planetary masses or anomolies in this quadrant. Long range sensors do pick up a homing beacon transmission emanating from the quadrant to the west. Your navigational computer has sufficient data to plot courses to the west, northwest, north and northeast.</desc>
+      <exits n='2145' ne='2146' w='2208' nw='2144' no-exit='nomove.space.1'/>
+   </location>
+
+   <location num='3809' flags='st'>
+      <name>Above the Sun</name>
+      <desc>Wow, it&apos;s hot here! The wormhole has placed you above the sun just outside the coronasphere. Your shields will protect you from the intense heat and radiation for a short time but it would be prudent to leave soon.</desc>
+      <exits n='2016' e='2081' s='2144' w='2079' no-exit='nomove.space.5'/>
+   </location>
+
+</fed2-map>

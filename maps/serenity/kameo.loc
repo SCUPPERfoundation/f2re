@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<fed2-map title='Kameo' version='21' editor='standard' from='590' to='Serenity.Serenity Space.390'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Re-pop location for mobiles and items.</desc>
+   </location>
+
+   <location num='398' flags='b'>
+      <name>Tia&apos;s Garden</name>
+      <desc>   You find yourself in the middle of a courtyard garden, surrounded by colorful creations of Mother Nature&apos;s design. The aroma immediately captivates you, leaving you with a feeling of serenity as you indulge in the beauty around you. A grouping of iron patio furniture with fluffy cushions provides you with comfortable seating to enjoy the view, while a large umbrella provides you with shade from the sun. Birds flutter around in the trees that surround the courtyard, their soft chirping providing a calming melody. A squirrel is busy gathering food as he scurries across the brick patio on his venture. A cart containing a pitcher of fresh lemonade has been left for your enjoyment.</desc>
+      <desc>   Exits - Apartment (South)</desc>
+      <exits s='462'/>
+   </location>
+
+   <location num='457'>
+      <name>Sunset</name>
+      <desc>   The tanned oarsman smiles and nods to you as you enter the canoe and find a seat. As the canoe gets in motion for your return to the Islet, sunset is on the horizon as the Island revolves away from the sun. The sky is laced with bright-colored scarves, and soon the twilit, peach sky becomes a crimson wound.</desc>
+      <desc>   Exits - To the Islet/Shuttle (SE)</desc>
+      <exits se='522'/>
+   </location>
+
+   <location num='458'>
+      <name>Canoe Ride</name>
+      <desc>   As the shore nears, you can make out people on the beach and hut-like structures scattered here and there. The bluegreen waters shimmering in the sun like tiny mirrors. The ocean gently laps at the canoe as you gaze at the palm trees, lush and green against the white sands of the beach. Vacationers come from all over to enjoy the tropical climate of Kameo and explore the jungles of the Island.</desc>
+      <desc>   Exits - Island (Out)</desc>
+      <exits out='1120'/>
+   </location>
+
+   <location num='462' flags='b'>
+      <name>Tia and Leo&apos;s Apartment</name>
+      <desc>   This area serves as quarters for Leo and Tia when they are not on the Island. It appears large and bright as it is decorated mostly in white with lots of windows. The plush carpeting gives the room a crisp soft charm. Along the back wall is a small kitchenette and nestled in a nook through some louver doors is the bathroom. To the left is a grand old mahogany 4-poster bed elegantly outfitted in gossamer laces and linens, and a mahogany armoire with scrolled feet and a carved skirt. A tiffany lamp sits atop a matching bedside table. A ceiling fan centered above the bed turns slowly. To the right is a sitting area where a white marble coffee table is centered between two armchairs in front of a white overstuffed sofa. The room is full of plants of various varieties, including a large bay window seat with ferns draping themselves over the edge of their pots and hanging in the afternoon sun.</desc>
+      <desc>   Exits - Shuttle (O) - Garden (N)</desc>
+      <exits n='398' out='590'/>
+   </location>
+
+   <location num='522'>
+      <name>Dusk</name>
+      <desc>   The ocean is somewhat calm now as the canoe skims across the water, gentle waves lapping at the bow and outriggers. The sun finally drops below the horizon and bathes the Island in a fragile semi-darkness. What follows is not so much night, but a lilac afterglow that in a few hours will be the prelude to sunrise.</desc>
+      <desc>   Exits - To the Islet/Shuttle (SE)</desc>
+      <exits se='587'/>
+   </location>
+
+   <location num='523'>
+      <name>Canoe Ride</name>
+      <desc>   As the canoe swiftly cuts through the water, you take in the fresh air off the ocean. You relax and enjoy the ride as the warm sun kisses your skin.</desc>
+      <desc>   Exits - Island (NW)</desc>
+      <exits nw='458'/>
+   </location>
+
+   <location num='525'>
+      <name>--==  Aloha... Welcome to the beautiful island of Kameo  ==--</name>
+      <desc>   An island paradise awaits you just a short boat ride from the landing pad, where sand, sea and memories meet. Whether you enjoy drifting on crystal-blue water, exploring a secluded beach, or discovering the secrets of the jungles and caves, you will find the ultimate, intimate hideaway here on Kameo. Life is a function of desire here, not the ticking of a clock. When it&apos;s over... just close your eyes... and remember each tranquil moment. Surrender to the embrace of the turquoise-blue waters below...</desc>
+   </location>
+
+   <location num='526' flags='b'>
+      <name>Tia and Leo&apos;s Office</name>
+      <desc>   This is the only office on Kameo, it is large and spacious, and Tia and Leo both share the space. A single desk sits in front of a large window, the drapes drawn open, overlooking the northern waters of the ocean. The desk and matching armchairs are made of polished teak wood and intricately carved with jungle plants and animal life, the chairs carved to match with the names of the owners centered in their backs. Ornate rugs cover the floors, and deep comfortable chairs are placed about the room for guests. A portrait hangs on the wall showing Tia and Leo facing each other, each with one hand on a golden goblet looking into each others eyes... a bonding ritual native to the Island. A wetbar against the wall offers libations from all over the universe, as it is customary to seal all business deals with a drink.</desc>
+      <desc>   Exits - Shuttle (South)</desc>
+      <exits s='590' in='462'/>
+   </location>
+
+   <location num='587'>
+      <name>Nightfall</name>
+      <desc>   The canoe approaches the shore of Black Sand Beach, reflections of the moonlight dance on the ripples of the ocean. Your eyes search for where the sky meets the ocean... you fixate on sailboats drifting through the night under a canopy of stars, the curves of the canvas caught in the moonlight.</desc>
+      <desc>   Exits - Black Sand Beach (Out)</desc>
+      <exits out='652'/>
+   </location>
+
+   <location num='588'>
+      <name>Canoe Ride</name>
+      <desc>   As you get into the canoe, the oarsman steadies the canoe as it rocks back and forth a bit. Seats are provided to sit on even though they&apos;re narrow. As you shove off, the waves breaking on the beach make a gentle sloshing sound against the canoe sides. The oarsman puts his strong arms and back to work and the canoe swiftly accelerates through the water, the bow bobbing up and down with his strokes.</desc>
+      <desc>   Exits - Island (NW)</desc>
+      <exits nw='523'/>
+   </location>
+
+   <location num='589'>
+      <name>Black Sand BeachBlack Sand Beach</name>
+      <desc>   As you approach the beach, the whole beach sparkles with different colors as the sun reflects off the sand&apos;s faceted surface, reminding you of millions of stars in the blackened sky at night. Seagulls and pelicans skim the surface of the water looking for their dinner, as you watch them you realize that you too are hungry and hope there is a place to dine on the Island. The canoes along the beach rock back and forth, the gentle waves splashing at their sides while the oarsmen patiently wait for you to get in.</desc>
+      <desc>   Exits - Canoe Ride to the Island (In) - Islet/Shuttle (East)</desc>
+      <exits e='590' in='588'/>
+   </location>
+
+   <location num='590'>
+      <name>Kameo Islet/Shuttle Pad</name>
+      <desc>   The shuttle pad is located on an Islet away from the Island, as no spaceships are allowed to land on the Island itself. Tia &amp; Leo&apos;s office is located to the north in the only modern building on the planet. To the east is the Exchange where all commods are brought in by outrigger canoe as is the custom of the natives. To the south is the Supply Hut, nothing more than a thatch hut supplying a variety of goods to those just visiting the shuttle area. To the west is the Black Sand Beach where canoes wait to take you to the Island.</desc>
+      <desc>   North - Tia &amp; Leo&apos;s Office</desc>
+      <desc>   South - Supply Hut</desc>
+      <desc>   East  - Kameo Exchange</desc>
+      <desc>   West  - Black Sand Beach</desc>
+      <exits n='526' e='591' s='654' w='589'/>
+   </location>
+
+   <location num='591' flags='e'>
+      <name>Kameo Exchange</name>
+      <desc>   A man rushes past you as you enter the Exchange, all around you see crates of commods stacked and waiting to be loaded into ships. Looking out the window you see tanned muscular men carrying crates from the beach where they are transported from the Island to the Exchange by large outrigger canoes. The exchange master is standing close by, checking labels on each crate and marking it down to keep track of the what&apos;s going out and what&apos;s coming in.</desc>
+      <desc>   A primitive way of handling things in a modern Universe?... yes...  but, it&apos;s completely reliable.</desc>
+      <desc> Exits - Shuttle (West)</desc>
+      <exits w='590'/>
+   </location>
+
+   <location num='652'>
+      <name>Nightfall on Black Sand Beach</name>
+      <desc>   The oarsman bids you a safe journey as you gather your belongings and carefully exit the canoe. In the moonlight, you can make out the silhouette of a pelican perched sleeping on the stern of one of the grounded canoes. A sanderling runs in and out with the surf, probing its bill in the wet sand in search of invertebrates.</desc>
+      <desc>   Exits -  Shuttle (East)</desc>
+      <exits e='590'/>
+   </location>
+
+   <location num='654' flags='yrhib'>
+      <name>Supply Hut</name>
+      <desc>   Since this is the only place to buy goods on the LP, everything is housed in one fairly large hut. To your right is a small eatery, nothing more than a few tables placed in a corner, but it does have a nice view of the beach below and the goings on there. At the back of the Hut is a native woman selling Island trinkets and clothing suitable for the Island and the warm days on Kameo. Dressing booths made of bamboo with cloth draped doors are also provided. To your left is a man sitting behind a long table with radios and equipment you might find useful in exploring the Island. Although a little crowded, it must serve its purpose well as there are so many people milling about and looking at different items for sale here. Perhaps you should have a look as well, or maybe you should venture to the Island instead...</desc>
+      <desc>   Exit - Shuttle (North)</desc>
+      <exits n='590'/>
+   </location>
+
+   <location num='931' flags='b'>
+      <name>Natural Hot Spring</name>
+      <desc>   As you enter the mineral spring you feel refreshed as the warm waters bubble up from a hidden source... heated by seismic activity far underground. You sit relaxing, your body and soul immersed in the tranquillity of the spring. Every now and then a bubble rises to the surface of the water, bursting with a soft pop. The calming influence of the nearby surf relaxes you as it provides a gentle lullaby.</desc>
+      <desc>   Exits - (Out)</desc>
+      <exits out='995'/>
+   </location>
+
+   <location num='986'>
+      <name>Grass Hut</name>
+      <desc>   You&apos;re standing in a small but cozy hut, with a futon on the floor. It has a few other meager pieces of furniture adorned with treasures found on the island such as conch shells, dried starfish, and pieces of coral. It is a rental unit and doesn&apos;t appear to be occupied, feel free to make yourself at home.</desc>
+      <desc>   Exits - (SE)</desc>
+      <exits se='1051'/>
+   </location>
+
+   <location num='988'>
+      <name>Lagoon</name>
+      <desc>   Sheltered by palms, the tranquil waters of the lagoon provides a haven for swimmers. Stretches of pure white sand along the palm-fringed beach embraced by turquoise blue waters... so inviting. Perhaps this would be a nice spot to go for a swim, or to relax upon the warm sand and enjoy the sunshine and the gentle breeze.</desc>
+      <desc>   Exits - Lagoon (SW or SE) - Water (In)</desc>
+      <exits se='1053' sw='1051' in='1052'/>
+   </location>
+
+   <location num='995'>
+      <name>Jetty</name>
+      <desc>   Finding a path through the rocks you come across a natural hot spring hidden in the jetty. The waters bubble up from the bottom and break the surface with a faint pop.</desc>
+      <desc>   Exits - Jetty (S) - Spring (In)</desc>
+      <exits s='1059' in='931'/>
+   </location>
+
+   <location num='1046'>
+      <name>Blue Grotto</name>
+      <desc>   The oarsman waits until the waves subside, then shoves your head below the gunwale to avoid injury as the boat bounces and bumps into the cave.</desc>
+      <desc>   Inside, what looks like an intense light show flashes around you, creating an almost prismlike effect. Everything silent except for the sounds of waves lapping at the rowboat... you seem to hover in a different dimension. You are mystified with the dancing reflections from the minuscule shards of sunlight that manage to ebb their way through the eroded pin-holes in the cave walls, and ricochet about the interior as they reflect off the moving water and the mirror-like cave walls.</desc>
+      <desc>   Exits - (Out)</desc>
+      <exits out='1110'/>
+   </location>
+
+   <location num='1049'>
+      <name>Dunes</name>
+      <desc>   You&apos;re standing atop some large sand dunes which are dotted here and there with palm trees. The sand is pure white, stirred into rippling patterns by the wind. Further inland, a faint path disappears into some palm trees toward the cliffs.</desc>
+      <desc>   Exits - Path (NW) - Beach (SE)</desc>
+      <desc>..--==ATTN:  THIS SECTION WILL BE ADDED WHEN I AM ALLOTED MORE BUILDING LOCATIONS!!!!==--..</desc>
+      <exits se='1114'/>
+   </location>
+
+   <location num='1051'>
+      <name>Around the Lagoon</name>
+      <desc>   The blue lagoon laps gently at the shore, spreading out like a pool of polished glass. Various types of small sea shells are washed up on the shore here. A grass hut is located in the shade of the giant palm trees.</desc>
+      <desc>   Exits - Grass Hut (NW) - Lagoon (S or NE)</desc>
+      <exits ne='988' s='1115' nw='986'/>
+   </location>
+
+   <location num='1052'>
+      <name>Wading into the Lagoon Waters</name>
+      <desc>   You wade into the blue waters of the lagoon as it surrounds you, so clear, calm, and tranquil. Soon your feet can no longer touch the bottom as you become buoyant and begin to tread water.</desc>
+      <desc>   Exits - Lagoon (S) - Lagoon Shore (N)</desc>
+      <exits n='988' s='1116'/>
+   </location>
+
+   <location num='1053'>
+      <name>Around the Lagoon</name>
+      <desc>   This area of the beach maintains a tropical atmosphere, palm trees wave gently in the balmy breezes, and the sand is fine and powdery beneath your feet. A warm breeze blows gently across your face, its gentle touch pulling you into the daylight dreams and midnight remembrances of the surf.</desc>
+      <desc>   Exits - Lagoon (NW or SE)</desc>
+      <exits se='1118' nw='988'/>
+   </location>
+
+   <location num='1055' flags='b'>
+      <name>&quot;Cabana Breezes&quot; Cantina</name>
+      <desc>   When you start with the island&apos;s finest beaches, everything else is a breeze. Welcome to the playful side of paradise. You&apos;re inside an open-air cabana facing the beach, with a thatched roof of coconut fronds. A bar spans the middle where a beach-clad, tanned bartender flashes his pearly whites as he serves colorful drinks with little parasols. You hear the sounds of raggae music from a transistor radio on the bar, adding to the island atmosphere of the cabana. Tourist and natives of the island sit on barstools eating roasted peanuts from wooden buckets on the bar and tossing the shells on the floor... go ahead, toss those hulls, its tradition here.</desc>
+      <desc>   Exits - (South)</desc>
+      <exits s='1119'/>
+   </location>
+
+   <location num='1056'>
+      <name>Sand Dunes</name>
+      <desc>   You are standing atop some sand dunes, sea oats sway gently in the breeze. Inland, dense vines and trees weave into a veritable jungle.</desc>
+      <desc>   Exits - Jungle (N) - Beach (SW)</desc>
+      <desc>..--==ATTN:  THIS SECTION WILL BE ADDED WHEN I AM ALLOTED MORE BUILDING LOCATIONS!!!!==--..</desc>
+      <exits sw='1119'/>
+   </location>
+
+   <location num='1059'>
+      <name>Jetty</name>
+      <desc>   You climb onto the rocks of the large jetty that extends out into the ocean. Farther out, you see what appears to be steam emitting from a section of the rock formation... what could it be?</desc>
+      <desc>   Exits - Jetty (N) - Beach (SW)</desc>
+      <exits n='995' sw='1122'/>
+   </location>
+
+   <location num='1110'>
+      <name>Return from Blue Grotto</name>
+      <desc>   After soaking in the beauty of this mystical place, the oarsman warns you to duck as he catches just the right wave and out the boat shoots, into the bright sunshine of a perfect island day.</desc>
+      <desc>   He follows the shoreline back to the boat landing. You relax and enjoy the ride back, gazing into the sky... a blue bowl of popcorn clouds. Upon reaching the landing, you disembark... handing a small gratuity to the oarsman as you bid him adieu.</desc>
+      <desc>   Exits - Boat Landing (Out)</desc>
+      <exits out='1113'/>
+   </location>
+
+   <location num='1111'>
+      <name>Travel to Blue Grotto</name>
+      <desc>   You enter a rowboat and an oarsman begins to row the boat out to sea as he follows the shoreline. He steers up to what looks like a sheer cliff. Closer in, the low entrance to a cave appears and then disappears as the waves wash in and out.</desc>
+      <desc>   Exits - Blue Grotto (In)</desc>
+      <exits in='1046'/>
+   </location>
+
+   <location num='1113'>
+      <name>Rowboat Landing</name>
+      <desc>   An oarsman waits by the shoreline that is used as a landing for the rowboat he is propped against. There is a small sign posted in the sand nearby that reads &apos;Blue Grotto Tours, Compliments of the Island&apos;.</desc>
+      <desc>   Exits - Rowboat (In) - Beach (E)</desc>
+      <exits e='1114' in='1111'/>
+   </location>
+
+   <location num='1114'>
+      <name>Beach</name>
+      <desc>   You walk the beach, the sand shifting comfortably under your feet as you leave footprints in the sand. Along the edges of the shore you see pieces of bleached driftwood that have been left with the ebb of the tide. Looking across some dunes to the northwest, you see where the island takes on a mountainous terrain scattered with trees.</desc>
+      <desc>   Exits - Dunes (NW) - Beach (W or E)</desc>
+      <exits e='1115' w='1113' nw='1049'/>
+   </location>
+
+   <location num='1115'>
+      <name>Lagoon Entrance, West Side</name>
+      <desc>   Standing at the entrance of the lagoon, the waves caress the shore before slipping back to the lagoon. Soft breezes caress you, gently tousling your hair, and the sun&apos;s light makes you tingle with warmth. At the mouth of the lagoon you see something swimming in the water.</desc>
+      <desc>   Exits - Beach (W) - Lagoon (N)</desc>
+      <exits n='1051' w='1114'/>
+   </location>
+
+   <location num='1116'>
+      <name>Swimming in the Lagoon Waters</name>
+      <desc>   You swim further out toward the mouth of the lagoon leading out to sea. The sun reflects off the sand on the distant shore, making it seem a shifting mass of little sparkles. The gentle ripples bathe you and relax you as you float serenely near the surface. This is almost paradise...</desc>
+      <desc>   Exits - Water (North)</desc>
+      <exits n='1052'/>
+   </location>
+
+   <location num='1118'>
+      <name>Lagoon Entrance, East Side</name>
+      <desc>   Standing at the entrance of a large breathtaking lagoon, the sand here is pure white, glistening with tiny bits of mica. You scan west slowly taking a panoramic view, unconsciously a contented sigh escapes your lips... the words that come to mind are &apos;majestic, seclusion, refinement&apos;.</desc>
+      <desc>   Exits - Lagoon (NW) - Beach (E)</desc>
+      <exits e='1119' nw='1053'/>
+   </location>
+
+   <location num='1119'>
+      <name>Beach</name>
+      <desc>   Strolling down the beach, the salt-tinged scent of the ocean spray prickles your senses. Further inland are some large dunes, the sea oats on top of them seemingly waving at you. Toward the north is a large cabana which serves as the island&apos;s local cantina.</desc>
+      <desc>   Exits - Dunes (NE) - Cabana (N) - Beach (W or E)</desc>
+      <exits n='1055' ne='1056' e='1120' w='1118'/>
+   </location>
+
+   <location num='1120'>
+      <name>Kameo Island Landing</name>
+      <desc>   You step onto the shore of the Island Landing and breathe in the fresh ocean air and sunshine. Taking in your surroundings, you see that the shape of the island is elongated, extending mostly toward the west from the landing. Gazing toward the west, you see an entrance to a lagoon. Further west, the elevation of the island is higher, with mountains topped with jungle vegetation and granite cliffs that extend into the ocean. Looking around, the white sands that line the shore of the island appear to fade into a mass of jungle palms.</desc>
+      <desc>   Exits - Jetty (E) - Lagoon (W) - Return to the Islet/Shuttle (In)</desc>
+      <exits e='1121' w='1119' in='457'/>
+   </location>
+
+   <location num='1121'>
+      <name>Beach</name>
+      <desc>   Walking along a stretch of pure white sand, you are surrounded by ocean on one side, and jungle vegetation on the other side. Seagulls dive at the water near the shoreline feeding on small fish, their call resembles a loud laugh ...ha, ha, ha...</desc>
+      <desc>   Exits - Beach (E or W)</desc>
+      <exits e='1122' w='1120'/>
+   </location>
+
+   <location num='1122'>
+      <name>Beach</name>
+      <desc>   Silken white sand lapped by the gentle azure sea. A brightly colored beach umbrella stands upright in the sand and a beach towel is spread underneath in the shade. The sun has already begun to scorch the sands, this might be a good place to get out of the hot sun for a break.</desc>
+      <desc>   Exits - Beach (NE or W)</desc>
+      <exits ne='1059' w='1121'/>
+   </location>
+
+</fed2-map>

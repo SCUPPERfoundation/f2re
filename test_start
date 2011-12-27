@@ -1,0 +1,10 @@
+echo "ibgames test services startup\n"
+
+cd /var/opt/billingtest
+./start &
+echo "Billing started, please wait...\n"
+sleep 15
+
+cd /var/opt/fed2test
+./start &
+echo "Federation 2 test version started\n"

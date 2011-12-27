@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<fed2-map title='Costar' version='6' editor='standard' from='264' to='Jaguar.Jaguar Space.130'>
+
+   <location num='0' flags='t'>
+      <name>drop box</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='200' flags='hi'>
+      <name>Hospital and insurance</name>
+      <desc>Get a sex change, get your face changed, or cure that nagging little cough that just won&apos;t go away. We can fix you up  here. The LP is south.</desc>
+      <exits s='264'/>
+   </location>
+
+   <location num='263' flags='yrb'>
+      <name>Used Jaguars and repair shop</name>
+      <desc>Whatever your taste in the latest space vehicle, you&apos;ll be pampered here while you wait. Servers walk around with smiles and trays of food, but little else!</desc>
+      <desc>The LP is east from here.</desc>
+      <exits e='264' sw='326'/>
+   </location>
+
+   <location num='264'>
+      <name>Costar Landing Pad</name>
+      <desc>Here you are! Welcome to my home, Costar. You may enjoy fine dining to the south, get fixed up in the hospital to the north, buy or repair a ship to the west, or visit my exchange to the east.</desc>
+      <exits n='200' e='265' s='328' w='263'/>
+   </location>
+
+   <location num='265' flags='e'>
+      <name>Costar Exchange</name>
+      <desc>Be careful looking too long at the exchange boards. They tend to mesmerize as is evidenced by the few drooling idiots sitting on the floor staring at the screens. The way to the LP is west.</desc>
+      <exits w='264'/>
+   </location>
+
+   <location num='326'>
+      <name>Secret pathway</name>
+      <desc>You&apos;ve found the secret! Going northeast takes you back to the LP, or you may go south on the path.</desc>
+      <exits ne='263' s='390'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>The Restaurant of the Picture Show</name>
+      <desc>Want a famous burger? How about a side of fries? The prices are right, the servers friendly and nice to look at. Grab a  table and relax. You&apos;re taken care of. Grab some dinner and the movie will start shortly. Go North for the LP.</desc>
+      <exits n='264'/>
+   </location>
+
+   <location num='390'>
+      <name>The pathway turns north and southeast</name>
+      <desc>Foliage resembling half naked nymphs lines the path here.</desc>
+      <exits n='326' se='455'/>
+   </location>
+
+   <location num='393'>
+      <name>A Tree and a House</name>
+      <desc>You come to a treetrunk blocking your way. Looking up you can barely make out a treehouse way up in the branches. There doesn&apos;t appear any way you could possibly get up there however. A chimpanzee looks at you from a branch above your head, grinning and gesturing. The way out is south.</desc>
+      <exits s='457'/>
+   </location>
+
+   <location num='455'>
+      <name>The path continues northwest and east</name>
+      <desc>Statues painted gold and silver stand guarding the passage.</desc>
+      <exits e='456' nw='390'/>
+   </location>
+
+   <location num='456'>
+      <name>The pathway straightens</name>
+      <desc>You may move east or west from here.</desc>
+      <exits e='457' w='455'/>
+   </location>
+
+   <location num='457'>
+      <name>Hard turn north or west.</name>
+      <desc>The path turns sharply to the north and west here. Clinging vines sway before your face, the sound of monkeys is occasionally drowned out by a loud yell. It almost sounds as though some man is calling for someone named Jane.</desc>
+      <exits n='393' w='456'/>
+   </location>
+
+</fed2-map>

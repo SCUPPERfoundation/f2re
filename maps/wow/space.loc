@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<fed2-map title='Wow Space' version='10' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Whoo Orbit and interstellar link</name>
+      <desc>   Your ship is floating next to a small space habitat, which provides facilities for those in distress to repair or replace their ships, their equipment - or even themselves!</desc>
+      <desc>   Far below you there is an inhabited planet, but the populace does not welcome visitors. This station is their concession to the laws of Galactic aid. They keep it stocked and in excellent condition, but it&apos;s all automated. WoW!</desc>
+      <exits s='524' up='464' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='464' flags='sp'>
+      <name>Whow Orbit</name>
+      <desc>   Your ship is floating next to a small space habitat.</desc>
+      <desc>   Far below you there is an inhabited planet Whow, but the populace does not welcome visitors. So you stay in orbit and admire the beauty of Whow.</desc>
+      <exits s='528' down='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='sp'>
+      <name>Orbital Transitional Space</name>
+      <desc>Orbital space with traffic going North to Link and Whoo. Other smaller vessals are traveling SE.</desc>
+      <exits n='460' se='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526' flags='sp'>
+      <name>Ooh Orbit</name>
+      <desc>The political enviroment of this planet will allow visitors to land. Move SE to Ooh Orbit West. Move SW to Ooh orbit East.</desc>
+      <exits se='591' sw='589' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='528' flags='sp'>
+      <name>Orbital Transitional Space</name>
+      <desc>Orbital space with traffic going North to Whow. Other smaller vessals are traveling SW.</desc>
+      <exits n='464' sw='591' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589' flags='sp'>
+      <name>Ooh Orbit Space West</name>
+      <desc>As you look out your window to NE you see a brillant green planet Ooh. Ships of all shapes and sizes orbit here. NW exit to Link and Whoo.</desc>
+      <exits ne='526' nw='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='591' flags='sp'>
+      <name>Ooh Orbit Space East</name>
+      <desc>As you look out your window to NW you see the brillant green planet of Ooh. Ships of all shapes and sizes orbit here. NE exit to empty space and Whow.</desc>
+      <exits ne='528' nw='526' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

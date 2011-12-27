@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<fed2-map title='Glory' version='1.00' editor='standard' from='263' to='Starcloud.Starcloud Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Glory Storeroom</name>
+      <desc>   Space debris and inappropriate content is kept here.</desc>
+      <exits no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='263' flags='b'>
+      <name>Glory Docking Bay</name>
+      <desc>   The Glory Space Station, located on the edge of the Starcloud Nebula, serves as the home for the residents of the Starcloud system and the base of operations to expeditions into the nebula.  From the docking bay visitors have access to three airlocks that all lead into the stations primary dome.  The airlock to the SOUTH leads to the main part of the dome used as the welcoming hall, the airlock to the SOUTHWEST leads strait to the Glory Lounge, and the airlock to the SOUTHEAST will lead visitors to the stations exchange.</desc>
+      <exits se='328' s='327' sw='326' up='399' in='328' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='269'>
+      <name>Outside the Beach Simulation Room</name>
+      <desc>   The Beach Simulation Room was created for those visitors who have spent to much time in space and are in desperate need for a change of scenery.  The simulated beach is IN, and the entrance hall is SOUTHEAST from here.</desc>
+      <exits se='334' in='1799' out='334' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='271'>
+      <name>Outside Simulation Room 2</name>
+      <desc>   This is the entrance to a scenery simulation room, but it is currently under repair.  The exit to the entrance hall is SOUTHWEST.</desc>
+      <exits sw='334' in='1806' out='334' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='276'>
+      <name>Orchard Fields</name>
+      <desc>   There are many different types of trees in this orchard and they are filled with green leaves.  The first flower bulbs are just starting to show on the trees, so it will be sometime before any ripe fruit will be ready to pick.</desc>
+      <desc>   Fields of grain are EAST of here and the dome entrance is SOUTHEAST.</desc>
+      <exits e='277' se='341' up='1813' out='341' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='277'>
+      <name>Fields of Grain</name>
+      <desc>  The fields of grain on the Glory Space Station are actually stacked one on top of another, with just enough space in between for the special lighting to be effective in promoting growth.  This innovative stacking technique is obviously necessary due to the constrictive nature of the space station.  The fields are currently being harvested by groups of small machines that are specially designed to fit in the tight area available.</desc>
+      <desc>   The fields continue to the EAST, and fruit orchards are to the WEST, while the dome entrance lies SOUTH.</desc>
+      <exits e='278' s='341' w='276' out='341' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='278'>
+      <name>Grazing Fields</name>
+      <desc>   The fields here look much like the fields to the west.  The Grazing fields are full of hay and alfalfa used to feed the cattle raised on the Glory Space Station.  The hay and alfalfa are short right now and fresh tractor tracks show the recent harvesting activity.  Cattle currently fill the field and are grazing on the planets that the couldn&apos;t be harvested.</desc>
+      <desc>   The fields continue to the WEST and the dome entrance is SOUTHWEST.</desc>
+      <exits sw='341' w='277' out='341' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='283'>
+      <name>Empty Apartment</name>
+      <desc>   This is an empty apartment that is available for rent.  Because room is at a premium on space stations this apartment is only a single room.  The room is fully furnished, well that just means it has a bed, a desk, and a chair.  The door to exit is SOUTHEAST.</desc>
+      <exits se='348' out='348' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='326' flags='b'>
+      <name>The Glory Lounge</name>
+      <desc>   The beautiful view of the nebula, the close proximity of the docking bay, and the wide variety of well made drinks makes the Glory Lounge the busiest location on the station.  Customers have a seating choice between the bar counter or the variety of tables spread throughout the bar.  Well dressed and attractive waitresses move around the room bringing drinks and taking orders from the customers.  A board next to the bar lists the lounge&apos;s specials.  The waitress at the nearest table recommends a drink that looks like a glass full of a suspicious blue liquid, but its actually raspberry juice with rum and light cream.</desc>
+      <desc>   The center of the stations primary dome lies EAST, and an airlock to the NORTHEAST is a shortcut to the Glory Docking Bay.</desc>
+      <exits ne='263' e='327' in='327' out='263' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Glory Welcome Hall</name>
+      <desc>   The center of Glory&apos;s primary dome provides the best view of the Starcloud Nebula high above.  The entire dome is filled with blue light since the nebula provides a lot of light to the dome and the artificial lights seems to enhance it creating a pleasant light blue color.  A bright yellow mural on the elevator door finishes the unique effect that mixes a bright sunny day with the darkness of space.</desc>
+      <desc>   The Glory Welcome Hall is the central hub for all station services.  An airlock leading to the Glory Docking Bay is NORTH, the exchange area of the stations primary dome is EAST, and the Glory Lounge area of the dome lies WEST.  A door to the SOUTHEAST leads to the Glory Medical Center, a door to the SOUTHWEST leads to the Glory Shipyard, and the elevator to the SOUTH provides access to the rest of the station.</desc>
+      <exits n='263' e='328' se='392' s='391' sw='390' w='326' in='391' out='263' no-exit='moves.noexits.4'/>
+   </location>
+
+   <location num='328' flags='eb'>
+      <name>Glory Exchange</name>
+      <desc>   This area of the stations primary dome acts as the stations exchange. The room is filled with computer terminals and large screens that display the current prices of all commodities traded on Glory.  Several large chairs have been placed against the south wall for the comfort of those who wish to remain in the exchange for an extended time.  Vending machines have been conveniently placed against the east wall.  The Glory Welcome Hall, at the center of the stations primary dome lies WEST.  An airlock to the NORTHWEST leads to the stations docking bay.</desc>
+      <exits w='327' nw='263' in='327' out='263' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='334'>
+      <name>Glory Entertainment Center</name>
+      <desc>   This is the entrance hall of the Glory Entertainment Center.  A door to the SOUTHWEST leads to the Glory Karaoke Bar as the annoying sounds of people trying to sing indicate.  A hall to the NORTHWEST leads to a simulation of a beach resort for those who want to get away from thoughts of space, and see a bevy of young, fit and attractive sunbathers.  A hall to the NORTHEAST leads to another simulation room that is currently closed.  Finally, a door to the SOUTHEAST leads to a door marked only as reserved.  The door to the elevator is SOUTH.</desc>
+      <exits ne='271' se='399' s='398' sw='397' nw='269' in='398' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='341'>
+      <name>Entrance to the Agricultural Dome</name>
+      <desc>   This is the entrance to the Glory Space Station Agricultural Dome.  The Agricultural Dome is the largest area of the station as it houses the fields and orchards which supply the agricultural products used by the station and its residents.  Rooms to the SOUTHWEST and SOUTHEAST provide secluded space away from the tranquility of the rest of the dome.</desc>
+      <desc>   The dome extends toward all NORTHERN directions, while the elevator to leave the dome is SOUTH.</desc>
+      <exits n='277' ne='278' se='406' s='405' sw='404' nw='276' in='405' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='348'>
+      <name>Residential Center</name>
+      <desc>   There are doors in all compass directions, the door to the elevator is SOUTH.</desc>
+      <exits s='412' nw='283' in='412' no-exit='moves.noexits.3'/>
+   </location>
+
+   <location num='390' flags='yr'>
+      <name>Glory Shipyard</name>
+      <desc>   Viewscreens fill one wall of the room showing to view from remote controlled cameras that are floating around every ship docked on the Glory Space Station.  The cameras can be used for security and to check for repairs.  Several droids await orders for ship repairs, and a private electronic panel in the corner of the room is available for purchasing new ships.</desc>
+      <desc>The only exit is NORTHEAST.</desc>
+      <exits ne='327' out='327' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='391'>
+      <name>Elevator - Level 1 - Station Services</name>
+      <desc>   The door out of the elevator is NORTH, or the elevator can be taken UP to Level 2.</desc>
+      <exits n='327' up='398' out='327' no-exit='moves.noexits.2'/>
+   </location>
+
+   <location num='392' flags='hib'>
+      <name>Glory Medical Center</name>
+      <desc>   The Glory Medical Center is an important part of the Glory Space Station.  In addition to day to day injuries, all exploration teams are required to have regular examinations to test the effect of the Starcloud Nebula on human and non human bodies.  The medical facilities also serve as a lab for testing samples brought back from the nebula.</desc>
+      <desc>   There is also a modern automatic insurance machine because no medical center is complete without one.  The only exit is NORTHWEST.</desc>
+      <exits nw='327' out='327' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>Glory Karaoke Bar</name>
+      <desc>   The load noises of the bar patrons is drowned out only by the loader noises of someone on stage singing karaoke, well its either singing or a cry for help (or both).  Those who are brave enough can go UP on stage and try singing, and those who wish to save their ear drums, or equivalent, can leave by going NORTHEAST.</desc>
+      <exits ne='334' up='1812' out='334' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='398'>
+      <name>Elevator - Level 2 - Entertainment Center</name>
+      <desc>   The door out of the elevator is NORTH, or the elevator can be taken DOWN to Level 1, or UP to Level 3.</desc>
+      <exits n='334' up='405' down='391' out='334' no-exit='moves.noexits.2'/>
+   </location>
+
+   <location num='399' flags='b'>
+      <name>Large Empty Room</name>
+      <desc>   The tables are all folded, and the chairs are all stacked in the corner.  This room can be used for parties, but right now its mostly empty.  The exit is NORTHWEST.</desc>
+      <exits nw='334' down='263' out='334' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='404'>
+      <name>Working Factory</name>
+      <desc>   The whole room is filled with loud machinery and louder workers.  Its not possible to determine what they are doing from all the confusion, but as long as they know what they are doing the factory continues to operate.  The exit is NORTHEAST.</desc>
+      <exits ne='341' out='341' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='405'>
+      <name>Elevator - Level 3 - Agricultural Dome</name>
+      <desc>   The door out of the elevator is NORTH, or the elevator can be taken DOWN to Level 2, or UP to Level 4.</desc>
+      <exits n='341' up='412' down='398' out='341' no-exit='moves.noexits.2'/>
+   </location>
+
+   <location num='406'>
+      <name>Open Factory Space</name>
+      <desc>   The emptiness of this room would indicate that the Glory Space Station still has room for more factories, but this room will not do a factory owner any good unless they go to the exchange and buy a factory.  The exit of this room is NORTHWEST.</desc>
+      <exits nw='341' out='341' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='412'>
+      <name>Elevator - Level 4 - Residential Center</name>
+      <desc>   The door out of the elevator is NORTH, or the elevator can be taken DOWN to Level 3.</desc>
+      <exits n='348' down='405' out='348' no-exit='moves.noexits.2'/>
+   </location>
+
+   <location num='1734' flags='b'>
+      <name>Simulated Beach</name>
+      <desc>   All the labels entering this room referred to it as a simulated beach, and the illusion is well done.  The beach has real sand and real water.  The lighting, murals, and mirrors give the illusion of size and distance, it seems like the beach stretches off into the distance for miles.  Young men and women with deep tans and little clothing are spread all over the beach, and a wave machine finishes the effect with gently rolling waves.  The beach continues to the SOUTH, and the resort entrance is SOUTHEAST.</desc>
+      <exits se='1799' s='1798' out='269' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1736' flags='b'>
+      <name>Sauna Baths</name>
+      <desc>   The sauna is being used by all genders, some of whom are clothed, while others are not.  This room also contains a hot tub that guest are welcome to enter by going IN.  The Beach Resort Entrance is SOUTHWEST.</desc>
+      <exits sw='1799' in='1737' out='269' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1737' flags='b'>
+      <name>In the Hot Tub</name>
+      <desc>   The water temperature is just a little higher than your body temperature.  The bubbles make it difficult to tell what the others in the hot tub are wearing, or not wearing.  Refreshments are available for those who wish to remain for an extended period of time.  The only way to exit the hot tub is by going OUT.</desc>
+      <exits out='1736' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1798' flags='b'>
+      <name>White Sands Beach</name>
+      <desc>   In this area, the illusion is in its full effect.  The sky looks blue with a few fluffy white clouds.  The white sand is soft and warm.  A cooling sea breeze seems to keep the temperature at a perfect level. The sun is hot and several people are taking advantage of it to bask on the beach.  Gently rolling waves break on the shore, their white tops collapsing into frothy bubbles that race up the beach and then drain back again.</desc>
+      <desc>   For those who wish to leave this sunny paradise, the exit is NORTH.</desc>
+      <exits n='1734' out='269' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1799'>
+      <name>Beach Resort Entrance</name>
+      <desc>   This room is filled with lockers were visitors can leave personal belongings and extra clothes that will not be needed on the simulated beach.  The door to the beach is NORTHWEST.  Steam is entering the room from the doorway to the NORTHEAST, the doorway is labeled sauna.   The simulation can be left buy going OUT from any location in the simulation.</desc>
+      <exits ne='1736' nw='1734' in='1736' out='269' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1806'>
+      <name>Simulation Room 2</name>
+      <desc>   Oh you came in anyway huh.  OK, what happened was I just ran out of creative juice or whatever and I wanted to put my creation in the game so I can start enjoying it, but I&apos;m going to expand my planet, or space station.  You don&apos;t believe me, I mean it I plan to expand Glory, eventually.  For right now there are other places on Glory to explore.  Have you gone to the beach simulation?  How about the Agricultural Dome?  You did explore the nebula, right?  From the link and orbit you go IN.  Your still here, ummm...OK.  Thats all there is here, you can leave now.  Your only exit is OUT.</desc>
+      <exits out='271' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1812'>
+      <name>On stage in the Glory Karaoke Bar</name>
+      <desc>  Well you were brave enough to get on stage, all eyes are on you now, I hope you know how to sing.  Oh wait, did you pick a song first, is that girl laughing at you, does that guy think you&apos;re an idiot.  OK, maybe its time for you to get DOWN from the stage and let the next victim ... I mean singer have a chance.</desc>
+      <exits down='397' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='1813' flags='b'>
+      <name>Secret Treehouse</name>
+      <desc>   Very Good, you have found Rip&apos;s secret treehouse, so now what are you going to do?</desc>
+      <exits down='276' out='276' no-exit='moves.noexits.1'/>
+   </location>
+
+</fed2-map>
+

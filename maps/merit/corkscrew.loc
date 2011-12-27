@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<fed2-map title='Corkscrew' version='11' editor='standard' from='2105' to='Merit.Merit Space.2141'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Objects and Mobiles will live here.</desc>
+   </location>
+
+   <location num='2104' flags='eb'>
+      <name>Corkscrew Exchange</name>
+      <desc>One of the most mellow exchanges you&apos;ve visited, Corkscrew&apos;s traders are relaxed, smiling and courteous.  Dagny&apos;s competent, minimalist governing policies help commerce thrive on Corkscrew.  Well armed with market quotes, eyes on the swiftly updating numbers, the traders buy and sell commodities and futures in a civil, efficient way.  An espresso bar in one corner helps keep traders alert, and the scrumptious croissants and other pastries keep a smile on their faces.  The LP is EAST.</desc>
+      <exits e='2105'/>
+   </location>
+
+   <location num='2105' flags='yrb'>
+      <name>Corkscrew Landing Pad</name>
+      <desc>This small planet is big on charm.  Its ideal climate and fertile soil make living here quite desirable.  The inhabitants take advantage of the temperate outdoors and enjoy a large selection of delectable, fresh food.  Corkscrew is aptly named, since it has become a mecca for vintners, who find the climate ideal for growing quality grape vines.  Inhale the fragrant air, feel the mild dry breeze on your skin, and you will understand why this planet&apos;s residents are known for their good cheer and humorous take on life.  The Exchange is WEST, a wine bar is SE and The Twister, the rapid transit system on Corkscrew, is SW.</desc>
+      <exits se='2170' sw='2168' w='2104' in='2340'/>
+   </location>
+
+   <location num='2152'>
+      <name>Corkscrew Playground </name>
+      <desc>The various neighborhoods pooled their resources and constructed an elaborate play center for the area children.  The ground is covered with small bits of cork to provide a safe landing area for the youngsters.  There are the traditional swings and slides and climbing apparatus.  There are also spinners and bouncers, crawling tubes and balancers.  There are seasaws and spring riders shaped like giant insects.  Shaded benches are provided nearby so that parents can supervise the play.  Exits E and SW.</desc>
+      <exits e='2153' sw='2215'/>
+   </location>
+
+   <location num='2153'>
+      <name>Neighborhoods</name>
+      <desc>Several typical family neighborhoods have sprouted in this district due to its proximity to the Twister transit system.  There are multiple permutations of living arrangements.  You see some high rise condominiums which feature common amenities such as fitness clubs and pools.  There are winding lanes with semi-attached homes fronting on ponds and parks, bicycle lanes connecting them, pod facilities all underground and out of sight.  There are some larger residences as well, many of which are powered by solar energy thanks to the plentiful sunshine on Corkscrew.  There are central areas with greenery, flowers and benches and most people do a great deal of walking and meeting with friends, chatting in the open air. Exits are SE or WEST.</desc>
+      <exits se='2218' w='2152'/>
+   </location>
+
+   <location num='2158' flags='b'>
+      <name>Dagny&apos;s Patio</name>
+      <desc>You have reached the main house, and see that Dagny and her family take advantage of Corkscrew&apos;s ideal climate by spending a great deal of time outdoors.  The spacious, multi-level lanai is tiled in a colorful mosaic pattern.  There are comfortable lounge chairs and a long glass topped table with cushioned seats.  Retractable awnings provide shade when desired.  Two ceramic grills stand ready for outdoor cooking.  You see a boxer and cocker spaniel frolicking on the lawn below.  Exits are E or SW.</desc>
+      <exits e='2159' sw='2221'/>
+   </location>
+
+   <location num='2159'>
+      <name>Dagny&apos;s Stables</name>
+      <desc>A dozen or so horses call Dagny&apos;s estate home, and they are lucky indeed, because they are pampered and treated like royalty.  Nearby you see a large stable, with pastures, indoor and outdoor arenas and board fencing.  They are groomed and exercised daily.  There are hot/cold wash racks and an impressive array of saddles, blankets, horse tack and riding supplies.  Dagny&apos;s favorite mount is a chestnut stallion named Bacchus who loves eating apples from her hand.  Exits SE or W.</desc>
+      <exits se='2224' w='2158'/>
+   </location>
+
+   <location num='2164'>
+      <name>Wine Making Tour - Barrels</name>
+      <desc>Your tour brings you down into a chilly basement where you see row upon row of stacked oak barrels, colorfully striped in red, tan and green.  Dagny requires that only oak barrels be used for aging Corkscrew wines, and the oak trees are grown in large forests nearby.  The particular oak used here is what uniquely characterizes the color, texture, flavor and tannin profile of the wine.  A guide explains that the wood&apos;s porosity allows a certain degree of evaporation, which in turn condenses the wine.  White wine will be lighter in color and silky in texture when allowed to ferment and mature completely in oak.  You are surprised to learn the barrels&apos; interiors are toasted before being completely assembled, which imparts a smokey and spicy taste to wine.  Exits are E or SW.</desc>
+      <exits e='2165' sw='2227'/>
+   </location>
+
+   <location num='2165'>
+      <name>Wine Making Tour - the Grape Fields</name>
+      <desc>No two terroirs have the exact same properties.  Vineyards can be hilly or flat, have rocky or sandy soil and their climates and exposure to wind, rain and sun will vary.  Add to this the variety of grapes grown and the manner in which they are blended, and you can understand why there is such a great variety of wine and why each has its unique characteristics.  The vignette before you is planted with Cabernet Sauvignon grapes.  It is surrounded by beautiful rose bushes, planted there not for their beauty, but to alert vintners to the presence of insects harmful to the grape vines.  You may proceed SE or W.</desc>
+      <exits se='2230' w='2164'/>
+   </location>
+
+   <location num='2168' flags='b'>
+      <name>Twister Nexus Alpha</name>
+      <desc>The Twister is Corkscrew&apos;s rapid transit system, a speedy alternative to walking or driving along the curving road that runs through Corkscrew.  There are refreshment stands in all stations for your convenience.  Five nexi, or stations, are evenly spaced across the planet.  The travel capsules are comfortable and you can scarcely feel their movement.  Enter a capsule to go DOWN to Nexus Beta.  Nexus Delta&apos;s pod is UP through the arch and is the quickest way to reach the Hospital.  Corkscrew&apos;s LP is NE.</desc>
+      <exits ne='2105' up='2344' down='2356'/>
+   </location>
+
+   <location num='2170' flags='b'>
+      <name>Helix Thoroughfare - Corkscrew Wine Bar</name>
+      <desc>Intimate and cozy, this wine bar has an impressive bottle selection from all over Merit, Shadow and Gaul.  The communal style tables make it easy to make friends.  Local pianists play softly while patrons sample their favorites or experiment with new flavors.  Artisan cheeses and a variety of tapas enhance the wine experience to make this a popular gathering place for locals and tourists alike.  The LP is NW.  The Loose Screw is SE.</desc>
+      <exits se='2235' nw='2105'/>
+   </location>
+
+   <location num='2215'>
+      <name>Dog Park</name>
+      <desc>Dogs like to have fun too.  And their owners can enjoy them off the leash here.  There are two double gated entries to ensure that no opportunistic pooches try to make a getaway.   There are benches for the humans and tools for them to dispose of waste if needed.  There are ramps for the dogs to run up and down on, and little tunnels for them to crawl through.  There are hoops for them to jump through and frisbees for them to catch.  Social dogs are happy dogs and this area has become a gathering place for elderly residents as well, who like to exercise their beloved companions, but who can no longer walk as much.</desc>
+      <exits ne='2152' s='2279'/>
+   </location>
+
+   <location num='2218' flags='hi'>
+      <name>Corkscrew Hospital and Medical Research Institute</name>
+      <desc>This is the planet&apos;s most advanced medical facility.  In keeping with Dagny&apos;s economic philosophy, patients must pay for the services either with health insurance or from their own funds.  Costs, however, are extremely reasonable, because everyone is expected to pay and everyone understands they will not receive treatment otherwise.  Corkscrew residents appreciate the resulting rock bottom rates for health insurance and the excellent medical personnel who vie for positions in this advanced facility.  Don&apos;t forget to insure!   Exits are SW or NW.</desc>
+      <exits sw='2281' nw='2153'/>
+   </location>
+
+   <location num='2221'>
+      <name>Dagny&apos;s Offices</name>
+      <desc>As much as she enjoys relaxation and fun times, Dagny also prizes productive endeavours that challenge her mind and achieve tangible results.  Her offices are tastefully furnished, the carpeting plush, the wood veneers rich, and the equipment state of the art, but well camoflauged in the elegant furniture.  Her staff is competent, resourceful and effective.  The only personal touch in these rooms is an oil painting of Dagny&apos;s beloved Amalfi on one wall.  Exits NE or SOUTH.</desc>
+      <exits ne='2158' s='2285'/>
+   </location>
+
+   <location num='2224' flags='b'>
+      <name>Dagny&apos;s Guest Cottages</name>
+      <desc>Some charming guest cottages are clustered along the drive which leads to the main house.  Their tudor styling and lush greenery evoke another era, but they are equipped inside with the most modern and high tech furnishings, in particular regarding communication.  Dagny&apos;s guests cannot afford to be unreachable.  Gourmet catered meals are delivered to guests who wish some time alone.  These cottages are generally in great demand.  Exits are SW or NW.</desc>
+      <exits sw='2287' nw='2159'/>
+   </location>
+
+   <location num='2227'>
+      <name>Wine Making Tour - The Cellars</name>
+      <desc>The tour guide escorts you through gallery after gallery stacked to the ceiling with either barrels or wine bottles.  Although steeped in tradition, modern winemaking benefits from carefully controlled processes, such as maintaining an even 13 degrees C at all times.  The floor is covered with gravel and sprinkled with water, a time honored way of keeping the cellars sufficiently humid to prevent corks from drying out.  The musty smell and chill in the air makes the thought of sampling a little wine soon very appealing.  Exit NE or S.</desc>
+      <exits ne='2164' s='2291'/>
+   </location>
+
+   <location num='2230' flags='b'>
+      <name>Wine Tasting Galleries</name>
+      <desc>Here&apos;s your opportunity to taste and evaluate what appeals to your palate.  A sommelier explains the proper procedure.  First you check out the wine&apos;s appearance, then inhale its aroma in the glass.  Next, you evaluate its taste in your mouth and finally, see what kind of finish it offers.  A discerning vinophile will then rate the wine according to its complexity and character, its potential for aging, and its faults if any.  For wine connaisseurs, both vertical, horizontal and blind tastings can be arranged.  The winery tour begins to the NW or you can go SW.</desc>
+      <exits sw='2293' nw='2165'/>
+   </location>
+
+   <location num='2235' flags='b'>
+      <name>Helix Thoroughfare - The Loose Screw</name>
+      <desc>You enter a large room with cabaret seating and a narrow stage in front.  People are laughing so hard there are tears in their eyes as they listen to today&apos;s featured stand-up comic at The Loose Screw Comedy Club.  Twice a week the Corkscrew Players, the resident improvisation company, perform.  Comedy classes are offered in daytime, and the amateurs get to try out their material on Monday nights.  The zany comedian says, &quot;What is Preparation A?&quot;  After a pause, he continues, &quot; It&apos;s the name of an over the counter product used to relieve the pain of asteroids.&quot;  Exits are SOUTH or NW.</desc>
+      <exits s='2299' nw='2170'/>
+   </location>
+
+   <location num='2279'>
+      <name>Pelion Observatory</name>
+      <desc>Set off far from light pollution, the Pelion Observatory educates the populace about astronomy and related sciences and provides the opportunity to observe the universe.  The adjoining planetarium features a star projector, laser digital projection system, an aluminum dome, comfortable seating, a surround sound system and theatrical lighting.  Star parties are held monthly where dozens of amateur and professional astronomers assemble and set up their telescopes.  Visitors can view through a variety of telescopes and talk to knowledgeable astronomers who explain what they&apos;re seeing.   Observing distant galaxies, star clusters, and nearby planets engenders much thought about physics and our place in the universe.  Exit  NORTH or go SE to the Twister Nexus and Helix Thoroughfare beyond.</desc>
+      <exits n='2215' se='2344'/>
+   </location>
+
+   <location num='2281' flags='b'>
+      <name>Culinary Institute</name>
+      <desc>With the wonderfully fresh food ingredients produced all over Corkscrew, this is an obvious location for an award winning culinary institute.  Celebrated chefs welcome students who combine classroom study with over 2,000 hours of in-kitchen training.  Besides learning the fine points of cooking and pastry making, students are taught restaurant operations, marketing and financial management.  Wine certification programs can also be obtained.  Three different types of restaurants are run by the students here, where guests dine and then provide feedback.  Dagny dines here often, so as to encourage the students.  The Twister Nexus is SW, or you can go NE.</desc>
+      <exits ne='2218' sw='2344'/>
+   </location>
+
+   <location num='2285' flags='b'>
+      <name>Dagny&apos;s Living Quarters</name>
+      <desc>Dagny and Amalfi like to spread out, and this house has large, high-ceilinged rooms.  Their master bedroom overlooks the vineyards, and on each side are twin customized dressing rooms and bathrooms.  The bed is piled high with square shams, neckrolls and boudoir pillows, the decor mainly burgundy and gold.  An adjoining sitting room, one wall of which is floor to ceiling glass, is a favorite place for sipping coffee, reading or catching up on news events.  As in all her residences, Dagny&apos;s kitchen is huge and well equipped, and there are favorite spots scattered about where the family relaxes.  The estate is NORTH.  The Twister Nexus is SE and the Helix Thoroughfare is beyond it.</desc>
+      <exits n='2221' se='2350'/>
+   </location>
+
+   <location num='2287' flags='b'>
+      <name>Dagny&apos;s Estate and Winery </name>
+      <desc>With responsibility for governing several planets, Dagny built this estate on Corkscrew out of necessity in order to have a place where she could entertain fellow planet owners and selected guests.  Important business is conducted, policies are established, but in a congenial environment with a little wine to keep the stress at bay.  The estate is comprised of several thousand acres.  Dagny&apos;s personal vineyard is behind the mansion.  You see a tennis court and beautifully landscaped gardens.  A playful touch is a boxwood maze with an arched gazebo in the central clearing.  The Nexus is back to the SW, or you can explore more of the estate to the NE.</desc>
+      <exits ne='2224' sw='2350'/>
+   </location>
+
+   <location num='2291' flags='b'>
+      <name>Retail and Wholesale Sales of Corkscrew Wines</name>
+      <desc>You have arrived in a beautiful series of wood paneled rooms each featuring different groups of varietals.  In each room, a sommelier stands at a polished black granite counter, pouring samples and discussing the merits of each bottle.  At each counter is a silver spit bucket, so wine tasters can spit out what they don&apos;t like, or limit what they actually drink.  Most of Corkscrew&apos;s vineyards prefer blended wines, rather than wines with purely one variety of grape, such as merlot or pinot noir.   Dagny has a cooperative arrangement with the excellent vineyards of the Gaul system, and both benefit from the collaboration.  The excellence of the grape growing climate has drawn some of the finest wine blending experts in Federation, accounting for the fine quality of the wine produced.  The vineyards will gladly ship to your home planet with a four case minimum order unless local import laws forbid it.  Return N or go SE to Twister Nexus Beta.</desc>
+      <exits n='2227' se='2356'/>
+   </location>
+
+   <location num='2293'>
+      <name>Vintners Association Headquarters</name>
+      <desc>The Corkscrew Vintners Association maintains the high standards Dagny requires for vineyards including a rating system that helps the public know what quality they are buying.  They provide maps and lodging information for the wine country and arrange tours of the numerous vineyards.  They help coordinate the special events such as wine tastings and wine pairing dinners and provide education for those wishing to become sommeliers or vintners.  Tasting samples of the local wines are available NE, or you can return to the Twister Nexus SW.</desc>
+      <exits ne='2230' sw='2356'/>
+   </location>
+
+   <location num='2299' flags='b'>
+      <name>Helix Thoroughfare - Corkscrew Grand Hotel</name>
+      <desc>Ultimate luxury is the dominant theme at the Corkscrew Grand Hotel.  It&apos;s the benchmark by which other hotels are measured throughout the Federation.  It has lodged the intelligentsia and the glitterati.  All rooms are suites furnished exquisitely.  There is complimentary luggage unpacking and packing, a fireplace in every room with wood neatly stacked for the guest&apos;s use.  The bathrooms are all grey marble, plush bathrobes and slippers, magnifying mirrors and the finest toiletries are provided.  A 5-star restaurant is in an alcove off the magnificent lobby and the smells emanating from there are making you hungry.  Exits are NORTH or SW.</desc>
+      <exits n='2235' sw='2362'/>
+   </location>
+
+   <location num='2340'>
+      <name>Helix Thoroughfare - Convolution</name>
+      <desc>Convolution is the site of Corkscrew&apos;s think tank.  Dagny has assembled great minds from across Merit and provided them with comfortable surroundings and all the material support they require.  The stress-free collaborative environment encourages creative thought.  These brilliant minds are not required to produce anything specific, but rather they are asked to cogitate freely in whatever direction their imaginations lead.  The result has been an array of ingenious ideas that have greatly contributed to mankind&apos;s progress.  SE is the Helix Thoroughfare or you can return to the LP by taking the express pod OUT.</desc>
+      <exits se='2405' out='2105'/>
+   </location>
+
+   <location num='2344' flags='b'>
+      <name>Twister Nexus Delta</name>
+      <desc>You have reached a Twister Nexus and can transfer to Nexus Gamma by using the Upper pod or return to Alpha Nexus with the pod you see DOWN the walkway.  Refreshments are available for purchase.  The Helix Thoroughfare is SE or SW.  You will find the Culinary Institute, Hospital, Observatory and residential districts to the NE and NW.</desc>
+      <exits ne='2281' se='2409' sw='2407' nw='2279' up='2350' down='2168'/>
+   </location>
+
+   <location num='2350' flags='b'>
+      <name>Twister Nexus Gamma</name>
+      <desc>You have reached a Twister Nexus and can transfer to Beta Nexus by using the Upper pod or to Delta Nexus with the pod you see DOWN the walkway.  Refreshments are available for purchase.  The Helix Thoroughfare is SE or SW.  Dagny&apos;s estate is NE and NW.</desc>
+      <exits ne='2287' se='2415' sw='2413' nw='2285' up='2356' down='2344'/>
+   </location>
+
+   <location num='2356' flags='b'>
+      <name>Twister Nexus Beta</name>
+      <desc>You have reached a Twister Nexus and can transfer to Alpha Nexus by using the Upper pod or to Gamma Nexus with the pod you see DOWN the walkway.  Refreshments are available for purchase.  The Helix Thoroughfare is SE or SW.  The Wine tour begins to the NE, or you can go directly NW if you&apos;re looking to purchase wines.</desc>
+      <exits ne='2293' se='2421' sw='2419' nw='2291' up='2168' down='2350'/>
+   </location>
+
+   <location num='2362'>
+      <name>Helix Thoroughfare - Tighten the Screws Security</name>
+      <desc>Practicing strong information and cyber security is a nonnegotiable requirement for organizations doing business.  The Tighten the Screws Security building is jet black and you have to crane your neck to see its upper floors.  This interplanetary company addresses privacy concerns, software security, physical security and forensics.  It identifies threats and prevents security breaches.  Corporations, governments and private individuals form its client base.  Exits are NE or SW.</desc>
+      <exits ne='2299' sw='2425'/>
+   </location>
+
+   <location num='2405' flags='b'>
+      <name>Helix Thoroughfare - Unwinding</name>
+      <desc>Unwinding is a popular bar and nightclub with a convivial atmosphere and hearty fare.  A trivia game is breaking the ice tonight.  The questions get harder and the laughter gets louder, the more the patrons imbibe.  The walls are comprised of giant video screens that show changing views of various star systems from space.   Ales, stouts and beers are the beverages of choice here, most produced from local microbreweries.   Live music plays when the games are done, and surprisingly, many people take advantage of the small dance floor.  Exits are E or NW.</desc>
+      <exits e='2406' nw='2340'/>
+   </location>
+
+   <location num='2406'>
+      <name>Helix Thoroughfare - Wound Up Tight</name>
+      <desc>This store specializes in products you wind up, such as old fashioned toys for younger children, which don&apos;t rely on electronics or chips.  There is a large collection of music boxes, with delicate ballerinas balancing on one toe as the music plays, or finely polished inlaid wood boxes for which you can select your own music.  There are vintage wind up clocks and even wind up battery chargers.  There are wind up gag gifts and wind up trains.  When you&apos;ve wound up your shopping here, the exits are E or W.</desc>
+      <exits e='2407' w='2405'/>
+   </location>
+
+   <location num='2407'>
+      <name>Helix Thoroughfare - Whorl</name>
+      <desc>You smell the fragrance of the Whorl Florist before you even see its beautiful floral arrangements in the window and displayed outside.  Known for its spiral shaped arrangements, you are intrigued as to how one basic shape can be interpreted in such a variety of ways through the use of different shaped flowers.  Centerpieces, floral baskets and bouquets are preserved in chilled cases along two walls.  You are especially impressed with the collection of orchids, their delicate colors and velvety softness a true work of art from nature.  Corkscrew&apos;s ideal climate is made to order for growing flowers, and many of its fields are dedicated to growing flowers destined for perfume manufacturing.  Some of the jasmine based perfumes are also on sale here in Whorl.  NE you&apos;ll find the Twister Nexus Delta as well as several important Corkscrew institutions and neighborhoods.   Helix Thoroughfare is either W or back down the boulevard.</desc>
+      <exits ne='2344' w='2406' down='2409'/>
+   </location>
+
+   <location num='2409'>
+      <name>Helix Thoroughfare - Cirrus</name>
+      <desc>Cirrus sells individual travel pods of every variety, all manufactured right here on Corkscrew.  There are PAVs (personal air vehicles) that will whisk you along approved flying routes equipped with the latest safety and comfort features.  For surface travel, there are family-sized pods with child friendly features such as built in Etablets, seats that transform into beds and stain proof furnishings.  Pods with sunroofs and sleek sports models all operate efficiently on hydrogen fuel.  Built to last, the styles change very little from year to year.  NW you&apos;ll find the Twister Nexus Delta as well as several important Corkscrew institutions and neighborhoods.  The Helix Thoroughfare is E or UP ahead.</desc>
+      <exits e='2410' nw='2344' up='2407'/>
+   </location>
+
+   <location num='2410'>
+      <name>Helix Thoroughfare - Loop De Loop</name>
+      <desc>After examining the wares in the window of this upscale jewelry store, then examining your wallet, you decide to windowshop instead of entering.  The gold and platinum shine and the diamonds, emeralds, rubies and sapphires glitter.  You admire the watches, rings, diamond encrusted locks and keyrings.  Loop de Loop is reknown for its original designs and high quality material.  When your eyes are through feasting on the beautiful items, you may go E or W.</desc>
+      <exits e='2411' w='2409'/>
+   </location>
+
+   <location num='2411'>
+      <name>Helix Thoroughfare - Swirls</name>
+      <desc>Swirls is the brainchild of noted fashion designer Coco Colette.  Originally Coco was a designer of custom-made, one of a kind dresses for the wealthy women of Corkscrew and neighboring planets.  She opened Swirls to provide off the rack dresses based upon her more expensive designs.  The mannequins feature items from her newest collection, although there are sales racks in the back with last year&apos;s stock.  This year&apos;s style has a decided military flair, with brass buttons and padded shoulders in evidence.  Exits E or W.</desc>
+      <exits e='2412' w='2410'/>
+   </location>
+
+   <location num='2412'>
+      <name>Helix Thoroughfare - Curves</name>
+      <desc>Curves is a state of the art fitness center which aims to provide healthy exercise in an entertaining environment.  Enthusiastic fitness trainers run classes in yoga, gravity free aerobics, aqua aerobics and high intensity training.  Personal trainers are available to advise clients on nutritional and exercise programs.  Elliptical trainers and other equipment which promotes cardio-vascular health is equipped with entertaining, often humorous videos that respond to your level of effort and thus provide reward and motivation.  Exits are E or W.</desc>
+      <exits e='2413' w='2411'/>
+   </location>
+
+   <location num='2413'>
+      <name>Helix Thoroughfare - Curlicue</name>
+      <desc>The clever helical design which maximizes privacy, and the all white furnishings which make everything appear clean and bright have established Curlicue as a leading day spa.  Reservations must be made weeks ahead to enjoy its many services.  Soothing music permeates the shop.   Licensed aestheticians and masseuses can massage you, wax you, provide facials or aromatherapy.  Chemical peels, microdermabrasions, and sclerotherapy are provided under medical supervision at the day clinic.  Such pampering doesn&apos;t come cheaply however.  The Twister Nexus Gamma and Dagny&apos;s estate is NE.  The Helix Thoroughfare is W or back DOWN the boulevard.</desc>
+      <exits ne='2350' w='2412' down='2415'/>
+   </location>
+
+   <location num='2415'>
+      <name>Helix Thoroughfare - Ringlet</name>
+      <desc>Once Dagny became a regular customer at Ringlet, its popularity exploded.  A skillful staff styles men and women&apos;s hair in the latest fashion.  Whether it&apos;s haircuts, coloring or artificial hair pieces, the Ringlet professionals put customer service first.  Lately their client base has expanded to include celebrities.  The Twister Nexus Gamma and Dagny&apos;s estate is NW.  The Helix Thoroughfare is E or further UP the boulevard.</desc>
+      <exits e='2416' nw='2350' up='2413'/>
+   </location>
+
+   <location num='2416' flags='b'>
+      <name>Helix Thoroughfare - Put a Cork in It</name>
+      <desc>With colorful flowers in window boxes along the front, this combination gourmet grocery shop and cafe is always crowded.  Known for its wide selection of locally produced olive oils and wines, the cheeses and freshly baked breads are considered the best on Corkscrew.  Fancy cookware and imported foodstuffs are artfully arranged on the shelves.  The cafe features many of the store&apos;s products, and there are always two or three refined, exquisite soups on the menu.  Exit E ow W.</desc>
+      <exits e='2417' w='2415'/>
+   </location>
+
+   <location num='2417'>
+      <name>Helix Thoroughfare - Volute</name>
+      <desc>Volute is one of the premier architectural firms on Corkscrew, known for its fine designs.  The name volute is derived from the spiral-shaped scroll like ornamentation on classical columns.  As the population expands across Corkscrew, architects are in great demand, most residents preferring to custom design their residences.  Volute has also designed many of Corkscrew&apos;s official buildings.  Exits are E or W.</desc>
+      <exits e='2418' w='2416'/>
+   </location>
+
+   <location num='2418'>
+      <name>Helix Thoroughfare - The Tickler Coil</name>
+      <desc>This part along Helix Thoroughfare features small specialty shops and little cafes.  You stop before the large display window of The Tickler Coil and survey the electronics equipment on sale.  Oscillators, circuit boards, chips, components, amplifiers, fiber optics - if it&apos;s electronic, you&apos;re likely to find it here.  Exit W or E.</desc>
+      <exits e='2419' w='2417'/>
+   </location>
+
+   <location num='2419'>
+      <name>Helix Thoroughfare - The Cork Popper</name>
+      <desc>If you&apos;re having a party, this is the place to come for supplies.  On an upper floor you catch a glimpse of the loft which features a wide selection of sparkling wines and ciders.  Dozens of aisles on the main floor display everything from costumes to disposable dishes, glasses and eating utensils. A large rental section provides tents for outdoor parties, seating, folding tables, chafing dishes and even bounce houses and the like for children&apos;s parties.  There are pinatas and balloons, garlands and invitations.  Party planners and entertainment can also be hired.  The Twister Nexus Beta and wine district is NW.  You can go DOWN or W on the Helix Thoroughfare.</desc>
+      <exits ne='2356' w='2418' down='2421'/>
+   </location>
+
+   <location num='2421'>
+      <name>Helix Thoroughfare - The Vortex</name>
+      <desc>Your eyes are drawn to a four story building housing one vast store, The Vortex.  Inside you realize this retailer specializes in science, offering educational toys and games as well as equipment for amateur science buffs.  There are archeological dig kits, chemistry sets, human body and medical kits.  You see robot building, physics and weather science kits.  There are microscopes and telescopes, collections of insects and DNA sets.    Prominently displayed are fossil kits and engineering sets, electronics and astronomy activity boxes.  You can continue UP Helix Thoroughfare to the Cork Popper, or return E.   NW leads to the Twister Nexus Beta and the wine district.</desc>
+      <exits e='2422' nw='2356' up='2419'/>
+   </location>
+
+   <location num='2422' flags='b'>
+      <name>Helix Thoroughfare - Spring Chickens</name>
+      <desc>If your exploring has worked up your appetite, you might want to stop into Spring Chickens.  The walls are decorated with humorous depictions of chickens, many borrowed from pop culture.  All entrees are served strictly with biscuits, fresh corn and slaw, but the chicken choices are plentiful.  You can choose chicken fingers, chicken cacciatori, fried chicken, broasted chicken, drunken chicken soup, sesame chicken, chicken wings, General Tso&apos;s chicken, and chicken salad.  And that&apos;s just what&apos;s on the first screen of the four-page holomenu.</desc>
+      <desc>Exits are E or W.</desc>
+      <exits e='2423' w='2421'/>
+   </location>
+
+   <location num='2423'>
+      <name>Helix Thoroughfare - Floaters</name>
+      <desc>Locals spend many weekends and vacation days enjoying the enormous, 30,000 square kilometers of Lake Corkscrew.  Floaters provides inexpensive ways to play in the water.  It sells inflatable kyacks and rafts.  There are floats for a relaxing drift in the water shaped like seashells and funny creatures for the children.  There are baby floats and swimming vests, tubes and noodles.  There are diving games such as sunken treasure chest dive or shipwreck pool dive.  Go on DOWN to the lake if a sunny day on the water beckons to you.  Otherwise you can exit W or E.</desc>
+      <exits e='2424' w='2422' down='2551'/>
+   </location>
+
+   <location num='2424' flags='b'>
+      <name>Helix Thoroughfare - Screwballs</name>
+      <desc>Screwballs is a popular ice cream parlor, its ice cream made with rich local cream and sophisticated flavors.  The specialty is the &quot;screwball cone&quot; which is softened ice cream in three flavors of your choice spiraling into your cone.  The seat and tables are in colorful pastels.  Giant HD screens adorn the walls featuring the latest music videos.  In the back are several large rooms reserved for birthday parties, screening the regular customers from too much noise from the juveniles.  Exits E and W.</desc>
+      <exits e='2425' w='2423'/>
+   </location>
+
+   <location num='2425' flags='b'>
+      <name>Helix Thoroughfare - A Turn of the Screw</name>
+      <desc>Rounding the curve of the Helix Thoroughfare, you see stretching before you a wide boulevard lined with flowering trees, purple myrtles, pink cherry trees and white dogwoods.  A beautifully carved fountain, its water cascading down, sparkles in the bright sunlight.  A beautiful carved maiden is in the center standing in a chariot pulled by a team of charging horses.  You see a shop on your right called A Turn of the Screw which features both classic and contemporary literary works you can download onto your Ebook.  Comfortable seating abounds as do knowledgeable staff members who can recommend reading material.  Many customers take seats, buy a cup of coffee or tea and exchange critiques or suggestions with others.   Exits W or NE.</desc>
+      <exits ne='2362' w='2424'/>
+   </location>
+
+   <location num='2551'>
+      <name>Lake Corkscrew</name>
+      <desc>You are astonished at the size of the lake and the bays and inlets visible that provide extra shoreline.  All manner of boats are plying the waters - sailboats, speed boats, fishing boats and catamarans.  You even see an area far to your right that seems reserved for houseboats.  Half-hidden by the trees, in the distance, you see piers leading out to some small yachts at anchor.  Shaded picnic table areas, playgrounds and a steep water slide provide fun for families.  Helix Thoroughfare is back UP the way you came.</desc>
+      <exits up='2423'/>
+   </location>
+
+</fed2-map>

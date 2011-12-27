@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<fed2-map title='Weiyang' version='51' editor='standard' from='396' to='Xingmang.Xingmang Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Bags Of Chinese gold is kept here.</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Traditional Chinese Medical Clinic</name>
+      <desc>Welcome, this clinic is  unconditionally committed to providing patients with the very best medical care in a gentle, friendly and highly effective manner. This clinic does not use conventional medical  treatment  but throught the effectiveness of Chinese ancient can bring most of our pateints back to good health. Exit to the south</desc>
+      <exits s='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing strip</name>
+      <desc>Weiyang Landing strip, in the distance you can see A replica of Weiyang Palace, namesake of this planet, this was the largest Palcae ever built on Earth. The complex was located near the city of Chang&apos;an (modern Xi&apos;an). Built in 200 BC at the request of Han Gaozu, under the supervision of his prime minister Xiao</desc>
+      <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Weiyang Exchange</name>
+      <desc>Compiled by the China Securities Index Company Limited (CSI), a joint venture between the Gongzhu Exchange and the Federation. This exchange specializes in the creation and management of  all commodites and futures. Check in with any of the many hostests and they will show you to your own private terminal.</desc>
+      <exits s='461' w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>Imperial Gardens Chinese restuarant</name>
+      <desc>Authentic Szechuan and Mandarin-style Chinese cuisine served 24 hours</desc>
+      <exits ne='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Administrative office</name>
+      <desc>This is the administrative centre and gateway to the imperial residences of the Gongzhu empire.</desc>
+      <exits n='397' e='462' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Jiaofang Hall</name>
+      <desc>Jiaofang Hall, residence of the ancestrial  empresses of the Han Dynasty and now the home of Luchi</desc>
+      <exits s='526' w='461' down='526' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name>The Lingering Garden</name>
+      <desc>Replica of one of China&apos;s most famous Imperial gardens. One of the four Suzhou gardens listed by UNESCO. It was a scholar garden originally known as the East Garden (its present name dates from the nineteenth century). The garden is entered through a twisting narrow passage, 50 m in length, which leads to views of the lake through brilliant grilled windows. The path then leads to a roofed walkway (lang) bordering the lake. The architectural structures divide the garden into four sections. The distinctly themed sections; East, Central, West, and North.</desc>
+      <exits n='462' up='462' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

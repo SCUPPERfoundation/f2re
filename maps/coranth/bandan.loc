@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<fed2-map title='Bandan' version='49' editor='standard' from='129' to='Coranth.Coranth Space.131'>
+
+   <location num='66'>
+      <name>Interplanetary Merchant&apos;s and Traiders Academy</name>
+      <desc>The floor in this room is dark blue carpet. The walls are deep amethyst with a border of blue along the top. There are desks lined in neat rows, with trading consoles acting as the desktop. The chairs are comfortabe and versatile, covered in grey upholstery.  Along the back and side walls are mahogany bookshelves filled with an assortment of graphs, documents, and books, all pertaining to the merchant trade.  The windows are open and framed in velvet blue floor-length curtains.   At the front of the classroom sits an ancient oak desk where Professor Deus will instruct the class. On the wall behind the desk is a large chalkboard and traders&apos; graph.   Take a seat; class will start soon. To get back to the exchange just head down the stairs.</desc>
+      <exits down='67' no-exit='bandan.noexit.3'/>
+   </location>
+
+   <location num='67' flags='e'>
+      <name>Merchantile</name>
+      <desc>The noise of the Mercantile is almost overwhelming, with multitudes of traders and merchants going about their daily business of trying to buy low and sell high.  Every now and then you notice a young, wide-eyed merchant trying out new skills they acquired at the academy.  It&apos;s an ample room, but quite bathed in sunlight. The walls are tiled in a warm brown, evocative of cocoa, broken up by sheer, lavender curtains on the windows  Many trader consoles line the walls including one with a sign above it that reads &quot;Reserved for Trilleth&quot;  you notice that the base is lined in soft rubber as not to be damaged by kicking.  Up the stairs, is the famed Interplanetary Merchants and Traders Academy and over the door to the east is a sign that reads, Bird of Prey Club and south east is the exit to the Spaceport.</desc>
+      <exits e='68' sw='130' up='66' no-exit='bandan.noexit.3'/>
+   </location>
+
+   <location num='68' flags='b'>
+      <name>Bird of Prey Club</name>
+      <desc>Upon entering the lounge, you are given a friendly hello. The floor is plush white carpet. One wall is papered in a soft amber, while the rest are dusky blue. Large windows draped with amber curtains are along the north wall.  There is a long bar on the far side of the room where  Harlan, the friendly white-haired bandanian barman, is serving all sorts of drinks and personal concoctions he has been working on.  Off in the corner, a couple of Traders are wasting time between cycles playing a game of pool while a couple more people are throwing darts at a picture of Arlene.   The tables are tall, allowing you to either stand at them or sit on one of the stools around them.  The faint aroma of fine cigars is coming from a poker game that is currently in progress at one of the tables. The Cigars are for sale at the bar. The participants seem to be completely oblivious to what is going on around them as they concentrate hard on their cards. The exchange is to the west.</desc>
+      <exits w='67' down='1409' no-exit='bandan.noexit.3'/>
+   </location>
+
+   <location num='129'>
+      <name>Eagles Landing</name>
+      <desc>As you step off your shuttle on the top of Mt Miser you notice that the mountain itself is The White City of O&apos;Rend, Planetary capital and spaceport of Bandan.   All around you is a flurry of activity as the citizens of Badan go about their daily business, however the wide diversity of alien tourists is what piques your interest.  Off to the east through the spaceport entrance you hear the oh so familiar Ding of traders and merchants going about their daily routine in the exchange and Pete&apos;s is down the escalator where you can get your every desire fulfilled when it comes to a starship.</desc>
+      <exits e='130' down='257' no-exit='bandan.noexit.2'/>
+   </location>
+
+   <location num='130' flags='b'>
+      <name>Bandan Spaceport</name>
+      <desc>You enter the very busy spaceport and commerce center for Bandan. The aroma from various street vendors is pleasant to the palate. From here there are many choices for you. Do you visit the street vendors for a bite to eat, head North East through the arch to the exchange, East out the doors to explore the rest of the planet, or do you take the elevator to the South?  Upstairs you will find the offices of Silverhawk, the &quot;Benevolent Ruler of Bandan&quot;, and the Hawk&apos;s Nest, the best 5-star hotel and restaurant in the system.  Who knows?  You might even catch a glimpse of the Bird himself.  Currently there is a major storm raging on Bandan.  All travel outside of the Spaceport is forbidden.</desc>
+      <exits ne='67' se='195' s='194' w='129' no-exit='bandan.noexit.2'/>
+      <events enter='bandan.storm.1'/>
+   </location>
+
+   <location num='194'>
+      <name>Elevator</name>
+      <desc>You step into a fine peice of workmanship; the floors are covered in deep red carpet laced with gold; the walls are a dark hardwood paneling with brass handbars and mirrors halfway up from the floor; the ceiling is covered in some strange panels that provide a low soothing atmosphere; and, of course, we can not forget about the elevator music, reminiscent of early hotels on old Earth.</desc>
+      <exits n='130' no-exit='bandan.noexit.3'/>
+      <events enter='bandan.elevator.1'/>
+   </location>
+
+   <location num='195' flags='hi'>
+      <name>Spaceport Clinic</name>
+      <desc>The floor in this room is an intricate design of ceramic tiles. The walls are a creamy off-white with a border of white along the middle. The odor of alcohol and antiseptic is noticeable but not overwhelming.  To the right of the room is a row of plush chairs upholstered in imitation leather. There is a coffee table in front of chairs upon which sits the most recent edition of the Star.  In the corner is a plant that reminds you of a miniature palm tree in desperate need of watering. A nurse sits behind a utilitarian desk, thumbing through numerous patients&apos; files.  As you enter, she looks up from the mounds of paperwork and says, &quot;Take a seat and fill out this paperwork; you will be called in a moment and dont forget to reinsure before leaving.&quot;</desc>
+      <exits nw='130' no-exit='bandan.no exit.3'/>
+   </location>
+
+   <location num='257' flags='yr'>
+      <name>Pete&apos;s Discount New and Used Starships</name>
+      <desc>As you reach the bottom of the escalator, you notice it is letting you off on a low plateau with long drops on three sides of the mountain. The magnificent city stretches out far below you.  Off in the distance there are numerous purple mountains with snow-capped peaks.  Inside the shipyard are old ship hulls that have seen better days. One in particular looks like it almost survived a war.    The new ships are neatly lined up against the cliff edge to best catch the sunlight.  They wait to be purchased.  The manager of the ship yard looks a little disheveled but, like all true salesmen, he crunches on his cigar while he waits for the return of a ship out on a test drive, hoping that it returns in one piece.   As you look, he comes up to you and, through the side of his mouth that doesn&apos;t have a cigar says, &quot;May I take your order?&quot;</desc>
+      <exits up='129' no-exit='bandan.noexit.1'/>
+   </location>
+
+   <location num='386'>
+      <name>Suite 9</name>
+      <desc>xxx</desc>
+      <exits s='450'/>
+   </location>
+
+   <location num='388'>
+      <name>Hawks Nest Restaurant</name>
+      <desc>xxx</desc>
+      <exits e='389' s='452'/>
+   </location>
+
+   <location num='389'>
+      <name>Hawks Nest Lounge</name>
+      <desc>xxx</desc>
+      <exits w='388'/>
+   </location>
+
+   <location num='390'>
+      <name>Suit 1</name>
+      <desc>xxx</desc>
+      <exits s='454'/>
+   </location>
+
+   <location num='449'>
+      <name>Suite 8</name>
+      <desc>xxx</desc>
+      <exits e='450'/>
+   </location>
+
+   <location num='450'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='386' e='451' s='514' w='449'/>
+   </location>
+
+   <location num='451'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits e='452' w='450'/>
+   </location>
+
+   <location num='452'>
+      <name>Grand Stairway</name>
+      <desc>xxx</desc>
+      <exits n='388' e='453' w='451' down='516'/>
+   </location>
+
+   <location num='453'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits e='454' w='452'/>
+   </location>
+
+   <location num='454'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='390' e='455' s='518' w='453'/>
+   </location>
+
+   <location num='455'>
+      <name>Suite 2</name>
+      <desc>xxx</desc>
+      <exits w='454'/>
+   </location>
+
+   <location num='459'>
+      <name>Silverhawk Office</name>
+      <desc>xxx</desc>
+      <exits s='523'/>
+   </location>
+
+   <location num='514'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='450' s='578'/>
+   </location>
+
+   <location num='515'>
+      <name>Elevator</name>
+      <desc>You step into a fine peice of workmanship; the floors are covered in deep red carpet laced with gold; the walls are a dark hardwood paneling with brass handbars and mirrors halfway up from the floor; the ceiling is covered in some strange panels that provide a low soothing atmosphere; and, of course, we can not forget about the elevator music, reminiscent of early hotels on old Earth.</desc>
+      <exits e='516' no-exit='bandan.noexit.3'/>
+   </location>
+
+   <location num='516'>
+      <name>Hawk&apos;s Nest Lobby</name>
+      <desc>Your footsteps echo on the polished slate floor as you step off the elevator and enter the lobby of the Hawk&apos;s Nest.  At first glance the lobby of the Hawks Nest is a massive room with 4 large marble pillars that appear to hold the ceiling up from the corners.  In the middle of the room is a series of rocks with water cascading off the tallest one into a pool; in the middle of them is a statue of a Bald Eagle taking flight over the cascading water with a fish in its talons.   Surrounding the pool is a fine hand-carved hardwood bench with expensive burgundy upholstery.  Along the south wall is check-in and the concierge desk.  Directly across the lobby to the east is a second bank of elevators that leads to the private office and apartments of Silverhawk.  To the north is the grand stairwell that leads to the Restaurant, Lounge and rooms.  If you would like a room just contact Silverhawk for permission and a key.   The elevators to the west head back to the spaceport.</desc>
+      <exits e='517' w='515' no-exit='bandan.noexit.3'/>
+   </location>
+
+   <location num='517'>
+      <name>Elevator</name>
+      <desc>You step into a fine peice of workmanship; the floors are covered in deep red carpet laced with gold; the walls are a dark hardwood paneling with brass handbars and mirrors halfway up from the floor; the ceiling is covered in some strange panels that provide a low soothing atmosphere; and, of course, we can not forget about the elevator music, reminiscent of early hotels on old Earth.</desc>
+      <exits w='516'/>
+   </location>
+
+   <location num='518'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='454' s='582'/>
+   </location>
+
+   <location num='522'>
+      <name>Elevator</name>
+      <desc>You step into a fine peice of workmanship; the floors are covered in deep red carpet laced with gold; the walls are a dark hardwood paneling with brass handbars and mirrors halfway up from the floor; the ceiling is covered in some strange panels that provide a low soothing atmosphere; and, of course, we can not forget about the elevator music, reminiscent of early hotels on old Earth.</desc>
+      <exits e='523'/>
+   </location>
+
+   <location num='523'>
+      <name>Private Office and Living Quarters of Silverhawk</name>
+      <desc>Welcome to Silverhaks office,</desc>
+      <exits n='459' w='522'/>
+   </location>
+
+   <location num='524'>
+      <name>Sitting room</name>
+      <desc>xxx</desc>
+      <exits s='588' w='523' nw='459'/>
+   </location>
+
+   <location num='577'>
+      <name>Suite 7</name>
+      <desc>xxx</desc>
+      <exits e='578'/>
+   </location>
+
+   <location num='578'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='514' e='579' s='642' w='577'/>
+   </location>
+
+   <location num='579'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits e='580' w='578'/>
+   </location>
+
+   <location num='580'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits e='581' s='644' w='579'/>
+   </location>
+
+   <location num='581'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits e='582' w='580'/>
+   </location>
+
+   <location num='582'>
+      <name>Hall</name>
+      <desc>xxx</desc>
+      <exits n='518' e='583' s='646' w='581'/>
+   </location>
+
+   <location num='583'>
+      <name>Suit 3</name>
+      <desc>xxx</desc>
+      <exits w='582'/>
+   </location>
+
+   <location num='588'>
+      <name>Bed Room </name>
+      <desc>Upon entering you notice that the room appears to have been taken right out of a old english castle.  The first thing you see ia a large bed that has a canopy with heavy burgandy curtains which are drawn back.  The bed is bedeced with a heavy dark blue almost black comforter and severals bolsters and pillows.  A huge fireplace stands in the oposite wall, no longer in use.  Large tapestries hang on every wall as decoration now, but in prior years before Silverhawk had this room dismantled from the original castle and moved to the Hawks Nest, they served to keep out the cold.The floors are of the original stone from the castle itself.  In the corner stands a small table and chair for late night reading.</desc>
+      <exits n='524'/>
+   </location>
+
+   <location num='642'>
+      <name>Suite 6</name>
+      <desc>xxx</desc>
+      <exits n='578'/>
+   </location>
+
+   <location num='644'>
+      <name>Suite 5</name>
+      <desc>xxx</desc>
+      <exits n='580'/>
+   </location>
+
+   <location num='646'>
+      <name>Suite 4</name>
+      <desc>xxx</desc>
+      <exits n='582'/>
+   </location>
+
+   <location num='1409' flags='b'>
+      <name>Wine Cellar</name>
+      <desc>As you step through the trap door under the bar, the lights come on and you find yourself standing in a wine Cellar. There are numerous oak wine racks around the room all filled with the best vintages of wines.  The floor is concrete and cold to the touch.  In the far corner of the room is a private bar, a couple of lounge chairs and a sofa.  This is obviously a quiet place for Silverhawk to hide and escape the hectic activity of the planet without straying too far from the exchange.</desc>
+      <exits up='68' no-exit='bandan.noexit.3'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='Slither Space' version='1.00' editor='standard'>
+
+   <location num='453' flags='slp'>
+      <name>Interstellar Link and Binary Orbit</name>
+      <desc>Due to the recent Sol virus outbreak, which caused Slitherion Corporation to move Binary Station to its own system, you are advised that all living beings travelling to or from Binary Station from other systems will have to pass through biofilters installed on the shuttle landing pad.</desc>
+   </location>
+
+</fed2-map>

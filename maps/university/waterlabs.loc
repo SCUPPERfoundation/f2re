@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<fed2-map title='Waterlabs' version='1.00' editor='standard' from='330' to='University.University Space.330'>
+
+   <location num='0' flags='t'>
+      <name>Storage room</name>
+      <desc>Things get stored here.</desc>
+   </location>
+
+   <location num='268'>
+      <name>A small office</name>
+      <desc>This office is very small and crowded. A desk is alone one wall, covered with computer displays. All the walls are lined with shelves filled with books.</desc>
+      <desc>South - Corridor</desc>
+      <exits s='332'/>
+   </location>
+
+   <location num='329' flags='e'>
+      <name>Waterlabs exchange</name>
+      <desc>In order to increase the profitability of the Waterlabs facility, the lab director declared that the exchange should be placed outside the secure zone. The building itself is a large, clear dome. This way the exchange patrons are protected from the elements of this all water planet, while at the time able to enjoy the often beautiful view that is missing from the enclosed and highly secure research section of the facility.</desc>
+      <desc>East - Landing pad</desc>
+      <exits e='330'/>
+   </location>
+
+   <location num='330' flags='yrhib'>
+      <name>Waterlabs landing pad</name>
+      <desc>The Waterlabs landing pad itself appears to be somewhat lax on security, and as a result some rather unsophisticated individuals are loitering about having some drinks at bar built right on the landing pad. Hurried people frequently push passed you, going both into the labs as well as back to their ships, as materials unknown to you are transported into and out of this research facility.</desc>
+      <desc>West - Exchange</desc>
+      <desc>East - Waterlabs research facilities</desc>
+      <exits e='331' w='329'/>
+   </location>
+
+   <location num='331'>
+      <name>Security checkpoint</name>
+      <desc>Two large lines have formed here.. one for entering the facility and another for exiting. Any individual going in either direction must submit to molecular scans to verify identity, and at the same time undergo a detailed body scan for any illegal materials. Ironically, the backup caused by such high security is exactly the chaos a person such as yourself would need to slip in or out of the facility unnoticed.</desc>
+      <desc>West - Landing pad</desc>
+      <desc>East - Corridor</desc>
+      <exits e='332' w='330'/>
+   </location>
+
+   <location num='332'>
+      <name>Corridor</name>
+      <desc>This is a corridor lined with doors. Most of the doors have signs warning of some sort of danger, and as a result there are no windows into the rooms. To the west lies the security checkpoint, while to the east the corridor continues. Unmarked doors are to the north and south.</desc>
+      <desc>North - Office</desc>
+      <desc>East - Corridor</desc>
+      <desc>South - Office</desc>
+      <desc>West - Security checkpoint</desc>
+      <exits n='268' e='333' s='396' w='331'/>
+   </location>
+
+   <location num='333'>
+      <name>Corridor</name>
+      <desc>The corridor continues to the east and west. A door to the north is marked &quot;DANGER DO NOT ENTER WHILE LIGHT IS ON.&quot; Above the door is a bright red light.</desc>
+      <desc>West - Corridor</desc>
+      <desc>East - Corridor</desc>
+      <exits e='334' w='332'/>
+   </location>
+
+   <location num='334'>
+      <name>A bend in the corridor</name>
+      <desc>Here the corridor bends to the south, however the path is blocked by a heavy security door. You can only guess what lies behind that door, but it is likely some very important research. Whatever it is, there is no way to sneak past at this time.</desc>
+      <desc>West - Corridor</desc>
+      <exits w='333'/>
+   </location>
+
+   <location num='396'>
+      <name>A large office</name>
+      <desc>This office appears to be quite large. The furniture is arranged neatly as to maximize the open space. A small desk is propped up against one wall, and a small plate on the side indicates that the desk belongs to a graduate student here at the lab. You may continue east or south to explore more of the office.</desc>
+      <desc>North - Corridor</desc>
+      <desc>East - Director&apos;s desk</desc>
+      <desc>South - Office</desc>
+      <exits n='332' e='397' s='460'/>
+   </location>
+
+   <location num='397'>
+      <name>The desk of the Waterlabs director</name>
+      <desc>This is where the director of Waterlabs would be, were he not currently giving a lecture. His desk is quite large, and the walls are lined with a mix of artwork and advanced degrees. To the south there are too many filing cabinets for anyone to navigate through.</desc>
+      <desc>West - Office</desc>
+      <exits w='396'/>
+   </location>
+
+   <location num='460'>
+      <name>The southwest corner of a large office</name>
+      <desc>Here the walls are decorated to simulate large windows overlooking a sunny landscape. Another graduate student&apos;s work area is off in the corner, and the room to the east is clogged with filing cabinets and boxes.</desc>
+      <desc>North - Office</desc>
+      <exits n='396'/>
+   </location>
+
+</fed2-map>

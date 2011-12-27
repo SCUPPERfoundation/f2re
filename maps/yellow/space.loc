@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<fed2-map title='Yellow Sun Space' version='1.00' editor='standard'>
+
+   <location num='261' flags='l'>
+      <name>Link and Orbit</name>
+      <desc>You pull into orbit above Spindle and you know now how it got the name, it&apos;s a huge ring spinning around the sun. Built from the planets that used to be in the system, it is huge.</desc>
+      <exits no-exit='spindle.orbit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='43'>
+
+   <object type='static' start='329' visibility='100' size='1' weight='1' flags='i'>
+      <name>zlitherworm head</name>
+      <id>obj_head</id>
+      <desc>The head has been stuffed and mounted on the wall; the zlitherworm's eyes seem to follow you around the room... a plaque tells you it was killed by Osbert Squeegle, using a Mark II Arkadium personal laser.</desc>
+      <vocab cmd='get' event='objects.head.1'></vocab>
+   </object>
+
+   <object type='static' start='263' visibility='100' size='1' weight='1' flags='ip'>
+      <name>paperclips</name>
+      <id>obj_paperclips</id>
+      <desc>The paperclips are scattered in a heap over one quarter of the desk, although someone has made a half-hearted attempt to join a few of them into a chain.</desc>
+      <vocab cmd='join' event='objects.paperclips.1'></vocab>
+   </object>
+
+   <object type='static' start='136' visibility='0' size='1' weight='1'>
+      <name>button</name>
+      <id>obj_button1</id>
+      <desc>Press the button to start the elevator and go up to the surface.</desc>
+      <vocab cmd='press' event='moves.elevator.1'></vocab>
+      <vocab cmd='push' event='moves.elevator.1'></vocab>
+   </object>
+
+   <object type='static' start='525' visibility='0' size='1' weight='1'>
+      <name>button</name>
+      <id>obj_button2</id>
+      <desc>Press the button to start the elevator and go down to the underground base.</desc>
+      <vocab cmd='press' event='moves.elevator.2'></vocab>
+      <vocab cmd='push' event='moves.elevator.2'></vocab>
+   </object>
+
+   <object type='static' start='265' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>The food on offer is burgers. That's all.</desc>
+      <vocab cmd='buy' event='food.fedruckers.1'></vocab>
+   </object>
+
+   <object type='static' start='329' visibility='0' size='1' weight='1'>
+      <name>box</name>
+      <id>obj_box</id>
+      <desc>The box is long and flat, ideal for fitting into the space under the bed. It isn't locked so if you are in the mood for some snooping, you could see what the room's inhabitant keeps in it.</desc>
+      <vocab cmd='get' event='objects.box.1'></vocab>
+      <vocab cmd='open' event='objects.box.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='2' flags='ps'>
+      <name>tap shoes</name>
+      <id>obj_shoes</id>
+      <desc>These "one size fits all" shoes can be worn by all species, even if they don't have feet! The shoes have metal plates fitted to them, so they can be used for tap dancing. If you'd like to try some tap dancing, then don them.</desc>
+      <vocab cmd='drop' event='objects.shoes.1'></vocab>
+      <vocab cmd='don' event='objects.shoes.2'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='100' size='1' weight='1'>
+      <name>Clive</name>
+      <id>obj_clive</id>
+      <desc>Clive is a portly man with long, greasy hair pulled back in a pony tail. He is a collectibles fanatic and talks about nothing else, to the despair of his friends (of which he has only a handful).</desc>
+      <vocab cmd='get' event='mobiles.clive.1'></vocab>
+      <vocab cmd='hug' event='mobiles.clive.1'></vocab>
+      <vocab cmd='kiss' event='mobiles.clive.1'></vocab>
+      <vocab cmd='clive' event='mobiles.clive.2'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='0' size='1' weight='1'>
+      <name>trading card</name>
+      <id>obj_card</id>
+      <desc>The display has several different sets of cards. This month's special offer is part of the series "Great Emperors of the Galaxy" and features Catty. It costs one slithy tove - if you'd like to purchase it, 'BUY CATTY'.</desc>
+      <vocab cmd='get' event='gifts.card.1'></vocab>
+      <vocab cmd='buy' event='gifts.card.2'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='0' size='1' weight='1'>
+      <name>promethius</name>
+      <id>obj_prom</id>
+      <desc>The Promethius trading card has been withdrawn from sale and is no longer available.</desc>
+      <vocab cmd='get' event='gifts.expired.1'></vocab>
+      <vocab cmd='buy' event='gifts.expired.1'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='0' size='1' weight='1'>
+      <name>frizz</name>
+      <id>obj_frizz</id>
+      <desc>The Frizz trading card has been withdrawn from sale and is no longer available.</desc>
+      <vocab cmd='get' event='gifts.card.3'></vocab>
+      <vocab cmd='buy' event='gifts.expired.1'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='0' size='1' weight='1'>
+      <name>zetian</name>
+      <id>obj_zetian</id>
+      <desc>The Zetian trading card has been withdrawn from sale and is no longer available.</desc>
+      <vocab cmd='get' event='gifts.card.3'></vocab>
+      <vocab cmd='buy' event='gifts.expired.1'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='0' size='1' weight='1'>
+      <name>ming</name>
+      <id>obj_ming</id>
+      <desc>The Ming trading card has been withdrawn from sale and is no longer available.</desc>
+      <vocab cmd='get' event='gifts.card.3'></vocab>
+      <vocab cmd='buy' event='gifts.expired.1'></vocab>
+   </object>
+
+   <object type='static' start='198' visibility='0' size='1' weight='1'>
+      <name>catty</name>
+      <id>obj_catty</id>
+      <desc>Catty, the last emperor, looks out from the holo. A string of half hidden, semi-translucent figures appear to split off from behind the figure. Each is believed to represent one of Catty's alternative personalities...</desc>
+      <vocab cmd='get' event='gifts.card.3'></vocab>
+      <vocab cmd='buy' event='gifts.card.4'></vocab>
+   </object>
+
+</object-list>

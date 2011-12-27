@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<fed2-map title='Grandprix' version='1.00' editor='standard' from='458' to='Circuit.Circuit Space.458'>
+
+   <location num='0' flags='t'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='199' flags='b'>
+      <name>Mclareen Turn Grandstands</name>
+      <desc>You see a mass of people with everyone&apos;s head looking into the sky.  They are all watching the race.  You see ships, sometimes going wide, go through the Mclareen turn on the race course.  You see droids going through the grandstand delivering drink and food to the fans.  Maybe you should sit down, order a beer or pizza and watch the race.  You can go to the Renalt turn by going east, or back to the Grandstand entrance by going south.</desc>
+      <exits e='200' s='263' no-exit='planet.seats.9'/>
+   </location>
+
+   <location num='200' flags='b'>
+      <name>Renalt Turn Grandstand</name>
+      <desc>You see everyone standing up.  No one is sitting in their seats!  Something exciting must be going on!  You stretch your neck to see.  Did someone spin out?  Did one ship pass another?  So much action going on, you don&apos;t know what to look at.  Maybe you should just sit down and get a beer or pizza.  You can get to the Mclareen Turn Grandstand to the west, or back to the Grandstand entrance by going southwest.</desc>
+      <exits sw='263' w='199' no-exit='planet.seats.9'/>
+   </location>
+
+   <location num='263'>
+      <name>Entrance to Mclareen and Renalt Grandstands</name>
+      <desc>The roar of the engines and the cheering of the crowd get louder as you approach.  You only need to decide which grandstand you want to stand in.  Will it be to view the ships as they go through the Mclareen turn, or as they go through the Renalt turn.  Mclareen is to the north, while Renalt is to the northeast.  You can return to the Team Champions exhibit by going south.</desc>
+      <exits n='199' ne='200' s='327' no-exit='planet.entrance.8'/>
+   </location>
+
+   <location num='267' flags='b'>
+      <name>Toyateya Grandstands</name>
+      <desc>You can see the racers as they come into and out of Toyateya Turn on the course.  Occasionally as a spaceship passes some members of the crowd will rise to their feet, and cheer them on.  You wonder if the pilots can hear the shouts of encouragements from the fans.  You see vendors selling pizza and beer wandering through the grandstands.  The museum is to the southeast.</desc>
+      <exits se='332' no-exit='planet.seats.9'/>
+   </location>
+
+   <location num='327'>
+      <name>Team Champions</name>
+      <desc>As in the past, Grand Prix style racing has been about teams.  While the vehicles that race may have changed the teamwork needed to win has not changed.  This area pays tribute to the great teams of the past.  You see different liveries.  You see a crest painted in red.  Another is in Yellow, Another in Orange, another in Blue.  All solid colors, and some with designs.  You feel it&apos;s an ancient history that only the most learned scholars can crack.  Maybe one day you&apos;ll understand it all.  The entrance to the grandstand is to the north, to the southeast are the driver champions.</desc>
+      <exits n='263' se='392' no-exit='planet.artwork.7'/>
+   </location>
+
+   <location num='332'>
+      <name>Grandprix Museum</name>
+      <desc>A small museum is located on the way to the grandstands.  It contains the busts of some of the great drivers of the old old old times.  You see signs that claim one statue is of Mickey Shomaker, another is Rob Alinso, Still another is Kim Rikkinen.</desc>
+      <desc>  Did Kim just blink?  No that couldn&apos;t happen, it&apos;s a statue.  The Toyateya Grandstands are to the northwest, while the Honday Grandstands are to the southeast.  The path you arrived on, leads to the southwest.</desc>
+      <exits se='397' sw='395' nw='267' no-exit='planet.artwork.7'/>
+   </location>
+
+   <location num='392'>
+      <name>Driver Champions</name>
+      <desc>The first thing you see as you enter the path are large statues of past champions made from many different substances, clay, crystal, alloy, nickel.  Some of the more noteable stories you see as you look at the plaques by the pilots:</desc>
+      <desc>   Speedy George -- the first winner of the first Fed GrandPrix ever held.  He finished first among 15 pilots.  What made his win so spectacular was he started last, and managed to avoid the big pile up at Mclareen turn.  Which was caused when the pole sitter, Frank Stilwrite, inexplicably went left instead of right.  When asked about it Frank said, &quot;I didn&apos;t know we had to turn right.&quot;</desc>
+      <desc>   Sally &quot;two wheels&quot; Whitmore -- Sally won a race with only 2 of her 4 thrusters.  An amazing feat, that showed stellar skill.  Though many thought she may have found a way to cheat, her ship passed all post race inspections.</desc>
+      <desc>  You can return to the landing pad by going southeast or continue to the grandstands by going northwest.</desc>
+      <exits se='457' nw='327' no-exit='planet.artwork.7'/>
+   </location>
+
+   <location num='394' flags='b'>
+      <name>Lugnutz Bar and Grill</name>
+      <desc>As you enter the establishment you see many folks raising their glasses in a toast.  Some in celebration, some just glad to be alive.  Waitresses dash around delivering drink and grub to the patrons.  You recognize some of the patrons to be drivers by their helmets and goggles.  Others you see must be spectators.  Some of them are grouped around one table with pen and paper.  You thought there would be a better way to get autographs of famous people after all these years.  I guess some things will never change.  To return to the madding crowd, and the landing pad, you can step through the door to your south.</desc>
+      <exits s='458' no-exit='planet.bargrill.6'/>
+   </location>
+
+   <location num='395'>
+      <name>Grandstand Path</name>
+      <desc>Just another path that leads to or from the grandstands.  To your southwest you can see the hustle and bustle of the landing pad.  To the northeast is the Grandprix Museum, maybe you should take a look there.</desc>
+      <exits ne='332' sw='458' no-exit='planet.path.4'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>Honday Grandstands</name>
+      <desc>This grandstand almost seems like a whole company gathered together.  You see red and white everywhere.  Everyone seems to be in Honday shirts.  You wonder what they make.  You wonder if they&apos;re having fun.  They look like they are having fun.  Drinking beer, eating pizza.  Some of the kids have souveneirs.  The beer and pizza look good, maybe you should get some.  Or if you so desire you can head back to the museum by going northwest.</desc>
+      <exits nw='332' no-exit='planet.seats.9'/>
+   </location>
+
+   <location num='457'>
+      <name>Entrance to Champions Path</name>
+      <desc>This path leads to one set of grandstands on Grandprix.  You see people walking along the path, taking pictures, reading plaques by some of the statues. To continue on the path you will need to travel northwest, the landing pad is to the east.</desc>
+      <exits e='458' nw='392' no-exit='planet.path.4'/>
+   </location>
+
+   <location num='458'>
+      <name>Grandprix Landing pad</name>
+      <desc>This is where much of the excitement goes on.  You can hear the roar of the spaceships above you as they complete their laps.  You notice a couple of bandaged racers coming from the south. You see people dressed in suits carrying sacks of money coming and going east. A large creature carrying a huge engine walks to the southwest.  To the north you hear what sounds like a drinking song.  As you look to the west and northeast you see many people walking back and forth with their cameras out. Then you notice the sign:</desc>
+      <desc>   Lugnutz Bar and Grill = North</desc>
+      <desc>   Grandprix Hospital = South</desc>
+      <desc>   Owner&apos;s Exchange = East</desc>
+      <desc>   Pieces and Parts/New Racers = Southwest</desc>
+      <desc>   Grandstands = West, Northeast</desc>
+      <exits n='394' ne='395' e='459' s='522' sw='521' w='457' no-exit='planet.general.1'/>
+   </location>
+
+   <location num='459' flags='e'>
+      <name>Owner&apos;s Exchange</name>
+      <desc>There&apos;s an old saying in racing.  If you want to make a million dollars in racing, start with five million.  The same could be said for making investments in the market.  Several people are running around, checking prices trying to decide if they want to buy or sell.  Step up to the big screen to watch prices roll by, or use one of the price checking machines to find the price of the commodity you want to deal in.</desc>
+      <desc>   After you&apos;ve made your millions you can return to the landing pad to your west.</desc>
+      <exits w='458' no-exit='planet.exchange.5'/>
+   </location>
+
+   <location num='520' flags='y'>
+      <name>New Racers</name>
+      <desc>The grunge of the repair shop is replaced by gleaming, shiny metal.  The salesfolks are dressed in sharp outfits, and those that have teeth are showing bright whites.  Though you think some of them look a little sharp.  While you think some of the showroom models are nice, you would be more interested in designing your own.  Most people do it that way and the salesfolks will be more than willing to help you with your purchase.</desc>
+      <desc>   After you make your purchase, or if you just want to leave you have to re-enter the world of grease and grunge to the east.</desc>
+      <exits e='521' no-exit='planet.newships.2'/>
+   </location>
+
+   <location num='521' flags='r'>
+      <name>Pieces and Parts</name>
+      <desc>You see several spaceships hovering in the air as many people crowd around them, or pound on their hulls trying to remove dents, or fix motors, or whatever else might be wrong.  You can go northeast back to the landing pad, or if you&apos;re looking for a new ship a sign to the west looks promising: New Racers.</desc>
+      <exits ne='458' w='520' no-exit='planet.newships.2'/>
+   </location>
+
+   <location num='522' flags='hi'>
+      <name>Grandprix Hospital</name>
+      <desc>You see a very sterile room filled with mostly empty beds.  A couple of people are lying in some of the beds, bandaged from head to toe.  A reminder that racing can be very dangerous.  The landing pad is back to your north.</desc>
+      <exits n='458' no-exit='planet.medical.3'/>
+   </location>
+
+</fed2-map>
+

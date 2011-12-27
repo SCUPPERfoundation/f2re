@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Flea' version='5' editor='standard' from='196' to='Canine.Canine Space.393'>
+
+   <location num='0'>
+      <name>Store Room</name>
+      <desc>Several banned items are in here that would cause extreme hazard to the inhabitants such as flea collars and pest sprays.</desc>
+   </location>
+
+   <location num='145' flags='t'>
+      <name>Major Jump Off Site</name>
+      <desc>Everything you see now is larger than life.  You see all sort of activities going on.</desc>
+      <exits up='470'/>
+   </location>
+
+   <location num='196' flags='t'>
+      <name>Welcome to Flea</name>
+      <desc>No matter where you look you see nothing.  There is nary a path, nor sign of life</desc>
+      <exits up='145'/>
+   </location>
+
+   <location num='470' flags='b'>
+      <name>Flea Circus</name>
+      <desc>Welcome to the Big Top.  A Flea clown, a strange sight indeed, saunters past you selling animal fur and little rubber  containers of fresh blood.  Fleas on trapeze and Fleas on a highwire are a couple of the acts going on right now.</desc>
+      <exits up='586'/>
+   </location>
+
+   <location num='586' flags='eyrhibt'>
+      <name>Flea Market</name>
+      <desc>The locals say if you want it they&apos;ve got it somewhere in the market.</desc>
+      <exits up='642'/>
+   </location>
+
+   <location num='642' flags='t'>
+      <name>Living Accommodations</name>
+      <desc>Very odd looking residences.  Inside and out looks like really, really, really long shag carpeting.  Actually it looks long enough to in.</desc>
+      <exits up='196'/>
+   </location>
+
+</fed2-map>

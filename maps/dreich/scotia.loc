@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<fed2-map title='Scotia' version='1.00' editor='standard' from='392' to='Dreich.Dreich Space.849'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='328' flags='r'>
+      <name>Maintenance Shed</name>
+      <desc>A wooden shed, recently erected by the looks of it, full of tools and machines for repairing and maintaining spaceships. A burly uniformed man with an eye-patch stands behind a desk, giving instructions to what are clearly the mechanics, some of which brush past you on the way to repair jobs. Now you look a little more closely, you notice a few strange, small holes in the sides of the shed and in its roof.</desc>
+      <desc>   The door to the south leads back out to the landing pad.</desc>
+      <exits s='392' out='392' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='329' flags='hi'>
+      <name>Field Hospital</name>
+      <desc>You are in a large tent, with four rows of cots, almost all containing a person. Nurses scuttle around through the aisles attending to the patients. As you walk around, you see that the patients suffer from all sorts of horrendous wounds. The smell of the place and the screams and moans of the wounded would make most people feel nauseous.</desc>
+      <desc>   Large canvas flaps are hung at the back of the tent. If you lift one of the flaps a little, you see a large central table, a few sideboards with nasty looking implements and one or two battered, old machines. All of it is covered in masses of blood, more or less dry.</desc>
+      <desc>   You can leave this place by going out the door in the southeast.</desc>
+      <exits se='394' out='394' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='330'>
+      <name>Free Scotia Visitor Information Centre</name>
+      <desc>An elderly lady sits on a stool behind a counter inside this small building. The rack on the counter only contains one leaflet, which she is keen to hand to you. You read:</desc>
+      <desc>         &quot;Welcome to Free Scotia. Please observe the following during your visit:</desc>
+      <desc>            1. Please obey all instructions issued by personnel of the Scotian Liberation Alliance.</desc>
+      <desc>            2. Please show consideration for the refugees. Most have only recently been freed and may be still in shock.</desc>
+      <desc>            3. If the shelling starts again, get out quickly.</desc>
+      <desc>         We wish you a pleasant stay.&quot;</desc>
+      <desc>   You squint to read the fine print: &quot;The SLA takes no responsibility for any loss, injury or death that may occur during your visit to Scotia.&quot;</desc>
+      <desc>   You can leave through the exit in the south.</desc>
+      <exits s='394' out='394' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='392'>
+      <name>Free Scotia Shuttle Landing Pad</name>
+      <desc>A small, improvised landing pad holds a few shuttles. The buildings around here are all covered by camouflage netting. The sky is solid grey with clouds from which falls a fine drizzle. Staying outside will surely get you soaked in double-quick time.</desc>
+      <desc>   To the north, a wooden shed with &quot;Maintenance&quot; painted in rough dark green letters on a wooden board. A similar sign with &quot;Free Scotia&quot; points east. Underneath it a small notice tells all visitors to report to the Visitor Information Centre without delay.</desc>
+      <exits n='328' e='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393'>
+      <name>Security Check</name>
+      <desc>At a set of small booths, armed soldiers carefully scrutinize the papers of all who wish to come or go. As you wait in line, you notice that the uniforms are of rather poor quality. You also notice that there are a few folk that are not wearing uniforms but instead are just sitting around wrapped in blankets, looking morosely at the people passing by.</desc>
+      <desc>   A reasonably large tent to the south has &quot;Duty Officer&quot; written above the door in crude letters, but armed soldiers prevent you from entering.</desc>
+      <desc>   A post contains two hastily-made signs, one pointing west with the word &quot;Landing Pad&quot;, the other to the east with the word &quot;Free Scotia&quot;.</desc>
+      <exits e='394' w='392' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='394'>
+      <name>Large Field</name>
+      <desc>You walk onto what must originally have been a large open field between steep hills. Now, however, it is covered with shacks, tents and other types of shelter. People wearing rags or wrapped in blankets huddle around small fires or mill aimlessly about in the drizzle. If you try to engage any of them in conversation, they evade your gaze and refuse to answer any of your questions. Armed soldiers are keeping a close eye on everything going on.</desc>
+      <desc>   A large, army-green tent with a red cross on a white square stands to the northwest, and a sign above the gigantic tent to the east has a crossed knife-and-fork above the door.</desc>
+      <desc>   A signpost tells you that the exchange is to the south, the Visitor Information Centre is to the north. An arrow points to a road in the south and has the letters SLA HQ painted on it.</desc>
+      <exits n='330' e='395' se='459' s='458' w='393' nw='329' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='395' flags='b'>
+      <name>Refectory</name>
+      <desc>This huge dark-green tent is filled with rows and rows of trestle tables and benches, where people are eating food that does not look very attractive. Nevertheless, most appear to be unconcerned by the lack of quality and eat eagerly.</desc>
+      <desc>   You can join the long lines of wretched people huddling with their tins, waiting for the soldiers behind a counter at the back to dish it out, or you can leave through the exit in the west.</desc>
+      <exits w='394' out='394' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='457'>
+      <name>Office of the Duty Officer</name>
+      <desc>The inside of this reasonably large tent contains not much more than two battered old desks, one a little larger than the other, each with a chair behind it.</desc>
+      <desc>   Behind the small desk, a tall, gangly man wearing spectacles sits working on a comm unit. The woman behind the larger desk is having a conversation on her comm unit. She is clearly the superior officer here, which you can tell by both her demeanor and the sign that says so on her desk.</desc>
+      <desc>   The tent&apos;s exit is to the north.</desc>
+      <exits n='393' in='1092' out='393' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='458' flags='e'>
+      <name>Bourse of Free Scotia</name>
+      <desc>This is one of the few buildings stone buildings you have seen. It obviously used to be the stable part of a small farmhouse, but it now houses the exchange. Only a few traders are about, and the equipment that has been installed must have come from a museum. It appears to be functioning still though. A chill wind blows in through a few big holes in the roof, and as you look up, you see that a few of the beams holding up the roof look damaged and charred.</desc>
+      <desc>   A door to the south gives access to what used to be the living quarters of the farmer and his family. To go back outside, use the door in the north wall.</desc>
+      <exits n='394' s='522' out='394' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='459'>
+      <name>Muddy Lane</name>
+      <desc>You are standing in a narrow, muddy lane, surrounded by thick forests, packed with people on the move. Small groups of people, dressed mostly in rags and looking miserable and hungry are moving toward the city of tents which lies about a mile to the northwest. Occasionally you see soldiers stumbling in the same direction, invariably with bandages around some part of their body, on crutches or being led by a comrade. A few primitive vehicles transport what must be the more seriously wounded, or drive at high speed to the southeast, empty.</desc>
+      <desc>   About a mile to the southeast you see that the forest opens up into a clearing.</desc>
+      <exits se='524' nw='394' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='522' flags='b'>
+      <name>Farm House Lounge</name>
+      <desc>What was once the living room of the farmer whose farm is now the exchange, has been crudely made into a bar. Apart from the female soldier serving food and drink from behind a bar, this is usually a very quiet place. Unlike in the exchange itself, the holes in the roof here have been patched up, but here too you can see some charred beams.</desc>
+      <desc>   The door in the north wall is the only visible exit, and it leads back into the stables-come-exchange.</desc>
+      <exits n='458' out='458' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='524'>
+      <name>Army Camp</name>
+      <desc>You are standing in a large field. It is covered by small green tents, in orderly rows. Soldiers are everywhere. In the past, this must have been some prime agricultural land, but now it&apos;s just one gigantic mud bath. Planks have been laid down to form semi-dry paths, but all the mud of soldiers&apos; boots has made even these treacherous. Few of the soldiers milling about here seem to take any notice of you; they appear to be more focussed on something else. Squads of soldiers can be seen marching off to the east, joined by the occasional vehicle. Some wounded are transported back from there and away again along the road in the northwest.</desc>
+      <desc>   Around the edges of the field you notice ancient artillery pieces and air defence systems, all manned to their full complements. On the south side of the field is a big army tent, with a sign above the door, that reads &quot;Scotian Liberation Alliance HQ&quot;.</desc>
+      <exits e='525' s='588' nw='459' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='525'>
+      <name>Gorge Road</name>
+      <desc>A wide road roughly leads from east to west through a gorge for around 5 miles. Most traffic consists of squads of soldiers marching to the east, joined by an occasional vehicle. Moving westward along this road are mainly ambulances and wounded soldiers on foot. Some are on their own, whereas others are helping out their comrades.</desc>
+      <exits e='526' w='524' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='526'>
+      <name>Road Block</name>
+      <desc>You are stopped by a group of soldiers who tell you that no civilians are allowed to proceed here. Peering past them to the east you can see what appears to be a large country house, surrounded by smaller outbuildings, set in large rolling hill country. Big clouds of smoke billow up beyond it and you can hear the muffled sounds of what can only be explosions.</desc>
+      <desc>   When you ask the soldiers, they tell you proudly that after months of hard fighting they finally managed to gain a foothold here. They also tell you that the mansion and the outbuildings are part of the Tiva Estate, the largest slave-holding plantation on Scotia.</desc>
+      <desc>   With the soldiers blocking your way, you can only go back west.</desc>
+      <exits w='525' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='588'>
+      <name>Scotian Liberation Alliance HQ</name>
+      <desc>One of the guards leads you inside, announces your presence to the gathered officers, and then leaves. The officers appear far too busy to have taken any notice.</desc>
+      <desc>   You stand inside a large tent. Maps are hung on the walls, officers are barking orders to soldiers who in turn relay the orders through old-fashioned comm units to what must be units elsewhere. Soldiers brush hurriedly and roughly past you on their way to report progress and take back orders. A senior-looking officer points out areas on a map to a number of juniors. Your eyes follow a young female officer come in, report something to the officers, then move to the back of the tent and you lose sight of her.</desc>
+      <desc>   You can move back out to the camp by going north.</desc>
+      <exits n='524' down='652' out='524' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='652'>
+      <name>Concrete Stairs</name>
+      <desc>You are on a set of stairs made out of primitive reinforced concrete. The only light comes from a number of small emergency lamps placed at regular intervals.</desc>
+      <desc>   As is usual with stairs, you can go up or down, or you can stay put.</desc>
+      <exits up='588' down='1028' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='1028'>
+      <name>Command Bunker</name>
+      <desc>Deep underground, surrounded by feet of reinforced concrete, is the nerve centre of the Scotian Liberation Alliance. A large conference table with a dozen or so chairs dominates one end of the room, with the other end containing large, vertical, perspex sheets contain strange symbols which are constantly being changed by a group of junior officers. Senior officers are quietly discussing issues in small groups. They do not seem to notice you have evaded the security systems.</desc>
+      <desc>   As you look, a curtain in the south wall flutters slightly when someone brushes past it, revealing a small steel door. In the north a set of stairs leads back up.</desc>
+      <exits s='1092' up='652' no-exit='moves.noexit.17'/>
+   </location>
+
+   <location num='1092' flags='b'>
+      <name>CO&apos;s Quarters</name>
+      <desc>You stand in a small, dimly-lit room. It contains a big desk with a battered old comm unit, maps and papers scattered on and around it. A shelf on the east wall contains a few battered novels, a few small trophies and a picture of the Boston University Terriers hockey team of around 15 years ago. Nex to the door to the north is a man-high steel locker, which appears to be locked.</desc>
+      <desc>   An uncomfortable-looking folding bed has been placed along the west wall. On a rickety night-stand lies a stack of books, some in a language that uses a strange language you don&apos;t understand. The alarm clock confusingly specifies a time that is 5 hours ahead of the time on your watch.</desc>
+      <exits n='1028' out='457' no-exit='moves.noexit.18'/>
+   </location>
+
+</fed2-map>

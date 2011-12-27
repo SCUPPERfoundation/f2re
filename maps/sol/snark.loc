@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<fed2-map title='Snark' version='1.00'>
+
+   <location num='522'>
+      <name>Living quarters</name>
+      <desc>   You are in the living area. On one side is a large bed. Underfoot are scattered worn, but tasteful, rugs. A holo unit stands in front of a comfortable, old fashioned bamboo sofa.    </desc>
+      <desc>   The holo unit is displaying a book on cryptography, and is open at the section on the use of one-time pads.   </desc>
+      <desc>   The door is southeast.</desc>
+      <exits se='587'/>
+   </location>
+
+   <location num='523'>
+      <name>Transmitter room</name>
+      <desc>   Most of this room is taken up by a very large hyperspace transceiver unit. It is unusual in that it also seems to have a scanner built into it. If you have the correct information you could probably contact the DNI by using the "TYPE" command.</desc>
+      <exits s='587'/>
+   </location>
+
+   <location num='524'>
+      <name>Computer room</name>
+      <desc>   The room is chock full of ancient computer gear. On a bench is a dust-covered console, but no amount of fiddling with it by you will bring it to life. Against one wall is an original 110 baud DECwriter printer! There is a door to the south-west.</desc>
+      <exits sw='587'/>
+   </location>
+
+   <location num='525'>
+      <name>Storeroom</name>
+      <desc>   You are in a tiny storeroom. The shelves are crammed with all the needs and necessities of life in this barren environment. There is an exit to the south-west.</desc>
+      <exits sw='588'/>
+   </location>
+
+   <location num='586'>
+      <name>Galley</name>
+      <desc>   This is a compact galley - it bears more than a passing resemblance to the one in your ship. In fact, looking more closely, you have the feeling that it might originally have been a spaceship galley. </desc>
+      <desc>  There is an exit in the east wall.</desc>
+      <exits e='587'/>
+   </location>
+
+   <location num='587'>
+      <name>Open space</name>
+      <desc>   You are in an open space. The floor, while uneven, has been smoothed by playing a laser over it to fuse the rubble. Passages lead off to the east, southeast and southwest. There are doors in all other directions.</desc>
+      <exits n='523' ne='524' e='588' se='652' s='651' sw='650' w='586' nw='522'/>
+   </location>
+
+   <location num='588'>
+      <name>Corridor</name>
+      <desc>   You are in a short corridor. To the west is an open area, while to the northeast and the southeast are doors.</desc>
+      <exits ne='525' se='653' w='587'/>
+   </location>
+
+   <location num='650'>
+      <name>Passage</name>
+      <desc>   You are in a rock-lined passage running from the north-east to the south-west, where there is a featureless steel door barring your way. Carved into the wall next to the door is a sign saying 'EMERGENCY EXIT'.</desc>
+      <exits ne='587'/>
+   </location>
+
+   <location num='651'>
+      <name>Workshop</name>
+      <desc>   You are looking round a small workshop. Various partially disassembled gadgets are lying on the benches. In one corner is a small lathe with a complex-looking jig, and a quad trace oscilloscope is built into the test bench.      </desc>
+      <desc>   Examining the lathe more closely you come to the conclusion that you would be able to use it if you were to put the correct item into the jig! </desc>
+      <desc>   There is a door to the north.</desc>
+      <exits n='587'/>
+   </location>
+
+   <location num='652'>
+      <name>Narrow passage</name>
+      <desc>   You are squeezing through a narrow rock passage running from the south to the northwest.</desc>
+      <exits s='716' nw='587'/>
+   </location>
+
+   <location num='653'>
+      <name>Holo room</name>
+      <desc>   You are in a room full of holograms which looks suspiciously like another holo room you know of... In the centre of the room is a holo of a large fish. A plaque under it reads 'Hareng rouge'... </desc>
+      <desc>  The exit is northwest.</desc>
+      <exits nw='588'/>
+   </location>
+
+   <location num='716'>
+      <name>Cave</name>
+      <desc>   You are in a round smooth cave, obviously artificial, but apparently leading nowhere. To the south is the energy curtain holding the atmosphere in the cave - though why it should be doing so is a mystery.</desc>
+      <exits n='652' s='780'/>
+   </location>
+
+   <location num='730'>
+      <name>Laboratory</name>
+      <desc>   You are in a laboratory. Vile looking substances bubble through towers of glassware, and there is a steady drip, drip from a distillation apparatus.   </desc>
+      <desc>   To the east is the door into the corridor, to the southwest is a steel door with the word 'DANGER' stencilled on it in large, bright red lettering.</desc>
+      <exits e='731' sw='793'/>
+   </location>
+
+   <location num='731'>
+      <name>Corridor</name>
+      <desc>   You are in a rock lined corridor, which stretches off to the southeast, lit at intervals by glowing orange globes. To the west is a door with a badly scuffed plaque. Looking carefully you can make out the words '...and Hyde Project', but the first part of the legend is indecipherable.</desc>
+      <exits se='796' w='730'/>
+   </location>
+
+   <location num='735'>
+      <name>Bar</name>
+      <desc>   You are in a depressing looking bar. All the furniture and fittings look as old and the counter has a number of laser scars along its length. The clientele is, as you would expect, colourful, but most are keeping to themselves.   </desc>
+      <desc>   There is an exit to the southwest.</desc>
+      <exits se='800' sw='798'/>
+   </location>
+
+   <location num='780'>
+      <name>Energy curtain</name>
+      <desc>   You are standing in an energy field. Is this wise? Your skin tingles, and you feel euphoric. North leads into a cave, and south leads out towards the surface.</desc>
+      <exits n='716' s='844'/>
+   </location>
+
+   <location num='793'>
+      <name>Corridor</name>
+      <desc>   You are at the northern end of a rock corridor. The wierd green lighting gives your face an unhealthy pallor. To the northeast is a steel door marked 'EXIT'.</desc>
+      <exits ne='730' s='857'/>
+   </location>
+
+   <location num='796'>
+      <name>Corridor</name>
+      <desc>   You are in a corridor. Spaced at intervals along the wall are glowing orange globes. The corridor continues to the northwest, and runs into an open brightly lit area at its southeast end.</desc>
+      <exits se='861' nw='731'/>
+   </location>
+
+   <location num='798'>
+      <name>Corridor</name>
+      <desc>   You are in a well used corridor. At the northeast end is a bar, and at the southwest end is an open space.</desc>
+      <exits ne='735' sw='861'/>
+   </location>
+
+   <location num='800'>
+      <name>Office</name>
+      <desc>   Yes - even pirates need administrators! This is an office, but there is little of interest in it. The door is northwest.</desc>
+      <exits nw='735'/>
+   </location>
+
+   <location num='844'>
+      <name>Cave</name>
+      <desc>   You are in a dimly lit cave. The light comes from the shifting colours of an energy curtain at the north end. The cave exit is south.</desc>
+      <exits n='780' s='908'/>
+   </location>
+
+   <location num='856'>
+      <name>Boojum room</name>
+      <desc>   You are standing in a seven sided room. In the centre is a curious tower structure, covered with whorls that remind you of the ruins on Mars. The sides of the room are covered with control and monitoring equipment of an unfamiliar design. </desc>
+      <desc>   Through the transparent floor you can see huge busbars carrying vast amounts of power to the structure. </desc>
+      <desc>   The exit is in the south wall.</desc>
+      <exits s='920'/>
+   </location>
+
+   <location num='857'>
+      <name>Corridor</name>
+      <desc>   You are in a rock corridor lit by sickly green lighting. The corridor continues to your north, and it widens out to the south.</desc>
+      <exits n='793' s='921'/>
+   </location>
+
+   <location num='861'>
+      <name>Octagon</name>
+      <desc>   You are in a brightly lit octagonal room. There are corridors to the northeast, southeast and northwest. There is also the entrance to a lift in the south wall.</desc>
+      <exits ne='798' se='926' s='925' nw='796'/>
+   </location>
+
+   <location num='908'>
+      <name>Ravine</name>
+      <desc>   You are in a narrow ravine whose walls appear to be on the point of meeting overhead. The darkness is nearly absolute, but by the light of your torch you can see a cave mouth to the north.    </desc>
+      <desc>  To the southwest the ravine broadens out a little.</desc>
+      <exits n='844' sw='971'/>
+   </location>
+
+   <location num='917'>
+      <name>Shaft</name>
+      <desc>   You are climbing a set of rusty iron handholds set into the walls of a vertical shaft. The handholds look none too secure... </desc>
+      <desc>   Below you the shaft vanishes into darkness, but the handholds go no further down. To the south is a dark hole in the shaft wall, and above you the handholds continue for as far as the light of your torch reaches.</desc>
+      <exits e='918' s='981'/>
+   </location>
+
+   <location num='918'>
+      <name>Tunnel</name>
+      <desc>   You are in a roughly worked tunnel. The rusting remains of rails running along the floor indicate that you are in a disused mine working. To the west a steep shaft drops away from your feet, and the tunnel runs southeast.</desc>
+      <exits se='983' w='917'/>
+   </location>
+
+   <location num='920'>
+      <name>Security room</name>
+      <desc>   You are in a bare room. A closed circuit TV camera follows your movements. At the south end of the room is a door leading to the corridor, while at the north end is a door with a sign saying 'DANGER - NO UNAUTHORIZED PERSONNEL'.</desc>
+      <exits n='856' s='984'/>
+   </location>
+
+   <location num='921'>
+      <name>Corridor</name>
+      <desc>   The corridor widens at this point. The lighting is still a lurid green, but it seems a little brighter. A door in the east wall is marked 'CONTROL - KEEP OUT'. </desc>
+      <desc>   The corridor continues to the north and the southwest.</desc>
+      <exits n='857' e='922' sw='984'/>
+   </location>
+
+   <location num='922'>
+      <name>Reactor control</name>
+      <desc>   You are in the control room of the nuclear reactor supplying the asteroid's power. The control room is a glass lined gallery running across the north end of the reactor room. </desc>
+      <desc>   Stairs lead down to the floor of the reactor room to the south, and there is a door in the west wall.</desc>
+      <exits s='986' w='921'/>
+   </location>
+
+   <location num='925'>
+      <name>Elevator</name>
+      <desc>   You are in an old fashioned elevator with sliding gates. You can either go up, or leave the elevator by going north.</desc>
+      <exits n='861' up='1093'/>
+   </location>
+
+   <location num='926'>
+      <name>Corridor</name>
+      <desc>   You are in a steel sheathed corridor. In addition to the normal lights, self-powered emergency lights are hung at intervals. Huge blast doors stand poised to swing into position at the touch of a remote switch... </desc>
+      <desc>   The corridor continues to the southeast, and enters a brightly lit space at the northwest end.</desc>
+      <exits se='991' nw='861'/>
+   </location>
+
+   <location num='969'>
+      <name>Ravine</name>
+      <desc>   You are at the western end of a deep ravine. To the north and west the side of the ravine rises sharply, but to the south the cliff has crumbled under a meteorite impact, making it just possible to climb up.</desc>
+      <exits e='970' s='1033' sw='1032'/>
+   </location>
+
+   <location num='970'>
+      <name>Ravine</name>
+      <desc>   You are in a deep east/west ravine which scores the surface of the asteroid. The cliffs on either side are unclimbable, and the ravine narrows as it runs eastwards.</desc>
+      <exits e='971' w='969'/>
+   </location>
+
+   <location num='971'>
+      <name>Ravine</name>
+      <desc>   The ravine runs round from the west to the northeast, narrowing considerably at the northeast end. Looking up you can see the sharp silhouette of the cliff edges far above you. </desc>
+      <desc>  The north east end of the ravine is shrouded in darkness.</desc>
+      <exits ne='908' w='970'/>
+   </location>
+
+   <location num='981'>
+      <name>Mine face</name>
+      <desc>   You are crouched in an abandoned mine working. To one side there is a glint from the remains of the worked out vein. </desc>
+      <desc>   Judging from the gloomy air of neglect, no one has been here for a very long time. The exit is north into a shaft.</desc>
+      <exits n='917'/>
+   </location>
+
+   <location num='983'>
+      <name>Cave</name>
+      <desc>   You are in a large cave. To the east green light spills in from the corridor. A worn path leads from the opening in the east wall to another opening to the northwest.</desc>
+      <exits e='984' nw='918'/>
+   </location>
+
+   <location num='984'>
+      <name>Corridor</name>
+      <desc>   You are at the southwest end of a corridor. A large hole has been excavated in the west wall, but the darkness hides anything beyond the wall.  </desc>
+      <desc>  To the north is a strangely wrought door with a large skull and crossbones etched into it...</desc>
+      <exits n='920' ne='921' w='983'/>
+   </location>
+
+   <location num='986'>
+      <name>Reactor room</name>
+      <desc>   You are on the floor of the reactor room. The reactor's pile towers above you, and close inspection reveals that it is in dire need of a service.  </desc>
+      <desc>   A Geiger counter on the wall is showing an unhealthily high radiation reading. The way out is up to the north.</desc>
+      <exits n='922'/>
+   </location>
+
+   <location num='991'>
+      <name>Corridor</name>
+      <desc>   You are at the southeastern end of a steel lined corridor. There are heavy steel doors to the south and the east.</desc>
+      <exits e='992' s='1055' nw='926'/>
+   </location>
+
+   <location num='992'>
+      <name>Transfer control</name>
+      <desc>   You are in what is obviously some sort of control room. Most of the equipment is unfamiliar, but your attention is drawn to a console marked 'TRANSFER PORTAL'.    </desc>
+      <desc>   You look over the console, but are unable to figure out how it works.   </desc>
+      <desc>   There is an exit in the west wall.</desc>
+      <exits w='991'/>
+   </location>
+
+   <location num='1032'>
+      <name>Ravine</name>
+      <desc>   You are a one end of a ravine which runs northeast. To the north and west cliffs rise sheer and unclimbable. To the east the slopes have crumbled and can be traversed relatively easily.  </desc>
+      <desc>   To the south rises the bulk of an old spoil heap.</desc>
+      <exits ne='969' e='1033' se='1097' s='1096'/>
+   </location>
+
+   <location num='1033'>
+      <name>Surface</name>
+      <desc>   You are stumbling about on the uneven surface of the asteroid. To the north the ground slopes down to the bottom of a ravine, while to the east and south the uneven surface continues.</desc>
+      <exits n='969' e='1034' s='1097' sw='1096' w='1032'/>
+   </location>
+
+   <location num='1034'>
+      <name>Surface</name>
+      <desc>   You are wandering around the surface of the asteroid. To your east the ground becomes more broken, to the north is an abrupt drop into a deep ravine. To the south your way is blocked by a scarred and battered concrete wall.</desc>
+      <exits e='1035' se='1099' sw='1097' w='1033'/>
+   </location>
+
+   <location num='1035'>
+      <name>Surface</name>
+      <desc>   You are walking very carefully over a glassy area. The surface is fused as though hit by a massively powerful laser beam. You marvel at the forces that could have wrought such havoc.  </desc>
+      <desc>  To the east is a spoil heap, southeast is the start of a path. To the north is a steep drop into a deep ravine - not recommended!</desc>
+      <exits e='1036' se='1100' s='1099' w='1034'/>
+   </location>
+
+   <location num='1036'>
+      <name>Spoil heap</name>
+      <desc>   You are standing on a heap of old slag and waste left over from the time when this was a mining asteroid. On the south side of the heap is the start of a path leading to a blockhouse.   </desc>
+      <desc>  North and east of the heap the surface becomes impossible broken and impassable.</desc>
+      <exits se='1101' s='1100' sw='1099' w='1035'/>
+   </location>
+
+   <location num='1039'>
+      <name>Mirror</name>
+      <desc>xxx</desc>
+      <exits s='1103'/>
+   </location>
+
+   <location num='1055'>
+      <name>Missile room</name>
+      <desc>   Missiles lie in rack all around you, waiting to be fed into the silos in the asteroid's defence facilities. As you watch a robot arm feeds a missile into a tube, and another missile is moved into the vacated place. </desc>
+      <desc>   There is an exit to the north.</desc>
+      <exits n='991'/>
+   </location>
+
+   <location num='1093'>
+      <name>Elevator</name>
+      <desc>   You are in an old-fashioned elevator with sliding concertina gates - mind you don't trap your fingers.   </desc>
+      <desc>   Down will take you down, and south will take you into the airlock.</desc>
+      <exits s='1098' down='925'/>
+   </location>
+
+   <location num='1096'>
+      <name>Spoil heap</name>
+      <desc>   You are standing on one of the slopes of an old spoil heap. The detritus has been burrowed into many times by scavengers, making it not a little unsafe. As you shift your weight it precipitates a small avalanche of rubble...  </desc>
+      <desc>   To the north is the start of a ravine, and to the northeast and the east is broken ground.</desc>
+      <exits n='1032' ne='1033' e='1097' se='1161'/>
+   </location>
+
+   <location num='1097'>
+      <name>Surface</name>
+      <desc>   The surface of the asteroid is very broken. To the west and northwest the ground drops away abruptly. Southwest is a sign saying 'DANGER - AUTHORIZED PERSONNEL ONLY'. Beyond it you can see the launching tubes of missile silos.</desc>
+      <exits n='1033' ne='1034' se='1162' s='1161' sw='1160' w='1096' nw='1032'/>
+   </location>
+
+   <location num='1098'>
+      <name>Airlock</name>
+      <desc>   You are in a rarely used airlock. The mechanisms are very stiff, and it takes all your strength to move them. </desc>
+      <desc>   To the north the airlock leads into an elevator, and to the south is the exit to the asteroid's surface.</desc>
+      <exits n='1093' s='1162'/>
+   </location>
+
+   <location num='1099'>
+      <name>Surface</name>
+      <desc>   Your feet skid as you walk over the glassy surface. To the east is the start of a path leading to a squat, ugly looking blockhouse. To the west is a battered concrete wall which prevents movement in that direction.</desc>
+      <exits n='1035' ne='1036' e='1100' s='1163' sw='1162' nw='1034'/>
+   </location>
+
+   <location num='1100'>
+      <name>Path</name>
+      <desc>   You are at the west end of an east/west path made from crushed rock. </desc>
+      <desc>   The path weaves a little to avoid obstacles, and appears to be heading towards a low blockhouse just visible to the east. To the north is a spoil heap.</desc>
+      <exits n='1036' e='1101' sw='1163' w='1099' nw='1035'/>
+   </location>
+
+   <location num='1101'>
+      <name>Path</name>
+      <desc>   You are walking along an east/west path made with crushed stone. You cannot get off the path because of the ragged nature of the terrain.</desc>
+      <exits e='1102' w='1100' nw='1036'/>
+   </location>
+
+   <location num='1102'>
+      <name>Path</name>
+      <desc>   You are standing on a path. To the west the path runs over the asteroid's nearby horizon. To the east is the entrance to a blockhouse.   </desc>
+      <desc>  The southern arm of the path leads through an area dotted with sensors to the landing pad.</desc>
+      <exits e='1103' se='1167' s='1166' w='1101'/>
+   </location>
+
+   <location num='1103'>
+      <name>Blockhouse</name>
+      <desc>   You are in the single room that makes up the blockhouse. Three of the walls are rough hewn blocks, but the north wall looks very much like the black, gold flecked material to be found in the Martian ruins. Set into the wall is a softly glowing silvery mirror.      </desc>
+      <desc>   To the west is an exit leading to the surface of the asteroid.</desc>
+      <exits n='1039' w='1102' out='1102'/>
+   </location>
+
+   <location num='1160'>
+      <name>Missile silos</name>
+      <desc>   You are in an area dotted with missile silos. You had better be out of the area when the missiles are fired, unless you wish to get frazzled by the backlash! </desc>
+      <desc>   You can leave by going northeast or east, in all other directions the ground is too broken to move.</desc>
+      <exits ne='1097' e='1161'/>
+   </location>
+
+   <location num='1161'>
+      <name>Surface</name>
+      <desc>   You are on the asteroid's surface. To your northeast is a low concrete building with an airlock in its south face. To the west you can see missile silos.  </desc>
+      <desc>   In a southerly direction the ground becomes too broken move around.</desc>
+      <exits n='1097' e='1162' s='1225' w='1160' nw='1096'/>
+   </location>
+
+   <location num='1162'>
+      <name>Surface</name>
+      <desc>   You are on the surface of the asteroid. To your north is an airlock, to the south and southwest the surface is an impassable jumble of boulders. To the southeast you can see groups of missile silos.</desc>
+      <exits n='1098' ne='1099' e='1163' se='1227' w='1161' nw='1097'/>
+   </location>
+
+   <location num='1163'>
+      <name>Surface</name>
+      <desc>   You are wandering around on the surface of the asteroid. It is difficult to say where the light is coming from - a greenish-blue radience seems to emanate from all directions overhead. South are missile silos. </desc>
+      <desc>   East is an unpleasant looking pit. You can see the gleam of an oily looking liquid in the bottom. You find this puzzling considering you are in a vacuum...</desc>
+      <exits n='1099' ne='1100' e='1164' s='1227' w='1162'/>
+   </location>
+
+   <location num='1164'>
+      <name>Pit</name>
+      <desc>   You scramble down into the pit and are standing knee deep in the strange oil like substance. The 'oil' seems to have a life of its own. Ripples run across the surface and it slops hungrily around the legs of your spacesuit...</desc>
+      <exits w='1163'/>
+   </location>
+
+   <location num='1166'>
+      <name>Sensor array</name>
+      <desc>   You are in the middle of a flat area containing a sensor array. Most of the rigs are familiar, but one or two of the antennas look a little strange.  </desc>
+      <desc>   A north/south path runs through the area connecting the landing pad in the south to the main pathway in the north. To the east is the business end of a large particle cannon.</desc>
+      <exits n='1102' s='1230'/>
+   </location>
+
+   <location num='1167'>
+      <name>Particle cannon</name>
+      <desc>   The muzzle of a very large particle cannon pokes out of the ground. Massive deflector coils circle it, gleaming nightmarishly in the strange light from overhead. </desc>
+      <desc>   The surrounding area is very broken, but it is possible to move west, where there is an impressive array of sensors, and northwest.</desc>
+      <exits nw='1102'/>
+   </location>
+
+   <location num='1225'>
+      <name>Small spoil heap</name>
+      <desc>   You are perched on the top of a small spoil heap, from which you can look out over a bleak landscape. The only safe way off the heap is by going north.</desc>
+      <exits n='1161'/>
+   </location>
+
+   <location num='1227'>
+      <name>Silos</name>
+      <desc>   You are in an area dotted with missile silos. Not the place to be caught in when they are being launched! An energy curtain runs from the east round to the south.  </desc>
+      <desc>   West is an unclimbable jumble of boulders.</desc>
+      <exits n='1163' nw='1162'/>
+   </location>
+
+   <location num='1230'>
+      <name>Landing pad</name>
+      <desc>   This is the asteroid's landing area. It looks inhospitable and bleak. To the north is the start of a path leading towards a blockhouse, low down on the asteroid's shockingly near horizon.</desc>
+      <exits n='1166'/>
+   </location>
+
+</fed2-map>

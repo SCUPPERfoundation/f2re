@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<fed2-map title='Ciel Space' version='1.00' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>store room</name>
+      <desc>This is a small room for storage.</desc>
+   </location>
+
+   <location num='199' flags='sl'>
+      <name>Cil Link and Maji Orbit</name>
+      <desc>     You are greeted by the sight of several large spaceships, along with some nasty looking star fighters, all emblazoned with the golden vortex of the Necrotic Armada. They seem to be patroling the spaceways, and don&apos;t bother you as you make your way about your business.</desc>
+      <desc>     Below you lies the beautiful water world of Maji. Small islands swim in a vast sea of oceans, with volcanos spewing forth molten earth to create new life. The largest island houses the trading features for the planet, and is available for exploring now. The Link twinkles from the distance.</desc>
+      <exits no-exit='space.space.1'/>
+   </location>
+
+</fed2-map>

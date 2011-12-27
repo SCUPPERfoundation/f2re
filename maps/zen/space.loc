@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Zen Space' version='10' editor='standard'>
+
+   <location num='329' flags='slp'>
+      <name>Zen Interstella link and orbit</name>
+      <desc>You are in a tight orbit that surrounds your body with it&apos;s life force...enter if you please.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<event-list version='10'>
+
+ <category name='mobiles'>
+
+  <section name='guard'>
+
+   <event num='1'>
+    <comment>Talk to guard</comment>
+    <match phrase='password' id-name='guard' lo='mobiles.guard.1'/>
+    <match phrase='arena' id-name='guard' lo='mobiles.guard.2'/>
+    <match phrase='portal' id-name='guard' lo='mobiles.guard.3'/>
+    <match phrase='the easter bunny sent me' id-name='guard' event='mobiles.guard.2'/>
+    <match phrase='hello' id-name='guard' lo='mobiles.guard.6'/>
+    <nomatch id-name='guard' lo='mobiles.guard.4'/>
+   </event>
+
+   <event num='2'>
+    <comment>The player gives the correct password and is moved to the arena</comment>
+    <message type='single' where='com' who='individual' lo='mobiles.guard.5'/>
+    <move what='player' who='individual' loc='914'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='keepout'>
+
+   <event num='1'>
+    <comment>Dummy loc - 457 - stop people from just walking through the portal from Hunt Central</comment>
+    <move what='player' who='individual' loc='393'/>
+    <message type='single' where='com' who='individual' lo='moves.keepout.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='party'>
+
+  <section name='food'>
+
+   <event num='1'>
+    <comment>Buy food</comment>
+    <message type='single' where='com' who='individual' lo='party.food.1'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>Throw pie</comment>
+    <message type='single' where='com' who='individual' lo='party.food.2'/>
+    <message type='single' where='com' who='room_ex' lo='party.food.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Buy drink</comment>
+    <message type='single' where='com' who='individual' lo='party.food.4'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='4'>
+    <comment>Buy round</comment>
+    <message type='single' where='com' who='individual' lo='party.food.5'/>
+    <message type='single' where='com' who='room_ex' lo='party.food.6'/>
+    <changestat who='room' stamina='2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

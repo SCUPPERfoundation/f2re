@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='26'>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>gobstopper</name>
+      <id>obj_gobstopper</id>
+      <desc>The ancient gobstopper gum-ball closely resembles a golf ball-sized, mold-covered piece of rock and is completely inedible.</desc>
+      <vocab cmd='drop' event='command.gumball.2'></vocab>
+   </object>
+
+   <object type='static' start='274' visibility='0' size='1' weight='1'>
+      <name>handle</name>
+      <id>obj_handle</id>
+      <desc>The metal handle on the gumball machine looks as though it might move if you turn it.</desc>
+      <vocab cmd='turn' event='command.gumball.1'></vocab>
+   </object>
+
+   <object type='static' start='274' visibility='100' size='1' weight='1' flags='i'>
+      <name>gumball machine</name>
+      <id>obj_gumball</id>
+      <desc>The gumball machine is in reasonable condition considering it's ancient. The handle may even turn.</desc>
+   </object>
+
+   <object type='static' start='145' visibility='100' size='1' weight='1' flags='d'>
+      <name>robot</name>
+      <id>mob_robot</id>
+      <desc>The holographic robot looks the same as the one that is seated in the captain's chair but a lot more animated.</desc>
+      <vocab cmd='robot' event='command.robot.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>catapult</name>
+      <id>obj_catapult</id>
+      <desc>The catapult is cruedly made from metal scraps and sinew. It could probably be USEd like a sling to fire a small object several yards.</desc>
+      <vocab cmd='use' event='engineering.catapult.1'></vocab>
+      <vocab cmd='drop' event='engineering.catapult.8'></vocab>
+   </object>
+
+   <object type='static' start='203' visibility='100' size='1' weight='1' flags='i'>
+      <name>scrap heap</name>
+      <id>obj_scrap</id>
+      <desc>The pile of junk is mostly broken weapons and useless junk. You would have to search it to find anything of value.</desc>
+      <vocab cmd='search' event='sectione.catapult.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>badge</name>
+      <id>obj_badge</id>
+      <desc>The badge is imprinted with a chip that can be read by a scanner. Where the name should be, it reads "Badges? We don't need no stinkin' badges!".</desc>
+      <vocab cmd='drop' event='engineering.badge.2'></vocab>
+   </object>
+
+   <object type='static' start='713' visibility='0' size='1' weight='1'>
+      <name>badge</name>
+      <id>obj_staticbadge</id>
+      <desc>The badge is imprinted with a chip that can be read by a scanner. Where the name should be, it reads "Badges? We don't need no stinkin' badges!".</desc>
+      <vocab cmd='get' event='engineering.badge.1'></vocab>
+      <vocab cmd='take' event='engineering.badge.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>gold plastic crown</name>
+      <id>obj_crown</id>
+      <desc>Instead of gems, the chintzy crown is encrusted with twinkling LED lights that flash the words "Liberty Explorer of the Week"</desc>
+   </object>
+
+   <object type='static' start='713' visibility='100' size='1' weight='1' flags='i'>
+      <name>red button</name>
+      <id>obj_button</id>
+      <desc>It's a big red button by the door, with the word "walkway" under it.</desc>
+      <vocab cmd='press' event='engineering.button.1'></vocab>
+      <vocab cmd='push' event='engineering.button.1'></vocab>
+   </object>
+
+</object-list>

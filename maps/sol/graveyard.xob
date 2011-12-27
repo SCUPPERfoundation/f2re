@@ -1,0 +1,989 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='77'>
+
+   <object type='static' start='783' visibility='100' size='1' weight='1'>
+      <name>Wedgewood</name>
+      <id>obj_wedgewood</id>
+      <desc>Wedgewood is wearing a plain grey suit and carrying a briefcase in one hand and a clipboard in the other - he is the very image of the perfect accountant. His lined face and thinning hair are testament to the stresses of his job.</desc>
+      <vocab cmd='wedgewood' event='mobiles.wedgewood.1'></vocab>
+   </object>
+
+   <object type='static' start='979' visibility='0' size='1' weight='1' flags='i'>
+      <name>spade</name>
+      <id>obj_1spade</id>
+      <desc>The blade part of the spade is rusty, and it's not fixed very well to the handle part - this was a cheap spade to begin with, and it hasn't been well taken care of.</desc>
+      <vocab cmd='get' event='objects.spade.1'></vocab>
+      <vocab cmd='take' event='objects.spade.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='3' flags='ist'>
+      <name>spade</name>
+      <id>obj_spade</id>
+      <desc>The blade part of the spade is rusty, and it's not fixed very well to the handle part - this was a cheap spade to begin with, and it hasn't been well taken care of.</desc>
+      <vocab cmd='drop' event='objects.spade.4'></vocab>
+      <vocab cmd='use' event='objects.spade.5'></vocab>
+   </object>
+
+   <object type='static' start='979' visibility='0' size='1' weight='1' flags='i'>
+      <name>rake</name>
+      <id>obj_1rake</id>
+      <desc>The long wooden handle has been crudely fixed to the business end of the rake. It doesn't look as if it would be very easy to use.</desc>
+      <vocab cmd='get' event='objects.rake.1'></vocab>
+      <vocab cmd='take' event='objects.rake.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='3' flags='ist'>
+      <name>rake</name>
+      <id>obj_rake</id>
+      <desc>The long wooden handle has been crudely fixed to the business end of the rake. It doesn't feel balanced properly, and would not be very easy to use.</desc>
+      <vocab cmd='drop' event='objects.rake.4'></vocab>
+      <vocab cmd='use' event='objects.rake.5'></vocab>
+   </object>
+
+   <object type='static' start='979' visibility='0' size='1' weight='1' flags='d'>
+      <name>shears</name>
+      <id>obj_1shears</id>
+      <desc>The blades are rusty and not very sharp, and the handles made from rough wood which would give you blisters if you used the shears for very long.</desc>
+      <vocab cmd='get' event='objects.shears.1'></vocab>
+      <vocab cmd='take' event='objects.shears.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='3' flags='dst'>
+      <name>shears</name>
+      <id>obj_shears</id>
+      <desc>The blades are rusty and not very sharp, and the handles made from rough wood which you can feel would give you blisters if you used the shears for very long.</desc>
+      <vocab cmd='drop' event='objects.shears.4'></vocab>
+      <vocab cmd='use' event='objects.shears.5'></vocab>
+   </object>
+
+   <object type='static' start='979' visibility='0' size='1' weight='1' flags='d'>
+      <name>wheelbarrow</name>
+      <id>obj_barrow</id>
+      <desc>It looks like a standard wheelbarrow - one big wheel at the front, and two handles which you use to push it. The wheel looks wonky, and the barrow part looks as if it hasn't been cleaned for years.</desc>
+      <vocab cmd='get' event='objects.wheelbarrow.1'></vocab>
+      <vocab cmd='take' event='objects.wheelbarrow.1'></vocab>
+      <vocab cmd='use' event='objects.wheelbarrow.2'></vocab>
+      <vocab cmd='wheel' event='objects.wheelbarrow.2'></vocab>
+   </object>
+
+   <object type='static' start='979' visibility='0' size='1' weight='1' flags='d'>
+      <name>urn</name>
+      <id>obj_1urn</id>
+      <desc>The urns are all identical - large pottery jars with a dark red glaze, with a small plaque inset which would tell you whose remains were inside, if they weren't all covered with dust.</desc>
+      <vocab cmd='get' event='objects.urn.1'></vocab>
+      <vocab cmd='take' event='objects.urn.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>urn</name>
+      <id>obj_urn</id>
+      <desc>It is a large pottery jar with a dark red glaze - it's heavier than it looks. A small plaque on the side of the urn is smeared with dust and dirt, which conceals the name written on it.</desc>
+      <vocab cmd='drop' event='objects.urn.4'></vocab>
+      <vocab cmd='open' event='objects.urn.5'></vocab>
+      <vocab cmd='empty' event='objects.urn.6'></vocab>
+   </object>
+
+   <object type='static' start='980' visibility='0' size='1' weight='1' flags='d'>
+      <name>wood</name>
+      <id>obj_1wood</id>
+      <desc>The planks were once part of a coffin, but are now a heap of splintered timber, fit for nothing except starting a fire.</desc>
+      <vocab cmd='get' event='objects.wood.1'></vocab>
+      <vocab cmd='take' event='objects.wood.1'></vocab>
+   </object>
+
+   <object type='static' start='980' visibility='0' size='1' weight='1' flags='d'>
+      <name>coffin</name>
+      <id>obj_2wood</id>
+      <desc>The planks were once part of a coffin, but are now a heap of splintered timber, fit for nothing except starting a fire.</desc>
+      <vocab cmd='get' event='objects.wood.1'></vocab>
+      <vocab cmd='take' event='objects.wood.1'></vocab>
+   </object>
+
+   <object type='static' start='1040' visibility='0' size='1' weight='4' flags='d'>
+      <name>coffin</name>
+      <id>obj_coffin</id>
+      <desc>These are not new coffins - they look as if they were once buried, but have been dug up and the lids prised off. There's no sign of what happened to their previous occupants.</desc>
+      <vocab cmd='get' event='objects.coffin.1'></vocab>
+      <vocab cmd='take' event='objects.coffin.1'></vocab>
+   </object>
+
+   <object type='static' start='1040' visibility='0' size='1' weight='1' flags='d'>
+      <name>worm</name>
+      <id>obj_worm</id>
+      <desc>The worms are long and wriggly and they move with a sort of writhing motion, leaving a trail of slime behind them.</desc>
+      <vocab cmd='get' event='objects.worm.1'></vocab>
+      <vocab cmd='take' event='objects.worm.1'></vocab>
+      <vocab cmd='eat' event='objects.worm.2'></vocab>
+   </object>
+
+   <object type='static' start='1104' visibility='0' size='1' weight='1' flags='d'>
+      <name>fungus</name>
+      <id>obj_fungus</id>
+      <desc>If it were possible to identify poisonous funguses on sight, you would definitely assume these are. They are grey and spongy-looking, with brown splodges here and there, and they give off a pungent odor which is very unpleasant.</desc>
+      <vocab cmd='get' event='objects.fungus.1'></vocab>
+      <vocab cmd='take' event='objects.fungus.1'></vocab>
+      <vocab cmd='eat' event='objects.fungus.2'></vocab>
+   </object>
+
+   <object type='static' start='1106' visibility='0' size='1' weight='1' flags='d'>
+      <name>bandage</name>
+      <id>obj_1bandage</id>
+      <desc>The bandages are of varying length, and are very stained - they have obviously been used. The fabric is starting to fray at the edges.</desc>
+      <vocab cmd='get' event='objects.bandage.1'></vocab>
+      <vocab cmd='take' event='objects.bandage.1'></vocab>
+   </object>
+
+   <object type='static' start='1106' visibility='0' size='1' weight='1' flags='d'>
+      <name>bandages</name>
+      <id>obj_2bandage</id>
+      <desc>The bandages are of varying length, and are very stained - they have obviously been used. The fabric is starting to fray at the edges.</desc>
+      <vocab cmd='get' event='objects.bandage.1'></vocab>
+      <vocab cmd='take' event='objects.bandage.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pst'>
+      <name>bandages</name>
+      <id>obj_bandage</id>
+      <desc>The bandages are of varying length, and are very stained - they have obviously been used. The fabric is starting to fray at the edges.</desc>
+      <vocab cmd='drop' event='objects.bandage.4'></vocab>
+      <vocab cmd='use' event='objects.bandage.5'></vocab>
+      <vocab cmd='knot' event='objects.bandage.8'></vocab>
+      <vocab cmd='tie' event='objects.bandage.8'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>lasso</name>
+      <id>obj_lasso</id>
+      <desc>The lasso has been made out of bandages - a rather unorthodox use for them!</desc>
+      <vocab cmd='drop' event='objects.lasso.1'></vocab>
+      <vocab cmd='use' event='objects.lasso.2'></vocab>
+      <vocab cmd='swing' event='objects.lasso.2'></vocab>
+      <vocab cmd='throw' event='objects.lasso.2'></vocab>
+   </object>
+
+   <object type='static' start='1108' visibility='0' size='1' weight='1' flags='d'>
+      <name>skull</name>
+      <id>obj_1skull</id>
+      <desc>The skulls were once placed carefully in regimented rows on a shelf, but have now been tumbled every which way. Some of them have been knocked to the floor.</desc>
+      <vocab cmd='get' event='objects.skull.1'></vocab>
+      <vocab cmd='take' event='objects.skull.1'></vocab>
+   </object>
+
+   <object type='static' start='1108' visibility='0' size='1' weight='1' flags='d'>
+      <name>skulls</name>
+      <id>obj_2skull</id>
+      <desc>The skulls were once placed carefully in regimented rows on a shelf, but have now been tumbled every which way. Some of them have been knocked to the floor.</desc>
+      <vocab cmd='get' event='objects.skull.1'></vocab>
+      <vocab cmd='take' event='objects.skull.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>skull</name>
+      <id>obj_skull</id>
+      <desc>The skull is completely intact, and it grins up at you with a perfect set of teeth.</desc>
+      <vocab cmd='drop' event='objects.skull.4'></vocab>
+      <vocab cmd='use' event='objects.skull.5'></vocab>
+      <vocab cmd='juggle' event='objects.skull.6'></vocab>
+      <vocab cmd='kick' event='objects.skull.7'></vocab>
+   </object>
+
+   <object type='static' start='1108' visibility='0' size='1' weight='1' flags='d'>
+      <name>bone</name>
+      <id>obj_1bone</id>
+      <desc>The bones were originally stacked neatly in piles, but have now been all jumbled up into random heaps.</desc>
+      <vocab cmd='get' event='objects.bone.1'></vocab>
+      <vocab cmd='take' event='objects.bone.1'></vocab>
+   </object>
+
+   <object type='static' start='1108' visibility='0' size='1' weight='1' flags='d'>
+      <name>bones</name>
+      <id>obj_2bone</id>
+      <desc>The bones were originally stacked neatly in piles, but have now been all jumbled up into random heaps.</desc>
+      <vocab cmd='get' event='objects.bone.1'></vocab>
+      <vocab cmd='take' event='objects.bone.1'></vocab>
+   </object>
+
+   <object type='static' start='1108' visibility='0' size='1' weight='1' flags='d'>
+      <name>skeleton</name>
+      <id>obj_1skeleton</id>
+      <desc>The bones were originally stacked neatly in piles, but have now been all jumbled up into random heaps.</desc>
+      <vocab cmd='get' event='objects.bone.2'></vocab>
+      <vocab cmd='take' event='objects.bone.2'></vocab>
+   </object>
+
+   <object type='static' start='1108' visibility='0' size='1' weight='1' flags='d'>
+      <name>skeletons</name>
+      <id>obj_2skeleton</id>
+      <desc>The bones were originally stacked neatly in piles, but have now been all jumbled up into random heaps.</desc>
+      <vocab cmd='get' event='objects.bone.2'></vocab>
+      <vocab cmd='take' event='objects.bone.2'></vocab>
+   </object>
+
+   <object type='static' start='1169' visibility='0' size='1' weight='1' flags='d'>
+      <name>insect</name>
+      <id>obj_1insect</id>
+      <desc>The insects have lots of legs, which they use to great effect, skittering across the tree roots at great speed. Their long jaws bite into the rotting wood, bringing the time when the tree will fall ever closer.</desc>
+      <vocab cmd='get' event='objects.insect.1'></vocab>
+      <vocab cmd='take' event='objects.insect.1'></vocab>
+   </object>
+
+   <object type='static' start='1169' visibility='0' size='1' weight='1' flags='d'>
+      <name>insects</name>
+      <id>obj_2insect</id>
+      <desc>The insects have lots of legs, which they use to great effect, skittering across the tree roots at great speed. Their long jaws bite into the rotting wood, bringing the time when the tree will fall ever closer.</desc>
+      <vocab cmd='get' event='objects.insect.1'></vocab>
+      <vocab cmd='take' event='objects.insect.1'></vocab>
+   </object>
+
+   <object type='static' start='1042' visibility='0' size='1' weight='1' flags='d'>
+      <name>vase</name>
+      <id>obj_1vase</id>
+      <desc>The vase is tall and thin, quite an elegant shape, and is made of glass which must have sparkled very prettily when it was new. Now, it's stained and cracked - it's a wonder it's still intact.</desc>
+      <vocab cmd='get' event='objects.rose.1'></vocab>
+      <vocab cmd='take' event='objects.rose.1'></vocab>
+   </object>
+
+   <object type='static' start='1042' visibility='0' size='1' weight='1' flags='d'>
+      <name>rose</name>
+      <id>obj_1rose</id>
+      <desc>The petals have shrivelled and dried up; they are now brown, and it's impossible to tell what color the roses were originally. The stems all have wicked thorns on them.</desc>
+      <vocab cmd='get' event='objects.rose.2'></vocab>
+      <vocab cmd='take' event='objects.rose.2'></vocab>
+   </object>
+
+   <object type='static' start='1042' visibility='0' size='1' weight='1' flags='d'>
+      <name>roses</name>
+      <id>obj_2rose</id>
+      <desc>The petals have shrivelled and dried up; they are now brown, and it's impossible to tell what color the roses were originally. The stems all have wicked thorns on them.</desc>
+      <vocab cmd='get' event='objects.rose.2'></vocab>
+      <vocab cmd='take' event='objects.rose.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>dead rose</name>
+      <id>obj_rose</id>
+      <desc>The petals have shrivelled and dried up, any leaves are long gone, but the stem still has some very sharp thorns on it.</desc>
+      <vocab cmd='drop' event='objects.rose.5'></vocab>
+      <vocab cmd='smell' event='objects.rose.6'></vocab>
+   </object>
+
+   <object type='static' start='1044' visibility='0' size='1' weight='1' flags='d'>
+      <name>corpse</name>
+      <id>obj_1corpse</id>
+      <desc>The bodies are all human male adults, and don't appear to have decayed very much. They were once formally dressed in smart outfits, but now the clothes are in tatters.</desc>
+      <vocab cmd='get' event='objects.corpse.1'></vocab>
+      <vocab cmd='take' event='objects.corpse.1'></vocab>
+   </object>
+
+   <object type='static' start='1044' visibility='0' size='1' weight='1' flags='d'>
+      <name>corpses</name>
+      <id>obj_2corpse</id>
+      <desc>The bodies are all human male adults, and don't appear to have decayed very much. They were once formally dressed in smart outfits, but now the clothes are in tatters.</desc>
+      <vocab cmd='get' event='objects.corpse.1'></vocab>
+      <vocab cmd='take' event='objects.corpse.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='10' flags='ist'>
+      <name>corpse</name>
+      <id>obj_corpse</id>
+      <desc>It's a dead body, in a reasonable state of preservation. There's not much more to be said about it. It was dressed in a smart black suit with a red bow tie and cummerbund, but the clothes are torn and dirty now.</desc>
+      <vocab cmd='use' event='objects.corpse.4'></vocab>
+      <vocab cmd='drop' event='objects.corpse.5'></vocab>
+   </object>
+
+   <object type='static' start='1107' visibility='0' size='1' weight='1' flags='d'>
+      <name>crow</name>
+      <id>obj_1crow</id>
+      <desc>The crow looks sleek and very well fed. You hope its diet consists of insects and worms and so on rather than anything more sinister. It fixes you with its beady black eye and gives a raucous squawk.</desc>
+      <vocab cmd='get' event='objects.crow.1'></vocab>
+      <vocab cmd='take' event='objects.crow.1'></vocab>
+      <vocab cmd='kill' event='objects.crow.2'></vocab>
+   </object>
+
+   <object type='static' start='851' visibility='0' size='1' weight='1' flags='ip'>
+      <name>leaves</name>
+      <id>obj_1leaves</id>
+      <desc>The dead leaves have been piled up against the foot of the monument in a tidy heap.</desc>
+      <vocab cmd='get' event='objects.leaves.1'></vocab>
+      <vocab cmd='move' event='objects.leaves.1'></vocab>
+      <vocab cmd='search' event='objects.leaves.1'></vocab>
+      <vocab cmd='rake' event='objects.leaves.1'></vocab>
+      <vocab cmd='take' event='objects.leaves.1'></vocab>
+   </object>
+
+   <object type='static' start='1241' visibility='100' size='1' weight='1' flags='i'>
+      <name>zombie</name>
+      <id>obj_cedric</id>
+      <desc>Cedric's flesh is grey and lumps appear to be falling off in places. He is dressed in incredibly tattered clothing, just enough to preserve modesty, assuming that he still has the private parts to be modest about!</desc>
+      <vocab cmd='kill' event='cedric.kill.1'></vocab>
+      <vocab cmd='catch' event='cedric.catch.1'></vocab>
+      <vocab cmd='capture' event='cedric.catch.1'></vocab>
+      <vocab cmd='lasso' event='cedric.catch.1'></vocab>
+      <vocab cmd='zombie' event='cedric.chat.1'></vocab>
+   </object>
+
+   <object type='static' start='1109' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_stone</id>
+      <desc>Desc given by event.</desc>
+      <vocab cmd='examine' event='castle.entrance.1'></vocab>
+      <vocab cmd='ex' event='castle.entrance.1'></vocab>
+      <vocab cmd='press' event='castle.entrance.4'></vocab>
+      <vocab cmd='push' event='castle.entrance.4'></vocab>
+   </object>
+
+   <object type='static' start='1109' visibility='0' size='1' weight='1'>
+      <name>stones</name>
+      <id>obj_1stone</id>
+      <desc>Desc given by event.</desc>
+      <vocab cmd='examine' event='castle.entrance.1'></vocab>
+      <vocab cmd='ex' event='castle.entrance.1'></vocab>
+      <vocab cmd='press' event='castle.entrance.4'></vocab>
+      <vocab cmd='push' event='castle.entrance.4'></vocab>
+   </object>
+
+   <object type='static' start='981' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_2stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1045' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_3stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1109' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_4stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1173' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_5stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1238' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_6stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1239' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_7stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1240' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_8stone</id>
+      <desc>You peer at the stones, but can't see anything unusual about them.</desc>
+      <vocab cmd='press' event='castle.entrance.7'></vocab>
+      <vocab cmd='push' event='castle.entrance.7'></vocab>
+   </object>
+
+   <object type='static' start='1241' visibility='0' size='1' weight='1' flags='i'>
+      <name>cedric</name>
+      <id>obj_1cedric</id>
+      <desc>Its flesh is grey and lumps appear to be falling off in places. It is dressed in incredibly tattered clothing, just enough to preserve modesty, assuming that the zombie still has the parts to be modest about!</desc>
+      <vocab cmd='kill' event='cedric.kill.1'></vocab>
+      <vocab cmd='catch' event='cedric.catch.1'></vocab>
+      <vocab cmd='capture' event='cedric.catch.1'></vocab>
+      <vocab cmd='lasso' event='cedric.catch.1'></vocab>
+      <vocab cmd='cedric' event='cedric.chat.1'></vocab>
+   </object>
+
+   <object type='static' start='1672' visibility='0' size='1' weight='1'>
+      <name>stone</name>
+      <id>obj_9stone</id>
+      <desc>Just like the castle wall on the outside, you can see one of the stones is actually a button.</desc>
+      <vocab cmd='press' event='castle.exit.1'></vocab>
+      <vocab cmd='push' event='castle.exit.1'></vocab>
+   </object>
+
+   <object type='static' start='1672' visibility='0' size='1' weight='1'>
+      <name>stones</name>
+      <id>obj_10stone</id>
+      <desc>Just like the castle wall on the outside, you can see one of the stones is actually a button.</desc>
+      <vocab cmd='press' event='castle.exit.1'></vocab>
+      <vocab cmd='push' event='castle.exit.1'></vocab>
+   </object>
+
+   <object type='static' start='1674' visibility='0' size='1' weight='1'>
+      <name>latch</name>
+      <id>obj_latch</id>
+      <desc>The latch is the only thing holding the door closed, so to open the door just lift it.</desc>
+      <vocab cmd='lift' event='castle.entrance.8'></vocab>
+   </object>
+
+   <object type='static' start='1675' visibility='0' size='1' weight='1'>
+      <name>shelves</name>
+      <id>obj_shelves</id>
+      <desc>The shelves are tall and heavy-looking. From behind them, you can't see what the shelves hold.</desc>
+      <vocab cmd='push' event='castle.entrance.9'></vocab>
+      <vocab cmd='pull' event='castle.entrance.10'></vocab>
+      <vocab cmd='slide' event='castle.entrance.11'></vocab>
+   </object>
+
+   <object type='static' start='1675' visibility='0' size='1' weight='1'>
+      <name>latch</name>
+      <id>obj_1latch</id>
+      <desc>The latch is the only thing holding the door closed, so to open the door just lift it.</desc>
+      <vocab cmd='lift' event='castle.exit.2'></vocab>
+   </object>
+
+   <object type='static' start='1677' visibility='0' size='1' weight='1'>
+      <name>shelves</name>
+      <id>obj_1shelves</id>
+      <desc>The shelves are tall and heavy-looking. From behind them, you can't see what the shelves hold.</desc>
+      <vocab cmd='pull' event='castle.exit.3'></vocab>
+      <vocab cmd='push' event='castle.exit.4'></vocab>
+      <vocab cmd='slide' event='castle.exit.5'></vocab>
+   </object>
+
+   <object type='static' start='1563' visibility='100' size='1' weight='1'>
+      <name>Brian</name>
+      <id>obj_brian</id>
+      <desc>Brian's flesh is rotting and he smells terrible, but there's a look of intelligence coupled with fierce determination on his pallid face.</desc>
+      <vocab cmd='brian' event='brian.chat.1'></vocab>
+   </object>
+
+   <object type='static' start='1435' visibility='0' size='1' weight='1'>
+      <name>fireplace</name>
+      <id>obj_fireplace</id>
+      <desc>The fireplace is large - wide, deep and high - but it looks as if it hasn't been used for some time. There is not a trace of ash on the bottom, and the soot stains on the sides appear to have been there for ages.</desc>
+      <vocab cmd='search' event='castle.fireplace.1'></vocab>
+   </object>
+
+   <object type='static' start='1435' visibility='0' size='1' weight='1'>
+      <name>lever</name>
+      <id>obj_lever</id>
+      <desc>Description by event.</desc>
+      <vocab cmd='ex' event='castle.fireplace.4'></vocab>
+      <vocab cmd='examine' event='castle.fireplace.4'></vocab>
+      <vocab cmd='pull' event='castle.fireplace.7'></vocab>
+   </object>
+
+   <object type='static' start='1436' visibility='0' size='1' weight='1'>
+      <name>lever</name>
+      <id>obj_lever</id>
+      <desc>The lever is set into the wall next to the almost invisible secret door, which does rather give the game away.</desc>
+      <vocab cmd='pull' event='castle.fireplace.10'></vocab>
+   </object>
+
+   <object type='static' start='1428' visibility='0' size='1' weight='1'>
+      <name>bracket</name>
+      <id>obj_bracket</id>
+      <desc>Desc by event.</desc>
+      <vocab cmd='ex' event='castle.cellar.1'></vocab>
+      <vocab cmd='examine' event='castle.cellar.1'></vocab>
+      <vocab cmd='twist' event='castle.cellar.4'></vocab>
+      <vocab cmd='turn' event='castle.cellar.4'></vocab>
+   </object>
+
+   <object type='static' start='1876' visibility='0' size='1' weight='1'>
+      <name>wire</name>
+      <id>obj_1wire</id>
+      <desc>There are several lengths of wire half-hidden amongst the junk, but they are tangled up with each other and with some of the other stuff in the room.</desc>
+      <vocab cmd='get' event='objects.wire.1'></vocab>
+      <vocab cmd='take' event='objects.wire.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pst'>
+      <name>wire</name>
+      <id>obj_wire</id>
+      <desc>It's a long piece of wire with a copper core surrounded by an insulating sleeve - just a standard piece of wire used for all kinds of household equipment.</desc>
+      <vocab cmd='use' event='objects.wire.4'></vocab>
+      <vocab cmd='attach' event='objects.wire.5'></vocab>
+      <vocab cmd='drop' event='objects.wire.6'></vocab>
+   </object>
+
+   <object type='static' start='1812' visibility='0' size='1' weight='1'>
+      <name>cable</name>
+      <id>obj_1cable</id>
+      <desc>You can see several lengths of heavy-duty cable coiled up amongst the discarded equipment.</desc>
+      <vocab cmd='get' event='objects.cable.1'></vocab>
+      <vocab cmd='take' event='objects.cable.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pst'>
+      <name>cable</name>
+      <id>obj_cable</id>
+      <desc>It's a piece of heavy-duty cable, of the kind used for industrial equipment. A thick copper core is covered by a sleeve of plastic.</desc>
+      <vocab cmd='use' event='objects.cable.4'></vocab>
+      <vocab cmd='attach' event='objects.cable.5'></vocab>
+      <vocab cmd='drop' event='objects.cable.6'></vocab>
+   </object>
+
+   <object type='static' start='1812' visibility='0' size='1' weight='1'>
+      <name>extension cable</name>
+      <id>obj_1extcable</id>
+      <desc>Hidden behind some other junk are several extension cables, designed to extend pieces of cable that are not long enough for whatever it is they are going to be used for.</desc>
+      <vocab cmd='get' event='objects.extcable.1'></vocab>
+      <vocab cmd='take' event='objects.extcable.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pst'>
+      <name>extension cable</name>
+      <id>obj_extcable</id>
+      <desc>The extension cable is designed to extend a piece of cable that is not long enough for whatever use it is intended for.</desc>
+      <vocab cmd='use' event='objects.extcable.4'></vocab>
+      <vocab cmd='attach' event='objects.extcable.5'></vocab>
+      <vocab cmd='drop' event='objects.extcable.6'></vocab>
+   </object>
+
+   <object type='static' start='1748' visibility='0' size='1' weight='1'>
+      <name>duct tape</name>
+      <id>obj_1tape</id>
+      <desc>Tucked away in between some of the discarded junk in the room, you can see some duct tape - not in nice neat rolls, but scraps of it stuck onto various other things.</desc>
+      <vocab cmd='get' event='objects.tape.1'></vocab>
+      <vocab cmd='take' event='objects.tape.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pst'>
+      <name>duct tape</name>
+      <id>obj_tape</id>
+      <desc>You are carrying several strips of duct tape, slightly creased up but still usable despite the crinkles.</desc>
+      <vocab cmd='use' event='objects.tape.4'></vocab>
+      <vocab cmd='attach' event='objects.tape.5'></vocab>
+      <vocab cmd='stick' event='objects.tape.5'></vocab>
+      <vocab cmd='drop' event='objects.tape.6'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>machine</name>
+      <id>obj_machine</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='machine.examine.1'></vocab>
+      <vocab cmd='examine' event='machine.examine.1'></vocab>
+      <vocab cmd='use' event='machine.use.1'></vocab>
+      <vocab cmd='operate' event='machine.use.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>slab</name>
+      <id>obj_slab</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='objects.slab.1'></vocab>
+      <vocab cmd='examine' event='objects.slab.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>corpse</name>
+      <id>obj_labcorpse</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='objects.corpse.10'></vocab>
+      <vocab cmd='examine' event='objects.corpse.10'></vocab>
+      <vocab cmd='get' event='objects.corpse.14'></vocab>
+      <vocab cmd='take' event='objects.corpse.14'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>wire</name>
+      <id>obj_labwire</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='wire.examine.1'></vocab>
+      <vocab cmd='examine' event='wire.examine.1'></vocab>
+      <vocab cmd='get' event='wire.get.1'></vocab>
+      <vocab cmd='take' event='wire.get.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>cable</name>
+      <id>obj_labcable</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='cable.examine.1'></vocab>
+      <vocab cmd='examine' event='cable.examine.1'></vocab>
+      <vocab cmd='get' event='cable.get.1'></vocab>
+      <vocab cmd='take' event='cable.get.1'></vocab>
+      <vocab cmd='insulate' event='cables.insulate.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>wire</name>
+      <id>obj_towerwire</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='wire.examine.6'></vocab>
+      <vocab cmd='examine' event='wire.examine.6'></vocab>
+      <vocab cmd='get' event='wire.get.1'></vocab>
+      <vocab cmd='take' event='wire.get.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>cable</name>
+      <id>obj_towercable</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='cable.examine.3'></vocab>
+      <vocab cmd='examine' event='cable.examine.3'></vocab>
+      <vocab cmd='get' event='cable.get.1'></vocab>
+      <vocab cmd='take' event='cable.get.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>wire to machine</name>
+      <id>obj_lab1wire</id>
+      <desc>I can't find anything called wire in the vicinity!</desc>
+      <vocab cmd='attach' event='wire.attach.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>cable to machine</name>
+      <id>obj_lab1cable</id>
+      <desc>I can't find anything called cable in the vicinity!</desc>
+      <vocab cmd='attach' event='cable.attach.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>extension cable to cable</name>
+      <id>obj_labextcable</id>
+      <desc>I can't find anything called extension in the vicinity!</desc>
+      <vocab cmd='attach' event='cable.join.1'></vocab>
+      <vocab cmd='join' event='cable.join.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>cables</name>
+      <id>obj_labcables</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='cables.examine.1'></vocab>
+      <vocab cmd='examine' event='cables.examine.1'></vocab>
+      <vocab cmd='get' event='cable.get.1'></vocab>
+      <vocab cmd='take' event='cable.get.1'></vocab>
+      <vocab cmd='insulate' event='cables.insulate.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>lightning rod</name>
+      <id>obj_rod</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='rod.examine.1'></vocab>
+      <vocab cmd='examine' event='rod.examine.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>cable to lightning rod</name>
+      <id>obj_1rod</id>
+      <desc>I can't find anything called cable in the vicinity!</desc>
+      <vocab cmd='attach' event='rod.cable.1'></vocab>
+      <vocab cmd='join' event='rod.cable.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>wire to lightning rod</name>
+      <id>obj_2rod</id>
+      <desc>I can't find anything called wire in the vicinity!</desc>
+      <vocab cmd='attach' event='rod.wire.1'></vocab>
+      <vocab cmd='join' event='rod.wire.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>join</name>
+      <id>obj_join</id>
+      <desc>I can't find anything called join in the vicinity!</desc>
+      <vocab cmd='insulate' event='cables.insulate.1'></vocab>
+   </object>
+
+   <object type='static' start='1819' visibility='0' size='1' weight='1'>
+      <name>handle</name>
+      <id>obj_handle</id>
+      <desc>The handle is what controls the machine - pull it, and the machine will do its thing, whatever that is.</desc>
+      <vocab cmd='pull' event='machine.use.1'></vocab>
+   </object>
+
+   <object type='static' start='1498' visibility='0' size='1' weight='1'>
+      <name>armor</name>
+      <id>obj_armor</id>
+      <desc>The armor is pseudo-medieval, the kind of thing you see in holos and probably not in the least authentic. It's covered in dust but for some reason remains relatively undamaged with hardly any traces of rust.</desc>
+      <vocab cmd='get' event='objects.armor.1'></vocab>
+      <vocab cmd='take' event='objects.armor.1'></vocab>
+      <vocab cmd='wear' event='objects.armor.2'></vocab>
+      <vocab cmd='dismantle' event='objects.armor.3'></vocab>
+   </object>
+
+   <object type='static' start='1433' visibility='0' size='1' weight='1'>
+      <name>rocking horse</name>
+      <id>obj_horse</id>
+      <desc>Its dark wood has been highly polished by generations of youthful bottoms. Once, its mane and tail were made from real horsehair, but childish fingers have yanked most of it out over the years, leaving just a few forlorn tufts.</desc>
+      <vocab cmd='get' event='objects.horse.1'></vocab>
+      <vocab cmd='take' event='objects.horse.1'></vocab>
+      <vocab cmd='rock' event='objects.horse.2'></vocab>
+      <vocab cmd='ride' event='objects.horse.3'></vocab>
+   </object>
+
+   <object type='static' start='1435' visibility='0' size='1' weight='1'>
+      <name>rations</name>
+      <id>obj_rations</id>
+      <desc>The box contains the kind of concentrated food rations favored by the military authorities and loathed by the troops themselves. There seem to be enough here to last one person for several years.</desc>
+      <vocab cmd='get' event='objects.rations.1'></vocab>
+      <vocab cmd='take' event='objects.rations.1'></vocab>
+      <vocab cmd='eat' event='objects.rations.1'></vocab>
+   </object>
+
+   <object type='static' start='1678' visibility='0' size='1' weight='1'>
+      <name>implements</name>
+      <id>obj_implements</id>
+      <desc>The implements are so rusty and covered with muck that it's impossible to tell what they actually are.</desc>
+      <vocab cmd='get' event='objects.implements.1'></vocab>
+      <vocab cmd='take' event='objects.implements.1'></vocab>
+      <vocab cmd='use' event='objects.implements.1'></vocab>
+   </object>
+
+   <object type='static' start='1677' visibility='0' size='1' weight='1'>
+      <name>wine</name>
+      <id>obj_1wine</id>
+      <desc>The bottles of wine are covered with dust and cobwebs, so much so that it is impossible to read the labels and see whether they are supposed to be any good or not.</desc>
+      <vocab cmd='get' event='objects.wine.1'></vocab>
+      <vocab cmd='take' event='objects.wine.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='pst'>
+      <name>wine</name>
+      <id>obj_wine</id>
+      <desc>The bottle of wine is covered with dust and cobwebs, so much so that it is impossible to read the label and see just what it is.</desc>
+      <vocab cmd='drink' event='objects.wine.2'></vocab>
+      <vocab cmd='open' event='objects.wine.2'></vocab>
+      <vocab cmd='drop' event='objects.wine.3'></vocab>
+   </object>
+
+   <object type='static' start='1677' visibility='0' size='1' weight='1'>
+      <name>bottle</name>
+      <id>obj_2wine</id>
+      <desc>The bottles of wine are covered with dust and cobwebs, so much so that it is impossible to read the labels and see whether they are supposed to be any good or not.</desc>
+      <vocab cmd='get' event='objects.wine.1'></vocab>
+      <vocab cmd='take' event='objects.wine.1'></vocab>
+   </object>
+
+   <object type='static' start='1813' visibility='0' size='1' weight='1'>
+      <name>zombies</name>
+      <id>obj_zombies</id>
+      <desc>The zombies' decaying flesh is of course a horrible sight, but even worse is the way they are all working in unison, with blank stares on their faces. Around their necks each one is wearing a metallic collar.</desc>
+      <vocab cmd='zombies' event='objects.zombies.1'></vocab>
+   </object>
+
+   <object type='static' start='1813' visibility='0' size='1' weight='1'>
+      <name>zombie</name>
+      <id>obj_1zombies</id>
+      <desc>The zombies' decaying flesh is of course a horrible sight, but even worse is the way they are all working in unison, with blank stares on their faces. Around their necks each one is wearing a metallic collar.</desc>
+      <vocab cmd='zombie' event='objects.zombies.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>computer</name>
+      <id>obj_computer</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='computer.examine.1'></vocab>
+      <vocab cmd='examine' event='computer.examine.1'></vocab>
+      <vocab cmd='get' event='computer.misc.1'></vocab>
+      <vocab cmd='take' event='computer.misc.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>keyboard</name>
+      <id>obj_keyboard</id>
+      <desc>It's a standard keyboard. It looks as if a beverage of some kind was once spilt on it and not cleaned up properly - some of the keys are very sticky. If you want to give commands to the computer, type them: 'TYPE command'.</desc>
+      <vocab cmd='get' event='computer.keyboard.1'></vocab>
+      <vocab cmd='take' event='computer.keyboard.1'></vocab>
+      <vocab cmd='search' event='computer.keyboard.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>screen</name>
+      <id>obj_screen</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='computer.screen.1'></vocab>
+      <vocab cmd='examine' event='computer.screen.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>post-it note</name>
+      <id>obj_note</id>
+      <desc>The post-it note has the cryptic code 'GCS43EL' written on it.</desc>
+      <vocab cmd='get' event='computer.note.1'></vocab>
+      <vocab cmd='take' event='computer.note.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>slot</name>
+      <id>obj_slot</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='computer.slot.1'></vocab>
+      <vocab cmd='examine' event='computer.slot.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>type</name>
+      <id>obj_type</id>
+      <desc>I can't find anything called type in the vicinity!</desc>
+      <vocab cmd='type' event='computer.type.1'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>enter</name>
+      <id>obj_type</id>
+      <desc>I can't find anything called enter in the vicinity!</desc>
+      <vocab cmd='enter' event='computer.type.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>collar</name>
+      <id>obj_collar</id>
+      <desc>The collar is made of shiny metal, and it's about an inch wide and six inches in diameter. The inside of the collar has some kind of miniature electrodes studded all around it. On one side is a hinge, and on the other, a lock.</desc>
+      <vocab cmd='wear' event='objects.collar.4'></vocab>
+      <vocab cmd='drop' event='objects.collar.6'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>collar into slot</name>
+      <id>obj_1slot</id>
+      <desc>I can't find anything called collar in the vicinity!</desc>
+      <vocab cmd='put' event='computer.slot.4'></vocab>
+      <vocab cmd='insert' event='computer.slot.4'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>collar in slot</name>
+      <id>obj_2slot</id>
+      <desc>I can't find anything called collar in the vicinity!</desc>
+      <vocab cmd='put' event='computer.slot.4'></vocab>
+      <vocab cmd='insert' event='computer.slot.4'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>collar</name>
+      <id>obj_3slot</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='ex' event='computer.slot.9'></vocab>
+      <vocab cmd='examine' event='computer.slot.9'></vocab>
+      <vocab cmd='get' event='computer.slot.12'></vocab>
+      <vocab cmd='take' event='computer.slot.12'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>flipchart</name>
+      <id>obj_chart</id>
+      <desc>The flipchart is a large pad of paper balanced on a three-legged stand.  There are several pages to the flipchart, and all of them look like they've got something written on them.</desc>
+      <vocab cmd='get' event='objects.chart.1'></vocab>
+      <vocab cmd='take' event='objects.chart.1'></vocab>
+      <vocab cmd='read' event='objects.chart.2'></vocab>
+      <vocab cmd='flip' event='objects.chart.3'></vocab>
+   </object>
+
+   <object type='static' start='1814' visibility='0' size='1' weight='1'>
+      <name>noticeboard</name>
+      <id>obj_board</id>
+      <desc>It is covered with scraps of paper - some of them are pages torn out of books, some handwritten notes - if you read the board you can find out what some of them say.</desc>
+      <vocab cmd='get' event='objects.board.1'></vocab>
+      <vocab cmd='take' event='objects.board.1'></vocab>
+      <vocab cmd='read' event='objects.board.2'></vocab>
+   </object>
+
+   <object type='static' start='1813' visibility='0' size='1' weight='1'>
+      <name>collar</name>
+      <id>obj_2collar</id>
+      <desc>Each zombie is wearing a metallic collar around its neck. The collars are quite wide and look as if they must be uncomfortable.</desc>
+      <vocab cmd='get' event='objects.collar.5'></vocab>
+   </object>
+
+   <object type='static' start='1813' visibility='0' size='1' weight='1'>
+      <name>collars</name>
+      <id>obj_3collar</id>
+      <desc>Each zombie is wearing a metallic collar around its neck. The collars are quite wide and look as if they must be uncomfortable.</desc>
+      <vocab cmd='get' event='objects.collar.5'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>rod</name>
+      <id>obj_3rod</id>
+      <desc>Desc by events</desc>
+      <vocab cmd='ex' event='rod.examine.1'></vocab>
+      <vocab cmd='examine' event='rod.examine.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>cable to rod</name>
+      <id>obj_4rod</id>
+      <desc>I can't find anything called cable in the vicinity!</desc>
+      <vocab cmd='attach' event='rod.cable.1'></vocab>
+      <vocab cmd='join' event='rod.cable.1'></vocab>
+   </object>
+
+   <object type='static' start='1755' visibility='0' size='1' weight='1'>
+      <name>wire to rod</name>
+      <id>obj_5rod</id>
+      <desc>I can't find anything called wore in the vicinity!</desc>
+      <vocab cmd='attach' event='rod.wire.1'></vocab>
+      <vocab cmd='join' event='rod.wire.1'></vocab>
+   </object>
+
+   <object type='static' start='1876' visibility='0' size='1' weight='1'>
+      <name>stuff</name>
+      <id>obj_stuff</id>
+      <desc>There is all kinds of stuff here, it's like an Aladdin's cave of junk.</desc>
+      <vocab cmd='get' event='objects.stuff.1'></vocab>
+      <vocab cmd='take' event='objects.stuff.1'></vocab>
+      <vocab cmd='search' event='objects.stuff.1'></vocab>
+   </object>
+
+   <object type='static' start='1812' visibility='0' size='1' weight='1'>
+      <name>stuff</name>
+      <id>obj_1stuff</id>
+      <desc>There is all kinds of stuff here, it's like an Aladdin's cave of junk.</desc>
+      <vocab cmd='get' event='objects.stuff.1'></vocab>
+      <vocab cmd='take' event='objects.stuff.1'></vocab>
+      <vocab cmd='search' event='objects.stuff.1'></vocab>
+   </object>
+
+   <object type='static' start='1748' visibility='0' size='1' weight='1'>
+      <name>stuff</name>
+      <id>obj_2stuff</id>
+      <desc>There is all kinds of stuff here, it's like an Aladdin's cave of junk.</desc>
+      <vocab cmd='get' event='objects.stuff.1'></vocab>
+      <vocab cmd='take' event='objects.stuff.1'></vocab>
+      <vocab cmd='search' event='objects.stuff.1'></vocab>
+   </object>
+
+   <object type='static' start='1876' visibility='0' size='1' weight='1'>
+      <name>junk</name>
+      <id>obj_junk</id>
+      <desc>There is all kinds of stuff here, it's like an Aladdin's cave of junk.</desc>
+      <vocab cmd='get' event='objects.stuff.1'></vocab>
+      <vocab cmd='take' event='objects.stuff.1'></vocab>
+      <vocab cmd='search' event='objects.stuff.1'></vocab>
+   </object>
+
+   <object type='static' start='1812' visibility='0' size='1' weight='1'>
+      <name>junk</name>
+      <id>obj_1junk</id>
+      <desc>There is all kinds of stuff here, it's like an Aladdin's cave of junk.</desc>
+      <vocab cmd='get' event='objects.stuff.1'></vocab>
+      <vocab cmd='take' event='objects.stuff.1'></vocab>
+      <vocab cmd='search' event='objects.stuff.1'></vocab>
+   </object>
+
+   <object type='static' start='1748' visibility='0' size='1' weight='1'>
+      <name>junk</name>
+      <id>obj_2junk</id>
+      <desc>There is all kinds of stuff here, it's like an Aladdin's cave of junk.</desc>
+      <vocab cmd='get' event='objects.stuff.1'></vocab>
+      <vocab cmd='take' event='objects.stuff.1'></vocab>
+      <vocab cmd='search' event='objects.stuff.1'></vocab>
+   </object>
+
+</object-list>

@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<fed2-map title='horsell' version='1.00'>
+
+   <location num='217'>
+      <name>Study</name>
+      <desc>   You are in the vicar's study. Theological books line the walls, and in the middle is a large battered desk. All the drawers are locked. There is a door in the south wall.</desc>
+      <exits s='281' out='281'/>
+   </location>
+
+   <location num='218'>
+      <name>Kitchen</name>
+      <desc>   The kitchen is tiny and very neat. On an open hearth range victuals are cooking, and there is a delicious aroma in the air. The door is southwest, and steps lead down to the cellar.</desc>
+      <exits sw='281' down='284' out='281'/>
+   </location>
+
+   <location num='274'>
+      <name>Observatory</name>
+      <desc>   You are in a small, but highly professional astronomic observatory. All around are the artifacts of the owner's trade, telescopes, star catalogues and the like. There is a door to the southeast.</desc>
+      <exits se='339' out='339'/>
+   </location>
+
+   <location num='275'>
+      <name>Dead end</name>
+      <desc>   The road comes to a dead end, surrounded on all sides, except south, with featureless walls.</desc>
+      <exits s='339'/>
+   </location>
+
+   <location num='281'>
+      <name>Hall</name>
+      <desc>   You're standing in the hallway of a small vicarage. There are doors to the north, northeast and east. The exit is to the southwest.</desc>
+      <exits n='217' ne='218' e='282' sw='344' out='344'/>
+   </location>
+
+   <location num='282'>
+      <name>Bedroom</name>
+      <desc>   A pair of neatly made up twin beds take up the bulk of the room. Over each is a hand carved wooden plaque. One says 'Beth' and the other 'Nathaniel'. The window looks out over the garden, and the door leads west.</desc>
+      <exits w='281' out='281'/>
+   </location>
+
+   <location num='284'>
+      <name>Cellar</name>
+      <desc>   The cellar is empty. Light filters down the steps allowing you to see that it has been kept clean, but is unused otherwise. You notice that a tunnel has been started in the southeast of the cellar. Steps lead up to the kitchen.</desc>
+      <exits se='349' up='218' out='218'/>
+   </location>
+
+   <location num='329'>
+      <name>Road</name>
+      <desc>   In the middle of the road is a signpost. The north pointing hand says 'London', the southeast hand is marked 'Horsell'.</desc>
+      <exits se='394'/>
+   </location>
+
+   <location num='338'>
+      <name>Horsell station</name>
+      <desc>   Horsell railway station is a typical English country railway halt. Its two platforms are neat and well kept. A board informs you that trains run to London four times a day. The station is deserted, and the ticket barrier - unmanned - is to the east.</desc>
+      <exits e='339' out='339'/>
+   </location>
+
+   <location num='339'>
+      <name>Side road</name>
+      <desc>   You are on a north/south side road. To the west is the entrance to Horsell railway station, to the northwest is the entrance to a small observatory, and to the east is the Express pub.</desc>
+      <exits n='275' e='340' s='403' w='338' nw='274'/>
+   </location>
+
+   <location num='340'>
+      <name>Express pub</name>
+      <desc>   You are in the tiny bar of the Express Pub. There are no customers, though the empty glasses on some of the tables suggest that there have been some in there recently. All the walls have pictures of steam engines on them. The door is west.</desc>
+      <exits w='339' out='339'/>
+   </location>
+
+   <location num='344'>
+      <name>Vicarage garden</name>
+      <desc>   The garden is blazing with late summer colours. The lawn is neatly trimmed and you can see that hoops have been set up to play croquet. A path leads off to the south, and the door to the vicarage is northeast.</desc>
+      <exits ne='281' s='408' out='408'/>
+   </location>
+
+   <location num='349'>
+      <name>Tunnel</name>
+      <desc>   The start of a tunnel has been crudely dug into the wall. It doesn't go very far, and there is no sign of who was digging it, or what tools he was using. The cellar is northwest.</desc>
+      <exits nw='284' out='284'/>
+   </location>
+
+   <location num='394'>
+      <name>Road</name>
+      <desc>   You are standing on a road on the northern edge of a small grove of trees. To the northwest the road continues into open country, while to the southeast it plunges into the grove.</desc>
+      <exits se='459' s='458' nw='329'/>
+   </location>
+
+   <location num='401'>
+      <name>Undertakers</name>
+      <desc>   A note pinned on the door says 'Back soon', but there is no sign of its author. You look round the display of coffins with a morbid fascination, but are unable to get into the back of the shop. The exit is east.</desc>
+      <exits e='402'/>
+   </location>
+
+   <location num='402'>
+      <name>Road</name>
+      <desc>   You are at the west end of the main street. To your west is an undertakers shop, to the south is a stable. You can't go north because you are blocked by fencing. Through the fence you can see a railway station.</desc>
+      <exits e='403' s='466' w='401'/>
+   </location>
+
+   <location num='403'>
+      <name>Road</name>
+      <desc>   You are standing in the middle of the village of Horsell. The road runs east/west, and a side road runs north. South is the entrance to a house.</desc>
+      <exits n='339' e='404' s='467' w='402'/>
+   </location>
+
+   <location num='404'>
+      <name>Main street</name>
+      <desc>   You are on the east/west main street of the small village of Horsell. To the south is a small general store.</desc>
+      <exits e='405' s='468' w='403'/>
+   </location>
+
+   <location num='405'>
+      <name>Road</name>
+      <desc>   You are on the outskirts of a village. The road continues west into the village proper, and to the southeast it runs through the outskirts. To your south is a house.</desc>
+      <exits se='470' s='469' w='404'/>
+   </location>
+
+   <location num='408'>
+      <name>Path</name>
+      <desc>   The path runs from the south to a pretty vicarage at its northern end. Flowerbeds along the sides have been neatly maintained, and late flowering shrubs show a riot of colours.</desc>
+      <exits n='344' s='472'/>
+   </location>
+
+   <location num='410'>
+      <name>Church belfry</name>
+      <desc>   You are standing in the church belfry - there are no bats... You can see over the whole countryside. To the east you can see an enormous crater, in the centre of which is the giant cylinder whose impact caused the crater. Around the lip of the crater are small figures moving excitedly.</desc>
+      <exits down='474' out='474'/>
+   </location>
+
+   <location num='411'>
+      <name>Loft</name>
+      <desc>   You are in the church's organ loft. On one side are the bellows and on the other is the organ's manual. It really is a magnificent instrument, and your fingers itch to play it... Stairs lead down to the nave.</desc>
+      <exits s='475' down='475' out='475'/>
+   </location>
+
+   <location num='458'>
+      <name>Trees</name>
+      <desc>   You are standing in a small grove of trees. The dense undergrowth tugs at your clothes. To the north and the east you can see a road.</desc>
+      <exits n='394' se='523' s='522'/>
+   </location>
+
+   <location num='459'>
+      <name>Road</name>
+      <desc>   The road runs from the northwest to the southeast through a small grove of trees.</desc>
+      <exits e='460' se='524' s='523' sw='522' nw='394'/>
+   </location>
+
+   <location num='460'>
+      <name>Grove</name>
+      <desc>   You are in the northeastern part of a small grove of trees. To the west and the south you can just make out a road running through the grove.</desc>
+      <exits s='524' w='459'/>
+   </location>
+
+   <location num='464'>
+      <name>Crater</name>
+      <desc>   You are scrambling over the rubble at the northern end of the crater. To the south is the front end of the cylinder - the cause of the crater.</desc>
+      <exits se='529' s='528' sw='527' down='528' in='528'/>
+   </location>
+
+   <location num='466'>
+      <name>Stable</name>
+      <desc>   You are in a deserted stable. The mangers are full, the tack is hung on the wall, but there are no people or horses anywhere... The stable doors are north of your present position.</desc>
+      <exits n='402'/>
+   </location>
+
+   <location num='467'>
+      <name>Hallway</name>
+      <desc>   You are in the hallway of a deserted house - it is as though the inhabitants rushed out without closing the front door. All the doors off the hall are locked, and a calendar hanging on the wall shows you that it is August 1904. The way out is north.</desc>
+      <exits n='403'/>
+   </location>
+
+   <location num='468'>
+      <name>General store</name>
+      <desc>   You are in a deserted general store. All around you are useful things - like horseshoe nails - for which you have no use whatsoever! The exit is north.</desc>
+      <exits n='404'/>
+   </location>
+
+   <location num='469'>
+      <name>Garden</name>
+      <desc>   You are standing in the well-tended front garden of a house, but you are unable to get any answer when you knock on the - locked - front door. The road is to your north.</desc>
+      <exits n='405'/>
+   </location>
+
+   <location num='470'>
+      <name>Outskirts</name>
+      <desc>   The road on which you are standing winds through the outskirts of a small, neat, English village. Northwest goes into the village, while to the southeast the road run into more open country.</desc>
+      <exits se='535' nw='405'/>
+   </location>
+
+   <location num='472'>
+      <name>Path</name>
+      <desc>   The path forks, going north to the vicarage, east to the church, and southwest to the main road.</desc>
+      <exits n='408' e='473' sw='535'/>
+   </location>
+
+   <location num='473'>
+      <name>Path</name>
+      <desc>   The path continues to the west. To the east it leads to the main entrance of the church. The entrance to the graveyard lies southeast.</desc>
+      <exits e='474' se='538' w='472'/>
+   </location>
+
+   <location num='474'>
+      <name>Church</name>
+      <desc>   You are standing in the main body of the church. To the west is the exit, and to the east is the nave of the church. A flight of steps leads up into the tower.</desc>
+      <exits e='475' w='473' up='410' out='473'/>
+   </location>
+
+   <location num='475'>
+      <name>Church Nave</name>
+      <desc>   You are standing in the nave of the church. The main body of the church lies to your west, and to the north a flight of steps leads up to the organ loft. The church has a magnificent organ, far larger than you would expect.</desc>
+      <exits n='411' w='474' up='411'/>
+   </location>
+
+   <location num='522'>
+      <name>Thicket</name>
+      <desc>   You are crashing around in dense undergrowth. All around you are trees, but there does appear to be a clearing to the northeast.</desc>
+      <exits n='458' ne='459' e='523'/>
+   </location>
+
+   <location num='523'>
+      <name>Grove</name>
+      <desc>You are standing in a small grove of trees. To the north and to the east you can see a road.</desc>
+      <exits n='459' e='524' s='587' w='522' nw='458'/>
+   </location>
+
+   <location num='524'>
+      <name>Road</name>
+      <desc>   The road runs from the northwest to the south-east through a grove of trees. The trees meet overhead, making the road a little gloomy even though the sun is shining.</desc>
+      <exits n='460' se='589' s='588' w='523' nw='459'/>
+   </location>
+
+   <location num='527'>
+      <name>Crater</name>
+      <desc>   You are balanced precariously on the western lip of the crater. As you look east you can see the whole immense length of the cylinder whose impact wrought this devastation.</desc>
+      <exits ne='464' e='528' down='528'/>
+   </location>
+
+   <location num='528'>
+      <name>Cylinder</name>
+      <desc>   You stand in the bottom of the crater, dwarfed by the immensity of the cylinder which towers above you. As you look you notice that the front part of the cylinder is gradually unscrewing - already a couple of inches of thread show.</desc>
+      <exits n='464' e='529' se='593' w='527' out='593'/>
+   </location>
+
+   <location num='529'>
+      <name>Cylider</name>
+      <desc>   You are standing at the rear of the cylinder. It is totally featureless, and you can gain no indication of its original means of propulsion. The front of the cylinder is to your west.</desc>
+      <exits s='593' w='528' nw='464' up='593' out='593'/>
+   </location>
+
+   <location num='535'>
+      <name>Road junction</name>
+      <desc>   The road branches at this point. A path runs northeast to a church and its attendant vicarage. The main road swings round from the south to a village in the northwest.</desc>
+      <exits ne='472' s='599' nw='470'/>
+   </location>
+
+   <location num='538'>
+      <name>Graveyard</name>
+      <desc>   You are standing at the western end of a quiet graveyard. A small gate opens onto a path in the northwest. You wander among the head stones drinking in the peacefulness.</desc>
+      <exits e='539' nw='473' out='473'/>
+   </location>
+
+   <location num='539'>
+      <name>Graveyard</name>
+      <desc>   You are standing at the east end of a small walled graveyard. It is  a quiet and very private place, which feels very peaceful.</desc>
+      <exits w='538'/>
+   </location>
+
+   <location num='587'>
+      <name>Thicket</name>
+      <desc>   You are in a small thicket of trees, fighting your way through the dense undergrowth. To the northeast you can see a road.</desc>
+      <exits n='523' e='588'/>
+   </location>
+
+   <location num='588'>
+      <name>Edge of grove</name>
+      <desc>   You are at the southern edge of a small grove of trees. To the north and the east you can see a road.</desc>
+      <exits n='524' e='589' w='587'/>
+   </location>
+
+   <location num='589'>
+      <name>Road</name>
+      <desc>   The road runs northwest into a small grove of trees, and southeast into more open countryside.</desc>
+      <exits se='654' w='588' nw='524'/>
+   </location>
+
+   <location num='591'>
+      <name>Downs</name>
+      <desc>   You are walking on rolling downs country. You can't go north because of a steep earth rampart, but the country continues to the east, and a road run to your south.</desc>
+      <exits e='592' se='656' s='655'/>
+   </location>
+
+   <location num='592'>
+      <name>Downs</name>
+      <desc>   The section of downs you are walking on has suffered considerably from the impact of the cylinder. Whole trees have been uprooted, and the ground is strewn with rubble. The southern part of the crater lies to the east, and a road to the south.</desc>
+      <exits s='656' sw='655' w='591'/>
+   </location>
+
+   <location num='593'>
+      <name>Crater</name>
+      <desc>   You are in the southern part of the crater. To your south is the remains of a road. North you can see the bulk of the giant cylinder which recently crashed on the common.</desc>
+      <exits n='529' se='658' s='657' nw='528'/>
+   </location>
+
+   <location num='599'>
+      <name>Road</name>
+      <desc>   You are on a north/south road. To the south is a junction and a copse of trees, while to the north the road runs in the general direction of a village and a church.</desc>
+      <exits n='535' s='663'/>
+   </location>
+
+   <location num='654'>
+      <name>Bend in the road</name>
+      <desc>   You are standing at a bend in the road. In one direction the road runs east towards a distant church spire, and in the other it runs north-west through a small grove of trees.</desc>
+      <exits e='655' nw='589'/>
+   </location>
+
+   <location num='655'>
+      <name>Road</name>
+      <desc>   You are on an east-west road passing through pleasant green downs.</desc>
+      <exits n='591' ne='592' e='656' w='654'/>
+   </location>
+
+   <location num='656'>
+      <name>Road</name>
+      <desc>   You are on an east/west road. To the north lie rolling green downs. The scene is really rather pleasant.</desc>
+      <exits n='592' e='657' w='655' nw='591'/>
+   </location>
+
+   <location num='657'>
+      <name>Damaged road</name>
+      <desc>   You are standing on a buckled east/west road. To the north is the lip of an enormous crater, but you can't see in because of the earth thrown up by the impact.</desc>
+      <exits n='593' e='658' w='656' down='593' in='593'/>
+   </location>
+
+   <location num='658'>
+      <name>Damaged section of road</name>
+      <desc>   You are standing on a badly damaged east-west road. To the north-west is the cause of the devastation - a huge crater caused by the impact of a large cylinder, which lies glowing from the heat of its passage in the centre of the crater.</desc>
+      <exits e='659' w='657' nw='593' down='593' in='593'/>
+   </location>
+
+   <location num='659'>
+      <name>Roadway</name>
+      <desc>   You are walking along an east/west road. To the west the road passes through a scene of devastation. To the east it heads towards a small stand of birch trees.</desc>
+      <exits e='660' w='658'/>
+   </location>
+
+   <location num='660'>
+      <name>Road</name>
+      <desc>   You are walking along an east/west road, which passes through rolling downs country. To the north you can make out the outlines of a village.</desc>
+      <exits e='661' se='725' s='724' w='659'/>
+   </location>
+
+   <location num='661'>
+      <name>Road</name>
+      <desc>   You are walking along an east/west road. To the south the downs roll into a hazy distance. To the west you can see the lip of a massive crater.</desc>
+      <exits e='662' s='725' sw='724' w='660'/>
+   </location>
+
+   <location num='662'>
+      <name>Road</name>
+      <desc>   You are on an east/west road. To the west is a scene of devastation, and to the south is the start of a small copse of birch trees. To the north in the middle distance you can see a village.</desc>
+      <exits e='663' s='726' sw='725' w='661'/>
+   </location>
+
+   <location num='663'>
+      <name>Road junction</name>
+      <desc>   You are standing at a three way road junction. In the centre is a weather beaten signpost. The northern arm says Horsell, the western arm says The Common, and the southern arm is too faded to read.</desc>
+      <exits n='599' s='727' sw='726' w='662'/>
+   </location>
+
+   <location num='724'>
+      <name>Downs</name>
+      <desc>   You are strolling over rolling hilly country . Very pleasant it is too. North lies a road and southeast is a stand of birch trees.</desc>
+      <exits n='660' ne='661' e='725'/>
+   </location>
+
+   <location num='725'>
+      <name>Downs</name>
+      <desc>   You are wandering around pleasant rolling downs country. The sun shines overhead and you are very content with your lot. To the north is a road and to the south and east is the edge of a small stand of birches.</desc>
+      <exits n='661' ne='662' e='726' se='790' s='789' w='724' nw='660'/>
+   </location>
+
+   <location num='726'>
+      <name>Copse</name>
+      <desc>   You are standing in the eves of a small copse of birch trees. A road runs round the edge of the copse from the northwest to the east. To the northwest you can see in the distance a road sign.</desc>
+      <exits n='662' ne='663' e='727' se='791' s='790' sw='789' w='725' nw='661'/>
+   </location>
+
+   <location num='727'>
+      <name>Road</name>
+      <desc>   The road runs north towards a village in the middle distance, and south east around the edge of the copse of birch trees.</desc>
+      <exits n='663' se='792' s='791' sw='790' w='726' up='663'/>
+   </location>
+
+   <location num='789'>
+      <name>Copse</name>
+      <desc>   You are standing at the western edge of a small stand of birch trees.</desc>
+      <exits n='725' ne='726' e='790'/>
+   </location>
+
+   <location num='790'>
+      <name>Birch trees</name>
+      <desc>      You are standing in a grove of birch trees. The undergrowth is extremely thick and your clothes snag every time you try to move. To the northeast you get a glimpse of what seem to be a road.</desc>
+      <exits n='726' ne='727' e='791' se='855' s='854' w='789' nw='725'/>
+   </location>
+
+   <location num='791'>
+      <name>Birch trees</name>
+      <desc>   You are on the eastern edge of a small stand of birch trees. Before you, to the north and east a road skirts the copse.</desc>
+      <exits n='727' e='792' se='856' s='855' sw='854' w='790' nw='726'/>
+   </location>
+
+   <location num='792'>
+      <name>Winding road</name>
+      <desc>   The road winds its way round the northeastern edge of some birch trees. In one direction it goes east, and in the other northwest. Some distance to the north you can see a small village and a church.</desc>
+      <exits e='793' s='856' sw='855' w='791' nw='727'/>
+   </location>
+
+   <location num='793'>
+      <name>Bend in the road</name>
+      <desc>   The road on which you are walking bends from the south to the west as it follows the north-eastern edge of a small stand of birch trees.  </desc>
+      <desc>   Off to the north you can see a small church, and slightly to the east is a village.</desc>
+      <exits s='857' w='792'/>
+   </location>
+
+   <location num='854'>
+      <name>Tangled undergrowth</name>
+      <desc>   You are caught up in tangled undergrowth on the western edge of a small copse of trees. Brambles catch at your ankles and low branches threaten to knock you out if you make an incautious move.</desc>
+      <exits n='790' ne='791' e='855' se='919'/>
+   </location>
+
+   <location num='855'>
+      <name>Copse</name>
+      <desc>   You are standing in the middle of a small copse of birch trees. To the northeast you can see through the trees part of a road.</desc>
+      <exits n='791' ne='792' e='856' s='919' w='854' nw='790'/>
+   </location>
+
+   <location num='856'>
+      <name>Eves</name>
+      <desc>   You are standing under the eves of a small copse looking at a road which skirts the copse. The road runs from the north round to the southeast.</desc>
+      <exits n='792' e='857' sw='919' w='855' nw='791'/>
+   </location>
+
+   <location num='857'>
+      <name>Road</name>
+      <desc>   You are standing on a north/south road. To the west is a small stand of birch trees, and to the north, in the distance, you can see a church.</desc>
+      <exits n='793' s='921' w='856'/>
+   </location>
+
+   <location num='919'>
+      <name>Edge of trees</name>
+      <desc>   You are standing at the southernmost edge of a grove of birch trees. To the south are rolling downs, made hazy by the shimmer from the edge of the time field, while to the north the grove becomes more dense.</desc>
+      <exits n='855' ne='856' nw='854'/>
+   </location>
+
+   <location num='921'>
+      <name>Road</name>
+      <desc>   You are walking along a north-south road which skirts the eastern edge of a small copse of birch trees.</desc>
+      <exits n='857' s='985'/>
+   </location>
+
+   <location num='985'>
+      <name>Road</name>
+      <desc>   You are walking along a north/south road. A little way to the north the road skirts a small copse of trees.</desc>
+      <exits n='921' s='1049'/>
+   </location>
+
+   <location num='1049'>
+      <name>Road</name>
+      <desc>   You are standing on a north/south road, but to the south is the haze of the chrono-field's limits, so you won't be able to go in that direction.</desc>
+      <exits n='985' e='1050'/>
+   </location>
+
+   <location num='1050'>
+      <name>Downs</name>
+      <desc>   You are standing on rolling green downs that recede into the distance. The air is clear and there no trace of industrial pollution. To the north is a small copse, and the spire of a church rises from beyond it, while to the west is a road.</desc>
+      <exits w='1049'/>
+   </location>
+
+</fed2-map>

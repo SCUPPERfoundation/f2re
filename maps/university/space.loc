@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<fed2-map title='University Space' version='1.00' editor='standard'>
+
+   <location num='330' flags='sl'>
+      <name>Orbit and link</name>
+      <desc>Welcome to the University campus. Currently, most of the campus is off limits to all but faculty, staff, and current or prospective students. A campus police cruiser, assuming you are a delivery person, signals for you to either dock with the Waterlabs research facility - a small planet consisting entirely of water - or exit the campus through the link.</desc>
+   </location>
+
+</fed2-map>

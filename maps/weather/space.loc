@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<fed2-map title='Weather Space' version='1.00' editor='standard'>
+
+   <location num='133' flags='slp'>
+      <name>Weather System Link</name>
+      <desc>As you exit the hyperspace link, you appear in the weather system.  An automated beacon welcomes you to our system.  Please be aware with all the weather events occurring, be cautious of your surroundings.  Enjoy your stay.</desc>
+      <desc>A weather beacon directions you south toward Stormy.  Or back toward the link.</desc>
+      <exits s='197' in='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='197' flags='s'>
+      <name>Solar Wind Junction</name>
+      <desc>You have arrived at a junction where the solar winds are very strong.  You wonder what could be causing this sort of weather in space!!!  You decide to leave the matter alone and continue on your way.</desc>
+      <exits n='133' se='262' sw='260' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='260' flags='s'>
+      <name>Windy Straits</name>
+      <desc>The winds are continuing to push you along the spacelanes.  You notice several special weather anomalies outside the spacelanes and wonder what could be happening.</desc>
+      <desc>The winds continue S, or you can continue back to the NE.</desc>
+      <exits ne='197' s='324' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='261' flags='sp'>
+      <name>Stormy Orbit</name>
+      <desc>As the spatial weather subsides you finally arrive at Stormy!!  Welcome to the stormy system, please disengage all devices as this may interfere with weather research being done on the surface.  As you slowly look around you notice a variety of weather events that look spectacular to your eyes.</desc>
+      <desc>You may leave orbit to the SW or SE.</desc>
+      <exits se='326' sw='324' out='133' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='262' flags='s'>
+      <name>Windy Straits</name>
+      <desc>The winds are continuing to push you along the spacelanes.  You notice several special weather anomalies outside the spacelanes and wonder what could be happening.</desc>
+      <desc>The winds continue S, or you can continue back to the NW.</desc>
+      <exits s='326' nw='197' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='324' flags='s'>
+      <name>Stormy Junction</name>
+      <desc>As you arrive you find an automated beacon.  To reach planet stormy head thru the Level 4 Nebula to the Northeast.  Please be aware testing is being done to the SouthEast.  Unless authorized, DO NOT ENTER THIS SPACE!!!</desc>
+      <desc>You see a nebula to the NE and a void area to the SE.</desc>
+      <exits n='260' ne='261' se='389' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='326' flags='s'>
+      <name>Stormy Junction</name>
+      <desc>As you arrive you find an automated beacon.  To reach planet stormy head thru the Level 4 Nebula to the Northeast.  Please be aware testing is being done to the SouthEast.  Unless authorized, DO NOT ENTER THIS SPACE!!!</desc>
+      <desc>You see a nebula to the NE and a void area to the SE.</desc>
+      <exits n='262' sw='389' nw='261' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='389' flags='s'>
+      <name>Blackhole Anomaly</name>
+      <desc>As you enter the sector you notice a large blackhole!!!  You try with ALL your might to thrust your engines away from the phenomenon to no avail.  As you enter the phenomenon you discover vast secrets of the universe that have been swallowed over time!!  You start pondering the idea of becoming rich off of these findings.  All of a sudden your ship is begins shimmying left and right.  As you start wondering if you should have heeded the warnings, Zman comes from no where and tractors you back to the entrance of the sector giving you a thorough lashing!</desc>
+      <desc>There are no ways out of this sector!!!  Wait, Zman reappears from nowhere and opens a dimentional rift to your NW and NE.  Be more cautious next time Zman advises, heed the warnings!!</desc>
+      <exits ne='326' nw='324' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

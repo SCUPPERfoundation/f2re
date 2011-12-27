@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<fed2-map title='Fowl Space' version='11' editor='standard'>
+
+   <location num='594' flags='s'>
+      <name>Asteroid</name>
+      <desc>   A small asteroid is below you, but no one can live there... yet.</desc>
+      <exits s='658' sw='657' no-exit='space.only.1'/>
+   </location>
+
+   <location num='657' flags='sl'>
+      <name>Kingdom Orbit and Link</name>
+      <desc>   Down below you is a planet, green and spinning around on its axis. Guard ships are around, keeping an eye or for bandits and other such evils. So that you may be safe as you explore the Fowl space. You may board the planet, or move onward to the east and northeast.</desc>
+      <exits ne='594' e='658' no-exit='space.only.1'/>
+   </location>
+
+   <location num='658' flags='s'>
+      <name>Seasons</name>
+      <desc>  Infront of you is a spacestation above a beautiful colored planet. You can board the station which is orbiting around the planet. You can go north or west from here.</desc>
+      <exits n='594' w='657' no-exit='space.only.1'/>
+   </location>
+
+</fed2-map>
+

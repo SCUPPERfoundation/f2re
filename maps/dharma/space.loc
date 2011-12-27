@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<fed2-map title='Dharma Space' version='9' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Dharma link and Nirvana orbit</name>
+      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <desc>   Nibbana is east</desc>
+      <exits e='461' s='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>Nibbana orbit</name>
+      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <desc>   Dharma link and Nirvana orbit is west</desc>
+      <exits sw='524' w='460'/>
+   </location>
+
+   <location num='524' flags='sp'>
+      <name>Samsara orbit</name>
+      <desc>Dharma system link and Nirvana orbit is north</desc>
+      <desc>Nibbana orbit is northeast</desc>
+      <exits n='460' ne='461'/>
+   </location>
+
+</fed2-map>

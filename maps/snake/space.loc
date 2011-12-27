@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Snake Space' version='4' editor='standard'>
+
+   <location num='330' flags='slp'>
+      <name>Snake Space</name>
+      <desc>   With a super-sized and emblem engraved circular link filled with what looks like a flat surface of water hanging above you, and the animal filled planet practically howling below you, you realize that you must be in the Snake system.</desc>
+      <desc>   You decide to check out the animal life and BOARD onto the planet.</desc>
+   </location>
+
+</fed2-map>
+

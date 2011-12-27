@@ -1,0 +1,557 @@
+<?xml version="1.0"?>
+
+<event-list version='36'>
+
+ <category name='food'>
+
+  <section name='taproom'>
+
+   <event num='1'>
+    <comment>Buy food - Old Earth Taproom - 328</comment>
+    <checkstat who='individual' money='10' higher='food.taproom.2' equals='food.taproom.2' lower='food.taproom.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.taproom.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.taproom.2'/>
+   </event>
+
+  </section>
+
+  <section name='wok'>
+
+   <event num='1'>
+    <comment>Buy food - Sizzling Wok - 648</comment>
+    <checkstat who='individual' money='10' higher='food.wok.2' equals='food.wok.2' lower='food.wok.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.wok.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.wok.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='lantern'>
+
+   <event num='1'>
+    <comment>Is player doing newbod puzzle clue three?</comment>
+    <checkvariable name='newbod' key='clue' value='three' equals='newbod.lantern.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does player already have a lantern</comment>
+    <checkinventory map='home' id-name='lantern' found='stop'/>
+    <message type='text' where='com' who='individual'>The manager bustles up, smiling. He informs you that he has no tables for the moment, but gives you one of their patent self-igniting paper chinese lanterns as a souvenir.</message>
+    <createobject where='inventory' home-map='sol/mercury' id='obj_lantern'/>
+   </event>
+
+   <event num='3'>
+    <comment>Drop event for lantern</comment>
+    <destroyobject where='inventory' map='home' id-name='lantern'/>
+    <message type='text' where='com' who='individual'>The impact with the floor jars the self-ignition mechanism and the lantern flares up. Within seconds the lantern is completely consumed and there is nothing left behind.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='box'>
+
+   <event num='1'>
+    <comment>Examine box - check if it is open or closed</comment>
+    <checksize id-name='obj_box' value='2' equal='objects.box.2' less='objects.box.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Box is open</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Box is closed</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Get box</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Open box - check if it&apos;s open or closed</comment>
+    <checksize id-name='obj_box' value='2' equal='objects.box.6' less='objects.box.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Box is already open</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Box is closed, so open it</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.5'/>
+    <message type='single' where='com' who='room_ex' lo='objects.box.6'/>
+    <changesize id-name='obj_box' amount='2' change='set' max-size='2' destroy='no'/>
+   </event>
+
+   <event num='8'>
+    <comment>Close box - check if it&apos;s open or closed</comment>
+    <checksize id-name='obj_box' value='2' equal='objects.box.9' less='objects.box.10'/>
+   </event>
+
+   <event num='9'>
+    <comment>Box is open - so close it</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.7'/>
+    <message type='single' where='com' who='room_ex' lo='objects.box.8'/>
+    <changesize id-name='obj_box' amount='1' change='set' max-size='2' destroy='no'/>
+   </event>
+
+   <event num='10'>
+    <comment>Box is already closed</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.9'/>
+   </event>
+
+   <event num='11'>
+    <comment>Get candle - check if box is open</comment>
+    <checksize id-name='obj_box' value='2' equal='objects.box.13' less='objects.box.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>Box is closed - can&apos;t have a candle</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.10'/>
+   </event>
+
+   <event num='13'>
+    <comment>Box is open - check if she already has a candle</comment>
+    <checkinventory map='home' id-name='candle' found='objects.box.14' not-found='objects.box.15'/>
+   </event>
+
+   <event num='14'>
+    <comment>Already got one</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.11'/>
+   </event>
+
+   <event num='15'>
+    <comment>Not got one - so give her one</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.12'/>
+    <message type='single' where='com' who='room_ex' lo='objects.box.13'/>
+    <createobject where='inventory' home-map='home' id='obj_candle'/>
+   </event>
+
+   <event num='16'>
+    <comment>Examine candles - check if box is open or closed</comment>
+    <checksize id-name='obj_box' value='2' equal='objects.box.17' less='objects.box.18'/>
+   </event>
+
+   <event num='17'>
+    <comment>Desc of candles if box is open</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.14'/>
+   </event>
+
+   <event num='18'>
+    <comment>Desc of candles if box is closed</comment>
+    <message type='single' where='com' who='individual' lo='objects.box.15'/>
+   </event>
+
+  </section>
+
+  <section name='candle'>
+
+   <event num='1'>
+    <comment>Drop candle</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.1'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.2'/>
+    <destroyobject where='inventory' map='home' id-name='candle'/>
+   </event>
+
+   <event num='2'>
+    <comment>Desc of candle in inventory (to get round bug)</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Light candle - check if she is in a bar</comment>
+    <checklocflag flag='bar'  set='objects.candle.4' unset='objects.candle.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>In a bar</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.5'/>
+    <destroyobject where='inventory' map='home' id-name='candle'/>
+   </event>
+
+   <event num='5'>
+    <comment>Light candle outside bar - burn 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.6'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.7'/>
+    <delayevent delay='30' event='objects.candle.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Candle burn 2 - checks</comment>
+    <checkinventory map='home' id-name='candle' not-found='stop'/>
+    <checklocflag flag='bar'  set='objects.candle.18' unset='objects.candle.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Burn 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.8'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.9'/>
+    <delayevent delay='30' event='objects.candle.8'/>
+   </event>
+
+   <event num='8'>
+    <comment>Candle burn 3 - checks</comment>
+    <checkinventory map='home' id-name='candle' not-found='stop'/>
+    <checklocflag flag='bar'  set='objects.candle.18' unset='objects.candle.9'/>
+   </event>
+
+   <event num='9'>
+    <comment>Burn 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.10'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.11'/>
+    <delayevent delay='30' event='objects.candle.10'/>
+   </event>
+
+   <event num='10'>
+    <comment>Candle burn 4 - checks</comment>
+    <checkinventory map='home' id-name='candle' not-found='stop'/>
+    <checklocflag flag='bar'  set='objects.candle.18' unset='objects.candle.11'/>
+   </event>
+
+   <event num='11'>
+    <comment>Burn 4</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.12'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.13'/>
+    <delayevent delay='30' event='objects.candle.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>Candle burn 5 - checks</comment>
+    <checkinventory map='home' id-name='candle' not-found='stop'/>
+    <checklocflag flag='bar'  set='objects.candle.18' unset='objects.candle.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>Burn 5</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.14'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.15'/>
+    <delayevent delay='30' event='objects.candle.14'/>
+   </event>
+
+   <event num='14'>
+    <comment>Candle burn 6 - checks</comment>
+    <checkinventory map='home' id-name='candle' not-found='stop'/>
+    <checklocflag flag='bar'  set='objects.candle.18' unset='objects.candle.15'/>
+   </event>
+
+   <event num='15'>
+    <comment>Burn 6</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.16'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.17'/>
+    <delayevent delay='30' event='objects.candle.16'/>
+   </event>
+
+   <event num='16'>
+    <comment>Candle burn 7 - checks</comment>
+    <checkinventory map='home' id-name='candle' not-found='stop'/>
+    <checklocflag flag='bar'  set='objects.candle.18' unset='objects.candle.17'/>
+   </event>
+
+   <event num='17'>
+    <comment>Burn 7 - final</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.18'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.19'/>
+    <destroyobject where='inventory' map='home' id-name='candle'/>
+   </event>
+
+   <event num='18'>
+    <comment>Continuing burn in bar</comment>
+    <message type='single' where='com' who='individual' lo='objects.candle.20'/>
+    <message type='single' where='com' who='room_ex' lo='objects.candle.21'/>
+    <destroyobject where='inventory' map='home' id-name='candle'/>
+   </event>
+
+  </section>
+
+  <section name='dice'>
+
+   <event num='1'>
+    <comment>Get dice</comment>
+    <message type='single' where='object' who='individual' lo='objects.dice.1'/>
+    <createobject where='inventory' home-map='sol/mercury' id='obj_2dice'/>
+   </event>
+
+   <event num='2'>
+    <comment>Roll dice - initial message and random call for dice 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.dice.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.dice.3'/>
+    <call event='objects.dice.random[3-8]'/>
+   </event>
+
+   <event num='3'>
+    <comment>Dice 1 - option 1</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.4'/>
+    <call event='objects.dice.random[9-14]'/>
+   </event>
+
+   <event num='4'>
+    <comment>Dice 1 - option 2</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.5'/>
+    <call event='objects.dice.random[9-14]'/>
+   </event>
+
+   <event num='5'>
+    <comment>Dice 1 - option 3</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.6'/>
+    <call event='objects.dice.random[9-14]'/>
+   </event>
+
+   <event num='6'>
+    <comment>Dice 1 - option 4</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.7'/>
+    <call event='objects.dice.random[9-14]'/>
+   </event>
+
+   <event num='7'>
+    <comment>Dice 1 - option 5</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.8'/>
+    <call event='objects.dice.random[9-14]'/>
+   </event>
+
+   <event num='8'>
+    <comment>Dice 1 - option 6</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.9'/>
+    <call event='objects.dice.random[9-14]'/>
+   </event>
+
+   <event num='9'>
+    <comment>Dice 2 - option 1</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.10'/>
+   </event>
+
+   <event num='10'>
+    <comment>Dice 2 - option 2</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.11'/>
+   </event>
+
+   <event num='11'>
+    <comment>Dice 2 - option 3</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>Dice 2 - option 4</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>Dice 2 - option 5</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.14'/>
+   </event>
+
+   <event num='14'>
+    <comment>Dice 2 - option 6</comment>
+    <message type='single' where='com' who='room' lo='objects.dice.15'/>
+   </event>
+
+   <event num='15'>
+    <comment>Drop dice</comment>
+    <message type='single' where='com' who='individual' lo='objects.dice.16'/>
+    <destroyobject where='inventory' map='home' id-name='dice'/>
+   </event>
+
+  </section>
+
+  <section name='jukebox'>
+
+   <event num='1'>
+    <comment>Play jukebox - object in loc 328 - call random</comment>
+    <message type='text' where='com' who='individual'>You can&apos;t make up your mind what you want to hear, so you press some buttons at random to see what happens...</message>
+    <message type='text' where='com' who='room_ex'>Leaning over the machine, %s presses some buttons at random.</message>
+    <call event='objects.jukebox.random[2-21]'/>
+   </event>
+
+   <event num='2'>
+    <comment>jukebox - 1</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>jukebox - 2</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>jukebox - 3</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>jukebox - 4</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>jukebox - 5</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>jukebox - 6</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.6'/>
+   </event>
+
+   <event num='8'>
+    <comment>jukebox - 7</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.7'/>
+   </event>
+
+   <event num='9'>
+    <comment>jukebox - 8</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.8'/>
+   </event>
+
+   <event num='10'>
+    <comment>jukebox - 9</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.9'/>
+   </event>
+
+   <event num='11'>
+    <comment>jukebox - 10</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.10'/>
+   </event>
+
+   <event num='12'>
+    <comment>jukebox - 11</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.11'/>
+   </event>
+
+   <event num='13'>
+    <comment>jukebox - 12</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.12'/>
+   </event>
+
+   <event num='14'>
+    <comment>jukebox - 13</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.13'/>
+   </event>
+
+   <event num='15'>
+    <comment>jukebox - 14</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.14'/>
+   </event>
+
+   <event num='16'>
+    <comment>jukebox - 15</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.15'/>
+   </event>
+
+   <event num='17'>
+    <comment>jukebox - 16</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.16'/>
+   </event>
+
+   <event num='18'>
+    <comment>jukebox - 17</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.17'/>
+   </event>
+
+   <event num='19'>
+    <comment>jukebox - 18</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.18'/>
+   </event>
+
+   <event num='20'>
+    <comment>jukebox - 19</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.19'/>
+   </event>
+
+   <event num='21'>
+    <comment>jukebox - 20</comment>
+    <message type='single' where='com' who='room' lo='objects.jukebox.20'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='stats'>
+
+  <section name='int'>
+
+   <event num='1'>
+    <comment>Chamber - 976 - buy intelligence - check for slithy</comment>
+    <checkslithy value='1' pass='stats.int.3' fail='stats.int.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>No slithy</comment>
+    <message type='single' where='com' who='individual' lo='stats.int.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Has got slithy so send basic msg and check if already done a stat before</comment>
+    <message type='multi' where='com' who='individual' lo='stats.int.2' hi='stats.int.3'/>
+    <checkflag who='individual' flag ='slithy2stat'  set='stats.int.4' unset='stats.int.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Already done a stat today</comment>
+    <message type='multi' where='com' who='individual' lo='stats.int.4' hi='stats.int.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not already done so check if int is maxed, or almost maxed</comment>
+    <checkstat who='individual' intelligence='149' higher='stats.int.6' equals='stats.int.7' lower='stats.int.8'/>
+   </event>
+
+   <event num='6'>
+    <comment>Int is already maxed</comment>
+    <message type='single' where='com' who='individual' lo='stats.int.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>Int is 149 so call int increase event, and send final warning</comment>
+    <call event='stats.int.8'/>
+    <message type='single' where='com' who='individual' lo='stats.int.9'/>
+   </event>
+
+   <event num='8'>
+    <comment>Increase int</comment>
+    <message type='multi' where='com' who='individual' lo='stats.int.7' hi='stats.int.8'/>
+    <changeslithy value='-1' change='add'/>
+    <changestat who='individual' intelligence='1' change='add' cur-max='maximum'/>
+    <changestat who='individual' intelligence='99' change='add' cur-max='current'/>
+    <flipflag who='individual' flag ='slithy2stat'/>
+    <log>SLITHY - %s has bought an intelligence point.</log>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

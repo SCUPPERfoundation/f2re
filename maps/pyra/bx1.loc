@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<fed2-map title='Bx1' version='17' editor='standard' from='2015' to='Pyra.Pyra Space.2080'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>The Storeroom</desc>
+   </location>
+
+   <location num='1813' flags='b'>
+      <name>Tip-top</name>
+      <desc>This is the top corner of this large, triangular, office space. The office continues southwest, south and southeast.</desc>
+      <exits se='1878' s='1877' sw='1876' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1823'>
+      <name>Breaking through</name>
+      <desc>A bomber plane lifts you to altitude, and once there, there&apos;s a sudden drop and the horizon streches before you out the cockpit window. You are then pinned to the back of your seat as the rocket fires and the plane accelerates. A rush of sound gets steadily louder, until suddenly it&apos;s very quiet. You&apos;ve just passed the sound barrier. As the rocket dies, you decelerate and, on your command, the automated systems will take you down to the landing pad.</desc>
+      <exits down='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1876' flags='b'>
+      <name>West corner office space</name>
+      <desc>This is the western corner of this large office space, you can go eest and northeast from here.</desc>
+      <exits ne='1813' e='1877' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1877' flags='b'>
+      <name>Head office</name>
+      <desc>This is the middle of a large, triangular, office space, which is currently unoccupied. The accessway is south.</desc>
+      <exits n='1813' e='1878' s='1941' w='1876' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1878' flags='b'>
+      <name>East corner office space</name>
+      <desc>This is the eastern corner of this large office space, you can go west and northwest from here.</desc>
+      <exits w='1877' nw='1813' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1941'>
+      <name>Accessway</name>
+      <desc>The &quot;head-office&quot; is north and the accessway continues to the south.</desc>
+      <exits n='1877' s='2005' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1950' flags='r'>
+      <name>Supersonic ship repairs</name>
+      <desc>Ships repairs done, very quickly. The LP is southeast.</desc>
+      <exits se='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1951'>
+      <name>Tribute gardens and fountains</name>
+      <desc>Scattered among the gardens and fountains here are the bronze statues of the Collier Trophy winners for the first (rocket assisted) faster-than-sound flight - Larry Bell, Chuck Yeager, and John Stack. The LP is south.</desc>
+      <exits s='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1952' flags='y'>
+      <name>Rocket-powered starships</name>
+      <desc>The mark of any great achievement: that future generations take it for granted. The LP is southwest.</desc>
+      <exits sw='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2005'>
+      <name>CG point</name>
+      <desc>An accessway leads to the north and south. Getting in the shuttle will take you back to the LP.</desc>
+      <exits n='1941' s='2069' in='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2014' flags='hi'>
+      <name>Sonic boom hospital</name>
+      <desc>Hope your next flight is better! The LP is east.</desc>
+      <exits e='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2015'>
+      <name>Flight 50 landing pad</name>
+      <desc>You&apos;ve reached the planet named in honor of the first vehicle to break the sound barrier, the Bell X-1. The exchange is east. Shops and services lie in all directions. Getting in a shuttle will take you to an office complex. You can also go up in an X-1 replica and experience a supersonic flight.</desc>
+      <exits n='1951' ne='1952' e='2016' se='2080' s='2079' sw='2078' w='2014' nw='1950' up='1823' down='2207' in='2005' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2016' flags='e'>
+      <name>Yeager exchange</name>
+      <desc>A fast-moving exchange dealing in the planets commodities. The LP is west.</desc>
+      <exits w='2015' in='2017' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2017' flags='b'>
+      <name>Private lounge</name>
+      <desc>You&apos;re in a quiet and comfortable sitting area. Drinks and food are avaiable. You can return by going out.</desc>
+      <exits in='2018' out='2016' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2018' flags='b'>
+      <name>Private quarters</name>
+      <desc>Quiet and relaxing, a refuge from the world.</desc>
+      <exits out='2017' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2069'>
+      <name>Accessway</name>
+      <desc>There are office spaces to the southwest and southeast, and the accessway continues north and south.</desc>
+      <exits n='2005' se='2134' s='2133' sw='2132' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2078'>
+      <name>Gift shop</name>
+      <desc>A small shop selling all sorts of X-1 memorabilia. The LP is northeast.</desc>
+      <exits ne='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2079' flags='b'>
+      <name>&quot;Chuck&quot; wagon cafe</name>
+      <desc>A western and space-aged themed restaurant. Unusual as it sounds, it&apos;s a comfortable place to &quot;recharge your rockets&quot;. The LP is north.</desc>
+      <exits n='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2080'>
+      <name>Speed-of-sound clothing shop</name>
+      <desc>Faster than you can say &quot;orange is the new pink&quot;, the fashions sold here will be out of style. The LP is northwest.</desc>
+      <exits nw='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2132' flags='b'>
+      <name>Empty office</name>
+      <desc>The accessway is northeast.</desc>
+      <exits ne='2069' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2133'>
+      <name>Accessway end</name>
+      <desc>There are offices to the southwest, south and southeast. The accessway continues north.</desc>
+      <exits n='2069' se='2198' s='2197' sw='2196' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2134' flags='b'>
+      <name>Empty office</name>
+      <desc>The accessway is northwest.</desc>
+      <exits nw='2069' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2196' flags='b'>
+      <name>Empty office</name>
+      <desc>The accessway is northeast.</desc>
+      <exits ne='2133' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2197' flags='b'>
+      <name>Empty office</name>
+      <desc>The accessway is north.</desc>
+      <exits n='2133' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2198' flags='b'>
+      <name>Empty office</name>
+      <desc>The accessway is northwest.</desc>
+      <exits nw='2133' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2207' flags='b'>
+      <name>Blast-off bar</name>
+      <desc>The place where rocketeers come to relax. The LP is up.</desc>
+      <exits up='2015' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+

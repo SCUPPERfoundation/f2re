@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<routes>
+
+	<from planet='brass' loc='2444'>
+		<to planet='castillo'>e,se,o,ne,e</to>
+		<to planet='doris'>se,s</to>
+		<to planet='earth'>e,se,o,e,e,e,se,se</to>
+		<to planet='lattice'>se,se,se,se</to>
+		<to planet='magellan'>e,se,o,se,se,se,e</to>
+		<to planet='mars'>e,se,o,e,e,se</to>
+		<to planet='mercury'>e,se,o,se,se,se,se,se</to>
+		<to planet='moon'>e,se,o,e,e,e,se,se,se</to>
+		<to planet='selena'>e,se,o,e,e,e,se,se,se</to>
+		<to planet='paradise'>e,se,o,se,se,s,s,sw</to>
+		<to planet='pearl'>e,se,o,s,se,se,se,se,se,se</to>
+		<to planet='phobos'>e,se,o,e,e,e,e</to>
+		<to planet='rhea'>e,se,o,nw,w</to>
+		<to planet='silk'>se,e,ne,n</to>
+		<to planet='sumatra'>e,se,o,se</to>
+		<to planet='titan'>e,se,o,n,n</to>
+		<to planet='venus'>e,se,o,se,se,s,s</to>
+	</from>
+
+	<from planet='castillo' loc='593'>
+		<to planet='brass'>w,sw,in,nw,w</to>
+		<to planet='doris'>w,sw,in,sw</to>
+		<to planet='earth'>se,se,se</to>
+		<to planet='lattice'>w,sw,in,s,se,se</to>
+		<to planet='mars'>s,se</to>
+		<to planet='magellan'>se,se,s,s</to>
+		<to planet='mercury'>se,se,se,s,s,s</to>
+		<to planet='moon'>se,se,se,se</to>
+		<to planet='selena'>se,se,se,se</to>
+		<to planet='paradise'>s,s,s,s,s,sw</to>
+		<to planet='pearl'>se,se,se,se,s,s,s,s</to>
+		<to planet='phobos'>e,se</to>
+		<to planet='rhea'>w,w,w,w</to>
+		<to planet='silk'>w,sw,in,ne,n</to>
+		<to planet='sumatra'>sw,s</to>
+		<to planet='titan'>nw,w</to>
+		<to planet='venus'>s,s,s,s,s</to>
+	</from>
+
+	<from planet='doris' loc='2573'>
+		<to planet='brass'>n,nw</to>
+		<to planet='castillo'>ne,o,e,ne</to>
+		<to planet='earth'>ne,o,e,e,e,se,se</to>
+		<to planet='lattice'>e,se,se</to>
+		<to planet='magellan'>ne,o,se,se,e,se</to>
+		<to planet='mars'>ne,o,e,e,se</to>
+		<to planet='mercury'>ne,o,se,se,se,se,se</to>
+		<to planet='moon'>ne,o,e,e,e,se,se,se</to>
+		<to planet='selena'>ne,o,e,e,e,se,se,se</to>
+		<to planet='paradise'>ne,o,se,se,s,s,sw</to>
+		<to planet='pearl'>ne,o,s,se,se,se,se,se,se</to>
+		<to planet='phobos'>ne,o,e,e,e,e</to>
+		<to planet='rhea'>ne,o,nw,w</to>
+		<to planet='silk'>ne,ne,n</to>
+		<to planet='sumatra'>ne,o,se</to>
+		<to planet='titan'>ne,o,n,n</to>
+		<to planet='venus'>ne,o,se,se,s,s</to>
+	</from>
+	
+	<from planet='earth' loc='788'>
+		<to planet='brass'>nw,nw,w,w,w,in,nw,w</to>
+		<to planet='castillo'>nw,nw,nw</to>
+		<to planet='doris'>nw,nw,w,w,w,in,sw</to>
+		<to planet='lattice'>nw,nw,w,w,w,in,s,se,se</to>
+		<to planet='magellan'>sw</to>
+		<to planet='mars'>w,nw</to>
+		<to planet='mercury'>s,s,s</to>
+		<to planet='moon'>se</to>
+		<to planet='selena'>se</to>
+		<to planet='paradise'>sw,sw,w,sw</to>
+		<to planet='pearl'>s,s,s,s,se</to>
+		<to planet='phobos'>n,nw</to>
+		<to planet='rhea'>nw,nw,nw,w,w,w,w</to>
+		<to planet='silk'>nw,nw,w,w,w,in,ne,n</to>
+		<to planet='sumatra'>w,w,w,nw</to>
+		<to planet='titan'>nw,nw,nw,nw,w</to>
+		<to planet='venus'>sw,sw,w</to>
+	</from>
+	
+	<from planet='lattice' loc='2704'>
+		<to planet='brass'>nw,nw,nw,nw</to>
+		<to planet='castillo'>nw,nw,n,o,e,ne</to>
+		<to planet='doris'>nw,nw,w</to>
+		<to planet='earth'>nw,nw,n,o,e,e,e,se,se</to>
+		<to planet='magellan'>nw,nw,n,o,se,se,e,se</to>
+		<to planet='mars'>nw,nw,n,o,e,e,se</to>
+		<to planet='mercury'>nw,nw,n,o,se,se,se,se,se</to>
+		<to planet='moon'>nw,nw,n,o,e,e,e,se,se,se</to>
+		<to planet='selena'>nw,nw,n,o,e,e,e,se,se,se</to>
+		<to planet='paradise'>nw,nw,n,o,se,se,s,s,sw</to>
+		<to planet='pearl'>nw,nw,n,o,s,se,se,se,se,se,se</to>
+		<to planet='phobos'>nw,nw,n,o,e,e,e,e</to>
+		<to planet='rhea'>nw,nw,n,o,nw,w</to>
+		<to planet='silk'>nw,nw,n,ne,n</to>
+		<to planet='sumatra'>nw,nw,n,o,se</to>
+		<to planet='titan'>nw,nw,n,o,n,n</to>
+		<to planet='venus'>nw,nw,n,o,se,se,s,s</to>
+	</from>
+	
+	<from planet='magellan' loc='851'>
+		<to planet='brass'>nw,nw,nw,w,in,nw,w</to>
+		<to planet='castillo'>n,n,nw,nw</to>
+		<to planet='doris'>nw,nw,nw,w,in,sw</to>
+		<to planet='earth'>ne</to>
+		<to planet='lattice'>nw,nw,nw,w,in,s,se,se</to>
+		<to planet='mars'>n,nw</to>
+		<to planet='mercury'>s,se</to>
+		<to planet='moon'>e,e,</to>
+		<to planet='selena'>e,e</to>
+		<to planet='paradise'>sw,w,sw</to>
+		<to planet='pearl'>se,se,s,s</to>
+		<to planet='phobos'>n,n,n</to>
+		<to planet='rhea'>nw,nw,nw,nw,w,w</to>
+		<to planet='silk'>nw,nw,nw,w,in,ne,n</to>
+		<to planet='sumatra'>nw,nw,w</to>
+		<to planet='titan'>n,nw,nw,nw,nw</to>
+		<to planet='venus'>sw,w</to>
+	</from>
+	
+	<from planet='mars' loc='722'>
+		<to planet='brass'>nw,w,w,in,nw,w</to>
+		<to planet='castillo'>nw,n</to>
+		<to planet='doris'>nw,w,w,in,sw</to>
+		<to planet='earth'>e,se</to>
+		<to planet='lattice'>nw,w,w,in,s,se,se</to>
+		<to planet='magellan'>se,s</to>
+		<to planet='mercury'>se,se,s,s</to>
+		<to planet='moon'>e,se,se</to>
+		<to planet='selena'>e,se,se</to>
+		<to planet='paradise'>sw,s,s,sw</to>
+		<to planet='pearl'>se,se,se,s,s,s</to>
+		<to planet='phobos'>ne</to>
+		<to planet='rhea'>nw,nw,w,w,w</to>
+		<to planet='silk'>nw,w,w,in,ne,n</to>
+		<to planet='sumatra'>w,w</to>
+		<to planet='titan'>nw,nw,nw</to>
+		<to planet='venus'>sw,s,s</to>
+	</from>
+	
+	<from planet='mercury' loc='980'>
+		<to planet='brass'>nw,nw,nw,nw,nw,in,nw,w</to>
+		<to planet='castillo'>nw,nw,nw,n,n,n</to>
+		<to planet='doris'>nw,nw,nw,nw,nw,in,sw</to>
+		<to planet='earth'>n,n,n</to>
+		<to planet='lattice'>nw,nw,nw,nw,nw,in,s,se,se</to>
+		<to planet='magellan'>n,nw</to>
+		<to planet='mars'>nw,nw,n,n</to>
+		<to planet='moon'>ne,n</to>
+		<to planet='selena'>ne,n</to>
+		<to planet='paradise'>nw,w,w,sw</to>
+		<to planet='pearl'>se,s</to>
+		<to planet='phobos'>n,n,n,n,nw</to>
+		<to planet='rhea'>nw,nw,nw,nw,nw,nw,w</to>
+		<to planet='silk'>nw,nw,nw,nw,nw,in,ne,n</to>
+		<to planet='sumatra'>nw,nw,nw,nw</to>
+		<to planet='titan'>nw,nw,nw,nw,nw,n,n</to>
+		<to planet='venus'>nw,w,w</to>
+	</from>
+	
+	<from planet='moon' loc='853'>
+		<to planet='brass'>nw,nw,nw,w,w,w,in,nw,w</to>
+		<to planet='castillo'>nw,nw,nw,nw</to>
+		<to planet='doris'>nw,nw,nw,w,w,w,in,sw</to>
+		<to planet='earth'>nw</to>
+		<to planet='lattice'>nw,nw,nw,w,w,w,in,s,se,se</to>
+		<to planet='magellan'>w,w</to>
+		<to planet='mars'>nw,nw,w</to>
+		<to planet='mercury'>sw,s</to>
+		<to planet='paradise'>w,w,w,sw,sw</to>
+		<to planet='pearl'>s,s,s,s</to>
+		<to planet='phobos'>n,nw,nw</to>
+		<to planet='rhea'>nw,nw,nw,nw,w,w,w,w</to>
+		<to planet='silk'>nw,nw,nw,w,w,w,in,ne,n</to>
+		<to planet='sumatra'>nw,nw,w,w,w</to>
+		<to planet='titan'>nw,nw,nw,nw,nw,w</to>
+		<to planet='venus'>w,w,w,sw</to>
+	</from>
+	
+	<from planet='paradise' loc='976'>
+		<to planet='brass'>ne,n,n,nw,nw,in,nw,w</to>
+		<to planet='castillo'>ne,n,n,n,n,n</to>
+		<to planet='doris'>ne,n,n,nw,nw,in,sw</to>
+		<to planet='earth'>ne,ne,ne,e</to>
+		<to planet='lattice'>ne,n,n,nw,nw,in,s,se,se</to>
+		<to planet='magellan'>ne,e,ne</to>
+		<to planet='mars'>ne,ne,n,n</to>
+		<to planet='mercury'>ne,e,se,e</to>
+		<to planet='moon'>ne,ne,e,e,e</to>
+		<to planet='selena'>ne,ne,e,e,e</to>
+		<to planet='pearl'>ne,e,se,se,se,</to>
+		<to planet='phobos'>ne,n,n,ne,ne</to>
+		<to planet='rhea'>ne,n,n,nw,nw,nw,w</to>
+		<to planet='silk'>ne,n,n,nw,nw,in,ne,n</to>
+		<to planet='sumatra'>ne,nw,n,n</to>
+		<to planet='titan'>ne,n,n,n,n,nw,nw</to>
+		<to planet='venus'>ne</to>
+	</from>
+
+	<from planet='pearl' loc='1109'>
+		<to planet='brass'>n,nw,nw,nw,nw,nw,nw,in,nw,w</to>
+		<to planet='castillo'>n,n,n,n,nw,nw,nw,nw</to>
+		<to planet='doris'>n,nw,nw,nw,nw,nw,nw,in,sw</to>
+		<to planet='earth'>n,n,n,n,nw</to>
+		<to planet='lattice'>n,nw,nw,nw,nw,nw,nw,in,s,se,se</to>
+		<to planet='magellan'>n,n,nw,nw</to>
+		<to planet='mars'>n,n,n,nw,nw,nw</to>
+		<to planet='mercury'>n,nw</to>
+		<to planet='moon'>n,n,n,n</to>
+		<to planet='selena'>n,n,n,n</to>
+		<to planet='paradise'>nw,nw,w,w,w</to>
+		<to planet='phobos'>n,n,n,n,n,nw,nw</to>
+		<to planet='rhea'>n,nw,nw,nw,nw,nw,nw,nw,w</to>
+		<to planet='silk'>n,nw,nw,nw,nw,nw,nw,in,ne,n</to>
+		<to planet='sumatra'>n,nw,nw,nw,nw,nw</to>
+		<to planet='titan'>n,n,n,nw,nw,nw,nw,nw,nw</to>
+		<to planet='venus'>nw,nw,nw,w</to>
+	</from>
+	
+	<from planet='phobos' loc='659'>
+		<to planet='brass'>w,w,w,w,in,nw,w</to>
+		<to planet='castillo'>nw,w</to>
+		<to planet='doris'>w,w,w,w,in,sw</to>
+		<to planet='earth'>s,se</to>
+		<to planet='lattice'>w,w,w,w,in,s,se,se</to>
+		<to planet='magellan'>s,s,s</to>
+		<to planet='mars'>sw</to>
+		<to planet='mercury'>se,s,s,s,s</to>
+		<to planet='moon'>se,se,s</to>
+		<to planet='selena'>se,se,s</to>
+		<to planet='paradise'>sw,sw,s,s,sw</to>
+		<to planet='pearl'>se,se,s,s,s,s,s</to>
+		<to planet='rhea'>nw,w,w,w,w,w</to>
+		<to planet='silk'>w,w,w,w,in,ne,n</to>
+		<to planet='sumatra'>w,w,sw</to>
+		<to planet='titan'>nw,nw,w,w</to>
+		<to planet='venus'>sw,sw,s,s</to>
+	</from>
+	
+	<from planet='rhea' loc='589'>
+		<to planet='brass'>e,se,in,nw,w</to>
+		<to planet='castillo'>e,e,e,e</to>
+		<to planet='doris'>e,se,in,sw</to>
+		<to planet='earth'>e,e,e,e,se,se,se</to>
+		<to planet='lattice'>e,se,in,s,se,se</to>
+		<to planet='magellan'>e,e,se,se,se,se</to>
+		<to planet='mars'>e,e,e,se,se</to>
+		<to planet='mercury'>e,se,se,se,se,se,se</to>
+		<to planet='moon'>e,e,e,e,se,se,se,se</to>
+		<to planet='selena'>e,e,e,e,se,se,se,se</to>
+		<to planet='paradise'>e,se,se,s,s,s,s</to>
+		<to planet='pearl'>e,se,se,se,se,se,se,se,s</to>
+		<to planet='phobos'>e,e,e,e,e,se</to>
+		<to planet='silk'>e,se,in,ne,n</to>
+		<to planet='sumatra'>e,se,se</to>
+		<to planet='titan'>ne,e</to>
+		<to planet='venus'>e,se,se,se,s,s</to>
+	</from>
+	
+	<from planet='silk' loc='2383'>
+		<to planet='brass'>s,sw,nw,w</to>
+		<to planet='castillo'>s,sw,o,ne,e</to>
+		<to planet='doris'>s,sw,sw</to>
+		<to planet='earth'>s,sw,o,e,e,e,se,se</to>
+		<to planet='lattice'>s,sw,s,se,se</to>
+		<to planet='magellan'>s,sw,o,e,se,se,se</to>
+		<to planet='mars'>s,sw,o,e,e,se</to>
+		<to planet='mercury'>s,sw,o,se,se,se,se,se</to>
+		<to planet='moon'>s,sw,o,e,e,e,se,se,se</to>
+		<to planet='selena'>s,sw,o,e,e,e,se,se,se</to>
+		<to planet='paradise'>s,sw,o,se,s,s,s,s</to>
+		<to planet='pearl'>s,sw,o,s,se,se,se,se,se,se</to>
+		<to planet='phobos'>s,sw,o,e,e,e,e</to>
+		<to planet='rhea'>s,sw,o,nw,w</to>
+		<to planet='sumatra'>s,sw,o,se</to>
+		<to planet='titan'>s,sw,o,n,n</to>
+		<to planet='venus'>s,sw,o,se,se,s,s</to>
+	</from>
+
+	<from planet='sumatra' loc='720'>
+		<to planet='brass'>nw,in,nw,w</to>
+		<to planet='castillo'>ne,n</to>
+		<to planet='doris'>nw,in,sw</to>
+		<to planet='earth'>e,e,e,se</to>
+		<to planet='lattice'>nw,in,s,se,se</to>
+		<to planet='magellan'>se,e,se</to>
+		<to planet='mars'>e,e</to>
+		<to planet='mercury'>se,se,se,se</to>
+		<to planet='moon'>e,e,e,se,se</to>
+		<to planet='selena'>e,e,e,se,se</to>
+		<to planet='paradise'>s,s,s,s</to>
+		<to planet='pearl'>se,se,se,se,se,s</to>
+		<to planet='phobos'>e,ne,e</to>
+		<to planet='rhea'>nw,nw,w</to>
+		<to planet='silk'>nw,in,ne,n</to>
+		<to planet='titan'>n,n,nw</to>
+		<to planet='venus'>se,s,s</to>
+	</from>
+	
+	<from planet='titan' loc='527'>
+		<to planet='brass'>s,s,in,nw,w</to>
+		<to planet='castillo'>se,e</to>
+		<to planet='doris'>s,s,in,sw</to>
+		<to planet='earth'>se,se,se,se,e</to>
+		<to planet='lattice'>s,s,in,s,se,se</to>
+		<to planet='magellan'>se,se,se,se,s</to>
+		<to planet='mars'>se,se,se</to>
+		<to planet='mercury'>se,se,se,se,se,s,s</to>
+		<to planet='moon'>se,se,se,se,se,e</to>
+		<to planet='selena'>se,se,se,se,se,e</to>
+		<to planet='paradise'>se,s,s,s,s,s,s</to>
+		<to planet='pearl'>se,se,se,se,se,se,s,s,s</to>
+		<to planet='phobos'>se,se,e,e</to>
+		<to planet='rhea'>w,sw</to>
+		<to planet='silk'>s,s,in,ne,n</to>
+		<to planet='sumatra'>s,s,se</to>
+		<to planet='venus'>se,se,s,s,s,s</to>
+	</from>
+	
+	<from planet='venus' loc='913'>
+		<to planet='brass'>n,n,nw,nw,in,nw,w</to>
+		<to planet='castillo'>n,n,n,n,n</to>
+		<to planet='doris'>n,n,nw,nw,in,sw</to>
+		<to planet='earth'>ne,ne,e</to>
+		<to planet='lattice'>n,n,nw,nw,in,s,se,se</to>
+		<to planet='magellan'>e,ne</to>
+		<to planet='mars'>ne,n,n</to>
+		<to planet='mercury'>e,se,e</to>
+		<to planet='moon'>ne,e,e,e</to>
+		<to planet='selena'>ne,e,e,e</to>
+		<to planet='paradise'>sw</to>
+		<to planet='pearl'>e,se,se,se,</to>
+		<to planet='phobos'>n,n,ne,ne</to>
+		<to planet='rhea'>n,n,nw,nw,nw,w</to>
+		<to planet='silk'>n,n,nw,nw,in,ne,n</to>
+		<to planet='sumatra'>nw,n,n</to>
+		<to planet='titan'>n,n,n,n,nw,nw</to>
+	</from>
+
+</routes>

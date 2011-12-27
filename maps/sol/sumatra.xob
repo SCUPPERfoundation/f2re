@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='151'>
+
+   <object type='static' start='1029' visibility='100' size='1' weight='1' flags='i'>
+      <name>touchpad</name>
+      <id>obj_touchpad1</id>
+      <desc>The touchpad glows a soft green color indicating it is operational.</desc>
+      <vocab cmd='press' event='objects.touchpad.1'></vocab>
+   </object>
+
+   <object type='static' start='1026' visibility='100' size='1' weight='1' flags='i'>
+      <name>document</name>
+      <id>obj_report1</id>
+      <desc>Tabulation of Contracts Supervised by the Corps of Engineers for Construction of Complexes 34 and 37 as Well as Work on Sumatra for IEF Facilities (hereafter cited as Tabulation of Corps of Engineers Contracts).</desc>
+      <vocab cmd='read' event='objects.document.1'></vocab>
+   </object>
+
+   <object type='static' start='1030' visibility='100' size='1' weight='1' flags='i'>
+      <name>touchpad</name>
+      <id>obj_touchpad2</id>
+      <desc>The touchpad glows a soft green color indicating it is operational.</desc>
+      <vocab cmd='press' event='objects.touchpad.3'></vocab>
+   </object>
+
+   <object type='static' start='1029' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_tpadsign1</id>
+      <desc>The sign is finely crafted from plazsteel and meticulously engraved by skilled union workers. It's welded to the wall of the dome. The words are in Galactic Standard English so anyone can read it.</desc>
+      <vocab cmd='read' event='signs.touchpad.1'></vocab>
+   </object>
+
+   <object type='static' start='1030' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_tpadsign2</id>
+      <desc>The sign is finely crafted from plazsteel and meticulously engraved by skilled union workers. It's welded to the wall of the dome. The words are in Galactic Standard English so anyone can read it.</desc>
+      <vocab cmd='read' event='signs.touchpad.1'></vocab>
+   </object>
+
+   <object type='static' start='1026' visibility='100' size='1' weight='1' flags='d'>
+      <name>data unit</name>
+      <id>obj_data1</id>
+      <desc>The data unit is an old model with integrated display and input panel. The status panels are unlit except for the power button which glows a dull red waiting to be activated.</desc>
+      <vocab cmd='activate' event='objects.data1.1'></vocab>
+   </object>
+
+   <object type='static' start='1157' visibility='100' size='1' weight='1' flags='d'>
+      <name>sign</name>
+      <id>obj_bofh1</id>
+      <desc>You see a large sheet of paper taped to the wall. A warning is scrawled across it in very large green letters. You lean closer to read it.</desc>
+      <vocab cmd='read' event='signs.bofh.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>coffee bulb</name>
+      <id>obj_coffee</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='drop' event='objects.coffee.4'></vocab>
+   </object>
+
+   <object type='static' start='967' visibility='100' size='1' weight='1' flags='i'>
+      <name>touchpad</name>
+      <id>obj_touchpad3</id>
+      <desc>The touchpad glows a soft green color indicating it is operational.</desc>
+      <vocab cmd='press' event='objects.touchpad1.1'></vocab>
+   </object>
+
+   <object type='static' start='968' visibility='100' size='1' weight='1' flags='i'>
+      <name>touchpad</name>
+      <id>obj_touchpad4</id>
+      <desc>The touchpad glows a soft green color indicating it is operational.</desc>
+      <vocab cmd='press' event='objects.touchpad1.2'></vocab>
+   </object>
+
+   <object type='static' start='967' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_tpadsign3</id>
+      <desc>The sign is finely crafted from plazsteel and meticulously engraved by skilled union workers. It's welded to the wall of the dome. The words are in Galactic Standard English so anyone can read it.</desc>
+      <vocab cmd='read' event='signs.mantrap.1'></vocab>
+   </object>
+
+   <object type='static' start='968' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_tpadsign4</id>
+      <desc>The sign is finely crafted from plazsteel and meticulously engraved by skilled union workers. It's welded to the wall of the dome. The words are in Galactic Standard English so anyone can read it.</desc>
+      <vocab cmd='read' event='signs.mantrap.2'></vocab>
+   </object>
+
+   <object type='static' start='967' visibility='0' size='1' weight='1'>
+      <name>nameplate</name>
+      <id>obj_brass1</id>
+      <desc>The gleaming brass nameplate is engraved in block letters. Finely crafted by natives of the asteroid Brass, it is a solid tribute to the dignity of corporate achievement. Perhaps you should read the nameplate.</desc>
+      <vocab cmd='read' event='objects.nameplate.1'></vocab>
+   </object>
+
+   <object type='static' start='840' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_warning1</id>
+      <desc>You see a very important warning sign from G.O.S.H.A. that everyone should read.</desc>
+      <vocab cmd='read' event='signs.warning.1'></vocab>
+   </object>
+
+   <object type='static' start='777' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_warning2</id>
+      <desc>As you walk along you read the series of signs.</desc>
+      <vocab cmd='read' event='signs.catwalk.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>bottle</name>
+      <id>obj_bottle1</id>
+      <desc>An impressively rich looking clear glass bottle completely filled with fine puce particles. A florid label identifies it as a Commemorative Souvenir of Sumatra, Courtesy of T&amp;C Corp. Contents: Genuine Sumatra Rock Dust.</desc>
+      <vocab cmd='drop' event='objects.bottle1.4'></vocab>
+   </object>
+
+   <object type='static' start='963' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee1</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='1092' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee2</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='838' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee3</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='903' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee4</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='1157' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee5</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='1287' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee6</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='1226' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee7</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='839' visibility='100' size='1' weight='1' flags='i'>
+      <name>coffee bulb</name>
+      <id>obj_coffee8</id>
+      <desc>You see a discarded standard plastic thermal bulb that once held coffee but is now empty. A bright yellow and black warning label lists one of the many toxic effects of this addictive beverage.</desc>
+      <vocab cmd='get' event='objects.coffee.5'></vocab>
+   </object>
+
+   <object type='static' start='707' visibility='100' size='1' weight='1' flags='i'>
+      <name>touchpad</name>
+      <id>obj_touchpad5</id>
+      <desc>The touchpad glows a soft green color indicating it is operational.</desc>
+      <vocab cmd='press' event='objects.touchpad2.1'></vocab>
+   </object>
+
+   <object type='static' start='643' visibility='100' size='1' weight='1' flags='i'>
+      <name>touchpad</name>
+      <id>obj_touchpad6</id>
+      <desc>The touchpad glows a soft green color indicating it is operational.</desc>
+      <vocab cmd='press' event='objects.touchpad2.3'></vocab>
+   </object>
+
+   <object type='static' start='707' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_tpadsign5</id>
+      <desc>The sign is finely crafted from plazsteel and meticulously engraved by skilled union workers. It's welded to the wall of the dome. The words are in Galactic Standard English so anyone can read it.</desc>
+      <vocab cmd='read' event='signs.touchpad.1'></vocab>
+   </object>
+
+   <object type='static' start='643' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj_tpadsign6</id>
+      <desc>The sign is finely crafted from plazsteel and meticulously engraved by skilled union workers. It's welded to the wall of the dome. The words are in Galactic Standard English so anyone can read it.</desc>
+      <vocab cmd='read' event='signs.touchpad.1'></vocab>
+   </object>
+
+   <object type='static' start='515' visibility='100' size='1' weight='1' flags='di'>
+      <name>fountain</name>
+      <id>obj_fountain1</id>
+      <desc>You see an elegant white plazstone fountain. You step closer to look at it.</desc>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>coin</name>
+      <id>obj_coin1</id>
+      <desc>The coin appears to be a silver groat in very fine condition, softy gleaming with the patina of great age.</desc>
+      <vocab cmd='drop' event='objects.coin1.1'></vocab>
+   </object>
+
+   <object type='static' start='515' visibility='0' size='1' weight='1'>
+      <name>at fountain</name>
+      <id>obj_fountain2</id>
+      <desc>I can't find anything called at fountain in the vicinity!</desc>
+      <vocab cmd='look' event='objects.fountain.2'></vocab>
+   </object>
+
+   <object type='static' start='515' visibility='0' size='1' weight='1'>
+      <name>coin from fountain</name>
+      <id>obj_coin2</id>
+      <desc>Looking down through the water you see 3 shiney silver coins amongst some smoothly rounded pebbles at the bottom of the fountain's lowest basin.</desc>
+      <vocab cmd='get' event='objects.fountain.1'></vocab>
+   </object>
+
+   <object type='static' start='515' visibility='0' size='1' weight='1'>
+      <name>in fountain</name>
+      <id>obj_fountain3</id>
+      <desc>I can't find anything called in fountain in the vicinity!</desc>
+      <vocab cmd='look' event='objects.fountain.2'></vocab>
+      <vocab cmd='get' event='objects.fountain.6'></vocab>
+      <vocab cmd='climb' event='objects.fountain.6'></vocab>
+      <vocab cmd='jump' event='objects.fountain.6'></vocab>
+   </object>
+
+   <object type='static' start='387' visibility='0' size='1' weight='1'>
+      <name>out</name>
+      <id>obj_out1</id>
+      <desc>I can't find anything called out in the vicinity! Perhaps you want to get out?</desc>
+      <vocab cmd='get' event='objects.fountain.7'></vocab>
+   </object>
+
+   <object type='static' start='1027' visibility='100' size='1' weight='1' flags='i'>
+      <name>DANGER sign</name>
+      <id>obj_danger1</id>
+      <desc>You see a large sign. Bright red LEDs flash, "DANGER- HIGH VOLTAGE". Do not approach sign! The message continues in several additional lines of small type.</desc>
+      <vocab cmd='read' event='objects.danger.1'></vocab>
+   </object>
+
+   <object type='static' start='202' visibility='100' size='1' weight='1' flags='d'>
+      <name>notice</name>
+      <id>obj_notice1</id>
+      <desc>You see an Official Notice to Cease and Desist All Excavation and Construction Activities by order of the Galactic Heritage Foundation.</desc>
+   </object>
+
+   <object type='static' start='386' visibility='100' size='1' weight='1' flags='d'>
+      <name>toilet</name>
+      <id>obj_toilet1</id>
+      <desc>You see a standard porcelain bowl with a plastic seat and a flush handle. Please remember to flush the toilet when you are finished.</desc>
+      <vocab cmd='flush' event='objects.toilet.1'></vocab>
+   </object>
+
+   <object type='static' start='386' visibility='0' size='1' weight='1'>
+      <name>the toilet</name>
+      <id>obj_toilet2</id>
+      <desc>You see a standard porcelain bowl with a plastic seat and a flush handle. Please remember to flush the toilet when you are finished.</desc>
+      <vocab cmd='flush' event='objects.toilet.1'></vocab>
+   </object>
+
+   <object type='static' start='386' visibility='100' size='1' weight='1' flags='d'>
+      <name>sink</name>
+      <id>obj_sink1</id>
+      <desc>You see a gleaming sink with hot and cold taps and a soap dispenser. It even has an auto-hand dryer.</desc>
+   </object>
+
+   <object type='static' start='386' visibility='0' size='1' weight='1'>
+      <name>hands</name>
+      <id>obj_hands1</id>
+      <desc>Your hands are lovely but perhaps you should wash them before leaving the toilet?</desc>
+      <vocab cmd='wash' event='objects.toilet.2'></vocab>
+   </object>
+
+   <object type='static' start='386' visibility='0' size='1' weight='1'>
+      <name>your hands</name>
+      <id>obj_hands2</id>
+      <desc>Your hands are lovely but perhaps you should wash them before leaving the toilet?</desc>
+      <vocab cmd='wash' event='objects.toilet.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='0' size='1' weight='1' flags='is'>
+      <name>tissue</name>
+      <id>obj_tissue1</id>
+      <desc>It's a white tissue.</desc>
+      <vocab cmd='drop' event='objects.tissue.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='dst'>
+      <name>expresso bulb</name>
+      <id>obj_expresso</id>
+      <desc>You take a cautious sip from the unmarked bulb. Wow! Triple expresso!</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='static' start='195' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>If you want to eat here, you will be served ribs and beans.</desc>
+      <vocab cmd='buy' event='food.muddy.1'></vocab>
+   </object>
+
+   <object type='static' start='196' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>Fish and chips is the food on offer here.</desc>
+      <vocab cmd='buy' event='food.corsica.1'></vocab>
+   </object>
+
+   <object type='static' start='197' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_3food</id>
+      <desc>A feast of exotic delights awaits the adventurous diner, so buy some food and prepare to have your tastebuds (or equivalent) tickled.</desc>
+      <vocab cmd='buy' event='food.brasserie.1'></vocab>
+   </object>
+
+   <object type='static' start='450' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_4food</id>
+      <desc>The house speciality is BBQ pork made to a traditional Earth recipe.</desc>
+      <vocab cmd='buy' event='food.guevarra.1'></vocab>
+   </object>
+
+   <object type='static' start='1161' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_5food</id>
+      <desc>The food on sale here is Venusian landcrabs served with cheese.</desc>
+      <vocab cmd='buy' event='food.custer.1'></vocab>
+   </object>
+
+   <object type='static' start='1226' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_6food</id>
+      <desc>The food on sale here is Venusian landcrabs served with cheese.</desc>
+      <vocab cmd='buy' event='food.custer.1'></vocab>
+   </object>
+
+   <object type='static' start='1287' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_7food</id>
+      <desc>The food on offer is borscht.</desc>
+      <vocab cmd='buy' event='food.working.1'></vocab>
+   </object>
+
+   <object type='static' start='1352' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_8food</id>
+      <desc>This worker's cafeteria specializes in hearty, simple meals that satisfy the soul as well as the appetites.</desc>
+      <vocab cmd='buy' event='food.cafeteria.1'></vocab>
+   </object>
+
+   <object type='static' start='195' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_1coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='196' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_2coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='197' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_3coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='450' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_4coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='1161' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_5coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='1226' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_6coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='1287' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_7coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+   <object type='static' start='1352' visibility='0' size='1' weight='1'>
+      <name>coffee</name>
+      <id>obj_8coffee</id>
+      <desc>The beverage Sumatra is justly famed for is on sale here.</desc>
+      <vocab cmd='buy' event='food.coffee.1'></vocab>
+   </object>
+
+</object-list>

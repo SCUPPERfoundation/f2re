@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<fed2-map title='Katharon' version='12' editor='standard' from='330' to='Crypton.Crypton Space.463'>
+
+   <location num='0'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='1'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='64'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='65'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='209'>
+      <name>Mine wall</name>
+      <desc>There are massive digger machines digging into the mine wall.</desc>
+      <desc>   SOUTH leads to the Mine tunnel.</desc>
+      <exits s='273'/>
+   </location>
+
+   <location num='258'>
+      <name>Mine office&apos;s confrance room</name>
+      <desc>There is a large desk in the middle of the room for presentations.</desc>
+      <desc>   SOUTH WEST leads to the Mine Managers office SOUTH EAST leads to the Mine Managers office.</desc>
+      <exits se='323' sw='321'/>
+   </location>
+
+   <location num='261'>
+      <name>Mine office&apos;s</name>
+      <desc>SOUTH WEST leads to the Mine office&apos;s.</desc>
+      <exits sw='324'/>
+   </location>
+
+   <location num='266'>
+      <name>Entrance to workers living section</name>
+      <desc>You walk into a area that is completly plain it is also the cleanest place you have seen yet here.</desc>
+      <desc>   IN leads to the living section SOUTH leads to the Landing Pad For Katharon.</desc>
+      <exits s='330' in='528'/>
+   </location>
+
+   <location num='271'>
+      <name>Mine wall</name>
+      <desc>There are massive digger machines digging into the mine wall.</desc>
+      <desc>  SOUTH EAST leads to the Mine tunnel.</desc>
+      <exits se='336'/>
+   </location>
+
+   <location num='273'>
+      <name>Mine tunnel</name>
+      <desc>This is a section of the mine tunnel that has been dug out and all the materials taken to other systems.</desc>
+      <desc>   NORTH and SOUTH leads to the Mine wall.</desc>
+      <exits n='209' s='337'/>
+   </location>
+
+   <location num='275'>
+      <name>Mine wall</name>
+      <desc>There are massive digger machines digging into the mine wall.</desc>
+      <desc>  SOUTH WEST leads to the Mine tunnel.</desc>
+      <exits sw='338'/>
+   </location>
+
+   <location num='321'>
+      <name>Mine office&apos;s confrance room</name>
+      <desc>There is a large desk in the middle of the room for presentations.</desc>
+      <desc>   SOUTH EAST leads to the Mine Managers office NORTH EAST leads to the Mine office&apos;s confrance room.</desc>
+      <exits ne='258' se='386'/>
+   </location>
+
+   <location num='323'>
+      <name>Mine Managers office</name>
+      <desc>NORTH WEST leads to the Mine office&apos;s confrance room SOUTH and EAST leads to the Mine office&apos;s.</desc>
+      <exits e='324' s='387' nw='258'/>
+   </location>
+
+   <location num='324'>
+      <name>Mine office&apos;s</name>
+      <desc>NORTH EAST and SOUTH WEST leads to the Mine office&apos;s WEST leads to the Mine Managers office.</desc>
+      <exits ne='261' sw='387' w='323'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>Hale of berry bar</name>
+      <desc>This bar is seen to be a shabby place with dirt all up the walls and old food on the floor but this does not seen to effect the people in here having fun.</desc>
+      <desc>  SOUTH WEST leads to the Mines trading centre EAST leads to the Landing pad.</desc>
+      <exits e='330' sw='392'/>
+   </location>
+
+   <location num='330'>
+      <name>Landing Pad For Katharon</name>
+      <desc>Once you exit your ship you are transported to the processing centre of the mine, You look around and see all different species walking around dressed in protective clothing for the deep mining.</desc>
+      <desc>  WEST leads to the mines trading centre NORTH leads to the Entrance to workers living section SOUTH leads to the mine hallway.</desc>
+      <exits n='266' e='331' s='394' w='329'/>
+   </location>
+
+   <location num='331'>
+      <name>Katharon reception</name>
+      <desc>You see a man with his feet resting on a desk sleeping you assume he is meant to greet you but there will not be any greeting here.</desc>
+      <desc>   WEST leads to the Landing pad SOUTH EAST leads to the waiting room.</desc>
+      <exits se='396' w='330'/>
+   </location>
+
+   <location num='336'>
+      <name>Mine tunnel</name>
+      <desc>EAST leads to the Mining tunnel NORTH WEST leads to the mine wall.</desc>
+      <exits e='337' nw='271'/>
+   </location>
+
+   <location num='337'>
+      <name>Mine tunnel</name>
+      <desc>SOUTH leads to the Mining shaft of Katharon NORTH, EAST and WEST leads to the Mining tunnel.</desc>
+      <exits n='273' e='338' s='401' w='336'/>
+   </location>
+
+   <location num='338'>
+      <name>Mine tunnel</name>
+      <desc>NORTH leads to the mine wall WEST leads to the Mine tunnel.</desc>
+      <exits ne='275' w='337'/>
+   </location>
+
+   <location num='386'>
+      <name>Mine Managers office</name>
+      <desc>NORTH WEST leads to the Mine office&apos;s confrance room SOUTH and EAST leads to the Mine office&apos;s.</desc>
+      <exits e='387' s='450' nw='321'/>
+   </location>
+
+   <location num='387'>
+      <name>Mine office&apos;s</name>
+      <desc>NORTH EAST and SOUTH WEST leads to the Mine office&apos;s WEST and NORTH leads to the Mine Managers office.</desc>
+      <exits n='323' ne='324' sw='450' w='386'/>
+   </location>
+
+   <location num='392' flags='e'>
+      <name>Mines trading centre</name>
+      <desc>You look around there are stores of products all around the room.</desc>
+      <desc>   NORTH EAST leads to the hale of berry bar.</desc>
+      <exits ne='329'/>
+   </location>
+
+   <location num='394'>
+      <name>Mine Hallway</name>
+      <desc>while walking down the hall way there are cleaning products all over the floor but they look like they have never been used.</desc>
+      <desc>   NORTH leads to the Landing pad SOUTH leads to the mining shaft.</desc>
+      <exits n='330' s='458'/>
+   </location>
+
+   <location num='396'>
+      <name>Waiting room</name>
+      <desc>The room is filled with people wating for the man behind the desk to wake up.</desc>
+      <desc>   NORTH WEST leads to the Katharon reception.</desc>
+      <exits nw='331'/>
+   </location>
+
+   <location num='401'>
+      <name>Mining shaft of Katharon</name>
+      <desc>Once you enter this shaft you notice that it isnt wire holding the lift but rope which is pulled by little creatures from a far away system.</desc>
+      <desc>  UP leads to the deep levels of the mine and NORTH leads to the Mine tunnel.</desc>
+      <exits n='337' up='458'/>
+   </location>
+
+   <location num='450'>
+      <name>Mine office&apos;s</name>
+      <desc>NORTH EAST and SOUTH WEST leads to the Mine office&apos;s NORTH leads to the Mine Managers office.</desc>
+      <exits n='386' ne='387' sw='513'/>
+   </location>
+
+   <location num='458'>
+      <name>Mining shaft of Katharon</name>
+      <desc>Once you enter this shaft you notice that it isnt wire holding the lift but rope which is pulled by little creatures from a far away system.</desc>
+      <desc>  DOWN leads to the deep levels of the mine and NORTH leads to the Mine Hallway.</desc>
+      <exits n='394' down='401'/>
+   </location>
+
+   <location num='513'>
+      <name>Mine office&apos;s</name>
+      <desc>DOWN leads to the living section hallway NORTH EAST leads to the Mine office&apos;s.</desc>
+      <exits ne='450' down='589'/>
+   </location>
+
+   <location num='525' flags='hi'>
+      <name>Katharon medical centre</name>
+      <desc>The medical centre has not been used in many years due to the safty procedures that the crypton system requries.</desc>
+      <desc>   SOUTH leads to the Living section hallway.</desc>
+      <exits s='589'/>
+   </location>
+
+   <location num='528'>
+      <name>workers living section</name>
+      <desc>SOUTH leads to the living section hallway OUT leads to the Entrance to workers living section.</desc>
+      <exits s='592' out='266'/>
+   </location>
+
+   <location num='530'>
+      <name>Kitchen</name>
+      <desc>There are about three people cooking all the food for the whole mining staff.</desc>
+      <desc>   SOUTH leads to the Living section cafe.</desc>
+      <exits s='594'/>
+   </location>
+
+   <location num='589'>
+      <name>Living section hallway</name>
+      <desc>UP leads to the office level of the mine NORTH  leads to the Katharon medical centre EAST leads to the Living section hallway SOUTH WEST leads to tallys shipyard.</desc>
+      <exits n='525' e='590' sw='652' up='513'/>
+   </location>
+
+   <location num='590'>
+      <name>Living section hallway</name>
+      <desc>WEST and EAST leads to the Living section hallway.</desc>
+      <exits e='591' w='589'/>
+   </location>
+
+   <location num='591'>
+      <name>Living section hallway</name>
+      <desc>SOUTH leads to the medium bedroom WEST and EAST leads to the Living section hallway.</desc>
+      <exits e='592' s='655' w='590'/>
+   </location>
+
+   <location num='592'>
+      <name>Living section hallway</name>
+      <desc>NORTH leads to the workers living section SOUTH leads to the big bedroom WEST and EAST leads to the Living section hallway.</desc>
+      <exits n='528' e='593' s='656' w='591'/>
+   </location>
+
+   <location num='593'>
+      <name>Living section hallway</name>
+      <desc>EAST leads to the Living section cafe WEST leads to the Living section hallway.</desc>
+      <exits e='594' w='592'/>
+   </location>
+
+   <location num='594' flags='b'>
+      <name>Living section cafe</name>
+      <desc>Although most of this mine is dirty and smelly this cafe is clean and only smells of fresh food being cooked in the kitchen.</desc>
+      <desc>   WEST leads to the Living section hallway NORTH leads to the kitchen.</desc>
+      <exits n='530' w='593'/>
+   </location>
+
+   <location num='651' flags='r'>
+      <name>Tallys shipyard repair</name>
+      <desc>You walk into the shipyard and notice that the whole room is made of glass so that customers can see what they are having done to their ships.</desc>
+      <desc>   EAST leads to Tallys shipyard.</desc>
+      <exits e='652'/>
+   </location>
+
+   <location num='652' flags='y'>
+      <name>Tallys Shipyard</name>
+      <desc>You walk into the shipyard and notice that the whole room is made of glass so that customers can see what they are buying.</desc>
+      <desc>   NORTH EAST leads to the Living section hallway WEST leads to Tallys Shipyard repair.</desc>
+      <exits ne='589' w='651'/>
+   </location>
+
+   <location num='655'>
+      <name>Medium bedroom</name>
+      <desc>This room has over 50 bunk beds in here for all the mine workers.</desc>
+      <desc>   NORTH leads to the Living section hallway.</desc>
+      <exits n='591'/>
+   </location>
+
+   <location num='656'>
+      <name>Big Bedroom</name>
+      <desc>This room has over one hundred bunk beds in here for all the mine workers.</desc>
+      <desc>   NORTH leads to the living section hallway.</desc>
+      <exits n='592'/>
+   </location>
+
+</fed2-map>

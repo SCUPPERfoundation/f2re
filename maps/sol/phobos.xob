@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='31'>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>keycard</name>
+      <id>obj_keycard</id>
+      <desc>The keycard authorizes the bearer to use a buggy to travel between the domes on Phobos.</desc>
+      <vocab cmd='examine' event='objects.keycard.1'></vocab>
+      <vocab cmd='ex' event='objects.keycard.1'></vocab>
+      <vocab cmd='drop' event='objects.keycard.2'></vocab>
+   </object>
+
+   <object type='static' start='341' visibility='0' size='1' weight='1'>
+      <name>tracey for authorization</name>
+      <id>obj_tracey</id>
+      <desc>I can't find anything called tracey for authorization in the vicinity!</desc>
+      <vocab cmd='ask' event='buggy.auth.1'></vocab>
+   </object>
+
+   <object type='static' start='218' visibility='0' size='1' weight='1'>
+      <name>button</name>
+      <id>obj_button0pad</id>
+      <desc>You haven't said which button you want to look at!</desc>
+      <vocab cmd='press' event='buggy.pad.1'></vocab>
+      <vocab cmd='push' event='buggy.pad.1'></vocab>
+   </object>
+
+   <object type='static' start='218' visibility='0' size='1' weight='1'>
+      <name>button 1</name>
+      <id>obj_button1pad</id>
+      <desc>Press button 1 to go to the shuttle pad.</desc>
+      <vocab cmd='press' event='buggy.pad.2'></vocab>
+      <vocab cmd='push' event='buggy.pad.2'></vocab>
+   </object>
+
+   <object type='static' start='218' visibility='0' size='1' weight='1'>
+      <name>button 2</name>
+      <id>obj_button2pad</id>
+      <desc>Press button 2 to go to Alpha Dome.</desc>
+      <vocab cmd='press' event='buggy.pad.3'></vocab>
+      <vocab cmd='push' event='buggy.pad.3'></vocab>
+   </object>
+
+   <object type='static' start='218' visibility='0' size='1' weight='1'>
+      <name>button 3</name>
+      <id>obj_button3pad</id>
+      <desc>Press button 3 to go to Beta Dome.</desc>
+      <vocab cmd='press' event='buggy.pad.5'></vocab>
+      <vocab cmd='push' event='buggy.pad.5'></vocab>
+   </object>
+
+   <object type='static' start='218' visibility='0' size='1' weight='1'>
+      <name>button 4</name>
+      <id>obj_button4alpha</id>
+      <desc>Press button 4 to go to Gamma Dome.</desc>
+      <vocab cmd='press' event='buggy.pad.6'></vocab>
+      <vocab cmd='push' event='buggy.pad.6'></vocab>
+   </object>
+
+   <object type='static' start='919' visibility='0' size='1' weight='1'>
+      <name>button</name>
+      <id>obj_button0alpha</id>
+      <desc>You haven't said which button you want to look at!</desc>
+      <vocab cmd='press' event='buggy.alpha.1'></vocab>
+      <vocab cmd='push' event='buggy.alpha.1'></vocab>
+   </object>
+
+   <object type='static' start='919' visibility='0' size='1' weight='1'>
+      <name>button 1</name>
+      <id>obj_button1alpha</id>
+      <desc>Press button 1 to go to the shuttle pad.</desc>
+      <vocab cmd='press' event='buggy.alpha.3'></vocab>
+      <vocab cmd='push' event='buggy.alpha.3'></vocab>
+   </object>
+
+   <object type='static' start='919' visibility='0' size='1' weight='1'>
+      <name>button 2</name>
+      <id>obj_button2alpha</id>
+      <desc>Press button 2 to go to Alpha Dome.</desc>
+      <vocab cmd='press' event='buggy.alpha.2'></vocab>
+      <vocab cmd='push' event='buggy.alpha.2'></vocab>
+   </object>
+
+   <object type='static' start='919' visibility='0' size='1' weight='1'>
+      <name>button 3</name>
+      <id>obj_button3alpha</id>
+      <desc>Press button 4 to go to Beta Dome.</desc>
+      <vocab cmd='press' event='buggy.alpha.5'></vocab>
+      <vocab cmd='push' event='buggy.alpha.5'></vocab>
+   </object>
+
+   <object type='static' start='919' visibility='0' size='1' weight='1'>
+      <name>button 4</name>
+      <id>obj_button4alpha</id>
+      <desc>Press button 4 to go to Gamma Dome.</desc>
+      <vocab cmd='press' event='buggy.alpha.6'></vocab>
+      <vocab cmd='push' event='buggy.alpha.6'></vocab>
+   </object>
+
+   <object type='static' start='341' visibility='100' size='1' weight='1'>
+      <name>Tracey</name>
+      <id>obj_tracey</id>
+      <desc>Desc by event</desc>
+      <vocab cmd='kiss' event='objects.tracey.1'></vocab>
+      <vocab cmd='hug' event='objects.tracey.1'></vocab>
+      <vocab cmd='grope' event='objects.tracey.1'></vocab>
+      <vocab cmd='get' event='objects.tracey.1'></vocab>
+      <vocab cmd='tracey' event='objects.tracey.2'></vocab>
+      <vocab cmd='examine' event='objects.tracey.3'></vocab>
+      <vocab cmd='ex' event='objects.tracey.3'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>flower</name>
+      <id>obj_flower</id>
+      <desc>It looks like a large, genetically engineered dog daisy...</desc>
+      <vocab cmd='drop' event='newbod.message.3'></vocab>
+   </object>
+
+   <object type='static' start='340' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>The food available here is a special substance called morphood that constantly changes its appearance, taste and texture.</desc>
+      <vocab cmd='buy' event='food.morph.1'></vocab>
+   </object>
+
+   <object type='static' start='586' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>The main meal on offer today is steak and kidney pudding.</desc>
+      <vocab cmd='buy' event='food.noshery.1'></vocab>
+   </object>
+
+</object-list>

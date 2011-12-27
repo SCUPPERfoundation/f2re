@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<fed2-map title='Beer' version='2' editor='standard' from='267' to='Liquor.Liquor Space.199'>
+
+   <location num='0' flags='t'>
+      <name>Empty box</name>
+      <desc>A place to put the toys!</desc>
+   </location>
+
+   <location num='72'>
+      <name>Stouts</name>
+      <desc>English stout, mild stout, sweet stout, and various others line the rows here. The way out is southeast.</desc>
+      <exits se='137'/>
+   </location>
+
+   <location num='73'>
+      <name>Various foreign types</name>
+      <desc>Baltic porter, Russian stout, varioius other types of foreign brew made in the UK are lined up here. The way out is south.</desc>
+      <exits s='137'/>
+   </location>
+
+   <location num='74'>
+      <name>Irish brews</name>
+      <desc>Mainly dry stouts and red ales are piled up here. The way out is southwest.</desc>
+      <exits sw='137'/>
+   </location>
+
+   <location num='76'>
+      <name>Pale Ales</name>
+      <desc>Various types of Pale Ale are stacked all around here. The way out is southeast.</desc>
+      <exits se='141'/>
+   </location>
+
+   <location num='77'>
+      <name>Malt Liquors</name>
+      <desc>Various types of strong drink is held in kegs here. The way out is south.</desc>
+      <exits s='141'/>
+   </location>
+
+   <location num='78'>
+      <name>Steam </name>
+      <desc>Stacks upon stacks of various Steam beers are piled up here. The way out is southwest.</desc>
+      <exits sw='141'/>
+   </location>
+
+   <location num='136'>
+      <name>Dark brews</name>
+      <desc>Dark ales, brown ales, and other dark colored brews are stacked high in here. The way out is east.</desc>
+      <exits e='137'/>
+   </location>
+
+   <location num='137'>
+      <name>Brews of Great Britain</name>
+      <desc>South are Porters, southwest contains Braggot, Barleywine, and Bitters, West are brown and other dark ales, northwest is for Pale ales, Northwest can be found Stouts, north is stacks of foreign type brews, northeast contains irish brews, east can be found scottish brews. The LP is southeast from here.</desc>
+      <exits n='73' ne='74' e='138' se='202' s='201' sw='200' w='136' nw='72'/>
+   </location>
+
+   <location num='138'>
+      <name>Scottish brews</name>
+      <desc>Something called &apos;Gruit&apos; is stacked next to other types of scottish ales. The way out is west.</desc>
+      <exits w='137'/>
+   </location>
+
+   <location num='140'>
+      <name>Porter</name>
+      <desc>Stacks and stacks of kegs labelled &quot;Porter&quot; are here. The way out is east.</desc>
+      <exits e='141'/>
+   </location>
+
+   <location num='141'>
+      <name>Rows of Stout</name>
+      <desc>The LP is southwest here. South is labelled &apos;Stout&apos;. Southeast are labelled &quot;Wheat&quot;. South is labelled &quot;Amber&quot;, West is labelled &quot;Porter&quot;, northwest is labelled &apos;Pale Ales&apos; , north is labelled &quot;Malt Lagers&quot;, Northeast is labelled &quot;Steam&quot;, and east is labelled &quot;Light and low alcohol&quot;.</desc>
+      <exits n='77' ne='78' e='142' se='206' s='205' sw='204' w='140' nw='76'/>
+   </location>
+
+   <location num='142'>
+      <name>Light beer</name>
+      <desc>Several types of low-alcohol and low-calorie beers are stacked here. The way out is west.</desc>
+      <exits w='141'/>
+   </location>
+
+   <location num='200'>
+      <name>Different brews</name>
+      <desc>Braggots, barley, and bitters are stacked up here. The way out is northeast.</desc>
+      <exits ne='137'/>
+   </location>
+
+   <location num='201'>
+      <name>Porters</name>
+      <desc>Stack upon stack of English Porter lines these rows. The way out is north.</desc>
+      <exits n='137'/>
+   </location>
+
+   <location num='202'>
+      <name>Rows of Beer Kegs</name>
+      <desc>This row starts with a sign proclaiming these kegs to contain various flavors common to Great Britain. They continue to the northwest. The LP is southeast of here.</desc>
+      <exits se='267' nw='137'/>
+   </location>
+
+   <location num='203' flags='hi'>
+      <name>The Hospital</name>
+      <desc>Several beds hold patients who appear to be blissfully smiling. There appears to be something wrong with the IV bags near all the beds however. Closer inspection reveals there is foam in all of them!</desc>
+      <desc>The LP is south.</desc>
+      <exits s='267'/>
+   </location>
+
+   <location num='204'>
+      <name>Beer Kegs</name>
+      <desc>There is a sign here stating that this row of kegs contains &apos;American Ales&apos;. The stacks continue northeast and the LP is southwest here.</desc>
+      <exits ne='141' sw='267'/>
+   </location>
+
+   <location num='205'>
+      <name>Stout</name>
+      <desc>Stout, double stout, strong, wild and other typesof stout ale are stacked here. The way out is north.</desc>
+      <exits n='141'/>
+   </location>
+
+   <location num='206'>
+      <name>Wheat beers</name>
+      <desc>Light and dark wheats. Wheats mixed with fruit. Lots of varieties are stacked up here. The way out is northwest.</desc>
+      <exits nw='141'/>
+   </location>
+
+   <location num='266'>
+      <name>Ships and repairs</name>
+      <desc>&quot;Hello my friend! Welcome to Jeanie&apos;s ships and repairls!&quot; A very attractive woman with coal black hair and eyes wipes her hands and walks towards you. The smudge on her cheek and nose looks rather cute on her!</desc>
+      <desc>The LP is east from here.</desc>
+      <exits e='267'/>
+   </location>
+
+   <location num='267'>
+      <name>Welcome to Beer!</name>
+      <desc>As you step off the shuttle, the most noticeable aspect of this landing pad is the rows upon rows with stacks upon stacks of beer kegs. As far as you can see in all directions they stretch on and on. Oh what a wonderful place for those who enjoy their pint at the end of the day.</desc>
+      <desc>The Exchange is east. There is a pub to the south. To the west you&apos;ll find ships and repairs and north is a hospital.</desc>
+      <exits n='203' ne='204' e='268' se='332' s='331' sw='330' w='266' nw='202'/>
+   </location>
+
+   <location num='268' flags='eb'>
+      <name>The Exchange</name>
+      <desc>You are greeted by a droid and handed a pint of something dark and frothy as you enter the busy exchange of Beer!</desc>
+      <desc>The LP is west.</desc>
+      <exits w='267'/>
+   </location>
+
+   <location num='330'>
+      <name>Stacks of kegs</name>
+      <desc>A sign indicates the stacks here are ready for loading. The rows continue southwest, or the LP is northeast from here.</desc>
+      <exits ne='267'/>
+   </location>
+
+   <location num='331' flags='b'>
+      <name>A pub </name>
+      <desc>A rather large space built of wood, there are several bars spaced around the walls. One has a robotic bartender. Another has a human male, yet another a human female. The others are tended by various species and sexes or lack thereof. There appears to be a bar to make any sentient feel right at home while lifting a pint.</desc>
+      <desc>Snooker tables, pin ball machines, pool tables, dart areas are to the southeast. Southwest is a large room containing quiet tables conveniently hidden from most sides by rough hewn plank walls and pillars. Robot waiters hum quietly between tables delivering food and beverage.</desc>
+      <exits n='267' se='396' sw='394'/>
+   </location>
+
+   <location num='332'>
+      <name>Rows of beer kegs</name>
+      <desc>The sign indicates these varioius stouts are being prepared for loading. The LP is northwest.</desc>
+      <exits nw='267'/>
+   </location>
+
+   <location num='394' flags='b'>
+      <name>Quiet tables</name>
+      <desc>A robotic host greets you and asks if you would like a quiet table to discuss business perhaps? The room is divided up into smaller partitioned alcoves with tables big enough to seat anywhere from 4 to 20 people. Most are not visible from your location but you can tell this room is rather large. The way out is northeast.</desc>
+      <exits ne='331'/>
+   </location>
+
+   <location num='396' flags='b'>
+      <name>Sports Room</name>
+      <desc>It&apos;s rather noisy in here as people play various games or simply enjoy one of the sports events on one of the several holo-views conveniently placed around the room. The way out is northwest.</desc>
+      <exits nw='331'/>
+   </location>
+
+</fed2-map>

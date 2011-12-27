@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<fed2-map title='Graveyard' version='3' editor='standard' from='720' to='Sol.Sol Space.2512'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Bones have been neatly stacked upon shelves until they are needed. Buckets of blood are lined up in a row. Zombies lounge around, smoking and drinking, until such time as they are required to go into action.</desc>
+   </location>
+
+   <location num='720'>
+      <name>Graveyard shuttle pad</name>
+      <desc>   The shuttle pad is shrouded in mist, making it hard to see anything at all except for your shuttle. From time to time the mist swirls and parts enough for you to see other ships: wrecked, abandoned, derelict ships. Then it closes in again, hiding the graveyard of ships from your sight.</desc>
+      <desc>   The air feels damp and clammy, and you turn up the heating circuits on your suit, hoping that the heat will provide a little comfort.</desc>
+      <desc>   The mist seems just a bit thinner to the south.</desc>
+      <exits s='784' no-exit='moves.noexit.1'/>
+      <events in-room='puzzle.leaving.1'/>
+   </location>
+
+   <location num='783' flags='t'>
+      <name>Behind a tree</name>
+      <desc>   A small open space between trees allows you to leave the path to the east, but you cannot push your way any further into the dark forest.</desc>
+      <exits e='784' no-exit='moves.noexit.1'/>
+      <events enter='puzzle.start.6'/>
+   </location>
+
+   <location num='784' flags='t'>
+      <name>Misty wood</name>
+      <desc>   A damp, clinging mist swirls around, revealing and then concealing ancient trees which could, in turn, be concealing who knows what! A path leading north between two dark, brooding oaks will take you back to the landing pad and the safety of your ship. A narrower path heads southeast into darkness.</desc>
+      <desc>   As you ponder which direction to go, a flash of lightning illuminates the sky, accompanied by a loud clap of thunder that rumbles all around you threateningly. For a moment, you can see the outline of a large building on the horizon, somewhere to the southeast, and then all is dark again.</desc>
+      <exits n='720' se='849' w='783' no-exit='moves.noexit.1'/>
+      <events in-room='puzzle.start.1'/>
+   </location>
+
+   <location num='849' flags='t'>
+      <name>Graveyard</name>
+      <desc>   A stone wall encloses the graveyard - maybe it&apos;s to stop trespassers getting in, maybe it&apos;s to stop things from getting out... The wall has collapsed at the northwest corner leaving a large opening through which you can see a dark, mist-shrouded path heading into the woods.</desc>
+      <desc>   On this side of the wall, a grassy path leads east and south between graves.</desc>
+      <exits e='850' s='913' nw='784' no-exit='moves.noexit.1'/>
+      <events enter='puzzle.insurance.1'/>
+   </location>
+
+   <location num='850' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The grass underfoot is damp and it squelches slightly as you walk along the path. You hope it&apos;s just dew, or moisture from the mist, and nothing more sinister!</desc>
+      <desc>   The main path leads east-west, following the line of the stone wall which is covered with lichen. Another path leads south, past a heap of freshly-dug earth, and there is a gap between two headstones to the southeast.</desc>
+      <exits e='851' se='915' s='914' w='849' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='851' flags='t'>
+      <name>Graveyard</name>
+      <desc>   An enormous monument erected to honor somebody&apos;s beloved dead confronts you, carved out of pink marble. A huge plinth bears a noble-looking angel holding a torch in one hand and a book in another; the book is open and angled so that you can read the details of the recipient of the memorial: Sephronia Beanblossom, beloved wife to Jethro and mother to Floyd and Distophia... the rest of the inscription is obscured by a large pile of leaves.</desc>
+      <desc>   The impressive statue blocks the eastward path - the only way you can go is west.</desc>
+      <exits w='850' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='912' flags='t'>
+      <name>Open grave</name>
+      <desc>   Your foot slips on some of the loose earth that is lying on the ground, and you realize where the soil came from.</desc>
+      <exits e='913'/>
+      <events enter='graveyard.death.1'/>
+   </location>
+
+   <location num='913' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The graves in this part of the graveyard seem very old and neglected; the grass on the path (which leads north and southwest) is long and who knows what it may be concealing.</desc>
+      <desc>   An ancient gravestone leans drunkenly to one side, the inscription completely obscured by moss. Its displacement leaves a gap to the west, where you can see the ground has been disturbed by digging - which is probably what made the stone fall over.</desc>
+      <exits n='849' sw='976' w='912' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='914' flags='t'>
+      <name>Open grave</name>
+      <desc>   Your foot slips on some of the loose earth that is lying on the ground, and you realize where the soil came from.</desc>
+      <exits n='850'/>
+      <events enter='graveyard.death.1'/>
+   </location>
+
+   <location num='915' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The thick mist roils around, making it very hard to see where you are. All you can tell is that the path splits here, with branches going northwest, east and southwest. The eastern path is partially blocked by a pile of soil, but it&apos;s not enough to deter you if you wanted to go that way.</desc>
+      <exits e='916' sw='978' nw='850' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='916' flags='t'>
+      <name>Open grave</name>
+      <desc>   Your foot slips on some of the loose earth that is lying on the ground, and you realize where the soil came from.</desc>
+      <exits w='915'/>
+      <events enter='graveyard.death.1'/>
+   </location>
+
+   <location num='976' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The grassy path between the graves winds northeast and southeast, past the stone wall of the graveyard. Several plaques have been inset into the wall, with details of some of those who have been interred here, but they have not survived the years well and it is impossible to read them.</desc>
+      <exits ne='913' se='1041' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='977' flags='t'>
+      <name>Mausoleum</name>
+      <desc>   This final resting place has been converted into the creepiest trading exchange you have ever seen. No attempt to clean it up has been made - the floor is covered with dust, and thick cobwebs cling to the walls. Amongst this squalor, trading screens and control pads have been mounted, but they are not in operation; some of the screens are blank, while others show snowstorms or interference patterns. Presumably, they will all be turned on should the planet be admitted to the Trading Guild, but trading here is never going to be a pleasure!</desc>
+      <desc>   The mausoleum door is east.</desc>
+      <exits e='978' out='978' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='978' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The path comes to a stop here, in front of a large stone mausoleum. The door is open but you cannot see what is inside - to find out, you are going to have to walk through it by going west, if you dare. Or you can return along the northeastern path.</desc>
+      <exits ne='915' w='977' in='977'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='979' flags='t'>
+      <name>Mausoleum</name>
+      <desc>   This large, echoing room is lined with shelves upon which have been placed many urns which presumably contain the ashes of the cremated dead. Most of the urns are intact, although a few have toppled off and smashed on the floor - whether by accident or vandalism, it&apos;s not clear.</desc>
+      <desc>   In the center of the room is something very incongruous - it&apos;s a shipyard terminal, although it doesn&apos;t appear to be operational.</desc>
+      <desc>   In the meantime, somebody is using this mausoleum as a storage space. Lots of tools have been stacked in one corner of the room, including some spades, a few pairs of shears, some rakes, and a wheelbarrow.</desc>
+      <desc>   Steps lead upwards, through the exit door to the south.</desc>
+      <exits s='1043' up='1043' out='1043' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='980' flags='t'>
+      <name>Graveyard</name>
+      <desc>   You have reached the stone wall that encloses the graveyard, and cannot go any further; you will have to return along the southwest path. The mist continues to swirl around, making it impossible to see what is on the other side of the graveyard wall.</desc>
+      <desc>   There is a pile of wood here, splintered planks of some kind which have been thoroughly smashed up. Closer examination reveals it to have been a large wooden box of some kind. Then you realize - it&apos;s a coffin. Something smashed its way into a coffin here. Or - worse - out of it!</desc>
+      <exits sw='1043' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='981' flags='t'>
+      <name>Castle wall</name>
+      <desc>   The narrow trench is blocked with an enormous foul-smelling heap of garbage, which prevents you from going any further. On the west side, the graveyard wall keeps the dead safely enclosed; east is the imposing wall of the castle, its gray stones covered with ivy. The only way you can go is south.</desc>
+      <exits s='1045' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1040' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The lichen-covered stone wall that encloses the graveyard causes the path to bend here, turning from the east to the south. There are some open coffins stacked up against the wall; something seems to be moving inside them. You look closer and see some creepy crawly wormy things inching their way along the wooden bottoms.</desc>
+      <exits e='1041' s='1104' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1041' flags='t'>
+      <name>Graveyard</name>
+      <desc>   A gravel path which runs east-west through the center of the graveyard is crossed by a smaller path, grassy and overgrown, which winds northwest and south. A scattering of earth to the south indicates that some digging may have gone on in that direction.</desc>
+      <desc>   Standing next to the main path at an angle is a low, squat building built of stone. The southeast entrance is fitted with an ornate wrought iron gate, which swings back and forth with an unpleasant creak.</desc>
+      <exits e='1042' se='1106' s='1105' w='1040' nw='976' in='1106' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1042' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The miasma of death hangs in the air, along with the grey mist, a noxious odor of death and decay. A headstone marks the grave of yet another poor lost soul, but it is covered with clinging ivy so you cannot tell who has been buried here.</desc>
+      <desc>   A stained, cracked vase placed on the grave contains some dead roses.</desc>
+      <exits e='1043' w='1041' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1043' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The path curves from the west to the northeast here. The grey gravel on the path is stained a deep brownish-red here... your imagination can surely come up with many possible answers, each more ghastly than the last, to the question: what caused those stains? Perhaps the answer will be found in the mausoleum which stands to the north, where steps lead down through its open doorway.</desc>
+      <exits n='979' ne='980' w='1042' down='979' in='979' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1044' flags='t'>
+      <name>Tomb</name>
+      <desc>   A low bier has been placed against the wall of this large tomb, and several corpses have been heaped upon it. Unlike the bones in the southern part of the room, these bodies appear to be relatively recent additions. Oddly, their clothes are stained and in places covered with little piles of earth.</desc>
+      <desc>   Some of the stones from the eastern wall of the tomb have been removed. Through it you can see that the tomb backs onto the graveyard wall, which is itself missing some stones. With a little care, you could clamber through the gap and exit the graveyard.</desc>
+      <exits e='1045' s='1108' in='1108' out='1045' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1045' flags='t'>
+      <name>Castle wall</name>
+      <desc>   A small north-south trench allows you to walk alongside the imposing walls of a huge castle. High above you, the ivy-covered walls are topped with several pointy-roofed towers of different sizes.</desc>
+      <desc>   On the other side of the trench is a lower wall which encloses a graveyard. A hole in the wall here allows you to climb west into one of the tombs.</desc>
+      <exits n='981' s='1109' w='1044' no-exit='moves.noexit.4'/>
+      <events enter='graveyard.exit.1'/>
+   </location>
+
+   <location num='1104' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The path curves from the north to the southeast here to avoid a large dead tree which is positioned in the corner of the graveyard. The bark is rotting and has come away completely in places, revealing that the inside of the tree is hollow. What remains of the trunk sprouts with a crop of nasty-looking fungus.</desc>
+      <exits n='1040' se='1169' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1105' flags='t'>
+      <name>Open grave</name>
+      <desc>   Your foot slips on some of the loose earth that is lying on the ground, and you realize where the soil came from.</desc>
+      <exits n='1041'/>
+      <events enter='graveyard.death.1'/>
+   </location>
+
+   <location num='1106' flags='t'>
+      <name>Crypt</name>
+      <desc>   The crypt is dominated by a large tomb which should hold the body of whoever was inhumed here - but the stone lid has been levered off and is leaning against one wall. The tomb itself is now empty except for a pile of frayed, stained bandages.</desc>
+      <desc>   The crypt door is northwest.</desc>
+      <exits nw='1041' out='1041' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1107' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The grassy path turns sharply through a right-angle, bending southwest to southeast to avoid a large stone block which looks like it was once the plinth to a long-gone monument. Whatever inscription was once carved into the stone has been worn almost smooth; you can make out the word &quot;rest&quot; but that&apos;s all.</desc>
+      <desc>   A large black crow is perching on the plinth.</desc>
+      <exits se='1172' sw='1170' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1108' flags='t'>
+      <name>Tomb</name>
+      <desc>   This large tomb belongs to a long-established family, and they have been interring their dead here for centuries - as the bones piled around the walls and upon shelves show you. Some are almost complete skeletons, others just heaps of random bones. Several skulls grin at you from their final resting places.</desc>
+      <desc>  The tomb continues to the north; the exit is south.</desc>
+      <exits n='1044' s='1172' in='1044' out='1172' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1109' flags='t'>
+      <name>Castle wall</name>
+      <desc>   This narrow trench runs north-south between two walls, one of which surrounds a graveyard, the other keeps interlopers out of the castle. Climbing plants cling to the castle wall, but don&apos;t get any ideas - they are not sturdy enough to bear your weight.</desc>
+      <exits n='1045' s='1173' no-exit='moves.noexit.4'/>
+      <events enter='castle.entrance.12'/>
+   </location>
+
+   <location num='1169' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The corner of the graveyard is home to what was once a large, majestic oak tree, but now it is dead and looks as if it may crumble to dust at any moment. Some large insects are crawling over its exposed roots - perhaps they are what killed it?</desc>
+      <desc>   The path bends here; northwest it is covered with gravel, while east it is formed from grass.</desc>
+      <exits e='1170' nw='1104' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1170' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The grass on the path is thick and lush here; clearly it finds all the moisture it needs from the ever-present swirling mist, and nutrients from the... well, best not to dwell on what fertilizes it! It winds west and northeast.</desc>
+      <exits ne='1107' w='1169' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1172' flags='t'>
+      <name>Graveyard</name>
+      <desc>   The path from the northwest ends here, in the corner of the graveyard. There is a tomb to the north, its gaping entrance shrouded with mist. Is it beckoning you to enter, or urging you to flee?</desc>
+      <exits n='1108' nw='1107' in='1108' no-exit='moves.noexit.1'/>
+      <events in-room='graveyard.effects.1'/>
+   </location>
+
+   <location num='1173' flags='t'>
+      <name>Castle wall</name>
+      <desc>   The trench bends from the north to the southeast here, following the curve of the castle wall as it passes underneath a flying buttress made of sturdy stone. But put any thought of climbing up the buttress out of your mind - it&apos;s covered in a slippery lichen that will prevent you from getting a good hold.</desc>
+      <exits n='1109' se='1238' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1238' flags='t'>
+      <name>Castle wall</name>
+      <desc>   A lichen-covered flying buttress on one corner of the castle helps to provide support to its walls, which are fashioned from enormous stone blocks. The trench that follows the walls curves under the buttress, from the northwest to the east.</desc>
+      <exits e='1239' nw='1173' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1239' flags='t'>
+      <name>Castle wall</name>
+      <desc>   The trench that runs east-west alongside the castle wall has a large bank of earth on its other side, and was probably intended as a moat. Let&apos;s hope it doesn&apos;t fill with water while you are exploring it!</desc>
+      <desc>   Large tufts of moss grow between the stones of the castle wall. They look quite damp and soggy, which can&apos;t be doing the structure of the castle any good at all.</desc>
+      <exits e='1240' w='1238' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1240' flags='t'>
+      <name>Drawbridge</name>
+      <desc>   This is the entrance to the castle; there is an enormous imposing gateway which allows ingress and egress across a huge drawbridge across the moat. At least, it would if the drawbridge were not firmly in the up position. The chains that hold it up look very rusty, as if it hasn&apos;t been moved for many years.</desc>
+      <desc>   The moat continues to the east and west.</desc>
+      <exits e='1241' w='1239' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='1241' flags='t'>
+      <name>Castle wall</name>
+      <desc>   The trench that you assume is meant to be the castle&apos;s moat is blocked here by a pile of rubble. It wouldn&apos;t be enough to stop the water from gushing into the trench, should somebody turn on the supply, but it prevents you from going any further east; the only available direction is west.</desc>
+      <exits w='1240' no-exit='moves.noexit.5'/>
+      <events in-room='cedric.meet.1'/>
+   </location>
+
+   <location num='1428' flags='t'>
+      <name>Cupboard</name>
+      <desc>   Nothing remains of whatever was stored in this room; it is completely empty. Brackets on the walls show that there it once contained shelves but they too have been removed. For some reason, the cupboard is rather clean, with little or no dust on the floor, which seems odd considering it is no longer in use.</desc>
+      <desc>   The cupboard door is south.</desc>
+      <exits s='1492' out='1492' no-exit='moves.noexit.2'/>
+      <events enter='castle.cellar.7'/>
+   </location>
+
+   <location num='1429' flags='t'>
+      <name>Bedroom</name>
+      <desc>   A rough wooden bed frame is all that remains of whatever meager furniture was provided for the servants who shared this room. In truth, there probably wasn&apos;t much more here even when the castle was fully occupied!</desc>
+      <desc>   As you look around, a rat runs across the floor. It sees you, freezes for a moment, then turns and runs back into the hole it came out of.</desc>
+      <desc>   The door to the hall is south.</desc>
+      <exits s='1493' out='1493' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1433' flags='t'>
+      <name>Nursery</name>
+      <desc>   As in all the other rooms in this dismal castle, most of the furniture in this room has been smashed beyond all recognition. However, one item remains intact - a rocking horse which takes pride of place in the center of the room, and indicates it was probably a child&apos;s room or a nursery once.</desc>
+      <desc>   The east door leads back to the hall.</desc>
+      <exits e='1434' out='1434' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1434' flags='t'>
+      <name>Hall</name>
+      <desc>   Strips of wallpaper have been torn from the wall, and hang in tatters like streamers, which gives this end of the hall an oddly festive look. Doors lead east and west, and the hall continues to the south.</desc>
+      <exits e='1435' s='1498' w='1433' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1435' flags='t'>
+      <name>Bedroom</name>
+      <desc>   The debris that you have seen in the other rooms of the castle is also present in this room, but it&apos;s been pushed back to one end of the room. In the rest of the space, someone has actually set up home. There&apos;s a campbed heaped with blankets, and a box of concentrated food rations. It&apos;s quite a surprise to see signs of life in this otherwise deserted castle. The room is very damp, though, and although the fireplace has been swept clean, it doesn&apos;t look like anyone has tried to light a fire in it.</desc>
+      <desc>   The door to the hall is west.</desc>
+      <exits w='1434' out='1434' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1436' flags='t'>
+      <name>Bottom of staircase</name>
+      <desc>   Rickety wooden stairs lead up into one of the castle&apos;s towers. You can see the faint outline of the doorway that leads out from this secret staircase, with a lever set into the wall which - you hope - will allow you to open it and get out.</desc>
+      <exits up='1819' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1492' flags='t'>
+      <name>Hallway</name>
+      <desc>   This part of the castle was never decorated with anything other than the roughest of whitewash - these are the servants&apos; quarters so not worth spending any money or effort on!</desc>
+      <desc>   The hallway continues east, and rough wooden stairs lead down to the kitchen. There is a room to the south and a cupboard to the north.</desc>
+      <exits n='1428' e='1493' s='1556' sw='1613' down='1613' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1493' flags='t'>
+      <name>Hallway</name>
+      <desc>   The wooden planks of the floor are very rough and never fitted together very well; now, with the passage of time, they have warped and twisted and in places sprung right out of place. In fact, it is impossible to go any further east along the east-west hallway, because there are enough floorboards missing to leave an enormous great hole.</desc>
+      <desc>   North and south are doors leading into rooms.</desc>
+      <exits n='1429' s='1557' w='1492' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1498' flags='t'>
+      <name>Hall</name>
+      <desc>   A set of magnificent stairs sweeps downwards to the west, the top of the staircase flanked by two suits of armor which have remained unaccountably upright and undamaged. The hall runs from the north to the south.</desc>
+      <exits n='1434' s='1562' w='1551' down='1551' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1551' flags='t'>
+      <name>Staircase</name>
+      <desc>   The majestic sweep of this curved staircase was once framed by ornately-carved banisters - but the polished rails have been reduced to splinters not even fit for kindling. Whatever carpet covered the stone steps has gone.</desc>
+      <desc>   You can go up to the first floor of the castle, or down to the ground floor.</desc>
+      <exits n='1498' s='1615' up='1498' down='1615' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1556' flags='t'>
+      <name>Empty room</name>
+      <desc>   This room is completely empty. You could guess from its position as part of the servants&apos; quarters that it was probably a bedroom for several staff to share, but there&apos;s no evidence left.</desc>
+      <desc>   Large cobwebs fill most of the corners of the room, and when you look at them you can see the remains of dead insects stuck firmly in place.</desc>
+      <desc>   The door in the north wall leads to the hall.</desc>
+      <exits n='1492' out='1492' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1557' flags='t'>
+      <name>Room</name>
+      <desc>   A large table in the center of the room shows that this wasn&apos;t a bedroom, but there&apos;s nothing to indicate what the table - and therefore the room - was used for. Now, it&apos;s thick with dust, although somebody has drawn some strange symbols in the dust.</desc>
+      <desc>   The hall is to the north.</desc>
+      <exits n='1493' out='1493' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1561' flags='t'>
+      <name>Bathroom</name>
+      <desc>   This was once a well-appointed and luxurious bathroom, but most of the elaborate fixtures and fittings are gone, leaving just a few piles of smashed porcelain along with a tangle of bent pipes. Vile black mold covers the walls, and by contrast an orange mold creeps across the floor. Where the two meet, they seem to be fighting for territory, with occasional tendrils of orange crawling up the walls and trails of black inching across the floor.</desc>
+      <desc>   The bathroom door is east.</desc>
+      <exits e='1562' out='1562' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1562' flags='t'>
+      <name>Hall</name>
+      <desc>   The wooden floor of this part of the hall is scuffed, as if something heavy has been dragged along it. As you look around, you see a large spider scurry across the floor and up the wall.</desc>
+      <desc>   The hall continues north, and there are doors in the east and west walls.</desc>
+      <exits n='1498' e='1563' w='1561' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1563' flags='t'>
+      <name>Bedroom</name>
+      <desc>   This is - or was - the master bedroom. A large four poster bed dominates the room, its frame still intact although looking extremely woodworm-ridden in places. Whatever curtains and coverings adorned the bed have long gone.</desc>
+      <desc>   The exit is to the west.</desc>
+      <exits w='1562' out='1562' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1613' flags='t'>
+      <name>Back stairs</name>
+      <desc>   These narrow, winding wooden stairs lead down to the kitchen and up to the servants&apos; quarters. There are several large flies buzzing around here, but they don&apos;t look like the kind that bite - you hope!</desc>
+      <exits ne='1492' se='1678' up='1492' down='1678' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1614' flags='t'>
+      <name>Parlor</name>
+      <desc>   Once, this room was intended for receiving guests and for relaxation, with big puffy armchairs and sofas providing comfort, a crackling fire giving warmth, and a set of tables of varying sizes allowing card games between any number of players. Now... well, there&apos;s neither warmth nor comfort in this derelict room. The tables have collapsed, the chairs have lost their leather coverings revealing their naked springs for all to see, and something has clearly made a nest in the stuffing inside the sofa.</desc>
+      <desc>   There are several statues leaning drunkenly against the walls, all of them missing their heads - which have been piled up in a pyramid in the fireplace!</desc>
+      <desc>   You can leave the room by going east back into the hall.</desc>
+      <exits e='1615' out='1615' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1615' flags='t'>
+      <name>Hallway</name>
+      <desc>   Pictures were once hung upon the walls of this long hallway, but whatever faces or scenes appeared on the canvases are long gone, ripped out of the frames which are themselves scratched and bent although, inexplicably, all are still hanging straight.</desc>
+      <desc>   You hear a skittering noise and catch a glimpse of something moving in one corner, but when you turn to examine it more closely, it&apos;s gone.</desc>
+      <desc>   The hallway runs south towards the castle doors. North is a large sweeping staircase leading up to the next level. Doors in the west and east walls lead to the parlour and the ballroom respectively.</desc>
+      <exits n='1551' e='1616' s='1679' w='1614' up='1551' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1616' flags='t'>
+      <name>Ballroom</name>
+      <desc>   The remains of a huge crystal chandelier swing back and forth from the ceiling. The wooden floor underneath is littered with smashed glass, and some rather suggestive red stains that make it seem that some unlucky person or persons were directly underneath it when the glass fell.</desc>
+      <desc>   The wall at the end of the ballroom was once draped with huge expensive tapestries, but they now lie on the ground, a soiled heap of faded fabric.</desc>
+      <desc>   The devastated ballroom continues to the south, and the castle hall is west.</desc>
+      <exits s='1680' w='1615' out='1615' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1672' flags='t'>
+      <name>Tunnel</name>
+      <desc>   A short tunnel runs eastwards underneath the wall of the castle, dug through the earthen foundations and shored up with randomly-placed timbers and the occasional chunk of stone. The ground underfoot is slightly muddy and you can see footprints which indicate this tunnel gets a fair bit of use.</desc>
+      <desc>   There ought to be a door at the end of the tunnel leading out, but it is very well concealed and there is no obvious switch, lever, knob or handle.</desc>
+      <exits e='1673' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1673' flags='t'>
+      <name>Tunnel</name>
+      <desc>   You are now directly underneath the castle wall, with the entire weight of all those massive stones pressing down on the roof of the east-west tunnel. But don&apos;t worry, it&apos;s almost certainly not going to collapse now.</desc>
+      <desc>   A squeaking and a skittering in the shadows reveals that the castle rats use this as a route in and out too.</desc>
+      <exits e='1674' w='1672' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1674' flags='t'>
+      <name>Tunnel</name>
+      <desc>   A short tunnel leads west underneath the castle walls, providing an alternative exit for those that don&apos;t want to use the main door. Given the number of footprints you can see on the muddy ground, it appears most people coming in and out of the castle use this route, but then it&apos;s probably easier than dealing with the massive drawbridge.</desc>
+      <desc>   There is a sturdy wooden door set into the wall at the end of the tunnel, with large iron hinges and a complicated-looking lock with several keyholes. It&apos;s just as well, then, that the door is not actually locked - all you have to do to open it is lift the latch.</desc>
+      <exits w='1673' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1675' flags='t'>
+      <name>Behind shelves</name>
+      <desc>   You are in a tiny space between a large door and a set of tall shelves. The door is fastened with a latch, which you can lift if you want to go that way, and there&apos;s no other obvious exit - but there must be a way into the castle from here, otherwise why would you have been sent this way?</desc>
+      <exits no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1677' flags='t'>
+      <name>Wine cellar</name>
+      <desc>   The walls of this small cellar are lined with shelves upon which have been laid down bottles of wine. They are all covered in dust, with the occasional cobweb stringing from one to the other. While aged wine is what you would expect in a well-stocked cellar, there is a hint that something may be wrong here - some of the bottles have fallen off the shelves (or been hurled to the floor) and have smashed, and the spilt wine fills the air with the most appalling vinegar smell. Either the vintages stored here are not very good, or something has happened to spoil them.</desc>
+      <desc>   It is impossible to see which of the shelves opens out to reveal the door into the tunnel - it is supposed to be a secret exit, after all - but you can remember which one you have to pull to gain access. The other way out of the cellar is visible in the form of some steep steps leading upwards in the eastern wall.</desc>
+      <exits e='1678' up='1678' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1678' flags='t'>
+      <name>Kitchen</name>
+      <desc>   The kitchen is large enough to cater for all of the guests a castle this size could handle - except that the air of neglect makes it obvious nobody has prepared meals here for a very long time. A large fireplace is heaped with old ash with a few spiky bits of bone poking out of it, and the spit that stands over it is covered with patches of red rust. A table in the center of the room has a few implements scattered on it but they are all old, rusted and useless. A musty smell adds to the impression that this kitchen has not been used for a very long time.</desc>
+      <desc>   Steep stone steps in the west wall lead down to a cellar of some kind, there are some narrow winding stairs going up in the northwest corner of the room, and there is a eastern doorway that will take you into the castle hallway.</desc>
+      <exits e='1679' w='1677' nw='1613' up='1613' down='1677' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1679' flags='t'>
+      <name>Hallway</name>
+      <desc>   Once, the heavy flagstones of this long hallway were covered with a thick red carpet. Now, all that remains are a few scraps of tattered and faded material which give only a hint of its former plushness. It looks as if it has been destroyed not just by wear and tear, or neglect, but by some active agent of destruction that ripped it to pieces.</desc>
+      <desc>   The hallway continues to the north. South is the main entrance to the castle, a huge set of iron doors which are firmly locked and barred. There&apos;s no way in or out that way.</desc>
+      <desc>    The kitchen is to the west, and the castle&apos;s ballroom is east.</desc>
+      <exits n='1615' e='1680' w='1678' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1680' flags='t'>
+      <name>Ballroom</name>
+      <desc>   Do you hear the strains of a waltz playing in the background? No, it&apos;s just a trick of the wind - there has been no dancing or partying in this ballroom for a very long time. The once smoothly polished wooden walls have been scratched and gouged leaving splintered ruts, and the huge mirrors that lined the walls have been smashed, giving somebody (or something) a great many years of bad luck.</desc>
+      <desc>   The ballroom continues to the north, and a door in the west wall leads out to the hall.</desc>
+      <exits n='1616' w='1679' out='1679' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1748' flags='t'>
+      <name>Store room</name>
+      <desc>   The whole room is filled with a bewildering array of discarded... well, stuff is the only word to use. So many different things have been dumped here, all higgledy-piggledy, it&apos;s hard to see what any of it actually is.</desc>
+      <desc>   The room smells of damp and mildew, an unpleasant musty smell that you often find in cellars and other underground rooms.</desc>
+      <desc>   The exit door is south.</desc>
+      <exits s='1812' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1755' flags='t'>
+      <name>Tower roof</name>
+      <desc>   A small platform runs around the outside of the pointy tower roof, but only the fool-hardy would spend long out here because the wind which howls around the castle threatens to pluck you off at any moment.</desc>
+      <desc>   A lightning rod reaches for the sky, its base fixed to the machine in the laboratory below you.</desc>
+      <exits down='1819'/>
+      <events no-exit='castle.death.1' in-room='castle.tower.1'/>
+   </location>
+
+   <location num='1812' flags='t'>
+      <name>Store room</name>
+      <desc>   This room is filled with bits of broken equipment, electrical stuff, gizmos and gadgets that may or may not still work and the function of which leaves you completely baffled, all of it piled up to the ceiling. There&apos;s so much stuff it almost obscures the doors to the north, east and south.</desc>
+      <exits n='1748' e='1813' s='1876' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1813' flags='t'>
+      <name>Food processing room</name>
+      <desc>   As you walk through the door you are greeted by a horrendous sight. This enormous room is filled with zombies, all of them laboring away mindlessly over production lines. This, clearly, is the source of the excessively cheap goods the planet wants to sell.</desc>
+      <desc>   The zombies ignore you and simply carry on with their work. And what work it is... this being a planet with an agricultural economy, they are engaged in packaging foodstuffs such as meats, soya, cereals and so on. The hygiene implications are just too gross to even think about! As you watch, you see that the zombies&apos; dead bodies are continuing to decay despite their pseudo-resurrection, and from time to time a chunk of rotting flesh falls off one of the workers and lands in the foodstuffs. Oh how ghastly, who knows which bars may end up serving pizzas made out of these ingredients?</desc>
+      <desc>   The exit out of this vomit-inducing room is west. You can see there is also a door leading east at the far end of the production line.</desc>
+      <exits e='1814' w='1812' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1814' flags='t'>
+      <name>Control room</name>
+      <desc>   This is the room from which the enslaved zombies are controlled. The huge computer-like machine that the Count uses to keep them under his control takes up one wall, and has a keyboard and monitor that the operator uses to program the machine.</desc>
+      <desc>   A flipchart leans against another wall, covered with completely incomprehensible scribble and complex diagrams. A noticeboard is plastered with bits of paper which may or may not be any more intelligible to those that are not experts (or completely mad).</desc>
+      <desc>   The door leading into the food processing room is west.</desc>
+      <exits w='1813' out='1813' no-exit='moves.noexit.2'/>
+      <events enter='castle.control.1'/>
+   </location>
+
+   <location num='1819' flags='t'>
+      <name>Laboratory</name>
+      <desc>   This tower is where the evil Count Sinistre carries out his devilish work, raising the dead in order to put them to work. It looks like a true mad scientist&apos;s laboratory. In the center is a stone slab. The room is dominated by a huge machine, covered with dials and gauges, with valves and capacitors and other strange bits; it has a large handle on one side. Four wires connect the machine with some large electrodes, the kind you have seen attached to patients in hospitals.</desc>
+      <desc>   Looking up, you can see that a rod or pole of some kind extends from one side of the machine and up, through the roof of the room, to the very top of the tower. A ladder up the side of the room gives access to that open space.</desc>
+      <desc>   Rickety wooden stairs lead down into the castle.</desc>
+      <exits up='1755' down='1436' no-exit='moves.noexit.2'/>
+      <events in-room='castle.lab.1'/>
+   </location>
+
+   <location num='1876' flags='t'>
+      <name>Store room</name>
+      <desc>   This low-ceilinged room is used as a store room for all kinds of stuff. Things are piled onto tables and heaped in mounds on the floor - it is a real junkyard of a room. Who knows what you might find if you poke around in here?</desc>
+      <desc>   The few bits of floor that you can see have damp patches showing that moisture is seeping into the foundations of the castle from the outside, which must be doing some damage.</desc>
+      <desc>   A door leads north, and a ladder will let you climb back up out of the cellar.</desc>
+      <exits n='1812' up='1428' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>

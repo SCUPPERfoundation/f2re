@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<fed2-map title='Mercury' version='5' editor='standard' from='646' to='Sol.Sol Space.980'>
+
+   <location num='264' flags='a'>
+      <name>Solarium</name>
+      <desc>   This is the place to come if you like sunbathing. Special filters have been fitted to the ceiling and walls of this room, to let through just enough of the sun&apos;s power to allow people to bask and tan. Soothing music, slightly reminiscent of whale song, plays quietly, and crystals dangle in the air, catching the sun and splitting the white light into rainbow colors.</desc>
+      <desc>   The exit is southwest.</desc>
+      <exits sw='327' out='327'/>
+   </location>
+
+   <location num='325' flags='a'>
+      <name>Hydroponics Plant</name>
+      <desc>   The hydroponics plant is vast, stretching away as far as the eye can see. Rows upon rows of plants are growing in their specialized environments, providing fresh oxygen for the colony, as well as foodstuffs.</desc>
+      <desc>   You can&apos;t go any further into the plant, in case you contaminate the growing plants. The exit is southwest.</desc>
+      <exits sw='388' out='388'/>
+   </location>
+
+   <location num='326' flags='e'>
+      <name>Trading exchange</name>
+      <desc>   Mercury&apos;s trading exchange is a frenzy of activity as commodities are bought and sold. Near you a screen shows the value of various lots offered for sale, but you can&apos;t bid unless you have a permit to trade.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='327' out='327'/>
+   </location>
+
+   <location num='327'>
+      <name>Corridor</name>
+      <desc>   You are at the north end of a rock lined corridor. To the west is the entrance to the city&apos;s trading exchange. There is a bar to the east, and the entrance to the solarium is northeast.</desc>
+      <exits ne='264' e='328' s='391' w='326' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='328' flags='ba'>
+      <name>Old Earth Taproom</name>
+      <desc>   The most popular bar on Mercury is decked out in the style of a tavern from the pre-spaceflight days on Earth. Some obscure agricultural equipment hangs on one of the walls. A display case contains a golden horseshoe, which the legend claims belonged to Pegasus himself. A closer look shows that it&apos;s actually made out of brass.</desc>
+      <desc>   Pride of place is given to a type of two-wheeled personal transportation called a motorcycle, which looks very unlikely and somewhat dangerous.</desc>
+      <exits w='327' out='327'/>
+   </location>
+
+   <location num='387' flags='ta'>
+      <name>Temple of Gaelaan</name>
+      <desc>   This vast building used to be some kind of manufacturing workshop, but has now been taken over by one of the new religious cults that seem to be springing up wherever humans live.</desc>
+      <desc>   The Temple of Gaelaan was started by the prophet of that name, who was a humble manual worker until struck by the blinding revelation that led him to his new calling. A large hologram showing his moment of epiphany dominates the circular room.</desc>
+      <desc>   The rest of the room is as-yet bare. No doubt it will soon be decorated by the usual paraphernalia of the cult.</desc>
+      <exits e='388' out='388'/>
+   </location>
+
+   <location num='388'>
+      <name>Corridor</name>
+      <desc>   You are at the north end of a rock-lined corridor. Northeast is some kind of plant, and a door to the west leads into what looks like a derelict area.</desc>
+      <exits ne='325' s='452' w='387' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='391'>
+      <name>Corridor</name>
+      <desc>   The north/south rock corridor is wide here, as it needs to be to accommodate the crowds moving backwards and forwards.</desc>
+      <exits n='327' s='455' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393' flags='a'>
+      <name>Public library</name>
+      <desc>   The Mercury Central Library&apos;s terminals provide access to much of the sum of human knowledge so far, as well as some alien information. All the terminals are occupied at the moment.</desc>
+      <desc>   The library even owns a few real, bound, paper books, but they are only available to scholars and academics.</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='457' out='457'/>
+   </location>
+
+   <location num='396' flags='a'>
+      <name>Tourist office</name>
+      <desc>   Visitors to Mercury can take advantage of some of the organized events which this tourist office supervises. These include guided tours of the dangerous caves, with the chance to hunt grizzles; or for the less rugged, party nights with themes to do with the ancient Roman gods, after one of which the planet was named.</desc>
+      <desc>   The exit is southwest.</desc>
+      <exits sw='459' out='459'/>
+   </location>
+
+   <location num='398'>
+      <name>Dead end</name>
+      <desc>   You are at a dead end. The tunnel goes off to the southeast, but elsewhere is bare rock.</desc>
+      <exits se='463'/>
+   </location>
+
+   <location num='401'>
+      <name>Sharp bend</name>
+      <desc>   The tunnel you are in makes a sharp turn. One end goes south and the other goes southwest.</desc>
+      <exits s='465' sw='464' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='452'>
+      <name>T-junction</name>
+      <desc>   At this point in the corridor there is a T-junction. Branches run off to the north, south, and east. The walls of the corridors are featureless rock.</desc>
+      <exits n='388' e='453' s='516' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='453'>
+      <name>Corridor</name>
+      <desc>   This east/west corridor has been bored through solid rock, and the walls still bear the marks of the drilling equipment.</desc>
+      <exits e='454' w='452' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='454'>
+      <name>Corridor</name>
+      <desc>   This is an east/west corridor. At the eastern end it becomes a major junction.</desc>
+      <exits e='455' w='453' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='455'>
+      <name>The Hub</name>
+      <desc>   This is the central point of the Mercury colony. A statue of a grizzle has been erected here, in honor of the fact that grizzle hunting is an important source of income for the planet.</desc>
+      <desc>   Corridors run off in the directions of the cardinal points.</desc>
+      <exits n='391' e='456' s='519' w='454'/>
+   </location>
+
+   <location num='456'>
+      <name>Corridor</name>
+      <desc>   The corridor is brightly lit, and colorful murals have been painted on the rough rock walls, to disguise their crudeness. To the west the corridor runs into a large junction, while to the east the corridor continues out of sight.</desc>
+      <exits e='457' w='455' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='457'>
+      <name>Corridor</name>
+      <desc>   This is a bright east/west corridor with an impressively ornate building to the north.</desc>
+      <exits n='393' e='458' w='456' in='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>Corridor</name>
+      <desc>   This east/west corridor throngs with people, some ambling aimlessly, others moving single-mindedly to their destinations. South is a hotel building.</desc>
+      <exits e='459' s='522' w='457' in='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459'>
+      <name>Corridor</name>
+      <desc>   This very long east/west corridor is cheerfully decorated with bas-reliefs carved into the rock walls, depicting aspects of life on the planet. Northeast is the entrance to the tourist office, while a blue lamp marked &apos;Police&apos; hangs above a door in the south wall.</desc>
+      <exits ne='396' e='460' s='523' w='458' in='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Corridor</name>
+      <desc>   You are at the east end of a very long corridor. To the southeast is a transparent plastisteel door, through which you can see a rough rock tunnel.</desc>
+      <desc>   A sign on the wall next to the door warns you that beyond this point the regulations pertaining to the hunting of grizzles apply. An additional sign warns that it is not safe to enter the cave system except as part of an official sightseeing or hunting group, and that the planetary authorities accept no responsibility for death or injury sustained by those venturing into the caves alone.</desc>
+      <exits se='525' w='459' in='525' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='463'>
+      <name>Tunnel</name>
+      <desc>   The rocky tunnel runs from the east round to the southwest. Branches also run off to the northwest and south.</desc>
+      <exits e='464' s='527' sw='526' nw='398' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='464'>
+      <name>Tunnel</name>
+      <desc>   The tunnel narrows somewhat and runs from the northeast to the west.</desc>
+      <exits ne='401' w='463' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='465'>
+      <name>Cave</name>
+      <desc>   This cave has such a low ceiling that you cannot imagine anything as large as a grizzle squeezing through. As you crouch and peer round you can see that there are exits to the north and east.</desc>
+      <exits n='401' e='466' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='466'>
+      <name>Tunnel</name>
+      <desc>   The wide rock-lined tunnel runs in an east/west direction. Strange marks on the walls look as if they may have been made with very large, very sharp claws...</desc>
+      <exits e='467' w='465' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='467'>
+      <name>Tunnel</name>
+      <desc>   The tunnel is quite wide here, and it curves gently round from the southeast to the west.</desc>
+      <exits se='532' w='466' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='468'>
+      <name>Grizzle&apos;s lair</name>
+      <desc>   A huge pile of bones have been pushed into the back of the grizzle&apos;s lair. Some of them look as if they once belonged to humans! Better leave now, by going southeast, before the grizzle returns to its lair and adds your bones to the pile.</desc>
+      <exits se='533' out='533' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='516'>
+      <name>Corridor</name>
+      <desc>   The corridor leads south, towards a shopping mall, and north to a more industrial part of the colony.</desc>
+      <exits n='452' s='580' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='517' flags='a'>
+      <name>Electronics Emporium</name>
+      <desc>   This shop specializes in the latest bleeding-edge technology, all of it expensive and most of it pretty useless to a working being like yourself.</desc>
+      <desc>   The exit is southwest.</desc>
+      <exits sw='580' out='580'/>
+   </location>
+
+   <location num='519'>
+      <name>Corridor</name>
+      <desc>   This rock-lined corridor leads north to a crossroads, while south the corridor continues. From an open door in the east wall, you can hear the hum of machinery and the murmur of voices.</desc>
+      <exits n='455' e='520' s='583' in='520' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='520' flags='c'>
+      <name>Armstrong Cuthbert, Inc</name>
+      <desc>   Armstrong Cuthbert&apos;s Mercury office follows the same basic layout as all their offices - it is filled with communications equipment, providing instantaneous links to the head office on Earth, and to the subsidiary offices on the other Sol planets.</desc>
+      <desc>   The atmosphere is one of repressed panic, as employees attempt to talk into two or three comm units at a time! The only person seemingly unaffected by this hysteria is the receptionist, who is buffing her seven-inch-long nails.</desc>
+      <exits w='519' out='519'/>
+   </location>
+
+   <location num='522' flags='ra'>
+      <name>Hydrargyrum Hotel</name>
+      <desc>   What used to be a simple dormitory where workers crowded together to sleep in one large room, has been separated into cubicles. Visitors to Mercury are willing to pay for this luxury, because although the cubbies are so tiny there is barely room to stretch out, they offer a rare chance for privacy.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='458' out='458'/>
+   </location>
+
+   <location num='523' flags='a'>
+      <name>Police station</name>
+      <desc>   Mercury&apos;s newfound popularity as a recreation and tourist destination has brought with it extra security problems, and as a result the colony&apos;s police force is really stretched to cope.</desc>
+      <desc>   A harassed constable at the counter is trying to take down details from a visitor who has had his comm unit and credit chip stolen, while in the background you can see several cells are full to bursting with miscreants.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='459' out='459'/>
+   </location>
+
+   <location num='525'>
+      <name>Tunnel</name>
+      <desc>   This tunnel has been roughly hewn out of the planet&apos;s rock, and no attempt has been made to pretty it up. There is a transparent door to the northwest, through which you can see the start of a well-lit corridor. The tunnel runs east from this point.</desc>
+      <exits e='526' nw='460' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='526'>
+      <name>Tunnel</name>
+      <desc>   At this point the tunnel branches, and arms run off to the northeast, the west and the southeast.</desc>
+      <exits ne='463' se='591' w='525' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='527'>
+      <name>Grizzle&apos;s Lair</name>
+      <desc>   You have walked into the lair of a grizzle. All around you are strewn the bones of others who made the same mistake! A gently glowing fungus on one wall gives off enough light to see by.</desc>
+      <desc>   The exit - should no grizzle be at home - is north.</desc>
+      <exits n='463' out='463' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='528'>
+      <name>Dead end</name>
+      <desc>   The tunnel comes to an abrupt stop here, with a seemingly impenetrable wall. You can only go back the way you came, to the east.</desc>
+      <exits e='529' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='529'>
+      <name>Tunnel</name>
+      <desc>   The tunnel twists in a fashion which makes it difficult to be certain of the way. The gyrocompass, however, indicates that the tunnel continues to the west and the southeast.</desc>
+      <exits se='594' w='528' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='532'>
+      <name>Cave</name>
+      <desc>   This is a large cave, with exits to the east and the northwest. You can hear the echo of your footsteps bouncing back from the cave walls.</desc>
+      <exits e='533' nw='467' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='533'>
+      <name>Grizzle&apos;s lair</name>
+      <desc>   You have stepped into the lair of a grizzle. Light comes from a glowing fungus on the ceiling. The lair extends to the northwest. If you survive, the exit is west.</desc>
+      <exits w='532' nw='468' in='468' out='532' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='579' flags='a'>
+      <name>Crocket&apos;s Armory</name>
+      <desc>   Imagine a weapon, and Crocket has it on sale. An ex-space marine, she delights in seeking out the most obscure items to offer to specialists.</desc>
+      <desc>   However, there are strict regulations about who can buy what, and the only thing you will be allowed to purchase is missiles for your ship.</desc>
+      <desc>   The way out is east.</desc>
+      <exits e='580' out='580'/>
+   </location>
+
+   <location num='580'>
+      <name>Mall</name>
+      <desc>   Mercury gets a lot of visitors, in particular personnel from the nearby solar array, so recently an enterprising local decided to build a brand new mall bringing all the local shopkeepers into one place. Business is booming, and the shops are doing a roaring trade.</desc>
+      <desc>   Southeast is a souvenir shop, an armory is west, and northeast is a shop selling electronic items.</desc>
+      <exits n='516' ne='517' se='645' w='579' out='516'/>
+   </location>
+
+   <location num='583'>
+      <name>Corridor</name>
+      <desc>   You are standing at the south end of a north/south corridor. To your south is the entrance to the spaceport.</desc>
+      <exits n='519' s='647' in='647' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='591'>
+      <name>Cave</name>
+      <desc>   This small cave has three exits. To the east and northwest are tunnels. To the south is a narrow crack, through which you might be able to squeeze.</desc>
+      <exits e='592' s='655' nw='526' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='592'>
+      <name>Tunnel</name>
+      <desc>   This smooth, rock lined tunnel swings in a huge arc from the west to the south.</desc>
+      <exits s='656' w='591' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='593'>
+      <name>Chimney</name>
+      <desc>   The tunnel ends here, and although there&apos;s a narrow chimney leading upwards, it&apos;s not big enough to climb.</desc>
+      <exits e='594' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='594'>
+      <name>Cave</name>
+      <desc>   This is a huge vaulting cave, whose ceiling disappears into the shadows cast by your torch. Tunnels lead off to the southeast, southwest, northwest and west.</desc>
+      <exits se='659' sw='657' w='593' nw='529' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='645' flags='a'>
+      <name>Souvenir shop</name>
+      <desc>   Visitors to Mercury love to come away with something that reminds them of their visit, and this shop caters to that need. Top selling item is a t-shirt which says, &quot;My host mother went to Mercury and all I got was this lousy t-shirt&quot;. Second best seller is a book called, &quot;101 Uses for a Dead Grizzle&quot;.</desc>
+      <desc>   The exit is northwest.</desc>
+      <exits nw='580' out='580'/>
+   </location>
+
+   <location num='646'>
+      <name>Shuttle landing bay</name>
+      <desc>   This is the underground landing bay of Mercury&apos;s spaceport, where shuttles and ships are parked. A droid is unloading cargo from a small freighter, while a bunch of stevedores lean on crates, watching it.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='647' out='647' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='647'>
+      <name>Space port</name>
+      <desc>   Mercury&apos;s small but busy spaceport is crowded with people going to and from their ships. The landing area is to the west, and there is a shipwright to the south. The smell of garlic and spices entices you into a restaurant to the east. A corridor leads north to the rest of the colony.</desc>
+      <exits n='583' e='648' s='711' w='646' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='648' flags='ba'>
+      <name>The Sizzling Wok</name>
+      <desc>   Such heavenly aromas! This popular restaurant serves authentic Hunan and Szechuan cooking, and is popular with locals and visitors alike - many traders try to time their runs so they have a spare hour or two around lunchtime to eat here.</desc>
+      <desc>   The ceiling is hung with Chinese lanterns, which have to be replaced frequently since the paper has a tendency to ignite spontaneously in the intense heat in the restaurant. The diners consider that part of the entertainment, and cheer loudly when a flaming lantern drops onto a table.</desc>
+      <desc>   The chef works in the center of the room, chopping, dicing and stir-frying at top speed - it&apos;s better than a cabaret. He works in a heat-resistant suit, to protect himself from the heat source that makes the wok sizzle - the direct heat of the nearby sun, focused onto a hot plate.</desc>
+      <exits w='647' out='647'/>
+      <events in-room='newbod.lantern.1'/>
+   </location>
+
+   <location num='654'>
+      <name>Drop off</name>
+      <desc>   The tunnel ends abruptly as the floor falls away into a sheer drop. Luckily, you manage to stop yourself from plummeting over the edge. Safety lies east.</desc>
+      <exits e='655' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='655'>
+      <name>Narrow crack</name>
+      <desc>   You force yourself through a narrow crack that has exits to the north and the west.</desc>
+      <exits n='591' w='654' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='656'>
+      <name>Tunnel</name>
+      <desc>   The tunnel walls glow from some kind of phosphorescence, casting eery shadows that confuse the eye. The tunnel bends from the north to the east.</desc>
+      <exits n='592' e='657' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='657'>
+      <name>Tunnel</name>
+      <desc>  The tunnel runs from the northeast to the west. The walls are rough, with jagged edges on which are caught clumps of grizzle fur.</desc>
+      <exits ne='594' w='656' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='658'>
+      <name>Grizzle&apos;s lair</name>
+      <desc>   Walking into the grizzle&apos;s lair is not the normal way one goes about hunting them... A glowing fungus coats the walls, and underfoot the bones of your predecessors crunch as you move. The exit is east.</desc>
+      <exits e='659' out='659' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='659'>
+      <name>Tunnel</name>
+      <desc>   You are in a tunnel running southeast/northwest. A small tunnel leads west.</desc>
+      <exits se='724' w='658' nw='594' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='660'>
+      <name>Grizzle&apos;s lair</name>
+      <desc>   You&apos;ve just walked into a grizzle lair! It&apos;s lit by a glowing fungus covering one of the walls. As you move you trip over the bones left over from the grizzle&apos;s last meal... The exit is east.</desc>
+      <exits e='661' out='661' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='661'>
+      <name>Tunnel</name>
+      <desc>   You are walking along an east/west tunnel. Another tunnel leads off to the south.</desc>
+      <exits e='662' s='725' w='660' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='662'>
+      <name>Tunnel</name>
+      <desc>   You are in a tunnel which bends round from the south to the west.</desc>
+      <exits s='726' w='661' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='711' flags='ra'>
+      <name>Wallace the Shipwright</name>
+      <desc>   Wallace&apos;s place used to do a good trade in building small ships for personal use, until Jarrow on Earth cornered the market. Now they get by doing repairs, but it&apos;s not a great living, and all their equipment is old and a bit rickety.</desc>
+      <desc>   There is an exit to the north, and to the east is a small workshop.</desc>
+      <exits n='647' e='712' in='712' out='647'/>
+   </location>
+
+   <location num='712' flags='a'>
+      <name>Workshop</name>
+      <desc>   This workshop is where replacement parts are machined if they are not in stock. This kind of precision work is usually done by droids these days, but here humans are employed to add the personal touch.</desc>
+      <desc>   To the west is the main shop.</desc>
+      <exits w='711' out='711'/>
+   </location>
+
+   <location num='720'>
+      <name>Dead end</name>
+      <desc>   The small cave comes to a dead end at this point, because the roof has collapsed. The only way out is southwest.</desc>
+      <exits sw='783' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='723'>
+      <name>Cave</name>
+      <desc>   You are standing on the west side of a large cave. The cave continues to the east, and a tunnel leads south.</desc>
+      <exits e='724' s='787' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='724'>
+      <name>Cave</name>
+      <desc>   You are on the east side of a large cave, which continues to your west. There are tunnels to the east and the northwest.</desc>
+      <exits e='725' w='723' nw='659' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='725'>
+      <name>Tunnel</name>
+      <desc>   The tunnel swings round from the north to the west. It&apos;s just as well your comm unit is keeping track of the directions, otherwise you would be hopelessly lost.</desc>
+      <exits n='661' w='724' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='726'>
+      <name>Tunnel</name>
+      <desc>   The tunnel curves from the north to the southwest; from this point you cannot see around the bend in either direction, although there may be a small glimmer of light around the southwest corner. Or it may be your imagination.</desc>
+      <exits n='662' sw='789' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='783'>
+      <name>Cave</name>
+      <desc>   This cave is part of a vast network that connects up and goes on for miles. There are more caves to the northeast, southwest and southeast.</desc>
+      <exits ne='720' se='848' sw='846' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='787'>
+      <name>Tunnel</name>
+      <desc>   This is a north/south tunnel. The south end of the tunnel terminates in a shaft leading down.</desc>
+      <exits n='723' s='851' down='851' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='789'>
+      <name>Grizzle&apos;s lair</name>
+      <desc>   You&apos;ve walked into a grizzle&apos;s lair... The exit is northeast, if you survive to use it!</desc>
+      <exits ne='726' out='726' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='846'>
+      <name>Cave</name>
+      <desc>   You are in a series of interconnected caves. There are other caves to the southwest and the northeast.</desc>
+      <exits ne='783' sw='909' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='848'>
+      <name>Cave</name>
+      <desc>   You are on the edge of a series of interconnected caverns. There are other caves to the southwest and the northwest.</desc>
+      <desc>   A tunnel leads east, and there seems to be a glimmer of light in the northwest cave.</desc>
+      <exits e='849' sw='911' nw='783' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='849'>
+      <name>Tunnel</name>
+      <desc>   You are walking along a very long east/west tunnel, wondering if it will ever end.</desc>
+      <exits e='850' w='848' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='850'>
+      <name>Tunnel</name>
+      <desc>   You are in an east/west tunnel. At the east end a shaft leads upward.</desc>
+      <exits e='851' w='849' up='851' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='851'>
+      <name>Shaft</name>
+      <desc>   The shaft is very narrow, but that makes it easier to find hand and footholds as you climb. At the top a tunnel leads north, while at the bottom a tunnel leads west.</desc>
+      <exits n='787' w='850' up='787' down='850' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='909'>
+      <name>Grizzle&apos;s lair</name>
+      <desc>   You are in a grizzle&apos;s lair, and in grave danger of becoming a snack for its owner! The lair is lit by patches of glowing fungus and the exit is northeast.</desc>
+      <exits ne='846' out='846' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='911'>
+      <name>Cave</name>
+      <desc>   You are in a series of interconnected caves. There are other caves to the northeast and southeast. A dim glow emanates from the southeast cave.</desc>
+      <exits ne='848' se='976' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='976'>
+      <name>Chamber</name>
+      <desc>   You are in a chamber, containing a lot of machinery which was once wrecked but now seems to have been repaired. At the center is a seat, which is covered with pits and burn marks - it seems that a lot of acid was thrown over it at one time!</desc>
+      <desc>   An elderly droid, who looks just as old and patched up as the machinery, potters around the chamber fiddling with the machinery. &quot;Ah, you&apos;ve heard that I got this ancient machinery working,&quot; it says. &quot;Yes, all the rumors are true: it will boost your intelligence. I charge a slithy for each point, but your brain and body can only cope with one stat increase a day. I warn you, it&apos;s very painful, but the results are worth enduring a little suffering.&quot; It cackles rustily.</desc>
+      <desc>   &quot;Who would have thought it was possible to BUY INTELLIGENCE just like that. So much for genetics. Oh, I should point out, this is highly illegal and if you breathe a word of it to the wrong people, you&apos;ll be arrested as well as me. So don&apos;t.&quot;</desc>
+      <desc>   The exit is northwest.</desc>
+      <exits nw='911' out='911' no-exit='moves.noexit.3'/>
+   </location>
+
+</fed2-map>

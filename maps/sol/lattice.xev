@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+
+<event-list version='80'>
+
+ <category name='extras'>
+
+  <section name='fountain'>
+
+   <event num='1'>
+    <comment>color changer loop for the fountain in the reception area</comment>
+    <call event='extras.fountain.random[2-9]'/>
+    <delayevent delay='300' logoff='extras.fountain.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.6'/>
+   </event>
+
+   <event num='8'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.7'/>
+   </event>
+
+   <event num='9'>
+    <comment>fountain color change message</comment>
+    <announce type='single' loc='2078' lo='extras.fountain.8'/>
+   </event>
+
+  </section>
+
+  <section name='locations'>
+
+   <event num='1'>
+    <comment>extra text for loc 1443</comment>
+    <message type='multi' where='com' who='individual' lo='extras.locations.1' hi='extras.locations.4'/>
+   </event>
+
+   <event num='2'>
+    <comment>location 1571 - extra text</comment>
+    <message type='multi' where='com' who='individual' lo='extras.locations.5' hi='extras.locations.8'/>
+   </event>
+
+   <event num='3'>
+    <comment>extra text for loc 2393</comment>
+    <message type='multi' where='com' who='individual' lo='extras.locations.9' hi='extras.locations.10'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='fur'>
+
+   <event num='1'>
+    <comment>Buy food - Breakfast in Fur - loc 1509</comment>
+    <checkstat who='individual' money='10' higher='food.fur.2' equals='food.fur.2' lower='food.fur.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.fur.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.fur.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>see if player is doing the puzzle...</comment>
+    <checkvariable name='newbod' key='clue' value='five' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does the player already have a hexagon?</comment>
+    <checkinventory map='home' id-name='hexagon' found='stop'/>
+    <createobject where='inventory' home-map='sol/lattice' id='obj_hexagon'/>
+    <message type='single' where='com' who='individual' lo='newbod.message.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>drop event for the hexagon</comment>
+    <destroyobject where='inventory' map='home' id-name='hexagon'/>
+    <message type='text' where='com' who='individual'>The force of the impact does something to the molecular binding of the hexagon&apos;s material. It rebounds with a sharp &apos;PING&apos; and the bonds release, turning the hexagon into a drifting smear of dust.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='buzzer'>
+
+   <event num='1'>
+    <comment>Press buzzer - in studio, loc 2642</comment>
+    <message type='single' where='com' who='room_ex' lo='objects.buzzer.1'/>
+    <message type='single' where='com' who='individual' lo='objects.buzzer.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Examine portable buzzer</comment>
+    <message type='multi' where='com' who='individual' lo='objects.buzzer.3' hi='objects.buzzer.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Get portable buzzer - check if player is staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.buzzer.4' unset='objects.buzzer.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player is staff so they get the buzzer</comment>
+    <message type='single' where='com' who='individual' lo='objects.buzzer.5'/>
+    <message type='single' where='com' who='room_ex' lo='objects.buzzer.8'/>
+    <get id-name='obj_2buzzer' silent='true'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not staff</comment>
+    <message type='single' where='com' who='individual' lo='objects.buzzer.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Drop buzzer</comment>
+    <message type='single' where='com' who='individual' lo='objects.buzzer.7'/>
+    <message type='single' where='com' who='room_ex' lo='objects.buzzer.9'/>
+    <drop id-name='obj_2buzzer' silent='true'/>
+   </event>
+
+  </section>
+
+  <section name='dylan'>
+
+   <event num='1'>
+    <comment>examine dylan</comment>
+    <message type='multi' where='com' who='individual' lo='objects.dylan.1' hi='objects.dylan.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>toss a coin into dylan&apos;s cap</comment>
+    <message type='multi' where='com' who='individual' lo='objects.dylan.3' hi='objects.dylan.5'/>
+    <changestat who='individual' money='-20' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>shake or talk to dylan</comment>
+    <message type='single' where='com' who='individual' lo='objects.dylan.6'/>
+   </event>
+
+   <event num='4'>
+    <comment>get or steal dylan&apos;s cap</comment>
+    <message type='text' where='com' who='individual'>As you reach for the cap Dylan wakes up and cracks you across the knuckles with his guitar. "That&apos;s not very cool man," he observes, and immediately goes back to sleep.</message>
+    <checkstat who='individual' stamina='5' higher='objects.dylan.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>lose stamin as a result thereof</comment>
+    <changestat who='individual' stamina='-1' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='emily'>
+
+   <event num='1'>
+    <comment>Conversation with Emily</comment>
+    <match phrase='hello' id-name='obj_emily' lo='objects.emily.1'/>
+    <match phrase='arm' id-name='obj_emily' lo='objects.emily.2' hi='objects.emily.4'/>
+    <match phrase='lattice' id-name='obj_emily' lo='objects.emily.5'/>
+    <match phrase='bye' id-name='obj_emily' lo='objects.emily.6'/>
+    <match phrase='who' id-name='obj_emily' lo='objects.emily.7'/>
+    <match phrase='job' id-name='obj_emily' lo='objects.emily.7'/>
+    <match phrase='profession' id-name='obj_emily' lo='objects.emily.7'/>
+    <match phrase='emporium' id-name='obj_emily' lo='objects.emily.8'/>
+    <match phrase='where' id-name='obj_emily' lo='objects.emily.8'/>
+    <match phrase='ming' id-name='obj_emily' lo='objects.emily.9'/>
+    <match phrase='gaelaan' id-name='obj_emily' lo='objects.emily.10'/>
+    <match phrase='teleport' id-name='obj_emily' lo='objects.emily.11' hi='objects.emily.12'/>
+    <match phrase='orrery' id-name='obj_emily' lo='objects.emily.13'/>
+    <nomatch id-name='obj_emily' lo='objects.emily.14'/>
+   </event>
+
+  </section>
+
+  <section name='lottery'>
+
+   <event num='1'>
+    <comment>Activate lottery machine</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>release ball - random choice</comment>
+    <call event='objects.lottery.random[3-12]'/>
+   </event>
+
+   <event num='3'>
+    <comment>Lottery ball - option 1</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.2'/>
+   </event>
+
+   <event num='4'>
+    <comment>Lottery ball - option 2</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Lottery ball - option 3</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.4'/>
+   </event>
+
+   <event num='6'>
+    <comment>Lottery ball - option 4</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.5'/>
+   </event>
+
+   <event num='7'>
+    <comment>Lottery ball - option 5</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.6'/>
+   </event>
+
+   <event num='8'>
+    <comment>Lottery ball - option 6</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.7'/>
+   </event>
+
+   <event num='9'>
+    <comment>Lottery ball - option 7</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.8'/>
+   </event>
+
+   <event num='10'>
+    <comment>Lottery ball - option 8</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.9'/>
+   </event>
+
+   <event num='11'>
+    <comment>Lottery ball - option 9</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.10'/>
+   </event>
+
+   <event num='12'>
+    <comment>Lottery ball - option 10</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.11'/>
+   </event>
+
+   <event num='13'>
+    <comment>Stop lottery machine</comment>
+    <announce type='single' loc='2770' lo='objects.lottery.12'/>
+   </event>
+
+  </section>
+
+  <section name='notice'>
+
+   <event num='1'>
+    <comment>instructions for using the teleport system</comment>
+    <message type='multi' where='com' who='individual' lo='objects.notice.1' hi='objects.notice.8'/>
+   </event>
+
+  </section>
+
+  <section name='pass'>
+
+   <event num='1'>
+    <comment>Eat pass</comment>
+    <message type='single' where='object' who='individual' lo='objects.pass.1' id-name='pass'/>
+    <destroyobject where='inventory' map='home' id-name='pass'/>
+   </event>
+
+   <event num='2'>
+    <comment>Drop pass</comment>
+    <message type='single' where='object' who='individual' lo='objects.pass.2' id-name='pass'/>
+    <destroyobject where='inventory' map='home' id-name='pass'/>
+   </event>
+
+   <event num='3'>
+    <comment>Issue pass please (in loc 2706)</comment>
+    <message type='single' where='loc' who='individual' lo='objects.pass.3'/>
+    <message type='single' where='com' who='room' lo='objects.pass.4'/>
+    <createobject where='room' home-map='sol/lattice' id='obj_pass' dest-map='sol/lattice' dest-loc='2706'/>
+   </event>
+
+   <event num='4'>
+    <comment>Enter room 2770 - check for pass</comment>
+    <checkinventory map='home' id-name='pass' found='objects.pass.6' not-found='objects.pass.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>No pass</comment>
+    <message type='single' where='loc' who='individual' lo='objects.pass.5'/>
+    <move what='player' who='individual' loc='2706'/>
+   </event>
+
+   <event num='6'>
+    <comment>Pass</comment>
+    <message type='single' where='loc' who='individual' lo='objects.pass.6'/>
+   </event>
+
+  </section>
+
+  <section name='plaque'>
+
+   <event num='1'>
+    <message type='multi' where='com' who='individual' lo='objects.plaque.1' hi='objects.plaque.6'/>
+   </event>
+
+  </section>
+
+  <section name='wheel'>
+
+   <event num='1'>
+    <comment>Get wheel (loc 2642)</comment>
+    <message type='single' where='object' who='individual' lo='objects.wheel.1' id-name='obj_wheel'/>
+   </event>
+
+   <event num='2'>
+    <comment>Spin wheel</comment>
+    <message type='single' where='object' who='individual' lo='objects.wheel.2' id-name='obj_wheel'/>
+    <message type='single' where='com' who='room_ex' lo='objects.wheel.3'/>
+    <call event='objects.wheel.random[3-26]'/>
+   </event>
+
+   <event num='3'>
+    <comment>Spin wheel - option 1</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>Spin wheel - option 2</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Spin wheel - option 3</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>Spin wheel - option 4</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>Spin wheel - option 5</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.8'/>
+   </event>
+
+   <event num='8'>
+    <comment>Spin wheel - option 6</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.9'/>
+   </event>
+
+   <event num='9'>
+    <comment>Spin wheel - option 7</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.10'/>
+   </event>
+
+   <event num='10'>
+    <comment>Spin wheel - option 8</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.11'/>
+   </event>
+
+   <event num='11'>
+    <comment>Spin wheel - option 9</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.12'/>
+   </event>
+
+   <event num='12'>
+    <comment>Spin wheel - option 10</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.13'/>
+   </event>
+
+   <event num='13'>
+    <comment>Spin wheel - option 11</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.14'/>
+   </event>
+
+   <event num='14'>
+    <comment>Spin wheel - option 12</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.15'/>
+   </event>
+
+   <event num='15'>
+    <comment>Spin wheel - option 13</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.16'/>
+   </event>
+
+   <event num='16'>
+    <comment>Spin wheel - option 14</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.17'/>
+   </event>
+
+   <event num='17'>
+    <comment>Spin wheel - option 15</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.18'/>
+   </event>
+
+   <event num='18'>
+    <comment>Spin wheel - option 16</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.19'/>
+   </event>
+
+   <event num='19'>
+    <comment>Spin wheel - option 17</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.20'/>
+   </event>
+
+   <event num='20'>
+    <comment>Spin wheel - option 18</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.21'/>
+   </event>
+
+   <event num='21'>
+    <comment>Spin wheel - option 19</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.22'/>
+   </event>
+
+   <event num='22'>
+    <comment>Spin wheel - option 20</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.23'/>
+   </event>
+
+   <event num='23'>
+    <comment>Spin wheel - option 21</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.24'/>
+   </event>
+
+   <event num='24'>
+    <comment>Spin wheel - option 22</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.25'/>
+   </event>
+
+   <event num='25'>
+    <comment>Spin wheel - option 23</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.26'/>
+   </event>
+
+   <event num='26'>
+    <comment>Spin wheel - option 24</comment>
+    <message type='single' where='com' who='room' lo='objects.wheel.27'/>
+   </event>
+
+   <event num='27'>
+    <comment>Examine portable wheel</comment>
+    <message type='multi' where='com' who='individual' lo='objects.wheel.28' hi='objects.wheel.29'/>
+   </event>
+
+   <event num='28'>
+    <comment>Get portable wheel - check if player is staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.wheel.29' unset='objects.wheel.30'/>
+   </event>
+
+   <event num='29'>
+    <comment>Player is staff so they get the wheel</comment>
+    <message type='single' where='com' who='individual' lo='objects.wheel.30'/>
+    <message type='single' where='com' who='room_ex' lo='objects.wheel.33'/>
+    <get id-name='obj_2wheel' silent='true'/>
+   </event>
+
+   <event num='30'>
+    <comment>Not staff</comment>
+    <message type='single' where='com' who='individual' lo='objects.wheel.31'/>
+   </event>
+
+   <event num='31'>
+    <comment>Drop wheel</comment>
+    <message type='single' where='com' who='individual' lo='objects.wheel.32'/>
+    <message type='single' where='com' who='room_ex' lo='objects.wheel.34'/>
+    <drop id-name='obj_2wheel' silent='true'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='start'>
+
+  <section name='start'>
+
+   <event num='1'>
+    <comment>start fountain color changer</comment>
+    <call event='extras.fountain.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='teleport'>
+
+  <section name='general'>
+
+   <event num='1'>
+    <comment>loc 2078 - teleport on black/yellow to 2589 - intermediate node</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2589'/>
+   </event>
+
+   <event num='2'>
+    <comment>loc 2589/1958 - teleport on white to 2078 - reception</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2078'/>
+   </event>
+
+   <event num='3'>
+    <comment>loc 2589 - teleport on black to 2406 - armstrong cuthbert</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2406'/>
+   </event>
+
+   <event num='4'>
+    <comment>loc 2406/24571508 - teleport on white to 2589 - xfer node</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2589'/>
+   </event>
+
+   <event num='5'>
+    <comment>loc 2589 - teleport on yellow to 2457 - manufacturing</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2457'/>
+   </event>
+
+   <event num='6'>
+    <comment>loc 2078 - teleport on blue/green to 1958 - intermediate node</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='1958'/>
+   </event>
+
+   <event num='7'>
+    <comment>loc 1958/2069 - teleport on blue to 2069 - commodity exchange</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2069'/>
+   </event>
+
+   <event num='8'>
+    <comment>loc 2069 - teleport on white to 1958 - intermediate node</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='1958'/>
+   </event>
+
+   <event num='9'>
+    <comment>loc 1958 - teleport on green to 1508 - leisure complex</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='1508'/>
+   </event>
+
+   <event num='10'>
+    <comment>loc1508 - attempt to teleport on gold disk</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.2'/>
+   </event>
+
+   <event num='11'>
+    <comment>loc 2457 - teleport on grey to 2706 - production annex</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2706'/>
+   </event>
+
+   <event num='12'>
+    <comment>loc 2706 - teleport on grey to 2457 - production complex</comment>
+    <message type='single' where='com' who='individual' lo='teleport.general.1'/>
+    <move what='player' who='individual' loc='2457'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

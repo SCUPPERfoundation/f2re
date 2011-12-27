@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<fed2-map title='Kittyheaven' version='16' editor='standard' from='330' to='Siamese.Siamese Space.522'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>you can find spare wings, robes and halos here.</desc>
+   </location>
+
+   <location num='138'>
+      <name>Angels Haunt</name>
+      <desc>This is a large cloudy chair with lots of cushions.  There is a picture of Lacey. To the South is Heavenly Delights.</desc>
+      <exits s='202' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='202' flags='b'>
+      <name>Heavenly Delights</name>
+      <desc>The floor is an airy design with small puffy cloud steps lined with pillows and cushions.  Your order is selected by a telepathic controlled menu allowing you to sample the flavor and appearance of the food before ordering it.  There are vases of beverages setting next to silver goblets.  Another table is set with deserts of all kinds; merange pies, angel cakes, cream puffs.  Another table has fresh vegitables and fruit of all varieties. To the North is Angels Haunt.</desc>
+      <exits n='138' s='266' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='266'>
+      <name>Heavenly Delights Anteroom</name>
+      <desc>This room leads to the universe renowned Heavenly Delights.  You are greated by a angelic kitty. Go N to Heavenly Delights.</desc>
+      <exits n='202' s='330' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='328'>
+      <name>Michael&apos;s Way</name>
+      <desc>All kinds of angelic kitties are roaming around and purring.  The landing pad is to east.</desc>
+      <exits e='329' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='329'>
+      <name>Michael&apos;s Way</name>
+      <desc>The way is lined with pillars and busts of kitties.</desc>
+      <exits e='330' w='328' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='330'>
+      <name>Landing Pad</name>
+      <desc>The Shuttle Pad is circled with airy marble columns. To the North are two winged Imperial lions, one on each side of the gate, welcoming you to a diner.  To the East is the Heavenly exchange.  To the West is Michaels Way.  To the South is the Heavens medical complex.  To the SouthEast is Heavens Ship Sales.  Novice kitty angels can be seen flying around chasing imaginary teasers.</desc>
+      <exits n='266' e='331' se='395' s='394' w='329' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='e'>
+      <name>Kittyheaven&apos;s Exchange</name>
+      <desc>You visualize a telepathic stock board and select your orders and sales telepathically.</desc>
+      <exits w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Hospital Way</name>
+      <desc>Go South to Heavens Hospital.</desc>
+      <exits n='330' s='458' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='395'>
+      <name>Coluseum Way</name>
+      <desc>Lush vegitation, Ivies and orchids mixed in with the airy white clouds line the way</desc>
+      <exits se='460' nw='330' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='458' flags='hi'>
+      <name>Heaven&apos;s Hospital</name>
+      <desc>Buy Insurance here.  There are healers floating around checking patients.  Thought healing and the laying of hands is practiced here.</desc>
+      <exits n='394' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='460' flags='yr'>
+      <name>Caesars new and used chariots</name>
+      <desc>There are rows upon rows of thought controlled energy transports.</desc>
+      <exits nw='395' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>
+

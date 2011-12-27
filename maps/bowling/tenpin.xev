@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<event-list version='4'>
+
+ <category name='objects'>
+
+  <section name='coin'>
+
+   <event num='1'>
+    <comment>Get coin - loc 458 - pick from 2 options</comment>
+    <call event='objects.coin.random[2-3]'/>
+   </event>
+
+   <event num='2'>
+    <comment>Option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.coin.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.coin.2'/>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='key'>
+
+   <event num='1'>
+    <comment>Get key - loc 458 - pick from 3 options</comment>
+    <call event='objects.key.random[2-4]'/>
+   </event>
+
+   <event num='2'>
+    <comment>Option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.key.1'/>
+    <createobject where='inventory' home-map='bowling/tenpin' id='obj_2key'/>
+   </event>
+
+   <event num='3'>
+    <comment>Option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.key.2'/>
+    <changestat who='individual' stamina='-2' change='add' cur-max='current'/>
+   </event>
+
+   <event num='4'>
+    <comment>Option 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.key.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Drop key</comment>
+    <message type='single' where='com' who='individual' lo='objects.key.4'/>
+    <destroyobject where='inventory' map='home' id-name='key'/>
+   </event>
+
+   <event num='6'>
+    <comment>Loc 329 - put key in lock - check for key</comment>
+    <checkinventory map='home' id-name='key' found='objects.key.7' not-found='objects.key.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Got key</comment>
+    <message type='single' where='com' who='individual' lo='objects.key.5'/>
+    <destroyobject where='inventory' map='home' id-name='key'/>
+    <move what='player' who='individual' loc='330'/>
+   </event>
+
+   <event num='8'>
+    <comment>No key</comment>
+    <message type='single' where='com' who='individual' lo='objects.key.6'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

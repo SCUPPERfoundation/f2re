@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<fed2-map title='Garafena' version='38' editor='standard' from='2141' to='Booyan.Booyan Space.581'>
+
+   <location num='1299'>
+      <name>Fore Topmast</name>
+      <desc>   You are further up the foremast to the topmast, and in a rough sea you can imagine that this mast would be swinging around wildly. From here a fall was invariably fatal - either a plunge to the deck and breaking your back, neck or legs or falling overboard.</desc>
+      <desc>   The shrouds allow you to climb down the mast.</desc>
+      <exits down='1558' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1362'>
+      <name>Main Mast Port Yardarm</name>
+      <desc>   You see a few sailors spread out along the yard using the foot ropes for support. You see a halyard with a series of colorful flags hanging from it. They appear to be in some special order like they have a meaning. Far below you is the deck of the ship, and you have no doubt now that a fall would be very fatal for anyone. It makes you wonder why none of the sailors you see in the rigging have a safety harness, and would they think less of you if you went to find one.</desc>
+      <desc>   The mainmast is back to your starboard-beam.</desc>
+      <exits e='1363' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1363'>
+      <name>Main Topmast</name>
+      <desc>   You are further up the main mast to the topmast, and in a rough sea you can imagine that this mast would be swinging around wildly. From here a fall was invariably fatal - either a plunge to the deck and breaking your back, neck or legs or falling overboard. You have reached the fighting top, and watch in amazement as some of these sailors swing out around the top to move along the yardarm on continue higher up the mast.</desc>
+      <desc>   The yard arm extends to your port-beam and starboard-beam, and the shrouds allow you to climb aloft or down the mast.</desc>
+      <exits e='1364' w='1362' up='1366' down='1622' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1364'>
+      <name>Main Mast Starboard Yardarm</name>
+      <desc>   You see a few sailors spread out along the yard using the foot ropes for support. One seaman who must be in a rush is actually running along the tops of the yard, then dropping onto the foot ropes when he reaches the place he seems to want to be. Far below you is the deck of the ship, and you have no doubt now that a fall would be very fatal for anyone. It makes you wonder why none of the sailors you see in the rigging have a safety harness, and would they think less of you if you went to find one.</desc>
+      <desc>   The mainmast is back to your port-beam</desc>
+      <exits w='1363' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1366'>
+      <name>Main Topgallant Mast</name>
+      <desc>   You are as far up the main mast as you are able to climb. There is a small platform here for you to rest on. You can feel the slightest movement of the ship from this location, and grab a hold of the rigging just a little tighter. But as you look around, you can appreciate the view from this location, and how maybe a sailor might like this spot unless the weather was rough. Just about you head is a shimmering portal with a short line hanging out of it. You are not sure where it leads as you see nothing beyond the shimmering light, but you think you could climb up the rope if you wanted to find out.</desc>
+      <desc>   The shrouds allow you to climb down the mast.</desc>
+      <exits up='1369' down='1363' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1369' flags='b'>
+      <name>Crows Nest Bar</name>
+      <desc>   You find yourself in a bar that is a few thousand feet in the air. The scent of the ocean drifts to you which seems a bit unusual consider how far you are above the ocean. This appears to be a favorite hang out for many of the local sailors. The bar&apos;s walls are actually large windows that give you an incredible view of the island and ocean below. The bar itself is in the center of the room, with a large sign that reads &quot;The CROWS NEST&quot; hanging above it. The sailors seem to having a good time drinking, eating, playing various card and dice games, even singing the occasional sea chantey. You think to yourself this could be a real fun place to have a few drinks and soak up some of the local culture while admiring the view.</desc>
+      <desc>   You notice a rope that leads back down.</desc>
+      <exits down='1366' in='2141' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1371'>
+      <name>Lighthouse Overlook</name>
+      <desc>   You breath is taken away by the dramatic views from the top of the lighthouse overlook the sea-cliffs and into the churning ocean water below, you take a step back from the edge because it is a long drop to the bottom.</desc>
+      <desc>   There are stairs leading back down and a door to your east.</desc>
+      <exits e='1372' down='1436' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1372'>
+      <name>Lighthouse Light</name>
+      <desc>    You step into a small, glass walled room that has a very bright. two sided, rotating beacon shinning across the ocean. Every minute either the white or the blue side flashes past you.</desc>
+      <desc>   There is a door to your west.</desc>
+      <exits w='1371' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1374' flags='b'>
+      <name>DocDroopy&apos;s Office</name>
+      <desc>   You have entered DocDroopy&apos;s private office. To one side there is a large couch, and on the other side is a fireplace with a warm fire. On the mantel of the fireplace are two models, one of a wooden sailing ship with the name GPS Angel and the other is a modern starship with the name BSS Alexander. Near the door you see an antique Grandfathers Clock still keeping time. In the center of the room is a large pedestal desk.</desc>
+      <desc>   On the desk you see three holographic images, one of a young couple laughing in the Starship Cantina on Earth, one of a young boy playing with a large dog, and one of a very striking woman with dark hair and eyes. Gently placed on the desk is a large black ball, you realize it is a magic 8-ball. What answers could it hold for you? You think about having a seat on the couch, but find a very large Fawn Mastiff and young child have already beaten you to it and are asleep. You decide you best not come between a boy and his dog.</desc>
+      <desc>   The Door is east.</desc>
+      <exits e='1375' out='2141' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1375'>
+      <name>Main Chamber</name>
+      <desc>   Beneath the mountain, nature has carved a veritable masterpiece in stone. Water dissolved out an incredible series of rooms and passages, and created spectacular formations of stalactites and stalagmites. Over time, nature has decorated this intriguing space with new deposits of minerals forming elegant shapes, multiple textures, and lots of color, This is nature&apos;s artistry is at its best. There is a pool to the back of the cavern, with a magnificent waterfall.</desc>
+      <desc>   To your west is a steel door with a biological warning symbol and the name DocDroopy carved on it, as well as the trail up.</desc>
+      <exits w='1374' up='1565' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1427'>
+      <name>Mizzen Topmast</name>
+      <desc>   You are further up the mizzen mast to the topmast, and in a rough sea you can imagine that this mast would be swinging around wildly. From here a fall was invariably fatal - either a plunge to the deck and breaking your back, neck or legs or falling overboard.</desc>
+      <desc>   The shrouds allow you to climb down the mast.</desc>
+      <exits down='1686' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='1436'>
+      <name>Lighthouse Stairwell</name>
+      <desc>   This steep spiral staircase runs the interior of this tall structure. It is lit with a few old hurricane lamps on the wall. You see the Entrance below you and an overlook above you.</desc>
+      <exits up='1371' down='1500' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1494'>
+      <name>Forecastle</name>
+      <desc>   On the Forecastle you see some neatly laid lines and rope. There is a sailor here scrubbing the deck. There is a bowsprit attached to the Fo&apos;c&apos;sle that projects over the bow of the ship, supporting the foremast, and extends the headsails. Just under the bowsprit on the hull of the ship you see the figurehead that gives the ship her name of Angel.</desc>
+      <desc>   You can go port-quarter, aft, or starboard-quarter from here.</desc>
+      <exits se='1559' s='1558' sw='1557' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1497'>
+      <name>Wharf</name>
+      <desc>   You are on a wooden platform settled upon stone pilings and attached to the shore, it overlooks the large natural harbor that the island provides. This obviously is a place where old water ships tie off to send crew and cargo ashore. You see large metal cleats with heavy ropes attached that the old style sailing ship tied off to the wharf with. From here you see what looks to be like a beautiful woman, with a pale complexion, sparkling brown eyes, and wings that sweep back against the hull of the ship, carved into the bow. This lifelike carving helps you to understand why the name of the vessel is Angel.</desc>
+      <desc>   The wharf continues to the south.</desc>
+      <exits s='1561' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1500'>
+      <name>Lighthouse Entrance</name>
+      <desc>   You are inside the base of this tall structure. It actually has a very homey feel to it, the room is well lit by the windows. There is a hammock against one wall and a small desk against the another.</desc>
+      <desc>   You see a stairwell leading up and the door to leave is to your south.</desc>
+      <exits s='1564' up='1436' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1503' flags='b'>
+      <name>Grand Garafena Hotel Ballroom</name>
+      <desc>   Walking into this room you are taken aback by the splendor and beauty. With a stunning medley of coral-hued walls, an arching, 100-foot ceiling with three chandeliers, an elevated stage, raised seating areas surrounding the massive wooden dance floor, and a full-service bar in the back. There is sweeping veranda surrounding the ballroom with a stunning view of the island, the ocean, and the sky.</desc>
+      <desc>   The hallway is to the south.</desc>
+      <exits s='1567' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1552'>
+      <name>Galley</name>
+      <desc>   The galley provided the means for cooking hot food for all of the ships crew. You see a big wood burning stove, and strangely you seem to recall it is called a camboose. You wonder how they would prevent sparks or burning embers from setting fire to the deck around the galley. Almost unnoticeable to all but the most careful of examinations are many modern conveniences for food preparation in the far bulkhead.</desc>
+      <desc>   You can go starboard-quarter or aft from here.</desc>
+      <exits se='1617' s='1617' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1554'>
+      <name>Magazine</name>
+      <desc>   Shipboard powder used for those long guns is stored in this room. It is fitted deep within the ship. The compartment is sheathed with copper, which should prevent sparks from being produced by iron, such as nails on shoes, belts, or tools. And you realize that these precautions make sense since this is literally a powder keg of old style explosives, so you decide not to light anything while here.</desc>
+      <desc>   You can go port-quarter, or aft from here.</desc>
+      <exits s='1617' sw='1617' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1557'>
+      <name>Port Fore Railing</name>
+      <desc>Near the bow there is a projecting piece of timber with the cap carved into the form of a lions head. It seems to serve as crane boom for hoisting the anchors to the rail. For some reason you seem to recall they are commonly known as a catheads. The anchors are secured to the cathead. This vessel carries four anchor that are made of two pieces of wood, bound together by iron bands. The remainder of the anchor is wrought iron.</desc>
+      <desc>   You can go aloft via the shrouds, go starboard-beam, starboard-bow, starboard-quarter, or aft from here.</desc>
+      <exits ne='1494' e='1558' se='1622' s='1621' up='1299' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1558'>
+      <name>Fore Mast</name>
+      <desc>   The masts carries the horizontal yards from which are slung the great canvas sails. The position of the sails can be controlled by hauling on the complex system of running rigging. Setting and furling the sails require the sailors to climb the masts and then to move out along the yard arms, high above the deck and even right out over the sea.  You see a few sailors climbing using the thin &apos;ratlines&apos; as steps that are strung between the main shrouds. The Foremast looks to be 190 feet tall and two feet in width.</desc>
+      <desc>   You can go fore, starboard-beam, starboard-quarter, port-beam, port-quarter, or aft from here.</desc>
+      <exits n='1494' e='1559' se='1623' s='1622' sw='1621' w='1557' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1559'>
+      <name>Starboard Fore Railing</name>
+      <desc>   Near the bow there is a projecting piece of timber with the cap carved into the form of a lions head. It seems to serve as crane boom for hoisting the anchors to the rail. For some reason you seem to recall they are commonly known as a catheads. The anchors are secured to the cathead. This vessel carries four anchor that are made of two pieces of wood, bound together by iron bands. The remainder of the anchor is wrought iron.</desc>
+      <desc>   You can go aloft via the shrouds, go port-beam, port-bow, port-quarter, or aft from here.</desc>
+      <exits s='1623' sw='1622' w='1558' nw='1494' up='1299' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1561'>
+      <name>Wharf</name>
+      <desc>   You are on a wooden platform settled upon stone pilings and attached to the shore, it overlooks the large natural harbor that the island provides. This obviously is a place where old water ships tie off to send crew and cargo ashore. You see an old style sailing ship tied off to the wharf, her decks busy with what can only be described as the life of a sailor.</desc>
+      <desc>   The wharf continues to the north and south, and there is a door to the southeast.</desc>
+      <exits n='1497' se='1626' s='1625' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1564'>
+      <name>Lighthouse Grounds</name>
+      <desc>   This 260 foot structure is located on a peninsula on the islands north shore, which itself a remnant of a former volcanic vent that last erupted about 200,000 years ago. It appears the rotating beacon on top of this structure is designed to warn sailors about the dangerous reefs located on this side of the island. It also appears the grounds have become home to much of the local avian wildlife, as you see a diverse population of nesting seabirds.</desc>
+      <desc>   The entrance to the building is to the north, and the town is to the southeast.</desc>
+      <exits n='1500' se='1629' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1565'>
+      <name>Underground Passage</name>
+      <desc>   As you walk among the tropical foliage you suddenly come to a hole in the ground, a low stone wall is the only clue that something is there. The scattered palms and wide meadow that surround you give no hint of what lies below. There is a trail that leads down into the hole along what looks to be a spring, you can not see past the entrance to decide what is in there.</desc>
+      <desc>   The road lies to your south.</desc>
+      <exits s='1629' down='1375' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='1567'>
+      <name>Grand Garafena Hotel Hallway</name>
+      <desc>   The unique architecture of large open spaces and archways are woven with the memories of an unforgettable past. This hallway has the whole history of Garafena offered to you in paintings, photos and holograms of eras gone by. There are doors leading to some of the rooms on scattered along the hallway.</desc>
+      <desc>   The entrance to the ballroom is to the north and the lobby is to the south.</desc>
+      <exits n='1503' sw='1630' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1617'>
+      <name>Gundeck</name>
+      <desc>   The gun deck is fully enclosed, but seems very well lit considering the only source of light you see is the open gun ports. And you not sure how fresh air is being supplied to this area, but you are glad that it is. It stretches the entire width of the ship from port to starboard. There is a mix of 24 and 32 pounder long guns here.</desc>
+      <desc>   You can imagine the hard work that would be involved for a 6 man crew to service these archaic weapons and find yourself thankful for the more modern lasers and missiles of today.This also appears where many of the crew live, as you see hammocks rolled and stowed above the bulwarks, and tables are folded down from the bulkheads as some of the crew is eating a meal. You can go starboard-bow, starboard-quarter, port-bow, or port-quarter from here.</desc>
+      <exits ne='1554' se='1682' sw='1680' nw='1552' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1621'>
+      <name>Port Amidship Railing</name>
+      <desc>   You see a double capstan here. This deck drum is used in connection with the heavier running rigging aloft, and if necessary, to warp the ship along side a dock or load/off load heavy objects. To operate the capstan there are twelve long poles inserted in pigeon holes over the wasp-waisted drum which allows the sailors to turn the ropes around the drum and lift sails or complete other tasks as needed. You consider if you have a spare mechanical winch on your ship, and if they might want to buy it to make life easier.</desc>
+      <desc>  You can go aloft via the shrouds, go fore, starboard-beam, starboard-bow, starboard-quarter, or aft from here.</desc>
+      <exits n='1557' ne='1558' e='1622' se='1686' s='1685' up='1363' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1622'>
+      <name>Main Mast</name>
+      <desc>   The masts carries the horizontal yards from which are slung the great canvas sails. The position of the sails can be controlled by hauling on the complex system of running rigging. Setting and furling the sails require the sailors to climb the masts and then to move out along the yard arms, high above the deck and even right out over the sea.  You see a few sailors climbing using the thin &apos;ratlines&apos; as steps that are strung between the main shrouds. The Main Mast looks to be 230 feet tall and two and a half feet in width.</desc>
+      <desc>   You can go fore, starboard-beam, starboard-bow, starboard-quarter, port-beam, port-bow, port-quarter, or aft from here.</desc>
+      <exits n='1558' ne='1559' e='1623' se='1687' s='1686' sw='1685' w='1621' nw='1557' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1623'>
+      <name>Starboard Amidship Railing</name>
+      <desc>   You see a double capstan here. The deck drum looks to be used to hoist the anchors by a very manual process. There twelve long poles inserted in pigeon holes over the wasp-waisted drum which allows the sailors to turn the huge anchor cable around the drum and it inch the ponderous anchors up from the bottom. You find yourself wondering if they have ever heard of anchor windless on this planet.</desc>
+      <desc>   You can go aloft via the shrouds, go fore, port-beam, port-bow, port-quarter, or aft from here.</desc>
+      <exits n='1559' e='1624' s='1687' sw='1686' w='1622' nw='1558' up='1363' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1624'>
+      <name>Gangway</name>
+      <desc>   This narrow plank forms a bridge by which you can go between the wharf and the ship. Along both sides are dark blue banners that have the words GPS ANGEL intricately woven with a silver thread in letters that look to be two feet high. There are ropes that look as if they are in place to help you keep you balance in case you need it. As you look at the wooden ship you think you might want to recheck the price of woods in the planetary exchange.</desc>
+      <desc>   You can go west onto the ship or east to the wharf.</desc>
+      <exits e='1625' w='1623' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1625'>
+      <name>Wharf</name>
+      <desc>   You are on a wooden platform settled upon stone pilings and attached to the shore, it overlooks the large natural harbor that the island provides. This obviously is a place where old water ships tie off to send crew and cargo ashore. You see an old style sailing ship tied off to the wharf, her decks busy with what can only be described as the life of a sailor.</desc>
+      <desc>   The wharf continues to the north and south, and there is a gangway the leads aboard the ship to the west.</desc>
+      <exits n='1561' s='1689' w='1624' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1626'>
+      <name>Wharehouse Office</name>
+      <desc>   This is a small office that glass windows that overlook the whole warehouse. On the wall is a few holograms of various official looking beings, along with the Booyan system&apos;s coat-of-arms and the logo of the Galactic Trade Guild. In the middle of the office is a neatly kept desk with papers, and a computer terminal. There is a name plate an the desk with the name Schrodinger on it. Maybe you want to double check the warehouse for what cargo is actually being stored there, then again maybe it is best not to ask questions where the Galactic Trade guild might be involved.</desc>
+      <desc>   There are doors to the south and to the northwest.</desc>
+      <exits s='1690' nw='1561' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1629'>
+      <name>Oliver Perry Way</name>
+      <desc>   This cobblestone street leads between what you think must be the more affluent section of the town and the main plaza. There are nice two and three story homes which line both sides of the street, they all seem to come with verandas that would appear to have either a nice view of the island or of the ocean.</desc>
+      <desc>   You see the local hotel to your east, a large lighthouse to your northwest, and a trail that leads off into the jungle to your north and the road continues to the south.</desc>
+      <exits n='1565' e='1630' s='1693' nw='1564' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1630'>
+      <name>Grand Garafena Hotel Lobby</name>
+      <desc>   Nestled between sun-kissed beaches and majestic mountains this legendary Garafena hotel is recognized around the galaxy as the ultimate vacation destination. This hotel is an icon of luxury and romance for all those that seek an unforgettable vacation away from the daily stress of the galaxy. This hotel has been the focal point of island entertainment and glamour since its inception. You find yourself in the lobby is this grand hotel, a mix of droids and locals are here to see to your every need. There is a check-in desk to one side, and a hallway leading the ballroom in to the northeast.</desc>
+      <exits ne='1567' w='1629' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1631' flags='b'>
+      <name>Garden Gazebo</name>
+      <desc>   You are in a small gazebo that is made of beautiful dark grained wood.  It sits upon a small hill that ensures you have an extensive view of the whole garden. There are a few benches that you could sit on to relax and enjoy the view of the pond and the garden. Built to one side of the gazebo is a short table with a small selection of fruits and drinks, you know someone must use this place, because the fruit looks fresh and the drinks are cold.</desc>
+      <desc>   On the post as you enter you notice someone carved a heart with the letters TAB &amp; APS inside of it. There are also the letters ILU4E underneath the heart, you wonder about the person who carved this and why they carved this here. Perhaps this was once a special rendezvous for them, it is certainly both peaceful and beautiful enough to be.</desc>
+      <exits out='1694' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1680'>
+      <name>Wardroom</name>
+      <desc>   The Wardroom contains the accommodations for the ships officers. This appears to be where they dine, spend their leisure hours, and receive visitors while in port. The small attached officer cabins are a pretty spartan. They have a narrow swinging bunk, a small table, chair, and sea chest that are used for stowing personal effects.</desc>
+      <desc>   You can go up the ladder, fore, starboard-beam, or starboard-bow from here.</desc>
+      <exits n='1617' ne='1617' e='1682' up='1749' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1682'>
+      <name>Hold</name>
+      <desc>   This is the space that cargo as well as food and drink are stored. To prevent the cargo from rolling around, it is set down into a bed of shingles and then tied down. Even the tightest wooden ship can take on water, which had to be periodically pumped out. This task was accomplished by using the hand operated bilge pumps located here.</desc>
+      <desc>   You can go fore, port-beam, or port-bow from here.</desc>
+      <exits n='1617' w='1680' nw='1617' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1685'>
+      <name>Port Aft Railing</name>
+      <desc>   The area holds the ships pinnace. A boat that is used to carry personal, cargo, and messages between ship and shore when the ship is at anchor. You find yourself happy that you have your shuttle and do not have to try to row one of these. There are a group of sailors here re-calking the seems in this long boat.</desc>
+      <desc>   You can go aloft via the shrouds, go fore, starboard-beam, starboard-bow, or aft from here.</desc>
+      <exits n='1621' ne='1622' e='1686' s='1749' up='1427' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1686'>
+      <name>Mizzen Mast</name>
+      <desc>   The masts carries the horizontal yards from which are slung the great canvas sails. The position of the sails can be controlled by hauling on the complex system of running rigging. Setting and furling the sails require the sailors to climb the masts and then to move out along the yard arms, high above the deck and even right out over the sea.  You see a few sailors climbing using the thin &apos;ratlines&apos; as steps that are strung between the main shrouds. The Mizzen Mast looks to be 170 feet tall and two feet in width.</desc>
+      <desc>   You can go fore, starboard-beam, starboard-bow, port-beam, port-bow, or aft from here.</desc>
+      <exits n='1622' ne='1623' e='1687' s='1750' w='1685' nw='1621' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1687'>
+      <name>Starboard Aft Railing</name>
+      <desc>   You see the main hatch, which you think is normally covered by numerous pieces of wood latticework that you see moved aside. Right now this access point to the hold is being used to move supplies on and off the ship by the sailors. You are fascinated that they are using yardarms as crane hoists to do this work and you wonder why there are no Galactic Trade Guild stevedores here to move the cargo.</desc>
+      <desc>   You can go aloft via the shrouds, go fore, port-beam, port-bow, or aft from here.</desc>
+      <exits n='1623' s='1751' w='1686' nw='1622' up='1427' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1689'>
+      <name>Wharf</name>
+      <desc>   You are on a wooden platform settled upon stone pilings and attached to the shore, it overlooks the large natural harbor that the island provides. This obviously is a place where old water ships tie off to send crew and cargo ashore.  You see an old style sailing ship tied off to the wharf, you notice that from here there are ropes and pulleys being used to load and offload cargo from this vessel.</desc>
+      <desc>   The wharf continues to the north and south, and there is a large opening to the east.</desc>
+      <exits n='1625' e='1690' s='1753' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1690'>
+      <name>Wharehouse</name>
+      <desc>   This large plain structure seems to be a storage facility for various goods. You guess from its convenient location with the wharf that these pallets of goods being stored are moved by the sea. What you do find unusual is that all the goods here seemed to be moved by an old fashion manual process of local labor instead of using any of the more modern option available.</desc>
+      <desc>   There is a door to the north and large openings onto the street to the south and onto the wharf to the west.</desc>
+      <exits n='1626' s='1754' w='1689' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1693'>
+      <name>Oliver Perry Way</name>
+      <desc>   This cobblestone street leads between what you think must be the more affluent section of the town and the main plaza. There are nice two and three story homes which line both sides of the street, they all seem to come with verandas that would appear to have either a nice view of the island or of the ocean.</desc>
+      <desc>   The road continues to the north and south.</desc>
+      <exits n='1629' s='1757' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1694'>
+      <name>Meditation Garden</name>
+      <desc>  You find yourself in a quiet and restful garden. There are paths that lead through the garden, with benches along the way to sit and rest or think. There is a Gazebo that overlooks a pond as well as a low bridge that crosses the pond. The pond is filled with large colorful fish that seem to follow you whenever you get near. To one side of the garden is an area covered entirely with green sand. There is a dark blue rock in the middle of it, and it appears that someone has created some unusual designs in the sand. You think it would be a great place to just sit and think about anything.</desc>
+      <desc>   The road is to your south and there is a beautifully designed stone building to the east.</desc>
+      <exits e='1695' s='1758' in='1631' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1695'>
+      <name>The Garden House</name>
+      <desc>   The architecture of this building is timeless, one entire wall is a giant window with a view out over the beach and the ocean below. The Window faces east, so you can imagine that the sunrises seen here are just incredible. There are benches and tables by various alcoves and niches spread throughout the entire building. You quickly realize this must be a place where anyone can come to worship the deity of their choice. And judging from all the alcoves and niches every deity you can think of seems to be covered. Not wanting to disturb the restful solitude this place offers you try to make sure you are quiet.</desc>
+      <desc>   You notice a small stairway in one corner, and the door leading to the garden is to the west.</desc>
+      <exits w='1694' down='2014' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1696' flags='b'>
+      <name>Beach</name>
+      <desc>   Lazy days, tropical weather, and endless blue ocean are here. This picture perfect setting with its wide, bright white sand beaches is a great place for a long, lazy beach day or a night-time picnic underneath the stars and swaying coconut palm trees. You can hear the rhythmic sounds, and know that everyone is sure to enjoy the song and dance of the islands that have influenced the unique culture found only on Garafena. You see a small thatch covered hut that has a nice spread of exotic food and drink.</desc>
+      <desc>   The beach continues to your south.</desc>
+      <exits s='1760' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1749'>
+      <name>Aft Ladderwell</name>
+      <desc>   You are in front of a steep ladder leading down into the bowels of the ship. While standing there, you hear the words &quot;Make a hole&quot; and are knocked to one side as two sailors scramble down the ladder like someone or something is chasing them.</desc>
+      <desc>   You can go down the ladder or fore from here.</desc>
+      <exits n='1685' down='1680' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1750' flags='b'>
+      <name>Captain&apos;s Quarters</name>
+      <desc>   This room seems to be strictly the domain of the ships captain, and the splendor of this cabin catches you by surprise. Against one bulkhead is a very plush looking hammock, the back bulkhead has windows that both light up the room and look out over the ocean from the stern of the ship. Spread throughout the room is Old Earth, Tudor, style furniture that you would expect to see in a house and not aboard a ship. There is a large table to one side that has charts and maps spread across it, as if someone is deciding where they want to go next. And on the other side of the room is a nice desk. You notice on the desk the ships log and an old 2-D photo of a young couple in of all places, the Starship Cantina on Earth. You think about investigating further, but notice a very large brindle mastiff blocking your path, and decide not to press you luck and test how friendly the dog is.</desc>
+      <desc>   You can go fore from here.</desc>
+      <exits n='1686' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='1751'>
+      <name>Quarter Deck Ladderwell</name>
+      <desc>   You are in front of a steep ladder leading up to a smaller deck on the aft of the ship. Beneath the ladder you see a very young sailor doing something with one of the many ropes that aboard this ship. He sees you looking at him and smiles before he turns back to his task.</desc>
+      <desc>   You can go up the ladder or fore from here.</desc>
+      <exits n='1687' up='1878' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1753'>
+      <name>Wharf</name>
+      <desc>   You are on a wooden platform settled upon stone pilings and attached to the shore, it overlooks the large natural harbor that the island provides. This obviously is a place where old water ships tie off to send crew and cargo ashore.  You see an old style sailing ship tied to the wharf, her decks busy with what can only be described as the life of a sailor.</desc>
+      <desc>   The wharf continues to the north and south, and there is a road to the east.</desc>
+      <exits n='1689' e='1754' s='1817' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1754'>
+      <name>Horatio Nelson Avenue</name>
+      <desc>   This appears to be the busiest of the streets. It goes between the wharf and the town plaza. Everywhere you look you see locals and droids moving around like beings on a mission. You can tell this must be the business district of town because of all the businesses, warehouses, and vendors along this route. You need to step lively or you might get crushed in the constant stream of traffic moving along the street.</desc>
+      <desc>   There is a warehouse you your north, the plaza to you east and a large wharf to your west.</desc>
+      <exits n='1690' e='1755' w='1753' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1755'>
+      <name>Horatio Nelson Avenue</name>
+      <desc>   This appears to be the busiest of the streets. It goes between the wharf and the town plaza. Everywhere you look you see locals and droids moving around like beings on a mission. You can tell this must be the business district of town because of all the businesses, warehouses, and vendors along this route. You need to step lively or you might get crushed in the constant stream of traffic moving along the street.</desc>
+      <desc>   The plaza to you east and a large wharf to your west.</desc>
+      <exits e='1756' w='1754' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1756'>
+      <name>Horatio Nelson Avenue</name>
+      <desc>   This appears to be the busiest of the streets. It goes between the wharf and the town plaza. Everywhere you look you see locals and droids moving around like beings on a mission. You can tell this must be the business district of town because of all the businesses, warehouses, and vendors along this route. You need to step lively or you might get crushed in the constant stream of traffic moving along the street.</desc>
+      <desc>   There is a building to your southwest, with the plaza to you east and a large wharf to your west.</desc>
+      <exits e='1757' sw='1819' w='1755' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1757'>
+      <name>Four Corners Plaza</name>
+      <desc>   You have reached the crossroads of the town. There is a large banyan tree in the middle, with a canopy of leaves and branches that cover over half of the plaza. It seems like a nice place just to sit and watch the traffic going down the four different roads. There is a small plaque at the base of the tree that reads &quot;To all visitors, may you know fair winds and following seas.&quot;  There is a large fountain that offers both local and visitor alike a chance at cool, fresh water. Over to one side of the plaza, where shade from the tree does not reach, you see a small pedestal with a sundial placed on top of it.</desc>
+      <desc>   From here you can head south down Comte de Grasse Road, north along Oliver Hazard Perry Way, east on Yi Sunsin Lane or west on Horatio Nelson Avenue. You step under the shade of the tree while you decide the path you want to follow, to stay cool and avoid being in anyone&apos;s way.</desc>
+      <exits n='1693' e='1758' s='1821' w='1756' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1758'>
+      <name>Yi Sunsin Lane </name>
+      <desc>   This very quiet little lane seems to head from the plaza to a very large beach. The lush green vegetation almost threatens to engulf the lane, but on closer inspection you can see where it is actually well manicured. You realize this appearance of wild vegetation must actually have been planned by someone.</desc>
+      <desc>   There is a gate to the north, and the road goes west towards the plaza as well as east towards the beach.</desc>
+      <exits n='1694' e='1759' w='1757' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1759'>
+      <name>Yi Sunsin Lane </name>
+      <desc>   This very quiet little lane seems to head from the plaza to very large beach. The lush green vegetation almost threatens to engulf the lane, but on closer inspection you can see where it is actually well manicured. You realize this appearance of wild vegetation must actually have been planned by someone.</desc>
+      <desc>   The road goes west towards the plaza, as well as southeast towards the beach.</desc>
+      <exits se='1824' w='1758' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1760'>
+      <name>Beach</name>
+      <desc>   A beautiful stretch of lush, vanilla scented beach stretches out to the north, this white sand beach is framed by tall coral cliffs and immediately envelops you in natural splendor. There a pier with a variety of water sports options. Though a dip in the sapphire water could be decidedly refreshing, beach goers would also enjoy sunbathing while sprawled on the white sands stretching across the shoreline.</desc>
+      <desc>   The trail back to town is to your south.</desc>
+      <exits n='1696' s='1824' up='1824' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1817'>
+      <name>Wharf</name>
+      <desc>   You are on a wooden platform settled upon stone pilings and attached to the shore, it overlooks the large natural harbor that the island provides. This obviously is a place where old water ships tie off to send crew and cargo ashore. You can see large metal cleats with heavy ropes attached that the old style sailing ship is tied off to. >From here you can see the stern of the ship, and notice gracefully carved into the stern is the name Angel.</desc>
+      <desc>   The wharf continues to the north.</desc>
+      <exits n='1753' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1819'>
+      <name>The Ditty Bag</name>
+      <desc>   This is a very cluttered store. Everywhere you look there are supplies typically needed and used by those who spend their lives at sea, from knifes to sail repair kits. You also see an amazing collection of Scrimshaw, that looks to be carved using the bones of a very large creature, on a counter. You noticed a weathered looking native standing behind a counter, smiling at you with a mouth that you are sure is short a few teeth.</desc>
+      <desc>   There is a door to the northeast.</desc>
+      <exits ne='1756' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='1821'>
+      <name>Comte deGrasse Road</name>
+      <desc>   You are on a small black sand road that appears to be both well maintained and well used by visitors and the locals alike. The black sand gives the appearance of being asphalt, except that is it easier on your knees when you walk. There are small buildings along both sides of the road.</desc>
+      <desc>   This quiet road leads you north to the central plaza or south to a small pier.</desc>
+      <exits n='1757' s='1885' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='1824'>
+      <name>Beach Trail</name>
+      <desc>   A very well maintained trail of crushed granite is cut into the side of the mountain. It winds along the side of the cliff leading to the beach. It is lined with safety ropes in hopes of keeping anyone from falling.</desc>
+      <desc>   The beach is to the north and the road to town is to the northwest.</desc>
+      <exits n='1760' nw='1759' down='1760' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1878'>
+      <name>Quarter Deck</name>
+      <desc>   This looks to be the work area for the Mate on watch. Hanging from a staff on the stern of the ship are the planetary colors, and it appears that it is treated as an object of respect. This is also  where this vessel is navigated into action from. Located here are the large ship wheels of a double helm as well as two compasses that are ensconced in binnacles just forward of the helm. To one side you see a brass ships bell with the name GPS ANGEL embossed on it.</desc>
+      <desc>   You can go back down the laderwell from here.</desc>
+      <exits down='1751' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='1885'>
+      <name>Small Pier</name>
+      <desc>   This small wooded pier juts out into the water many meters. It seems to be a nice place to fish or just look out over the ocean. There are a few small wooden boats tied to it. You catch yourself thinking about how fun it would be to take one of them out for a short joy ride, but then noticing the rather large local near them, decide against it.</desc>
+      <desc>   At the south end of the pier you see an archway leading into a small wooden building and to the north the road leading to town.</desc>
+      <exits n='1821' s='1949' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='1949'>
+      <name>Teleport Pad</name>
+      <desc>   Having stepped through the Archway you find yourself in a small dark room. There is a short, red glowing lever on one wall with writing on it that says DOWN. There is a pier to your north.</desc>
+      <exits n='1885' down='2013' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2013'>
+      <name>Teleport Pad</name>
+      <desc>   Having stepped through the Archway you find yourself in a small dark room. There is a short, red glowing lever on one wall with writing on it that say UP. There is a corridor to your south.</desc>
+      <exits s='2077' up='1949' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2014' flags='hi'>
+      <name>Sickbay (Hospital &amp; Insurance)</name>
+      <desc>   In stark contrast to the corridor, this room is brightly lit, with white painted walls. The equipment appears to be almost new and unused because of how well maintained it is. There are a few curtained off areas that you can hear crying and screaming from patients that are obviously in need of the care this facility is able to offer. You see a small stairwell in one corner. Right next to the door is a small desk with a computer and a sign for insurance, under it a note stating &quot;Good throughout the entire galaxy.&quot;</desc>
+      <desc>   You can leave through the door to the southwest.</desc>
+      <exits sw='2077' up='1695' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2076' flags='e'>
+      <name>Changers Alley (Exchange)</name>
+      <desc>   On two walls there are banks upon banks of video monitors displaying the current prices of various commodities offered by the planet. On another wall you see the planetary coat of arms with the motto &quot;Dictum Meum Pactum&quot; beneath it. And right next to it is the logo for the Galactic Trading Guild. There is commotion everywhere. People are coming and going, talking and yelling, as well as buying and selling. It reminds you that even in chaos there is an order to everything.</desc>
+      <desc>   To the southwest is a small lounge for the exchange patrons to relax and toast their successes or drown their sorrows. To the east is a door leading out.</desc>
+      <exits e='2077' sw='2139' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2077'>
+      <name>Corridor</name>
+      <desc>   You are in a damp and dimly lit corridor. There is a door to the northeast labeled Sickbay and another to the west labeled Changers Alley. To the north is an archway that leads to town and the south opens up to the immense landing pad.</desc>
+      <exits n='2013' ne='2014' s='2141' w='2076' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2083' flags='t'>
+      <name>Storage Closet</name>
+      <desc>   A place to store a little of this and a little of that, a bit of knick and a bunch of knack. Because you can never have enough stuff, and everyone needs some knickknacks.</desc>
+   </location>
+
+   <location num='2139' flags='b'>
+      <name>Treasure Chest Lounge</name>
+      <desc>   This seems like a nice place to put up your feet and relax after a tough day at Changers Alley. The walls are paneled with what appears to be a dark oak wood. The tables and chairs are all made from a mahogany colored wood, in the style of early Tudor furniture from Earth. Against one wall is a large fireplace with a nice warm fire burning, while on another wall are images of various old wood sailing ships. The bar running the length of the back wall seems to have plenty of food and drinks to offer. You find yourself wanting to pull up a chair and enjoy the ambiance for a while.</desc>
+      <desc>   The exchange is to the northeast.</desc>
+      <exits ne='2076' no-exit='moves.noexit.7'/>
+   </location>
+
+   <location num='2141'>
+      <name>Garafena Landing Pad</name>
+      <desc>   There is a clear force-shield surrounding the pad. It is an amazing view of all Garafena&apos;s natural sea life that you have from this more personal perspective. You notice a few people wandering east, and more people heading north into a very solid looking structure. Just ahead of you is a single pillar with what appears to be a map posted to it.</desc>
+      <desc>   You suddenly notice that you are standing in a puddle of water and nervously glance around as you find yourself wondering what would happen if the power fails for the force-shield holding back all that ocean.</desc>
+      <desc>   There are archways to the north and the east.</desc>
+      <exits n='2077' e='2142' out='1369' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='2142' flags='yr'>
+      <name>Shipwright (Shipyard and Repair Facility)</name>
+      <desc>   You are almost overcome by the immensity of this space. Steel arches are aligned to form various distinct rooms, containing both modern star ships and classic wooden ships at various stages of being built. The commotion of both robot and native labor makes you think of an army of ants swarming over food.</desc>
+      <desc>   Located to one side of this space is a small counter with a computer allowing ship owners to place orders for new ships or request repairs to current vessels.</desc>
+      <desc>   The Landing pad is to your west.</desc>
+      <exits w='2141' no-exit='moves.noexit.5'/>
+   </location>
+
+</fed2-map>
+

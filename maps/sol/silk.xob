@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+
+<object-list next_number='2' version='51'>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>doogmints</name>
+      <id>obj_1flower</id>
+      <desc>A shuttlecock-like coroot holds an aquamarine pucore in its center. A neon pink navelipe crowns its tip. A thin black ring floating just above the pucore is called oracling. It is held in situ by a weak electromagnetic field.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>crialis</name>
+      <id>obj_2flower</id>
+      <desc>A silence-scented spacebloom, crialis diligently collects and processes matter that is turned into ferzele, the red spinach tinged offspring of the mustard family. A complex snowflake composed of six identical units.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>zippinia</name>
+      <id>obj_3flower</id>
+      <desc>A unique spacebloom of erratic intentions, none of which are known. A favourite of kids and neophyte magicians universe-wide, zippinia can transform itself into a tasty blurango.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>koulekouli</name>
+      <id>obj_4flower</id>
+      <desc>A perennial favourite at floral shows, admired for its perfect shape and unique scent. Hunted for its library content. A rule-structured, perfectly symmetrical cluster of red curantloopz and blue or purple pilkos.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>kubiko</name>
+      <id>obj_5flower</id>
+      <desc>A deep space faring workhorse. Unassuming and selfless, kubiko is the only spacebloom capable of carrying seedlets of other spaceblooms to distant regions. Quadriclover-shaped frame with four matrigon solpans.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ist'>
+      <name>elpae</name>
+      <id>obj_6flower</id>
+      <desc>Sapid and rapid. Elpae is the fastest digital bioprocessor yet is full of flavour. Its antenna tips hide self-adjusting sweet nothings, desired by half of the population everywhere.</desc>
+      <vocab cmd='drop' event='objects.flower.14'></vocab>
+   </object>
+
+   <object type='static' start='74' visibility='0' size='1' weight='1'>
+      <name>spacebloom</name>
+      <id>obj_flower</id>
+      <desc>You peer closely at the tray of flowering spacebloom seedlings. Spaceblooms are self-propagating fragrance producing synthetic flowers capable of an autonomous existence in deep space. You're very tempted to reach out and get one.</desc>
+      <vocab cmd='get' event='objects.flower.1'></vocab>
+      <vocab cmd='pick' event='objects.flower.1'></vocab>
+      <vocab cmd='pluck' event='objects.flower.1'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='100' size='1' weight='1' flags='i'>
+      <name>large box</name>
+      <id>obj_1box</id>
+      <desc>The large box is wrapped in stained and crumpled brown paper. One corner of the parcel has been crushed. Writing on the label has been smudged, almost completely gone. Peering closely you can make out one word, "Rosebud".</desc>
+   </object>
+
+   <object type='static' start='330' visibility='100' size='1' weight='1' flags='i'>
+      <name>small box</name>
+      <id>obj_2box</id>
+      <desc>The small box is completely wrapped in duct tape and stamped FRAGILE. When prodded, there are a few suspicious sounds of broken glass.</desc>
+   </object>
+
+   <object type='static' start='330' visibility='100' size='1' weight='1' flags='p'>
+      <name>sacks</name>
+      <id>obj_sacks</id>
+      <desc>A number of shapeless sacks are piled in the corner. They are full of something but unlabeled. They emit an aroma of unwashed feet. Oily stains splotch the canvas.</desc>
+   </object>
+
+   <object type='static' start='330' visibility='100' size='1' weight='1' flags='i'>
+      <name>moosehead</name>
+      <id>obj_moose</id>
+      <desc>A motheaten stuffed moosehead with a pair of sunglasses stuck on it. Its blank stare seems to follow you.</desc>
+   </object>
+
+   <object type='static' start='74' visibility='100' size='1' weight='1' flags='p'>
+      <name>spaceblooms</name>
+      <id>obj_7flower</id>
+      <desc>You peer closely at the tray of flowering spacebloom seedlings. Spaceblooms are self-propagating fragrance producing synthetic flowers capable of an autonomous existence in deep space. You're very tempted to reach out and get one.</desc>
+      <vocab cmd='get' event='objects.flower.1'></vocab>
+      <vocab cmd='pick' event='objects.flower.1'></vocab>
+      <vocab cmd='pluck' event='objects.flower.1'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='0' size='1' weight='1'>
+      <name>droid</name>
+      <id>obj_droid</id>
+      <desc>You see a cluster of droids, most battered and dented by age and ill use. Looking closer you recognize an ancient Drafting Dan, a small astromech, and a protocol droid. A sign instructs you to bring claimed droids to the counter.</desc>
+      <vocab cmd='get' event='mobiles.droids.1'></vocab>
+   </object>
+
+   <object type='static' start='330' visibility='100' size='1' weight='1' flags='p'>
+      <name>droids</name>
+      <id>obj_droids</id>
+      <desc>You see a cluster of droids, most battered and dented by age and ill use. Looking closer you recognize an ancient Drafting Dan, a small astromech, and a protocol droid. A sign instructs you to bring claimed droids to the counter.</desc>
+      <vocab cmd='get' event='mobiles.droids.1'></vocab>
+   </object>
+
+   <object type='static' start='262' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_1food</id>
+      <desc>The local speciality is crottled greeps. If you don't like crottled greeps, what did you come here for?</desc>
+      <vocab cmd='buy' event='food.exchange.1'></vocab>
+   </object>
+
+   <object type='static' start='393' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_2food</id>
+      <desc>Considered a great delicacy by some, the food on offer here is decidedly alien.</desc>
+      <vocab cmd='buy' event='food.sier.1'></vocab>
+   </object>
+
+</object-list>

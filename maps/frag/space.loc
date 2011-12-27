@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<fed2-map title='Frag Space' version='5' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>Space Map Storage Bin</name>
+      <desc>   How did you get here? You shouldn&apos;t be here.</desc>
+   </location>
+
+   <location num='1885' flags='sp'>
+      <name>Ur Base Orbit</name>
+      <desc>   You are in orbit around the planet Ur. It has long been closed off to travelers due to the constant war and political turmoil among its inhabitants, but recently one faction has claimed enough territory and power to wage a campaign to unite the people (violently if necessary) and has built a central base equipped with sufficient facilities to accommodate trade from off-world.</desc>
+      <desc>   The planet Capture is east of here, and the link is to the southeast.</desc>
+      <exits e='1886' se='1950' no-exit='movement.noexit.2'/>
+   </location>
+
+   <location num='1886' flags='sp'>
+      <name>Capture Orbit</name>
+      <desc>   You are in orbit above the planet Capture. The landscape below you appears to be a patchwork of lush natural environments and harshly inhospitable desert zones. In addition to the unevenness of the landscape, the distribution of natural resources is highly clustered to specific areas.</desc>
+      <desc>   Naturally, this has led to the planet being torn apart by war over its history. Recently, however, war has given way to a form of ritualistic combat aimed at capturing a representation of the enemy&apos;s resources and territory. The combat, while smaller in scale, is still very real - but due to advances in medical and cloning technology, it has taken on a status akin to a sport. These days, thrillseekers from across the galaxy even travel here to participate!</desc>
+      <desc>   The link is to the south, and Ur is west of here.</desc>
+      <exits s='1950' w='1885' no-exit='movement.noexit.2'/>
+   </location>
+
+   <location num='1950' flags='slp'>
+      <name>Frag Interstellar Link</name>
+      <desc>   You are within range of the Frag system&apos;s interstellar link. Nearby is a small handful of intimidating-looking warships, and you are quickly hailed and informed that you are cleared (and in fact, welcome) to visit the planet Capture to your north or the base at Ur to the northwest, but any attempt to explore the system further will be treated as a security breach and dealt with accordingly.</desc>
+      <exits n='1886' nw='1885' no-exit='movement.noexit.1'/>
+   </location>
+
+</fed2-map>

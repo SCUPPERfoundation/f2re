@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Time Space' version='55' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>Space Store Room</name>
+      <desc>No way out of here.</desc>
+   </location>
+
+   <location num='1936' flags='s'>
+      <name>Sto</name>
+      <desc>Board your shuttle to visit Astrid Peth&apos;s homeworld, Sto, or go South to visit Gallifrey and the Cartel Link.</desc>
+      <exits s='2000'/>
+   </location>
+
+   <location num='2000' flags='sl'>
+      <name>Time Link and Gallifrey Orbit</name>
+      <desc>Board your shuttle to visit the planet Gallifrey, the nexus of Time, or JUMP to another system in Time Cartel.  Calufrax is SouthWest, Argos is South, Sto is North, and Tara is SouthEast.</desc>
+      <exits n='1936' se='2065' s='2064' sw='2063'/>
+   </location>
+
+   <location num='2063' flags='s'>
+      <name>Calufrax</name>
+      <desc>Board your shuttle to visit the planet Calufrax. You may go East to visit Argos or NorthEast to visit Gallifrey and the Cartel Link.</desc>
+      <exits ne='2000' e='2064'/>
+   </location>
+
+   <location num='2064' flags='s'>
+      <name>Argos</name>
+      <desc>Board your shuttle to visit the planet Argos. Go West to visit Calufrax, East to visit Tara, or North to visit Gallifrey and the Cartel Link.</desc>
+      <exits n='2000' e='2065' w='2063'/>
+   </location>
+
+   <location num='2065' flags='s'>
+      <name>Tara</name>
+      <desc>Board your shuttle to visit the planet Tara. West is Argos and NorthWest is Gallifrey and the Cartel Link.</desc>
+      <exits w='2064' nw='2000'/>
+   </location>
+
+</fed2-map>

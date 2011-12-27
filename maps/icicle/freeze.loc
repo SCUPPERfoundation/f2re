@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<fed2-map title='Freeze' version='2' editor='standard' from='457' to='Icicle.Icicle Space.393'>
+
+   <location num='137' flags='b'>
+      <name>Balancy</name>
+      <desc>From here you see all of the space port of Freeze. There is a wonderful glow from the lights in the city.</desc>
+      <exits e='138' se='202' s='201' out='457'/>
+   </location>
+
+   <location num='138' flags='b'>
+      <name>Balcony</name>
+      <desc>From here you see all of the space port of Freeze. There is a wonderful glow from the lights in the city.</desc>
+      <exits e='139' se='203' s='202' sw='201' w='137' out='457'/>
+   </location>
+
+   <location num='139' flags='b'>
+      <name>Balcony</name>
+      <desc>From here you see all of the space port of Freeze. There is a wonderful glow from the lights in the city.</desc>
+      <exits s='203' sw='202' w='138' out='457'/>
+   </location>
+
+   <location num='201' flags='b'>
+      <name>Balcony</name>
+      <desc>From here you see all of the space port of Freeze. There is a wonderful glow from the lights in the city.</desc>
+      <exits n='137' ne='138' e='202' out='457'/>
+   </location>
+
+   <location num='202' flags='b'>
+      <name>Bedroom</name>
+      <desc>This is the famous bedroom of Icey. This room has a wonderful king size bed, all the women are in awe everytime the see this room. There is a small sliding glass door to one side, as you look out the glass you see the space port of Freeze.</desc>
+      <exits n='138' ne='139' e='203' se='267' s='266' w='201' nw='137' out='457'/>
+   </location>
+
+   <location num='203' flags='b'>
+      <name>Balcony</name>
+      <desc>There is a small glow in the distance you wonder if that is the huge city of freeze. You look stright down from here and notice that you are on top of a high mountain. This looks higher then any other one so this might have been one of the peaks that you seen from space.</desc>
+      <exits n='139' w='202' nw='138' out='457'/>
+   </location>
+
+   <location num='266'>
+      <name>Walk in Closet</name>
+      <desc>This room has alot of clothes that are marked with Icey on them. If you look hard enough you see a small drawer and wonder whats in it. It is completely closed and no way to open it.</desc>
+      <exits n='202'/>
+   </location>
+
+   <location num='267'>
+      <name>Hallway to the Bedroom</name>
+      <desc>This is the hallway to the bedroom of Icey. You see alot of personal pictures of times of Icey and Furgas on Dilconia. There is alot of other pictures of other great friends such as Jessecka, Sedako, Mousey, Phiddie. Also other friends that are not suppose to be listed due to there offenses against fed</desc>
+      <exits e='268' nw='202' out='457'/>
+   </location>
+
+   <location num='268'>
+      <name>Penthouse</name>
+      <desc>From here you see the whole penthouse with the office to the west. The bedroom is to the east, you notice through the crack of the door that the bed is huge. On the door to the west you see a sign with the Beware of Dog sign.</desc>
+      <exits e='269' w='267' down='330' out='457'/>
+   </location>
+
+   <location num='269' flags='b'>
+      <name>Icey&apos;s Private Office</name>
+      <desc>In this room you see alot of pictures of old players such as phedre, The girl Mouse( We all miss you girly). You continue to look around and see alot of other old players with faded faces and forgetable names. You look around and see alot of different furniture from the 1900&apos;s and you wonder how Icey has keep it this long without the customs takeing it away. There is notices of  trades that have gone from traders to the Planet Owner due to planetary issues. You see what looks like a ancient dog next to the desk. It looks like it has a tag, but just as you go near the dog it makes a growl. You see a droid in the corner and you order it to find the name of the dog and it says,&quot; Sir, The dog&apos;s name is Floppy.&quot;</desc>
+      <exits w='268' down='522' out='457'/>
+   </location>
+
+   <location num='325'>
+      <name>In the water</name>
+      <desc>You see this is the shallow swimable area of the ocean. This is the areas the shore line droids were watching people in the water. You also look around and see small children swiming out here with there parents on the shore watching them swim and also other are sun bathing.</desc>
+      <exits e='326' se='390' s='389'/>
+   </location>
+
+   <location num='326'>
+      <name>Beach Front Shore Line</name>
+      <desc>This is the northern shore line with the cafe to the west. You look to the east and see nothing but water. You wonder if you could step into it but it looks to good to be true.</desc>
+      <exits e='327' se='391' s='390' sw='389' w='325'/>
+   </location>
+
+   <location num='327' flags='b'>
+      <name>Beach front cafe</name>
+      <desc>This little beach hut has many ways to come and go. The hut has a droid in the corner acting as a waiter and cook. The droids comes over to ask if you need anything and complains about the sand and circuits are getting rusty. The droid goes back to the corner after you give you order and mutters something else about hateing the beach. You begin to call the Central office on this rude droid when all the sudden the droid turns and  shuts done for the normal maintance. A new sign reads in for a direct route to the exchange and out directly to the shuttle bays.</desc>
+      <exits s='391' sw='390' w='326' in='522' out='457'/>
+   </location>
+
+   <location num='330'>
+      <name>Main Lobby</name>
+      <desc>You look around and see the main lobby for Icey&apos;s Planet. There is one entrance to the turbo lift. If you find this location try out to go back to the Landing Pad</desc>
+      <exits up='268' out='457' no-exit='The droids Warn you Wrong Way'/>
+   </location>
+
+   <location num='389'>
+      <name>Shallow swim area</name>
+      <desc>You see this is the shallow swimable area of the ocean. This is the areas the shore line droids were watching people in the water. You also look around and see small children swiming out here with there parents on the shore watching them swim and also other are sun bathing.</desc>
+      <exits n='325' ne='326' e='390' se='454' s='453'/>
+   </location>
+
+   <location num='390'>
+      <name>Beach front</name>
+      <desc>As you come to the top of the dunes you notice that there is a ocean out there and wonder where they had this hidden to the public. As you ponder the ideas you begin to think the people of this planet where trying to hid this from the outsiders. From here you can go in many different directions. You notice to the east that there is the water front. The west is a small hut that has something marked on it about changing clothes for proper beach attire.</desc>
+      <exits n='326' ne='327' e='391' se='455' s='454' sw='453' w='389' nw='325'/>
+   </location>
+
+   <location num='391'>
+      <name>Changing hut</name>
+      <desc>This is a hut for Changing clothes. If you type Change clothes and add the items of your request the droid will charge you account. The Suits here are for any style person or creature. You begin to walk to the back of the store just looking at the suits available and notice that the store just keeps going. There seems to be no end to this store. You turn around to ask the waitdroid thinking you have only taken a few steps in, and notice that he is out of sight and you have walking quite some time.</desc>
+      <exits n='327' w='390' nw='326' no-exit='The droids say wrong way.'/>
+   </location>
+
+   <location num='453'>
+      <name>Southern edge of the water</name>
+      <desc>You see this is the shallow swimable area of the ocean. This is the areas the shore line droids were watching people in the water. You also look around and see small children swiming out here with there parents on the shore watching them swim and also other are sun bathing.</desc>
+      <exits n='389' ne='390' e='454'/>
+   </location>
+
+   <location num='454'>
+      <name>Beach Front Shore Line</name>
+      <desc>This is the southern edge of the Beach, you see a small sign that says,&quot;Swim At Your Own Risk.&quot; This sign is rather small and dingy. You begin to think that this sign has been here for ages. All the Sudden you see a life droid come by in a hover craft. This droid looks to see that there is no one in the water needing help. Suddenly the droids hover craft beeps and he fly&apos;s off.</desc>
+      <exits n='390' w='453' nw='389'/>
+   </location>
+
+   <location num='455'>
+      <name>Sandy road</name>
+      <desc>By now you have notice the paven road has ended and has now become complete sandy. You look to the north west and still notice nothing but a sand dune and begin to wonder where did all this sand come from and why they call this planet Freeze.</desc>
+      <exits se='520' nw='390'/>
+   </location>
+
+   <location num='457'>
+      <name>Welcome to Freeze</name>
+      <desc>This is a normal looking shuttle pad. The view is of many different shuttles from other merchants and traders already trading with the planet. You look around the area and see snow cap mountains. These were the mountains you seen as you were landing on the planet. You see a sign that reads south for the rest of the colony and up is a short cut for traders and merchants in a hurry stright to the Exchange. Those needing a rest at the beach can go stright down for there short cuts. The new additions where added for maximum ease of all citizens and travelers to the planet.</desc>
+      <exits s='521' up='522' down='327' in='330'/>
+   </location>
+
+   <location num='520'>
+      <name>Half Sandy Road </name>
+      <desc>You look around and the road has turned from paven to half covered in sand and you wonder why hasnt someone come by and swept the sand off the roads. You look to the right side of the road and tucket beside a building you notice a droid that is rusted and it looks like it was done with salt air but you are unsure of the reasons. You notice a sandy but still paven road to the northwest.</desc>
+      <exits se='585' nw='455'/>
+   </location>
+
+   <location num='521'>
+      <name>Pathway</name>
+      <desc>As you walk from the shuttle bay where there is no outside windows of any sort. You notice a change in the seasons and wonder if this is a hologram or actually windows. The trees are starting to lose there green leaves and change to brown. There are other signs of the coming fall and winter seasons. The bench thats in site is showing alot of leaves untouched on it. It looks as if no one has tried to enjoy the view here in a few hours or maybe a few days. You notice a door to the south that looks like it leads outside but you are unsure because you belived this was outside except for the walls of glass above you.</desc>
+      <exits n='457' s='585' no-exit=' '/>
+   </location>
+
+   <location num='522' flags='eb'>
+      <name>Planetary Exchange</name>
+      <desc>You see many different traders and merchants. There are different huts which help others sell there goods to other merchants and the locals of this planet. These locals are dressed a little different the others. The locals are starting to carry warming units and warmer clothers on them. The area seems to show vacant huts for selling commods. A sign reads new exits have been added out will lead you directly back to the shuttle bays for easier departure.</desc>
+      <exits s='586' sw='585' out='457'/>
+   </location>
+
+   <location num='524'>
+      <name>Small building</name>
+      <desc>As you walk in you notice a small fire place in the corner and begin to wonder who lives in this house. You continue to look around and find a small desk with loads of papers on it. These papers begin to explain how the planet was nothing until Icey had brought his friends into the system. So you begin to wonder where is these person no one talks about.  All the sudden the door bursts open and you see a old man standing in the door way. He begins with a smile and tells you the long story of the one called Icey.</desc>
+      <exits s='588' out='585'/>
+   </location>
+
+   <location num='584' flags='hib'>
+      <name>Cafe of the Traders</name>
+      <desc>The Waitdroid says welcome to the Cafe. Is there  something I can get you? You notice there is alot of traders and merchants wanting to buy and sell there commods to the cafe. Some folks are just on there lunch breaks others are As you look around you notice the change from Summer to Fall. The android&apos;s are putting up fall pictures and taking down what use to be the summer pictures from the beach and putting up the wonderful pictures from the snowcapped mountain. You also look around and notice some strange traders from other worlds still here but most have left for the change in weather has decreased the business. In the Corner you notice Icey&apos;s Private table being cleaned due to the colder temperature.</desc>
+      <exits e='585' up='522' out='457'/>
+   </location>
+
+   <location num='585'>
+      <name>Open Market Square</name>
+      <desc>As you see this is the Main Square, you see this leads to many different areas of the city. To the north leads back to the landing pad. Looking to the Northeast you see the Exchange where all the traders make there trades from this planet to the others. To the Northwest you see a path leading to some sand dunes. To the Southwest is the office areas of the planet.</desc>
+      <exits n='521' ne='522' e='586' s='649' sw='648' w='584' nw='520'/>
+   </location>
+
+   <location num='586' flags='yrb'>
+      <name>Ship Yards</name>
+      <desc>You walk into a warehouse that has a colder feel to it due to the sun isnt warming this building as well as it does during the warmer months. The waitdroid gives you a look and turns back to repairing some hunk of bolts. He assumes that you are just looking because the tourist traffic has died down due to the colder weather coming in.</desc>
+      <exits n='522' w='585'/>
+   </location>
+
+   <location num='588'>
+      <name>Edge of the lake</name>
+      <desc>This is the edge of the lake and it has a small house with some smoke comeing out the top of it. It looks very old you want to believe its been there for a long time. You also notice that you are walking along the side of the lake and notice in a distance of what looks like the other side of the bank is a small boat and possibly another small house but there is no visible path to that bank at this time.</desc>
+      <exits n='524' e='589' se='653' s='652' sw='651'/>
+   </location>
+
+   <location num='589'>
+      <name>Far side of the lake</name>
+      <desc>From here you can see the fair side of the lake  and the mountains. Its quite peaceful here, there is no one to bother you. You can see a small cottage amongst the clearing.</desc>
+      <exits s='653' sw='652' w='588'/>
+   </location>
+
+   <location num='646' flags='b'>
+      <name>Empty Office</name>
+      <desc>xxx</desc>
+      <exits se='711'/>
+   </location>
+
+   <location num='647' flags='b'>
+      <name>GhostMan&apos;s Office</name>
+      <desc>In this Office you notice that there are very little items of personal nature. There is a crypt in the corner and you wonder what its for but leave it to another matter of questions</desc>
+      <exits s='711'/>
+   </location>
+
+   <location num='648' flags='b'>
+      <name>Half Paven Road </name>
+      <desc>All around you the view changes from a open market to a business looking places. You start to notice less people bugging you for money, and buying and selling of  there little trinkets. Once you start to notice the professional looking people you notice the buildings look more like someone has put some money into them for the ideas of business purposes. These people look like they may have used there lives to get educations and farther themselves. Some of these people actually greet you with a welcome smile and a hello.</desc>
+      <exits ne='585' e='649' sw='711'/>
+   </location>
+
+   <location num='649'>
+      <name>Street Market</name>
+      <desc>You see more street people yelling to get there products at a cheaper prices. You see alot of droids wandering about cleaning the streets, some are actually carrying packages for the humans.  The people walking around in this area look a little lower in class. The clothes that the people are wearing are not brand new. They also look like they have been used for a long time period.</desc>
+      <exits n='585' s='713' w='648'/>
+   </location>
+
+   <location num='651'>
+      <name>Small clearing</name>
+      <desc>You see a small clearing. There are some houses here with smoke stacks on them. They seem to be working because there is a small stream of smoke comeing out of them. You also see a lot of wonderful trees and plants here that you couldnt see before. You wonder who planted this wonderful garden setting. You continue to look around and see a huge lake and also a small building off to one side of the lake. You begin to wonder why it sits by itself. You think maybe its worth looking at, but you unsure and continue to just observe the surrounding beauty at the moment.</desc>
+      <exits ne='588' e='652' se='716' sw='714'/>
+   </location>
+
+   <location num='652'>
+      <name>In the Water</name>
+      <desc>You have walked a little distance into the water. You look down and you are about knee deep. As you look down you notice that there are some small fish in the water with you trying to nibble on you toes and legs. You can clearly see there are other objects on the other side with no visible way to get to them.</desc>
+      <exits n='588' ne='589' e='653' se='717' s='716' w='651'/>
+   </location>
+
+   <location num='653'>
+      <name>Farside of the lake</name>
+      <desc>A small clearing in the woods for a pinic and just a resting spot for anyone who wishes to spend time here.</desc>
+      <exits n='589' s='717' sw='716' w='652' nw='588'/>
+   </location>
+
+   <location num='710' flags='b'>
+      <name>Empty Office</name>
+      <desc>xxx</desc>
+      <exits e='711'/>
+   </location>
+
+   <location num='711' flags='b'>
+      <name>Office Space</name>
+      <desc>Ghostman&apos;s office is North of this location. Local Office Space Rent is available. Please see Icey For Rental agreements.</desc>
+      <exits n='647' ne='648' e='712' se='776' s='775' sw='774' w='710' nw='646'/>
+   </location>
+
+   <location num='712' flags='b'>
+      <name>Empty office</name>
+      <desc>xxx</desc>
+      <exits w='711'/>
+   </location>
+
+   <location num='713'>
+      <name>Rocky  Pathway</name>
+      <desc>You leave the city behind and start to climb a mountain top. The path is actually very rocky and also you notice that there are no people heading up the path. You begin to wonder if there is anyone that knows about this path. The rocks around  here prevent the groweth of plants of any kinds.</desc>
+      <exits n='649' e='714' s='777'/>
+   </location>
+
+   <location num='714'>
+      <name>Small Path</name>
+      <desc>This path is heading back down the mountain to a small body of water that looks like a lake. There is alot of trees around so it is hard to be sure of this.</desc>
+      <exits ne='651' sw='777' w='713'/>
+   </location>
+
+   <location num='716'>
+      <name>Edge of the Lake</name>
+      <desc>This is the opposite of the side of the lake. There is wildlife that is running around showing themselves for just a brief second. There is a small area where you can sit down and watch them . There is even a small table that looks like it has food to give the animals. This is truely what looks like a small touch of heaven.</desc>
+      <exits n='652' ne='653' e='717' nw='651'/>
+   </location>
+
+   <location num='717'>
+      <name>Small cottage</name>
+      <desc>You see a boat dock and a small rowboat. The cottage looks rustic from the outside. The door is locked and you wonder who would live here and have locked doors in this peaceful area.</desc>
+      <exits n='653' w='716' nw='652'/>
+   </location>
+
+   <location num='774' flags='b'>
+      <name>empty office</name>
+      <desc>xxx</desc>
+      <exits ne='711'/>
+   </location>
+
+   <location num='775' flags='b'>
+      <name>empty office</name>
+      <desc>xxx</desc>
+      <exits n='711'/>
+   </location>
+
+   <location num='776' flags='b'>
+      <name>empty office</name>
+      <desc>xxx</desc>
+      <exits nw='711'/>
+   </location>
+
+   <location num='777'>
+      <name>Top of the mountain</name>
+      <desc>This spot is the top of the mountain and you can see the busy spaceport with the hussle and bussle of the everyday life. You see a small path leading down the mountain to what looks like a lake and a small clearing. This area looks wonderful you cannt wait to go down and look at it all. You even see a small area where you can sit and watch the people just move around like wild animals. You wonder if these people even realize how fast the move and forget to look at the simple things in life.</desc>
+      <exits n='713' ne='714'/>
+   </location>
+
+</fed2-map>

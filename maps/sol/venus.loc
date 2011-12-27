@@ -1,0 +1,665 @@
+<?xml version="1.0"?>
+<fed2-map title='Venus' version='5' editor='standard' from='580' to='Sol.Sol Space.913'>
+
+   <location num='84' flags='t'>
+      <name>Store room</name>
+      <desc>   This is the room where the processed drugs are stored prior to shipment. A shipment appears to have just gone out, since the shelves are bare. There are doors to the east and the southwest.</desc>
+      <exits e='85' sw='147'/>
+   </location>
+
+   <location num='85' flags='t'>
+      <name>Living quarters</name>
+      <desc>   You are in the living quarters of the drug smugglers. Along one wall is a couple of tiers of bunks. In the middle of the room is a mess table, and at one end of the room is a small cooker. There is a doorway in the west wall.</desc>
+      <exits w='84' out='84'/>
+   </location>
+
+   <location num='93' flags='t'>
+      <name>Mine face</name>
+      <desc>   This is one of the faces of the old mine workings. There is a faintly bluish vapor clinging to the raw rock, and it appears to pulse gently to some hidden rhythm... The exit is southeast.</desc>
+      <exits se='158' out='158' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='94' flags='t'>
+      <name>Processing room</name>
+      <desc>   This is a room full of silent gem processing machinery. The floor is covered in grit from the processing, and it crunches noisily underfoot as you move about. The exit is south.</desc>
+      <exits s='158' out='158'/>
+   </location>
+
+   <location num='142' flags='t'>
+      <name>Dummy loc</name>
+      <desc>Oh dear, you shouldn&apos;t be here! If you you get into this area please tell feedback@ibgames.net that you managed to get into Venus location 142. Thank you - the way out is south :)</desc>
+      <exits s='206'/>
+   </location>
+
+   <location num='147' flags='t'>
+      <name>Drug processing</name>
+      <desc>   This is the area in which the harvested plants are processed into a variety of drugs. The machinery is not in use at the moment. There is an exit to the south, and a door to the northeast.</desc>
+      <exits ne='84' s='211'/>
+   </location>
+
+   <location num='149' flags='t'>
+      <name>Abandoned face</name>
+      <desc>   You have surfaced in a pocket of air trapped in an abandoned working. Above you is the roof of the working, and all around are rock walls. There are no exits visible.</desc>
+      <exits s='213'/>
+   </location>
+
+   <location num='152' flags='t'>
+      <name>Security control</name>
+      <desc>   This is the security control center for the entire complex. Banks of closed circuit television screens allow you to watch activities in any part of the complex. There is a door in the south wall.</desc>
+      <exits s='216' out='216'/>
+   </location>
+
+   <location num='154'>
+      <name>Nisrik shuttle station</name>
+      <desc>   This is the platform of the shuttle station giving access to Nisrik mine. To the south is a large door, above which is a sign saying &apos;Nisrik Mining Corporation - Private Property - KEEP OUT.&apos; To show that they mean it, a force field has been erected, preventing you from entering the mine.</desc>
+      <vocab cmd='wait' event='shuttle.wait.1'/>
+   </location>
+
+   <location num='158' flags='t'>
+      <name>Tunnel</name>
+      <desc>   You are at the north end of a cramped north/south tunnel. In the north wall is a heavy iron door, and to the east and northwest are mine faces.</desc>
+      <exits n='94' e='159' s='222' nw='93' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='159' flags='t'>
+      <name>Mine face</name>
+      <desc>   You are standing before a disused mine face. A trickle of liquid seeps down the face, and forms a puddle at your feet.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='158' out='158' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='206' flags='t'>
+      <name>Security curtain</name>
+      <desc>This is a small rectangular area with a security force field across the middle, to the north of your present position. South is a door with a sign, &quot;Fire Door - For Emergency Use ONLY&apos;. it has been propped open with a chair.</desc>
+      <exits n='142' s='270'/>
+      <events enter='objects.zork.6'/>
+   </location>
+
+   <location num='211' flags='t'>
+      <name>Growing area</name>
+      <desc>   You stop in amazement, coughing in the ozone laden atmosphere. You are in a large cave with UV lights slung from the roof. All around you are strange plants which you recognize as sources of illegal hallucinogenic drugs.</desc>
+      <desc>   The plants are highly poisonous, so don&apos;t touch them. There are exits to the north and the east.</desc>
+      <exits n='147' e='212'/>
+   </location>
+
+   <location num='212' flags='t'>
+      <name>Small cave</name>
+      <desc>   You are in a small cave. The cave&apos;s atmosphere has a strongly acid smell to it, making your eyes water. The cave has exits to the southwest and the west. The acid smell is stronger near the west exit.</desc>
+      <exits sw='275' w='211'/>
+   </location>
+
+   <location num='213' flags='t'>
+      <name>Sloping tunnel</name>
+      <desc>   You are in a tunnel which slopes down to the north and leads to a shaft at its southeast end. The tunnel is partly filled with water, which gets deeper as you go down.</desc>
+      <desc>   At the north end the water comes up to your neck. There seems to be no exit to the north, but a careful examination shows that there is one - underwater!</desc>
+      <desc>   If you want to go north you will have to hope that there is air on the other side...</desc>
+      <exits n='149' se='278'/>
+   </location>
+
+   <location num='216' flags='t'>
+      <name>Corridor</name>
+      <desc>   You are standing at the west end of a brightly lit corridor. To the north is a door marked &apos;SECURITY,&apos; and to the south is a badly lit tunnel.</desc>
+      <exits n='152' e='217' s='280'/>
+   </location>
+
+   <location num='217' flags='t'>
+      <name>Corridor</name>
+      <desc>   You are in a brightly lit east/west corridor. At the east end of the corridor is a door.</desc>
+      <exits e='218' w='216'/>
+   </location>
+
+   <location num='218' flags='t'>
+      <name>Security area</name>
+      <desc>   You are standing in an open area with a big sign saying &apos;SECURITY CHECK-IN.&apos; On the wall is a numeric keypad. There are heavy steel doors to the east and the west of the room. The east door is slightly ajar, and you could squeeze through it.</desc>
+      <desc>   The exit to the shuttle station is north.</desc>
+      <exits n='154' e='219'/>
+   </location>
+
+   <location num='219' flags='t'>
+      <name>Corridor</name>
+      <desc>   You are in a brightly lit rock lined corridor, with a door at its west end. The corridor continues to the east</desc>
+      <exits e='220' w='218'/>
+   </location>
+
+   <location num='220' flags='t'>
+      <name>Corridor</name>
+      <desc>   This is the east end of a brightly lit east/west corridor. At your feet a dark shaft slopes down to the southeast.</desc>
+      <exits se='285' w='219' down='285'/>
+   </location>
+
+   <location num='222' flags='t'>
+      <name>Tunnel</name>
+      <desc>   You are in a cramped tunnel running from the north to the southwest.</desc>
+      <exits n='158' sw='285' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='262'>
+      <name>Power plant</name>
+      <desc>   You are in the part of the city&apos;s power plant that houses the main reactors. A door to the east takes you to the rest of the plant. There&apos;s a door in the south wall.</desc>
+      <exits e='263' s='326' in='326' out='263'/>
+   </location>
+
+   <location num='263'>
+      <name>Power plant</name>
+      <desc>   You are standing by the railing which surrounds a hefty and complex-looking machine, which is part of the power generating plant for the Venus colony. The plant room continues to your west, and the lobby is south.</desc>
+      <exits s='327' w='262' in='262' out='327'/>
+   </location>
+
+   <location num='269'>
+      <name>Corridor</name>
+      <desc>This is a bend in the corridor - in one direction it runs east where you can see a number of individuals hanging around, and in the other direction it leads southwest.</desc>
+      <exits e='270' sw='332'/>
+   </location>
+
+   <location num='270'>
+      <name>Corridor</name>
+      <desc>The way east is blocked by a group of workers furtively drinking coffee. They ignore your request to be allowed past, although one, a droid with a name tag saying &apos;zork857&apos;, looks slightly more friendly. A door in the north wall has a sign saying &apos;Fire Exit - Keep Clear&apos;. It has been wedged open with a battered office chair.</desc>
+      <exits n='206' w='269'/>
+   </location>
+
+   <location num='275' flags='t'>
+      <name>Large cave</name>
+      <desc>   You are standing in the middle of a large cave with exits to the northeast and southeast. A faint light comes from various glowing patches of phosphorescent lichen.</desc>
+      <desc>   The vaulted ceiling of the cave vanishes into the shadows overhead, and a slightly acrid odor assails your nostrils. The odor is stronger near the northeast exit.</desc>
+      <exits ne='212' se='340'/>
+   </location>
+
+   <location num='278' flags='t'>
+      <name>Mine shaft</name>
+      <desc>   You are at the bottom of a shaft. From a brightly lit room at the top comes just sufficient light for you to see that an unlit tunnel leads off to the northwest. The bottom of the shaft is several inches deep in water.</desc>
+      <exits s='342' nw='213' up='342'/>
+   </location>
+
+   <location num='280' flags='t'>
+      <name>Tunnel</name>
+      <desc>   You are standing in a badly lit tunnel running from the north round to the southwest. In spite of its rough construction the tunnel gives the feel of being frequently used. At the north end the tunnel runs into a brightly lit corridor.</desc>
+      <exits n='216' sw='343' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='285' flags='t'>
+      <name>Mine shaft</name>
+      <desc>   You are standing at the bottom of a mine shaft. Upward and to the northwest is a gleam of light. A tunnel leads northeast.</desc>
+      <exits ne='222' nw='220' up='220' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='326' flags='a'>
+      <name>Monitoring station</name>
+      <desc>   Although the nuclear plant is mostly automatic, regulations say that a human has to be on duty to monitor operations in case anything goes wrong. This room, therefore, is filled with monitor screens and displays that show exactly what is happening in all parts of the plant. A vast console contains all the knobs and controls to make whatever adjustments are necessary.</desc>
+      <desc>   The last time anything had to be manually adjusted was about five years ago, which explains why the operator is leaning back in his chair, dozing, with a half-eaten donut in his hand!</desc>
+      <exits n='262' out='262'/>
+   </location>
+
+   <location num='327' flags='a'>
+      <name>Power plant</name>
+      <desc>   You are standing in the lobby of the city&apos;s power plant. Unlike the other planets in Sol space, which receive beamed power from the Helios solar arrays, Venus still has a nuclear plant. The inhabitants continue to dream of independence, and so don&apos;t want to rely on outside power sources which could be cut off.</desc>
+      <desc>   North takes you farther into the plant, and southeast takes you out into the street.</desc>
+      <exits n='263' se='392' in='263' out='392'/>
+   </location>
+
+   <location num='329' flags='t'>
+      <name>Dirty Boy Productions</name>
+      <desc>   From this office, Fogg and his associates produce a number of magazines which are exported all over the Galaxy. The desk contains the latest issues of some of the titles - you can see copies of Venusian Babes, Martian Maids, and Readers&apos; Droids.</desc>
+      <desc>   A large poster on the wall shows the centerfold from the latest Raunchy Rigellians, featuring a small, green Rigellian woman, a flying jacket slung casually over one shoulder, baring all for the cameras... can it be Bella? Surely it must be a fix-up, with her head stuck on someone else&apos;s body. You wonder if she knows about this, and decide that you don&apos;t want to be the one to tell her.</desc>
+      <exits e='330' out='330'/>
+   </location>
+
+   <location num='330' flags='t'>
+      <name>Dr. Fogg&apos;s Back Room</name>
+      <desc>   Dr. Fogg sells appliances for humans and aliens, and much of the merchandise comes with extensive warnings about it being dangerous for certain species. The longest set of warnings comes with the famous King Kong Ding Dong (batteries not included) which appears to be unsafe for just about everyone!</desc>
+      <desc>   Pride of place is given to a display of his famous breast-mounted joystick, together with its complement, the Clever Dick.</desc>
+      <desc>   A sign on the wall announces that the management regrets they have been banned from selling WHOOSH! pending the outcome of a legal suit.</desc>
+      <desc>   The main shop is east, while a door to the west leads to an office.</desc>
+      <exits e='331' w='329' out='331'/>
+   </location>
+
+   <location num='331' flags='a'>
+      <name>Dr. Fogg&apos;s Marital Arts Emporium</name>
+      <desc>   Dr. Fogg has been under threat of closure for many, many years, by the more puritan elements in the Cargon City Council. Despite that, his business is thriving and he has recently expanded his operations.</desc>
+      <desc>   The public area of the shop sells rather mild items, such as sexy lingerie. The main counter contains a very artistic display of brightly colored Venusian forked condoms.</desc>
+      <desc>   A door in the west wall leads to the back room of the shop, where items for the more discerning customer are sold. The street exit is south.</desc>
+      <exits s='395' w='330' out='395'/>
+   </location>
+
+   <location num='332'>
+      <name>Corridor</name>
+      <desc>The rock carved corridor has been painted an uninspiring grey. To the southwest it leads into a well lit open space, and it continues to the northeast.</desc>
+      <exits ne='269' sw='395'/>
+   </location>
+
+   <location num='340' flags='t'>
+      <name>Narrow crack</name>
+      <desc>   You are at the west end of a narrow east/west crack. To the northwest is a slit in the wall.</desc>
+      <exits e='341' nw='275'/>
+   </location>
+
+   <location num='341' flags='t'>
+      <name>Narrow crack</name>
+      <desc>   You are crouched in a narrow east/west crack. The east end runs out into a brightly lit space.</desc>
+      <exits e='342' w='340'/>
+   </location>
+
+   <location num='342' flags='t'>
+      <name>Open space</name>
+      <desc>   You are in what once was just a large cave. The floor has been leveled and coated with anti-slip material, and the walls have been polished smooth.</desc>
+      <desc>   To the north a shaft leads down and to the east is a badly lit tunnel. There are doors to the south and southwest, and there is a small crack in the wall to the west.</desc>
+      <exits n='278' e='343' s='406' sw='405' w='341' down='278'/>
+   </location>
+
+   <location num='343' flags='t'>
+      <name>Tunnel</name>
+      <desc>   This is a badly lit tunnel which starts at an open area at its west end and continues to the northeast.</desc>
+      <exits ne='280' w='342' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='390' flags='a'>
+      <name>Control room</name>
+      <desc>   The room is full of complex equipment monitoring and controlling the environment of Cargon City. As you enter, several technicians look up from their machines and glare at you for disturbing them.</desc>
+      <desc>   The exit is southeast.</desc>
+      <exits se='455' out='455'/>
+   </location>
+
+   <location num='392'>
+      <name>Plaza</name>
+      <desc>   You are in the western half of a small plaza. South is the entrance to an office while the slideway from the spaceport runs into the southwest corner.</desc>
+      <desc>   Northwest is the Venus colony&apos;s power plant.</desc>
+      <exits e='393' s='456' sw='455' nw='327' in='456'/>
+   </location>
+
+   <location num='393'>
+      <name>Plaza</name>
+      <desc>   You are in the eastern half of a small plaza with a fountain playing in the middle. To the north, the entrance to the building has been blocked up, and the windows all blacked out. South is the door to an office.</desc>
+      <desc>   The plaza continues to the west, and a slideway runs off to the east.</desc>
+      <exits e='394' s='457' w='392' in='457'/>
+   </location>
+
+   <location num='394'>
+      <name>Slideway</name>
+      <desc>   You are moving along an east/west slideway.</desc>
+      <exits e='395' w='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Open space</name>
+      <desc>   You are standing in the middle of an open space which looks as if it was originally a cave, but has been extended over the years.</desc>
+      <desc>   To the north is a shop, but you can&apos;t tell what it sells because all the windows are blacked out. East is the entrance to a small park, slideways run off to the south and the west, and an unmarked corridor leads northeast.</desc>
+      <exits n='331' ne='332' e='396' s='459' w='394' in='331'/>
+   </location>
+
+   <location num='396'>
+      <name>Park</name>
+      <desc>   This small park has been carved out of the surrounding rock. A small number of plants have been imported from Earth, at horrendous expense, and a great deal of effort is put into keeping them healthy. They are being lovingly tended by a droid park-keeper.</desc>
+      <desc>   The exit is to the west, and the park continues to the east.</desc>
+      <exits e='397' w='395' out='395' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='397'>
+      <name>Park</name>
+      <desc>   You are standing in the middle of a small cavern which has been cleverly turned into a park - at what expense you can&apos;t even begin to guess! There&apos;s even a small patch of real Earth grass, but it&apos;s fenced off so you cannot walk on it. You can hear the cries and squeals of happy children enjoying themselves coming from the east.</desc>
+      <desc>   There is an unmarked door in the south wall.</desc>
+      <exits e='398' s='461' w='396' in='461' out='396' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='398'>
+      <name>Park</name>
+      <desc>   You are standing at the eastern end of the park, in the area which children have taken over as their own special play area. Here they can race around without fear of crashing into something important, and without adults interfering with their play.</desc>
+      <desc>   A recent addition is a large bouncy castle, upon which a crowd of excited children are playing. Why not join them and have a bounce?</desc>
+      <exits w='397' no-exit='moves.noexit.2'/>
+      <vocab cmd='bounce' event='objects.castle.1'/>
+   </location>
+
+   <location num='405' flags='t'>
+      <name>Processing room</name>
+      <desc>   You are in a noisy room full of polishing and grinding machinery. The exit is northeast.</desc>
+      <exits ne='342' out='342'/>
+   </location>
+
+   <location num='406' flags='t'>
+      <name>Office</name>
+      <desc>   This is a small untidy office. Its walls are covered with incomprehensible charts and diagrams.</desc>
+      <exits n='342' out='342'/>
+   </location>
+
+   <location num='452' flags='e'>
+      <name>Trading Exchange</name>
+      <desc>   The Venusian Trading Exchange is abuzz with the murmur and hum of the machinery, and the hustle and bustle of traders mumbling and muttering to themselves. The occasional loud exclamation signals someone making a very good - or very bad - trade.</desc>
+      <desc>   The exit is southeast.</desc>
+      <exits se='517' out='517'/>
+   </location>
+
+   <location num='453' flags='ba'>
+      <name>The Urban Spaceman Bar</name>
+      <desc>   This bar is run by a long-standing Venus resident, who got tired of the spacer&apos;s life and decided to settle down. It has become a popular haunt for off-duty spaceport workers and visiting spaceship crews. It can get very rowdy at times!</desc>
+      <desc>   As you look around, you notice that everybody in the bar seems to be chewing!</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='517' out='517' no-exit='moves.noexit.6'/>
+      <events in-room='objects.marsrat.1'/>
+      <vocab cmd='spit' event='objects.spittoon.2'/>
+   </location>
+
+   <location num='455'>
+      <name>Slideway</name>
+      <desc>   You are standing on a slideway which runs northeast/southwest through a tunnel carved out of solid rock. There is a solid, official-looking door to the northwest, marked &apos;Environmental Control&apos;.</desc>
+      <exits ne='392' sw='518' nw='390' in='390' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='456' flags='a'>
+      <name>Venus Freedom Party HQ</name>
+      <desc>   The Venus Freedom Party campaigns for Venusian Independence. The walls are covered with proclamations exhorting you to vote for the party&apos;s candidates in various elections, and leaflets are scattered about urging you to join up.</desc>
+      <desc>   However, there are persistent rumors that certain elements are willing to do anything to advance their cause!</desc>
+      <desc>   The exit is north, and there is a small door leading south.</desc>
+      <exits n='392' s='520' out='392'/>
+   </location>
+
+   <location num='457' flags='c'>
+      <name>Armstrong Cuthbert, Inc</name>
+      <desc>   This is the Cargon City branch of the interplanetary cargo company. Like most of their offices, it is a hive of activity, as instructions for shifting cargo to and fro are communicated from planet to planet.</desc>
+      <desc>   Behind the reception desk is an enormous plant, with vine-like suckers spreading out from a central stalk, and large glossy purple leaves. Very decorative, you think...</desc>
+      <desc>   Then to your surprise, the plant waves its leaves at you and speaks. It&apos;s not just decorative foliage, it&apos;s an alien being working as a receptionist!</desc>
+      <exits n='393' out='393'/>
+   </location>
+
+   <location num='459'>
+      <name>Slideway</name>
+      <desc>    The slideway links an open space, to the north, with the Cargon city museum, which is south.</desc>
+      <exits n='395' s='523' in='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Museum</name>
+      <desc>   Here, the displays concentrate on Earth history from prehistoric times until the colonization of the other planets in the Solar System. Most Venusians don&apos;t consider old Earth to be in the least bit relevant to them, so this part of the museum is completely deserted.</desc>
+      <exits s='524' out='524' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='461' flags='ta'>
+      <name>Temple of Gaelaan</name>
+      <desc>   The Gaelaan cult has embarked on an effort to establish footholds throughout the Solar System, and so is spreading off Earth. This old office has been converted to a temple, and decked out with the usual trappings of the new religion.</desc>
+      <desc>   The building&apos;s structure has been altered to form a large circular room. It is decorated with paintings and carvings showing alien technology.</desc>
+      <desc>   Flashing lights run around the room, blinking on and off in patterns that look as if they might hold meaning... but you can&apos;t make out what that meaning is.</desc>
+      <exits n='397' out='397'/>
+   </location>
+
+   <location num='517'>
+      <name>Spaceport</name>
+      <desc>   You are in Cargon City spaceport. The port&apos;s transit area is to the east of your present position, and the port continues to the south.</desc>
+      <desc>   The colony&apos;s trading exchange is housed in a building to the northwest, and the spaceport bar is north.</desc>
+      <exits n='453' e='518' s='581' nw='452' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='518'>
+      <name>Transit area</name>
+      <desc>   You are in the transit area of Cargon City&apos;s spaceport. To your west the port unrolls before you, while to the northeast and southeast are slideways.</desc>
+      <exits ne='455' se='583' w='517'/>
+   </location>
+
+   <location num='520'>
+      <name>Party office</name>
+      <desc>   This is the back room where the Party&apos;s ideologies and actions are thrashed out. Once a borderline illegal organization, the party has become almost respectable in recent years, and has started to influence both the public, and planetary policies on Venus.</desc>
+      <desc>   There are several filing cabinets and cupboards, but they are all locked, and nothing is left out on the desks.</desc>
+      <exits n='456'/>
+   </location>
+
+   <location num='522'>
+      <name>Museum</name>
+      <desc>   This area of the museum is devoted to Venus. Display cases show examples of the fabulous gems for which the planet is famous, and the exotic, hallucinogen-producing, plant life. The cases are securely locked, and contain all kinds of sensors and alarms designed to prevent theft.</desc>
+      <desc>   The lobby is east.</desc>
+      <exits e='523' out='523' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='523' flags='a'>
+      <name>Museum lobby</name>
+      <desc>   You are standing in the lobby of the city&apos;s museum. There are doors leading to the exhibition rooms in the west, south and east walls. The exit is north.</desc>
+      <exits n='459' e='524' s='587' w='522' out='459' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='524'>
+      <name>Museum</name>
+      <desc>   You are in a section of the museum which is devoted to the inhabited worlds of the solar system. There are separate displays for most of the main Sol colonies, although Earth and Venus have their own sections elsewhere. Each display details how the world was first colonized, and how it has developed.</desc>
+      <desc>   The exit is west, and there are more exhibits north, south and east.</desc>
+      <exits n='460' e='525' s='588' w='523' in='460' out='523' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='525'>
+      <name>Museum</name>
+      <desc>   This room is filled with exhibits showing what life is currently like on Earth. Clusters of children crowd round the displays, looking disbelieving as a guide explains what it&apos;s like to live outside, without having to wear a suit. When he tries to explain about snow, quite clearly they think he is telling them stories!</desc>
+      <exits w='524' out='524' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='580'>
+      <name>Shuttle landing bay</name>
+      <desc>   You are in a landing bay which forms part of Cargon City&apos;s underground spaceport. This part of the area caters to personal shuttles.</desc>
+      <desc>   There is an exit in the east wall.</desc>
+      <exits e='581' out='581' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='581'>
+      <name>Spaceport</name>
+      <desc>   This is the southern part of the spaceport. There are landing bays to the south and the west, while the spaceport itself continues to the north.</desc>
+      <desc>   A room has been hollowed out of the rocky wall to the east.  A sign over the entrance proclaims this to be the new home of the Droid Theatre, appearing every night with their interpretation of Shakespeare&apos;s Hamlet.</desc>
+      <exits n='517' e='582' s='645' w='580' no-exit='moves.noexit.4'/>
+      <events enter='objects.burbage.11'/>
+   </location>
+
+   <location num='582'>
+      <name>Droid Theatre</name>
+      <desc>   The room has been converted into a traditional theatre space, with a raised proscenium arch stage at one end. The curtain is raised, revealing the stage set for the first scene of Hamlet which takes place on the walls of Elsinore. You can hear banging noises coming from back stage, and the occasional hysterical scream as a highly-strung droid actor loses its temper about something.</desc>
+      <desc>   The auditorium itself is filled with rows of seats, padded and covered with plush red velvet. Closer inspection reveals them to be old and worn, with the padding poking through holes here and there. They probably look alright when the house lights are down, though.</desc>
+      <desc>   There is an aisle running up the center of the auditorium, linking the stage and the exit which is to the west.</desc>
+      <exits w='581' out='581'/>
+   </location>
+
+   <location num='583'>
+      <name>Slideway</name>
+      <desc>   You are traveling through a rock tunnel on a slideway. At its northwest end the slideway enters the spaceport. To the southeast the slideway continues into the distance.</desc>
+      <exits se='648' nw='518' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Museum</name>
+      <desc>   This section of the museum is all about the economy of the solar system. You have to be a high finance wiz to get anything out of it though! The exit is north.</desc>
+      <exits n='523' out='523' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='588'>
+      <name>Museum</name>
+      <desc>This part of the museum is all about myths and legends. Some of the exhibits show the Greek and Roman gods who gave their names to the planets; others more modern stories, urban legends that grew up around technology.</desc>
+      <exits n='524' out='524'/>
+   </location>
+
+   <location num='645'>
+      <name>Landing bay</name>
+      <desc>   You are standing in a huge landing bay which is part of the Cargon spaceport complex. The bay looks as though it was built to accommodate one of the fabled State class freight liners, although there are no ships berthed here now.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='581' out='581' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='648'>
+      <name>Slideway</name>
+      <desc>   This is a slideway running through a tunnel of roughly excavated rock. At the southeast end it debouches onto the platform of the shuttle station, and to the northwest it runs on out of sight.</desc>
+      <exits se='713' nw='583' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='713'>
+      <name>Cargon City shuttle station</name>
+      <desc>   You are standing on the platform of the electromagnetic shuttle station. Above you hangs a sign which tells you that the shuttle service is running again, following the recent operational difficulties which cut off access to the other stations for so long.</desc>
+      <desc>   The way out is northwest to a slideway.</desc>
+      <exits nw='648' in='778' out='648'/>
+      <vocab cmd='wait' event='shuttle.wait.1'/>
+   </location>
+
+   <location num='726'>
+      <name>Old mine workings</name>
+      <desc>   These mine workings are old and abandoned. The pit props seem none too steady and the whole area looks as if it might collapse at any moment. The exit is to the southeast.</desc>
+      <exits se='791' out='791' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='728'>
+      <name>Harrington shuttle station</name>
+      <desc>   The platform of the shuttle station is hardly ever used by people - the Harrington mine is being dug by machines, controlled remotely from elsewhere.</desc>
+      <desc>   The entrance into the mine is southwest.</desc>
+      <exits sw='791' out='791'/>
+      <vocab cmd='wait' event='shuttle.wait.1'/>
+   </location>
+
+   <location num='771'>
+      <name>Rock face</name>
+      <desc>   This is one of the mine&apos;s working faces. The roof is very low, and you have to stoop to get this close to the face. Loose rocks lie underfoot; they have been broken open to see if they contain any valuable gemstones, and then discarded when they turned out to be worthless.</desc>
+      <desc>   The exit is southeast.</desc>
+      <exits se='836' out='836' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='773'>
+      <name>Rock face</name>
+      <desc>   This is one of the mine&apos;s faces. It doesn&apos;t seem to be in use at the moment, but the roof seems sound enough. The exit is south.</desc>
+      <exits s='837' out='837' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='778' flags='t'>
+      <name>Shuttle</name>
+      <desc>   You are sitting in the carriage of the shuttle. Along each side of the carriage is benching, and in the middle is room for standing passengers.</desc>
+      <exits out='713'/>
+      <vocab cmd='wait' event='shuttle.wait.2'/>
+   </location>
+
+   <location num='790'>
+      <name>Mine face</name>
+      <desc>   This is the continuation of the seam being mined to the southeast. The machinery is unbelievably noisy and the arc-lights hurt your eyes. This isn&apos;t a place for mere humans to hang about in.</desc>
+      <exits se='855' out='855' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='791'>
+      <name>Mine entrance</name>
+      <desc>   This is the entrance to the Harrington mine. Workings lead off to the east, south, and northwest - most of the noise seems to come from the south. The exit to the shuttle station is to the northeast.</desc>
+      <exits ne='728' e='792' s='855' nw='726'/>
+   </location>
+
+   <location num='792'>
+      <name>Abandoned face</name>
+      <desc>   This face of the old mine working has been long abandoned. Part of the face has caved in, leaving just a pile of earth and rubble. The exit is west.</desc>
+      <exits w='791' out='791' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='834'>
+      <name>Rock face</name>
+      <desc>   You have come to a halt at the face of the mine workings. This is the area in which the rough gems are carefully dug from the rock in which they are formed.</desc>
+      <desc>   The rest of the workings lie to your south.</desc>
+      <exits s='898' out='898' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='836'>
+      <name>Tunnel</name>
+      <desc>   The tunnel leads to a mine face, to the northwest, and a large open space, to the southeast.</desc>
+      <exits se='901' nw='771' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='837'>
+      <name>Tunnel</name>
+      <desc>   The north/south tunnel narrows here, making it hard to squeeze through, but you can just about make it so long as you&apos;re not scared of tight spaces.</desc>
+      <exits n='773' s='901' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='855'>
+      <name>Mine face</name>
+      <desc>   This appears to be part of the main seam being mined at the moment. All around you machines are digging and gouging into the walls. Behind you other machines move new pit props into position.</desc>
+      <desc>   The seam continues to the northwest. North takes you out to the mine entrance.</desc>
+      <exits n='791' nw='790' out='791' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='898'>
+      <name>Workings</name>
+      <desc>   This seems to be one of the main workings in the mine, though it is deserted at the moment. In the dim light you can see mounds of rubble from which gems have been (mostly) extracted.</desc>
+      <desc>   The face of the workings lies to your north, while an unlit corridor leads off to the southeast.</desc>
+      <exits n='834' se='963' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='900'>
+      <name>Tunnel</name>
+      <desc>   This narrow tunnel leads from a well-lit corridor at its east end into pitch darkness at its southwest end.</desc>
+      <exits e='901' sw='963' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='901'>
+      <name>Gallery</name>
+      <desc>   Many, many years of mining have opened out this part of the mine into a huge open space. Workers in Hobbs End Mine now use it as an assembly point before going on duty, and after they finish. The pit boss counts heads to make sure everyone is accounted for - not only because she worries about injuries, but also because unauthorized mining is strictly illegal.</desc>
+      <desc>   Tunnels lead north, northwest, west and southwest. The main corridor is east.</desc>
+      <exits n='837' e='902' sw='964' w='900' nw='836' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='902'>
+      <name>Corridor</name>
+      <desc>   The corridor bends to the west, where it opens out into a gallery. Southeast, it leads back to the station.</desc>
+      <exits se='967' w='901' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='904' flags='a'>
+      <name>Hobbs End admin office</name>
+      <desc>   Paperwork needs to be filled in even in mines, and this hut houses all the administration functions that are needed to keep the mining operation going. It&apos;s a pretty dismal place to work; everything is covered with a layer of dust and grime, which keeps on coming back no matter how frequently it&apos;s cleaned.</desc>
+      <desc>   Perhaps that&apos;s why it is staffed by a clerical droid, rather than a human!</desc>
+      <exits s='968' out='968'/>
+   </location>
+
+   <location num='963'>
+      <name>Tunnel</name>
+      <desc>   You are in a roughly hewn tunnel which bends round from the northeast to the northwest. There is a very faint glimmer of light to the northwest.</desc>
+      <exits ne='900' nw='898' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='964'>
+      <name>Blocked tunnel</name>
+      <desc>   The tunnel is blocked by a rockfall, and you can&apos;t go any further. The walls look very unstable, as if there could be a further collapse at any moment.</desc>
+      <exits ne='901' out='901' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='967'>
+      <name>Corridor</name>
+      <desc>   The walls of this well-lit tunnel, which joins the mine entrance to the workings, are worn smooth from use. The mine entrance is to the northwest and the corridor continues to the east.</desc>
+      <exits e='968' nw='902' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='968'>
+      <name>Mine entrance</name>
+      <desc>   Although mines are, by their very nature, dirty dusty places, it appears that in Hobbs End Mine some attempt is made to stop the debris and dust getting out of control. A wide, brightly lit corridor which looks relatively clean leads off to the west. The shuttle station lies east, and to the south is a dark slit. North a small hut has been erected.</desc>
+      <exits n='904' e='969' s='1032' w='967' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='969'>
+      <name>Hobbs End shuttle station</name>
+      <desc>   The platform of the shuttle station serving Hobbs End Mine is cluttered with bits of machinery, waiting to be taken into the mines, or back to the main city for repair.</desc>
+      <desc>   The mine entrance is to the west.</desc>
+      <exits w='968'/>
+      <vocab cmd='wait' event='shuttle.wait.1'/>
+   </location>
+
+   <location num='1032'>
+      <name>New face</name>
+      <desc>   Work has been started on developing a new mine face here, but it hasn&apos;t got very far yet.</desc>
+      <exits n='968' out='968' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1042'>
+      <name>Blocked corridor</name>
+      <desc>   Large amounts of debris fill this corridor. It doesn&apos;t look like a cave-in, more like it was blocked deliberately. In any case, you can&apos;t go any further.</desc>
+      <exits sw='1105' out='1105' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1104'>
+      <name>Abandoned face</name>
+      <desc>   This face of the mine has been abandoned for years, and the pit props are sagging in the most alarming fashion. The exit is east.</desc>
+      <exits e='1105' out='1105' no-exit='moves.noexit.3'/>
+      <events in-room='newbod.message.1'/>
+   </location>
+
+   <location num='1105'>
+      <name>Mine entrance</name>
+      <desc>   You are at the entrance to the mine. A corridor leads off to the northeast. The lights of the shuttle station lie southeast, and to the west is a narrow slit.</desc>
+      <exits ne='1042' se='1170' w='1104' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='1170'>
+      <name>Scargill shuttle station</name>
+      <desc>   Judging from the air of decay on the shuttle station platform, nobody has visited Scargill mine for years. Clearly it is no longer worked, by humans or by machines.</desc>
+      <desc>   The entrance into the mine is northwest, but there is no glimmer of light from that direction.</desc>
+      <exits nw='1105'/>
+      <vocab cmd='wait' event='shuttle.wait.1'/>
+   </location>
+
+</fed2-map>

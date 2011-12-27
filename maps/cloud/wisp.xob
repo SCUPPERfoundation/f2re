@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='41'>
+
+   <object type='static' start='584' visibility='100' size='50' weight='50' flags='d'>
+      <name>locker</name>
+      <id>obj1_locker</id>
+      <desc>This is a personal storage locker as used by the maintenance staff who previously worked here. The locker door is closed but does not appear to be locked.</desc>
+      <vocab cmd='open' event='actions.open.1'></vocab>
+      <vocab cmd='hit' event='actions.break.1'></vocab>
+      <vocab cmd='smash' event='actions.break.1'></vocab>
+      <vocab cmd='break' event='actions.break.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>key</name>
+      <id>obj1_key</id>
+      <desc>Its a normal run of the mill key, it is attached to a label which reads 'Maintenance Shed'.</desc>
+      <vocab cmd='get' event='actions.get.1'></vocab>
+      <vocab cmd='take' event='actions.get.1'></vocab>
+      <vocab cmd='drop' event='actions.drop.1'></vocab>
+      <vocab cmd='close' event='actions.close.1'></vocab>
+      <vocab cmd='shut' event='actions.close.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='2' flags='is'>
+      <name>protection suit</name>
+      <id>obj1_suit</id>
+      <desc>This is a Radiation Protection Suit, on closer examination you see the makers guarantee which claims that the suit provides the wearer 100% protection from all known forms of radiation.</desc>
+      <vocab cmd='get' event='actions.get.3'></vocab>
+      <vocab cmd='take' event='actions.get.3'></vocab>
+      <vocab cmd='drop' event='actions.drop.2'></vocab>
+      <vocab cmd='wear' event='actions.wear.1'></vocab>
+   </object>
+
+   <object type='static' start='845' visibility='100' size='1' weight='1' flags='i'>
+      <name>console</name>
+      <id>obj1_console</id>
+      <desc>This is the control console for the Power supply, there is a red button that can be pushed to start the reactor and a blue button that can be pushed to route the power supply, all the other  buttons are damaged and will not work.</desc>
+      <vocab cmd='get ' event='actions.get.2'></vocab>
+      <vocab cmd='take' event='actions.get.2'></vocab>
+      <vocab cmd='grab' event='actions.get.2'></vocab>
+      <vocab cmd='hit' event='actions.break.1'></vocab>
+      <vocab cmd='smash' event='actions.break.1'></vocab>
+      <vocab cmd='break' event='actions.break.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='2' weight='3' flags='is'>
+      <name>rod</name>
+      <id>obj1_rod</id>
+      <desc>This is a highly radioactive unspent plutonium rod that can be placed into the reactor to generate power for the planet.</desc>
+      <vocab cmd='drop' event='actions.drop.7'></vocab>
+      <vocab cmd='insert' event='check.reactor.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='5' weight='2' flags='s'>
+      <name>cap</name>
+      <id>obj1_cap</id>
+      <desc>This is a locking cap that is used to seal the Plutonium Rods into the reactor in order that power can be generated for the Planet.</desc>
+      <vocab cmd='drop' event='actions.drop.8'></vocab>
+   </object>
+
+   <object type='static' start='1222' visibility='100' size='1' weight='200' flags='i'>
+      <name>desk</name>
+      <id>obj1_desk</id>
+      <desc>This is the Curators Desk from where he ran the Museum Operation.</desc>
+   </object>
+
+   <object type='static' start='1222' visibility='100' size='1' weight='1' flags='i'>
+      <name>bookcase</name>
+      <id>obj1_bookcase</id>
+      <desc>This appears to be an antique bookcase that holds a number of files and folders and antique reference manuals.</desc>
+      <vocab cmd='search' event='curator.bookcase.1'></vocab>
+   </object>
+
+   <object type='static' start='591' visibility='100' size='30' weight='50' flags='i'>
+      <name>body</name>
+      <id>obj1_body</id>
+      <desc>This is the curators body, it would appear that it has lain here for some considerable time, though there are no signs of decomposure and appears to be perfectly preserved, you do notice the back of his head has been caved in.</desc>
+      <vocab cmd='search' event='curator.search.1'></vocab>
+   </object>
+
+   <object type='static' start='584' visibility='0' size='1' weight='1' flags='d'>
+      <name>door</name>
+      <id>obj1_door</id>
+      <desc>The locker door is like any other locker door that you may have seen. A sign on the door indicates that the locker contains tools.</desc>
+      <vocab cmd='open' event='actions.open.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='2' flags='is'>
+      <name>torch</name>
+      <id>obj1_torch</id>
+      <desc>Its a torch, though long since used, it looks like the power supply has been depleted.</desc>
+      <vocab cmd='drop' event='actions.drop.4'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='2' flags='is'>
+      <name>spanner</name>
+      <id>obj1_spanner</id>
+      <desc>This is a fairly unusual looking spanner, aside from its form there is a radiation warning sign moulded into its shaft.</desc>
+      <vocab cmd='drop' event='actions.drop.5'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='2' flags='is'>
+      <name>hammer</name>
+      <id>obj1_hammer</id>
+      <desc>This is a standard engineers ball pein hammer mounted on a wooden shaft.</desc>
+      <vocab cmd='drop' event='actions.drop.6'></vocab>
+   </object>
+
+   <object type='abstract' start='1030' visibility='100' size='1' weight='1' flags='is'>
+      <name>red door pass</name>
+      <id>obj1_redpass</id>
+      <desc>The door pass is red in colour and looks like it can be used to gain entry to a locked door with the corresponding colour card reader.</desc>
+      <vocab cmd='swipe' event='reader.red.1'></vocab>
+      <vocab cmd='drop' event='actions.drop.9'></vocab>
+   </object>
+
+   <object type='abstract' start='1157' visibility='100' size='1' weight='1' flags='is'>
+      <name>blue door pass</name>
+      <id>obj1_bluepass</id>
+      <desc>The door pass is blue in colour and looks like it can be used to gain entry to a locked door with the corresponding colour card reader.</desc>
+      <vocab cmd='swipe' event='reader.blue.1'></vocab>
+      <vocab cmd='drop' event='actions.drop.11'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='i'>
+      <name>letter</name>
+      <id>obj1_letter</id>
+      <desc>This is a handwritten letter, it bears the  crest of the Cloud Museum and is personalized, it would appear to be a letter from the curator of the museum.</desc>
+      <vocab cmd='examine letter' event='curator.letter.1'></vocab>
+   </object>
+
+   <object type='static' start='1159' visibility='100' size='1' weight='1000' flags='i'>
+      <name>Dino</name>
+      <id>mob1_dino</id>
+      <desc>Dino is the droid host of dino's bar and grill, he has a human form is made entirely of an ultra light metal compound which is decorated to give the appearance of him wearing a tuxedo.</desc>
+      <vocab cmd='dino' event='dino.chat.1'></vocab>
+   </object>
+
+   <object type='static' start='647' visibility='100' size='1' weight='1' flags='i'>
+      <name>sign</name>
+      <id>obj1_sign</id>
+      <desc>The sign is an evacuation notice advising residents of Wisp of the arrangements and deadlines set for the total evacuation of the Planet Wisp.</desc>
+      <vocab cmd='examine' event='examine.sign.1'></vocab>
+      <vocab cmd='take' event='moves.notake.1'></vocab>
+      <vocab cmd='get' event='moves.notake.1'></vocab>
+      <vocab cmd='steal' event='moves.notake.1'></vocab>
+      <vocab cmd='smash' event='moves.notake.1'></vocab>
+      <vocab cmd='read ' event='examine.sign.1'></vocab>
+   </object>
+
+   <object type='static' start='583' visibility='0' size='1' weight='1' flags='i'>
+      <name>door</name>
+      <id>obj2_door</id>
+      <desc>The door to the Maintenance Shed appears to be locked.</desc>
+      <vocab cmd='get' event='actions.get.4'></vocab>
+      <vocab cmd='unlock' event='unlock.door.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>protection suit (worn)</name>
+      <id>obj1_suitworn</id>
+      <desc>You are wearing the Radiation Protection Suit, on closer examination you see the makers guarantee which claims that the suit provides the wearer 100% protection from all known forms of radiation.</desc>
+      <vocab cmd='get' event='actions.get.3'></vocab>
+      <vocab cmd='take' event='actions.get.3'></vocab>
+      <vocab cmd='drop' event='actions.drop.3'></vocab>
+      <vocab cmd='remove' event='actions.remove.1'></vocab>
+   </object>
+
+   <object type='static' start='906' visibility='100' size='1' weight='1' flags='i'>
+      <name>lever</name>
+      <id>obj1_lever</id>
+      <desc>Its a simple lever, pull it to operate it, it automatically returns to its start position and initiates the de-contamination process allowing you to exit the plant.</desc>
+      <vocab cmd='pull' event='actions.lever.1'></vocab>
+   </object>
+
+   <object type='static' start='519' visibility='0' size='1' weight='1'>
+      <name>bomb</name>
+      <id>obj1_bomb</id>
+      <desc>for testing purposes only</desc>
+      <vocab cmd='blow' event='changevariable.bomb.1'></vocab>
+   </object>
+
+   <object type='static' start='845' visibility='100' size='1' weight='1'>
+      <name>red button</name>
+      <id>obj1_redbutton</id>
+      <desc>This is the Button that will iniate the generation of nuclear power, provided the reactor is of course ready to do so.</desc>
+      <vocab cmd='press' event='check.reactor.6'></vocab>
+   </object>
+
+   <object type='static' start='845' visibility='100' size='1' weight='1'>
+      <name>blue button</name>
+      <id>obj1_bluebutton</id>
+      <desc>Pressing this button re-routes the power between the idle/accommodation/leisure or all areas mode.</desc>
+      <vocab cmd='press' event='check.power.1'></vocab>
+   </object>
+
+   <object type='static' start='971' visibility='0' size='5' weight='15' flags='i'>
+      <name>rod into reactor</name>
+      <id>obj2_rod</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='fit' event='check.reactor.2'></vocab>
+      <vocab cmd='insert' event='check.reactor.2'></vocab>
+   </object>
+
+   <object type='static' start='971' visibility='0' size='5' weight='15' flags='i'>
+      <name>plutonium rod into reactor</name>
+      <id>obj3_rod</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='fit' event='check.reactor.2'></vocab>
+      <vocab cmd='insert' event='check.reactor.2'></vocab>
+   </object>
+
+   <object type='static' start='971' visibility='0' size='5' weight='15' flags='i'>
+      <name>cap onto reactor</name>
+      <id>obj2_cap</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='screw' event='check.reactor.4'></vocab>
+      <vocab cmd='fit' event='check.reactor.4'></vocab>
+   </object>
+
+   <object type='static' start='971' visibility='0' size='3' weight='5' flags='i'>
+      <name>locking cap onto reactor</name>
+      <id>obj2_cap</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='screw' event='check.reactor.4'></vocab>
+      <vocab cmd='fit' event='check.reactor.4'></vocab>
+   </object>
+
+   <object type='static' start='971' visibility='0' size='3' weight='5' flags='i'>
+      <name>locking cap</name>
+      <id>obj3_cap</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='tighten' event='check.reactor.3'></vocab>
+   </object>
+
+   <object type='static' start='971' visibility='0' size='3' weight='5' flags='i'>
+      <name>cap</name>
+      <id>obj4_cap</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='tighten' event='check.reactor.3'></vocab>
+   </object>
+
+   <object type='static' start='523' visibility='0' size='1' weight='1' flags='d'>
+      <name>touchpad</name>
+      <id>obj1_touchaccom</id>
+      <desc>The touchpad is a pad you press your hand to, to operate the teleporter.</desc>
+      <vocab cmd='press' event='check.touchpad.1'></vocab>
+   </object>
+
+   <object type='static' start='964' visibility='0' size='1' weight='1' flags='d'>
+      <name>touchpad</name>
+      <id>obj1_touchleisure</id>
+      <desc>The touchpad is a pad you press your hand to, to operate the teleporter.</desc>
+      <vocab cmd='press' event='check.touchpad.2'></vocab>
+   </object>
+
+   <object type='static' start='845' visibility='0' size='1' weight='1' flags='i'>
+      <name>variables</name>
+      <id>obj1_variables</id>
+      <desc>This is a test object</desc>
+      <vocab cmd='test' event='test.variables.16'></vocab>
+   </object>
+
+   <object type='static' start='525' visibility='0' size='1' weight='1' flags='d'>
+      <name>touchpad</name>
+      <id>obj1_touchaccom1</id>
+      <desc>The touchpad is a pad you press your hand to, to operate the teleporter.</desc>
+      <vocab cmd='press' event='actions.move.5'></vocab>
+   </object>
+
+   <object type='static' start='1092' visibility='0' size='1' weight='1' flags='d'>
+      <name>touchpad</name>
+      <id>obj1_touchleisure1</id>
+      <desc>The touchpad is a pad you press your hand to, to operate the teleporter.</desc>
+      <vocab cmd='press' event='actions.move.6'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='2' flags='s'>
+      <name>diary</name>
+      <id>obj1_diary</id>
+      <desc>This is the Museum Curators personal diary.</desc>
+      <vocab cmd='examine' event='curator.diary.1'></vocab>
+   </object>
+
+   <object type='abstract' start='1093' visibility='100' size='1' weight='1' flags='is'>
+      <name>yellow door pass</name>
+      <id>obj1_yellowpass</id>
+      <desc>The door pass is yellow in colour and looks like it can be used to gain entry to a locked door with the corresponding colour card reader.</desc>
+      <vocab cmd='swipe' event='reader.yellow.1'></vocab>
+      <vocab cmd='drop' event='actions.drop.10'></vocab>
+   </object>
+
+   <object type='abstract' start='1031' visibility='100' size='1' weight='1' flags='is'>
+      <name>green door pass</name>
+      <id>obj1_greenpass</id>
+      <desc>The door pass is green in colour and looks like it can be used to gain entry to a locked door with the corresponding colour card reader.</desc>
+      <vocab cmd='swipe' event='reader.green.1'></vocab>
+      <vocab cmd='drop' event='actions.drop.12'></vocab>
+   </object>
+
+   <object type='static' start='527' visibility='0' size='1' weight='1' flags='i'>
+      <name>277465</name>
+      <id>obj1_277465</id>
+      <desc>Can't see anything with that name!</desc>
+      <vocab cmd='enter' event='move.door.1'></vocab>
+   </object>
+
+   <object type='static' start='647' visibility='0' size='1' weight='1'>
+      <name>accom</name>
+      <id>obj1_accom</id>
+      <desc>for testing purposes only</desc>
+      <vocab cmd='go' event='test.move.1'></vocab>
+   </object>
+
+   <object type='static' start='647' visibility='0' size='1' weight='1'>
+      <name>leisure</name>
+      <id>obj1_leisure</id>
+      <desc>for testing purposes only</desc>
+      <vocab cmd='go' event='test.move.2'></vocab>
+   </object>
+
+</object-list>

@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<fed2-map title='Estari' version='38' editor='standard' from='1247' to='Talmera.Talmera Space.585'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>STOREROOM: DO NOT ENTER</desc>
+   </location>
+
+   <location num='354'>
+      <name>Overlooking the Ocean</name>
+      <desc>    There is a rail to the north of this area, making sure no one falls off the cliff face and down into the ocean below. The ocean itself seems to stretch onward to eternity, the dark blue color seems to only shift every once in awhile with the wind that passes through. The beach below seems riddled with rocks and other nasties making it impossible to head down without hurting themselves. To the south is the rest of the platform.</desc>
+      <exits s='418' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='418'>
+      <name>Through the Rocks</name>
+      <desc>    The rocks themselves are scattered around the towns people unable to get rid of them when they had made the deck. The wind here whips around, pushing people around a little. To the north you can hear the sound of an ocean, waving lapping at the shore line. To the southwest you can see the forest in the distance, and hear howling slightly. To the south is the mountain path downwards.</desc>
+      <exits n='354' s='482' sw='481' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='481'>
+      <name>Overlooking the Forest</name>
+      <desc>    Handrails cover the south section of this area, looking over the large forest nestled into the mountains that surround the city limits. As a wind whips through, black birds seem to scatter into the air, leaving behind the sound of cawing in their wake. The only other noises from the forest below is the occasional sound of howling and barking as you can see specks of white and grey wolves in between the trees. To the northeast heads back to the platform.</desc>
+      <exits ne='418' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='482'>
+      <name>Mountain Top</name>
+      <desc>    The wind whips around up here, blowing everything and anything around in almost a vortex type motion. There are handrails here to assist people, as are guards seeming to be stationed for protection as well as help. The area here is a large wooden platform that seems to have been made as a look out deck, rocks are in the way to the north but you can climb through them if you wish to see more of the deck. You can go down the mountain too.</desc>
+      <exits n='418' down='546' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='546'>
+      <name>Side of the Mountain</name>
+      <desc>    A guard is stationed here in a small booth where he seems to be lounging back, watching people who climb up or down the mountain from the platform or the city itself. The path up the side of the mountain is steep but it seems hand rails were put in to help those who can not make the climb without an assitant. You can climb up the mountain or down.</desc>
+      <exits up='482' down='610' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='610'>
+      <name>Mountain Path</name>
+      <desc>   The path here is steep, and seems to stretch up into the mountains and a sign post is here reading that up is the path to the observation plaform, and south is back into town. The sound of the ocean seems to reach you here, along with howling in the distance. Guards seem to be posted every one hundred feet seeming to make sure the people visiting were protected. You can climb up the mountain or go to the south of the path.</desc>
+      <exits s='674' up='546' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='674'>
+      <name>Pathway</name>
+      <desc>   The pathway narrows and the ground grows steeper here. The traffic here seems to be almost no one, as the path leads either up into the mountains once more or down into the market place. Snow falls still collecting on the ground piling up slightly seeming to stack up on either side of the pathway making it more enclosed. South is the Lower Market and southwest is the Market place proper.</desc>
+      <exits n='610' s='738' sw='737' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='737'>
+      <name>Pathway</name>
+      <desc>   The pathway here is cobble stone, and snow flakes fall in a certain pattern here it seems. Everything is quite peaceful as the traffic seems to let up as the path grows somewhat narrower heading to the northeast. To the east the path widens heading to the Lower Market place. To the southwest is the path to the Market place proper.</desc>
+      <exits ne='674' e='738' sw='800' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='738'>
+      <name>Pathway</name>
+      <desc>   The pathway here is dirt, and snow flakes fall in a certain pattern here it seems. Everything is quite peaceful as the traffic seems to let up as the path grows somewhat narrower heading to the northwest. To the west the path widens heading to the Market place proper. To the southeast is the path to the Lower Market.</desc>
+      <exits n='674' se='803' w='737' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='799' flags='b'>
+      <name>Estari Restaurant</name>
+      <desc>     The restaurant is spacious, with many long tables along the length of the restaurant with a bench running parallel. On the back wall is a buffet like setting, with several different kinds of food set out all along it, with plates on either side to take and fill with food. Pitchers of mulled wine, and ale sit on the tables along with stacks of glasses for people to pour themselves. People pay the woman in the front before going to get some food. To leave you head east.</desc>
+      <exits e='800' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='800'>
+      <name>Marketplace</name>
+      <desc>      The road is cobble stone, and people sit behind booths where their wares are set out and they call to the people on the street to buy something. Pieces of jewelry, and fine clothing are sold here and there. Along with small boxes of scented candles and rocks they seem to mine out. Children dressed up, and playing with very expensive looking dolls and wooden swords run down the streets. Playing with one another, seeming to be bouncing around only occasionally being yelled at by the adults. There is a building to the west, with a sign on it that says it&apos;s a Estari Restaurant, lovely smells of roast beef and chicken seem to come from the open door of the restaurant. To the northeast the market place continues as it does to the south.</desc>
+      <exits ne='737' s='864' w='799' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='803'>
+      <name>Lower Market</name>
+      <desc>       The road is just plain dirt under you, people sit on mats here selling small things. Trinkets, looking almost as if they had been taken from the trash to be sold. Children dressed in only rags ran down the streets, either for fun or they were running from an adult. There is a building to the east, with a sign on it that says it&apos;s open for business, there are flowers in the windows making you wonder what they sell there. To the northwest the market place continues on.</desc>
+      <exits e='804' s='867' nw='738' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='804' flags='b'>
+      <name>Flower Shop</name>
+      <desc>       Inside the shop the first thing to hit you is the smell. The fragrant smell of the flowers, that sit all along the shop walls. A young woman stands behind the counter, arranging a new bouquet. She smiles up at you, asking you quietly if you would like a free flower, and to pick any flowers that you wish. To the west is the exit out of this shop.</desc>
+      <exits w='803' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='863' flags='b'>
+      <name>Gift Shop</name>
+      <desc>    The shop is spacious and seems to have everything you can imagine in it. Silk dresses, and tunics hang on the walls. Cozy blankets are folded up neatly on one of the tables, along with some nick nacks like quills and ink wells. There are a few books shelves too, lined with leather bound old books of the planet&apos;s past. Wolf skin rugs are lying in the corner ready to be sold as well, fur coats also line the walls. To leave you can go east.</desc>
+      <exits e='864' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='864'>
+      <name>Marketplace</name>
+      <desc>      The road is cobble stone, and people sit behind booths where their wares are set out and they call to the people on the street to buy something. Pieces of jewelry, and fine clothing are sold here and there. Along with small boxes of scented candles and rocks they seem to mine out. Children dressed up, and playing with very expensive looking dolls and wooden swords run down the streets. Playing with one another, seeming to be bouncing around only occasionally being yelled at by the adults. There is a building to the west, with a sign on it that says it&apos;s a Gift Shop, in the window there are fine looking clothing and kites seeming to be ready to be sold.. To the north the market place continues or go to the fork which is southeast.</desc>
+      <exits n='800' se='929' w='863' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='867'>
+      <name>Lower Market</name>
+      <desc>     The road is just plain dirt under you, people sit on mats here selling small things. Trinkets, looking almost as if they had been taken from the trash to be sold. Children dressed in only rags ran down the streets, either for fun or they were running from an adult. There is a building to the east, with a sign on it that says it&apos;s the Hospital. To the north the market place continues on.</desc>
+      <exits n='803' e='868' sw='930' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='868' flags='hi'>
+      <name>Hospital</name>
+      <desc>     Everyone seems to be bustling around in this area, a woman sits a a desk near the front door of the Hospital and looks up as everyone enters seeming to smile.</desc>
+      <desc>&quot;Hello how can I help you?&quot; she asks in a sweet voice. &quot;If you need anything just ask.&quot;</desc>
+      <desc>When you look around the Hospital you notice most wounds people come in with are wolf bites or broken limbs from falling off the many cliffs. You can leave the hospital by heading west.</desc>
+      <exits w='867' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='929'>
+      <name>Fork in the road</name>
+      <desc>    As you approach the fork in the road, there is a sign. East is the lower Market place, where only small things are sold, and for very dirt cheap prices. And Northwest is the regular Market where everything is of better value. Ivy grows up the sign post, and someone is standing nearby cleaning off the ivy from the signs themself so everyon can see them.</desc>
+      <exits e='930' s='993' nw='864' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='930'>
+      <name>Pathway</name>
+      <desc>     Snow is still falling here, and the path winds northeast from here. But there is a hut to the southeast that has a large sign:</desc>
+      <desc>         Shipyard!</desc>
+      <desc>               Dirt Cheap prices</desc>
+      <desc>The other path leads northeast to the lower markets. There is a small dirty sign that way that says &quot;Keep trace of your money at all times. Thieves be here.&quot;</desc>
+      <exits ne='867' se='995' w='929' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='993'>
+      <name>Pathway</name>
+      <desc>     White large snowflakes fall from the sky, the pathway seems to have been shoveled rather recently to let people walk where they please. Houses line this street, small one story houses with thatched roofs snow piling on top of them. Women in colorful dresses are shoveling there walks with hand made shovels. Their kids some smaller than others playing snowball fights in the yards.</desc>
+      <desc>North leads to a fork in the road, and south heads back to the archway.</desc>
+      <exits n='929' s='1057' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='995' flags='yr'>
+      <name>Shipyard</name>
+      <desc>   The hut is tall and large on the inside, a large roaring fire makes the room almost cozy. A man with a balding head stands there smiling up at you. He wears a tunic, some fur leggings and a cloak to keep himself warm. He has kind gray eyes and he smiles proudly. &quot;&apos;Ello, &apos;ow may I &apos;elp ye?&quot; he asks in his thick accent. &quot;We &apos;ave a bunch o&apos; fine ships just waitin&apos; ta be purchased!&quot;</desc>
+      <desc>Northwest leads back out of the hut.</desc>
+      <exits nw='930' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1053'>
+      <name>Inside the Wolves&apos; Den</name>
+      <desc>      You step within the cave, the darkness seeming to creep upon you, surrounding you on all sides. You hear a small barking noise in the cave and come across a small wolf with gray fur, lying in an odd way as if its hind leg is injured. It barks and growls at you as you approach but when it moves it whimpers loudly. You can head back out of the cave where you came from since the howling has gotten louder and you may want to flee.</desc>
+      <exits out='1054' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1054'>
+      <name>Outside the Wolves Den</name>
+      <desc>    You step out and are in front of a large cavern. The howling is still off in the distance, but getting closer all the time. The cave is dark inside, and you smell something like--well, you didn&apos;t want to know what it was. If you feel adventuress you can go into the cave, not knowing exactly what lives there. But you can go southest to get away from the wolves.</desc>
+      <exits se='1119' in='1053' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1057'>
+      <name>Village Archway</name>
+      <desc>    Finally the stairs end and you stand before an old stone archway. Snow covers most of it, but the parts you can see has carvings into the stone. The ancient text was magic surrounding the village with an invisible force-field, to keep out monsters leaving the villagers safe to do what they wish. The letters glow slightly when a monster tries to enter the village, they glow almost a firey red color.</desc>
+      <desc>North heads into the village, you can go up the stairs to the landing pad.</desc>
+      <exits n='993' up='1119' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1119'>
+      <name>Path Down the Mountain</name>
+      <desc>   The trees clear out here a little, the path widens and splits off in two directions.The trees seem to more dense to the Northwest where the stone path cuts between them. You hear distant howling off in that direction. The other path leads down stairs and into the village entrance. The snow here has stopped, and there is an eerie silence around the forest with the occasional howling off in the distance.</desc>
+      <exits nw='1054' up='1182' down='1057' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1182'>
+      <name>Path down the Mountain</name>
+      <desc>    You step onto the old stone path that leads down the mountain, the path is cracked in places and discolored in others. Large trees stretch over the pathway shielding it from the sun, and the snow that still falls from the sky. The trees glisten white from the snow. Unfortunately the trees cast a shadow over the path, so that when the wind does blow, it creates almost a wind tunnel. You may head down the path, or up it.</desc>
+      <exits up='1247' down='1119' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1247'>
+      <name>Landing Pad</name>
+      <desc>     As you step off your shuttle you are hit with a freezing cold, the mountain wind seeming to go right through you. Snow drifts down from above looking like tiny flecks of white against the crystal blue sky. The snow swirls in the air as the wind blows in a fierce gale towards the small village below. There is a stone path with large trees lining it heading down towards the village, the leaves on the branches are gone, but snow covers the trees making them glint white in the sunlight. To the south is the exchange tent the multicolored cloth billows out as another gale rushes through the plateau. As you look down you see an entire village below you, lights twinkling on and off in the twilight hours. The sun heading down in the sky, casting the village in a sort of pale white glow.</desc>
+      <exits s='1311' down='1182' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1311' flags='eb'>
+      <name>Exchange</name>
+      <desc>    Once you step into the tent, the fire in the center of the exchange warms you up. You would think the fire would burn the tent down but you over hear someone saying that the cloth was coated with a magic spell making them non-flammable and the hole in the roof was enough to vent the smoke out as to not disturb the many traders and merchants coming and going here. A large screen is to the south end of the tent and scrolls the prices and commodities list for people to buy and sell. To leave the tent and go back to the landing pad you head North from here.</desc>
+      <desc>You can also go In which will lead to a special area if you wish to purchase Factories.</desc>
+      <exits n='1247' in='1375' no-exit='estari.planet.1'/>
+   </location>
+
+   <location num='1375'>
+      <name>Factory Message</name>
+      <desc>  Attention, if you wish to purchase Factories, please contact Angelfowl, as I am not normally onling all that often. She will take care of most of my planet work. Thank you all for your patiences.</desc>
+      <desc>    ----Isella</desc>
+      <exits out='1311' no-exit='estari.planet.1'/>
+   </location>
+
+</fed2-map>
+

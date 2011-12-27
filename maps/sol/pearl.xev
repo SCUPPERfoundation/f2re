@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+
+<event-list version='61'>
+
+ <category name='food'>
+
+  <section name='teahouse'>
+
+   <event num='1'>
+    <comment>Buy food - Pearl Teahouse - 264</comment>
+    <checkstat who='individual' money='10' higher='food.teahouse.2' equals='food.teahouse.2' lower='food.teahouse.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.teahouse.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.teahouse.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='keepout'>
+
+  <section name='anti'>
+
+   <event num='1'>
+    <comment>time limit in Antimatter room</comment>
+    <delayevent delay='5' event='keepout.anti.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check if player is in Anti room</comment>
+    <checkmap map='sol/pearl'  pass='keepout.anti.3' loc='151'/>
+   </event>
+
+   <event num='3'>
+    <comment>move out of Anti room</comment>
+    <message type='text' where='com' who='individual'>Chime!</message>
+    <message type='text' where='com' who='individual'>Chime!</message>
+    <message type='text' where='com' who='individual'>Chime!</message>
+    <message type='text' where='com' who='individual'>A woman in a brown kimono hurries up to you and tells you it is too dangerous to linger in this area. "Sorry, sorry," she chants, "Too much exposure today. Come back tomorrow. Or better still, next week." She bows, murmuring, "Domo, I will bring you to my lab."</message>
+    <move what='player' who='individual' loc='214'/>
+   </event>
+
+  </section>
+
+  <section name='staff'>
+
+   <event num='1'>
+    <comment>keepout non-staff from Pearl</comment>
+    <checkflag who='individual' flag ='staff'  set='moves.entry.1' unset='keepout.staff.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>move player to shuttle bay</comment>
+    <message type='text' where='com' who='individual'>A woman in a blue silk kimono hurries up to you and tells you this is an active contruction site. "Sorry, sorry," she chants, "No visitors today. Come back tomorrow. Or better still, next week." She bows and bows again, murmuring, "Domo arigato gozaimas."</message>
+    <move what='player' who='individual' loc='198'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='entry'>
+
+   <event num='1'>
+    <comment>check for tabi</comment>
+    <checkinventory map='home' id-name='tabi' not-found='moves.entry.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>remove shoes</comment>
+    <message type='text' where='com' who='individual'>A soft synthovoice announces, "Visitors are please to remove all footwear before entering The Pearl."</message>
+    <message type='text' where='com' who='individual'>A squat droid trundles up and assists you to configure your nano-chameleon suit so that your feet (or equivalent ambulatory appendages) are left bare.</message>
+   </event>
+
+   <event num='3'>
+    <comment>check for tabi</comment>
+    <checkinventory map='home' id-name='tabi' not-found='moves.entry.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>create tabi</comment>
+    <createobject where='inventory' home-map='sol/pearl' id='obj_tabi'/>
+    <message type='text' where='com' who='individual'>A small droid rolls over to you and opens its torso compartment. It plucks out a pair of the shapeless white socks known as tabi and presses them into your hand (or equivalent appendage). "Please to wear tabi," it says, backing away with a series of small, respectful bows.</message>
+   </event>
+
+  </section>
+
+  <section name='exit'>
+
+   <event num='1'>
+    <comment>check for tabi</comment>
+    <checkinventory map='home' id-name='tabi' found='moves.exit.2' not-found='moves.exit.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>have tabi - destroy tabi &amp; destroy string if not on newbod puzzle</comment>
+    <destroyobject where='inventory' map='home' id-name='tabi'/>
+    <message type='text' where='com' who='individual'>You pause to remove the tabi and wonder what to do with them. The squat droid rolls up and takes them from you. Inclining its torso slightly in a bow, it says, "Domo arigato gozaimas. Please to visit the Pearl again."</message>
+    <message type='text' where='com' who='individual'>Returning the bow, you hurry off about your business.</message>
+    <checkvariable name='newbod' key='clue' value='seven' equals='stop'/>
+    <destroyobject where='inventory' map='home' id-name='string'/>
+   </event>
+
+   <event num='3'>
+    <comment>no tabi- droid says bye</comment>
+    <message type='text' where='com' who='individual'>A squat droid rolls up to you, inclining its torso slightly in a bow, it says, "Domo arigato gozaimas. Please to visit the Pearl again."</message>
+    <message type='text' where='com' who='individual'>Returning the bow, you hurry off about your business.</message>
+   </event>
+
+  </section>
+
+  <section name='rooms'>
+
+   <event num='1'>
+    <comment>check for string</comment>
+    <checkinventory map='home' id-name='string' not-found='moves.rooms.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>string not found</comment>
+    <message type='text' where='com' who='individual'>The woman in the blue kimono steps up beside you and firmly says, "Must wear tabi, please." With a shooing motion of her hands she urges you back into the atrium.</message>
+    <move what='player' who='individual' loc='199'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='chairs'>
+
+   <event num='1'>
+    <comment>sit in black chair</comment>
+    <message type='text' where='com' who='individual'>You ease yourself down onto the soft, plump cushions. The chair supports you in supreme comfort. This is just right.</message>
+   </event>
+
+   <event num='2'>
+    <comment>sit in go chair</comment>
+    <message type='text' where='com' who='individual'>You carefully ease yourself into the G Chair. No matter how you wiggle, you can&apos;t quite get comfortable. It must be better suited to some other species.</message>
+   </event>
+
+   <event num='3'>
+    <comment>sit in ero/s/ chair</comment>
+    <message type='text' where='com' who='individual'>You attempt to sit in the exceedingly stylish chair. While it is a clever art piece, the edge cuts into the back of your legs and when you try to lean back it wobbles unsteadily.</message>
+   </event>
+
+   <event num='4'>
+    <comment>sit in twizzle frame</comment>
+    <message type='text' where='com' who='individual'>Don&apos;t be silly! You are neither an avien nor a serpent species. If you climb onto the Twizzle frame, you will break it into little pieces and completely lose face.</message>
+   </event>
+
+   <event num='5'>
+    <comment>sit in free form</comment>
+    <message type='text' where='com' who='individual'>Your joints creak slightly as you squat lower and lower to seat yourself on the Noguchi freeform. Seated at last, your knees at ear level, you can&apos;t relax because there is no back or arm support. You try reclining on the soft cushion. While this is comfortable, you are now positioned so low you would be talking to people&apos;s ankles.</message>
+   </event>
+
+  </section>
+
+  <section name='kitten'>
+
+   <event num='1'>
+    <comment>kitten scampers by</comment>
+    <message type='text' where='com' who='individual'>A black kitten silently pads across the room, skitters between your legs, and goes scampering out of sight.</message>
+   </event>
+
+   <event num='2'>
+    <comment>delay</comment>
+    <delayevent delay='3' event='objects.kitten.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>pet kitten</comment>
+    <message type='text' where='com' who='individual'>The black kitten notices you and scampers closer to greet you.</message>
+    <call event='objects.kitten.random[4-6]'/>
+   </event>
+
+   <event num='4'>
+    <comment>pet kitten-purrs</comment>
+    <message type='text' where='com' who='individual'>You gently reach down and pet Blackice&apos;s soft fur. He regally arches in pleasure under your hand and loudly purrs.</message>
+    <message type='text' where='com' who='individual'>After a few moments of allowing you to admire him, he scampers away to Madame Mitzu.</message>
+   </event>
+
+   <event num='5'>
+    <comment>pet kitten- he plays hide and seek</comment>
+    <message type='text' where='com' who='individual'>You reach down to pet the kitten but he scampers slightly to the left. You move left and he moves right. You turn to the right and he slips under your hand and between your feet (or equivalent appendages). You turn around and he scampers back around you, evading your hand.</message>
+   </event>
+
+   <event num='6'>
+    <comment>pet kitten - scratches</comment>
+    <message type='text' where='com' who='individual'>You reach down to pet Blackice. He regally arches himself waiting for your hand. And you foolishly pat him like a dog!</message>
+    <message type='text' where='com' who='individual'>With a loud hiss, his fur fluffs up and he swiftly swats your hand away, leaving a trail of tiny kitten claw scratches. He streaks back under Madame Mitzu&apos;s desk.</message>
+    <message type='text' where='com' who='individual'>Madame Mitzu looks up at the commotion and frowns at you.</message>
+   </event>
+
+  </section>
+
+  <section name='string'>
+
+   <event num='1'>
+    <comment>drop string- check map</comment>
+    <checkmap map='sol/pearl'  pass='objects.string.2' fail='objects.string.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>on pearl- keep string</comment>
+    <message type='text' where='com' who='individual'>You look at the red silk string, remembering it is considered a symbol of good luck here. Reconsidering, you tuck it back in your pocket.</message>
+   </event>
+
+   <event num='3'>
+    <comment>not on pearl - drop string</comment>
+    <message type='text' where='com' who='individual'>You drop the red silk string. Gossamer light, it is caught by the slightest current of air and drifts from your sight.</message>
+    <destroyobject where='inventory' map='home' id-name='string'/>
+   </event>
+
+  </section>
+
+  <section name='tabi'>
+
+   <event num='1'>
+    <comment>wear tabi-check for string</comment>
+    <checkinventory map='home' id-name='string' found='objects.tabi.2' not-found='objects.tabi.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>wear tabi-string found</comment>
+    <message type='text' where='com' who='individual'>You are already wearing the tabi.</message>
+   </event>
+
+   <event num='3'>
+    <comment>create string</comment>
+    <message type='text' where='com' who='individual'>Untying the red silk string around the tabi, you slide them onto your feet (or equivalent appendages). The tabi adjust to fit perfectly and you slip the red string into your pocket as a lucky souvenir of your visit.</message>
+    <createobject where='inventory' home-map='sol/pearl' id='obj_string'/>
+   </event>
+
+   <event num='4'>
+    <comment>drop tabi</comment>
+    <message type='text' where='com' who='individual'>You remove the tabi and drop them. A squat droid rolls up and takes them. Inclining its torso slightly in a bow, it says, "Domo."</message>
+    <destroyobject where='inventory' map='home' id-name='tabi'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='people'>
+
+  <section name='kiko'>
+
+   <event num='1'>
+    <comment>bow to kiko</comment>
+    <message type='text' where='com' who='individual'>You turn to face Madame Kiko and bow politely.</message>
+    <message type='text' where='com' who='individual'>Madame Kiko gracefully bows in return. "How may I help you, %s-san?" She waves her fan. "You may ask me for directions."</message>
+   </event>
+
+   <event num='2'>
+    <comment>ask for directions</comment>
+    <message type='text' where='com' who='individual'>You politely bow to Madame Kiko and ask her for directions around The Pearl.</message>
+    <message type='text' where='com' who='individual'>Madame Kiko returns your bow and gracefully pointing with her carved ebony fan, she directs you to the various major areas of The Pearl.</message>
+    <message type='text' where='com' who='individual'>Pointing her fan to the northwest, she says, "The Shrine of the Sunbeam is that way."</message>
+    <message type='text' where='com' who='individual'>Pointing her fan to the northeast, she says, "The Yohkoh Solar Observatory is that way."</message>
+    <message type='text' where='com' who='individual'>Pointing her fan to the southeast, she says, "The Pearl Teahouse is in that direction."</message>
+    <message type='text' where='com' who='individual'>Pointing her fan to the southwest, she says, "The Scholar&apos;s garden is that way."</message>
+    <message type='text' where='com' who='individual'>Pointing her fan to the north, she says, "Over the bridge is a gravshaft. You may take that to the other levels of The Pearl."</message>
+    <message type='text' where='com' who='individual'>With a final flourish of her fan she points west and says, "And that is the way out to the shuttles."  She looks at you and bows once more. "Enjoy your visit to The Pearl."</message>
+   </event>
+
+  </section>
+
+  <section name='mitzu'>
+
+   <event num='1'>
+    <comment>bow to mitzu</comment>
+    <message type='text' where='com' who='individual'>You bow deeply to Madame Mitzu to show your respect for her authority.</message>
+    <message type='text' where='com' who='individual'>She gravely returns the bow, "It is most gratifying to meet someone who respects our traditions, %s-san," her comm unit announces, "I shall note this in your file."</message>
+    <message type='text' where='com' who='individual'>After a few taps on her data unit, her comm unit hums, "You show much respect. You may ask about Romarth or my life."</message>
+   </event>
+
+   <event num='2'>
+    <comment>ask about romarth</comment>
+    <message type='text' where='com' who='individual'>Her comm unit hums as she pauses in reminiscent thought then begins, "Old Romarth, far out beyond Rigel. Our culture was long past its greatest glory and basically in a holding pattern when the IEF discovered Romarth. Our ruined castles, abandoned to ghouls."</message>
+    <message type='text' where='com' who='individual'>Madame Mitzu pauses and delicately sips her green tea. "You are a polite being, %s-san. You may ask about my life if you wish."</message>
+   </event>
+
+   <event num='3'>
+    <comment>ask about her life</comment>
+    <message type='text' where='com' who='individual'>Madame Mitzu pauses and delicately sips her green tea.</message>
+    <message type='text' where='com' who='individual'>She smiles unexpectedly and her comm unit hums, "I was trained from childhood as an exotic dancer. But a woman rarely achieves glory in her own home, so I secured an audition at Chez Diesel&apos;s on Mars. A miserable failure that was." Madame Mitzu sighs deeply and wipes a tear away, "That Diesel is a philistine! No respect for tradition. No appreciation of high art."</message>
+    <message type='text' where='com' who='individual'>"So there I was, alone in Marsport, a sensitive young artist, a stranger in a strange land. By chance I wandered into the Armstrong Cuthbert office and spotted a notice of openings for apprentice agents." Another sip of tea, a tap on her comm unit, and she continues, "Perhaps I had lost a bit of directional energy, but I stepped right up and applied. After training, I was assigned to the Pearl."</message>
+    <message type='text' where='com' who='individual'>"Tradition is respected on the Pearl. I work hard and virtuously and Armstrong Cuthbert has honored my efforts. I have found my kingdom here on The Pearl." She bows to you, "And that is my story. Now I must chastise these lazy stevedores. Please excuse."</message>
+   </event>
+
+  </section>
+
+  <section name='tarutani'>
+
+   <event num='1'>
+    <comment>bow to Dr. Tarutani</comment>
+    <message type='text' where='com' who='individual'>You turn to face Dr. Tarutani and bow politely.</message>
+    <message type='text' where='com' who='individual'>Dr. Tarutani gracefully bows in return. "Enjoy your visit to the Pearl, %s-san, but be careful." She bows again and turns back to her work.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

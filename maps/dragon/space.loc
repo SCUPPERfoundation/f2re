@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<fed2-map title='Dragon Space' version='14' editor='standard'>
+
+   <location num='263' flags='sl'>
+      <name>Dragon Link</name>
+      <desc>     You arrive out of hyperspace in the Dragon System. Through your viewscreen you see dark space all around you.  You comm unit beeps with a standard entrance message saying, &quot;Warning, you have entered the Dragon system, be wary of rampaging dragons! Use extreme caution as your approach the nearby planet of Red to the East.&quot;</desc>
+      <desc>     Your sensors indicate a large object to the East and a small wormhole that appears to be  just big enough for your ship to fly IN too.</desc>
+      <exits e='264' in='549' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='264' flags='s'>
+      <name>Red Orbit</name>
+      <desc>   Your viewscreen fills up with the odd shaped planet of Red, which resembles the shape of a mythical dragon. This is enhanced by the red shaded soil, that gives the planet it&apos;s name, and the image of a Red Dragon.  As your sensors indicate various targets roaming nearby the planet, your comm unit beeps with an incoming message from the planet below.  &quot;Please be advised of hostile dragons. You are advised to take whatever safety precautions necessay and &apos;board&apos; your shuttle to land on the next available landing pad. Or make haste to the System Link to the West. Thank You!&quot;</desc>
+      <exits w='263' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='549' flags='s'>
+      <name>Bronze Orbit</name>
+      <desc>  You arrive above the planet Bronze. Below you see the majestic view of a planet that is full of various terrains. The planet has no big cities or colonies, just large oceans, rolling plains, jagged mountains, and lush forests.  This planet was recently discovered by the explorers from the planet Red.  Scans of the planet below, indicate massive life readings. so something is alive down there.  Your sensors also pick up a beacon to the small outpost that has been established by the system colonists.</desc>
+      <desc>     You can board your shuttle and hope there is something down there to land on.. or go back in the wormhole to the System Link.</desc>
+      <exits in='263' no-exit='move.noexit.1'/>
+   </location>
+
+</fed2-map>
+

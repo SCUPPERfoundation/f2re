@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='3'>
+
+   <object type='static' start='2018' visibility='0' size='1' weight='1'>
+      <name>zarquad</name>
+      <id>obj_zarquad</id>
+      <desc>I can't find anything called zarquad in the vicinity!</desc>
+      <vocab cmd='worship' event='home.moves.1'></vocab>
+   </object>
+
+</object-list>
+

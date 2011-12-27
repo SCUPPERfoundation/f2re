@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+
+<event-list version='75'>
+
+ <category name='charms'>
+
+  <section name='charms'>
+
+   <event num='1'>
+    <comment>check for laser</comment>
+    <checkflag who='individual' flag ='lighter-2005'  set='charms.charms.2' unset='charms.charms.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>laser - carve initials</comment>
+    <message type='text' where='com' who='individual'>Spotting a small bare space on the battered wooden table, you reach for your keychain and grab the tiny laser BBQ lighter. Flicking it on, you swifty carve your initials into the dark surface. Flicking the lighter off, you slip it back into your pocket before anyone catches you vandalizing station property.</message>
+    <message type='text' where='com' who='room_ex'>%s examines the table and pulls out a keyring with the tiny laser BBQ lighter.</message>
+    <message type='text' where='com' who='room_ex'>There&apos;s a small flash of bright blue laser light as %s carves something into the table.</message>
+    <message type='text' where='com' who='room_ex'>With a conspiratorial grin and a wink of the eye, %s flicks off the lighter and puts it away.</message>
+   </event>
+
+   <event num='3'>
+    <comment>no laser  - message</comment>
+    <message type='text' where='com' who='individual'>You notice a bare spot on the battered old table and check your pockets for something to carve with. Regretfully, you find nothing of use. A laser lighter would come in very handy here.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='knobs'>
+
+   <event num='1'>
+    <comment>Buy food - Knobs and Knockers - 453</comment>
+    <checkstat who='individual' money='10' higher='food.knobs.2' equals='food.knobs.2' lower='food.knobs.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.knobs.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.knobs.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='mobiles'>
+
+  <section name='spider'>
+
+   <event num='1'>
+    <comment>Spider stops you getting flower if you already</comment>
+    <message type='text' where='com' who='individual'>The arachnid clerk carefully examines you. "Sssssorry, ssssorry, you already possessss  a sssspacebloom. One is more than enough, it issss infinitely more than zero."</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='flower'>
+
+   <event num='1'>
+    <comment>check for flower1</comment>
+    <checkinventory map='home' id-name='doogmints' found='mobiles.spider.1' not-found='objects.flower.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for flower2</comment>
+    <checkinventory map='home' id-name='crialis' found='mobiles.spider.1' not-found='objects.flower.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>check for flower3</comment>
+    <checkinventory map='home' id-name='zippinia' found='mobiles.spider.1' not-found='objects.flower.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>check for flower4</comment>
+    <checkinventory map='home' id-name='koulekouli' found='mobiles.spider.1' not-found='objects.flower.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>check for flower5</comment>
+    <checkinventory map='home' id-name='kubiko' found='mobiles.spider.1' not-found='objects.flower.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>check for flower6</comment>
+    <checkinventory map='home' id-name='elpae' found='mobiles.spider.1' not-found='objects.flower.18'/>
+   </event>
+
+   <event num='7'>
+    <comment>call random event</comment>
+    <message type='text' where='com' who='individual'>The clerk, a large gleaming black arachnid with a shiny silver comm unit hanging from its pneumothorax, slides down a glimmering strand of silk to stop directly in front of you. "Thisss is mossst beautiful ssspacebloom you buy," hisses from its comm unit as it hands you a flower and deftly relieves you of 100 IG.</message>
+    <call event='objects.flower.random[8-13]'/>
+   </event>
+
+   <event num='8'>
+    <comment>create flower1</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1flower'/>
+   </event>
+
+   <event num='9'>
+    <comment>create flower2</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_2flower'/>
+   </event>
+
+   <event num='10'>
+    <comment>create flower3</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_3flower'/>
+   </event>
+
+   <event num='11'>
+    <comment>create flower4</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_4flower'/>
+   </event>
+
+   <event num='12'>
+    <comment>create flower5</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_5flower'/>
+   </event>
+
+   <event num='13'>
+    <comment>create flower6</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_6flower'/>
+   </event>
+
+   <event num='14'>
+    <comment>drop flower</comment>
+    <destroyobject where='inventory' map='home' id-name='doogmints'/>
+    <destroyobject where='inventory' map='home' id-name='crialis'/>
+    <destroyobject where='inventory' map='home' id-name='zippinia'/>
+    <destroyobject where='inventory' map='home' id-name='koulekouli'/>
+    <destroyobject where='inventory' map='home' id-name='kubiko'/>
+    <destroyobject where='inventory' map='home' id-name='elpae'/>
+    <message type='text' where='com' who='individual'>You open your hand (or equivalent) and the spacebloom lays on your palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+    <checkgender male='objects.flower.15' female='objects.flower.16' neuter='objects.flower.17'/>
+   </event>
+
+   <event num='15'>
+    <comment>male drop messages</comment>
+    <message type='text' where='com' who='room_ex'>You see %s holding a spacebloom. The spacebloom lays on his open palm for a  moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+   </event>
+
+   <event num='16'>
+    <comment>female drop message</comment>
+    <message type='text' where='com' who='room_ex'>You see %s holding a spacebloom. The spacebloom lays on her open palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+   </event>
+
+   <event num='17'>
+    <comment>neuter drop message</comment>
+    <message type='text' where='com' who='room_ex'>You see %s holding a spacebloom. The spacebloom lays on its open palm for a moment before sliding off and drifting away. Then, with a tiny glitter and gleam, it drifts away under autonomous flight, steadily gaining speed, and it&apos;s gone.</message>
+   </event>
+
+   <event num='18'>
+    <comment>check money</comment>
+    <checkstat who='individual' money='100' higher='objects.flower.20' equals='objects.flower.20' lower='objects.flower.19'/>
+   </event>
+
+   <event num='19'>
+    <comment>not enough money</comment>
+    <message type='text' where='com' who='individual'>"Sssssorry, sssorry, you don&apos;t have enough groats to buy anything here," hisses from its comm unit. The arachnid slowly ascends its silken thread watchfully keeping at least three of its gleaming beady eyes on you.</message>
+   </event>
+
+   <event num='20'>
+    <comment>take money</comment>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <call event='objects.flower.7'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='prize'>
+
+  <section name='quiz'>
+
+   <event num='1'>
+    <comment>create mug1</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1mug'/>
+    <message type='text' where='com' who='individual'>You pull a prize mug out of the box.</message>
+   </event>
+
+   <event num='2'>
+    <comment>drink from mug</comment>
+    <changestat who='individual' stamina='200' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>You raise the empty prize mug to your lips (or equivalent) and a hidden mechanism fills it with freshly brewed 100% arabica coffee from Sumatra. You sip gently and savor the delicious flavour; you now feel invigorated and refreshed.</message>
+   </event>
+
+   <event num='3'>
+    <comment>create golden escargot</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1snail'/>
+    <message type='text' where='com' who='individual'>You pull a slightly tarnished gold medal from the carton. Giving it a quick swipe with your sleeve you mutter, "That&apos;ll do".</message>
+   </event>
+
+   <event num='4'>
+    <comment>wear medal</comment>
+    <changestat who='individual' strength='150' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>You pin the medal to your chest (or equivalent) and gaze at it with pride. You feel filled with new strength and inspired to further great endeavors</message>
+   </event>
+
+   <event num='5'>
+    <comment>remove medal</comment>
+    <message type='text' where='com' who='individual'>You unpin the medal. You admire it briefly as it lays in your hand (or equivalent) and then shove it into your pocket. You feel oddly weaker without the medal displayed on your person.</message>
+   </event>
+
+   <event num='6'>
+    <comment>create bat</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1bat'/>
+    <message type='text' where='com' who='individual'>You pull a tiny black bat from the carton.</message>
+   </event>
+
+   <event num='7'>
+    <comment>create DAB radio</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1radio'/>
+    <message type='text' where='com' who='individual'>you create a radio</message>
+   </event>
+
+   <event num='8'>
+    <comment>create silk purse</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1purse'/>
+    <message type='text' where='com' who='individual'>A silk purse is put into your pocket</message>
+   </event>
+
+   <event num='9'>
+    <comment>create icicle</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1icicle'/>
+    <message type='text' where='com' who='individual'>an icicle is slipped into your pocket</message>
+   </event>
+
+   <event num='10'>
+    <comment>create wishbone</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1wish'/>
+    <message type='text' where='com' who='individual'>a wishbone is slipped into your pocket</message>
+   </event>
+
+  </section>
+
+  <section name='suit'>
+
+   <event num='1'>
+    <comment>create antiradiation suit</comment>
+    <createobject where='inventory' home-map='sol/paradise' id='obj_1suit'/>
+    <message type='text' where='com' who='individual'>a antiradiation suit is slipped into your pocket</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='sleaze'>
+
+  <section name='vendor'>
+
+   <event num='1'>
+    <comment>mobile cart - 1st message</comment>
+    <message type='text' where='com' who='individual'>A small, self-propelled cart rolls out of a sliding wall panel and stops in front of you. "Hey buddy, looking for a bargain? Fell off the cargo bay. I give it to you cheap.</message>
+    <delayevent delay='2' event='sleaze.vendor.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>mobile cart - 2nd message</comment>
+    <message type='text' where='com' who='individual'>A tray extrudes from the cart. Heaped on it are flashy wrist chronos labeled Relox, uPod music units, and a Verspace handbag. A small card reads 5 groats each/3 for 10 groats.</message>
+    <delayevent delay='3' event='sleaze.vendor.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>mobile cart - 3rd message</comment>
+    <message type='text' where='com' who='individual'>With a jerk, the tray is retracted as you hear footsteps in the walkway outside. The cart speeds back to the open wall panel and slips inside, the panel sliding rapidly shut with a click.</message>
+   </event>
+
+   <event num='4'>
+    <comment>mobile cart - start chain of events</comment>
+    <delayevent delay='3' event='sleaze.vendor.1'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

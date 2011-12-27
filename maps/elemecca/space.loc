@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<fed2-map title='Elemecca Space' version='7' editor='standard'>
+
+   <location num='66' flags='s'>
+      <name>Elemecca Hub</name>
+      <desc>Elemecca Link - Out</desc>
+      <desc>     Argentia - East</desc>
+      <desc>    Inluvines - West</desc>
+      <exits e='337' w='205' out='460'/>
+   </location>
+
+   <location num='203' flags='s'>
+      <name>Mud Caverns</name>
+      <desc>The slimy, mud-coated walls curve from the Southwest to the Southeast.</desc>
+      <exits se='268' sw='266' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='205' flags='s'>
+      <name>Inluvines Orbit</name>
+      <desc>   Below you is a ball of rock, devoid of any natural life. There&apos;s no atmosphere, no water except deep underground. It&apos;s one of the most inhospitable worlds in the Galaxy, to all forms of life - plant-life brought from other planets withers and dies. Nobody knows why.</desc>
+      <desc>   Only a small patch of the planet has been terraformed so that it is habitable, but even so workers on the planet are limited to three-month tours of duties. If they stay any longer, they too start to sicken.</desc>
+      <desc>Sensors detect the system hub above you.</desc>
+      <exits sw='268' up='66' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='266' flags='s'>
+      <name>Mud Caverns</name>
+      <desc>The slimy, mud-coated walls curve sharply from the East to the Northeast.</desc>
+      <exits ne='203' e='267' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='267' flags='s'>
+      <name>Mud Caverns</name>
+      <desc>The slimy, mud-coated walls curve slightly from the Seoutheast to the West.</desc>
+      <exits se='332' w='266' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='268' flags='s'>
+      <name>Mud Caverns</name>
+      <desc>The slimy, mud-coated walls run straight from the Northwest to the Southeast.  Inluvines lies to the Northeast.</desc>
+      <exits ne='205' se='333' nw='203' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='271' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>The path through the ice caverns bends sharply from the East to the Southeast</desc>
+      <exits e='272' se='336' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='272' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>The cavern system bends sharply from the Southwest to the West.</desc>
+      <exits sw='335' w='271' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='332' flags='s'>
+      <name>Mud Caverns</name>
+      <desc>The slimy, mud-coated walls split off and go to the South, East, and Northwest.</desc>
+      <exits e='333' s='396' nw='267' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='333' flags='s'>
+      <name>Mud Caverns</name>
+      <desc>The slimy, mud-coated walls bend sharply from the West to the Northwest.</desc>
+      <exits w='332' nw='268' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='335' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>The path through the ice continues straight ahead, leading Northeast and Southwest.</desc>
+      <exits ne='272' sw='398' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='336' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>Two branches of the ice caverns merge here from the Southwest and the Northwest, and leads towards Argentia in the East.</desc>
+      <exits e='337' sw='399' nw='271' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='337' flags='s'>
+      <name>Argentia Orbit</name>
+      <desc>   The planet which spins in your viewscreen is completely encased in ice. It looks like a snowball fashioned by a giant. It sparkles as it slowly rotates, the light of the distant sun reflecting off the icy surface, making it hard to look at the world for too long without getting dazzled.</desc>
+      <desc>   A small area of the planet has been terraformed so it is possible to survive there, but you&apos;d better turn the heating up... it&apos;s cold down there!</desc>
+      <desc>Sensors detect the system hub above you.</desc>
+      <exits w='336' up='66' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='395' flags='s'>
+      <name>Elemecca Space - Northwest</name>
+      <desc>You are in empty space.</desc>
+      <desc>The interstellar link is Southeast of you.</desc>
+      <exits e='396' se='460' s='459' sw='458' nw='525' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='s'>
+      <name>Enterance to the muddy caverns of Inluvines</name>
+      <desc>You see a giant ball of mud to the North.  Sensors claim that Argentia lies inside of it.  There is a clear path into the ice to the Northeast.</desc>
+      <desc>The interstellar link is South of you.</desc>
+      <exits n='332' e='397' se='461' s='460' sw='459' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='s'>
+      <name>Elemecca Space - Northeast</name>
+      <desc>You are in empty space.</desc>
+      <desc>The interstellar link is Southwest of you.</desc>
+      <exits ne='397' s='461' sw='460' w='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>The ice caverns split here, going Southwest, Northeast, and Southeast.</desc>
+      <exits ne='335' se='463' sw='461' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='399' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>The path bends slightly from the South to the Northeast.</desc>
+      <exits ne='336' s='463' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='458' flags='s'>
+      <name>Near Aurium</name>
+      <desc>You are aproaching the system&apos;s star, Aurium.</desc>
+      <desc>The heat here is intense as the energy from this system&apos;s sun blazes in the West.</desc>
+      <exits ne='395' e='459' se='523' w='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Between Aurium and the Link</name>
+      <desc>You are dirrectly between the system&apos;s sun, Aurium, which lies to the West, and the Interstellar link, which lies to your East.</desc>
+      <exits n='395' ne='396' e='460' se='524' s='523' w='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Elemecca Interstellar Link</name>
+      <desc>Welcome to Elemecca Space.</desc>
+      <desc>The system&apos;s sun, Aurium blazes to the West.  Sensors detect the system hub above you.  There is a large ball of dirt North of you, and an ice field to the East.</desc>
+      <exits n='396' ne='397' e='461' se='525' s='524' sw='523' w='459' nw='395' up='66' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Enterance to the ice caverns of Argentia</name>
+      <desc>To the East lies a giant ball of ice that houses Argentia inside it.  There is a clear path into the ice to the Northeast.</desc>
+      <desc>The interstellar link is East of you.</desc>
+      <exits n='397' ne='398' s='525' sw='524' w='460' nw='396' in='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='463' flags='s'>
+      <name>Ice Caverns</name>
+      <desc>The ice cavern bends sharply from the Northwest to the North.</desc>
+      <exits n='399' nw='398' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='523' flags='s'>
+      <name>Elemecca Space - Southwest</name>
+      <desc>You are in empty space.</desc>
+      <desc>The interstellar link is Northeast of you.</desc>
+      <exits n='459' ne='460' e='524' sw='397' nw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Elemecca Space - South</name>
+      <desc>You are in empty space.</desc>
+      <desc>The interstellar link is North of you.</desc>
+      <exits n='460' ne='461' e='525' w='523' nw='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='s'>
+      <name>Elemecca Space - Southeast</name>
+      <desc>You are in empty space.</desc>
+      <desc>The interstellar link is Northwest of you.</desc>
+      <exits n='461' se='395' w='524' nw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

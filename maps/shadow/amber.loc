@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<fed2-map title='Amber' version='46' editor='standard' from='1886' to='Shadow.Shadow Space.1999'>
+
+   <location num='0'>
+      <name>Planet Store Room</name>
+      <desc>No way out.</desc>
+   </location>
+
+   <location num='1885' flags='eyrb'>
+      <name>Amber Trading Exchange</name>
+      <desc>This is an orderly exchange.  Hopefully you can see the patterns.</desc>
+      <exits e='1886'/>
+   </location>
+
+   <location num='1886' flags='yrhib'>
+      <name>Amber Landing Pad</name>
+      <desc>Welcome to Amber.  Pardon the heavy construction.  We much prefer order here.  Exchange is West.  All other services can be found here.</desc>
+      <exits w='1885'/>
+   </location>
+
+</fed2-map>

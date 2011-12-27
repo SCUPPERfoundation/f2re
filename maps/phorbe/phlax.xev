@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<event-list version='2'>
+
+ <category name='static'>
+
+  <section name='alarm'>
+
+   <event num='1'>
+    <comment>This alarm sounds when player enters the platform in the museum loc 150</comment>
+    <message type='text' where='com' who='room'>A bright light snaps on and blinds you.  You feel the tingling sensation of being scanned as a booming computronic voices blasts at deafening level, "Attention Citizen %s, You Are In An UNAUTHORIZED ZONE.  Relocate Yourself Immediately Or Be subject to Poetic Recitation By Prostetnic Vogon Smagron!"</message>
+   </event>
+
+  </section>
+
+  <section name='climbing'>
+
+   <event num='1'>
+    <comment>this gets sent if someone tries to climg the signpost at water street and main 1348</comment>
+    <message type='text' where='loc' who='individual'>Accustomed to rapscallions such as yourself, the local officials have applied anti-climb shielding to the pole.  Try as you might, you cannot obtain a grip and slide back down the pole landing soundly on your posterier portion.</message>
+    <message type='text' where='com' who='room_ex'>You hear a loud noise as %s attempts to climb the signpost but falls soundly on their bum!</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

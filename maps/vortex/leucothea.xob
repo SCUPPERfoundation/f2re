@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<object-list version='11' editor='Version 1.37'>
+   <object type='static' start='453' visibility='100' size='1' weight='30'>
+      <name>Akumai</name>
+      <id>Akumai_mobile</id>
+      <desc>Standing here is the shop&apos;s proprietor, Akumai.  As you watch him, you see an array of emotions rapidly flash across his face at a clip that is quite alarming!</desc>
+   </object>
+
+   <object type='static' start='260' visibility='100' size='1' weight='1' flags='d'>
+      <name>Welcome-Bot</name>
+      <id>Welcome_Bot_mobile</id>
+      <desc>A bulky mono-wheeled droid balances in front of you , ready to assist you with any problems.</desc>
+      <vocab cmd='' event=''></vocab>
+      <vocab cmd='' event=''></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='i'>
+      <name>loaner compass</name>
+      <id>compass</id>
+      <desc>You are carrying a PiersXT98 - a compass calibrated to Leucothea&apos;s unique magnetic field.  Unfortunatly, you are required to return it at the end of the day.</desc>
+      <vocab cmd='drop' event='compass.drop.1'></vocab>
+      <vocab cmd='destroy' event='compass.drop.1'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
+      <name>PiersXT98 compass</name>
+      <id>compass_p</id>
+      <desc>You are carrying a PiersXT98 - a compass calibrated to Leucothea&apos;s unique magnetic field. </desc>
+      <vocab cmd='drop' event='compass.drop.2'></vocab>
+      <vocab cmd='destroy' event='compass.drop.2'></vocab>
+   </object>
+
+   <object type='static' start='196' visibility='100' size='1' weight='20' flags='d'>
+      <name>nurse</name>
+      <id>hospital_nurse_mobile</id>
+      <desc>You see a voluptuous nurse sitting behind the counter, noticing your glance, she smiles broadly and hands you a piece of paper with her number on it, which, unfortunately, you place in the pocket that has a hole in it, and promptly lose.</desc>
+   </object>
+
+   <object type='static' start='452' visibility='100' size='1' weight='50' flags='d'>
+      <name>Foreman</name>
+      <id>mine_foreman_mobile</id>
+      <desc>The burly mine forman scowls back at you, then returns to ordering workthings around.</desc>
+   </object>
+
+   <object type='static' start='453' visibility='0' size='1' weight='1' flags='i'>
+      <name>compass</name>
+      <id>perm_compass_trigger</id>
+      <desc>I can&apos;t find anything called compass in the vicinity, guv!</desc>
+      <vocab cmd='buy' event='compass.getperm.1'></vocab>
+      <vocab cmd='get' event='compass.getperm.6'></vocab>
+      <vocab cmd='take' event='compass.getperm.6'></vocab>
+   </object>
+
+   <object type='static' start='324' visibility='0' size='1' weight='1'>
+      <name>black</name>
+      <id>roulette_black</id>
+      <desc>I can&apos;t find anything called black in the vicinity, guv!</desc>
+      <vocab cmd='gamble' event='roulette.black.1'></vocab>
+      <vocab cmd='' event=''></vocab>
+      <vocab cmd='' event=''></vocab>
+   </object>
+
+   <object type='static' start='324' visibility='0' size='1' weight='1'>
+      <name>red</name>
+      <id>roulette_red</id>
+      <desc>I can&apos;t find anything called black in the vicinity, guv!</desc>
+      <vocab cmd='gamble' event='roulette.red.1'></vocab>
+      <vocab cmd='' event=''></vocab>
+      <vocab cmd='' event=''></vocab>
+   </object>
+
+   <object type='static' start='197' visibility='0' size='1' weight='100'>
+      <name>Al</name>
+      <id>shipyard_Al_mobile</id>
+      <desc>&apos;Big&apos; Al returns your glace and says, &quot;Whatdaya want?&quot;</desc>
+   </object>
+
+   <object type='static' start='260' visibility='0' size='1' weight='1' flags='i'>
+      <name>compass</name>
+      <id>temp_compass_trigger</id>
+      <desc>I can&apos;t find anything called compass in the vicinity, guv!</desc>
+      <vocab cmd='get' event='compass.getloaner.1'></vocab>
+      <vocab cmd='take' event='compass.getloaner.1'></vocab>
+   </object>
+
+</object-list>
+

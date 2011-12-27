@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<fed2-map title='Starcloud Space' version='14' editor='standard'>
+
+   <location num='204' flags='sp'>
+      <name>Orbit of the Starcloud star</name>
+      <desc>   You know if this was the Sol System you would be dead right now, but lucky for you Rip doesn&apos;t believe in death locations so you are free to leave under your own power.</desc>
+      <exits se='269' s='268' sw='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='267' flags='sp'>
+      <name>Close to core</name>
+      <desc>   To the Northeast is a yellow star, you should try and avoid it.  In all other directions thin blue clouds are giving way to a developing star system.</desc>
+      <exits ne='204' e='268' se='332' s='331' sw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268' flags='sp'>
+      <name>A star is born!</name>
+      <desc>   You are just south of a yellow star.  You should try and avoid it.</desc>
+      <desc>   The thin blue clouds of gas have cleared in this sector and a young yellow star has formed to the north.  Sensors indicate that this star is approximatley 95% the size of the sun found in the Sol System.</desc>
+      <exits n='204' e='269' se='333' s='332' sw='331' w='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='269' flags='sp'>
+      <name>Close to the center</name>
+      <desc>   To the Northwest is a yellow star, you should try and avoid it.  In all other directions thin blue clouds are giving way to a developing star system.</desc>
+      <exits se='334' s='333' sw='332' w='268' nw='204' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330' flags='sp'>
+      <name>Western edge of the Starcloud Nebula</name>
+      <desc>   The blue clouds of the Starcloud Nebula are thickest here and streaks of blue clouds appear to be slowly moving toward a central point.  It is very possible for a large gas planet to form in this region of space.</desc>
+      <exits ne='267' e='331' se='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331' flags='sp'>
+      <name>Asteroid Orbit</name>
+      <desc>   You are now in orbit around an unnamed asteroid that is still under construction.</desc>
+      <exits n='267' ne='268' e='332' se='396' s='395' w='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332' flags='sp'>
+      <name>Asteroid field</name>
+      <desc>   You have entered an asteroid field that slowly moving around inside the nebula.  Asteroids to the west and east are being developed for habitation and production.</desc>
+      <exits n='268' ne='269' e='333' se='397' s='396' sw='395' w='331' nw='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333' flags='sp'>
+      <name>Pride Orbit</name>
+      <desc>   You are now in orbit around an asteroid the residents of the system have named Pride.  You are welcome to land on the asteroid and explore it, but as small as the asteroid looks it is doubtful that much will be there.</desc>
+      <exits n='269' e='334' s='397' sw='396' w='332' nw='268' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='334' flags='sp'>
+      <name>Eastern edge of the Starcloud Nebula</name>
+      <desc>   This is the eastern edge of the Starcloud Nebula.  In this region of space the blue clouds of the nebula are gone and debris of a passing celestial object fills your viewscreen.  This is all that remains of the force that started the once stable clouds of the nebula to begin moving toward a central point further in the nebula.</desc>
+      <exits sw='397' w='333' nw='269' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='sp'>
+      <name>South of Greed</name>
+      <desc>   You are inside the Starcloud nebula.  Thin blue clouds surround your ship making it hard to see clearly.  To the North is an asteroid that is being developed.  To the Southeast is the interstellar link and Glory space station.</desc>
+      <exits n='331' ne='332' e='396' se='460' nw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='sp'>
+      <name>Inside the Starcloud Nebula</name>
+      <desc>   The Starcloud Nebula is a large cloud of blue gas.  The clouds are getting thinner in several areas of the nebula as gravitational forces bring the clouds together and planets begin to form.  There are several asteroids in the system so caution is advised.  Asteroids to the Northeast and Northwest are being developed.  The link is south from here.</desc>
+      <exits n='332' ne='333' e='397' s='460' w='395' nw='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='sp'>
+      <name>South of Pride</name>
+      <desc>   You are inside the Starcloud nebula.  Thin blue clouds surround your ship making it hard to see clearly.  To the North is an asteroid that has been developed.  To the Southwest is the interstellar link and Glory space station.</desc>
+      <exits n='333' ne='334' sw='460' w='396' nw='332' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Starcloud Interstellar Link and Glory Orbit</name>
+      <desc>   Your ship is floating next to the space station Glory, which serves has the hub for activity in the Starcloud Nebula.  Glory was the only destination for the Starcloud system, providing supplies and facilities for those who are studying and observing the Starcloud Nebula, until asteroids in the system where colonized and developed.</desc>
+      <desc>   You are welcome to BOARD the space station, use the interstellar link to JUMP to a new location, or travel further into the Starcloud Nebula and explore it for yourself.</desc>
+      <exits n='396' ne='397' nw='395' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

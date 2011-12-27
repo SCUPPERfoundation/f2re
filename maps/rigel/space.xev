@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<event-list version='6'>
+
+ <category name='moves'>
+
+  <section name='sun'>
+
+   <event num='1'>
+    <comment>Player flies into sun - 716 - is moved to safety</comment>
+    <message type='single' where='com' who='individual' lo='moves.sun.1'/>
+    <move what='player' who='individual' loc='588'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

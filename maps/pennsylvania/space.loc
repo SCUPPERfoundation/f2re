@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<fed2-map title='Pennsylvania Space' version='1.00' editor='standard'>
+
+   <location num='130' flags='slp'>
+      <name>PENNSYLVANIA LINK (planet = S,S,S)</name>
+      <desc>You might as well attempt to put out the</desc>
+      <desc>flames of a burning house with a squirt gun.</desc>
+      <desc>I think this is to be a long war, very long.</desc>
+      <desc>Much longer than any politician thinks.</desc>
+      <desc>War is the remedy our enemies have chosen and</desc>
+      <desc>I say let&apos;s give them all that they want.</desc>
+      <desc>                  William Tecumseh Sherman</desc>
+      <exits s='194' no-exit='moves.space.1'/>
+   </location>
+
+   <location num='194' flags='s'>
+      <name>Whence shall we expect the approach of danger?</name>
+      <desc>Shall some transatlantic giant step the Earth</desc>
+      <desc>and crush us at a blow?</desc>
+      <desc>Never!</desc>
+      <desc>All the armies of Europe and Asia could not by</desc>
+      <desc>force take a drink from the Ohio river or make</desc>
+      <desc>a track on the Blue Ridge in a trial of a</desc>
+      <desc>thousand years.</desc>
+      <desc>If destruction be our lot we must ourselves be</desc>
+      <desc>its author.</desc>
+      <desc>As a nation of free men we will live forever</desc>
+      <desc>or die by suicide.</desc>
+      <desc>                        : Abraham Lincoln</desc>
+      <desc>                          1837</desc>
+      <exits n='130' s='258' no-exit='moves.space.1'/>
+   </location>
+
+   <location num='258' flags='s'>
+      <name>I can anticipate no greater calamity for the country</name>
+      <desc>then a dissolution of the Union. It would be an accumulation of all the evils we complain of,  and I am willing to sacrifice everything but honor for it&apos;s preservation.</desc>
+      <desc>                          :Robert E. Lee</desc>
+      <desc>                           1860</desc>
+      <exits n='194' s='322' no-exit='moves.space.1'/>
+   </location>
+
+   <location num='322' flags='s'>
+      <name>GETTYSBURG ORBIT           (Link = N,N,N)</name>
+      <desc>I wish you could hear Joshua give off a</desc>
+      <desc>command and see him ride along the battalion</desc>
+      <desc>on his white horse. He looks so splendidly.</desc>
+      <desc>He told me this morning that he never felt so</desc>
+      <desc>well.</desc>
+      <desc>                                      :Tom Chamberlain</desc>
+      <desc>                                       Fallmouth Virginia.</desc>
+      <desc>                                       January, 1863</desc>
+      <exits n='258' no-exit='moves.space.1'/>
+   </location>
+
+</fed2-map>

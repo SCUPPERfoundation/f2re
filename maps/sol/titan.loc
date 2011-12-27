@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<fed2-map title='Titan' version='5' editor='standard' from='717' to='Sol.Sol Space.527'>
+
+   <location num='326'>
+      <name>West hall</name>
+      <desc>   You are standing at the west end of a large hall filled with crushing machinery, which is pounding ore into small pieces. There&apos;s hardly any room for you to stand; one false move and you&apos;d find yourself crushed along with the ore.</desc>
+      <exits e='327' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='327'>
+      <name>Central hall</name>
+      <desc>   You are in the middle of a very long hall which stretches east and west. It is filled with machinery that is crushing huge lumps of ore, turning them into something more manageable that can be processed easily.</desc>
+      <exits e='328' s='391' w='326' out='391' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='328'>
+      <name>East hall</name>
+      <desc>   You are in the eastern half of a hall containing very noisy crushing machinery. It&apos;s so loud, it almost hurts.</desc>
+      <exits w='327' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='390'>
+      <name>Processing room</name>
+      <desc>   The whole of the room is filled with machinery, from which conveyor belts run in and out through hatches in the walls. It&apos;s not clear what the machine is doing to the lumps of ore on the belts, but whatever it is, it makes a whole lot of noise doing it.</desc>
+      <exits e='391' out='391'/>
+   </location>
+
+   <location num='391'>
+      <name>Corridor</name>
+      <desc>   You are at the northern end of a gray-painted corridor. There are doors to the west, north and east, all with &apos;NO ADMITTANCE&apos; signs.</desc>
+      <exits n='327' e='392' s='455' w='390'/>
+   </location>
+
+   <location num='392' flags='a'>
+      <name>Production office</name>
+      <desc>   This is the production office of the colony&apos;s mining unit. The walls are full of charts showing squiggly lines annotated in scrawly writing!</desc>
+      <exits w='391'/>
+   </location>
+
+   <location num='454' flags='a'>
+      <name>Control room</name>
+      <desc>   From this room, the mining operations of the Titan colony are controlled. There is little room to move in here, because there&apos;s so much equipment. Screens show the operation of all parts of the mining process, while a multitude of knobs, buttons, switches and sliders allow complete control over their operation.</desc>
+      <desc>   There&apos;s even a monitor showing the canteen!</desc>
+      <exits e='455' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='455'>
+      <name>Corridor</name>
+      <desc>   You are in a north/south corridor. There is an unmarked door to the east, while the west bears a sign saying &apos;KEEP OUT&apos;.</desc>
+      <exits n='391' e='456' s='519' w='454'/>
+   </location>
+
+   <location num='456' flags='a'>
+      <name>Analysis lab</name>
+      <desc>   This is the main laboratory in the mining base, where ore samples are analyzed for their mineral content. There is a door in the west wall, and a smaller lab to the east.</desc>
+      <exits e='457' w='455' out='455'/>
+   </location>
+
+   <location num='457' flags='a'>
+      <name>Research lab</name>
+      <desc>   The research lab is where experiments are carried out on minerals, trying to find new applications for some of the rarer compounds. This is a very minor part of the planet&apos;s operation, but once in a while it pays off by discovering something valuable.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='456' out='456'/>
+   </location>
+
+   <location num='458' flags='t'>
+      <name>Secure storage</name>
+      <desc>   While the management would be angry if any of the supplies that belong to the company were taken by unauthorized persons, this dome is where the stuff they really want to keep safe is housed. Most of the boxes and crates have labels with obscure codes on them, so it&apos;s impossible to tell what they contain. The only thing you recognize is a box full of TDX.</desc>
+      <desc>   There is a sealed link leading south. A button on the wall next to it will open it to let you out - the assumption is that if you were allowed in here, there is no reason not to let you out again.</desc>
+   </location>
+
+   <location num='518' flags='a'>
+      <name>Maintenance</name>
+      <desc>   The complex mining machinery used on Titan needs a lot of work to keep it operating at full capacity, so the maintenance engineers are amongst the most highly valued personnel, commanding high wages and a lot of respect.</desc>
+      <exits e='519' out='519'/>
+   </location>
+
+   <location num='519'>
+      <name>Entrance</name>
+      <desc>   You are at the entrance to the industrial section of the colony. A corridor leads off to the north, and there are doors in the east and west walls. South is the link to the rest of the base.</desc>
+      <exits n='455' e='520' s='583' w='518'/>
+   </location>
+
+   <location num='520' flags='a'>
+      <name>Species resources</name>
+      <desc>   This is the office that manages all of the personnel on Titan - hiring and firing, setting working conditions, and making sure all red tape is complied with. The people who actually do the work on the mining base are in constant conflict with this department, and bitter inter-office memos are frequently sent via the base comm system.</desc>
+      <exits w='519' out='519'/>
+   </location>
+
+   <location num='522'>
+      <name>Storage dome</name>
+      <desc>   The dome is crammed to the ceiling with things needed by the colony - mostly mining equipment - but none of it would be of any use to you.</desc>
+      <desc>   South lies the exit to the other domes, while to the east the storage area continues. North is the link to a secure dome which is sealed. A scanner on the wall checks for authorization.</desc>
+      <exits e='523' s='586' in='523' out='586'/>
+   </location>
+
+   <location num='523' flags='a'>
+      <name>Store</name>
+      <desc>   The eastern part of the storage dome contains larger items, such as spare parts for the huge mining machines. There&apos;s nothing here of the slightest interest to you. The store continues to the west.</desc>
+      <exits w='522' out='522'/>
+   </location>
+
+   <location num='583'>
+      <name>Linking corridor</name>
+      <desc>   This corridor links two domes. To the north is a door marked &apos;PROCESSING,&apos; to the southwest the link continues out of sight.</desc>
+      <exits n='519' sw='646'/>
+   </location>
+
+   <location num='586'>
+      <name>Link between domes</name>
+      <desc>   This link leads north to a small dome, and south to the main dome.</desc>
+      <exits n='522' s='650'/>
+   </location>
+
+   <location num='646'>
+      <name>Link</name>
+      <desc>   This linking corridor joins together two of the colony&apos;s domes. The corridor continues northeast, while to the southwest the corridor runs into the colony&apos;s viewing area.</desc>
+      <exits ne='583' sw='709'/>
+   </location>
+
+   <location num='650'>
+      <name>Link</name>
+      <desc>   The linking corridor joins together the main dome to the south and a smaller dome to the north.</desc>
+      <exits n='586' s='714'/>
+   </location>
+
+   <location num='652'>
+      <name>Titan surface</name>
+      <desc>   You are looking at the outside wall of a dome, which is covered with red stains of some kind. Closer inspection shows it&apos;s the remains of some graffiti, but you can&apos;t make out what the ancient lettering says.</desc>
+      <desc>   There is an airlock to the south of your present position.</desc>
+      <exits e='653' se='717' s='716'/>
+   </location>
+
+   <location num='653'>
+      <name>Titan surface</name>
+      <desc>   You are standing at the top of the breathtaking Krzesinski cliff, which drops away to your east. South lies the landing area.</desc>
+      <desc>   Several hoppers are waiting here to take visitors to the ski slopes - just get in.</desc>
+      <exits s='717' sw='716' w='652' in='654' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='654' flags='t'>
+      <name>Hopper</name>
+      <desc>   This hopper is designed to transport twelve people, but you&apos;re the only passenger at the moment. There is no pilot, it runs automatically, controlled by a computer. You settle into one of the seats and fasten the safety belt, then look around while you wait for the small craft to take off.</desc>
+      <desc>   Nothing happens.</desc>
+      <desc>   That&apos;s when you see the sign that tells you that in order to indicate your readiness to depart, you need to touch the screen in front of you. Alternatively, if you decide against going skiing, you can get out of the hopper.</desc>
+      <exits out='653'/>
+   </location>
+
+   <location num='709'>
+      <name>Viewing room</name>
+      <desc>   As you step into the viewing room, you catch your breath!</desc>
+      <desc>   The outside wall of the room is made of a clear crystalline substance, which gives a magnificent view of Saturn and its rings.</desc>
+      <desc>   Shaking your head slightly to take your eyes off the view, you note a corridor leading northeast, and a door in the south wall.</desc>
+      <exits ne='646' s='773'/>
+   </location>
+
+   <location num='712' flags='c'>
+      <name>General store and courier office</name>
+      <desc>   You are in the colony&apos;s general store. By the door is a selection of vac suits of varying sizes, for those that cannot afford the latest nano-chameleon technology. Dumped on the counter is a heap of Feyerabends, some brand new, others looking pretty battered.</desc>
+      <desc>   In the corner of the room, a young man sits behind a desk which contains several terminals and comm units. He is the local agent for courier company Armstrong Cuthbert - Titan&apos;s small size and relative unimportance in the Solar System means it does not merit a larger AC presence.</desc>
+      <desc>   However, his physical attributes clearly suit him to this job - he has been genetically engineered, and he now has four arms!</desc>
+      <exits se='777' out='777'/>
+   </location>
+
+   <location num='713' flags='e'>
+      <name>Commodities market</name>
+      <desc>   Traders jostle you from all sides as you stare at a massive electronic ticker-tape, which displays the prices of goods as they become available.</desc>
+      <desc>   The exit is to the east.</desc>
+      <exits e='714' out='714' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='714'>
+      <name>Main dome</name>
+      <desc>   This circulation area is at the entrance to the main dome of the Titan colony.</desc>
+      <desc>   A corridor leads north, and south is a small park. To your west is the commodity market.</desc>
+      <desc>   The airlock back to the surface is east.</desc>
+      <exits n='650' e='715' s='778' w='713' out='715'/>
+   </location>
+
+   <location num='715'>
+      <name>Airlock</name>
+      <desc>   You are in the main airlock of the Titan mining colony. To the east is the surface of Titan. West leads into the linked dome of the colony.</desc>
+      <exits e='716' w='714' in='714' out='716'/>
+   </location>
+
+   <location num='716'>
+      <name>Titan surface</name>
+      <desc>   You are walking along a path leading from the landing area (east) to the airlock (west).</desc>
+      <exits n='652' ne='653' e='717' se='781' s='780' w='715'/>
+   </location>
+
+   <location num='717'>
+      <name>Titan shuttle landing pad</name>
+      <desc>   You are standing on the Titan landing area. You can see the domes of the colony over the - very close - western horizon, and there is a cliff edge to the east.</desc>
+      <desc>   A sign announces a new attraction just opened on Titan - skiing on the methane-covered ice mountains. An arrow points north.</desc>
+      <exits n='653' s='781' sw='780' w='716' nw='652' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='772' flags='a'>
+      <name>Living quarters</name>
+      <desc>   These are living quarters belonging to one of the staff - they must have left the door unlocked. Better hope they don&apos;t come back and find you here. Don&apos;t move anything, scuff your feet, or do anything else that will leave traces of your presence...</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='773' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='773'>
+      <name>Corridor</name>
+      <desc>   You are in an unremarkable corridor. To the north is a door marked &apos;VIEWING,&apos; to the east is the entrance to a dome, and to the south is a canteen. West is an unmarked door.</desc>
+      <exits n='709' e='774' s='837' w='772'/>
+   </location>
+
+   <location num='774'>
+      <name>Dome entrance</name>
+      <desc>   You are at the entrance of one of the domes. To the east is a link to another dome. To the west is a corridor.</desc>
+      <exits e='775' w='773' in='773' out='775'/>
+   </location>
+
+   <location num='775'>
+      <name>Link between domes</name>
+      <desc>   This corridor links two of the domes together. To the east the link continues, while to the west it joins a dome.</desc>
+      <exits e='776' w='774'/>
+   </location>
+
+   <location num='776'>
+      <name>Link</name>
+      <desc>   You are in a corridor linking a pair of domes. To the east the corridor connects with the main dome. To the west it runs out of sight around a slight bend.</desc>
+      <exits e='777' w='775'/>
+   </location>
+
+   <location num='777'>
+      <name>Main dome</name>
+      <desc>   This part of the main dome is busy with people moving around, all of them focused and determined, with no time to stop and chat.</desc>
+      <desc>   A corridor leads east, to a small park. West and south, linking corridors will take you to other domes. There is a shop to the northwest.</desc>
+      <exits e='778' s='841' w='776' nw='712'/>
+   </location>
+
+   <location num='778'>
+      <name>Small park</name>
+      <desc>   This small grassy park has been provided for staff to relax during their off-duty hours. The turf and the small bushes and shrubs that surround the park take a lot of looking after in this barren environment, but the effect on morale means that the expense is more than recouped in terms of productivity.</desc>
+      <desc>   Benches are scattered around at intervals so that the surroundings can be enjoyed.</desc>
+      <desc>   You can leave the park by going west or north.</desc>
+      <exits n='714' w='777'/>
+      <events in-room='objects.marsrat.1'/>
+   </location>
+
+   <location num='780'>
+      <name>Titan surface</name>
+      <desc>   You are standing by the outside wall of a very large dome. The airlock is to your north.</desc>
+      <exits n='716' ne='717' e='781'/>
+   </location>
+
+   <location num='781'>
+      <name>Titan surface</name>
+      <desc>   You are wandering over the surface of the moon Titan. To the north is the landing area, while to the east a cliff bars your passage.</desc>
+      <exits n='717' w='780' nw='716' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='837' flags='ba'>
+      <name>Canteen</name>
+      <desc>   This huge room is filled with tables and chairs, with a counter at one end where staff help themselves to meals. Judging by what&apos;s left on the discarded plates, the food here is plentiful, but not very appealing.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='773' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='841'>
+      <name>Link between domes</name>
+      <desc>   The corridor links two of the domes. To the north is the main dome, while to the south is a door with a radioactivity sign on it.</desc>
+      <exits n='777' s='905'/>
+   </location>
+
+   <location num='905'>
+      <name>Lobby</name>
+      <desc>   You are standing in a small lobby. To the east is a door marked &apos;THORIUM.&apos; To the southeast is a door labeled &apos;URANIUM,&apos; and to the south is a door marked &apos;TRANSURANICS.&apos;</desc>
+      <desc>   All the doors are made of heavy steel and have the words &apos;KEEP OUT&apos; stenciled across them. To the north is the linking corridor to the main dome.</desc>
+      <desc>   So many people have ignored the signs that the doors have been plastered with radioactive symbol fridge magnets!</desc>
+      <exits n='841' e='906' se='970' s='969' out='841'/>
+   </location>
+
+   <location num='906'>
+      <name>Thorium storeroom</name>
+      <desc>   The walls of the storeroom are lined with shelves, and on the shelves are stacked containers, and on the containers are the very clear warning that is the universally recognized radiation symbol...</desc>
+      <exits w='905'/>
+      <events in-room='death.nuke.3'/>
+   </location>
+
+   <location num='969'>
+      <name>Transuranics store</name>
+      <desc>   The storeroom is filled with large containers, all of which are labelled with the same symbol that appeared on the door...</desc>
+      <exits n='905'/>
+      <events in-room='death.nuke.1'/>
+   </location>
+
+   <location num='970'>
+      <name>Uranium storeroom</name>
+      <desc>   There is just one container in this room, and it is not very big, but the warning label on its side tells you that you have made a mistake coming in here...</desc>
+      <exits nw='905'/>
+      <events in-room='death.nuke.2'/>
+   </location>
+
+   <location num='1159'>
+      <name>Hopper field</name>
+      <desc>   This area has been flattened and the ground smoothed to allow the hoppers to land safely. It stands in the shadow of an enormous mountain, which reaches high up into Titan&apos;s misty atmosphere, so high you cannot see the top. Whether the mountain is entirely made out of ice all the way through, or is merely rock covered with ice, you can&apos;t tell.</desc>
+      <desc>   There is a dome to the south.</desc>
+      <desc>  Several hoppers are parked on the field, waiting to take visitors back to the landing pad.</desc>
+      <exits s='1223' in='1160'/>
+   </location>
+
+   <location num='1160' flags='t'>
+      <name>Hopper</name>
+      <desc>   The hopper looks identical to the one that brought you here, so you waste no time in sitting down and strapping yourself in. Once again, the screen is waiting for you touch it so you can be transported back to the landing pad.</desc>
+      <desc>   If you decide to spend some more time skiing, get out of the hopper.</desc>
+      <exits out='1159'/>
+   </location>
+
+   <location num='1170' flags='t'>
+      <name>Skiing down the nursery slope</name>
+      <desc>This is it! There&apos;s no turning back now.</desc>
+      <exits up='1235'/>
+   </location>
+
+   <location num='1223' flags='b'>
+      <name>Methane Cafe</name>
+      <desc>   Serving hot drinks to fortify those who are bracing themselves to head up the mountain, the Methane Cafe is little more than a plain dome made out of basic materials, with plastic chairs and tables which are functional rather than decorative. Despite its crude appearance, it can provide just about any food or drink you can think of - a waitdroid stands ready to serve you.</desc>
+      <desc>   The dome is partitioned in two; the eastern half is reserved for those who have just come off the slopes, and you won&apos;t be allowed into it.</desc>
+      <desc>   Two small airlocks provide exits to the dome. North is the hopper landing field, and south is the path you should take if you want to go skiing.</desc>
+      <exits n='1159' e='1224' s='1287'/>
+   </location>
+
+   <location num='1224' flags='bt'>
+      <name>Apres ski bar</name>
+      <desc>   This part of the cafe serves two purposes: it is a place where skiers fresh off the mountain can sip at steaming hot drinks and recover from their exertions, and it&apos;s an exclusive club that only admits those that have braved the descent down the ski slopes. Being granted access here means you are part of the elite. Refreshment for the body and for the spirit.</desc>
+      <desc>   The plastic furniture has been tarted up somewhat: there are cushions on the seats, the plastic tables have been covered with red and white checked tableclothes, and a small candle sits in the center of each table.</desc>
+      <desc>   Panels in the dome wall are transparent, providing windows that allow you to look out at the mountain down which you skied.</desc>
+      <desc>   You can go east, back out to the foot of the mountain, or west, into the rest of the dome, to head back to the hoppers.</desc>
+      <exits e='1225' w='1223'/>
+      <events enter='moves.bar.1' in-room='moves.bar.2'/>
+   </location>
+
+   <location num='1225' flags='t'>
+      <name>Bottom of ski run</name>
+      <desc>   Looking up the mountain you can now see the full length of the nursery slope, as it winds its way back and forth down the side of the mountain. You can only see the last part of the black run from here, before it disappears behind some rocks.</desc>
+      <desc>   The only way you can go is west, into the apres ski bar.</desc>
+      <exits w='1224'/>
+   </location>
+
+   <location num='1235' flags='t'>
+      <name>Top of nursery slope</name>
+      <desc>   You&apos;re at the top of the ski slope, looking down. This may be the baby slope, that real beginners can train on, but it still looks an awful long way down. Actually the slope is quite gentle; it&apos;s been carefully cut into the side of the ice mountain in a zig zag pattern, so that at no point does it plummet too far, and the open side of the slope has been fenced off to eliminate any danger of going over the edge.</desc>
+      <desc>   When you&apos;re ready to go, push off.</desc>
+      <exits se='1300'/>
+   </location>
+
+   <location num='1287'>
+      <name>Path</name>
+      <desc>   Ice crunches under foot on this path which curves gently, linking the Methane Cafe dome to the place where you can take a chairlift up the mountain.</desc>
+      <exits n='1223' se='1352'/>
+   </location>
+
+   <location num='1298' flags='t'>
+      <name>Skiing down the black run</name>
+      <desc>This is it! There&apos;s no turning back now.</desc>
+      <exits up='1299'/>
+   </location>
+
+   <location num='1299' flags='t'>
+      <name>Top of black run</name>
+      <desc>   You&apos;re at the top of the ski slope, looking down. And my, does it look steep! It&apos;s called the black run because it&apos;s dangerous and only expert skiers should tackle it. Ok, there&apos;s no chance you&apos;re going to get killed - rescue droids are standing by in case of an accident - but you could end up pretty bruised and battered if you don&apos;t know what you are doing. An automatic sensor will prevent novices from fooling around up here.</desc>
+      <desc>   As you look down you can only see the first part of the slope, then it twists sideways around the side of the mountain at what looks like a sheer drop.</desc>
+      <desc>   When you&apos;re ready to go, push off.</desc>
+      <exits e='1300'/>
+   </location>
+
+   <location num='1300' flags='t'>
+      <name>Ski run</name>
+      <desc>   Looking down, you can just make out the main domes of Titan way in the distance, but then the thick orange clouds swirl across your view.</desc>
+      <desc>   The nursery slope, for beginners, is northwest, while the more difficult black run, which should only be tackled by experts, is west. East is an equipment hut, where you can get your skis.</desc>
+      <exits e='1301' s='1364' w='1299' nw='1235'/>
+   </location>
+
+   <location num='1301' flags='t'>
+      <name>Hut</name>
+      <desc>   The most important piece of equipment you need can be found here: skis. They are piled up in untidy heaps, but luckily somebody has taken care that the pairs are stored together, otherwise you could easily end up with mismatched skis. Just help yourself.</desc>
+      <desc>   The door out of the hut is west.</desc>
+      <exits w='1300'/>
+   </location>
+
+   <location num='1352'>
+      <name>Foot of mountain</name>
+      <desc>   The mist clears a little for a moment, allowing you to see the mountain clearly. It towers above you, and the markers showing the positions of the ski runs dwindle away in the distance until they are simply tiny dots moving up the mountain side.</desc>
+      <desc>   The path that leads away from the mountain is to the northwest.</desc>
+      <desc>   There is a chairlift here, allowing you to ascend the mountain.</desc>
+      <exits nw='1287'/>
+   </location>
+
+   <location num='1364' flags='t'>
+      <name>Top of mountain</name>
+      <desc>   Pause for a moment and take in the view... from the top of the mountain you can look down, down, through the swirling mist to the hopper field below, where the small crafts show up as tiny smudges against the ice.</desc>
+      <desc>   Now look outwards, and you can see the rings of Saturn stretching across the sky, seeming to be solid bands of color even though they are made up of separate rocks.</desc>
+      <desc>   From here, the only way to descend the mountain is to ski down one of the slopes, which lie to the north.</desc>
+      <exits n='1300'/>
+   </location>
+
+</fed2-map>

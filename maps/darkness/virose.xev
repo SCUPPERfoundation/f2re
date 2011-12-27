@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+<event-list version='16' editor='Version 1.46'>
+   <category name='insurance'>
+      <section name='preventdd'>
+
+      <event num='1'>
+         <comment>insurance check</comment>
+         <checkinsurance pass='insurance.preventdd.3' fail='insurance.preventdd.2'/>
+      </event>
+
+      <event num='2'>
+         <comment>no insurance move</comment>
+         <move what='player' who='individual' loc='262'/>
+         <message type='text' where='com' who='individual'>You need to purchase insurance if you wish to explore this planet. Please stop by the closest hospital and insure yourself.</message>
+      </event>
+
+      <event num='3'>
+         <comment>glowrock warning</comment>
+         <message type='text' where='com' who='individual'>WARNING: not having a glowrock could have DEADLY consequences.</message>
+      </event>
+
+      </section>
+   </category>
+   <category name='inventory'>
+      <section name='exchange'>
+
+      <event num='1'>
+         <comment>exchange glowrock</comment>
+         <checkinventory map='home' id-name='glowrock' found='rooms.exchange.1' not-found='rooms.exchange.2'/>
+      </event>
+
+      </section>
+      <section name='glowrock'>
+
+      <event num='1'>
+         <comment>have or have not</comment>
+         <checkinventory map='home' id-name='glowrock' found='objects.glowrock.2' not-found='objects.glowrock.1'/>
+      </event>
+
+      </section>
+      <section name='punjistick'>
+
+      <event num='1'>
+         <comment>punjistick glowrock</comment>
+         <checkinventory map='home' id-name='glowrock' found='rooms.punjistick.1' not-found='rooms.punjistick.2'/>
+      </event>
+
+      </section>
+      <section name='shipyard'>
+
+      <event num='1'>
+         <comment>shipyard glowrock</comment>
+         <checkinventory map='home' id-name='glowrock' found='rooms.shipyard.1' not-found='rooms.shipyard.2'/>
+      </event>
+
+      </section>
+      <section name='snakepit'>
+
+      <event num='1'>
+         <comment>snakepit glowrock</comment>
+         <checkinventory map='home' id-name='glowrock' found='rooms.snakepit.1' not-found='rooms.snakepit.2'/>
+      </event>
+
+      </section>
+      <section name='trashpit'>
+
+      <event num='1'>
+         <comment>trashpit glowrock</comment>
+         <checkinventory map='home' id-name='glowrock' found='rooms.trashpit.1' not-found='rooms.trashpit.2'/>
+      </event>
+
+      </section>
+      <section name='waterpit'>
+
+      <event num='1'>
+         <comment>waterpit glowrock</comment>
+         <checkinventory map='home' id-name='glowrock' found='rooms.waterpit.1' not-found='rooms.waterpit.2'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='objects'>
+      <section name='glowrock'>
+
+      <event num='1'>
+         <comment>virose glowrock</comment>
+         <createobject where='inventory' home-map='home' id='viroserock'/>
+         <message type='text' where='com' who='individual'>You take a glowrock to help illuminate your travels. The rooms lights up a bit more and you see a stairway leading UP to the exchange or DOWN to the shipyard.</message>
+      </event>
+
+      <event num='2'>
+         <comment>already have glowrock</comment>
+         <message type='text' where='com' who='individual'>You already have a glowrock and one is all you need. The glowrock helps to illuminate a stairway leading UP to the exchange and DOWN to the shipyard.</message>
+      </event>
+
+      <event num='3'>
+         <comment>perm glowrock</comment>
+         <createobject where='inventory' home-map='home' id='viroserockperm'/>
+      </event>
+
+      </section>
+   </category>
+   <category name='rooms'>
+      <section name='antechamber'>
+
+      <event num='1'>
+         <comment>glowrock warning</comment>
+         <message type='text' where='com' who='individual'>Not taking a glowrock could have painful consequences.</message>
+      </event>
+
+      </section>
+      <section name='exchange'>
+
+      <event num='1'>
+         <comment>have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.exchange.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>dont have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.exchange.2'/>
+         <changeplayer sta='-5'/>
+      </event>
+
+      </section>
+      <section name='punjistick'>
+
+      <event num='1'>
+         <comment>have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.punjistick.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>dont have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.punjistick.2'/>
+         <changeplayer sta='-150'/>
+         <announce type='text' loc='262'>%s has fallen into the punji stick pit and met a grisly death. The fool has been skewered by the many punji sticks at the bottom of the pit.</announce>
+      </event>
+
+      </section>
+      <section name='shipyard'>
+
+      <event num='1'>
+         <comment>have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.shipyard.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>dont have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.shipyard.2'/>
+         <changeplayer sta='-5'/>
+      </event>
+
+      </section>
+      <section name='snakepit'>
+
+      <event num='1'>
+         <comment>have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.snakepit.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>dont have glowrock</comment>
+         <message type='multi' where='com' who='individual' lo='rooms.snakepit.2' hi='rooms.snakepit.3'/>
+         <changeplayer sta='-150'/>
+         <announce type='text' loc='262'>%s has fallen into the snake pit and met a grisly death. The fool has been poisoned and eaten by the many snakes at the bottom of the pit.</announce>
+      </event>
+
+      </section>
+      <section name='trashpit'>
+
+      <event num='1'>
+         <comment>have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.trashpit.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>dont have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.trashpit.2'/>
+         <changeplayer sta='-150'/>
+         <announce type='text' loc='262'>%s has fallen into the trash pit and has suffocated to death from the horrible fumes.</announce>
+      </event>
+
+      </section>
+      <section name='waterpit'>
+
+      <event num='1'>
+         <comment>have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.waterpit.1'/>
+      </event>
+
+      <event num='2'>
+         <comment>dont have glowrock</comment>
+         <message type='single' where='com' who='individual' lo='rooms.waterpit.2'/>
+         <changeplayer sta='-150'/>
+         <announce type='text' loc='262'>%s has fallen into the water pit and after treading water for as long as possible has slipped beneath the surface and drowned.</announce>
+      </event>
+
+      </section>
+   </category>
+</event-list>
+

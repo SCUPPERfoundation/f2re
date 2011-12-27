@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<fed2-map title='Tea Party' version='9' editor='standard' from='458' to='Free.Free Space.781'>
+
+   <location num='393' flags='b'>
+      <name>Bunsen bar</name>
+      <desc>   Bars are meant to be jolly places, where customers relax and socialize in convivial surroundings. Not this one. Visitors to the asteroid don&apos;t want to spend any more time on this dangerous rock than they have to, so if they need refreshment they aren&apos;t going to linger over it. The few lab workers who supervise operations have to go through a tortuous decontamination process every time they leave and enter the lab, so they very seldom come out to visit this bar. And everybody is terrified of touching anyone else in case they catch something.</desc>
+      <desc>   Even the waitdroids act oddly here, scurrying around serving drinks in the kind of flasks normally seen on a scientist&apos;s bench, and trying not to touch anyone or anything.</desc>
+      <desc>   The exit is southeast.</desc>
+      <exits se='458' out='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='hi'>
+      <name>Lab clinic</name>
+      <desc>   This automated clinic is here to patch up scrapes, bruises and other minor injuries sustained by visitors. It is not intended to deal with major trauma, or any kind of disease. If anybody on the asteroid shows any sign of illness, if they so much as sneeze, they are rushed back to their shuttles and sent away immediately before whatever germs they are carrying can get anywhere near the lab.</desc>
+      <desc>   Any problems within the lab itself, of course, stay in the lab, so the clinic never has to deal with the results of experiments gone wrong.</desc>
+      <desc>   The door in the southwest wall leads back to the shuttle pad.</desc>
+      <exits sw='458' out='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>Lab shuttle pad</name>
+      <desc>   This asteroid is an insignificant piece of rock that contains no useful features at all - which makes it ideal for the site of a plant producing biological commodities; if anything should go wrong, and some strange plague were to break out, or a nanobot should go mad and start turning everything into grey goo, the whole asteroid can be nuked and nobody will care. Except, perhaps, the few workers, but they are paid extremely well and they know the risk.</desc>
+      <desc>   The place doesn&apos;t get very many visitors, but those that do come here to trade for the valuable bio goods park their shuttles here. The pad is surrounded by small domes, all isolated from each other. The exchange is southwest, there&apos;s a bar to the northwest, and the asteroid&apos;s hospital is northeast.</desc>
+      <desc>   Far away in the distance to the southeast, the main laboratory complex stands.</desc>
+      <exits ne='395' se='523' sw='521' nw='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Warehouse</name>
+      <desc>   Boxes and crates are carefully stacked around this vast warehouse dome, containing the fruits of the asteroid, ready to be ferried up to the cargo ships waiting in orbit. Of course, they will all be thoroughly decontaminated on the way; nobody tries to circumvent these measures, because the risk of some deadly virus, or even worse some rogue nanotech gobbler, getting taken to a populated world is just too dreadful to contemplate.</desc>
+      <desc>   The robot stevedores slouch around, looking just as reluctant to do any work as their fleshy counterparts on other worlds. They don&apos;t pilfer quite so much, but only because these are very dangerous commodities.</desc>
+      <desc>   The door back to the lab complex is south.</desc>
+      <exits s='524' out='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='521' flags='e'>
+      <name>Bio exchange</name>
+      <desc>   It&apos;s an exchange like any other, but because it deals in those very rare and dangerous commodities - biological products - everyone trading here seems subdued. All movement is careful and precise, because nobody wants to touch anybody else, just in case some kind of contamination has escaped from the labs.</desc>
+      <desc>   Even the traditional ticker-tape noise that accompanies the display of prices seems muted, as if it doesn&apos;t want to draw attention to itself.</desc>
+      <desc>   The exit is northeast.</desc>
+      <exits ne='458' out='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Decontamination and quarantine</name>
+      <desc>   You cannot go into or out of the laboratory complex without undergoing a thorough decontamination process. It is vital that nothing is brought into the lab that might compromise the work being done; it is equally vital that no experimental viruses or rogue nanotech should escape the confines of the lab. This room also serves as a quarantine; if there is any doubt about what is going on in the lab, it is locked down, the room is sealed, and nobody is allowed in or out.</desc>
+      <desc>   As you walk through the room, jets of water spray from all sides, washing any stray organisms off your nano-chameleon suit. They are followed by a cloud of gas intended to kill anything that remains. Luckily, your suit protects you from the poisonous vapor, so you are not affected.</desc>
+      <desc>   Once you have been decontaminated, you can go northwest to the shuttle pad, or east into the laboratory complex.</desc>
+      <exits e='524' nw='458' in='524' out='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Laboratory complex</name>
+      <desc>   The large laboratory dome is filled with busy, bustling droids, all operating the equipment which produces the biological commodities that are so valued throughout the Galaxy, and yet considered so dangerous they can only be manufactured on lifeless asteroids. The lab is supervised by a small, highly-trained cadre of technicians whose job is to make sure the droids don&apos;t do anything outside of their programmed tasks. Any deviation, and everything gets shut down before an accident occurs, because accidents can be deadly when dealing with bios.</desc>
+      <desc>   South is a smaller dome where research into new products is done, east is the gene lab, and north a warehouse. Some stairs lead down into a hole under the asteroid&apos;s surface. The exit is west.</desc>
+      <exits n='460' e='525' s='588' w='523' down='589' out='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>Gene lab</name>
+      <desc>   The walls are lined with computers which spend all their time running the complex calculations involved in genetic engineering. They have in their memory banks models of the genetic structures of most of the Galaxy&apos;s living organisms, and they calculate the results of making small changes to the genes, or combining genes from one species with another, before suggesting a change that should move to real live experimentation.</desc>
+      <desc>   All such suggestions are reviewed by the chief technician, whose job it is to approve those that may turn out to be profitable without being too dangerous to experiment on. It&apos;s a fine line, and holders of this post generally retire with their nerves in shreds after only a few years.</desc>
+      <desc>   The west doorway leads to the main lab complex.</desc>
+      <exits w='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='588'>
+      <name>Research and development</name>
+      <desc>   This laboratory is possibly the most dangerous place on the asteroid. It&apos;s where experiments into new products are carried out. It&apos;s a high stress environment, and unlike the manufacturing plant, all the work here is carried out by organic sentients, not robots, because it requires flashes of intuition and the following of hunches, which are not generally the strongpoint of artificial intelligences.</desc>
+      <desc>   Success, here, means a new product, and a hefty bonus for the researchers who developed it. Failure not only means no profit, but could result in a dangerous organism that threatens the life of everybody in the lab. It&apos;s not exactly a calm working environment.</desc>
+      <desc>   Go north to leave the R&amp;D lab.</desc>
+      <exits n='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589'>
+      <name>Vegas</name>
+      <desc>   This room has been formed from a cave in the interior of the rocky asteroid, and it&apos;s where the workers come when off duty, to rest, eat and relax.</desc>
+      <desc>   Because they have to act in a very measured and controlled way in the lab, to avoid any chance of a dangerous mishap, they tend to go to the other extreme when they are relaxing. They don&apos;t drink alcohol or take any other recreational drugs that might have a lasting effect on their work performance, but they spend all their free time engaged in a high-stakes poker game that never ends. That&apos;s why they have named the room Vegas. Fortunes are won and lost here, and although to an outsider it sounds as though tempers are running high as histrionic declarations are made and vitriolic insults thrown back and forth, in reality it&apos;s all make-believe.</desc>
+      <desc>   A sign on the wall says, &quot;What happens in Vegas, stays in Vegas,&quot; another indication that in this room, anything goes.</desc>
+      <desc>   To leave, go up the stairs.</desc>
+      <exits up='524' out='524' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

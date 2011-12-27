@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<fed2-map title='Eidolon' version='12' editor='standard' from='391' to='Ruby.Ruby Space.391'>
+
+   <location num='0' flags='t'>
+      <name>Storage Room</name>
+      <desc>This is the system mandated storage room. What are you doing here?</desc>
+      <exits no-exit='visitors.noexit.7'/>
+   </location>
+
+   <location num='201'>
+      <name>Gallery of Pioneers</name>
+      <desc>   This circular chamber is dedicated to the half-million pioneers entombed in cryosleep chambers throughout the Linkship. A curving bay window looks out onto the primary suspension bay, a dark space of startling vastness. Within it are racks stacked upon racks of hibernation ampoules, each a gently-glowing sapphire preserving a single human life, that stretch away beyond the limits of your vision in all directions.</desc>
+      <desc>   On the opposite wall are engraved the names of each and every slumbering pioneer, lit from behind in green. A very few unfortunate individuals are named in red; presumably, those who have not been able to endure the rigors of passage.</desc>
+      <desc>   In the center of the room is a small pedestal with a brass plaque mounted atop it. On the plaque is engraved a crest consisting of a central stroke, capped on each end by a dot, with two strokes curving out from the main stroke&apos;s base.</desc>
+      <desc>   Archways open onto the foyer, to the south, and another pavilion to the east.</desc>
+      <exits e='202' s='265' no-exit='visitors.noexit.10'/>
+   </location>
+
+   <location num='202'>
+      <name>Gallery of Origins</name>
+      <desc>   This chamber has been styled after a classical amphitheater. The seats of the theatron, beyond offering the comfort of repose, form a lengthy mosaic describing the history of the Eidolon Mission. The start of the mosaic depicts the prosperity of the planet Celandine and its thriving export trade in specialty liquors and beverages. At the center, the colony is shown destroying its Link to escape Emperor Ming, and the onset of a dark age: subsequent scenes illustrate balkanization, warfare, and the destruction of the Distiller&apos;s Library. The last few scenes illustrate the ecological collapse of Celandine&apos;s fragile biosphere and the hasty reforging of the ancient Link into a starfaring vessel.</desc>
+      <desc>   Hovering over the skene is a three-dimensional rotating display of the Eidolon, demonstrating its origins as a derelict hulk, its reconstruction and launch, as well as its drone-driven in-flight evolution towards today&apos;s final form.</desc>
+      <desc>   Archways lead south and west to other pavilions.</desc>
+      <exits s='266' w='201' no-exit='visitors.noexit.9'/>
+   </location>
+
+   <location num='265' flags='b'>
+      <name>Visitor&apos;s Gallery</name>
+      <desc>   A suspended sculpture of argon discharge-tubes illuminates and announces the foyer to the Visitor&apos;s Gallery of the Linkship Eidolon. A number of short couches and armchairs have been arranged in clusters around the outer rim of this circular space, each clad in cerulean synthetic leather. Along the walls are racks with pamphlets describing liquors formerly produced by the Linkship&apos;s architects - Celandal ale, Mead of Nightbloom, and various others. An autobar beneath the sculpture offers samples of these, along with more convential beverages, for a modest fee.</desc>
+      <desc>   On the floor, an ultramarine line lightens as it runs down a corridor to the southwest. Archways in the north and east walls open onto other pavilions of the Gallery.</desc>
+      <exits n='201' e='266' sw='328' no-exit='visitors.noexit.6'/>
+   </location>
+
+   <location num='266'>
+      <name>Gallery of Settlement</name>
+      <desc>   This small plaza is centered around a holographic video display. A looping film describes the fortuitous discovery of a rogue planet captured into a stable orbit around a cluster of young stars, fully enveloped in a luminous nebula of neon gas. Towards the end of the film, a set of calculations predict effective insolation for crop cultivation around the clock thanks to nebular fluorescence.</desc>
+      <desc>   Portholes in the walls permit observation of a drone bay, wherein space-scarred droids await activation or repair. Plaques on the walls indicate that drones were chosen by the ship&apos;s computer as they were readily available due to the ship&apos;s en-route construction and the need for a thicker-than-average upper atmosphere in order to render the prefabricated habitation domes safe for their intended occupants.</desc>
+      <desc>   Archways lead to another pavilion, north, and the foyer, west.</desc>
+      <exits n='202' w='265' no-exit='visitors.noexit.8'/>
+   </location>
+
+   <location num='327' flags='yrhi'>
+      <name>Automechanic</name>
+      <desc>   This small room is little more than a cubbyhole of grey-painted metal. A stiff breeze blows from an aeration vent in the ceiling, tickling your face. A touchscreen computer terminal juts from the wall, offering access to the linkship&apos;s automated shipyard, drydock and biological reconstruction service. A small slot next to the computer dispenses medical insurance pamphlets.</desc>
+      <desc>   A steel door in the south wall leads to the travelers&apos; hangar.</desc>
+      <exits s='391' no-exit='visitors.noexit.3'/>
+   </location>
+
+   <location num='328'>
+      <name>Visitor&apos;s Corridor</name>
+      <desc>  This long corridor is bare of nearly all decoration. On the ground, a thick line of paint lightens into blue towards the southwest, passing through an archway into the travelers&apos; hangar bay. To the northeast, the line deepens into a brackish ultramarine; the archway there is lit from beyond by an otherworldly azure light.</desc>
+      <exits ne='265' sw='391' no-exit='visitors.noexit.5'/>
+   </location>
+
+   <location num='391'>
+      <name>Hangar of the Eidolon</name>
+      <desc>   A dozen landing pads checker the immaculate steel floor, demarcated by inlaid plates of iridescent brass. Luminescent strips line the featureless walls of this cozy hangar bay, casting a frigid light over the few shuttles that rest within. The air is still, but fresh; the only sound audible is a nigh-imperceptible buzzing - one more felt than heard. Tiny scrub-bots crawl silently along, ceaselessly polishing and re-polishing every surface; aside from them, signs of life, or even of motion, are scant.</desc>
+      <desc>   The hangar&apos;s sterility is broken only by three lines of matte paint. The green one leads east towards a small alcove packed with trading equipment, while the red one runs north towards a door labeled &apos;Mechanic&apos;. A thick bar of blue leads through a towering archway in the northeastern wall. Above the archway is a small sign: &quot;Visitors&quot;.</desc>
+      <exits n='327' ne='328' e='392' no-exit='visitors.noexit.1'/>
+   </location>
+
+   <location num='392' flags='eb'>
+      <name>Trading Alcove</name>
+      <desc>   A tiny nook has been partitioned off from the traveler&apos;s hangar, permitting the commercially-minded to ply their trade while even further isolated from the linkship&apos;s desolate public atria. The walls are covered floor-to-ceiling in glossy touchscreen segments. Initially dark, the nearest few flare to life as you draw near, and fade back into somnolence as you retreat. The floor itself is an underfoot display, with price quotes and stock levels flashing by. A bank of automated snack dispensers are set into the northern wall.</desc>
+      <desc>   A small archway to the east leads to an observation deck, while the alcove opens onto the traveler&apos;s hangar to the west.</desc>
+      <exits e='393' w='391' no-exit='visitors.noexit.2'/>
+   </location>
+
+   <location num='393'>
+      <name>Wares Observation Platform</name>
+      <desc>   This small platform is encased in a transparent bubble, permitting observation of one of the Eidolon&apos;s titanic storehouses. Hexagonal lattices are densely packed in precise rows; most of the cells house cargocombs - smaller structures specialized for the storage of individual types of goods in standardized containers. Others are left empty to permit transit between aisles. Stevedore drones zip through, carting needed cargo to and from waiting terraformer-droids, the Eidolon&apos;s own internal factories, or, in rare cases, impatient merchants.</desc>
+      <desc>   A portal to the west leads back to the automated exchange.</desc>
+      <exits w='392' no-exit='visitors.noexit.4'/>
+   </location>
+
+</fed2-map>

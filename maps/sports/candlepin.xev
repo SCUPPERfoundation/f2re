@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+
+<event-list version='11'>
+
+ <category name='bowling'>
+
+  <section name='average'>
+
+   <event num='1'>
+    <comment>Player has average skill - check if player scores 0</comment>
+    <percent value='6' higher='bowling.average.2' equals='bowling.score.1' lower='bowling.score.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player did not score 0 - check if player scores 1</comment>
+    <percent value='9' higher='bowling.average.3' equals='bowling.score.2' lower='bowling.score.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player did not score 1 - check if player scores 2</comment>
+    <percent value='9' higher='bowling.average.4' equals='bowling.score.3' lower='bowling.score.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player did not score 2 - check if player scores 3</comment>
+    <percent value='9' higher='bowling.average.5' equals='bowling.score.4' lower='bowling.score.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player did not score 3 - check if player scores 4</comment>
+    <percent value='12' higher='bowling.average.6' equals='bowling.score.5' lower='bowling.score.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player did not score 4 - check if player scores 5</comment>
+    <percent value='12' higher='bowling.average.7' equals='bowling.score.6' lower='bowling.score.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player did not score 5 - check if player scores 6</comment>
+    <percent value='12' higher='bowling.average.8' equals='bowling.score.7' lower='bowling.score.7'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player did not score 6 - check if player scores 7</comment>
+    <percent value='12' higher='bowling.average.9' equals='bowling.score.8' lower='bowling.score.8'/>
+   </event>
+
+   <event num='9'>
+    <comment>Player did not score 7 - check if player scores 8</comment>
+    <percent value='9' higher='bowling.average.10' equals='bowling.score.9' lower='bowling.score.9'/>
+   </event>
+
+   <event num='10'>
+    <comment>Player did not score 8 - check if player scores 9 or 10</comment>
+    <percent value='65' higher='bowling.score.11' equals='bowling.score.10' lower='bowling.score.10'/>
+   </event>
+
+  </section>
+
+  <section name='dex'>
+
+   <event num='1'>
+    <comment>Bowl bowling ball - check players dexterity to determine skill level</comment>
+    <checkstat who='individual' dexterity='30' higher='bowling.dex.2' equals='bowling.low.1' lower='bowling.low.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player is not low skill so next check</comment>
+    <checkstat who='individual' dexterity='50' higher='bowling.high.1' equals='bowling.average.1' lower='bowling.average.1'/>
+   </event>
+
+  </section>
+
+  <section name='high'>
+
+   <event num='1'>
+    <comment>Player has high skill - check if player scores 2</comment>
+    <percent value='6' higher='bowling.high.2' equals='bowling.score.3' lower='bowling.score.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player did not score 2 - check if player scores 3</comment>
+    <percent value='19' higher='bowling.high.3' equals='bowling.score.4' lower='bowling.score.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player did not score 3 - check if player scores 4</comment>
+    <percent value='19' higher='bowling.high.4' equals='bowling.score.5' lower='bowling.score.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player did not score 4 - check if player scores 5</comment>
+    <percent value='15' higher='bowling.high.5' equals='bowling.score.6' lower='bowling.score.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player did not score 5 - check if player scores 6</comment>
+    <percent value='8' higher='bowling.high.6' equals='bowling.score.7' lower='bowling.score.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player did not score 6 - check if player scores 7</comment>
+    <percent value='8' higher='bowling.high.7' equals='bowling.score.8' lower='bowling.score.8'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player did not score 7 - check if player scores 10</comment>
+    <percent value='8' higher='bowling.high.8' equals='bowling.score.11' lower='bowling.score.11'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player did not score 10 - check if player scores 8 or 9</comment>
+    <percent value='50' higher='bowling.score.10' equals='bowling.score.9' lower='bowling.score.9'/>
+   </event>
+
+  </section>
+
+  <section name='low'>
+
+   <event num='1'>
+    <comment>Player has low skill - check if player scores 0</comment>
+    <percent value='15' higher='bowling.low.2' equals='bowling.score.1' lower='bowling.score.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player did not score 0 - check if player scores 1</comment>
+    <percent value='19' higher='bowling.low.3' equals='bowling.score.2' lower='bowling.score.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player did not score 1 - check if player scores 2</comment>
+    <percent value='19' higher='bowling.low.4' equals='bowling.score.3' lower='bowling.score.3'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player did not score 2 - check if player scores 3</comment>
+    <percent value='15' higher='bowling.low.5' equals='bowling.score.4' lower='bowling.score.4'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player did not score 3 - check if player scores 4</comment>
+    <percent value='8' higher='bowling.low.6' equals='bowling.score.5' lower='bowling.score.5'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player did not score 4 - check if player scores 5</comment>
+    <percent value='8' higher='bowling.low.7' equals='bowling.score.6' lower='bowling.score.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player did not score 5 - check if player scores 6</comment>
+    <percent value='8' higher='bowling.low.8' equals='bowling.score.7' lower='bowling.score.7'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player did not score 6 - check if player scores 7</comment>
+    <percent value='5' higher='bowling.low.9' equals='bowling.score.8' lower='bowling.score.8'/>
+   </event>
+
+   <event num='9'>
+    <comment>Player did not score 7 - check if player scores 8</comment>
+    <percent value='1' higher='bowling.low.10' equals='bowling.score.9' lower='bowling.score.9'/>
+   </event>
+
+   <event num='10'>
+    <comment>Player did not score 8 - check if player scores 9 or 10</comment>
+    <percent value='50' higher='bowling.score.11' equals='bowling.score.10' lower='bowling.score.10'/>
+   </event>
+
+  </section>
+
+  <section name='score'>
+
+   <event num='1'>
+    <comment>Player scores 0</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.3'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.4'/>
+   </event>
+
+   <event num='2'>
+    <comment>Player scores 1</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.5'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.6'/>
+    <message type='single' where='com' who='room' lo='bowling.score.7'/>
+   </event>
+
+   <event num='3'>
+    <comment>Player scores 2</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.8'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.9'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='4'>
+    <comment>Player scores 3</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.11'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.12'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='5'>
+    <comment>Player scores 4</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.13'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.14'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='6'>
+    <comment>Player scores 5</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.15'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.16'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='7'>
+    <comment>Player scores 6</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.17'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.18'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='8'>
+    <comment>Player scores 7</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.19'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.20'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='9'>
+    <comment>Player scores 8</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.21'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.22'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='10'>
+    <comment>Player scores 9</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.23'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.24'/>
+    <message type='single' where='com' who='room' lo='bowling.score.10'/>
+   </event>
+
+   <event num='11'>
+    <comment>Player scores 10</comment>
+    <call event='bowling.score.12'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.25'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.26'/>
+    <message type='single' where='com' who='room' lo='bowling.score.27'/>
+   </event>
+
+   <event num='12'>
+    <comment>Bowling events for all scores</comment>
+    <destroyobject where='inventory' map='home' id-name='bowling ball'/>
+    <message type='single' where='com' who='individual' lo='bowling.score.1'/>
+    <message type='single' where='com' who='room_ex' lo='bowling.score.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='alley'>
+
+   <event num='1'>
+    <comment>Enter event on loc 711 - check for bowling ball and take it away when player leaves alley</comment>
+    <checkinventory map='home' id-name='bowling ball' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.alley.1'/>
+    <destroyobject where='inventory' map='home' id-name='bowling ball'/>
+   </event>
+
+   <event num='2'>
+    <comment>Enter event on 713 - check for bowling shoes - player can&apos;t leave alley with them</comment>
+    <checkinventory map='home' id-name='bowling shoes' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.alley.2'/>
+    <move what='player' who='individual' loc='712'/>
+   </event>
+
+   <event num='3'>
+    <comment>Enter event on 710 - check for bowling shoes - player can&apos;t enter alley without them</comment>
+    <checkinventory map='home' id-name='bowling shoes' found='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.alley.3'/>
+    <move what='player' who='individual' loc='711'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='ball'>
+
+   <event num='1'>
+    <comment>Get bowling ball - loc 710 - Check if already got one</comment>
+    <checkinventory map='home' id-name='bowling ball' found='objects.ball.2' not-found='objects.ball.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got a ball</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not already got one, so create ball</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.3'/>
+    <createobject where='inventory' home-map='sports/candlepin' id='obj_ball'/>
+   </event>
+
+   <event num='4'>
+    <comment>Drop ball</comment>
+    <message type='single' where='com' who='individual' lo='objects.ball.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.ball.5'/>
+    <destroyobject where='inventory' map='home' id-name='bowling ball'/>
+   </event>
+
+  </section>
+
+  <section name='shoes'>
+
+   <event num='1'>
+    <comment>Rent shoes - loc 638 - check if already got a pair</comment>
+    <checkinventory map='home' id-name='bowling shoes' found='objects.shoes.2' not-found='objects.shoes.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got shoes</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got shoes so create a pair</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.2'/>
+    <createobject where='inventory' home-map='sports/candlepin' id='obj_shoes'/>
+   </event>
+
+   <event num='4'>
+    <comment>Return shoes - loc 648 - check if they have shoes</comment>
+    <checkinventory map='home' id-name='bowling shoes' found='objects.shoes.6' not-found='objects.shoes.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not got shoes</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Got shoes, so return them</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.4'/>
+    <destroyobject where='inventory' map='home' id-name='bowling shoes'/>
+   </event>
+
+   <event num='7'>
+    <comment>Drop bowling shoes</comment>
+    <message type='single' where='com' who='individual' lo='objects.shoes.5'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

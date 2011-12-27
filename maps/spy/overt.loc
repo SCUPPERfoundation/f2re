@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<fed2-map title='Overt' version='12' editor='standard' from='1824' to='Spy.Spy Space.2270'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Future objects and events</desc>
+   </location>
+
+   <location num='480'>
+      <name>Soapbox Meadow</name>
+      <desc>Being open to new ideas or different points of view is considered an important quality for Overtians.  But sometimes it&apos;s hard to find an audience for avant garde or alternative thinking.  Thus was created Soapbox Meadow, where, once a week, people are given a half hour to discuss their viewpoints, their inventions, their take on the universe....anything they wish to address.  Some are considered crackpots and are listened to for amusement, while others have interesting notions that sometimes are embraced and taken further.  Exits are SE or SW.</desc>
+      <exits se='545' sw='543'/>
+   </location>
+
+   <location num='543'>
+      <name>Luminous Rock</name>
+      <desc>On a planet virtually devoid of hills or mountains, there rises Luminous Rock, a luminescent marble monadnock surrounded by a plain.  A sculptor named Charles Bell who lived nearby is said to have gone nearly mad from cabin fever, one long, harsh winter.  When warmer weather finally arrived, he started erecting scaffolding all over Luminous Rock and began carving.  The project took 15 years, and at the end, Bell had created a bas relief sculpture 300 feet high, 200 feet across and recessed 30 feet into the rock.  The subjects of his sculpture were all manner of mammals, native to Overt.   Exits NE or South.</desc>
+      <exits ne='480' s='607'/>
+   </location>
+
+   <location num='545' flags='b'>
+      <name>Home Made</name>
+      <desc>Life&apos;s whirlwind sometimes makes demands upon our days that prevents us from finding time for things we&apos;d like to do.  Nothing compares with home made preserves or local honey.  A group of friends talked one day and decided to open a store together where all the products would be made in local kitchens.  You can find canned tomato sauce, pressed cider, pickles and peanut butter....whatever the locals are growing and cooking.  Regulars come great distances to get their favorites.  The ladies refuse to fill mail orders.  They feel the personal touch is required.  Exits are South or NW.</desc>
+      <exits s='609' nw='480'/>
+   </location>
+
+   <location num='607' flags='hib'>
+      <name>Luminous Medical Center</name>
+      <desc>Fully half the mission of this medical center is to service patients in more remote areas.  Hoverpods deliver medical supplies and personnel when acute circumstances prevent transporting the patients safely to Luminous.  The staff here also has unusual challenges, because many of the patients they treat have neglected conditions, again  because of a lack of proximity.  Despite its added responsibilities, Luminous Medical Center is a fully certified, modern facility which performs transplants and sophisticated procedures.  Don&apos;t forget to insure!  Exits E or N.</desc>
+      <exits n='543' e='608'/>
+   </location>
+
+   <location num='608' flags='b'>
+      <name>Luminous Jumperport</name>
+      <desc>Luminous is a small city situated in the northern reaches of Overt.  It was named for the luminescent marble common to the area.  Although small, it serves as an important hub for surrounding towns and settlements, particular during the winter months when transportation between these locales is mainly via snowpod.  The people are industrious and have made good livelihoods with indigenous crafts such as hand made rugs, quilts and jewelry.  Their unique quality and styling have created demand in planets throughout Merit.  The Jumper can take you back UP to Jumper Junction.   The Hospital is W and you can explore E.</desc>
+      <exits e='609' w='607' up='1764'/>
+   </location>
+
+   <location num='609'>
+      <name>Luminous Portraits</name>
+      <desc>A specialized artists colony has settled into these dozen or so cottages sitting in two neat rows in a flowered field.  They limit their art to portraits and their reputation has grown throughout Overt and even offplanet.  Though all the artists seek to portray the essence of their subjects, their methods of execution vary.  Some produce caricatures with exaggerated features.  Others use oils, water colors or even dried materials from nature.  One young woman&apos;s passion is to paint young children, hoping to convey their open minds and innocence onto her canvas.  Exit North or go West to the Jumperport.</desc>
+      <exits n='545' w='608'/>
+   </location>
+
+   <location num='883' flags='b'>
+      <name>Riverwalk Casino</name>
+      <desc>The Riverwalk ends here before a grandiose casino.  There are two entrances, one for gamblers dressed in finery and the other for whom attire is an afterthought.  The casino gladly welcomes either sort; their groats spend the same.  The elegant crowd favors baccarat while the less experienced choose the simple card games or roulette wheel.  Several restaurants catering to different tastes are within the casino, created to keep the gamblers from leaving when they&apos;re hungry.  The Riverwalk is SW.   The Hotel minirail tram is E.</desc>
+      <exits e='884' sw='946'/>
+   </location>
+
+   <location num='884'>
+      <name>Hotel Minirail</name>
+      <desc>Hotels in Galore not only shelter visitors, but they provide them with food and entertainment, ranging from full scale theme parks to nightclub acts.  As a result, guests stay at one hotel, but visit as many others as they have time and money for.  Galore city managers established a minirail which carries people in tramcars along a circuit to all the main hotels, free of charge, night and day.  Many a guest has fallen asleep in a tramcar and ridden the circuit several times.  Casino is W.  Galore&apos;s Jumperport is to the SE.</desc>
+      <exits se='949' w='883'/>
+   </location>
+
+   <location num='910' flags='b'>
+      <name>The Refuge</name>
+      <desc>You&apos;ve arrived at Angelique&apos;s house, her home when she&apos;s on Overt.  A prairie style house, well suited to the flatness of the surroundings, the all brick structure has a low pitched roof and open floor plan.  Some fragrant rose bushes adorn the front entrance.  The kitchen is at the center of the space, and she can cook and keep a watch on her culinary creations while also participating in conversations in the living areas.  Some impressive oil paintings grace the walls.  You&apos;ve been told the luxurious master bedroom and bath contrast starkly with the simplicity of the decor in the rest of the house.  Exits SW or SE.</desc>
+      <exits se='975' sw='973'/>
+   </location>
+
+   <location num='946' flags='b'>
+      <name>Riverwalk Arcade</name>
+      <desc>Games of chance and skill attract visitors to the arcade.  Just enough people win to encourage the crowds to try. Freelance entertainers and musicians gather here, their hats upturned at their feet, hoping to collect some groats from an appreciative audience.  You can buy cotton candy, popcorn and cold drinks.  The Riverwalk continues S or NE.</desc>
+      <exits ne='883' s='1010'/>
+   </location>
+
+   <location num='949'>
+      <name>Galore Hotels</name>
+      <desc>The hotel district can only be described as architecturally magnificent.  The Skimmer Hotel is built to resemble a sailing vessel, situated on a manmade island linked to the mainland by a curving causeway.  The Platinum appears like a shining tower of platinum and is best known for its top quality entertainment and sterling service.  Galoria is family friendly and contains the largest indoor theme park in the Federation.  Ouverte is a hotel constructed by one of Merepoule&apos;s corporations and makes you feel transported to Provence.  The white stucco building is gracefully punctuated with delicate towers and arches.  Exit NW or SE to the Jumperport.</desc>
+      <exits se='1014' nw='884'/>
+   </location>
+
+   <location num='973'>
+      <name>Renoir Center for the Arts</name>
+      <desc>You see a vast plaza, its pavement all covered with mosaic tiles.  You notice the plaza is free of trees or landscaping, its only adornment a tall circular fountain in the center.  Around the plaza in architecturally complementary styles, is the opera house, symphony hall and ballet theater.  The theater for the dramatic arts is set somewhat aside.  All have 8 story high glass fronts with intricate tapestries hanging, all created by a local artist.  It dawns on you that the vast plaza was kept unobstructed so that audiences can congregate and converse without impediment during intermissions and before or after performances.  Exits are NE or S.</desc>
+      <exits ne='910' s='1037'/>
+   </location>
+
+   <location num='975'>
+      <name>The Hamlet</name>
+      <desc>The wide open and flat farmland on Overt is a natural fit for mega farms with highly mechanized operations.  Many of the settlers to Overt have strong agricultural roots and although they run the megafarms and enjoy the plentiful output and profits, they yearn for a more hands on type of farming.  It has become the custom of many of them to have what are called hamlets, small family farms strictly for their personal enjoyment and consumption.  Here you see a handful of chickens in a coop, a pig with piglets, and a small vegetable garden, the tomatoes ready to pick.  Exits S or NW.</desc>
+      <exits s='1039' nw='910'/>
+   </location>
+
+   <location num='1010'>
+      <name>Riverwalk Merry Go Round</name>
+      <desc>The Merry Go Round from afar looks like a garish birthday cake topped by hundreds of white lights.  Upon closer inspection, you see meticulously painted circus animals, elephants, horses and bears.  The calliope, tuned to the chromatic scale, increases the sense of merriment for the riders.  The older children on the outer animals hold long sticks with which they try to snag brass rings as they pass hoping for the most rings which wins them a free ride.  The Riverwalk continues E or N.</desc>
+      <exits n='946' e='1011'/>
+   </location>
+
+   <location num='1011' flags='b'>
+      <name>Riverwalk Dining Plaza</name>
+      <desc>You come to a large square bordered on three sides by various eating establishments, the fourth side fronting on the river.  Within the square are rectangles of tables and chairs, each rectangle featuring differently colored or patterned parasols, which distinguish each restaurant from its neighbors.  Patrons eat outside, while the waiters from the different restaurants scurry back and forth to their bases, ferrying trays of food.  Al fresco dining is well-liked by the tourists who enjoy the temperate climate of Overt, largely devoid of insects prone to annoying humans.  The Riverwalk continues E or W.</desc>
+      <exits e='1012' w='1010'/>
+   </location>
+
+   <location num='1012'>
+      <name>Riverwalk</name>
+      <desc>The shops in this portion of the riverwalk are some of the more upscale boutiques, their names well recognized across Overt.  Geoffnet specializes in open toed footwear, especially high heeled sandals for ladies.  Aperto features luggage and handbags in its patented open weave design.  Avoiktos Imports carries home furnishings in the latest styles and fabrics.  The Riverwalk continues E or W.</desc>
+      <exits e='1013' w='1011'/>
+   </location>
+
+   <location num='1013'>
+      <name>Riverwalk</name>
+      <desc>A wide raised boardwalk allows for strolling along the riverside, window shopping the charming stores along the way and enjoying the steady stream of boats and ships passing by.  Loading docks, industrial wharves and cranes are kept on the far side of the river.  The huge stacks of crates and containers are well organized and seem to be handled efficiently, especially the perishables.  The Riverwalk continues E or W.</desc>
+      <exits e='1014' w='1012'/>
+   </location>
+
+   <location num='1014'>
+      <name>Galore - Jumperport</name>
+      <desc>Like most cities in Overt, Galore is situated on a wide river.  The network of rivers on Overt, many of which contain complex canal systems, link the larger cities.  The barges and tankers are the backbone of the trade between them.  Galore&apos;s flat farmland produces more than enough food for its citizens&apos; needs, supplemented by a large variety of fish from the rivers.  Galore&apos;s main source of income is from tourism, and it boasts 50% of all the hotel rooms on the planet.  You may explore W or NW.  The Jumper can take you back UP to Jumper Junction.</desc>
+      <exits w='1013' nw='949' up='1765'/>
+   </location>
+
+   <location num='1037' flags='b'>
+      <name>Lake Silenius</name>
+      <desc>You realize Angelica was built right by this translucent blue lake, named after Angelique&apos;s husband, Silenius.  Sailboats seem to be the vessel of choice, the flat unprotected land around the lake promoting strong winds.  Some lovely lakeside restaurants border the shoreline, one more charming than the next.  Cyclists pedal around the perimeter.  You feel a strong urge to remove your footwear and go wading.  The Jumperport is East or you can go North.</desc>
+      <exits n='973' e='1038'/>
+   </location>
+
+   <location num='1038'>
+      <name>Angelica - Jumperport</name>
+      <desc>Named after Angelique, the founder of Overt, Angelica was one of the first settlements on the planet but has quickly mushroomed into a sizeable city.  It has established itself recently as a mecca for the arts.  Following the example of Angelique, patrons have founded a ballet and opera company, a symphony orchestra as well as a venue for classic and modern theater.  The Jumper can take you back UP to Jumper Junction.  Lake Silenius is West or you can go East.</desc>
+      <exits e='1039' w='1037' up='1763'/>
+   </location>
+
+   <location num='1039'>
+      <name>Douglass Day School</name>
+      <desc>A private school for children aged 8 to 14, this institution was established for intellectually gifted children requiring much more content and challenge that can be offered in a traditional school setting.  Tuition is not charged because the school is part of the universal education system on Overt.  However, admission is strictly merit based.  Intellectually gifted does not include children with talents in sports or the arts.  The Douglass Day School focuses on reasoning power.  Students here have already made actual, meaningful contributions to science and technology.  Exit N or go West to the Jumperport.</desc>
+      <exits n='975' w='1038'/>
+   </location>
+
+   <location num='1763' flags='b'>
+      <name>Angelica Jumper</name>
+      <desc>Averaging 1500km/hr in flight, it won&apos;t take long for the Jumper to fly DOWN to Angelica.  Step aboard, fasten your harness and make yourself comfortable in the auto-contouring seat.  Food and drink dispensers are located on the panel directly in front of you, next to the touchscreen.  Jumper Junction is SE for returning passengers.</desc>
+      <exits se='1828' down='1038'/>
+   </location>
+
+   <location num='1764' flags='b'>
+      <name>Luminous Jumper</name>
+      <desc>Averaging 1500km/hr in flight, it won&apos;t take long for the Jumper to fly DOWN to Luminous.  Step aboard, fasten your harness and make yourself comfortable in the auto-contouring seat.  Food and drink dispensers are located on the panel directly in front of you, next to the touchscreen.  Jumper Junction is SOUTH for returning passengers.</desc>
+      <exits s='1828' down='608'/>
+   </location>
+
+   <location num='1765' flags='b'>
+      <name>Galore Jumper</name>
+      <desc>Averaging 1500km/hr in flight, it won&apos;t take long for the Jumper to fly DOWN to Galore.  Step aboard, fasten your harness and make yourself comfortable in the auto-contouring seat.  Food and drink dispensers are located on the panel directly in front of you, next to the touchscreen.  Jumper Junction is SW for returning passengers.</desc>
+      <exits sw='1828' down='1014'/>
+   </location>
+
+   <location num='1823' flags='eb'>
+      <name>Overt Exchange</name>
+      <desc>Traders gather here amicably, study the markets and look for profitable deals.  The walls of the Exchange administrative offices are clear plexiglass, giving a feeling of openness and trust.  Overt Exchange codes require full disclosure and no insider trading is tolerated.  A small restaurant is in one corner, which offers some Overt specialties such as open faced sandwiches and naked iced tea.  The LP is East.</desc>
+      <exits e='1824'/>
+   </location>
+
+   <location num='1824' flags='yrb'>
+      <name>Overt Launch Pad</name>
+      <desc>The launch pad and adjoining facilities are positioned in the middle of a high plateau, many thousands of acres in size.  Tall grasses sway in response to the gentle wind swirling around you.  You have an unimpaired view of the rest of Overt well below where you stand.   Your first impression is a land of wide open spaces.  The Exchange is due West.  Take the Jumper shuttle DOWN to the rest of Overt.</desc>
+      <exits w='1823' down='1828'/>
+   </location>
+
+   <location num='1828'>
+      <name>Jumper Junction</name>
+      <desc>Jumpers are the fastest form of transportation on Overt, which is an exceptionally large planet, its cities positioned very far apart from each other.  Besides the Jumper which takes you UP to the Launch Pad and Overt Exchange, you can fly directly to the five biggest population centers of Overt, by selecting Jumper NE, Jumper SE, Jumper SW, and Jumper NW.  Jumper N also leads to the Hospital.</desc>
+      <exits n='1764' ne='1765' se='1893' sw='1891' nw='1763' up='1824'/>
+   </location>
+
+   <location num='1891' flags='b'>
+      <name>Crystal City Jumper</name>
+      <desc>Averaging 1500km/hr in flight, it won&apos;t take long for the Jumper to fly DOWN to Crystal City.  Step aboard, fasten your harness and make yourself comfortable in the auto-contouring seat.  Food and drink dispensers are located on the panel directly in front of you, next to the touchscreen.  Jumper Junction is NE for returning passengers.</desc>
+      <exits ne='1828' down='2953'/>
+   </location>
+
+   <location num='1893' flags='b'>
+      <name>Boundless Jumper</name>
+      <desc>Averaging 1500km/hr in flight, it won&apos;t take long for the Jumper to fly DOWN to Boundless.  Step aboard, fasten your harness and make yourself comfortable in the auto-contouring seat.  Food and drink dispensers are located on the panel directly in front of you, next to the touchscreen.  Jumper Junction is NW for returning passengers.</desc>
+      <exits nw='1828' down='2998'/>
+   </location>
+
+   <location num='2741'>
+      <name>Hands On Exhibit</name>
+      <desc>Especially popular with youngsters, the Aquarium&apos;s touch tank allows visitors to actually hold sea creatures.  Sea stars, crabs and stingrays are gently handled under the supervision of Aquarium staff who provide information on the animals.  Exit South.</desc>
+      <exits s='2805'/>
+   </location>
+
+   <location num='2761'>
+      <name>Bizmuth Military Base</name>
+      <desc>Even open societies require military protection or freedoms are inevitably snatched away.  Angelique has chosen to locate her largest basic training base in Crystal City, due in part to its relative remoteness and because the terrain lends itself to training.  The locals are welcoming to the military personnel and their families and are not adverse to enjoying the extra boost to the local economy.  Exits SE or SW.</desc>
+      <exits se='2826' sw='2824'/>
+   </location>
+
+   <location num='2804'>
+      <name>Peninsula</name>
+      <desc>Some of the most impressive waterfront homes have been built along the peninsula, interspersed with some luxury resort hotels.  Electric bicycles can be rented for you to sightsee in a leisurely way, taking in the magnificent mansions and breathtaking views of the ocean.  A public park is at the very tip of the peninsula so that everyone has a place to relax and spend time with open access to the view.  You can go down to the water taxi or East.</desc>
+      <exits e='2805' down='2932'/>
+   </location>
+
+   <location num='2805'>
+      <name>Blue Waters Aquarium</name>
+      <desc>You see an ultra modern structure designed to look like an enormous ocean wave from the outside.  As you enter, you are meant to feel as if you&apos;ve been swept up into a maelstrom drawing you deep into the sea.  The windows for viewing the huge tanks seem endlessly long and the lighting enforces the impression that you are in the ocean with the ocean life displayed.  The overall impression is that you are seeing the fish in their element.  Exits are North to the touch tank, or exit the Aquarium West or East.</desc>
+      <exits n='2741' e='2806' w='2804'/>
+   </location>
+
+   <location num='2806' flags='b'>
+      <name>Barefoot Landing</name>
+      <desc>A pleasant boardwalk, open air shopping area, people come to shop, window shop, people watch, be entertained and eat.  Reminiscent of a fishing village, the restaurants specialize in delicious seafood specialties.  The mirror maze and house of magic are popular attractions.  Exit West or board the Ferry by going DOWN the ramp.</desc>
+      <exits w='2805' down='2934'/>
+   </location>
+
+   <location num='2824'>
+      <name>Topaz</name>
+      <desc>Several residential neighborhoods are in the Topaz District of Crystal City.  The population here is still growing, but for now, traffic delays are rare.  In addition to the land under and around each home, neighborhoods are designed with another 50% of open space for community use.  Natural parks and woodlands separate neighborhoods from each other to create a sense of being part of the land.  Exits are NE and SE.</desc>
+      <exits ne='2761' se='2889'/>
+   </location>
+
+   <location num='2826'>
+      <name>Quartz Explosives Testing</name>
+      <desc>You see a closed Security gate blocking access to the road leading to the explosives testing grounds several klicks northeast.   Most of the testing conducted here is underground, which minimizes impact on Crystal City citizens.  Besides determining the potency of the particular explosive under examination, experts conduct impact, thermal sensitivity and friction tests.  They determine detonation velocity, brisance, bubble energy and stability.    Exits are NW or SE.</desc>
+      <exits se='2891' nw='2761'/>
+   </location>
+
+   <location num='2889' flags='b'>
+      <name>Aragonite</name>
+      <desc>A commercial district, Aragonite is bustling most days of the week.  The majority of businesses are privately owned.  Crystal City residents prefer dealing with people they know than with impersonal, ever changing chain store staff.  The economy is healthy so there&apos;s plenty of inventory and choice.  And of course, this being Overt, businesses are open 7 days a week.  Exits South or NW.</desc>
+      <exits s='2953' nw='2824'/>
+   </location>
+
+   <location num='2891'>
+      <name>Beryl Military Housing</name>
+      <desc>Beryl is a small town onto itself, where military personnel&apos;s families live and pursue their lives.  Comfortable housing, community amenities, quality schools and military stores with greatly discounted prices are happily provided for in the Spy System budget, so that recruitment of quality soldiers remains high.  Exits NW and SE.</desc>
+      <exits se='2956' nw='2826'/>
+   </location>
+
+   <location num='2932'>
+      <name>Water Taxi</name>
+      <desc>The water taxi is a catamaran that takes you rapidly across the bay between Boundless Penninsula and Boundless Beach.  The operator is friendly and describes points of interest along the shoreline.  He suggests further sightseeing from the water you can plan during your stay, including nighttime dinner cruises.  The ramp goes UP to the peninsula or you can go OUT to the beach.</desc>
+      <exits up='2804' out='2996'/>
+   </location>
+
+   <location num='2934'>
+      <name>Hoverferry</name>
+      <desc>For a quick trip between the peninsula and the mainland, the hoverferry can&apos;t be beat.  With a choice of inside seating protected from the wind and weather or on the outside deck, there are no refreshments served because the travel time is very short.  You can exit UP to Barefoot Landing or Out to the Boundless Jumperport.</desc>
+      <exits up='2806' out='2998'/>
+   </location>
+
+   <location num='2953'>
+      <name>Crystal City Jumperport</name>
+      <desc>Crystal City was named for the massive accumulations of crystals nearby thought to have been deposited by glaciers eons ago.  The crystals continue to be mined and the revenue contributes to the prosperity of this medium sized city.  The buildings are deep and wide, rather than tall, as if the residents are reluctant to wall off the openness of the surrounding countryside.  Districts in the city are named after different crystals.  The Jumper can take you back UP to Jumper Junction.  Exits are East or North.</desc>
+      <exits n='2889' e='2954' up='1891'/>
+   </location>
+
+   <location num='2954' flags='b'>
+      <name>Amber Crystal Museum</name>
+      <desc>The array of crystals and gemstones collected here is dazzling.  There are over 4,000 items on systematic display.  You see a 35 foot long darkened hallway containing beautiful fluorescent crystals and minerals.  Most tempting, outside the museum only 500 feet back, there are three collecting displays which were former mine dumps where interesting and even new minerals are discovered every day by museum visitors.  Picnic tables are provided outside in a shaded area where you can eat while examining what you have found.  Exits SE or West to the Jumperport.</desc>
+      <exits se='3019' w='2953'/>
+   </location>
+
+   <location num='2956' flags='b'>
+      <name>Pyrite Dance Hall</name>
+      <desc>Dancing strengthens community and family bonds, and the Pyrite Dance Hall is crowded every night of the week.  Family nights are on Friday and Saturdays are reserved for couples.  The music is always live, and dance instructors are glad to teach the newest steps or give refreshers on old standards.  People living alone come for companionship, and if they don&apos;t have a partner, the line dances allow them to shake a leg.   Beer and lemonade are the drinks of choice and the dancers get pretty thirsty.  Exits SW and NW.</desc>
+      <exits sw='3019' nw='2891'/>
+   </location>
+
+   <location num='2996'>
+      <name>Boundless Beach</name>
+      <desc>The sparkling, fine sand at Boundless Beach is almost white, composed of coral and shell particles.  It contrasts beautifully with the azure blue of the sea.  Snorkelers and scuba divers explore the reefs.  Surfers enjoy their sport at an inlet to the west known for its perfect waves.  Boundless officials have kept the road along the beach clear of buildings so that you can walk or drive and enjoy an open unimpeded view.  Shops, restaurants and beach equipment businesses are all situated across the road, accessible on foot by footbridge.  You can go INto the water taxi or return East.</desc>
+      <exits e='2997' in='2932'/>
+   </location>
+
+   <location num='2997'>
+      <name>Boundless Port</name>
+      <desc>The Harbor here is busy.  This is the home port for great numbers of fishing vessels.  The shellfish and fish are an important boon to the economy, and the delicious catch is distributed quickly throughout Overt.  Pleasure craft are lined up on docks by the thousands and you can see tankers near the horizon.  A popular seafood restaurant is DOWN the pier.  The beach is West or you can go East to the Jumperport.</desc>
+      <exits e='2998' w='2996' down='3125'/>
+   </location>
+
+   <location num='2998'>
+      <name>Boundless Jumperport</name>
+      <desc>Boundless is a seaside city, bordering the largest ocean on Overt.  Bays and inlets limit the useable land mass, so land is expensive.  Rentals are hard to come by and are snapped up before they&apos;re advertised.  Because of the expense, the bulk of the residents are in the technology and resource industries.   You can go IN the hoverferry to the Peninsula.  You can also go West.  The Jumper can take you back UP to Jumper Junction.</desc>
+      <exits w='2997' up='1893' in='2934'/>
+   </location>
+
+   <location num='3019' flags='b'>
+      <name>Amethyst Arms</name>
+      <desc>Romance is the dominant theme at the best fine dining restaurant in Crystal City.  Anniversaries, birthdays, engagements are all celebrated with finesse.  Exquisitely prepared dishes coupled with the finest wines from Corkscrew, the soft sounds of the pianist, softly flickering candles all combine to create a perfect evening for loving couples.  The linens are crisp and white, the silverware highly polished, and the china is transluscent.  An evening spent here is unforgettable.  Exits NW or NE.</desc>
+      <exits ne='2956' nw='2954'/>
+   </location>
+
+   <location num='3125' flags='b'>
+      <name>Oceana Restaurant</name>
+      <desc>Decorated to look like you&apos;ve stepped on an ocean liner, the floor to ceiling windows give you an unobstructed view on the water.  You first see a tantalizing raw bar with an array of no less than four varieties of oysters, plus clams and Overtian mussels.  You can order grilled whole fish like halibut, swordfish and striped bass with spectacular sauces such as Hollandaise or tomatillo salsa.  Sole is prepared and fileted table side.  When you&apos;ve had your fill you can go back UP the pier.</desc>
+      <exits up='2997'/>
+   </location>
+
+</fed2-map>

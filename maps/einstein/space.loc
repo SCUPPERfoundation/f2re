@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<fed2-map title='Einstein Space' version='31' editor='standard'>
+
+   <location num='1737' flags='sl'>
+      <name>Einstein Link</name>
+      <desc>With a bit of a mind flip, you are into a time slip, and find yourself at the Einstein Link. Lowering your shields and looking out through the titaspex canopy, you can see only black space. Enjoying the solitude, you relax, settle back into your grav seat, and direct your entertainment console to play a sensamp cut of Grace Slick and the Airplane doing White Rabbit. The sensual sounds and visions surround you, but they are soon interrupted by a comm message from Einstein Planetary Control: Please follow the space beacon strobes to the South East if you have business to conduct here. Otherwise, we will maintain the link open for your jump departure.</desc>
+      <exits se='1802'/>
+   </location>
+
+   <location num='1802' flags='s'>
+      <name>Einstein Planetary Space</name>
+      <desc>Welcome to the Einstein System. Currently, only the planet Mass to your east is open to visitors. You may procede there, or return NW to the Einstein Link.</desc>
+      <exits e='1803' nw='1737'/>
+   </location>
+
+   <location num='1803' flags='s'>
+      <name>Mass Orbit</name>
+      <desc>Welcome to Mass orbit. Feel free to board your shuttle and explore. Do not fear the heavy gravitational effects of this massive planet. The Einstein Universal Field Generators will make your stay most pleasant!</desc>
+      <desc>   As you consider landing, an eerie voice faintly sounds in your ears, singing &apos;It&apos;s astounding, time is fleeting, madness takes it&apos;s toll.....&apos; You seriously consider returning west to the jump link.</desc>
+      <exits w='1802'/>
+   </location>
+
+</fed2-map>

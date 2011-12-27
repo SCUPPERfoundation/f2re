@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<fed2-map title='Pride' version='29' editor='standard' from='265' to='Starcloud.Starcloud Space.333'>
+
+   <location num='0'>
+      <name>Empty Room</name>
+      <desc>   If you are here then I made a mistake, you can leave by going out.</desc>
+      <exits out='265' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='264' flags='b'>
+      <name>The Pride Cafe</name>
+      <desc>   This is the Pride Cafe, a small cafe with some excellent food.  The head chef is rumored to have been one of the top gourmets in existence but he ended up moving here to get away from large crowds of impatient customers.  Even though Pride is in the middle of nowhere this cafe still brings a lot of tourists and guests here.  The exit back to the landing pad is east and the exit to the central hub is southeast.</desc>
+      <exits e='265' se='329' in='329' out='265' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='265' flags='b'>
+      <name>Pride Landing Pad</name>
+      <desc>   This is the landing pad of the little asteroid known as Pride, to the south is the central hub of the asteroid and to the east is the exchange.  Loud noises can be heard coming from the west.</desc>
+      <exits e='266' s='329' w='264' in='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='266' flags='eb'>
+      <name>Pride trading exchange</name>
+      <desc>   All around you is the activity of a normal trading exchange, although a little more quiet then some of the bigger planets.  A surprising large number of commodities are produced here on Pride and are available for sale.  The exit to the landing pad is back to the west and the central hub is toward the southwest.</desc>
+      <exits sw='329' w='265' in='329' out='265' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='324' flags='b'>
+      <name>The Pride Observation Center</name>
+      <desc>   In this room you can look out over the top of the asteroid known as Pride.  The asteroid is very bland looking but the view of the Starcloud nebula is very interesting.  Attractive women in small uniforms are ready to take your food and drink orders while you enjoy the view.  You can leave the room by going down or in.</desc>
+      <exits down='329' in='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='328' flags='b'>
+      <name>The Starcloud Viewing Lounge</name>
+      <desc>   A view of the Starcloud Nebula greets anyone who enters this room.  The room is kept darker then the rest of the colony and the thick windows that surround the room allows for the best view available on Pride.  Vending machines next to the entrance, on the east side of the room, provides snacks and drinks.</desc>
+      <exits e='329' out='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='329' flags='b'>
+      <name>Central Hub</name>
+      <desc>   This is the central hub of Pride, there are a few venders selling there goods here and some of the food looks rather tasty.  A sign in the center of the room points to all the different directions.  The Landing Pad is north, Exchange is northeast, office space is east, a first aid station is southeast, guest dorms are south, a shipyard is southwest, the viewing lounge is west, and The Pride Cafe is northwest.</desc>
+      <exits n='265' ne='266' e='330' se='394' s='393' sw='392' w='328' nw='264' up='324' down='334' in='334' out='265' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='330' flags='b'>
+      <name>Office Space</name>
+      <desc>   This room provides open office space for anybody that may need it.  The room is filled with small cubicles, each with a desk and a chair.  Anybody that needs more then that will have to bring it themselves.  The exit is west.</desc>
+      <exits w='329' down='650' out='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='334'>
+      <name>Pride agricultural center</name>
+      <desc>   This is the agricultural center of Pride.  The large number of agricultural products available on Pride are grown and raised in this large room that has been carved out of the center of the asteroid.  Well I guess they had to do something with all the space created after the mining was moved to other areas of the asteroid.  You can leave the room by going up or out.</desc>
+      <exits up='329' down='339' in='339' out='329' no-exit='moves.noexits.2'/>
+   </location>
+
+   <location num='339'>
+      <name>Pride mining center</name>
+      <desc>   All around are active mining operations that provides the resources that are used and sold on Pride.  There are several signs warning visitors about the danger of playing near open mines.  The exit is up.</desc>
+      <exits up='334' out='334' no-exit='moves.noexits.3'/>
+   </location>
+
+   <location num='392' flags='yr'>
+      <name>Pride Shipyard and Repair</name>
+      <desc>   Every planet should have a shipyard and Pride is no exception.  The exit is northeast.</desc>
+      <exits ne='329' out='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='393' flags='b'>
+      <name>Guest dorms</name>
+      <desc>   Initially this facility was used for workers on Pride to bed down for a night, but as the colony grew the need for housing grew as well.  Workers now stay in another part of the asteroid, but guests are welcome to bed down here for as long as they would like.</desc>
+      <desc>   The beds are soft and inviting with privacy provided by curtains which can be pulled around the individual beds.  Vending machines next to the entrance are fully stocked with sandwiches made in the local cafe, the normal junk foods, and several different kinds of drinks, both alcoholic and non-alcoholic.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='329' out='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='394' flags='hi'>
+      <name>First aid station</name>
+      <desc>   The first aid station here is set up with state of the art machinery that can treat anything from a paper cut to major surgery and of course is has an automatic insurance machine just in case.  The exit is northwest.</desc>
+      <exits nw='329' out='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='521'>
+      <name>Security Station</name>
+      <desc>   You have been discovered wandering the forbidden corridors of Pride, you can leave the security station by going out</desc>
+      <exits up='329' down='329' in='329' out='329' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='580' flags='b'>
+      <name>The nude room</name>
+      <desc>   You are in a room filled with the softest furniture and the softest carpeting, the feeling of everything in here must feel wonderful on bare skin.</desc>
+      <exits up='329' out='329' no-exit='moves.noexits.4'/>
+   </location>
+
+   <location num='589'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='521' sw='521' w='521' nw='521' up='590' down='521' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='590'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='521' sw='521' w='521' nw='521' up='521' down='591' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='591'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='580' se='521' s='521' sw='521' w='521' nw='521' up='521' down='521' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='644' flags='b'>
+      <name>The down room</name>
+      <desc>   You are in a very romantic room filled with soft music and chilled bottles of wine.  There is a soft bed in the middle of the room covered in red velvet sheets.  A picture of Jinto and Stiddleficks wedding is on the wall next to a picture of Jinto in a pair of swimming trunks and a very beautiful picture of Stiddleficks wearing a sexy pink bikini.  You have just stumbled into the honeymoon suite that was built for the happy couple.</desc>
+      <exits up='329' out='329' no-exit='moves.noexits.4'/>
+   </location>
+
+   <location num='649' flags='b'>
+      <name>Hole in the wall</name>
+      <desc>   You are in a room, there are exits everywhere, have fun exploring!</desc>
+      <exits n='589' ne='521' e='650' se='521' s='717' sw='521' w='521' nw='521' up='521' down='653' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='650'>
+      <name>Under the desk</name>
+      <desc>   The desk that you&apos;ve crawled under is covering a hole in the wall to the west.</desc>
+      <exits w='649' up='330' in='649' out='330' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='653'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='521' sw='521' w='521' nw='521' up='521' down='521' in='521' out='654' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='654'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='521' sw='521' w='655' nw='521' up='521' down='521' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='655'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='644' ne='521' e='521' se='521' s='521' sw='521' w='521' nw='521' up='521' down='521' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='708' flags='b'>
+      <name>The suds room</name>
+      <desc>   You are in a room with a large hot tub, big enough to fit 8 people.  The water is so tempting and nobody else seems to be here.</desc>
+      <exits up='329' out='329' no-exit='moves.noexits.4'/>
+   </location>
+
+   <location num='717'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='521' sw='521' w='521' nw='521' up='718' down='521' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='718'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='521' sw='521' w='521' nw='521' up='521' down='719' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+   <location num='719'>
+      <name>In a cave</name>
+      <desc>   You are lost in a system of caves.</desc>
+      <exits n='521' ne='521' e='521' se='521' s='708' sw='521' w='521' nw='521' up='521' down='521' in='521' out='521' no-exit='moves.noexits.1'/>
+   </location>
+
+</fed2-map>

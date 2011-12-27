@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<fed2-map title='Tenpin' version='1.00' editor='standard' from='130' to='Bowling.Bowling Space.196'>
+
+   <location num='0' flags='t'>
+      <name>storage</name>
+      <desc>storage</desc>
+   </location>
+
+   <location num='67' flags='t'>
+      <name>Holding Room</name>
+      <desc>&quot;Stop !!!&quot;, yells a Planet Guard who grabs you and takes you to the Holding Room. After you have been searched and any contraband removed, you are released. The landing pad is Southwest.</desc>
+      <exits sw='130' no-exit='force.field.1'/>
+   </location>
+
+   <location num='129'>
+      <name>Taxi Stand to Downtown</name>
+      <desc>As you wait for the taxi, you find an old brochure about the bowling alley here. It tells you you can get the complete story at: http://www.ibgames.net/fed2/info/planetdesc/aringer.html . Please get IN the first taxi in line. The landing pad is East.</desc>
+      <exits e='130' in='193' no-exit='tenpin.landing.1'/>
+   </location>
+
+   <location num='130'>
+      <name>Tenpin Landing Pad</name>
+      <desc>The Tenpin Landing Pad</desc>
+      <desc>Welcome to Tenpin. &apos;Board&apos; the shuttle to return to the link .Closed for years, Tenpin&apos;s Bowling Alley has a tale to tell. Someone, someday, will know the details of that story and unlock the doors of the alley and bring bowling back to the Federation. Perhaps you can get your first clues from the old man who seems to be the custodian here. The exchange is to the east. There is an old portal to the southeast with a sign above it that reads:&quot;Bowling Alley&quot;. The portal does not seem to be working. The story begins to the west.</desc>
+      <exits e='131' w='129' no-exit='tenpin.landing.1'/>
+   </location>
+
+   <location num='131' flags='e'>
+      <name>Tenpin Exchange</name>
+      <desc>Welcome Traders,</desc>
+      <desc>Welcome Traders,We hope you enjoy your visit. A small Flag of Tenpin is attached to the wall. Moving East will give you a quiet room with remote terminals to work. The faint outline of a door presents itself on the Southeast wall. West takes you back to the Landing Pad.</desc>
+      <exits e='132' w='130' no-exit='tenpin.landing.1'/>
+   </location>
+
+   <location num='132'>
+      <name>Computer Terminal Room</name>
+      <desc>Sit, relax and enjoy. Please no food or drink here. On the wall is a large shielf which holds a Trophy. It reads: &quot;The Winners of the Improved Tenpin Puzzle:&quot;</desc>
+      <exits w='131' no-exit='tenpin.landing.1'/>
+   </location>
+
+   <location num='187'>
+      <name>Path to the beach</name>
+      <desc>As you walk to the beach the path slowly changes to sand. Ahead to the east is the ocean.</desc>
+      <exits e='188' sw='250'/>
+   </location>
+
+   <location num='188'>
+      <name>Beach</name>
+      <desc>On the beach at the north end you at in the sights of the skimply clad beings from all parts of the Federation. A boat is just pulling away from the beach to give its guests at parachute ride. The casino is to the south.</desc>
+      <exits s='252' w='187'/>
+   </location>
+
+   <location num='193'>
+      <name>Taxi</name>
+      <desc>You sit in a nearly new Taxi. The LCD screen on the back of the front seat begins to flicker advertisements for local shops. Lucky for you the audio seems to be out.  &quot;Which way you headed?,&quot; says the driver. &quot;East takes you to Downtown or Get Out now and head back to the landing pad. So, have you met the old man?&quot;</desc>
+      <exits e='194' out='129' no-exit='taxi.exits.1'/>
+   </location>
+
+   <location num='194'>
+      <name>Taxi Stand</name>
+      <desc>You are at the taxi stand at the northwest end of the Tenpin Town Square. &quot;You getting OUT or are you going with me West back to the Landing Pad? &quot; says the cabby.</desc>
+      <exits w='193' out='195' no-exit='taxi.exits.1'/>
+   </location>
+
+   <location num='195'>
+      <name>Taxi Stand to Landing Pad</name>
+      <desc>A short line of Taxis waits at the stand at the northwest end of the town square. The busy hub of Tenpin. You can find everything you need right here with shops positioned all around. The center of the square has some interesting features. The taxi driver says, &quot;Well, Get IN!!, If your going to the spaceport.&quot;</desc>
+      <exits e='196' se='260' s='259' in='194' no-exit='town.square.1'/>
+   </location>
+
+   <location num='196'>
+      <name>North End of the Square</name>
+      <desc>You are at the northern end of Tenpin Square. To the northwest is what looks like a portal. The sign over it says, &quot;Exchange&quot;. The square has signs all around for different shops. The center of the Square has some interesting features.</desc>
+      <exits e='197' se='261' s='260' sw='259' w='195' nw='131' no-exit='town.square.1'/>
+   </location>
+
+   <location num='197'>
+      <name>Northeast corner of the Square</name>
+      <desc>You are at the northeast corner of the Square. You are at the front door of the local clothing shop. Drop in and check out this weeks specials.</desc>
+      <exits s='261' sw='260' w='196' in='198' no-exit='town.square.1'/>
+   </location>
+
+   <location num='198'>
+      <name>Donna&apos;s Clothing Shop</name>
+      <desc>Specializing in the latest fashions from Earth, Donna also is an exquisite tailor in her own right. She can design something special just for you. You notice looking out the window to the East the darkened bowling alley. Makes you wonder how to get over there. You can go out to the square to continue on your quest.</desc>
+      <exits out='197' no-exit='town.square.2'/>
+   </location>
+
+   <location num='203'>
+      <name>xxx</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='250'>
+      <name>Nearly at the beach</name>
+      <desc>As you approch the resort area you begin to smell the ocean. It reminds you of your youth, growing up near the ocean. To the east is a large building. To the northeast is the beach. To the south is the bowling alley.</desc>
+      <exits ne='187' e='251' sw='313'/>
+   </location>
+
+   <location num='251'>
+      <name>Casino of Tenpin</name>
+      <desc>Entering you are hit with the noise of a busy casino. Slot machines line the walls and the center of the floor has card games and a roullette wheel. East takes you to the beach. West takes you back outside.</desc>
+      <exits e='252' w='250'/>
+   </location>
+
+   <location num='252'>
+      <name>Beach</name>
+      <desc>Outside the casino you find a bar setup on the beach to service you. The waves lap against the sand. A few surfers are out catching the waves.</desc>
+      <exits n='188' w='251'/>
+   </location>
+
+   <location num='258' flags='y'>
+      <name>Tenpin Shipyard</name>
+      <desc>For sale every description of spaceship or scow you can imagine. We build to special order. You can go out to the Square.</desc>
+      <exits out='259' no-exit='town.square.2'/>
+   </location>
+
+   <location num='259'>
+      <name>West Side of Square</name>
+      <desc>You come upon the Shipyard entrance. You can always get special deals from our fine craftsman IN there. There are other shops all around the Square.</desc>
+      <exits n='195' ne='196' e='260' se='324' s='323' in='258' no-exit='town.square.1'/>
+   </location>
+
+   <location num='260'>
+      <name>North of center of the Square.</name>
+      <desc>There is a Pillar here. The Trophy on the pillar reads: &quot;Original Tenpin Puzzle Solvers: DarkAngel,Jdcollins,Nomad,Flood,Sycorax,Djentsch,Brookrf,Sage,Stirling,Cooly,Guido,Robius,Kalandra,Angel,Desertwolf.&quot; In the ground next to the pillar is a sewer grate. Looking down into the grate, you can make out something shinny. Hard to tell what it is. Looking around you can see there are shops of every description. The center of the Square looks interesting.</desc>
+      <exits n='196' ne='197' e='261' se='325' s='324' sw='323' w='259' nw='195' no-exit='town.square.1'/>
+   </location>
+
+   <location num='261'>
+      <name>East Side of Square.</name>
+      <desc>You are on the East Side of the Square. Getting a little glare from the sun as you look West. You are at the front door of the Piper Electronics Shop. Drop In for todays bargins. There are many more shops positioned around the Square.</desc>
+      <exits n='197' s='325' sw='324' w='260' nw='196' in='262' no-exit='town.square.1'/>
+   </location>
+
+   <location num='262'>
+      <name>Piper Electronics</name>
+      <desc>The latest in ship electronics. Try the Maxi Converter. It keeps your ship running smooth even for those last few days before your tune-up. You notice looking out the window to the East the darkened bowling alley. Makes you wonder how to get over there. You can go out to the square to continue on your quest.</desc>
+      <exits out='261' no-exit='town.square.2'/>
+   </location>
+
+   <location num='266'>
+      <name>Managers Office</name>
+      <desc>A large office with a desk in the center. On the desk is a small tenpin flag and a sign that says &quot;Aringer CEO&quot;. It is piled high with old bowling sheets and tax returns. Seems like you cannot get away from taxes even here. A picture of the family hangs on the wall. A large certificate also hangs there is says, &quot; To The Oldman, For many years of service. Many Thanks. &quot;</desc>
+      <exits s='330' no-exit='force.field.1'/>
+   </location>
+
+   <location num='313'>
+      <name>Path to Resort Area</name>
+      <desc>Leaving the fields behind you travel toward the resort area of Tenpin.</desc>
+      <exits ne='250' sw='376'/>
+   </location>
+
+   <location num='322' flags='r'>
+      <name>Tenpin Ship Repair Shop</name>
+      <desc>You have come to the right place for ship repairs. Done only with factory certified parts. You can go out to the Square.</desc>
+      <exits out='323' no-exit='town.square.2'/>
+   </location>
+
+   <location num='323'>
+      <name>Ship Repair Shop</name>
+      <desc>You near the front door of the Ship Repair Shop . A group of young men wait in line for employment. Drop IN and check out their excellent work. Other Shops are all around the Square.</desc>
+      <exits n='259' ne='260' e='324' se='388' s='387' in='322' no-exit='town.square.1'/>
+   </location>
+
+   <location num='324'>
+      <name>Center Of the Square.</name>
+      <desc>A statue adorns the center of the Tenpin Square. You read the inscription on the plaque at the bottom of the statue. &quot;Dedicated to the greatest bowler ever to live in the Federation. Phil XXXVVVRX, (something, cannot quite make out the last name) bowled  8 consecutive 300 games in one season. stardate:101189:0134. Odd, the statue seems to be off center slightly. Shops all around the Square invite you.</desc>
+      <exits n='260' ne='261' e='325' se='389' s='388' sw='387' w='323' nw='259' no-exit='town.square.1'/>
+   </location>
+
+   <location num='325'>
+      <name>Southeast Corner of the Square</name>
+      <desc>You are on the East Side of the Square . You are at the front door of the Tenpin Cafe. Come on IN for a frosty brew. All around the Square are other shops to visit.</desc>
+      <exits n='261' s='389' sw='388' w='324' nw='260' in='326' no-exit='town.square.1'/>
+   </location>
+
+   <location num='326' flags='b'>
+      <name>Tenpin Cafe</name>
+      <desc>Soft music and a quite din meet you as you enter the cafe. Patrons enjoying the fine food and drink carry on conversation of the day&apos;s events and their trading deals of the week. Sitting down you can hear a conversation between to men a couple of tables away. Not clearly, but it seems someone has lost something. A key maybe. Hard to follow them coming into the conversation in the middle as you did. You notice looking out the window to the East the darkened bowling alley. Makes you wonder how to get over there. You can go out to the square to continue on your quest.</desc>
+      <exits out='325' no-exit='town.square.2'/>
+   </location>
+
+   <location num='328'>
+      <name>Bottom of Fire Escape</name>
+      <desc>You notice a fire escape on the side of the hospital. You grab the rail and swing onto the ladder. Down you go. OOPS!! The ladder retracts as you step off. Hope there is another way out. There is a thick hedge all around you. An opening in the hedge goes East.</desc>
+      <exits e='329' down='441' no-exit='hedge.door.1'/>
+   </location>
+
+   <location num='329'>
+      <name>End of Trail</name>
+      <desc>On this side of the hedge is the Bowling Alley. To the east is the front door of the bowling alley. The battered door still has patches of its old coat of red paint. Once there was a sign attached to it but all that remains of it is a lighter color silhouette on a larger patch of paint near the top of the door and 4 holes where bolts once attached it. A large lock installed over a brass doorknob still secures the door against the curious visitor. The metal of the lock gleams brightly in contrast to the dilapidated state of the door.The force field keeps you back from actually touching the door. A portal to the northwest takes you back to the landing pad.</desc>
+      <exits w='328' nw='130' no-exit='force.field.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Inside the bowling alley</name>
+      <desc>As the lights inside the alleys come on you discover you have solved the puzzle. Congradulations. Please email: aringer@yahoo.com and give him the password: abigail4.  Your name will be added to the new trophy in the Computer Terminal Room. Please keep this puzzle a secret and let others have as much fun solving it as you did. Have a great day...The oldman. Northwest takes you back to the Landing Pad.</desc>
+      <exits n='266' nw='130' no-exit='force.field.1'/>
+   </location>
+
+   <location num='376'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin. A sign at the edge of the field says &quot;OCEAN THIS WAY&quot;.</desc>
+      <exits n='67' ne='313' e='377' se='441' s='440' sw='67' w='67' nw='67' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='377'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin.</desc>
+      <exits n='67' ne='67' e='67' se='67' s='441' sw='67' w='376' nw='67' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='387'>
+      <name>Southwest corner of the Square</name>
+      <desc>Visit the shops all around the Square for the finest in Bowling Merchandise.</desc>
+      <exits n='323' ne='324' e='388' no-exit='town.square.1'/>
+   </location>
+
+   <location num='388'>
+      <name>South Center of the Square</name>
+      <desc> South is the Hospital. If you are not feeling well please go in there. All around the square are the shops of Tenpin.</desc>
+      <exits n='324' ne='325' e='389' w='387' nw='323' in='452' no-exit='town.square.1'/>
+   </location>
+
+   <location num='389'>
+      <name>Southeast corner of the Square</name>
+      <desc>Looking around you can see there are shops of every description. You notice looking out the window to the East the darkened bowling alley. Makes you wonder how to get over there.</desc>
+      <exits n='325' w='388' nw='324' no-exit='town.square.1'/>
+   </location>
+
+   <location num='390'>
+      <name>Bottom of Sluce</name>
+      <desc>WEEEEEEEEEEEEE, You jump off the sluce and find yourself in an old processing center for the gold ore. Looking back you realize your not going to be able to get back up the sluce. There is a door in the north wall.</desc>
+      <exits out='389' no-exit='town.square.1'/>
+   </location>
+
+   <location num='440'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin.</desc>
+      <exits n='376' ne='67' e='441' se='67' s='504' sw='67' w='67' nw='67' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='441'>
+      <name>Country side of Tenpin</name>
+      <desc>You get down on your hands and knees and wiggle through the small opening in the bottom of the thick hedge. Standing up and wiping off your knees you look around to see the your are at the corner of a large farming field. Workers are planting new crops. Off in the distance you see a sign. Need to get closer to read it. You can go in almost any direction but you rule out trying to get back through the hedge.</desc>
+      <exits n='377' ne='67' e='442' se='506' s='505' sw='504' w='440' nw='376' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='442'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin.</desc>
+      <exits n='67' ne='67' e='67' se='67' s='506' sw='505' w='441' nw='67' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='452' flags='hi'>
+      <name>Hospital</name>
+      <desc>Cure what ails you here. South is the hospital balcony where you can stand and get a good view of Tenpin&apos;s countryside.</desc>
+      <exits s='516' out='388' no-exit='hospital.exit.1'/>
+   </location>
+
+   <location num='458' flags='kt'>
+      <name>Bottom of the Sewer.</name>
+      <desc>Water runs through a shallow rubbish filled conduit in the center of the floor. Here and there a bright flash of metal reveals old lost coins and keys among the broken glass, discarded bowling pins, and papers resembling old bowling score sheets. Bits of paper and wood along the raised rim of the conduit are mute evidence that others have searched for lost treasure in the conduit. Up will always get you out.</desc>
+      <exits se='523' up='324' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='502'>
+      <name>The Sluce</name>
+      <desc>You jump onto the sluce and begin your slide down the mountain. WEEEEEEEEEEE. Reaching a point about halfway down the sluce flattens out and you come to a stop. Looking back you realize you cannot go back up the sluce. Better give yourself a push to continue.</desc>
+      <exits down='390'/>
+   </location>
+
+   <location num='503'>
+      <name>Top of the mountain.</name>
+      <desc>You are nearing a cliff that overlooks the planet of Tenpin. Looking down you discover a sluce. It was probably used to get the ore down off the mountain. It appears the sluce is all solid and it looks like to goes all the way to town.</desc>
+      <exits s='567' down='502' no-exit='country.trail.2'/>
+   </location>
+
+   <location num='504'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin. A sign at the edge of the field says,&quot;WORKER SAFTEY MEETING ON TUESDAY 6PM .&quot;</desc>
+      <exits n='440' ne='441' e='505' se='67' s='67' sw='67' w='67' nw='67' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='505'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin.</desc>
+      <exits n='441' ne='442' e='506' se='67' s='67' sw='67' w='504' nw='67' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='506'>
+      <name>Fields of Tenpin</name>
+      <desc>Workers planting and caring for the Agricultural products for Tenpin. A sign on the edge of the field says, &quot;WORKERS PLEASE STAY ON MARKED PATH.&quot;</desc>
+      <exits n='442' ne='67' e='67' se='67' s='67' sw='569' w='505' nw='441' up='67' down='67' in='67' out='67' no-exit='country.trail.1'/>
+   </location>
+
+   <location num='516'>
+      <name>Hospital Balcony</name>
+      <desc>Fresh air is always a good cure for what ails you. To the east you can see the old bowling alley complex. South looks out on the beautiful Tenpin landscape. One unusual feature of Tenpin is its fall climate. This causes the trees to generate beautiful colors year round. North takes you back into the hospital.</desc>
+      <exits n='452' down='328' no-exit='hospital.exit.1'/>
+   </location>
+
+   <location num='520' flags='kt'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits n='67' e='67' se='67' s='67' w='67' nw='67' up='324' down='523' in='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='523' flags='kt'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along. You got a flash of something somewhere down here at the bottom of the sewer...but you have completely lost your sense of direction...</desc>
+      <exits n='67' ne='67' e='67' se='67' s='67' sw='67' w='67' nw='458' up='324' down='67' in='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='567'>
+      <name>Trail in the mountains of Tenpin.</name>
+      <desc>As you climb to the top of the mountain you see a opening to a old gold mine to the south. It could very well have been a were most of the gold sold at the exchange came from.</desc>
+      <exits n='503' s='631' down='568' no-exit='country.trail.2'/>
+   </location>
+
+   <location num='568'>
+      <name>Path to the mountains</name>
+      <desc>As you climb into the mountains, You see the beauty that is Tenpin. You come across workers cutting trees for shipment to the exchange.</desc>
+      <exits up='567' down='569' no-exit='country.trail.2'/>
+   </location>
+
+   <location num='569'>
+      <name>Trail to the mountains of Tenpin</name>
+      <desc>You have found the path workers use to get to the mountains.</desc>
+      <exits ne='506' up='568' no-exit='country.trail.2'/>
+   </location>
+
+   <location num='631'>
+      <name>Old gold mine</name>
+      <desc>As you enter the mine you find a torch and light it. Now, much easier to see, there is not alot here. You see a small tunnel going southwest.</desc>
+      <exits n='567' sw='694' no-exit='country.trail.2'/>
+   </location>
+
+   <location num='694'>
+      <name>Old gold mine</name>
+      <desc>Down on your hands and knees again, you enter the tunnel. It soon opens up into a large mine cavern. On one side is a pile of empty wooden boxes marked XXX-TNT-XXX, leaning against the wall near the boxes are a Shovel, a Pick-axe, a Digging bar, a Metal Bucket, and some Rope, you think, &apos;obviously tools needed for mining.&apos;  Also on the corner of one box is a pair of warn Gloves and Mining Helmet. It looks like the tunnel once lead off to the west but it has collapsed. As you are about to leave, something sparkling catches your eye in the far wall of the cavern.</desc>
+      <exits ne='631' no-exit='country.trail.2'/>
+   </location>
+
+   <location num='712' flags='kt'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits n='67' ne='67' se='67' s='67' sw='67' w='67' nw='67' up='324' down='67' in='67' out='799' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='715' flags='kt'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits n='67' ne='67' e='67' s='67' sw='67' w='67' up='324' down='520' in='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='799'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits n='67' e='67' s='67' w='67' up='324' down='67' in='1439' out='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='833'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits n='67' ne='67' e='837' se='67' s='67' sw='67' w='67' nw='67' up='324' down='67' in='67' out='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='837'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits n='67' ne='67' e='67' se='67' s='67' sw='1092' w='67' nw='67' up='324' down='67' in='67' out='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='1092'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <desc>Feeling around you find water is running into the chamber you are in from the ledge above your head.</desc>
+      <exits n='67' ne='67' e='67' se='67' s='67' sw='67' w='67' nw='67' up='324' down='67' in='67' out='67' no-exit='sewer.pipe.1'/>
+   </location>
+
+   <location num='1439'>
+      <name>The Sewers of Tenpin.</name>
+      <desc>Up will always get you out. It is very dark here and doesn&apos;t smell all that good. You will need to feel your way along.</desc>
+      <exits ne='67' se='67' sw='67' nw='67' up='324' down='67' in='67' out='715' no-exit='sewer.pipe.1'/>
+   </location>
+
+</fed2-map>

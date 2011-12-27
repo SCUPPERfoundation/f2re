@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<event-list version='5'>
+
+ <category name='greeting'>
+
+  <section name='cloudbaseorbit'>
+
+   <event num='1'>
+    <comment>personal greeting to player - loc 397 - in loc trigger</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Cloudbase Control, %s, Cloudbase welcomes your visit, please be advised that you have been cleared to land in Shuttle Bay 3.</message>
+   </event>
+
+  </section>
+
+  <section name='cumulusorbit'>
+
+   <event num='1'>
+    <comment>personal greeting to player - loc 461 - in loc trigger</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Cumulus Control, %s, Cumulus welcomes your visit, please be advised that you are cleared for landing</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='cloudclosed'>
+
+   <event num='1'>
+    <comment>Cloud closed - loc 717 - on entry trigger</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Cloud Control, %s please be advised that at this time it is not possible to land on Cloud, please obtain the necessary authorisation and return at a later date.</message>
+   </event>
+
+  </section>
+
+  <section name='nimbus'>
+
+   <event num='1'>
+    <comment>Nimbus closed - loc 717 - on entry trigger</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Nimbus Control, %s please be advised that at this time it is not possible to land on Nimbus, please obtain the necessary authorisation and return at a later date.</message>
+   </event>
+
+  </section>
+
+  <section name='noentry'>
+
+   <event num='1'>
+    <comment>checks for owner at - loc 589 - on entering loc</comment>
+    <move what='player' who='individual' loc='525'/>
+    <message type='single' where='com' who='individual' lo='moves.noexit.3'/>
+   </event>
+
+  </section>
+
+  <section name='ownerentry'>
+
+   <event num='1'>
+    <comment>checks for owner at - loc 589 - on entering loc</comment>
+    <checkflag who='individual' flag ='staff'  set='moves.ownerentry.2' unset='moves.noentry.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Successful passage message - loc 589 - on entering loc</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Cloud Space Control, "You have entered a restricted area of Cloud Space and your safety cannot be assured, please proceed carefully and be aware, Cloud Space Contril cannot be held responsible for your safety."</message>
+   </event>
+
+  </section>
+
+  <section name='sirrusclosed'>
+
+   <event num='1'>
+    <comment>Stratus closed - loc 717 - on entry trigger</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Sirrus Control, %s please be advised that at this time it is not possible to land on Sirrus, please obtain the necessary authorisation and return at a later date.</message>
+   </event>
+
+  </section>
+
+  <section name='stratusclosed'>
+
+   <event num='1'>
+    <comment>Stratus closed - loc 717 - on entry trigger</comment>
+    <message type='text' where='com' who='individual'>Your comms unit crackles with a message from Stratus Control, %s please be advised that at this time it is not possible to land on Stratus, please obtain the necessary authorisation and return at a later date.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<fed2-map title='Terran Space' version='20' editor='standard'>
+
+   <location num='0' flags='st'>
+      <name>Store Room</name>
+      <desc>There is no reason in the world why you should be here.</desc>
+      <exits no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='198' flags='sp'>
+      <name>In Orbit Around Dysnomia</name>
+      <desc>   There&apos;s no question why the planet spinning below you was named after the greek goddess of lawlessness. Quite a forboding world, a geologic scan of Dysnomia reveals that the crust is quite unstable, suffering from regular seismic activity. Although there is a breathable atmosphere, there is also no water to speak of on the planet, which would make any permanent settlement here quite difficult.</desc>
+      <desc>   After a second pass over the planet&apos;s surface, your computer has registered a small outpost located on Dysnomia&apos;s southern hemisphere. Upon further investigation, you notice that the outpost is broadcasting a low frequency, Terran military transponder beacon. It&apos;s not recommended that you go down to the planet&apos;s surface to check anything out further. You do notice, however, the faint signal of a nav-beacon to the South and East.</desc>
+      <exits e='199' se='263' s='262' sw='261' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='199' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   So you thought you&apos;d take a joy ride through the Terran system? Well, there&apos;s not much to see around here. The closest object to you is a planetoid to your West. The only problem, though, is that your long range scanners are picking up exactly zero activity in the area. If you want to do business in this system, you probably want to head back towards the shipping lanes to the SouthEast.</desc>
+      <exits se='264' s='263' sw='262' w='198' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='260' flags='sp'>
+      <name>In Orbit Around Ifrit</name>
+      <desc>   Glowing brightly below you is a hellish world. With molten metals flowing freely in rivers along its surface, Ifrit is not a welcoming place. The first planet in the Terran system, it hugs its parent star closely as follows its 15 standard day orbit. At this range, it is tidally locked to Soleil so that one side of the world is forever in daylight while the other suffers through an eternal night.</desc>
+      <desc>   Sitting at twice the mass of Earth and containing its own magnetic field, Ifrit has managed to retain a thick atmosphere. Choking the world below in what is most likely a runaway greenhouse effect, the average surface temperate sits at 1200 degrees Celsius. There&apos;s no place for you to land here.</desc>
+      <desc>   Soleil itself lies to the SouthWest.</desc>
+      <exits e='261' se='325' s='324' sw='323' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='261' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Your navigational computer isn&apos;t reading any planetary objects in this sector. At the same time, however, it is reading a metallic signature not far from your current position. Upon further investigation, you identify the mass as the remains of an Imperial class freighter. Several blast points along the hull of the wreck indicate that the vessel took significant amounts of laser fire. Additional scans show that any freight that was being carried onboard is long gone, so there&apos;s not much more you can do here.</desc>
+      <desc>   The only other nearby signatures are from a rocky planetoid to your West and another to your NorthEast.</desc>
+      <exits ne='198' e='262' se='326' s='325' sw='324' w='260' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='262' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   All screens are clear of traffic as you enter a particularly empty region of the Terran System. There are currently no navigational beacons within scanning range, although you do pick up a rocky planet to your North. If you want to head back towards the main shipping lanes, however, you can always head back East.</desc>
+      <exits n='198' ne='199' e='263' se='327' s='326' sw='325' w='261' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='263' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Being out in deep space has its privileges. You have time to count the exact number of switches on your control console. Your closet is now organized. You are definitely sure that there aren&apos;t a number of creatures crawling around the inside of your ship&apos;s hull trying to find and eat you.</desc>
+      <desc>   Of course, if you&apos;re looking for a more exciting location, you probably don&apos;t want to be here right now. Empty space surrounds your vessel and there&apos;s not much to break the monotony. To your NorthWest is a rocky planet that could be interesting to investigate. Otherwise, you should probably head back to a more commercialized location in the system by going East.</desc>
+      <exits n='199' e='264' se='328' s='327' sw='326' w='262' nw='198' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='264' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>     Your main viewscreen shows you that there is just empty space in this vicinity. Long range sensors, however, are picking up a host of different signals showing that you&apos;re not too far off the beaten path. Most notably, there seems to be a life bearing planet to your East. Of course, there is also a small navigational signal coming from SouthEast which is declaring the presence of a shipping lane.</desc>
+      <exits e='265' se='329' s='328' sw='327' w='263' nw='199' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='265' flags='sp'>
+      <name>In Orbit Around Eris</name>
+      <desc>   The glistening orb spinning silently below your ship fades into view on your computer screen. Once covered in a permanent layer of ice, the planet known as Eris has been almost completely terraformed after years of near constant adjustments. From what you can tell from your vantage point, the planet&apos;s permafrost has given way to a several large land masses separated by three great oceans. All that remains of Eris&apos;s original climate are two large icecaps at both of its poles extending to the 60th parallel of each hemisphere. A NavBeacon relays the location of a bustling spaceport located on the planet&apos;s surface where you can safely land a shuttle.</desc>
+      <desc>   Besides the planet&apos;s surface, there are 3 small, yet spherical moons that gracefully orbit around Eris. The commercial lane to and from the Interstellar Link is to your SouthEast while another shipping lane extends away from the planet to the South.</desc>
+      <exits e='266' se='330' s='329' sw='328' w='264' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='266' flags='sp'>
+      <name>Eris - Arawn Interplanetary Shipping Lane</name>
+      <desc>   Coasting through a shipping lane doesn&apos;t make for the most exciting time, but that&apos;s what you&apos;re up at the moment. Not quite as busy as the lane that connects the capital and agricultural worlds of this system, the Eris - Arawn shipping lane does serve as the main flight path to the bio-moon Arawn. A NavBeacon also signals that you&apos;re not far from the Interstellar Link. Heading South will take you to the Link. If you wish to visit the capital world, Eris, you can go West from here. The moon Arawn is quite a distance to your East.</desc>
+      <exits e='267' se='331' s='330' sw='329' w='265' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='267' flags='sp'>
+      <name>Eris - Arawn Interplanetary Shipping Lane</name>
+      <desc>   Shipping lane traffic remains steady as vessels of different sizes and configurations head between the worlds of Eris and Arawn. After a quick scan of the sector, your computer identifies most of the ships here as commercial vessels. With Arawn being the main source of biological products in the sector, it&apos;s easy to understand that there wouldn&apos;t be many people heading there unless it was on company business. The moon of Arawn is to your East. The planet it is orbiting, Clota, is to your SouthEast. Of course, if you want to head back to the Interstellar Link you can go SouthWest. Also, in the distance to the West is the capital of the Terran system, Eris.</desc>
+      <exits e='268' se='332' s='331' sw='330' w='266' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='268' flags='sp'>
+      <name>In Orbit Around Arawn</name>
+      <desc>   Quietly orbiting its parent planet, Arawn appears on your view screen as a dusty ball of ice. Although it does possess a decently dense atmosphere, the moon sits at a temperature of -215 degrees Celcius on average. Due to its clouded atmosphere, its hard to get a grasp of Arawn&apos;s surface features without relaying on radar or infrared imaging. At first glance, there isn&apos;t a sign of activity on the moon&apos;s surface until your computer picks up a small outpost near its equator. After telling your navigational computer to identify the station&apos;s transponder signal, it identifies the station below as a medical research facility. Landing instructions as well as the appropriate communication protocols have been registered in your computer&apos;s public data file, so it appears you can safely Board a shuttle and enter the facility if you&apos;d like.</desc>
+      <desc>   Clota, Arawn&apos;s parent planet lies to the South of your current position in space.</desc>
+      <exits s='332' sw='331' w='267' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='323' flags='sp'>
+      <name>Soleil Orbit</name>
+      <desc>   Burning brightly at the center of the Terran system is Soleil. A Class-G star, Soleil burns with a yellowish hue, not quite different from Sol. It was Soleil&apos;s familiar glow along with Terra&apos;s Earth-like climate that inspired explorers to name this system after their original home.</desc>
+      <desc>   Currently, the star appears to be in a period of magnetic flux which is causing a higher rate of flare activity. That being said, unless you plan on working on a permanent tan, it might be a good idea to steer your ship to somewhere else a little less toasty.</desc>
+      <desc>   A rocky world is to the NorthEast of your position.</desc>
+      <exits ne='260' e='324' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='324' flags='sp'>
+      <name>Interplanetary Space near Soleil</name>
+      <desc>All of your sensors indicate that you are nearing the Terran System&apos;s star, Soleil. Although you haven&apos;t quite reached the orbit of the giant ball of plasma, it wouldn&apos;t be advisable to travel West to its position. However, if you choose to study the star, you can proceed West from here. A planet sized object is orbiting Soleil to your immediate North. It could be worth investigating.</desc>
+      <exits n='260' ne='261' e='325' w='323' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='325' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Planets? No.</desc>
+      <desc>   Comets? No.</desc>
+      <desc>   Trojan Asteroids? No.</desc>
+      <desc>   You&apos;ve entered a region of the Terran system that is devoid of anything of note. With nothing better to do, your navigation computer asks you if you&apos;d like to play a game of Global Thermo-Nuclear war. Either that, or perhaps a nice game of chess.</desc>
+      <exits n='261' ne='262' e='326' w='324' nw='260' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='326' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   No planets here! The emptiness feels almost solid, as though you could grasp it. You smile gently, and go back to the tasks of running the spaceship. Your computer does at least register a planetary body far to the north of your location, as well as a faint NavBeacon to the far East which marks a major shipping lane.</desc>
+      <exits n='262' ne='263' e='327' w='325' nw='261' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='327' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Space madness is a real threat in this region of space. But that&apos;s mainly because of the sheer boredom that comes from floating aimlessly in the interplanetary void. On a positive note, your navigational computer says you&apos;re not far from an earth-sized planet. Just head to your SouthEast, and you&apos;ll be there in no time.</desc>
+      <exits n='263' ne='264' e='328' se='392' w='326' nw='262' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='328' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   You check the main viewscreen, but there are no planets in scanning range. The only useful signs of any kind, however come from planets to the Northeast and South. It appears you are within close proximity to a major shipping lane.</desc>
+      <exits n='264' ne='265' e='329' se='393' s='392' w='327' nw='263' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='329' flags='sp'>
+      <name>Eris - Terra Interplanetary Shipping Lane</name>
+      <desc>   You find your ship floating in one of the busiest sectors of the Terran system. Regular traffic passes through this region of space as it sits between the system&apos;s two most populated planets, Eris and Terra. Navigational Beacons send a message to your vessel instructing you to follow a specific trajectory depending on which direction you plan on heading.</desc>
+      <desc>   According to your computer, the system&apos;s capital, Eris, is to your North. If you&apos;d rather visit the agricultural world, Terra, the you can head to the SouthWest. At the same time, if you&apos;d rather head out of the system, the Interstellar Link&apos;s NavBeacon is beckoning from the East.</desc>
+      <exits n='265' ne='266' e='330' se='394' s='393' sw='392' w='328' nw='264' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='330' flags='slp'>
+      <name>Interstellar Link and Terran Interplanetary Shipping Lane</name>
+      <desc>   A relatively small freighter passes near you as you orbit the Terran System&apos;s Interplanetary Link. Of course, it passes you only by astronomical terms; in this case it never came closer than 450,000 miles to your vessel. Still you can tell as you detect another cargo ship on your long range sensors that a decent amount of traffic is passing along the shipping lane here.</desc>
+      <desc>   A NavBeacon which directs you towards the Terran System&apos;s capital world, Eris, is to your NorthWest, whereas another beacon directs you towards Terra, the system&apos;s agricultural seat, farther to the SouthWest. Also of note, there is a fainter navigational signal coming from a gas giant farther to your East, although it appears that only a small portion of the cargo vessels are heading in that direction.</desc>
+      <exits n='266' ne='267' e='331' se='395' s='394' sw='393' w='329' nw='265' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='331' flags='sp'>
+      <name>Terran Interplanetary Shipping Lane</name>
+      <desc>   Traveling along the Terran System&apos;s shipping lanes, you&apos;ve found yourself in a moderately busy sector of space. Commercial traffic here seems to be busiest in the direction of Arawn, a small moon of the planet Clota. If you wish to visit the moon, you can head to your NorthEast. The planet Clota, itself, is to your East, while the Interstellar Link is directly to your West.</desc>
+      <exits n='267' ne='268' e='332' se='396' s='395' sw='394' w='330' nw='266' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='332' flags='sp'>
+      <name>In Orbit Around Clota</name>
+      <desc>   Although it is not nearly as big as Saturn, the sight of the gas giant below you is still impressive. One of the first things you notice about Clota as you orbit the planet are the bright bands of blue and green that race across the planet&apos;s face. Constantly rubbing against each other, the friction between the jet streams allow for storms to develop quickly on Clota. Arcs of lightning dance across Clota&apos;s cloud tops at a rate no less than once every 3 minutes. Also not to be ignored is the faint system of rings that encompass the gas giant below you. Although not as dazzling as Saturn&apos;s, the rings are worth a quick scan or two and add an extra touch to the picture in your view screen.</desc>
+      <desc>   Clota is surrounded by a well developed system of moons. The largest, which your computer has labeled Arawn, is located to the North of your current position. A faint signal is directing shipping traffic towards the moon.</desc>
+      <exits n='268' e='333' se='397' s='396' sw='395' w='331' nw='267' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='333' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   A quick scan is enough to tell you that there are no planets in this sector, however there are indications that a gas giant is to your West. A glance at your long range sensors detect little signs of activity in that area.</desc>
+      <exits e='334' se='398' s='397' sw='396' w='332' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='334' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Instrument readings indicate a complete absence of planets in this sector of space, although there are signs that a massive gas giant is located to the distant South of your current location. It may warrant investigating, however there is currently no indication of any activity in that sector.</desc>
+      <exits e='335' se='399' s='398' sw='397' w='333' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='335' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>     Your instruments tell you that there are no planets in this sector. At the same time, however, it appears there is an icy body to the East of your current position. From what you can tell, you are nearing the furthest extent of explored space in the Terran system. It is highly advised that you don&apos;t travel much farther away from the Terran Star, Soleil, as your safety cannot be guaranteed.</desc>
+      <exits e='336' s='399' sw='398' w='334'/>
+   </location>
+
+   <location num='336' flags='sp'>
+      <name>In Orbit Around Mateus</name>
+      <desc>     Situated at the farthest explored edge of the Terran system lies the planet Mateus. No more than a frozen ball of gas and ice, it lurks quietly in the night orbiting its sun once every 200 standard years. At the moment, you&apos;re so far away from Soleil, the Terran system&apos;s host star, that it appears as just a brighter version of its sisters in the void around it.</desc>
+      <desc>     Mateus itself is currently unihabited. As with many of the other lifeless worlds in this solar system, the Terran government has a team of satellites and probes monitoring the icy planet. At the moment, though, your computer isn&apos;t providing you with any information that would make this world significant in any way compared to most.</desc>
+      <desc>     Unless you plan of making a sub-light journey to the next star system, there&apos;s nowhere East of here to go.</desc>
+      <exits sw='399' w='335' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='391' flags='sp'>
+      <name>In Orbit Around Boann</name>
+      <desc>   Boann, the largest moon of the planet Terra, drifts lazily around its parent planet as you enter orbit above it. To a large extent it resembles Earth&apos;s moon, Selena, with only a few exceptions. It has been able to retain a thin atmosphere composed mostly of carbon dioxide. That and due to the tidal forces between Terra and its companion moon, Dagda, Boann is still tectonically active. A series of volcanos mark the borders between the massive plates making up its crust. Although large glaciers dominate much of the moon&apos;s remaining landscape, there&apos;s just enough heat on Boann for liquid water to exist in rivers and a series of large lakes near its equator. Of course, without oxygen, and having a mean temperature of -50 degress centigrade, the moon is not quite habitable.</desc>
+      <desc>   To your immediate East is Boann&apos;s parent planet, Terra. Your sensors can detect quite a bit of commercial traffic heading to and from the planet.</desc>
+      <exits e='392' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='392' flags='sp'>
+      <name>In Orbit Around Terra</name>
+      <desc>   The jewel of the Terran system, Terra is the most earthlike of all the planets in the Terran system. Lush jungles and vast deserts span the equatorial regions of the planet. Oceans, teeming with life, seperate the various continents and mild temperate zones allow for a comfortable climate to settle in. At the same time, your computers are registering several zones that show unusually high radiation signatures. According to these readouts, several of Terra&apos;s landmasses have recovered from what appears to be radioactive fallout within the last few decades.</desc>
+      <desc>   Regardless of whatever past strife has consumed the planet, commercial activities appear to have returned to Terra. The largest hub of activity is a modestly sized spaceport on the edge of a continent in the northern hemisphere. You can board your shuttle and check out the space port if you like. The larger of Terra&apos;s two moons, Boann is to your West, while the shipping lane is to the NorthEast.</desc>
+      <exits n='328' ne='329' e='393' w='391' nw='327' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='393' flags='sp'>
+      <name>Terran Interplanetary Shipping Lane</name>
+      <desc>     As you enter this sector, a NavBeacon requests that you broadcast your shipping manifest as well as your destination coordinates. It seems the residents of the planet to your West are trying to keep a watchful eye on who&apos;s coming and going. Regardless of your intentions, there doesn&apos;t seem to be a military presence of any kind in this sector at the moment, so you could probably safely ignore that beacon if you wanted to.</desc>
+      <desc>   The few vessels that you have picked up on your long range sensors are primarly going to and coming from the planet to your West. Your sensors, however, have also detected two moons orbiting that world. If you&apos;d rather head back to the link, the shipping lane continues to the Northeast.</desc>
+      <exits n='329' ne='330' e='394' w='392' nw='328' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='394' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Your main viewscreen shows you that there is just empty space in this vicinity. Long range sensors, however, are picking up a host of different signals showing that you&apos;re not too far off the beaten path. First, there seems to be a life bearing planet in the distance to the West. Also, to your North seems to be the Interstellar Link connecting this system with the rest of the galaxy. Of course, there is a small navigational signal coming from the NorthWest which is declaring the presence of a shipping lane.</desc>
+      <exits n='330' ne='331' e='395' w='393' nw='329' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='395' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   Once again, you are in the empty space between planets... or so your computer tells you. On the upside, however, your navigational computer is picking up a nav-beacon to your NorthWest signaling the location of the Interstellar Beacon, so you&apos;re not far off the main shipping lane. Your long range sensors are also detecting a ringed gas giant to your NorthEast.</desc>
+      <exits n='331' ne='332' e='396' w='394' nw='330' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='396' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   A quick scan of the sector is all you need to tell you that there are no planets here. North of your sector is a modest, ringed planet that is slightly smaller than Saturn. A group of trojan asteroids are nearby your current location as well.</desc>
+      <exits n='332' ne='333' e='397' se='461' w='395' nw='331' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='397' flags='sp'>
+      <name>Jove&apos;s Graveyard</name>
+      <desc>   A golfball sized asteroid glances off your ship as you enter this sector of space. Your sensors take note of the asteroid belt known as Jove&apos;s Graveyard. More densely packed than Sol&apos;s asteroid belt, Jove&apos;s Graveyard was an actual planetary body that broke apart when its orbit shifted between the Terran system&apos;s two largest gas giants. The new asteroid belt now serves as a barrier between Clota and Bussumarus, although periodically, their respective gravities kick asteroids from Jove&apos;s Graveyard out of their orbits in an eternal game of Tug-of-War. Staying here could prove hazardous to your health. Almost any direction will do, however you can investigate the ringed planet Clota by heading NorthWest. To your SouthEast, though, you can visit the massive Bussumarus.</desc>
+      <exits n='333' ne='334' e='398' se='462' s='461' w='396' nw='332' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='398' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   You check your screens, but there are no planets in this part of space. With a shrug you turn to other tasks of shipboard maintenance. There are a few stray asteroids in this sector, however an extremely large gas giant is South of you if you&apos;d rather go there.</desc>
+      <exits n='334' ne='335' e='399' s='462' sw='461' w='397' nw='333' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='399' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   The printout indicates nothing in the way of planets in this sector. You can, however, proceed Northeast towards a small celestial body or SouthWest to an overgrown gas giant. Yay, what lovely choices!</desc>
+      <exits n='335' ne='336' sw='462' w='398' nw='334' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>Interplanetary Space</name>
+      <desc>   The unwinking stars look down on you as you travel between planets, of which there are none in this sector. If you go a bit further to the East though, you will run into an immense gas giant.</desc>
+      <exits n='397' ne='398' e='462' nw='396' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='462' flags='sp'>
+      <name>In Orbit around Bussumarus</name>
+      <desc>   Your ship stabilizes itself in a high orbit around the gas giant, Bussumarus. Weighing in at 6 times the mass of Jupiter, Bussumarus is a Jovian world of immense proportions. Thick bands of browns and reds sweep across the face of the planet as it turns about its axis.</desc>
+      <desc>   Although your computer has identified nearly 76 different moons of various shapes and sizes orbiting this massive planet, not a single one can safely be terraformed using current technology due to the magnetic and radioactive dangers present in the system.</desc>
+      <desc>   As of right now, you are definitely well outside the Terran system&apos;s main shipping lanes. Still, Bussumarus and its moons below do make for a nice view.</desc>
+      <exits n='398' ne='399' w='461' nw='397' no-exit='moves.noexit.3'/>
+   </location>
+
+</fed2-map>

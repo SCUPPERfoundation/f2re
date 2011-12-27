@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<fed2-map title='Veltier' version='6' editor='standard' from='458' to='Axieon.Axieon Space.329'>
+
+   <location num='394' flags='e'>
+      <name>No Refunds Exchange</name>
+      <desc>This small dome houses the Veltier Exchange.  Traders scurry around the dome trying to get the best deal on any given commodity.  The ceiling of the dome is one large ticker broadcasting the current price on all that is available to buy or sell.  The exit is to the South</desc>
+      <exits s='458'/>
+   </location>
+
+   <location num='395' flags='hi'>
+      <name>Live And Let Die Hospital</name>
+      <desc>All the modern gadgets you could ever hope to find aren&apos;t located in the Hospital dome.  While the rest of the planet is under construction, the Hospital is as simple as possible.  The insurance desk is tucked away in the corner.  The exit is to the SouthWest.</desc>
+      <exits sw='458'/>
+   </location>
+
+   <location num='458'>
+      <name>Landing Pad</name>
+      <desc>You are standing on the landing pad of Veltier.  It is the central dome with exits spanning the eight directions of the compass.  Unfortunately most of them are closed due to construction.</desc>
+      <desc>North - Exchange</desc>
+      <desc>NorthEast - Live And Let Die Hospital</desc>
+      <desc>East - Bar (Closed due to construction)</desc>
+      <desc>SouthEast - Factory Center (Closed to Visitors)</desc>
+      <desc>South - Agricultural BioDomes (Closed to Visitors)</desc>
+      <desc>SouthWest - Shipyard (Closed - Please visit Renglor)</desc>
+      <desc>West - Museum (Closed due to construction)</desc>
+      <desc>NorthWest - Employment Office (Closed due to construction)</desc>
+      <exits n='394' ne='395'/>
+   </location>
+
+</fed2-map>

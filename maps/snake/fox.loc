@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<fed2-map title='Fox' version='9' editor='standard' from='714' to='Snake.Snake Space.330'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>objects/mobiles</desc>
+   </location>
+
+   <location num='263'>
+      <name>Cub Lair</name>
+      <desc>   Upon entering from the cave opening, you immediately stop in fear.  Nestled in a cubby-hole at the end of the tunnel are two small cubs sleeping with their mother.  The movement of your entrance has knocked a pebble loose, and the echo of it bouncing along the floor has made the mother bear peek one eye open... and it&apos;s staring directly at you!     You decide a hasty retreat to the east might be your best option.</desc>
+      <exits e='264' no-exit='moves.noexit.16'/>
+   </location>
+
+   <location num='264'>
+      <name>Cave Entrance</name>
+      <desc>   Standing in the dim entrance to a small cave, you sight a small old-fashioned lantern off to the side.  After finally figuring out the archaic system of lighting something called a wick, you realize how untouched this place has been.  You see what appears to be old cave drawings in several areas of the walls, and other artifacts that are a minimum of 500 years old.  A few bats are seen to be sleeping on the ceiling, and walk quietly to avoid disturbing them.</desc>
+      <desc>  A small trickle of water runs down the center of the cave to the west, almost begging you to explore further.</desc>
+      <exits se='329' w='263' no-exit='moves.noexit.15'/>
+   </location>
+
+   <location num='329'>
+      <name>Mountain Plateau</name>
+      <desc>   Far to the north and west you can see mountains that range high enough to have snow and ice cap their peaks.  A chill wind blows off of them and you realize you have no gear or equipment to attempt their harsh climate or altitudes.</desc>
+      <desc>   A rocky path almost as harsh is passable to the south, while a more accessible hilltop beckons to the east.  You are also able to pick what appears to be a small cave entrance to the north-west.</desc>
+      <exits e='330' s='393' nw='264' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='330'>
+      <name>Hilltop</name>
+      <desc>   You come to rest on a graceful hilltop with the sun above gently warming you in a cloudless sky.  The smells of the fresh grass and the occasional butterfly has you entertain the thought of a short nap... or the perfect picnic and afternoon frolic with a lover.  You can&apos;t help but laugh out loud when you see a sign off to the side that states ABSOLUTELY NO FROLICING ALLOWED!</desc>
+      <desc>   A rocky plateau is off to your left, while the hilltop dips down out of sight to the east.</desc>
+      <exits e='331' w='329' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='331'>
+      <name>Ravine Bed</name>
+      <desc>   You are barely able to hold your footing in this muddy ravine bed as you slip and slide everywhere trying to keep the mud off your outfit and out of your hair.  As you finally slosh to a semi-stable standing position, you eye your surrounds.  Spotted throughout the area are what appears to be small shifting muddy hills.... and you realize they are actually ant hills with tens of thousands of tiny black ants squirming all over them.</desc>
+      <desc>   To your west is an insurmountable climb up what is practically a mud mountain, and to your south a gently rising dry ravine.  All other directions are impassable due to how low the bed of the dry ravine lays.</desc>
+      <exits s='395' no-exit='moves.noexit.14'/>
+   </location>
+
+   <location num='393'>
+      <name>Rocky Path</name>
+      <desc>   You pause to catch your breath on a rocky path with an incline to challenge any recreational hiker.  A whisper of movement out of the corner of your eye reveals a scorpion scuttling behind a boulder a dozen paces away, and you decide this may not be the best place to linger or nap.</desc>
+      <desc>   The path continues down to your southeast, and appears to level off to a plateau to your north.</desc>
+      <exits n='329' se='458' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='394'>
+      <name>Hollow Tree</name>
+      <desc>   You are on the inside of a quite roomy sequoia tree.  There is actually enough space in here to stand in the middle with your arms fully outstretched and still be several feet away from being able to touch any of the edges.  You find this to be a perfect place to camp out in the case of an occasional rainstorm or to fortify your position in escaping a dangerous animal.  Although the hollow interior extends well above you, there is no way to climb since you can not find any foot-holds or even rough areas to get a good grip.</desc>
+      <desc>   There is an open exit leading back out.</desc>
+      <exits out='458' no-exit='moves.noexit.13'/>
+   </location>
+
+   <location num='395'>
+      <name>Dry Ravine</name>
+      <desc>   You are treading down what is barely a footpath as it is actually a dried ravine that has become overgrown on both sides with young saplings and low brush creeping towards the center.  Towards the edges you can occasionally glimpse larger and taller trees with branching boughs that let the sunlight trickle to the ground in amazing shapes and shades.  Simple and complex webs are strung all around you to catch wayward flying insects by the spiders that seem to abound in this area.</desc>
+      <desc>   You are able to detect what appears to be a clearing to the north, while the path climbs and thins to your south-west.</desc>
+      <exits n='331' sw='458' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='456'>
+      <name>Grain Silo Interior</name>
+      <desc>   You are standing inside of what is basically a very large metal can that is currently empty after the sale of the entire product to the local exchange.  As you begin to think of the money you could make trading such a commodity, you start to wonder exactly why you&apos;re standing in a big empty metal can.</desc>
+      <desc>   The door out is to your south-east.</desc>
+      <exits se='521' out='521' no-exit='moves.noexit.12'/>
+   </location>
+
+   <location num='458'>
+      <name>Forest Glade</name>
+      <desc>   Standing in the middle of an old forest, the sound of bird calls surrounds you from all directions and a towering hollow sequoia tree with hundreds of branches provides shade in this calming glade covered in soft grass.</desc>
+      <desc>   To your northwest leads a steep trail upwards, while to your northeast is a much gentler slope down.  Directly to your south is a widening trail back towards town.</desc>
+      <exits ne='395' s='522' nw='393' in='394' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='518'>
+      <name>Attic</name>
+      <desc>   You are in the small attic room of the windmill that provides some light from a window on the eastern side.  While underneath your feet are sturdy floorboards, the walls are a smooth circle all around you made of limestone, as is the rest of the mill.  The stones feel cool to the touch, and the eerie feelings that have been bothering you seem to fade away.  Last of all, you notice sitting on the center of the floor a lit candle in a small tin holder and a book whose name you can&apos;t quite make out on the cover.  As you approach it, your mind begins to play tricks on you.  That creepy sense of something watching you rushes back, you see a strange glow from underneath the water of the pond through the window, and for just a moment you almost believe you hear a strange heartbeat sound.  Lub-dub-DUB, Lub-dub-DUB.</desc>
+      <desc>   The ladders leads back down.</desc>
+      <exits down='582' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='519'>
+      <name>Windmill</name>
+      <desc>   You are standing outside of a large windmill that whose massive presence dominates the area&apos;s landscape.  Although it appears to be at least several hundred years old and is missing a few panels in the four 50-foot vanes, it still looks as if it is in serviceable, if not workable, condition.  You suppose it is used to actually grind the grain that is harvested in the field and stored in the silo.</desc>
+      <desc>   An unlocked door leads in to the windmill although you feel an almost creepy presence about it.  You can also go east to the pond.</desc>
+      <exits e='520' in='583' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='520'>
+      <name>Pond</name>
+      <desc>   Resting beside and gliding on the small farms pond are several ducks who begin to quack as they notice you and hope for some bread crumbs.  The afternoon sun glints of the surface of the water making it impossible to see down into its depths.</desc>
+      <desc>   You see a silo to your east, a farm to your south, a windmill to your west, and a path back to the farmhouse to your south-east.</desc>
+      <exits e='521' se='585' s='584' w='519' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='521'>
+      <name>Grain Silo Exterior</name>
+      <desc>   You are standing next to a large four-story grain silo that currently appears empty since the door is cracked open to the north-west.  The sunlight reflecting off of the silvered surface begins to make you warm, and while looking up you see a flock of geese flying south.</desc>
+      <desc>   A pond is off to your west, an open field to the south-west, and the farmhouse to your south.</desc>
+      <exits s='585' sw='584' w='520' nw='456' in='456' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='522'>
+      <name>Tree Shaded Lane</name>
+      <desc>   You are strolling down a much smaller dirt path overhung on both sides by towering oak trees.  The gentle fragrance of the forest surrounds you as your steps gently fall on the thin lane.</desc>
+      <desc>   You can see an opening out of the grove to your south, while the trees continue to come together to your north.</desc>
+      <exits n='458' s='586' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='582'>
+      <name>Gear Room</name>
+      <desc>   There is little room to move about freely in the machine room which uses a complicated set of gears to convert the energy from the windmills outside into the main crank-shaft that turns the grinding wheel in the ground floor room below.  The sense of confinement is not helped by the extremely dim lighting or by the ever-growing feeling of something inhuman keeping its gaze on you.</desc>
+      <desc>   The stairs that curve along the wall of the mill lead back down, and you notice a small ladder in a corner leading further upward.</desc>
+      <exits up='518' down='583' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='583'>
+      <name>Ground Floor</name>
+      <desc>   It is very dim, though you are able to make out some of your surroundings from the late-afternoon light that comes in through the open door that leads back out.  The largest area of the ground floor is taken up by the massive grinding wheel that is used to crush the grain down before storage in the silo.  It is attached through a two-foot wide crank shaft that extends up through the ceiling to the gear room above.  Everything is exceptionally quiet in the mill, and you are unable to shake an uneasy feeling of being watched by.... some thing.</desc>
+      <desc>   There is a winding stair-case along the curved edge of the mill leading upwards, while the door leads back out.</desc>
+      <exits up='582' out='519' no-exit='moves.noexit.11'/>
+   </location>
+
+   <location num='584'>
+      <name>Open Field</name>
+      <desc>   Pleasantly strolling across an open field, you see stack after stack of recently baled up hay.  The fresh smell of it begins to bring back fond memories of your youth while you walk on the fertile soil.  Occasionally you see some mice running around as they look for a comfortable place to nest.</desc>
+      <desc>   You see a grain silo to your north-east, a pond to the north, while the farmhouse is back to your east.</desc>
+      <exits n='520' ne='521' e='585' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='585'>
+      <name>Farmhouse</name>
+      <desc>   You are standing on the front porch of a two-story farmhouse that is shaded by several old trees.  There are a few chickens running around freely and pecking at whatever food source they can find.  There is a field behind the house to the west, grain silos to the north, and a pond to the north-west while the gravel driveway leads back to the forest entrance to the east.</desc>
+      <exits n='521' e='586' w='584' nw='520' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='586'>
+      <name>Forest Entrance</name>
+      <desc>   In front of you stands a great wall of trees pressed so close together that attempting to wiggle between them could leave a person or animal helplessly stuck.  A small hover-dozer sits off to the side near some underbrush, and a nearby sign-post has the phrase LIMASAN scrawled onto it, although you can only wonder what that means.</desc>
+      <desc>   You notice a small path opened between the trees to the north and a farmhouse off to the west.</desc>
+      <exits n='522' s='650' w='585' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='649' flags='yr'>
+      <name>Shipyard Tiger</name>
+      <desc>   With slabs of extra hull as wallpaper, an old helm as a counter-top, and antique shuttle pieces hanging from the ceiling, you realize you are in the Shipyard and Repair shop.  A greasy mechanic in overalls relaxes while leaning back in a rickety old captain&apos;s chair and petting a calm and sleepy looking tiger that eyes you hungrily as you enter.  You begin to understand the lack of pirates purchasing their equipment here....</desc>
+      <desc>   You may exit south back to the crosswalk.</desc>
+      <exits s='713' no-exit='moves.noexit.8'/>
+   </location>
+
+   <location num='650'>
+      <name>Winding Lane</name>
+      <desc>   You are strolling down a winding dirt lane, packed loosely from little traffic.  Off to your left you notice a deer grazing in some long grass.</desc>
+      <desc>   You see the top of a tree-line to your north and hear the hum of shuttles taking off and landing to your south.</desc>
+      <exits n='586' s='714' no-exit='moves.noexit.9'/>
+   </location>
+
+   <location num='712' flags='b'>
+      <name>Cafe Mantis</name>
+      <desc>   You take a table in an eatery with animal hides everywhere and a menu of different delicious forest creatures.  The menu almost seems scary... except for the 100% pure Javan coffee proudly served and guaranteed.</desc>
+      <desc>   You may exit east back to the crosswalk.</desc>
+      <exits e='713' no-exit='moves.noexit.4'/>
+   </location>
+
+   <location num='713'>
+      <name>Crosswalk</name>
+      <desc>   Standing in the middle of the crosswalk, you may choose to go any of the four cardinal directions.</desc>
+      <desc>     East to the Landing Area</desc>
+      <desc>     West to Cafe Mantis</desc>
+      <desc>     North to Shipyard Tiger</desc>
+      <desc>     South to Hospital Octopus</desc>
+      <exits n='649' e='714' s='777' w='712' no-exit='moves.noexit.3'/>
+   </location>
+
+   <location num='714'>
+      <name>Landing Area</name>
+      <desc>   Standing next to your shuttle, you gaze across the horizon to see the landscape stretch before you.  Although there is a sense of hustle-and-bustle going on with loading and unloading of cargo, you also feel a sense of peace and tranquility.  A nearby notice posted up in plain sight states that all living creatures on this planet are treated equally, and any harm intentionally done to them will be severely punished, either by being banished from the system or by death.  You decide that it would be best to comply with the local laws regarding humane treatment.</desc>
+      <desc>   To your north you may enter the forest.  The exchange is to the east, and all other services to the west.  A small building to your south has an old wooden sign attached that simply says OFFICE.</desc>
+      <exits n='650' e='715' s='778' w='713' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='715' flags='eb'>
+      <name>Exchange</name>
+      <desc>   As you enter the central beehive of local financial activity, you realize the buzzing of activity here isn&apos;t the traders, but the actual beehives kept behind static force-shields.  You begin to wonder for the reason for the live decor, and then realize that you can purchase a flavorful banana-split sundae topped with truly fresh honey.</desc>
+      <desc>   You may exit west back to the Landing Area.</desc>
+      <exits w='714' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='777' flags='hi'>
+      <name>Hospital Octopus</name>
+      <desc>   While patiently sitting and waiting your turn in an uncomfortable chair, you are shocked to realize that all of the doctors are actually veterinarians, and you are the only human patient anywhere within sight.</desc>
+      <desc>     You may exist north back to the crosswalk, or south-west to venture further into the hospital.</desc>
+      <exits n='713' sw='840' no-exit='moves.noexit.5'/>
+   </location>
+
+   <location num='778'>
+      <name>Planetary Office</name>
+      <desc>   You are standing just inside the doorway of a modest building that houses all of the staff, documents, and other personnel required to regulate the trade and all other business of the local population and trade.  It&apos;s small size is a compliment to the efficiency of that business and the little amount of work it takes to keep the economic machine running smoothly.  There is a single long countertop to step up too to state your business or make a complaint.     Complaints are highly discouraged however, as you must take a number to do so, and the mechanism to put yourself in queue seems to be the number ONE which is attached to an old explosive and incendiary device.  It is not recommended to be the first complainer, it seems.</desc>
+      <desc>   The exit to the Landing Area is to the north.</desc>
+      <exits n='714' no-exit='moves.noexit.10'/>
+   </location>
+
+   <location num='840'>
+      <name>Recovery Room</name>
+      <desc>   Animals of all species and breeds are sleeping off the effects of anesthesia as they recover from different surgeries and procedures.  What takes you a moment to comprehend is that none of them are in cages, but rather on beds, pillows, and specially shaped or molded comfort surfaces.  You begin to wonder who thought to provide such care and attention to so many different types of animals.</desc>
+      <desc>     The exit to the north-east leads back to the lobby, while a complicated set of airlock doors leads to the east.</desc>
+      <exits ne='777' e='841' no-exit='moves.noexit.6'/>
+   </location>
+
+   <location num='841'>
+      <name>Operating Room</name>
+      <desc>   The gleaming surfaces and thousands of high-tech gadgets in this large amphitheater provide intricate and highly specialized surgical services to their patients.  However, none of the patients are humans, but all manner of beast and critter.  The area is pressurized to keep any bacteria or germs outside of the airlock doors which are your only exit to the west.</desc>
+      <exits w='840' no-exit='moves.noexit.7'/>
+   </location>
+
+</fed2-map>
+

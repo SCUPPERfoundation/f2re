@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<fed2-map title='Acme Space' version='8' editor='standard'>
+
+   <location num='528' flags='s'>
+      <name>Flower Space Parking</name>
+      <desc>Flower Space Parking. Park the ship here and take a shuddle down to the asteroid Flower.</desc>
+      <exits s='592' no-exit='1'/>
+   </location>
+
+   <location num='592' flags='s'>
+      <name>Space like a Bee</name>
+      <desc>Space like a Bee. South link, north Flower.</desc>
+      <exits n='528' s='656' no-exit='1'/>
+   </location>
+
+   <location num='656' flags='slp'>
+      <name>Acme Link for Occyland</name>
+      <desc>Space Link and spaceship parking lot for Occyland. Park your ship here and let the fun begin. Deliveries for the warehouse, keep going east for the loading dock. Flower Asteriod is somewhere north.</desc>
+      <exits n='592' e='657' no-exit='1'/>
+   </location>
+
+   <location num='657' flags='sp'>
+      <name>Driveup loading dock</name>
+      <desc>Back her up to the loading dock and shut her down.</desc>
+      <exits w='656' no-exit='1'/>
+   </location>
+
+</fed2-map>
+

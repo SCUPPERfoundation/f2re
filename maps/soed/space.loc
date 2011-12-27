@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<fed2-map title='Soed Space' version='1.00' editor='standard'>
+
+   <location num='332' flags='slp'>
+      <name>Soed System Link - Proud Member of the House of Doz</name>
+      <desc>When Deos fell, the residents fled to safer shores.  Most fled to Deos&apos; moon, Ainokea.  But a small group boarded a ship which had the misfortune of being piloted by Walleyed the Dyslexic.  This group got lost, and instead of joining their friends on Deos&apos; moon Ainokea, the landed here, in the Soed system, and its planet, Aekonia.</desc>
+      <desc>     The planet orbit is to the south.</desc>
+      <exits s='396' sw='395' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='395' flags='sp'>
+      <name>Noom Orbit</name>
+      <desc>The colonization of Aekonia&apos;s moon provided additional resources to the Dozian worlds.  However, the naming of the planet was a job unfortunately given to Zodraz.  And he came up with the name, &quot;Noom&quot;.  Noom has a 5 domed base, with underground facilities.  The central dome, which is visible from a low orbit, is the shuttle landing pad.  The dome will open to allow entry.</desc>
+      <exits ne='332' e='396' s='459' no-exit='moves.noexit.2'/>
+   </location>
+
+   <location num='396' flags='sp'>
+      <name>Aekonia Orbit</name>
+      <desc>You have entered a low grade orbit around Aekonia.  Your Comm Unit receives a tight band transmission from Aekonian orbit controllers saying, &quot;Howzit... wha... you like orbit all day?  Dock your freakin ship already.&quot;</desc>
+      <exits n='332' sw='459' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='sp'>
+      <name>Bal Soed Orbit</name>
+      <desc>When Zardoz instructed Zodraz to build Laboratory facilities in Soed Space, he made the mistake of letting Zodraz name the asteroid.  Thus, Deos Lab is located on Bal Soed.  Zardoz must learn that Zodraz cannot be trusted with the simple task of naming planets.  Bal Soed is a lifeless rock, but is perfectly suited for the dangerous task of producing biological products.</desc>
+      <exits n='395' ne='396' no-exit='moves.noexit.2'/>
+   </location>
+
+</fed2-map>
+

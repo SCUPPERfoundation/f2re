@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<fed2-map title='Brass' version='1.00' from='324' to='Sol.Sol Space.2444'>
+
+   <location num='135'>
+      <name>Gap between tents</name>
+      <desc>   The crowded tents have been erected so as to leave a small passageway between them, heading southwest back towards the main dome entrance (and past the very smelly livestock tent). East is the entrance to a tent where rugs are sold.</desc>
+      <exits e='136' sw='198' in='136'/>
+   </location>
+
+   <location num='136'>
+      <name>Rug merchant</name>
+      <desc>   The walls of this tent are hung with gaudy rugs, made from the shimmering many-hued wool of the Minter-strain llamas especially bred for the purpose. The floor is also covered with the brightly colored rugs, overlapping each other to form huge piles. On top of one pile is perched a small boy. He is engaged in trying to make a sale to a tourist couple, and grinning widely he launches into his sales pitch.</desc>
+      <desc>   "Gentle beings, welcome to the humble tent belonging to my father," he says. "Such modest produce as we can offer is displayed here for your inspection, all fashioned by the hands of my sisters, whose nimble fingers produce the delicate weave that you see before you." He points to the intricate patterns on the woven rugs, and waits for them to make an offer for one of them; but they cannot seem to make up their minds.</desc>
+      <exits w='135' out='135'/>
+      <events in-room='newbod.message.1'/>
+   </location>
+
+   <location num='198'>
+      <name>Gap between tents</name>
+      <desc>   The sort-of-passageway that allows access between the chaotically-placed tents allows you to make your way northeast or south back to the dome's main entrance. A large tent stands to the east, from which emanates the most appalling stench of unwashed creatures and rancid substances.</desc>
+      <exits ne='135' e='199' s='262' in='199'/>
+   </location>
+
+   <location num='199' flags='a'>
+      <name>Livestock tent</name>
+      <desc>   Good grief, the smell in here is appalling! Even your suit's filters are having a hard time stopping this dreadful odor. Looking around, you can immediately see that the stink is caused by a large herd of animals, which roam freely inside the tent. They look a little like llamas, but their wool is brightly colored - you can see reds, blues, yellows, oranges, llamas of all different colors - and as the light catches the pelts, they shimmer and shine. These Minter-strain llamas have been specially bred for their exotic coats.</desc>
+      <desc>   The beasts are clustered around a trough which contains nutri-pellets. Two or three of the beasts are being milked by their herders. The milk is taken away to be fermented, creating a potent drink much loved by Brassans. A few others are being shorn, so that the shiny colored wool can be made into fabrics. Handy, not having to dye the wool before using it!</desc>
+      <exits w='198' out='198'/>
+   </location>
+
+   <location num='201'>
+      <name>Tent</name>
+      <desc>   This tent has been lavishly decorated with silk drapes, thick rugs and plump cushions. It is obviously an environment aimed at providing a luxurious place to rest. You can see the appeal of Jeritt's accommodations!</desc>
+      <desc>   Then you realise that the tent is not unoccupied. Lounging on the cushions is a young woman. She is dressed in the usual Brassan robe, but she has arranged it so that it doesn't cover very much at all. Given the usual modesty found amongst the asteroid's inhabitants, her display of flesh is really quite shocking.</desc>
+      <desc>   She looks at you with sultry eyes, and stretches lazily, revealing even more skin. Then she laughs, and says, "I thought you were my next appointment, but you're not, are you?" With a little pout, she gestures you back out of the tent. "My dance card is pretty full these days, so I really don't have time to get to know you any better. Shame..."</desc>
+      <exits out='265'/>
+   </location>
+
+   <location num='204'>
+      <name>Private dome</name>
+      <desc>   This is the main entrance to a private dome. East is a large locked gate, made of intricately fashioned glass steel - so strong it could withstand the blast of a nuclear explosion, and yet completely transparent, allowing an unimpeded view of what lies behind it.</desc>
+      <desc>   And that is a large stately home, surrounded by beautiful ornate gardens and rolling green lawns - the kind you would expect to see on Earth, not on a barren asteroid. A sweeping driveway leads from the locked gate towards the house, then divides to go around a massive fountain which spews water high into the sky. The driveway joins again on the far side of the wasteful fountain, by a flight of stone steps that lead up to the main entrance to the house. You wish you could get a closer look, but there's no way through the gate.</desc>
+      <desc>   The airlock back to the main dome leads southwest.</desc>
+      <exits sw='267'/>
+   </location>
+
+   <location num='262'>
+      <name>Gap between tents</name>
+      <desc>   The closely-packed tents make it hard to move in a straight line, but this gap forms a passage of sorts leading south, back to the dome's airlock, and north, from which comes a faint odor of... well, you can't quite figure out what it is, but it's not very pleasant!</desc>
+      <exits n='198' s='326'/>
+   </location>
+
+   <location num='263' flags='c'>
+      <name>Armstrong Cuthbert</name>
+      <desc>   Armstrong Cuthbert offices are usually hi-tech hives of activity, but compared to the noise and bustle of the agora outside, this tent is a haven of tranquility. Some kind of electronic shield seems to keep the noise from penetrating to the interior of the tent, which allows the AC workers to concentrate on their business without distraction.</desc>
+      <desc>   The powerful computers and comms equipment which the company uses to conduct its business have all been cleverly designed so they look as if they belong in such primitive surroundings. You assume they are not really made out of stone, but that's what they look like!</desc>
+      <desc>   The exit from the tent is to the southeast.</desc>
+      <exits se='328' out='328'/>
+   </location>
+
+   <location num='264' flags='e'>
+      <name>Trading exchange</name>
+      <desc>   Trading exchanges are the same the galaxy over, no matter what planet they are on. Ok, this one is inside a tent, but it's still got the usual huge display screens flashing up prices, and the same clusters of over-anxious traders shuffling nervously from side to side as they wait for prices to change in their favor.</desc>
+      <desc>   For a moment, you think you can see small figures weaving in and out of the crowds gathered around the screens, but when you look more closely, there's nothing there. Must be your imagination.</desc>
+      <exits s='328' out='328'/>
+   </location>
+
+   <location num='265' flags='ba'>
+      <name>Jeritt's Mad House</name>
+      <desc>   This huge tent houses the bar which visitors to Brass flock to after they have completed their business. In some cases, their sole reason for visiting Brass is to come to this bar. The reason is the proprietor - Jeritt Lightstar. He used to be the Galaxy's most popular comedian, commanding enormous fees and top billing wherever he appeared, but he fell from grace following a scandal, the exact details of which were hushed up. He can't set foot on any of the planets under the control of the Galactic Administration, so he wound up on Brass, one of the unregulated asteroids. Despite his banishment, Jeritt still has many friends in the entertainment industry who come to perform in his bar, where they can be as outrageous and indiscreet as they like without risking their careers.</desc>
+      <desc>   Jeritt also offers lodging, of a sort - one side of the huge tent contains lots of tiny tents, just big enough for one person, or two if they are intimate. All but one of those tents is closed.</desc>
+      <exits sw='328' in='201' out='328'/>
+   </location>
+
+   <location num='267'>
+      <name>Airlock</name>
+      <desc>   This airlock links together the main dome on Brass, which you can reach by going southwest, and a small private dome to the northeast.</desc>
+      <desc>   A guard scrutinizes anybody who enters the airlock closely; whatever he is looking for, you are not it, because he looks away from you after a few seconds.</desc>
+      <exits ne='204' sw='330'/>
+   </location>
+
+   <location num='324'>
+      <name>Shuttle landing pad</name>
+      <desc>   Being completely unregulated by the Galactic Administration, the asteroid Brass gets a whole lot of visitors, eager to conduct their business away from the usual prying eyes found on the main planets of the Solar System.</desc>
+      <desc>   The main dome on the asteroid Brass fits snugly into a rocky crater. There's enough room for shuttles belonging to the many visitors to land outside of the dome, but there's no access to the rest of the asteroid's surface - the only way you can go is east, into the dome airlock, or back into your shuttle.</desc>
+      <desc>   Out of the corner of your eye, you think you see something moving around the edge of the crater, behind the shuttles, but when you turn to look it's gone.</desc>
+      <exits e='325' in='325'/>
+   </location>
+
+   <location num='325'>
+      <name>Airlock</name>
+      <desc>   This is a small airlock, only big enough for a few people to fit comfortably - maybe ten could squeeze in if they didn't mind being squashed together. There is a guard standing beside each door. They don't seem too worried by people going into the dome, to the east, but they scrutinize those heading out the west door to the landing pad very closely.</desc>
+      <exits e='326' w='324'/>
+   </location>
+
+   <location num='326'>
+      <name>Dome entrance</name>
+      <desc>   The main dome on Brass is one big market, and it's crowded, noisy and confusing. Although it started as a single huge empty space with no buildings, people have erected tents of all shapes and sizes - and all colors - to act as both living space and market stalls. There's little order to the placement of the tents, and nothing so organised as streets. Finding your way here is not going to be easy.</desc>
+      <desc>   There are gaps between the tents that lead north and south. A somewhat larger gap leads to an open space to the east. The airlock, which leads back outside to the peace and quiet of the shuttle landing pad, is west.</desc>
+      <exits n='262' e='327' s='390' w='325'/>
+   </location>
+
+   <location num='327'>
+      <name>Passage between tents</name>
+      <desc>   You are surrounded by crowds of people, both off-worlders from many different planets, and those who live on Brass and are identifiable by the colored robes which swathe them from head to foot. Some even cover their faces so you cannot tell whether they are men, women, or others!</desc>
+      <desc>   Some common agreement has kept the random placement of tents from blocking, or even narrowing, this more-or-less straight passageway leading from the dome entrance which is to the west, to the agora, a large open space to your east.</desc>
+      <exits e='328' w='326'/>
+   </location>
+
+   <location num='328'>
+      <name>Agora</name>
+      <desc>   The closest thing to order in the madhouse that is the Brass main dome can be found here, in the agora - an open space where by custom no tents have been erected. The reason why is a small recycler in the middle, which produces the water supply for this dome. A queue of people dressed in multi-colored robes and carrying an assortment of containers waits to use it.</desc>
+      <desc>   Tents may have kept out of the agora, but they are crowded all around the edge, with entrances in most directions beckoning you to enter. North is the trading exchange, the Armstrong Cuthbert tent is northwest, and northeast is a bar - judging from the laughter and applause you can hear from within the tent, there is some kind of entertainment on offer as well as refreshments.</desc>
+      <desc>   A small unmarked tent is southwest. East and south are gaps between tents. West leads back towards the dome entrance.</desc>
+      <exits n='264' ne='265' e='329' se='393' s='392' sw='391' w='327' nw='263'/>
+   </location>
+
+   <location num='329'>
+      <name>Passage between tents</name>
+      <desc>   Somehow, this pathway that leads between tents has been kept relatively clear. It seems to be the main route linking the agora, to the west, with another airlock to the east. There are only a few people here, and all of them by their dress are off-worlders.</desc>
+      <exits e='330' w='328'/>
+   </location>
+
+   <location num='330'>
+      <name>Dome entrance</name>
+      <desc>   You are on the eastern side of the main dome, and there are two airlocks here, leading northeast and southeast.</desc>
+      <exits ne='267' se='395' w='329'/>
+   </location>
+
+   <location num='390'>
+      <name>Gap between tents</name>
+      <desc>   A narrow gap between tents allows you to go north, back to the main entrance of the dome, and south, into a maze formed by the chaotic placement of tents large and small. Passage between the tents is made more difficult by the crowds of people moving backwards and forwards, all wearing brightly colored robes that cover them completely.</desc>
+      <exits n='326' s='454'/>
+   </location>
+
+   <location num='391'>
+      <name>Mission</name>
+      <desc>   This small tent houses a privately-funded charity mission to Brass. Quite why the citizens of the asteroid, who seem perfectly happy from what you saw in the main dome, should need a charity mission is not clear. Since there's nobody here at the moment, there's nobody to explain.</desc>
+      <exits ne='328' out='328'/>
+   </location>
+
+   <location num='392'>
+      <name>Gap between tents</name>
+      <desc>   The winding pathway between the tents leads north towards the large open area called the agora, and south into a refreshments tent.</desc>
+      <exits n='328' s='456'/>
+   </location>
+
+   <location num='393' flags='a'>
+      <name>Trixie's Trinkets</name>
+      <desc>   A young woman sits cross-legged inside this tent - presumably she is Trixie - with her wares spread out before her on a blanket. Like all the inhabitants of Brass, she wears a full rainbow-hued robe, but on her it doesn't look so shapeless.</desc>
+      <desc>   Looking closely at her trinkets, you see a variety of jewelry fashioned delicately from wire - the kind of wire used in electronic equipment. You realise she makes the trinkets from factory discards. These unusual materials, combined with her design flair, result in startlingly attractive pieces that would sell for large amounts back on Earth.</desc>
+      <exits nw='328' out='328'/>
+   </location>
+
+   <location num='394' flags='a'>
+      <name>Fanciful Fabrications</name>
+      <desc>   The inhabitants of Brass - mostly human, with human modesties and taboos - feel the need to wear clothes, even though the climate-controlled dome is kept quite warm. In fact, humans being perverse creatures, the Brassans take modesty to extremes, and wear robes that cover them head to foot.</desc>
+      <desc>   This market stall sells such robes, fashioned from the offcuts and discards left over when the strangely-colored livestock on the planet are shorn and the wool processed into various items. The robes are a kaleidoscope of colors, with swirling patterns that almost hurt the eye to look at for long.</desc>
+      <exits sw='457' out='457'/>
+   </location>
+
+   <location num='395'>
+      <name>Airlock</name>
+      <desc>   This airlock links the main dome with the factory dome, where the goods that Brass produces to sell on the exchanges are produced. The airlock is full of important-looking business folk, some just leaving the factory and others heading in to be shown around the facility or talk business with those that run things on Brass.</desc>
+      <exits se='460' nw='330'/>
+   </location>
+
+   <location num='454'>
+      <name>Gap between tents</name>
+      <desc>   The many tents open out slightly allowing you a little breathing space. There is even a small stretch of the dome wall visible here. Someone has taken advantage of this flat surface to scribble "Jerrit is fab" in large red letters. North leads back to the nearest exit, the airlock which leads to the shuttle landing pad. East, the twisty little maze of tents continues.</desc>
+      <desc>   You can hear loud wailing and sobbing from a tent to the southeast.</desc>
+      <exits n='390' e='455' se='519' in='519'/>
+   </location>
+
+   <location num='455'>
+      <name>Gap between tents</name>
+      <desc>   The meandering pathway that allows you to move between tents actually forms a straight line of sorts at this point. You can go west, which leads vaguely in the direction of the main entrance to the dome, or east into a refreshment tent.</desc>
+      <exits e='456' w='454'/>
+   </location>
+
+   <location num='456'>
+      <name>Refreshments</name>
+      <desc>   This tent is where those who live in the main dome come for their refreshments. It is open on three sides, allowing you to head north, south or west. Against the closed wall of the tent there is a long table with benches, at which are seated people tucking into the local delicacy, llama burgers, with great enjoyment and much licking of lips and "yum yum" sounds. They are also slurping down vast quantities of fermented llama milk.</desc>
+      <desc>   If you are feeling brave, you could try these unusual culinary items yourself. For 10 groats you can 'BUY BURGER' and for 5, 'BUY MILK'. You can also get some llama milk to take away, with 'BUY CARTON'. It costs 25 groats and contains three drinks.</desc>
+      <exits n='392' s='520' w='455'/>
+   </location>
+
+   <location num='457'>
+      <name>Mini-mart</name>
+      <desc>   There is a small open space here, which allows a few market stalls and commerce tents the space to do business. Unlike the agora, which mainly caters to off-world visitors, this mini-mart sells goods for the inhabitants of this main dome.</desc>
+      <desc>   There are stalls northeast and southeast, and an aid station to the east. Southwest, a passageway between the tents leads back towards the main part of the dome.</desc>
+      <exits ne='394' e='458' se='522' sw='520'/>
+   </location>
+
+   <location num='458' flags='a'>
+      <name>Aid station</name>
+      <desc>   There's no such thing as a hospital on Brass - if the inhabitants get injured or fall ill, it's just too bad. This aid station has been set up by the charity mission to the planet, and it offers basic first aid for those who are not too badly hurt. Thankfully, serious injuries and major illnesses are rare here, which is just as well because the volunteer workers here only have limited resources.</desc>
+      <desc>   They won't treat off-worlders, who after all can visit the health facilities on Earth if they need medical help, so unless you want to volunteer your services as a medic, you might as well leave.</desc>
+      <exits w='457' out='457'/>
+   </location>
+
+   <location num='460' flags='a'>
+      <name>Brass management office</name>
+      <desc>   This suite of offices is the main point of contact for those off-worlders who wish to have some dealings with the Brass factory facilities, other than to trade on the exchanges where the goods are sold. Young, smiling, fresh-faced employees stand ready to show visitors around the factory, while corporate types deal with those who want to make private arrangements.</desc>
+      <desc>   If you'd like to look around the factory, go south. Otherwise, the airlock that leads back to the main dome is northwest.</desc>
+      <exits s='524' nw='395'/>
+   </location>
+
+   <location num='519'>
+      <name>The tent of the Edmundo family</name>
+      <desc>   You push your way into the tent, which is the dwelling of Harrison Edmundo, his wife Jenka, and their large brood of children. It is Jenka that's doing all the wailing and sobbing, while Harrison looks glum and wrings his hands together. They don't even notice that you have entered.</desc>
+      <desc>   Whatever the matter is, you had best leave them to their own affairs - they won't thank you for witnessing their grief.</desc>
+      <exits nw='454' out='454'/>
+   </location>
+
+   <location num='520'>
+      <name>Gap between tents</name>
+      <desc>   At first it looks like the passageway between tents comes to a dead end, but no - it simply doubles back on itself in a hairpin bend. You can head north, into a refreshment tent, or northeast, into a slightly less crowded section of the dome.</desc>
+      <exits n='456' ne='457'/>
+   </location>
+
+   <location num='522'>
+      <name>Storage tent</name>
+      <desc>   This tent is piled high with boxes and crates. There are no markings to tell you what is in them.</desc>
+      <desc>   Can you hear a scratching sound coming from behind one of the boxes...? No, you must be imagining it.</desc>
+      <exits nw='457' out='457'/>
+   </location>
+
+   <location num='524'>
+      <name>Factory</name>
+      <desc>   The factory on Brass is a model of modern, clean industry. Taking full advantage of the latest automation techniques, only a few people are needed to supervise operations here. It's also a lot quieter than you expected, just a few muffled thuds, a soft rumble and a steady hissing noise coming from the production line to the east and the packing depot to the south.</desc>
+      <desc>   The exit is north.</desc>
+      <exits n='460' e='525' s='588' out='460'/>
+   </location>
+
+   <location num='525'>
+      <name>Production line</name>
+      <desc>   A small number of smiling, happy people control the vast production lines that assemble the various commodities produced by the Brass factory. The actual work is done by machines - both mobile droids of varying sophistication, and giant manufacturing units that are fixed in place. A stream of raw materials is fed into these units and out the other side come widgets and gadgets and parts; these bits and pieces are then fed into other machines, that assemble them into more sophisticated widgets and gadgets...</desc>
+      <desc>   These half-assembled things then move onto a conveyor belt which rolls out of sight into another room to the south. The factory exit is west.</desc>
+      <exits s='589' w='524'/>
+   </location>
+
+   <location num='588'>
+      <name>Packing</name>
+      <desc>   This part of the factory is where the completed commodities are packed up ready to be sold on the asteroid's trading exchange. The human workers supervise droids that do the heavy lifting, placing items in crates, making sure the crates contain enough styrofoam peanuts and other packing material to keep the goods from being damaged in transit.</desc>
+      <desc>   Two young workers are giggling together as they work. They look as if they are carrying on a flirtation of some kind. Their all-covering robes prevent you from seeing their gender, but the taller one seems to be the shyer of the two, with the shorter the more assertive.</desc>
+      <desc>   The factory continues to the north and east.</desc>
+      <exits n='524' e='589'/>
+   </location>
+
+   <location num='589'>
+      <name>Finishing plant</name>
+      <desc>   In this part of the factory, half-assembled thingummies and doodads are put together with each other to provide the finished product. There is less automation here, because the human eye is still best at quality control - and the owners of the Brass factory want to ensure their goods are of the highest quality.</desc>
+      <desc>   As in other parts of the factory, the workers seem happy - and why wouldn't they be? They are fed well and paid good wages, and made to feel part of the big happy family of workers. You can hear several of them humming softly as they work.</desc>
+      <desc>   The stuff being assembled is coming from the north; the completed commodities are put onto a conveyor belt which takes them west.</desc>
+      <exits n='525' w='588'/>
+   </location>
+
+</fed2-map>

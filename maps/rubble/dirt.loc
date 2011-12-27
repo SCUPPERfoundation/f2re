@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<fed2-map title='Dirt' version='1' editor='standard' from='460' to='Rubble.Rubble Space.266'>
+
+   <location num='0'>
+      <name>A dirt bin</name>
+      <desc>A dirt bin</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268'>
+      <name>Regolith Reclaim Area</name>
+      <desc>  The entire northern quadrant of the asteroid to the horizon has been scoured down several meters, where the fine regolith surface has been dug out and shipped off-roid.  What has taken many millennia to create by constant bombardment of micro-meteoroids, a few short decades have erased.  However, in perspective, the horizon is quite close and the amount reclaimed is a tiny percentage of the total surface area of the asteroid.</desc>
+      <exits s='332' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='332'>
+      <name>Regolith Storage Area</name>
+      <desc>  Loaders to the north are busy scraping the finely grained regolith from the surface of Dirt and send it through huge trammel screens for sorting.  The various piles are sized and graded accordingly for production of dirt for a myriad of uses. Other loaders reclaim from the storage piles and deliver east to the mixing area.</desc>
+      <exits n='268' e='333' s='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333'>
+      <name>Mixing Facility</name>
+      <desc>  Loaders from the east and south arrive regularly and drop their loads onto conveyors that lead to giant mixing bins.  The compost and regolith are uniformly blended in the enormous columns, and the final product drops out of a pug mill hopper in the bottom, and into other waiting loaders.</desc>
+      <exits s='397' sw='396' w='332' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396'>
+      <name>Storage Pile Staging Area</name>
+      <desc>  The large open area is surrounded by various piles of virgin regolith and steaming odorous piles of compost. Massive loaders haul from the piles towards enormous mixing towers to the northeast where the two components are mixed to form the single salable product.  Loaders carry the mixed material south towards the LP for eventually being transported off-asteroid.</desc>
+      <exits n='332' ne='333' e='397' s='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='b'>
+      <name>Compost Storage Area</name>
+      <desc> Enormous piles of organic waste are slowly being digested down to compost matter, for eventual mixing with the sterile granular regolith that makes up the surface of Dirt.  Loaders reclaim the composted material and transport it north to the mixing towers, while other loaders haul fresh organic waste from holding piles to the east.</desc>
+      <exits n='333' e='398' w='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398'>
+      <name>Waste Holding Piles</name>
+      <desc>  Numerous piles of organic waste extend to the horizon, with haulers and loaders scurrying around between the piles. Every so often, a robotic drop ship pauses over a pile and deposits its load, which rolls down in a rather spectacular avalanche.</desc>
+      <exits w='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='hib'>
+      <name>Infirmary</name>
+      <desc>  A technician fiddles with some buttons on a blinking monitor beside a row of comfortable hammocks that swing in the breeze originating from a large ventilation duct set in the ceiling.  An auto-insure machine stands in the corner, collecting far more dust than insurance fees.</desc>
+      <exits e='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='rb'>
+      <name>Dirt Landing Pad</name>
+      <desc>  The LP is a shallow scooped out crater covered with a course black scoria, and surrounded by massive piles of regolith homogenously mixed with nearly equal parts of composted organic matter.  Enormous loaders haul large quantities from beyond the pad and build the storage piles, while smaller loaders fill covered bins mounted on a long rail that extends towards and beyond the eastern horizon. A narrow ladder leading UP is here.</desc>
+      <desc>  A particularly ugly foamstone dome, half buried in the regolith is SOUTH, and the local infirmary is WEST.  A pathway leading towards the local exchange is EAST.</desc>
+      <exits n='396' e='461' s='524' w='459' up='525' in='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='ebt'>
+      <name>Dirty Exchange</name>
+      <desc>  The Exchange is in a low foamstone igloo, with no windows and a single narrow door to the west as its only egress. Despite being fully enclosed, a significant amount of dirt is on the floor, with a thin layer of dust on every surface.</desc>
+      <desc>  The Quartermaster scans your manifest to ensure you have proper authorization to sell commodities to Dirt; looks at you very closely with narrowed eyes and after a shrug and a dismissive gesture, stamps your papers and activates your trading console.</desc>
+      <exits w='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='b'>
+      <name>Compost Outpost</name>
+      <desc>  The exterior tiny foamstone shell of the Outpost belies its cavernous interior, which is truly a cavern dug deep into the surface of Dirt.  The foyer opens to a wide spiral staircase that leads down to the bar and restaurant area.  An autobar is also available to quickly order food or drink.</desc>
+      <exits n='460' down='588' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>MagLev Loader</name>
+      <desc>  Bins of newly fabricated dirt are loaded and launched into low orbit by the magnetic levitation rail gun, that extends east and beyond the near horizon.  The bin on the launcher appears to be in a final state of preparation as workers close it up and perform a final inspection.  A narrow ladder leads down to the LP.</desc>
+      <exits e='526' down='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name>MagLev Rail</name>
+      <desc>  The narrow maintenance catwalk allows workers to adjust and repair the enormous magnetic coils that drag the steel bins of dirt down the rail and into orbit.</desc>
+      <exits e='527' w='525' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='527'>
+      <name>MagLev Rail</name>
+      <desc>  The narrow maintenance catwalk leads east and west and allows workers to adjust and repair the enormous magnetic coils that drag the steel bins of dirt down the rail and into orbit.  While the walkway extends far to the east and along the rail, a locked gate prevents any further access in that direction.</desc>
+      <exits w='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='588' flags='b'>
+      <name>Compost Cave</name>
+      <desc>  The Cave is truly cavernous. The enormous domed ceiling spans over a large eating area, with a semi-circular bar towards the east.</desc>
+      <exits e='589' up='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589' flags='b'>
+      <name>Cave Bar</name>
+      <desc>  The wide circular bar fully covers the eastern third of the roughly circular cave.  The entire wall of the cave behind the bar is a mural of prehistoric type cave paintings, predominantly of large ursine creatures.</desc>
+      <exits w='588' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

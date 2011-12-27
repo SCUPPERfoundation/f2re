@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<object-list next_number='1' version='22'>
+
+   <object type='static' start='910' visibility='0' size='25' weight='2'>
+      <name>some rope</name>
+      <id>obj_somerope</id>
+      <desc>You can buy some rope for 2 groats.</desc>
+      <vocab cmd='get' event='shop.rope.1'></vocab>
+      <vocab cmd='buy' event='shop.rope.2'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='ps'>
+      <name>rope</name>
+      <id>obj_rope</id>
+      <desc>This coil of rope is flexible enough that you can tie it to things, and strong enough that it will hold your weight. In other words, it's ideal for allowing you to climb up or down to reach otherwise inaccessible places.</desc>
+      <vocab cmd='knot' event='objects.rope.1'></vocab>
+      <vocab cmd='tie' event='objects.rope.1'></vocab>
+      <vocab cmd='use' event='objects.rope.1'></vocab>
+   </object>
+
+   <object type='static' start='796' visibility='0' size='1' weight='1'>
+      <name>back up</name>
+      <id>obj_backup</id>
+      <desc>The way back up to the top if the pit is provided by the handy rope which you left dangling down following your descent.</desc>
+      <vocab cmd='climb' event='objects.rope.7'></vocab>
+   </object>
+
+   <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='dst'>
+      <name>asparagus</name>
+      <id>obj_asparagus</id>
+      <desc>The asparagus sings a very pure note. Attached to it is a small tag reading 'Tuning asparagus, Middle C'.</desc>
+      <vocab cmd='drop' event='newbod.asparagus.3'></vocab>
+   </object>
+
+   <object type='static' start='716' visibility='0' size='1' weight='1'>
+      <name>food</name>
+      <id>obj_food</id>
+      <desc>A new addition to the menu is buffalo wings served with an extra spicy dipping sauce.</desc>
+      <vocab cmd='buy' event='food.bistro.1'></vocab>
+   </object>
+
+</object-list>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<fed2-map title='Bordeaux' version='27' editor='standard' from='396' to='Vinyards.Vinyards Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Spare sand is kept here. Well you never know, they might run out one day!</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name> Wine Country Medical Clinic</name>
+      <desc>Mostly Hangovers are treated here with free Advil dispensed by the very attractive nurses on call.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing strip</name>
+      <desc>Looking down from you cockpit window you can see thousands and thousands of acres of grape bearing vines. There are numerous plantations on this planet that harvest these wines to make wines very similar to those of the Bordeaux Region of France on the planet Earth. Looking at the visitors guide you notice there are Shipbuilding sales and repairs right at the landing Pad, and the exchange is to the East. Take Advantage of the fine wines and food served at the Wine Salon cafe to the SW.</desc>
+      <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Winemakers Auction and Exchange</name>
+      <desc>This Exchange not only sells commodities but also specializes for wine enthusiasts and collectorsthe opportunity to acquire fine and rare wines. Our Exchange offer the world#s finest and most collectible wines as well asl some of the most competitive prices on commodities in the Fed World. Pull up a chair and trade while you sample exotic wines being offered through wine tasting tables set up throughout the exchange.</desc>
+      <exits s='461' w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>The Wine Salon</name>
+      <desc>A small cafe that specializes in French cruisne as well as  featuring  wines from small, independent producers through out the Vinyard System and here on the planet Bordeaux.</desc>
+      <exits ne='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Warehouse 1</name>
+      <desc>Sign on the door reads under construction</desc>
+      <exits n='397' e='462' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>East End Vinyard</name>
+      <desc>The East End Vineyard Solstice drapes across an undulating ridgetop high above Max Mountain in the heart of the the great Bordeaux Valley. We  produce exceptional Bordeaux varietal grapes at this remarkable site. The Cabernet Sauvignon, Cabernet Franc and Petit Verdot are blended with cooler climate Merlot to contribute to the reputation we have of some of the finest tasting red wines in the universe.</desc>
+      <exits s='526' w='461' down='526' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name>South End Winnery</name>
+      <desc>Carefully tended vines produce balanced crop yields - with an insistence on quality over quantity. The detailed attention involved in growing grapes for wines on the planet Bordeaux and particularly for the South End Winery are specified by vineyard blocks or even row-by-row selections  which results in wines with intense flavors and soft, supple structure. Guided tours and Wine tastings are offered to the Public</desc>
+      <exits n='462' up='462' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

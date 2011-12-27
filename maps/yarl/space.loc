@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<fed2-map title='Yarl Space' version='1.00' editor='standard'>
+
+   <location num='397' flags='s'>
+      <name>Space</name>
+      <desc>There is nothing here.  You may return to the southwest to the interstellar link and the planet Mersun, or you may head south to the planet Mermoon.</desc>
+      <exits s='461' sw='460'/>
+   </location>
+
+   <location num='460' flags='slp'>
+      <name>Mersun Orbit</name>
+      <desc>You&apos;ve entered the Yarl Space System.  This is the link to the rest of the universe.  Below you is the planet Mersun.  To the east is the planet Mermoon.  Thank you for visiting.  Your business is always appreciated in the Yarl System.</desc>
+      <exits ne='397' e='461'/>
+   </location>
+
+   <location num='461' flags='s'>
+      <name>Mermoon Orbit</name>
+      <desc>Below you is the planet Mermoon.  It is chiefly inhabited by neuter frizzles that run the planet&apos;s factories.  Please be warned not to take one home with you.  Also, make sure you have extra spacesuits/warming supplies before disembarking from your spacesuit.  Thank you for visiting!</desc>
+      <exits n='397' w='460'/>
+   </location>
+
+</fed2-map>

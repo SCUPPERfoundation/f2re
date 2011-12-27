@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<fed2-map title='Ooops' version='16' editor='standard' from='196' to='Granite.Granite Space.259'>
+
+   <location num='0'>
+      <name>Store room</name>
+      <desc>space to put stuff</desc>
+   </location>
+
+   <location num='131' flags='e'>
+      <name>Ooops Exchange</name>
+      <desc>A basic planetary exchange and commodity market has been installed here. On a side wall is an ATM and a postage machine. A candy machine selling bright orange, white, and yelow candy corn for 1 groat displays a sign with &quot;BROKEN NO REFUNDS&quot; scrawled on it.</desc>
+      <exits se='196'/>
+   </location>
+
+   <location num='134'>
+      <name>Bedroom</name>
+      <desc>A pair of classic IKEA beds are covered with brilliantly red bedspreads. Two desks are on opposite walls sited under a row of sealed glass viewing ports. The floor is a uniform black looking almost like granite but is soft and yielding underfoot. A few comfortable looking arm chairs are clustered in a corner around a large wall mounted viewscreen. Sliding panels in the walls give a hint of storage units.</desc>
+      <exits se='199'/>
+   </location>
+
+   <location num='136'>
+      <name>Bedroom</name>
+      <desc>Two sets of bunk beds are lined up along opposite walls. Open sliding panels in the walls reveal storage shelves and drawers. A long table is strewn with books, papers, pencils, toys, and a slide rule. A partially disassembled machine of some sort is perched on blocks above spread out newspaper. Around it, tools are scattered on the floor. A huge wall viewscreen has been left on and is silently displaying some sort of drama featuring a huge furry alien with 3 eyes and a scantily clad curvacious Earth woman.</desc>
+      <exits sw='199'/>
+   </location>
+
+   <location num='196' flags='yr'>
+      <name>Ooops landing pad</name>
+      <desc>A typical planetary landing area spreads out around you. As always, an Armstrong Cuthbert office has claimed a choice location here. Ship repair sheds and used ship dealers lots cluster near the far edge of the paved pad. A commodities exchange is to the northwest and to the southwest is a Life Support Unit. To the east is the entrance to the small colony&apos;s living facilities.</desc>
+      <exits e='197' sw='259' nw='131'/>
+   </location>
+
+   <location num='197'>
+      <name>Corridor</name>
+      <desc>The gray corridor runs from the colony entrance doors in the west wall to the archway leading to the living areas in the south wall. A locked door with a brass sign engraved AKATURI is to the north. A sign on the wall directs visitors to the Green Dragonfly Pub with an arrow pointing south. A row of hooks on the wall offers convenient storage for gear and garments.</desc>
+      <exits s='261' w='196'/>
+   </location>
+
+   <location num='199'>
+      <name>Corridor</name>
+      <desc>The gray corridor leads to bedrooms in the northeast and northwest. To the south it leads back to the rest of the living areas.</desc>
+      <exits ne='136' s='263' nw='134'/>
+   </location>
+
+   <location num='259' flags='hi'>
+      <name>Life Support Unit</name>
+      <desc>This medical center is fully automated to cater to the needs of any life form known to Galactic Administration. A basic core of live medical staff are available to provide consultation and treatment for an extra fee. Unfortunately the receptionist&apos;s desk is empty and a sign posted on wall says, &quot;Closed for Mary Gober Training away day. Please use the machines.&quot;</desc>
+      <exits ne='196'/>
+   </location>
+
+   <location num='261'>
+      <name>Corridor</name>
+      <desc>The gray corridor continues east to shops and living areas. To the north the archway leads to the entry hall. A sign proclaiming the Green Dragonfly Pub arches above a set of large open doors to the south</desc>
+      <exits n='197' e='262' s='325'/>
+   </location>
+
+   <location num='262'>
+      <name>Corridor</name>
+      <desc>The gray corridor runs from east to west. To the south is a door to the colony&apos;s shop.</desc>
+      <exits e='263' s='326' w='261'/>
+   </location>
+
+   <location num='263'>
+      <name>Corridor</name>
+      <desc>The gray corridor leads to the lounge to the south, to the library to the east, and to bedrooms to the north.</desc>
+      <exits n='199' e='264' s='327' w='262'/>
+   </location>
+
+   <location num='264'>
+      <name>Library</name>
+      <desc>The walls are covered with book filled shelves. On one side of the room, a long table is surrounded by chairs. On the other side is a pool table with a hanging lamp over it. Two large windows ibreak the uniformity of the shelves on one wall. A large desk is nearby and a few comfortable chairs.</desc>
+      <exits w='263'/>
+   </location>
+
+   <location num='325' flags='b'>
+      <name>Green Dragonfly Pub</name>
+      <desc>The jukebox is playing some space cowboy lament about how he lost his girl and his dog and his ship. A gleaming walnut and brass bar stretches the length of the far wall. The bartender is busy chatting with a few locals who are sipping beer and playing some complicated game involving groat coins and unside down shot glasses. A slightly decrepit stuffed moose head hangs from the wall above the cash register in the center of the bar. It&apos;s wearing sunglasses.</desc>
+      <exits n='261'/>
+   </location>
+
+   <location num='326'>
+      <name>Spanner in the Works</name>
+      <desc>The shop is is crowded with shelves and display cases. Cartons are stacked in some aisles. There doesn&apos;t seem to be anyone around except a deactivated droid behind the counter. A sign is taped to the droid advising you that staff is sorry to be unavailable due to an away day for Mary Gober Training.</desc>
+      <exits n='262'/>
+   </location>
+
+   <location num='327'>
+      <name>Lounge</name>
+      <desc>Sofas and arm chairs are clustered comfortably about the room. All the usual entertainment service equipment is mounted on one wall including a massive viewscreen. A crumpled sheet of paper on a table near the door proclaims, &quot;Mary Gober is a Louse!&quot;</desc>
+      <exits n='263'/>
+   </location>
+
+</fed2-map>

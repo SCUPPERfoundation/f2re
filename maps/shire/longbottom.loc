@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<fed2-map title='Longbottom' version='1.00' editor='standard' from='330' to='Shire.Shire Space.197'>
+
+   <location num='0'>
+      <name>Closet</name>
+      <desc>Empty</desc>
+   </location>
+
+   <location num='265'>
+      <name>Dorms</name>
+      <desc>A nice quiet place for a little shut eye before hauling that load to the next quardrant.</desc>
+      <exits se='330'/>
+   </location>
+
+   <location num='267' flags='yr'>
+      <name>Repairs and Sales</name>
+      <desc>Just like it says, we repair ships and sell new ones.</desc>
+      <exits sw='330' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='330'>
+      <name>Landing Pad</name>
+      <desc>This is the landing pad for the planet Longbottom which features bio-goods and a large agri business in Longbottom Leaf.  To the northeast is the repair shop while dorms are conveniently located to the northwest for long haul space haulers.</desc>
+      <exits ne='267' s='394' nw='265' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='393' flags='e'>
+      <name>Longbottom Exchange</name>
+      <desc>Most commodities and futures can be bought here.</desc>
+      <exits e='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='394'>
+      <name>Reception</name>
+      <desc>Secure your badge to access the exchange to the east, the lounge to the west or the business offices to the south.</desc>
+      <exits n='330' e='395' s='458' w='393' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395' flags='b'>
+      <name>Lounge</name>
+      <desc>Hobbits serve the standard eight meals a day here.</desc>
+      <exits w='394' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>Hallway</name>
+      <desc>The hallway splits to the southest and southwest here.  To the southwest are the business offices while to the southeast is the hospital.</desc>
+      <exits n='394' se='523' sw='521' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='521'>
+      <name>Buesiness Offices</name>
+      <desc>The office is empty now.  Check the hours of operation and return when Bilbo is in.</desc>
+      <exits ne='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523' flags='hi'>
+      <name>Hobbspital</name>
+      <desc>Hurt?  Sick?  Dr. Bilbo will fix you up (better run now!)</desc>
+      <exits nw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<fed2-map title='Valisk' version='1.00' editor='standard' from='396' to='Ombey.Ombey Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   G-plan furniture, folding paper lampshades and brightly covered rugs are stored here.</desc>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Docking bay</name>
+      <desc>   You exit the airlock and are datavised a welcome guide and access code to the local net.  Valisk has become one of the more successful commercial centres of the region.  It&apos;s security (or lack there of) has provided ample opportunity for the darker side of the economy.  This is not a place to raise the children.</desc>
+      <desc>  The exit into Valisk is south.</desc>
+      <exits s='460' in='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>Lucy&apos;s Legs Bar and Grill</name>
+      <desc>Bar stools line a less than clean bar.  The bartender is a busty blond with a few too many years on her for that mini skirt.  Various ship captains are sipping on sophisticated drinks on one side of the room while the regulars sit at the bar chugging back cheap beer.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460'>
+      <name>Vac Tube Station</name>
+      <desc>    This place looks like a plumbers nightmare.  Seven foot diameter pipes are crisscrossing everywhere you look.  Commuters seem to have a knack for moving through the crowds of people without running into each other.  You aren&apos;t quite so adept.  Vac tubes located here can take you to most areas of the habitat.</desc>
+      <desc>  As you step forward you are datavised a schedule for the Vac tubes.</desc>
+      <desc>Exchange is East</desc>
+      <desc>Hospital is Southeast</desc>
+      <desc>Lucy&apos;s Legs is to the West</desc>
+      <desc>Shipyard is to the Southwest</desc>
+      <desc>Landing Pad is to the North</desc>
+      <exits n='396' e='461' se='525' sw='523' w='459' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='e'>
+      <name>Exchange</name>
+      <desc>   Trading terminals line the walls.  Fortunes are won and lost here.</desc>
+      <desc>   You will find the vac trains to the west.</desc>
+      <exits w='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523' flags='yr'>
+      <name>Government shipyard</name>
+      <desc>   Shady salesmen are sizing up your wallet as you pass by them.  Though government funded the salesmen are paid on a per sale basis to keep costs down.  You hear the sound of heavy machinery from behind the offices.  Ships can be purchased or repaired here for a modest fee.</desc>
+      <desc>   There&apos;s an access hatch above you leading to a duct. The vac trains are northeast.</desc>
+      <exits ne='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='hi'>
+      <name>Med Lab</name>
+      <desc>   The large red cross on this machinery is the universally understood sign showing that it will cure any illness, heal any wounds or broken bones, or failing that will activate your clone and send you off good as new. You will even have pleasant dreams while the autodoc works on you, thanks to the very latest in mood-enhancing anesthetic drugs.</desc>
+      <desc>   A smaller machine will renew lapsed life insurance.</desc>
+      <desc>   The Vac tube station is Northwest</desc>
+      <exits nw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

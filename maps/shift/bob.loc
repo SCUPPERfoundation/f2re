@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<fed2-map title='Bob' version='9' editor='standard' from='1885' to='Shift.Shift Space.2017'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>can&apos;t come out of this closet.</desc>
+   </location>
+
+   <location num='1821' flags='yrhi'>
+      <name>Ships and Suds</name>
+      <desc>Although you can purchase a ship here, it is not recommended, yet.  Feel free to repair your ship, and every new clone install comes with a free sponge bath. Don&apos;t forget to insure! The only exit is to the south.</desc>
+      <exits s='1885' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1884' flags='b'>
+      <name>Bob&apos;s Bar and Kill</name>
+      <desc>You probably shouldn&apos;t eat that! Hey, we won&apos;t tell if you don&apos;t! When you&apos;ve had enough for now, the exit is to the east.</desc>
+      <exits e='1885' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1885'>
+      <name>Welcome to Bob</name>
+      <desc>Thanks for stopping and enjoy your stay. The ship and hospital facilities are to the north. The exchange is to the south and the bar is to the west. East sets you on your way to the blue zone where everything is blue!</desc>
+      <exits n='1821' e='1886' s='1949' w='1884' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1886'>
+      <name>The road less traveled</name>
+      <desc>Despite any use at all, the road has been maintained to appear unmaintained! Southeast is the start of the blue zone, where everything is blue. West leads you back to the launchpad and main facilities.</desc>
+      <exits se='1951' w='1885' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1887' flags='b'>
+      <name>Blue Interior</name>
+      <desc>Blue wallpaper, blue sink, blue chairs. There is a blue desk with a blue book on it. The light bulbs are blue, and if there were windows.. they&apos;d likely be blue, too! The blue door will let you out.</desc>
+      <exits out='1888' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1888'>
+      <name>The Blue House</name>
+      <desc>If the house is blue, just go on IN. Southwest is one way to go, south is another.</desc>
+      <exits s='1952' sw='1951' in='1887' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1896' flags='bt'>
+      <name>Blue-lit Shed</name>
+      <desc>Blue light floods in the blue window. Even without the light, everything is already blue. Stay as long as you like, but nothing seems to be happening here.</desc>
+      <exits out='2017' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1949' flags='e'>
+      <name>&apos;Nuff said Exchange</name>
+      <desc>Welcome to the exchange. We&apos;re here to work together to ensure mutual profits. Please no dumping here. The loo is to the south and mind the broken lock!</desc>
+      <exits n='1885' s='2013' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1951'>
+      <name>The Blue Road</name>
+      <desc>The road isn&apos;t blue but it is blue!  Everything is blue here, the sky the ground the fence posts. Northeast allows you access to the blue house, and northwest sends you out of the blue zone.</desc>
+      <exits ne='1888' nw='1886' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='1952'>
+      <name>Blue Backyard</name>
+      <desc>The blue yard is a bit plain and all blue! To the southeast is a blue shed and north heads back towards the blue house.</desc>
+      <exits n='1888' se='2017' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='2013'>
+      <name>Stalls &apos;r&apos; Us</name>
+      <desc>The space is fairly small but due to every surface, other than the floor and ceiling, being mirrored the space seems infinite while maintaining your privacy.</desc>
+      <exits n='1949' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+   <location num='2017' flags='b'>
+      <name>Blue Shed</name>
+      <desc>True to its name, this shed is blue! Unlike the house, the shed has a blue window in its door. Northwest allows you safe passage back into the yard.</desc>
+      <exits nw='1952' in='1896' no-exit='bobmoves.noexit.1'/>
+   </location>
+
+</fed2-map>

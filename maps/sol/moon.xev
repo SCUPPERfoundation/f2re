@@ -1,0 +1,1093 @@
+<?xml version="1.0"?>
+
+<event-list version='75'>
+
+ <category name='customscert'>
+
+  <section name='obtain'>
+
+   <event num='1'>
+    <comment>player wants to obtain a customs certificate - is staff?</comment>
+    <checkflag who='individual' flag ='staff'  set='customscert.obtain.3' unset='customscert.obtain.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>has a slithy?</comment>
+    <checkslithy value='1' pass='customscert.obtain.3' fail='customscert.obtain.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>OK - fix it all</comment>
+    <flipflag who='individual' flag ='customs-cert'/>
+    <changeslithy value='-1' change='add'/>
+    <message type='text' where='com' who='individual'>You pass over the bribe and are handed your certificate. Don&apos;t forget to renew it when it runs out!</message>
+   </event>
+
+   <event num='4'>
+    <comment>not a staff member and no slithy</comment>
+    <message type='text' where='com' who='individual'>Sadly, you&apos;re not in a position to bribe anyone either for certificates or other useful extras.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='family-jewels'>
+
+  <section name='assistant'>
+
+   <event num='1'>
+    <comment>talk to the assistant</comment>
+    <match phrase='hello' id-name='obj_assistant' lo='family-jewels.assistant.1'/>
+    <match phrase='job' id-name='obj_assistant' lo='family-jewels.assistant.2'/>
+    <match phrase='work' id-name='obj_assistant' lo='family-jewels.assistant.2'/>
+    <match phrase='moon' id-name='obj_assistant' lo='family-jewels.assistant.3'/>
+    <match phrase='selena' id-name='obj_assistant' lo='family-jewels.assistant.3'/>
+    <match phrase='colony' id-name='obj_assistant' lo='family-jewels.assistant.3'/>
+    <match phrase='galactic admin' id-name='obj_assistant' lo='family-jewels.assistant.4'/>
+    <match phrase='illegal jewelry' id-name='obj_assistant' lo='family-jewels.assistant.5' hi='family-jewels.assistant.7'/>
+    <match phrase='illegal jewels' id-name='obj_assistant' lo='family-jewels.assistant.5' hi='family-jewels.assistant.7'/>
+    <match phrase='protection' id-name='obj_assistant' lo='family-jewels.assistant.9'/>
+    <match phrase='family jewels' id-name='obj_assistant' lo='family-jewels.assistant.8'/>
+    <match phrase='mafia' id-name='obj_assistant' lo='family-jewels.assistant.10' hi='family-jewels.assistant.11'/>
+    <match phrase='bye' id-name='obj_assistant' lo='family-jewels.assistant.13'/>
+    <match phrase='goodbye' id-name='obj_assistant' lo='family-jewels.assistant.13'/>
+    <match phrase='shop' id-name='obj_assistant' lo='family-jewels.assistant.8'/>
+    <match phrase='jewels' id-name='obj_assistant' lo='family-jewels.assistant.14'/>
+    <match phrase='jewelry' id-name='obj_assistant' lo='family-jewels.assistant.14'/>
+    <match phrase='regulation' id-name='obj_assistant' lo='family-jewels.assistant.15'/>
+    <match phrase='buy' id-name='obj_assistant' lo='family-jewels.assistant.16'/>
+    <match phrase='bribe' id-name='obj_assistant' lo='family-jewels.assistant.16'/>
+    <match phrase='medallio' id-name='obj_assistant' lo='family-jewels.assistant.17'/>
+    <match phrase='hi' id-name='obj_assistant' lo='family-jewels.assistant.1'/>
+    <match phrase='fedberge egg' id-name='obj_assistant' lo='family-jewels.assistant.18'/>
+    <match phrase='egg' id-name='obj_assistant' lo='family-jewels.assistant.18'/>
+    <match phrase='easter' id-name='obj_assistant' lo='family-jewels.assistant.18'/>
+    <match phrase='fedberge' id-name='obj_assistant' lo='family-jewels.assistant.19' hi='family-jewels.assistant.20'/>
+    <match phrase='keyring' id-name='obj_assistant' lo='family-jewels.assistant.21'/>
+    <match phrase='tenbrane' id-name='obj_assistant' lo='family-jewels.assistant.21'/>
+    <match phrase='gallagher' id-name='obj_assistant' lo='family-jewels.assistant.22' hi='family-jewels.assistant.23'/>
+    <nomatch id-name='obj_assistant' lo='family-jewels.assistant.12'/>
+   </event>
+
+   <event num='2'>
+    <comment>player tries to bribe the assistant</comment>
+    <message type='single' where='com' who='individual' lo='family-jewels.assistant.16'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='food'>
+
+  <section name='alhambra'>
+
+   <event num='1'>
+    <comment>Buy food - Alhambra - loc 908</comment>
+    <checkstat who='individual' money='10' higher='food.alhambra.2' equals='food.alhambra.2' lower='food.alhambra.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.alhambra.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.alhambra.2'/>
+   </event>
+
+  </section>
+
+  <section name='cafe'>
+
+   <event num='1'>
+    <comment>Buy food - Cafe - loc 390</comment>
+    <checkstat who='individual' money='10' higher='food.cafe.2' equals='food.cafe.2' lower='food.cafe.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.cafe.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.cafe.2'/>
+   </event>
+
+  </section>
+
+  <section name='canteen'>
+
+   <event num='1'>
+    <comment>Buy food - Canteen - loc 854</comment>
+    <checkstat who='individual' money='10' higher='food.canteen.2' equals='food.canteen.2' lower='food.canteen.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.canteen.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual'/>
+   </event>
+
+  </section>
+
+  <section name='casino'>
+
+   <event num='1'>
+    <checkstat who='individual' money='10' higher='food.casino.2' equals='food.casino.2' lower='food.casino.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.casino.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.casino.2'/>
+   </event>
+
+  </section>
+
+  <section name='mario'>
+
+   <event num='1'>
+    <comment>Buy food - Marios - loc 847</comment>
+    <checkstat who='individual' money='10' higher='food.mario.2' equals='food.mario.2' lower='food.mario.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.mario.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enuff groats</comment>
+    <message type='single' where='com' who='individual' lo='food.mario.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='keyring'>
+
+  <section name='egg'>
+
+   <event num='1'>
+    <comment>Player wants to buy easter egg charm - check for keyring</comment>
+    <checkflag who='individual' flag ='keyring'  set='keyring.egg.2' unset='keyring.egg.7'/>
+   </event>
+
+   <event num='2'>
+    <comment>Check for easter egg already bought</comment>
+    <checkflag who='individual' flag ='easter-2006'  set='keyring.egg.6' unset='keyring.egg.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>Check for slithy</comment>
+    <checkslithy value='1' pass='keyring.egg.4' fail='keyring.egg.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Buy the easter egg charm</comment>
+    <changeslithy value='-1' change='add'/>
+    <flipflag who='individual' flag ='easter-2006'/>
+    <message type='text' where='com' who='individual'>The assistant takes the slithy ownership certificate and clips the easter egg charm onto your keyring.</message>
+    <log>SLITHY: %s has bought the easter egg charm.</log>
+   </event>
+
+   <event num='5'>
+    <comment>No slithy</comment>
+    <message type='text' where='com' who='individual'>The assistant smiles apologetically and reminds you that you need a slithy tove to buy the exclusive Fedberge easter egg.</message>
+   </event>
+
+   <event num='6'>
+    <comment>Already has charm</comment>
+    <message type='text' where='com' who='individual'>The assistant explains that only one purchase per being is allowed, because the Fedberge egg is a limited edition, and only a certain number have been produced.</message>
+   </event>
+
+   <event num='7'>
+    <comment>Player has no keyring</comment>
+    <message type='text' where='com' who='individual'>These items require a TenBrane keyring to power their features, the assistant explains. Because of that, you will need to purchase a keyring from Gallagher&apos;s on Earth before he will sell you the easter egg accessory.</message>
+   </event>
+
+   <event num='8'>
+    <comment>Examine egg</comment>
+    <message type='text' where='com' who='individual'>The exquisite miniature egg is made from an iridescent nacre-like material that shines and flashes in different colors depending on how the light hits it. A delicate tracery of gold filigree frames the egg; the thin gold wires come together on the top of the egg to form the number &apos;2006&apos;.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='moves'>
+
+  <section name='elevator'>
+
+   <event num='1'>
+    <comment>Elevator down from 530 - press button</comment>
+    <message type='multi' where='loc' who='individual' lo='moves.elevator.1' hi='moves.elevator.2'/>
+    <move what='player' who='individual' loc='601'/>
+   </event>
+
+   <event num='2'>
+    <comment>Elevator up from 600 - press button</comment>
+    <message type='multi' where='loc' who='individual' lo='moves.elevator.3' hi='moves.elevator.4'/>
+    <move what='player' who='individual' loc='529'/>
+   </event>
+
+  </section>
+
+  <section name='temple'>
+
+   <event num='1'>
+    <comment>Search - loc 412</comment>
+    <message type='single' where='com' who='individual' lo='moves.temple.1'/>
+    <move what='player' who='individual' loc='348'/>
+    <changestat who='individual' stamina='-10' change='add' cur-max='current'/>
+   </event>
+
+   <event num='2'>
+    <comment>Enter event on 412 - exiting the temple</comment>
+    <checklastloc loc='348' fail='stop'/>
+    <message type='single' where='com' who='individual' lo='moves.temple.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='navcomp'>
+
+  <section name='about'>
+
+   <event num='1'>
+    <comment>player asks about the navigation computer s/ware</comment>
+    <message type='multi' where='com' who='individual' lo='navcomp.about.1' hi='navcomp.about.4'/>
+   </event>
+
+  </section>
+
+  <section name='buy'>
+
+   <event num='1'>
+    <comment>check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='navcomp.buy.3' unset='navcomp.buy.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for a slithy</comment>
+    <checkslithy value='1' pass='navcomp.buy.3' fail='navcomp.buy.4'/>
+   </event>
+
+   <event num='3'>
+    <comment>check for 1K ig</comment>
+    <checkstat who='individual' money='1000' higher='navcomp.buy.5' equals='navcomp.buy.5' lower='navcomp.buy.4'/>
+   </event>
+
+   <event num='4'>
+    <comment>no slithy or no cash</comment>
+    <message type='text' where='com' who='individual'>Arnie shakes his head and tells you that you need to have both 1,000ig and a slithy tove to make the deal.</message>
+   </event>
+
+   <event num='5'>
+    <comment>already got a nav computer?</comment>
+    <checkflag who='individual' flag ='nav-comp'  set='navcomp.buy.7' unset='navcomp.buy.6'/>
+   </event>
+
+   <event num='6'>
+    <comment>all OK</comment>
+    <changeslithy value='-1' change='add'/>
+    <changestat who='individual' money='-1000' change='add' cur-max='current'/>
+    <flipflag who='individual' flag ='nav-comp'/>
+    <message type='text' where='com' who='individual'>You use your comm unit to make the necessary transfers, and give Arnie access to your ship&apos;s computer so he can run the update. Arnie does something on his console and tells you the computer is now upgraded.</message>
+    <log>SLITHY: %s - navcomp_upgrade.</log>
+   </event>
+
+   <event num='7'>
+    <comment>duh! already got a nav computer</comment>
+    <message type='text' where='com' who='individual'>Arnie runs a check on your ship and points out that you already have a navigation computer upgrade!</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='newbod'>
+
+  <section name='message'>
+
+   <event num='1'>
+    <comment>See if player is doing the puzzle...</comment>
+    <checkvariable name='newbod' key='clue' value='twelve' equals='newbod.message.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>Does the player already have a chip? If not give him one</comment>
+    <checkinventory map='home' id-name='casino chipstop' found='stop'/>
+    <createobject where='inventory' home-map='sol/moon' id='obj_casinochip'/>
+    <message type='text' where='com' who='individual'>The room boss notices you and motions you out before you break the players&apos; concentration. As a gesture of goodwill he tosses you a chip, which you manage to catch.</message>
+   </event>
+
+   <event num='3'>
+    <comment>Drop the casino chip</comment>
+    <message type='text' where='com' who='individual'>I don&apos;t think you really want to do that - you need the chip!</message>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='objects'>
+
+  <section name='ankh'>
+
+   <event num='1'>
+    <comment>buy an ankh - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.ankh.4' unset='objects.ankh.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.ankh.3' fail='objects.ankh.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.ankh.4' equals='objects.ankh.4' lower='objects.ankh.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>does he already have one?</comment>
+    <checkflag who='individual' flag ='ankh'  set='objects.ankh.8' unset='objects.ankh.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant shakes his head and tells you that you are in no position to buy an ankh at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set the flag for an ankh + remove 100ig</comment>
+    <flipflag who='individual' flag ='ankh'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe and the assistant disappears into a back room, returning a few minutes later with your ankh, which you hang around your neck.</message>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <checkflag who='individual' flag ='staff'  unset='objects.ankh.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - ankh_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell another ankh</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you are already wearing an ankh!</message>
+   </event>
+
+  </section>
+
+  <section name='barbells'>
+
+   <event num='1'>
+    <comment>Get barbells - object in loc 719</comment>
+    <message type='multi' where='com' who='individual' lo='objects.barbells.1' hi='objects.barbells.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.barbells.3'/>
+    <checkstat who='individual' stamina='10' higher='objects.barbells.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>If stam is more than 10, reduce it to 10</comment>
+    <changestat who='individual' stamina='10' change='set' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='cards'>
+
+   <event num='1'>
+    <comment>Get cards - loc 972</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.1'/>
+    <createobject where='inventory' home-map='sol/moon' id='obj_cards'/>
+   </event>
+
+   <event num='2'>
+    <comment>Drop cards</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.3'/>
+    <destroyobject where='inventory' map='home' id-name='cards'/>
+   </event>
+
+   <event num='3'>
+    <comment>Deal cards - pick option</comment>
+    <call event='objects.cards.random[4-6]'/>
+   </event>
+
+   <event num='4'>
+    <comment>Deal cards - option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.5'/>
+   </event>
+
+   <event num='5'>
+    <comment>Deal cards - option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.6'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.7'/>
+   </event>
+
+   <event num='6'>
+    <comment>Deal cards - option 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.8'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.9'/>
+   </event>
+
+   <event num='7'>
+    <comment>Shuffle cards - select outcome</comment>
+    <call event='objects.cards.random[8-10]'/>
+   </event>
+
+   <event num='8'>
+    <comment>Shuffle cards - option 1</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.10'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.11'/>
+   </event>
+
+   <event num='9'>
+    <comment>Shuffle cards - option 2</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.12'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.13'/>
+   </event>
+
+   <event num='10'>
+    <comment>Shuffle cards - option 3</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.14'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.15'/>
+   </event>
+
+   <event num='11'>
+    <comment>Cut cards - setup then select outcome</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.16'/>
+    <message type='single' where='com' who='room_ex' lo='objects.cards.17'/>
+    <call event='objects.cards.random[12-23]'/>
+   </event>
+
+   <event num='12'>
+    <comment>Cut cards - 1</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.18'/>
+   </event>
+
+   <event num='13'>
+    <comment>Cut cards - 2</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.19'/>
+   </event>
+
+   <event num='14'>
+    <comment>Cut cards - 3</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.20'/>
+   </event>
+
+   <event num='15'>
+    <comment>Cut cards - 4</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.21'/>
+   </event>
+
+   <event num='16'>
+    <comment>Cut cards - 5</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.22'/>
+   </event>
+
+   <event num='17'>
+    <comment>Cut cards - 6</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.23'/>
+   </event>
+
+   <event num='18'>
+    <comment>Cut cards - 7</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.24'/>
+   </event>
+
+   <event num='19'>
+    <comment>Cut cards - 8</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.25'/>
+   </event>
+
+   <event num='20'>
+    <comment>Cut cards - 9</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.26'/>
+   </event>
+
+   <event num='21'>
+    <comment>Cut cards - 10</comment>
+    <message type='single' where='com' who='individual' lo='objects.cards.27'/>
+   </event>
+
+   <event num='22'>
+    <comment>Cut cards - 11</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.28'/>
+   </event>
+
+   <event num='23'>
+    <comment>Cut cards - 12</comment>
+    <message type='single' where='com' who='room' lo='objects.cards.29'/>
+   </event>
+
+  </section>
+
+  <section name='celtic'>
+
+   <event num='1'>
+    <comment>buy a celtic cross - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.celtic.4' unset='objects.celtic.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.celtic.3' fail='objects.celtic.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.celtic.4' equals='objects.celtic.4' lower='objects.celtic.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>does he already have one?</comment>
+    <checkflag who='individual' flag ='celtic'  set='objects.celtic.8' unset='objects.celtic.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant shakes his head and tells you that you are in no position to buy a celtic cross at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set flag for the celtic cross and remove 100ig</comment>
+    <flipflag who='individual' flag ='celtic'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe and the assistant disappears into a back room. He returns a few moments later with your celtic cross, which you hang around your neck.</message>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <checkflag who='individual' flag ='staff'  unset='objects.celtic.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - celtic_cross_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell a second celtic cross</comment>
+    <message type='text' where='com' who='individual'>The assistant patiently points out that you are already wearing a celtic cross!</message>
+   </event>
+
+  </section>
+
+  <section name='cross'>
+
+   <event num='1'>
+    <comment>buy cross - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.cross.4' unset='objects.cross.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.cross.3' fail='objects.cross.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.cross.4' equals='objects.cross.4' lower='objects.cross.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>does he already have it?</comment>
+    <checkflag who='individual' flag ='cross'  set='objects.cross.8' unset='objects.cross.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant shakes his head and tells you that you are in no position to buy a cross at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set the flag for the cross + remove 100ig</comment>
+    <flipflag who='individual' flag ='cross'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe and the assistant disappears into a back room, returning a few minutes later with your silver cross, which you hang around your neck.</message>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <checkflag who='individual' flag ='staff'  unset='objects.cross.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - cross_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell another</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you already have a silver cross on a chain around your neck.</message>
+   </event>
+
+  </section>
+
+  <section name='david'>
+
+   <event num='1'>
+    <comment>buy a star of david - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.david.4' unset='objects.david.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.david.3' fail='objects.david.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.david.4' equals='objects.david.4' lower='objects.david.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>laready has one?</comment>
+    <checkflag who='individual' flag ='david'  set='objects.david.8' unset='objects.david.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant regretfully informs you that you are in no position to buy a star of david at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set the flag for star of david and deduct 100ig</comment>
+    <flipflag who='individual' flag ='david'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe. The assistant disappears into a back room, emerging a few moments later. He hands you the star of david, which you hang round your neck.</message>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <checkflag who='individual' flag ='staff'  unset='objects.david.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - star_of_david_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell a second star</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you are already wearing one star of david. Another one would be unbelievably ostentatious.</message>
+   </event>
+
+  </section>
+
+  <section name='holocard'>
+
+   <event num='1'>
+    <comment>Get holo-card - check if already got one</comment>
+    <checkinventory map='home' id-name='holo-card' found='objects.holocard.2' not-found='objects.holocard.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Already got one</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not got one - so give her one</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.holocard.3'/>
+    <createobject where='inventory' home-map='home' id='obj_holocard'/>
+   </event>
+
+   <event num='4'>
+    <comment>Squeeze holo-card - check if it has power</comment>
+    <checksize id-name='holo-card' value='1' more='objects.holocard.5' equal='objects.holocard.5' less='objects.holocard.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>Got power, so display holo</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.4'/>
+    <message type='single' where='com' who='room_ex' lo='objects.holocard.5'/>
+    <changesize id-name='holo-card' amount='-1' change='add' max-size='2' destroy='no'/>
+   </event>
+
+   <event num='6'>
+    <comment>No power</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.6'/>
+   </event>
+
+   <event num='7'>
+    <comment>Recharge holo-card - check she is in right place</comment>
+    <checkmap map='home'  pass='objects.holocard.8' fail='objects.holocard.9' loc='348'/>
+   </event>
+
+   <event num='8'>
+    <comment>Recharge the card</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.7'/>
+    <message type='single' where='com' who='room_ex' lo='objects.holocard.8'/>
+    <changesize id-name='holo-card' amount='3' change='set' max-size='3' destroy='no'/>
+   </event>
+
+   <event num='9'>
+    <comment>Not in right place</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.9'/>
+   </event>
+
+   <event num='10'>
+    <comment>Drop holo-card</comment>
+    <message type='single' where='com' who='individual' lo='objects.holocard.10'/>
+    <message type='single' where='com' who='room_ex' lo='objects.holocard.11'/>
+    <destroyobject where='inventory' map='home' id-name='holo-card'/>
+   </event>
+
+  </section>
+
+  <section name='krystal'>
+
+   <event num='1'>
+    <comment>Krystal events - loc 847 Marios - examine krystal</comment>
+    <message type='single' where='com' who='individual' lo='objects.krystal.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>kiss/hug/grope krystal</comment>
+    <message type='single' where='com' who='individual' lo='objects.krystal.2'/>
+   </event>
+
+   <event num='3'>
+    <comment>Chat with krystal</comment>
+    <match phrase='hello' id-name='obj_krystal' event='objects.krystal.4'/>
+    <match phrase='krystal' id-name='obj_krystal' lo='objects.krystal.6' hi='objects.krystal.7'/>
+    <match phrase='who' id-name='obj_krystal' lo='objects.krystal.6' hi='objects.krystal.7'/>
+    <match phrase='gossip' id-name='obj_krystal' lo='objects.krystal.8'/>
+    <match phrase='scandal' id-name='obj_krystal' lo='objects.krystal.9'/>
+    <match phrase='celebrit' id-name='obj_krystal' lo='objects.krystal.10'/>
+    <match phrase='galactopoliton' id-name='obj_krystal' lo='objects.krystal.11'/>
+    <match phrase='dirt' id-name='obj_krystal' lo='objects.krystal.12' hi='objects.krystal.13'/>
+    <match phrase='rockstar' id-name='obj_krystal' lo='objects.krystal.14' hi='objects.krystal.16'/>
+    <match phrase='politician' id-name='obj_krystal' lo='objects.krystal.17' hi='objects.krystal.18'/>
+    <match phrase='holostar' id-name='obj_krystal' lo='objects.krystal.19' hi='objects.krystal.23'/>
+    <match phrase='newsdroid' id-name='obj_krystal' lo='objects.krystal.24' hi='objects.krystal.25'/>
+    <match phrase='hazed' id-name='obj_krystal' lo='objects.krystal.26' hi='objects.krystal.29'/>
+    <match phrase='star' id-name='obj_krystal' lo='objects.krystal.30'/>
+    <match phrase='moon' id-name='obj_krystal' lo='objects.krystal.31' hi='objects.krystal.32'/>
+    <match phrase='where' id-name='obj_krystal' lo='objects.krystal.31' hi='objects.krystal.32'/>
+    <match phrase='mario' id-name='obj_krystal' lo='objects.krystal.33'/>
+    <match phrase='bar' id-name='obj_krystal' lo='objects.krystal.33'/>
+    <nomatch id-name='obj_krystal' lo='objects.krystal.34'/>
+   </event>
+
+   <event num='4'>
+    <comment>Hello - check gender</comment>
+    <checkgender male='objects.krystal.5' female='objects.krystal.6' neuter='objects.krystal.7'/>
+   </event>
+
+   <event num='5'>
+    <comment>Hello boys</comment>
+    <message type='single' where='com' who='individual' lo='objects.krystal.3'/>
+   </event>
+
+   <event num='6'>
+    <comment>Hello girls</comment>
+    <message type='single' where='com' who='individual' lo='objects.krystal.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Hello things</comment>
+    <message type='single' where='com' who='individual' lo='objects.krystal.5'/>
+   </event>
+
+  </section>
+
+  <section name='marillion'>
+
+   <event num='1'>
+    <comment>buy marillion medallion - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.marillion.4' unset='objects.marillion.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.marillion.3' fail='objects.marillion.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check for groats</comment>
+    <checkstat who='individual' money='100' higher='objects.marillion.4' equals='objects.marillion.4' lower='objects.marillion.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>already has one?</comment>
+    <checkflag who='individual' flag ='marillion'  set='objects.marillion.8' unset='objects.marillion.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant shakes his head doubtfully. He tells you that you are not in a position to buy a marillion at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set the marillion flag + deduct 100ig</comment>
+    <flipflag who='individual' flag ='marillion'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe and the assistant vanishes into a back room. A few minutes later he returns with a marillion medallion which he hangs around your neck.</message>
+    <checkflag who='individual' flag ='staff'  unset='objects.marillion.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>deduct a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - marillion_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell a second one</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you already have a marillion medallion - it&apos;s hanging round your neck at the moment!</message>
+   </event>
+
+  </section>
+
+  <section name='medallion'>
+
+   <event num='1'>
+    <comment>Player tries to buy a medallion</comment>
+    <message type='text' where='com' who='individual'>You need to say which one you want to buy - for instance &apos;buy ankh&apos;. The assistant can&apos;t very well choose you one at random!</message>
+   </event>
+
+  </section>
+
+  <section name='menella'>
+
+   <event num='1'>
+    <comment>vocab for Menella Bute Smedley IV</comment>
+    <match phrase='hello' id-name='obj_menella' lo='objects.menella.1'/>
+    <match phrase='job' id-name='obj_menella' lo='objects.menella.2'/>
+    <match phrase='who' id-name='obj_menella' lo='objects.menella.2'/>
+    <match phrase='chart' id-name='obj_menella' lo='objects.menella.3'/>
+    <match phrase='schedule' id-name='obj_menella' lo='objects.menella.4' hi='objects.menella.5'/>
+    <match phrase='project' id-name='obj_menella' event='objects.menella.2'/>
+    <match phrase='selena' id-name='obj_menella' lo='objects.menella.10' hi='objects.menella.11'/>
+    <match phrase='sol' id-name='obj_menella' lo='objects.menella.12' hi='objects.menella.13'/>
+    <match phrase='alien' id-name='obj_menella' lo='objects.menella.14' hi='objects.menella.15'/>
+    <match phrase='bella' id-name='obj_menella' lo='objects.menella.16' hi='objects.menella.18'/>
+    <match phrase='hazed' id-name='obj_menella' lo='objects.menella.19' hi='objects.menella.20'/>
+    <match phrase='freya' id-name='obj_menella' lo='objects.menella.21'/>
+    <match phrase='bye' id-name='obj_menella' lo='objects.menella.22' hi='objects.menella.23'/>
+    <nomatch id-name='obj_menella' lo='objects.menella.24'/>
+   </event>
+
+   <event num='2'>
+    <comment>vocab event for project - send message and check stam</comment>
+    <message type='multi' where='com' who='individual' lo='objects.menella.6' hi='objects.menella.9'/>
+    <checkstat who='individual' stamina='5' higher='objects.menella.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>remove one stam for asking about projects</comment>
+    <changestat who='individual' stamina='-1' change='add' cur-max='current'/>
+   </event>
+
+  </section>
+
+  <section name='pegasus'>
+
+   <event num='1'>
+    <comment>buy a pegasus medallion - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.pegasus.4' unset='objects.pegasus.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.pegasus.3' fail='objects.pegasus.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.pegasus.4' equals='objects.pegasus.4' lower='objects.pegasus.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>already has it?</comment>
+    <checkflag who='individual' flag ='pegasus'  set='objects.pegasus.8' unset='objects.pegasus.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant frowns and shakes his head. He tells you that you are in no position to buy a pegasus medallion at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set flag for pegasus + remove 100ig</comment>
+    <flipflag who='individual' flag ='pegasus'/>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <message type='text' where='com' who='individual'>The assistant takes the money and the bribe and disappears into a back room, returning a few minutes later with your pegasus medallion, which he hangs around your neck.</message>
+    <checkflag who='individual' flag ='staff'  unset='objects.pegasus.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - pegasus_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell a second one</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you already have a pegasus medallion hanging round your neck!</message>
+   </event>
+
+  </section>
+
+  <section name='pentagram'>
+
+   <event num='1'>
+    <comment>buy pentagram - check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.pentagram.4' unset='objects.pentagram.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.pentagram.3' fail='objects.pentagram.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.pentagram.4' equals='objects.pentagram.4' lower='objects.pentagram.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>already has it?</comment>
+    <checkflag who='individual' flag ='pentagram'  set='objects.pentagram.8' unset='objects.pentagram.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant shakes his head dubiously and tells you that you are not in a position to buy a pentagram at the moment.</message>
+   </event>
+
+   <event num='6'>
+    <comment>set flag for pentagram + remove 100ig</comment>
+    <flipflag who='individual' flag ='pentagram'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe. The assistant disappears into a back room, returning a few minutes later with your pentagram, which he hangs round your neck.</message>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <checkflag who='individual' flag ='staff'  unset='objects.pentagram.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - pentagram_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell a second pentagram</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you are already wearing a pentagram!</message>
+   </event>
+
+  </section>
+
+  <section name='wrench'>
+
+   <event num='1'>
+    <comment>Get sonic wrench</comment>
+    <get id-name='obj_wrench'/>
+    <message type='single' where='com' who='individual' lo='objects.wrench.1'/>
+   </event>
+
+   <event num='2'>
+    <comment>Drop sonic wrench</comment>
+    <drop id-name='obj_wrench'/>
+    <message type='single' where='com' who='individual' lo='objects.wrench.2'/>
+    <message type='single' where='com' who='room_ex' lo='objects.wrench.3'/>
+    <changestat who='individual' stamina='-4' change='add' cur-max='current'/>
+    <delayevent delay='2' event='objects.wrench.3' logoff='objects.wrench.3'/>
+   </event>
+
+   <event num='3'>
+    <comment>After delay, a droid moves the wrench</comment>
+    <message type='single' where='com' who='room' lo='objects.wrench.4'/>
+    <move what='object' silent='true' id-name='obj_wrench' loc='539'/>
+   </event>
+
+   <event num='4'>
+    <comment>Enter event on loc 794 - workshop - check for laser, if they have it, take it away</comment>
+    <checkinventory map='home' id-name='obj_wrench' not-found='stop'/>
+    <message type='single' where='com' who='individual' lo='objects.wrench.5'/>
+    <drop id-name='obj_wrench' silent='true'/>
+    <move what='object' silent='true' id-name='obj_wrench' loc='539'/>
+   </event>
+
+   <event num='5'>
+    <comment>Use wrench</comment>
+    <message type='single' where='com' who='individual' lo='objects.wrench.6'/>
+   </event>
+
+  </section>
+
+  <section name='yinyang'>
+
+   <event num='1'>
+    <comment>buy a yin-yang symbol -check for staff</comment>
+    <checkflag who='individual' flag ='staff'  set='objects.yinyang.4' unset='objects.yinyang.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>check for slithy</comment>
+    <checkslithy value='1' pass='objects.yinyang.3' fail='objects.yinyang.5'/>
+   </event>
+
+   <event num='3'>
+    <comment>check groats</comment>
+    <checkstat who='individual' money='100' higher='objects.yinyang.4' equals='objects.yinyang.4' lower='objects.yinyang.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>does he already have one?</comment>
+    <checkflag who='individual' flag ='yin-yang'  set='objects.yinyang.8' unset='objects.yinyang.6'/>
+   </event>
+
+   <event num='5'>
+    <comment>no purchase</comment>
+    <message type='text' where='com' who='individual'>The assistant shakes his head and tells you that you are in no position to buy a yin-yang symbol at the moment!</message>
+   </event>
+
+   <event num='6'>
+    <comment>set flag for yin-yang symbol and deduct 100ig</comment>
+    <flipflag who='individual' flag ='yin-yang'/>
+    <message type='text' where='com' who='individual'>You hand over the money and the bribe to the assistant who disappears into a back room. Returning a few minutes later he hands you the yin-yang medallion, which you hang round your neck.</message>
+    <changestat who='individual' money='-100' change='add' cur-max='current'/>
+    <checkflag who='individual' flag ='staff'  unset='objects.yinyang.7'/>
+   </event>
+
+   <event num='7'>
+    <comment>remove a slithy</comment>
+    <changeslithy value='-1' change='add'/>
+    <log>SLITHY: %s - yin-yang_medallion</log>
+   </event>
+
+   <event num='8'>
+    <comment>refuse to sell a second symbol</comment>
+    <message type='text' where='com' who='individual'>The assistant points out that you are already wearing a yin-yang symbol.</message>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

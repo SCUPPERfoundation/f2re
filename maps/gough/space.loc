@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<fed2-map title='Gough Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Welcome to Gough, home system of the Goughian Empire</name>
+      <desc>   Your ship is floating next to space station New Gough, which provides facilities for those who wish to conduct business with the Goughian Empire without visiting the planet&apos;s surface. Far below you is the Empire&apos;s capitol planet, Gough Prime.</desc>
+      <desc>   To visit the station, simply board your shuttle now. To land on the planet, move your ship down into low orbit before boarding.</desc>
+      <desc>   Your ship&apos;s sensors detect a small, barren asteroid to the east.</desc>
+      <exits e='461' down='1485' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='sp'>
+      <name>Asteroid Gough Minor</name>
+      <desc>   Your ship orbits a small asteroid which is home to the New Gough Biolabs Corporation. To visit the lab&apos;s facilities located deep inside the asteroid, board your shuttle now. The interstellar link is west.</desc>
+      <exits w='460'/>
+   </location>
+
+   <location num='1485' flags='sp'>
+      <name>Gough Prime Orbit</name>
+      <desc>   Please board your shuttle to land on Gough Prime or move up to reach New Gough station and the interstellar link.</desc>
+      <exits up='460'/>
+   </location>
+
+</fed2-map>

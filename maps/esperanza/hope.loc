@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<fed2-map title='Hope' version='3' editor='standard' from='329' to='Esperanza.Esperanza Space.65'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>xxx</desc>
+   </location>
+
+   <location num='263' flags='t'>
+      <name>Hope&apos;s end</name>
+      <desc>This storeroom is dimly lit and full of cobwebs. A tunnel lies to the north but the walls have collapsed blocking off the tunnel. The bar is out through the door behind you.</desc>
+      <exits out='393' no-exit='move.noexit.1'/>
+   </location>
+
+   <location num='265' flags='hi'>
+      <name>Hospital of Hope</name>
+      <desc>Need an implant? Lost a limb? Help and hope are here! The exit is south.</desc>
+      <exits s='329'/>
+   </location>
+
+   <location num='328' flags='yr'>
+      <name>The Grease Monkey</name>
+      <desc>Ships for sale at a discount. Hope is so grateful for your business the planet will pay 10 percent of your ship&apos;s cost just for shopping with us. If you need a repair, there is an opening now!</desc>
+      <desc>The exit is east.</desc>
+      <exits e='329'/>
+   </location>
+
+   <location num='329'>
+      <name>Hope Landing Pad</name>
+      <desc>There is a bar to the south and the exchange is east from here. North you will find a hospital and to the west ships are being sold.</desc>
+      <exits n='265' e='330' s='393' w='328'/>
+   </location>
+
+   <location num='330' flags='e'>
+      <name>The Exchange</name>
+      <desc>Don&apos;t look directly at the ticker! You might end up stuck here, mesmerized by my prices.</desc>
+      <exits w='329'/>
+   </location>
+
+   <location num='393' flags='b'>
+      <name>Hope Bar and Grill</name>
+      <desc>The smell of BBQ and pizza, fried chicken and spagetti sauce permeates this place. The LP is to the north.</desc>
+      <exits n='329' in='263'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<fed2-map title='Pit Stop' version='26' editor='standard' from='396' to='Tourist Trap.Tourist Trap Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Storeroom for mobiles</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Health services</name>
+      <desc>   A barebones clinic offers basic health and insurance services for those on the go.  Although the equipment looks outdated, some patients have relatively serious conditions that look like they deserve the attention of a more state-of-the art facility.</desc>
+      <desc>   The exit is South.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396'>
+      <name>Pit Stop Hub</name>
+      <desc>   The Pit Stop Hub has been designed to help you recharge your body, mind, and ship as quickly as possible so you can be back in the space lanes and on your way as quickly as possible.  Newly arrived passengers from the space shuttle rush over to the restrooms in the corner of the hub to lighten the load and freshen up.</desc>
+      <desc>   A neon sign points East for the trading exchange, North for health services, Southwest for the diner and Southeast for ship repair.  You can also board the space shuttle to return to your ship in orbit.</desc>
+      <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Pit Stop Exchange</name>
+      <desc>   The Pit Stop Exchange is a frenetic place to buy and sell, as a steady stream of day traders flow in and out to make a couple trades for their personal accounts while their ship re-fuels.  Although gambling is illegal, there&apos;s a constant ringing from the far corner from terminals that resemble slot-machines by speculating on random commodities and futures based on the spin of a wheel.</desc>
+      <desc>   The exit back to the hub is to the West.</desc>
+      <exits w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>Pit Stop Diner</name>
+      <desc>   Harkening back to 1950s Earth, the pit stop diner serves roadside classics to hurried customers.  A constant stream of waitdroids circulates to keep coffee mugs filled, as many patrons look like they&apos;ve been traveling for days on end.</desc>
+      <desc>   The only exit is to the Northeast.</desc>
+      <exits ne='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='yr'>
+      <name>Ship Repair</name>
+      <desc>   Upon entering the ship repair center, a droid rushes up to you and shouts out suggested upgrades and repairs to your ship.  The repair center speicalizes in patchwork that will help you get another few hundred light years out of your ship before serious repairs are needed.</desc>
+      <desc>   The exit back to the hub is Northwest.</desc>
+      <exits nw='396'/>
+   </location>
+
+</fed2-map>

@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+
+<event-list version='21'>
+
+ <category name='food'>
+
+  <section name='reception'>
+
+   <event num='1'>
+    <comment>Buy food - Biolabs Reception Area - 530</comment>
+    <checkstat who='individual' money='10' higher='food.reception.2' equals='food.reception.2' lower='food.reception.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Feed the hungry</comment>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <message type='single' where='com' who='individual' lo='food.reception.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Not enough groats</comment>
+    <message type='single' where='com' who='individual' lo='food.reception.2'/>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='stats'>
+
+  <section name='strength'>
+
+   <event num='1'>
+    <comment>Strength enhancement booth - 595 - buy strength - check for slithy</comment>
+    <checkslithy value='1' pass='stats.strength.3' fail='stats.strength.2'/>
+   </event>
+
+   <event num='2'>
+    <comment>No slithy</comment>
+    <message type='single' where='com' who='individual' lo='stats.strength.1'/>
+   </event>
+
+   <event num='3'>
+    <comment>Has got slithy so send basic msg and check if already done a stat today</comment>
+    <message type='single' where='com' who='individual' lo='stats.strength.2'/>
+    <checkflag who='individual' flag ='slithy2stat'  set='stats.strength.4' unset='stats.strength.5'/>
+   </event>
+
+   <event num='4'>
+    <comment>Already done a stat today</comment>
+    <message type='single' where='com' who='individual' lo='stats.strength.3'/>
+   </event>
+
+   <event num='5'>
+    <comment>Not already done so check if strength is maxed, or already maxed</comment>
+    <checkstat who='individual' strength='149' higher='stats.strength.6' equals='stats.strength.7' lower='stats.strength.8'/>
+   </event>
+
+   <event num='6'>
+    <comment>Strength is already maxed</comment>
+    <message type='single' where='com' who='individual' lo='stats.strength.4'/>
+   </event>
+
+   <event num='7'>
+    <comment>Strength is 149 so call stam increase event, and send final warning</comment>
+    <call event='stats.strength.8'/>
+    <message type='single' where='com' who='individual' lo='stats.strength.7'/>
+   </event>
+
+   <event num='8'>
+    <comment>Increase strength</comment>
+    <message type='multi' where='com' who='individual' lo='stats.strength.5' hi='stats.strength.6'/>
+    <changeslithy value='-1' change='add'/>
+    <changestat who='individual' strength='1' change='add' cur-max='maximum'/>
+    <changestat who='individual' strength='99' change='add' cur-max='current'/>
+    <flipflag who='individual' flag ='slithy2stat'/>
+    <log>SLITHY - %s has bought a strength point.</log>
+   </event>
+
+  </section>
+
+ </category>
+
+ <category name='xmas'>
+
+  <section name='pie'>
+
+   <event num='1'>
+    <comment>Buy mince pie - object in loc 530 - check funds</comment>
+    <checkstat who='individual' money='10' higher='xmas.pie.2' equals='xmas.pie.2' lower='xmas.pie.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Sell the pie</comment>
+    <message type='single' where='loc' who='individual' lo='xmas.pie.1'/>
+    <changestat who='individual' stamina='5' change='add' cur-max='current'/>
+    <changestat who='individual' money='-10' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>No funds for pie</comment>
+    <message type='single' where='loc' who='individual' lo='xmas.pie.2'/>
+   </event>
+
+  </section>
+
+  <section name='wine'>
+
+   <event num='1'>
+    <comment>Buy mulled wine - object in loc 530 - check funds</comment>
+    <checkstat who='individual' money='5' higher='xmas.wine.2' lower='xmas.wine.3'/>
+   </event>
+
+   <event num='2'>
+    <comment>Sell the wine</comment>
+    <message type='multi' where='loc' who='individual' lo='xmas.wine.1' hi='xmas.wine.2'/>
+    <changestat who='individual' stamina='2' change='add' cur-max='current'/>
+    <changestat who='individual' money='-5' change='add' cur-max='current'/>
+   </event>
+
+   <event num='3'>
+    <comment>No funds for wine</comment>
+    <message type='single' where='loc' who='individual' lo='xmas.wine.3'/>
+   </event>
+
+  </section>
+
+ </category>
+
+</event-list>
+

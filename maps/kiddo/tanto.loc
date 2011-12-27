@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<fed2-map title='Tanto' version='4' editor='standard' from='2671' to='Kiddo.Kiddo Space.2267'>
+
+   <location num='0'>
+      <name>Storeroom</name>
+      <desc>Objects and Mobiles remain to be designed.</desc>
+   </location>
+
+   <location num='1890' flags='b'>
+      <name>The Minka of Beatrix</name>
+      <desc>Beatrix has chosen to reside in a traditional minka here on Tanto.  The gasho style home has a very high peaked roof.  The interior doma is covered with tatami mats.  There is an inviting hearth, cooking area and common room.  Beatrix enjoys the non technical simplicity of this residence, and comes here to meditate and relax.  You may exit east or take her airpod directly out to the Launch Pad.</desc>
+      <exits e='1891' out='2671'/>
+   </location>
+
+   <location num='1891'>
+      <name>Masahide Forger</name>
+      <desc>A master sword forger creates beautiful katanas and tantos here.  The master combines a number of unique metallurgical, material and mechanical properties within a single blade.  It involves a complicated, time-consuming series of advanced forging and heat treatment steps.  The blades are extremely valuable and sold only to those the master chooses to honor. You may go SE or NW.</desc>
+      <exits se='1956' w='1890'/>
+   </location>
+
+   <location num='1956'>
+      <name>Kamakura Way</name>
+      <desc>You see an interesting building at the top of the tall hill.  Lilacs and cherry trees are in full bloom and line to road.  It is beautiful to behold.  You may go SE or NW.</desc>
+      <exits se='2021' nw='1891'/>
+   </location>
+
+   <location num='2021'>
+      <name>Kamakura Way</name>
+      <desc>The roadway begins a sharp incline here, and you see Koryu students running up the hill, carrying buckets of water, attempting to spill as little as possible.  You may go SE or NW.</desc>
+      <exits se='2086' nw='1956'/>
+   </location>
+
+   <location num='2086'>
+      <name>Kamakura Way</name>
+      <desc>The Karesansui gardens are miniaturized representations of nature, using sand, gravel and moss to mimic mountains and islands.  They are appreciated by those whoi come to practice mediation.  You may go SE or NW.</desc>
+      <exits se='2151' nw='2021'/>
+   </location>
+
+   <location num='2151'>
+      <name>Kamakura Way</name>
+      <desc>You encounter more farms, these seemingly of a more commercial nature.  You may go SE or NW.</desc>
+      <exits se='2216' nw='2086'/>
+   </location>
+
+   <location num='2216'>
+      <name>Kamakura Way</name>
+      <desc>You see small farms here, the laborers mainly martial arts students seeking to gain favor with their masters.  You may go SE or NW.</desc>
+      <exits se='2281' nw='2151'/>
+   </location>
+
+   <location num='2281' flags='b'>
+      <name>Kamakura Way</name>
+      <desc>You arrive at the chaniwa gardens, designed especially for tea ceremonies.  Indeed there are small establishments where you can partake of tea and pastries here.  You may go SE or NW.</desc>
+      <exits se='2346' nw='2216'/>
+   </location>
+
+   <location num='2346'>
+      <name>Kamakura Way</name>
+      <desc>The tsukiyama garden continues winding through the small hills here.  You may go SE or NW.</desc>
+      <exits se='2411' nw='2281'/>
+   </location>
+
+   <location num='2411'>
+      <name>Kamakura Way</name>
+      <desc>Here you see a tsukiyama garden.  Its hilly land has ponds, stones, trees, flowers and paths creating a miniature reproduction of nature.  You may go SE or NW.</desc>
+      <exits se='2476' nw='2346'/>
+   </location>
+
+   <location num='2476'>
+      <name>Kamakura Way</name>
+      <desc>The Kamakura Way is a long winding road used by many of the Koryu&apos;s students for physical fitness and contemplation.  Traditional gardens alternate with farms.  You may go SE or NW.</desc>
+      <exits se='2541' nw='2411'/>
+   </location>
+
+   <location num='2478'>
+      <name>Kenjutsu School</name>
+      <desc>Sword training is carried on here with great tradition.  Two partners with swords drawn practice combat skills under the supervision of a master.  Exits East or SW.</desc>
+      <exits e='2479' sw='2541'/>
+   </location>
+
+   <location num='2479'>
+      <name>Laijutsu School</name>
+      <desc>Here is where students learn the art of mental presence and immediate reaction, stressing smooth, controlled movements of drawing one&apos;s sword.  Exits East or West.</desc>
+      <exits e='2480' w='2478'/>
+   </location>
+
+   <location num='2480'>
+      <name>Kendo School</name>
+      <desc>The training here is mainly to enable students to excel in the Kendo and kata competitions where strikes to the top of the head or thrusts to the throat score well.  Exits East or West.</desc>
+      <exits e='2481' w='2479'/>
+   </location>
+
+   <location num='2481'>
+      <name>Karate School</name>
+      <desc>Literally meaning empty hand, karate is characterized by linear punching and kicking techniques.  Exit East or West.</desc>
+      <exits e='2482' w='2480'/>
+   </location>
+
+   <location num='2482'>
+      <name>Aikido School</name>
+      <desc>The techniques taught here consist mainly of joint locking, throwing and striking.  It&apos;s known for its fluidity of motion, rather than confronting opponents head on.  Exits are East or West.</desc>
+      <exits e='2483' w='2481'/>
+   </location>
+
+   <location num='2483'>
+      <name>Ninjutso School</name>
+      <desc>Used traditionally by assassins, scouts and spies, ninjutso focuses on stealth and deception.  It is primarily a collection of essential survival techniques.  Many students come here from Covert.  Exit West.</desc>
+      <exits w='2482'/>
+   </location>
+
+   <location num='2541'>
+      <name>Koryu</name>
+      <desc>This school of martial arts was established by Beatrix.  It is the definitive place in Merit to come to learn the art of weaponry and naked combat.  You may enter the school to the NE or explore Kamakura Way to the NW.  The Samurai Inn is SE.</desc>
+      <exits ne='2478' se='2606' nw='2476'/>
+   </location>
+
+   <location num='2606' flags='b'>
+      <name>Samurai Inn</name>
+      <desc>A modest lodging, the Inn has a narrow street frontage but is long, stretching deep into the block, made all in wood except for its tile roof.  A courtyard garden is located in the center of the inn.  Rooms are very small, but clean, with individual bath facilities.  There is a small dining room as well, which opens early and closes at midnight.  The bar is well stocked. The LP is SE and the Koryu is NW.</desc>
+      <exits se='2671' nw='2541'/>
+   </location>
+
+   <location num='2670' flags='eb'>
+      <name>Tanto Exchange</name>
+      <desc>There are strict rules of behavior in this exchange, where elders demand respect, so beware.  Some smiling hostesses clad in kimonos serve tea to the traders.  The LP is East.</desc>
+      <exits e='2671'/>
+   </location>
+
+   <location num='2671' flags='b'>
+      <name>Tanto Launch Pad</name>
+      <desc>You see a small, uncrowded facility.  You&apos;ve learned that Tanto is principally a planet devoted to martial arts, the population largely self sufficient, although a few items are imported from Katana.  A modest restaurant where customers sit on stools along one long counter sells sushi, sashimi and saki.  The exchange is West, the Samurai Inn is NW.  There is also a way in to visit Beatrix in her minka.</desc>
+      <exits w='2670' nw='2606' in='1890'/>
+   </location>
+
+</fed2-map>

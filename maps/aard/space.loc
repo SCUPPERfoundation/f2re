@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<fed2-map title='Aard Space' version='22' editor='standard'>
+
+   <location num='395' flags='sl'>
+      <name>Hyperlink</name>
+      <desc>  Jump to the galaxy of your choice.</desc>
+      <desc>South is the Central Spaceway.</desc>
+      <exits s='459'/>
+   </location>
+
+   <location num='458' flags='s'>
+      <name>Olie</name>
+      <desc>   You are orbiting the planet Olie</desc>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Aard Central Spaceway</name>
+      <desc>   The traffic is slow today, which will let you board earlier at your destination.</desc>
+      <desc>To the south lies Bei, famous for its rich fruit-plantations.</desc>
+      <desc>The signs on your left and on your right show that Slarti is constructing two more planets.</desc>
+      <desc>Big banners tell you that the opening will be soon.</desc>
+      <exits n='395' s='523'/>
+   </location>
+
+   <location num='460' flags='s'>
+      <name> Kloot</name>
+      <desc>   closed for the moment</desc>
+   </location>
+
+   <location num='523' flags='s'>
+      <name>Orbit of planet Bei</name>
+      <desc>   You are orbiting Bei.</desc>
+      <desc>The fruit from this planet is valued highly throughout the universe, especially the strawberries.</desc>
+      <desc>The Central Spaceway is north.</desc>
+      <desc>Your comm unit crackles with a message from Tick, &quot;Board anytime you want, your business here is appreciated&quot;</desc>
+      <exits n='459'/>
+   </location>
+
+</fed2-map>

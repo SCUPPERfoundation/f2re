@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Corsec Space' version='9' editor='standard'>
+
+   <location num='0' flags='s'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='196' flags='slp'>
+      <name>Corsec interstellat link and Cruise lanes.</name>
+      <desc>This wide space link seems very old and many large luxury cruisers flow in and out of the space lane and Intersteller Link.</desc>
+      <desc> A Customes official Comms you &quot; Welcome to Dantooine Galactic Luxury Resort and Entertainment Planet.</desc>
+      <desc>Planetary Orbit is to the south, Soon to come will be the Twilight Hub, Out newest Luzury Hotel in Dantooine Space.</desc>
+      <desc>South = Dantooine</desc>
+      <desc>South-east = Twilight Hub (Under Construction)</desc>
+      <exits se='261' s='260'/>
+      <events enter='Welcome to Dantooine.' in-room='Dantooine Intersteller Link.'/>
+   </location>
+
+   <location num='260' flags='sp'>
+      <name>Dantooine Orbit. Home of the Hottest Resorts and Casinos.</name>
+      <desc>Dantooine Singals all clear to land. The Large planet seen from space has apparently been built for Luzery as somehow the architects have form more beachfront accross the planet with warm oceans and lakes then anyone ever dreamed possible.</desc>
+      <desc>The space lane leading north will show you to the interstellar link.</desc>
+      <exits n='196' e='261'/>
+   </location>
+
+   <location num='261' flags='sp'>
+      <name>Twilight Hub. (Under Construction.)</name>
+      <desc>Just above an ahead of you you see a MASSIVE wheel with 4 more inner wheels all interconnected by spokes large enough for a ship to fly through. Though 2/3rds of the Station is metal frame only, it is a Amazing sight to see. Come back soon to enjoy the Best Casino Space station in the universe.</desc>
+      <exits w='260' nw='196'/>
+   </location>
+
+</fed2-map>
+

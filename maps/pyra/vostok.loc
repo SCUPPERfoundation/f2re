@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<fed2-map title='Vostok' version='5' editor='standard' from='2079' to='Pyra.Pyra Space.2078'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>Storeroom</desc>
+   </location>
+
+   <location num='2015'>
+      <name>Small park</name>
+      <desc>This small, green, park features a sculpture of Yuri Gagarin, clad in a spacesuit and positioned inside the Vostok 1 capsule in which he made his 1961 journey to space and nearly 1 full orbit of the earth before landing again in western Russia. Nearby a small babbling brook runs through the park. There are small footbridges where the brook intersects the path that circles the park. It&apos;s a nice location to contemplate the achievements of brave pioneers throughout history. The landing pad is south.</desc>
+      <exits s='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2016' flags='b'>
+      <name>First-To-Space restaurant</name>
+      <desc>Decorated in a utilitarian Russian style and featuring cuisine native to the region where the first manned spaceflight was launched, this eatery provides an interesting snapshot of history. The landing pad is southwest</desc>
+      <exits sw='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2079'>
+      <name>Baikonur landing pad</name>
+      <desc>This spaceport is made to replicate the Russian cosmodrome from which the first manned spaceflight was launched from Earth in the mid-twentieth century. The exchange is east. A restaurant is northeast, and a park north.</desc>
+      <exits n='2015' ne='2016' e='2080' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='2080' flags='e'>
+      <name>Gagarin exchange</name>
+      <desc>A fully functioning modern facility, but reflecting very much a &quot;form follows function&quot; style, this exchange is reminiscent of 20th century Russian technology. The landing pad is west.</desc>
+      <exits w='2079' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>
+
