@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<fed2-map title='Ice' version='1.00' editor='standard' from='460' to='Iceberg.Iceberg Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Huge blocks of ice have been stored in here. You can&apos;t help wondering why, when there doesn&apos;t seem to be a shortage on the planet!</desc>
+   </location>
+
+   <location num='267'>
+      <name>Ice cavern</name>
+      <desc>   This spectacular cavern has been hewn out of the ice by the natives. The walls are carved with strange symbols and devices, some of which almost look like faces.</desc>
+      <desc>   It continues to the south where in the distance you can see a tall column of ice. The glacier disappears underground here and there&apos;s no room for you to slide any further. Nor can you climb back up it again. You&apos;d better hope there&apos;s another way out!</desc>
+      <exits s='331' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='268'>
+      <name>Top of the glacier</name>
+      <desc>   The inhabited areas of the planet are built high up on a plateau. Here you are at the edge and all around you the ground seems to fall away very steeply, plunging down, down, down out of sight, as you look over the un-terraformed areas of the planet.</desc>
+      <desc>   As you stand on the ice of the glacier, you wonder how fast it actually moves. Certainly not fast enough for you to detect it.</desc>
+      <desc>   You can go back southeast, or you can slide down the glacier and see what&apos;s at the bottom.</desc>
+      <exits se='333' down='267' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='331'>
+      <name>Ice pillar</name>
+      <desc>   This monumental pillar stretches upwards towards the roof of the cavern. It too is covered with carvings that you are sure have some meaning... after staring at them for a while, you realize you could use them as foot and handholds if you wanted to climb the pillar. Perhaps this is the way out?</desc>
+      <exits n='267' up='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='333'>
+      <name>Frozen river</name>
+      <desc>   The water has frozen in peculiar shapes; gentle waves, little sharp peaks, unexpected holes. The footing is treacherous, and you can see why the hospital treats so many broken limbs!</desc>
+      <desc>   The banks of the &quot;river&quot; to either side of you are far too dangerous to climb. You&apos;d disappear into deep snow drifts. You can only go - very carefully - south back to the ice field, or northwest towards a slow-moving glacier.</desc>
+      <exits s='397' nw='268' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397'>
+      <name>Ice field</name>
+      <desc>   Outside the somewhat sheltered confines of the landing field to the southwest, the icy wind is so strong it almost knocks you off your feet. A light dusting of snow is falling, and it swirls around in gusts before forming drifts all around you.</desc>
+      <desc>   North is a river... during the few days of summer this planet experiences, the water does run freely in great gushing torrents, but right now it&apos;s frozen solid.</desc>
+      <exits n='333' sw='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   Huge drifts of snow and banks of solid ice enclose the field, but they don&apos;t keep the bitter wind out. Igloos - small buildings fashioned from blocks of ice - house the planet&apos;s essential services.</desc>
+      <desc>   Southwest is the trading exchange, east is the hospital and a bar which serves lovely warming drinks is south. Northeast, a break in the ice bank lets you venture out onto the frozen wastes of the planet.</desc>
+      <desc>   A small droid, with ice encrusted around its head, trundles up and offers to sell you a new ship.</desc>
+      <exits ne='397' e='461' s='524' sw='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='hi'>
+      <name>Life and Death, Inc.</name>
+      <desc>   Visitors to this planet often come to grief by underestimating the dangers of an ice world, and the hospital does a brisk trade in patching them back together if possible, or activating their clones if the injuries are too serious.</desc>
+      <desc>   If you need it, the staff here can arrange insurance for you.</desc>
+      <desc>   When you&apos;re done, the exit door is west.</desc>
+      <exits w='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523' flags='e'>
+      <name>Trading igloo</name>
+      <desc>   Technology melds with nature... set into the iceblock walls of this igloo are the electronic trading screens, letting you buy and sell commodities, or order a variety of useful goods.</desc>
+      <desc>   Natives of the planet cluster around the screens, clothed in thick fur to keep out the bitter cold. Thankfully the controls are voice-operated so the locals don&apos;t have to take off their thick fur mittens.</desc>
+      <desc>   The exit back out into the cold is northeast.</desc>
+      <exits ne='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='b'>
+      <name>Snow Queen&apos;s hostel</name>
+      <desc>   This hostel&apos;s owner, an elegant albino man, smiles a welcome to you and offers you a steaming mug of what passes for coffee on this planet.</desc>
+      <desc>   There&apos;s a roaring fire in the centre of this igloo, making it warm enough for the natives to remove at least the outer layers of their clothing... but the fire doesn&apos;t melt the icy walls. Very clever!</desc>
+      <desc>   A native woman sits in the corner stitching furs together into clothing. Clearly, the new chameleon clothing hasn&apos;t made it this far.</desc>
+      <desc>   To leave the comfort and warmth of the hostel, go north.</desc>
+      <exits n='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

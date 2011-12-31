@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Stone Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   Below you is a ball of rock, devoid of any natural life. There&apos;s no atmosphere, no water except deep underground. It&apos;s one of the most inhospitable worlds in the Galaxy, to all forms of life - plant-life brought from other planets withers and dies. Nobody knows why.</desc>
+      <desc>   Only a small patch of the planet has been terraformed so that it is habitable, but even so workers on the planet are limited to three-month tours of duties. If they stay any longer, they too start to sicken.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

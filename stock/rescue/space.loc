@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Rescue Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   Your ship is floating next to a small space habitat, which provides facilities for those in distress to repair or replace their ships, their equipment - or even themselves!</desc>
+      <desc>   Far below you there is an inhabited planet, but the populace does not welcome visitors. This station is their concession to the laws of Galactic aid. They keep it stocked and in excellent condition, but it&apos;s all automated.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

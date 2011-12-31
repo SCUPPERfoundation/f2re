@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Iceberg Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   The planet which spins in your viewscreen is completely encased in ice. It looks like a snowball fashioned by a giant. It sparkles as it slowly rotates, the light of the distant sun reflecting off the icy surface, making it hard to look at the world for too long without getting dazzled.</desc>
+      <desc>   A small area of the planet has been terraformed so it is possible to survive there, but you&apos;d better turn the heating up... it&apos;s cold down there!</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

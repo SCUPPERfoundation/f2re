@@ -1,0 +1,25 @@
+
+# Set up the .loc and .msg files
+mkdir newstar
+sed s:"title='Fire'":"title='Bodville'": < stock/furnace/fire.loc | sed s:"to='Furnace.Furnace":"to='Newstar.Newstar": > newstar/bodville.loc
+sed s:"title='Furnace":"title='Newstar": < stock/furnace/space.loc > newstar/space.loc
+cp stock/furnace/space.msg newstar/space.msg
+cp stock/furnace/fire.msg newstar/bodville.msg
+
+# Create the .inf files
+echo "<?xml version=\"1.0\"?><infrastructure owner='Newbod' economy='None' closed='true'></infrastructure\n" > newstar/space.inf
+echo "<?xml version=\"1.0\"?><infrastructure owner='Newbod' economy='Agricultural' closed='false'></infrastructure\n" > newstar/bodville.inf
+
+# Fix the permissions
+chmod g+w newstar/*
+
+# Add planet and system to maps.dat
+cp data/maps.dat data/maps.dat.old
+mv data/maps.dat data/maps.tmp
+sed s:"</galaxy>":"<star name='Newstar' directory='newstar'><map name='bodville'/><map name='space'/></star>": < data/maps.tmp > data/maps.dat
+echo "</galaxy>" >> data/maps.dat
+
+# sed '
+# /<\/galaxy>/ i\
+# <star name='Newstar' directory='newstar'><map name='bodville'/><map name='space'/></star>
+# ' < data/maps.tmp > data/maps.dat
