@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -75,6 +75,7 @@ private:
 	void	Carry(Player *player,std::string& line);
 	void	Check(Player *player,std::string& line);
 	void	CheckPrice(Player *player,std::string& line);
+	void	Claim(Player *player);
 	void	Clip(Player *player,std::string& line);
 	void	Com(Player *player,std::string& line);
 	void	Comms(Player *player);

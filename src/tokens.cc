@@ -38,7 +38,7 @@ void	Tokens::Dump()
 	std::cout << std::endl;
 }
 
-int	Tokens::FindIndex(std::string& the_word)
+int	Tokens::FindIndex(const std::string& the_word)
 {
 	int index = 0;
 	for(TokenArray::iterator iter = token_array.begin();iter != token_array.end();++iter,++index)

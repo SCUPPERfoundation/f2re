@@ -39,7 +39,7 @@ public:
 	const std::string& 	Get(unsigned index) const;
 	const std::string&	GetRestOfLine(const std::string& line,unsigned start,int format) const;
 
-	int	FindIndex(std::string& the_word);	// returns NOT_FOUND if word not found
+	int	FindIndex(const std::string& the_word);	// returns NOT_FOUND if word not found
 	int	GetSignedNumber(unsigned index,const std::string& line) const;
 	int 	GetStart(unsigned index) const;
 

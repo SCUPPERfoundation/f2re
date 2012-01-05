@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-11
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -960,7 +960,6 @@ int	FedMap::Efficiency(int type) const
 LocRec	*FedMap::EventMove(Player *player,int loc_num)
 {
 	static LocRec	rec;
-	LocIndex::iterator	iter = loc_index.find(player->LocNo());
 	rec.fed_map = 0;
 	rec.loc_no = loc_num;
 	Announce(player,LEAVE);		// arrival announcement handled by player

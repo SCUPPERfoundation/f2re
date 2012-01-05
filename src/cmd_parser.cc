@@ -1,5 +1,5 @@
  /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 
 #include <cctype>
 #include <climits>
@@ -21,6 +22,7 @@
 
 #include "admin.h"
 #include "assign.h"
+#include "build_planet.h"
 #include	"business.h"
 #include "bus_register.h"
 #include "buy.h"
@@ -87,7 +89,7 @@ const std::string	CmdParser::vocab[] =
 	"retrieve", "retreive", "doff", "carry", "pocket", "clip", "unclip", "assign",	// 167-174
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
-	"undivert", "move", "allocate", "stop", "extend", "hide",
+	"undivert", "move", "allocate", "stop", "extend", "hide", "claim",
 	""
 };
 
@@ -524,6 +526,71 @@ void	CmdParser::CheckPrice(Player *player,std::string& line)
 	price_check->Process(player,tokens,line);
 }
 
+void	CmdParser::Claim(Player *player)
+{
+	static std::string	help("Command is 'claim system <name> planet <name> type <name>\n For more info try 'help claim' :)\n");
+	if(player->Rank() != Player::FINANCIER)
+	{
+		player->Send("You need to be a financier to register a claim to a planet!\n");
+		return;
+	}
+
+	if(player->IsPlanetOwner() || player->HasClaimedPlanet())
+	{
+		player->Send("You have already laid claim to a system and a planet!\n");
+		return;
+	}
+
+	int	system_index = tokens->FindIndex("system");
+	int	planet_index = tokens->FindIndex("planet");
+	int	type_index   = tokens->FindIndex("type");
+	int	size = tokens->Size();
+
+		if((size < 7) || (system_index < 0) || (planet_index < system_index) ||
+								(type_index < planet_index) || (type_index == (size - 1)))
+	{
+		player->Send(help);
+		return;
+	}
+	std::ostringstream	buffer;
+	for(int count = system_index +1;count != planet_index;++count)
+	{
+		if(count > (system_index +1))
+			buffer << " ";
+		buffer << tokens->Get(count);
+	}
+	std::string	system(buffer.str());
+
+	buffer.str("");
+	for(int count = planet_index +1;count != type_index;++count)
+	{
+		if(count > (planet_index +1))
+			buffer << " ";
+		buffer << tokens->Get(count);
+	}
+	std::string	planet(buffer.str());
+
+	std::string	type(tokens->Get(type_index + 1));
+
+	BuildPlanet	*planet_builder;
+	try
+	{
+		planet_builder = new BuildPlanet(player,system,planet,type);
+	}
+	catch(const std::invalid_argument&	except)
+	{
+		player->Send(except.what());
+		return;
+	}
+
+	if(!planet_builder->Run())
+		player->Send("Please report the problem and error message to 'feedback@ibgames.net' - remember to put 'fed2' in the subject line!\n");
+	else
+		player->SetPlanetClaimed();
+
+	delete planet_builder;
+}
+
 void	CmdParser::Clip(Player *player,std::string& line)
 {
 	static const std::string	error("You haven't said what you want to clip onto a keyring!\n");
@@ -893,6 +960,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 194:	StopCityProduction(player,line);					break;	// 'stop'
 		case 195:	player->ExtendSystemCabinet();					break;	// 'extend'
 		case 196:	Stash(player,line,true);							break;	// 'hide'
+		case 197:	Claim(player);											break;	// 'claim'
 	}
 }
 

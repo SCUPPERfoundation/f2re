@@ -114,12 +114,18 @@ public:
 		SPACE, BRIEF, SPARE_1, INSURED, LOCKED, ALPHA_CREW, NO_COMMS,
 		NEWBOD, SPONSOR, MAX_FLAGS
 	};																						//	general purpose flags
-	enum	{ EV_TRACE, FROZEN, TAXED, SLITHY2STAT, MAX_TEMP_FLAGS };	// temporary flags
+
+	enum
+	{
+		EV_TRACE, FROZEN, TAXED, SLITHY2STAT, PLANET_CLAIMED, MAX_TEMP_FLAGS
+	};	// temporary flags
+
 	enum
 	{
 		MANAGER, HOST_FLAG, NAV_FLAG, TECHIE, TECH_MANAGER,
 		MAX_MAN_FLAGS
 	};																						// management flags
+
 	enum
 	{
 		UNUSED, OFF_LINE, IN_GAME, LOST_LINE, START, RACE, GENDER,
@@ -335,6 +341,7 @@ public:
 	bool	HasALoan()											{ return(loan > 0L);		}
 	bool	HasAnOffer()										{ return(pending != 0);	}
 	bool	HasAShip();
+	bool	HasClaimedPlanet()								{ return(temp_flags.test(PLANET_CLAIMED));	}
 	bool	HasCustomsCert();
 	bool	HasExtendedPriceCheck();
 	bool	HasFuturesContract(const std::string& commod,const std::string& exch_name);
@@ -574,6 +581,7 @@ public:
 	void	SetLouie(Louie *the_game)						{ louie = the_game;			}
 	void	SetManFlag(int which)							{ man_flags.set(which);		}
 	void	SetNavFlag(Player *player);
+	void	SetPlanetClaimed()								{ temp_flags.set(PLANET_CLAIMED);	}
 	void	SetSpouse(Player *player)						{ spouse = player->Name();	}
 	void	SetTempFlag(int which)							{ temp_flags.set(which);	}
 	void	SetToFinancier();

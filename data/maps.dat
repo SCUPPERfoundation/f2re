@@ -531,7 +531,9 @@
 	</star>
 
 	<star name='Errinas' directory='errinas'>
+		<map name='cinaed'/>
 		<map name='dennotairn'/>
+		<map name='fionnlagh'/>
 		<map name='space'/>
 	</star>
 
