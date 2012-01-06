@@ -5713,14 +5713,17 @@ void	Player::UpdateCompanyTime()
 		company->UpdateTime();
 }
 
-void	Player::UpdateEMail(const std::string& pwd,const std::string& address)
+void	Player::UpdateEMail(const std::string& new_email)
 {
-	billing->UpdateEMail(pwd,address);
+	if((new_email.find('@') == std::string::npos) || (new_email.find('@') == std::string::npos))
+		Send("That is not a valid e-mail address!\n");
+	else
+		billing->UpdateEMail(new_email);
 }
 
-void	Player::UpdatePassword(const std::string& old_pw,const std::string& new_pw)
+void	Player::UpdatePassword(const std::string& new_pw)
 {
- 	billing->UpdatePassword(old_pw,new_pw);
+ 	billing->UpdatePassword(new_pw);
 }
 
 void	Player::UpdateStatusCache()

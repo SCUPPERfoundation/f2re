@@ -610,8 +610,8 @@ public:
 	void	UnIgnore(const std::string& who);
 	void	Unlock()												{ flags.reset(LOCKED);		}
 	void	UpdateCompanyTime();
-	void	UpdateEMail(const std::string& pwd,const std::string& address);
-	void	UpdatePassword(const std::string& old_pw,const std::string& new_pw);
+	void	UpdateEMail(const std::string& address);
+	void	UpdatePassword(const std::string& new_pw);
 	void	UpdateTradeCash(long amount)					{trade_cash += amount;		}
 	void	UpdateStatusCache();
 	void	UpgradeAirport();

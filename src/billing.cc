@@ -305,22 +305,8 @@ bool	Billing::StatusCheck(const std::string& status_val)
 		return(false);
 }
 	
-void	Billing::UpdateEMail(const std::string& pwd,const std::string& address)
+void	Billing::UpdateEMail(const std::string& address)
 {
-	static const std::string	pls_wait("Please wait while your address is updated.\n");
-
-	if(password == "")
-	{
-		owner->Send(Game::system->GetMessage("billing","updateemail",1));
-		return;
-	}
-	
-	if(password != pwd)
-	{
-		owner->Send(Game::system->GetMessage("billing","updateemail",2));
-		return;
-	}
-
 	std::ostringstream	buffer("");
 	buffer << "BILL_SetEmail|" << ib_account << "|" << address << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
@@ -328,19 +314,10 @@ void	Billing::UpdateEMail(const std::string& pwd,const std::string& address)
 	owner->Send(Game::system->GetMessage("billing","updateemail",3));
 }
 
-void	Billing::UpdatePassword(const std::string& old_pw,const std::string& new_pw)
+void	Billing::UpdatePassword(const std::string& new_pw)
 {
 	if(password == "")
-	{
-		owner->Send(Game::system->GetMessage("billing","updatepassword",1));
-		return;
-	}
-	
-	if(password != old_pw)
-	{
-		owner->Send(Game::system->GetMessage("billing","updatepassword",2));
-		return;
-	}
+	password = new_pw;
 
 	std::ostringstream	buffer("");
 	buffer << "BILL_SetPwd|" << ib_account << "|" << new_pw << "|" << sd << "|" << std::endl;

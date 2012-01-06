@@ -69,8 +69,8 @@ public:
 	void	GetEMail();
 	void	ProcessReply(const std::string& reply);
 	void	SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename);
-	void	UpdateEMail(const std::string& pwd,const std::string& address);
-	void	UpdatePassword(const std::string& old_pw,const std::string& new_pw);
+	void	UpdateEMail(const std::string& address);
+	void	UpdatePassword(const std::string& new_pw);
 	void	UpdateStatusCache();
 };
 

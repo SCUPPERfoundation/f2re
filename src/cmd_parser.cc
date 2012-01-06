@@ -2302,24 +2302,21 @@ void	CmdParser::UnPost(Player *player)
 
 void	CmdParser::Update(Player *player,std::string& line)
 {
-	if(tokens->Size() < 2)
+	if(tokens->Size() < 3)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","update",1));
+		player->Send("Try 'update email <new address>' or 'update password <new password>'\n");
 		return;
 	}
 
 	if((tokens->Get(1) == "e-mail") || (tokens->Get(1) == "email"))
 	{
-player->Send("This command temporarily disabled!\n");
-//		UpdateEMail(player,line);
+		UpdateEMail(player,line);
 		return;
 	}
 
 	if(tokens->Get(1) == "password")
 	{
-		player->Send("This command temporarily disabled - please mail \
-feedback@ibgames.com to have your password changed. Thank you.\n");
-//		UpdatePassword(player,line);
+		UpdatePassword(player,line);
 		return;
 	}
 
@@ -2329,28 +2326,13 @@ feedback@ibgames.com to have your password changed. Thank you.\n");
 void	CmdParser::UpdateEMail(Player *player,std::string& line)
 {
 	tokens->UpdateTokenize(line);
-	if(tokens->Size() < 4)
-	{
-		player->Send(Game::system->GetMessage("cmdparser","updateemail",1));
-		return;
-	}
-
-	if(tokens->Get(3).find('@') != std::string::npos)
-		player->UpdateEMail(tokens->Get(2),tokens->Get(3));
-	else
-	{
-		player->Send(Game::system->GetMessage("cmdparser","updateemail",2));
-		player->Send(Game::system->GetMessage("cmdparser","updateemail",1));
-	}
+	player->UpdateEMail(tokens->Get(2));
 }
 
 void	CmdParser::UpdatePassword(Player *player,std::string& line)
 {
 	tokens->UpdateTokenize(line);
-	if(tokens->Size() < 4)
-		player->Send(Game::system->GetMessage("cmdparser","updatepassword",1));
-	else
-		player->UpdatePassword(tokens->Get(2),tokens->Get(3));
+	player->UpdatePassword(tokens->Get(2));
 }
 
 void	CmdParser::Upgrade(Player *player)

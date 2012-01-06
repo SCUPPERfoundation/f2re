@@ -68,10 +68,10 @@ Genetic::~Genetic()
 
 bool	Genetic::Add(Player *player,Tokens *tokens)
 {
-	static const std::string	success("The opening of the another genetic medicine clinic \
+	static const std::string	success("The opening of another genetic medicine clinic \
 is greeted with enthusiasm by the population. People now understand genetic medicine and look \
 forward to reaping the benefits.\n");
-	static const std::string	too_many ("The opening of the another genetic medicine clinic \
+	static const std::string	too_many ("The opening of another genetic medicine clinic \
 has little effect. You already have enough clinics to treat the whole population.\n");
 
 	if(!CheckHospitals(player))
