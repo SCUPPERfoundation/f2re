@@ -5723,6 +5723,15 @@ void	Player::UpdateEMail(const std::string& new_email)
 
 void	Player::UpdatePassword(const std::string& new_pw)
 {
+	int len = new_pw.size();
+	for(int count = 0;count < len;++count)
+	{
+		if(!std::isalnum(new_pw[count]))
+		{
+			Send("Passwords can only contain letters and numbers. Please try again.\n");
+			return;
+		}
+	}
  	billing->UpdatePassword(new_pw);
 }
 

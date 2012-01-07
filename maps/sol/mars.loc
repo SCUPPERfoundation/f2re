@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Mars' version='39' editor='standard' from='772' to='Sol.Sol Space.722'>
+<fed2-map title='Mars' version='38' editor='standard' from='772' to='Sol.Sol Space.722'>
 
    <location num='0' flags='t'>
       <name>Martian storeroom</name>
@@ -138,19 +138,19 @@
 
    <location num='259' flags='bt'>
       <name>Roof garden</name>
-      <desc>   Unlike the bar, the Christmas decorations on the roof display a modicum of taste, and it looks like a snowy winter garden. The huge exotic plants which hide the ducts and pipework have been sprayed with something so they look as if they are covered with glistening ice. Tiny white lights glimmer amongst the leaves, twinkling on and off, and artificial icicles hang from the branches.</desc>
-      <desc>   Some kind of fake snow covers the floor; it crunches when you walk on it. It has drifted around the edges of the roof, merging with the forcefield that stops those imbued with the Christmas spirit from tumbling off the edge. Two off-duty waitdroids are scraping up handfulls of the artificial snow and hurling snowballs at each other. There&apos;s plenty of snow to go around so if you want to join in the fun, GET SNOWBALL.</desc>
-      <desc>   An open trapdoor reveals the top of a spiral staircase leading down into the bar, from where you can hear the soft notes of Phil&apos;s piano, reluctantly playing Christmas songs.</desc>
+      <desc>   The roof of the Chez Diesel has been turned into a magnificent roof garden. Huge exotic plants have been strategically placed to disguise the functional nature of the space and hide the ducts and pipework; they also provide secluded spaces for customers wanting privacy. A few discarded wooden skewers have been planted in some of the pots, left over from a barbecue, along with a well-gnawed turkey drumstick.</desc>
+      <desc>   A shimmering forcefield around the edge of the roof, decorated with silver stars,  ensures the safety of those who have over-indulged in Diesel&apos;s brew! From this vantage point, you can see almost the whole of Mars City, right down to the spaceport. A few drifts of artificial snow remain around the edge of the roof.</desc>
+      <desc>   An open trapdoor reveals the top of a spiral staircase leading down into the bar. A helium balloon shaped like a spaceship and another like a bouncy castle have been tied to the top of the stairs.</desc>
       <exits down='260' in='260'/>
       <events in-room='xmas09.snowball.1'/>
    </location>
 
    <location num='260' flags='bt'>
       <name>Chez Diesel</name>
-      <desc>   Diesel has decorated her famous bar for the festive season, and has eschewed good taste and gone for the kitsch Christmas look. The walls are covered with brightly colored fairy lights, which flash on and off gaudily. Paper chains and foil decorations hang from every bit of the ceiling. A large inflatable snowman sits in one corner, rocking backwards and forwards and giggling manically. It&apos;s actually quite scary!</desc>
-      <desc>   Phil, the ancient Arcturian piano player, is reluctantly playing a selection of ancient traditional Christmas songs, but from the way he is scowling - and the sign on the piano that says &quot;No I won&apos;t play bloody Jingle Bells!&quot; - he isn&apos;t exactly full of the joys of Christmas.</desc>
-      <desc>   The waitdroids all have tinsel and colored flashing lights wrapped around them. It&apos;s a wonder they can see to serve the customers the free food and drink.</desc>
-      <desc>   The banister of the stairs leading to the roof is festooned with those thin strips of silver paper that are meant to look like icicles.</desc>
+      <desc>   Diesel has opted for transparency - quite literally. The floor is see-through, allowing a clear view into the basement micro-brewery where the Diesel&apos;s Old Peculiar is brewed. Large stainless steel vats are filled with bubbling liquid. Diligent aledroids scurry around undertaking incomprehensible tasks involved in the alchemy of producing the beer. A large pipe brings the ale up to the pumps that dispense it to the eager customers.</desc>
+      <desc>   The wood furnishings have been hand-carved - you can see chisel marks on the stools, and the surface of the tables are uneven and knotted. It&apos;s all very simple and homespun, until you realize everything must have been imported from Earth at great expense. Rough wooden stairs lead up to the roof garden.</desc>
+      <desc>   Phil the Arcturian is using his four arms to bash away at what looks like an upright honky-tonk piano, but is probably powered by modern electronic gadgetry.</desc>
+      <desc>   A poster has been stuck on the wall above the bar. It says: PIZZA IS A VEGETABLE.</desc>
       <exits se='325' up='259' down='325' out='325' no-exit='moves.noexit.2'/>
       <events enter='party.fireworks.11' in-room='newbod.card.1'/>
    </location>
@@ -246,7 +246,7 @@
    <location num='325'>
       <name>City street</name>
       <desc>   You are in a wide street running north/south. To the west is the entrance to a shop. A large sign in the shop window announces a closing down sale.</desc>
-      <desc>   To the northwest a set of iron stairs run up to a discreet door on the second story of an otherwise undistinguished building, leading to the famous bar Chez Diesel. A sign affixed to the stairs indicates that the hopper Diesel has laid on to transport customers back to their ships has been replaced by a toboggan. Wait a short while and your transportation will arrive, then get IN.</desc>
+      <desc>   To the northwest a set of iron stairs run up to a discreet door on the second story of an otherwise undistinguished building, leading to the famous bar Chez Diesel. A sign affixed to the stairs indicates that Diesel has laid on a hopper to transport customers back to their ships. Wait a short while and your transportation will arrive, then get IN.</desc>
       <exits n='261' s='389' w='324' nw='260' up='260'/>
       <events enter='party.poppers.3'/>
    </location>
@@ -604,9 +604,9 @@
    </location>
 
    <location num='579'>
-      <name>Toboggan</name>
-      <desc>   The toboggan is huge, both long and wide, providing room for many passengers. Like the hopper it has replaced for Christmas, it has been provided by Diesel and it it moves between the bar and Marsport on a regular schedule, whether there are any passengers or not.</desc>
-      <desc>   The benches are covered with fur, to provide warmth in the cold snow outside the toboggan. A metal bar will snap into place to prevent anybody from falling off the toboggan.</desc>
+      <name>Hopper</name>
+      <desc>   The hopper provided by Diesel is automated, and it moves between the bar and Marsport on a regular schedule, whether there are any passengers or not.</desc>
+      <desc>   The seats are soft and well-padded, and covered with something that can be wiped clean no matter what happens. Harnesses spring into place to prevent anybody falling out of the seats. It&apos;s all very well thought out.</desc>
       <exits out='773'/>
    </location>
 
@@ -863,7 +863,7 @@
       <name>Marsport</name>
       <desc>   This northeastern part of Marsport is unused at the moment - the spaceport was built to cater for far more traffic than it currently gets.</desc>
       <desc>   There is a road leading north, out of the spaceport, and in the distance you can see the buildings which make up the main city on Mars. South is an open area, while the general landing area is west.</desc>
-      <desc>   A sign indicates that the special hopper that has been sponsored by Diesel, to take customers straight to her bar, has been replaced by a toboggan. Just wait a moment and one will be along, then you can get IN.</desc>
+      <desc>   A sign indicates that a special hopper has been sponsored by Diesel, to take customers straight to her bar. Just wait a moment and one will be along, then you can get IN.</desc>
       <exits n='709' s='837' sw='836' w='772' in='579' no-exit='moves.noexit.4'/>
    </location>
 

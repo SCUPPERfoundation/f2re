@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Earth' version='49' editor='standard' from='263' to='Sol.Sol Space.788'>
+<fed2-map title='Earth' version='50' editor='standard' from='263' to='Sol.Sol Space.788'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -203,8 +203,7 @@
       <name>Earth shuttle landing pad</name>
       <desc>  This is the main landing area of the Earth&apos;s spaceport, where shuttles are berthed, waiting to take their owners up to their ships in orbit. The area is immense, and stretches away to the south and the west. A long way to the south you can see the outline of the terminus buildings.</desc>
       <desc>   North is a small featureless building, made from concrete, and northeast an office where ship repairs can be arranged.</desc>
-      <desc>   A temporary portal has been erected to the northwest, with a sign over it that says, &quot;This way to Santa&apos;s Grotto&quot;.</desc>
-      <exits n='199' ne='200' se='328' s='327' sw='326' nw='70' w='262' no-exit='moves.noexit.2'/>
+      <exits n='199' ne='200' se='328' s='327' sw='326' w='262' no-exit='moves.noexit.2'/>
       <events enter='xmas06.move.2'/>
    </location>
 

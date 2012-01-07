@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<object-list version='425' editor='Version 1.40a'>
+<object-list version='426' editor='Version 1.40a'>
    <object type='static' start='587' visibility='0' size='1' weight='1' flags='i'>
       <name>Acorn</name>
       <id>acorn_st</id>

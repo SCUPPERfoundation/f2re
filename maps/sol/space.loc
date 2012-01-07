@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Sol Space' version='5' editor='standard'>
+<fed2-map title='Sol Space' version='6' editor='standard'>
 
    <location num='523' flags='s'>
       <name>Magrathea</name>
@@ -13,7 +13,6 @@
       <desc>   You are in a tight orbit around the beacon indicating the presence of an interstellar hyperspace link. In the center of your screen is the pulsing blue circle that indicates the link entry.</desc>
       <desc>   The beacon itself is a white dodecahedron covered with transmission aerials.</desc>
       <desc>   On the far side of the link you can see some kind of planetoid...</desc>
-      <desc>   A huge neon sign has been erected next to the link, with flashing pink writing, telling you to visit Santa&apos;s Grotto on Earth.</desc>
       <exits e='525' se='589' s='588' w='523'/>
    </location>
 
@@ -208,7 +207,6 @@
    <location num='788' flags='sp'>
       <name>Earth orbit</name>
       <desc>   You are in orbit round the Earth. A lump comes into your throat as you gaze at the misty blue-green surface, with its white cloud masses. Few are unaffected by the sight of mankind&apos;s home planet.</desc>
-      <desc>   As you look at the planet you see a shimmer of silver glitter and hear a sound something like reindeer hooves... the glitter coalesces into letters which form words which make up a message telling you to visit Santa&apos;s Grotto on Earth by using the portal on the landing pad.</desc>
       <exits n='724' ne='725' e='789' se='853' s='852' sw='851' w='787' nw='723'/>
    </location>
 

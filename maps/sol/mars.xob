@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<object-list version='283' editor='Version 1.40a'>
+<object-list version='282' editor='Version 1.40a'>
    <object type='abstract' start='0' visibility='100' size='1' weight='1' flags='is'>
       <name>AOL award</name>
       <id>aol_abs</id>
@@ -132,7 +132,7 @@
    <object type='static' start='260' visibility='100' size='1' weight='1' flags='d'>
       <name>craftsman</name>
       <id>craftsman_st</id>
-      <desc>The craftsman is using a tiny set of tools to create tinsel charms, because it&apos;s Christmas. He is selling them to the pub&apos;s customers for 1 slithy - BUY TINSEL to get one.</desc>
+      <desc>The craftsman is using a tiny set of tools to create musical globes for Fourth of July. He is selling them to the pub&apos;s customers for 1 slithy - BUY GLOBE to get one.</desc>
       <vocab cmd='craftsman' event='keyring.craftsman.1'></vocab>
    </object>
 
@@ -332,7 +332,7 @@
       <vocab cmd='take' event='objects.bones.1'></vocab>
    </object>
 
-   <object type='static' start='0' visibility='0' size='1' weight='1'>
+   <object type='static' start='260' visibility='0' size='1' weight='1'>
       <name>food</name>
       <id>obj_3food</id>
       <desc>Chez Diesel serves her trademark pizzas, garnished with ground moose-meat.</desc>
@@ -864,14 +864,14 @@
       <vocab cmd='buy' event='val10.food.1'></vocab>
    </object>
 
-   <object type='static' start='260' visibility='0' size='1' weight='1'>
+   <object type='static' start='0' visibility='0' size='1' weight='1'>
       <name>food</name>
       <id>xmasfoodcd_st</id>
       <desc>The waitdroids are serving a big plate of Christmas dinner, for free, thanks to the generosity of diesel.</desc>
       <vocab cmd='buy' event='xmas08.food.1'></vocab>
    </object>
 
-   <object type='static' start='260' visibility='0' size='1' weight='1' flags='i'>
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='i'>
       <name>round</name>
       <id>xmasroundcd_st</id>
       <desc>The waitdroids are serving free beer for Christmas, courtesy of Diesel.</desc>
@@ -886,7 +886,7 @@
       <vocab cmd='throw' event='xmas09.throw.1'></vocab>
    </object>
 
-   <object type='static' start='259' visibility='0' size='1' weight='1' flags='i'>
+   <object type='static' start='0' visibility='0' size='1' weight='1' flags='i'>
       <name>snowball</name>
       <id>xmassnowball_st</id>
       <desc>The snow on the roof is ideal for making snowballs - just GET SNOWBALL.</desc>

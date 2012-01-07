@@ -316,7 +316,6 @@ void	Billing::UpdateEMail(const std::string& address)
 
 void	Billing::UpdatePassword(const std::string& new_pw)
 {
-	if(password == "")
 	password = new_pw;
 
 	std::ostringstream	buffer("");

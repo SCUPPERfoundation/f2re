@@ -838,40 +838,40 @@
 
       <section name='diesel'>
 
-         <para number='1' comment='Toboggan departs CDs - 325'>
-         The driver - a burly man bundled up in a thick fur coat - shouts, "The toboggan to Marsport is about to head off down the hill. Please stand back - you don't want to get caught up in the runners. They're sharp, and we don't want to get blood on them." A last passenger is flung onto the back by a long-suffering waitdroid, and the toboggan swooshes off downhill along the steep snow-covered street.
+         <para number='1' comment='Hopper departs CDs - 325'>
+         A computerized voice says, "The hopper to Marsport is about to depart. Please stand clear of the doors." A last passenger is pushed on board by a long-suffering waitdroid; the doors slam shut, and the hopper takes off vertically at great speed and flies rapidly out of sight.
          </para>
 
          <para number='2' comment='Hopper departs CDs - 579'>
-         The driver shouts, "The toboggan to Marsport is about to head off down the hill. Stand back - the runners are sharp, and we don't want to get blood on them." A last passenger is flung on board by a waitdroid, giggling loudly, and those already seated shuffle along to make room. A metal bar descends to hold the passengers in place during the fast downhill journey, and the toboggan swooshes off downhill along the steep snow-covered street.
+         A computerized voice says, "The hopper to Marsport is about to depart. Please stand clear of the doors." A last passenger is pushed on board by a waitdroid and falls helplessly into a seat, giggling loudly; the doors slam shut, the harness locks you into place, and the hopper accelerates upwards rapidly, pressing you into your seat.
          </para>
 
-         <para number='3' comment='Toboggan arrives CDs - 325'>
-         With a rumble and a swoosh a toboggan slides down the street on a carpet of snow that wasn't there a moment ago. Although the road is flat, the toboggan is going downhill - that's the wonder of gravity generators. The driver shouts, "We're off to Marsport. Take a seat. Quickly, quickly. We've no time to hang around waiting." A number of passengers clamber off the toboggan, keen to get to the bar and partake of the free Christmas refreshment.
+         <para number='3' comment='Hopper arrives CDs - 325'>
+         A hopper hurtles down from the sky and lands; it has the words "Sponsored by Chez Diesel" painted on the side in very garish colors. The doors flip open and a computerized voice says, "This hopper will be departing for Marsport shortly. Please let the passengers off first and then get in quickly so we can keep to our schedules." Several people hurry out of the hopper, keen to get to the bar and sample its delights.
          </para>
 
-         <para number='4' comment='Toboggan arrives CDs - 579'>
-         The toboggan slaloms down the hill - the gravity generators make it downhill both ways - and arrives outside Chez Diesel with a spray of snow. The driver shouts, "We're here. Off you get, we need to turn this thing around fast. Vamoose, vamoose!" The metal safety bar retracts and several people stagger off, their legs a bit unsteady after the journey down the steep hill, and head for the bar, keen to partake of the free Christmas refreshment.
+         <para number='4' comment='Hopper arrives CDs - 579'>
+         The hopper lands with a bump, your harness is released and the doors flip open. A computerized voice says, "We have arrived at Chez Diesel. Please get out of the hopper rapidly so we are not delayed. We hope you enjoyed your journey and will travel with us again soon. Thank you." Several people hurry out of the hopper, keen to sample the delights of the bar.
          </para>
 
       </section>
 
       <section name='marsport'>
 
-         <para number='1' comment='Toboggan departs Marsport - 773'>
-         The driver, a large man wrapped up in snug furs to protect from the elements, shouts, "We're about ready to head off to Chez Diesel. Stand back - those runners are sharp and you don't want them to lop off a body part." A last passenger, keen to get to the famous bar, hurriedly climbs aboard, the driver releases the brake and the toboggan swooshes off down the steep snowy street.
+         <para number='1' comment='Hopper departs Marsport - 773'>
+         A computerized voice says, "The hopper to Chez Diesel is about to depart. Please stand clear of the doors." A last passenger hurries on board, obviously keen to get to the famous bar; the doors slam shut, and the hopper takes off vertically at great speed and flies rapidly out of sight.
          </para>
 
-         <para number='2' comment='Toboggan departs Marsport - 579'>
-         The driver, wrapped in snug furs to protect from the elements, shouts, "We're about ready to head off to Chez Diesel. Stand back - those runners are sharp and you don't want them to lop off a body part." A last passenger hurriedly climbs aboard and finds a place on one of the bench seats. A metal bar snaps down, to keep the passengers safe during the fast journey down the hill, and the toboggan swooshes off down the steep snowy street.
+         <para number='2' comment='Hopper departs Marsport - 579'>
+         A computerized voice says, "The hopper to Chez Diesel is about to depart. Please stand clear of the doors." A last passenger hurries on board and takes a seat, eager to go to the famous bar; the doors slam shut, the harness locks you into place, and the hopper accelerates upwards rapidly, pressing you into your seat.
          </para>
 
-         <para number='3' comment='Toboggan arrives Marsport - 773'>
-         With a rumble of its runners and a swoosh of spraying snow, a toboggan arrives, sliding down the steep hill (although the road is flat) on a bed of snow (that wasn't there just now). The fur-clad driver shouts, "We'll be off to Chez Diesel in two shakes, so let the passengers off and then hop on board speedily." Several people fall off the toboggan, only just able to walk. They must have had a great time at the bar - well, the drinks are free!
+         <para number='3' comment='Hopper arrives Marsport - 773'>
+         A hopper hurtles down from the sky and lands; it has the words "Sponsored by Chez Diesel" painted on the side in very garish colors. The doors flip open and a computerized voice says, "This hopper will be departing for Chez Diesel shortly. Please let the passengers off first and then get in quickly so we can keep to our schedules." Several people fall out of the hopper, only just able to walk. They must have had a great time at the bar.
          </para>
 
-         <para number='4' comment='Toboggan arrives Marsport - 579'>
-         The toboggan careers from side to side as it hurtles down the steep hill (the journey is downhill both ways thanks to the gravity generators) and then skids to a halt. The safety bar retracts, and the driver bellows, "Marsport, we're at Marsport, off you get now so we can head back to Chez Diesel without delay." Several people fall off the toboggan, only just able to walk. They must have had a great time at the bar - well, the drinks are free!
+         <para number='4' comment='Hopper arrives Marsport - 579'>
+         The hopper lands with a bump, your harness is released and the doors flip open. A computerized voice says, "We have arrived at Marsport. Please get out of the hopper rapidly so we are not delayed. We hope you enjoyed your journey and will travel with us again soon. Thank you." Several people fall out of the hopper, barely able to walk; they must have really enjoyed themselves at Diesel's bar.
          </para>
 
       </section>
