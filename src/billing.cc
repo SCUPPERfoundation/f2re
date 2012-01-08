@@ -180,6 +180,14 @@ void	Billing::DisplayEMail(const std::string& line)
 	}
 }
 
+void	Billing::DumpLedger()
+{
+	std::ostringstream	buffer("");
+	buffer << "BILL_Count" << "|" << sd << "|" << std::endl;
+	Game::ipc->Send2Billing(buffer.str());
+	status = COUNT;
+}
+
 void	Billing::GetAccount(const std::string& ib_name)
 {
 	std::string	account_name(ib_name);
@@ -268,6 +276,13 @@ void	Billing::ProcessReply(const std::string& reply)
 			owner->Send(reply);
 			owner->Send("\n");
 			break;
+
+		case COUNT:
+			if(reply.find("BILL_OK") != std::string::npos)
+				owner->Send("OK - done - look in err.log\n");
+			else
+				owner->Send("Didn't work :(\n");
+			break;
 	}
 	status = NO_PROC;
 }
@@ -312,7 +327,7 @@ void	Billing::UpdateEMail(const std::string& address)
 	Game::ipc->Send2Billing(buffer.str());
 	status = UPDATE_EMAIL;
 	buffer.str("");
-	buffer << "Please wait while we update your email address to '" << address << "'\n";
+	buffer << "Please wait while we update your emial address to '" << address << "'\n";
 	owner->Send(buffer);
 }
 

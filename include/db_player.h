@@ -80,7 +80,9 @@ struct DBPlayer
 	int		gifts;
 	char		spouse[Player::NAME_SIZE];
 	time_t	tp_rental;
-	char		spare[400];
+	char		password[Player::MAX_PASSWD];
+	char		email[Player::MAX_EMAIL];
+	char		spare[304];
 };
 
 #endif

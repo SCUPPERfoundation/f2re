@@ -32,7 +32,7 @@ private:
 	{
 		NO_PROC, UPDATE_EMAIL, DISPLAY_EMAIL, UPDATE_PWD, 
 		DISPLAY_ACC, ADMIN_EMAIL, ADMIN_PWD, ADMIN_STATUS,
-		SET_ACC_STATUS, SEND_EMAIL, DISPLAY_ACCS_BY_EMAIL
+		SET_ACC_STATUS, SEND_EMAIL, DISPLAY_ACCS_BY_EMAIL, COUNT
 	};												// Billing status 
 		
 
@@ -64,6 +64,7 @@ public:
 	int	AccountStatus();
 
 	void	AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value);
+	void	DumpLedger();
 	void	GetAccount(const std::string& name);
 	void	GetAccountByEmail(const std::string& e_mail);
 	void	GetEMail();

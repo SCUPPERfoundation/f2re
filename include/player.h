@@ -87,6 +87,8 @@ public:
 	static const int	UNKNOWN_LOC;
 	static const int	MAX_GIFT;
 	static const int	MAX_TRADER_EXCH_EARNINGS;
+	static const int	MAX_PASSWD = 16;
+	static const int	MAX_EMAIL = 80;
 
 	static const unsigned	MAX_GROUP;
 	static const unsigned	MAX_FUTURES;
@@ -136,6 +138,8 @@ public:
 protected:
 	std::string	name;					// name - size = 16
 	std::string ib_account;			// ibgames account name  - size = 24
+	char	password[MAX_PASSWD];	// MD5 hash of player's password - size = 16
+	std::string	email;				// E-mail address - size = 80
 	std::string	desc;					// description - size = 160
 	std::string	mood;					//	mood - size = 64
 	std::string	race;					// race (free form) - size = 16
@@ -476,6 +480,7 @@ public:
 	void	Divorce();
 	void	DropOff();
 	void	Drop(const std::string& name);
+	void	DumpLedger();
 	void	Emote(const std::string& which,Player *recipient);
 	void	Engineer2Mogul();
 	void	ExtendSystemCabinet();
