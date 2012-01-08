@@ -25,6 +25,7 @@ private:
 	void	Alter(Player *player,Tokens *tokens,std::string& line);
 	void	Change(Player *player,Tokens *tokens);
 	void	DeleteVariable(Player *player,Tokens *tokens);
+	void	DumpLedger();
 	void	DisplayFlags(Player *player,Tokens *tokens);
 	void	Founder(Player *player,Tokens *tokens);
 	void	Help(Player *player);

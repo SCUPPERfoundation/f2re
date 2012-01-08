@@ -180,6 +180,14 @@ void	Billing::DisplayEMail(const std::string& line)
 	}
 }
 
+void	Billing::DumpLedger()
+{
+	std::ostringstream	buffer("");
+	buffer << "BILL_Count" << "|" << sd << "|" << std::endl;
+	Game::ipc->Send2Billing(buffer.str());
+	status = COUNT;
+}
+
 void	Billing::GetAccount(const std::string& ib_name)
 {
 	std::string	account_name(ib_name);
@@ -268,6 +276,13 @@ void	Billing::ProcessReply(const std::string& reply)
 			owner->Send(reply);
 			owner->Send("\n");
 			break;
+
+		case COUNT:
+			if(reply.find("BILL_OK") != std::string::npos)
+				owner->Send("OK - done - look in err.log\n");
+			else
+				owner->Send("Didn't work :(\n");
+			break;
 	}
 	status = NO_PROC;
 }
@@ -311,7 +326,9 @@ void	Billing::UpdateEMail(const std::string& address)
 	buffer << "BILL_SetEmail|" << ib_account << "|" << address << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
 	status = UPDATE_EMAIL;
-	owner->Send(Game::system->GetMessage("billing","updateemail",3));
+	buffer.str("");
+	buffer << "Please wait while we update your emial address to '" << address << "'\n";
+	owner->Send(buffer);
 }
 
 void	Billing::UpdatePassword(const std::string& new_pw)
@@ -322,7 +339,9 @@ void	Billing::UpdatePassword(const std::string& new_pw)
 	buffer << "BILL_SetPwd|" << ib_account << "|" << new_pw << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
 	status = UPDATE_PWD;
-	owner->Send(Game::system->GetMessage("billing","updatepassword",3));
+	buffer.str("");
+	buffer << "Please wait while we update your password to '" << new_pw << "'\n";
+	owner->Send(buffer);
 }
 
 void	Billing::UpdateStatusCache()

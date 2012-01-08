@@ -178,6 +178,8 @@ Player::Player(DBPlayer *rec)
 {
 	name = rec->name;
 	ib_account = rec->ib_account;
+	std::memcpy(password,rec->password,MAX_PASSWD);
+	email = rec->email;
 	desc = rec->desc;
 	race = rec->race;
 	gender = rec->gender;
@@ -1559,6 +1561,8 @@ DBPlayer	*Player::CreateDBRec()
 
 	std::strcpy(rec->name,name.c_str());
 	std::strcpy(rec->ib_account,ib_account.c_str());
+	std::memcpy(password,rec->password,MAX_PASSWD);
+	std::strcpy(rec->email,email.c_str());
 	std::strcpy(rec->desc,desc.c_str());
 	std::strcpy(rec->race,race.c_str());
 	rec->gender =  gender;
@@ -2403,6 +2407,11 @@ void	Player::DropOff()
 		if((courier_pts % 100) == 0)
 			Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	}
+}
+
+void	Player::DumpLedger()
+{
+	billing->DumpLedger();
 }
 
 void	Player::Emote(const std::string& which,Player *recipient)
@@ -5715,7 +5724,7 @@ void	Player::UpdateCompanyTime()
 
 void	Player::UpdateEMail(const std::string& new_email)
 {
-	if((new_email.find('@') == std::string::npos) || (new_email.find('@') == std::string::npos))
+	if((new_email.find('@') == std::string::npos) || (new_email.find('.') == std::string::npos))
 		Send("That is not a valid e-mail address!\n");
 	else
 		billing->UpdateEMail(new_email);
@@ -5724,6 +5733,12 @@ void	Player::UpdateEMail(const std::string& new_email)
 void	Player::UpdatePassword(const std::string& new_pw)
 {
 	int len = new_pw.size();
+	if((len < 8) || (len > 15))
+	{
+		Send("Passwords must be at least 8 and not more than 15 characters.\n");
+		return;
+	}
+
 	for(int count = 0;count < len;++count)
 	{
 		if(!std::isalnum(new_pw[count]))

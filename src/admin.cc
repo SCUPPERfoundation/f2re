@@ -309,6 +309,7 @@ void	Admin::Help(Player *player)
 		"      flags are: host, manager, nav, techie, alpha, builds\n",
 		"   ADMIN DELETE VARIABLE player variablename\n",
 		"   ADMIN DISPLAY player\n",
+		"   ADMIN DUMP (NOTE: For Alan's use only)\n",
 		"   ADMIN FOUNDER player\n",
 		"   ADMIN INDY player\n",
 		"   ADMIN MERCHANT player\n",
@@ -363,7 +364,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 	{
 		"report", "change", "set", "clear", "save", "display", 		//  0- 5
 		"delete", "add", "nomatch", "help", "promote", "whoelse",	//	 6-11
-		"alter", "founder", "indy", "merchant",							//	12-15
+		"alter", "founder", "indy", "merchant", "dump",					//	12-15
 		""
 	};
 
@@ -413,6 +414,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	13:	Founder(player,tokens);					break;
 		case	14:	Indy(player,tokens);						break;
 		case	15:	Merchant(player,tokens);				break;
+		case	16:	player->DumpLedger();					break;
 		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1));		break;
 	}
 }

@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.02";
+const std::string	Fed::version = "1.89.03";
 
 
 Fed::Fed()
