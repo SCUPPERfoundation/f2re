@@ -327,7 +327,7 @@ void	Billing::UpdateEMail(const std::string& address)
 	Game::ipc->Send2Billing(buffer.str());
 	status = UPDATE_EMAIL;
 	buffer.str("");
-	buffer << "Please wait while we update your emial address to '" << address << "'\n";
+	buffer << "Please wait while we update your email address to '" << address << "'\n";
 	owner->Send(buffer);
 }
 

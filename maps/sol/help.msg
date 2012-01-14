@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<para-list version='193' editor='standard'>
+<para-list version='197' editor='standard'>
 
    <category name='accept'>
 
@@ -1595,7 +1595,7 @@
       <section name='email'>
 
          <para number='1' comment='mail/email'>
-         To change the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change. Check what you set it to with 'DISPLAY EMAIL'.
+         To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to. Check what you set it to with 'DISPLAY EMAIL'.
          </para>
 
       </section>
@@ -1631,11 +1631,19 @@
          </para>
 
          <para number='4'>
-         To change your password, or to change the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change.
+         To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to. Check what you set it to with 'DISPLAY EMAIL'.
          </para>
 
          <para number='5'>
-         You cannot change your Fed character's name or race once you have started playing, and you can't change the name of a business, company or a planet.
+         To change the password for your account use 'UPDATE PASSWORD new_password' where 'new_password' is what you want the password to be changed to. Passwords must be between 8 and 15 characters, and can only contains letters and numbers. If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
+         </para>
+
+         <para number='6'>
+         You cannot change your Fed character's name once you have started playing, and you can't change the name of a business, company or a planet.
+         </para>
+
+         <para number='7'>
+         You can pay to have your race changed - it costs 1 slithy tove. Email feedback@ibgames.com (don't forget to put Fed2 in the subject line). One word only, all in lower case.
          </para>
 
       </section>
@@ -1643,11 +1651,15 @@
       <section name='password'>
 
          <para number='1'>
-         You can change your password using the command 'UPDATE PASSWORD old_password new_password'. If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
+         To change the password for your account use 'UPDATE PASSWORD new_password' where 'new_password' is what you want the password to be changed to. Passwords must be between 8 and 15 characters, and can only contains letters and numbers.
          </para>
 
          <para number='2'>
          Always keep your password secure, and don't tell it to anybody else!
+         </para>
+
+         <para number='3'>
+         If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
          </para>
 
       </section>
@@ -1856,6 +1868,58 @@
 
          <para number='10'>
          'STOP PRODUCTION cityname slotnumber' - stops the production of commodities
+         </para>
+
+      </section>
+
+   </category>
+
+   <category name='claim'>
+
+      <section name='nothing'>
+
+         <para number='1'>
+         To promote to Founders, Financiers link a star system and planet into the game. This can be done automatically using one of the six stock systems.
+         </para>
+
+         <para number='2'>
+         The command is: 'CLAIM SYSTEM systemname PLANET planetname TYPE stocksystemname'
+         </para>
+
+         <para number='3'>
+         'systemname' is the name you want to give your system.
+         </para>
+
+         <para number='4'>
+         'planetname' is the name you want to give your planet.
+         </para>
+
+         <para number='5'>
+         Both of these can be up to 32 characters, and can contain spaces. You can use letters and numbers, but no punctuation or symbols, and the names must start with a letter. They must not already exist in the game. Do not use the words system, planet or type as part of the names.
+         </para>
+
+         <para number='6'>
+         Examples: systemname Big Star and planetname New World
+         </para>
+
+         <para number='7'>
+         'stocksystemname' is the type of stock system you want to use. The options are: beach, furnace, iceberg, rescue, stone, sweet.
+         </para>
+
+         <para number='8'>
+         You can explore the various stock systems and their planets by visiting Magrathea, to the west of the Sol interstellar link.
+         </para>
+
+         <para number='9'>
+         The command you type might look like this: claim system big star planet new world type sweet.
+         </para>
+
+         <para number='10'>
+         Warning: make sure you have spelled the system and planet names correctly before you press return, because you can't change them once you have issued the command!
+         </para>
+
+         <para number='11'>
+         The new planet will be linked into the game at the next reset which will promote you to Founder.
          </para>
 
       </section>
@@ -3007,7 +3071,7 @@
       <section name='email'>
 
          <para number='1'>
-         'DI EMAIL' reminds you of the registered email address on your account. To change the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change.
+         'DI EMAIL' reminds you of the registered email address on your account. To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to.
          </para>
 
       </section>
@@ -3567,11 +3631,15 @@
       <section name='nothing'>
 
          <para number='1' comment='mail/email'>
-         To change the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change. Check what you set it to with 'DISPLAY EMAIL'.
+         To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to. Check what you set it to with 'DISPLAY EMAIL'.
          </para>
 
          <para number='2'>
          There is also the 'MAIL' command for Traders to check whether the broker has sent any messages.
+         </para>
+
+         <para number='3'>
+         POs can send mail to other members of the cartel (Sol cartel excepted) with 'SEND MAIL playername message' where 'playername' is either the name of one of your cartel-mates, or the word 'all' - which does the obvious - and 'message' is what you want to say. 'MAIL' lets you read any messages sent to you.
          </para>
 
       </section>
@@ -4087,7 +4155,11 @@
       <section name='nothing'>
 
          <para number='1' comment='Financier'>
-         Financier is the 9th rank in the game. Financiers run financial companies which buy shares in other companies, and trade on the futures market. See http://www.ibgames.net/fed2/guide/financier/index.html for details. You can find out how Financiers promote to the next rank with 'RANKS FINANCIER'.
+         Financier is the 9th rank in the game. Financiers run financial companies which buy shares in other companies, and trade on the futures market. See http://www.ibgames.net/fed2/guide/financier/index.html for details. Financiers promote to the next rank by linking a planet into the game.
+         </para>
+
+         <para number='2'>
+         You can generate a stock system automatically using the CLAIM command - 'HELP CLAIM' gives the details - or design your own planet, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench.
          </para>
 
       </section>
@@ -5823,7 +5895,7 @@
       <section name='nothing'>
 
          <para number='1' comment='mail/email'>
-         To change the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change. Check what you set it to with 'DISPLAY EMAIL'.
+         To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to. Check what you set it to with 'DISPLAY EMAIL'.
          </para>
 
          <para number='2'>
@@ -6755,11 +6827,15 @@
       <section name='nothing'>
 
          <para number='1'>
-         You can change your password using the command 'UPDATE PASSWORD old_password new_password'. If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
+         To change the password for your account use 'UPDATE PASSWORD new_password' where 'new_password' is what you want the password to be changed to. Passwords must be between 8 and 15 characters, and can only contains letters and numbers.
          </para>
 
          <para number='2'>
          Always keep your password secure, and don't tell it to anybody else!
+         </para>
+
+         <para number='3'>
+         If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
          </para>
 
       </section>
@@ -6923,7 +6999,7 @@
       <section name='builder'>
 
          <para number='1' comment='planet builder/editor/workbench'>
-         At the rank of Founder you own a planet which you design yourself, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench. There is also a selection of stock planets which you can use if you prefer - the files are on the workbench web page.
+         At the rank of Founder you own a planet. You can generate a stock system automatically using the CLAIM command, or design your own planet, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench.
          </para>
 
       </section>
@@ -6931,7 +7007,7 @@
       <section name='editor'>
 
          <para number='1' comment='planet builder/editor/workbench'>
-         At the rank of Founder you own a planet which you design yourself, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench. There is also a selection of stock planets which you can use if you prefer - the files are on the workbench web page.
+         At the rank of Founder you own a planet. You can generate a stock system automatically using the CLAIM command, or design your own planet, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench.
          </para>
 
       </section>
@@ -6962,6 +7038,10 @@
          To find out what star system a planet is in, type 'WHEREIS planetname'.
          </para>
 
+         <para number='4'>
+         Financiers can link a new star system and planet into the game automatically using the CLAIM command - type 'HELP CLAIM' for details.
+         </para>
+
       </section>
 
       <section name='owner'>
@@ -6971,7 +7051,7 @@
          </para>
 
          <para number='2'>
-         To find out how to design your own planet go to http://www.ibgames.net/fed2/guide/planets/index.html and read the manual.
+         You can generate a stock system automatically using the CLAIM command, or design your own planet, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench.
          </para>
 
       </section>
@@ -9106,6 +9186,10 @@
          To find out what star system a planet is in, type 'WHEREIS planetname'.
          </para>
 
+         <para number='4'>
+         Financiers can link a new star system into the game automatically using the CLAIM command - type 'HELP CLAIM' for details.
+         </para>
+
       </section>
 
    </category>
@@ -9124,6 +9208,10 @@
 
          <para number='3'>
          To find out what star system a planet is in, type 'WHEREIS planetname'.
+         </para>
+
+         <para number='4'>
+         Financiers can link a new star system into the game automatically using the CLAIM command - type 'HELP CLAIM' for details.
          </para>
 
       </section>
@@ -9647,7 +9735,7 @@
       <section name='email'>
 
          <para number='1'>
-         To change your password or the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change. Check what you set the email to with 'DISPLAY EMAIL'.
+         To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to. Check what you set it to with 'DISPLAY EMAIL'.
          </para>
 
       </section>
@@ -9655,7 +9743,11 @@
       <section name='nothing'>
 
          <para number='1'>
-         To change your password or the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change. Check what you set the email to with 'DISPLAY EMAIL'.
+         To change the registered email address for your account use 'UPDATE EMAIL new_email' where 'new_email' is what you want the email address to be changed to. Check what you set it to with 'DISPLAY EMAIL'.
+         </para>
+
+         <para number='2'>
+         To change the password for your account use 'UPDATE PASSWORD new_password' where 'new_password' is what you want the password to be changed to. Passwords must be between 8 and 15 characters, and can only contains letters and numbers. If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
          </para>
 
       </section>
@@ -9663,7 +9755,7 @@
       <section name='password'>
 
          <para number='1'>
-         To change your password or the registered email address for your account please mail feedback@ibgames.com (put Fed2 in the subject line) and request the change. Check what you set the email to with 'DISPLAY EMAIL'.
+         To change the password for your account use 'UPDATE PASSWORD new_password' where 'new_password' is what you want the password to be changed to. Passwords must be between 8 and 15 characters, and can only contains letters and numbers. If you forget your password, email feedback@ibgames.com and ask for help. You will need to give your account ID.
          </para>
 
       </section>
@@ -10099,7 +10191,7 @@
       <section name='nothing'>
 
          <para number='1' comment='planet builder/editor/workbench'>
-         At the rank of Founder you own a planet which you design yourself, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench. There is also a selection of stock planets which you can use if you prefer - the files are on the workbench web page.
+         At the rank of Founder you own a planet which you design yourself, using a set of tools called the workbench. There are versions for Windows and for the Mac. Go to http://www.ibgames.net/fed2/workbench/index.html to download the workbench. There is also a selection of stock systems and planets which you can use if you don't want to design your own - 'HELP CLAIM' gives you the details.
          </para>
 
       </section>

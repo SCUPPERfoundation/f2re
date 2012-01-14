@@ -26,26 +26,29 @@ const std::string	BuildPlanet::stock_planet_files[] =		{ "water", "fire", "ice",
 BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string& planet,
 									const std::string& type_name) : player(who)
 {
+	if((system.length() > 32) || (system.length() < 3) || (planet.length() > 32) || (planet.length() < 3))
+		throw std::invalid_argument("System and planet names must be three characters or more, and not more than 32 characters.\n");
+	if(!isalpha(system[0]))
+		throw std::invalid_argument("The system name must start with an alphabetic character.\n");
+	if(!isalpha(planet[0]))
+		throw std::invalid_argument("The planet name must start with an alphabetic character.\n");
+
 	system_title = system;
 	NormalisePlanetTitle(system_title);
+	planet_title = planet;
+	NormalisePlanetTitle(planet_title);
+
+	if(!SystemNotInUse())
+		throw std::invalid_argument("That system name is already in use.\n");
 	if(!PlanetNotInUse())
 		throw std::invalid_argument("That planet name is already in use.\n");
 
-	planet_title = planet;
-	NormalisePlanetTitle(planet_title);
-	if(!SystemNotInUse())
-		throw std::invalid_argument("That system name is already in use.\n");
-
-	if(!isalpha(system[0]))
-		throw std::invalid_argument("The system name must start with an alphabetic character.\n");
 	std::string temp = "maps/";
 	temp += system;
 	system_file_root = (temp);
 	if(!MakeFileRoot(system_file_root))
 		throw std::invalid_argument("There is an invalid character in system name.\n");
 
-	if(!isalpha(planet[0]))
-		throw std::invalid_argument("The planet name must start with an alphabetic character.\n");
 	temp = "maps/";
 	temp += planet;
 	planet_file_root = (temp);
@@ -63,7 +66,7 @@ BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string
 	}
 
 	if(system_type == -1)
-		throw std::invalid_argument("Unknown system_type.\n");
+		throw std::invalid_argument("Unknown system_type. (Try Beach, Furnace, Iceberg, Rescue, Stone, or Sweet.)\n");
 }
 
 BuildPlanet::~BuildPlanet()
