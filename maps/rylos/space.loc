@@ -1,11 +1,33 @@
 <?xml version="1.0"?>
-<fed2-map title='Rylos Space' version='2' editor='standard'>
+<fed2-map title='Rylos Space' version='5' editor='standard'>
+
+   <location num='397' flags='s'>
+      <name>Marcos orbit</name>
+      <desc>   You are in orbit around an intensely hot body which produces all kinds of noxious chemicals - inimicable to life, but useful for producing biological commodities. Just turn your filters up high, because it smells really bad down there.</desc>
+      <desc>   The link is to the southwest.</desc>
+      <exits sw='460'/>
+   </location>
+
+   <location num='459' flags='s'>
+      <name>Galos orbit</name>
+      <desc>   The planet below is hot and arrid. What little native life it possesses has a tough time surviving in the intense heat. Thank goodness for air conditioning, which makes it possible for visitors to conduct their business.</desc>
+      <desc>   The link is east.</desc>
+      <exits e='460'/>
+   </location>
 
    <location num='460' flags='slp'>
       <name>Kronos orbit and interstellar link</name>
-      <desc>   There is only one planet in this system, and it is very close to the star. Thankfully your nano-chameleon suit is just as good at keeping out the heat of the sun as it is the cold of deep space!</desc>
-      <desc>   The planet glows deep, bright orange, much of it enveloped in fire. There&apos;s a small terraformed area surrounded by very thick firewalls where you can land your shuttle.</desc>
-      <exits no-exit='moves.noexit.1'/>
+      <desc>   The planets in this system, and are very close to the star. Thankfully your nano-chameleon suit is just as good at keeping out the heat of the sun as it is the cold of deep space!</desc>
+      <desc>   The planet below glows deep, bright orange, much of it enveloped in fire. There&apos;s a small terraformed area surrounded by very thick firewalls where you can land your shuttle.</desc>
+      <desc>   More worlds lie to the west, northeast and southeast.</desc>
+      <exits ne='397' se='525' w='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='s'>
+      <name>Orros orbit</name>
+      <desc>   The landscape of this world is constantly changing as volcanoes erupt, reforming the mountains and making it a hazardous environment. Only the area around the landing pad is geologically stable enough to allow a small colony.</desc>
+      <desc>   The link is northwest.</desc>
+      <exits nw='460'/>
    </location>
 
 </fed2-map>

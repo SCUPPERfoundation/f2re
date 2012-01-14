@@ -580,6 +580,7 @@ void	CmdParser::Claim(Player *player)
 	catch(const std::invalid_argument&	except)
 	{
 		player->Send(except.what());
+		player->Send("Enter 'help claim' if you need further information.\n");
 		return;
 	}
 

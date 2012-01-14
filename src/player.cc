@@ -5715,7 +5715,7 @@ void	Player::UpdateCompanyTime()
 
 void	Player::UpdateEMail(const std::string& new_email)
 {
-	if((new_email.find('@') == std::string::npos) || (new_email.find('@') == std::string::npos))
+	if((new_email.find('@') == std::string::npos) || (new_email.find('.') == std::string::npos))
 		Send("That is not a valid e-mail address!\n");
 	else
 		billing->UpdateEMail(new_email);
@@ -5724,6 +5724,12 @@ void	Player::UpdateEMail(const std::string& new_email)
 void	Player::UpdatePassword(const std::string& new_pw)
 {
 	int len = new_pw.size();
+	if((len < 8) || (len > 15))
+	{
+		Send("Passwords must be at least 8 and not more than 15 characters.\n");
+		return;
+	}
+
 	for(int count = 0;count < len;++count)
 	{
 		if(!std::isalnum(new_pw[count]))

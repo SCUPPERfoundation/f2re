@@ -311,7 +311,9 @@ void	Billing::UpdateEMail(const std::string& address)
 	buffer << "BILL_SetEmail|" << ib_account << "|" << address << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
 	status = UPDATE_EMAIL;
-	owner->Send(Game::system->GetMessage("billing","updateemail",3));
+	buffer.str("");
+	buffer << "Please wait while we update your email address to '" << address << "'\n";
+	owner->Send(buffer);
 }
 
 void	Billing::UpdatePassword(const std::string& new_pw)
@@ -322,7 +324,9 @@ void	Billing::UpdatePassword(const std::string& new_pw)
 	buffer << "BILL_SetPwd|" << ib_account << "|" << new_pw << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
 	status = UPDATE_PWD;
-	owner->Send(Game::system->GetMessage("billing","updatepassword",3));
+	buffer.str("");
+	buffer << "Please wait while we update your password to '" << new_pw << "'\n";
+	owner->Send(buffer);
 }
 
 void	Billing::UpdateStatusCache()
