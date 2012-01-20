@@ -90,7 +90,7 @@ const std::string	CmdParser::vocab[] =
 	"retrieve", "retreive", "doff", "carry", "pocket", "clip", "unclip", "assign",	// 167-174
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
-	"undivert", "move", "allocate", "stop", "extend", "hide", "claim", "test",
+	"undivert", "move", "allocate", "stop", "extend", "hide", "claim",
 	""
 };
 
