@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "admin.h"
+#include "cmd_admin.h"
 
 #include <sstream>
 #include <string>

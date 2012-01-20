@@ -21,7 +21,6 @@
 #include <signal.h>
 #include <unistd.h>
 
-#include "admin.h"
 #include "assign.h"
 #include "build_planet.h"
 #include	"business.h"
@@ -30,6 +29,7 @@
 #include "cartel.h"
 #include "change.h"
 #include "channel_man.h"
+#include "cmd_admin.h"
 #include "cmd_build.h"
 #include "cmd_expropriate.h"
 #include "cmd_give.h"
