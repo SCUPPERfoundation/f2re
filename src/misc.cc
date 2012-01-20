@@ -48,6 +48,7 @@
 namespace Game
 {
 	sig_atomic_t				wrap_up = 0;
+	std::string					load_billing_info = "";
 
 	BusinessRegister			*business_register = 0;
 	ChannelManager				*channel_manager = 0;
@@ -62,7 +63,7 @@ namespace Game
 	FedMap						*system = 0;
 	Forbidden					*forbidden = 0;
 	Galaxy						*galaxy = 0;
-	GlobalPlayerVarsTable	*global_player_vars_table = 0;;
+	GlobalPlayerVarsTable	*global_player_vars_table = 0;
 	IPC							*ipc = 0;
 	Syndicate					*syndicate = 0;
 	NavComp						*nav_comp = 0;

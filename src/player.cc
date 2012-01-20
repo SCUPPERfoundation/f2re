@@ -49,6 +49,7 @@
 #include "login.h"
 #include "louie.h"
 #include "mail.h"
+#include "md5.h"
 #include "misc.h"
 #include "navcomp.h"
 #include "player_index.h"
@@ -950,6 +951,63 @@ bool	Player::CanStartIPO()
 	return(true);
 }
 
+bool	Player::CantPayCustomsDues(Star *star)
+{
+	static std::string	no_cash("You don't have any money in your treasury to cover the customs dues!\n");
+
+	if(ship == 0)
+	{
+		Send("Unable to find your ship - please report problem to ibgames\n");
+		return true ;
+	}
+
+	if(!ship->HasCargo())
+		return false;
+
+	Cartel *cartel = Game::syndicate->Find(star->CartelName());
+	if((cartel == 0) || cartel->IsMember(loc.star_name))
+		return false;
+
+	if(Rank() >= FOUNDER)
+	{
+		FedMap	*fed_map = Game::galaxy->GetPrimaryPlanet(this);
+		if((fed_map != 0) && (fed_map->Balance() <= 0L))
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+
+	if(Rank() == MANUFACTURER)
+	{
+		Company *company = GetCompany();
+		if((company != 0) && (company->Cash() <= 0L))
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+
+	if(Rank() == INDUSTRIALIST)
+	{
+		Business	*business = GetBusiness();
+		if((business != 0) && (business->Cash() <= 0L))
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+	if(Rank() < INDUSTRIALIST)
+	{
+		if(cash <= 0L)
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool	Player::CanUnload()
 {
 	if((loc.map_name == job->to) && (loc.fed_map->IsACourier(loc.loc_no)))
@@ -1561,7 +1619,7 @@ DBPlayer	*Player::CreateDBRec()
 
 	std::strcpy(rec->name,name.c_str());
 	std::strcpy(rec->ib_account,ib_account.c_str());
-	std::memcpy(password,rec->password,MAX_PASSWD);
+	std::memcpy(rec->password,password,MAX_PASSWD);
 	std::strcpy(rec->email,email.c_str());
 	std::strcpy(rec->desc,desc.c_str());
 	std::strcpy(rec->race,race.c_str());
@@ -3229,6 +3287,32 @@ bool	Player::IsMarried()
 bool	Player::IsOnLandingPad()
 {
 	return(loc.fed_map->IsALandingPad(loc.loc_no));
+}
+
+bool	Player::IsPassword(const std::string& pwd)
+{
+	int len = pwd.length();
+	char *pw = new char[len +1];
+	std::strcpy(pw,pwd.c_str());
+
+	MD5 test;
+	test.update((unsigned char *)pw, len);
+	test.finalize();
+	unsigned char *test_digest = test.raw_digest();
+
+	bool ret_val = true;
+	for ( int iLoop = 0; iLoop < MAX_PASSWD; iLoop++ )
+	{
+//		std::fprintf(stderr,"password = %02X, test = %02X\n",(unsigned char)password[iLoop],(unsigned char)test_digest[iLoop]);
+		if ( (unsigned char)password[iLoop] != (unsigned char)test_digest[iLoop] )
+		{
+			ret_val = false;
+			break;
+		}
+	}
+	delete [] test_digest;
+	delete [] pw;
+	return ret_val;
 }
 
 bool	Player::IsPlanetOwner()
@@ -6458,62 +6542,5 @@ void	Player::Xt(const std::string& msg)
 }
 
 
-
-bool	Player::CantPayCustomsDues(Star *star)
-{
-	static std::string	no_cash("You don't have any money in your treasury to cover the customs dues!\n");
-
-	if(ship == 0)
-	{
-		Send("Unable to find your ship - please report problem to ibgames\n");
-		return true ;
-	}
-
-	if(!ship->HasCargo())
-		return false;
-
-	Cartel *cartel = Game::syndicate->Find(star->CartelName());
-	if((cartel == 0) || cartel->IsMember(loc.star_name))
-		return false;
-
-	if(Rank() >= FOUNDER)
-	{
-		FedMap	*fed_map = Game::galaxy->GetPrimaryPlanet(this);
-		if((fed_map != 0) && (fed_map->Balance() <= 0L))
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-
-	if(Rank() == MANUFACTURER)
-	{
-		Company *company = GetCompany();
-		if((company != 0) && (company->Cash() <= 0L))
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-
-	if(Rank() == INDUSTRIALIST)
-	{
-		Business	*business = GetBusiness();
-		if((business != 0) && (business->Cash() <= 0L))
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-	if(Rank() < INDUSTRIALIST)
-	{
-		if(cash <= 0L)
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-	return false;
-}
 
 

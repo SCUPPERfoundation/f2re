@@ -42,6 +42,7 @@ private:
 	void	SetSponsor(Player *player,Tokens *tokens,Player *target,int which);
 	void	SetTechie(Player *player,Tokens *tokens,Player *target,int which);
 	void	WhoElse(Player *player,Tokens *tokens);
+	void	Zombie(Player *player,Tokens *tokens);
 
 public:
 	Admin()	{	}

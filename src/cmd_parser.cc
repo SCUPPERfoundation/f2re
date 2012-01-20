@@ -1,4 +1,4 @@
- /*-----------------------------------------------------------------------
+/*-----------------------------------------------------------------------
 		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
@@ -16,6 +16,7 @@
 #include <cctype>
 #include <climits>
 #include <cstdlib>
+#include <ctime>
 
 #include <signal.h>
 #include <unistd.h>
@@ -89,7 +90,7 @@ const std::string	CmdParser::vocab[] =
 	"retrieve", "retreive", "doff", "carry", "pocket", "clip", "unclip", "assign",	// 167-174
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
-	"undivert", "move", "allocate", "stop", "extend", "hide", "claim",
+	"undivert", "move", "allocate", "stop", "extend", "hide", "claim", "test",
 	""
 };
 
@@ -2593,11 +2594,4 @@ void	CmdParser::Zap(Player *player)
 	}
 }
 
-
-void	CmdParser::Test(Player *player,std::string& line)
-{
-	std::ostringstream	buffer;
-	buffer << tokens->Get(1) << "= " << Game::commodities->Commod2Type(tokens->Get(1)) << "\n";
-	player->Send(buffer);
-}
 

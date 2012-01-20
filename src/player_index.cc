@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -9,6 +9,7 @@
 
 #include "player_index.h"
 
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -51,13 +52,18 @@ PlayerIndex::PlayerIndex(char *file_name)
 	LoadIndices();
 	std::ostringstream	buffer("");
 	buffer << "There are " << player_index.size() << " players in the database";
+	WriteLog(buffer);
+	if(Game::load_billing_info != "")
+	{
+		WriteLog(Game::load_billing_info);
+		UpdateBillingInfo(Game::load_billing_info);
+	}
 	login = new Login;
 	newbie = new Newbie;
 	max_players = 0;
 	min_players = 9999;
 	session_max = 0;
 	total_player_time = 0;
-	WriteLog(buffer);
 }
 
 
@@ -397,10 +403,6 @@ void	PlayerIndex::LoadIndices()
 			delete player;
 	}
 	dbc->close();
-	
-	
-	
-	
 }
 
 void	PlayerIndex::LoadInventoryObjects()
@@ -517,6 +519,23 @@ int	PlayerIndex::NumberOfPlayersAtRank(int rank)
 	return(total);
 }
 
+std::pair<int,int> PlayerIndex::NumberOutOfDate(int days)
+{
+	std::time_t now = std::time(0);
+	std::time_t then = now - (days * 24 * 60 * 60);
+	int	out_of_date = 0;
+	int	total = 0;
+	std::time_t value;
+	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
+	{
+		value = iter->second->LastTimeOn();
+		if(value < then)
+			++out_of_date;
+		++total;
+	}
+	return(std::make_pair(out_of_date,total));
+}
+
 bool	PlayerIndex::ProcessBilling(std::string& input_text)
 {
 	std::string	line;
@@ -548,7 +567,6 @@ bool	PlayerIndex::ProcessInput(int sd,std::string& text)
 	return(true);
 }
 
-// ******************** refactor the promote functions ********************
 void	PlayerIndex::PromotePlayers()
 {
 	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
@@ -629,15 +647,21 @@ void	PlayerIndex::Save(Player *player,int which_bits)
 	delete rec;
 }
 
-void	PlayerIndex::SaveAllPlayers()
+void	PlayerIndex::SaveAllPlayers(int which_bits)
 {
+	int total = 0;
+	std::ostringstream	buffer;
 	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
 	{
-		Save(iter->second,WITH_OBJECTS);
-		std::ostringstream	buffer;
+		Save(iter->second,which_bits);
+		buffer.str("");
 		buffer << "Saved " << iter->second->Name() << " to disk";
 		WriteLog(buffer);
+		++total;
 	}
+	buffer.str("");
+	buffer << "Saved " << total << "records to disk";
+	WriteLog(buffer);
 }
 
 void	PlayerIndex::SaveTeleporterPlayers()
@@ -978,5 +1002,78 @@ void	PlayerIndex::Zap(Player *player,Player *who_by)
 	who_by->Send(buffer);
 	delete player;
 }
+
+
+
+// temporary stuff to merge old billing info with player record
+
+int PlayerIndex::MAX_BUFFER = 256;
+
+void	PlayerIndex::UpdateBillingInfo(std::string& input_file)
+{
+	std::list<std::string>	billing_list;
+	std::list<std::string>::iterator	iter;
+	int	total = 0;
+
+	WriteLog("Starting merge of billing info into player records.");
+	if(!LoadInputFile(input_file,billing_list))
+	{
+		WriteLog("Unable to open billing info file.");
+		return;
+	}
+
+	for(iter = billing_list.begin();iter != billing_list.end();++iter)
+	{
+		if(ProcessBillingLine(*iter))
+			++total;
+	}
+	std::ostringstream	buffer;
+	buffer << "A total of " << total << " records were updated";
+	WriteLog(buffer);
+	SaveAllPlayers(NO_OBJECTS);
+}
+
+bool	PlayerIndex::LoadInputFile(std::string& input_file,std::list<std::string>& billing_list)
+{
+	std::ifstream	file(input_file.c_str());
+	if(!file)
+		return false;
+
+	char	buffer[MAX_BUFFER];
+	while(!file.eof())
+	{
+		file.getline(buffer,MAX_BUFFER);
+		billing_list.push_back(buffer);
+	}
+	return true;
+}
+
+bool	PlayerIndex::ProcessBillingLine(std::string& line)
+{
+	char	buffer[MAX_BUFFER];
+	std::memset(buffer,0,MAX_BUFFER);
+	std::strncpy(buffer,line.c_str(),MAX_BUFFER);
+	std::string account_name(std::strtok(buffer,","));
+	Player	*player = FindAccount(account_name);
+	if(player == 0)
+		return false;
+
+	player->SetEmail(std::strtok(0,","));
+
+	std::ostringstream	log_buffer;
+	log_buffer << player->IBAccount() << ":" << player->Name() << ":" << player->Email();
+	WriteLog(log_buffer);
+
+	int counter = 0;
+	char	*hash;
+	while((hash = std::strtok(0," ")) != 0)
+	{
+		log_buffer << hash;
+		player->password[counter] = static_cast<char>(std::strtol(hash,0,16)); // hash is a two hex digit string
+		++counter;
+	}
+	return true;
+}
+
 
 

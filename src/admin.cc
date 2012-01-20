@@ -11,6 +11,7 @@
 
 #include <sstream>
 #include <string>
+#include <utility>
 
 #include <cctype>
 
@@ -309,7 +310,7 @@ void	Admin::Help(Player *player)
 		"      flags are: host, manager, nav, techie, alpha, builds\n",
 		"   ADMIN DELETE VARIABLE player variablename\n",
 		"   ADMIN DISPLAY player\n",
-		"   ADMIN DUMP (NOTE: For Alan's use only)\n",
+		"   ADMIN DUMP (NOTE: For Alan's use only!)\n",
 		"   ADMIN FOUNDER player\n",
 		"   ADMIN INDY player\n",
 		"   ADMIN MERCHANT player\n",
@@ -320,6 +321,7 @@ void	Admin::Help(Player *player)
 		"   ADMIN SET flag player\n",
 		"      flags are: nav, alpha, host, techie, manager, sponsor, \n",
 		"   ADMIN WHOELSE player\n",
+		"   ADMIN ZOMBIE number_of_days\n",
 
 		"Whois commands:\n",
 		"   WHOIS ACCOUNT account_ID\n",
@@ -364,7 +366,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 	{
 		"report", "change", "set", "clear", "save", "display", 		//  0- 5
 		"delete", "add", "nomatch", "help", "promote", "whoelse",	//	 6-11
-		"alter", "founder", "indy", "merchant", "dump",					//	12-15
+		"alter", "founder", "indy", "merchant", "dump",	"zombie",	//	12-17
 		""
 	};
 
@@ -415,6 +417,8 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	14:	Indy(player,tokens);						break;
 		case	15:	Merchant(player,tokens);				break;
 		case	16:	player->DumpLedger();					break;
+		case  17:	Zombie(player,tokens);					break;
+
 		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1));		break;
 	}
 }
@@ -654,3 +658,16 @@ void	Admin::WhoElse(Player *player,Tokens *tokens)
 		}
 	}
 }
+
+void	Admin::Zombie(Player *player,Tokens *tokens)
+{
+	int days = 365;
+	if(tokens->Size() > 2)
+		days = std::atoi(tokens->Get(2).c_str());
+	std::pair<int,int>	info = Game::player_index->NumberOutOfDate(days);
+	std::ostringstream	buffer;
+	buffer << "Number of zombie accounts over " << days << " days old is ";
+	buffer << info.first << " of " << info.second << "\n";
+	player->Send(buffer);
+}
+

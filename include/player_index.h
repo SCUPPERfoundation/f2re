@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -14,6 +14,7 @@
 #include <list>
 #include <map>
 #include <string>
+#include <utility>
 
 #include "ipc.h"
 
@@ -65,8 +66,10 @@ public:
 
 	Player	*FindAccount(const std::string& name);	// Find in all players     - key = account name
 	Player	*FindCurrent(const std::string& name);	// Find in current players - key = name
-	Player	*FindCurrent(int desc);						// Find in current players - key = descriptor
+	Player	*FindCurrent(int desc);						// Find in current players - key = socket descriptor
 	Player	*FindName(const std::string& name);		// Find in all players     - key = name
+
+	std::pair<int,int>	NumberOutOfDate(int days = 365);
 
 	int	FindAllAlts(Player *player,const std::string& ip_address);
 	int	FindAlts(Player *player,const std::string& ip_address);
@@ -99,7 +102,7 @@ public:
 	void	Qw(Player *player);
 	void	ReportSocketError(int sd,int error_number);
 	void	Save(Player *player,int which_bits);
-	void	SaveAllPlayers();
+	void	SaveAllPlayers(int which_bits = WITH_OBJECTS);
 	void	SaveTeleporterPlayers();
 	void	SendPlayerInfo(Player *player);
 	void	SpynetNotice(const std::string& text);
@@ -115,6 +118,12 @@ public:
 	void	XmlPlayerLeft(Player *player);
 	void	XmlPlayerStart(Player *player);
 	void	Zap(Player *player,Player *who_by);
+
+	// temporary stuff to merge old billing info with player record
+	static int MAX_BUFFER;
+	void	UpdateBillingInfo(std::string& input_file);
+	bool	LoadInputFile(std::string& input_file,std::list<std::string>& billing_list);
+	bool	ProcessBillingLine(std::string& line);
 };
 
 #endif

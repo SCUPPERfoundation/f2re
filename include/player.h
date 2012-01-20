@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -69,6 +69,7 @@ typedef std::list<FuturesContract *>	FuturesList;
 
 class Player
 {
+	friend bool	PlayerIndex::ProcessBillingLine(std::string& line);
 	friend bool PlayerIndex::ValidatePlayerRecord(Player *player);
 
 public:
@@ -285,6 +286,7 @@ public:
 	const	std::string&	Channel()						{ return(channel);		}
 	const std::string&	CompanyName();
 	const	std::string&	Conversation()					{ return(conversation);	}
+	const std::string&	Email()							{ return email;			}
 	const std::string&	FullName();
 	const std::string&	IBAccount()						{ return(ib_account);	}
 	const std::string&	IPAddress()						{ return(ip_addr);		}
@@ -368,6 +370,7 @@ public:
 	bool	IsMarried();
 	bool	IsNavigator()										{ return(man_flags.test(NAV_FLAG));		}
 	bool	IsOnLandingPad();
+	bool	IsPassword(const std::string& pwd);
 	bool	IsPlanetOwner();
 	bool	IsStaff()											{ return(man_flags.any());					}
 	bool	IsTechie()											{ return(man_flags.test(TECHIE));		}
@@ -578,6 +581,7 @@ public:
 	void	SendMailTo(std::ostringstream& text,const std::string& sender);
 	void	SendSound(const std::string& sound);
 	void	SetCP(int amount)									{ courier_pts = amount;		}
+	void	SetEmail(const std::string& new_email)		{ email = new_email;			}
 	void	SetEventTracking(bool turn_on);
 	void	SetFactoryOutput(int fact_num,const std::string& where);
 	void	SetFactoryStatus(int fact_num,const std::string& new_status);
@@ -612,6 +616,7 @@ public:
 	void	TermWidth(int size);
 	void	Time();
 	void	ToggleSpace()										{ flags.flip(SPACE); 		}
+	void	TransformSlithies();
 	void	UnIgnore(const std::string& who);
 	void	Unlock()												{ flags.reset(LOCKED);		}
 	void	UpdateCompanyTime();
@@ -624,11 +629,10 @@ public:
 	void	UpgradeFactory(int number);
 	void	UpgradeStorage(int number);
 	void	ValidateJobsAK();
+	void	Version();
 	void	Void();
 	void	WantAnsi(bool setting);
 	void	Xfer2Treasury(int num_megs);
-	void	TransformSlithies();
-	void	Version();
 	void	XMLStats();
 	void	Xt(const std::string& msg);
 };

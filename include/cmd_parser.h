@@ -146,7 +146,6 @@ private:
 	void	Teleport(Player *player,std::string& line);
 	void	Tell(Player *player,std::string& line);
 	void	TermWidth(Player *player);
-	void	Test(Player *player,std::string& line);
 	void	Unclip(Player *player);
 	void	UnDivert(Player *player);
 	void	UnGag(Player *player);
