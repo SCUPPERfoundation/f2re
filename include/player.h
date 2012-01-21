@@ -137,15 +137,15 @@ public:
 	};																						// status of player
 
 protected:
-	std::string	name;					// name - size = 16
-	std::string ib_account;			// ibgames account name  - size = 24
-	char	password[MAX_PASSWD];	// MD5 hash of player's password - size = 16
-	std::string	email;				// E-mail address - size = 80
-	std::string	desc;					// description - size = 160
-	std::string	mood;					//	mood - size = 64
-	std::string	race;					// race (free form) - size = 16
-	int	gender;						// gender
-	int	strength[2];				// stats
+	std::string	name;										// name - size = 16
+	std::string ib_account;								// ibgames account name  - size = 24
+	unsigned char	password[MAX_PASSWD];			// MD5 hash of player's password - size = 16
+	std::string	email;									// max size = 80
+	std::string	desc;										// max size = 160
+	std::string	mood;										//	max size = 64
+	std::string	race;										// race (free form), max size = 16
+	int	gender;
+	int	strength[2];
 	int	stamina[2];
 	int	dexterity[2];
 	int	intelligence[2];
@@ -154,19 +154,19 @@ protected:
 	long	loan;
 	int	trader_pts;
 	int	courier_pts;
-	long	reward;						// reward on player's head
-	int	games;						// number of games played
-	int	killed;						// number of times killed
-	int	jobs_completed;			// jobs completed this session
-	int	starvation;					// count down from MAX_STARVE to reduce stamina by one
+	long	reward;											// reward on player's head
+	int	games;											// number of games played
+	int	killed;											// number of times killed
+	int	jobs_completed;								// jobs completed this session
+	int	starvation;										// count down from MAX_STARVE to reduce stamina by one
 
-	Inventory	*inventory;			// inventory objects
+	Inventory	*inventory;								// inventory objects
 	std::bitset<MAX_FLAGS>			flags;			// general purpose flags
 	std::bitset<MAX_TEMP_FLAGS>	temp_flags;		// temporary flags (not stored to disk)
 	std::bitset<MAX_MAN_FLAGS>		man_flags;		// management flags
 	std::bitset<MAX_STATUS>			status_flags;	// status of player
-	int	counters[MAX_COUNTERS];	// general purpose counters
-	time_t	timers[MAX_TIMERS];	// available for recording times (not saved)
+	int	counters[MAX_COUNTERS];						// general purpose counters
+	time_t	timers[MAX_TIMERS];						// available for recording elapsed times (not saved)
 
 	LocRec		loc;					// location details
 	int			last_loc;			// the location we were in prior to the current one
@@ -187,7 +187,8 @@ protected:
 	int		sd;						// socket descriptor
 	std::string	ip_addr;				// ip address used for last/current login
 	std::string	input_buffer;		// for building player input
-	Billing	*billing;				// billing/account queries handler
+
+	Billing	*billing;				// billing/account queries handler  /**************** soon to go *******************/
 
 	int	line_length;				// length of lines on player terminal
 	std::string	channel;				// comms channel tuned to

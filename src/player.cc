@@ -123,7 +123,7 @@ const std::string	Player::rank_str[][MAX_RANK + 1] =
 
 Player::Player()
 {
-	name = ib_account= desc = mood = race = "";
+	name = ib_account= desc = mood = race = email = "";
 	gender = FEMALE;
 	strength[CURRENT] = strength[MAXIMUM] = 0;
 	stamina[CURRENT] = stamina[MAXIMUM] = 0;
@@ -148,6 +148,8 @@ Player::Player()
 Player::Player(LoginRec	*rec)
 {
 	ib_account = rec->name;
+	std::memcpy(password,rec->digest,MAX_PASSWD);
+	email = rec->email;
 	name = mood = desc = "";
 	race = "human";
 	gender = FEMALE;
@@ -3310,7 +3312,7 @@ bool	Player::IsPassword(const std::string& pwd)
 			break;
 		}
 	}
-	delete [] test_digest;
+//	delete [] test_digest;
 	delete [] pw;
 	return ret_val;
 }

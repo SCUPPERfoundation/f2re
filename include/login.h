@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-6
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -62,15 +62,16 @@ public:
 
 struct	LoginRec
 {
-	std::string	name;				// account name
-	std::string	password;		// the password
-	std::string	email;			// player's e-mail address
-	int			sd;				// socket descriptor
-	int			failures;		// number of failed logins this session
-	time_t		last_input;		// time of last input from player
-	std::string	input_buffer;	// player input buffer
-	std::string	address;			// client internet address used for this access
-	int			status;			//	current login status
+	std::string	name;										// account name
+	std::string	password;								// the password
+	unsigned char	digest[Login::MAX_PASSWORD];	// the password digest for storing
+	std::string	email;									// player's e-mail address
+	int			sd;										// socket descriptor
+	int			failures;								// number of failed logins this session
+	time_t		last_input;								// time of last input from player
+	std::string	input_buffer;							// player input buffer
+	std::string	address;									// client internet address used for this access
+	int			status;									//	current login status
 };
 
 #endif
