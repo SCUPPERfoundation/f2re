@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-7
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -16,44 +16,20 @@
 #include	<ctime>
 #include <netinet/in.h>
 
-struct	XMLLoginRec
-{
-	enum	{	UNKNOWN, RETURNING, NEWBIE, RETURNING_BILLING	};
-
-	// common stuff
-	int			status;			// player status
-	std::string	id;				// account name
-	std::string	password;		// the password
-	std::string	email;			// player's e-mail address
-	int			sd;				// socket descriptor
-	int			failures;		// number of failed logins this session
-	time_t		last_input;		// time of last input from player
-	std::string	input_buffer;	// player input buffer
-	std::string	address;			// client internet address used for this access
-	int			api_level;		// what level of Fedterm API is supported (default = 1)
-	
-	// newbie stuff
-	std::string	name;				//	avatar name
-	std::string	species;			// avatar species
-	int			strength;		// stats
-	int			stamina;
-	int			dexterity;
-	int			intelligence;
-	char			gender;			// male (m), female (f), or neuter (n)
-};
+struct XMLLoginRec;
 
 typedef	std::map<int,XMLLoginRec,std::less<int> >	XMLLoginIndex;	// logins indexed by socket desc
 
 class XMLLogin
 {
-private:
+public:
 	static const int	MAX_ADDR = 80;
 	static const int	MAX_USER_NAME = 24;
 	static const int	MAX_PASSWORD = 16;
 
+private:
 	XMLLoginIndex	login_index;
-
-	XMLLoginRec	*Find(int sd);
+	XMLLoginRec		*Find(int sd);
 	
 	bool	CheckID(XMLLoginRec *rec);
 	bool	CheckPassword(XMLLoginRec *rec);
@@ -74,6 +50,33 @@ public:
 
 	bool	ProcessInput(int sd,std::string& text);
 	void	Remove(int sd);
+};
+
+struct	XMLLoginRec
+{
+	enum	{	UNKNOWN, RETURNING, NEWBIE, RETURNING_BILLING	};
+
+	// common stuff
+	int			status;			// player status
+	std::string	id;				// account name
+	std::string	password;		// the password
+	unsigned char	digest[XMLLogin::MAX_PASSWORD];	// the password digest for storing
+	std::string	email;			// player's e-mail address
+	int			sd;				// socket descriptor
+	int			failures;		// number of failed logins this session
+	time_t		last_input;		// time of last input from player
+	std::string	input_buffer;	// player input buffer
+	std::string	address;			// client internet address used for this access
+	int			api_level;		// what level of Fedterm API is supported (default = 1)
+
+	// newbie stuff
+	std::string	name;				//	avatar name
+	std::string	species;			// avatar species
+	int			strength;		// stats
+	int			stamina;
+	int			dexterity;
+	int			intelligence;
+	char			gender;			// male (m), female (f), or neuter (n)
 };
 
 #endif

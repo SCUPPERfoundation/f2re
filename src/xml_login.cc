@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-6
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -41,11 +41,9 @@ bool	XMLLogin::BillAcValid(XMLLoginRec *rec)
 {
 	static const std::string	locked("<s-locked-out/>\n");
 
-WriteErrLog("XMLLogin::BillAcValid()");
 	Player	*player = Game::player_index->FindAccount(rec->name);
 	if((player != 0) && player->IsLocked())
 	{
-WriteErrLog("Locked player!");
 		write(rec->sd,locked.c_str(),locked.length());
 		std::ostringstream	buffer;
 		buffer << "BILL_AccLogout|" << rec->name << "|" << PlayerIndex::DISCARD << "|" << std::endl;
@@ -74,19 +72,6 @@ bool	XMLLogin::BillAlreadyIn(XMLLoginRec *rec)
 {
 	static const std::string	in_game("<s-in-game/>\n");
 
-	Player	*player = Game::player_index->FindAccount(rec->name);
-	if(player != 0)
-	{
-		if(Game::player_index->FindCurrent(player->Name()) == 0)
-		{
-			// Billing out of sync - re-sync
-			std::ostringstream	buffer;
-			buffer << "BILL_AccLogout|" << rec->name << "|" << PlayerIndex::DISCARD << "|" << std::endl;
-			Game::ipc->Send2Billing(buffer.str());
-		}
-		else
-			Game::player_index->LogOff(player);
-	}
 	write(rec->sd,in_game.c_str(),in_game.length());
 	Game::ipc->ClearSocket(rec->sd);
 	Remove(rec->sd);
@@ -162,16 +147,40 @@ void	XMLLogin::Initialise(XMLLoginRec *rec,int sd,std::string& text)
 
 void	XMLLogin::Login(XMLLoginRec *rec)
 {
-WriteErrLog(rec->id);
-WriteErrLog(rec->password);
+	static const std::string	locked("<s-locked-out/>\n");
+	static const std::string	in_game("<s-in-game/>\n");
+
 	if(!CheckID(rec) || !CheckPassword(rec))
 		return;
 
-	std::ostringstream	buffer;
-	buffer << "BILL_AccLogin|" << rec->id << "|" << rec->password << "|" << rec->sd << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
-WriteErrLog(buffer.str());
-	rec->status = XMLLoginRec::RETURNING_BILLING;
+	Player	*player = Game::player_index->FindAccount(rec->name);
+	if(player != 0)
+	{
+		if(player->IsPassword(rec->password))
+		{
+			if(player->IsLocked())
+			{
+				write(rec->sd,locked.c_str(),locked.length());
+				Game::ipc->ClearSocket(rec->sd);
+				Remove(rec->sd);
+				return;
+			}
+			if(Game::player_index->FindCurrent(player->Name()) != 0)
+			{
+				write(rec->sd,in_game.c_str(),in_game.length());
+				Game::ipc->ClearSocket(rec->sd);
+				Remove(rec->sd);
+				return;
+			}
+
+			Game::player_index->AccountOK(rec);
+			Remove(rec->sd);
+			return;
+		}
+	}
+
+	// Bad name or password if we get here
+	BillAcInvalid(rec);
 }
 
 bool	XMLLogin::LoginBilling(XMLLoginRec *rec,std::string& text)
