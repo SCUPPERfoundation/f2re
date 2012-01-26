@@ -310,11 +310,6 @@ void	Player::AcceptPendingJobOffer()
 	Send("You accept the pending job\n");
 }
 
-int	Player::AccountStatus()
-{
-	return(billing->AccountStatus());
-}
-
 void	Player::Act(std::string& text,bool possessive)
 {
 	std::ostringstream	buffer("");

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-7
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -49,7 +49,6 @@ private:
 	std::string em_filename;
 
 	bool	StatusCheck(const std::string& status_val);
-	void	AccountStatus(const std::string& line);
 	void	DisplayAccount(const std::string& line);
 	void	DisplayAccountsByEmail(const std::string& reply);
 	void	DisplayEMail(const std::string& line);
@@ -60,8 +59,6 @@ private:
 public:
 	Billing(Player *owner,const std::string& account,const std::string& pwd,int skt);
 	~Billing()		{	}
-
-	int	AccountStatus();
 
 	void	AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value);
 	void	DumpLedger();

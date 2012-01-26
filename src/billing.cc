@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-4
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -30,31 +30,6 @@ Billing::Billing(Player *player,const std::string& account,const std::string& pw
 	UpdateStatusCache();
 }
 
-
-int	Billing::AccountStatus()
-{ 
-	UpdateStatusCache();
-	return(acc_status);
-}
-
-void	Billing::AccountStatus(const std::string& line)
-{
-	static const std::string	acc_status_vals[] =
-		{ "TRIAL", "ACTIVE", "COMP", "SUSPENDED", "CANCELLED", "BLOCKED", "" };
-
-
-	ParseBillSelect(line);
-	for(int count = 0;acc_status_vals[count] != "";count++)
-	{
-		if(acc_status_vals[count] == tokens[B_STATUS])
-		{
-			acc_status = count;
-			return;
-		}
-	}
-	acc_status = UNKNOWN;
-}
-
 void	Billing::AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value)
 {
 	std::ostringstream	buffer("");
@@ -77,27 +52,6 @@ void	Billing::AdminChange(const std::string& which,const std::string& ib_name,co
 		SelectPlayer(&ib_name);
 		return;
 	}
-/*
-	if(which == "status")
-	{
-		std::string	status_val(new_value);
-		int len = status_val.length();
-		for(int count = 0;count < len;count++)
-			status_val[count] = std::toupper(status_val[count]);
-		if(!StatusCheck(status_val))
-		{
-			owner->Send(Game::system->GetMessage("billing","adminchange",1));
-			return;
-		}
-
-		buffer << "BILL_SetStatus|" << ib_name << "|" << status_val << "|" << sd << "|" << std::endl;
-		Game::ipc->Send2Billing(buffer.str());
-		status = ADMIN_PWD;
-		owner->Send(Game::system->GetMessage("billing","adminchange",2));
-		SelectPlayer(&ib_name);
-		return;
-	}
-*/
 }
 
 void	Billing::DisplayAccount(const std::string& line)
@@ -248,12 +202,6 @@ void	Billing::ProcessReply(const std::string& reply)
 			else
 				owner->Send(Game::system->GetMessage("billing","processreply",5));
 			break;
-
-		case SET_ACC_STATUS:
-			if(reply.find("BILL_OK") != std::string::npos)
-				AccountStatus(reply);
-			break;
-
 		case UPDATE_EMAIL:
 			if(reply.find("BILL_OK") != std::string::npos)
 				owner->Send(Game::system->GetMessage("billing","processreply",1));

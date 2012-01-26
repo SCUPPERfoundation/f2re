@@ -307,7 +307,6 @@ public:
 	long	PersonalRiot(int percentage);
 	long	Reward()												{ return(reward);			}
 
-	int	AccountStatus();
 	int	AddSlithy(int amount = 0);
 	int	AKJobs()												{ return(courier_pts);	}
 	int	CommsAPILevel()									{ return(comms_api_level);			}
