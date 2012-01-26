@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -48,10 +48,8 @@ private:
 	std::string em_subject;
 	std::string em_filename;
 
-	bool	StatusCheck(const std::string& status_val);
 	void	DisplayAccount(const std::string& line);
 	void	DisplayAccountsByEmail(const std::string& reply);
-	void	DisplayEMail(const std::string& line);
 	void	ParseBillSelect(const std::string& line);
 	void	SelectPlayer(const std::string *name = 0);
 	void	SendEMail(const std::string& line);
@@ -64,7 +62,6 @@ public:
 	void	DumpLedger();
 	void	GetAccount(const std::string& name);
 	void	GetAccountByEmail(const std::string& e_mail);
-	void	GetEMail();
 	void	ProcessReply(const std::string& reply);
 	void	SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename);
 	void	UpdateEMail(const std::string& address);

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -117,23 +117,6 @@ void	Billing::DisplayAccountsByEmail(const std::string& reply)
 	owner->Send(buffer);
 }
 
-void	Billing::DisplayEMail(const std::string& line)
-{
-	static const std::string	error("I'm sorry, I'm unable to find your mail address at the moment.\n");
-
-	ParseBillSelect(line);
-
-	if(tokens[B_RETVAL] != "BILL_OK")
-		owner->Send(Game::system->GetMessage("billing","displayemail",1));
-	else
-	{
-		std::ostringstream	buffer("");
-		buffer << "Your registered email address is " << tokens[B_EMAIL] << std::endl;
-		buffer << "To change it use the command 'update email password new_address', where 'password' is your password.\n";
-		owner->Send(buffer);
-	}
-}
-
 void	Billing::DumpLedger()
 {
 	std::ostringstream	buffer("");
@@ -155,12 +138,6 @@ void	Billing::GetAccountByEmail(const std::string& e_mail)
 	std::ostringstream	buffer("");
 	buffer << "BILL_Select|EMAIL|" << e_mail << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
-}
-
-void	Billing::GetEMail()
-{
-	status = DISPLAY_EMAIL;
-	SelectPlayer();
 }
 
 void	Billing::ParseBillSelect(const std::string& line)
@@ -202,6 +179,7 @@ void	Billing::ProcessReply(const std::string& reply)
 			else
 				owner->Send(Game::system->GetMessage("billing","processreply",5));
 			break;
+
 		case UPDATE_EMAIL:
 			if(reply.find("BILL_OK") != std::string::npos)
 				owner->Send(Game::system->GetMessage("billing","processreply",1));
@@ -216,7 +194,6 @@ void	Billing::ProcessReply(const std::string& reply)
 				owner->Send(Game::system->GetMessage("billing","processreply",4));
 			break;
 
-		case DISPLAY_EMAIL:	DisplayEMail(reply); 				break;
 		case SEND_EMAIL:		SendEMail(reply); 					break;
 
 		case DISPLAY_ACCS_BY_EMAIL: DisplayAccountsByEmail(reply);	break;
@@ -259,15 +236,6 @@ void	Billing::SendEMail(const std::string& line)
 		owner->SendEMail(tokens[B_EMAIL],em_reply_to,em_subject,em_filename);
 }
 
-bool	Billing::StatusCheck(const std::string& status_val)
-{
-	if((status_val == "TRIAL") || (status_val == "ACTIVE")  || (status_val == "COMP")
-			 || (status_val == "SUSPENDED")  || (status_val == "CANCELLED")  || (status_val == "BLOCKED"))
-		return(true);
-	else
-		return(false);
-}
-	
 void	Billing::UpdateEMail(const std::string& address)
 {
 	std::ostringstream	buffer("");
