@@ -18,7 +18,6 @@
 
 #include "scr_announce.h"
 #include "call.h"
-#include "checkacc.h"
 #include "checkak.h"
 #include "checkflag.h"
 #include "checkforowner.h"
@@ -150,7 +149,6 @@ Script	*Script::Create(const char *element,const char **attribs,FedMap *fed_map)
 		case CHG_SIZE:			return(new ChangeSize(attribs,fed_map));
 		case CHG_SLITHY:		return(new ChangeSlithy(attribs,fed_map));
 		case CHG_STAT:			return(new ChangeStat(attribs,fed_map));
-		case CHK_ACC:			return(new CheckAccount(attribs,fed_map));
 		case CHK_FLAG:			return(new CheckFlag(attribs,fed_map));
 		case CHK_OWNER:		return(new CheckForOwner(attribs,fed_map));
 		case CHK_GENDER:		return(new CheckGender(attribs,fed_map));

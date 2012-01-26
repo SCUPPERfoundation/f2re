@@ -193,6 +193,7 @@ bool	Login::ProcessName(int sd,std::string& text,LoginRec *rec)
 
 		if(line.find("<?xml") == 0)
 		{
+WriteLog("Login::ProcessName()");
 			rec->status = XML_TEXT;
 			return(xml_login->ProcessInput(sd,rec->address));
 		}
