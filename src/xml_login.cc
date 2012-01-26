@@ -207,9 +207,12 @@ bool XMLLogin::ProcessInput(int sd,std::string& text)
 {
 	static const std::string	start_text("<?xml version=\"1.0\"?>\n<s-login/>\n");
 
+WriteLog("XMLLogin::ProcessInput():1");
+WriteLog(text);
 	XMLLoginRec	*rec = Find(sd);
 	if(rec == 0)
 	{
+WriteLog("XMLLogin::ProcessInput():2");
 		XMLLoginRec	login_rec;
 		login_index[sd] = login_rec;
 		rec = &(login_index[sd]);
@@ -217,6 +220,7 @@ bool XMLLogin::ProcessInput(int sd,std::string& text)
 		write(sd,start_text.c_str(),start_text.length());
 		return(true);
 	}
+WriteLog("XMLLogin::ProcessInput():3");
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
@@ -225,6 +229,7 @@ bool XMLLogin::ProcessInput(int sd,std::string& text)
 
 	if((rec->status == XMLLoginRec::UNKNOWN) || (rec->status == XMLLoginRec::RETURNING))
 	{
+WriteLog("XMLLogin::ProcessInput():4");
 		LoginParser	*parser = new LoginParser(rec);
 		parser->Parse(line.c_str());
 		delete parser;
