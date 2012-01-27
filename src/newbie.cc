@@ -94,7 +94,7 @@ character. (Minimum 3, maximum 15 letters):\n");
 
 	std::ostringstream	buffer("");
 	buffer << HomeDir() << "/data/" << filename;
-	player->SendEMail(rec->email,reply_to,subject,buffer.str());
+	player->SendEMail(reply_to,subject,buffer.str());
 
 	return(Player::START);
 }

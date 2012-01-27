@@ -27,7 +27,6 @@ Billing::Billing(Player *player,const std::string& account,const std::string& pw
 	sd = skt;
 	acc_status = UNKNOWN;
 	em_reply_to = em_subject = em_filename = "";
-	UpdateStatusCache();
 }
 
 void	Billing::AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value)
@@ -70,53 +69,6 @@ void	Billing::DisplayAccount(const std::string& line)
 	}
 }
 
-void	Billing::DisplayAccountsByEmail(const std::string& reply)
-{
-	std::string	text(reply);
-	int	count, next_start = 0;
-	int	len = text.length();
-
-	// check there is a match
-	for(count = 0;count < len;count++)
-	{
-		if(text[count] == '|')
-		{
-			if(text.substr(0,count) != "BILL_OK")
-			{
-				owner->Send("No accounts found with that email address.\n");				
-				return;
-			}
-			next_start = ++count;
-			break;
-		}
-	}
-
-	// find out how many matches there are
-	std::ostringstream	buffer;
-	for(;count < len;count++)
-	{
-		if(text[count] == '|')
-		{
-			buffer << text.substr(next_start,count - next_start) << " accounts found:\n";
-			owner->Send(buffer);
-			next_start = ++count;
-			break;
-		}
-	}
-	
-	// now iterate through the names
-	buffer.str("");
-	for(;count < len;count++)
-	{
-		if(text[count] == '|')
-		{
-			buffer << "  " <<text.substr(next_start,count - next_start) << std::endl;
-			next_start = count + 1;
-		}
-	}
-	owner->Send(buffer);
-}
-
 void	Billing::DumpLedger()
 {
 	std::ostringstream	buffer("");
@@ -130,14 +82,6 @@ void	Billing::GetAccount(const std::string& ib_name)
 	std::string	account_name(ib_name);
 	status = DISPLAY_ACC;
 	SelectPlayer(&account_name);
-}
-
-void	Billing::GetAccountByEmail(const std::string& e_mail)
-{
-	status = DISPLAY_ACCS_BY_EMAIL;
-	std::ostringstream	buffer("");
-	buffer << "BILL_Select|EMAIL|" << e_mail << "|" << sd << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
 }
 
 void	Billing::ParseBillSelect(const std::string& line)
@@ -180,23 +124,6 @@ void	Billing::ProcessReply(const std::string& reply)
 				owner->Send(Game::system->GetMessage("billing","processreply",5));
 			break;
 
-		case UPDATE_EMAIL:
-			if(reply.find("BILL_OK") != std::string::npos)
-				owner->Send(Game::system->GetMessage("billing","processreply",1));
-			else
-				owner->Send(Game::system->GetMessage("billing","processreply",2));
-			break;
-
-		case UPDATE_PWD:
-			if(reply.find("BILL_OK") != std::string::npos)
-				owner->Send(Game::system->GetMessage("billing","processreply",3));
-			else
-				owner->Send(Game::system->GetMessage("billing","processreply",4));
-			break;
-
-		case SEND_EMAIL:		SendEMail(reply); 					break;
-
-		case DISPLAY_ACCS_BY_EMAIL: DisplayAccountsByEmail(reply);	break;
 		default:
 			owner->Send(reply);
 			owner->Send("\n");
@@ -219,51 +146,3 @@ void	Billing::SelectPlayer(const std::string *name)
 	buffer << "|" << sd << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
 }
-
-void	Billing::SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename)
-{
-	em_reply_to = reply_to;
-	em_subject = subject;
-	em_filename = filename;
-	SelectPlayer();
-	status = SEND_EMAIL;
-}
-
-void	Billing::SendEMail(const std::string& line)
-{
-	ParseBillSelect(line);
-	if(tokens[B_RETVAL] == "BILL_OK")
-		owner->SendEMail(tokens[B_EMAIL],em_reply_to,em_subject,em_filename);
-}
-
-void	Billing::UpdateEMail(const std::string& address)
-{
-	std::ostringstream	buffer("");
-	buffer << "BILL_SetEmail|" << ib_account << "|" << address << "|" << sd << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
-	status = UPDATE_EMAIL;
-	buffer.str("");
-	buffer << "Please wait while we update your email address to '" << address << "'\n";
-	owner->Send(buffer);
-}
-
-void	Billing::UpdatePassword(const std::string& new_pw)
-{
-	password = new_pw;
-
-	std::ostringstream	buffer("");
-	buffer << "BILL_SetPwd|" << ib_account << "|" << new_pw << "|" << sd << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
-	status = UPDATE_PWD;
-	buffer.str("");
-	buffer << "Please wait while we update your password to '" << new_pw << "'\n";
-	owner->Send(buffer);
-}
-
-void	Billing::UpdateStatusCache()
-{
-	status = SET_ACC_STATUS;
-	SelectPlayer();
-}
-
-

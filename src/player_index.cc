@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -115,8 +115,6 @@ void	PlayerIndex::AccountOK(XMLLoginRec *rec)
 		player->CreateBilling(rec->password);
 		player->StartUp(rec->api_level);
 	}
-//	else
-//		newbie->NewPlayer(rec); /**************** fix asap ****************/
 }
 
 void	PlayerIndex::Broadcast(Player *player,std::string mssg)
@@ -184,6 +182,28 @@ void	PlayerIndex::Com(Player *player,std::string mssg)
 	{
 		if(iter->second != player)
 			iter->second->ComSend(text,player);
+	}
+}
+
+void	PlayerIndex::DisplaySameEmail(Player *player,const std::string& email)
+{
+	EmailIndex::iterator	iter, lower, upper;
+	lower = email_index.lower_bound(email);
+	upper = email_index.upper_bound(email);
+	std::ostringstream	buffer;
+	if(upper == lower)
+	{
+		buffer << "I can't find any players with the address " << email << "\n";
+		player->Send(buffer);
+		return;
+	}
+	buffer << "Players with the email address '" << email << "':\n";
+	player->Send(buffer);
+	for(iter = lower;iter != upper;++iter)
+	{
+		buffer.str("");
+		buffer << iter->second->Name() << "\n";
+		player->Send(buffer);
 	}
 }
 
@@ -379,10 +399,6 @@ void	PlayerIndex::LoadIndices()
 	Dbt	*data = new Dbt;
 	DBPlayer	rec;
 	Player	*player;
-/*
-	WriteLog("Founders not in game for over three months");
-	static time_t	now = std::time(0);
-*/
 	while(dbc->get(key,data,DB_NEXT) != DB_NOTFOUND)
 	{
 		std::memcpy(&rec,data->get_data(),data->get_size());
@@ -393,11 +409,7 @@ void	PlayerIndex::LoadIndices()
 		{
 			player_index[player->Name()] = player;
 			account_index[player->IBAccount()] = player;
-/*
-			if((player->Rank() > Player::FOUNDER) &&
-							((now - player->LastTimeOn()) > static_cast<time_t>(2592000u * 3)))	// 3 months
-				WriteLog(player->Name());
-*/
+			email_index.insert(std::make_pair(player->Email(),player));
 		}
 		else
 			delete player;
@@ -435,7 +447,6 @@ void	PlayerIndex::LogOff(Player *player)
 	XmlPlayerLeft(player);
 	Ship *ship = player->GetShip();
 	if((ship != 0) && (ship->HasCargo()))
-//	if(player->HasCargo())
 		player->Send(Game::system->GetMessage("playerindex","logoff",2));
 	player->Send(Game::system->GetMessage("playerindex","logoff",1));
 	player->Offline();
@@ -488,6 +499,7 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	player_index[player->Name()] = player;
 	account_index[player->IBAccount()] = player;
 	current_index[player->Name()] = player;
+	email_index.insert(std::make_pair(player->Email(),player));
 	desc_index[player->Socket()] = player;
 	player->CreateBilling("");
 	std::ostringstream	buffer;

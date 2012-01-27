@@ -49,10 +49,8 @@ private:
 	std::string em_filename;
 
 	void	DisplayAccount(const std::string& line);
-	void	DisplayAccountsByEmail(const std::string& reply);
 	void	ParseBillSelect(const std::string& line);
 	void	SelectPlayer(const std::string *name = 0);
-	void	SendEMail(const std::string& line);
 
 public:
 	Billing(Player *owner,const std::string& account,const std::string& pwd,int skt);
@@ -61,12 +59,7 @@ public:
 	void	AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value);
 	void	DumpLedger();
 	void	GetAccount(const std::string& name);
-	void	GetAccountByEmail(const std::string& e_mail);
 	void	ProcessReply(const std::string& reply);
-	void	SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename);
-	void	UpdateEMail(const std::string& address);
-	void	UpdatePassword(const std::string& new_pw);
-	void	UpdateStatusCache();
 };
 
 #endif

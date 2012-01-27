@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -2492,8 +2492,8 @@ void	CmdParser::WhoIs(Player *player,std::string& line)
 		{
 			if((tokens->Get(1) == "email") && (tokens->Size() >= 3))
 			{
-				std::string	e_mail(tokens->GetRestOfLine(line,2,Tokens::RAW));
-				player->GetAccountByEmail(e_mail);
+				std::string	email(tokens->GetRestOfLine(line,2,Tokens::RAW));
+				Game::player_index->DisplaySameEmail(player,email);
 			}
 			else
 			{

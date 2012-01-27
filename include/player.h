@@ -341,6 +341,7 @@ public:
 	bool	CompanyFlagSet(int which);
 	bool	Die()													{ return(Death(false));	}
 	bool	DisplaySystemCabinetObject(const std::string& obj_name);
+
 	bool	Examine(const std::string& other_name);
 	bool	GenFlagIsSet(int which)							{ return(flags.test(which));				}
 	bool	HasAJob()											{ return(job != 0);		}
@@ -503,7 +504,6 @@ public:
 	void	Gengineer2Magnate();
 	void	Get(FedObject	*object);
 	void	GetAccount(const std::string& whose_account);
-	void	GetAccountByEmail(const std::string& e_mail);
 	void	GetEMail();
 	void	Give(Player *recipient,int amount);
 	void	Give(Player *recipient,std::string& obj_name);
@@ -575,8 +575,6 @@ public:
 	void	SellShares(int amount,const std::string& co_name = "");
 	void	SellTreasury(int amount);
 	void	SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename);
-	void	SendEMail(const std::string& to,const std::string& reply_to,
-									const std::string& subject,const std::string& filename);
 	void	SendOrMail(std::ostringstream& text,const std::string& sender);
 	void	SendMailTo(std::ostringstream& text,const std::string& sender);
 	void	SendSound(const std::string& sound);
@@ -623,7 +621,6 @@ public:
 	void	UpdateEMail(const std::string& address);
 	void	UpdatePassword(const std::string& new_pw);
 	void	UpdateTradeCash(long amount)					{trade_cash += amount;		}
-	void	UpdateStatusCache();
 	void	UpgradeAirport();
 	void	UpgradeDepot();
 	void	UpgradeFactory(int number);

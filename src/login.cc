@@ -363,7 +363,7 @@ bool	Login::ProcessNewAcPwd(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNewAcPwdConf(int sd,std::string& text,LoginRec *rec)
 {
-	const std::string	email_addr("\nPlease provide an e-mail address at which we can contact you (only be used by ibgames):\n");
+	const std::string	email_addr("\nPlease provide an e-mail address at which we can contact you -(this address will only be used by ibgames and our credit card processing agency):\n");
 	const std::string	wrong("\nYour password and confirmation don't match. Please try again.\nPassword:\n");
 
 	std::string	line;

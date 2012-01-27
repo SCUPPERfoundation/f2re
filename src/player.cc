@@ -2830,11 +2830,6 @@ void	Player::GetAccount(const std::string& whose_account)
 	billing->GetAccount(whose_account);
 }
 
-void	Player::GetAccountByEmail(const std::string& e_mail)
-{
-	billing->GetAccountByEmail(e_mail);
-}
-
 void	Player::GetEMail()
 {
 	std::ostringstream	buffer("");
@@ -4745,19 +4740,12 @@ bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
 	else
 		return(false);
 }
-
-void	Player::SendEMail(const std::string& to,const std::string& reply_to,
-								const std::string& subject,const std::string& filename)
-{
-	std::ostringstream	buffer("");
-	buffer << "/bin/mail -s " << subject << " " << to << " < " << filename << " &";
-	WriteErrLog(buffer.str());
-	std::system(buffer.str().c_str());
-}
-
 void	Player::SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename)
 {
-	billing->SendEMail(reply_to,subject,filename);
+	std::ostringstream	buffer("");
+	buffer << "/bin/mail -s " << subject << " " << email << " < " << filename << " &";
+	WriteErrLog(buffer.str());
+	std::system(buffer.str().c_str());
 }
 
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
@@ -5072,6 +5060,7 @@ void	Player::SpynetReport(Player *player)
 		}
 		else
 		{
+
 			if(elapsed > ONE_DAY)
 			{
 				time_t	num_days = (time(0) - last_on)/(ONE_DAY);
@@ -5809,9 +5798,15 @@ void	Player::UpdateCompanyTime()
 void	Player::UpdateEMail(const std::string& new_email)
 {
 	if((new_email.find('@') == std::string::npos) || (new_email.find('.') == std::string::npos))
+	{
 		Send("That is not a valid e-mail address!\n");
-	else
-		billing->UpdateEMail(new_email);
+		return;
+	}
+	email = new_email;
+	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
+	std::ostringstream	buffer;
+	buffer << "Your registered email address has been changed to: " << email << "\n";
+	Send(buffer);
 }
 
 void	Player::UpdatePassword(const std::string& new_pw)
@@ -5831,12 +5826,17 @@ void	Player::UpdatePassword(const std::string& new_pw)
 			return;
 		}
 	}
- 	billing->UpdatePassword(new_pw);
-}
 
-void	Player::UpdateStatusCache()
-{
-	billing->UpdateStatusCache();
+	char *pw = new char[len +1];
+	std::strcpy(pw,new_pw.c_str());
+
+	MD5 new_password;
+	new_password.update((unsigned char *)pw, len);
+	new_password.finalize();
+	unsigned char *pw_digest = new_password.raw_digest();
+	std::memcpy(password,pw_digest,MAX_PASSWD);
+	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
+	Send("Your password has been updated.\n");
 }
 
 void	Player::UpgradeAirport()

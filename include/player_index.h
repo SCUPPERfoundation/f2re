@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -29,6 +29,7 @@ class	XMLLoginRec;
 
 // NOTE: The player records are 'owned' by NameIndex, which handles deletions
 typedef	std::map<const std::string,Player *,std::less<const std::string> >	NameIndex;
+typedef	std::multimap<const std::string,Player *,std::less<const std::string> >	EmailIndex;
 typedef	std::map<int,Player *,std::less<int> >	DescIndex;
 typedef	std::list<Player *>	Reaper;
 
@@ -42,6 +43,7 @@ private:
 	NameIndex	player_index;			// all players in the DB keyed by name
 	NameIndex	account_index;			// all players in the DB keyed by account name
 	NameIndex	current_index;			// players in game keyed by name
+	EmailIndex	email_index;			// all players in the DB keyed by email (may be more than one)
 	DescIndex	desc_index;				// players in game keyed by socket descriptor
 	Reaper		reaper;					// list of player who have died in the last one second
 
@@ -86,6 +88,7 @@ public:
 	void	Broadcast(Player *player,std::string mssg);
 	void	CallNightWatch(Player *player,Player *target);
 	void	Com(Player *player,std::string mssg);
+	void	DisplaySameEmail(Player *player,const std::string& email);
 	void	DisplayStaff(Player *player,Tokens *tokens,const std::string& line);
 	void	DisplayShipOwners(Player *player,const std::string& regname);
 	void	GrimReaper();
