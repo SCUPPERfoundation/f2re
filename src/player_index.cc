@@ -185,6 +185,25 @@ void	PlayerIndex::Com(Player *player,std::string mssg)
 	}
 }
 
+void	PlayerIndex::DisplayAccount(Player *player,const std::string& id)
+{
+	std::ostringstream	buffer;
+	Player	*target = FindAccount(id);
+	if(target == 0)
+	{
+		buffer << "I can't find any details for an account called '" << id << "'\n";
+		player->Send(buffer);
+		return;
+	}
+
+	buffer << "Account details for " << id << ":\n";
+	buffer << "  Name:       " << target->Name() << "\n";
+	buffer << "  Email:      " << target->Email() << "\n";
+	buffer << "  Last on:    " << target->LastOn() << "\n";
+	buffer << "  IP Address: " << target->IPAddress() << "\n";
+	player->Send(buffer);
+}
+
 void	PlayerIndex::DisplaySameEmail(Player *player,const std::string& email)
 {
 	EmailIndex::iterator	iter, lower, upper;

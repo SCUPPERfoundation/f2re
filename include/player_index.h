@@ -88,6 +88,7 @@ public:
 	void	Broadcast(Player *player,std::string mssg);
 	void	CallNightWatch(Player *player,Player *target);
 	void	Com(Player *player,std::string mssg);
+	void	DisplayAccount(Player *player,const std::string& id);
 	void	DisplaySameEmail(Player *player,const std::string& email);
 	void	DisplayStaff(Player *player,Tokens *tokens,const std::string& line);
 	void	DisplayShipOwners(Player *player,const std::string& regname);

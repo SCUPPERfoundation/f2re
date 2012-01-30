@@ -402,7 +402,6 @@ public:
 	void	AddBusiness(Business *the_business)			{ business = the_business;	}
 	void	Address(const std::string& addr)				{ ip_addr = addr;			}
 	void	AddWarehouse(const std::string&  where = "");
-	void	AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value);
 	void	AdminFlags(Player *player);
 	void	Akaturi();
 	void	AllowBuilds(Player	*initiator);
@@ -503,7 +502,6 @@ public:
 	void	Gag(bool status)									{ status ? flags.set(NO_COMMS) : flags.reset(NO_COMMS);	}
 	void	Gengineer2Magnate();
 	void	Get(FedObject	*object);
-	void	GetAccount(const std::string& whose_account);
 	void	GetEMail();
 	void	Give(Player *recipient,int amount);
 	void	Give(Player *recipient,std::string& obj_name);

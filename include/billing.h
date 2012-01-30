@@ -48,17 +48,13 @@ private:
 	std::string em_subject;
 	std::string em_filename;
 
-	void	DisplayAccount(const std::string& line);
 	void	ParseBillSelect(const std::string& line);
-	void	SelectPlayer(const std::string *name = 0);
 
 public:
 	Billing(Player *owner,const std::string& account,const std::string& pwd,int skt);
 	~Billing()		{	}
 
-	void	AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value);
 	void	DumpLedger();
-	void	GetAccount(const std::string& name);
 	void	ProcessReply(const std::string& reply);
 };
 

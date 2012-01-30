@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-9
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -212,16 +212,34 @@ void	Admin::Alter(Player *player,Tokens *tokens,std::string& line)
 
 void	Admin::Change(Player *player,Tokens *tokens)
 {
-	if((tokens->Get(2) == "email") || (tokens->Get(2) == "password"))
+	if(tokens->Size() < 4)
 	{
-		if(tokens->Size() < 5)
-			player->Send(Game::system->GetMessage("cmdparser","adminchange",2));
-		else
-			player->AdminChange(tokens->Get(2),tokens->Get(3),tokens->Get(4));
+		player->Send("Type 'ADMIN HELP' to get the correct format!\n");
+		return;
 	}
-	else
-		player->Send(Game::system->GetMessage("cmdparser","adminchange",1));
-	return;
+
+	std::ostringstream	buffer;
+	Player *target = Game::player_index->FindAccount(tokens->Get(3));
+	if(target == 0)
+	{
+		buffer << "I can't find an account with the name '" << tokens->Get(3) << "'\n";
+		player->Send(buffer);
+		return;
+	}
+
+	if(tokens->Get(2) == "email")
+	{
+		target->UpdateEMail(tokens->Get(4));
+		player->Send("Email address updated.\n");
+		return;
+	}
+
+	if(tokens->Get(2) == "password")
+	{
+		target->UpdatePassword(tokens->Get(4));
+		player->Send("Password updated.\n");
+		return;
+	}
 }
 
 void	Admin::DeleteVariable(Player *player,Tokens *tokens)
@@ -396,7 +414,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 
 	switch(cmd)
 	{
-		case	 0:	player->GetAccount(tokens->Get(2));	break;
+		case	 0:	Game::player_index->DisplayAccount(player,tokens->Get(2));	break;
 		case	 1:	Change(player,tokens);					break;
 		case	 2:
 		case	 3:	if(tokens->Size() < 4)

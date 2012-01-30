@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Fringe Space' version='28' editor='standard'>
+<fed2-map title='Fringe Space' version='29' editor='standard'>
 
    <location num='4' flags='s'>
       <name>Planetary Orbit - Planet Alpha</name>
@@ -127,7 +127,7 @@
    <location num='327' flags='sp'>
       <name>Solus Station</name>
       <desc>Your ship is floating silently around the large space station known to the locals simply as &quot;Solus.&quot; The station itself was designed by Grayson Corporation and built to support their activities in this area. The station itself is rather unremarkable. Painted a odd tanish color the station is really nothing more then two circles joined together in the middle. A light on your console indicates that docking control has confirmed your arrival and is awaiting your shuttle in the station&apos;s shuttle bay.</desc>
-      <exits n='263' ne='264' e='328' w='326' nw='262' no-exit='moves.nomove.1'/>
+      <exits n='263' ne='264' e='328' s='391' w='326' nw='262' no-exit='moves.nomove.1'/>
    </location>
 
    <location num='328' flags='s'>
@@ -142,5 +142,10 @@
       <exits n='265' w='328' nw='264' no-exit='moves.nomove.1'/>
    </location>
 
-</fed2-map>
+   <location num='391' flags='sp'>
+      <name>Space Station</name>
+      <desc>You are currently circling around a small space station in artificial geosynchronous orbit of Solus. The station is much smaller than Solus Station with the only visible entry point being a small docking bay on the aft side. The station is a manky shade of gray, with the only exceptions being the Grayson Corporation logo and &quot;Hydroponics Station # 1&quot; painted across the side.</desc>
+      <exits n='327' no-exit='moves.nomove.1'/>
+   </location>
 
+</fed2-map>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<fed2-map title='Hydroponics Station 1' version='7' editor='standard' from='327' to='Fringe.Fringe Space.391'>
+
+   <location num='327'>
+      <name>Docking Bay</name>
+      <desc>You are standing in a small cramped docking bay capable of handling at most three or four large freighters. The station is entirely hydroponics for feeding the population of Solus Station and is fully automated. To the east is a sigh that reads &quot;Exchange.&quot;</desc>
+      <exits e='328' no-exit='nomove.nomove.1'/>
+   </location>
+
+   <location num='328' flags='e'>
+      <name>Exchange</name>
+      <desc>A small trading console has been placed here to handle orders and deliveries to the station. Loading and unloading are handled remotely and the entire system is automated.</desc>
+      <exits w='327' no-exit='nomove.nomove.1'/>
+   </location>
+
+</fed2-map>

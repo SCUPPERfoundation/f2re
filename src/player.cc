@@ -390,16 +390,6 @@ void	Player::AddWarehouse(const std::string&  where)
 	warehouse_list.push_back(located);
 }
 
-void	Player::AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value)
-{
-	static const std::string	error("Can't find anyone with that account name!\n");
-	Player *target = Game::player_index->FindAccount(ib_name);
-	if(target == 0)
-		Send(error);
-	else
-		billing->AdminChange(which,ib_name,new_value);
-}
-
 void	Player::AdminFlags(Player *player)
 {
 	std::ostringstream	buffer;
@@ -2825,11 +2815,6 @@ void	Player::Get(FedObject	*object)
 	}
 }
 
-void	Player::GetAccount(const std::string& whose_account)
-{
-	billing->GetAccount(whose_account);
-}
-
 void	Player::GetEMail()
 {
 	std::ostringstream	buffer("");
@@ -3299,13 +3284,13 @@ bool	Player::IsPassword(const std::string& pwd)
 	for ( int iLoop = 0; iLoop < MAX_PASSWD; iLoop++ )
 	{
 //		std::fprintf(stderr,"password = %02X, test = %02X\n",(unsigned char)password[iLoop],(unsigned char)test_digest[iLoop]);
-		if ( (unsigned char)password[iLoop] != (unsigned char)test_digest[iLoop] )
+		if ((unsigned char)password[iLoop] != (unsigned char)test_digest[iLoop])
 		{
 			ret_val = false;
 			break;
 		}
 	}
-//	delete [] test_digest;
+	delete [] test_digest;	// md5 code transfers ownership to caller (ugh!)
 	delete [] pw;
 	return ret_val;
 }
@@ -6540,7 +6525,5 @@ void	Player::Xt(const std::string& msg)
 		Game::channel_manager->Send(this,channel,buffer.str());
 	}
 }
-
-
 
 

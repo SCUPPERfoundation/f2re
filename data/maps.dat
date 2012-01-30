@@ -648,6 +648,7 @@
 	<star name='Fringe' directory='fringe'>
 		<map name='planetalpha'/>
 		<map name='destinystation'/>
+		<map name='hydroponicsstation1'/>
 		<map name='solus'/>
 		<map name='space'/>
 	</star>

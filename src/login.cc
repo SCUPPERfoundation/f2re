@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -391,7 +391,7 @@ bool	Login::ProcessNewAcPwdConf(int sd,std::string& text,LoginRec *rec)
 //				std::fprintf(stderr,"rec->digest = %02X, pw_digest = %02X\n",(unsigned char)rec->digest[count],(unsigned char)pw_digest[count]);
 			}
 
-//			delete [] test_digest;
+			delete [] pw_digest;	// md5 code transfers ownership to calling code (ugh!)
 			delete [] pw;
 
 			write(sd,email_addr.c_str(),email_addr.length());
