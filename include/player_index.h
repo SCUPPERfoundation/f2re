@@ -18,7 +18,6 @@
 
 #include "ipc.h"
 
-
 class Db;
 class	Login;
 class	LoginRec;
@@ -59,6 +58,7 @@ private:
 
 	std::ofstream	graph_file;
 
+	void	DumpAccounts();
 	void	LoadIndices();
 	void	Terminate(Player *player,std::string& name);
 

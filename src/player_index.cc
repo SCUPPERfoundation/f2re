@@ -21,6 +21,7 @@
 #include <db_cxx.h>
 #include <sys/dir.h>
 
+#include "ascii_dump_load.h"
 #include "db_player.h"
 #include "db_object.h"
 #include "fed_object.h"
@@ -53,6 +54,7 @@ PlayerIndex::PlayerIndex(char *file_name)
 	std::ostringstream	buffer("");
 	buffer << "There are " << player_index.size() << " players in the database";
 	WriteLog(buffer);
+	DumpAccounts();		/*********** FIX IT: for test only **********/
 	if(Game::load_billing_info != "")
 	{
 		WriteLog(Game::load_billing_info);
@@ -292,6 +294,25 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 			buffer << "There aren't any other staff available!\n";
 		player->Send(buffer);
 	}
+}
+
+void	PlayerIndex::DumpAccounts()
+{
+	AsciiDumpLoad	*dump_load = new AsciiDumpLoad;
+	std::ofstream dump_file("./data/avatars.xml");
+	dump_file << "<?xml version=\"1.0\"?>\n\n";
+	dump_file << "<player_db>\n";
+	int total = 0;
+	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();++iter)
+	{
+		if(dump_load->DumpOneAccount(iter->second, dump_file))
+			++total;
+	}
+	dump_file << "</player_db>\n";
+	std::ostringstream buffer;
+	buffer << "A total total of " << total << " accounts were dumped to ~fed/data/avatars.xml.";
+	WriteLog(buffer);
+	delete dump_load;
 }
 
 // Find in all players - key = account name
@@ -1105,6 +1126,7 @@ bool	PlayerIndex::ProcessBillingLine(std::string& line)
 	}
 	return true;
 }
+
 
 
 

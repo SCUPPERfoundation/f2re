@@ -1638,7 +1638,6 @@ DBPlayer	*Player::CreateDBRec()
 		rec->counters[count] = counters[count];
 	rec->slithy_xform = 0;
 
-//	std::time(&(rec->last_on));
 	rec->last_on = last_on;
 	rec->last_payment = 0;
 	std::strcpy(rec->ip_address,ip_addr.c_str());
