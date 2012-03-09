@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+   <cabinet size='57'>
+      <item id='charm_spider' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='charm_globe11' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='rose_ab' star='Sol' map='Mars' size='1' visibility='100'></item>
+   </cabinet>

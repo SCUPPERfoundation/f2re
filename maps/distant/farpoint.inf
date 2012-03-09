@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<infrastructure owner='Zuroc' economy='Technical' treasury='305913864' yard-markup='0' workers='1250' base='1000' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='4'/>
+  <build type='Clinic' level='6' hospital='6' unused='0'/>
+  <build type='Atmos' level='6' unused='5'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Family' points='10'/>
+  <build type='Police' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Dole' points='3'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Oil' points='1'/>
+  <build type='Pension' points='6'/>
+  <build type='Hospital' points='3'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Defence' points='5'/>
+  <build type='Insurance' points='4'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Floating' points='1'/>
+  <build type='Airlane' points='4'/>
+  <build type='Urban' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Fibre' points='40'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='La Sapo Feo' id='5' planet='Farpoint' output='Libraries' status='run' cash='339075' top-up='100000' income='2242275' exp='1550950' profit='1260350'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='64' labour='80' wages='40' stored='75' disposal='exchange'/>
+      <input name='Polymers' quantity='45' />
+      <input name='Woods' quantity='30' />
+      <input name='Textiles' quantity='15' />
+    </factory>
+    <factory owner='La Sapo Feo' id='7' planet='Farpoint' output='Libraries' status='run' cash='233550' top-up='100000' income='2253525' exp='1547500' profit='1165175'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='52' labour='80' wages='40' stored='150' disposal='exchange'/>
+      <input name='Polymers' quantity='10' />
+      <input name='Woods' quantity='15' />
+      <input name='Textiles' quantity='20' />
+    </factory>
+    <factory owner='Giant' id='7' planet='Farpoint' output='Univators' status='run' cash='475525' top-up='100000' income='1994850' exp='386850' profit='3028875'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='125' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='0' />
+    </factory>
+    <factory owner='Giant' id='5' planet='Farpoint' output='Univators' status='run' cash='558475' top-up='100000' income='1995525' exp='384525' profit='3117825'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='92' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='0' />
+    </factory>
+</infrastructure>

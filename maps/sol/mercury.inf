@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bella' economy='Leisure' treasury='188740895' yard-markup='0' workers='0' base='1000' slithy-xform='0' registry='true'>
+  <build type='Heliograph' points='1'/>
+  <build type='Pension' points='2'/>
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightstar'>
+    </warehouse>
+
+</infrastructure>

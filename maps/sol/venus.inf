@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bella' economy='Industrial' treasury='373808267' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Clinic' level='2' hospital='0' unused='0'/>
+  <build type='Rail' points='2'/>
+  <build type='Housing' points='8'/>
+  <build type='RiotPolice' points='2'/>
+  <build type='School' level='3' agri='4' mining='4' unused='1'/>
+  <build type='Mining' points='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Pension' points='1'/>
+  <build type='Heliograph' points='3'/>
+    <warehouse owner='Boedicca'>
+      <cargo name='NanoFabrics' star='Sol' planet='Selena' cost='700' />
+      <cargo name='NanoFabrics' star='Sol' planet='Venus' cost='700' />
+      <cargo name='NanoFabrics' star='Sol' planet='Venus' cost='686' />
+      <cargo name='NanoFabrics' star='Sol' planet='Titan' cost='693' />
+      <cargo name='NanoFabrics' star='Sol' planet='Mercury' cost='678' />
+      <cargo name='NanoFabrics' star='Sol' planet='Magellan' cost='721' />
+      <cargo name='NanoFabrics' star='Sol' planet='Mercury' cost='678' />
+      <cargo name='NanoFabrics' star='Sol' planet='Venus' cost='693' />
+      <cargo name='NanoFabrics' star='Sol' planet='Castillo' cost='700' />
+      <cargo name='NanoFabrics' star='Sol' planet='Titan' cost='678' />
+      <cargo name='NanoFabrics' star='Sol' planet='Paradise' cost='678' />
+      <cargo name='NanoFabrics' star='Sol' planet='Venus' cost='678' />
+      <cargo name='Artifacts' star='Sol' planet='Castillo' cost='785' />
+      <cargo name='Artifacts' star='Sol' planet='Doris' cost='583' />
+      <cargo name='Artifacts' star='Sol' planet='Doris' cost='768' />
+      <cargo name='Artifacts' star='Sol' planet='Venus' cost='595' />
+      <cargo name='Artifacts' star='Sol' planet='Mercury' cost='589' />
+    </warehouse>
+
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Horancia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightsky'>
+    </warehouse>
+
+    <warehouse owner='Scrapheap'>
+    </warehouse>
+
+    <warehouse owner='Triphina'>
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1133' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1048' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1086' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1068' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1085' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1046' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1093' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1111' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1026' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1064' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1111' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1028' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1076' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1070' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1107' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1047' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1094' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1087' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1017' />
+      <cargo name='TQuarks' star='Slither' planet='Binary' cost='1024' />
+    </warehouse>
+
+</infrastructure>

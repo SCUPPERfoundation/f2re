@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<infrastructure owner='Djentsch' economy='Biological' treasury='989817031' yard-markup='-10' workers='1350' base='1000' registry='false'>
+  <build type='Antigrav' points='4'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='5'/>
+  <build type='Clinic' level='8' hospital='30' unused='6'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4' unused='5'/>
+  <build type='Research' points='1'/>
+  <build type='Port' points='7'/>
+  <build type='Hospital' points='15'/>
+  <build type='Atmos' level='8' unused='5'/>
+  <build type='Pollution' level='0' unused='17'/>
+  <build type='Police' points='8'/>
+  <build type='Floating' points='4'/>
+  <build type='Tech' points='1'/>
+  <build type='Airlane' points='5'/>
+  <build type='Urban' points='6'/>
+  <build type='Insurance' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Biolab' points='1'/>
+  <build type='Terraform' points='1'/>
+  <build type='Genetic' points='15'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Tachyon' points='19'/>
+  <build type='Biodiversity' points='6'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

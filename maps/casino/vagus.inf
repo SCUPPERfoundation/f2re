@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Implantguy' economy='Industrial' treasury='-739990018' yard-markup='0' workers='700' base='1000' registry='false'>
+  <build type='Canal' points='1'/>
+  <build type='School' level='3' unused='8'/>
+  <build type='Clinic' level='1' hospital='0' unused='0'/>
+  <build type='Atmos' level='1' unused='0'/>
+  <build type='Pollution' level='4' unused='0'/>
+  <build type='Police' points='2'/>
+  <build type='Coal' points='3'/>
+  <build type='Port' points='3'/>
+  <build type='Satellite' points='3'/>
+</infrastructure>

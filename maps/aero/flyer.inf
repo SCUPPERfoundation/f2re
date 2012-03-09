@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<infrastructure owner='Marred' economy='Leisure' treasury='958547669' yard-markup='-10' workers='1300' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='6' mining='4' tech='4' research='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='10' hospital='10' unused='0'/>
+  <build type='Police' points='10'/>
+  <build type='Atmos' level='10' unused='5'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Dole' points='3'/>
+  <build type='Pension' points='10'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Oil' points='5'/>
+  <build type='Radio' points='20'/>
+  <build type='Port' points='8'/>
+  <build type='Hospital' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Insurance' points='10'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Floating' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Louey'>
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='662' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='668' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='648' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='668' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='662' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='656' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='675' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='656' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='668' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='648' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='642' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='648' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='635' />
+      <cargo name='NanoFabrics' star='Aero' planet='Flyer' cost='648' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='568' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='580' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='568' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='580' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='604' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='574' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='574' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

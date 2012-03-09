@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<infrastructure owner='Sparhawk' economy='Agricultural' treasury='76725' yard-markup='-10' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Heliograph' points='2'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

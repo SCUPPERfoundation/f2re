@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<infrastructure owner='Rip' economy='Agricultural' treasury='181346371' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

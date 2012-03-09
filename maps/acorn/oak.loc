@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Oak' version='2' editor='standard' from='325' to='Acorn.Acorn Space.325'>
+<fed2-map title='Oak' version='2' editor='online' from='325' to='Acorn.Acorn Space.325'>
 
    <location num='0'>
       <name>Storeroom</name>
@@ -110,7 +110,7 @@
 
    <location num='978'>
       <name>GravTube</name>
-      <desc>   Words can not describe what you see, so you decide to keep moving.  You can visit the hospital to the south or go back down the GravTube.</desc>
+      <desc>Words can not describe what you see, but you realize that you can&apos;t go anywhere but down.</desc>
       <exits down='202'/>
    </location>
 

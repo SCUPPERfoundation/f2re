@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<infrastructure owner='Nolepaul' economy='Agricultural' treasury='224767116' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Heliograph' points='2'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

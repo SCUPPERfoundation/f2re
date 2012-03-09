@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<infrastructure owner='Znob' economy='Technical' treasury='43213086' yard-markup='-10' workers='1240' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='2'/>
+  <build type='Canal' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Clinic' level='6' hospital='4' unused='0'/>
+  <build type='Police' points='8'/>
+  <build type='Family' points='10'/>
+  <build type='Atmos' level='6' unused='3'/>
+  <build type='Pollution' level='9' unused='1'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Dole' points='2'/>
+  <build type='Radio' points='8'/>
+  <build type='Pension' points='10'/>
+  <build type='Hospital' points='2'/>
+  <build type='Oil' points='1'/>
+  <build type='Satellite' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fusion' points='3'/>
+  <build type='Fibre' points='9'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <factory owner='Weinersnitchel Twitter Pics' id='3' planet='Bordeaux' output='Gold' status='run' cash='458225' top-up='100000' income='1744500' exp='580675' profit='3041550'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='123' labour='200' wages='40' stored='150' disposal='exchange'/>
+      <input name='Explosives' quantity='0' />
+    </factory>
+    <factory owner='Weinersnitchel Twitter Pics' id='7' planet='Bordeaux' output='Gold' status='run' cash='527475' top-up='100000' income='1842375' exp='643725' profit='3072225'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='81' labour='200' wages='40' stored='75' disposal='exchange'/>
+      <input name='Explosives' quantity='60' />
+    </factory>
+</infrastructure>

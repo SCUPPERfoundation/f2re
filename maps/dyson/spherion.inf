@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Denikar' economy='Agricultural' treasury='277982018' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

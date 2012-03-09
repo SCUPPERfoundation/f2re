@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<infrastructure owner='Sephorin' economy='Resource' treasury='993882773' yard-markup='0' workers='1150' base='1000' slithy-xform='0' registry='false'>
+  <build type='Atmos' level='2' unused='4'/>
+  <build type='Pollution' level='2' unused='7'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='School' level='2' mining='4'/>
+  <build type='Police' points='4'/>
+  <build type='Clinic' level='2' hospital='10' unused='0'/>
+  <build type='Housing' points='3'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Hospital' points='5'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Demon Dogs Ltd.' id='9' planet='Alice' output='Artifacts' status='stop' cash='100000' top-up='100000' income='3486975' exp='888480' profit='3082480'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='81' labour='352' wages='0' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Inferno Heating Oil Co.' id='11' planet='Alice' output='Univators' status='stop' cash='100000' top-up='100000' income='3433200' exp='652500' profit='2851630'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='102' labour='90' wages='0' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='20' />
+    </factory>
+    <factory owner='Inferno Heating Oil Co.' id='12' planet='Alice' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='4421700' exp='1957450' profit='2608970'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='101' labour='20' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='5' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Inferno Heating Oil Co.' id='15' planet='Alice' output='Univators' status='stop' cash='100000' top-up='100000' income='3527325' exp='704260' profit='2844505'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='13' labour='90' wages='0' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='35' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<infrastructure owner='Hermes' economy='Industrial' treasury='115821492' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='6'/>
+  <build type='Police' points='11'/>
+  <build type='Clinic' level='4' hospital='0' unused='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='4' unused='5'/>
+  <build type='Pollution' level='5' unused='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Dole' points='2'/>
+  <build type='Biodiversity' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='4'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='2'/>
+  <build type='RiotPolice' points='8'/>
+  <build type='Pension' points='6'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

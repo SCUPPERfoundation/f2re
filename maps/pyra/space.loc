@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Pyra Space' version='12' editor='standard'>
+<fed2-map title='Pyra Space' version='12' editor='online'>
 
    <location num='1952' flags='sp'>
       <name>Saturn V orbit</name>
@@ -9,7 +9,7 @@
 
    <location num='2015' flags='slp'>
       <name>Pyra system link</name>
-      <desc>The planet BX1 is southeast, Vostok is southwest. You can also go northeast, east, and south.</desc>
+      <desc>The planet BX1 is southeast, Vostok is southwest, and Saturn V is northeast. You can also go east, and south.</desc>
       <exits ne='1952' e='2016' se='2080' s='2079' sw='2078' no-exit='moves.noexit.1'/>
    </location>
 
@@ -38,4 +38,3 @@
    </location>
 
 </fed2-map>
-

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Parkland Station' version='10' editor='standard' from='523' to='Parklandia.Parklandia Space.716'>
+<fed2-map title='Parkland Station' version='10' editor='online' from='523' to='Parklandia.Parklandia Space.716'>
 
    <location num='64'>
       <name>storeroom</name>
@@ -8,7 +8,7 @@
 
    <location num='523'>
       <name>Parkland Station Docking Ring</name>
-      <desc>A rather sterile room with airlocks all around.  The corridor heads towards the SOUTH towards the central core of the station.  The air seems fresh as the ducts rattle, pumping out oxygen with a whooshing sound which echoes off the metal floors, ceiling and walls.</desc>
+      <desc>A rather sterile room with airlocks all around.  The corridor heads SOUTH towards the central core of the station.  The air seems fresh as the ducts rattle, pumping out oxygen with a whooshing sound which echoes off the metal floor, ceiling and walls.</desc>
       <exits s='587'/>
    </location>
 
@@ -20,7 +20,7 @@
 
    <location num='586' flags='hi'>
       <name>Sick Bay</name>
-      <desc>A row of biobeds to the right are the only furniture in the room.  Above each bed is a medical droid with several probes and tools attached to it with long flexible arms.  The droids chirp as they are activated by your presense in the room.  Lay down and let them heal your wounds or cure your ills, or if you have recently died and have awoken on one of the tables, insurance can be purchased here as well.</desc>
+      <desc>A row of biobeds to the right are the only furniture in the room.  Above each bed is a medical droid with several probes and tools attached to it with long flexible arms.  The droids chirp as they are activated by your presence in the room.  Lay down and let them heal your wounds or cure your ills, or if you have recently died and have awoken on one of the tables, purchase insurance.</desc>
       <exits e='587'/>
    </location>
 
@@ -38,7 +38,7 @@
 
    <location num='651' flags='b'>
       <name>Parkland Station Lounge</name>
-      <desc>Consoles line the walls for all food and drink orders.  There are several rows of metal tables and benches for comsumption of item purchased.  At the entrance there are several bins set deep into the wall to dispose trash in.</desc>
+      <desc>Consoles line the walls for all food and drink orders.  On the far side is a locked door.  Above the door a sign reads &quot;BATTERY CHARGING STATION- All Voltages.&quot;  There are several rows of metal tables and benches for consumption of items purchased.  At the entrance there are several bins set deep into the wall to dispose trash in.</desc>
       <exits n='587'/>
    </location>
 

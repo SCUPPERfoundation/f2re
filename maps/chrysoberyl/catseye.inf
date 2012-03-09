@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<infrastructure owner='Catspaws' economy='Leisure' treasury='225485228' yard-markup='-10' workers='1510' base='1000' slithy-xform='0' registry='true'>
+  <build type='School' level='6' research='4' studio='4' unused='26'/>
+  <build type='Atmos' level='10' unused='4'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Clinic' level='10' hospital='30' unused='10'/>
+  <build type='Police' points='12'/>
+  <build type='Hospital' points='15'/>
+  <build type='Family' points='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Satellite' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='10'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Phone' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Research' points='1'/>
+  <build type='Defence' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Insurance' points='10'/>
+  <build type='Floating' points='5'/>
+  <build type='Terraform' points='1'/>
+  <build type='Tquark' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Solar' points='5'/>
+  <build type='Genetic' points='15'/>
+  <build type='Informer' points='1'/>
+  <build type='Leisure' points='8'/>
+    <warehouse owner='Exton'>
+      <cargo name='Libraries' star='Logic' planet='Genesis' cost='513' />
+      <cargo name='Libraries' star='Logic' planet='Genesis' cost='518' />
+      <cargo name='Woods' star='Logic' planet='Genesis' cost='546' />
+      <cargo name='TQuarks' star='Chrysoberyl' planet='Catseye' cost='637' />
+      <cargo name='NanoFabrics' star='Chrysoberyl' planet='Catseye' cost='635' />
+    </warehouse>
+
+    <warehouse owner='Founderodo'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Test Inc' id='1' planet='Catseye' output='Gold' status='run' cash='100000' top-up='100000' income='3833925' exp='1278750' profit='2531625'>
+      <building max-eff='150' max-store='150' maint='5' eff='145'/>
+      <production interval-max='90' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Explosives' quantity='30' />
+    </factory>
+</infrastructure>

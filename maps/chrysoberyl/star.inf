@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<star name='Chrysoberyl' cartel='Chrysoberyl' build='no'>
+
+   <black-list>
+      <exile name='Puppies'/>
+      <exile name='Strudel'/>
+      <exile name='Squeeky'/>
+   </black-list>
+
+</star>

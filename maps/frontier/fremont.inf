@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<infrastructure owner='Boone' economy='Biological' treasury='446227017' yard-markup='-10' workers='1350' base='1000' registry='false'>
+  <build type='Antigrav' points='4'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='5'/>
+  <build type='Clinic' level='8' hospital='2' unused='4'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4' unused='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Hospital' points='1'/>
+  <build type='Atmos' level='3' unused='0'/>
+  <build type='Pollution' level='0' unused='7'/>
+  <build type='Police' points='3'/>
+  <build type='Airlane' points='4'/>
+  <build type='Urban' points='6'/>
+  <build type='Insurance' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Floating' points='2'/>
+  <build type='Biolab' points='1'/>
+  <build type='Terraform' points='20'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='580' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='613' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='599' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='620' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='667' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='644' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='658' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='651' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='694' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='725' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='697' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='719' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='749' />
+      <cargo name='BioComponents' star='Frontier' planet='Fremont' cost='721' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='645' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='613' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='639' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='613' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='620' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='607' />
+    </warehouse>
+
+</infrastructure>

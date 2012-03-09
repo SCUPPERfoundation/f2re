@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<infrastructure owner='Gorelab' economy='Agricultural' treasury='-105699304' yard-markup='10' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='2'/>
+</infrastructure>

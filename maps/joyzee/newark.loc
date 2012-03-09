@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='New Ark' version='1' editor='standard' from='460' to='Joyzee.Joyzee Space.460'>
+<fed2-map title='New Ark' version='1' editor='online' from='460' to='Joyzee.Joyzee Space.460'>
 
    <location num='0'>
       <name>A bin</name>
@@ -9,13 +9,13 @@
 
    <location num='332' flags='b'>
       <name>Futures Lounge</name>
-      <desc>A pleasant alcove is set off of the exchange with comfortable easy chairs and large terminals for traders to manage their futures investments.  A large monitor in the center wall is labeled &quot;Futures-Pick-of-the-Day&quot; for displaying those futures with particularly good values. (The screen is presently dark.)</desc>
+      <desc>A pleasant alcove is set off of the exchange with comfortable easy chairs and large terminals for traders to manage their futures investments.  A handwritten note is taped to a coffee table that reads &quot;ALL COMMODITY PRICE SPREADS ARE SET TO 40 PERCENT!&quot;. A large monitor in the center wall is labeled &quot;Futures-Pick-of-the-Day&quot; for displaying those futures with particularly good values.                                                                  (The screen display is presently blank.)</desc>
       <exits s='396' no-exit='moves.noexit.2'/>
    </location>
 
    <location num='395'>
       <name>Commodities Sold (Commodity Net Production)</name>
-      <desc>Woods(79)|Meats(61)|Spices(61)|Cereals(51)|Generators(40)|Alloys(37)|Nickel(37)|Propellants(33)|Monopoles(31)| Hides(29)|Livestock(21)|LanzariK(17)|Explosives(15)|Polymers(15)|Droids(14)|LubOils(14)|Semiconductors(13)| Crystals(9)|GAsChips(8)|Gold(8)|Munitions(8)|Nanos(8)|Vidicasters(8)|Mechparts(5)|Weapons(5)|Controllers(2)| Nitros(2)|TQuarks(2)|Lasers(0)|</desc>
+      <desc>Pending new exchange...</desc>
       <exits e='396' no-exit='moves.noexit.2'/>
    </location>
 
@@ -28,7 +28,7 @@
 
    <location num='397' flags='b'>
       <name>Commodities Purchased (Commodity Net Deficit)</name>
-      <desc>ToxicMunchers(-1)|Clinics(-2)|Firewalls(-4)|Tools(-4)|Powerpacks(-5)|Probes(-5)|AntiMatter(-9)|Artifacts(-9)| Laboratories(-10)|Sensamps(-10)|Synths(-10)|Clays(-11)|Katydidics(-11)|Hypnotapes(-12)|Furs(-15)|Electros(-16)| Fruit(-16)|MicroScalpels(-16)|Musiks(-16)|Univators(-16)|Holos(-17)|Pharmaceutical(-17)|Sensors(-17)|Tracers(-17)| BioComponents(-18)|Games(-18)|NanoFabrics(-18)|Simulations(-19)|Radioactives(-20)|Studios(-20)|RNA(-21)| Xmetals(-21)|Petrochemicals(-23)|Proteins(-24)|Textiles(-24)|BioChips(-25)|Soya(-26)|Libraries(-28)|</desc>
+      <desc>Pending new exchange...</desc>
       <exits w='396' no-exit='moves.noexit.2'/>
    </location>
 

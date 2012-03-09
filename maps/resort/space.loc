@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<fed2-map title='Resort Space' version='1.00' editor='standard'>
+<fed2-map title='Resort Space' version='1' editor='online'>
 
    <location num='460' flags='slp'>
-      <name>Welcome to the Resort system</name>
+      <name>Welcome to the Resort system, a protectorate of the Goughian Empire</name>
       <desc>   You are in orbit around the planet Majestic, a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
       <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
       <exits no-exit='moves.noexit.1'/>

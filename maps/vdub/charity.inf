@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<infrastructure owner='Vdubu' economy='Agricultural' treasury='-1121534260' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='632' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='639' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='645' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='607' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='632' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='632' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='639' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='613' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='613' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='645' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='620' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='632' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='632' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='613' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='613' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='632' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='627' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='620' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='620' />
+      <cargo name='BioComponents' star='Esperanza' planet='Boston' cost='645' />
+    </warehouse>
+
+    <factory owner='Warfrat Inc.' id='11' planet='Charity' output='Artifacts' status='run' cash='833300' top-up='100000' income='3708675' exp='816280' profit='4886665'>
+      <building max-eff='110' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='37' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='4' planet='Charity' output='Artifacts' status='run' cash='832805' top-up='100000' income='929925' exp='197120' profit='4755445'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='79' labour='352' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

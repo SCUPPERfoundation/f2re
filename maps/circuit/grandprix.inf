@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<infrastructure owner='Captainfuzzy' economy='Agricultural' treasury='94546792' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Base' points='2'/>
+  <build type='Heliograph' points='2'/>
+  <build type='Atmos' level='0' unused='1'/>
+  <build type='Pollution' level='0' unused='1'/>
+  <build type='School' unused='1'/>
+    <warehouse owner='Founderodo'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

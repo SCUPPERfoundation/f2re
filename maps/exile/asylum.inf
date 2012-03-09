@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<infrastructure owner='Brookerf' economy='Leisure' treasury='113075977' yard-markup='0' workers='1908' base='700' casualties='52' registry='false'>
+  <build type='Atmos' level='10' unused='9'/>
+  <build type='Pollution' level='9' unused='10'/>
+  <build type='Clinic' level='10' hospital='30' unused='0'/>
+  <build type='Hospital' points='15'/>
+  <build type='Police' points='11'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Family' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Dole' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Radio' points='10'/>
+  <build type='Port' points='5'/>
+  <build type='Oil' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Tquark' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Terraform' points='20'/>
+  <build type='Genetic' points='15'/>
+  <build type='Leisure' points='8'/>
+  <build type='Airport' points='10' level='trans'/>
+  <build type='Longevity' points='16'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

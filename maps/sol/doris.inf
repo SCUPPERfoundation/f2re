@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<infrastructure owner='Hazed' economy='Biological' treasury='3173715' yard-markup='0' workers='200' base='1000' registry='false'>
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Florancia'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Horancia'>
+    </warehouse>
+
+    <warehouse owner='Ionia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Mur'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightsky'>
+    </warehouse>
+
+    <warehouse owner='Nightstar'>
+    </warehouse>
+
+    <warehouse owner='Thursday'>
+      <cargo name='Furs' star='Sol' planet='Silk' cost='540' />
+      <cargo name='Furs' star='Sol' planet='Silk' cost='572' />
+      <cargo name='Furs' star='Sol' planet='Selena' cost='524' />
+      <cargo name='Furs' star='Sol' planet='Selena' cost='583' />
+      <cargo name='Furs' star='Sol' planet='Titan' cost='551' />
+      <cargo name='Furs' star='Sol' planet='Castillo' cost='551' />
+      <cargo name='Furs' star='Sol' planet='Castillo' cost='577' />
+      <cargo name='Furs' star='Sol' planet='Castillo' cost='594' />
+      <cargo name='Furs' star='Sol' planet='Paradise' cost='519' />
+      <cargo name='Furs' star='Sol' planet='Paradise' cost='559' />
+      <cargo name='NanoFabrics' star='Sol' planet='Castillo' cost='707' />
+      <cargo name='NanoFabrics' star='Sol' planet='Magellan' cost='693' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='700' />
+      <cargo name='NanoFabrics' star='Sol' planet='Mercury' cost='721' />
+      <cargo name='NanoFabrics' star='Sol' planet='Paradise' cost='693' />
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='707' />
+      <cargo name='NanoFabrics' star='Sol' planet='Titan' cost='693' />
+      <cargo name='NanoFabrics' star='Sol' planet='Selena' cost='678' />
+      <cargo name='NanoFabrics' star='Sol' planet='Castillo' cost='713' />
+      <cargo name='NanoFabrics' star='Sol' planet='Venus' cost='713' />
+    </warehouse>
+
+</infrastructure>

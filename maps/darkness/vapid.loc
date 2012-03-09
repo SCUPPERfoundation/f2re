@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Vapid' version='2' editor='standard' from='264' to='Darkness.Darkness Space.200'>
+<fed2-map title='Vapid' version='2' editor='online' from='264' to='Darkness.Darkness Space.200'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,8 +8,8 @@
    </location>
 
    <location num='72' flags='b'>
-      <name>Empty Office</name>
-      <desc>This is one of the offices in the Vapid office complex. It is currently empty and there is nothing to be seen here. Once a tenant arrives furniture and ammenities will be installed.</desc>
+      <name>Trav&apos;s Office</name>
+      <desc>You marvel at the vast array of old earth pinball machines and video games lining the walls.  The center of the room has a very comfortable looking recliner which is part of a virtual reality system where all the company&apos;s factories can be monitored and manipulated.</desc>
       <exits s='136' no-exit='moves.noexit.1'/>
    </location>
 
@@ -33,25 +33,25 @@
 
    <location num='263' flags='yrb'>
       <name>Shipyard and Ship Repair</name>
-      <desc>As you float to the west you find yourself in the shipyard. Just like the view from space and the view from the LP everything here is completely colorless and no shapes can be seen because everything blends into everything else. There is a small sign that state &quot;Buy or Repair Your Ship Here&quot; and if it wasnt for that you would not even know that thats what this location was for.</desc>
+      <desc>As you float to the west you find yourself in the shipyard. Just like the view from space and the view from the LP everything here is completely colorless and no shapes can be seen because everything blends into everything else. There is a small sign that states &quot;Buy or Repair Your Ship Here&quot; and if it wasnt for that you would not even know that that is what this location is for.</desc>
       <exits e='264' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='264' flags='b'>
       <name>Launch Pad</name>
-      <desc>As you exit your ship you realize you are floating. It is not due to any sort of low gravity or anti-gravity it jsut seems this world is a sort of limbo. You look around but everything here is just as colorless as the world was from the space above. You cannot make out any discernible buildings or shapes save for a signpost on the edge of the landing pad. As you look closer at the sign you can make out a set of directions. &quot; Exchange=EAST---Bar and Lounge=SOUTH-----Shipyard=WEST&quot;.</desc>
+      <desc>As you exit your ship you realize you are floating. It is not due to any sort of low gravity or anti-gravity effect it just seems this world is a sort of limbo. You look around but everything here is just as colorless as the world was from space. You cannot make out any discernible buildings or shapes save for a signpost on the edge of the landing pad. As you look closer at the sign you can make out a set of directions. &quot; Exchange=EAST---Bar and Lounge=SOUTH-----Shipyard=WEST------Office Complex=UP&quot;.</desc>
       <exits e='265' s='328' w='263' up='136' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='265' flags='eb'>
       <name>Vapid Exchange</name>
-      <desc>As you float to the east you find yourself in the exchange. Again as with the rest the planet everthing is colorless and no specific shape can be made out. You are sure there must be some diaplay screens in here but you can amke out any. Luckily there is a loudspeaker system set up that announces the current prices as they cycle as well as any prices that are requested at any given moment. If it wasnt for that loudspeaker you are not sure you would be able to do business in this exchange as there doesnt seem to be any other way of finding out the current prices.</desc>
+      <desc>As you float to the east you find yourself in the exchange. Again as with the rest the planet everthing is colorless and no specific shape can be made out. You are sure there must be some display screens in here but you cannot make out any. Luckily there is a loudspeaker system set up that announces the current prices as they cycle as well as any prices that are requested at any given moment. If it wasnt for that loudspeaker you are not sure you would be able to do business in this exchange as there does not seem to be any other way of finding out the current prices.</desc>
       <exits w='264' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='328' flags='b'>
       <name>Bar and Lounge</name>
-      <desc>As you float to the south you arrive in the Vapid Bar and Lounge. There are no discernible shapes here either however there are quite a few colors. You cannot make out the bottles but can make out quitre a bit of liquor to one side of the room. It looks as if the liquor is floating in thin air because if the lack of color of anything else. You see the occasional floating blob of liquid come down be poured in some sort of unseen container and set down on an unseen bar. You have no idea how anyone can operate a bar properly without spilling half the liquor and breaking most of the bottles because of the lacking ability to see anything clearly but whoever it is that is working behind the bar seems to know what they are doing.</desc>
+      <desc>As you float to the south you arrive in the Vapid Bar and Lounge. There are no discernible shapes here either however there are quite a few colors. You cannot make out the bottles but can make out quite a bit of liquor to one side of the room. It looks as if the liquor is floating in thin air because of the lack of color of anything else. You see the occasional floating blob of liquid come down be poured in some sort of unseen container and set down on an unseen bar. You have no idea how anyone can operate a bar properly without spilling half the liquor and breaking most of the bottles because of the lacking ability to see anything clearly but whoever it is that is working behind the bar seems to know what they are doing.</desc>
       <exits n='264' no-exit='moves.noexit.1'/>
    </location>
 

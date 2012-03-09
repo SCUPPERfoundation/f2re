@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Fiesta' version='6' editor='standard' from='396' to='Holiday.Holiday Space.460'>
+<fed2-map title='Fiesta' version='6' editor='online' from='396' to='Holiday.Holiday Space.460'>
 
    <location num='332' flags='syrhib'>
       <name>Sunburn clinic</name>
@@ -71,8 +71,7 @@
 
    <location num='525' flags='syrb'>
       <name>Shore</name>
-      <desc>   Massive waves break on the shore, their white tops collapsing into frothy bubbles that race up the beach towards you then drain back again. The sand under your feet is wet and cool. Every tenth wave is stronger than the rest, and the water surges far enough to splash against your legs.  The cold rain continues to pour down over you making you uncomfortable.</desc>
-      <desc>   You can go south into the water for a swim, or north back to the beach.</desc>
+      <desc>Massive waves driven by the strong wind break on the shore, their white tops collapsing into frothy bubbles that race up the beach towards you then drain back again. The rain seems to be falling even harder here than anywhere else.  The sand under your feet is wet and cool. Every tenth wave is stronger than the rest, and the water surges hard enough to knock you over.  The cold rain continues to pour down over you making you uncomfortable.</desc>
       <exits n='461' s='589' in='589' no-exit='moves.noexit.1'/>
    </location>
 
@@ -98,10 +97,8 @@
 
    <location num='589' flags='syrb'>
       <name>In the water</name>
-      <desc>   You can&apos;t really swim here, nor can you stand up in the water. The waves are big enough that they keep knocking you off balance and pulling you around. It&apos;s the most exhilarating feeling, and you feel the cares and stresses of your working life drain away as the water washes over and around you.</desc>
-      <desc>   Now you can see why this planet is considered the ultimate in holiday destinations.</desc>
+      <desc>The waves are even stronger here and are knocking the wind out of you each time they hit.  You feel yourself being drained of energy as you fight to stay above water and fight to even breath through the pounding rain.  Maybe you should head back to shore?</desc>
       <exits n='525' out='525' no-exit='moves.noexit.1'/>
    </location>
 
 </fed2-map>
-

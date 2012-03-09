@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<infrastructure owner='Squeeky' economy='Agricultural' treasury='49697048' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Heliograph' points='2'/>
+  <build type='Canal' points='5'/>
+  <build type='Clinic' level='0' hospital='0' unused='2'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

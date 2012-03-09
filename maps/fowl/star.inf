@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<star name='Fowl' cartel='Russia'>
+
+   <black-list>
+      <exile name='Holychicken'/>
+      <exile name='Schoolwork'/>
+      <exile name='Chickens'/>
+      <exile name='Novelediting'/>
+      <exile name='Chores'/>
+   </black-list>
+
+</star>

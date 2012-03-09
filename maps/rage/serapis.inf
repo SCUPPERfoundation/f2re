@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Obisean' economy='Agricultural' treasury='110275828' yard-markup='0' workers='1150' base='1000' registry='false'>
+  <build type='School' agri='4' unused='2'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='0' hospital='10' unused='2'/>
+  <build type='Hospital' points='5'/>
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<infrastructure owner='Kalandra' economy='Leisure' treasury='293039416' yard-markup='0' workers='1580' base='1000' casualties='120' registry='false'>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='10' hospital='30' unused='0'/>
+  <build type='Hospital' points='15'/>
+  <build type='Atmos' level='10' unused='1'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Police' points='11'/>
+  <build type='School' level='6' research='4' studio='4' unused='1'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Dole' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Insulation' points='10'/>
+  <build type='Radio' points='20'/>
+  <build type='Port' points='13'/>
+  <build type='Oil' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Floating' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Fibre' points='40'/>
+  <build type='Genetic' points='15'/>
+  <build type='Terraform' points='20'/>
+  <build type='Tquark' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Solar' points='11'/>
+  <build type='Satellite' points='5'/>
+  <build type='Defence' points='5'/>
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='LubOils' star='Kaos' planet='Pantheon' cost='570' />
+      <cargo name='LubOils' star='Kaos' planet='Pantheon' cost='559' />
+      <cargo name='RNA' star='Kaos' planet='Pantheon' cost='356' />
+      <cargo name='Explosives' star='Zylon' planet='Zylon Prime' cost='417' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='740' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='704' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='697' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='726' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='726' />
+      <cargo name='Mechparts' star='Vdub' planet='Charity' cost='320' />
+      <cargo name='Generators' star='Vdub' planet='Charity' cost='510' />
+      <cargo name='LanzariK' star='Vdub' planet='Charity' cost='551' />
+      <cargo name='LubOils' star='Java' planet='Sludge' cost='427' />
+      <cargo name='Pharmaceuticals' star='Vdub' planet='Charity' cost='481' />
+      <cargo name='Semiconductors' star='Food' planet='Drunk' cost='294' />
+      <cargo name='Mechparts' star='Vdub' planet='Charity' cost='333' />
+      <cargo name='LubOils' star='Food' planet='Restaurant Row' cost='488' />
+      <cargo name='BioChips' star='Java' planet='Sludge' cost='501' />
+      <cargo name='Tracers' star='Acme' planet='Flower' cost='472' />
+      <cargo name='Spices' star='Food' planet='Drunk' cost='570' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

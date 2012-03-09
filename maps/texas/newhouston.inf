@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<infrastructure owner='Tazer' economy='Agricultural' treasury='353253220' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

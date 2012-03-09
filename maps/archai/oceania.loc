@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Oceania' version='29' editor='standard' from='587' to='Archai.Archai Space.458'>
+<fed2-map title='Oceania' version='29' editor='online' from='587' to='Archai.Archai Space.458'>
 
    <location num='226'>
       <name>Inside the Taxi-whale</name>
@@ -57,9 +57,8 @@
    </location>
 
    <location num='1004'>
-      <name>Vacant Office</name>
-      <desc>   This office is totally empty and unadorned. A notice on the wall reads: &quot;&quot;This office suite is available for lease. Environmental controls assure comfort for nearly any species. Enquire with Dingbat for availability.&quot;</desc>
-      <desc>   A door to the north leads to a similarly empty room. To the south is the lobby.</desc>
+      <name>OFFICE OF CARWHEEL ENTERPRISES: &quot;WHERE RUBBER MEETS THE ROAD&quot;</name>
+      <desc>You are amazed at the clutter that greets you. A fish tank burbles against the far wall. The denisons (Mollys) of all different colors shapes and sizes--swim to the front of the tank, hoping you&apos;ve brought crumbs of some sort. An old, well-used Gibson guitar leans against the desk. Piles of papers and stacks of books are everywhere. A big, white American Eskimo, his tag reads &quot;Lorenzo,&quot; bounces up to greet you, leaving your legs covered in white fur. You don&apos;t mind. He&apos;s such a friendly old dog. Hanging behind the desk is a painting titled, &quot;The Open Gate.&quot; You find yourself longing to enter that world, walk through the gate to see Who awaits you. Hard to believe that this glorious mess is the home of mega-billionaire and fiduciary giant CarWheel himself. You can&apos;t wait to see what words of economic wisdom (and maybe some groats) he will lay upon you. The exit to the lobby is south.</desc>
       <exits n='940' s='1068' no-exit='moves.noexit.5'/>
    </location>
 

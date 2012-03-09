@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dunavant' economy='Resource' treasury='992583810' yard-markup='0' workers='950' base='1000' slithy-xform='0' registry='false'>
+  <build type='Atmos' level='2' unused='10'/>
+  <build type='Pollution' level='2' unused='12'/>
+  <build type='School' level='2' agri='4' mining='4' unused='20'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='2' hospital='10' unused='18'/>
+  <build type='Police' points='10'/>
+  <build type='Housing' points='3'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Hospital' points='5'/>
+  <build type='Dole' points='5'/>
+  <build type='Family' points='10'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

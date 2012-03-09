@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<infrastructure owner='Boffin' economy='Agricultural' treasury='476120052' yard-markup='0' workers='1050' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4' unused='10'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Police' points='2'/>
+  <build type='Clinic' level='0' hospital='0' unused='2'/>
+  <build type='Atmos' level='0' unused='6'/>
+  <build type='Pollution' level='0' unused='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Family' points='5'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Darkoenia Enterprises Inc.' id='14' planet='School' output='Firewalls' status='run' cash='100000' top-up='100000' income='627750' exp='90740' profit='3898575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='40' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='8' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4452225' exp='1242200' profit='3003275'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Crystals' quantity='45' />
+      <input name='Gold' quantity='45' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='9' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4430775' exp='1243775' profit='2987525'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Crystals' quantity='45' />
+      <input name='Gold' quantity='45' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='10' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4436625' exp='1236575' profit='2978375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Crystals' quantity='45' />
+      <input name='Gold' quantity='45' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='11' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4531800' exp='1234925' profit='2962025'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Crystals' quantity='35' />
+      <input name='Gold' quantity='35' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='12' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4526475' exp='1242400' profit='2914375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Crystals' quantity='45' />
+      <input name='Gold' quantity='45' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='3' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4532850' exp='1166675' profit='2444000'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Crystals' quantity='15' />
+      <input name='Gold' quantity='15' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='4' planet='School' output='Sensamps' status='run' cash='100000' top-up='100000' income='4551000' exp='1171250' profit='2433275'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='depot'/>
+      <input name='Crystals' quantity='15' />
+      <input name='Gold' quantity='15' />
+    </factory>
+    <factory owner='Warfrat Inc.' id='13' planet='School' output='Artifacts' status='run' cash='815900' top-up='100000' income='3709725' exp='816280' profit='4937915'>
+      <building max-eff='110' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='44' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

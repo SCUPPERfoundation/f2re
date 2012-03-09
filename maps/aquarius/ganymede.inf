@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<infrastructure owner='Aqueous' economy='Industrial' treasury='-156737915' yard-markup='-10' workers='870' base='1000' slithy-xform='0' registry='true'>
+  <build type='Base' points='1'/>
+  <build type='Atmos' level='4' unused='1'/>
+  <build type='Pollution' level='5' unused='1'/>
+  <build type='School' level='3' unused='3'/>
+  <build type='Clinic' level='2' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+  <build type='Police' points='4'/>
+  <build type='Family' points='2'/>
+  <build type='Rail' points='2'/>
+  <build type='Port' points='4'/>
+</infrastructure>

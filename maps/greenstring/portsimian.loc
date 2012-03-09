@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Port Simian' version='7' editor='standard' from='396' to='Green String.Green String Space.460'>
+<fed2-map title='Port Simian' version='7' editor='online' from='396' to='Green String.Green String Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,7 +8,7 @@
 
    <location num='269' flags='yrb'>
       <name> Dark Skys Inc.</name>
-      <desc>The office belonging to Jonncarter, a major Factory Owner in the Green String System.  Reception is to the South while Out will take you to the LP.</desc>
+      <desc>The office belonging to Jonncarter, a major Factory Owner in the Green String System.  Dominating the room is a HUGE Leather chair behind an ornate Mohagany desk.  Recessed accustic speakers send out soothing, relaxing music.  This is not an office for the hustle and bustle, but a hide-away for Jonn.  A place to relax and unwind from the stresses of being an important Manufacturer In the Universe.   On the left side of Jonn&apos;s desk is a decanter of Wine, while on the right side of the desk is a self-contained, mini Pizza Oven.  Reception is to the South while Out will take you to the LP.</desc>
       <exits s='333' out='396'/>
    </location>
 
@@ -21,36 +21,31 @@
 
    <location num='332' flags='hi'>
       <name>Port Simian Emergency Room and Hospital</name>
-      <desc>The moment you enter the Emergency room, Automatic Medical Droids converge on you and start doing pre-op exams.  Broken bones and Machine injuries are common, but all aches and pains can be taken care of here.</desc>
+      <desc>The moment you enter the Emergency room, Automatic Medical Droids converge on you and start doing triage exams.  Broken bones and injuries due to heavy machinary are common here, but all aches and pains can be taken care of easily and quickly.</desc>
       <exits s='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='333' flags='b'>
       <name>Import/Export Reception</name>
-      <desc>Upon entering the front offices of Port Simian&apos;s Import/Export Control, you find yourself buffetted by many hurrying secretaires and order runners. The major Factory Owners of Port Simian (and future planned expansions) are headquartered in this comples.</desc>
-      <desc>Office of Twitch is to the East</desc>
-      <desc>Office of Jonncarter is to the North</desc>
-      <desc>Office of Silversims and Doolittle is to the NE.</desc>
-      <desc>A small refreshment stand is situated in the corner, for those quick coffee breaks, while a Plasteel door to the South connects with the Exchange.</desc>
+      <desc>As soon as you enter the front offices of Port Simian&apos;s Import/Export Control, you find yourself buffetted by many hurrying secretaries and message runners. The major Factory Owners of Port Simian (and future planned expansions) are headquartered in this complex.Office of Twitch is to the East --- Office of Jonncarter is to the North --- Office of Silversims and Doolittle is to the NE. --- For those quick coffee breaks, a small refreshment stand is situated in the corner, while a Plasteel door to the South connects with the Exchange.</desc>
       <exits n='269' ne='270' e='334' s='397' sw='396'/>
    </location>
 
    <location num='334' flags='yrb'>
       <name>Sir Twitch-a-lot Inc.</name>
-      <desc>Upon entering the spacious office of Twitch (and associates), the hubbub and confusion of the reception area is left behing.  Living plants line the walls will a huge Plasteel Window looks out over the protected Port Simian Wildlife Zone.  A modern Desk and ergonomic chair occupy the center of the room, but comfortable armchairs situated thru-out the room.  A modern High-Tech Beverage station is hidden in the ceiling, with only a thought needed for it to go into action and dispense Twitch&apos;s Famous Long Island Iced Teas.</desc>
-      <desc>Reception is to the West while Out will take you to the LP.</desc>
+      <desc>Upon entering the spacious office of Twitch (and associates), the hubbub and confusion of the reception area is left behind.  Living plants line the walls while a huge Plasteel Window looks out over the protected Port Simian Wildlife Zone.  A modern Desk and ergonomic chair occupy the center of the room, with comfortable armchairs situated thru-out.  An ultra-modern, High-Tech Beverage station is hidden in the ceiling, with only a thought needed for it to go into action and dispense Twitch&apos;s Famous Long Island Iced Teas.</desc>
       <exits w='333' out='396'/>
    </location>
 
    <location num='395' flags='b'>
       <name>The Rest Your Butt Dining Hall</name>
-      <desc>Leaving the dust-filled outside, you enter a large, sterile looking Dining Hall.  Several long Buffet stations are situated thru-out the spacious room, each one sporting different flavored dishes from across the galaxy, to feed the large Mining Crews operated on Port Simian.  Grab a tray, fill er up, eat fast and get back to work.</desc>
+      <desc>Leaving the dust-filled, noisy outside, you enter a large, sterile looking Dining Hall.  Several long Buffet stations are situated thru-out the spacious room, (each one sporting different flavored dishes from across the galaxy) to feed the large Mining Crews operating on Port Simian.  Grab a tray, eat fast and get back to work.</desc>
       <exits e='396' out='396'/>
    </location>
 
    <location num='396' flags='yrb'>
       <name>Landing strip for Port Simian - Exchange is to the East</name>
-      <desc>Stepping out of your shuttle, you find yourself on a paved Landing Pad, situated in the midst of a massive mining operation.  Several Pre-fab buildings have been placed around the edge of the LP.  A trading complex is to the East, a small hospital is to your North, a dining hall is to the West and a mobile refreshment stand is to the SouthWest.  Constant streams of heavy Machinery and Trucks travel on a massive Mining Road extending to the SouthEast</desc>
+      <desc>Stepping out of your shuttle, you find yourself on a paved Landing Pad, situated in the midst of a massive mining operation.  Several Pre-fab buildings have been placed around the edges of the LP.  A trading complex to the East which is attached to an Office Complex to the NorthEast, a small hospital is to your North, a dining hall is to the West while a mobile refreshment stand is to the SouthWest.  Constant streams of heavy Machinery and Trucks travel on a massive Mining Road extending to the SouthEast</desc>
       <exits n='332' ne='333' e='397' se='461' sw='459' w='395' no-exit='moves.noexit.1'/>
    </location>
 

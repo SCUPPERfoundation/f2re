@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lima' economy='Agricultural' treasury='274370130' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+    <warehouse owner='Achmedthe'>
+    </warehouse>
+
+    <warehouse owner='Asmodeus'>
+    </warehouse>
+
+    <warehouse owner='Dontattaglia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Zodbot'>
+    </warehouse>
+
+</infrastructure>

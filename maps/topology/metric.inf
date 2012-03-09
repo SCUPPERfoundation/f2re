@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Coolkid' economy='Resource' treasury='-5663912' yard-markup='-10' workers='1110' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='2' mining='4' unused='7'/>
+  <build type='Family' points='10'/>
+  <build type='Heliograph' points='6'/>
+  <build type='Atmos' level='2' unused='6'/>
+  <build type='Clinic' level='2' hospital='2' unused='2'/>
+  <build type='Hospital' points='1'/>
+  <build type='Police' points='4'/>
+  <build type='Pollution' level='2' unused='7'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Housing' points='6'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='4'/>
+  <build type='Rail' points='4'/>
+</infrastructure>

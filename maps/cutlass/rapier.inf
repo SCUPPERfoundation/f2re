@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dinger' economy='Agricultural' treasury='86698009' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='0' hospital='0' unused='1'/>
+  <build type='Base' points='1'/>
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Island Paradise Corp.' id='6' planet='Rapier' output='Artifacts' status='run' cash='285575' top-up='100000' income='1085550' exp='488400' profit='1667775'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='47' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Island Paradise Corp.' id='7' planet='Rapier' output='Artifacts' status='run' cash='291725' top-up='100000' income='1007850' exp='488400' profit='1367250'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='47' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<infrastructure owner='Cloudbase' economy='Resource' treasury='763272228' yard-markup='0' workers='720' base='1000' registry='false'>
+  <build type='School' level='2' agri='4' mining='4' unused='9'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='2' hospital='6' unused='18'/>
+  <build type='Hospital' points='3'/>
+  <build type='Police' points='8'/>
+  <build type='Canal' points='5'/>
+  <build type='Dole' points='9'/>
+  <build type='Atmos' level='2' unused='7'/>
+  <build type='Pollution' level='2' unused='10'/>
+  <build type='Biodiversity' points='19'/>
+  <build type='Housing' points='3'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='15'/>
+  <build type='Family' points='9'/>
+  <build type='RiotPolice' points='10'/>
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Ionia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='723' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='731' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='723' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='731' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='696' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='702' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='710' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='726' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='726' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ricmer'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Admiralty Inc.' id='13' planet='Cloudbase' output='Artifacts' status='run' cash='100000' top-up='100000' income='2916525' exp='443160' profit='4628550'>
+      <building max-eff='150' max-store='150' maint='5' eff='150'/>
+      <production interval-max='88' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='3' planet='Cloudbase' output='Univators' status='run' cash='100000' top-up='100000' income='3408525' exp='823500' profit='2405475'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='70' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='4' planet='Cloudbase' output='Univators' status='run' cash='100000' top-up='100000' income='3421575' exp='815175' profit='2400825'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='80' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='5' planet='Cloudbase' output='Univators' status='run' cash='100000' top-up='100000' income='3402975' exp='818775' profit='2303850'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='80' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='7' planet='Cloudbase' output='Artifacts' status='run' cash='100000' top-up='100000' income='5174625' exp='1154400' profit='3176525'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>

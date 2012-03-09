@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<infrastructure owner='Afdude' economy='Industrial' treasury='-15368449' yard-markup='10' workers='1000' base='1000' registry='false'>
+  <build type='Atmos' level='4' unused='4'/>
+  <build type='Pollution' level='5' unused='3'/>
+  <build type='School' level='3' unused='11'/>
+  <build type='Clinic' level='4' hospital='0' unused='6'/>
+  <build type='Police' points='3'/>
+  <build type='Canal' points='2'/>
+  <build type='Housing' points='5'/>
+  <build type='Rail' points='1'/>
+</infrastructure>

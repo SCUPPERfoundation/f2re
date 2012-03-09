@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<infrastructure owner='Cathy' economy='Technical' treasury='3167939' yard-markup='0' workers='742' base='1000' casualties='378' registry='false'>
+  <build type='Clinic' level='6' hospital='0' unused='5'/>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='7'/>
+  <build type='Atmos' level='6' unused='7'/>
+  <build type='Pollution' level='9' unused='8'/>
+  <build type='Police' points='9'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='11'/>
+  <build type='Oil' points='1'/>
+  <build type='Radio' points='4'/>
+  <build type='Fusion' points='3'/>
+  <build type='Floating' points='8'/>
+  <build type='Airlane' points='4'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Urban' points='5'/>
+  <build type='Fibre' points='28'/>
+  <build type='Research' points='1'/>
+  <build type='Insurance' points='4'/>
+    <factory owner='Irony&apos;s Ironclad Irons, Inc.' id='4' planet='Paradigm' output='Xmetals' status='run' cash='299350' top-up='100000' income='1226175' exp='716175' profit='1113775'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='28' labour='105' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='45' />
+      <input name='Polymers' quantity='0' />
+    </factory>
+    <factory owner='Irony&apos;s Ironclad Irons, Inc.' id='6' planet='Paradigm' output='Xmetals' status='run' cash='289825' top-up='100000' income='1217775' exp='728100' profit='1055950'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='28' labour='105' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='45' />
+      <input name='Polymers' quantity='0' />
+    </factory>
+    <factory owner='Irony&apos;s Ironclad Irons, Inc.' id='5' planet='Paradigm' output='Xmetals' status='run' cash='208075' top-up='100000' income='1144425' exp='687825' profit='1061025'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='21' labour='105' wages='40' stored='150' disposal='depot'/>
+      <input name='Lasers' quantity='5' />
+      <input name='Polymers' quantity='50' />
+    </factory>
+</infrastructure>

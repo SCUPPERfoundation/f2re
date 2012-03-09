@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<infrastructure owner='Beachbabe' economy='Resource' treasury='-22293099' yard-markup='0' workers='800' base='1000' registry='false'>
+  <build type='Pollution' level='1' unused='0'/>
+  <build type='Police' points='1'/>
+  <build type='Base' points='1'/>
+</infrastructure>

@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
-<fed2-map title='Blue Sun Space' version='1.00' editor='standard'>
+<fed2-map title='Blue Sun Space' version='1' editor='online'>
 
    <location num='460' flags='slp'>
-      <name>Orbit and interstellar link</name>
-      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
-      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <name>Blue Sun System Interstellar Link</name>
+      <desc>As you approach this distant system near the outer rim you notice an asteroid field on your viewscreen.  As you get closer it appears as though it is not an asteroid field at all but all manner of debris. Nothing in the &apos;verse can prepare you for an encounter with Reavers.  You quickly fire your thrusters and head planetside.</desc>
       <exits no-exit='moves.noexit.1'/>
    </location>
 

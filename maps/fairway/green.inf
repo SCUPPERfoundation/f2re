@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<infrastructure owner='Otter' economy='Resource' treasury='25101678' yard-markup='-10' workers='1070' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='2' agri='4' mining='4' unused='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='2' unused='3'/>
+  <build type='Pollution' level='2' unused='4'/>
+  <build type='Clinic' level='2' hospital='4' unused='2'/>
+  <build type='Police' points='4'/>
+  <build type='Hospital' points='2'/>
+  <build type='Family' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Telegraph' points='2' unused='0'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Dole' points='1'/>
+  <build type='Pension' points='1'/>
+    <warehouse owner='Aragorn'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+    </warehouse>
+
+    <warehouse owner='Arwen'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='732' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='763' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='759' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='766' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='761' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='801' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='827' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='820' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='838' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='806' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='855' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='816' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='858' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='833' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='860' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='851' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='852' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='887' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='860' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='915' />
+    </warehouse>
+
+    <warehouse owner='Dunsguns'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+    </warehouse>
+
+    <warehouse owner='Elrond'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='860' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='851' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='895' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='877' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='877' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='870' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='887' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='942' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='897' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='915' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='915' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='906' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='925' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='943' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='906' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='933' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='933' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='952' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='962' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='962' />
+    </warehouse>
+
+    <warehouse owner='Eomer'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+    </warehouse>
+
+    <warehouse owner='Eowyn'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='731' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='711' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='735' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='738' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='770' />
+    </warehouse>
+
+    <warehouse owner='Galadriel'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='696' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='733' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='743' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='735' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='754' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='754' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='771' />
+    </warehouse>
+
+    <warehouse owner='Gandalf'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+    </warehouse>
+
+    <warehouse owner='Gimli'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='832' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='875' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='833' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='860' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='876' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='852' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='860' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='887' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='924' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='915' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='942' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='942' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='915' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='925' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='943' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='916' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='925' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='915' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='971' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='953' />
+    </warehouse>
+
+    <warehouse owner='Legolas'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='726' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='704' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='722' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='724' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='741' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='743' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='759' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='785' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='817' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='779' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='820' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='830' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='855' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='841' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='849' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='875' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='851' />
+    </warehouse>
+
+    <warehouse owner='Meriadoc'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+    </warehouse>
+
+    <warehouse owner='Oddroid'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+    </warehouse>
+
+    <warehouse owner='Pippin'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+    </warehouse>
+
+    <warehouse owner='Predator'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+    </warehouse>
+
+    <warehouse owner='Samwise'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='686' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='700' />
+    </warehouse>
+
+    <warehouse owner='Wizard'>
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='693' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='721' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='707' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='713' />
+      <cargo name='NanoFabrics' star='Chicago' planet='New Chicago' cost='678' />
+    </warehouse>
+
+    <factory owner='Olibanum Inc.' id='13' planet='Green' output='Artifacts' status='run' cash='646650' top-up='100000' income='3315825' exp='799200' profit='4917025'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='82' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Free World Enterprises' id='5' planet='Green' output='TQuarks' status='run' cash='688450' top-up='100000' income='5410875' exp='1761675' profit='1368300'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='51' labour='30' wages='100' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='70' />
+      <input name='Droids' quantity='70' />
+    </factory>
+    <factory owner='Free World Enterprises' id='6' planet='Green' output='TQuarks' status='run' cash='532075' top-up='100000' income='5333625' exp='1918875' profit='1305525'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='51' labour='30' wages='100' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='70' />
+      <input name='Droids' quantity='70' />
+    </factory>
+</infrastructure>

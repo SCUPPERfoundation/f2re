@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<infrastructure owner='Cloudbase' economy='Biological' treasury='991945528' yard-markup='0' workers='941' base='1000' casualties='59' registry='false'>
+  <build type='School' level='5' biolab='4' unused='22'/>
+  <build type='Biolab' points='1'/>
+  <build type='Antigrav' points='9'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='5'/>
+  <build type='Clinic' level='8' hospital='0' unused='33'/>
+  <build type='Port' points='5'/>
+  <build type='Atmos' level='8' unused='18'/>
+  <build type='Insurance' points='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Police' points='4'/>
+  <build type='Pollution' level='0' unused='27'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='650' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='650' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='638' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='618' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='650' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='638' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='631' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='631' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='631' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='650' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='618' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='638' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='644' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='631' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='657' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='638' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='650' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='644' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='657' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='650' />
+    </warehouse>
+
+    <depot owner='Admiralty Inc.' bays='51' efficiency='100'>
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='499' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='508' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='499' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='478' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='483' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='410' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='488' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='504' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='488' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='499' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='508' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='499' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='410' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='488' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='478' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='415' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='415' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='415' />
+    </depot>
+    <depot owner='Rifles &amp; Revolvers Ltd.' bays='51' efficiency='100'>
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='504' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='494' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='488' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='483' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='488' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='410' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='415' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='488' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='483' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='508' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='478' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='534' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='530' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='565' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='555' />
+      <cargo name='Nanos' star='Crypton' planet='Superland' cost='601' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='410' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='436' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='415' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='424' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='415' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='432' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='410' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='428' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+      <cargo name='Nanos' star='Crypton' planet='Dome' cost='419' />
+    </depot>
+    <factory owner='Admiralty Inc.' id='2' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2300550' exp='927490' profit='2328710'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='3' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2268600' exp='927490' profit='2265785'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='4' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3498675' exp='1414800' profit='1613100'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='5' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3444600' exp='1414800' profit='1688175'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='6' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3418950' exp='1416000' profit='1658400'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='7' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3467925' exp='1416000' profit='1537875'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='4' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2152575' exp='928690' profit='2300210'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='75' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='5' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2256750' exp='928690' profit='2303510'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='75' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='8' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3345225' exp='1416000' profit='1495275'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='6' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2232375' exp='928690' profit='2286635'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='75' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='9' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3111675' exp='1416000' profit='1525575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='7' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2123250' exp='928690' profit='2271410'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='75' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='10' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3228450' exp='1414800' profit='1449300'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='11' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3130500' exp='1414800' profit='1368975'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='12' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='3011550' exp='1414800' profit='1514250'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='13' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2847000' exp='1414800' profit='1551375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='8' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2056875' exp='928690' profit='2310635'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='75' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='9' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2049600' exp='885040' profit='2228810'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='14' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2677125' exp='1371150' profit='1465875'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Rifles &amp; Revolvers Ltd.' id='15' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='2707125' exp='1371150' profit='1517850'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='45' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='10' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='1802250' exp='885040' profit='2261960'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='11' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='1718925' exp='927490' profit='1678985'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+    <factory owner='Admiralty Inc.' id='12' planet='Nimbus' output='Tracers' status='run' cash='100000' top-up='100000' income='1779975' exp='927490' profit='1779635'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<infrastructure owner='Odin' economy='Biological' treasury='996934890' yard-markup='0' workers='1650' base='1000' slithy-xform='0' registry='false'>
+  <build type='Clinic' level='8' hospital='30' unused='0'/>
+  <build type='School' level='5' research='4' biolab='4' unused='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Family' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Hospital' points='15'/>
+  <build type='Genetic' points='15'/>
+  <build type='Terraform' points='20'/>
+  <build type='Airlane' points='8'/>
+  <build type='Urban' points='5'/>
+  <build type='Fibre' points='40'/>
+  <build type='Tachyon' points='15'/>
+  <build type='Insurance' points='5'/>
+  <build type='Port' points='13'/>
+  <build type='Atmos' level='8' unused='7'/>
+  <build type='Pollution' level='0' unused='15'/>
+  <build type='Police' points='12'/>
+  <build type='Floating' points='10'/>
+  <build type='Satellite' points='5'/>
+  <build type='Defence' points='10'/>
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Tears Of Elas Perfumes' bays='31' efficiency='100'>
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='548' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='571' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='554' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='577' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='571' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='548' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='560' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='560' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='571' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='560' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='583' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='583' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='571' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='548' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='566' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='560' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='577' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='554' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='583' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='571' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='583' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='571' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='560' />
+      <cargo name='Pharmaceuticals' star='Chicago' planet='Joliet' cost='554' />
+    </depot>
+</infrastructure>

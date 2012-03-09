@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lemondropkid' economy='Agricultural' treasury='701045139' yard-markup='0' workers='1010' base='1000' registry='false'>
+  <build type='Clinic' level='0' hospital='2' unused='0'/>
+  <build type='Hospital' points='1'/>
+  <build type='School' agri='4'/>
+  <build type='Canal' points='5'/>
+  <build type='Agri' points='1'/>
+</infrastructure>

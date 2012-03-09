@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<infrastructure owner='Caesar' economy='Industrial' treasury='-218561' yard-markup='0' workers='1090' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4'/>
+  <build type='Clinic' level='4' hospital='7' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='5'/>
+  <build type='Hospital' points='4'/>
+  <build type='Canal' points='3'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='5'/>
+  <build type='Police' points='7'/>
+  <build type='Pollution' level='5' unused='3'/>
+  <build type='Atmos' level='4' unused='2'/>
+  <build type='Biodiversity' points='2'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='2'/>
+  <build type='Dole' points='2'/>
+  <build type='Telegraph' points='10'/>
+  <build type='Pension' points='6'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='6'/>
+  <build type='Insulation' points='9'/>
+  <build type='Oil' points='3'/>
+  <build type='Radio' points='4'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Redman Idustries' bays='21' efficiency='100'>
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+      <cargo name='Games' star='Siamese' planet='Kittyheaven' cost='210' />
+    </depot>
+    <factory owner='Redman Idustries' id='2' planet='Kittyheaven' output='Artifacts' status='run' cash='824445' top-up='100000' income='2644350' exp='609916' profit='4744293'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='48' labour='370' wages='41' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Redman Idustries' id='3' planet='Kittyheaven' output='Games' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='41' stored='75' disposal='depot'/>
+      <input name='BioChips' quantity='0' />
+      <input name='Hides' quantity='0' />
+    </factory>
+    <factory owner='Redman Idustries' id='1' planet='Kittyheaven' output='Artifacts' status='run' cash='810720' top-up='100000' income='2621850' exp='609916' profit='2555745'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='18' labour='370' wages='41' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

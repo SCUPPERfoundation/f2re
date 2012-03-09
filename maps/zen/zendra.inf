@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Anna' economy='Industrial' treasury='-324235917' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Clinic' level='3' hospital='0' unused='2'/>
+  <build type='School' level='3' agri='4' mining='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Police' points='2'/>
+  <build type='Heliograph' points='2'/>
+  <build type='Atmos' level='4' unused='0'/>
+  <build type='Pollution' level='5' unused='0'/>
+  <build type='Dole' points='2'/>
+  <build type='Biodiversity' points='4'/>
+  <build type='Mining' points='1'/>
+  <build type='Housing' points='4'/>
+  <build type='Rail' points='4'/>
+  <build type='Base' points='4'/>
+  <build type='Telegraph' points='5'/>
+</infrastructure>

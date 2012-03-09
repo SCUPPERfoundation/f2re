@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Sjw' economy='Biological' treasury='38197733' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Clinic' level='8' hospital='0' unused='0'/>
+  <build type='School' level='5' unused='4'/>
+  <build type='Insurance' points='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

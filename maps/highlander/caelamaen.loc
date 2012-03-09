@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Caelamaen' version='1.00' editor='standard' from='396' to='Highlander.Highlander Space.460'>
+<fed2-map title='Caelamaen' version='1' editor='online' from='396' to='Highlander.Highlander Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -7,10 +7,8 @@
    </location>
 
    <location num='332' flags='hi'>
-      <name>Sunburn clinic</name>
-      <desc>   Caring nurses stand by to rub soothing lotion into the skin of those who have been out in the sun a little too long.</desc>
-      <desc>   Peeping behind a screen you see doctors battling to save the life of someone who drowned. An insurance agent wrings his hands in despair, saying, &apos;Why didn&apos;t he get himself insured? What a tragic waste.&apos; You hope he&apos;s talking about the life, not the money.</desc>
-      <desc>   The exit is south.</desc>
+      <name>Band-aid Clinic</name>
+      <desc>As you enter the lobby of this small-ish hospital, you are greeted by a friendly receptionist who asks in her silky voice what she can do for you. You see several round tables with chairs nestled around a cozy fireplace. The windows down the hall afford you a stunning view of Mill Cove which empties out into the ocean. Sit down, relax a spell. Chances are that you&apos;re going to be here awhile anyhow. And, hey, next time, insure yourself, huh?</desc>
       <exits s='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 
@@ -30,32 +28,26 @@
    </location>
 
    <location num='459' flags='b'>
-      <name>Sunshine bar</name>
-      <desc>   &quot;Welcome, one and all, to the bar where the best cocktails in the whole Galaxy are served,&quot; cries the tanned young bartender. He tosses a cocktail shaker high in the air and catches it behind his back.</desc>
-      <desc>   Small booths in each corner sell tourist goods such as sunhats and snorkels, electronic equipment and weapons. Anyone who forgot their costume (and isn&apos;t lucky enough to have a nano-chameleon suit) can buy one here, from the skimpiest thong to the most demure all-in-one suit.</desc>
-      <desc>   The door in the northeast wall leads back to the landing strip.</desc>
+      <name>The Flying Bridge</name>
+      <desc>As you enter, you are suddenly whisked to the third and top floor of this establishment. Twelve round tables as well as a sitdown bar overlook the harbor in the center of town. A wooden footbridge separates the West side from the East of the harbor. Enjoy a beverage from the myriad of choices and sample a treat from the extensive Tapas Menu. Exit is Northeast.</desc>
       <exits ne='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='461'>
-      <name>White Sands beach</name>
-      <desc>  Perfection! The sand is so soft you can&apos;t wait to stretch yourself out and soak up some rays. The beach stretches off into the distance for miles, and you&apos;re sure to find yourself somewhere secluded to rest.</desc>
-      <desc>   If you get too hot, there&apos;s shade to the east in a small rocky cove, or you can head south down to the shore where gently rolling waves break onto the sand.</desc>
-      <desc>   The way back to the landing-pad is northwest.</desc>
+      <name>Town Center</name>
+      <desc>You are struck by the familial appeal of this quintessential seaside village&apos;s cozy downtown. Old, narrow streets meander through aged brick buildings housing shopping stores and restaurants. Looking for Touristy tee-shirts and stuff? Yep, they got &apos;em. The cafes are world-reknowned as well. Several store fronts display the area&apos;s talented artists, too. The Landing Pad is to the Northwest and the Wharf is to the East.</desc>
       <exits e='462' s='525' nw='396' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='462'>
-      <name>Cove</name>
-      <desc>   Eroded into the side of a rocky hill by the waves, this secluded cove provides shade from the sun if you need it. The waves surge up the rocks, flinging droplets of spray over you as their foaming white heads break and fall back again.</desc>
-      <desc>   As the waves retreat, they leave pools of water between the rocks. Most are small, but there&apos;s one that is deep enough for you to climb down into the crystal clear water.</desc>
+      <name>Wharf</name>
+      <desc>You see a fine, white sandy beach stretching off in either direction for miles,with a working fishing wharf situated in the center. Several lobster boats chug off in the distance with seagulls flying closely overhead, their screeches, combined with the sound of the crashing waves, lulls you into a dream-like state. The town center is off to the west.</desc>
       <exits w='461' down='526' in='526' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='525'>
-      <name>Shore</name>
-      <desc>   Gently rolling waves break on the shore, their white tops collapsing into frothy bubbles that race up the beach towards you then drain back again. The sand under your feet is wet and cool. Every tenth wave is stronger than the rest, and the water surges far enough to splash against your legs.</desc>
-      <desc>   You can go south into the water for a swim, or north back to the beach.</desc>
+      <name>Town Outskirts</name>
+      <desc>Main Street winds away from the town center and gently curves towards the beach. The old Captain&apos;s houses dot the coast hither and thither, harkening back to simpler times. The rapidly approaching beach is to the South. The Town Center is to the North.</desc>
       <exits n='461' s='589' in='589' no-exit='moves.noexit.1'/>
    </location>
 
@@ -68,9 +60,8 @@
    </location>
 
    <location num='589'>
-      <name>In the water</name>
-      <desc>   You can&apos;t really swim here, nor can you stand up in the water. The waves are big enough that they keep knocking you off balance and pulling you around. It&apos;s the most exhilarating feeling, and you feel the cares and stresses of your working life drain away as the water washes over and around you.</desc>
-      <desc>   Now you can see why this planet is considered the ultimate in holiday destinations.</desc>
+      <name>The Rocky Beach</name>
+      <desc>You can&apos;t really swim here, nor can you stand up in the water. The waves are big enough that they keep knocking you off balance and pulling you around. It&apos;s the most exhilarating feeling, and you feel the cares and stresses of your working life drain away as the water washes over and around you.   Now you can see why this planet is considered the ultimate in holiday destinations. The road into town is North.</desc>
       <exits n='525' out='525' no-exit='moves.noexit.1'/>
    </location>
 

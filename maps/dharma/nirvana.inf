@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<infrastructure owner='Brock' economy='Technical' treasury='44468936' yard-markup='-10' workers='935' base='1000' casualties='75' slithy-xform='0' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4'/>
+  <build type='Police' points='9'/>
+  <build type='Clinic' level='6' hospital='0' unused='5'/>
+  <build type='Atmos' level='6' unused='5'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='11'/>
+  <build type='Dole' points='3'/>
+  <build type='Oil' points='1'/>
+  <build type='Radio' points='4'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Family' points='1'/>
+  <build type='Pension' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Floating' points='8'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Insurance' points='5'/>
+  <build type='Airlane' points='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Cooked And Beird' bays='31' efficiency='100'>
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+      <cargo name='TQuarks' star='Dharma' planet='Nirvana' cost='835' />
+    </depot>
+    <factory owner='Cooked And Beird' id='1' planet='Nirvana' output='Lasers' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='55' stored='150' disposal='depot'/>
+      <input name='Electros' quantity='75' />
+      <input name='AntiMatter' quantity='0' />
+      <input name='Semiconductors' quantity='0' />
+    </factory>
+    <factory owner='Cooked And Beird' id='2' planet='Nirvana' output='Nanos' status='run' cash='42450' top-up='100000' income='1226400' exp='1221600' profit='487375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='16' labour='5' wages='55' stored='150' disposal='depot'/>
+      <input name='Nanos' quantity='15' />
+      <input name='Lasers' quantity='45' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Cooked And Beird' id='3' planet='Nirvana' output='Nanos' status='run' cash='137700' top-up='100000' income='1405125' exp='1249800' profit='190900'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='15' labour='5' wages='55' stored='75' disposal='depot'/>
+      <input name='Nanos' quantity='40' />
+      <input name='Lasers' quantity='20' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Cooked And Beird' id='4' planet='Nirvana' output='TQuarks' status='run' cash='790525' top-up='100000' income='4998225' exp='1259325' profit='4239075'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='53' labour='30' wages='55' stored='75' disposal='depot'/>
+      <input name='Lasers' quantity='5' />
+      <input name='Droids' quantity='5' />
+    </factory>
+    <factory owner='Cooked And Beird' id='5' planet='Nirvana' output='TQuarks' status='run' cash='639100' top-up='100000' income='4983600' exp='1329075' profit='4272675'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='50' labour='30' wages='55' stored='150' disposal='depot'/>
+      <input name='Lasers' quantity='60' />
+      <input name='Droids' quantity='60' />
+    </factory>
+    <factory owner='Seldon Crisis' id='1' planet='Nirvana' output='TQuarks' status='run' cash='870660' top-up='100000' income='1056975' exp='286315' profit='5219920'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='60' labour='30' wages='40' stored='150' disposal='depot'/>
+      <input name='Lasers' quantity='55' />
+      <input name='Droids' quantity='55' />
+    </factory>
+    <factory owner='Seldon Crisis' id='2' planet='Nirvana' output='TQuarks' status='run' cash='886410' top-up='100000' income='1076475' exp='290065' profit='5234620'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='60' labour='30' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='55' />
+      <input name='Droids' quantity='55' />
+    </factory>
+    <factory owner='Seldon Crisis' id='7' planet='Nirvana' output='TQuarks' status='run' cash='938685' top-up='100000' income='1057575' exp='218890' profit='5337895'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='58' labour='30' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='0' />
+      <input name='Droids' quantity='0' />
+    </factory>
+</infrastructure>

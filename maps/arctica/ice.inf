@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bella' economy='Agricultural' treasury='9734438' yard-markup='0' workers='1000' base='1000' registry='true'>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Founderodo'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='The Crusty Crab Inc .' id='13' planet='Ice' output='Firewalls' status='run' cash='100000' top-up='100000' income='5472750' exp='1125750' profit='3994425'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='75' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='14' planet='Ice' output='Firewalls' status='run' cash='100000' top-up='100000' income='5568900' exp='1102200' profit='3210450'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+    <factory owner='The Crusty Crab Inc .' id='15' planet='Ice' output='Firewalls' status='run' cash='100000' top-up='100000' income='5574375' exp='1199250' profit='3103350'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='12' planet='Ice' output='Firewalls' status='run' cash='100000' top-up='100000' income='5593200' exp='1166775' profit='3032925'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='75' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='13' planet='Ice' output='Firewalls' status='run' cash='100000' top-up='100000' income='5563425' exp='1250700' profit='2980575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='75' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='14' planet='Ice' output='Firewalls' status='run' cash='100000' top-up='100000' income='5481825' exp='1313925' profit='2909400'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='75' />
+    </factory>
+</infrastructure>

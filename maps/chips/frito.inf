@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<infrastructure owner='Beandip' economy='Agricultural' treasury='684927229' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='4'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

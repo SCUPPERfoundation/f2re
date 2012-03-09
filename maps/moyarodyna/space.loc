@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<fed2-map title='Moya Rodyna Space' version='2' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Sean orbit and interstellar link</name>
+      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <desc>   Alternatively, you can head south for another planet.</desc>
+      <exits s='524' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524' flags='s'>
+      <name>Jfour orbit</name>
+      <desc>   Board your shuttle and come down to this small but perfectly formed planet, where rest and relaxation are on offer in many different forms.</desc>
+      <desc>   The interstellar link lies to the north.</desc>
+      <exits n='460'/>
+   </location>
+
+</fed2-map>

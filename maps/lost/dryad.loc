@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Dryad' version='1.00' editor='standard' from='658' to='Lost.Lost Space.198'>
+<fed2-map title='Dryad' version='1' editor='online' from='658' to='Lost.Lost Space.198'>
 
    <location num='0'>
       <name>Storge</name>
@@ -266,13 +266,13 @@
 
    <location num='661'>
       <name>Shuttle </name>
-      <desc>You strap in and feel the engines begin to break free from the dock. You got seated just in time! With a thrust, and then a slight bump, you land on the planet. The lovely Dryad Goddess beside the door hands you a large fur parka and points you out to the planet.</desc>
+      <desc>You strap in and feel the engines begin to break free from the planet&apos;s atmosphere. You got seated just in time! With a thrust, and then a slight bump, you dock with the space station. The lovely Dryad Goddess beside the door takes the large fur parka from your hand and points you out to the shuttle pad.</desc>
       <exits out='659' no-exit='moves.noexit.2'/>
    </location>
 
    <location num='662'>
       <name>Shuttle</name>
-      <desc>You strap in and feel the engines begin to break free from the planet&apos;s atmosphere. You got seated just in time! With a thrust, and then a slight bump, you dock with the space station. The lovely Dryad Goddess beside the door takes the large fur parka from your hand and points you out to the shuttle pad.</desc>
+      <desc>You strap in and feel the engines begin to break free from the dock. You got seated just in time! With a thrust, and then a slight bump, you land on the planet. The lovely Dryad Goddess beside the door hands you a large fur parka and points you out to the planet.</desc>
       <exits out='728' no-exit='moves.noexit.2'/>
    </location>
 
@@ -428,8 +428,7 @@
 
    <location num='850' flags='b'>
       <name>Lounge</name>
-      <desc>Laughter fills the air as you glance around this almost perfect reproduction of the Member&apos;s Lounge on Earth. Comfortable chairs and couches fill the room, including a burned recliner, along with tables for jumping on or dancing on. Speakers in the walls blare out the tunes from Fed Radio. A hot tub fills the center of the room, while a small sauna, just big enough for two, sits in the corner. Fat cushions lie around the room, most likely for visitors of the feline persuasion. A tall table, complete on top with a small table, chairs and a couch, sits to one side, ready for any mice who want to be eye level with their friends. Dryad goddesses circle the room, taking drink orders and serving food. A very beautiful Dryad goddess stands in the back beside a table, ready to give any who need it a pleasent back massage. This is the perfect place to spend an evening after a long day of hauling. When you are ready to leave, if you ever are, you can go back up to the!
-  Landing facilities.</desc>
+      <desc>Laughter fills the air as you glance around this almost perfect reproduction of the Member&apos;s Lounge on Earth. Comfortable chairs and couches fill the room, including a burned recliner, along with tables for jumping on or dancing on. Speakers in the walls blare out the tunes from Fed Radio. A hot tub fills the center of the room, while a small sauna, just big enough for two, sits in the corner. Fat cushions lie around the room, most likely for visitors of the feline persuasion. A tall table, complete on top with a small table, chairs and a couch, sits to one side, ready for any mice who want to be eye level with their friends. Dryad goddesses circle the room, taking drink orders and serving food. A very beautiful Dryad goddess stands in the back beside a table, ready to give any who need it a pleasent back massage. This is the perfect place to spend an evening after a long day of hauling. When you are ready to leave, if you ever are, you can go back up to the Landing facilities.</desc>
       <exits up='658' down='849' in='851' no-exit='moves.noexit.2'/>
    </location>
 
@@ -459,7 +458,7 @@
 
    <location num='861'>
       <name>Frozen River</name>
-      <desc>Just as you make it back to the river bank, you begin to get the hang of skating. Deciding to press onward, you zoom across the ice, feeling the cold wind bite into your checks, making them rosey and pink. You giggle like a child as the bright winter morning lifts your spirits. You notice the faint sounds of water dripping further up river.</desc>
+      <desc>Just as you make it back to the river bank, you begin to get the hang of skating. Deciding to press onward, you zoom across the ice, feeling the cold wind bite into your cheeks, making them rosey and pink. You giggle like a child as the bright winter morning lifts your spirits. You notice the faint sounds of water dripping further up river.</desc>
       <exits up='798' no-exit='moves.noexit.8'/>
    </location>
 

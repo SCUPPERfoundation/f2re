@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<star name='Racetrack' cartel='Russia'>
+
+   <black-list>
+      <exile name='Maggie'/>
+      <exile name='Ming'/>
+   </black-list>
+
+</star>

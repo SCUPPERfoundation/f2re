@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dannae' economy='Agricultural' treasury='991885423' yard-markup='0' workers='1030' base='1000' slithy-xform='0' registry='false'>
+  <build type='Family' points='2'/>
+  <build type='School' agri='4' unused='6'/>
+  <build type='Agri' points='1'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Pollution' level='0' unused='2'/>
+  <build type='Clinic' level='0' hospital='2' unused='2'/>
+  <build type='Canal' points='5'/>
+  <build type='Hospital' points='1'/>
+  <build type='Police' points='2'/>
+  <build type='Atmos' level='0' unused='2'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Florancia'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='657' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='663' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='625' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='663' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='663' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='657' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='644' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='665' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='680' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='670' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='664' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='701' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='625' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='680' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='649' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='658' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='666' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='696' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='725' />
+      <cargo name='TQuarks' star='Garr' planet='Ashten' cost='713' />
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Tavajo'>
+      <cargo name='NanoFabrics' star='Sol' planet='Magellan' cost='713' />
+    </warehouse>
+
+</infrastructure>

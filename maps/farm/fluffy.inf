@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lambert' economy='Agricultural' treasury='443285909' yard-markup='0' workers='1150' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4' unused='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='0' hospital='10' unused='3'/>
+  <build type='Police' points='4'/>
+  <build type='Family' points='10'/>
+  <build type='Canal' points='5'/>
+  <build type='Hospital' points='5'/>
+  <build type='Atmos' level='0' unused='9'/>
+  <build type='Pollution' level='0' unused='10'/>
+  <build type='Biodiversity' points='6'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='2'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Admiralty Inc.' id='1' planet='Fluffy' output='Monopoles' status='run' cash='100000' top-up='100000' income='1167450' exp='836600' profit='1566200'>
+      <building max-eff='150' max-store='150' maint='5' eff='130'/>
+      <production interval-max='101' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='55' />
+      <input name='Nitros' quantity='55' />
+    </factory>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Cumulus' version='21' editor='standard' from='461' to='Cloud.Cloud Space.461'>
+<fed2-map title='Cumulus' version='21' editor='online' from='461' to='Cloud.Cloud Space.461'>
 
    <location num='0'>
       <name>Store Room</name>
@@ -65,8 +65,8 @@
    </location>
 
    <location num='398' flags='b'>
-      <name>Cumulus Bar</name>
-      <desc> You notice a large demister humming in the centre of the room, vision is perfect in here. There are row upon row of very comfortable Chesterfield Leather armchairs in here with their own comms units built in for you to order your wares and discuss the successes of your endeavours. The Exit to the Exchange is West.</desc>
+      <name>The Misty Cloud of Lust</name>
+      <desc>The is certainly a seedy joint with scantilly clad bodies waiting to sell you cheap champagne and offer private dances. In the corner is a cage dancer cavorting provocatively. On the wall is a framed picture of Sephorin and her famed 3 foot purple Cucumber. The exit is West.</desc>
       <exits w='397' no-exit='moves.noexit.5'/>
    </location>
 
@@ -179,8 +179,7 @@
 
    <location num='527' flags='y'>
       <name>Cumulus Shipyard</name>
-      <desc>  Through the mist you can see various gleaming spaceships of all sizes in what appears to be the largest showroom you have ever seen. In the centre of the room is a Terminal, above which a sign advertises the &quot;best deals in the universe. Simply type BUY SHIP to take advantage of these wonderful offers&quot; A sign says one free slithy issued to each ship owner at the free bi-monthly service of your Cumulus registered spaceship.</desc>
-      <desc>South-West will take you to the Paved Walkway and North to the Shipyard Repair area.</desc>
+      <desc>Through the mist you can see various gleaming spaceships of all sizes in what appears to be the largest showroom you have ever seen. In the centre of the room is a Terminal, above which a sign advertises the &quot;best deals in the universe. Simply type BUY SHIP to take advantage of these wonderful offers&quot;</desc>
       <exits n='463' sw='590' no-exit='moves.noexit.4'/>
    </location>
 

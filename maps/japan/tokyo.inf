@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<infrastructure owner='Yuko' economy='Industrial' treasury='19789398' yard-markup='0' workers='900' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='4' hospital='0' unused='1'/>
+  <build type='Police' points='6'/>
+  <build type='Atmos' level='4' unused='3'/>
+  <build type='Pollution' level='5' unused='3'/>
+  <build type='Canal' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Dole' points='6'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Pension' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='3'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Radio' points='4'/>
+  <build type='Family' points='10'/>
+  <build type='Oil' points='1'/>
+  <build type='Port' points='5'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Across Staffing Services' id='1' planet='Tokyo' output='RNA' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='90' />
+      <input name='Xmetals' quantity='90' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<infrastructure owner='Meijerman' economy='Agricultural' treasury='17460588' yard-markup='-10' workers='1020' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='2'/>
+    <factory owner='Bright Knight Lights Inc.' id='5' planet='Byron Center' output='Artifacts' status='run' cash='598400' top-up='100000' income='5040675' exp='1124800' profit='3909175'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='72' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Bright Knight Lights Inc.' id='7' planet='Byron Center' output='Firewalls' status='run' cash='550375' top-up='100000' income='4419750' exp='938850' profit='3520725'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='102' labour='150' wages='40' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='20' />
+    </factory>
+    <factory owner='Excalibur Inc.' id='5' planet='Byron Center' output='Artifacts' status='run' cash='593150' top-up='100000' income='2111400' exp='473600' profit='4530875'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='101' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>

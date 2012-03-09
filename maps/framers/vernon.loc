@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Vernon' version='17' editor='standard' from='2013' to='Framers.Framers Space.394'>
+<fed2-map title='Vernon' version='17' editor='online' from='2013' to='Framers.Framers Space.394'>
 
    <location num='1756'>
       <name>office</name>
@@ -140,7 +140,7 @@
 
    <location num='2012'>
       <name>President Washingtons Office</name>
-      <desc>tbd</desc>
+      <desc>This is the office of the President of the Framers Coalition.  Gwashington has his office here and you notice that Wjackson the attesting secretarry has a desk here as well where all workings of the Coalition are reviewed before final approval of the President.  All members of the Framers have offices located here on the Headquarters and Founding Planet.</desc>
       <exits e='2013'/>
    </location>
 

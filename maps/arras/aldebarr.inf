@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<infrastructure owner='Zauchust' economy='Leisure' treasury='495088539' yard-markup='0' workers='2718' base='1000' casualties='32' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='6' tech='4' research='4' studio='4' unused='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Biodiversity' points='9'/>
+  <build type='Atmos' level='10' unused='1'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Police' points='13'/>
+  <build type='Clinic' level='10' hospital='30' unused='0'/>
+  <build type='Hospital' points='15'/>
+  <build type='Family' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Dole' points='5'/>
+  <build type='Pension' points='20'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Port' points='13'/>
+  <build type='Tech' points='1'/>
+  <build type='Phone' points='11'/>
+  <build type='Fibre' points='40'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Radio' points='16'/>
+  <build type='Weather' points='4'/>
+  <build type='Fusion' points='9'/>
+  <build type='Insurance' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Research' points='1'/>
+  <build type='Floating' points='10'/>
+  <build type='Airport' points='10' level='intra'/>
+  <build type='Terraform' points='20'/>
+  <build type='Genetic' points='15'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Solar' points='12'/>
+  <build type='Longevity' points='110'/>
+  <build type='Leisure' points='16'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dragonslayer' economy='Leisure' treasury='993909872' yard-markup='0' workers='2800' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='2'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='8' hospital='30' unused='0'/>
+  <build type='Hospital' points='15'/>
+  <build type='Police' points='12'/>
+  <build type='Atmos' level='10' unused='5'/>
+  <build type='Pollution' level='9' unused='7'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Dole' points='5'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Pension' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Radio' points='20'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='13'/>
+  <build type='Oil' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Floating' points='10'/>
+  <build type='Terraform' points='20'/>
+  <build type='Genetic' points='15'/>
+  <build type='Tquark' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Solar' points='12'/>
+  <build type='Longevity' points='20'/>
+  <build type='Leisure' points='8'/>
+  <build type='Airport' points='10' level='intra'/>
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Benzite Salt Company' bays='31' efficiency='100'>
+    </depot>
+    <depot owner='Sparks Turn Into Flames Power' bays='31' efficiency='100'>
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='412' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='426' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='430' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='422' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='648' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='636' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='430' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='409' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='422' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='616' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='610' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='636' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='434' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='409' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='426' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='648' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='630' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='616' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='434' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='417' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='412' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='648' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='616' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='610' />
+      <cargo name='Lasers' star='Urland' planet='Elspeth' cost='422' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='622' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='648' />
+      <cargo name='Droids' star='Urland' planet='Elspeth' cost='648' />
+    </depot>
+</infrastructure>

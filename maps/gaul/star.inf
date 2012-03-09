@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<star name='Gaul' cartel='Darkness'>
+
+   <black-list>
+      <exile name='Jyar'/>
+   </black-list>
+
+</star>

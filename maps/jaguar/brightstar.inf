@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<infrastructure owner='Winks' economy='Agricultural' treasury='-1316506' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='3'/>
+  <build type='Agri' points='1'/>
+  <build type='Pollution' level='0' unused='3'/>
+  <build type='Atmos' level='0' unused='2'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

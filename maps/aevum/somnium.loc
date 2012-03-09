@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Somnium' version='5' editor='standard' from='2015' to='Aevum.Aevum Space.1953'>
+<fed2-map title='Somnium' version='5' editor='online' from='2015' to='Aevum.Aevum Space.1953'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -14,7 +14,7 @@
 
    <location num='2015' flags='r'>
       <name>Landing pad</name>
-      <desc>The ground here feels solid enough, yet a sensation of floating, or falling, you can tell which, sticks with you, and the hazy mist is ever-present. You&apos;re not sure how, but you are aware that the planet&apos;s exchange lies to the east, and there is a relaxing lounge to the west.</desc>
+      <desc>The ground here feels solid enough, yet a sensation of floating, or falling, you can&apos;t tell which, sticks with you, and the hazy mist is ever-present. You&apos;re not sure how, but you are aware that the planet&apos;s exchange lies to the east, and there is a relaxing lounge to the west.</desc>
       <exits e='2016' w='2014' no-exit='moves.noexit.1'/>
    </location>
 

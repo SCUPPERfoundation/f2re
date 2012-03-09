@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<infrastructure owner='Obisean' economy='Technical' treasury='83722187' yard-markup='0' workers='950' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='4' research='4' unused='2'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='3' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Atmos' level='6' unused='6'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Police' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Dole' points='4'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Oil' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Insurance' points='10'/>
+    <warehouse owner='Kayla'>
+      <cargo name='RNA' star='Food' planet='Restaurant Row' cost='348' />
+      <cargo name='RNA' star='Food' planet='Restaurant Row' cost='334' />
+      <cargo name='RNA' star='Food' planet='Restaurant Row' cost='342' />
+      <cargo name='RNA' star='Food' planet='Restaurant Row' cost='331' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

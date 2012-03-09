@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='New Chicago' version='1.00' editor='standard' from='193' to='Chicago.Chicago Space.460'>
+<fed2-map title='New Chicago' version='1' editor='online' from='193' to='Chicago.Chicago Space.460'>
 
    <location num='0'>
       <name>Storeroom</name>
@@ -50,10 +50,7 @@
 
    <location num='193' flags='yr'>
       <name>Ohare Landing Pad</name>
-      <desc>   Like the airport in Chicago, the LP here after the airport in Chicago.  The Armstrong &amp; Cuthbert offices are here as well as ship repairs and sales.</desc>
-      <desc>   A remote trading center has been setup to the east and an infirmrry is located to the northeast.</desc>
-      <desc>   A bar is located to the north.  You have a drink and a bite while you wait for your flight.</desc>
-      <desc>   The commercial district fot New Chicago is located far to the east.  If is accessable via shuttle located down on the shuttle platform.</desc>
+      <desc>Like the airport in Chicago, the LP here after the airport in Chicago.  The Armstrong &amp; Cuthbert offices are here as well as ship repairs and sales. A remote trading center has been setup to the east and an infirmary is located to the northeast. A bar is located to the north.  You have a drink and a bite while you wait for your flight. The commercial district for New Chicago is located far to the east.  If is accessible via shuttle located down on the shuttle platform.</desc>
       <exits n='129' ne='130' e='194' down='258' no-exit='moves.noexit.1'/>
    </location>
 

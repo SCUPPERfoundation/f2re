@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<infrastructure owner='Zarquad' economy='Agricultural' treasury='219734306' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4' unused='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Atmos' level='0' unused='4'/>
+  <build type='Clinic' level='0' hospital='0' unused='4'/>
+  <build type='Police' points='4'/>
+  <build type='Pollution' level='0' unused='4'/>
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

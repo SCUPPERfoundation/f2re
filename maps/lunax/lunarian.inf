@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lester' economy='Agricultural' treasury='-125812067' yard-markup='-10' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' unused='2'/>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Quaoar' version='19' editor='standard' from='460' to='Kuiper.Kuiper Space.460'>
+<fed2-map title='Quaoar' version='19' editor='online' from='460' to='Kuiper.Kuiper Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -113,7 +113,7 @@
    </location>
 
    <location num='461' flags='eb'>
-      <name>Trading Exchange</name>
+      <name>Quaoar Trading Exchange</name>
       <desc>   Technology melds with nature... set into the iceblock walls of this igloo are the electronic trading screens, letting you buy and sell commodities, or order a variety of useful goods.</desc>
       <desc>   Natives of the planet cluster around the screens, clothed in thick fur to keep out the bitter cold. Thankfully the controls are voice-operated so the locals don&apos;t have to take off their thick fur mittens.</desc>
       <exits w='460' up='335' out='460' no-exit='moves.noexit.1'/>

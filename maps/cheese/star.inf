@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<star name='Cheese' cartel='Havefun'>
+
+   <black-list>
+      <exile name='Catspaws'/>
+      <exile name='Lice'/>
+   </black-list>
+
+</star>

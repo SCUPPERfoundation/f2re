@@ -1,3 +1,80 @@
 <?xml version="1.0"?>
-<infrastructure owner='Brock' economy='Biological' treasury='0' yard-markup='0' workers='1000' slithy-xform='0' registry='false'>
+<infrastructure owner='Brock' economy='Biological' treasury='-647392469' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Atmos' level='8' unused='0'/>
+  <build type='School' level='5' research='4' biolab='4'/>
+  <build type='Research' points='1'/>
+  <build type='Biolab' points='1'/>
+  <build type='Clinic' level='8' hospital='0' unused='0'/>
+  <build type='Police' points='8'/>
+  <build type='Port' points='5'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='604' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='618' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='654' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='644' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='666' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='682' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='733' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='765' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='750' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='766' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='805' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='813' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='773' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='797' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='837' />
+      <cargo name='BioComponents' star='Dharma' planet='Samsara' cost='837' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='568' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='604' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+    </warehouse>
+
+    <depot owner='Cooked And Beird' bays='21' efficiency='100'>
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+      <cargo name='ToxicMunchers' star='Dharma' planet='Samsara' cost='470' />
+    </depot>
+    <factory owner='Cooked And Beird' id='8' planet='Samsara' output='ToxicMunchers' status='run' cash='87900' top-up='100000' income='1063725' exp='1080525' profit='41425'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='53' labour='80' wages='55' stored='150' disposal='depot'/>
+      <input name='RNA' quantity='65' />
+    </factory>
 </infrastructure>

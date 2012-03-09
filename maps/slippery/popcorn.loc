@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Popcorn' version='1.00' editor='standard' from='396' to='Slippery.Slippery Space.460'>
+<fed2-map title='Popcorn' version='1' editor='online' from='396' to='Slippery.Slippery Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -14,19 +14,14 @@
    </location>
 
    <location num='459' flags='e'>
-      <name>Remote trading exchange</name>
-      <desc>   Even in emergencies, traders don&apos;t like to be cut off from the markets, so there are facilities here to buy or sell goods with the world below. They might like to think they have turned their back on the Galaxy, but they still need to import and export a certain amount!</desc>
-      <desc>   Trading is all done remotely. As you sell goods, they are moved by steve-droids from the hold of your ship into teleport units; as you buy, the droids unload the &apos;porters and fill your cargo hold.</desc>
-      <desc>   The control room is east.</desc>
+      <name>Diaper Dandy Exchange</name>
+      <desc>Welcome to the Diaper Dandy Exchange- *Sniff Sniff* No that is not Butters&apos; diaper you smell but the sweat and hard work from the Traders looking for those valuable futures. Ticker is on the wall to the left and yes, Butters very own diaper changing station is on the right side of the room. Just in case it is the diapers you smell.... extra ventilation systems have been put in place. ***Buy, Sell, and Trade!*** Sellers BEWARE, check factories and make sure you don&apos;t hurt the facs owners (Don&apos;t want to get Exiled).  If you see Butters, feel free to leave a bag of fresh diapers and some baby powder for the rash... you will be rewarded with the satisfaction of clean air. FACTORIES WILL BE REMOVED IF NOT GIVEN PERMISSION TO PLACE ONE!  Exit is to the East.</desc>
       <exits e='460' out='460' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='460' flags='b'>
-      <name>Control room</name>
-      <desc>   This is the hub of the small space habitat. There&apos;s a mechanical hum and lots of winking lights, as the automated station goes about the business of keeping its systems operational, and providing for the needs of weary visitors.</desc>
-      <desc>   Vending machines sell refreshments to keep weary travelers alive and in good health.</desc>
-      <desc>   A cubbyhole to the west has a remote trading machine; to the east is an autodoc medical unit.</desc>
-      <desc>   Two portholes southeast and southwest will let you look out of the habitat.</desc>
+      <name>Churn room</name>
+      <desc>This is the hub of the small space habitat. There&apos;s a mechanical hum and lots of winking lights, as the automated station goes about the business of keeping its systems operational, and providing for the needs of weary visitors.   Vending machines sell refreshments to keep weary travelers alive and in good health (Side Note: Food Machines only sell varied flavors of popcorn). CHURN to the West for the DIAPER DANDY EXCHANGE.  CHURN to the SE for the slippery ones Office.  CHURN to the SW for a Porthole.  CHURN to the East for Medical Hospitalities.  CHURN to the North for VALET PARKING (AKA your ship).  **Watch out for falling Diaper debris**</desc>
       <exits n='396' e='461' se='525' sw='523' w='459' out='396' no-exit='moves.noexit.1'/>
    </location>
 
@@ -47,10 +42,8 @@
    </location>
 
    <location num='525'>
-      <name>Porthole</name>
-      <desc>   You have a magnificent view of the planet below. You can make out the shape of the continents, and patches of light show you the major cities. No-one knows whether the inhabitants are human or alien, since they have refused all contact with the rest of the Galaxy - this is as close as anyone ever gets.</desc>
-      <desc>   As you watch, a storm brews up over the northern hemisphere, the clouds grow thicker and the planet&apos;s detail is obscured.</desc>
-      <desc>   An access hatch above you leads to a duct. The control room is northwest.</desc>
+      <name>Butters Office</name>
+      <desc>Welcome to Butters Office- Through the giant view window that sits on the front wall of the room.. you have a magnificent view of the planet below. You can make out the shape of the continents, and patches of light show you the major cities. No-one knows whether the inhabitants are human or alien, since they have refused all contact with the rest of the Galaxy.  A black leather armchair is positioned in the middle of the room behind a red oak desk.  The desk is covered with sticky notes as the current planet Founder is trying to remember everything and not blow up the planet. Also a empty box of Chocolate with a note reading: &quot;Sorry Hazed, I was hungry!&quot;, can be seen in the open drawer of the desk. The only door in the room on the left, marked Butters&apos; Throne Room, is locked and covered with chemical waste tape to prevent entry. Portraits of a certain planet owner from Groundhog to Founder, cover the walls, with a few spots left open.  **Only exit is the ladder to the Northwest.**</desc>
       <exits nw='460' up='589' no-exit='moves.noexit.1'/>
    </location>
 
@@ -78,4 +71,3 @@
    </location>
 
 </fed2-map>
-

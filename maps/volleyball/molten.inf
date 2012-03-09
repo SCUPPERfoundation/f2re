@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<infrastructure owner='Desaxman' economy='Biological' treasury='-62510413' yard-markup='0' workers='200' base='1000' slithy-xform='0' registry='false'>
+  <build type='Tachyon' points='15'/>
+  <build type='School' level='5' research='4' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Insurance' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Saavik'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='568' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='568' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='568' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+    </warehouse>
+
+</infrastructure>

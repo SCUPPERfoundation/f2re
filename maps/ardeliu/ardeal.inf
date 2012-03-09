@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<infrastructure owner='Nosferatu' economy='Agricultural' treasury='993690480' yard-markup='0' workers='1100' base='1000' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Family' points='10'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Saavik'>
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='592' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='580' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='501' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='501' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Genco Olive Oil Co.' id='14' planet='Ardeal' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='5363550' exp='1795450' profit='3968180'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='112' labour='20' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='55' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='15' planet='Ardeal' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='5529825' exp='1791250' profit='3791705'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='128' labour='20' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='20' />
+      <input name='Synths' quantity='45' />
+    </factory>
+    <factory owner='Demon Dogs Ltd.' id='1' planet='Ardeal' output='Univators' status='stop' cash='100000' top-up='100000' income='3107625' exp='599870' profit='3128530'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='32' labour='90' wages='0' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='60' />
+    </factory>
+    <factory owner='Demon Dogs Ltd.' id='2' planet='Ardeal' output='Univators' status='stop' cash='100000' top-up='100000' income='3108600' exp='609995' profit='3110830'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='2' labour='90' wages='0' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='60' />
+    </factory>
+    <factory owner='Lords Of Light Ltd.' id='4' planet='Ardeal' output='Univators' status='stop' cash='100000' top-up='100000' income='3111225' exp='603320' profit='3207795'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='119' labour='90' wages='0' stored='75' disposal='depot'/>
+      <input name='Monopoles' quantity='70' />
+    </factory>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Bei' version='31' editor='standard' from='396' to='Aard.Aard Space.523'>
+<fed2-map title='Bei' version='31' editor='online' from='396' to='Aard.Aard Space.523'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -40,11 +40,7 @@
 
    <location num='396' flags='yr'>
       <name>Landing strip</name>
-      <desc>   Welcome at Bei, the fruity planet.</desc>
-      <desc>-West : Recreational Area</desc>
-      <desc>-North : Yorah Memorial Hospital</desc>
-      <desc>-East  : Fishermen&apos;s Gain Exchange</desc>
-      <desc>-South: Expo</desc>
+      <desc>Welcome at Bei, the fruity planet.  North: Band Aid Hospital - East:  Exchange - South: Downtown</desc>
       <exits n='332' e='397' s='460' no-exit='moves.noexit.1'/>
    </location>
 

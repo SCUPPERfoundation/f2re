@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<infrastructure owner='Kimberly' economy='Technical' treasury='-46444353' yard-markup='0' workers='1110' base='1000' slithy-xform='0' registry='false'>
+  <build type='Clinic' level='5' hospital='2' unused='2'/>
+  <build type='Hospital' points='1'/>
+  <build type='Police' points='6'/>
+  <build type='School' level='4' mining='4' unused='10'/>
+  <build type='Atmos' level='5' unused='0'/>
+  <build type='Pollution' level='8' unused='0'/>
+  <build type='Family' points='2'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='2'/>
+  <build type='Coal' points='4'/>
+  <build type='Insulation' points='8'/>
+  <build type='Satellite' points='2'/>
+  <build type='Port' points='2'/>
+  <build type='Oil' points='2'/>
+  <build type='Defence' points='10'/>
+  <build type='Phone' points='8'/>
+  <build type='Airlane' points='2'/>
+  <build type='Urban' points='4'/>
+  <build type='Fibre' points='38'/>
+</infrastructure>

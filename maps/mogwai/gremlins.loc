@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Gremlins' version='7' editor='standard' from='329' to='Mogwai.Mogwai Space.265'>
+<fed2-map title='Gremlins' version='7' editor='online' from='329' to='Mogwai.Mogwai Space.265'>
 
    <location num='0' flags='t'>
       <name>Storage Room</name>
@@ -50,7 +50,7 @@
 
    <location num='329' flags='b'>
       <name>Towne Square</name>
-      <desc>As you step out of your ship you find yourself in the Towne Square. The entire square is covered in a blanket of snow several inches thick. There is a very tall slender Christmas tree in the middle of the square. There are a few benches arranged in a open circle around the Christmas tree. There are several different varieties of trees and bushes growing around the square. There is a Christmas tree lot on the SOUTH side of the square. An indoor pool is to the WEST and there is a bar to the SOUTHWEST. There is a large department store to the EAST, the sheriff&apos;s office is to the NORTHWEST, and a movie theater to the NORTH.</desc>
+      <desc>As you step out of your ship you find yourself in the Towne Square. The entire square is covered in a blanket of snow several inches thick. There is a very tall slender Christmas tree in the middle of the square. There are a few benches arranged in a open circle around the Christmas tree. There are several different varieties of trees and bushes growing around the square. There is a Christmas tree lot (Exchange) on the SOUTH side of the square. An indoor pool is to the WEST and there is a bar to the SOUTHWEST. There is a large department store to the EAST, the sheriff&apos;s office is to the NORTHWEST, and a movie theater to the NORTH.</desc>
       <exits n='265' ne='266' e='330' se='394' s='393' sw='392' w='328' nw='264' no-exit='moves.noexit.1'/>
    </location>
 

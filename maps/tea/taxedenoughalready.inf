@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<infrastructure owner='Godiva' economy='Agricultural' treasury='32446944' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <depot owner='Cool Mountain Ventures' bays='21' efficiency='100'>
+    </depot>
+    <factory owner='Cool Mountain Ventures' id='9' planet='Taxed Enough Already' output='NanoFabrics' status='run' cash='274625' top-up='100000' income='1843725' exp='784975' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='28' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='10' />
+      <input name='Synths' quantity='60' />
+    </factory>
+    <factory owner='Cool Mountain Ventures' id='10' planet='Taxed Enough Already' output='NanoFabrics' status='run' cash='339100' top-up='100000' income='1843125' exp='730925' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='50' />
+      <input name='Synths' quantity='0' />
+    </factory>
+    <factory owner='Cool Mountain Ventures' id='11' planet='Taxed Enough Already' output='NanoFabrics' status='run' cash='434550' top-up='100000' income='1855425' exp='729200' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='50' />
+      <input name='Synths' quantity='0' />
+    </factory>
+    <factory owner='Cool Mountain Ventures' id='12' planet='Taxed Enough Already' output='NanoFabrics' status='run' cash='100000' top-up='100000' income='1378575' exp='613075' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='100' />
+      <input name='Synths' quantity='0' />
+    </factory>
+    <factory owner='Old West Mining &amp; Exploration' id='9' planet='Taxed Enough Already' output='Synths' status='run' cash='326025' top-up='100000' income='1419900' exp='963175' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='28' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='GAsChips' quantity='50' />
+      <input name='Clays' quantity='35' />
+    </factory>
+    <factory owner='Old West Mining &amp; Exploration' id='10' planet='Taxed Enough Already' output='Synths' status='run' cash='317400' top-up='100000' income='1423425' exp='984475' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='28' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='GAsChips' quantity='50' />
+      <input name='Clays' quantity='35' />
+    </factory>
+</infrastructure>

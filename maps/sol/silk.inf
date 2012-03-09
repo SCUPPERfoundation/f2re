@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<infrastructure owner='Freya' economy='Technical' treasury='-180886683' yard-markup='0' workers='400' base='1000' registry='false'>
+    <warehouse owner='Achmedthe'>
+    </warehouse>
+
+    <warehouse owner='Dutchie'>
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='724' />
+      <cargo name='Controllers' star='Sol' planet='Silk' cost='606' />
+      <cargo name='Nanos' star='Sol' planet='Silk' cost='457' />
+      <cargo name='LanzariK' star='Sol' planet='Brass' cost='583' />
+      <cargo name='LanzariK' star='Sol' planet='Brass' cost='596' />
+      <cargo name='LanzariK' star='Sol' planet='Brass' cost='601' />
+      <cargo name='LanzariK' star='Sol' planet='Brass' cost='592' />
+      <cargo name='LanzariK' star='Sol' planet='Brass' cost='588' />
+      <cargo name='LanzariK' star='Sol' planet='Brass' cost='589' />
+      <cargo name='Woods' star='Sol' planet='Silk' cost='583' />
+      <cargo name='Woods' star='Sol' planet='Silk' cost='656' />
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='748' />
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='686' />
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='696' />
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='697' />
+      <cargo name='NanoFabrics' star='Sol' planet='Silk' cost='744' />
+      <cargo name='Monopoles' star='Sol' planet='Mars' cost='709' />
+      <cargo name='Crystals' star='Sol' planet='Silk' cost='540' />
+      <cargo name='Crystals' star='Sol' planet='Silk' cost='558' />
+      <cargo name='Crystals' star='Sol' planet='Silk' cost='537' />
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Horancia'>
+    </warehouse>
+
+    <warehouse owner='Ionia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='404' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='401' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='422' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='409' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='401' />
+      <cargo name='Studios' star='Food' planet='Recipe' cost='343' />
+      <cargo name='Studios' star='Food' planet='Recipe' cost='350' />
+      <cargo name='Univators' star='Food' planet='Recipe' cost='526' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='414' />
+      <cargo name='Univators' star='Food' planet='Recipe' cost='496' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='425' />
+      <cargo name='Studios' star='Food' planet='Recipe' cost='360' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='417' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='422' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='425' />
+      <cargo name='Studios' star='Food' planet='Recipe' cost='339' />
+      <cargo name='Studios' star='Food' planet='Recipe' cost='343' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='409' />
+      <cargo name='Studios' star='Food' planet='Recipe' cost='356' />
+      <cargo name='AntiMatter' star='Food' planet='Recipe' cost='417' />
+    </warehouse>
+
+    <warehouse owner='Koskbelloc'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Mur'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightstar'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Scarfdood'>
+      <cargo name='AntiMatter' star='Archai' planet='Oceania' cost='427' />
+      <cargo name='AntiMatter' star='Archai' planet='Oceania' cost='435' />
+      <cargo name='AntiMatter' star='Frontier' planet='Boondock' cost='411' />
+      <cargo name='AntiMatter' star='Frontier' planet='Boondock' cost='402' />
+    </warehouse>
+
+</infrastructure>

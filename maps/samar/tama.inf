@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<infrastructure owner='Ironman' economy='Leisure' treasury='449418060' yard-markup='-10' workers='1450' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='10' unused='5'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Clinic' level='10' hospital='30' unused='0'/>
+  <build type='Police' points='11'/>
+  <build type='Dole' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='20'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Port' points='13'/>
+  <build type='Radio' points='44'/>
+  <build type='Airlane' points='10'/>
+  <build type='Fusion' points='15'/>
+  <build type='Insurance' points='10'/>
+  <build type='Weather' points='14'/>
+  <build type='Antigrav' points='10'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Tech' points='1'/>
+  <build type='Urban' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Floating' points='10'/>
+  <build type='Oil' points='1'/>
+  <build type='Airport' points='10' level='intra'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Leisure' points='8'/>
+  <build type='Solar' points='12'/>
+  <build type='Hospital' points='15'/>
+  <build type='Genetic' points='15'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+</infrastructure>

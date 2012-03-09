@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<star name='Vermont' cartel='Havefun'>
+
+   <black-list>
+      <exile name='Riles'/>
+      <exile name='Rat'/>
+      <exile name='Rats'/>
+      <exile name='Hitler'/>
+      <exile name='Markiss'/>
+      <exile name='Santa'/>
+   </black-list>
+
+</star>

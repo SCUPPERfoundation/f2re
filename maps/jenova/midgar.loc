@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Midgar' version='1.00' editor='standard' from='339' to='Jenova.Jenova Space.791'>
+<fed2-map title='Midgar' version='1' editor='online' from='339' to='Jenova.Jenova Space.791'>
 
    <location num='0' flags='kt'>
       <name>storage</name>
@@ -14,7 +14,7 @@
 
    <location num='340'>
       <name>Rocket</name>
-      <desc>The rocket stands 50 meters tall.  Its large propulsion engines form a wide base and the rocket tapers along its length from the base to its small nose cone.  The rocket is tilted slightly and appears if not for the scafolding erected around it, that it would fall over.  The rocket is weathered, as if it has been exposed to the elements for some time.</desc>
+      <desc>The rocket stands 50 meters tall.  Its large propulsion engines form a wide base and the rocket tapers along its length from the base to its small nose cone.  The rocket is tilted slightly and appears if not for the scaffolding erected around it, that it would fall over.  The rocket is weathered, as if it has been exposed to the elements for some time.</desc>
       <exits w='339' in='341'/>
    </location>
 
@@ -175,4 +175,3 @@
    </location>
 
 </fed2-map>
-

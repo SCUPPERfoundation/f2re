@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<infrastructure owner='Trilleth' economy='Resource' treasury='16722306' yard-markup='0' workers='1030' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='2' agri='4' mining='4'/>
+  <build type='Family' points='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Police' points='4'/>
+  <build type='Clinic' level='2' hospital='4' unused='0'/>
+  <build type='Hospital' points='2'/>
+  <build type='Atmos' level='2' unused='1'/>
+  <build type='Pollution' level='2' unused='2'/>
+  <build type='Housing' points='3'/>
+  <build type='Rail' points='5'/>
+  <build type='Mining' points='1'/>
+    <warehouse owner='Alcapone'>
+    </warehouse>
+
+    <warehouse owner='Aragorn'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1158' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1205' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1168' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1204' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+    </warehouse>
+
+    <warehouse owner='Arwen'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1057' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1066' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1087' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1075' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1095' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1126' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1136' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1134' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1165' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1154' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1130' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1176' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1151' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1162' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1183' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1149' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1158' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1134' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1144' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1215' />
+    </warehouse>
+
+    <warehouse owner='Asmodeus'>
+    </warehouse>
+
+    <warehouse owner='Astaroth'>
+    </warehouse>
+
+    <warehouse owner='Elrond'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+    </warehouse>
+
+    <warehouse owner='Eomer'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+    </warehouse>
+
+    <warehouse owner='Eowyn'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='715' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='736' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='732' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='747' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='747' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='747' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='747' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='732' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='710' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='753' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='742' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='763' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='757' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+    </warehouse>
+
+    <warehouse owner='Galadriel'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='702' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='710' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='696' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='710' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='731' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='731' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='702' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='696' />
+    </warehouse>
+
+    <warehouse owner='Gandalf'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='723' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='744' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='744' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='710' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='747' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='732' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='710' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='753' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='710' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='732' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='710' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='724' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='716' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='747' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='749' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='757' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='742' />
+    </warehouse>
+
+    <warehouse owner='Gimli'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='871' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='881' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='864' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='882' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='865' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='875' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='857' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='884' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='901' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='901' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='876' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='920' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='930' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='930' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='922' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='913' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='931' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='903' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='931' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='932' />
+    </warehouse>
+
+    <warehouse owner='Hexlir'>
+      <cargo name='Crystals' star='Ombey' planet='Valisk' cost='580' />
+      <cargo name='Crystals' star='Ombey' planet='Valisk' cost='618' />
+      <cargo name='Crystals' star='Ombey' planet='Valisk' cost='582' />
+      <cargo name='Crystals' star='Ombey' planet='Valisk' cost='618' />
+      <cargo name='Crystals' star='Ombey' planet='Valisk' cost='600' />
+      <cargo name='Crystals' star='Ombey' planet='Valisk' cost='612' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='631' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='657' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='650' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='625' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='625' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='625' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='631' />
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Legolas'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='876' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='903' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='930' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='931' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='894' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='940' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='922' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='940' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='904' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='922' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='969' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='980' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='980' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='980' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='940' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='960' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='980' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='988' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='1019' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='968' />
+    </warehouse>
+
+    <warehouse owner='Lfive'>
+    </warehouse>
+
+    <warehouse owner='Meriadoc'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nowayjose'>
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='574' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='510' />
+      <cargo name='Monopoles' star='Garr' planet='Ashten' cost='566' />
+      <cargo name='Powerpacks' star='Asylum' planet='Sanitaria' cost='519' />
+      <cargo name='Firewalls' star='Asylum' planet='Link' cost='547' />
+      <cargo name='Libraries' star='Asylum' planet='Link' cost='513' />
+      <cargo name='Tracers' star='Asylum' planet='Link' cost='467' />
+      <cargo name='Katydidics' star='Asylum' planet='Link' cost='465' />
+      <cargo name='Univators' star='Asylum' planet='Link' cost='439' />
+      <cargo name='LanzariK' star='Asylum' planet='Narcissus' cost='551' />
+      <cargo name='Pharmaceuticals' star='Farm' planet='Fluffy' cost='486' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='574' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='510' />
+      <cargo name='Tracers' star='Asylum' planet='Link' cost='467' />
+      <cargo name='Tracers' star='Asylum' planet='Link' cost='454' />
+      <cargo name='Katydidics' star='Asylum' planet='Link' cost='456' />
+      <cargo name='Artifacts' star='Asylum' planet='Sanitaria' cost='557' />
+      <cargo name='Artifacts' star='Asylum' planet='Sanitaria' cost='579' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='604' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='486' />
+    </warehouse>
+
+    <warehouse owner='Oddroid'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1162' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='713' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+    </warehouse>
+
+    <warehouse owner='Ozamabindozin'>
+    </warehouse>
+
+    <warehouse owner='Predator'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='734' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='726' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='691' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='705' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='720' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='698' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='723' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='736' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='715' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='730' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='744' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='730' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='708' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='723' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='715' />
+    </warehouse>
+
+    <warehouse owner='Repete'>
+      <cargo name='Woods' star='Mythos' planet='Siryn' cost='539' />
+      <cargo name='Generators' star='Mythos' planet='Siryn' cost='552' />
+      <cargo name='Gold' star='Mythos' planet='Siryn' cost='489' />
+      <cargo name='Hides' star='Mythos' planet='Siryn' cost='321' />
+      <cargo name='Lasers' star='Mythos' planet='Siryn' cost='375' />
+      <cargo name='Mechparts' star='Mythos' planet='Siryn' cost='342' />
+      <cargo name='Nanos' star='Mythos' planet='Siryn' cost='441' />
+      <cargo name='Nickel' star='Mythos' planet='Siryn' cost='284' />
+      <cargo name='Radioactives' star='Mythos' planet='Siryn' cost='454' />
+      <cargo name='Spices' star='Mythos' planet='Siryn' cost='519' />
+      <cargo name='Synths' star='Mythos' planet='Siryn' cost='441' />
+      <cargo name='TQuarks' star='Mythos' planet='Siryn' cost='708' />
+      <cargo name='Weapons' star='Mythos' planet='Siryn' cost='356' />
+      <cargo name='Xmetals' star='Mythos' planet='Siryn' cost='377' />
+      <cargo name='Clays' star='Mythos' planet='Siryn' cost='397' />
+      <cargo name='Hides' star='Mythos' planet='Siryn' cost='312' />
+      <cargo name='Gold' star='Mythos' planet='Siryn' cost='503' />
+      <cargo name='Fruit' star='Mythos' planet='Siryn' cost='327' />
+      <cargo name='Woods' star='Mythos' planet='Siryn' cost='561' />
+      <cargo name='Meats' star='Mythos' planet='Siryn' cost='337' />
+    </warehouse>
+
+    <warehouse owner='Silverhawkjr'>
+    </warehouse>
+
+    <warehouse owner='Snack'>
+    </warehouse>
+
+    <warehouse owner='Tombombadil'>
+    </warehouse>
+
+    <warehouse owner='Wizard'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='764' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='757' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='780' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='789' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='789' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='797' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='797' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='764' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='807' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='790' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='790' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='775' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='784' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='808' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='816' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='832' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='816' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='826' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='842' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cumulus' cost='801' />
+    </warehouse>
+
+    <warehouse owner='Zodbot'>
+    </warehouse>
+
+    <factory owner='Mental Dreams Inc.' id='6' planet='Siryn' output='Univators' status='run' cash='628265' top-up='100000' income='2229525' exp='369580' profit='3048645'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='65' labour='94' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='0' />
+    </factory>
+    <factory owner='Mental Dreams Inc.' id='7' planet='Siryn' output='Univators' status='run' cash='528815' top-up='100000' income='2242425' exp='372365' profit='3066945'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='5' labour='94' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='0' />
+    </factory>
+    <factory owner='Meijer Technologies Ltd' id='6' planet='Siryn' output='Firewalls' status='run' cash='800200' top-up='100000' income='2453925' exp='460050' profit='4003015'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='79' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='65' />
+    </factory>
+    <factory owner='Meijer Technologies Ltd' id='7' planet='Siryn' output='Firewalls' status='run' cash='756175' top-up='100000' income='2341050' exp='462825' profit='3796690'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='79' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='65' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<infrastructure owner='Caesar' economy='Biological' treasury='41244319' yard-markup='0' workers='1090' base='1000' slithy-xform='0' registry='false'>
+  <build type='Terraform' points='3'/>
+  <build type='Clinic' level='8' hospital='6' unused='0'/>
+  <build type='Hospital' points='3'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='2'/>
+  <build type='Pension' points='1'/>
+  <build type='Dole' points='2'/>
+  <build type='Tachyon' points='8'/>
+  <build type='Genetic' points='3'/>
+  <build type='Tech' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

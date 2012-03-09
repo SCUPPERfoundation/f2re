@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+   <cabinet size='57'>
+      <item id='shoes_abs' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='sceptre_abs' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='invite_abs' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='ashtray_abs' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='genie_abs' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='aol_abs' star='Sol' map='Mars' size='1' visibility='100'></item>
+   </cabinet>

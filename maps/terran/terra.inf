@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<infrastructure owner='Liakell' economy='Agricultural' treasury='13829486' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Across Staffing Services' bays='21' efficiency='95'>
+    </depot>
+    <factory owner='Across Staffing Services' id='2' planet='Terra' output='Firewalls' status='run' cash='100000' top-up='100000' income='3731700' exp='790345' profit='3524280'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='80' />
+    </factory>
+    <factory owner='Across Staffing Services' id='3' planet='Terra' output='Firewalls' status='run' cash='100000' top-up='100000' income='3715350' exp='804220' profit='3529155'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='80' />
+    </factory>
+    <factory owner='Across Staffing Services' id='4' planet='Terra' output='Firewalls' status='run' cash='100000' top-up='100000' income='3728175' exp='833470' profit='3458730'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='80' />
+    </factory>
+</infrastructure>

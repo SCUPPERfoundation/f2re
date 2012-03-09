@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Death Row' version='2' editor='standard' from='458' to='Exile.Exile Space.459'>
+<fed2-map title='Death Row' version='2' editor='online' from='458' to='Exile.Exile Space.459'>
 
    <location num='393' flags='b'>
       <name>Mess Hall</name>
@@ -47,7 +47,7 @@
    </location>
 
    <location num='524'>
-      <name>Droid Security Comples</name>
+      <name>Droid Security Complex</name>
       <desc>  The droids working here appear to be unaware of your presence, but you have made a very poor choice in entering this restricted area.  One droid is stepping into a lift that is taking it down into some sort of disposal facility.  Some may call this decision a deadly choice, as any movement in any direction other than west through the door may result in your slow and painful death at the hands of a hardened criminal.</desc>
       <exits n='460' e='525' s='588' w='523' down='589' out='523' no-exit='moves.noexit.1'/>
    </location>

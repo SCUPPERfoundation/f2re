@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Lost Space' version='7' editor='standard'>
+<fed2-map title='Lost Space' version='7' editor='online'>
 
    <location num='132' flags='s'>
       <name>Bubbles Orbit</name>
@@ -9,7 +9,7 @@
 
    <location num='196' flags='slp'>
       <name>Lost Link</name>
-      <desc>Welcome to the Lost system. The lost colony of Dryad is to your east, the recently discovered planet of Bubble or you can use the link to jump to another system.</desc>
+      <desc>Welcome to the Lost system. The lost colony of Dryad is to your east, the recently discovered planet of Bubble to the north or you can use the link to jump to another system.</desc>
       <exits n='132' e='197' no-exit='moves.noexit.1'/>
    </location>
 

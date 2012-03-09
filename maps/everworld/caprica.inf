@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<infrastructure owner='Necrotik' economy='Leisure' treasury='260357786' yard-markup='0' workers='1550' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='10' hospital='10' unused='8'/>
+  <build type='Police' points='10'/>
+  <build type='Atmos' level='10' unused='0'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Dole' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Housing' points='3'/>
+  <build type='Mining' points='1'/>
+  <build type='Radio' points='20'/>
+  <build type='Port' points='12'/>
+  <build type='Oil' points='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Hospital' points='5'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Weather' points='10'/>
+  <build type='Fusion' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Defence' points='10'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Floating' points='9'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Tquark' points='10'/>
+  <build type='Solar' points='12'/>
+  <build type='Leisure' points='8'/>
+  <build type='Terraform' points='20'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <depot owner='Cool Mountain Ventures' bays='21' efficiency='100'>
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='519' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='519' />
+      <cargo name='Nitros' star='Dharma' planet='Samsara' cost='170' />
+    </depot>
+    <depot owner='Old West Mining &amp; Exploration' bays='21' efficiency='100'>
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='519' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='534' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='513' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='513' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='519' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+      <cargo name='Pharmaceuticals' star='Highlander' planet='Zephan' cost='508' />
+    </depot>
+    <factory owner='Old West Mining &amp; Exploration' id='5' planet='Caprica' output='Monopoles' status='run' cash='579625' top-up='100000' income='2069475' exp='666000' profit='1435050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='75' labour='300' wages='40' stored='150' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='30' />
+      <input name='Nitros' quantity='30' />
+    </factory>
+    <factory owner='Cool Mountain Ventures' id='1' planet='Caprica' output='Monopoles' status='run' cash='690475' top-up='100000' income='3399000' exp='1208925' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='29' labour='300' wages='40' stored='75' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='20' />
+      <input name='Nitros' quantity='20' />
+    </factory>
+    <factory owner='Cool Mountain Ventures' id='2' planet='Caprica' output='Monopoles' status='run' cash='696625' top-up='100000' income='3405150' exp='1209075' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='29' labour='300' wages='40' stored='75' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='20' />
+      <input name='Nitros' quantity='20' />
+    </factory>
+</infrastructure>

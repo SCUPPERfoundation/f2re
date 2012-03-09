@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Genike' economy='Resource' treasury='-76482433' yard-markup='-10' workers='880' base='1000' registry='true'>
+  <build type='Atmos' level='2' unused='1'/>
+  <build type='Pollution' level='2' unused='2'/>
+  <build type='School' level='2' mining='4' unused='2'/>
+  <build type='Family' points='8'/>
+  <build type='Canal' points='4'/>
+  <build type='Police' points='2'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='1'/>
+  <build type='Rail' points='4'/>
+</infrastructure>

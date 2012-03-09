@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<infrastructure owner='Brookerf' economy='Biological' treasury='20238411' yard-markup='0' workers='1300' base='1300' slithy-xform='0' registry='false'>
+  <build type='Clinic' level='8' hospital='0' unused='10'/>
+  <build type='Phone' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='School' level='5' research='4' biolab='4'/>
+  <build type='Research' points='1'/>
+  <build type='Biolab' points='1'/>
+  <build type='Atmos' level='3' unused='0'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

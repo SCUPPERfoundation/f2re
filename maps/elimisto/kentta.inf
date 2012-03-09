@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lynnea' economy='Agricultural' treasury='505210427' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <depot owner='Lace, Leather And Chains' bays='21' efficiency='100'>
+    </depot>
+    <depot owner='Polka-dotted Pole Cats' bays='21' efficiency='100'>
+    </depot>
+    <factory owner='Polka-dotted Pole Cats' id='1' planet='Kentta' output='Synths' status='run' cash='233325' top-up='100000' income='3678375' exp='2779200' profit='702200'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='41' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='GAsChips' quantity='50' />
+      <input name='Clays' quantity='20' />
+    </factory>
+    <factory owner='Lace, Leather And Chains' id='3' planet='Kentta' output='Synths' status='run' cash='262350' top-up='100000' income='502350' exp='340000' profit='816825'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='23' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='GAsChips' quantity='0' />
+      <input name='Clays' quantity='60' />
+    </factory>
+    <factory owner='Lace, Leather And Chains' id='4' planet='Kentta' output='Synths' status='run' cash='233925' top-up='100000' income='502875' exp='368950' profit='860200'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='3' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='GAsChips' quantity='50' />
+      <input name='Clays' quantity='35' />
+    </factory>
+    <factory owner='Polka-dotted Pole Cats' id='2' planet='Kentta' output='Univators' status='run' cash='442825' top-up='100000' income='3679425' exp='843675' profit='2479125'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='100' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='0' />
+    </factory>
+</infrastructure>

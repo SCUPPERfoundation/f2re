@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Cube' version='2' editor='standard' from='403' to='Cubit.Cubit Space.194'>
+<fed2-map title='Cube' version='2' editor='online' from='403' to='Cubit.Cubit Space.194'>
 
    <location num='0'>
       <name>Storage</name>
@@ -58,7 +58,7 @@
 
    <location num='403'>
       <name>Shuttle Pad</name>
-      <desc>    Space shuttles are landing and taking off from this huge landing pad area. Incoming passengers and freight are heading in a southwest direction through conveyor tubes towards the arrivals and departures building.</desc>
+      <desc>Space shuttles are landing and taking off from this huge landing pad area. Incoming passengers and freight are heading in a SouthWest direction towards the Arrivals and Departures building. A flashing sign on the building reads http://www.cragonfed.com/.</desc>
       <exits sw='466'/>
    </location>
 
@@ -91,8 +91,7 @@
 
    <location num='466'>
       <name>Arrivals and Departures</name>
-      <desc>    Holographic screens seem to hang in mid air throughout the arrivals and departures building in which you are now standing. They indicate that six domes have been constructed on this asteroid.</desc>
-      <desc>    Management has provided plenty of directional signs to ensure you do not get lost. The shuttle landing pad can be clearly seen to the northeast while the door to the west leads to the main concourse.</desc>
+      <desc>Holographic screens seem to hang in mid air throughout the arrivals and departures building in which you are now standing. They indicate that six domes have been constructed on this asteroid.    Management has provided plenty of directional signs to ensure you do not get lost. The shuttle landing pad can be clearly seen to the northeast while the door to the west leads to the main concourse.</desc>
       <exits ne='403' w='465'/>
       <events in-room='message.security.1'/>
    </location>
@@ -127,8 +126,7 @@
 
    <location num='528' flags='e'>
       <name>Exchange</name>
-      <desc>    Private cubicles with inter-active holo screens are provided for the merchants and traders.</desc>
-      <desc>    The exit is northeast.</desc>
+      <desc>Private Cubicles with inter-active holo screens are provided for the merchants and traders. Management has also provided the following list of commodities needed by the planet...Alloys, Nitros, Props, Controllers, Electros, Synths, all Bio, Sens, Sims and Unis. The exit is NorthEast.</desc>
       <exits ne='465'/>
    </location>
 

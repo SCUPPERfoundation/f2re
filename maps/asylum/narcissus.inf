@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<infrastructure owner='Monodefuego' economy='Agricultural' treasury='164291092' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+    <warehouse owner='Exton'>
+      <cargo name='TQuarks' star='Asylum' planet='Sanitaria' cost='662' />
+      <cargo name='TQuarks' star='Asylum' planet='Sanitaria' cost='662' />
+      <cargo name='Crystals' star='Asylum' planet='Narcissus' cost='510' />
+      <cargo name='Crystals' star='Asylum' planet='Narcissus' cost='510' />
+      <cargo name='AntiMatter' star='Asylum' planet='Narcissus' cost='376' />
+      <cargo name='Woods' star='Asylum' planet='Sanitaria' cost='544' />
+      <cargo name='Crystals' star='Asylum' planet='Sanitaria' cost='510' />
+      <cargo name='Libraries' star='Asylum' planet='Sanitaria' cost='528' />
+      <cargo name='Woods' star='Asylum' planet='Sanitaria' cost='544' />
+      <cargo name='Woods' star='Asylum' planet='Narcissus' cost='549' />
+      <cargo name='Woods' star='Asylum' planet='Narcissus' cost='544' />
+      <cargo name='Woods' star='Asylum' planet='Narcissus' cost='544' />
+      <cargo name='TQuarks' star='Asylum' planet='Sanitaria' cost='662' />
+      <cargo name='Crystals' star='Asylum' planet='Sanitaria' cost='510' />
+      <cargo name='Gold' star='Asylum' planet='Narcissus' cost='466' />
+      <cargo name='Generators' star='Asylum' planet='Narcissus' cost='520' />
+      <cargo name='Crystals' star='Asylum' planet='Narcissus' cost='510' />
+      <cargo name='Gold' star='Asylum' planet='Narcissus' cost='466' />
+      <cargo name='LanzariK' star='Logic' planet='Genesis' cost='529' />
+      <cargo name='Libraries' star='Logic' planet='Genesis' cost='524' />
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Tinkerbell&apos;s Trinkets' id='15' planet='Narcissus' output='Univators' status='run' cash='662600' top-up='100000' income='4678125' exp='881750' profit='3822575'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='30' labour='85' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='50' />
+    </factory>
+</infrastructure>

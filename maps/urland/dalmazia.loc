@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Dalmazia' version='1.00' editor='standard' from='329' to='Urland.Urland Space.265'>
+<fed2-map title='Dalmazia' version='1' editor='online' from='329' to='Urland.Urland Space.265'>
 
    <location num='0'>
       <name>Closet</name>
@@ -32,7 +32,7 @@
    </location>
 
    <location num='268' flags='e'>
-      <name>Dragonfire Exchange</name>
+      <name>Mirror Exchange</name>
       <desc>In addition to the normal commodities societies trade, one can acquire little known and hard to acquire commodities here.  There names are quite secret so I cannot tell you what they are, but if you need them, this is where you can get them.</desc>
       <exits w='267' up='329' out='329' no-exit='moves.noexit.3'/>
    </location>

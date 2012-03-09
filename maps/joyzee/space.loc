@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Joyzee Space' version='1' editor='standard'>
+<fed2-map title='Joyzee Space' version='1' editor='online'>
 
    <location num='0' flags='st'>
       <name>Storage closet</name>
@@ -8,7 +8,7 @@
 
    <location num='459' flags='s'>
       <name>Piles of Stuff that New Ark is SELLING</name>
-      <desc>Commodities being sold:</desc>
+      <desc>Commodities being sold (net production): Hides (60)| LanzariK (45)| Munitions (42)| Mechparts (39)| Nitros (35)| Pharmaceuticals (34)| Livestock (27)| LubOils (21)| Droids (20)| Generators (20)| Fruit (18)| Nanos (18)| Alloys (17)| Gold (13)| NanoFabrics (11)| Soya (10)| GAsChips (7)| Semiconductors (7)| Spices (7)| Synths (7)| RNA (5)| TQuarks (5)| Controllers (4)| Explosives (3)| Polymers (1)|</desc>
       <exits e='460' no-exit='moves.noexit.1'/>
    </location>
 
@@ -21,7 +21,7 @@
 
    <location num='461' flags='s'>
       <name>Flashing Neon Sign &quot;NEW ARK IS BUYING&quot;</name>
-      <desc>Commods bought:</desc>
+      <desc>Commods bought (net consumption): Artifacts (-2)| BioComponents (-2)| Lasers (-2)| BioChips (-3)| Tools (-3)| Holos (-5)| Probes (-5)| Xmetals (-5)| Nickel (-6)| Petrochemicals (-8)| Simulations (-8)| Clays (-9)| Vidicasters (-9)| Powerpacks (-10)| AntiMatter (-12)| Hypnotapes (-12)| Woods (-12)| Katydidics (-13)| Cereals (-14)| Propellants (-14)| Radioactives (-14)| Sensamps (-14)| Textiles (-14)| Electros (-15)| Furs (-15)| Weapons (-16)| Proteins (-17)| Tracers (-17)| Univators (-17)| ToxicMunchers (-18)| Games (-19)| Laboratories (-19)| Clinics (-21)| MicroScalpels (-21)| Musiks (-21)| Crystals (-22)| Monopoles (-23)| Libraries (-25)| Sensors (-27)| Meats (-28)| Firewalls (-30)| Studios (-31)|</desc>
       <exits w='460' no-exit='moves.noexit.1'/>
    </location>
 

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<infrastructure owner='Stingr' economy='Resource' treasury='-51239150' yard-markup='0' workers='800' base='1000' registry='false'>
+  <build type='Canal' points='2'/>
+  <build type='Heliograph' points='2'/>
+  <build type='Base' points='3'/>
+  <build type='School' level='2' unused='5'/>
+  <build type='Rail' points='3'/>
+</infrastructure>

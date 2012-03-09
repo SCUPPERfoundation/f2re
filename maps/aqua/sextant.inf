@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<infrastructure owner='Murmur' economy='Agricultural' treasury='633657737' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Heliograph' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Carpathia' version='1.00' editor='standard' from='457' to='Ardeliu.Ardeliu Space.267'>
+<fed2-map title='Carpathia' version='1' editor='online' from='457' to='Ardeliu.Ardeliu Space.267'>
 
    <location num='0' flags='kt'>
       <name>Storage Shed</name>
@@ -19,8 +19,8 @@
    </location>
 
    <location num='406'>
-      <name>Base of Tower</name>
-      <desc>The tower is constructed of stone.  A circular stone stairway winds its way up the tower.  There is an exit to the south.</desc>
+      <name>Base of Dingbat&apos;s Tower</name>
+      <desc>The Northwest tower is where Dingbat has made his home until he gets a star system of his own. Having dug up sufficient dirt on Zardoz buried deep in the Spynet files, the homeless Dingbat approached Zardoz with an ultimatum, and Count Nosferatu was compelled to provide him with a tower to call his own. Though the two clash from time to time on what is appropriate decor and behavior for a wamphyri castle, they manage to live in quiet disharmony.  A circular staircase winds its way up the tower walls, continuing upward through each level. An ominous looking doorway leads south from the relative peace of Dingbat&apos;s tower into the castle&apos;s Main Hall.</desc>
       <exits s='470' up='414' no-exit='moves.noexit.2'/>
    </location>
 
@@ -31,8 +31,8 @@
    </location>
 
    <location num='414'>
-      <name>Tower</name>
-      <desc>The stairs continue their climb from the top of the tower to the bottom.  Torches placed on the walls provide a modicum of light.</desc>
+      <name>Dingbat&apos;s Office</name>
+      <desc>Dingbat&apos;s office is as cozy as the Count will allow. The walls are hung with photos of proud and happy moments in Ding&apos;s life. Here&apos;s a photo of Ding shaking hands with the salesman at the Jarrow Shipyards. Over there is a candid snapshot of Jezz, Zardoz, Ding, and a soaking wet squirrel sipping cans of WhoopAss in the castle hot tub. Somewhat out of place is a disturbing picture of Ding&apos;s charred body in an indelicate pose on the gurney of the Ritual recovery room after another venture into Jezz&apos;s fireplace. Apparently the Count insisted that this photo be hung, to counter the cheeriness of the other photos. Dingbat&apos;s desk is strewn with accounting books bearing the name Squid Inc. and hastily scrawled factory request letters to various planet owners. On the other side of the office, Ding&apos;s holo-drafting table contains the incomplete plans for his own star system.  From above, you can smell the delicious aroma of food being prepared...but something&apos;s missing. Stairs also lead down.</desc>
       <exits up='422' down='406' no-exit='moves.noexit.4'/>
    </location>
 
@@ -43,8 +43,8 @@
    </location>
 
    <location num='422'>
-      <name>Tower</name>
-      <desc>The tower has slits built into the walls.  Oak doors positioned to the south and to the east provide access to the Battlements of the castle.  There are stairs going down and up.</desc>
+      <name>Dingbat&apos;s Kitchen</name>
+      <desc>Who knew that Dingbat loved to cook? Certainly you didn&apos;t. Ding&apos;s enormous kitchen occupies the whole of this level of the tower. On the west wall, a sliding glass door opens onto a balcony where Ding&apos;s space-age ceramic cooker allows him to create the galaxy&apos;s best steaks. The Count likes his very rare.  Delicious scents fill the air. The table bows from the weight of enormous quantities of food, and the pantry is loaded...but no garlic. No garlic? Certainly Nosferatu must be behind this outrage.  Doorways lead out to the battlements, both east and south. A circular staircase leads up from the office below and hugs the wall as it continues its way up the tower. You do not hear the tolling of a gigantic bell coming from the room above.</desc>
       <exits e='423' s='486' up='430' down='414' no-exit='moves.noexit.2'/>
    </location>
 
@@ -62,8 +62,8 @@
    </location>
 
    <location num='430' flags='b'>
-      <name>Tower Room</name>
-      <desc>The tower room surprisingly is quite modern.  There are hook ups for communication and data transmission.  It appears that this could be a nice office.  Perhaps if the Count is asked nicely, one can be built here.</desc>
+      <name>Dingbat&apos;s Belfry</name>
+      <desc>Entering the belfry, you are impressed with the sheer enormity of the neobronze bell. A sign on the wall warns, &quot;No dongs, bongs or gongs allowed!&quot; You may take that to mean whatever you wish.  You recall the conspicuous absence of the cliched ominous tolling of the castle bell echoing across the countryside upon your arrival at the landing pad. When Dingbat moved into Castle Doz, he insisted that his abode be located in the belfry. Hearing that the castle was not equipped with a belfry, Dingbat insisted one be constructed and fitted with the monstrosity that now hangs above you. Unfortunately, the Count would not tolerate a bell that only went &quot;Ding&quot; as it ruined the macabre atmosphere, so he had the clapper removed.  The belfry comprises Dingbat&apos;s living quarters and contains all the furniture you&apos;d expect to see in a human bedroom. A nondescript grey coverall is draped defiantly over a chair.  The staircase continues up to the tower&apos;s parapet, but Dingbat doesn&apos;t go up there.</desc>
       <exits up='438' down='422' out='457' no-exit='moves.noexit.2'/>
    </location>
 
@@ -76,20 +76,19 @@
 
    <location num='438'>
       <name>Parapet</name>
-      <desc>The top of the tower offers a sweeping view of the landscape below.  The wind whips eddys and currents around the parapet and a soft mist is seen rising from the chasm.  The planet&apos;s dreaded nature contains a certain beauty that is visible from this vantage point.</desc>
+      <desc>Dingbat doesn&apos;t come up here. The stairs lead down.</desc>
       <exits down='430' no-exit='moves.noexit.4'/>
    </location>
 
    <location num='440' flags='bt'>
       <name>Zard and Jezz&apos;s Tower</name>
-      <desc>The top of the tower affords a sweeping view of Carpathia.  >From this vantage point, the beauty of this strange red world is evident.  In the distance, the village can be seen with the tiny plumes of smoke rising from their chimneys.  Zard has placed two chairs, side-by-side, so he can watch the sunset with his beloved.  On a small table is a cup of steaming coffee for his beloved to enjoy.  On a stand is a classical guitar that Zard will play for his beloved as they watch the sunset together.</desc>
+      <desc>The top of the tower affords a sweeping view of Carpathia.  &gt;From this vantage point, the beauty of this strange red world is evident.  In the distance, the village can be seen with the tiny plumes of smoke rising from their chimneys.  Zard has placed two chairs, side-by-side, so he can watch the sunset with his beloved.  On a small table is a cup of steaming coffee for his beloved to enjoy.  On a stand is a classical guitar that Zard will play for his beloved as they watch the sunset together.</desc>
       <exits down='432' no-exit='moves.noexit.7'/>
    </location>
 
    <location num='457' flags='yr'>
       <name>Carpathia Shuttle Landing Pad</name>
-      <desc>The blood red sky of Carpathia creates an eerie mood.  Unlike the bustle of activity that is common to Landing Pads on other worlds, Carpathia&apos;s Landing Pad is deserted.  In the distance, to the east, the sharp spires of Castle Doz reach for the sky like a dark claw.  Wind blows and howls across the landing pad.  Night is coming, and the Sleeper will awaken.</desc>
-      <desc>     A road to town is to the east.</desc>
+      <desc>The blood red sky of Carpathia creates an eerie mood.  Unlike the bustle of activity that is common to Landing Pads on other worlds, Carpathia&apos;s Landing Pad is deserted.  In the distance, to the east, the sharp spires of Castle Doz reach for the sky like a dark claw.  Wind blows and howls across the landing pad.  Orange dust blows in tiny whirls and eddies across the abandoned pad.  Night is coming, and the Sleeper will awaken.  Suddenly, a scream echoes over the howls of the wind.  Or is it a scream?  Can anything human make such tortured cry?  The cry fades away and is lost in the wind.  A chill passes over the pad, and a sensation of insatiable hunger is felt.  A primal hunger.  A hunger for the essence of life.  A hunger that is deeper and more unquenchable than Hazed&apos;s hunger for chocolate.  The sleeper is awake.</desc>
       <exits e='458' no-exit='moves.noexit.9'/>
    </location>
 
@@ -130,7 +129,7 @@
       <name>Staircase</name>
       <desc>The Staircase has two wooden railings coming down along side.  At the end of each railing, a large statue of a gargolye is perched.  The view up the stairs shows a large tapestry which contains troubling pictures of an ancient war, death, and gruesome treatment of the prisoners.  The flickering lights of the torches against the woven scenes creates an illusion that the scenes are coming to life.</desc>
       <desc>     There are doors to the towers to the northeast and southeast, and a small door with steps leading down.</desc>
-      <exits ne='408' se='536' w='470' up='479' down='787' no-exit='moves.noexit. 2'/>
+      <exits ne='408' se='536' w='470' up='479' down='787' no-exit='moves.noexit.2'/>
    </location>
 
    <location num='478' flags='b'>
@@ -246,12 +245,12 @@
    <location num='723'>
       <name>Abandoned Tomb</name>
       <desc>This appears to be a tomb that was abandoned long ago.  There are two crypts here, one is still sealed, but the other is open.  A marker on the sealed one says, &quot;In Memory of Shebel96 - Gone, but never forgotten.&quot;  The open crypt has a marker that says, &quot;MooSol - Forgotten, but never gone.&quot;</desc>
-      <exits s='787' no-exit='moves.noexit 2'/>
+      <exits s='787' no-exit='moves..0'/>
    </location>
 
    <location num='724' flags='bkt'>
       <name>Jezz&apos;s Office</name>
-      <desc>Jezz has set up an office in what was once a dungeon cell.  Shackles hang from the walls, and there is a variety of somwhat scary devices on a table which seem to be designed to convince someone of the error of their ways, and the need to tell all that they know.</desc>
+      <desc>Jezz has set up an office in what was once a dungeon cell.  Shackles hang from the walls, and there is a variety of somewhat scary devices on a table which seem to be designed to convince someone of the error of their ways, and the need to tell all that they know.</desc>
       <exits s='788' out='457' no-exit='moves.noexit.10'/>
    </location>
 
@@ -300,4 +299,3 @@
    </location>
 
 </fed2-map>
-

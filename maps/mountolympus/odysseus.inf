@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<infrastructure owner='Deus' economy='Agricultural' treasury='-5580657' yard-markup='0' workers='1110' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='2'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='0' hospital='2' unused='2'/>
+  <build type='Hospital' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Heliograph' points='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Tinkerbell&apos;s Trinkets' id='14' planet='Odysseus' output='Univators' status='run' cash='701450' top-up='100000' income='4882950' exp='855725' profit='4057850'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='30' labour='85' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='70' />
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='7' planet='Odysseus' output='NanoFabrics' status='run' cash='822110' top-up='100000' income='1082250' exp='360140' profit='4859855'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='74' labour='19' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+      <input name='Synths' quantity='60' />
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='8' planet='Odysseus' output='Artifacts' status='run' cash='834080' top-up='100000' income='931200' exp='197120' profit='4795815'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='39' labour='352' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>

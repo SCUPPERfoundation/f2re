@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<infrastructure owner='Freya' economy='Resource' treasury='166137865' yard-markup='0' workers='1150' base='1000' registry='false'>
+  <build type='School' level='2' agri='4' mining='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='2' hospital='10' unused='8'/>
+  <build type='Hospital' points='5'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='5'/>
+  <build type='Atmos' level='2' unused='8'/>
+  <build type='Pollution' level='2' unused='8'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Police' points='10'/>
+  <build type='Family' points='10'/>
+  <build type='Dole' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Housing' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='10'/>
+    <depot owner='Cogs! Cogs! Cogs!' bays='21' efficiency='100'>
+    </depot>
+    <factory owner='Cogs! Cogs! Cogs!' id='1' planet='Ooops' output='Artifacts' status='run' cash='665000' top-up='100000' income='5401425' exp='1287600' profit='3564200'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='79' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Cogs! Cogs! Cogs!' id='2' planet='Ooops' output='Univators' status='run' cash='551875' top-up='100000' income='4231650' exp='850350' profit='2935500'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='47' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='60' />
+    </factory>
+    <factory owner='Cogs! Cogs! Cogs!' id='3' planet='Ooops' output='Univators' status='run' cash='546025' top-up='100000' income='4216425' exp='846975' profit='2903025'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='46' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='60' />
+    </factory>
+    <factory owner='Cogs! Cogs! Cogs!' id='4' planet='Ooops' output='Univators' status='run' cash='547450' top-up='100000' income='4234575' exp='846975' profit='2935875'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='45' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='60' />
+    </factory>
+    <factory owner='Cogs! Cogs! Cogs!' id='5' planet='Ooops' output='Artifacts' status='run' cash='663875' top-up='100000' income='5399775' exp='1287600' profit='3532825'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='42' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

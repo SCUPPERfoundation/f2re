@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Augusta' version='32' editor='standard' from='396' to='Georgia.Georgia Space.460'>
+<fed2-map title='Augusta' version='32' editor='online' from='396' to='Georgia.Georgia Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -112,13 +112,13 @@
    </location>
 
    <location num='706'>
-      <name>Jeffro&apos;s Balcony</name>
+      <name>Clyde&apos;s Balcony</name>
       <desc>Towers of industries stretch the length of Augusta as far as the eye can see.  You can see the canal from here churning turbines and moving barges.  Water from the river is used to operate the vast array of plants producing a variety of comodities.  To the East is the Office of Slug Bug Unlimited.</desc>
       <exits e='707'/>
    </location>
 
    <location num='707'>
-      <name>Slug Bug Unlimited Office - CEO Hillbilly Jeffro</name>
+      <name>Big Dog Engineering Office: CEO One eyed Clyde.</name>
       <desc>You see a desk with pictures of his buddies, Scottric and Von.  The wide sprawl of the room on top of the Bon Air Hotel opens into a balcony that overlooks the industrial section of the planet to the West.</desc>
       <exits w='706' down='708' out='396'/>
    </location>
@@ -172,4 +172,3 @@
    </location>
 
 </fed2-map>
-

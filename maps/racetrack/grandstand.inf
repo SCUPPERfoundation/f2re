@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<infrastructure owner='Racingnut' economy='Industrial' treasury='114257688' yard-markup='0' workers='860' base='1000' registry='true'>
+  <build type='Police' points='6'/>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='1'/>
+  <build type='Pollution' level='5' unused='4'/>
+  <build type='Clinic' level='4' hospital='6' unused='2'/>
+  <build type='Hospital' points='3'/>
+  <build type='Family' points='3'/>
+  <build type='Dole' points='6'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='4' unused='2'/>
+  <build type='Housing' points='7'/>
+  <build type='Mining' points='1'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Pension' points='9'/>
+  <build type='Oil' points='2'/>
+  <build type='Radio' points='4'/>
+  <build type='Tech' points='1'/>
+  <build type='Insulation' points='4'/>
+  <build type='Port' points='4'/>
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Hexlir'>
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='631' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='631' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='625' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='625' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='631' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='650' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='625' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='650' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='657' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sulawesi' cost='657' />
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='935' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='962' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='924' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='971' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='971' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='982' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='972' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='981' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='942' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='991' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='972' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='952' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='942' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='951' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='999' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1010' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='960' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='991' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='970' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='970' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Aphrodite&apos;s Aphrodisiacs' bays='31' efficiency='90'>
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+      <cargo name='TQuarks' star='Racetrack' planet='Grandstand' cost='835' />
+    </depot>
+    <factory owner='Music Mania Llc' id='6' planet='Grandstand' output='Powerpacks' status='run' cash='407475' top-up='100000' income='3783375' exp='2353800' profit='1624000'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='52' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='15' />
+      <input name='Radioactives' quantity='0' />
+    </factory>
+    <factory owner='Music Mania Llc' id='7' planet='Grandstand' output='Powerpacks' status='run' cash='298500' top-up='100000' income='3780525' exp='2413050' profit='1624600'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='37' labour='50' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='30' />
+      <input name='Radioactives' quantity='0' />
+    </factory>
+    <factory owner='Music Mania Llc' id='8' planet='Grandstand' output='LanzariK' status='run' cash='412800' top-up='100000' income='3891975' exp='2451375' profit='1653850'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='45' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='Polymers' quantity='5' />
+      <input name='Semiconductors' quantity='40' />
+      <input name='Xmetals' quantity='25' />
+      <input name='Alloys' quantity='40' />
+    </factory>
+</infrastructure>

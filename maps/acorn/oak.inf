@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<infrastructure owner='Risu' economy='Agricultural' treasury='269744833' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='0' unused='1'/>
+  <build type='Clinic' level='0' hospital='0' unused='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Man-eater Catering Supplies' id='11' planet='Oak' output='Sensamps' status='stop' cash='100000' top-up='100000' income='2653875' exp='943255' profit='1980700'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='130' labour='80' wages='0' stored='150' disposal='exchange'/>
+      <input name='Crystals' quantity='70' />
+      <input name='Gold' quantity='70' />
+    </factory>
+    <factory owner='Man-eater Catering Supplies' id='12' planet='Oak' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='4445700' exp='1654570' profit='2986885'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='113' labour='20' wages='0' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='5' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Man-eater Catering Supplies' id='13' planet='Oak' output='Firewalls' status='stop' cash='100000' top-up='100000' income='3606075' exp='781240' profit='3041420'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='112' labour='150' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='40' />
+    </factory>
+    <factory owner='Man-eater Catering Supplies' id='14' planet='Oak' output='Firewalls' status='stop' cash='100000' top-up='100000' income='3507825' exp='799240' profit='3177170'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='111' labour='150' wages='0' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='60' />
+    </factory>
+</infrastructure>

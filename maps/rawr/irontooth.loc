@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Irontooth' version='31' editor='standard' from='460' to='Rawr.Rawr Space.460'>
+<fed2-map title='Irontooth' version='31' editor='online' from='460' to='Rawr.Rawr Space.460'>
 
    <location num='460' flags='yr'>
       <name>Irontooth Stardock</name>
@@ -21,8 +21,7 @@
 
    <location num='462'>
       <name>Irontooth Exchange Announcements</name>
-      <desc>Announcements for the Irontooth Exchange will be posted here.</desc>
-      <desc>The exchange itself is back to the west...</desc>
+      <desc>Nothing to announce today!</desc>
       <exits w='461'/>
    </location>
 

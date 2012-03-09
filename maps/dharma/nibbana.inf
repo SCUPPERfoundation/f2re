@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<infrastructure owner='Brock' economy='Agricultural' treasury='-597476869' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Cooked And Beird' bays='31' efficiency='100'>
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+      <cargo name='Furs' star='Dharma' planet='Nibbana' cost='650' />
+    </depot>
+    <factory owner='Cooked And Beird' id='6' planet='Nibbana' output='Furs' status='run' cash='205300' top-up='100000' income='1553025' exp='1060875' profit='781800'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='13' labour='60' wages='55' stored='150' disposal='depot'/>
+      <input name='Petrochemicals' quantity='20' />
+      <input name='Mechparts' quantity='20' />
+      <input name='Textiles' quantity='40' />
+      <input name='Livestock' quantity='20' />
+    </factory>
+    <factory owner='Cooked And Beird' id='7' planet='Nibbana' output='Furs' status='run' cash='292975' top-up='100000' income='1752900' exp='1059750' profit='539025'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='12' labour='60' wages='55' stored='150' disposal='depot'/>
+      <input name='Petrochemicals' quantity='20' />
+      <input name='Mechparts' quantity='20' />
+      <input name='Textiles' quantity='40' />
+      <input name='Livestock' quantity='20' />
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='1' planet='Nibbana' output='Artifacts' status='run' cash='834680' top-up='100000' income='931800' exp='197120' profit='4911915'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='77' labour='352' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='2' planet='Nibbana' output='Artifacts' status='run' cash='831305' top-up='100000' income='928425' exp='197120' profit='4935165'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='78' labour='352' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

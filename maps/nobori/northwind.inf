@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<infrastructure owner='Ronin' economy='Industrial' treasury='50934157' yard-markup='-10' workers='1070' base='1000' slithy-xform='0' registry='false'>
+  <build type='Base' points='5'/>
+  <build type='Canal' points='5'/>
+  <build type='Heliograph' points='5'/>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='4' hospital='4' unused='4'/>
+  <build type='Police' points='6'/>
+  <build type='Atmos' level='4' unused='2'/>
+  <build type='Pollution' level='5' unused='4'/>
+  <build type='Hospital' points='2'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Family' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Satellite' points='4'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Cybran Gengineering Corporation' id='1' planet='Northwind' output='Artifacts' status='run' cash='691590' top-up='100000' income='2168325' exp='513480' profit='3722955'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='42' labour='389' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

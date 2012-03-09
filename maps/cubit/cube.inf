@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<infrastructure owner='Cragon' economy='Industrial' treasury='-37338639' yard-markup='0' workers='980' base='1000' registry='false'>
+  <build type='Base' points='5'/>
+  <build type='School' level='3' agri='4' mining='4' tech='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='4' hospital='6' unused='2'/>
+  <build type='Hospital' points='3'/>
+  <build type='Family' points='10'/>
+  <build type='Atmos' level='4' unused='5'/>
+  <build type='Police' points='4'/>
+  <build type='Pollution' level='5' unused='3'/>
+  <build type='Housing' points='6'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='4'/>
+  <build type='Dole' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Rail' points='3'/>
+  <build type='Insulation' points='5'/>
+  <build type='Radio' points='4'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Oil' points='1'/>
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='RNA' star='Kaos' planet='Pantheon' cost='370' />
+      <cargo name='RNA' star='Kaos' planet='Pantheon' cost='382' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='568' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='568' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='592' />
+    </warehouse>
+
+    <depot owner='Trigonometry Inc.' bays='21' efficiency='100'>
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+      <cargo name='Artifacts' star='Cubit' planet='Cube' cost='730' />
+    </depot>
+    <factory owner='Trigonometry Inc.' id='1' planet='Cube' output='Alloys' status='run' cash='257050' top-up='100000' income='1079025' exp='234000' profit='967050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='91' labour='90' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Trigonometry Inc.' id='2' planet='Cube' output='Alloys' status='run' cash='257425' top-up='100000' income='1074675' exp='234000' profit='962325'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='91' labour='90' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Trigonometry Inc.' id='3' planet='Cube' output='Alloys' status='run' cash='256375' top-up='100000' income='1080600' exp='234000' profit='960600'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='91' labour='90' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Trigonometry Inc.' id='7' planet='Cube' output='Artifacts' status='run' cash='167375' top-up='100000' income='1635750' exp='962000' profit='849575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='99' labour='370' wages='40' stored='75' disposal='depot'/>
+    </factory>
+    <factory owner='Trigonometry Inc.' id='8' planet='Cube' output='Katydidics' status='run' cash='330650' top-up='100000' income='3486450' exp='1813850' profit='1908800'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='101' labour='100' wages='40' stored='150' disposal='exchange'/>
+      <input name='AntiMatter' quantity='40' />
+      <input name='Polymers' quantity='5' />
+      <input name='Gold' quantity='40' />
+    </factory>
+</infrastructure>

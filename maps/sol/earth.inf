@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bella' economy='Resource' treasury='146225233' yard-markup='-10' workers='940' base='1000' slithy-xform='0' registry='true'>
+  <build type='School' agri='4' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='0' unused='1'/>
+  <build type='Heliograph' points='2'/>
+  <build type='Base' points='3'/>
+  <build type='Pollution' level='0' unused='2'/>
+  <build type='Clinic' level='0' hospital='4' unused='1'/>
+  <build type='Hospital' points='2'/>
+  <build type='Police' points='2'/>
+  <build type='Family' points='2'/>
+  <build type='Canal' points='2'/>
+  <build type='Dole' points='2'/>
+  <build type='Biodiversity' points='2'/>
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Horancia'>
+    </warehouse>
+
+    <warehouse owner='Ionia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Kiraile'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightstar'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Thursday'>
+      <cargo name='Droids' star='Sol' planet='Selena' cost='570' />
+      <cargo name='Droids' star='Sol' planet='Selena' cost='601' />
+      <cargo name='Droids' star='Sol' planet='Selena' cost='574' />
+      <cargo name='Droids' star='Sol' planet='Doris' cost='559' />
+      <cargo name='Droids' star='Sol' planet='Doris' cost='578' />
+      <cargo name='Droids' star='Sol' planet='Doris' cost='592' />
+      <cargo name='Droids' star='Sol' planet='Doris' cost='589' />
+      <cargo name='Droids' star='Sol' planet='Castillo' cost='565' />
+      <cargo name='Droids' star='Sol' planet='Castillo' cost='596' />
+      <cargo name='Droids' star='Sol' planet='Mars' cost='559' />
+      <cargo name='BioChips' star='Sol' planet='Paradise' cost='608' />
+      <cargo name='BioChips' star='Sol' planet='Doris' cost='535' />
+      <cargo name='BioChips' star='Sol' planet='Magellan' cost='524' />
+      <cargo name='BioChips' star='Sol' planet='Paradise' cost='545' />
+      <cargo name='BioChips' star='Sol' planet='Doris' cost='530' />
+      <cargo name='BioChips' star='Sol' planet='Magellan' cost='537' />
+      <cargo name='BioChips' star='Sol' planet='Magellan' cost='535' />
+      <cargo name='BioChips' star='Sol' planet='Magellan' cost='616' />
+      <cargo name='BioChips' star='Sol' planet='Doris' cost='540' />
+      <cargo name='BioChips' star='Sol' planet='Paradise' cost='544' />
+    </warehouse>
+
+    <warehouse owner='Trav'>
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='524' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='529' />
+      <cargo name='LanzariK' star='Eriez' planet='Edinboro' cost='601' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='524' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='540' />
+      <cargo name='LanzariK' star='Eriez' planet='Edinboro' cost='592' />
+      <cargo name='LanzariK' star='Eriez' planet='Edinboro' cost='574' />
+      <cargo name='LanzariK' star='Vacation' planet='Nowhere' cost='529' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='534' />
+      <cargo name='LanzariK' star='Vacation' planet='Nowhere' cost='534' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='524' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='534' />
+      <cargo name='LanzariK' star='Vacation' planet='Somewhere' cost='529' />
+      <cargo name='LanzariK' star='Eriez' planet='Edinboro' cost='594' />
+      <cargo name='LanzariK' star='Eriez' planet='Edinboro' cost='578' />
+    </warehouse>
+
+    <warehouse owner='Triphina'>
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='693' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='723' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='711' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='752' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='788' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='809' />
+      <cargo name='NanoFabrics' star='Sol' planet='Earth' cost='822' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='680' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='831' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='907' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='936' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='1001' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='1018' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='1014' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='1096' />
+      <cargo name='TQuarks' star='Sol' planet='Earth' cost='1144' />
+    </warehouse>
+
+</infrastructure>

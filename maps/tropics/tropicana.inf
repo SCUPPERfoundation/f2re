@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<infrastructure owner='Silverwolf' economy='Agricultural' treasury='543331772' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='908' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='955' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='945' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='966' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='956' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='946' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='928' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='909' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='956' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='938' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='919' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='938' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='958' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='967' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='949' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='967' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='949' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='967' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='986' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='938' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

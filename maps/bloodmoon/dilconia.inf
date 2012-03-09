@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Furgas' economy='Technical' treasury='-12901766' yard-markup='0' workers='1120' base='1000' slithy-xform='0' registry='false'>
+  <build type='Base' points='2'/>
+  <build type='School' level='4' unused='11'/>
+  <build type='Clinic' level='6' hospital='4' unused='3'/>
+  <build type='Atmos' level='6' unused='0'/>
+  <build type='Pollution' level='7' unused='0'/>
+  <build type='Police' points='3'/>
+  <build type='Family' points='10'/>
+  <build type='Telegraph' points='3'/>
+  <build type='Housing' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Hospital' points='2'/>
+  <build type='Satellite' points='2'/>
+  <build type='Radio' points='4'/>
+  <build type='Oil' points='1'/>
+  <build type='Insulation' points='9'/>
+</infrastructure>

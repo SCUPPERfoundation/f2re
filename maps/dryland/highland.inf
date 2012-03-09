@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<infrastructure owner='Robroy' economy='Technical' treasury='-14108338' yard-markup='-10' workers='1290' base='1000' slithy-xform='0' registry='false'>
+  <build type='Atmos' level='6' unused='6'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='School' level='4' tech='4' research='4' unused='9'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='6' hospital='8' unused='4'/>
+  <build type='Police' points='8'/>
+  <build type='Hospital' points='4'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Base' points='5'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Port' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Insulation' points='4'/>
+  <build type='Satellite' points='5'/>
+  <build type='Research' points='1'/>
+  <build type='Fibre' points='10'/>
+  <build type='Phone' points='5'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Defence' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Insurance' points='5'/>
+  <build type='Floating' points='1'/>
+  <build type='Surveillance' points='9'/>
+</infrastructure>

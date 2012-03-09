@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Slippery Space' version='1.00' editor='standard'>
+<fed2-map title='Slippery Space' version='1' editor='online'>
 
    <location num='460' flags='slp'>
       <name>Orbit and interstellar link</name>
@@ -9,4 +9,3 @@
    </location>
 
 </fed2-map>
-

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Miranda' version='1.00' editor='standard' from='396' to='Blue Sun.Blue Sun Space.460'>
+<fed2-map title='Miranda' version='1' editor='online' from='396' to='Blue Sun.Blue Sun Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -22,7 +22,7 @@
    </location>
 
    <location num='397' flags='e'>
-      <name>Sandy exchange</name>
+      <name>Miranda Trading Exchange</name>
       <desc>   The thick stone walls of the building keep it cool, which prevents the trading machinery - and the traders themselves - from overheating. The floor is covered with sand and you wonder why it doesn&apos;t get into the equipment and cause problems.</desc>
       <desc>   The full range of commodities are bought and sold here, despite the planet being for vacationers. Obviously some people can&apos;t relax properly without a trading console nearby.</desc>
       <desc>   When you&apos;ve had enough work and want to head to the beach, you can exit by going through the west door.</desc>

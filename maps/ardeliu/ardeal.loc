@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Ardeal' version='1.00' editor='standard' from='332' to='Ardeliu.Ardeliu Space.396'>
+<fed2-map title='Ardeal' version='1' editor='online' from='332' to='Ardeliu.Ardeliu Space.396'>
 
    <location num='0' flags='kt'>
       <name>Storage Shed</name>
@@ -75,7 +75,7 @@
 
    <location num='399'>
       <name>Village Square</name>
-      <desc>In the center of the square is a fountain.  The water sprays in the air giving forth a renewal of life to the planet and the villagers who reside here.  The Village square is lined with cobblestones, and quaint rustic buildings surround it.  The planetary exchange is to the north, and a small cafe with a checkered awning is to the south.  To the west is a rustic two story building that houses offices for various companies.</desc>
+      <desc>In the center of the square is a fountain.  The water sprays in the air giving forth a renewal of life to the planet and the villagers who reside here.  The Village square is lined with cobblestones, and quaint rustic buildings surround it.  The planetary exchange is to the north, and a small cafe with a checkered awning is to the south.  To the east is a rustic two story building that houses offices for various companies.</desc>
       <exits n='335' e='400' s='463' w='398' no-exit='moves.noexit.7'/>
    </location>
 
@@ -203,7 +203,7 @@
    <location num='2765'>
       <name>Inside Tree</name>
       <desc>The inside of the tree is dark, you faintly see the doorway, and the outside planetform OUT of the tree.</desc>
-      <exits up='2744' out='1228' no-exit='moves.noexit 12'/>
+      <exits up='2744' out='1228' no-exit='moves..0'/>
    </location>
 
    <location num='2807' flags='bkt'>
@@ -221,4 +221,3 @@
    </location>
 
 </fed2-map>
-

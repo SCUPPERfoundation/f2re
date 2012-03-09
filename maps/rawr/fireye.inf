@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Trogdor' economy='Agricultural' treasury='961005018' yard-markup='0' workers='900' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='6'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='0' unused='2'/>
+  <build type='Pollution' level='0' unused='3'/>
+  <build type='Police' points='2'/>
+  <build type='Clinic' level='0' hospital='0' unused='2'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Dole' points='2'/>
+</infrastructure>

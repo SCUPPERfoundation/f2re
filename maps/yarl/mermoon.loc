@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Mermoon' version='1.00' editor='standard' from='398' to='Yarl.Yarl Space.461'>
+<fed2-map title='Mermoon' version='1' editor='online' from='398' to='Yarl.Yarl Space.461'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,8 +8,7 @@
 
    <location num='334' flags='e'>
       <name>Exchange</name>
-      <desc>   It&apos;s slightly cooler in this dome, as the warming pods are constantly being extinguished by the rushing of the traders and haulers. Booths lining the walls give you the chance to stock up on any other things you or your ship might need.</desc>
-      <desc>   The exit is south.</desc>
+      <desc>It&apos;s slightly cooler in this MERMOON dome, as the warming pods are constantly being extinguished by the rushing of the traders and haulers. Booths lining the walls give you the chance to stock up on any other things you or your ship might need.</desc>
       <exits s='398' out='398' no-exit='moves.noexit.1'/>
    </location>
 

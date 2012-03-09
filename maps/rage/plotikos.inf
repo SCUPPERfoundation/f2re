@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Obisean' economy='Biological' treasury='33898032' yard-markup='0' workers='1250' base='1000' slithy-xform='0' registry='false'>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='8' hospital='30' unused='4'/>
+  <build type='Hospital' points='15'/>
+  <build type='School' level='5' research='4' biolab='4' unused='7'/>
+  <build type='Research' points='1'/>
+  <build type='Biolab' points='1'/>
+  <build type='Genetic' points='10'/>
+  <build type='Pollution' level='0' unused='15'/>
+  <build type='Atmos' level='8' unused='6'/>
+  <build type='Police' points='10'/>
+  <build type='Port' points='10'/>
+  <build type='Floating' points='5'/>
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Vivid' version='11' editor='standard' from='259' to='Darkness.Darkness Space.264'>
+<fed2-map title='Vivid' version='11' editor='online' from='259' to='Darkness.Darkness Space.264'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -20,13 +20,13 @@
 
    <location num='132' flags='b'>
       <name>Office Complex</name>
-      <desc>This is the Vivid office complex. Currently the offices are completely empty but once tenants arrive the complex will be fixed up.</desc>
+      <desc>This is the Vivid office complex. The office of Death&apos;s Delay lies to the NORTHWEST. The office to the NORTHEAST is currently empty but will be quickly decorated should there be a tenant that moves in.</desc>
       <exits ne='69' s='196' nw='67' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='195' flags='eb'>
       <name>Vivid Exchange</name>
-      <desc>You find yourself in the exchange. You look around and realize like the launch pad building this building doesnt have any windows either. All the display screens are facing away from the doorway and you realize the brightness of the planet would probably cause an incredible amount of annoying glare if this place was not set up differently. You are very thankful that someone had enough sense to design this place properly and step up to one of the empty terminals to start your business.</desc>
+      <desc>You find yourself in the exchange. You look around and realize like the launch pad building this building does not have any windows either. All the display screens are facing away from the doorway and you realize the brightness of the planet would probably cause an incredible amount of annoying glare if this place was set up differently. You are very thankful that someone had enough sense to design this place properly and step up to one of the empty terminals to start your business.</desc>
       <exits e='196' no-exit='moves.noexit.1'/>
    </location>
 
@@ -44,7 +44,7 @@
 
    <location num='259' flags='b'>
       <name>Vivid Landing Pad</name>
-      <desc>You arrive on the planets surface and your shuttle is docked with a small building. As you step out of your shuttle into the small building you notice a two things. First you notice that the entire building is solid without a single window and one door leading into a small alcove. Second you notice that the alcove entrance door is open but the exit door is hut tightly and you cannot open the exit door without first closing the alcove entrance door. You can go IN to the alcove or BOARD your shuttle.</desc>
+      <desc>You arrive on the planets surface and your shuttle is docked with a small building. As you step out of your shuttle into the small building you notice two things. First you notice that the entire building is solid without a single window and one door leading into a small alcove. Second you notice that the alcove entrance door is open but the exit door is shut tightly and you cannot open the exit door without first closing the alcove entrance door. You can go IN to the alcove or BOARD your shuttle.</desc>
       <exits in='260' no-exit='moves.noexit.1'/>
       <vocab cmd='wear sunglasses' event='move.sunglasses.1'/>
    </location>

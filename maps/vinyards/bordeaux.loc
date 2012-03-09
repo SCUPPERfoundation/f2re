@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Bordeaux' version='27' editor='standard' from='396' to='Vinyards.Vinyards Space.460'>
+<fed2-map title='Bordeaux' version='27' editor='online' from='396' to='Vinyards.Vinyards Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -20,13 +20,13 @@
 
    <location num='397' flags='e'>
       <name>Winemakers Auction and Exchange</name>
-      <desc>This Exchange not only sells commodities but also specializes for wine enthusiasts and collectorsthe opportunity to acquire fine and rare wines. Our Exchange offer the world#s finest and most collectible wines as well asl some of the most competitive prices on commodities in the Fed World. Pull up a chair and trade while you sample exotic wines being offered through wine tasting tables set up throughout the exchange.</desc>
+      <desc>This Exchange not only sells commodities but also specializes for wine enthusiasts and collectors the opportunity to acquire fine and rare wines. Our Exchange offer the worlds finest and most collectible wines as well as some of the most competitive prices on commodities in the Fed World. Pull up a chair and trade while you sample exotic wines being offered through wine tasting tables set up throughout the exchange.</desc>
       <exits s='461' w='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='459' flags='b'>
       <name>The Wine Salon</name>
-      <desc>A small cafe that specializes in French cruisne as well as  featuring  wines from small, independent producers through out the Vinyard System and here on the planet Bordeaux.</desc>
+      <desc>A small cafe that specializes in French cruisine as well as  featuring  wines from small, independent producers through out the Vinyard System and here on the planet Bordeaux.</desc>
       <exits ne='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 
@@ -38,7 +38,7 @@
 
    <location num='462'>
       <name>East End Vinyard</name>
-      <desc>The East End Vineyard Solstice drapes across an undulating ridgetop high above Max Mountain in the heart of the the great Bordeaux Valley. We  produce exceptional Bordeaux varietal grapes at this remarkable site. The Cabernet Sauvignon, Cabernet Franc and Petit Verdot are blended with cooler climate Merlot to contribute to the reputation we have of some of the finest tasting red wines in the universe.</desc>
+      <desc>The East End Vineyard Solstice drapes across an undulating ridgetop high above Max Mountain in the heart of the the great Bordeaux Valley. We  produce exceptional Bordeaux varietal grapes at this remarkable site. The Cabernet Sauvignon, Cabernet Franc and Petit Verdot are blended with cooler climate Merlot which contributes to our reputation for having some of the finest tasting red wines in the universe.</desc>
       <exits s='526' w='461' down='526' in='526' no-exit='moves.noexit.1'/>
    </location>
 

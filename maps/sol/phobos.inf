@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<infrastructure owner='Hazed' economy='Biological' treasury='-363647562' yard-markup='0' workers='200' base='1000' slithy-xform='0' registry='false'>
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Dimwit'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Horancia'>
+    </warehouse>
+
+    <warehouse owner='Ionia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Koskbelloc'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Mur'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightsky'>
+    </warehouse>
+
+    <warehouse owner='Nightstar'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Scarfdood'>
+      <cargo name='Xmetals' star='Ruby' planet='Eidolon' cost='391' />
+      <cargo name='Xmetals' star='Ruby' planet='Eidolon' cost='399' />
+      <cargo name='Xmetals' star='Ruby' planet='Eidolon' cost='407' />
+      <cargo name='Xmetals' star='Ruby' planet='Eidolon' cost='396' />
+      <cargo name='Xmetals' star='Ruby' planet='Eidolon' cost='387' />
+      <cargo name='Xmetals' star='Ruby' planet='Eidolon' cost='383' />
+      <cargo name='Propellants' star='Addams' planet='Outcast' cost='210' />
+      <cargo name='Propellants' star='Addams' planet='Outcast' cost='220' />
+      <cargo name='Propellants' star='Addams' planet='Outcast' cost='220' />
+      <cargo name='Propellants' star='Addams' planet='Outcast' cost='217' />
+    </warehouse>
+
+</infrastructure>

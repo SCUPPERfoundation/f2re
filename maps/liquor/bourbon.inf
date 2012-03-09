@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<infrastructure owner='Klytos' economy='Industrial' treasury='504903659' yard-markup='0' workers='1150' base='1000' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='4' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+  <build type='Police' points='6'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Atmos' level='4' unused='4'/>
+  <build type='Pollution' level='5' unused='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='4'/>
+  <build type='Oil' points='3'/>
+  <build type='Pension' points='10'/>
+  <build type='Satellite' points='3'/>
+    <factory owner='Insanity' id='12' planet='Bourbon' output='Artifacts' status='run' cash='556475' top-up='100000' income='1976850' exp='489920' profit='3661590'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='76' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Insanity' id='13' planet='Bourbon' output='Artifacts' status='run' cash='671150' top-up='100000' income='2086725' exp='489920' profit='3518650'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='73' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

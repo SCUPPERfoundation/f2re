@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<infrastructure owner='Monkey' economy='Leisure' treasury='776682161' yard-markup='0' workers='1640' base='1000' registry='false'>
+  <build type='Atmos' level='10' unused='6'/>
+  <build type='Pollution' level='9' unused='7'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='10' hospital='26' unused='0'/>
+  <build type='Hospital' points='13'/>
+  <build type='Police' points='12'/>
+  <build type='Dole' points='5'/>
+  <build type='Canal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Oil' points='5'/>
+  <build type='Port' points='12'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Radio' points='4'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Insurance' points='10'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Floating' points='9'/>
+  <build type='Genetic' points='9'/>
+  <build type='Tquark' points='10'/>
+  <build type='Solar' points='7'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Leisure' points='8'/>
+  <build type='Terraform' points='20'/>
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='710' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='731' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='710' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='723' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='688' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='723' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='702' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='723' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='717' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='731' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nani'>
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='919' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='910' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='919' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='883' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='928' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='919' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='901' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='891' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='927' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='937' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='927' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='936' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='927' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='955' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='898' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='908' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='955' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='945' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='908' />
+      <cargo name='Controllers' star='Musa' planet='Zebrina' cost='908' />
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='NanoFabrics' star='Cloud' planet='Cloudbase' cost='679' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cloudbase' cost='659' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cloudbase' cost='666' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cloudbase' cost='659' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cloudbase' cost='653' />
+      <cargo name='NanoFabrics' star='Cloud' planet='Cloudbase' cost='679' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Props2u' bays='21' efficiency='100'>
+    </depot>
+    <factory owner='Props2u' id='3' planet='Zebrina' output='Artifacts' status='run' cash='601475' top-up='100000' income='1872450' exp='488400' profit='3389475'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='74' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Props2u' id='7' planet='Zebrina' output='Artifacts' status='run' cash='596525' top-up='100000' income='1858125' exp='488400' profit='3415425'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='74' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

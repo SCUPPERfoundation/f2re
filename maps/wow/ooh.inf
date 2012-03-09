@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<infrastructure owner='Hammac' economy='Agricultural' treasury='158537349' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+</infrastructure>

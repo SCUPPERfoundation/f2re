@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Chiron' version='10' editor='standard' from='1759' to='Ara.Ara Space.459'>
+<fed2-map title='Chiron' version='10' editor='online' from='1759' to='Ara.Ara Space.459'>
 
    <location num='1500' flags='b'>
       <name>Vacant Apartment</name>
@@ -135,7 +135,7 @@
 
    <location num='1820'>
       <name>Quiet Corner</name>
-      <desc>A low bench sits here and different trees and vegetation screen the rest of the park from view. The wind rustles the leaves of the trees above and you can hear the birds softly calling to eachother.</desc>
+      <desc>A low bench sits here and different trees and vegetation screen the rest of the park from view. The wind rustles the leaves of the trees above and you can hear the birds softly calling to each other.</desc>
       <exits e='1821' se='1885' s='1884'/>
    </location>
 

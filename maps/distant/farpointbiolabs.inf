@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Zuroc' economy='Biological' treasury='556383891' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='5' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Insurance' points='5'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='24'/>
+  <build type='Clinic' level='8' hospital='0' unused='0'/>
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<infrastructure owner='Baldez' economy='Technical' treasury='999502182' yard-markup='-10' workers='1220' base='1000' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='9'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Clinic' level='6' hospital='0' unused='4'/>
+  <build type='Police' points='10'/>
+  <build type='Atmos' level='6' unused='9'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Oil' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Dole' points='3'/>
+  <build type='Family' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Floating' points='1'/>
+  <build type='Fibre' points='40'/>
+  <build type='Insurance' points='5'/>
+  <build type='Defence' points='5'/>
+  <build type='Satellite' points='1'/>
+  <build type='Airlane' points='5'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Urban' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Founderodo'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Giant' id='1' planet='Chula Vista' output='Gold' status='run' cash='426525' top-up='100000' income='1974450' exp='891475' profit='1926050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='51' labour='200' wages='40' stored='75' disposal='exchange'/>
+      <input name='Explosives' quantity='15' />
+    </factory>
+    <factory owner='Giant' id='2' planet='Chula Vista' output='Gold' status='run' cash='428625' top-up='100000' income='1989375' exp='893950' profit='1918325'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='16' labour='200' wages='40' stored='75' disposal='exchange'/>
+      <input name='Explosives' quantity='15' />
+    </factory>
+    <factory owner='La Sapo Feo' id='8' planet='Chula Vista' output='Pharmaceuticals' status='run' cash='317400' top-up='100000' income='2079975' exp='1355050' profit='1490100'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='22' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='RNA' quantity='0' />
+      <input name='Xmetals' quantity='50' />
+    </factory>
+    <factory owner='Giant' id='3' planet='Chula Vista' output='Pharmaceuticals' status='run' cash='308475' top-up='100000' income='2078700' exp='1360300' profit='1459950'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='13' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='RNA' quantity='0' />
+      <input name='Xmetals' quantity='50' />
+    </factory>
+    <factory owner='Giant' id='4' planet='Chula Vista' output='Pharmaceuticals' status='run' cash='239000' top-up='100000' income='2070150' exp='1326200' profit='1364175'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='130' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='RNA' quantity='0' />
+      <input name='Xmetals' quantity='60' />
+    </factory>
+</infrastructure>

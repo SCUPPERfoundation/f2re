@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<infrastructure owner='Gwaptiva' economy='Agricultural' treasury='893331080' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' unused='2'/>
+  <build type='Clinic' level='0' hospital='0' unused='2'/>
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='750' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='750' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='743' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

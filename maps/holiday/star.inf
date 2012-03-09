@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<star name='Holiday' cartel='Sol'>
+
+   <black-list>
+      <exile name='Macrohaulers'/>
+   </black-list>
+
+</star>

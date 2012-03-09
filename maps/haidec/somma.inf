@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jinto' economy='Agricultural' treasury='275464503' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+   <cabinet size='57'>
+      <item id='obj_forklift' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='charm_staffpulsar09' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='obj_pass' star='Sol' map='The Lattice' size='1' visibility='100'></item>
+   </cabinet>

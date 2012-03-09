@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<star name='Kaos' cartel='Food'>
+
+   <black-list>
+      <exile name='Prometheus'/>
+      <exile name='Hermit'/>
+      <exile name='Furgas'/>
+      <exile name='Lusifer'/>
+      <exile name='Riles'/>
+   </black-list>
+
+</star>

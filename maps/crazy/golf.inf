@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<infrastructure owner='Filbert' economy='Industrial' treasury='764937113' yard-markup='-10' workers='1100' base='1000' registry='true'>
+  <build type='Atmos' level='4' unused='4'/>
+  <build type='Pollution' level='5' unused='4'/>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='4' hospital='0' unused='2'/>
+  <build type='Police' points='6'/>
+  <build type='Family' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Dole' points='2'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='4'/>
+  <build type='Insulation' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='RiotPolice' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='733' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='733' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='704' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='711' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='726' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='697' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='719' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='740' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='719' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='733' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='726' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='733' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='719' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='750' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='743' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='657' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='644' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='657' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='657' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='625' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='637' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='650' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='631' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='663' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='637' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='644' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='637' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='631' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='644' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='625' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='657' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='637' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='625' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='663' />
+      <cargo name='TQuarks' star='Weather' planet='Stormy' cost='663' />
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Fast Track Navigation' id='1' planet='Golf' output='Artifacts' status='run' cash='631980' top-up='100000' income='2551875' exp='652310' profit='3670410'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='112' labour='370' wages='41' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Fast Track Navigation' id='2' planet='Golf' output='Artifacts' status='run' cash='631305' top-up='100000' income='2557650' exp='667480' profit='3818385'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='41' labour='370' wages='41' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dennotairn' economy='Resource' treasury='80398939' yard-markup='0' workers='750' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='2' agri='4' unused='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Atmos' level='2' unused='9'/>
+  <build type='Pollution' level='2' unused='9'/>
+  <build type='Police' points='5'/>
+  <build type='Clinic' level='0' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Dole' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

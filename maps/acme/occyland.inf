@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<infrastructure owner='Occy' economy='Leisure' treasury='-71903027' yard-markup='-10' workers='2374' base='1000' casualties='16' slithy-xform='0' registry='true'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Police' points='7'/>
+  <build type='Pollution' level='9' unused='16'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Clinic' level='10' hospital='24' unused='2'/>
+  <build type='Hospital' points='12'/>
+  <build type='Family' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='4'/>
+  <build type='Pension' points='4'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Radio' points='15'/>
+  <build type='Port' points='5'/>
+  <build type='Oil' points='5'/>
+  <build type='Atmos' level='10' unused='1'/>
+  <build type='Satellite' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Insurance' points='11'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Floating' points='2'/>
+  <build type='Tquark' points='12'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Solar' points='7'/>
+  <build type='Longevity' points='25'/>
+  <build type='Leisure' points='8'/>
+  <build type='Genetic' points='4'/>
+  <build type='Fusion' points='2'/>
+  <build type='Urban' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Founderodo'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Insanity' id='1' planet='Occyland' output='Monopoles' status='run' cash='560950' top-up='100000' income='1840650' exp='639825' profit='2628225'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='28' labour='300' wages='40' stored='75' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='10' />
+      <input name='Nitros' quantity='10' />
+    </factory>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Rainbow' version='1.00' editor='standard' from='397' to='Diversity.Diversity Space.201'>
+<fed2-map title='Rainbow' version='1' editor='online' from='397' to='Diversity.Diversity Space.201'>
 
    <location num='0'>
       <name>Store room</name>
@@ -58,7 +58,7 @@
 
    <location num='394' flags='b'>
       <name>Meteu&apos;s Weapons</name>
-      <desc>The view out the windows behind the desk is amazing....overlooking the pool area with all those naked, tanning (endowed) bodies surrounding it.  Your eye is drawn to the art work on the walls. To your left is a life sized painting, surreal, but you can tell its two people embraced in each others arms.  To your right are two pictures, each with a single individual, ripped toned bodies, facing each other, and obviously very excited to see the other.  Help yourself to whatever you find in the bar, and do enjoy yourself.</desc>
+      <desc>The view out the windows behind the desk is amazing....overlooking the pool area with all those naked, tanning (endowed) bodies surrounding it.  Your eye is drawn to the art work on the walls. To your left is a life sized painting, surreal, but you can tell its two people embraced in each others arms.  To your right are two pictures, each with a single individual, ripped toned bodies, facing each other, and obviously very excited to see the other.  In the corner of the room is a shower area.  No walls, just an arrangement of nozzles to wash and stimulate every part of the body.  Hanging next to the shower area are Meteu&apos;s uniforms.  Gotta love a man in uniform.  Help yourself to whatever you find in the bar, and do enjoy yourself.</desc>
       <exits se='459' sw='457' no-exit='move.nomove.1'/>
    </location>
 
@@ -84,7 +84,7 @@
 
    <location num='457'>
       <name>Rainbow Pool</name>
-      <desc>When a break from the hectic office life is in order, what better place than the Rainbow Pool.  The sun is always bright.  The temperature perfect.  And the water just right.  But the best asset is the view.  Naked and nearly naked bodies line the deck area.  Tanned....toned....exposed.  Unload the burden of your clothes....grap a rainbow rum from the bar....and join in.</desc>
+      <desc>When a break from the hectic office life is in order, what better place than the Rainbow Pool.  The sun is always bright.  The temperature perfect.  And the water just right.  But the best asset is the view.  Naked and nearly naked bodies line the deck area.  Tanned....toned....exposed.  Unload the burden of your clothes....grab a rainbow rum from the bar....and join in.</desc>
       <exits ne='394' e='458' se='522'/>
    </location>
 
@@ -113,15 +113,14 @@
    </location>
 
    <location num='523' flags='b'>
-      <name>Suite D</name>
-      <desc>Unoccupied cept for the bar in the corner.</desc>
+      <name>Rhys&apos; Roost</name>
+      <desc>Not much here except a cot in the corner sometimes used by Rhys between workthingy floggings.</desc>
       <exits n='459' no-exit='move.nomove.1'/>
    </location>
 
    <location num='524' flags='b'>
       <name>Snow&apos;s</name>
-      <desc>The wall of cold causes you to reach for a parka hanging by the door.  Your breath is visible.  Little light comes in from the frost covered windows.  Walls, ceiling and floor are cold, colorless concrete.  The furniture is frigid plastic.</desc>
-      <desc>Blowing, Snow is here.</desc>
+      <desc>The wall of cold causes you to reach for a parka hanging by the door.  Your breath is visible.  Little light comes in from the frost covered windows.  Walls, ceiling and floor are cold, colorless concrete.  The furniture is frigid plastic.  Not much gets used here since Snow put Blizzard into hibernation.</desc>
       <exits nw='459' no-exit='move.nomove.1'/>
    </location>
 
@@ -132,4 +131,3 @@
    </location>
 
 </fed2-map>
-

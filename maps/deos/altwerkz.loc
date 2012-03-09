@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Alterkz' version='1.00' editor='standard' from='335' to='Deos.Deos Space.393'>
+<fed2-map title='Altwerkz' version='1' editor='online' from='335' to='Deos.Deos Space.393'>
 
    <location num='0' flags='kt'>
       <name>Closet</name>
@@ -14,7 +14,7 @@
 
    <location num='335'>
       <name>Altwerkz - Shuttle Landing Bay</name>
-      <desc>Altwerkz Shuttle Landing Bay is a stark contrast to other landing bays throughout the galaxy.  Whereas the majority of shuttle bays are a jumble of activity, and the grease and grime of travel, and machinery fill the air, Altwerkz&apos;s Landing Bay is near pristine, the white surfaces are shined to a gleaming sheen, and the curious smell of a mixture of phisoderm, bleach, and amonia lingers in the air.  Incoming shuttles are treated with a dose of light radiation, and then scrubbed with an antibacterial wash prior to entering the bay.  The dangers of an alien microbe being introduced, or a domestic microbe being inadvertanly loosed are not lost upon the planners of this Bio-Asteroid.</desc>
+      <desc>Altwerkz Shuttle Landing Bay is a stark contrast to other landing bays throughout the galaxy.  Whereas the majority of shuttle bays are a jumble of activity, and the grease and grime of travel, and machinery fill the air, Altwerkz&apos;s Landing Bay is near pristine, the white surfaces are shined to a gleaming sheen, and the curious smell of a mixture of phisoderm, bleach, and amonia lingers in the air.  Incoming shuttles are treated with a dose of light radiation, and then scrubbed with an antibacterial wash prior to entering the bay.  The dangers of an alien microbe being introduced, or a domestic microbe being inadvertently loosed are not lost upon the planners of this Bio-Asteroid.</desc>
       <exits e='336' no-exit='moves.noexit.1'/>
    </location>
 
@@ -199,4 +199,3 @@
    </location>
 
 </fed2-map>
-

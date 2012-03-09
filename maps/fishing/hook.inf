@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<infrastructure owner='Silvos' economy='Technical' treasury='-111666429' yard-markup='0' workers='1198' base='1000' casualties='2' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='7'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='6' hospital='10' unused='9'/>
+  <build type='Hospital' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Canal' points='5'/>
+  <build type='Base' points='2'/>
+  <build type='Atmos' level='6' unused='8'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Police' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Dole' points='3'/>
+  <build type='Rail' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Pension' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Port' points='11'/>
+  <build type='Tech' points='1'/>
+  <build type='Insulation' points='10'/>
+  <build type='Oil' points='1'/>
+  <build type='Radio' points='20'/>
+  <build type='Satellite' points='10'/>
+  <build type='Phone' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Fusion' points='1'/>
+  <build type='Airlane' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Floating' points='8'/>
+  <build type='RiotPolice' points='10'/>
+  <build type='Defence' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Creepy Company' id='2' planet='Hook' output='TQuarks' status='run' cash='643825' top-up='100000' income='2438325' exp='650850' profit='5000250'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='72' labour='30' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='35' />
+      <input name='Droids' quantity='35' />
+    </factory>
+    <factory owner='Creepy Company' id='3' planet='Hook' output='TQuarks' status='run' cash='645550' top-up='100000' income='2435175' exp='646200' profit='5007750'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='76' labour='30' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='35' />
+      <input name='Droids' quantity='35' />
+    </factory>
+</infrastructure>

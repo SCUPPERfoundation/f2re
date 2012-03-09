@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Sinta' version='3' editor='standard' from='458' to='Fatcat.Fatcat Space.136'>
+<fed2-map title='Sinta' version='3' editor='online' from='458' to='Fatcat.Fatcat Space.136'>
 
    <location num='74'>
       <name>Under Construction</name>
@@ -117,7 +117,7 @@
 
    <location num='458' flags='yrb'>
       <name>Under Construction</name>
-      <desc>This planet is currently under construction. To be honest I needed another planet to have another treasury that I could fill with groats. However currently I have neither the time nor energy to think of and write original descriptions. Therefore for now you get nothing. Check back in a week or so. Thank you.</desc>
+      <desc>This planet is currently under construction. To be honest I needed another planet to have another treasury that I could fill with groats. However currently I have neither the time nor energy to think of and write original descriptions. Therefore for now you get nothing. Check back in a week or so. Thank you. EXCHANGE IS UP.</desc>
       <exits se='523' sw='521' up='330' no-exit='moves.noexit.1'/>
    </location>
 

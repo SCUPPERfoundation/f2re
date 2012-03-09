@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<infrastructure owner='Tavok' economy='Resource' treasury='323250354' yard-markup='0' workers='1150' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='2' agri='4' mining='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='1'/>
+  <build type='Atmos' level='2' unused='2'/>
+  <build type='Pollution' level='2' unused='2'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Clinic' level='2' hospital='10' unused='0'/>
+  <build type='Police' points='2'/>
+  <build type='Family' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='2'/>
+  <build type='Insulation' points='5'/>
+  <build type='Housing' points='3'/>
+  <build type='Pension' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Hospital' points='5'/>
+  <build type='Dole' points='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <factory owner='Blueskin Properties Inc.' id='3' planet='Bella Terra' output='Artifacts' status='run' cash='759260' top-up='100000' income='857100' exp='197840' profit='4360015'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='54' labour='352' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='12' planet='Bella Terra' output='Artifacts' status='run' cash='767480' top-up='100000' income='864600' exp='197120' profit='4452840'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='32' labour='352' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='14' planet='Bella Terra' output='Firewalls' status='run' cash='751505' top-up='100000' income='817800' exp='166295' profit='4395115'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='32' labour='142' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='65' />
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='6' planet='Bella Terra' output='Firewalls' status='run' cash='755480' top-up='100000' income='820050' exp='164570' profit='4393690'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='36' labour='142' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='70' />
+    </factory>
+    <factory owner='Blueskin Properties Inc.' id='11' planet='Bella Terra' output='NanoFabrics' status='run' cash='708520' top-up='100000' income='994200' exp='385680' profit='4247330'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='52' labour='19' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='65' />
+      <input name='Synths' quantity='15' />
+    </factory>
+</infrastructure>

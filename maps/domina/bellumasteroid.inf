@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<infrastructure owner='Kimberly' economy='Agricultural' treasury='393407702' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Base' points='5'/>
+  <build type='Heliograph' points='1'/>
+  <build type='Canal' points='6'/>
+  <build type='School' agri='4' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='0' hospital='0' unused='1'/>
+  <build type='Police' points='2'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

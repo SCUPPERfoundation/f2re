@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Velvyn' version='2' editor='standard' from='396' to='Xylyss.Xylyss Space.460'>
+<fed2-map title='Velvyn' version='2' editor='online' from='396' to='Xylyss.Xylyss Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -15,7 +15,7 @@
    </location>
 
    <location num='396' flags='yr'>
-      <name>Velvynn landing strip</name>
+      <name>Velvyn landing strip</name>
       <desc>   The sky is deep blue with a few fluffy white clouds. A cooling sea breeze keeps the temperature to a perfect level. The sun is hot and you look forward to basking on the beach.</desc>
       <desc>   Young men and women with stunningly attractive, deeply tanned bodies throng around the landing pad, welcoming visitors and directing them to the beach to the southeast, and to white stone buildings north, east and southwest.</desc>
       <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>

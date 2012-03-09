@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<infrastructure owner='Sephiroth' economy='Industrial' treasury='925042991' yard-markup='0' workers='1090' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Pollution' level='5' unused='10'/>
+  <build type='Atmos' level='4' unused='7'/>
+  <build type='Clinic' level='4' hospital='0' unused='5'/>
+  <build type='Police' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Dole' points='2'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Base' points='2'/>
+  <build type='Pension' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='12'/>
+  <build type='Oil' points='1'/>
+  <build type='Radio' points='4'/>
+  <build type='Family' points='9'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Saavik'>
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='587' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='604' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='501' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='496' />
+      <cargo name='TQuarks' star='Asylum' planet='Sanitaria' cost='631' />
+      <cargo name='TQuarks' star='Asylum' planet='Sanitaria' cost='644' />
+      <cargo name='Pharmaceuticals' star='Farm' planet='Fluffy' cost='470' />
+      <cargo name='Pharmaceuticals' star='Farm' planet='Fluffy' cost='495' />
+      <cargo name='Crystals' star='Farm' planet='Fluffy' cost='496' />
+      <cargo name='Crystals' star='Farm' planet='Fluffy' cost='491' />
+      <cargo name='Furs' star='Farm' planet='Fluffy' cost='516' />
+      <cargo name='Furs' star='Farm' planet='Fluffy' cost='501' />
+      <cargo name='Spices' star='Garr' planet='Ashten' cost='505' />
+      <cargo name='Spices' star='Garr' planet='Ashten' cost='505' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='574' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='604' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='491' />
+      <cargo name='BioChips' star='Asylum' planet='Link' cost='496' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='587' />
+      <cargo name='BioComponents' star='Asylum' planet='Link' cost='598' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Demon Dogs Ltd.' id='15' planet='Midgar' output='Artifacts' status='stop' cash='100000' top-up='100000' income='4078425' exp='888480' profit='3737725'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='30' labour='352' wages='0' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='12' planet='Midgar' output='Firewalls' status='stop' cash='100000' top-up='100000' income='4439100' exp='828050' profit='3666360'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='111' labour='150' wages='0' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+    <factory owner='Demon Dogs Ltd.' id='4' planet='Midgar' output='Univators' status='stop' cash='100000' top-up='100000' income='3149475' exp='568520' profit='3153055'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='35' labour='90' wages='0' stored='150' disposal='depot'/>
+      <input name='Monopoles' quantity='30' />
+    </factory>
+</infrastructure>

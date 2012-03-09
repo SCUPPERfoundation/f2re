@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Jennabug' version='8' editor='standard' from='267' to='Starlight.Starlight Space.461'>
+<fed2-map title='Jennabug' version='8' editor='online' from='267' to='Starlight.Starlight Space.461'>
 
    <location num='143' flags='b'>
       <name>Office of Jeffro Overlord of Jenna 5 and Lord of Jennabug</name>
@@ -50,7 +50,7 @@
    </location>
 
    <location num='271' flags='b'>
-      <name>Office of Von Overlord of Augusta</name>
+      <name>Office of Riles</name>
       <desc>There is a bar on the western wall with a waiter droid waiting to serve your every need. There are white balloon like couches that seem to just float in mid air, and a solid pearl desk imported from Earth, in front of them. A door to the North leads the way OUT.</desc>
       <exits n='207' in='396' out='267'/>
    </location>

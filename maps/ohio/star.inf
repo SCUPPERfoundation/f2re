@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<star name='Ohio' cartel='Sol'>
+
+   <black-list>
+      <exile name='All'/>
+      <exile name='Other'/>
+      <exile name='Rats'/>
+   </black-list>
+
+</star>

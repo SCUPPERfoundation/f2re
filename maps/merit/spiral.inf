@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dagny' economy='Leisure' treasury='-62407820' yard-markup='0' workers='14978' base='5500' casualties='422' slithy-xform='0' registry='false'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Atmos' level='10' unused='5'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Clinic' level='10' hospital='10' unused='0'/>
+  <build type='Police' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='20'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Weather' points='6'/>
+  <build type='Fusion' points='4'/>
+  <build type='Defence' points='10'/>
+  <build type='Floating' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Hospital' points='5'/>
+  <build type='Airport' points='10' level='trans'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Satellite' points='5'/>
+  <build type='Tquark' points='10'/>
+  <build type='Solar' points='12'/>
+  <build type='Leisure' points='8'/>
+  <build type='Longevity' points='110'/>
+  <build type='Terraform' points='20'/>
+  <build type='Genetic' points='15'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <factory owner='Weinersnitchel Twitter Pics' id='1' planet='Spiral' output='NanoFabrics' status='run' cash='768975' top-up='100000' income='2626050' exp='789450' profit='4524675'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='16' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='20' />
+      <input name='Synths' quantity='45' />
+    </factory>
+    <factory owner='Murphy Partners Llc' id='5' planet='Spiral' output='NanoFabrics' status='run' cash='610625' top-up='100000' income='5093850' exp='1589650' profit='4023550'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='55' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Murphy Partners Llc' id='6' planet='Spiral' output='NanoFabrics' status='run' cash='731925' top-up='100000' income='5105625' exp='1554400' profit='4008550'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='105' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='10' />
+      <input name='Synths' quantity='60' />
+    </factory>
+    <factory owner='Murphy Partners Llc' id='7' planet='Spiral' output='NanoFabrics' status='run' cash='612300' top-up='100000' income='5088450' exp='1613325' profit='4026400'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='50' labour='20' wages='40' stored='150' disposal='depot'/>
+      <input name='Nanos' quantity='70' />
+      <input name='Synths' quantity='45' />
+    </factory>
+</infrastructure>

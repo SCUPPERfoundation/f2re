@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<infrastructure owner='Doncorleone' economy='Industrial' treasury='962721882' yard-markup='0' workers='1010' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='7'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Police' points='10'/>
+  <build type='Clinic' level='4' hospital='2' unused='11'/>
+  <build type='Atmos' level='4' unused='7'/>
+  <build type='Pollution' level='5' unused='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Dole' points='2'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Pension' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='12'/>
+  <build type='Radio' points='4'/>
+  <build type='Oil' points='1'/>
+  <build type='Hospital' points='1'/>
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Genco Olive Oil Co.' id='2' planet='Corleone' output='Artifacts' status='stop' cash='100000' top-up='100000' income='4436175' exp='1084200' profit='3647995'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='101' labour='370' wages='0' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='6' planet='Corleone' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='4574025' exp='1890475' profit='3496130'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='111' labour='20' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='15' />
+      <input name='Synths' quantity='15' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='10' planet='Corleone' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='5338875' exp='1813600' profit='3836720'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='130' labour='20' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='20' />
+      <input name='Synths' quantity='45' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='4' planet='Corleone' output='Firewalls' status='stop' cash='100000' top-up='100000' income='4278375' exp='850100' profit='3828360'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='121' labour='150' wages='0' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='0' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='7' planet='Corleone' output='Vidicasters' status='stop' cash='100000' top-up='100000' income='2479200' exp='1531175' profit='993765'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='17' labour='50' wages='0' stored='75' disposal='exchange'/>
+      <input name='Electros' quantity='25' />
+      <input name='TQuarks' quantity='65' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='1' planet='Corleone' output='Vidicasters' status='stop' cash='100000' top-up='100000' income='2478075' exp='1541150' profit='985890'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='38' labour='50' wages='0' stored='150' disposal='exchange'/>
+      <input name='Electros' quantity='25' />
+      <input name='TQuarks' quantity='20' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='3' planet='Corleone' output='Gold' status='stop' cash='100000' top-up='100000' income='3846000' exp='1409950' profit='2702600'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='99' labour='200' wages='0' stored='150' disposal='exchange'/>
+      <input name='Explosives' quantity='60' />
+    </factory>
+    <factory owner='Genco Olive Oil Co.' id='5' planet='Corleone' output='Powerpacks' status='stop' cash='100000' top-up='100000' income='4489800' exp='2672750' profit='1877190'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='9' labour='50' wages='0' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='0' />
+      <input name='Radioactives' quantity='50' />
+    </factory>
+</infrastructure>

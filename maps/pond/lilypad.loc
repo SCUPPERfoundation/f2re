@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Lilypad' version='23' editor='standard' from='329' to='Pond.Pond Space.200'>
+<fed2-map title='Lilypad' version='23' editor='online' from='329' to='Pond.Pond Space.200'>
 
    <location num='137'>
       <name>The Pond</name>
@@ -66,10 +66,8 @@
    </location>
 
    <location num='329'>
-      <name>Corrider</name>
-      <desc>You can go east for food.</desc>
-      <desc>South for the landing Pad.</desc>
-      <desc>Down to see the Frog&apos;s Pond.</desc>
+      <name>Lily Pad&apos;s Landing Pad</name>
+      <desc>You can go East for Food. Down to see the Frog&apos;s Pond. South towards the exchange.</desc>
       <exits e='330' s='393' down='265'/>
    </location>
 
@@ -88,10 +86,8 @@
    </location>
 
    <location num='393'>
-      <name>Lily Pad&apos;s Landing Pad</name>
-      <desc>The landing pad is in the shape of a lilypad leaf.</desc>
-      <desc>The exchange is to to East.</desc>
-      <desc>You can also go North and West.</desc>
+      <name>Corridor</name>
+      <desc>The exchange is to East, The Shipyard is to the West</desc>
       <exits n='329' e='394' w='392'/>
    </location>
 

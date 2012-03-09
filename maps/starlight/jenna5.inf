@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jeffro' economy='Leisure' treasury='-73022131' yard-markup='-10' workers='2570' base='1000' registry='false'>
+  <build type='Family' points='10'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Clinic' level='10' hospital='40' unused='0'/>
+  <build type='Hospital' points='20'/>
+  <build type='Atmos' level='10' unused='0'/>
+  <build type='Police' points='10'/>
+  <build type='Pollution' level='9' unused='11'/>
+  <build type='Dole' points='6'/>
+  <build type='Housing' points='4'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Rail' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Satellite' points='5'/>
+  <build type='RiotPolice' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Pension' points='15'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Defence' points='6'/>
+  <build type='Oil' points='4'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='6'/>
+  <build type='Insurance' points='10'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Radio' points='20'/>
+  <build type='Fibre' points='16'/>
+  <build type='Genetic' points='20'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Terraform' points='2'/>
+  <build type='Tquark' points='10'/>
+  <build type='Floating' points='2'/>
+  <build type='Solar' points='3'/>
+  <build type='Leisure' points='8'/>
+  <build type='Airport' points='10' level='intra'/>
+  <build type='Longevity' points='20'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<star name='Terran' cartel='Russia'>
+
+   <black-list>
+      <exile name='Sevenine'/>
+   </black-list>
+
+</star>

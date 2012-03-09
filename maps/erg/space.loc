@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<fed2-map title='Erg Space' version='1.00' editor='standard'>
+<fed2-map title='Erg Space' version='1' editor='online'>
 
    <location num='135' flags='s'>
-      <name>xxx</name>
-      <desc>xxx</desc>
+      <name>Space</name>
+      <desc>Nothing...absolutely nothing, that&apos;s why it&apos;s called space</desc>
       <exits e='136'/>
    </location>
 
    <location num='136' flags='s'>
-      <name>xxx</name>
-      <desc>xxx</desc>
+      <name>Space</name>
+      <desc>Nothing...absolutely nothing, that&apos;s why it&apos;s called space</desc>
       <exits e='137' w='135'/>
    </location>
 

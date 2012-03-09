@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<infrastructure owner='Joe' economy='Biological' treasury='1010494501' yard-markup='0' workers='1255' base='1000' casualties='295' registry='false'>
+  <build type='Clinic' level='8' hospital='30' unused='0'/>
+  <build type='Atmos' level='8' unused='3'/>
+  <build type='Pollution' level='0' unused='15'/>
+  <build type='Police' points='11'/>
+  <build type='Port' points='13'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='4'/>
+  <build type='Urban' points='5'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4'/>
+  <build type='Research' points='1'/>
+  <build type='Floating' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Defence' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Satellite' points='5'/>
+  <build type='Hospital' points='15'/>
+  <build type='Biolab' points='1'/>
+  <build type='Terraform' points='20'/>
+  <build type='Genetic' points='15'/>
+  <build type='Tachyon' points='16'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='580' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='598' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='568' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='592' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='574' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='568' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='568' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='580' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='574' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='604' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='604' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='580' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='574' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='598' />
+      <cargo name='BioComponents' star='Java' planet='Sludge' cost='587' />
+    </warehouse>
+
+</infrastructure>

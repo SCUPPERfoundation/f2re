@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Thorus' version='4' editor='standard' from='396' to='Cyclide.Cyclide Space.460'>
+<fed2-map title='Thorus' version='4' editor='online' from='396' to='Cyclide.Cyclide Space.460'>
 
    <location num='0' flags='t'>
       <name>A bin.</name>
@@ -14,8 +14,7 @@
 
    <location num='459' flags='eb'>
       <name>Thorus Station Exchange</name>
-      <desc>   Trading with the station is all done remotely. As you sell goods, they are moved by steve-a-droids from the hold of your ship into smaller holding piles around the station; as you buy, the droids reclaim from selected larger heaps and fill your cargo hold with the purchased commodities.</desc>
-      <desc>   The control room is east.</desc>
+      <desc>Trading with the station is all done remotely. As you sell goods, they are moved by steve-a-droids from the hold of your ship into smaller holding piles around the station; as you buy, the droids reclaim from selected larger heaps and fill your cargo hold with the purchased commodities. A placard with net production states Sold:Woods79|Meats61|Spices61|Cereals51|Gens40|Alloys37|Nickel37|Props33|Monos31| Hides29|Livestock21|LanzariK17|Explosives15|Polymers15|Droids14|LubOils14|Semis13|Crystals9| GAsChips8|Gold8|Munitions8|Nanos8|Vids8|Mechs5|Weapons5|Controllers2|Nitros2|TQuarks2|Lasers0| Bought:Toxics-1|Clinics-2|Firewalls-4|Tools-4|Packs-5|Probes-5|Anti-9| Artifacts-9|Labs-10|Sensamps-10|Synths-10|Clays-11|Katydidics-11|Hypnotapes-12|Furs-15|Electros-16|Fruit-16|Scalpels-16|Musiks-16|Unis-16|Holos-17|Pharms2-17|Sensors-17|Tracers-17|BioComp-18|Games-18|Nanfab-18|Simulations-19|Rads-20|Studios-20|RNA-21|Xmetals-21|Petros-23|Proteins-24|Textiles-24|BioChips-25|Soya-26|Libs-28|</desc>
       <exits e='460' out='396' no-exit='moves.noexit.1'/>
    </location>
 

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Catspaws' economy='Industrial' treasury='-871950' yard-markup='0' workers='960' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='2' mining='4' unused='8'/>
+  <build type='Atmos' level='4' unused='0'/>
+  <build type='Pollution' level='2' unused='0'/>
+  <build type='Clinic' level='3' hospital='2' unused='0'/>
+  <build type='Police' points='2'/>
+  <build type='Base' points='4'/>
+  <build type='Hospital' points='1'/>
+  <build type='Family' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Dole' points='1'/>
+  <build type='Pension' points='9'/>
+  <build type='Mining' points='1'/>
+  <build type='Radio' points='1'/>
+</infrastructure>

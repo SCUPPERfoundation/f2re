@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<infrastructure owner='Rip' economy='Technical' treasury='322901003' yard-markup='0' workers='1300' base='1000' slithy-xform='0' registry='false'>
+  <build type='Atmos' level='6' unused='4'/>
+  <build type='Pollution' level='9' unused='3'/>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='8'/>
+  <build type='Clinic' level='6' hospital='10' unused='4'/>
+  <build type='Police' points='10'/>
+  <build type='Agri' points='1'/>
+  <build type='Hospital' points='5'/>
+  <build type='Rail' points='4'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Radio' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Dole' points='3'/>
+  <build type='Pension' points='10'/>
+  <build type='Port' points='5'/>
+  <build type='Coal' points='3'/>
+  <build type='Insulation' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Insurance' points='10'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='12'/>
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='771' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='787' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='764' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='740' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='740' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='771' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='771' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='748' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='787' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='771' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

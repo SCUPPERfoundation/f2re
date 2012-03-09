@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Charlestown' version='1.00' editor='standard' from='396' to='Framers4.Framers4 Space.460'>
+<fed2-map title='Charlestown' version='1' editor='online' from='396' to='Framers4.Framers4 Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -31,7 +31,7 @@
    </location>
 
    <location num='397' flags='e'>
-      <name>Gingerbread exchange</name>
+      <name>Charlestown Trading Room</name>
       <desc>   Enormous slabs of gingerbread have been maneuvered into position to form the imposing building that houses the trading functions. To show how important the building is, decorative cornices and pillars have been fashioned out of sugar icing.</desc>
       <desc>   Traders stare at the price screens, munching absently on pieces of candy. Rice paper screens separate off areas selling various goods.</desc>
       <desc>   The exit back to the landing pad is west.</desc>

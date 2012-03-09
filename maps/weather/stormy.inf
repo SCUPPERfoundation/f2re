@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jdcollins' economy='Agricultural' treasury='688694645' yard-markup='0' workers='1010' base='1000' registry='false'>
+  <build type='Atmos' level='0' unused='2'/>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='6'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='1'/>
+  <build type='Base' points='1'/>
+  <build type='Pollution' level='0' unused='2'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Founderodo'>
+      <cargo name='Hypnotapes' star='Acme' planet='Occyland' cost='354' />
+      <cargo name='Hypnotapes' star='Acme' planet='Occyland' cost='346' />
+      <cargo name='Hypnotapes' star='Acme' planet='Occyland' cost='349' />
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='1269' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='1219' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='1291' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='1278' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='869' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='869' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='878' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='886' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='895' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='852' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='886' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='878' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='896' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='860' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='887' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='914' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='869' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='905' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='877' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+    </warehouse>
+
+</infrastructure>

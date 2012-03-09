@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<star name='Forgotten' cartel='Forgotten' build='no' divert='yes'>
+
+   <black-list>
+      <exile name='Allznames'/>
+   </black-list>
+
+</star>

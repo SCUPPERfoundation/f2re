@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<infrastructure owner='Boone' economy='Industrial' treasury='932922518' yard-markup='0' workers='1100' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Police' points='4'/>
+  <build type='Atmos' level='4' unused='3'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='4' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Base' points='5'/>
+  <build type='Pollution' level='5' unused='2'/>
+  <build type='Coal' points='5'/>
+  <build type='Dole' points='3'/>
+  <build type='Pension' points='14'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='4'/>
+  <build type='Biodiversity' points='5'/>
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Inferno Heating Oil Co.' id='7' planet='Carson' output='Monopoles' status='stop' cash='100000' top-up='100000' income='4718550' exp='1294275' profit='3525075'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='97' labour='300' wages='0' stored='75' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='35' />
+      <input name='Nitros' quantity='35' />
+    </factory>
+    <factory owner='Warfrat Inc.' id='12' planet='Carson' output='NanoFabrics' status='run' cash='820350' top-up='100000' income='4320525' exp='1355320' profit='5087435'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='34' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='65' />
+      <input name='Synths' quantity='15' />
+    </factory>
+</infrastructure>

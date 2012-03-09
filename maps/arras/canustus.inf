@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<infrastructure owner='Zauchust' economy='Resource' treasury='318019847' yard-markup='0' workers='800' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='2'/>
+  <build type='School' level='1' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Biodiversity' points='4'/>
+  <build type='Atmos' level='2' unused='5'/>
+  <build type='Pollution' level='2' unused='5'/>
+  <build type='Clinic' level='2' hospital='0' unused='0'/>
+  <build type='Police' points='12'/>
+  <build type='Dole' points='5'/>
+</infrastructure>

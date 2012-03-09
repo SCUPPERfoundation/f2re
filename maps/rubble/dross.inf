@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jake' economy='Leisure' treasury='4663200' yard-markup='-10' workers='1755' base='1200' casualties='57' registry='true'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='3'/>
+  <build type='Atmos' level='10' unused='2'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Clinic' level='10' hospital='12' unused='3'/>
+  <build type='Police' points='14'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='RiotPolice' points='16'/>
+  <build type='Pension' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='11'/>
+  <build type='Insulation' points='5'/>
+  <build type='Radio' points='20'/>
+  <build type='Hospital' points='6'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Antigrav' points='7'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Fusion' points='8'/>
+  <build type='Weather' points='3'/>
+  <build type='Floating' points='8'/>
+  <build type='Insurance' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Leisure' points='8'/>
+  <build type='Tquark' points='10'/>
+  <build type='Airport' points='10' level='trans'/>
+  <build type='Dole' points='5'/>
+  <build type='Solar' points='6'/>
+  <build type='Genetic' points='6'/>
+    <warehouse owner='Heat'>
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='512' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='498' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='503' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='493' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='523' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='508' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='498' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='493' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='508' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='503' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='530' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='509' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='515' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='515' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='504' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='499' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='520' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='515' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='530' />
+      <cargo name='Furs' star='Gliese' planet='Crash' cost='515' />
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='719' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='719' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='740' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='713' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='721' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='721' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='743' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='713' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='713' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='721' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='738' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='730' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='722' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='738' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='744' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='738' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='722' />
+      <cargo name='NanoFabrics' star='Resort' planet='Majestic' cost='724' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='764' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='748' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Jingos Belle' bays='31' efficiency='100'>
+    </depot>
+    <depot owner='Potted Plantains' bays='31' efficiency='100'>
+    </depot>
+    <depot owner='Xornatopia' bays='51' efficiency='100'>
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='548' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='560' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='577' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='548' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='554' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='554' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='577' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='554' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='548' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='560' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='577' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='577' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='554' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='571' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='554' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='566' />
+      <cargo name='Pharmaceuticals' star='Rubble' planet='Dottle' cost='583' />
+      <cargo name='Monopoles' star='Rubble' planet='Dross' cost='720' />
+      <cargo name='Monopoles' star='Rubble' planet='Dross' cost='720' />
+    </depot>
+    <factory owner='Xornatopia' id='1' planet='Dross' output='Monopoles' status='run' cash='-62825' top-up='100000' income='3563925' exp='1356075' profit='2651100'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='82' labour='300' wages='40' stored='150' disposal='depot'/>
+      <input name='Pharmaceuticals' quantity='50' />
+      <input name='Nitros' quantity='50' />
+    </factory>
+    <factory owner='Xornatopia' id='2' planet='Dross' output='Univators' status='run' cash='669775' top-up='100000' income='3308925' exp='723600' profit='3069750'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='79' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='65' />
+    </factory>
+    <factory owner='Xornatopia' id='3' planet='Dross' output='Univators' status='run' cash='567775' top-up='100000' income='3330450' exp='723600' profit='3054375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='78' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='65' />
+    </factory>
+    <factory owner='Xornatopia' id='4' planet='Dross' output='Univators' status='run' cash='562525' top-up='100000' income='3336375' exp='669600' profit='3082200'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='83' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='5' />
+    </factory>
+    <factory owner='Xornatopia' id='7' planet='Dross' output='Univators' status='run' cash='668275' top-up='100000' income='3344625' exp='669600' profit='3060000'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='83' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='0' />
+    </factory>
+    <factory owner='Xornatopia' id='8' planet='Dross' output='Univators' status='run' cash='574075' top-up='100000' income='3336900' exp='723600' profit='3141000'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='83' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='20' />
+    </factory>
+    <factory owner='Xornatopia' id='5' planet='Dross' output='Univators' status='run' cash='668200' top-up='100000' income='3346575' exp='723600' profit='3111600'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='81' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='30' />
+    </factory>
+    <factory owner='Xornatopia' id='6' planet='Dross' output='Univators' status='run' cash='670450' top-up='100000' income='3345225' exp='723600' profit='3119550'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='81' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='40' />
+    </factory>
+</infrastructure>

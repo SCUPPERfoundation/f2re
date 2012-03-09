@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
-<fed2-map title='Frontier Space' version='13' editor='standard'>
+<fed2-map title='Frontier Space' version='13' editor='online'>
 
    <location num='460' flags='slp'>
       <name>Frontier Interstellar Link and Boondock Orbit</name>
-      <desc>As you warp into Frontier Space, you notice a blue/green planet laid out below you. Your first view of Boondock is breathtaking, as the only signs of civilization is the glow on the northern hemisphere, where your readouts show the Landing Pad, and the Spaceport for Boondock.  Off to the east you spy a smaller planet. This must be the new colony that Boone is installing.</desc>
-      <desc>Carson-&gt; East</desc>
+      <desc>As you warp into Frontier Space, you notice a blue/green planet laid out below you, Your first view of Boondock is breathtaking, as the only signs of civilization is the glow on the northern hemisphere, where you readouts show the Spaceport.East is the planet carson, and south is the new planet Fremont.</desc>
       <exits e='461' s='524' no-exit='moves.noexit.1'/>
    </location>
 
@@ -17,7 +16,7 @@
 
    <location num='524' flags='sp'>
       <name>Fremont Orbit</name>
-      <desc>   The asteroid Fremont is where Frontier has placed its highly dangerous Biological manufacturing center. Access to all but the basest of facilities is strictly controlled. You may Board to land, and all amenities will be available right off the LP.</desc>
+      <desc>The asteroid Fremont is where Frontier has placed its highly dangerous Biological manufacturing center. Access to all but the basest of facilities is strictly controlled. You may Board to land, and all amenities will be available right off the LP. Link is north.</desc>
       <exits n='460'/>
    </location>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Urland Space' version='1.00' editor='standard'>
+<fed2-map title='Urland Space' version='1' editor='online'>
 
    <location num='199' flags='s'>
       <name>Elspeth Orbit</name>
@@ -9,7 +9,7 @@
 
    <location num='263' flags='sp'>
       <name>Galen Orbit</name>
-      <desc>Below you is the planet Galen.  You can see a landing platform near the equator of the planet.</desc>
+      <desc>Below you is the planet Galen.  You can see a landing platform near the equator of the planet.  Above you can see the gleaming moon called Elspeth.</desc>
       <exits se='328' s='327' up='199' no-exit='moves.noexit.1'/>
    </location>
 

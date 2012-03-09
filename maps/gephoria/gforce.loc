@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Gforce' version='20' editor='standard' from='326' to='Gephoria.Gephoria Space.259'>
+<fed2-map title='Gforce' version='20' editor='online' from='326' to='Gephoria.Gephoria Space.259'>
 
    <location num='64'>
       <name>Storeroom</name>
@@ -103,8 +103,8 @@
    </location>
 
    <location num='328'>
-      <name>xxx</name>
-      <desc>xxx</desc>
+      <name>Return Tram</name>
+      <desc>You can&apos;t help but feel a small twinge as you start to board the tram to return to the spaceport. Maybe you don&apos;t HAVE to leave. Maybe you could extend your stay just a tad longer. But eventually you get on board the tram and head back to the spaceport, which lies to the South once the tram stops.</desc>
       <exits s='391'/>
    </location>
 
@@ -164,9 +164,8 @@
 
    <location num='457' flags='b'>
       <name>Gforce Diner</name>
-      <desc>Metal walls, metal chairs, metal floors, metal tables....if this a diner or a galley on a ship? There really isn&apos;t much of a difference. The food is all the same, so feel free to dig in.</desc>
+      <desc>Metal walls, metal chairs, metal floors, metal tables...is this a diner or a galley on a ship? There really isn&apos;t much of a difference. The food is all the same, so feel free to dig in.</desc>
       <exits n='393'/>
    </location>
 
 </fed2-map>
-

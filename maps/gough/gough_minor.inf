@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dunavant' economy='Biological' treasury='705544221' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Clinic' level='8' hospital='0' unused='2'/>
+  <build type='School' level='5' research='4' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Research' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

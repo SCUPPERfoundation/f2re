@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<infrastructure owner='Scottric' economy='Resource' treasury='-552516868' yard-markup='0' workers='900' base='1000' registry='false'>
+  <build type='Clinic' level='0' hospital='0' unused='1'/>
+  <build type='Canal' points='1'/>
+</infrastructure>

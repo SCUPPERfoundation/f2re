@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Ara Space' version='7' editor='standard'>
+<fed2-map title='Ara Space' version='7' editor='online'>
 
    <location num='330' flags='s'>
       <name>Empty Space</name>
@@ -21,7 +21,7 @@
 
    <location num='395' flags='sl'>
       <name>Ara Space Interstellar Link</name>
-      <desc>Ara&apos;s local interstellar link floats waiting to be accessed for travel to other systems while a directional beakon beckons to the South pointing you in the direction of Chiron, the only planet currently open for trade. A Dilconian troop ship emblazoned with the black falcon crest of the empire.</desc>
+      <desc>Ara&apos;s local interstellar link floats waiting to be accessed for travel to other systems while a directional beakon beckons to the South pointing you in the direction of Chiron, the only planet currently open for trade. A Dilconian troop ship approaches swiftly informing you that you are cleared to either jump to a different system or continue south to Chiron and that any disruption of the peace will be dealt with swiftly.</desc>
       <exits e='396' s='459' nw='330' down='394' in='394'/>
    </location>
 
@@ -38,7 +38,7 @@
    </location>
 
    <location num='461' flags='s'>
-      <name>xxx</name>
+      <name>Empty Space</name>
       <desc>There is nothing here but empty space. The link is located Northwest, West</desc>
       <exits nw='396'/>
    </location>

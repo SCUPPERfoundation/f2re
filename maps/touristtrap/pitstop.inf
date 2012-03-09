@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dan' economy='Leisure' treasury='732218903' yard-markup='0' workers='1500' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Atmos' level='10' unused='1'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Police' points='11'/>
+  <build type='Clinic' level='10' hospital='0' unused='3'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Pension' points='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='13'/>
+  <build type='Radio' points='20'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Fusion' points='10'/>
+  <build type='Defence' points='7'/>
+  <build type='Floating' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Solar' points='12'/>
+  <build type='Tquark' points='10'/>
+  <build type='Leisure' points='8'/>
+  <build type='Terraform' points='20'/>
+  <build type='Airport' points='10' level='intra'/>
+  <build type='Satellite' points='5'/>
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <factory owner='Old West Mining &amp; Exploration' id='15' planet='Pit Stop' output='Gold' status='run' cash='558675' top-up='100000' income='1628700' exp='604975' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='4' labour='200' wages='40' stored='75' disposal='exchange'/>
+      <input name='Explosives' quantity='15' />
+    </factory>
+</infrastructure>

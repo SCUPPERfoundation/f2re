@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Musa Space' version='5' editor='standard'>
+<fed2-map title='Musa Space' version='5' editor='online'>
 
    <location num='331' flags='sp'>
       <name>Ornata orbit</name>
@@ -27,7 +27,7 @@
    </location>
 
    <location num='396' flags='sp'>
-      <name>Zebrina interstellar link and orbit</name>
+      <name>Zebrina orbit</name>
       <desc>  In stark contrast to its sister planet, Zebrina is an inviting, tropical paradise. A quick surface scan shows the landing pad nestled amongst the tropical banana plants that envelop the entire surface.</desc>
       <desc>  Your navcomp shows Acuminata orbit to the south of your present position, the interstellar link to the west and Rubra to the north.</desc>
       <exits n='332' s='460' w='395' nw='331'/>
@@ -41,4 +41,3 @@
    </location>
 
 </fed2-map>
-

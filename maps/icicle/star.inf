@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<star name='Icicle' cartel='Chicago'>
+
+   <black-list>
+      <exile name='Zordaz'/>
+      <exile name='Nightwatch'/>
+   </black-list>
+
+</star>

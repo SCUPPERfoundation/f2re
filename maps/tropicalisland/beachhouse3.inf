@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<infrastructure owner='Quanshee' economy='Biological' treasury='359451' yard-markup='-10' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Tachyon' points='9'/>
+  <build type='Clinic' level='8' hospital='0' unused='2'/>
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

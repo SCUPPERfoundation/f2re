@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<infrastructure owner='Racingnut' economy='Agricultural' treasury='90681459' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' unused='2'/>
+    <depot owner='Music Mania Llc' bays='21' efficiency='100'>
+    </depot>
+    <factory owner='Music Mania Llc' id='1' planet='Gasoline Alley' output='Powerpacks' status='run' cash='246375' top-up='100000' income='3784800' exp='2389275' profit='1650700'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='8' labour='50' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='45' />
+      <input name='Radioactives' quantity='50' />
+    </factory>
+    <factory owner='Music Mania Llc' id='2' planet='Gasoline Alley' output='Powerpacks' status='run' cash='417675' top-up='100000' income='3782550' exp='2331025' profit='1647925'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='119' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='30' />
+      <input name='Radioactives' quantity='0' />
+    </factory>
+    <factory owner='Music Mania Llc' id='3' planet='Gasoline Alley' output='Libraries' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='75' disposal='exchange'/>
+      <input name='Polymers' quantity='75' />
+      <input name='Woods' quantity='75' />
+      <input name='Textiles' quantity='0' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Novemix' economy='Agricultural' treasury='749960344' yard-markup='0' workers='1150' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='0' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

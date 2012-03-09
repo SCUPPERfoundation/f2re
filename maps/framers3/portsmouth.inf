@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jlangdon' economy='Agricultural' treasury='-141338477' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' unused='3'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

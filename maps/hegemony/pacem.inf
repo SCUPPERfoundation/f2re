@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<infrastructure owner='Silenius' economy='Biological' treasury='990184620' yard-markup='0' workers='6105' base='3700' slithy-xform='0' registry='false'>
+  <build type='Insurance' points='5'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4'/>
+  <build type='Clinic' level='8' hospital='10' unused='0'/>
+  <build type='Hospital' points='5'/>
+  <build type='Genetic' points='15'/>
+  <build type='Family' points='10'/>
+  <build type='Terraform' points='20'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Tachyon' points='15'/>
+  <build type='Satellite' points='5'/>
+  <build type='Defence' points='10'/>
+  <build type='Biolab' points='1'/>
+  <build type='Fibre' points='40'/>
+  <build type='Phone' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Weather' points='3'/>
+  <build type='Fusion' points='9'/>
+  <build type='Port' points='5'/>
+  <build type='Floating' points='10'/>
+    <factory owner='Everworld Companies' id='1' planet='Pacem' output='TQuarks' status='run' cash='799930' top-up='100000' income='10030875' exp='2543940' profit='4833575'>
+      <building max-eff='100' max-store='150' maint='5' eff='90'/>
+      <production interval-max='148' intervals='23' labour='33' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='10' />
+      <input name='Droids' quantity='10' />
+    </factory>
+</infrastructure>

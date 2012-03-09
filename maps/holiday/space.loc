@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Holiday Space' version='13' editor='standard'>
+<fed2-map title='Holiday Space' version='13' editor='online'>
 
    <location num='204' flags='s'>
       <name>Space</name>
@@ -41,7 +41,7 @@
 
    <location num='332' flags='sl'>
       <name>Interstellar Link</name>
-      <desc>Welcome to Holiday!  The planet Gala lies to the South.  Explorers have been exploring routes thorough the system but no other destinations have been found yet.</desc>
+      <desc>Welcome to Holiday!  The planet Fiesta lies to the South.  Explorers have been exploring routes thorough the system but no other destinations have been found yet.</desc>
       <exits n='268' e='333' s='396' w='331'/>
    </location>
 
@@ -58,30 +58,28 @@
    </location>
 
    <location num='395' flags='s'>
-      <name>Shortcut between Gala and nowhere</name>
-      <desc>You can Go NorthWest, but there is nothing there.  You can go SouthEast to the planet Gala</desc>
+      <name>Shortcut between Fiesta and nowhere</name>
+      <desc>You can Go NorthWest, but there is nothing there.  You can go SouthEast to the planet Fiesta</desc>
       <exits se='460' nw='330'/>
    </location>
 
    <location num='396' flags='s'>
       <name>Space</name>
-      <desc>You are mid-way between the Link and Gala Orbit.</desc>
-      <desc>The link is to the North, Gala orbit is to the South.</desc>
+      <desc>You are mid-way between the Link and Fiesta orbit</desc>
       <exits n='332' s='460'/>
    </location>
 
    <location num='397' flags='s'>
-      <name>Shortcut between Gala and nowhere</name>
-      <desc>You can Go NorthEast, but there is nothing there.  You can go SouthWest to the planet Gala</desc>
+      <name>Shortcut between Fiesta and nowhere</name>
+      <desc>You can Go NorthEast, but there is nothing there.  You can go SouthWest to the planet Fiesta</desc>
       <exits ne='334' sw='460'/>
    </location>
 
    <location num='460' flags='sp'>
-      <name>Gala Orbit</name>
+      <name>Fiesta Orbit</name>
       <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
       <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
       <exits n='396' ne='397' nw='395' no-exit='moves.noexit.1'/>
    </location>
 
 </fed2-map>
-

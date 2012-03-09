@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Kingdom' version='48' editor='standard' from='784' to='Fowl.Fowl Space.657'>
+<fed2-map title='Kingdom' version='48' editor='online' from='784' to='Fowl.Fowl Space.657'>
 
    <location num='0' flags='t'>
       <name>xxx</name>
@@ -387,9 +387,8 @@
    </location>
 
    <location num='1096'>
-      <name>Angel and Gwarriors Room</name>
-      <desc>         You step into the room via a secret door from the living room. This room is large. One wall is made up of windows which look down into the Ocean and Water Kingdom. In the middle of the room is a large pool table. In one corner, there is a pinball machine, and in another corner is a comfy couch. The couch is in front of a large plasma HDTV that is hanging on the wall. Under the TV are a DVR and cable box. Next to the TV there are several box sets of Gwarrior and Angel&apos;s favorite shows and several DVD movies. Several pictures of Gwarrior and Angelfowl adorn the wall. On the opposite wall, next to the pinball machine, are several bookcases filled to the brim with the lovers favorite books. Several stereos are scattered around the room, and the CD player itself sits next to the bookcases, and a large case holds the couples favorite CD&apos;s</desc>
-      <desc>If you wish to leave, you may go Out.</desc>
+      <name>Angel&apos;s Offiice</name>
+      <desc>You step into the room via a secret door from the living room. This room is large. One wall is made up of windows which look down into the Ocean and Water Kingdom. In the middle of the room is a large pool table. In one corner, there is a pinball machine, and in another corner is a comfy couch. The couch is in front of a large plasma HDTV that is hanging on the wall. Under the TV are a DVR and cable box. Next to the TV there are several box sets of Angel&apos;s favorite shows and several DVD movies. Several pictures of Angel&apos;s favorite bands, and celebrities adorn the walls. On the opposite wall, next to the pinball machine, are several bookcases filled to the brim with the her favorite books. Several stereos are scattered around the room, and the CD player itself sits next to the bookcases, and a large case holds the all of her favorite CD&apos;s     If you wish to leave, you may go Out.</desc>
       <exits up='903' out='644'/>
    </location>
 

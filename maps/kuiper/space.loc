@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<fed2-map title='Kuiper Space' version='11' editor='standard'>
+<fed2-map title='Kuiper Space' version='11' editor='online'>
 
    <location num='460' flags='slp'>
       <name>Quaoar Orbit and interstellar link</name>
-      <desc>the Kuiper Belt objects are extremely primitive remnants from the early accretional phases of the solar system.There are at least 70,000 &quot;trans-Neptunians&quot; with diameters larger than 100 km in the radial zone extending outwards. The planet which spins in your viewscreen is completely encased in ice.A small area of the planet has been terraformed so it is possible to survive there,</desc>
+      <desc>the Kuiper Belt objects are extremely primitive remnants from the early accretional phases of the solar system.  There are at least 70,000 &quot;trans-Neptunians&quot; with diameters larger than 100 km in the radial zone extending outwards. The planet which spins in your view screen is completely encased in ice.  A small area of the planet has been terraformed so it is possible to survive there, The Blirish City Jen is in lower orbit.  Its massive size is staggering</desc>
       <exits no-exit='moves.noexit.2'/>
    </location>
 

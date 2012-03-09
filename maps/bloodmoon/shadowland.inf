@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<infrastructure owner='Furgas' economy='Agricultural' treasury='274419586' yard-markup='0' workers='1020' base='1000' slithy-xform='0' registry='false'>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='5'/>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='0' hospital='4' unused='0'/>
+  <build type='Hospital' points='2'/>
+    <warehouse owner='Founderodo'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Futuretech' id='1' planet='Shadowland' output='Artifacts' status='run' cash='668825' top-up='100000' income='4797900' exp='1139600' profit='3547325'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='25' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Futuretech' id='2' planet='Shadowland' output='Artifacts' status='run' cash='551450' top-up='100000' income='4681500' exp='1139600' profit='3545600'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='29' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>

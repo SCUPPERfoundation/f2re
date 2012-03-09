@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Zion' version='1.00' editor='standard' from='328' to='Chicago.Chicago Space.398'>
+<fed2-map title='Zion' version='1' editor='online' from='328' to='Chicago.Chicago Space.398'>
 
    <location num='0'>
       <name>Closet</name>
@@ -44,7 +44,7 @@
 
    <location num='328'>
       <name>Zion Landing Pad</name>
-      <desc>This is the Zion Landing Pad.  The habitable areas of this moon are laid out in a circular fashion around the landing pad.  Thus, there are exits in the cardinal directions.  The exchange for Mimas is located to the east.</desc>
+      <desc>This is the Zion Landing Pad.  The habitable areas of this moon are laid out in a circular fashion around the landing pad.  Thus, there are exits in the cardinal directions.  The exchange for Zion is located to the east.</desc>
       <exits n='264' e='329' s='392' w='327' no-exit='moves.noexit.1'/>
    </location>
 

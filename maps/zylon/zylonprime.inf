@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<infrastructure owner='Daylin' economy='Technical' treasury='30350761' yard-markup='-10' workers='1300' base='1000' slithy-xform='0' registry='false'>
+  <build type='Family' points='10'/>
+  <build type='School' level='4' mining='4' tech='4' research='4'/>
+  <build type='Police' points='6'/>
+  <build type='Atmos' level='6' unused='5'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Dole' points='3'/>
+  <build type='Clinic' level='6' hospital='10' unused='0'/>
+  <build type='Pension' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Radio' points='4'/>
+  <build type='Hospital' points='5'/>
+  <build type='Research' points='1'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Insurance' points='10'/>
+  <build type='Oil' points='4'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='709' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='716' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='704' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='704' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='706' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='713' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='729' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='722' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='730' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='730' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='746' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='725' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='769' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='756' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='756' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='741' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='780' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='796' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='773' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='788' />
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='580' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='574' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='598' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='604' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='587' />
+    </warehouse>
+
+</infrastructure>

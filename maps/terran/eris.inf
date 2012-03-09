@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<infrastructure owner='Liakell' economy='Technical' treasury='5641611' yard-markup='-10' workers='1200' base='1000' slithy-xform='0' registry='true'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='1'/>
+  <build type='Police' points='8'/>
+  <build type='Clinic' level='6' hospital='6' unused='2'/>
+  <build type='Atmos' level='6' unused='3'/>
+  <build type='Pollution' level='9' unused='1'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Dole' points='4'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='4'/>
+  <build type='Oil' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Hospital' points='3'/>
+  <build type='Research' points='1'/>
+  <build type='Airlane' points='4'/>
+  <build type='Defence' points='5'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Urban' points='5'/>
+  <build type='Phone' points='10'/>
+  <build type='Insurance' points='5'/>
+  <build type='Fibre' points='40'/>
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='740' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='748' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='771' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='740' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='748' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='787' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='740' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='740' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='756' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='766' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='776' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='784' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='778' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='796' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='816' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='831' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='800' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='860' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Across Staffing Services' bays='21' efficiency='95'>
+    </depot>
+    <factory owner='Across Staffing Services' id='5' planet='Eris' output='Explosives' status='run' cash='100000' top-up='100000' income='2539125' exp='1455255' profit='1353495'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Electros' quantity='80' />
+      <input name='Nitros' quantity='50' />
+      <input name='Nickel' quantity='80' />
+    </factory>
+    <factory owner='Across Staffing Services' id='6' planet='Eris' output='Explosives' status='run' cash='100000' top-up='100000' income='2525400' exp='1667130' profit='1104270'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Electros' quantity='80' />
+      <input name='Nitros' quantity='50' />
+      <input name='Nickel' quantity='80' />
+    </factory>
+    <factory owner='Across Staffing Services' id='7' planet='Eris' output='AntiMatter' status='run' cash='100000' top-up='100000' income='2581350' exp='1633620' profit='1216055'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='GAsChips' quantity='45' />
+      <input name='Monopoles' quantity='80' />
+    </factory>
+    <factory owner='Across Staffing Services' id='8' planet='Eris' output='AntiMatter' status='run' cash='100000' top-up='100000' income='2585625' exp='1654995' profit='1207430'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='GAsChips' quantity='45' />
+      <input name='Monopoles' quantity='80' />
+    </factory>
+</infrastructure>

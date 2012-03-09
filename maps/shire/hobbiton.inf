@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bilbo' economy='Agricultural' treasury='997335370' yard-markup='0' workers='1150' base='1000' registry='false'>
+  <build type='School' agri='4' unused='18'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='0' hospital='10' unused='29'/>
+  <build type='Hospital' points='5'/>
+  <build type='Police' points='12'/>
+  <build type='Atmos' level='0' unused='15'/>
+  <build type='Pollution' level='0' unused='15'/>
+  <build type='Biodiversity' points='8'/>
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Zorn Enterprises' bays='21' efficiency='100'>
+    </depot>
+</infrastructure>

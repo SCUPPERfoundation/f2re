@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Shire Space' version='1.00' editor='standard'>
+<fed2-map title='Shire Space' version='1' editor='online'>
 
    <location num='197' flags='s'>
       <name>Longbottom Bio Colony and Agri Fields</name>
@@ -32,8 +32,8 @@
    </location>
 
    <location num='328' flags='slp'>
-      <name>Urland Link</name>
-      <desc>The link to the rest of space is located here.  The planet Hobbitat is to the northwest.</desc>
+      <name>Shire Link</name>
+      <desc>The link to the rest of space is located here.  The planet Arda is to the northwest. The agri colony Hobbitat is somewhere to the southwest.</desc>
       <exits sw='391' w='327' nw='263' no-exit='moves.noexit.1'/>
    </location>
 

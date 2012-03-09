@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<infrastructure owner='Monkey' economy='Leisure' treasury='1000165889' yard-markup='0' workers='1710' base='1000' registry='false'>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Atmos' level='10' unused='1'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='10' hospital='12' unused='0'/>
+  <build type='Police' points='12'/>
+  <build type='Canal' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Housing' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='5'/>
+  <build type='Telegraph' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Family' points='10'/>
+  <build type='Hospital' points='6'/>
+  <build type='Biodiversity' points='10'/>
+  <build type='Radio' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='12'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Insurance' points='10'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Floating' points='9'/>
+  <build type='Dole' points='5'/>
+  <build type='Tquark' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Leisure' points='8'/>
+  <build type='Solar' points='7'/>
+  <build type='Airport' points='10' level='intra'/>
+  <build type='Satellite' points='5'/>
+  <build type='Defence' points='5'/>
+  <build type='Terraform' points='20'/>
+  <build type='Genetic' points='6'/>
+    <warehouse owner='Nani'>
+    </warehouse>
+
+    <factory owner='Props2u' id='1' planet='Ornata' output='NanoFabrics' status='run' cash='468075' top-up='100000' income='2028900' exp='827850' profit='3504225'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='39' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='30' />
+      <input name='Synths' quantity='30' />
+    </factory>
+</infrastructure>

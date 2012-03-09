@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<infrastructure owner='Icey' economy='Agricultural' treasury='181248968' yard-markup='0' workers='950' base='1000' registry='false'>
+  <build type='Canal' points='4'/>
+  <build type='Atmos' level='0' unused='4'/>
+  <build type='Pollution' level='0' unused='4'/>
+  <build type='School' unused='4'/>
+  <build type='Dole' points='1'/>
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

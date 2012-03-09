@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<infrastructure owner='Fester' economy='Biological' treasury='925173150' yard-markup='0' workers='1093' base='810' registry='false'>
+  <build type='School' level='5' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Tachyon' points='4'/>
+  <build type='Terraform' points='20'/>
+  <build type='Clinic' level='8' hospital='0' unused='0'/>
+  <build type='Satellite' points='3'/>
+  <build type='Port' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='4'/>
+  <build type='Urban' points='5'/>
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<infrastructure owner='Queenmommy' economy='Technical' treasury='-120838978' yard-markup='-10' workers='1060' base='1000' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='5'/>
+  <build type='Clinic' level='6' hospital='2' unused='2'/>
+  <build type='Atmos' level='6' unused='5'/>
+  <build type='Police' points='8'/>
+  <build type='Pollution' level='9' unused='5'/>
+  <build type='Hospital' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Family' points='14'/>
+  <build type='Dole' points='4'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Radio' points='2'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Insurance' points='4'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Mq Acres Inc' id='3' planet='Caramel' output='TQuarks' status='run' cash='581725' top-up='100000' income='1556775' exp='459675' profit='4312800'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='29' labour='30' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='10' />
+      <input name='Droids' quantity='10' />
+    </factory>
+    <factory owner='Mq Acres Inc' id='4' planet='Caramel' output='TQuarks' status='run' cash='568225' top-up='100000' income='1543575' exp='470550' profit='4213575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='29' labour='30' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='10' />
+      <input name='Droids' quantity='10' />
+    </factory>
+    <factory owner='Mq Acres Inc' id='6' planet='Caramel' output='Pharmaceuticals' status='run' cash='305025' top-up='100000' income='1159950' exp='623075' profit='2105775'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='25' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='RNA' quantity='0' />
+      <input name='Xmetals' quantity='55' />
+    </factory>
+    <factory owner='Mq Acres Inc' id='5' planet='Caramel' output='Tools' status='run' cash='284100' top-up='100000' income='647325' exp='347375' profit='1249050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='34' labour='50' wages='40' stored='75' disposal='exchange'/>
+      <input name='Radioactives' quantity='15' />
+      <input name='Nickel' quantity='45' />
+    </factory>
+    <factory owner='Mq Acres Inc' id='8' planet='Caramel' output='Katydidics' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='74975'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='150' disposal='exchange'/>
+      <input name='AntiMatter' quantity='75' />
+      <input name='Polymers' quantity='75' />
+      <input name='Gold' quantity='0' />
+    </factory>
+    <factory owner='Mq Acres Inc' id='7' planet='Caramel' output='Gold' status='run' cash='504075' top-up='100000' income='1113000' exp='434375' profit='2781825'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='11' labour='200' wages='40' stored='75' disposal='exchange'/>
+      <input name='Explosives' quantity='15' />
+    </factory>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Diagaga' version='5' editor='standard' from='200' to='Rubble.Rubble Space.587'>
+<fed2-map title='Diagaga' version='5' editor='online' from='200' to='Rubble.Rubble Space.587'>
 
    <location num='0'>
       <name>Closet</name>
@@ -332,8 +332,8 @@
    </location>
 
    <location num='839'>
-      <name>Methane Collection Grid</name>
-      <desc>  A maze of pipes extends through the ceiling of the service shaft and into the festering mound of garbage.  An evacuation pump chugs away, sucking methane from the decomposing waste and piping it to a methane processing facility towards the northeast.</desc>
+      <name>Methane Collection Junction</name>
+      <desc>A maze of pipes extends through the ceiling of the service shaft and into the festering mound of garbage.  Pipes hung in slimy crawl spaces leading from the north and east convey methane scavenged from the storage pile converge in this room.  An evacuation pump chugs away, sucking methane from the decomposing waste and piping it to a methane processing facility towards the northeast.</desc>
       <exits n='775' ne='776' e='840' no-exit='moves.noexit.6'/>
    </location>
 

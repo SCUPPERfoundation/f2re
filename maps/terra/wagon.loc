@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Wagon' version='6' editor='standard' from='2015' to='Terra.Terra Space.2015'>
+<fed2-map title='Wagon' version='6' editor='online' from='2015' to='Terra.Terra Space.2015'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -56,7 +56,7 @@
 
    <location num='2015'>
       <name>Landing pad</name>
-      <desc>The exchange is east, ship services north, bar west, and hospital south.</desc>
+      <desc>Welcome to Wagon. The exchange is east, ship services north, bar west, and hospital south.</desc>
       <exits n='1951' e='2016' s='2079' w='2014' no-exit='moves.noexit.1'/>
    </location>
 

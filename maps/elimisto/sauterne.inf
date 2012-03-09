@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lynnea' economy='Industrial' treasury='148178766' yard-markup='0' workers='1030' base='1000' slithy-xform='0' registry='false'>
+  <build type='Base' points='4'/>
+  <build type='School' level='2' agri='4' mining='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='3'/>
+  <build type='Police' points='4'/>
+  <build type='Clinic' level='4' hospital='0' unused='1'/>
+  <build type='Atmos' level='4' unused='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='3'/>
+  <build type='Pollution' level='5' unused='5'/>
+  <build type='Insulation' points='4'/>
+  <build type='Rail' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Radio' points='4'/>
+    <depot owner='Lace, Leather And Chains' bays='21' efficiency='100'>
+    </depot>
+    <depot owner='Polka-dotted Pole Cats' bays='21' efficiency='100'>
+    </depot>
+    <factory owner='Polka-dotted Pole Cats' id='3' planet='Sauterne' output='Artifacts' status='run' cash='435900' top-up='100000' income='3273525' exp='858400' profit='1984650'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Polka-dotted Pole Cats' id='4' planet='Sauterne' output='Spices' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='75' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='80' />
+      <input name='Mechparts' quantity='80' />
+      <input name='Woods' quantity='80' />
+      <input name='Textiles' quantity='80' />
+      <input name='Spices' quantity='5' />
+      <input name='Fruit' quantity='15' />
+    </factory>
+    <factory owner='Lace, Leather And Chains' id='1' planet='Sauterne' output='Artifacts' status='run' cash='321075' top-up='100000' income='324675' exp='103600' profit='2317025'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='64' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Lace, Leather And Chains' id='2' planet='Sauterne' output='Artifacts' status='run' cash='308000' top-up='100000' income='326400' exp='118400' profit='2298050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='53' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Polka-dotted Pole Cats' id='6' planet='Sauterne' output='Libraries' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='40' stored='150' disposal='exchange'/>
+      <input name='Polymers' quantity='5' />
+      <input name='Woods' quantity='45' />
+      <input name='Textiles' quantity='10' />
+    </factory>
+</infrastructure>

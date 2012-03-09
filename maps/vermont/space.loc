@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Vermont Space' version='17' editor='standard'>
+<fed2-map title='Vermont Space' version='17' editor='online'>
 
    <location num='529' flags='sp'>
       <name>Parmigiano Cheese Orbit</name>
@@ -11,10 +11,8 @@
    </location>
 
    <location num='530' flags='sp'>
-      <name>Cheddar Cheese Orbit</name>
-      <desc>Welcome to Cheddar Cheese, where we make the best cheddar in Fed data space.  Just board your shutter and enjoy the ride!</desc>
-      <desc>West - Parmigiano Cheese Orbit</desc>
-      <desc>South West - Link</desc>
+      <name>Cheddar Prime</name>
+      <desc>Welcome to Cheddar Prime, where we make the best cheddar in Fed data space.  Just board your shutter and enjoy the ride! West - Parmigiano Cheese OrbitSouth West - Link</desc>
       <exits sw='593' w='529'/>
    </location>
 
@@ -25,4 +23,3 @@
    </location>
 
 </fed2-map>
-

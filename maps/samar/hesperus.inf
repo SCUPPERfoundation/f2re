@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<infrastructure owner='Ironman' economy='Resource' treasury='78579713' yard-markup='0' workers='800' base='1000' slithy-xform='0' registry='false'>
+  <build type='Pollution' level='2' unused='4'/>
+  <build type='Atmos' level='2' unused='5'/>
+  <build type='School' level='1' agri='4'/>
+  <build type='Police' points='10'/>
+  <build type='Canal' points='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Biodiversity' points='5'/>
+</infrastructure>

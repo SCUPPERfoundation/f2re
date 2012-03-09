@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Atlantis' version='1.00' editor='standard' from='543' to='Aegean.Aegean Space.390'>
+<fed2-map title='Atlantis' version='1' editor='online' from='543' to='Aegean.Aegean Space.390'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -33,7 +33,7 @@
 
    <location num='544' flags='e'>
       <name>Atlantis Exchange</name>
-      <desc>This is the exchange for the planet Atlantis. Madddder wishes you happy trading! Several locals, visitors, and traders from afar are scurrying to and fro, shouting the likes of &quot;Buy, buy!&quot; and &quot;Sell, sell!&quot; One man tells you &quot;Please DO NOT sell commods that already have Factories pleasant on this planet! There might be consequences!&quot; The Landing Pad is back to the West.</desc>
+      <desc>This is the exchange for the planet Atlantis. MadAdder wishes you happy trading! Several locals, visitors, and traders from afar are scurrying to and fro, shouting the likes of &quot;Buy, buy!&quot; and &quot;Sell, sell!&quot; One man tells you &quot;Please DO NOT sell commods that already have Factories pleasant on this planet! There might be consequences!&quot; The Landing Pad is back to the West.</desc>
       <exits w='543' no-exit='moves.noexit.2'/>
    </location>
 
@@ -180,7 +180,7 @@
 
    <location num='2761'>
       <name>Old Aegean Hotel Lobby</name>
-      <desc>You are in the lobby of the Old Aegean Hotel. You&apos;re pleasantly surprised that such a luxurious hotel can exist underwater of all places. &quot;But hey, it&apos;s Atlantis,&quot; you think to yourself. The receptionist sees you enter, and informs you that if you wish, you can take the elevator up to the second level of the hotel. >From here you can also go West into the Restaurant, or East back out to the City Center.</desc>
+      <desc>You are in the lobby of the Old Aegean Hotel. You&apos;re pleasantly surprised that such a luxurious hotel can exist underwater of all places. &quot;But hey, it&apos;s Atlantis,&quot; you think to yourself. The receptionist sees you enter, and informs you that if you wish, you can take the elevator up to the second level of the hotel. &gt;From here you can also go West into the Restaurant, or East back out to the City Center.</desc>
       <exits e='2762' w='2760' no-exit='moves.noexit.7'/>
    </location>
 
@@ -296,4 +296,3 @@
    </location>
 
 </fed2-map>
-

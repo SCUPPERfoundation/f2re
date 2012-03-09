@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<infrastructure owner='Veexe' economy='Agricultural' treasury='231875004' yard-markup='0' workers='1030' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4' unused='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Clinic' level='0' hospital='2' unused='0'/>
+  <build type='Atmos' level='0' unused='2'/>
+  <build type='Family' points='2'/>
+  <build type='Base' points='2'/>
+  <build type='Hospital' points='1'/>
+  <build type='Police' points='1'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

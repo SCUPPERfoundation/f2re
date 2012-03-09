@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<infrastructure owner='Aringerdroid' economy='Agricultural' treasury='106666511' yard-markup='0' workers='1010' base='1000' slithy-xform='0' registry='false'>
+  <build type='Base' points='2'/>
+  <build type='Canal' points='1'/>
+  <build type='Clinic' level='0' hospital='2' unused='2'/>
+  <build type='Police' points='2'/>
+  <build type='Atmos' level='0' unused='2'/>
+  <build type='Pollution' level='0' unused='2'/>
+  <build type='Hospital' points='1'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

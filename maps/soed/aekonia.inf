@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<infrastructure owner='Zodraz' economy='Leisure' treasury='984723119' yard-markup='-10' workers='1220' base='1000' registry='true'>
+  <build type='School' level='6' tech='4' research='4' studio='4' unused='3'/>
+  <build type='Atmos' level='10' unused='1'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Police' points='11'/>
+  <build type='Clinic' level='10' hospital='2' unused='1'/>
+  <build type='Family' points='4'/>
+  <build type='Hospital' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Pension' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='12'/>
+  <build type='Oil' points='5'/>
+  <build type='Radio' points='20'/>
+  <build type='Satellite' points='2'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='5'/>
+  <build type='Weather' points='5'/>
+  <build type='Fusion' points='5'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Floating' points='9'/>
+  <build type='Insurance' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Tquark' points='10'/>
+  <build type='Solar' points='12'/>
+  <build type='Leisure' points='8'/>
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='895' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='913' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='888' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='879' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='915' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='925' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='925' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='944' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='918' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='936' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='945' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='936' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='945' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='936' />
+      <cargo name='NanoFabrics' star='Holiday' planet='Fiesta' cost='946' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='693' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='842' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='914' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='906' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='943' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Saavik'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+    </warehouse>
+
+    <depot owner='Aphrodite&apos;s Aphrodisiacs' bays='21' efficiency='95'>
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+      <cargo name='NanoFabrics' star='Soed' planet='Aekonia' cost='850' />
+    </depot>
+    <depot owner='Lords Of Light Ltd.' bays='21' efficiency='100'>
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='500' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='500' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='470' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='481' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='500' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='495' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='486' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='495' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='481' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='475' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='500' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='486' />
+      <cargo name='Pharmaceuticals' star='Soed' planet='Noom' cost='490' />
+    </depot>
+    <factory owner='Lords Of Light Ltd.' id='6' planet='Aekonia' output='Monopoles' status='stop' cash='100000' top-up='100000' income='4037025' exp='1305975' profit='3616575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='2' labour='300' wages='0' stored='150' disposal='exchange'/>
+      <input name='Pharmaceuticals' quantity='70' />
+      <input name='Nitros' quantity='70' />
+    </factory>
+    <factory owner='Lords Of Light Ltd.' id='7' planet='Aekonia' output='Sensamps' status='stop' cash='100000' top-up='100000' income='3031350' exp='855570' profit='2809595'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='113' labour='80' wages='0' stored='150' disposal='exchange'/>
+      <input name='Crystals' quantity='35' />
+      <input name='Gold' quantity='35' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<infrastructure owner='Elpon' economy='Agricultural' treasury='253779153' yard-markup='-10' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='592' />
+      <cargo name='BioComponents' star='Acme' planet='Flower' cost='568' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='598' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='604' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='574' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='587' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='592' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='580' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='598' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='568' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='580' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='568' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='598' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='587' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='604' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='604' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='574' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='574' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='598' />
+      <cargo name='BioComponents' star='Cloud' planet='Nimbus' cost='592' />
+    </warehouse>
+
+</infrastructure>

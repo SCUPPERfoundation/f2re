@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<star name='Nobori' cartel='Fringe'>
+
+   <black-list>
+      <exile name='Ricmer'/>
+      <exile name='Hobob'/>
+      <exile name='Ming'/>
+   </black-list>
+
+</star>

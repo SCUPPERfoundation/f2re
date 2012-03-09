@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Hobbiton' version='1.00' editor='standard' from='330' to='Shire.Shire Space.456'>
+<fed2-map title='Hobbiton' version='1' editor='online' from='330' to='Shire.Shire Space.456'>
 
    <location num='0'>
       <name>Closet</name>

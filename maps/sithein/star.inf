@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<star name='Sithein' cartel='Chrysoberyl'>
+
+   <black-list>
+      <exile name='Dannae'/>
+   </black-list>
+
+</star>

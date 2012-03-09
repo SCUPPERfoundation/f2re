@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<fed2-map title='Candlepin' version='18' editor='standard' from='458' to='Sports.Sports Space.258'>
+<fed2-map title='Candlepin' version='18' editor='online' from='458' to='Sports.Sports Space.258'>
 
    <location num='458'>
-      <name>Landing Pad- Candlepin</name>
-      <desc>Welcome to Candlepin. We hope you enjoy your visit. Join us at the Bowling Alley for a pizza and a drink. You might also bowl a few strings. Never heard of Candlepin bowling? Then your probably not from New England, USA, Earth. We&apos;ll fill you in on the game as you explore Candlepin. The exchange is East. Downtown is Southwest.</desc>
+      <name>Landing Pad- Candlepin PLEASE DO NOT BUILD WAREHOUSES ON CANDLEPIN BEFORE IT MOVES TO IT&apos;S NEW HOME IN THE BOWLING SYSTEM. THAT SHOULD OCCUR IN JAN 2008. ANY WAREHOUSES BUILT BEFORE THEN WILL BE LOST.</name>
+      <desc>Welcome to Candlepin. We hope you enjoy your visit. Join us at the Bowling Alley for a pizza and a drink. You might also bowl a few strings. Never heard of Candlepin bowling? Then your probably not from New England, USA, Earth. We&apos;ll fill you in on the game as you explore Candlepin. The exchange is East. Downtown is Southwest. PLEASE DO NOT BUILD WAREHOUSES ON CANDLEPIN BEFORE IT MOVES TO IT&apos;S NEW HOME IN THE BOWLING SYSTEM. THAT SHOULD OCCUR IN JAN 2008. ANY WAREHOUSES BUILT BEFORE THEN WILL BE LOST.</desc>
       <exits e='459' sw='521' no-exit='basics.landingpad.1'/>
    </location>
 
    <location num='459' flags='e'>
-      <name>Exchange Of Candlepin</name>
-      <desc>Traders are welcome. we hope you find good deals here. The products available for the most profit are:____________ Factory owners welcome, But no arts factories please.</desc>
+      <name>Exchange Of Candlepin PLEASE DO NOT BUILD WAREHOUSES ON CANDLEPIN BEFORE IT MOVES TO IT&apos;S NEW HOME IN THE BOWLING SYSTEM. THAT SHOULD OCCUR IN JAN 2008. ANY WAREHOUSES BUILT BEFORE THEN WILL BE LOST.</name>
+      <desc>Traders are welcome. we hope you find good deals here. PLEASE DO NOT BUILD WAREHOUSES ON CANDLEPIN BEFORE IT MOVES TO IT&apos;S NEW HOME IN THE BOWLING SYSTEM. THAT SHOULD OCCUR IN JAN 2008. ANY WAREHOUSES BUILT BEFORE THEN WILL BE LOST.</desc>
       <exits w='458' no-exit='basics.landingpad.1'/>
    </location>
 

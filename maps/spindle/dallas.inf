@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<infrastructure owner='Mistert' economy='Biological' treasury='680859311' yard-markup='0' workers='1511' base='1000' casualties='39' slithy-xform='0' registry='false'>
+  <build type='Clinic' level='8' hospital='30' unused='0'/>
+  <build type='Atmos' level='8' unused='3'/>
+  <build type='Pollution' level='0' unused='15'/>
+  <build type='Fusion' points='2'/>
+  <build type='Police' points='11'/>
+  <build type='Port' points='13'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='4'/>
+  <build type='Urban' points='5'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4'/>
+  <build type='Research' points='1'/>
+  <build type='Floating' points='10'/>
+  <build type='Insurance' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Defence' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Biolab' points='1'/>
+  <build type='Satellite' points='5'/>
+  <build type='Tachyon' points='15'/>
+  <build type='Hospital' points='15'/>
+  <build type='Genetic' points='15'/>
+  <build type='Terraform' points='20'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Darkoenia Enterprises Inc.' id='8' planet='Dallas' output='Univators' status='run' cash='100000' top-up='100000' income='384975' exp='74630' profit='3028575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='55' />
+    </factory>
+    <factory owner='Toga Toga Toga&apos;s R Us' id='6' planet='Dallas' output='Tracers' status='run' cash='100000' top-up='100000' income='1417050' exp='441820' profit='3479400'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+    </factory>
+</infrastructure>

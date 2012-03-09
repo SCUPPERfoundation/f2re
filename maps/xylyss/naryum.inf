@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<infrastructure owner='Nyomar' economy='Agricultural' treasury='818704578' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <factory owner='Liquid Courage Inc.' id='1' planet='Naryum' output='Artifacts' status='run' cash='655210' top-up='100000' income='736050' exp='180840' profit='3484990'>
+      <building max-eff='100' max-store='150' maint='5' eff='90'/>
+      <production interval-max='148' intervals='91' labour='411' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Liquid Courage Inc.' id='2' planet='Naryum' output='Artifacts' status='run' cash='655735' top-up='100000' income='736575' exp='180840' profit='3503815'>
+      <building max-eff='100' max-store='150' maint='5' eff='90'/>
+      <production interval-max='148' intervals='91' labour='411' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

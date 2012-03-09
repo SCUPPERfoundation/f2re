@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Arov Space' version='6' editor='standard'>
+<fed2-map title='Arov Space' version='6' editor='online'>
 
    <location num='0' flags='sp'>
       <name>Storeroom</name>
@@ -15,7 +15,7 @@
 
    <location num='262' flags='sp'>
       <name>Navarium Orbit</name>
-      <desc>Your ship lies in low orbit over the planet of Navarium. The entire surface of this of this planet is covered in water. Your shuttle may land on the ISDS Estate if you choose, or you may head back to the link to the east.</desc>
+      <desc>Your ship lies in low orbit over the planet of Navarium. The entire surface of this of this planet is covered in water. The fleet of the Interstellar Sword &amp; Dagger Company sails the sea of this planet, exploiting its resources for the greater glory of the Imperium. Shuttles may land on the ISDS Estate if they choose, or head back to the link to the west.</desc>
       <exits w='261' no-exit='moves.noexit.1'/>
    </location>
 

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<infrastructure owner='Tenabutter' economy='Technical' treasury='-298235627' yard-markup='0' workers='1040' base='1000' registry='false'>
+  <build type='Canal' points='4'/>
+  <build type='School' level='4' mining='4' tech='4' unused='9'/>
+  <build type='Atmos' level='6' unused='2'/>
+  <build type='Clinic' level='6' hospital='4' unused='7'/>
+  <build type='Police' points='8'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Family' points='2'/>
+  <build type='Hospital' points='2'/>
+  <build type='Mining' points='1'/>
+  <build type='Housing' points='5'/>
+  <build type='Coal' points='4'/>
+  <build type='Rail' points='4'/>
+  <build type='Insulation' points='2'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Pension' points='2'/>
+  <build type='Satellite' points='4'/>
+  <build type='Phone' points='9'/>
+  <build type='Fibre' points='9'/>
+  <build type='Airlane' points='2'/>
+</infrastructure>

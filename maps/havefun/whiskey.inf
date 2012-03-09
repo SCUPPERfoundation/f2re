@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bourbon' economy='Leisure' treasury='986884492' yard-markup='10' workers='944' base='689' casualties='126' registry='true'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='6'/>
+  <build type='Clinic' level='10' hospital='28' unused='5'/>
+  <build type='Hospital' points='14'/>
+  <build type='Police' points='11'/>
+  <build type='Family' points='10'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Atmos' level='10' unused='4'/>
+  <build type='Pollution' level='9' unused='11'/>
+  <build type='Dole' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Insulation' points='10'/>
+  <build type='Pension' points='7'/>
+  <build type='Port' points='13'/>
+  <build type='Radio' points='20'/>
+  <build type='Tech' points='1'/>
+  <build type='Oil' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Surveillance' points='5'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='6'/>
+  <build type='Insurance' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Floating' points='8'/>
+  <build type='Defence' points='4'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Tquark' points='5'/>
+  <build type='Solar' points='13'/>
+  <build type='Leisure' points='8'/>
+  <build type='Airport' points='10' level='trans'/>
+  <build type='Genetic' points='11'/>
+  <build type='Fusion' points='8'/>
+  <build type='Weather' points='8'/>
+  <build type='Longevity' points='4'/>
+    <warehouse owner='Achmedthe'>
+    </warehouse>
+
+    <warehouse owner='Donaldcoffey'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='Monopoles' star='Volleyball' planet='Zeerox' cost='566' />
+      <cargo name='Controllers' star='Volleyball' planet='Wilson' cost='869' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Funtimes Inc.' bays='41' efficiency='100'>
+      <cargo name='Meats' star='Havefun' planet='Bourbonballs' cost='331' />
+      <cargo name='Meats' star='Havefun' planet='Bourbonballs' cost='322' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='164' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='164' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='164' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='162' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='159' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='168' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='165' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='160' />
+    </depot>
+    <depot owner='Groundhog Daze' bays='31' efficiency='100'>
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+      <cargo name='Artifacts' star='Havefun' planet='Whiskey Map' cost='730' />
+    </depot>
+    <depot owner='Tater Tots Inc.' bays='41' efficiency='100'>
+      <cargo name='Electros' star='Havefun' planet='Project M' cost='203' />
+      <cargo name='Electros' star='Havefun' planet='Project M' cost='201' />
+      <cargo name='Electros' star='Havefun' planet='Project M' cost='195' />
+      <cargo name='Electros' star='Havefun' planet='Project M' cost='195' />
+      <cargo name='Semiconductors' star='Havefun' planet='Project M' cost='271' />
+      <cargo name='Semiconductors' star='Havefun' planet='Project M' cost='282' />
+      <cargo name='Semiconductors' star='Havefun' planet='Project M' cost='271' />
+      <cargo name='Semiconductors' star='Havefun' planet='Project M' cost='273' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='385' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='373' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='392' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='388' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='373' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='373' />
+      <cargo name='AntiMatter' star='Havefun' planet='Project M' cost='388' />
+      <cargo name='Meats' star='Havefun' planet='Bourbonballs' cost='328' />
+      <cargo name='Meats' star='Havefun' planet='Bourbonballs' cost='311' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='168' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='160' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='169' />
+      <cargo name='Livestock' star='Havefun' planet='Bourbonballs' cost='160' />
+    </depot>
+    <factory owner='Tater Tots Inc.' id='1' planet='Whiskey Map' output='Lasers' status='run' cash='616550' top-up='100000' income='2294100' exp='1071400' profit='2103175'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='79' labour='100' wages='40' stored='75' disposal='exchange'/>
+      <input name='Electros' quantity='35' />
+      <input name='AntiMatter' quantity='70' />
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+    <factory owner='Groundhog Daze' id='6' planet='Whiskey Map' output='NanoFabrics' status='run' cash='741075' top-up='100000' income='12017550' exp='4241565' profit='4672500'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='92' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='60' />
+      <input name='Synths' quantity='60' />
+    </factory>
+    <factory owner='Tater Tots Inc.' id='3' planet='Whiskey Map' output='Hides' status='run' cash='401125' top-up='100000' income='1953750' exp='1071420' profit='1251825'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='51' labour='60' wages='40' stored='75' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='25' />
+      <input name='Mechparts' quantity='25' />
+      <input name='Textiles' quantity='25' />
+      <input name='Meats' quantity='25' />
+      <input name='Livestock' quantity='50' />
+    </factory>
+    <factory owner='Tater Tots Inc.' id='4' planet='Whiskey Map' output='Hides' status='run' cash='399625' top-up='100000' income='1887225' exp='1066845' profit='1262100'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='51' labour='60' wages='40' stored='150' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='25' />
+      <input name='Mechparts' quantity='25' />
+      <input name='Textiles' quantity='25' />
+      <input name='Meats' quantity='25' />
+      <input name='Livestock' quantity='50' />
+    </factory>
+    <factory owner='Tater Tots Inc.' id='5' planet='Whiskey Map' output='NanoFabrics' status='run' cash='752775' top-up='100000' income='4008150' exp='1446325' profit='4571735'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='92' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='10' />
+      <input name='Synths' quantity='60' />
+    </factory>
+    <factory owner='Groundhog Daze' id='7' planet='Whiskey Map' output='Artifacts' status='run' cash='752375' top-up='100000' income='9677025' exp='2501200' profit='3989200'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='92' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Funtimes Inc.' id='1' planet='Whiskey Map' output='Hides' status='run' cash='464575' top-up='100000' income='537600' exp='297525' profit='1258875'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='4' labour='60' wages='40' stored='75' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='60' />
+      <input name='Mechparts' quantity='60' />
+      <input name='Textiles' quantity='60' />
+      <input name='Meats' quantity='60' />
+      <input name='Livestock' quantity='45' />
+    </factory>
+    <factory owner='Funtimes Inc.' id='2' planet='Whiskey Map' output='Hides' status='run' cash='399025' top-up='100000' income='469425' exp='294900' profit='1420050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='53' labour='60' wages='40' stored='150' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='25' />
+      <input name='Mechparts' quantity='25' />
+      <input name='Textiles' quantity='25' />
+      <input name='Meats' quantity='25' />
+      <input name='Livestock' quantity='50' />
+    </factory>
+    <factory owner='Funtimes Inc.' id='4' planet='Whiskey Map' output='Furs' status='run' cash='686725' top-up='100000' income='793875' exp='238650' profit='4084050'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='35' labour='60' wages='40' stored='150' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='25' />
+      <input name='Mechparts' quantity='25' />
+      <input name='Textiles' quantity='50' />
+      <input name='Livestock' quantity='25' />
+    </factory>
+    <factory owner='Funtimes Inc.' id='5' planet='Whiskey Map' output='Furs' status='run' cash='684730' top-up='100000' income='792375' exp='239145' profit='3954000'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='96' labour='60' wages='40' stored='150' disposal='exchange'/>
+      <input name='Petrochemicals' quantity='35' />
+      <input name='Mechparts' quantity='35' />
+      <input name='Textiles' quantity='70' />
+      <input name='Livestock' quantity='35' />
+    </factory>
+</infrastructure>

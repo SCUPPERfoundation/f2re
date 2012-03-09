@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dreed' economy='Technical' treasury='806393511' yard-markup='-10' workers='1300' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='4'/>
+  <build type='Atmos' level='6' unused='5'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Clinic' level='6' hospital='12' unused='4'/>
+  <build type='Hospital' points='6'/>
+  <build type='Police' points='11'/>
+  <build type='Family' points='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Dole' points='1'/>
+  <build type='Pension' points='10'/>
+  <build type='Radio' points='20'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='13'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='5'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Floating' points='10'/>
+  <build type='Satellite' points='5'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<infrastructure owner='Tanetti' economy='Industrial' treasury='-16234290' yard-markup='-10' workers='1100' base='1000' slithy-xform='0' registry='true'>
+  <build type='Atmos' level='4' unused='7'/>
+  <build type='Police' points='10'/>
+  <build type='Clinic' level='4' hospital='0' unused='6'/>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='9'/>
+  <build type='Agri' points='1'/>
+  <build type='Pollution' level='5' unused='7'/>
+  <build type='Biodiversity' points='2'/>
+  <build type='Housing' points='8'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Coal' points='2'/>
+  <build type='Insulation' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Oil' points='2'/>
+  <build type='Satellite' points='2'/>
+  <build type='Dole' points='2'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='4'/>
+    <factory owner='Insanity' id='8' planet='Absolute' output='Artifacts' status='run' cash='734450' top-up='100000' income='2250525' exp='503960' profit='4003190'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='24' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Insanity' id='9' planet='Absolute' output='Artifacts' status='run' cash='729875' top-up='100000' income='2248200' exp='504720' profit='4007240'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='30' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

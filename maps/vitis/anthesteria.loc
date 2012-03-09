@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Anthesteria' version='6' editor='standard' from='655' to='Vitis.Vitis Space.455'>
+<fed2-map title='Anthesteria' version='6' editor='online' from='655' to='Vitis.Vitis Space.455'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -25,8 +25,8 @@
    </location>
 
    <location num='589' flags='b'>
-      <name>Jewells&apos; disc N</name>
-      <desc>sw and se</desc>
+      <name>Lobby</name>
+      <desc>Please make yourself comfortable, the Princess may or may not be with you momentarily.</desc>
       <exits se='654' sw='652' no-exit='moves.noexit.1'/>
    </location>
 
@@ -67,8 +67,8 @@
    </location>
 
    <location num='652' flags='b'>
-      <name>Jewells&apos; disc W</name>
-      <desc>ne and se</desc>
+      <name>Office of Jewells, Former Martian Princess - Current Princess of Anthesteria</name>
+      <desc>The first thing you notice upon entering this large, well appointed office is that the walls are actually floor-to-ceiling windows overlooking the planet discs below. As your eyes adjust to the light coming in from the fantastic vista, you see that you are in a stylishly modern office. Besides the requisite desk, which is a work of art in itself, there is a large and comfortable sitting area with a couch, chairs and low table. Not far from this is a well stocked bar, with several stools. Also here are two cats: a grey cat named &quot;Pirate&quot; and a black-and-white &quot;tuxedo&quot; cat named &quot;Ella&quot;.</desc>
       <exits ne='589' se='717' no-exit='moves.noexit.1'/>
    </location>
 
@@ -79,8 +79,8 @@
    </location>
 
    <location num='654' flags='b'>
-      <name>Jewells&apos; disc E waterfall down</name>
-      <desc>nw and sw and down to LP</desc>
+      <name>The Princess of Anthesteria&apos;s Home Disc</name>
+      <desc>You see a sign posted on the wall in front of you. It reads: NOW HIRING! Planet Designer, Please Apply to Princess Jewells. No phone calls please.</desc>
       <exits sw='717' nw='589' down='655' no-exit='moves.noexit.1'/>
    </location>
 
@@ -133,8 +133,8 @@
    </location>
 
    <location num='717' flags='b'>
-      <name>Jewells&apos; disc S</name>
-      <desc>nw and ne</desc>
+      <name>Fed2 Taboo Game Room</name>
+      <desc>Comfortable furniture fills the room.  There are plenty of overstuffed chairs in which to sit and enjoy the game.  Snacks and drinks are available.  Grab something, get situated and get ready for the game!</desc>
       <exits ne='654' nw='652' no-exit='moves.noexit.1'/>
    </location>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Starport 9' version='29' editor='standard' from='458' to='Demeter.Demeter Space.650'>
+<fed2-map title='Starport 9' version='29' editor='online' from='458' to='Demeter.Demeter Space.650'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -271,4 +271,3 @@
    </location>
 
 </fed2-map>
-

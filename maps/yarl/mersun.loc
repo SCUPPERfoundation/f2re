@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Mersun' version='1.00' editor='standard' from='398' to='Yarl.Yarl Space.460'>
+<fed2-map title='Mersun' version='1' editor='online' from='398' to='Yarl.Yarl Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,8 +8,7 @@
 
    <location num='334' flags='e'>
       <name>Commerce dome</name>
-      <desc>   It&apos;s slightly cooler in this dome, apart from the usual sweats brought on by frantic buying and selling of commodities at the small trading screens. Booths lining the walls give you the chance to stock up on any other things you or your ship might need.</desc>
-      <desc>   The exit is south.</desc>
+      <desc>It&apos;s slightly cooler in this MERSUN dome, apart from the usual sweats brought on by frantic buying and selling of commodities at the small trading screens. Booths lining the walls give you the chance to stock up on any other things you or your ship might need.   The exit is south.</desc>
       <exits s='398' out='398' no-exit='moves.noexit.1'/>
    </location>
 

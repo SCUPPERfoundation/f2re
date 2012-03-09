@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<infrastructure owner='Riley' economy='Technical' treasury='76312917' yard-markup='0' workers='1080' base='1000' registry='false'>
+  <build type='School' level='4' tech='4' research='4' unused='7'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='6' hospital='6' unused='2'/>
+  <build type='Police' points='8'/>
+  <build type='Hospital' points='3'/>
+  <build type='Pollution' level='9' unused='3'/>
+  <build type='Base' points='1'/>
+  <build type='Atmos' level='6' unused='2'/>
+  <build type='Family' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Coal' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Insulation' points='10'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='4'/>
+  <build type='Oil' points='1'/>
+  <build type='Dole' points='5'/>
+  <build type='Satellite' points='2'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Insurance' points='5'/>
+  <build type='Fibre' points='10'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='The Flying Beagle' id='1' planet='Parmigiano Cheese' output='Firewalls' status='run' cash='256525' top-up='100000' income='2989875' exp='737400' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='74' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='0' />
+    </factory>
+    <factory owner='The Flying Beagle' id='2' planet='Parmigiano Cheese' output='Firewalls' status='run' cash='256975' top-up='100000' income='2993100' exp='747450' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='73' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='0' />
+    </factory>
+    <factory owner='The Flying Beagle' id='3' planet='Parmigiano Cheese' output='Firewalls' status='run' cash='100000' top-up='100000' income='0' exp='0' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='0' disposal='depot'/>
+      <input name='Semiconductors' quantity='0' />
+    </factory>
+</infrastructure>

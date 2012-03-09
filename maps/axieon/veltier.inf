@@ -1,3 +1,15 @@
 <?xml version="1.0"?>
-<infrastructure owner='Desertwolf' economy='Agricultural' treasury='0' yard-markup='0' workers='1000' registry='false'>
+<infrastructure owner='Desertwolf' economy='Agricultural' treasury='10429305' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
 </infrastructure>

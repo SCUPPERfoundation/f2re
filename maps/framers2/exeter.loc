@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Exeter' version='1.00' editor='standard' from='396' to='Framers2.Framers2 Space.460'>
+<fed2-map title='Exeter' version='1' editor='online' from='396' to='Framers2.Framers2 Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -25,16 +25,13 @@
 
    <location num='396' flags='yr'>
       <name>Landing pad</name>
-      <desc>   At first glance, the ground here is made of rocks of differing colours and strengths. But closer examination reveals that the muddy patches are in fact chocolate fudge, and the more solid rock is hard toffee. You cram some into your mouth - yes, the planet is edible!</desc>
-      <desc>   There are buildings surrounding the fudgy landing pad - a cookie dough hospital to the north, a gingerbread exchange to the east, and a candy bar south. A brown road leads west towards a bubbling river.</desc>
+      <desc>Welcome to Exeter, a member of the Framers Coalition.  The Trading Exchange is due East as is customary on all the Framers planets.</desc>
       <exits n='332' e='397' s='460' w='395' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='397' flags='e'>
-      <name>Gingerbread exchange</name>
-      <desc>   Enormous slabs of gingerbread have been maneuvered into position to form the imposing building that houses the trading functions. To show how important the building is, decorative cornices and pillars have been fashioned out of sugar icing.</desc>
-      <desc>   Traders stare at the price screens, munching absently on pieces of candy. Rice paper screens separate off areas selling various goods.</desc>
-      <desc>   The exit back to the landing pad is west.</desc>
+      <name>Exeter Trading Room</name>
+      <desc>Welcome to the Exeter Trading Room.  Feel free to buy or sell as you please.</desc>
       <exits w='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 
@@ -46,10 +43,8 @@
    </location>
 
    <location num='460' flags='b'>
-      <name>Candy Bar</name>
-      <desc>   All the Candy Bar&apos;s beverages are brightly coloured and sweet-tasting. Anyone without a sweet tooth might as well leave now, via the north door.</desc>
-      <desc>   The tables and chairs are all made of hard candy. There&apos;s a drunk on the floor, contentedly licking the furniture. In the corner is an array of indoor plants, including a strawberry shortcake bush and a marzipan palm tree.</desc>
-      <desc>   Rocky tends the bar. He&apos;s an enormously fat man, who gets his name from his habit of putting miniature sticks of rock into the drinks instead of cocktail sticks.</desc>
+      <name>Framers Inn</name>
+      <desc>This is where ya are able to get some Framers Ale and colonial cuisine.</desc>
       <exits n='396' out='396' no-exit='moves.noexit.1'/>
    </location>
 

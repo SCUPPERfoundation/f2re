@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+   <cabinet size='57'>
+      <item id='obj_crayon' star='Sol' map='Mars' size='1' visibility='100'></item>
+      <item id='xmastoyslinky_ab' star='Sol' map='Earth' size='1' visibility='100'></item>
+      <item id='xmastoydollmale_ab' star='Sol' map='Earth' size='1' visibility='100'></item>
+      <item id='xmastoyyoyo_ab' star='Sol' map='Earth' size='1' visibility='100'></item>
+      <item id='xmastoyship_ab' star='Sol' map='Earth' size='1' visibility='100'></item>
+   </cabinet>

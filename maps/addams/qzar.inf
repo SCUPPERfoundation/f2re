@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<infrastructure owner='Fester' economy='Resource' treasury='-551632263' yard-markup='0' workers='1435' base='1650' slithy-xform='0' registry='false'>
+  <build type='School' level='1'/>
+  <build type='Family' points='7'/>
+  <build type='Canal' points='5'/>
+  <build type='Heliograph' points='1'/>
+</infrastructure>

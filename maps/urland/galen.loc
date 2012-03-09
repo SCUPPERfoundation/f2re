@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Galen' version='1.00' editor='standard' from='329' to='Urland.Urland Space.263'>
+<fed2-map title='Galen' version='1' editor='online' from='329' to='Urland.Urland Space.263'>
 
    <location num='203' flags='b'>
       <name>Pot O Sumphin</name>
@@ -63,13 +63,13 @@
    </location>
 
    <location num='336'>
-      <name>xxx</name>
-      <desc>Best leave now.  This is someone else&apos;s house!</desc>
+      <name>Trophy Room</name>
+      <desc>You look on the walls and see the following trophies: Dragonslayer - Largest final payout in Fed History 1,987,735,400  (12/07)  Greatest company profit for a new company, as shown in the accounts for cycle 1:  Scaley Souvenirs, Llc had a profit of 153 meg - 1/07 Dragontracker - Most warehouses owned when promoting to Industrialist - 152 Most warehouse purchased prior to promoting to Industrialist - 301 (149 purchased pre August 2007 had to be repurchased).Most shares held at promotion to Industrialist (2020)</desc>
       <exits sw='399' no-exit='moves.noexit.4'/>
    </location>
 
    <location num='387'>
-      <name>Outsourced Factory 1</name>
+      <name>Outsourced Factory Slot</name>
       <desc>Not sure what we make here yet.  This factory is dormant for now.  The factory alleyway runs north and south.</desc>
       <exits s='451' no-exit='moves.noexit.5'/>
    </location>
@@ -111,8 +111,8 @@
    </location>
 
    <location num='451'>
-      <name>Outsourced Factory 2</name>
-      <desc>Not sure what we make here yet.  This factory is dormant for now.  The factory alleyway runs north and south.</desc>
+      <name>Firewalls Factory - Outsourced</name>
+      <desc>This is a double factory plot run by Bowlers International.  It holds factory #6 and #7 making Firewalls.</desc>
       <exits n='387' s='515' no-exit='moves.noexit.5'/>
    </location>
 
@@ -183,20 +183,20 @@
    </location>
 
    <location num='519'>
-      <name>Factory 3</name>
-      <desc>Not sure what we make here yet.  This factory is dormant for now.  The factory alleyway runs east and west.</desc>
+      <name>Univators Factory</name>
+      <desc>This is factory #11 run by Dragontracker and the Scaley Souvenirs empire.</desc>
       <exits e='520' w='518' no-exit='moves.noexit.5'/>
    </location>
 
    <location num='520'>
-      <name>Factory 2</name>
-      <desc>Not sure what we make here yet.  This factory is dormant for now.  The factory alleyway runs east and west.</desc>
+      <name>Firewalls Factory</name>
+      <desc>This is factory #10 run by Dragontracker.</desc>
       <exits e='521' w='519' no-exit='moves.noexit.5'/>
    </location>
 
    <location num='521'>
-      <name>Factory 1</name>
-      <desc>Not sure what we make here yet.  This factory is dormant for now.  The factory alleyway runs east and west.</desc>
+      <name>Alien Artifacts Factory</name>
+      <desc>This is factory #8 run by Dragontracker.</desc>
       <exits e='522' w='520' no-exit='moves.noexit.5'/>
    </location>
 

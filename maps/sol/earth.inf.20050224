@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bella' economy='Agricultural'>
+    <depot owner='Diamond Wine' bays='31' efficiency='100'>
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+      <cargo name='Crystals' star='Sol' planet='Earth' cost='650' />
+    </depot>
+    <factory owner='Diamond Wine' id='1' planet='Earth' output='Crystals' status='run' cash='328320' top-up='100000' income='1958550' exp='959370' profit='347855'>
+      <building max-eff='110' max-store='300' maint='5' eff='110'/>
+      <production interval-max='120' intervals='45' labour='181' wages='40' stored='75' disposal='depot'/>
+      <input name='Powerpacks' quantity='45' />
+      <input name='LubOils' quantity='15' />
+    </factory>
+</infrastructure>

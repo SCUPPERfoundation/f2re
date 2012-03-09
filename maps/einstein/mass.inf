@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<infrastructure owner='Nkir' economy='Agricultural' treasury='-137414875' yard-markup='-10' workers='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='0' unused='2'/>
+    <warehouse owner='Aragorn'>
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1269' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1231' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1068' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1123' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1068' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1101' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1134' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1078' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1123' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1132' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1099' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1110' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1143' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1143' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1108' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1153' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1165' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1162' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1152' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='1185' />
+    </warehouse>
+
+    <warehouse owner='Arwen'>
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='752' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='775' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='770' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='794' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='778' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='764' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='803' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='787' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='771' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='812' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='812' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='812' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='813' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='829' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='805' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='798' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='838' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='822' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='822' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='831' />
+    </warehouse>
+
+    <warehouse owner='Elrond'>
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='642' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='635' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='642' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='662' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='642' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='635' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='662' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='642' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='642' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='648' />
+    </warehouse>
+
+    <warehouse owner='Galadriel'>
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='635' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='642' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='662' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='635' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='635' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='648' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='656' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='668' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='662' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='675' />
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='678' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='721' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='707' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='686' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='700' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='693' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='713' />
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Seria'>
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='951' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1001' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='970' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='980' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='960' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='991' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='991' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1010' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1029' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1009' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='988' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='979' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='988' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='979' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='979' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='979' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='988' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1029' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1019' />
+      <cargo name='NanoFabrics' star='Acme' planet='Occyland' cost='1028' />
+    </warehouse>
+
+    <warehouse owner='Tomservo'>
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='631' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='663' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='657' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='650' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='625' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='644' />
+      <cargo name='TQuarks' star='Gliese' planet='Crash' cost='637' />
+    </warehouse>
+
+    <factory owner='Slavedriver Of Love' id='13' planet='Mass' output='Artifacts' status='run' cash='824850' top-up='100000' income='2505975' exp='563160' profit='4643840'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='50' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Slavedriver Of Love' id='14' planet='Mass' output='Univators' status='run' cash='688450' top-up='100000' income='1955025' exp='343585' profit='3843590'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='49' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='35' />
+    </factory>
+</infrastructure>

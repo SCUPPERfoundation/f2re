@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<infrastructure owner='Sevenine' economy='Agricultural' treasury='216001617' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

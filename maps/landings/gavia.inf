@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bonzetti' economy='Biological' treasury='16098116' yard-markup='0' workers='69' base='119' casualties='50' slithy-xform='0' registry='false'>
+  <build type='Insurance' points='5'/>
+  <build type='School' level='5' research='4' biolab='4'/>
+  <build type='Clinic' level='8' hospital='0' unused='0'/>
+  <build type='Biolab' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fusion' points='6'/>
+  <build type='Weather' points='2'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='1'/>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Highland' version='2' editor='standard' from='460' to='Dryland.Dryland Space.272'>
+<fed2-map title='Highland' version='2' editor='online' from='460' to='Dryland.Dryland Space.272'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -136,7 +136,7 @@
 
    <location num='523' flags='b'>
       <name>Highlands Bar and Grill</name>
-      <desc>   You have entered the highlands bar and grill.   While most of the planet is required to be &quot;old world,&quot; this bar is state of the art with booths to sit in!   The locals agreed to allow the bar to open only after agreeing that it would stay right next to the landing pad.  There is something strange about the picture of a ship to the south.  Hung on the wall it measures about seven feet tall and 4 feet wide.</desc>
+      <desc>You have entered the highlands bar and grill.   While most of the planet is required to be &quot;old world,&quot; this bar is state of the art with booths to sit in!   The locals agreed to allow the bar to open only after agreeing that it would be located next to the landing pad.  Behind the bar is a giant picture of a Sailing vessel catches your eye.  You cant seem to put your finger on it but it seems to draw you to board it.  Hung on the wall to the south, it measures about seven feet tall and 4 feet wide.</desc>
       <exits ne='460' out='460' no-exit='moves.noexit.2'/>
    </location>
 

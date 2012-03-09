@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jake' economy='Agricultural' treasury='3846680' yard-markup='0' workers='300' base='300' slithy-xform='0' registry='false'>
+  <build type='Heliograph' points='8'/>
+  <build type='Base' points='2'/>
+    <depot owner='Xornatopia' bays='51' efficiency='100'>
+    </depot>
+    <factory owner='Potted Plantains' id='6' planet='Dottle' output='TQuarks' status='run' cash='762700' top-up='100000' income='1671600' exp='497400' profit='4732575'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='107' labour='30' wages='40' stored='75' disposal='exchange'/>
+      <input name='Lasers' quantity='20' />
+      <input name='Droids' quantity='20' />
+    </factory>
+    <factory owner='Potted Plantains' id='7' planet='Dottle' output='TQuarks' status='run' cash='616375' top-up='100000' income='1682325' exp='497850' profit='4616625'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='80' labour='30' wages='40' stored='150' disposal='exchange'/>
+      <input name='Lasers' quantity='40' />
+      <input name='Droids' quantity='40' />
+    </factory>
+</infrastructure>

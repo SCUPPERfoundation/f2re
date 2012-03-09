@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<fed2-map title='Zeerox' version='43' editor='standard' from='785' to='Volleyball.Volleyball Space.463'>
+<fed2-map title='Zeerox' version='43' editor='online' from='785' to='Volleyball.Volleyball Space.463'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
       <desc>This room is used to store objects and mobiles, of which there are none.</desc>
-      <exits no-exit='You shouldn'/>
+      <exits no-exit='..0'/>
    </location>
 
    <location num='273' flags='b'>
@@ -110,7 +110,7 @@
    </location>
 
    <location num='594' flags='ek'>
-      <name>Tachikara Exchange</name>
+      <name>Molten Exchange</name>
       <desc>   Traders, tourists, and everyone in between meander through the busy exchange.  The Commercial hub lies to the NW, while a simple snack bar is due East.</desc>
       <desc>   Factory owners wishing to place facs on Zeerox should contact Desaxman before building any facilities on this planet.  Failure to do so may result in expropriation without notice.</desc>
       <exits e='595' nw='529' no-exit='moves.noexit.2'/>
@@ -166,7 +166,7 @@
    </location>
 
    <location num='785' flags='yk'>
-      <name>Zeerox Landing Pad</name>
+      <name>Zeerox LP</name>
       <desc>  You have landed smack in the middle of this volleyball planet with no apparent connecting pathways.  It seems that construction of the future boardwalk and sand courts will take some time, and an Engineer, to complete.</desc>
       <desc>   However, you can hop INto a shuttle which will automatically drop you off at the commercial hub, consisting of the exchange, the Spamalot complex, and the Volleyball Hall of Fame.  You can also go OUT to the south beach area, which is full of tourist attractions such as beaches and bars.  The east coast sports the Hospital, while the west coast hosts the Zeerox Pro Beach Volleyball Tour.</desc>
       <desc>   The LP also doubles as the Planet Shipyard, so feel free to BUY SHIP and enjoy a cheap upgrade today!</desc>

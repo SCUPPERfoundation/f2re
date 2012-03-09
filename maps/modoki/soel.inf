@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<infrastructure owner='Mokona' economy='Agricultural' treasury='7924098' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <factory owner='Across Staffing Services' id='14' planet='Soel' output='Katydidics' status='run' cash='100000' top-up='100000' income='3395025' exp='1836225' profit='1756400'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='AntiMatter' quantity='45' />
+      <input name='Polymers' quantity='90' />
+      <input name='Gold' quantity='45' />
+    </factory>
+    <factory owner='Across Staffing Services' id='15' planet='Soel' output='Katydidics' status='run' cash='100000' top-up='100000' income='3286575' exp='1819125' profit='1715750'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='0' labour='0' wages='0' stored='150' disposal='exchange'/>
+      <input name='AntiMatter' quantity='65' />
+      <input name='Polymers' quantity='55' />
+      <input name='Gold' quantity='65' />
+    </factory>
+</infrastructure>

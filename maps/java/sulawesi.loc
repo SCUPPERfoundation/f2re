@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Sulawesi' version='8' editor='standard' from='267' to='Java.Java Space.330'>
+<fed2-map title='Sulawesi' version='8' editor='online' from='267' to='Java.Java Space.330'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,7 +8,7 @@
 
    <location num='79'>
       <name>Loft Roof</name>
-      <desc>From here you have a 360 degree view of the planet, your breathe is taken away by the beauty you are witnessing.</desc>
+      <desc>You are standing on top of the tallest structure on Sulawesi, the sky is lit only by the stars scattered above and the two moons set low giving their elegant glow. The lights of the city below mirror the splendor of the stars above, paper lanterns gently sway in the soft breeze around the parapet walls while potted rose bushes are set in various locations filling the air with a delicate fragrance.</desc>
       <exits down='201'/>
    </location>
 
@@ -19,7 +19,7 @@
    </location>
 
    <location num='201' flags='b'>
-      <name>Joe&apos;s Loft</name>
+      <name>Joe &amp; Trill&apos;s Loft</name>
       <desc>Prestine hardwood white oak flooring echoes underfoot, unbroken by rugs or carpeting, in this penthouse style loft.  A black leather couch sits in the middle of the living area, facing a large screen recessed into a bare, red rustic brick wall that divides off the sleeping area from the rest of the room.  A large, neatly made, bed, a rather large closet and cherry dresser are tucked behind the wall.  A commercial style kitchen sprawls across the far corner, with stainless steel appliances including a commercial sized range, large refrigerator, microwave, and sink. The cabinets are made from fine Cherry wood inset with frosted glass, the countertop made of solid black granite.</desc>
       <desc>French doors, uncurtained, lead out to the balcony to the east, while a hidden staircase leads down to the offices.</desc>
       <exits e='202' up='79' down='327' out='267' no-exit='nomove.number.1'/>
@@ -86,12 +86,7 @@
 
    <location num='267' flags='rb'>
       <name>Landing Pad/Fly-Thru Liquor Store</name>
-      <desc>Home of the &quot;One and Only&quot; Fly-Thru Liquor Store</desc>
-      <desc>N - Hospital &amp; Bar</desc>
-      <desc>NE - Shipyard &amp; Bar</desc>
-      <desc>E - Exchange &amp; Bar</desc>
-      <desc>S - Construction &amp; Bar</desc>
-      <desc>W -Administrative Building &amp; Bar</desc>
+      <desc>You&apos;re standing on the landing pad, signs indicating this is Sulawesi.  The sky seems darker, the water murky, and the aroma of coffee has disappeared, although there is an oddly familiar scent lingering at the edge of your awareness.  Bleary-eyed, waxen-faced people wander the planet aimlessly, hands reaching out, occasionally running into buildings or each other with heedless disregard.  Some are bloodied or bruised from this abuse; others merely sit or lie where they are, as if another step would be too much for them.  When you try to assist one, he speaks listlessly, not even registering your presence.  &quot;She took all the coffee away.  Threw it in the water, launched it into the sky.  We only have hot chocolate.  How can we function without coffee?&quot;  Others around him take up, moaning, &quot;Coffeee.  Cofffeee.&quot;  They start toward you, expecting you to satiate their need.  If the horror of coffee&apos;s fate isn&apos;t enough to send you running, the crazed look of those poor beings should.</desc>
       <exits n='203' ne='204' e='268' s='331' w='266' no-exit='nomove.number.2'/>
    </location>
 
@@ -140,13 +135,7 @@
 
    <location num='328' flags='b'>
       <name>Grand Foyer</name>
-      <desc>You are in a Mesmerising Curved Foyer with doors to several offices.  the most significant one seems to be the one straight ahead to the west with huge glass double doors...that must be Joe&apos;s office.</desc>
-      <desc>There is also a staircase leading to the second level offices.</desc>
-      <desc>S -    ***Q&apos;s Kayaks***</desc>
-      <desc>SW - ***Aleut&apos;s Office***</desc>
-      <desc>W -   ***Trader Joe&apos;s***</desc>
-      <desc>NW - ***Inuit&apos;s Tuiliqs***</desc>
-      <desc>N -    ***Veridian Horizons, Inc. - Sulawesi Branch***</desc>
+      <desc>You are in a Mesmerising Curved Foyer with doors to several offices.  the most significant one seems to be the one straight ahead to the west with huge glass double doors...that must be Joe&apos;s office. There is also a staircase leading to the second level offices.</desc>
       <exits n='264' s='392' sw='391' w='327' nw='263' up='324' down='329' no-exit='nomove.number.1'/>
    </location>
 
@@ -181,16 +170,15 @@
    </location>
 
    <location num='391' flags='b'>
-      <name>Aleutian Paddle Makers Inc.</name>
-      <desc>Aleut&apos;s Office</desc>
+      <name>Reserved Corner Office for Jewells</name>
+      <desc>empty office</desc>
       <exits ne='328' out='267' no-exit='nomove.number.1'/>
    </location>
 
    <location num='392' flags='b'>
-      <name>The Offices of Q&apos;s Kayaks &amp; Inuit&apos;s Tuiliqs</name>
-      <desc>Qajaq&apos;s and Inuit&apos;s joint offices... Here for all you Financier needs.</desc>
+      <name>Zzeria&apos;s office</name>
+      <desc>The magma-red, windowless walls of Zzeria&apos;s office are marbled with a dimly glowing phosphorescent material. It casts enough light to see the mist swirling languidly around your feet. Stone pillars mark steps up to a raised platform in the center of the room where a data terminal and pocket comp hover on null-G devices.  The platform is covered with grizzle hide rugs and gaudily beaded cushions but not one piece of what most would call furniture is apparent.  The air is heavy with humidity but strangely, not overly hot.  A breeze seems to emanate from one corner where a continuous flat sheet of water pours from the ceiling to some receptacle hidden in the swirling mists on the floor.  A stone plinth stands by the waterfall with a few geometric objects atop it.  There&apos;s a small niche in the wall near the door where a food replicator sits.</desc>
       <exits n='328' out='267' no-exit='nomove.number.1'/>
    </location>
 
 </fed2-map>
-

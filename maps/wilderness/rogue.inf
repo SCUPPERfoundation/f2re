@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<infrastructure owner='Quizlo' economy='Leisure' treasury='33532040' yard-markup='0' workers='1390' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='10' unused='2'/>
+  <build type='Pollution' level='9' unused='2'/>
+  <build type='Clinic' level='10' hospital='18' unused='0'/>
+  <build type='Police' points='10'/>
+  <build type='Hospital' points='9'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Coal' points='2'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Pension' points='10'/>
+  <build type='Oil' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Urban' points='5'/>
+  <build type='Weather' points='5'/>
+  <build type='Floating' points='5'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Defence' points='5'/>
+  <build type='Fibre' points='40'/>
+  <build type='Radio' points='20'/>
+  <build type='Insurance' points='5'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Satellite' points='5'/>
+  <build type='Genetic' points='9'/>
+    <warehouse owner='Dontattaglia'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Zodbot'>
+    </warehouse>
+
+</infrastructure>

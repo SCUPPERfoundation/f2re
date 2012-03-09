@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Litterbox' version='19' editor='standard' from='523' to='Chrysoberyl.Chrysoberyl Space.199'>
+<fed2-map title='Litterbox' version='16' editor='standard' from='523' to='Chrysoberyl.Chrysoberyl Space.199'>
 
    <location num='0'>
       <name>Catnip Storage</name>
@@ -82,7 +82,7 @@
       <exits s='522'/>
    </location>
 
-   <location num='459'>
+   <location num='459' flags='hi'>
       <name>Hairball Veterinary Clinic</name>
       <desc>   You have entered a small veterinary clinic which specializes in feline ailments,  although, for a nice fee, the doctors will treat just about ANY ailment! In the corner is a vending machine which dispenses insurance policies. A door in the SOUTH wall will take you back to the shuttle pad.</desc>
       <exits s='523'/>

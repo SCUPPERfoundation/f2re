@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Rawr Space' version='18' editor='standard'>
+<fed2-map title='Rawr Space' version='18' editor='online'>
 
    <location num='396' flags='sp'>
       <name>Roughscale Orbit</name>
@@ -9,8 +9,7 @@
 
    <location num='460' flags='slp'>
       <name>Rawr Interstellar Link / Irontooth Station Orbit</name>
-      <desc>   A large vintage Vegas style neon sign floats in the middle of empty space proclaiming, &quot;Rawr!&quot;   In the distance you see what looks to be a small greyish-black starbase/trading post with yellow and reddish fiery colors in various stripes and designs on the geometrically curved starbase.</desc>
-      <desc>   A pre-recorded crackle comes in on your comm unit, &quot;You may BOARD here to visit Irontooth! SOUTH to visit Fireye. Thank you for your patronage.&quot;</desc>
+      <desc>A large vintage Vegas style neon sign floats in the middle of empty space proclaiming, &quot;Rawr!&quot;   In the distance you see what looks to be a small greyish-black starbase/trading post with yellow and reddish fiery colors in various stripes and designs on the geometrically curved starbase.   A pre-recorded crackle comes in on your comm unit, &quot;You may BOARD here to visit Irontooth! SOUTH to visit Fireye. NORTH to visit Roughscale. Thank you for your patronage.&quot;</desc>
       <exits n='396' s='524' no-exit='moves.noexit.1'/>
    </location>
 

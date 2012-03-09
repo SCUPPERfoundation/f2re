@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<infrastructure owner='Venabili' economy='Agricultural' treasury='112308869' yard-markup='0' workers='1100' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='11'/>
+  <build type='Agri' points='1'/>
+  <build type='Biodiversity' points='10'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='0' hospital='10' unused='4'/>
+  <build type='Hospital' points='5'/>
+  <build type='Police' points='4'/>
+  <build type='Atmos' level='0' unused='9'/>
+  <build type='Pollution' level='0' unused='10'/>
+  <build type='Dole' points='1'/>
+    <factory owner='Seldon Crisis' id='12' planet='Cinna' output='Firewalls' status='run' cash='643920' top-up='100000' income='723750' exp='179830' profit='3786265'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='51' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='55' />
+    </factory>
+    <factory owner='Seldon Crisis' id='6' planet='Cinna' output='Univators' status='run' cash='641790' top-up='100000' income='640350' exp='98560' profit='3037255'>
+      <building max-eff='100' max-store='225' maint='5' eff='100'/>
+      <production interval-max='133' intervals='30' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='5' />
+    </factory>
+    <factory owner='Seldon Crisis' id='9' planet='Cinna' output='Univators' status='run' cash='594240' top-up='100000' income='594825' exp='100585' profit='3104980'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='62' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='5' />
+    </factory>
+    <factory owner='Seldon Crisis' id='11' planet='Cinna' output='Univators' status='run' cash='597990' top-up='100000' income='644625' exp='146635' profit='3013180'>
+      <building max-eff='100' max-store='225' maint='5' eff='100'/>
+      <production interval-max='133' intervals='61' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='25' />
+    </factory>
+    <factory owner='Seldon Crisis' id='14' planet='Cinna' output='Univators' status='run' cash='592140' top-up='100000' income='646050' exp='153910' profit='2877805'>
+      <building max-eff='100' max-store='225' maint='5' eff='100'/>
+      <production interval-max='133' intervals='60' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='25' />
+    </factory>
+    <factory owner='Warfrat Inc.' id='14' planet='Cinna' output='Univators' status='run' cash='548050' top-up='100000' income='2290875' exp='536730' profit='3085565'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='48' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='35' />
+    </factory>
+    <factory owner='Warfrat Inc.' id='10' planet='Cinna' output='Univators' status='run' cash='459325' top-up='100000' income='2300700' exp='549405' profit='3098840'>
+      <building max-eff='105' max-store='225' maint='5' eff='100'/>
+      <production interval-max='133' intervals='47' labour='90' wages='40' stored='225' disposal='exchange'/>
+      <input name='Monopoles' quantity='35' />
+    </factory>
+    <factory owner='Seldon Crisis' id='5' planet='Cinna' output='Univators' status='run' cash='534090' top-up='100000' income='592275' exp='158185' profit='3005005'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='36' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='35' />
+    </factory>
+    <factory owner='Warfrat Inc.' id='7' planet='Cinna' output='Univators' status='run' cash='538600' top-up='100000' income='2258775' exp='571680' profit='3027365'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='43' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='35' />
+    </factory>
+</infrastructure>

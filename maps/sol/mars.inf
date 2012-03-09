@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<infrastructure owner='Bella' economy='Technical' treasury='63584064' yard-markup='0' workers='400' base='1000' registry='true'>
+  <build type='Radio' points='12'/>
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Florancia'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Mur'>
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Orim'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Trukk'>
+      <cargo name='Furs' star='Sol' planet='Rhea' cost='540' />
+      <cargo name='Furs' star='Sol' planet='Titan' cost='530' />
+      <cargo name='Furs' star='Sol' planet='Paradise' cost='524' />
+      <cargo name='Furs' star='Sol' planet='Venus' cost='535' />
+    </warehouse>
+
+</infrastructure>

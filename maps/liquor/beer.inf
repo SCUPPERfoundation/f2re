@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<infrastructure owner='Klytos' economy='Biological' treasury='991607725' yard-markup='0' workers='1138' base='1000' casualties='62' slithy-xform='0' registry='false'>
+  <build type='Clinic' level='8' hospital='10' unused='0'/>
+  <build type='School' level='5' research='4' biolab='4'/>
+  <build type='Phone' points='10'/>
+  <build type='Defence' points='10'/>
+  <build type='Port' points='13'/>
+  <build type='Research' points='1'/>
+  <build type='Biolab' points='1'/>
+  <build type='Fibre' points='40'/>
+  <build type='Fusion' points='1'/>
+  <build type='Atmos' level='8' unused='6'/>
+  <build type='Pollution' level='0' unused='18'/>
+  <build type='Police' points='11'/>
+  <build type='Floating' points='10'/>
+  <build type='Hospital' points='5'/>
+  <build type='Genetic' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Pension' points='10'/>
+  <build type='Radio' points='7'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <warehouse owner='Valdez'>
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='609' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='609' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='603' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='590' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='628' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='621' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='603' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='597' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='615' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='597' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='590' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='597' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='590' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='590' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='597' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='615' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='621' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='609' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='603' />
+      <cargo name='BioComponents' star='Chicago' planet='Joliet' cost='590' />
+    </warehouse>
+
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Ainokea' version='1.00' editor='standard' from='265' to='Deos.Deos Space.327'>
+<fed2-map title='Ainokea' version='1' editor='online' from='265' to='Deos.Deos Space.327'>
 
    <location num='0' flags='kt'>
       <name>Storage Room</name>
@@ -40,8 +40,8 @@
    </location>
 
    <location num='402' flags='bt'>
-      <name>Office</name>
-      <desc>This office is available - Contact the Planet Owner for Details</desc>
+      <name>Ainokean Headquarters of The Black Hand</name>
+      <desc>One of Doncorleone&apos;s partner&apos;s in crime, Donbarzini, is the CEO of The Black Hand.  Zardoz tolerates their presence in Dozian space as long as they are available for an occasional bit of &quot;dirty work&quot;.  Donbarzini&apos;s office is dark, and lurking in the shadows are some very unsavory characters.  There is a desk, with a glass of Chianti sitting next to some company reports.</desc>
       <exits se='467' out='265' no-exit='moves.noexit.7'/>
    </location>
 
@@ -210,7 +210,7 @@
 
    <location num='1248' flags='b'>
       <name>Member&apos;s Lounge</name>
-      <desc>The Member&apos;s lounge is dominated by a large antique oak bar imported from Earth.  The fixtures are polished brass and gleam in the light provided by the hanging lamps.  A large antique pool table is here and a row of dart boards line the wall.  In one corner, there are bookshelves and cofortable reading chairs set aside for members to sit and quietly enjoy a good drink, and a good read.  On the wall are pictures of honorary House members Qrygg and Dennotairn.  Dennotairn&apos;s picture has a black ribbon crossing it.  Several notes from members are posted next to it expressing their sadness at his passing.  There is another picture of Sephorin, with a black ribbon across it as well.  Over the fireplace is a large oil painting of the First Lady of the House of Doz, Zardoz&apos;s best friend, and wife, Jezz.</desc>
+      <desc>The Member&apos;s lounge is dominated by a large antique oak bar imported from Earth.  The fixtures are polished brass and gleam in the light provided by the hanging lamps.  A large antique pool table is here and a row of dart boards line the wall.  In one corner, there are bookshelves and comfortable reading chairs set aside for members to sit and quietly enjoy a good drink, and a good read.  On the wall are pictures of honorary House members Qrygg and Dennotairn.  Dennotairn&apos;s picture has a black ribbon crossing it.  Several notes from members are posted next to it expressing their sadness at his passing.  There is another picture of Sephorin, with a black ribbon across it as well.  Over the fireplace is a large oil painting of the First Lady of the House of Doz, Zardoz&apos;s best friend, and wife, Jezz.</desc>
       <exits w='1247' no-exit='moves.noexit.19'/>
    </location>
 
@@ -270,4 +270,3 @@
    </location>
 
 </fed2-map>
-

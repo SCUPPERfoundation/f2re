@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jewells' economy='Agricultural' treasury='20226858' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <factory owner='Four Corners Inc.' id='1' planet='Anthesteria' output='Artifacts' status='run' cash='100000' top-up='100000' income='3836175' exp='920640' profit='3252800'>
+      <building max-eff='100' max-store='150' maint='5' eff='90'/>
+      <production interval-max='148' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

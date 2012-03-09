@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dante' economy='Resource' treasury='677558519' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='School' level='2' agri='4' mining='4' unused='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Clinic' level='2' hospital='0' unused='2'/>
+  <build type='Police' points='4'/>
+  <build type='Atmos' level='2' unused='7'/>
+  <build type='Pollution' level='2' unused='8'/>
+  <build type='Housing' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Dole' points='1'/>
+    <factory owner='Inferno Heating Oil Co.' id='5' planet='Inferno' output='Artifacts' status='stop' cash='100000' top-up='100000' income='4303200' exp='1050800' profit='3679580'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='83' labour='370' wages='0' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Inferno Heating Oil Co.' id='6' planet='Inferno' output='NanoFabrics' status='stop' cash='100000' top-up='100000' income='5157150' exp='1832365' profit='3455120'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='9' labour='20' wages='0' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='30' />
+      <input name='Synths' quantity='30' />
+    </factory>
+    <factory owner='Canaan Pagan Llc' id='3' planet='Inferno' output='Studios' status='run' cash='270050' top-up='100000' income='1447200' exp='788225' profit='1297125'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='3' labour='70' wages='40' stored='150' disposal='exchange'/>
+      <input name='Electros' quantity='5' />
+      <input name='TQuarks' quantity='20' />
+    </factory>
+    <factory owner='Canaan Pagan Llc' id='4' planet='Inferno' output='Weapons' status='run' cash='205050' top-up='100000' income='1486275' exp='1013975' profit='1083675'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='114' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nickel' quantity='25' />
+      <input name='Alloys' quantity='25' />
+    </factory>
+    <factory owner='Canaan Pagan Llc' id='5' planet='Inferno' output='Libraries' status='run' cash='342000' top-up='100000' income='2228400' exp='1577050' profit='1239675'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='61' labour='80' wages='40' stored='75' disposal='exchange'/>
+      <input name='Polymers' quantity='20' />
+      <input name='Woods' quantity='30' />
+      <input name='Textiles' quantity='40' />
+    </factory>
+    <factory owner='Canaan Pagan Llc' id='6' planet='Inferno' output='Simulations' status='run' cash='140100' top-up='100000' income='1016775' exp='683800' profit='652350'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='77' labour='50' wages='40' stored='150' disposal='exchange'/>
+      <input name='AntiMatter' quantity='45' />
+      <input name='Gold' quantity='60' />
+    </factory>
+    <factory owner='Canaan Pagan Llc' id='7' planet='Inferno' output='NanoFabrics' status='run' cash='528675' top-up='100000' income='3002925' exp='1126100' profit='4040200'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='94' labour='20' wages='40' stored='150' disposal='exchange'/>
+      <input name='Nanos' quantity='20' />
+      <input name='Synths' quantity='45' />
+    </factory>
+    <factory owner='Canaan Pagan Llc' id='8' planet='Inferno' output='Tools' status='run' cash='208050' top-up='100000' income='1235100' exp='694175' profit='1177525'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='105' labour='50' wages='40' stored='150' disposal='exchange'/>
+      <input name='Radioactives' quantity='55' />
+      <input name='Nickel' quantity='15' />
+    </factory>
+</infrastructure>

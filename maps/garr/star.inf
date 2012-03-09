@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<star name='Garr' cartel='Acme'>
+
+   <black-list>
+      <exile name='Arlene'/>
+      <exile name='Ming'/>
+      <exile name='Clive'/>
+      <exile name='Butttttt'/>
+      <exile name='Potobeanz'/>
+   </black-list>
+
+</star>

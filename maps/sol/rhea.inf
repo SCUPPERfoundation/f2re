@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<infrastructure owner='Hazed' economy='Agricultural' treasury='-644974088' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='true'>
+    <warehouse owner='Achmedthe'>
+    </warehouse>
+
+    <warehouse owner='Bubbajr'>
+    </warehouse>
+
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Florancia'>
+    </warehouse>
+
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Glorancia'>
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='665' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='651' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='677' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='644' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='651' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='677' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='684' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='671' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='671' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='659' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='659' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='659' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='659' />
+      <cargo name='NanoFabrics' star='Esperanza' planet='Hope' cost='679' />
+      <cargo name='NanoFabrics' star='Gliese' planet='Crash' cost='653' />
+      <cargo name='NanoFabrics' star='Gliese' planet='Crash' cost='653' />
+      <cargo name='NanoFabrics' star='Gliese' planet='Crash' cost='687' />
+      <cargo name='NanoFabrics' star='Gliese' planet='Crash' cost='666' />
+      <cargo name='NanoFabrics' star='Gliese' planet='Crash' cost='693' />
+      <cargo name='NanoFabrics' star='Gliese' planet='Crash' cost='673' />
+    </warehouse>
+
+    <warehouse owner='Gunny'>
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='637' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='645' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='645' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='672' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='672' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='654' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='680' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='654' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='667' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='673' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='656' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='656' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='676' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='676' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='692' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='664' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='680' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='666' />
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Ionia'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+      <cargo name='Artifacts' star='Gliese' planet='Crash' cost='545' />
+      <cargo name='Artifacts' star='Gliese' planet='Crash' cost='563' />
+      <cargo name='Monopoles' star='Volleyball' planet='Zeerox' cost='556' />
+      <cargo name='Monopoles' star='Volleyball' planet='Zeerox' cost='566' />
+      <cargo name='Monopoles' star='Volleyball' planet='Zeerox' cost='550' />
+      <cargo name='Monopoles' star='Volleyball' planet='Zeerox' cost='550' />
+      <cargo name='Monopoles' star='Volleyball' planet='Zeerox' cost='556' />
+      <cargo name='Spices' star='Zerahl' planet='Zidon' cost='510' />
+      <cargo name='Spices' star='Zerahl' planet='Zidon' cost='510' />
+      <cargo name='Spices' star='Zerahl' planet='Zidon' cost='486' />
+      <cargo name='Spices' star='Zerahl' planet='Zidon' cost='505' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Mur'>
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='583' />
+      <cargo name='NanoFabrics' star='Sol' planet='Rhea' cost='1076' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='559' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='600' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='660' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='700' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='762' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='792' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='895' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='900' />
+      <cargo name='Woods' star='Sol' planet='Rhea' cost='951' />
+    </warehouse>
+
+    <warehouse owner='Nightbird'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Nightstar'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Orim'>
+    </warehouse>
+
+    <warehouse owner='Ronisu'>
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='573' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='545' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='568' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='573' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='579' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='568' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='573' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='579' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='563' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='563' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='563' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='557' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='573' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='563' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='557' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='557' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='557' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='557' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='545' />
+      <cargo name='Artifacts' star='Java' planet='Sulawesi' cost='557' />
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Thursday'>
+      <cargo name='Artifacts' star='Sol' planet='Mars' cost='607' />
+      <cargo name='Artifacts' star='Sol' planet='Castillo' cost='595' />
+      <cargo name='Artifacts' star='Sol' planet='Doris' cost='612' />
+      <cargo name='Artifacts' star='Sol' planet='Mars' cost='595' />
+      <cargo name='Artifacts' star='Sol' planet='Castillo' cost='595' />
+      <cargo name='Artifacts' star='Sol' planet='Doris' cost='612' />
+      <cargo name='Artifacts' star='Sol' planet='Mars' cost='619' />
+      <cargo name='Artifacts' star='Sol' planet='Castillo' cost='619' />
+      <cargo name='Artifacts' star='Sol' planet='Doris' cost='612' />
+      <cargo name='Artifacts' star='Sol' planet='Mars' cost='619' />
+      <cargo name='TQuarks' star='Sol' planet='Mercury' cost='716' />
+      <cargo name='TQuarks' star='Sol' planet='Castillo' cost='700' />
+      <cargo name='TQuarks' star='Sol' planet='Castillo' cost='695' />
+      <cargo name='TQuarks' star='Sol' planet='Magellan' cost='722' />
+      <cargo name='TQuarks' star='Sol' planet='Magellan' cost='680' />
+      <cargo name='TQuarks' star='Sol' planet='Pearl' cost='688' />
+      <cargo name='TQuarks' star='Sol' planet='Pearl' cost='779' />
+      <cargo name='TQuarks' star='Sol' planet='Magellan' cost='680' />
+      <cargo name='TQuarks' star='Sol' planet='Magellan' cost='795' />
+      <cargo name='TQuarks' star='Sol' planet='Castillo' cost='701' />
+    </warehouse>
+
+    <warehouse owner='Triphina'>
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1144' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='844' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='899' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='943' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='998' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1026' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1064' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1133' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='863' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='944' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1002' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1048' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1056' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1083' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1144' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1047' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1042' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1098' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1045' />
+      <cargo name='TQuarks' star='Sol' planet='Rhea' cost='1090' />
+    </warehouse>
+
+    <warehouse owner='Trukk'>
+      <cargo name='Nanos' star='Sol' planet='Titan' cost='438' />
+      <cargo name='NanoFabrics' star='Sol' planet='Titan' cost='693' />
+      <cargo name='TQuarks' star='Sol' planet='Titan' cost='680' />
+      <cargo name='Pharmaceuticals' star='Sol' planet='Mars' cost='529' />
+      <cargo name='Gold' star='Sol' planet='Mars' cost='495' />
+      <cargo name='Artifacts' star='Sol' planet='Mars' cost='638' />
+      <cargo name='Katydidics' star='Sol' planet='Mars' cost='517' />
+    </warehouse>
+
+    <warehouse owner='Wex'>
+    </warehouse>
+
+</infrastructure>

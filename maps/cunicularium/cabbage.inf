@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<infrastructure owner='Superbunny' economy='Agricultural' treasury='425929954' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Redrum'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

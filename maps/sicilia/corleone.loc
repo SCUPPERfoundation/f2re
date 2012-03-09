@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Corleone' version='1.00' editor='standard' from='1612' to='Sicilia.Sicilia Space.644'>
+<fed2-map title='Corleone' version='1' editor='online' from='1612' to='Sicilia.Sicilia Space.644'>
 
    <location num='0' flags='kt'>
       <name>Storage locker</name>
@@ -39,7 +39,7 @@
 
    <location num='1037'>
       <name>Village Square</name>
-      <desc>Cobblestones worn over the ages to a smooth, polished sheen line the main plaza of the Village of Corleone.  In the center of the plaza is a fountain with a marble statue of Santa Jezzeria, the patron saint of Corleone.  The water cascades over various tiers of the statue and the mist blows across the plaza and creates hues of rainbows visible in the mist.  Various pushcarts operated by  local vendors are here offering samples of the various products produced by the planet.  The shouts of traders to the west indicate that the planet&apos;s exchange is close by.  To the north is the local seat of government, and to the west a small cafe, with tables seated outside alongside the plaza beckons.</desc>
+      <desc>Cobblestones worn over the ages to a smooth, polished sheen line the main plaza of the Village of Corleone.  In the center of the plaza is a fountain with a marble statue of Santa Jezzeria, the patron saint of Corleone.  The water cascades over various tiers of the statue and the mist blows across the plaza and creates hues of rainbows visible in the mist.  Various pushcarts operated by  local vendors are here offering samples of the various products produced by the planet.  The shouts of traders to the west indicate that the planet&apos;s exchange is close by.  To the north is the local seat of government, and to the east a small cafe, with tables seated outside alongside the plaza beckons.</desc>
       <exits n='973' e='1038' s='1101' w='1036' no-exit='moves.noexit.12'/>
    </location>
 
@@ -87,7 +87,7 @@
 
    <location num='1103'>
       <name>Avenue d&apos; Corleone</name>
-      <desc>Running from the southeast to the northwest the Avenue d&apos; Corleone is a narrow lane with homes on either side.  The homes have small terraces on their second floor that over look the avenue, and it is common for the local people to stop and have near shouting conversations with their neighbors on the terraces above, oblivious to the fact that everyone can hear their conversation.</desc>
+      <desc>Running to the northeast, the Avenue d&apos; Corleone is a narrow lane with homes on either side.  The homes have small terraces on their second floor that over look the avenue, and it is common for the local people to stop and have near shouting conversations with their neighbors on the terraces above, oblivious to the fact that everyone can hear their conversation.</desc>
       <exits ne='1040' w='1102' no-exit='moves.noexit.16'/>
    </location>
 
@@ -185,4 +185,3 @@
    </location>
 
 </fed2-map>
-

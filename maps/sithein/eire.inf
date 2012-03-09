@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<infrastructure owner='Erianne' economy='Technical' treasury='10951100' yard-markup='-10' workers='1290' base='1000' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='8'/>
+  <build type='Atmos' level='6' unused='8'/>
+  <build type='Pollution' level='9' unused='8'/>
+  <build type='Clinic' level='6' hospital='4' unused='3'/>
+  <build type='Police' points='8'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Port' points='5'/>
+  <build type='Radio' points='10'/>
+  <build type='Pension' points='10'/>
+  <build type='Family' points='10'/>
+  <build type='Hospital' points='2'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Research' points='1'/>
+  <build type='Oil' points='4'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Fibre' points='14'/>
+  <build type='Terraform' points='2'/>
+  <build type='Insurance' points='10'/>
+  <build type='Dole' points='3'/>
+  <build type='Phone' points='2'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

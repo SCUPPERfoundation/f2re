@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<infrastructure owner='Mallow' economy='Agricultural' treasury='20415533' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+    <factory owner='Seldon Crisis' id='10' planet='Terminus' output='Artifacts' status='run' cash='656065' top-up='100000' income='764025' exp='207960' profit='3826330'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='37' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Seldon Crisis' id='13' planet='Terminus' output='Artifacts' status='run' cash='652090' top-up='100000' income='760050' exp='207960' profit='3824755'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='35' labour='370' wages='40' stored='150' disposal='depot'/>
+    </factory>
+    <factory owner='Seldon Crisis' id='15' planet='Terminus' output='Firewalls' status='run' cash='647070' top-up='100000' income='724350' exp='177280' profit='3789940'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='36' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+</infrastructure>

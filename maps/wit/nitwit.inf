@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<infrastructure owner='Gabrielle' economy='Biological' treasury='909503936' yard-markup='0' workers='0' base='100' registry='false'>
+  <build type='Insurance' points='5'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Research' points='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Weather' points='7'/>
+  <build type='Fusion' points='8'/>
+  <build type='Port' points='5'/>
+  <build type='Floating' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Tachyon' points='15'/>
+  <build type='Defence' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Dole' points='10'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

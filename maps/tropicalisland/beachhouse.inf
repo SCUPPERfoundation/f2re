@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<infrastructure owner='Quanshee' economy='Leisure' treasury='-21455691' yard-markup='-10' workers='1300' base='1000' registry='false'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4'/>
+  <build type='Family' points='4'/>
+  <build type='Biodiversity' points='6'/>
+  <build type='Canal' points='5'/>
+  <build type='Clinic' level='6' hospital='16' unused='0'/>
+  <build type='Pollution' level='9' unused='19'/>
+  <build type='Hospital' points='8'/>
+  <build type='Police' points='11'/>
+  <build type='Agri' points='1'/>
+  <build type='Atmos' level='10' unused='13'/>
+  <build type='Housing' points='6'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Pension' points='7'/>
+  <build type='Heliograph' points='4'/>
+  <build type='Telegraph' points='10'/>
+  <build type='Dole' points='6'/>
+  <build type='Base' points='1'/>
+  <build type='Radio' points='3'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Insulation' points='2'/>
+  <build type='Research' points='1'/>
+  <build type='Airlane' points='10'/>
+  <build type='Insurance' points='6'/>
+  <build type='Weather' points='6'/>
+  <build type='Fusion' points='8'/>
+  <build type='Phone' points='10'/>
+  <build type='Surveillance' points='5'/>
+  <build type='Fibre' points='40'/>
+  <build type='Antigrav' points='4'/>
+  <build type='Urban' points='5'/>
+  <build type='Floating' points='2'/>
+  <build type='RiotPolice' points='4'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Leisure' points='8'/>
+  <build type='Longevity' points='9'/>
+  <build type='Airport' points='7' level='intra'/>
+  <build type='Solar' points='8'/>
+  <build type='Tquark' points='11'/>
+</infrastructure>

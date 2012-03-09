@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<infrastructure owner='Marred' economy='Agricultural' treasury='965237901' yard-markup='0' workers='1150' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4' unused='10'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='0' hospital='10' unused='10'/>
+  <build type='Police' points='10'/>
+  <build type='Atmos' level='0' unused='10'/>
+  <build type='Pollution' level='0' unused='9'/>
+  <build type='Hospital' points='5'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Louey'>
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='637' />
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='644' />
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='663' />
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='650' />
+      <cargo name='TQuarks' star='Java' planet='Sludge' cost='625' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='650' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='631' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='657' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='657' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='663' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='637' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='625' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='657' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='663' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='657' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='631' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='650' />
+      <cargo name='TQuarks' star='Aero' planet='Spirit' cost='625' />
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Oldfolx'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='592' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='574' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='580' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='580' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='587' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='574' />
+      <cargo name='BioComponents' star='Aero' planet='Electra' cost='604' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

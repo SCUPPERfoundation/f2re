@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<infrastructure owner='Jerzee' economy='Industrial' treasury='989510932' yard-markup='0' workers='1150' base='1000' registry='false'>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='6'/>
+  <build type='Agri' points='1'/>
+  <build type='Clinic' level='4' hospital='14' unused='4'/>
+  <build type='Hospital' points='7'/>
+  <build type='Police' points='8'/>
+  <build type='Atmos' level='4' unused='8'/>
+  <build type='Pollution' level='5' unused='10'/>
+  <build type='Mining' points='1'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Satellite' points='2'/>
+  <build type='Insulation' points='5'/>
+  <build type='RiotPolice' points='5'/>
+    <depot owner='Jingos Belle' bays='31' efficiency='100'>
+      <cargo name='Firewalls' star='Joyzee' planet='New Ark' cost='690' />
+      <cargo name='Firewalls' star='Joyzee' planet='New Ark' cost='690' />
+    </depot>
+    <depot owner='Xornatopia' bays='51' efficiency='100'>
+    </depot>
+    <factory owner='Nuts!' id='1' planet='New Ark' output='Artifacts' status='run' cash='603425' top-up='100000' income='666225' exp='162800' profit='4536800'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='6' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Nuts!' id='2' planet='New Ark' output='Artifacts' status='run' cash='734525' top-up='100000' income='797325' exp='162800' profit='4515950'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='6' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Nuts!' id='3' planet='New Ark' output='Artifacts' status='run' cash='597350' top-up='100000' income='660150' exp='162800' profit='4512425'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='5' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>

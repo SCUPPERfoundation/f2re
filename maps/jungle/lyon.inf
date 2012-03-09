@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<infrastructure owner='Leostada' economy='Agricultural' treasury='347602414' yard-markup='0' workers='1000' base='1000' registry='false'>
+    <warehouse owner='George'>
+    </warehouse>
+
+    <warehouse owner='Hank'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='631' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='657' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='663' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='644' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='631' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='644' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='650' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='637' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='657' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='637' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='644' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='654' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='673' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='649' />
+      <cargo name='TQuarks' star='Crypton' planet='Superland' cost='666' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Revalued Reproductions Inc' id='15' planet='Lyon' output='Artifacts' status='run' cash='779010' top-up='100000' income='2446350' exp='564640' profit='4459085'>
+      <building max-eff='105' max-store='150' maint='5' eff='105'/>
+      <production interval-max='126' intervals='95' labour='352' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

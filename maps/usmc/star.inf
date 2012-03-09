@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<star name='Usmc' cartel='Sol'>
+
+   <black-list>
+      <exile name='Silvos'/>
+   </black-list>
+
+</star>

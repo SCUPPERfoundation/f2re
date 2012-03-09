@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Navarium' version='14' editor='standard' from='523' to='Arov.Arov Space.262'>
+<fed2-map title='Navarium' version='14' editor='online' from='523' to='Arov.Arov Space.262'>
 
    <location num='0'>
       <name>Storeroom</name>
@@ -39,14 +39,13 @@
 
    <location num='588' flags='e'>
       <name>Navarium Exchange</name>
-      <desc>Row after row of computer terminals line the starboard bulkhead of this compartment. As Navarium has no dry land whatsoever, all of the planet&apos;s off-world commerce is routed through this ship. Traders can buy some of the many products produced by the ISD fleet, or can sell commodities to feed the fleets needs. A hatchway forward leads to the purser&apos;s office, while a passageway to port leads back to the main concourse.</desc>
+      <desc>Row after row of computer terminals line the starboard bulkhead of this compartment. As Navarium has no dry land whatsoever, all of the  planet&apos;s off-world commerce is routed through this ship. Traders can buy some of the many products produced by the ISD fleet, or can sell commodities to feed the fleet&apos;s needs. A hatchway forward leads to the purser&apos;s office, while a passageway to port leads back to the main concourse.</desc>
       <exits n='524' w='587' no-exit='Moves.Standard.1'/>
    </location>
 
    <location num='651' flags='b'>
       <name>Viewing Lounge</name>
-      <desc>The viewing lounge sits just below the flight deck. The port and starboard bulkheads are made entirely of glass, affording a wide view of the surrounding sea. Other ships in the fleet can be seen plying their trade, tending to sea farms or harvesting fish. Smoke billows from factory ships synthesizing manufactured goods for use or export. Bulk transport or passenger bearing hydroplanes dart from ship to ship atop the waves.</desc>
-      <desc>The lounge itself consists of pole mounted tables surrounded by slender chairs affixed to the deck, with a circular bar in the center. White coated waiters hover attentively, bring fresh food straight from the galley. The exit is forward.</desc>
+      <desc>The viewing lounge sits just below the flight deck. The port and starboard bulkheads are made entirely of glass, affording a wide view of the surrounding sea. Other ships in the fleet can be seen plying their trade, tending to sea farms or harvesting fish. Smoke billows from factory ships synthesizing manufactured goods for use or export. Bulk transport or passenger bearing hydroplanes dart from ship to ship atop the waves. The lounge itself consists of pole mounted tables surrounded by slender chairs affixed to the deck, with a circular bar in the center. White coated waiters hover attentively, bringing fresh food straight from the galley. The exit is forward.</desc>
       <exits n='587' no-exit='Moves.Standard.1'/>
    </location>
 
@@ -58,14 +57,13 @@
 
    <location num='842' flags='b'>
       <name>Dining Cabin</name>
-      <desc>A heavy oak table fixed to the floor is the centerpiece of this cabin. Intricate gold patterns cover the table, while chairs line the table with room for servants to stand discretely behind. A lift provides quick access for for servers from Jazir&apos;s private galley. The stern window provides a splendid view of the sea. The exit lies starboard.</desc>
+      <desc>A heavy oak table fixed to the floor is the centerpiece of this cabin. Intricate gold patterns cover the table, while chairs line the table with room for servants to stand discretely behind. A lift provides quick access for servers from Jazir&apos;s private galley. The stern window provides a splendid view of the sea. The exit lies starboard.</desc>
       <exits e='843' no-exit='Moves.Standard.1'/>
    </location>
 
    <location num='843' flags='b'>
       <name>Admiral&apos;s Sitting Room</name>
-      <desc>The admiral&apos;s suite is located at the stern of the ship. The suite consists of several rooms with the sitting room in the center. The sitting room is lavishly furnished, with oak paneling covering the bulkheads and luxurious rugs covering the deck. The stern window offers a spectacular view of the Estate&apos;s wake.</desc>
-      <desc>Several comfortable armchairs are arranged in a circle at the center of the room. A hatchway leads forward, while doors lie to both sides.</desc>
+      <desc>The admiral&apos;s suite is located at the stern of the ship, and consists of several rooms, with the sitting room in the center. This room is lavishly furnished, with oak paneling covering the bulkheads and luxurious rugs covering the deck. The entire stern is a window, which offers a spectacular view of the Estate&apos;s wake. Several comfortable armchairs are arranged in a circle at the center of the room. A hatchway leads forward, while doors lie to both sides.</desc>
       <exits n='779' e='844' w='842' no-exit='Moves.Standard.1'/>
    </location>
 

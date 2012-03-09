@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<infrastructure owner='Djentsch' economy='Industrial' treasury='964966424' yard-markup='-10' workers='1030' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='Clinic' level='4' hospital='26' unused='6'/>
+  <build type='School' level='3' agri='4' mining='4' unused='5'/>
+  <build type='Agri' points='1'/>
+  <build type='Heliograph' points='7'/>
+  <build type='Police' points='7'/>
+  <build type='Atmos' level='4' unused='9'/>
+  <build type='Pollution' level='5' unused='8'/>
+  <build type='Biodiversity' points='18'/>
+  <build type='Housing' points='6'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='6'/>
+  <build type='Terraform' points='3'/>
+  <build type='Pension' points='10'/>
+  <build type='Dole' points='5'/>
+  <build type='Hospital' points='13'/>
+  <build type='Mining' points='1'/>
+  <build type='Family' points='11'/>
+    <warehouse owner='Gunny'>
+    </warehouse>
+
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Nightingale'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Shadowguy'>
+      <cargo name='Droids' star='Russia' planet='Marina' cost='589' />
+      <cargo name='Droids' star='Russia' planet='Marina' cost='577' />
+      <cargo name='Droids' star='Russia' planet='Marina' cost='577' />
+      <cargo name='Droids' star='Russia' planet='Marina' cost='577' />
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+</infrastructure>

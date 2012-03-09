@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<infrastructure owner='Doctor' economy='Biological' treasury='996347886' yard-markup='-10' workers='0' base='100' slithy-xform='0' registry='false'>
+  <build type='Tachyon' points='15'/>
+  <build type='School' level='5' tech='4' research='4' biolab='4'/>
+  <build type='Biolab' points='1'/>
+  <build type='Research' points='1'/>
+  <build type='Tech' points='1'/>
+  <build type='Weather' points='1'/>
+  <build type='Fusion' points='6'/>
+  <build type='Port' points='5'/>
+  <build type='Floating' points='10'/>
+  <build type='Insurance' points='5'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Urban' points='5'/>
+  <build type='Defence' points='5'/>
+  <build type='Satellite' points='5'/>
+  <build type='Dole' points='10'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+</infrastructure>

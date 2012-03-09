@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Tropicana' version='1.00' editor='standard' from='396' to='Tropics.Tropics Space.460'>
+<fed2-map title='Tropicana' version='1' editor='online' from='396' to='Tropics.Tropics Space.460'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -15,14 +15,14 @@
    </location>
 
    <location num='396' flags='yr'>
-      <name>Landing strip</name>
+      <name>Landing Pad</name>
       <desc>   The sky is deep blue with a few fluffy white clouds. A cooling sea breeze keeps the temperature to a perfect level. The sun is hot and you look forward to basking on the beach.</desc>
       <desc>   Young men and women with stunningly attractive, deeply tanned bodies throng around the landing pad, welcoming visitors and directing them to the beach to the southeast, and to white stone buildings north, east and southwest.</desc>
       <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>
    </location>
 
    <location num='397' flags='e'>
-      <name>Sandy exchange</name>
+      <name>Tropical Exchange</name>
       <desc>   The thick stone walls of the building keep it cool, which prevents the trading machinery - and the traders themselves - from overheating. The floor is covered with sand and you wonder why it doesn&apos;t get into the equipment and cause problems.</desc>
       <desc>   The full range of commodities are bought and sold here, despite the planet being for vacationers. Obviously some people can&apos;t relax properly without a trading console nearby.</desc>
       <desc>   When you&apos;ve had enough work and want to head to the beach, you can exit by going through the west door.</desc>
@@ -30,7 +30,7 @@
    </location>
 
    <location num='459' flags='b'>
-      <name>Sunshine bar</name>
+      <name>Tropical Bar</name>
       <desc>   &quot;Welcome, one and all, to the bar where the best cocktails in the whole Galaxy are served,&quot; cries the tanned young bartender. He tosses a cocktail shaker high in the air and catches it behind his back.</desc>
       <desc>   Small booths in each corner sell tourist goods such as sunhats and snorkels, electronic equipment and weapons. Anyone who forgot their costume (and isn&apos;t lucky enough to have a nano-chameleon suit) can buy one here, from the skimpiest thong to the most demure all-in-one suit.</desc>
       <desc>   The door in the northeast wall leads back to the landing strip.</desc>

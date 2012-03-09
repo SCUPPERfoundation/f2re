@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Dross' version='1.00' editor='standard' from='459' to='Rubble.Rubble Space.459'>
+<fed2-map title='Dross' version='1' editor='online' from='459' to='Rubble.Rubble Space.459'>
 
    <location num='0'>
       <name>storage</name>

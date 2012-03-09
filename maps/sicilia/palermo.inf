@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<infrastructure owner='Doncorleone' economy='Agricultural' treasury='991005913' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+    <factory owner='Man-eater Catering Supplies' id='1' planet='Palermo' output='Artifacts' status='stop' cash='100000' top-up='100000' income='4442325' exp='1031080' profit='3708765'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='110' labour='370' wages='0' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='1' planet='Palermo' output='Univators' status='run' cash='100000' top-up='100000' income='4859175' exp='841950' profit='3004650'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='15' />
+    </factory>
+    <factory owner='Patricks Poultry And Game Farm.' id='2' planet='Palermo' output='Univators' status='run' cash='100000' top-up='100000' income='4860000' exp='855225' profit='2986725'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='0' labour='0' wages='0' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='15' />
+    </factory>
+</infrastructure>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<infrastructure owner='Dan' economy='Agricultural' treasury='791788893' yard-markup='0' workers='1000' base='1000' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+    <factory owner='Old West Mining &amp; Exploration' id='11' planet='County Fair' output='NanoFabrics' status='run' cash='762300' top-up='100000' income='2322675' exp='827575' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='16' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='70' />
+      <input name='Synths' quantity='45' />
+    </factory>
+    <factory owner='Old West Mining &amp; Exploration' id='12' planet='County Fair' output='NanoFabrics' status='run' cash='765075' top-up='100000' income='2321100' exp='834025' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='15' labour='20' wages='40' stored='75' disposal='exchange'/>
+      <input name='Nanos' quantity='70' />
+      <input name='Synths' quantity='45' />
+    </factory>
+    <factory owner='Old West Mining &amp; Exploration' id='13' planet='County Fair' output='Firewalls' status='run' cash='728200' top-up='100000' income='1882800' exp='372675' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='6' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+    <factory owner='Old West Mining &amp; Exploration' id='14' planet='County Fair' output='Firewalls' status='run' cash='717475' top-up='100000' income='1876050' exp='379725' profit='0'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='6' labour='150' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='35' />
+    </factory>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Bob' version='9' editor='standard' from='1885' to='Shift.Shift Space.2017'>
+<fed2-map title='Bob' version='9' editor='online' from='1885' to='Shift.Shift Space.2017'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,37 +8,37 @@
 
    <location num='1821' flags='yrhi'>
       <name>Ships and Suds</name>
-      <desc>Although you can purchase a ship here, it is not recommended, yet.  Feel free to repair your ship, and every new clone install comes with a free sponge bath. Don&apos;t forget to insure! The only exit is to the south.</desc>
+      <desc>Although you can purchase a ship here, it is not recommended, yet.  Feel free to repair your ship, if needed. Hospital services are offered in a non-sterile environment. Please do not forget to insure. The exit is south.</desc>
       <exits s='1885' no-exit='bobmoves.noexit.1'/>
    </location>
 
    <location num='1884' flags='b'>
-      <name>Bob&apos;s Bar and Kill</name>
-      <desc>You probably shouldn&apos;t eat that! Hey, we won&apos;t tell if you don&apos;t! When you&apos;ve had enough for now, the exit is to the east.</desc>
+      <name>Smoke Filled Room</name>
+      <desc>The more appropriate title would end up being something like: the room of a mobioid. The smoke is made up of a possibly sentient substance that potentially allows you to feel as if you were traversing the entirety of a distance shaped similar to a yin-yang. A potential problem is that you have not moved, but you can see out from the directions you&apos;d have travelled, had you travelled... all at once. Buy a round for all here or, if you want to move, move east.</desc>
       <exits e='1885' no-exit='bobmoves.noexit.1'/>
    </location>
 
    <location num='1885'>
-      <name>Welcome to Bob</name>
-      <desc>Thanks for stopping and enjoy your stay. The ship and hospital facilities are to the north. The exchange is to the south and the bar is to the west. East sets you on your way to the blue zone where everything is blue!</desc>
+      <name>if you can hear me, you&apos;re probably too close</name>
+      <desc>Bob has begun to change. The blue zone to the east is beginning to fade and the hospitals are starting to decrepify. If you want to risk it, food and drinks can be bought west of here, and you can trade to the south.</desc>
       <exits n='1821' e='1886' s='1949' w='1884' no-exit='bobmoves.noexit.1'/>
    </location>
 
    <location num='1886'>
       <name>The road less traveled</name>
-      <desc>Despite any use at all, the road has been maintained to appear unmaintained! Southeast is the start of the blue zone, where everything is blue. West leads you back to the launchpad and main facilities.</desc>
+      <desc>Despite any use at all, the road has been maintained to appear unmaintained! Southeast is the start of the blue zone. West leads you back to the launchpad and main facilities.</desc>
       <exits se='1951' w='1885' no-exit='bobmoves.noexit.1'/>
    </location>
 
    <location num='1887' flags='b'>
       <name>Blue Interior</name>
-      <desc>Blue wallpaper, blue sink, blue chairs. There is a blue desk with a blue book on it. The light bulbs are blue, and if there were windows.. they&apos;d likely be blue, too! The blue door will let you out.</desc>
+      <desc>Blue wallpaper, blue sink, blue chairs; There is a blue desk with a blue book on it. The light bulbs are blue, and if there were windows, they&apos;d likely be blue, too! The blue door will let you go OUT.</desc>
       <exits out='1888' no-exit='bobmoves.noexit.1'/>
    </location>
 
    <location num='1888'>
       <name>The Blue House</name>
-      <desc>If the house is blue, just go on IN. Southwest is one way to go, south is another.</desc>
+      <desc>If the house is blue, just go IN. Southwest is one way to go, south is another.</desc>
       <exits s='1952' sw='1951' in='1887' no-exit='bobmoves.noexit.1'/>
    </location>
 
@@ -56,7 +56,7 @@
 
    <location num='1951'>
       <name>The Blue Road</name>
-      <desc>The road isn&apos;t blue but it is blue!  Everything is blue here, the sky the ground the fence posts. Northeast allows you access to the blue house, and northwest sends you out of the blue zone.</desc>
+      <desc>The road isn&apos;t blue, but the road is blue! Northeast allows access to a blue house; northwest: does similar to northeast out of a blue zone.</desc>
       <exits ne='1888' nw='1886' no-exit='bobmoves.noexit.1'/>
    </location>
 

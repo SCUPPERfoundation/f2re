@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<infrastructure owner='Odin' economy='Leisure' treasury='999831800' yard-markup='0' workers='2800' base='1000' registry='false'>
+  <build type='School' level='6' mining='4' tech='4' research='4' studio='4' unused='303'/>
+  <build type='Agri' points='1'/>
+  <build type='Canal' points='5'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='10' hospital='30' unused='0'/>
+  <build type='Hospital' points='15'/>
+  <build type='Police' points='12'/>
+  <build type='Atmos' level='10' unused='5'/>
+  <build type='Pollution' level='9' unused='7'/>
+  <build type='Heliograph' points='5'/>
+  <build type='Base' points='5'/>
+  <build type='Biodiversity' points='8'/>
+  <build type='Dole' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Coal' points='5'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Housing' points='6'/>
+  <build type='Pension' points='10'/>
+  <build type='Radio' points='20'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='14'/>
+  <build type='Satellite' points='5'/>
+  <build type='Phone' points='10'/>
+  <build type='Fibre' points='40'/>
+  <build type='Defence' points='10'/>
+  <build type='Research' points='1'/>
+  <build type='Antigrav' points='5'/>
+  <build type='Airlane' points='10'/>
+  <build type='Urban' points='5'/>
+  <build type='Surveillance' points='10'/>
+  <build type='Insurance' points='10'/>
+  <build type='Floating' points='10'/>
+  <build type='Metastudio' points='1'/>
+  <build type='Leisure' points='8'/>
+  <build type='Airport' points='10' level='intra'/>
+  <build type='Longevity' points='20'/>
+  <build type='Tquark' points='10'/>
+  <build type='Terraform' points='20'/>
+  <build type='Solar' points='12'/>
+  <build type='Genetic' points='15'/>
+    <warehouse owner='Evilexhusband'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Crystalsteel Creations' bays='31' efficiency='100'>
+    </depot>
+    <depot owner='Custodian Defence Systems' bays='21' efficiency='100'>
+    </depot>
+    <depot owner='Istari Consulting Group' bays='21' efficiency='100'>
+    </depot>
+    <depot owner='Love Shack Accessories' bays='21' efficiency='100'>
+    </depot>
+    <depot owner='Trahald Fishing And Diving' bays='21' efficiency='100'>
+    </depot>
+    <depot owner='Zenite Mining Company' bays='21' efficiency='100'>
+    </depot>
+</infrastructure>

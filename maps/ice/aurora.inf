@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<infrastructure owner='Arctic' economy='Resource' treasury='-443403106' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='4'/>
+  <build type='School' level='2' agri='4' unused='3'/>
+  <build type='Agri' points='1'/>
+  <build type='Pollution' level='2' unused='0'/>
+  <build type='Atmos' level='2' unused='1'/>
+  <build type='Police' points='1'/>
+  <build type='Clinic' level='2' hospital='0' unused='0'/>
+  <build type='Biodiversity' points='2'/>
+  <build type='Rail' points='3'/>
+  <build type='Coal' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Pension' points='3'/>
+</infrastructure>

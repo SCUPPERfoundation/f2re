@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Aero Space' version='6' editor='standard'>
+<fed2-map title='Aero Space' version='5' editor='online'>
 
    <location num='2015' flags='sp'>
       <name>Flyer orbit</name>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<star name='Soed' cartel='Sol'>
+
+   <black-list>
+      <exile name='Lagkiller'/>
+      <exile name='Icey'/>
+   </black-list>
+
+</star>

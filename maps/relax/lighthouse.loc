@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Lighthouse' version='1.00' editor='standard' from='265' to='Relax.Relax Space.272'>
+<fed2-map title='Lighthouse' version='1' editor='online' from='265' to='Relax.Relax Space.272'>
 
    <location num='265'>
       <name>Lighthouse Landing Bay</name>
@@ -45,7 +45,7 @@
 
    <location num='393'>
       <name>Platform Level 4</name>
-      <desc>xxx</desc>
+      <desc>You have entered the main construction level.   To the east you can see ships being built and constructed.   To the northeast you see several berthed ships that are in dock for repair.  To the west you see the entrance to lighthouse shipyard.  Down takes you toward the surface and up takes you toward the landing pad.</desc>
       <exits ne='330' e='394' w='392' up='329' down='457' no-exit='moves.noexit.1'/>
    </location>
 
@@ -58,7 +58,7 @@
 
    <location num='457'>
       <name>Platform Level 3</name>
-      <desc>The exchange is to the east.</desc>
+      <desc>The exchange is to the east.   You can head up to the landing pad and service platforms or down to the beach town built around this Lighthouse.</desc>
       <exits e='458' up='393' down='521' no-exit='moves.noexit.1'/>
    </location>
 

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<infrastructure owner='Davidh' economy='Technical' treasury='4059356' yard-markup='0' workers='615' base='1000' casualties='505' slithy-xform='0' registry='false'>
+  <build type='School' level='4' mining='4' tech='4' research='4' unused='9'/>
+  <build type='Atmos' level='6' unused='5'/>
+  <build type='Pollution' level='9' unused='6'/>
+  <build type='Police' points='10'/>
+  <build type='Clinic' level='6' hospital='0' unused='7'/>
+  <build type='Biodiversity' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Coal' points='6'/>
+  <build type='Mining' points='1'/>
+  <build type='Insulation' points='10'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='11'/>
+  <build type='Oil' points='1'/>
+  <build type='Radio' points='4'/>
+  <build type='Research' points='1'/>
+  <build type='Fusion' points='3'/>
+  <build type='Floating' points='8'/>
+  <build type='Airlane' points='10'/>
+  <build type='Antigrav' points='2'/>
+  <build type='Urban' points='5'/>
+  <build type='Fibre' points='40'/>
+  <build type='Insurance' points='8'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <factory owner='Irony&apos;s Ironclad Irons, Inc.' id='1' planet='Paradox' output='Firewalls' status='run' cash='483400' top-up='100000' income='1658475' exp='407550' profit='3017560'>
+      <building max-eff='105' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='71' labour='150' wages='40' stored='150' disposal='exchange'/>
+      <input name='Semiconductors' quantity='45' />
+    </factory>
+    <factory owner='Irony&apos;s Ironclad Irons, Inc.' id='2' planet='Paradox' output='Firewalls' status='run' cash='579845' top-up='100000' income='1761300' exp='417240' profit='2988385'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='30' labour='157' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='45' />
+    </factory>
+    <factory owner='Irony&apos;s Ironclad Irons, Inc.' id='3' planet='Paradox' output='Firewalls' status='run' cash='577220' top-up='100000' income='1754475' exp='422715' profit='2980735'>
+      <building max-eff='100' max-store='150' maint='5' eff='95'/>
+      <production interval-max='140' intervals='29' labour='157' wages='40' stored='75' disposal='exchange'/>
+      <input name='Semiconductors' quantity='45' />
+    </factory>
+</infrastructure>

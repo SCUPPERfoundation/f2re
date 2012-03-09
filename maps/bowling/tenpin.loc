@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Tenpin' version='1.00' editor='standard' from='130' to='Bowling.Bowling Space.196'>
+<fed2-map title='Tenpin' version='1' editor='online' from='130' to='Bowling.Bowling Space.196'>
 
    <location num='0' flags='t'>
       <name>storage</name>
@@ -123,7 +123,7 @@
 
    <location num='260'>
       <name>North of center of the Square.</name>
-      <desc>There is a Pillar here. The Trophy on the pillar reads: &quot;Original Tenpin Puzzle Solvers: DarkAngel,Jdcollins,Nomad,Flood,Sycorax,Djentsch,Brookrf,Sage,Stirling,Cooly,Guido,Robius,Kalandra,Angel,Desertwolf.&quot; In the ground next to the pillar is a sewer grate. Looking down into the grate, you can make out something shinny. Hard to tell what it is. Looking around you can see there are shops of every description. The center of the Square looks interesting.</desc>
+      <desc>There is a Pillar here. The Trophy on the pillar reads: &quot;Original Tenpin Puzzle Solvers: DarkAngel,Jdcollins,Nomad,Flood,Sycorax,Djentsch,Brookrf,Sage,Stirling,Cooly,Guido,Robius,Kalandra,Angel,Desertwolf.&quot; In the ground next to the pillar is a sewer grate. Looking down into the grate, you can make out something shiny. Hard to tell what it is. Looking around you can see there are shops of every description. The center of the Square looks interesting.</desc>
       <exits n='196' ne='197' e='261' se='325' s='324' sw='323' w='259' nw='195' no-exit='town.square.1'/>
    </location>
 

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<star name='Parklandia' cartel='Parklandia'>
+
+   <black-list>
+      <exile name='Hurricanes'/>
+      <exile name='Tropical'/>
+      <exile name='Storms'/>
+      <exile name='Tropicaldepressions'/>
+      <exile name='Nematodes'/>
+      <exile name='Hangnails'/>
+      <exile name='Drunks'/>
+      <exile name='Hobos'/>
+      <exile name='Peoplewithstinkyfeet'/>
+      <exile name='Chips'/>
+      <exile name='Dips'/>
+      <exile name='Chains'/>
+      <exile name='Whips'/>
+      <exile name='Menwhowearspeedostothebeach'/>
+   </black-list>
+
+</star>

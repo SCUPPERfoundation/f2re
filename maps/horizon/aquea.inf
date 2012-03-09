@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<infrastructure owner='Lucyn' economy='Industrial' treasury='237050464' yard-markup='0' workers='1120' base='1000' registry='false'>
+  <build type='Atmos' level='4' unused='7'/>
+  <build type='Pollution' level='5' unused='9'/>
+  <build type='School' level='3' agri='4' mining='4' tech='4' unused='1'/>
+  <build type='Clinic' level='4' hospital='6' unused='3'/>
+  <build type='Police' points='6'/>
+  <build type='Canal' points='5'/>
+  <build type='Dole' points='2'/>
+  <build type='Family' points='10'/>
+  <build type='Housing' points='6'/>
+  <build type='Coal' points='5'/>
+  <build type='Mining' points='1'/>
+  <build type='Agri' points='1'/>
+  <build type='Insulation' points='5'/>
+  <build type='Rail' points='5'/>
+  <build type='Biodiversity' points='2'/>
+  <build type='Tech' points='1'/>
+  <build type='Port' points='5'/>
+  <build type='Hospital' points='2'/>
+    <warehouse owner='Kayla'>
+    </warehouse>
+
+    <warehouse owner='Moloch'>
+    </warehouse>
+
+    <warehouse owner='Ruanek'>
+    </warehouse>
+
+    <warehouse owner='Solana'>
+    </warehouse>
+
+    <depot owner='Aquean Droidworks' bays='31' efficiency='100'>
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+      <cargo name='Electros' star='Horizon' planet='Aquea' cost='250' />
+    </depot>
+    <factory owner='Aquean Droidworks' id='1' planet='Aquea' output='Artifacts' status='run' cash='487175' top-up='100000' income='1196025' exp='325600' profit='3406725'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='57' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+    <factory owner='Aquean Droidworks' id='2' planet='Aquea' output='Artifacts' status='run' cash='589850' top-up='100000' income='1194225' exp='325600' profit='3504300'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='70' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+</infrastructure>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Noom' version='1.00' editor='standard' from='330' to='Soed.Soed Space.395'>
+<fed2-map title='Noom' version='1' editor='online' from='330' to='Soed.Soed Space.395'>
 
    <location num='0' flags='kt'>
       <name>Storage Room</name>
@@ -83,7 +83,7 @@
 
    <location num='330'>
       <name>Landing Pad</name>
-      <desc>The dome closes and the rush of air is heard as it is pumped into the chamber.  Landing crew, still wearing their life support suits, attach fuel, and control lines to the shuttle.  Crates of cargo are being readied for transport on one side of the pad.  The entire pad can lower to the shuttle hanger below.  To the northwest is an automated exchange station for the purchase and sale of cargo.  To the northwest is flight control, to the southwest is an observation and refreshment lounge.  To the southeast is a large agricutultural dome with a Hydroponic garden.</desc>
+      <desc>The dome closes and the rush of air is heard as it is pumped into the chamber.  Landing crew, still wearing their life support suits, attach fuel, and control lines to the shuttle.  Crates of cargo are being readied for transport on one side of the pad.  The entire pad can lower to the shuttle hanger below.  To the northeast is an automated exchange station for the purchase and sale of cargo.  To the northwest is flight control, to the southwest is a vehicle hanger.  To the southeast is a large agricutultural dome with a Hydroponic garden.</desc>
       <exits ne='267' se='395' sw='393' nw='265' down='339' no-exit='moves.noexit.1'/>
    </location>
 
@@ -183,14 +183,14 @@
    </location>
 
    <location num='1057' flags='bt'>
-      <name>Zardoz and Sephy&apos;s Noom Retreat -  Entryway</name>
-      <desc>The residence consists of two domes joined together.  The smaller is a dome for the buggy, and also serves as an airlock for travels outside the structure.  The larger dome is the living area and is subdivided into various functional areas.  Zardoz had this structure built at an incredible cost.  The materials were flown in to Noom Base and then carried by rovers to this remote point on Noom.  Zardoz chose this location partly for its remoteness, but also because it has an unobstructed view of the Looking Glass system.  The enviornmental systems are completely automated, and are hidden in recessed areas under the floor.</desc>
+      <name>Zardoz and Jezz&apos;s Noom Retreat -  Entryway</name>
+      <desc>The residence consists of two domes joined together.  The smaller is a dome for the buggy, and also serves as an airlock for travels outside the structure.  The larger dome is the living area and is subdivided into various functional areas.  Zardoz had this structure built at an incredible cost.  The materials were flown in to Noom Base and then carried by rovers to this remote point on Noom.  Zardoz chose this location partly for its remoteness, but also because it has an unobstructed view of The Rift system.  The environmental systems are completely automated, and are hidden in recessed areas under the floor.</desc>
       <exits n='993' e='1058' s='1121' w='1056' no-exit='moves.noexit.8'/>
    </location>
 
    <location num='1058' flags='bt'>
       <name>Living Area</name>
-      <desc>The Dome was constructed on the edge of a ranul cliff, over looking a vast plain across the surface of Noom.  There are comfortable sofas and chairs set up so that Zardoz and Sephorin can sit together and enjoy the view together.  There are bottles of sake imported from across the galaxy, each with a taste that can accentuate, or appease Sephorin&apos;s many moods.  Hidden controls are available to provide soft music, and control the ambiate light for those evenings where they are too tired to talk, but are content enough to doze, together.</desc>
+      <desc>The Dome was constructed on the edge of a ranul cliff, over looking a vast plain across the surface of Noom.  There are comfortable sofas and chairs set up so that Zardoz and Jezz can sit together and enjoy the view together.  There are bottles of wine imported from across the galaxy, each with a taste that can accentuate, or appease Jezz&apos;s many moods.  Hidden controls are available to provide soft music, and control the ambiate light for those evenings where they are too tired to talk, but are content enough to doze, together.</desc>
       <exits w='1057' no-exit='moves.noexit.8'/>
    </location>
 
@@ -207,4 +207,3 @@
    </location>
 
 </fed2-map>
-

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<fed2-map title='Pario' version='7' editor='standard' from='2015' to='Aevum.Aevum Space.2014'>
+<fed2-map title='Pario' version='7' editor='online' from='2015' to='Aevum.Aevum Space.2014'>
 
    <location num='0' flags='t'>
       <name>Storeroom</name>
@@ -8,7 +8,7 @@
 
    <location num='2015' flags='r'>
       <name>Pario landing bay</name>
-      <desc>The landing bay is relatively small, crowded and busy. You find your bearings while dodging mostly droids and androids unconcerned with your presence, only the job at hand. There are double doors in several directions, but all are marked &quot;DANGER: Authorized Personnel Only Beyond This Point.&quot;. A sign marking a down stairway indicates the exchange in that direction.</desc>
+      <desc>The landing bay is relatively small, crowded and busy. You find your bearings while dodging mostly droids and androids unconcerned with your presence, only the job at hand. There are double doors in several directions, but all are marked &quot;DANGER: Authorized Personnel Only Beyond This Point.&quot; A sign marking a down stairway indicates the exchange in that direction.</desc>
       <exits down='3679' no-exit='moves.noexit.1'/>
    </location>
 

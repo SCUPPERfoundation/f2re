@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<infrastructure owner='Otamusima' economy='Agricultural' treasury='301925426' yard-markup='-10' workers='1120' base='1000' slithy-xform='0' registry='false'>
+  <build type='Canal' points='5'/>
+  <build type='School' agri='4'/>
+  <build type='Agri' points='1'/>
+  <build type='Family' points='10'/>
+  <build type='Clinic' level='0' hospital='4' unused='0'/>
+  <build type='Hospital' points='2'/>
+    <factory owner='Death&apos;s Delay' id='1' planet='Bob' output='Univators' status='run' cash='589675' top-up='100000' income='3650025' exp='706350' profit='2931675'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='98' labour='90' wages='40' stored='75' disposal='exchange'/>
+      <input name='Monopoles' quantity='30' />
+    </factory>
+    <factory owner='Death&apos;s Delay' id='2' planet='Bob' output='Univators' status='run' cash='452800' top-up='100000' income='3647925' exp='748950' profit='2943375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='98' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='70' />
+    </factory>
+    <factory owner='Death&apos;s Delay' id='3' planet='Bob' output='Univators' status='run' cash='453925' top-up='100000' income='3641250' exp='705450' profit='2902950'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='98' labour='90' wages='40' stored='150' disposal='exchange'/>
+      <input name='Monopoles' quantity='55' />
+    </factory>
+    <factory owner='Death&apos;s Delay' id='4' planet='Bob' output='Artifacts' status='run' cash='695450' top-up='100000' income='4853175' exp='1124800' profit='3820375'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='66' labour='370' wages='40' stored='75' disposal='exchange'/>
+    </factory>
+    <factory owner='Death&apos;s Delay' id='5' planet='Bob' output='Artifacts' status='run' cash='571400' top-up='100000' income='4838325' exp='1124800' profit='3681400'>
+      <building max-eff='100' max-store='150' maint='5' eff='100'/>
+      <production interval-max='133' intervals='83' labour='370' wages='40' stored='150' disposal='exchange'/>
+    </factory>
+</infrastructure>
