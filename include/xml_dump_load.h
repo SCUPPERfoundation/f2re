@@ -7,23 +7,28 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#ifndef ASCII_DUMP_LOAD_H
-#define ASCII_DUMP_LOAD_H
+#ifndef XML_DUMP_LOAD_H
+#define XML_DUMP_LOAD_H
 
 #include <fstream>
+
+#include "xml_parser.h"
 
 class Player;
 
 struct	ComputerRec;
 struct	DbJob;
 struct	DBLocRec;
+struct	DBPlayer;
 struct	DbShip;
 struct	DbTask;
 struct	WeaponRec;
 
-class AsciiDumpLoad
+class XmlDumpLoad : public XMLParser
 {
 private:
+
+
 	void	DumpComputer(const ComputerRec& loc,std::ofstream&	dump_file);
 	void	DumpJob(DbJob& job,std::ofstream&	dump_file);
 	void	DumpLoc(DBLocRec& comp,std::ofstream&	dump_file);
@@ -31,9 +36,13 @@ private:
 	void	DumpTask(DbTask& task,std::ofstream& dump_file);
 	void	DumpWeapons(const WeaponRec *rec,std::ofstream& dump_file);
 
+	void	StartElement(const char *element,const char **attrib)	{	}
+	void	EndElement(const char *element)								{	}
+	void	TextData(const char *text,int textlen)						{	}
+
 public:
-	AsciiDumpLoad()	{	}
-	~AsciiDumpLoad()	{	}
+	XmlDumpLoad()	{	}
+	~XmlDumpLoad()	{	}
 
 	bool	DumpOneAccount(Player *player,std::ofstream&	dump_file);
 };

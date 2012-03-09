@@ -10,7 +10,7 @@
 /* Portability utilities for turning the binary accounts database into
    an XML file, for loading that file into a new database */
 
-#include "ascii_dump_load.h"
+#include "xml_dump_load.h"
 
 #include <fstream>
 #include <iomanip>
@@ -28,7 +28,7 @@
 #include "player.h"
 
 
-void	AsciiDumpLoad::DumpComputer(const ComputerRec& comp,std::ofstream& dump_file)
+void	XmlDumpLoad::DumpComputer(const ComputerRec& comp,std::ofstream& dump_file)
 {
 	dump_file << "        <computer level='" << comp.level;
 	dump_file << "' cur_level='" << comp.cur_level;
@@ -36,7 +36,7 @@ void	AsciiDumpLoad::DumpComputer(const ComputerRec& comp,std::ofstream& dump_fil
 	dump_file << "' jammers='" << comp.jammers << "'/>\n";
 }
 
-void	AsciiDumpLoad::DumpJob(DbJob& job,std::ofstream& dump_file)
+void	XmlDumpLoad::DumpJob(DbJob& job,std::ofstream& dump_file)
 {
 	dump_file << "      <job commod='" << job.commod << "'";
 	dump_file << "      from='" << job.from << "'";
@@ -48,14 +48,14 @@ void	AsciiDumpLoad::DumpJob(DbJob& job,std::ofstream& dump_file)
 	dump_file << "      credits='" << job.credits << "'/>\n";
 }
 
-void	AsciiDumpLoad::DumpLoc(DBLocRec& loc,std::ofstream& dump_file)
+void	XmlDumpLoad::DumpLoc(DBLocRec& loc,std::ofstream& dump_file)
 {
 	dump_file << "      <location star_name='" << loc.star_name;
 	dump_file << "' map_name='" << loc.map_name;
 	dump_file << "' loc_no='" << loc.loc_no << "'/>\n";
 }
 
-bool AsciiDumpLoad::DumpOneAccount(Player *player,std::ofstream& dump_file)
+bool XmlDumpLoad::DumpOneAccount(Player *player,std::ofstream& dump_file)
 {
 	// Don't save groundhogs who have not been on for over 3 months
 	static time_t	three_months_ago = 0;
@@ -145,7 +145,7 @@ bool AsciiDumpLoad::DumpOneAccount(Player *player,std::ofstream& dump_file)
 	return true;
 }
 
-void	AsciiDumpLoad::DumpShip(DbShip& ship,std::ofstream& dump_file)
+void	XmlDumpLoad::DumpShip(DbShip& ship,std::ofstream& dump_file)
 {
 	dump_file << "      <ship registry='" << ship.registry << "'";
 	dump_file << "      class='" << ship.ship_class << "'\n";
@@ -168,7 +168,7 @@ void	AsciiDumpLoad::DumpShip(DbShip& ship,std::ofstream& dump_file)
 	dump_file << "      </ship>\n";
 }
 
-void	AsciiDumpLoad::DumpTask(DbTask& task,std::ofstream& dump_file)
+void	XmlDumpLoad::DumpTask(DbTask& task,std::ofstream& dump_file)
 {
 	dump_file << "      <task pickup_map='" << task.pickup_map << "'";
 	dump_file << "      pickup_loc='" << task.pickup_loc << "'\n";
@@ -179,7 +179,7 @@ void	AsciiDumpLoad::DumpTask(DbTask& task,std::ofstream& dump_file)
 	dump_file << "      collected='" << (task.collected ? "true" : "false") << "'/>\n";
 }
 
-void	AsciiDumpLoad::DumpWeapons(const WeaponRec *rec,std::ofstream& dump_file)
+void	XmlDumpLoad::DumpWeapons(const WeaponRec *rec,std::ofstream& dump_file)
 {
 	for(int count = 0;count < Ship::MAX_HARD_PT;++count)
 		dump_file << "        <weapon type='" << rec[count].type << "' damage='" << rec[count].damage << "'/>\n";
