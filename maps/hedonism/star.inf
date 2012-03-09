@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<star name='Hedonism' cartel='Sol'>
-
-   <black-list>
-      <exile name='Nomad'/>
-   </black-list>
-
-</star>

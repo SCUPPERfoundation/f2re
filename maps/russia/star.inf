@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<star name='Russia' cartel='Russia' build='no' divert='yes'>
-
-   <black-list>
-      <exile name='Maggie'/>
-   </black-list>
-
-</star>

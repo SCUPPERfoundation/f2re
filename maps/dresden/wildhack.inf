@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Vannegut' economy='Agricultural' treasury='222027652' yard-markup='0' workers='1000' base='1000' registry='false'>
-    <factory owner='Island Paradise Corp.' id='3' planet='Wildhack' output='Artifacts' status='run' cash='557825' top-up='100000' income='1973325' exp='488400' profit='4121400'>
-      <building max-eff='100' max-store='150' maint='5' eff='100'/>
-      <production interval-max='133' intervals='80' labour='370' wages='40' stored='150' disposal='exchange'/>
-    </factory>
-</infrastructure>

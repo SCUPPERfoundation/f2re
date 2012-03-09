@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<fed2-map title='Totally Space' version='21' editor='standard'>
-
-   <location num='265' flags='sl'>
-      <name>Awesome Orbit</name>
-      <desc>You&apos;re orbiting a planet that even though you don&apos;t usually use the word, you can&apos;t help but mutter ... &apos;Awesome...&apos;</desc>
-   </location>
-
-</fed2-map>

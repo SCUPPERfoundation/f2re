@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<fed2-map title='Ender Space' version='2' editor='standard'>
-
-   <location num='130' flags='slp'>
-      <name>Ender Space</name>
-      <desc>As you enter Ender Space, a small fleet of warships greets you with an escort to Battle Station, former home of Ender Wiggin.  That is all you can see from this space and the warships prevent you from going anywhere else.</desc>
-   </location>
-
-</fed2-map>

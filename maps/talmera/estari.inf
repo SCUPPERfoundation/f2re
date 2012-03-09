@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Isella' economy='Agricultural' treasury='302545222' yard-markup='0' workers='1000' base='1000' registry='false'>
-  <build type='Canal' points='5'/>
-    <warehouse owner='Ruanek'>
-    </warehouse>
-
-</infrastructure>

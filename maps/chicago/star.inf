@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<star name='Chicago' cartel='Chicago' divert='yes'>
-
-   <black-list>
-      <exile name='Meteu'/>
-   </black-list>
-
-</star>

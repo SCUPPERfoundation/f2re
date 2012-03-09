@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Troublemaker' economy='Resource' treasury='-164402774' yard-markup='0' workers='1000' base='1000' slithy-xform='0' registry='false'>
-  <build type='Atmos' level='2' unused='13'/>
-  <build type='Pollution' level='2' unused='12'/>
-  <build type='School' level='2' unused='13'/>
-  <build type='Biodiversity' points='7'/>
-  <build type='Clinic' level='2' hospital='0' unused='8'/>
-  <build type='Police' points='7'/>
-</infrastructure>

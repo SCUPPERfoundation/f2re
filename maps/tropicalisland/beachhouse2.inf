@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Quanshee' economy='Agricultural' treasury='-17099568' yard-markup='-10' workers='1000' base='1000' registry='false'>
-  <build type='Canal' points='5'/>
-  <build type='School' unused='8'/>
-</infrastructure>

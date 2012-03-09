@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Nomad' economy='Biological' treasury='23052232' yard-markup='0' workers='1040' base='1000' slithy-xform='0' registry='false'>
-  <build type='Clinic' level='8' hospital='8' unused='0'/>
-  <build type='School' level='5' biolab='4'/>
-  <build type='Biolab' points='1'/>
-  <build type='Hospital' points='4'/>
-</infrastructure>

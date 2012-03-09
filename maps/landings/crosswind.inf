@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Bonzetti' economy='Agricultural' treasury='4142429' yard-markup='0' workers='100' base='100' slithy-xform='0' registry='false'>
-  <build type='School' agri='4'/>
-  <build type='Agri' points='1'/>
-  <build type='Canal' points='5'/>
-</infrastructure>

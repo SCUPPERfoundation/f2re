@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Aringer' economy='Biological' treasury='199622843' yard-markup='0' workers='1000' base='1000' registry='false'>
-  <build type='Clinic' level='8' hospital='0' unused='0'/>
-  <build type='School' level='5' biolab='4'/>
-  <build type='Biolab' points='1'/>
-</infrastructure>

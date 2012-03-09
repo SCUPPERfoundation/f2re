@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Liakell' economy='Biological' treasury='1840440' yard-markup='0' workers='200' base='1000' slithy-xform='0' registry='false'>
-  <build type='School' level='5' biolab='4'/>
-  <build type='Biolab' points='1'/>
-  <build type='Insurance' points='1'/>
-</infrastructure>

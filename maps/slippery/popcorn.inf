@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<infrastructure owner='Butters' economy='Agricultural' treasury='-52022061' yard-markup='0' workers='1000' base='1000' registry='false'>
-  <build type='School' agri='4' unused='1'/>
-  <build type='Canal' points='3'/>
-  <build type='Agri' points='1'/>
-    <warehouse owner='Oldfolx'>
-    </warehouse>
-
-</infrastructure>

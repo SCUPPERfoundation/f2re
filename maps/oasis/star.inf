@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<star name='Oasis' cartel='Chrysoberyl'>
-
-   <black-list>
-      <exile name='Nightwatch'/>
-      <exile name='Customs'/>
-   </black-list>
-
-</star>
