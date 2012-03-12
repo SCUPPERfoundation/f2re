@@ -21,7 +21,6 @@
 #include <db_cxx.h>
 #include <sys/dir.h>
 
-#include "ascii_dump_load.h"
 #include "db_player.h"
 #include "db_object.h"
 #include "fed_object.h"
@@ -35,6 +34,7 @@
 #include	"ship.h"
 #include "review.h"
 #include "tokens.h"
+#include "xml_dump_load.h"
 #include "xml_login.h"
 
 const  int	PlayerIndex::DISCARD = -1;
@@ -298,7 +298,7 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 
 void	PlayerIndex::DumpAccounts()
 {
-	AsciiDumpLoad	*dump_load = new AsciiDumpLoad;
+	XmlDumpLoad	*dump_load = new XmlDumpLoad;
 	std::ofstream dump_file("./data/avatars.xml");
 	dump_file << "<?xml version=\"1.0\"?>\n\n";
 	dump_file << "<player_db>\n";
