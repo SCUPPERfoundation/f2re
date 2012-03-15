@@ -70,9 +70,6 @@ void	Newbie::LostLine(int sd)
 	if(iter != desc_index.end())
 	{
 		Player	*rec = iter->second;
-		std::ostringstream	buffer("");
-		buffer << "BILL_AccLogout|" << rec->ib_account << "|" << PlayerIndex::DISCARD << "|" << std::endl;
-		Game::ipc->Send2Billing(buffer.str());
 		desc_index.erase(iter);
 		delete rec;
 	}

@@ -98,7 +98,6 @@ void	PlayerIndex::AccountOK(LoginRec *rec)
 		player->Address(rec->address);
 		current_index[player->Name()] = player;
 		desc_index[player->Socket()] = player;
-//		player->CreateBilling(rec->password);
 		player->StartUp(0);
 	}
 }
@@ -476,11 +475,7 @@ void	PlayerIndex::LogOff(Player *player)
 	player->Offline();
 	player->LogOff();
 	Save(player,PlayerIndex::WITH_OBJECTS);
-	buffer.str("");
-	buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
 	Game::ipc->ClearSocket(sd);
-//	player->ClearBilling();
 }
 
 void	PlayerIndex::LostLine(int sd)
@@ -506,10 +501,6 @@ void	PlayerIndex::LostLine(int sd)
 		player->Offline();
 		player->LogOff();
 		Save(player,PlayerIndex::WITH_OBJECTS);
-		buffer.str("");
-		buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
-		Game::ipc->Send2Billing(buffer.str());
-//		player->ClearBilling();
 	}
 }
 
@@ -525,7 +516,6 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	current_index[player->Name()] = player;
 	email_index.insert(std::make_pair(player->Email(),player));
 	desc_index[player->Socket()] = player;
-//	player->CreateBilling("");
 	std::ostringstream	buffer;
 	buffer << player->Name() << " has started playing Federation II.\n";
 	Game::review->Post(buffer);
@@ -774,9 +764,6 @@ void	PlayerIndex::Terminate(Player *player,std::string& name)
 
 	Game::ipc->ClearSocket(player->Socket());
 	std::ostringstream	buffer("");
-	buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
-	buffer.str("");
 	buffer << "SPYNET REPORT: " << name << " has left Federation DataSpace." << std::endl;
 	SpynetNotice(buffer.str());
 	XmlPlayerLeft(player);
@@ -1110,7 +1097,4 @@ bool	PlayerIndex::ProcessBillingLine(std::string& line)
 	}
 	return true;
 }
-
-
-
 
