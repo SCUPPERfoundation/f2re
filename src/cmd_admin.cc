@@ -434,7 +434,8 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	13:	Founder(player,tokens);					break;
 		case	14:	Indy(player,tokens);						break;
 		case	15:	Merchant(player,tokens);				break;
-		case	16:	player->DumpLedger();					break;
+		case	16:	player->Send("Not available\n");		break;
+//		case	16:	player->DumpLedger();					break;
 		case  17:	Zombie(player,tokens);					break;
 
 		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1));		break;

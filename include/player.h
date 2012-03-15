@@ -34,7 +34,6 @@ the class look somewhat inconsistent until I finish the refactoring. - AL */
 #include "loc_rec.h"
 #include "player_index.h"
 
-class Billing;
 class Business;
 class Cargo;
 class	Cartel;
@@ -187,9 +186,6 @@ protected:
 	int		sd;						// socket descriptor
 	std::string	ip_addr;				// ip address used for last/current login
 	std::string	input_buffer;		// for building player input
-
-	Billing	*billing;				// billing/account queries handler  /**************** soon to go *******************/
-
 	int	line_length;				// length of lines on player terminal
 	std::string	channel;				// comms channel tuned to
 
@@ -215,7 +211,6 @@ protected:
 	bool	XMLExamine(const std::string& other_name);
 
 	void	Adventurer2Merchant();
-	void	BillingReply(const std::string& line);
 	void	Captain2Adventurer();
 	void	ChangeShares(int amount);
 	void	ChangeStamina(int amount,bool add,bool current);
@@ -436,7 +431,6 @@ public:
 	void	ChangeTreasury(int amount);
 	void	Cheat();
 	void	CheckHolding(const std::string& co_name);
-	void	ClearBilling();
 	void	ClearGenFlag(int which)							{ flags.reset(which);	}
 	void	ClearLoan()											{ loan = 1L;				}
 	void	ClearLouie()										{ louie = 0;				}
@@ -456,7 +450,6 @@ public:
 	void	Conversation(const std::string& text)		{ conversation = text;		}
 	void	CoRevenueExpOnly(long amount);
 	void	CoRevenueIncOnly(long amount);
-	void	CreateBilling(const std::string& pwd);
 	void	CustomShip();
 	void	CustomsSearch();
 	void	DeadDead();
@@ -483,7 +476,6 @@ public:
 	void	Divorce();
 	void	DropOff();
 	void	Drop(const std::string& name);
-	void	DumpLedger();
 	void	Emote(const std::string& which,Player *recipient);
 	void	Engineer2Mogul();
 	void	ExtendSystemCabinet();

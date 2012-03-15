@@ -98,7 +98,7 @@ void	PlayerIndex::AccountOK(LoginRec *rec)
 		player->Address(rec->address);
 		current_index[player->Name()] = player;
 		desc_index[player->Socket()] = player;
-		player->CreateBilling(rec->password);
+//		player->CreateBilling(rec->password);
 		player->StartUp(0);
 	}
 }
@@ -480,7 +480,7 @@ void	PlayerIndex::LogOff(Player *player)
 	buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
 	Game::ipc->Send2Billing(buffer.str());
 	Game::ipc->ClearSocket(sd);
-	player->ClearBilling();
+//	player->ClearBilling();
 }
 
 void	PlayerIndex::LostLine(int sd)
@@ -509,7 +509,7 @@ void	PlayerIndex::LostLine(int sd)
 		buffer.str("");
 		buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
 		Game::ipc->Send2Billing(buffer.str());
-		player->ClearBilling();
+//		player->ClearBilling();
 	}
 }
 
@@ -525,7 +525,7 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	current_index[player->Name()] = player;
 	email_index.insert(std::make_pair(player->Email(),player));
 	desc_index[player->Socket()] = player;
-	player->CreateBilling("");
+//	player->CreateBilling("");
 	std::ostringstream	buffer;
 	buffer << player->Name() << " has started playing Federation II.\n";
 	Game::review->Post(buffer);

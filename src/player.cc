@@ -19,7 +19,6 @@
 
 #include <unistd.h>
 
-#include "billing.h"
 #include "business.h"
 #include "bus_register.h"
 #include "cargo.h"
@@ -473,11 +472,6 @@ void	Player::AllowBuilds(Player	*initiator)
 		buffer << "Planet builds now allowed for " << name << ".\n";
 	}
 	initiator->Send(buffer);
-}
-
-void	Player::BillingReply(const std::string& line)
-{
-	billing->ProcessReply(line);
 }
 
 void	Player::BlowKiss(Player *recipient)
@@ -1375,12 +1369,6 @@ void	Player::CheckHolding(const std::string& co_name)
 		company->CheckHolding(co_name);
 }
 
-void	Player::ClearBilling()
-{
-	delete billing;
-	billing = 0;
-}
-
 void	Player::ClearMood()
 {
 	mood = "";
@@ -1472,7 +1460,6 @@ void	Player::CommonSetUp()
 	loc.loc_no = 390;
 	loc.fed_map = 0;
 
-	billing = 0;
 	com_unit = 0;
 	ship_builder = 0;
 	job = pending = 0;
@@ -1592,11 +1579,6 @@ void	Player::CoRevenueIncOnly(long amount)
 {
 	if(company != 0)
 		company->RevenueIncomeOnly(amount);
-}
-
-void	Player::CreateBilling(const std::string& pwd)
-{
-	billing = new Billing(this,ib_account,pwd,sd);
 }
 
 DBPlayer	*Player::CreateDBRec()
@@ -2451,11 +2433,6 @@ void	Player::DropOff()
 		if((courier_pts % 100) == 0)
 			Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	}
-}
-
-void	Player::DumpLedger()
-{
-	billing->DumpLedger();
 }
 
 void	Player::Emote(const std::string& which,Player *recipient)
@@ -3557,13 +3534,7 @@ void	Player::Magnate2Plutocrat()
 		Send("You need 335 builds on your planet before you can promote!\n");
 		return;
 	}
-/*
-	if(loc.fed_map->IsOpen(this))
-	{
-		Send("Your star system must be open before you can promote to plutocrat!\n");
-		return;
-	}
-*/
+
 	if(Game::syndicate->NewCartel(this,loc.fed_map->HomeStarPtr()->Name()) == 0)
 	{
 		Send("I'm sorry, we can't set up a cartel for you at the moment :(\n");
@@ -4035,7 +4006,7 @@ void	Player::Ranks(const std::string& which)
 		Send("The top rank is plutocrat - you can't get any higher than that!\n");
 
 /*
-	if(promo < 9999)
+	if(promo <= 9999)
 	{
 		if(promo < PLUTOCRAT)
 			Send(Game::system->GetMessage("player","ranks",promo + 1));
@@ -4054,11 +4025,6 @@ void	Player::Read(std::string& text)
 		if((line[0] == '<') && ParseXML(line))
 			return;
 
-		if(line.find("BILL_") == 0)
-		{
-			BillingReply(line);
-			return;
-		}
 		if((CommsAPILevel() <= 0) && (line.find("pdate") != 1))
 		{
 			std::ostringstream	buffer("");
