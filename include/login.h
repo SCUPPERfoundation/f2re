@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -30,8 +30,8 @@ public:
 	
 	enum	
 	{ 
-		NAME, PASSWORD, CHECK_AC, NEW_AC_NAME, NEW_AC_PASSWORD, NEW_AC_PASSWORD2, 
-		NEW_AC_EMAIL, BILLING, NEW_AC_BILLING, XML_TEXT, NOT_VALID
+		NAME, PASSWORD, NEW_AC_NAME, NEW_AC_PASSWORD, NEW_AC_PASSWORD2,
+		NEW_AC_EMAIL, XML_TEXT, NOT_VALID
 	};
 
 private:
@@ -40,9 +40,7 @@ private:
 
 	LoginRec	*Find(int sd);
 
-	bool	ProcessAcCheck(int sd,std::string& text,LoginRec *rec);
 	bool	ProcessName(int sd,std::string& text,LoginRec *rec);
-	bool	ProcessNewAcBilling(int sd,std::string& text,LoginRec *rec);
 	bool	ProcessNewAcEMail(int sd,std::string& text,LoginRec *rec);
 	bool	ProcessNewAcName(int sd,std::string& text,LoginRec *rec);
 	bool	ProcessNewAcPwd(int sd,std::string& text,LoginRec *rec);

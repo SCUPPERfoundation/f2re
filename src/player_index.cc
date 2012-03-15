@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -35,7 +35,6 @@
 #include "review.h"
 #include "tokens.h"
 #include "xml_dump_load.h"
-#include "xml_login.h"
 
 const  int	PlayerIndex::DISCARD = -1;
 
@@ -51,13 +50,15 @@ PlayerIndex::PlayerIndex(char *file_name)
 	}
 
 	LoadIndices();
-	std::ostringstream	buffer("");
+	std::ostringstream	buffer;
 	buffer << "There are " << player_index.size() << " players in the database";
 	WriteLog(buffer);
-	DumpAccounts();		/*********** FIX IT: for test only **********/
+//	DumpAccounts();		/*********** FIX IT: for test only **********/
 	if(Game::load_billing_info != "")
 	{
-		WriteLog(Game::load_billing_info);
+		buffer.str("");
+		buffer << "Updating account information from '" << Game::load_billing_info << "'\n";
+		WriteLog(buffer);
 		UpdateBillingInfo(Game::load_billing_info);
 	}
 	login = new Login;
@@ -99,23 +100,6 @@ void	PlayerIndex::AccountOK(LoginRec *rec)
 		desc_index[player->Socket()] = player;
 		player->CreateBilling(rec->password);
 		player->StartUp(0);
-	}
-}
-
-void	PlayerIndex::AccountOK(XMLLoginRec *rec)
-{
-	static const std::string	start("<s-logged-in/>\n");
-
-	Player	*player = FindAccount(rec->id);
-	if(player != 0)
-	{
-		write(rec->sd,start.c_str(),start.length());
-		player->Socket(rec->sd);
-		player->Address(rec->address);
-		current_index[player->Name()] = player;
-		desc_index[player->Socket()] = player;
-		player->CreateBilling(rec->password);
-		player->StartUp(rec->api_level);
 	}
 }
 
@@ -1079,10 +1063,10 @@ void	PlayerIndex::UpdateBillingInfo(std::string& input_file)
 		if(ProcessBillingLine(*iter))
 			++total;
 	}
+	SaveAllPlayers(NO_OBJECTS);
 	std::ostringstream	buffer;
 	buffer << "A total of " << total << " records were updated";
 	WriteLog(buffer);
-	SaveAllPlayers(NO_OBJECTS);
 }
 
 bool	PlayerIndex::LoadInputFile(std::string& input_file,std::list<std::string>& billing_list)
