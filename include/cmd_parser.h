@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -146,7 +146,6 @@ private:
 	void	Teleport(Player *player,std::string& line);
 	void	Tell(Player *player,std::string& line);
 	void	TermWidth(Player *player);
-	void	Test(Player *player,std::string& line);
 	void	Unclip(Player *player);
 	void	UnDivert(Player *player);
 	void	UnGag(Player *player);

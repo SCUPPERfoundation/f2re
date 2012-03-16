@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<fed2-map title='Iberia Space' version='1.00' editor='standard'>
-
-   <location num='325' flags='sl'>
-      <name>Near the orbital platform Carlos V</name>
-      <desc>   A large, round metal and glass domed structure orbits the mostly blue planet of Alba II. This space-borne complex is the economic and technological base of the system. From here, it appears that the entire planet is covered in water, although some of its surface is obscured by large cloud formations. According to local legend, the planet was the end-result of a botched terraforming job, although how Albansire came to own it is anyone&apos;s guess. Frankly, this platform is the most likely place to keep technological infrastructure; there may be more dry land in orbit than on the entire planet. Along one side of the station is attractive script labelling it Carlos V.</desc>
-   </location>
-
-</fed2-map>

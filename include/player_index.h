@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -14,9 +14,9 @@
 #include <list>
 #include <map>
 #include <string>
+#include <utility>
 
 #include "ipc.h"
-
 
 class Db;
 class	Login;
@@ -28,6 +28,7 @@ class	XMLLoginRec;
 
 // NOTE: The player records are 'owned' by NameIndex, which handles deletions
 typedef	std::map<const std::string,Player *,std::less<const std::string> >	NameIndex;
+typedef	std::multimap<const std::string,Player *,std::less<const std::string> >	EmailIndex;
 typedef	std::map<int,Player *,std::less<int> >	DescIndex;
 typedef	std::list<Player *>	Reaper;
 
@@ -41,6 +42,7 @@ private:
 	NameIndex	player_index;			// all players in the DB keyed by name
 	NameIndex	account_index;			// all players in the DB keyed by account name
 	NameIndex	current_index;			// players in game keyed by name
+	EmailIndex	email_index;			// all players in the DB keyed by email (may be more than one)
 	DescIndex	desc_index;				// players in game keyed by socket descriptor
 	Reaper		reaper;					// list of player who have died in the last one second
 
@@ -56,6 +58,7 @@ private:
 
 	std::ofstream	graph_file;
 
+	void	DumpAccounts();
 	void	LoadIndices();
 	void	Terminate(Player *player,std::string& name);
 
@@ -65,8 +68,10 @@ public:
 
 	Player	*FindAccount(const std::string& name);	// Find in all players     - key = account name
 	Player	*FindCurrent(const std::string& name);	// Find in current players - key = name
-	Player	*FindCurrent(int desc);						// Find in current players - key = descriptor
+	Player	*FindCurrent(int desc);						// Find in current players - key = socket descriptor
 	Player	*FindName(const std::string& name);		// Find in all players     - key = name
+
+	std::pair<int,int>	NumberOutOfDate(int days = 365);
 
 	int	FindAllAlts(Player *player,const std::string& ip_address);
 	int	FindAlts(Player *player,const std::string& ip_address);
@@ -83,6 +88,8 @@ public:
 	void	Broadcast(Player *player,std::string mssg);
 	void	CallNightWatch(Player *player,Player *target);
 	void	Com(Player *player,std::string mssg);
+	void	DisplayAccount(Player *player,const std::string& id);
+	void	DisplaySameEmail(Player *player,const std::string& email);
 	void	DisplayStaff(Player *player,Tokens *tokens,const std::string& line);
 	void	DisplayShipOwners(Player *player,const std::string& regname);
 	void	GrimReaper();
@@ -99,7 +106,7 @@ public:
 	void	Qw(Player *player);
 	void	ReportSocketError(int sd,int error_number);
 	void	Save(Player *player,int which_bits);
-	void	SaveAllPlayers();
+	void	SaveAllPlayers(int which_bits = WITH_OBJECTS);
 	void	SaveTeleporterPlayers();
 	void	SendPlayerInfo(Player *player);
 	void	SpynetNotice(const std::string& text);
@@ -115,6 +122,12 @@ public:
 	void	XmlPlayerLeft(Player *player);
 	void	XmlPlayerStart(Player *player);
 	void	Zap(Player *player,Player *who_by);
+
+	// temporary stuff to merge old billing info with player record
+	static int MAX_BUFFER;
+	void	UpdateBillingInfo(std::string& input_file);
+	bool	LoadInputFile(std::string& input_file,std::list<std::string>& billing_list);
+	bool	ProcessBillingLine(std::string& line);
 };
 
 #endif

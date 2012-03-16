@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -34,7 +34,6 @@ the class look somewhat inconsistent until I finish the refactoring. - AL */
 #include "loc_rec.h"
 #include "player_index.h"
 
-class Billing;
 class Business;
 class Cargo;
 class	Cartel;
@@ -69,6 +68,7 @@ typedef std::list<FuturesContract *>	FuturesList;
 
 class Player
 {
+	friend bool	PlayerIndex::ProcessBillingLine(std::string& line);
 	friend bool PlayerIndex::ValidatePlayerRecord(Player *player);
 
 public:
@@ -136,15 +136,15 @@ public:
 	};																						// status of player
 
 protected:
-	std::string	name;					// name - size = 16
-	std::string ib_account;			// ibgames account name  - size = 24
-	char	password[MAX_PASSWD];	// MD5 hash of player's password - size = 16
-	std::string	email;				// E-mail address - size = 80
-	std::string	desc;					// description - size = 160
-	std::string	mood;					//	mood - size = 64
-	std::string	race;					// race (free form) - size = 16
-	int	gender;						// gender
-	int	strength[2];				// stats
+	std::string	name;										// name - size = 16
+	std::string ib_account;								// ibgames account name  - size = 24
+	unsigned char	password[MAX_PASSWD];			// MD5 hash of player's password - size = 16
+	std::string	email;									// max size = 80
+	std::string	desc;										// max size = 160
+	std::string	mood;										//	max size = 64
+	std::string	race;										// race (free form), max size = 16
+	int	gender;
+	int	strength[2];
 	int	stamina[2];
 	int	dexterity[2];
 	int	intelligence[2];
@@ -153,19 +153,19 @@ protected:
 	long	loan;
 	int	trader_pts;
 	int	courier_pts;
-	long	reward;						// reward on player's head
-	int	games;						// number of games played
-	int	killed;						// number of times killed
-	int	jobs_completed;			// jobs completed this session
-	int	starvation;					// count down from MAX_STARVE to reduce stamina by one
+	long	reward;											// reward on player's head
+	int	games;											// number of games played
+	int	killed;											// number of times killed
+	int	jobs_completed;								// jobs completed this session
+	int	starvation;										// count down from MAX_STARVE to reduce stamina by one
 
-	Inventory	*inventory;			// inventory objects
+	Inventory	*inventory;								// inventory objects
 	std::bitset<MAX_FLAGS>			flags;			// general purpose flags
 	std::bitset<MAX_TEMP_FLAGS>	temp_flags;		// temporary flags (not stored to disk)
 	std::bitset<MAX_MAN_FLAGS>		man_flags;		// management flags
 	std::bitset<MAX_STATUS>			status_flags;	// status of player
-	int	counters[MAX_COUNTERS];	// general purpose counters
-	time_t	timers[MAX_TIMERS];	// available for recording times (not saved)
+	int	counters[MAX_COUNTERS];						// general purpose counters
+	time_t	timers[MAX_TIMERS];						// available for recording elapsed times (not saved)
 
 	LocRec		loc;					// location details
 	int			last_loc;			// the location we were in prior to the current one
@@ -186,8 +186,6 @@ protected:
 	int		sd;						// socket descriptor
 	std::string	ip_addr;				// ip address used for last/current login
 	std::string	input_buffer;		// for building player input
-	Billing	*billing;				// billing/account queries handler
-
 	int	line_length;				// length of lines on player terminal
 	std::string	channel;				// comms channel tuned to
 
@@ -213,7 +211,6 @@ protected:
 	bool	XMLExamine(const std::string& other_name);
 
 	void	Adventurer2Merchant();
-	void	BillingReply(const std::string& line);
 	void	Captain2Adventurer();
 	void	ChangeShares(int amount);
 	void	ChangeStamina(int amount,bool add,bool current);
@@ -285,6 +282,7 @@ public:
 	const	std::string&	Channel()						{ return(channel);		}
 	const std::string&	CompanyName();
 	const	std::string&	Conversation()					{ return(conversation);	}
+	const std::string&	Email()							{ return email;			}
 	const std::string&	FullName();
 	const std::string&	IBAccount()						{ return(ib_account);	}
 	const std::string&	IPAddress()						{ return(ip_addr);		}
@@ -304,7 +302,6 @@ public:
 	long	PersonalRiot(int percentage);
 	long	Reward()												{ return(reward);			}
 
-	int	AccountStatus();
 	int	AddSlithy(int amount = 0);
 	int	AKJobs()												{ return(courier_pts);	}
 	int	CommsAPILevel()									{ return(comms_api_level);			}
@@ -339,6 +336,7 @@ public:
 	bool	CompanyFlagSet(int which);
 	bool	Die()													{ return(Death(false));	}
 	bool	DisplaySystemCabinetObject(const std::string& obj_name);
+
 	bool	Examine(const std::string& other_name);
 	bool	GenFlagIsSet(int which)							{ return(flags.test(which));				}
 	bool	HasAJob()											{ return(job != 0);		}
@@ -368,6 +366,7 @@ public:
 	bool	IsMarried();
 	bool	IsNavigator()										{ return(man_flags.test(NAV_FLAG));		}
 	bool	IsOnLandingPad();
+	bool	IsPassword(const std::string& pwd);
 	bool	IsPlanetOwner();
 	bool	IsStaff()											{ return(man_flags.any());					}
 	bool	IsTechie()											{ return(man_flags.test(TECHIE));		}
@@ -398,7 +397,6 @@ public:
 	void	AddBusiness(Business *the_business)			{ business = the_business;	}
 	void	Address(const std::string& addr)				{ ip_addr = addr;			}
 	void	AddWarehouse(const std::string&  where = "");
-	void	AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value);
 	void	AdminFlags(Player *player);
 	void	Akaturi();
 	void	AllowBuilds(Player	*initiator);
@@ -433,7 +431,6 @@ public:
 	void	ChangeTreasury(int amount);
 	void	Cheat();
 	void	CheckHolding(const std::string& co_name);
-	void	ClearBilling();
 	void	ClearGenFlag(int which)							{ flags.reset(which);	}
 	void	ClearLoan()											{ loan = 1L;				}
 	void	ClearLouie()										{ louie = 0;				}
@@ -453,7 +450,6 @@ public:
 	void	Conversation(const std::string& text)		{ conversation = text;		}
 	void	CoRevenueExpOnly(long amount);
 	void	CoRevenueIncOnly(long amount);
-	void	CreateBilling(const std::string& pwd);
 	void	CustomShip();
 	void	CustomsSearch();
 	void	DeadDead();
@@ -499,8 +495,6 @@ public:
 	void	Gag(bool status)									{ status ? flags.set(NO_COMMS) : flags.reset(NO_COMMS);	}
 	void	Gengineer2Magnate();
 	void	Get(FedObject	*object);
-	void	GetAccount(const std::string& whose_account);
-	void	GetAccountByEmail(const std::string& e_mail);
 	void	GetEMail();
 	void	Give(Player *recipient,int amount);
 	void	Give(Player *recipient,std::string& obj_name);
@@ -572,12 +566,11 @@ public:
 	void	SellShares(int amount,const std::string& co_name = "");
 	void	SellTreasury(int amount);
 	void	SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename);
-	void	SendEMail(const std::string& to,const std::string& reply_to,
-									const std::string& subject,const std::string& filename);
 	void	SendOrMail(std::ostringstream& text,const std::string& sender);
 	void	SendMailTo(std::ostringstream& text,const std::string& sender);
 	void	SendSound(const std::string& sound);
 	void	SetCP(int amount)									{ courier_pts = amount;		}
+	void	SetEmail(const std::string& new_email)		{ email = new_email;			}
 	void	SetEventTracking(bool turn_on);
 	void	SetFactoryOutput(int fact_num,const std::string& where);
 	void	SetFactoryStatus(int fact_num,const std::string& new_status);
@@ -612,23 +605,22 @@ public:
 	void	TermWidth(int size);
 	void	Time();
 	void	ToggleSpace()										{ flags.flip(SPACE); 		}
+	void	TransformSlithies();
 	void	UnIgnore(const std::string& who);
 	void	Unlock()												{ flags.reset(LOCKED);		}
 	void	UpdateCompanyTime();
 	void	UpdateEMail(const std::string& address);
 	void	UpdatePassword(const std::string& new_pw);
 	void	UpdateTradeCash(long amount)					{trade_cash += amount;		}
-	void	UpdateStatusCache();
 	void	UpgradeAirport();
 	void	UpgradeDepot();
 	void	UpgradeFactory(int number);
 	void	UpgradeStorage(int number);
 	void	ValidateJobsAK();
+	void	Version();
 	void	Void();
 	void	WantAnsi(bool setting);
 	void	Xfer2Treasury(int num_megs);
-	void	TransformSlithies();
-	void	Version();
 	void	XMLStats();
 	void	Xt(const std::string& msg);
 };

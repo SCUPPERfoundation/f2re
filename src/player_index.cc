@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -9,6 +9,7 @@
 
 #include "player_index.h"
 
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -33,7 +34,7 @@
 #include	"ship.h"
 #include "review.h"
 #include "tokens.h"
-#include "xml_login.h"
+#include "xml_dump_load.h"
 
 const  int	PlayerIndex::DISCARD = -1;
 
@@ -49,15 +50,23 @@ PlayerIndex::PlayerIndex(char *file_name)
 	}
 
 	LoadIndices();
-	std::ostringstream	buffer("");
+	std::ostringstream	buffer;
 	buffer << "There are " << player_index.size() << " players in the database";
+	WriteLog(buffer);
+//	DumpAccounts();		/*********** FIX IT: for test only **********/
+	if(Game::load_billing_info != "")
+	{
+		buffer.str("");
+		buffer << "Updating account information from '" << Game::load_billing_info << "'\n";
+		WriteLog(buffer);
+		UpdateBillingInfo(Game::load_billing_info);
+	}
 	login = new Login;
 	newbie = new Newbie;
 	max_players = 0;
 	min_players = 9999;
 	session_max = 0;
 	total_player_time = 0;
-	WriteLog(buffer);
 }
 
 
@@ -89,28 +98,8 @@ void	PlayerIndex::AccountOK(LoginRec *rec)
 		player->Address(rec->address);
 		current_index[player->Name()] = player;
 		desc_index[player->Socket()] = player;
-		player->CreateBilling(rec->password);
 		player->StartUp(0);
 	}
-}
-
-void	PlayerIndex::AccountOK(XMLLoginRec *rec)
-{
-	static const std::string	start("<s-logged-in/>\n");
-
-	Player	*player = FindAccount(rec->id);
-	if(player != 0)
-	{
-		write(rec->sd,start.c_str(),start.length());
-		player->Socket(rec->sd);
-		player->Address(rec->address);
-		current_index[player->Name()] = player;
-		desc_index[player->Socket()] = player;
-		player->CreateBilling(rec->password);
-		player->StartUp(rec->api_level);
-	}
-//	else
-//		newbie->NewPlayer(rec); /**************** fix asap ****************/
 }
 
 void	PlayerIndex::Broadcast(Player *player,std::string mssg)
@@ -181,6 +170,47 @@ void	PlayerIndex::Com(Player *player,std::string mssg)
 	}
 }
 
+void	PlayerIndex::DisplayAccount(Player *player,const std::string& id)
+{
+	std::ostringstream	buffer;
+	Player	*target = FindAccount(id);
+	if(target == 0)
+	{
+		buffer << "I can't find any details for an account called '" << id << "'\n";
+		player->Send(buffer);
+		return;
+	}
+
+	buffer << "Account details for " << id << ":\n";
+	buffer << "  Name:       " << target->Name() << "\n";
+	buffer << "  Email:      " << target->Email() << "\n";
+	buffer << "  Last on:    " << target->LastOn() << "\n";
+	buffer << "  IP Address: " << target->IPAddress() << "\n";
+	player->Send(buffer);
+}
+
+void	PlayerIndex::DisplaySameEmail(Player *player,const std::string& email)
+{
+	EmailIndex::iterator	iter, lower, upper;
+	lower = email_index.lower_bound(email);
+	upper = email_index.upper_bound(email);
+	std::ostringstream	buffer;
+	if(upper == lower)
+	{
+		buffer << "I can't find any players with the address " << email << "\n";
+		player->Send(buffer);
+		return;
+	}
+	buffer << "Players with the email address '" << email << "':\n";
+	player->Send(buffer);
+	for(iter = lower;iter != upper;++iter)
+	{
+		buffer.str("");
+		buffer << iter->second->Name() << "\n";
+		player->Send(buffer);
+	}
+}
+
 void	PlayerIndex::DisplayShipOwners(Player *player,const std::string& reg_name)
 {
 	int	total = 0;
@@ -247,6 +277,25 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 			buffer << "There aren't any other staff available!\n";
 		player->Send(buffer);
 	}
+}
+
+void	PlayerIndex::DumpAccounts()
+{
+	XmlDumpLoad	*dump_load = new XmlDumpLoad;
+	std::ofstream dump_file("./data/avatars.xml");
+	dump_file << "<?xml version=\"1.0\"?>\n\n";
+	dump_file << "<player_db>\n";
+	int total = 0;
+	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();++iter)
+	{
+		if(dump_load->DumpOneAccount(iter->second, dump_file))
+			++total;
+	}
+	dump_file << "</player_db>\n";
+	std::ostringstream buffer;
+	buffer << "A total total of " << total << " accounts were dumped to ~fed/data/avatars.xml.";
+	WriteLog(buffer);
+	delete dump_load;
 }
 
 // Find in all players - key = account name
@@ -373,10 +422,6 @@ void	PlayerIndex::LoadIndices()
 	Dbt	*data = new Dbt;
 	DBPlayer	rec;
 	Player	*player;
-/*
-	WriteLog("Founders not in game for over three months");
-	static time_t	now = std::time(0);
-*/
 	while(dbc->get(key,data,DB_NEXT) != DB_NOTFOUND)
 	{
 		std::memcpy(&rec,data->get_data(),data->get_size());
@@ -387,20 +432,12 @@ void	PlayerIndex::LoadIndices()
 		{
 			player_index[player->Name()] = player;
 			account_index[player->IBAccount()] = player;
-/*
-			if((player->Rank() > Player::FOUNDER) &&
-							((now - player->LastTimeOn()) > static_cast<time_t>(2592000u * 3)))	// 3 months
-				WriteLog(player->Name());
-*/
+			email_index.insert(std::make_pair(player->Email(),player));
 		}
 		else
 			delete player;
 	}
 	dbc->close();
-	
-	
-	
-	
 }
 
 void	PlayerIndex::LoadInventoryObjects()
@@ -433,17 +470,12 @@ void	PlayerIndex::LogOff(Player *player)
 	XmlPlayerLeft(player);
 	Ship *ship = player->GetShip();
 	if((ship != 0) && (ship->HasCargo()))
-//	if(player->HasCargo())
 		player->Send(Game::system->GetMessage("playerindex","logoff",2));
 	player->Send(Game::system->GetMessage("playerindex","logoff",1));
 	player->Offline();
 	player->LogOff();
 	Save(player,PlayerIndex::WITH_OBJECTS);
-	buffer.str("");
-	buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
 	Game::ipc->ClearSocket(sd);
-	player->ClearBilling();
 }
 
 void	PlayerIndex::LostLine(int sd)
@@ -469,10 +501,6 @@ void	PlayerIndex::LostLine(int sd)
 		player->Offline();
 		player->LogOff();
 		Save(player,PlayerIndex::WITH_OBJECTS);
-		buffer.str("");
-		buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
-		Game::ipc->Send2Billing(buffer.str());
-		player->ClearBilling();
 	}
 }
 
@@ -486,8 +514,8 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	player_index[player->Name()] = player;
 	account_index[player->IBAccount()] = player;
 	current_index[player->Name()] = player;
+	email_index.insert(std::make_pair(player->Email(),player));
 	desc_index[player->Socket()] = player;
-	player->CreateBilling("");
 	std::ostringstream	buffer;
 	buffer << player->Name() << " has started playing Federation II.\n";
 	Game::review->Post(buffer);
@@ -515,6 +543,23 @@ int	PlayerIndex::NumberOfPlayersAtRank(int rank)
 			total++;
 	}
 	return(total);
+}
+
+std::pair<int,int> PlayerIndex::NumberOutOfDate(int days)
+{
+	std::time_t now = std::time(0);
+	std::time_t then = now - (days * 24 * 60 * 60);
+	int	out_of_date = 0;
+	int	total = 0;
+	std::time_t value;
+	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
+	{
+		value = iter->second->LastTimeOn();
+		if(value < then)
+			++out_of_date;
+		++total;
+	}
+	return(std::make_pair(out_of_date,total));
 }
 
 bool	PlayerIndex::ProcessBilling(std::string& input_text)
@@ -548,7 +593,6 @@ bool	PlayerIndex::ProcessInput(int sd,std::string& text)
 	return(true);
 }
 
-// ******************** refactor the promote functions ********************
 void	PlayerIndex::PromotePlayers()
 {
 	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
@@ -629,15 +673,21 @@ void	PlayerIndex::Save(Player *player,int which_bits)
 	delete rec;
 }
 
-void	PlayerIndex::SaveAllPlayers()
+void	PlayerIndex::SaveAllPlayers(int which_bits)
 {
+	int total = 0;
+	std::ostringstream	buffer;
 	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
 	{
-		Save(iter->second,WITH_OBJECTS);
-		std::ostringstream	buffer;
+		Save(iter->second,which_bits);
+		buffer.str("");
 		buffer << "Saved " << iter->second->Name() << " to disk";
 		WriteLog(buffer);
+		++total;
 	}
+	buffer.str("");
+	buffer << "Saved " << total << "records to disk";
+	WriteLog(buffer);
 }
 
 void	PlayerIndex::SaveTeleporterPlayers()
@@ -714,9 +764,6 @@ void	PlayerIndex::Terminate(Player *player,std::string& name)
 
 	Game::ipc->ClearSocket(player->Socket());
 	std::ostringstream	buffer("");
-	buffer << "BILL_AccLogout|" << player->IBAccount() << "|" << DISCARD << "|" << std::endl;
-	Game::ipc->Send2Billing(buffer.str());
-	buffer.str("");
 	buffer << "SPYNET REPORT: " << name << " has left Federation DataSpace." << std::endl;
 	SpynetNotice(buffer.str());
 	XmlPlayerLeft(player);
@@ -979,4 +1026,75 @@ void	PlayerIndex::Zap(Player *player,Player *who_by)
 	delete player;
 }
 
+
+
+// temporary stuff to merge old billing info with player record
+
+int PlayerIndex::MAX_BUFFER = 256;
+
+void	PlayerIndex::UpdateBillingInfo(std::string& input_file)
+{
+	std::list<std::string>	billing_list;
+	std::list<std::string>::iterator	iter;
+	int	total = 0;
+
+	WriteLog("Starting merge of billing info into player records.");
+	if(!LoadInputFile(input_file,billing_list))
+	{
+		WriteLog("Unable to open billing info file.");
+		return;
+	}
+
+	for(iter = billing_list.begin();iter != billing_list.end();++iter)
+	{
+		if(ProcessBillingLine(*iter))
+			++total;
+	}
+	SaveAllPlayers(NO_OBJECTS);
+	std::ostringstream	buffer;
+	buffer << "A total of " << total << " records were updated";
+	WriteLog(buffer);
+}
+
+bool	PlayerIndex::LoadInputFile(std::string& input_file,std::list<std::string>& billing_list)
+{
+	std::ifstream	file(input_file.c_str());
+	if(!file)
+		return false;
+
+	char	buffer[MAX_BUFFER];
+	while(!file.eof())
+	{
+		file.getline(buffer,MAX_BUFFER);
+		billing_list.push_back(buffer);
+	}
+	return true;
+}
+
+bool	PlayerIndex::ProcessBillingLine(std::string& line)
+{
+	char	buffer[MAX_BUFFER];
+	std::memset(buffer,0,MAX_BUFFER);
+	std::strncpy(buffer,line.c_str(),MAX_BUFFER);
+	std::string account_name(std::strtok(buffer,","));
+	Player	*player = FindAccount(account_name);
+	if(player == 0)
+		return false;
+
+	player->SetEmail(std::strtok(0,","));
+
+	std::ostringstream	log_buffer;
+	log_buffer << player->IBAccount() << ":" << player->Name() << ":" << player->Email();
+	WriteLog(log_buffer);
+
+	int counter = 0;
+	char	*hash;
+	while((hash = std::strtok(0," ")) != 0)
+	{
+		log_buffer << hash;
+		player->password[counter] = static_cast<char>(std::strtol(hash,0,16)); // hash is a two hex digit string
+		++counter;
+	}
+	return true;
+}
 

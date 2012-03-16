@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<fed2-map title='Confidential Space' version='1.00' editor='standard'>
-
-   <location num='329' flags='slp'>
-      <name>Top Secret Space</name>
-      <desc>This area of Universe belongs to someone... but you do not know who. That information is classified. Your sensors tell you that you have entered &quot;TOP SECRET Space.&quot; You see the planet on your viewscreen.</desc>
-   </location>
-
-</fed2-map>

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-9
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -39,7 +39,7 @@ int			IPC::ticks = 0;
 
 IPC::IPC(const char *server)
 {
-	port = billing_port = -1;
+//	port = billing_port = -1;
 
 	// open listen socket...
 	if((ld = socket(AF_INET,SOCK_STREAM,0)) < 0)
@@ -97,70 +97,12 @@ IPC::IPC(const char *server)
 	error[0] = input[0] = '\0';
 	for(int count = 0;count < (Game::MAX_PLAYERS + 100);input_ticks[count++] = 0)
 		;
-	OpenBillingLink();
-
 }
 
 IPC::~IPC()
 {
-	// shut down billing & listening sockets
-	// player sockets should already be shut down
-	shutdown(bd,2);
-	close(bd);
 	shutdown(ld,2);
 	close(ld);
-}
-
-
-void	IPC::BillingLogOn()
-{
-	static const std::string	b_error("Unknown text from billing server");
-	static const char	*logon = "BILL_Login|fed2d|Highway61|\n";
-
-	char	buffer[BUFFER_SIZE];
-	int	index = 0;
-	for(int count = 0;count < 100;count++);
-	{
-		while(read(bd,&buffer[index],1) == 1)
-		{
-			if(index >= (BUFFER_SIZE - 1))
-			{
-				std::cerr << "Unknown text from billing server" << std::endl;
-				shutdown(ld,SHUT_RDWR);
-				close(ld);
-				shutdown(bd,SHUT_RDWR);
-				close(bd);
-				std::exit(EXIT_FAILURE);
-			}
-
-			if(buffer[index] == '\n')
-			{
-				buffer[index] = '\0';
-				if(std::strcmp("BILL_OK|",buffer) == 0)
-				{
-					int flags = fcntl(bd,F_GETFD);
-					fcntl(bd,F_SETFD,flags | FD_CLOEXEC);
-					flags = fcntl(bd,F_GETFL,0);
-					fcntl(bd,F_SETFL,flags | O_NONBLOCK);
-					FD_SET(bd,&descs);
-					if(bd > last)
-						last = bd;
-					std::ostringstream	mssg;
-					mssg << "Logged in to billing server at port " << billing_port;
-					WriteLog(mssg);
-					return;
-				}
-
-				if(std::strcmp("BILL_Start|",buffer) == 0)
-				{
-					write(bd,logon,std::strlen(logon));
-					index = 0;
-					continue;	// while(...)
-				}
-			}
-			index++;
-		}
-	}
 }
 
 void	IPC::ClearSocket(int sd)
@@ -209,11 +151,9 @@ void	IPC::GetInput()
 		FD_ZERO(&readfds);
 		for(int count = 0; count <= (last + 1);count++)
 		{
-//			if(FD_ISSET(count,&descs) && (ticks > (input_ticks[count] + 2)))
 			if(FD_ISSET(count,&descs) && (ticks != input_ticks[count]))
 				FD_SET(count,&readfds);
 		}
-		FD_SET(bd,&readfds);
 		FD_SET(ld,&readfds);
 
 		sigprocmask(SIG_UNBLOCK,&set,0);		// allow signals only while in select()
@@ -292,95 +232,10 @@ void	IPC::GetInput()
 	}
 }
 
-void	IPC::OpenBillingLink()
-{
-	static const std::string	error_mssg("Incorrect data in billing.dat. Should be in the format 'full host name:port number'");
-
-	// where is the billing server?
-	char	file_name[MAXNAMLEN +1];
-	std::snprintf(file_name,MAXNAMLEN +1,"%s/data/billing.dat",HomeDir());
-	std::ifstream	file(file_name,std::ios::in);
-	if(!file)
-	{
-		std::cerr << "Unable to open 'data/billing.dat" << std::endl;
-		shutdown(ld,SHUT_RDWR);
-		close(ld);
-		std::exit(EXIT_FAILURE);
-	}
-
-	char	buffer[BUFFER_SIZE];
-	file.getline(buffer,BUFFER_SIZE);
-	char	*token = std::strtok(buffer,":");
-	if(token == 0)
-	{
-		std::cerr << error_mssg << std::endl;
-		shutdown(ld,SHUT_RDWR);
-		close(ld);
-		std::exit(EXIT_FAILURE);
-	}
-	char host_name[80];
-	std::strncpy(host_name,token,80);
-	host_name[79] = '\0';
-	if((token = std::strtok(0,":\n")) == 0)
-	{
-		std::cerr << error_mssg << std::endl;
-		shutdown(ld,SHUT_RDWR);
-		close(ld);
-		std::exit(EXIT_FAILURE);
-	}
-	int	port_number = std::atoi(token);
-	file.close();
-
-	// ...now we are ready to open a connection to it...
-	hostent		*hptr;
-	sockaddr_in	sin;
-
-	sin.sin_family = AF_INET;
-	sin.sin_port = htons((u_short)port_number);
-
-	// ...map the host name to the address...
-	if((hptr = gethostbyname(host_name)) == 0)
-	{
-		std::cerr << "Can't find the host name given by billing.dat" << std::endl;
-		shutdown(ld,SHUT_RDWR);
-		close(ld);
-		std::exit(EXIT_FAILURE);
-	}
-	std::memcpy((char *)&sin.sin_addr,hptr->h_addr,hptr->h_length);
-
-	// ...open the socket...
-	if((bd = socket(AF_INET,SOCK_STREAM,0)) < 0)
-	{
-		std::cerr << "Can't open a socket to billing" << std::endl;
-		shutdown(ld,SHUT_RDWR);
-		close(ld);
-		std::exit(EXIT_FAILURE);
-	}
-
-	//	...and connect to billing server!
-	if(connect(bd,(sockaddr *)&sin,sizeof(sin)) < 0)
-	{
-		std::cerr << "Error connecting socket to billing - errno is " << errno << std::endl;
-		shutdown(ld,SHUT_RDWR);
-		close(ld);
-		shutdown(bd,SHUT_RDWR);
-		close(bd);
-		std::exit(EXIT_FAILURE);
-	}
-
-	billing_port = port_number;
-	BillingLogOn();
-
-}
-
 void	IPC::Read(int sd)
 {
 	int	read_type, count = 0;
-	if(sd == bd)
-		read_type = BILLING;
-	else
-		read_type = READ;
-
+	read_type = READ;
 	input_ticks[sd] = ticks;
 
 	// read in the first char and make sure the line hasn't been dropped
@@ -442,18 +297,5 @@ void	IPC::Read(int sd)
 	std::cerr << "Oversized line received" << std::endl;
 	input[BUFFER_SIZE -1] = '\0';
 	std::cerr << input;
-}
-
-void	IPC::Send2Billing(const std::string& text)
-{
-	char	buffer[BUFFER_SIZE];
-	std::strncpy(buffer,text.c_str(),BUFFER_SIZE);
-	buffer[BUFFER_SIZE -1] = '\0';
-	Send2Billing(buffer);
-}
-
-void	IPC::Send2Billing(const char *text)
-{
-	write(bd,text,std::strlen(text));
 }
 

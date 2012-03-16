@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-9
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -25,7 +25,7 @@
 #include "fed.h"
 
 
-int	main()
+int	main(int argc, char *argv[])
 {
 	sigset_t	sig_set;
 
@@ -105,6 +105,19 @@ int	main()
 	setrlimit(RLIMIT_NOFILE,&info);
 
 	std::srand(std::time(0));
+
+	if(argc > 1)
+	{
+		int	opt;
+		while((opt = getopt(argc, argv, "l:")) != -1)
+		{
+			switch(opt)
+			{
+				case 'l':	Game::load_billing_info = optarg;	break;
+			}
+		}
+	}
+
 	Game::fed = new Fed;
 	Game::fed->Run();
 

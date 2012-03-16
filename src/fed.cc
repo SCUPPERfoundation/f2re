@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-	Copyright (c) Alan Lenton & Interactive Broadcasting 2003-2011
+	Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.05";
+const std::string	Fed::version = "1.89.06";
 
 
 Fed::Fed()

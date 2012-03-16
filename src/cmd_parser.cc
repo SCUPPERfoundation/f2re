@@ -1,5 +1,5 @@
- /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+/*-----------------------------------------------------------------------
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -16,11 +16,11 @@
 #include <cctype>
 #include <climits>
 #include <cstdlib>
+#include <ctime>
 
 #include <signal.h>
 #include <unistd.h>
 
-#include "admin.h"
 #include "assign.h"
 #include "build_planet.h"
 #include	"business.h"
@@ -29,6 +29,7 @@
 #include "cartel.h"
 #include "change.h"
 #include "channel_man.h"
+#include "cmd_admin.h"
 #include "cmd_build.h"
 #include "cmd_expropriate.h"
 #include "cmd_give.h"
@@ -2491,8 +2492,8 @@ void	CmdParser::WhoIs(Player *player,std::string& line)
 		{
 			if((tokens->Get(1) == "email") && (tokens->Size() >= 3))
 			{
-				std::string	e_mail(tokens->GetRestOfLine(line,2,Tokens::RAW));
-				player->GetAccountByEmail(e_mail);
+				std::string	email(tokens->GetRestOfLine(line,2,Tokens::RAW));
+				Game::player_index->DisplaySameEmail(player,email);
 			}
 			else
 			{
@@ -2593,11 +2594,4 @@ void	CmdParser::Zap(Player *player)
 	}
 }
 
-
-void	CmdParser::Test(Player *player,std::string& line)
-{
-	std::ostringstream	buffer;
-	buffer << tokens->Get(1) << "= " << Game::commodities->Commod2Type(tokens->Get(1)) << "\n";
-	player->Send(buffer);
-}
 

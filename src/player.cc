@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -19,7 +19,6 @@
 
 #include <unistd.h>
 
-#include "billing.h"
 #include "business.h"
 #include "bus_register.h"
 #include "cargo.h"
@@ -49,6 +48,7 @@
 #include "login.h"
 #include "louie.h"
 #include "mail.h"
+#include "md5.h"
 #include "misc.h"
 #include "navcomp.h"
 #include "player_index.h"
@@ -122,7 +122,7 @@ const std::string	Player::rank_str[][MAX_RANK + 1] =
 
 Player::Player()
 {
-	name = ib_account= desc = mood = race = "";
+	name = ib_account= desc = mood = race = email = "";
 	gender = FEMALE;
 	strength[CURRENT] = strength[MAXIMUM] = 0;
 	stamina[CURRENT] = stamina[MAXIMUM] = 0;
@@ -147,6 +147,8 @@ Player::Player()
 Player::Player(LoginRec	*rec)
 {
 	ib_account = rec->name;
+	std::memcpy(password,rec->digest,MAX_PASSWD);
+	email = rec->email;
 	name = mood = desc = "";
 	race = "human";
 	gender = FEMALE;
@@ -307,11 +309,6 @@ void	Player::AcceptPendingJobOffer()
 	Send("You accept the pending job\n");
 }
 
-int	Player::AccountStatus()
-{
-	return(billing->AccountStatus());
-}
-
 void	Player::Act(std::string& text,bool possessive)
 {
 	std::ostringstream	buffer("");
@@ -390,16 +387,6 @@ void	Player::AddWarehouse(const std::string&  where)
 	}
 
 	warehouse_list.push_back(located);
-}
-
-void	Player::AdminChange(const std::string& which,const std::string& ib_name,const std::string& new_value)
-{
-	static const std::string	error("Can't find anyone with that account name!\n");
-	Player *target = Game::player_index->FindAccount(ib_name);
-	if(target == 0)
-		Send(error);
-	else
-		billing->AdminChange(which,ib_name,new_value);
 }
 
 void	Player::AdminFlags(Player *player)
@@ -485,11 +472,6 @@ void	Player::AllowBuilds(Player	*initiator)
 		buffer << "Planet builds now allowed for " << name << ".\n";
 	}
 	initiator->Send(buffer);
-}
-
-void	Player::BillingReply(const std::string& line)
-{
-	billing->ProcessReply(line);
 }
 
 void	Player::BlowKiss(Player *recipient)
@@ -950,6 +932,63 @@ bool	Player::CanStartIPO()
 	return(true);
 }
 
+bool	Player::CantPayCustomsDues(Star *star)
+{
+	static std::string	no_cash("You don't have any money in your treasury to cover the customs dues!\n");
+
+	if(ship == 0)
+	{
+		Send("Unable to find your ship - please report problem to ibgames\n");
+		return true ;
+	}
+
+	if(!ship->HasCargo())
+		return false;
+
+	Cartel *cartel = Game::syndicate->Find(star->CartelName());
+	if((cartel == 0) || cartel->IsMember(loc.star_name))
+		return false;
+
+	if(Rank() >= FOUNDER)
+	{
+		FedMap	*fed_map = Game::galaxy->GetPrimaryPlanet(this);
+		if((fed_map != 0) && (fed_map->Balance() <= 0L))
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+
+	if(Rank() == MANUFACTURER)
+	{
+		Company *company = GetCompany();
+		if((company != 0) && (company->Cash() <= 0L))
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+
+	if(Rank() == INDUSTRIALIST)
+	{
+		Business	*business = GetBusiness();
+		if((business != 0) && (business->Cash() <= 0L))
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+	if(Rank() < INDUSTRIALIST)
+	{
+		if(cash <= 0L)
+		{
+			Send(no_cash);
+			return true;
+		}
+	}
+	return false;
+}
+
 bool	Player::CanUnload()
 {
 	if((loc.map_name == job->to) && (loc.fed_map->IsACourier(loc.loc_no)))
@@ -1330,12 +1369,6 @@ void	Player::CheckHolding(const std::string& co_name)
 		company->CheckHolding(co_name);
 }
 
-void	Player::ClearBilling()
-{
-	delete billing;
-	billing = 0;
-}
-
 void	Player::ClearMood()
 {
 	mood = "";
@@ -1427,7 +1460,6 @@ void	Player::CommonSetUp()
 	loc.loc_no = 390;
 	loc.fed_map = 0;
 
-	billing = 0;
 	com_unit = 0;
 	ship_builder = 0;
 	job = pending = 0;
@@ -1549,11 +1581,6 @@ void	Player::CoRevenueIncOnly(long amount)
 		company->RevenueIncomeOnly(amount);
 }
 
-void	Player::CreateBilling(const std::string& pwd)
-{
-	billing = new Billing(this,ib_account,pwd,sd);
-}
-
 DBPlayer	*Player::CreateDBRec()
 {
 	DBPlayer	*rec = new DBPlayer;
@@ -1561,7 +1588,7 @@ DBPlayer	*Player::CreateDBRec()
 
 	std::strcpy(rec->name,name.c_str());
 	std::strcpy(rec->ib_account,ib_account.c_str());
-	std::memcpy(password,rec->password,MAX_PASSWD);
+	std::memcpy(rec->password,password,MAX_PASSWD);
 	std::strcpy(rec->email,email.c_str());
 	std::strcpy(rec->desc,desc.c_str());
 	std::strcpy(rec->race,race.c_str());
@@ -1593,7 +1620,6 @@ DBPlayer	*Player::CreateDBRec()
 		rec->counters[count] = counters[count];
 	rec->slithy_xform = 0;
 
-//	std::time(&(rec->last_on));
 	rec->last_on = last_on;
 	rec->last_payment = 0;
 	std::strcpy(rec->ip_address,ip_addr.c_str());
@@ -2770,19 +2796,12 @@ void	Player::Get(FedObject	*object)
 	}
 }
 
-void	Player::GetAccount(const std::string& whose_account)
-{
-	billing->GetAccount(whose_account);
-}
-
-void	Player::GetAccountByEmail(const std::string& e_mail)
-{
-	billing->GetAccountByEmail(e_mail);
-}
-
 void	Player::GetEMail()
 {
-	billing->GetEMail();
+	std::ostringstream	buffer("");
+	buffer << "Your registered email address is " << email << "\n";
+	buffer << "To change it use the command 'update email password new_address', where 'password' is your password.\n";
+	Send(buffer);
 }
 
 Inventory	*Player::GetInventory()
@@ -3231,6 +3250,32 @@ bool	Player::IsOnLandingPad()
 	return(loc.fed_map->IsALandingPad(loc.loc_no));
 }
 
+bool	Player::IsPassword(const std::string& pwd)
+{
+	int len = pwd.length();
+	char *pw = new char[len +1];
+	std::strcpy(pw,pwd.c_str());
+
+	MD5 test;
+	test.update((unsigned char *)pw, len);
+	test.finalize();
+	unsigned char *test_digest = test.raw_digest();
+
+	bool ret_val = true;
+	for ( int iLoop = 0; iLoop < MAX_PASSWD; iLoop++ )
+	{
+//		std::fprintf(stderr,"password = %02X, test = %02X\n",(unsigned char)password[iLoop],(unsigned char)test_digest[iLoop]);
+		if ((unsigned char)password[iLoop] != (unsigned char)test_digest[iLoop])
+		{
+			ret_val = false;
+			break;
+		}
+	}
+	delete [] test_digest;	// md5 code transfers ownership to caller (ugh!)
+	delete [] pw;
+	return ret_val;
+}
+
 bool	Player::IsPlanetOwner()
 {
 	return(CurrentMap()->IsOwner(this));
@@ -3494,13 +3539,7 @@ void	Player::Magnate2Plutocrat()
 		Send("You need 335 builds on your planet before you can promote!\n");
 		return;
 	}
-/*
-	if(loc.fed_map->IsOpen(this))
-	{
-		Send("Your star system must be open before you can promote to plutocrat!\n");
-		return;
-	}
-*/
+
 	if(Game::syndicate->NewCartel(this,loc.fed_map->HomeStarPtr()->Name()) == 0)
 	{
 		Send("I'm sorry, we can't set up a cartel for you at the moment :(\n");
@@ -3972,7 +4011,7 @@ void	Player::Ranks(const std::string& which)
 		Send("The top rank is plutocrat - you can't get any higher than that!\n");
 
 /*
-	if(promo < 9999)
+	if(promo <= 9999)
 	{
 		if(promo < PLUTOCRAT)
 			Send(Game::system->GetMessage("player","ranks",promo + 1));
@@ -3991,11 +4030,6 @@ void	Player::Read(std::string& text)
 		if((line[0] == '<') && ParseXML(line))
 			return;
 
-		if(line.find("BILL_") == 0)
-		{
-			BillingReply(line);
-			return;
-		}
 		if((CommsAPILevel() <= 0) && (line.find("pdate") != 1))
 		{
 			std::ostringstream	buffer("");
@@ -4661,19 +4695,12 @@ bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
 	else
 		return(false);
 }
-
-void	Player::SendEMail(const std::string& to,const std::string& reply_to,
-								const std::string& subject,const std::string& filename)
-{
-	std::ostringstream	buffer("");
-	buffer << "/bin/mail -s " << subject << " " << to << " < " << filename << " &";
-	WriteErrLog(buffer.str());
-	std::system(buffer.str().c_str());
-}
-
 void	Player::SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename)
 {
-	billing->SendEMail(reply_to,subject,filename);
+	std::ostringstream	buffer("");
+	buffer << "/bin/mail -s " << subject << " " << email << " < " << filename << " &";
+	WriteErrLog(buffer.str());
+	std::system(buffer.str().c_str());
 }
 
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
@@ -4988,6 +5015,7 @@ void	Player::SpynetReport(Player *player)
 		}
 		else
 		{
+
 			if(elapsed > ONE_DAY)
 			{
 				time_t	num_days = (time(0) - last_on)/(ONE_DAY);
@@ -5725,9 +5753,15 @@ void	Player::UpdateCompanyTime()
 void	Player::UpdateEMail(const std::string& new_email)
 {
 	if((new_email.find('@') == std::string::npos) || (new_email.find('.') == std::string::npos))
+	{
 		Send("That is not a valid e-mail address!\n");
-	else
-		billing->UpdateEMail(new_email);
+		return;
+	}
+	email = new_email;
+	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
+	std::ostringstream	buffer;
+	buffer << "Your registered email address has been changed to: " << email << "\n";
+	Send(buffer);
 }
 
 void	Player::UpdatePassword(const std::string& new_pw)
@@ -5747,12 +5781,17 @@ void	Player::UpdatePassword(const std::string& new_pw)
 			return;
 		}
 	}
- 	billing->UpdatePassword(new_pw);
-}
 
-void	Player::UpdateStatusCache()
-{
-	billing->UpdateStatusCache();
+	char *pw = new char[len +1];
+	std::strcpy(pw,new_pw.c_str());
+
+	MD5 new_password;
+	new_password.update((unsigned char *)pw, len);
+	new_password.finalize();
+	unsigned char *pw_digest = new_password.raw_digest();
+	std::memcpy(password,pw_digest,MAX_PASSWD);
+	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
+	Send("Your password has been updated.\n");
 }
 
 void	Player::UpgradeAirport()
@@ -6455,65 +6494,6 @@ void	Player::Xt(const std::string& msg)
 		buffer << "Your comm unit relays a message from " << name << ", \"" << msg << "\"\n";
 		Game::channel_manager->Send(this,channel,buffer.str());
 	}
-}
-
-
-
-bool	Player::CantPayCustomsDues(Star *star)
-{
-	static std::string	no_cash("You don't have any money in your treasury to cover the customs dues!\n");
-
-	if(ship == 0)
-	{
-		Send("Unable to find your ship - please report problem to ibgames\n");
-		return true ;
-	}
-
-	if(!ship->HasCargo())
-		return false;
-
-	Cartel *cartel = Game::syndicate->Find(star->CartelName());
-	if((cartel == 0) || cartel->IsMember(loc.star_name))
-		return false;
-
-	if(Rank() >= FOUNDER)
-	{
-		FedMap	*fed_map = Game::galaxy->GetPrimaryPlanet(this);
-		if((fed_map != 0) && (fed_map->Balance() <= 0L))
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-
-	if(Rank() == MANUFACTURER)
-	{
-		Company *company = GetCompany();
-		if((company != 0) && (company->Cash() <= 0L))
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-
-	if(Rank() == INDUSTRIALIST)
-	{
-		Business	*business = GetBusiness();
-		if((business != 0) && (business->Cash() <= 0L))
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-	if(Rank() < INDUSTRIALIST)
-	{
-		if(cash <= 0L)
-		{
-			Send(no_cash);
-			return true;
-		}
-	}
-	return false;
 }
 
 

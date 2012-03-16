@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-9
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -48,6 +48,7 @@
 namespace Game
 {
 	sig_atomic_t				wrap_up = 0;
+	std::string					load_billing_info = "";
 
 	BusinessRegister			*business_register = 0;
 	ChannelManager				*channel_manager = 0;
@@ -62,7 +63,7 @@ namespace Game
 	FedMap						*system = 0;
 	Forbidden					*forbidden = 0;
 	Galaxy						*galaxy = 0;
-	GlobalPlayerVarsTable	*global_player_vars_table = 0;;
+	GlobalPlayerVarsTable	*global_player_vars_table = 0;
 	IPC							*ipc = 0;
 	Syndicate					*syndicate = 0;
 	NavComp						*nav_comp = 0;
@@ -235,8 +236,6 @@ bool	IPCCallBack(int status,int sd,char *text)
 									return(ret_status);
 		case IPC::LOST:		Game::player_index->LostLine(sd);
 									return(true);
-		case IPC::BILLING:	ret_status = Game::player_index->ProcessBilling(input_text);
-									return(ret_status);
 	}
 	return(true);
 }

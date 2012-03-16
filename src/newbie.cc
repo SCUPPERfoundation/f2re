@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -70,9 +70,6 @@ void	Newbie::LostLine(int sd)
 	if(iter != desc_index.end())
 	{
 		Player	*rec = iter->second;
-		std::ostringstream	buffer("");
-		buffer << "BILL_AccLogout|" << rec->ib_account << "|" << PlayerIndex::DISCARD << "|" << std::endl;
-		Game::ipc->Send2Billing(buffer.str());
 		desc_index.erase(iter);
 		delete rec;
 	}
@@ -84,8 +81,7 @@ int	Newbie::NewPlayer(LoginRec *rec)
 	static const std::string	subject("\"Welcome to Federation 2\"");
 	static const std::string	filename("welcome.dat");
 
-	std::string	start(
-"\n\nWelcome to Federation II dataspace. Please provide a name for your \
+	std::string	start("\n\nWelcome to Federation II dataspace. Please provide a name for your \
 character. (Minimum 3, maximum 15 letters):\n");
 
 	Player	*player = new Player(rec);
@@ -94,17 +90,15 @@ character. (Minimum 3, maximum 15 letters):\n");
 
 	std::ostringstream	buffer("");
 	buffer << HomeDir() << "/data/" << filename;
-	player->SendEMail(rec->email,reply_to,subject,buffer.str());
+	player->SendEMail(reply_to,subject,buffer.str());
 
 	return(Player::START);
 }
 
 bool	Newbie::ProcessAccept(int sd,std::string& text,Player *player)
 {
-	std::string	start(
-"\n\nPlease provide a name for your character. (Mimimum 3, maximum 15 letters):\n");
-	std::string name_in_use(
-"\n\nI'm sorry that name is not available. Please try again with a different name.\n");
+	std::string	start("\n\nPlease provide a name for your character. (Mimimum 3, maximum 15 letters):\n");
+	std::string name_in_use("\n\nI'm sorry that name is not available. Please try again with a different name.\n");
 
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
@@ -182,8 +176,7 @@ bool	Newbie::ProcessDexterity(int sd,std::string& text,Player *player)
 
 bool	Newbie::ProcessGender(int sd,std::string& text,Player *player)
 {
-	std::string	stats(
-"\n\nYour character has four stats - strength, stamina, dexterity and \
+	std::string	stats("\n\nYour character has four stats - strength, stamina, dexterity and \
 intelligence. You have 140 stat points to distribute between the four \
 stats. You can either opt to distribute them equally between the stats \
 (35 points to each) or you can choose how to distribute them yourself.\n\
@@ -230,12 +223,9 @@ bool	Newbie::ProcessInput(int sd,std::string& text)
 
 bool	Newbie::ProcessName(int sd,std::string& text,Player *player)
 {
-	std::string	race(
-"\n\nPlease choose the race of your character. For example, human, cyborg, \
-vulcan, droid, grue, or any other type that you care to invent. \
-(Minimum 4, maximum 15 letters):\n");
-	std::string	wrong(
-"\n\nThe name for your character must be not more than 15 letters or less \
+	std::string	race("\n\nPlease choose the race of your character. For example, human, cyborg, \
+vulcan, droid, grue, or any other type that you care to invent. (Minimum 4, maximum 15 letters):\n");
+	std::string	wrong("\n\nThe name for your character must be not more than 15 letters and less \
 than three. Please enter a name:\n");
 
 	std::string	line;
@@ -280,8 +270,8 @@ than three. Please enter a name:\n");
 bool	Newbie::ProcessRace(int sd,std::string& text,Player *player)
 {
 	std::string	gender("\n\nPlease choose the gender of your character. [male/female/neuter]:\n");
-	std::string	wrong(
-"\n\nThe race for your character must be not more than 15 letters or less than four. Please enter a race:\n");
+	std::string	wrong("\n\nThe race for your character must be not more than 15 letters or less \
+than four. Please enter a race:\n");
 
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
@@ -339,8 +329,7 @@ bool	Newbie::ProcessStamina(int sd,std::string& text,Player *player)
 
 bool	Newbie::ProcessStats(int sd,std::string& text,Player *player)
 {
-	std::string	strength(
-"\n\nYou have 140 stat points available. How many points do you want to \
+	std::string	strength("\n\nYou have 140 stat points available. How many points do you want to \
 allocate to strength? (Minimum 20, maximum 70):\n");
 	
 	std::string	line;
