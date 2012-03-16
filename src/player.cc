@@ -2435,11 +2435,6 @@ void	Player::DropOff()
 	}
 }
 
-void	Player::DumpLedger()
-{
-	billing->DumpLedger();
-}
-
 void	Player::Emote(const std::string& which,Player *recipient)
 {
 	const int MAX_ADJ = 15;
