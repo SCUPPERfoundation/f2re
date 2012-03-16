@@ -384,11 +384,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 	{
 		"report", "change", "set", "clear", "save", "display", 		//  0- 5
 		"delete", "add", "nomatch", "help", "promote", "whoelse",	//	 6-11
-<<<<<<< HEAD:src/admin.cc
-		"alter", "founder", "indy", "merchant", "dump",					//	12-15
-=======
 		"alter", "founder", "indy", "merchant", "dump",	"zombie",	//	12-17
->>>>>>> add_accounts:src/cmd_admin.cc
 		""
 	};
 
@@ -438,14 +434,8 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	13:	Founder(player,tokens);					break;
 		case	14:	Indy(player,tokens);						break;
 		case	15:	Merchant(player,tokens);				break;
-<<<<<<< HEAD:src/admin.cc
-		case	16:	player->DumpLedger();					break;
-=======
 		case	16:	player->Send("Not available\n");		break;
-//		case	16:	player->DumpLedger();					break;
 		case  17:	Zombie(player,tokens);					break;
-
->>>>>>> add_accounts:src/cmd_admin.cc
 		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1));		break;
 	}
 }
