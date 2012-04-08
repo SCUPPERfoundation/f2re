@@ -58,7 +58,6 @@ private:
 
 	std::ofstream	graph_file;
 
-	void	DumpAccounts();
 	void	LoadIndices();
 	void	Terminate(Player *player,std::string& name);
 
@@ -92,6 +91,7 @@ public:
 	void	DisplaySameEmail(Player *player,const std::string& email);
 	void	DisplayStaff(Player *player,Tokens *tokens,const std::string& line);
 	void	DisplayShipOwners(Player *player,const std::string& regname);
+	void	DumpAccounts(const std::string& file_name);
 	void	GrimReaper();
 	void	InitMapPointers();
 	void	JobInfo(std::string mssg);

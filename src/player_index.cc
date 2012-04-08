@@ -279,10 +279,10 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 	}
 }
 
-void	PlayerIndex::DumpAccounts()
+void	PlayerIndex::DumpAccounts(const std::string& file_name)
 {
 	XmlDumpLoad	*dump_load = new XmlDumpLoad;
-	std::ofstream dump_file("./data/avatars.xml");
+	std::ofstream dump_file(file_name.c_str());
 	dump_file << "<?xml version=\"1.0\"?>\n\n";
 	dump_file << "<player_db>\n";
 	int total = 0;

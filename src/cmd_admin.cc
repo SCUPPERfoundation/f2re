@@ -339,6 +339,7 @@ void	Admin::Help(Player *player)
 		"   ADMIN SET flag player\n",
 		"      flags are: nav, alpha, host, techie, manager, sponsor, \n",
 		"   ADMIN WHOELSE player\n",
+		"   ADMIN XMLDUMP filename (NOTE: For Alan's use only!)\n",
 		"   ADMIN ZOMBIE number_of_days\n",
 
 		"Whois commands:\n",
@@ -385,6 +386,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		"report", "change", "set", "clear", "save", "display", 		//  0- 5
 		"delete", "add", "nomatch", "help", "promote", "whoelse",	//	 6-11
 		"alter", "founder", "indy", "merchant", "dump",	"zombie",	//	12-17
+		"xmldump",
 		""
 	};
 
@@ -436,6 +438,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	15:	Merchant(player,tokens);				break;
 		case	16:	player->Send("Not available\n");		break;
 		case  17:	Zombie(player,tokens);					break;
+		case  18:	Game::player_index->DumpAccounts(tokens->Get(2));						break;
 		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1));		break;
 	}
 }

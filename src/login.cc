@@ -302,7 +302,7 @@ bool	Login::ProcessNotValid(int sd,std::string& text,LoginRec *rec)
 bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 {
 	const std::string	locked_out("\nYou are locked out of the game. Please contact feedback@ibgames.com.\n");
-	const std::string	in_game("\nYour account is already playing Federation 2.\n");
+	const std::string	in_game("\nYou are trying to log on twice with the same account!\n");
 	const std::string	wrong("\nYour account name or password is wrong. Would you like to set up a new account? [yes/no]:\n");
 
 	std::string	line;
@@ -338,17 +338,24 @@ bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 					LostLine(sd);
 					Game::ipc->ClearSocket(sd);
 				}
-				if(Game::player_index->FindCurrent(player->Name()) != 0)
+				else
 				{
-					write(sd,in_game.c_str(),in_game.length());
-					LostLine(sd);
-					Game::ipc->ClearSocket(sd);
+					Player	*in_game_player = Game::player_index->FindCurrent(player->Name());
+					if(in_game_player != 0)	// double login!
+					{
+						in_game_player->Send(in_game);	// log off already in game player...
+						Game::player_index->LogOff(in_game_player);
+
+						LostLine(sd);							// ...and delete attempted login
+						Game::ipc->ClearSocket(sd);
+
+					}
+					else
+						Game::player_index->AccountOK(rec);
 				}
 
-				Game::player_index->AccountOK(rec);
-				LoginIndex::iterator iter = login_index.find(rec->sd);
-
 				// clean up whatever happened
+				LoginIndex::iterator iter = login_index.find(rec->sd);
 				if(iter != login_index.end())
 				{
 					LoginRec	*rec = iter->second;
