@@ -13,6 +13,8 @@
 
 #include <cstdlib>
 
+#include "business.h"
+#include "bus_register.h"
 #include "commodities.h"
 #include "company.h"
 #include "comp_register.h"
@@ -79,11 +81,11 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 {
 	static const std::string	not_owner("You don't own this planet!\n");
 	static const std::string	not_number("You haven't given a factory number...\n");
-	static const std::string	no_name("You haven't given a company name!\n");
+	static const std::string	no_name("You haven't given a company or business name!\n");
 	static const std::string	no_factory("I can't find the factory you specified.\n");
 	static const std::string	no_company("I can't find the company you specified.\n");
 	static const std::string	no_owner("I can't find the company owner.\n");
-	static const std::string	no_commod("I can't find the commodity being produced.\n");
+//	static const std::string	no_commod("I can't find the commodity being produced.\n");
 	static const std::string	is_owner("You can't expropriate your own factories!.\n");
 
 	if(!player->CurrentMap()->IsOwner(player))	{ player->Send(not_owner);		return;	}	
@@ -96,14 +98,48 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 	if(factory == 0)										{ player->Send(no_factory);	return;	}
 
 	Company	*company = Game::company_register->Find(factory->Owner());
-	if(company == 0)										{ player->Send(no_company);	return;	}
-	Player	*owner = company->CEO();		
-	if(owner == 0)											{ player->Send(no_owner);		return;	}
-	if(player == owner)									{ player->Send(is_owner);		return;	}
+	Player	*owner = 0;
+	std::string	company_name;
+	if(company == 0)	// see if it belongs to a business instead of a company
+	{
+		Business	*business = Game::business_register->Find(factory->Owner());
+		if(business == 0)
+		{
+			player->Send(no_company);
+			return;
+		}
+		owner = business->CEO();
+		if(owner == 0)
+		{
+			player->Send(no_owner);
+			return;
+		}
+		if(player == owner)
+		{
+			player->Send(is_owner);
+			return;
+		}
+		business->DeleteFactory(std::atoi(tokens->Get(2).c_str()));
+		company_name = business->Name();
+	}
+	else
+	{
+		owner = company->CEO();
+		if(owner == 0)
+		{
+			player->Send(no_owner);
+			return;
+		}
+		if(player == owner)
+		{
+			player->Send(is_owner);
+			return;
+		}
+		company->DeleteFactory(std::atoi(tokens->Get(2).c_str()));
+		company_name = company->Name();
+	}
 
-	company->DeleteFactory(std::atoi(tokens->Get(2).c_str()));
 
-	std::string	company_name = company->Name();
 	std::ostringstream	buffer;
 	buffer << "You have expropriated ";
  	if(company_name[company_name.length() - 1] == 's')

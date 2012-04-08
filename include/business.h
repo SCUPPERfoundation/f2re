@@ -122,7 +122,6 @@ private:
 	void	DecodeSharePricesString(const std::string& text);
 	void	DeleteBid(int number);
 	void	DeleteDepot(FedMap *where);
-	void	DeleteFactory(int number);
 	void	DisplayBids() const;
 	void	DisplayDepots() const;
 	void	DisplayFactories() const;
@@ -165,6 +164,7 @@ public:
 	void	BuyFactory(const std::string& where,const Commodity *commodity);
 	void	CleanUpAssets();
 	void	CleanUpShareholdings();
+	void	DeleteFactory(int number);
 	void	Display();
 	void	DisplayDepot(const std::string& d_name);
 	void	DisplayFactory(int number);

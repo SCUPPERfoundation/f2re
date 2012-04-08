@@ -57,7 +57,7 @@ void NoMatch::ClearFailures()
 	entries_file.close();
 
 	buffer.str("");
-	buffer << "cat " << file_name << " | /bin/mail -s \"Fed2 Notices\" feedback@ibgames.com &";
+	buffer << "cat " << file_name << " | /bin/mail -s \"Fed2 Notices\" fi.ibgames@gmail.com &";
 	system(buffer.str().c_str());
 }
 
