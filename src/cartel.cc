@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -254,7 +254,7 @@ void	Cartel::BuildGravingDock(Player *player)
 	player->Send(buffer);
 }
 
-bool	ChangeCash(long amount)
+bool	Cartel::ChangeCash(long amount)
 {
 	if(cash < 2000000000L)
 	{
@@ -797,3 +797,4 @@ void	Cartel::StopCityProduction(Player *player,const std::string& city_name,int 
 
 	city->StopProduction(player,slot_num);
 }
+
