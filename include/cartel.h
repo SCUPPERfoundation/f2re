@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -78,6 +78,7 @@ public:
 	int	RemoveMember(const std::string& mem_name);
 	int	RemoveRequest(const std::string& mem_name);
 
+	bool	ChangeCash(long amount);
 	bool	CityInUse(const std::string& system_title,const std::string& city_name = "");
 	bool	Expel(const std::string& sys_name);
 	bool	HasAGravingDock()									{ return(dock != 0);	}
@@ -95,7 +96,6 @@ public:
 	void	BuildGravingDock(Player *player);
 	void	CheckCommodityPrices(Player *player,const std::string& commod_name,bool send_intro = false);
 	void	ChangeEntranceFee(int new_fee)				{ entrance_fee = new_fee;	}
-	void	ChangeCash(long amount)							{ cash += amount;				}
 	void	CreateJobs();
 	void	Customs(int new_percent)						{ customs = new_percent;	}
 	void	Display(Player *player);

@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -145,7 +145,7 @@ void	Cartel::AssessDuty(Player *player)
 	long	amount_due = ship->AssessCustomsDuty(customs);
 	if(amount_due == 0L)
 		return;
-	cash += amount_due;
+	ChangeCash(amount_due);
 
 	std::ostringstream	buffer;
 	buffer << "Customs duties totalling " << amount_due << " are due on your cargo. ";
@@ -214,7 +214,7 @@ void	Cartel::BuildCity(Player *player,const std::string& city_name)
 				player->Send("The cartel doesn't have enough cash available to start building a new city!\n");
 			else
 			{
-				cash -= build_rec->cost;
+				ChangeCash(-build_rec->cost);
 				dock->BuildCity(player,this,city_name);
 			}
 		}
@@ -245,12 +245,24 @@ void	Cartel::BuildGravingDock(Player *player)
 		player->Send("You receive a stroppy note from the bank manager refusing to extend your overdraft!\n");
 		return;
 	}
-	cash -= GravingInfo::cost;
+
+	ChangeCash(-GravingInfo::cost);
 	dock = new GravingDock(name);
 	std::ostringstream	buffer;
 	buffer << "You provide a " << GravingInfo::cost << "ig line of credit to cover the wages and other overheads. ";
 	buffer << "Now all you need to do is to ensure a steady supply of raw materials to the builders...\n";
 	player->Send(buffer);
+}
+
+bool	ChangeCash(long amount)
+{
+	if(cash < 2000000000L)
+	{
+		cash += amount;
+		return true;
+	}
+	else
+		return false;
 }
 
 void	Cartel::CheckCommodityPrices(Player *player,const std::string& commod_name,bool send_intro)
@@ -760,8 +772,14 @@ void	Cartel::XferFunds(Player *player,long num_megs)
 		player->Send("You don't have that much money in your bank account!\n");
 		return;
 	}
-	cash += amount;
-	player->Send("Your cartel finance officer notifies you that the funds have been successfully transfered.\n");
+
+	if(ChangeCash(amount))
+		player->Send("Your cartel finance officer notifies you that the funds have been successfully transfered.\n");
+	else
+	{
+		player->Send("Your cartel finance officer notifies you that the transfer has been blocked by the galactic administration.\n");
+		player->ChangeCash(amount);
+	}
 }
 
 void	Cartel::StopCityProduction(Player *player,const std::string& city_name,int slot_num)
@@ -779,6 +797,3 @@ void	Cartel::StopCityProduction(Player *player,const std::string& city_name,int 
 
 	city->StopProduction(player,slot_num);
 }
-
-
-
