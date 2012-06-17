@@ -147,11 +147,11 @@ void	Inventory::Clip(Player *player,const std::string& obj_name)
 
 void	Inventory::CreateDBRec(DBPlayer *rec)
 {
-	rec->inv_flags = inv_flags.to_ulong();
-	rec->customs_cert = customs_cert;
-	rec->price_check_sub = price_check_sub;
-	rec->keyring = keyring.to_ulong();
-	rec->tp_rental = tp_rental;
+	rec->inv_flags = static_cast<unsigned int>(inv_flags.to_ulong());
+	rec->customs_cert = static_cast<unsigned int>(customs_cert);
+	rec->price_check_sub = static_cast<unsigned int>(price_check_sub);
+	rec->keyring = static_cast<unsigned int>(keyring.to_ulong());
+	rec->tp_rental = static_cast<unsigned int>(tp_rental);
 }
 
 void	Inventory::DestroyInventory(const std::string& map_title)

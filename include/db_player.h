@@ -42,29 +42,29 @@ struct DBPlayer
 	int	dexterity[2];
 	int	intelligence[2];
 	int	rank;
-	long	cash;
-	long	loan;
+	int	cash;
+	int	loan;
 	int	trader_pts;
 	int	courier_pts;
-	long	reward;
+	int	reward;
 	int	games;
 	int	killed;
 
-	unsigned long	inv_flags;
-	unsigned long	flags;
-	unsigned long	man_flags;
-	unsigned long	status_flags;
-	unsigned long	ship_flags;
-	unsigned long	medallions;
-	time_t	customs_cert;
-	unsigned long	keyring;
-	time_t	price_check_sub;
+	unsigned int	inv_flags;
+	unsigned int	flags;
+	unsigned int	man_flags;
+	unsigned int	status_flags;
+	unsigned int	ship_flags;
+	unsigned int	medallions;	// no longer in use
+	unsigned int	customs_cert;
+	unsigned int	keyring;
+	unsigned int	price_check_sub;
 	int		wearing;
 	int		slithy_xform;
 	int		counters[Player::MAX_COUNTERS];
 	
-	time_t	last_on;
-	time_t	last_payment;
+	unsigned int	last_on;
+	unsigned int	last_payment;
 	char		ip_address[INET6_ADDRSTRLEN];
 	int		line_length;
 
@@ -76,10 +76,10 @@ struct DBPlayer
 		DbTask	task;
 	};	
 	
-	time_t	start;
+	unsigned int	start;	// no longer in use
 	int		gifts;
 	char		spouse[Player::NAME_SIZE];
-	time_t	tp_rental;
+	unsigned int	tp_rental;
 	char		password[Player::MAX_PASSWD];
 	char		email[Player::MAX_EMAIL];
 	char		spare[304];

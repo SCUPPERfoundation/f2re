@@ -1611,16 +1611,16 @@ DBPlayer	*Player::CreateDBRec()
 	rec->killed = killed;
 
 	inventory->CreateDBRec(rec);
-	rec->flags = flags.to_ulong();
-	rec->man_flags = man_flags.to_ulong();
+	rec->flags = static_cast<unsigned int>(flags.to_ulong());
+	rec->man_flags = static_cast<unsigned int>(man_flags.to_ulong());
 	std::bitset<MAX_STATUS>	temp_status = status_flags;
 	temp_status.reset(BUY_SHIP);
-	rec->status_flags = temp_status.to_ulong();
+	rec->status_flags = static_cast<unsigned int>(temp_status.to_ulong());
 	for(int count = 0;count < MAX_COUNTERS;count++)
 		rec->counters[count] = counters[count];
 	rec->slithy_xform = 0;
 
-	rec->last_on = last_on;
+	rec->last_on = static_cast<unsigned int>(last_on);
 	rec->last_payment = 0;
 	std::strcpy(rec->ip_address,ip_addr.c_str());
 	std::strcpy(rec->loc.star_name,loc.star_name.c_str());

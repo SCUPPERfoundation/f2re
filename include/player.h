@@ -149,11 +149,11 @@ protected:
 	int	dexterity[2];
 	int	intelligence[2];
 	int	rank;
-	long	cash;
-	long	loan;
+	int	cash;
+	int	loan;
 	int	trader_pts;
 	int	courier_pts;
-	long	reward;											// reward on player's head
+	int	reward;											// reward on player's head
 	int	games;											// number of games played
 	int	killed;											// number of times killed
 	int	jobs_completed;								// jobs completed this session

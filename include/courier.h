@@ -19,7 +19,7 @@ struct Task
 	std::string	delivery_map;		// delivery location details
 	int			delivery_loc;
 	int			pkg_index;			// index into parcel details
-	long			payment;				// value of task
+	int			payment;				// value of task
 	bool			collected;			// true = collected and awaiting delivery
 };
 
@@ -30,7 +30,7 @@ struct DbTask
 	char	delivery_map[24];
 	int	delivery_loc;
 	int	pkg_index;					// can be Courier::NO_TASK
-	long	payment;
+	int	payment;
 	bool	collected;
 };
 

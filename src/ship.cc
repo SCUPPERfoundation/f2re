@@ -305,7 +305,7 @@ void	Ship::CreateRec(DBPlayer *pl_rec)
 	rec->cur_hold += manifest.size() * CommodityExchItem::CARGO_SIZE;
 	if(rec->cur_hold > rec->max_hold)
 		rec->cur_hold = rec->max_hold;
-	pl_rec->ship_flags = flags.to_ulong();
+	pl_rec->ship_flags = static_cast<unsigned int>(flags.to_ulong());
 }
 
 void	Ship::DisplayObjects(Player *player)
