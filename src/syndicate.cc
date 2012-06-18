@@ -243,10 +243,16 @@ planet to make the joining bonus/fee transfer.\n");
 		new_cartel_owner->Send("This isn't your cartel!\n");
 		return(false);
 	}
+
 	int status = cartel->ProcessRequest(system_name,Cartel::ACCEPT);
 	if(status == Cartel::NOT_FOUND)
 	{
 		new_cartel_owner->Send("I can't find that system in the list of pending requests!\n");
+		return(false);
+	}
+	if(status == Cartel::ALREADY_MEMBER)
+	{
+		new_cartel_owner->Send("That system is already a member of your Cartel!\n");
 		return(false);
 	}
 
