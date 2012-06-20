@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-9
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -1506,6 +1506,9 @@ void	Infrastructure::Weathermen()
 
 void	Infrastructure::Write(std::ofstream& file)
 {
+std::ostringstream buffer;
+buffer << "  " << home->Name();
+WriteErrLog(buffer.str());
 	file << "<?xml version=\"1.0\"?>\n";
 	file << "<infrastructure owner='" << owner_name << "' economy='";
 	file << econ_names[economy] << "' treasury='" << treasury << "' yard-markup='";
@@ -1520,15 +1523,19 @@ void	Infrastructure::Write(std::ofstream& file)
 	if(slithy_xform >= 0)
 		file << " slithy-xform='" << slithy_xform << "'";
 	file << " registry=" << (flags.test(REGISTRY) ? "'true'" : "'false'") << ">\n";
-
+WriteErrLog("    Name line written");
 	for(EnhanceList::iterator iter = enhancements.begin();iter != enhancements.end();iter++)
 		(*iter)->Write(file);
+WriteErrLog("    Enhance list written");
 	for(WarehouseList::iterator iter = warehouse_list.begin();iter != warehouse_list.end();iter++)
 		iter->second->Write(file);
+WriteErrLog("    Warehouse list written");
 	for(DepotList::iterator iter = depot_list.begin();iter != depot_list.end();iter++)
 		iter->second->Write(file);
+WriteErrLog("    Depot list written");
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->Write(file);
+WriteErrLog("    Factory list written");
 	file << "</infrastructure>" << std::endl;
 }
 

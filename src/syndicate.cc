@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-9
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -292,11 +292,13 @@ planet to make the joining bonus/fee transfer.\n");
 		new_cartel_owner->Send(buffer);
 
 		buffer.str("");
-		buffer << system_name << " has joined the " << cartel->Name() << " cartel!\n";
+		buffer << system_name << " has joined the " << cartel->Name() << " cartel!";
+		WriteLog(buffer);
+		buffer << "\n";
 		Game::review->Post(buffer);
 
 		return(true);
-	}
+ 	}
 	else
 	{
 		new_cartel_owner->Send("Sorry I can't seem to find a current owner for that system!\n");
