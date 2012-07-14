@@ -47,7 +47,7 @@ bool	CompanyRegister::CanUpdate()
 		std::time_t	then;
 		std::time_t	now = std::time(0);
 		file >> then;
-		if((now - then) < (60 * 60 * 24 - 600))	// 24 hrs less 10 min
+		if((now - then) < (60 * 60 * 23))	// 23 hrs
 			return(false);
 	}
 	return(true);
