@@ -1523,19 +1523,15 @@ WriteErrLog(buffer.str());
 	if(slithy_xform >= 0)
 		file << " slithy-xform='" << slithy_xform << "'";
 	file << " registry=" << (flags.test(REGISTRY) ? "'true'" : "'false'") << ">\n";
-WriteErrLog("    Name line written");
 	for(EnhanceList::iterator iter = enhancements.begin();iter != enhancements.end();iter++)
 		(*iter)->Write(file);
-WriteErrLog("    Enhance list written");
 	for(WarehouseList::iterator iter = warehouse_list.begin();iter != warehouse_list.end();iter++)
 		iter->second->Write(file);
-WriteErrLog("    Warehouse list written");
 	for(DepotList::iterator iter = depot_list.begin();iter != depot_list.end();iter++)
 		iter->second->Write(file);
-WriteErrLog("    Depot list written");
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->Write(file);
-WriteErrLog("    Factory list written");
+WriteErrLog("    Infra written");
 	file << "</infrastructure>" << std::endl;
 }
 

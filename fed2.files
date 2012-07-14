@@ -429,3 +429,5 @@ src/warehouse.cc
 src/work.cc
 src/xml_dump_load.cc
 src/xml_parser.cc
+include/role_money_sink.h
+include/role_money_source.h

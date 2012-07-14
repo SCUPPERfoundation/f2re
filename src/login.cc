@@ -38,6 +38,7 @@ Login::~Login()
 
 LoginRec	*Login::Find(int sd)
 {
+WriteErrLog("Find()");
 	LoginIndex::iterator	iter =  login_index.find(sd);
 	if(iter != login_index.end())
 		return(iter->second);
@@ -47,17 +48,19 @@ LoginRec	*Login::Find(int sd)
 
 void	Login::LostLine(int sd)
 {
+WriteErrLog("LostLine()");
 	LoginIndex::iterator iter = login_index.find(sd);
 	if(iter != login_index.end())
 	{
 		LoginRec	*rec = iter->second;
 		login_index.erase(iter);
-		delete rec;
+		delete rec;  ////////-------------------------------------------------------------
 	}
 }
 
 bool Login::ProcessInput(int sd,std::string& text)
 {
+WriteErrLog("ProcessInput()");
 	LoginRec	*rec = Find(sd);
 	if(rec == 0)
 	{
@@ -90,6 +93,7 @@ bool Login::ProcessInput(int sd,std::string& text)
 
 bool	Login::ProcessName(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("ProcessName()");
 	const std::string	ac_name_req("\nPlease supply a name for your account (Min 5, max 23 characters, letters and numbers only):\n");
 	const std::string	password_req("Password:\n");
 
@@ -114,6 +118,7 @@ bool	Login::ProcessName(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNewAcEMail(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("ProcessNewAcMail()");
 	const std::string	wrong("\nYou must give a valid e-mail address. Please try again.\nE-mail Address:\n");
 	const std::string	confirming("\nAccount set up. Please wait while we start up your Federation II character.\n");
 	const std::string	sorry("Sorry someone took that name while you were completing the details. Please try again.\n");
@@ -163,6 +168,7 @@ bool	Login::ProcessNewAcEMail(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNewAcName(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("ProcessNewAcName()");
 	const std::string	ac_pwd_req("\nPlease supply a password for your new account. (Min 8, max 15 letters):\n");
 	const std::string	wrong("\nYour account name must be between 5 and 23 characters long, letters and/or numbers only. Please try again. Account name:\n");
 	const std::string	in_use("\nThat account name is already in use. Please try again. Account name:\n");
@@ -207,6 +213,7 @@ bool	Login::ProcessNewAcName(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNewAcPwd(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("ProcessNewAcPwd()");
 	const std::string	confirm("\nPlease confirm password:\n");
 	const std::string	wrong("\nYour password must be between 8 and 15 characters long. Please try again.\nPassword:\n");
 
@@ -230,6 +237,7 @@ bool	Login::ProcessNewAcPwd(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNewAcPwdConf(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("ProcessNewAcPwConf()");
 	const std::string	email_addr("\nPlease provide an e-mail address at which we can contact you -(this address will only be used by ibgames and our credit card processing agency):\n");
 	const std::string	wrong("\nYour password and confirmation don't match. Please try again.\nPassword:\n");
 
@@ -276,6 +284,7 @@ bool	Login::ProcessNewAcPwdConf(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNotValid(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("ProcessNotValid()");
 	const std::string	yes("\nPlease supply a name for your new account. (Minimum 5, maximum 23 letters):\n");
 	const std::string	no("\nExisting account name:\n");
 
@@ -301,6 +310,7 @@ bool	Login::ProcessNotValid(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 {
+WriteErrLog("(ProcessPassword()");
 	const std::string	locked_out("\nYou are locked out of the game. Please contact feedback@ibgames.com.\n");
 	const std::string	in_game("\nYou are trying to log on twice with the same account!\n");
 	const std::string	wrong("\nYour account name or password is wrong. Would you like to set up a new account? [yes/no]:\n");
@@ -360,7 +370,7 @@ bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 				{
 					LoginRec	*rec = iter->second;
 					login_index.erase(iter);
-					delete rec;
+					delete rec; ////////-------------------------------------------------------
 				}
 				return true;
 			}
@@ -376,12 +386,13 @@ bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 
 void	Login::StartText(int sd)
 {
+WriteErrLog("Starttext()");
 	static std::string	start_text;
 	if(start_text == "")
 	{
 		std::ostringstream	buffer;
 		buffer << "\n                        Alan Lenton's Federation 2\n";
-		buffer << "                              Firefly Edition\n";
+		buffer << "                              Serenity Edition\n";
 		buffer << "\n           Copyright (c) 1985-2012 Interactive Broadcasting Ltd\n\n";
 #ifdef FEDTEST
 		buffer << "                     ***** Federation 2 Test Server *****\n\n";
