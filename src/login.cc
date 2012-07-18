@@ -52,9 +52,10 @@ WriteErrLog("LostLine()");
 	LoginIndex::iterator iter = login_index.find(sd);
 	if(iter != login_index.end())
 	{
+WriteErrLog("  deleting record(1)");
 		LoginRec	*rec = iter->second;
 		login_index.erase(iter);
-		delete rec;  ////////-------------------------------------------------------------
+		delete rec;
 	}
 }
 
@@ -131,14 +132,14 @@ WriteErrLog("ProcessNewAcMail()");
 	{
 		if((line.find('@') != std::string::npos) && (line.length() >= 8))
 		{
-			// Make sure no one else got the name while the player was dithering
 			Player	*player = Game::player_index->FindAccount(rec->name);
 			if(player != 0)
 			{
-				write(sd,wrong.c_str(),wrong.length());
+				write(sd,sorry.c_str(),sorry.length());
 				rec->name = "";
 				rec->password = "";
 				rec->status = NEW_AC_NAME;
+WriteErrLog("ProcessNewAcMail - End(1)");
 				return true;
 			}
 
@@ -155,6 +156,7 @@ WriteErrLog("ProcessNewAcMail()");
 			LoginIndex::iterator iter = login_index.find(rec->sd);
 			if(iter != login_index.end())
 			{
+WriteErrLog("  deleting record(2)");
 				LoginRec	*rec = iter->second;
 				login_index.erase(iter);
 				delete rec;
@@ -163,6 +165,7 @@ WriteErrLog("ProcessNewAcMail()");
 		else
 			write(sd,wrong.c_str(),wrong.length());
 	}
+	WriteErrLog("ProcessNewAcMail - End(2)");
 	return(true);
 }
 
@@ -266,6 +269,7 @@ WriteErrLog("ProcessNewAcPwConf()");
 //				std::fprintf(stderr,"rec->digest = %02X, pw_digest = %02X\n",(unsigned char)rec->digest[count],(unsigned char)pw_digest[count]);
 			}
 
+WriteErrLog("  deleting records(3)");
 			delete [] pw_digest;	// md5 code transfers ownership to calling code (ugh!)
 			delete [] pw;
 
@@ -368,9 +372,10 @@ WriteErrLog("(ProcessPassword()");
 				LoginIndex::iterator iter = login_index.find(rec->sd);
 				if(iter != login_index.end())
 				{
+WriteErrLog("  deleting record(4)");
 					LoginRec	*rec = iter->second;
 					login_index.erase(iter);
-					delete rec; ////////-------------------------------------------------------
+					delete rec;
 				}
 				return true;
 			}
