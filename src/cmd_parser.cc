@@ -1894,8 +1894,9 @@ void	CmdParser::Report(Player *player)
 
 void	CmdParser::Reset(Player *player)
 {
-#ifdef FEDTEST
-	if((tokens->Get(1) == "federation") && (tokens->Get(2) == "2"))
+    if(player->IsManager())
+    {
+        if((tokens->Get(1) == "federation") && (tokens->Get(2) == "2"))
 	{
 		std::ostringstream	buffer;
 		buffer << player->Name() << " is resetting the game";
@@ -1906,9 +1907,9 @@ void	CmdParser::Reset(Player *player)
 	}
 	else
 		player->Send("Sorry the request is in the wrong format\n");
-#else
-	player->Send("I'm sorry, I don't understand what you want to do!\n");
-#endif
+    }
+    else
+        player->Send("I'm sorry I don't understand you!\n");
 }
 
 void	CmdParser::Retrieve(Player *player,std::string& line)
