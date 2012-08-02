@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.16";
+const std::string	Fed::version = "1.89.20";
 
 
 Fed::Fed()
@@ -93,6 +93,9 @@ Fed::Fed()
 	buffer.replace(24,24,"");
 	buffer += " (UTC/GMT)";
 	WriteLog(buffer);
+
+
+	Game::start_up = std::ctime(&now);
 
 	std::cerr << "\n --- Starting " << buffer << "---\n";
 	std::cout << "\n --- Starting " << buffer << "---\n";

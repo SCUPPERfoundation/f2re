@@ -49,6 +49,7 @@ namespace Game
 {
 	sig_atomic_t				wrap_up = 0;
 	std::string					load_billing_info = "";
+	std::string					start_up = "";
 
 	BusinessRegister			*business_register = 0;
 	ChannelManager				*channel_manager = 0;
@@ -105,7 +106,8 @@ void AlarmHandler(int)
 
 	switch(ticks/2)
 	{
-		case  0:	Game::galaxy->UpdateExchanges();
+		case  0:	ResetTimer();
+					Game::galaxy->UpdateExchanges();
 					Game::production->Execute();
 					Game::player_index->UpdateCompanyTime();
 					Game::player_index->UpdateGraph();
@@ -119,7 +121,8 @@ void AlarmHandler(int)
 		case 10:	Game::syndicate->CreateJobs();						break;
 		case 15:	Game::galaxy->UpdateExchanges();						break;
 		case 25:	Game::player_index->KeepAlive();						break;
-		case 30:	Game::galaxy->UpdateExchanges();
+		case 30:	ResetTimer();
+					Game::galaxy->UpdateExchanges();
 					Game::galaxy->MoveMobiles();
 					break;
 		case 45:	Game::galaxy->UpdateExchanges();						break;
@@ -223,6 +226,11 @@ bool	IPCCallBack(int status,int sd,char *text)
 		if((iscntrl(input_text[count]) != 0) && (input_text[count] != '\n'))
 			input_text[count] = '-';
 	}
+
+	//////////////////////////
+	if((text[0] == 'n') && (text[1] == 'e') && (text[2] == 'w'))
+		return false;
+	//////////////////////////
 
 	bool	ret_status = true;
 	switch(status)
@@ -519,5 +527,68 @@ void	WriteNavLog(const std::string& text)
 	}
 	else
 		std::cerr <<  now->tm_hour << ":" << now->tm_min << text << std::endl;
+}
+
+
+void	ResetTimer()
+{
+	static int	ten_min_hours = 12;
+	static int	ten_min_mins = 50;
+	static bool	ten_min_sent = false;
+
+	static int	five_min_hours = 12;
+	static int	five_min_mins = 55;
+	static bool	five_min_sent = false;
+
+	static int	reset_hours = 13;
+	static int	reset_mins = 0;
+
+	static bool hour_changed = false;
+	static int	old_hour = -1;
+
+	std::time_t	now = std::time(0);
+	std::tm		*l_time = localtime(&now);
+
+	if(old_hour == -1)	// first time thru
+	{
+		old_hour = l_time->tm_hour;
+		/////////////////////////////////////////////// Remove this when we know it's definately working
+		std::ostringstream	buffer;
+		buffer << "old_hour set to " << old_hour;
+		WriteErrLog(buffer.str());
+		///////////////////////////////////////////////
+		return;
+	}
+
+	// just in case the reset is short enuff to result in a fire up that is
+	// still the same hour and minute as the reset! Note that the order of
+	// evaluation is important for efficiency...
+	if((hour_changed == false) && (old_hour != l_time->tm_hour))
+	{
+		hour_changed = true;
+		////////////////////////////////////////////// Remove this when we know it's definately working
+		WriteErrLog("hour_changed set to true");
+		//////////////////////////////////////////////
+	}
+
+	// Check for the ten minute reset warning
+	if((ten_min_hours == l_time->tm_hour) && !ten_min_sent && (ten_min_mins == l_time->tm_min) && hour_changed)
+	{
+		raise(SIGUSR1);
+		ten_min_sent = true;
+		return;
+	}
+
+	// Check for the five minute reset warning
+	if((five_min_hours == l_time->tm_hour) && !five_min_sent && (five_min_mins == l_time->tm_min) && hour_changed)
+	{
+		raise(SIGUSR2);
+		five_min_sent = true;
+		return;
+	}
+
+	// Check for the reset
+	if((reset_hours == l_time->tm_hour) && (reset_mins == l_time->tm_min) && hour_changed)
+		raise(SIGTERM);
 }
 

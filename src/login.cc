@@ -76,7 +76,7 @@ WriteErrLog("ProcessInput()");
 		StartText(sd);
 		rec->status = NAME;
 		login_index[sd] = rec;
-		return(true);
+		return true;
 	}
 
 	switch(rec->status)
@@ -108,6 +108,7 @@ WriteErrLog("ProcessName()");
 			write(sd,ac_name_req.c_str(),ac_name_req.length());
 			rec->status = NEW_AC_NAME;
 			return(true);
+
 		}
 
 		rec->name = line;
@@ -123,6 +124,9 @@ WriteErrLog("ProcessNewAcMail()");
 	const std::string	wrong("\nYou must give a valid e-mail address. Please try again.\nE-mail Address:\n");
 	const std::string	confirming("\nAccount set up. Please wait while we start up your Federation II character.\n");
 	const std::string	sorry("Sorry someone took that name while you were completing the details. Please try again.\n");
+
+std::ostringstream	buffer;
+buffer << "rec = " << rec;
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
@@ -403,8 +407,13 @@ WriteErrLog("Starttext()");
 		buffer << "                     ***** Federation 2 Test Server *****\n\n";
 #endif
 		buffer << "                         Welcome to Federation 2\n\n";
-		buffer << "If you do not have a Federation 2 account, login with the account name 'new' ";
-		buffer << "(without the quote marks) and you will be taken through setting up an account.\n\n";
+//		buffer << "If you do not have a Federation 2 account, login with the account name 'new' ";
+//		buffer << "(without the quote marks) and you will be taken through setting up an account.\n\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		buffer << "Please note that we are not accepting new players at the moment, while we sort ";
+		buffer << "out some problems caused by moving the game to a new server. We expect to be able ";
+		buffer << "to allow new players in the very near future.\nWe apologise for the inconvenience.\n\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		buffer << "Login:\n";
 		start_text = buffer.str();
 	}

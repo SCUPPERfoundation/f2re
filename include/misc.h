@@ -13,6 +13,7 @@
 #include <sstream>
 #include <string>
 
+#include <ctime>
 #include <signal.h>
 
 class BusinessRegister;
@@ -43,6 +44,7 @@ namespace Game
 	const int				MAX_PLAYERS = 400;
 	extern sig_atomic_t	wrap_up;
 	extern std::string	load_billing_info;
+	extern std::string	start_up;
 
 	extern BusinessRegister			*business_register;
 	extern ChannelManager			*channel_manager;
@@ -89,6 +91,7 @@ extern void	AlarmHandler(int);
 extern void	InputBuffer(std::string& buffer,std::string& text,std::string& line);
 extern void	MakeMoneyString(long amount,std::ostringstream& buffer);
 extern void	MakeNumberString(long amount,std::ostringstream& buffer);
+extern void	ResetTimer();
 extern void	SignalSetUp();
 extern void	SigUSRHandler(int num);
 extern void	TermHandler(int);

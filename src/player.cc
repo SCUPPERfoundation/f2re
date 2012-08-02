@@ -5178,6 +5178,9 @@ saying, 'Knock hard. Life is deaf.'\n");
 		business->UnFreeze();
 	if(Game::fed_mail->HasMail(this))
 		Send(has_mail);
+	buffer.str("");
+	buffer << "Last reset at " << Game::start_up;	// start_up is the result of a ctime() call and contains a <CR>
+	Send(buffer);
 }
 
 void	Player::Starve()
