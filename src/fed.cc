@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.20";
+const std::string	Fed::version = "1.89.21";
 
 
 Fed::Fed()
@@ -71,7 +71,7 @@ Fed::Fed()
 	std::string	buffer("Starting Federation II");
 	WriteLog(buffer);
 
-#ifdef FIREFLY
+#ifdef SERENITY
 	buffer = "Production Version " + version;
 #endif
 #ifdef DEVELOPMENT
@@ -164,7 +164,7 @@ Fed::~Fed()
 	Game::player_index->WriteGraphSummary();
 
 // only send out letters if it is the production version!
-#ifdef FIREFLY
+#ifdef FIREFLY	// TODO: change this when we have a mail program available on the server!
 	WriteLog("Mailing out Logs");
 	std::ostringstream	buffer;
 	buffer << HomeDir() << "/log/usage.log";

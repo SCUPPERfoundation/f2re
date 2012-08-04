@@ -107,6 +107,8 @@ bool	BuildPlanet::AddToMapsDatFile()
 		return false;
 	}
 
+	std::system("chmod g+w data/maps.dat");	// make sure I can edit it without having to 'su'
+
 	return true;
 }
 

@@ -516,8 +516,7 @@ void	Star::PremiumPriceCheck(const Commodity *commodity,std::ostringstream& buff
 		iter->second->PremiumPriceCheck(commodity,buffer,which);
 }
 
-void
-	Star::ProcessInfrastructure()
+void	Star::ProcessInfrastructure()
 {
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->ProcessInfrastructure();

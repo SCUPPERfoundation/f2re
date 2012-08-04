@@ -741,7 +741,6 @@ void	Infrastructure::ExchangeRiot()
 
 void	Infrastructure::FactoryRiot()
 {
-WriteLog("FactoryRiot");
 	if(riots == 0)
 		riots = new Riots(home);
 
@@ -760,7 +759,11 @@ WriteLog("FactoryRiot");
 		if(iter != factories.end())
 		{
 			Company	*company = Game::company_register->Find((*iter)->Owner());
+			if(company == 0)
+				return;
 			Player	*factory_owner = Game::company_register->Owner((*iter)->Owner());
+			if(factory_owner == 0)
+				return;
 			std::string	commod_name = (*iter)->Output();
 			if(company->DestroyFactory(home,*iter))
 			{

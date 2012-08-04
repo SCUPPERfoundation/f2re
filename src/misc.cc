@@ -541,7 +541,7 @@ void	ResetTimer()
 	static bool	five_min_sent = false;
 
 	static int	reset_hours = 13;
-	static int	reset_mins = 0;
+	static int	reset_mins = 5;
 
 	static bool hour_changed = false;
 	static int	old_hour = -1;
@@ -567,6 +567,9 @@ void	ResetTimer()
 	{
 		hour_changed = true;
 		////////////////////////////////////////////// Remove this when we know it's definately working
+		std::ostringstream	buffer;
+		buffer << "old_hour is " << old_hour << ", tm_hour is " << l_time->tm_hour;
+		WriteErrLog(buffer.str());
 		WriteErrLog("hour_changed set to true");
 		//////////////////////////////////////////////
 	}
@@ -589,6 +592,14 @@ void	ResetTimer()
 
 	// Check for the reset
 	if((reset_hours == l_time->tm_hour) && (reset_mins == l_time->tm_min) && hour_changed)
+	{
+		/////////////////////////////////////////////// Remove this when we know it's definately working
+		std::ostringstream	buffer;
+		buffer << "reset hours set to " << reset_hours << ", tm_hour set to " << l_time->tm_hour;
+		WriteErrLog(buffer.str());
+		///////////////////////////////////////////////
+
 		raise(SIGTERM);
+	}
 }
 
