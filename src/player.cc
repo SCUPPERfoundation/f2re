@@ -5650,7 +5650,7 @@ void	Player::Time()
 	std::ostringstream	buffer;
 	buffer << "Local time at the server is: " << std::asctime(date) << Stardate() << "\n";
 	buffer << "You have been in Federation II for " << (now - last_on)/60 << " minutes.\n";
-	buffer << "The reset takes place daily at 7pm server time. \n";
+	buffer << "The reset takes place daily at about 1pm server time. \n";
 	buffer << "All times shown are approximate!\n";
 	Send(buffer);
 }

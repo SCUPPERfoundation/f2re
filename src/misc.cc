@@ -533,11 +533,11 @@ void	WriteNavLog(const std::string& text)
 void	ResetTimer()
 {
 	static int	ten_min_hours = 12;
-	static int	ten_min_mins = 50;
+	static int	ten_min_mins = 55;
 	static bool	ten_min_sent = false;
 
-	static int	five_min_hours = 12;
-	static int	five_min_mins = 55;
+	static int	five_min_hours = 13;
+	static int	five_min_mins = 0;
 	static bool	five_min_sent = false;
 
 	static int	reset_hours = 13;

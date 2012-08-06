@@ -41,7 +41,9 @@ class	Unload;
 
 namespace Game
 {
-	const int				MAX_PLAYERS = 400;
+	const int	MAX_PLAYERS = 400;
+	const int	CYCLE_TIME = 22;
+
 	extern sig_atomic_t	wrap_up;
 	extern std::string	load_billing_info;
 	extern std::string	start_up;
