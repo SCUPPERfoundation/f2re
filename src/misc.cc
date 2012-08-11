@@ -226,12 +226,12 @@ bool	IPCCallBack(int status,int sd,char *text)
 		if((iscntrl(input_text[count]) != 0) && (input_text[count] != '\n'))
 			input_text[count] = '-';
 	}
-
+/*
 	//////////////////////////
 	if((text[0] == 'n') && (text[1] == 'e') && (text[2] == 'w'))
 		return false;
 	//////////////////////////
-
+*/
 	bool	ret_status = true;
 	switch(status)
 	{
@@ -423,7 +423,7 @@ void	SigUSRHandler(int num)
 	else
 	{
 		text = "SIGUSR2 received";
-		mssg = "Federation II will be closing down for a short while in five minutes time.\n";
+		mssg = "Federation II will be closing down for a short while in six minutes time.\n";
 		Game::player_index->Broadcast(0,mssg);
 	}
 	WriteLog(text);
@@ -536,8 +536,8 @@ void	ResetTimer()
 	static int	ten_min_mins = 55;
 	static bool	ten_min_sent = false;
 
-	static int	five_min_hours = 13;
-	static int	five_min_mins = 0;
+	static int	five_min_hours = 12;
+	static int	five_min_mins = 59;
 	static bool	five_min_sent = false;
 
 	static int	reset_hours = 13;
