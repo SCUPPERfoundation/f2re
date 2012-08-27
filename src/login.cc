@@ -97,18 +97,24 @@ bool	Login::ProcessName(int sd,std::string& text,LoginRec *rec)
 WriteErrLog("ProcessName()");
 	const std::string	ac_name_req("\nPlease supply a name for your account (Min 5, max 23 characters, letters and numbers only):\n");
 	const std::string	password_req("Password:\n");
+const std::string no_newbies("\n\nI'm sorry, we are not accepting new players at the moment.\n");
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
-	
+
 	if(line.length() > 0)
 	{
 		if(line.compare("new") == 0)
 		{
+			write(sd,no_newbies.c_str(),no_newbies.length());
+			LostLine(sd);
+			return(false);
+
+/*
 			write(sd,ac_name_req.c_str(),ac_name_req.length());
 			rec->status = NEW_AC_NAME;
 			return(true);
-
+*/
 		}
 
 		rec->name = line;
