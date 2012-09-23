@@ -35,8 +35,9 @@ public:
 	};
 
 private:
-	LoginIndex	login_index;			// index of players logging in
-	XMLLogin		*xml_login;				// for logins using the comms API
+	LoginIndex	login_index;	// index of players logging in
+	XMLLogin		*xml_login;		// for logins using the comms API
+	bool			has_a_newbie;	// Are we already processing a newbie?
 
 	LoginRec	*Find(int sd);
 
@@ -55,6 +56,8 @@ public:
 	~Login(); 	// Still need to clear out extant logins
 	
 	bool ProcessInput(int sd,std::string& text);
+
+	void	ClearNewbieFlag()		{ has_a_newbie = false; }
 	void	LostLine(int sd);
 };
 

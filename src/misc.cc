@@ -226,12 +226,7 @@ bool	IPCCallBack(int status,int sd,char *text)
 		if((iscntrl(input_text[count]) != 0) && (input_text[count] != '\n'))
 			input_text[count] = '-';
 	}
-/*
-	//////////////////////////
-	if((text[0] == 'n') && (text[1] == 'e') && (text[2] == 'w'))
-		return false;
-	//////////////////////////
-*/
+
 	bool	ret_status = true;
 	switch(status)
 	{

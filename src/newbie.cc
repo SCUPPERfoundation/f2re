@@ -70,6 +70,8 @@ void	Newbie::LostLine(int sd)
 	if(iter != desc_index.end())
 	{
 		Player	*rec = iter->second;
+		WriteErrLog("Clearing newbie flag");
+		Game::player_index->GetLogin()->ClearNewbieFlag();
 		desc_index.erase(iter);
 		delete rec;
 	}

@@ -70,6 +70,8 @@ public:
 	Player	*FindCurrent(int desc);						// Find in current players - key = socket descriptor
 	Player	*FindName(const std::string& name);		// Find in all players     - key = name
 
+	Login		*GetLogin()		{ return login;	}
+
 	std::pair<int,int>	NumberOutOfDate(int days = 365);
 
 	int	FindAllAlts(Player *player,const std::string& ip_address);

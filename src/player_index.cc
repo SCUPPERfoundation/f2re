@@ -519,6 +519,8 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	std::ostringstream	buffer;
 	buffer << player->Name() << " has started playing Federation II.\n";
 	Game::review->Post(buffer);
+	WriteErrLog("Clearing newbie flag");
+	login->ClearNewbieFlag();
 
 /*
 	if((player->Name().compare("Bella") == 0) || (player->Name().compare("Hazed") == 0)
