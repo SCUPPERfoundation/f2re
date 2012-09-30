@@ -39,7 +39,6 @@ Login::~Login()
 
 LoginRec	*Login::Find(int sd)
 {
-WriteErrLog("Find()");
 	LoginIndex::iterator	iter =  login_index.find(sd);
 	if(iter != login_index.end())
 		return(iter->second);
@@ -114,11 +113,11 @@ WriteErrLog("ProcessName()");
 	{
 		if(line.compare("new") == 0)
 		{
-/*
+
 			write(sd,no_newbies.c_str(),no_newbies.length());
 			LostLine(sd);
 			return(false);
-*/
+/*
 			if(has_a_newbie)
 			{
 				write(sd,already_processing.c_str(),already_processing.length());
@@ -131,7 +130,7 @@ WriteErrLog("ProcessName()");
 			WriteErrLog("Settinging newbie flag");
 			has_a_newbie = true;
 			return(true);
-
+*/
 		}
 
 		rec->name = line;
@@ -430,12 +429,12 @@ WriteErrLog("Starttext()");
 		buffer << "                     ***** Federation 2 Test Server *****\n\n";
 #endif
 		buffer << "                         Welcome to Federation 2\n\n";
-		buffer << "If you do not have a Federation 2 account, login with the account name 'new' ";
-		buffer << "(without the quote marks) and you will be taken through setting up an account.\n\n";
+//		buffer << "If you do not have a Federation 2 account, login with the account name 'new' ";
+//		buffer << "(without the quote marks) and you will be taken through setting up an account.\n\n";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//		buffer << "Please note that we are not accepting new players at the moment, while we sort ";
-//		buffer << "out some problems caused by moving the game to a new server. We expect to be able ";
-//		buffer << "to allow new players in the very near future.\nWe apologise for the inconvenience.\n\n";
+		buffer << "Please note that we are not accepting new players at the moment, while we sort ";
+		buffer << "out some problems caused by moving the game to a new server. We expect to be able ";
+		buffer << "to allow new players in the very near future.\nWe apologise for the inconvenience.\n\n";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		buffer << "Login:\n";
 		start_text = buffer.str();

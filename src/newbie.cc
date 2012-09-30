@@ -89,11 +89,11 @@ character. (Minimum 3, maximum 15 letters):\n");
 	Player	*player = new Player(rec);
 	desc_index[rec->sd] = player;
 	write(rec->sd,start.c_str(),start.length());
-
+/*
 	std::ostringstream	buffer("");
 	buffer << HomeDir() << "/data/" << filename;
 	player->SendEMail(reply_to,subject,buffer.str());
-
+*/
 	return(Player::START);
 }
 

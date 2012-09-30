@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -517,7 +517,7 @@ void	CommodityExchange::Update(int exch_cycles,bool are_players)
 	else
 		cycles += (exch_cycles * num_traders/2);
 
-	if((cycles >= MAX_UPDATE) || are_players)
+	if(cycles >= MAX_UPDATE)
 	{
 		for(CommodIndex::iterator iter = commod_index.begin();iter != commod_index.end();iter++)
 			home_map->UpdateCash(iter->second->Update(cycles,CYCLES_PER_UPDATE,max_deficit));

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -46,6 +46,7 @@ private:
 	int	base_cons;		// consumption before disasters etc
 	int	efficiency;		// percentage overall efficiency of production
 	int	cycles;			// number of unused cycles available
+	int	part_cycles;	// left over when rounded down, to be carried over to next computation
 	bool	valid;			// true if record is complete
 
 public:
@@ -58,7 +59,7 @@ public:
 	long	Buy(FedMap *exch_map);
 	long	DivertJob(const std::string& cartel_name,FedMap *exch_map);
 	long	Sell(FedMap *exch_map);
-	long	Update(int add_cycles,int cycles_per_update,int deficit);
+	long	Update(int add_cycles,int cycles_per_update,int deficit, bool write_log = false);
 	long	UpdateStock(int add_cycles,int deficit);
 	long	YardPurchase(FedMap *exch_map,int amount,std::ostringstream& buffer,int action);
 

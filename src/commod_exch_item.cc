@@ -1,5 +1,5 @@
  /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-8
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -52,6 +52,7 @@ CommodityExchItem::CommodityExchItem(const std::string&	the_name,int exchange_ty
 	max_stock = 800;
 	efficiency = 100;
 	cycles = 0;
+	part_cycles = 0;
 
 	switch(std::abs(Game::commodities->Commod2Type(name) - exchange_type))
 	{
@@ -210,6 +211,36 @@ void	CommodityExchItem::DisplayProduction(Player *player,int commod_grp)
 		buffer << "efficiency " << efficiency << "%\n";
 		player->Send(buffer);
 	}
+}
+
+long	CommodityExchItem::DivertJob(const std::string& cartel_name,FedMap *exch_map)
+{
+	long price = CARGO_SIZE * FinalPrice(value,spread,BUY);
+	Cartel	*cartel = Game::syndicate->Find(cartel_name);
+	if(cartel != 0)
+		cartel->DivertedGoods(name,CARGO_SIZE);
+	return(price);
+}
+
+void	CommodityExchItem::DivertTrade(Player *player,const std::string& cartel_name,FedMap *exch_map)
+{
+	Cartel	*cartel = Game::syndicate->Find(cartel_name);
+	if(cartel != 0)
+		cartel->DivertedGoods(name,CARGO_SIZE);
+	int price = CARGO_SIZE * FinalPrice(value,spread,BUY);
+	player->ChangeCash(price,true);
+	if(player->Rank() == Player::TRADER)
+		player->UpdateTradeCash(price);
+	exch_map->UpdateCash(-price);
+
+	Ship	*ship = player->GetShip();
+	if(ship != 0)
+		ship->RemoveCargo(player,name,price,exch_map->Title());
+
+	std::ostringstream	buffer;
+	buffer << "\n" << CARGO_SIZE << " tons of " << name;
+	buffer << " sold for "<< price << "ig\n\n";
+	player->Send(buffer);
 }
 
 void	CommodityExchItem::Dump()
@@ -498,16 +529,30 @@ int	CommodityExchItem::UpdateValue()
 	return(value);
 }
 
-long	CommodityExchItem::Update(int add_cycles,int cycles_per_update,int deficit)
+long	CommodityExchItem::Update(int add_cycles,int cycles_per_update,int deficit, bool write_log)
 {
 	long	cost = 0L;
 	int	adjusted_cycles = ((cycles + add_cycles) * efficiency)/100;
+	part_cycles += ((cycles + add_cycles) * efficiency) % 100;
+	if(part_cycles >= 100)
+	{
+		++adjusted_cycles;
+		part_cycles -= 100;
+	}
+
 	int update_cycles = adjusted_cycles/cycles_per_update;
 	cycles = adjusted_cycles % cycles_per_update;
 	if(update_cycles != 0)
 	{
 		cost = UpdateStock(update_cycles,deficit);
 		UpdateValue();
+	}
+
+	if(write_log)
+	{
+		std::ostringstream	buffer;
+		buffer << "  update_cycles = " << update_cycles << " cycles = " << cycles << "\n";
+		WriteErrLog(buffer.str());
 	}
 
 	return(cost);
@@ -550,34 +595,4 @@ long	CommodityExchItem::YardPurchase(FedMap *exch_map,int amount,std::ostringstr
 }
 
 
-
-long	CommodityExchItem::DivertJob(const std::string& cartel_name,FedMap *exch_map)
-{
-	long price = CARGO_SIZE * FinalPrice(value,spread,BUY);
-	Cartel	*cartel = Game::syndicate->Find(cartel_name);
-	if(cartel != 0)
-		cartel->DivertedGoods(name,CARGO_SIZE);
-	return(price);
-}
-
-void	CommodityExchItem::DivertTrade(Player *player,const std::string& cartel_name,FedMap *exch_map)
-{
-	Cartel	*cartel = Game::syndicate->Find(cartel_name);
-	if(cartel != 0)
-		cartel->DivertedGoods(name,CARGO_SIZE);
-	int price = CARGO_SIZE * FinalPrice(value,spread,BUY);
-	player->ChangeCash(price,true);
-	if(player->Rank() == Player::TRADER)
-		player->UpdateTradeCash(price); 
-	exch_map->UpdateCash(-price);
-	
-	Ship	*ship = player->GetShip();
-	if(ship != 0)
-		ship->RemoveCargo(player,name,price,exch_map->Title());
-
-	std::ostringstream	buffer;
-	buffer << "\n" << CARGO_SIZE << " tons of " << name;
-	buffer << " sold for "<< price << "ig\n\n";
-	player->Send(buffer);
-}
 
