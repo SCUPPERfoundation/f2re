@@ -146,6 +146,7 @@ Player::Player()
 
 Player::Player(LoginRec	*rec)
 {
+	memset(this,0,sizeof(Player));
 	ib_account = rec->name;
 	std::memcpy(password,rec->digest,MAX_PASSWD);
 	email = rec->email;
