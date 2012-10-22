@@ -149,6 +149,7 @@ WriteErrLog("ProcessNewAcMail()");
 
 std::ostringstream	buffer;
 buffer << "rec = " << rec;
+WriteErrLog(buffer.str());
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
@@ -168,7 +169,6 @@ buffer << "rec = " << rec;
 WriteErrLog("ProcessNewAcMail - End(1)");
 				return true;
 			}
-
 			rec->email = line;
 			write(sd,confirming.c_str(),confirming.length());
 
@@ -184,8 +184,11 @@ WriteErrLog("ProcessNewAcMail - End(1)");
 			{
 WriteErrLog("  deleting record(2)");
 				LoginRec	*rec = iter->second;
+				WriteErrLog("  deleting record(2a)");
 				login_index.erase(iter);
+				WriteErrLog("  deleting record(2b)");
 				delete rec;
+				WriteErrLog("  deleting record(2c)");
 			}
 		}
 		else
