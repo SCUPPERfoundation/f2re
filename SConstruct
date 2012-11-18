@@ -4,7 +4,7 @@
 # VariantDir('./obj','./src')
 
 env = Environment(CPPPATH='#./include',
-						CCFLAGS ='-g -Wall -Wcast-qual -Wcast-align -Wwrite-strings -Wpointer-arith -O2 -DDEVELOPMENT',
+						CCFLAGS ='-gstabs+ -Wall -Wcast-qual -Wcast-align -Wwrite-strings -Wpointer-arith -O2 -DDEVELOPMENT',
 						LIBS = ['expat','db_cxx','sqlite3'],
 						LIBPATH = '/usr/lib')
 
