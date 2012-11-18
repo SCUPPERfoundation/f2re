@@ -295,6 +295,7 @@ name of the business whose shares you are bidding for.\n");
 	{
 		buffer << "Sorry, I'm unable to find a business called '" << bus_name << "'!\n";
 		player->Send(buffer);
+		player->Send(bid_txt);
 		return;
 	}
 
