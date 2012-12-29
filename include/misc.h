@@ -72,7 +72,8 @@ namespace Game
 	extern Review						*financial;
 	extern Unload						*unload;
 	
-	extern bool							test;		// true means we are running tests, not production
+	extern bool							has_a_newbie;	// Are we currently processing a newbie?
+	extern bool							test;				// true means we are running tests, not production
 }
 
 extern const std::string&	EscapeXML(const std::string& text);

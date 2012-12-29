@@ -1509,9 +1509,6 @@ void	Infrastructure::Weathermen()
 
 void	Infrastructure::Write(std::ofstream& file)
 {
-std::ostringstream buffer;
-buffer << "  " << home->Name();
-WriteErrLog(buffer.str());
 	file << "<?xml version=\"1.0\"?>\n";
 	file << "<infrastructure owner='" << owner_name << "' economy='";
 	file << econ_names[economy] << "' treasury='" << treasury << "' yard-markup='";
@@ -1534,7 +1531,6 @@ WriteErrLog(buffer.str());
 		iter->second->Write(file);
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->Write(file);
-WriteErrLog("    Infra written");
 	file << "</infrastructure>" << std::endl;
 }
 

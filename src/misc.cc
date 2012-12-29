@@ -75,6 +75,7 @@ namespace Game
 	Review						*financial = 0;
 	Unload						*unload = 0;
 
+	bool							has_a_newbie = false;
 	bool							test = false;
 }
 
@@ -118,7 +119,9 @@ void AlarmHandler(int)
 					}
 					break;
 
-		case 10:	Game::syndicate->CreateJobs();						break;
+		case 10:	if(!Game::has_a_newbie)
+						Game::syndicate->CreateJobs();
+					break;
 		case 15:	Game::galaxy->UpdateExchanges();						break;
 		case 25:	Game::player_index->KeepAlive();						break;
 		case 30:	ResetTimer();

@@ -37,7 +37,6 @@ public:
 private:
 	LoginIndex	login_index;	// index of players logging in
 	XMLLogin		*xml_login;		// for logins using the comms API
-	bool			has_a_newbie;	// Are we already processing a newbie?
 
 	LoginRec	*Find(int sd);
 
@@ -57,7 +56,7 @@ public:
 	
 	bool ProcessInput(int sd,std::string& text);
 
-	void	ClearNewbieFlag()		{ has_a_newbie = false; }
+	void	ClearNewbieFlag();
 	void	LostLine(int sd);
 };
 

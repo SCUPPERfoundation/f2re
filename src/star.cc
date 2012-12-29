@@ -584,12 +584,10 @@ void	Star::UpdateExchanges()
 
 void	Star::Write()
 {
-static const std::string	line("-------------------------");
+	WriteErrLog(directory);	// if it crashes on writing - we can see where
 	std::ostringstream	buffer;
 	char	full_name[MAXNAMLEN];
 	std::snprintf(full_name,MAXNAMLEN,"%s/maps/%s/star.inf",HomeDir(),directory.c_str());
-WriteErrLog(line);
-WriteErrLog(directory);
 	std::ofstream	file(full_name,std::ios::out);
 	if(!file)
 	{
@@ -598,7 +596,7 @@ WriteErrLog(directory);
 		WriteErrLog(buffer.str());
 		return;
 	}
-WriteErrLog("File opened");
+
 	file << "<?xml version=\"1.0\"?>\n";
 	file << "<star name='" << name << "' cartel='" << cartel << "'";
 	if(flags.test(NO_BUILD))
@@ -606,7 +604,7 @@ WriteErrLog("File opened");
 	if(flags.test(DIVERT))
 		file << " divert='yes'";
 	file << ">\n\n";
-WriteErrLog("Name line written");
+
 	if(black_list.size() > 0)
 	{
 		file << "   <black-list>\n";
@@ -614,13 +612,12 @@ WriteErrLog("Name line written");
 			file << "      <exile name='" << *iter << "'/>\n";
 		file << "   </black-list>\n\n";
 	}
-WriteErrLog("Black List written");
+
 	file << "</star>" << std::endl;
 	buffer.str("");
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
-WriteErrLog("Cabinet Written");
 	return;
 }
 
