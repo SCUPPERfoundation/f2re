@@ -119,7 +119,7 @@ void AlarmHandler(int)
 					}
 					break;
 
-		case 10:	if(!Game::has_a_newbie)
+		case 10:	//	if(!Game::has_a_newbie)
 						Game::syndicate->CreateJobs();
 					break;
 		case 15:	Game::galaxy->UpdateExchanges();						break;

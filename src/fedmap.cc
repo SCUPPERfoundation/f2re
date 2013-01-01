@@ -1266,11 +1266,11 @@ bool	FedMap::IsAYard(int loc_no)
 
 bool	FedMap::IsOpen(Player *player)
 {
-	static const std::string	error("Unable to find infrastructure data - please email a report to \
-feedback@ibgames.com\n");
+	static const std::string	error("Unable to find infrastructure data - please email a report to feedback@ibgames.com\n");
 	if(infra != 0)
 		return(infra->IsOpen(player));
-	player->Send(error);
+	if(player != 0)
+		player->Send(error);
 	return(false);
 }
 
