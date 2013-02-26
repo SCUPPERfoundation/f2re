@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-6
+		Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -34,7 +34,7 @@ CmdXML::CmdXML(Player *player)
 	owner = player;
 	version = 100;
 }
-	
+
 
 CmdXML::~CmdXML()
 {
@@ -99,12 +99,6 @@ void	CmdXML::SetCommsLevel(const char **attrib)
 
 void	CmdXML::StartElement(const char *element,const char **attrib)
 {
-/*
-static std::ostringstream buffer;
-buffer << owner->Name() << ": " << element;
-WriteErrLog(buffer.str());
-buffer.str("");
-*/
 	switch(Find(element))
 	{
 		case	 0:	FedTerm(attrib);						break;	// 'c-fedterm'
@@ -115,6 +109,6 @@ buffer.str("");
 		case	 5:	Game::galaxy->XMLListLinks(owner,owner->CurrentMap()->HomeStarPtr()->Name());	break; // c-send-system-links
 	}
 }
-	
+
 
 

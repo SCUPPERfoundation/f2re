@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -519,8 +519,6 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	std::ostringstream	buffer;
 	buffer << player->Name() << " has started playing Federation II.\n";
 	Game::review->Post(buffer);
-	WriteErrLog("Clearing newbie flag");
-	login->ClearNewbieFlag();
 
 /*
 	if((player->Name().compare("Bella") == 0) || (player->Name().compare("Hazed") == 0)

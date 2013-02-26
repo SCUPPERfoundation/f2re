@@ -55,8 +55,6 @@ public:
 	~Login(); 	// Still need to clear out extant logins
 
 	bool ProcessInput(int sd,std::string& text);
-
-//	void	ClearNewbieFlag();
 	void	LostLine(int sd);
 };
 

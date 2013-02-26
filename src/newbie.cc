@@ -126,19 +126,6 @@ bool	Newbie::ProcessAccept(int sd,std::string& text,Player *player)
 				std::ostringstream	buffer;
 				buffer << "Groundhog " << player->name << " has started playing.";
 				WriteLog(buffer);
-
-#ifdef FEDTEST
-				// make sure new players are locked until checked by a manager
-				if((player->Name() != "Bella") && (player->Name() != "Hazed") &&
-						(player->Name() != "Freya") && (player->Name() != "Djentsch"))
-				{
-					player->Lock();
-					Game::player_index->LogOff(player);
-				}
-				else
-					player->InitManager();
-#endif
-
 			}
 		}
 		else

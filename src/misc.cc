@@ -550,11 +550,7 @@ void	ResetTimer()
 	if(old_hour == -1)	// first time thru
 	{
 		old_hour = l_time->tm_hour;
-		/////////////////////////////////////////////// Remove this when we know it's definately working
-		std::ostringstream	buffer;
-		buffer << "old_hour set to " << old_hour;
-		WriteErrLog(buffer.str());
-		///////////////////////////////////////////////
+
 		return;
 	}
 
@@ -564,12 +560,6 @@ void	ResetTimer()
 	if((hour_changed == false) && (old_hour != l_time->tm_hour))
 	{
 		hour_changed = true;
-		////////////////////////////////////////////// Remove this when we know it's definately working
-		std::ostringstream	buffer;
-		buffer << "old_hour is " << old_hour << ", tm_hour is " << l_time->tm_hour;
-		WriteErrLog(buffer.str());
-		WriteErrLog("hour_changed set to true");
-		//////////////////////////////////////////////
 	}
 
 	// Check for the ten minute reset warning
@@ -591,12 +581,6 @@ void	ResetTimer()
 	// Check for the reset
 	if((reset_hours == l_time->tm_hour) && (reset_mins == l_time->tm_min) && hour_changed)
 	{
-		/////////////////////////////////////////////// Remove this when we know it's definately working
-		std::ostringstream	buffer;
-		buffer << "reset hours set to " << reset_hours << ", tm_hour set to " << l_time->tm_hour;
-		WriteErrLog(buffer.str());
-		///////////////////////////////////////////////
-
 		raise(SIGTERM);
 	}
 }

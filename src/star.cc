@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-11
+		Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -584,7 +584,6 @@ void	Star::UpdateExchanges()
 
 void	Star::Write()
 {
-	WriteErrLog(directory);	// if it crashes on writing - we can see where
 	std::ostringstream	buffer;
 	char	full_name[MAXNAMLEN];
 	std::snprintf(full_name,MAXNAMLEN,"%s/maps/%s/star.inf",HomeDir(),directory.c_str());

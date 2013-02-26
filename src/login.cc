@@ -30,18 +30,14 @@ const int	Login::MAX_PASSWORD;
 
 Login::Login()
 {
-//		Game::has_a_newbie = false;
+
 }
 
 Login::~Login()
 {
+
 }
-/*
-void	Login::ClearNewbieFlag()
-{
-	Game::has_a_newbie = false;
-}
-*/
+
 LoginRec	*Login::Find(int sd)
 {
 	LoginIndex::iterator	iter =  login_index.find(sd);
@@ -53,11 +49,9 @@ LoginRec	*Login::Find(int sd)
 
 void	Login::LostLine(int sd)
 {
-WriteErrLog("LostLine()");
 	LoginIndex::iterator iter = login_index.find(sd);
 	if(iter != login_index.end())
 	{
-WriteErrLog("  deleting record(1)");
 		LoginRec	*rec = iter->second;
 		login_index.erase(iter);
 		delete rec;
@@ -66,7 +60,6 @@ WriteErrLog("  deleting record(1)");
 
 bool Login::ProcessInput(int sd,std::string& text)
 {
-WriteErrLog("ProcessInput()");
 	LoginRec	*rec = Find(sd);
 	if(rec == 0)
 	{
@@ -99,11 +92,10 @@ WriteErrLog("ProcessInput()");
 
 bool	Login::ProcessName(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("ProcessName()");
 	const std::string	ac_name_req("\nPlease supply a name for your account (Min 5, max 23 characters, letters and numbers only):\n");
 	const std::string	password_req("Password:\n");
-	const std::string	already_processing("\n\nI'm sorry, I can't process a new player at the moment, please try again in a couple of minutes. Thank you.\n");
-	const std::string no_newbies("\n\nI'm sorry, we are not accepting new players at the moment.\n");
+//	const std::string	already_processing("\n\nI'm sorry, I can't process a new player at the moment, please try again in a couple of minutes. Thank you.\n");
+//	const std::string no_newbies("\n\nI'm sorry, we are not accepting new players at the moment.\n");
 
 
 	std::string	line;
@@ -127,14 +119,9 @@ WriteErrLog("ProcessName()");
 
 bool	Login::ProcessNewAcEMail(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("ProcessNewAcMail()");
 	const std::string	wrong("\nYou must give a valid e-mail address. Please try again.\nE-mail Address:\n");
 	const std::string	confirming("\nAccount set up. Please wait while we start up your Federation II character.\n");
 	const std::string	sorry("Sorry someone took that name while you were completing the details. Please try again.\n");
-
-std::ostringstream	buffer;
-buffer << "rec = " << rec;
-WriteErrLog(buffer.str());
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
@@ -151,12 +138,12 @@ WriteErrLog(buffer.str());
 				rec->name = "";
 				rec->password = "";
 				rec->status = NEW_AC_NAME;
-WriteErrLog("ProcessNewAcMail - End(1)");
 				return true;
 			}
 			rec->email = line;
 			write(sd,confirming.c_str(),confirming.length());
 
+			len = rec->name.length();
 			for(int count = 0;count < len;count++)
 				rec->name[count] = std::tolower(rec->name[count]);
 			len = rec->password.length();
@@ -167,25 +154,19 @@ WriteErrLog("ProcessNewAcMail - End(1)");
 			LoginIndex::iterator iter = login_index.find(rec->sd);
 			if(iter != login_index.end())
 			{
-WriteErrLog("  deleting record(2)");
 				LoginRec	*rec = iter->second;
-				WriteErrLog("  deleting record(2a)");
 				login_index.erase(iter);
-				WriteErrLog("  deleting record(2b)");
 				delete rec;
-				WriteErrLog("  deleting record(2c)");
 			}
 		}
 		else
 			write(sd,wrong.c_str(),wrong.length());
 	}
-	WriteErrLog("ProcessNewAcMail - End(2)");
 	return(true);
 }
 
 bool	Login::ProcessNewAcName(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("ProcessNewAcName()");
 	const std::string	ac_pwd_req("\nPlease supply a password for your new account. (Min 8, max 15 letters):\n");
 	const std::string	wrong("\nYour account name must be between 5 and 23 characters long, letters and/or numbers only. Please try again. Account name:\n");
 	const std::string	in_use("\nThat account name is already in use. Please try again. Account name:\n");
@@ -230,7 +211,6 @@ WriteErrLog("ProcessNewAcName()");
 
 bool	Login::ProcessNewAcPwd(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("ProcessNewAcPwd()");
 	const std::string	confirm("\nPlease confirm password:\n");
 	const std::string	wrong("\nYour password must be between 8 and 15 characters long. Please try again.\nPassword:\n");
 
@@ -254,7 +234,6 @@ WriteErrLog("ProcessNewAcPwd()");
 
 bool	Login::ProcessNewAcPwdConf(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("ProcessNewAcPwConf()");
 	const std::string	email_addr("\nPlease provide an e-mail address at which we can contact you -(this address will only be used by ibgames and our credit card processing agency):\n");
 	const std::string	wrong("\nYour password and confirmation don't match. Please try again.\nPassword:\n");
 
@@ -278,12 +257,8 @@ WriteErrLog("ProcessNewAcPwConf()");
 			unsigned char *pw_digest = new_pw.raw_digest();
 
 			for(int count = 0;count < MAX_PASSWORD;++count)
-			{
 				rec->digest[count] = static_cast<unsigned char>(pw_digest[count]);
-//				std::fprintf(stderr,"rec->digest = %02X, pw_digest = %02X\n",(unsigned char)rec->digest[count],(unsigned char)pw_digest[count]);
-			}
 
-WriteErrLog("  deleting records(3)");
 			delete [] pw_digest;	// md5 code transfers ownership to calling code (ugh!)
 			delete [] pw;
 
@@ -302,7 +277,6 @@ WriteErrLog("  deleting records(3)");
 
 bool	Login::ProcessNotValid(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("ProcessNotValid()");
 	const std::string	yes("\nPlease supply a name for your new account. (Minimum 5, maximum 23 letters):\n");
 	const std::string	no("\nExisting account name:\n");
 
@@ -328,7 +302,6 @@ WriteErrLog("ProcessNotValid()");
 
 bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 {
-WriteErrLog("(ProcessPassword()");
 	const std::string	locked_out("\nYou are locked out of the game. Please contact feedback@ibgames.com.\n");
 	const std::string	in_game("\nYou are trying to log on twice with the same account!\n");
 	const std::string	wrong("\nYour account name or password is wrong. Would you like to set up a new account? [yes/no]:\n");
@@ -386,7 +359,6 @@ WriteErrLog("(ProcessPassword()");
 				LoginIndex::iterator iter = login_index.find(rec->sd);
 				if(iter != login_index.end())
 				{
-WriteErrLog("  deleting record(4)");
 					LoginRec	*rec = iter->second;
 					login_index.erase(iter);
 					delete rec;
@@ -405,7 +377,6 @@ WriteErrLog("  deleting record(4)");
 
 void	Login::StartText(int sd)
 {
-WriteErrLog("Starttext()");
 	static std::string	start_text;
 	if(start_text == "")
 	{
