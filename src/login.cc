@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -30,18 +30,18 @@ const int	Login::MAX_PASSWORD;
 
 Login::Login()
 {
-		Game::has_a_newbie = false;
+//		Game::has_a_newbie = false;
 }
 
 Login::~Login()
 {
 }
-
+/*
 void	Login::ClearNewbieFlag()
 {
 	Game::has_a_newbie = false;
 }
-
+*/
 LoginRec	*Login::Find(int sd)
 {
 	LoginIndex::iterator	iter =  login_index.find(sd);
@@ -59,11 +59,6 @@ WriteErrLog("LostLine()");
 	{
 WriteErrLog("  deleting record(1)");
 		LoginRec	*rec = iter->second;
-		if((rec->status >= NEW_AC_NAME) && (rec->status <= NEW_AC_EMAIL))
-		{
-			WriteErrLog("Clearing newbie flag");
-			ClearNewbieFlag();
-		}
 		login_index.erase(iter);
 		delete rec;
 	}
@@ -118,24 +113,9 @@ WriteErrLog("ProcessName()");
 	{
 		if(line.compare("new") == 0)
 		{
-/*
-			write(sd,no_newbies.c_str(),no_newbies.length());
-			LostLine(sd);
-			return(false);
-*/
-			if(Game::has_a_newbie)
-			{
-				write(sd,already_processing.c_str(),already_processing.length());
-				LostLine(sd);
-				return(false);
-			}
-
 			write(sd,ac_name_req.c_str(),ac_name_req.length());
 			rec->status = NEW_AC_NAME;
-			WriteErrLog("Settinging newbie flag");
-			Game::has_a_newbie = true;
 			return(true);
-
 		}
 
 		rec->name = line;
@@ -158,7 +138,7 @@ WriteErrLog(buffer.str());
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
-	
+
 	int	len = line.length();
 	if(len > 0)
 	{
@@ -256,7 +236,7 @@ WriteErrLog("ProcessNewAcPwd()");
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
-	
+
 	int	len = line.length();
 	if(len > 0)
 	{
@@ -328,7 +308,7 @@ WriteErrLog("ProcessNotValid()");
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
-	if(line.length() > 0)	
+	if(line.length() > 0)
 	{
 		if((line[0] == 'y') || (line[0] == 'Y'))
 		{
@@ -341,7 +321,7 @@ WriteErrLog("ProcessNotValid()");
 			rec->failures++;
 			rec->status = NAME;
 			write(sd,no.c_str(),no.length());
-		}			
+		}
 	}
 	return(true);
 }

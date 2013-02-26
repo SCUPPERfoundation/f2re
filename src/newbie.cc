@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -70,8 +70,6 @@ void	Newbie::LostLine(int sd)
 	if(iter != desc_index.end())
 	{
 		Player	*rec = iter->second;
-		WriteErrLog("Clearing newbie flag");
-		Game::player_index->GetLogin()->ClearNewbieFlag();
 		desc_index.erase(iter);
 		delete rec;
 	}
@@ -105,7 +103,7 @@ bool	Newbie::ProcessAccept(int sd,std::string& text,Player *player)
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		player->status_flags.reset();
 		if((line[0] == 'y') || (line[0] == 'Y'))
@@ -157,7 +155,7 @@ bool	Newbie::ProcessDexterity(int sd,std::string& text,Player *player)
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		int	remainder = 140 - player->strength[Player::CURRENT] - player->stamina[Player::CURRENT];
 		int 	max_dex = remainder - 20;
@@ -187,7 +185,7 @@ Distribute the stats equally? [yes/no]:\n");
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		if((line[0] == 'm') || (line[0] == 'M'))
 			player->gender = Player::MALE;
@@ -233,7 +231,7 @@ than three. Please enter a name:\n");
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		if((len >= 3) && (len < 15))
 		{
@@ -252,7 +250,7 @@ than three. Please enter a name:\n");
 				write(sd,wrong.c_str(),wrong.length());
 				return(true);
 			}
-									
+
 			player->name[0] = std::toupper(player->name[0]);
 			for(int count = 1;count < len;count++)	// can't get std::transform() working properly
 				player->name[count] = std::tolower(player->name[count]);
@@ -278,7 +276,7 @@ than four. Please enter a race:\n");
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		if((len >= 3) && (len <= 15))
 		{
@@ -306,7 +304,7 @@ bool	Newbie::ProcessStamina(int sd,std::string& text,Player *player)
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		int	remainder = 140 - player->strength[Player::CURRENT];
 		int 	max_sta = remainder - 40;
@@ -319,7 +317,7 @@ bool	Newbie::ProcessStamina(int sd,std::string& text,Player *player)
 		player->status_flags.set(Player::DEX);
 		remainder -= sta;
 		int 	max_dex = remainder - 20;
-		if(max_dex > 70)	max_dex = 70;		
+		if(max_dex > 70)	max_dex = 70;
 		std::ostringstream	buffer("");
 		buffer << std::endl << "You have " << remainder << " stat points left. ";
 		buffer << "How many points do you want to allocate to dexterity? (Minimum 20, maximum ";
@@ -333,11 +331,11 @@ bool	Newbie::ProcessStats(int sd,std::string& text,Player *player)
 {
 	std::string	strength("\n\nYou have 140 stat points available. How many points do you want to \
 allocate to strength? (Minimum 20, maximum 70):\n");
-	
+
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		if((line[0] == 'y') || (line[0] == 'Y'))
 		{
@@ -364,7 +362,7 @@ bool	Newbie::ProcessStrength(int sd,std::string& text,Player *player)
 	std::string	line;
 	InputBuffer(player->input_buffer,text,line);
 	int len = line.length();
-	if(len > 0)	
+	if(len > 0)
 	{
 		int 	str = std::atoi(line.c_str());
 		if(str > 70)	str = 70;

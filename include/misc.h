@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton 2003-13
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -71,8 +71,8 @@ namespace Game
 	extern Review						*review;
 	extern Review						*financial;
 	extern Unload						*unload;
-	
-	extern bool							has_a_newbie;	// Are we currently processing a newbie?
+
+//	extern bool							has_a_newbie;	// Are we currently processing a newbie?
 	extern bool							test;				// true means we are running tests, not production
 }
 

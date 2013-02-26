@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -27,9 +27,9 @@ public:
 	static const int	MAX_ADDR = 80;
 	static const int	MAX_USER_NAME = 24;
 	static const int	MAX_PASSWORD = 16;
-	
-	enum	
-	{ 
+
+	enum
+	{
 		NAME, PASSWORD, NEW_AC_NAME, NEW_AC_PASSWORD, NEW_AC_PASSWORD2,
 		NEW_AC_EMAIL, XML_TEXT, NOT_VALID
 	};
@@ -53,10 +53,10 @@ private:
 public:
 	Login();
 	~Login(); 	// Still need to clear out extant logins
-	
+
 	bool ProcessInput(int sd,std::string& text);
 
-	void	ClearNewbieFlag();
+//	void	ClearNewbieFlag();
 	void	LostLine(int sd);
 };
 
