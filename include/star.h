@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-11
+		            Copyright (c) Alan Lenton 2003-11
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -31,6 +31,8 @@ class	Star
 
 public:
 	static const int	NAME_SIZE = 48;
+	static const int	ABANDONED = 90*24*60*60;	// 90 days
+
 	enum	{ CLOSED, NO_BUILD, DIVERT, MAX_FLAGS	};
 	enum	{ LIST_ALL, LIST_OPEN	};				// used by ListSystem()
 
@@ -46,6 +48,7 @@ private:
 	FedMap			*hosp_map;
 	int				hosp_loc;
 	DisplayCabinet	*cabinet;
+	bool				abandoned;						// owner absent for overthree months
 
 public:
 	Star(const std::string& star_name,const std::string& dir);
@@ -78,12 +81,14 @@ public:
 
 	bool	AddExile(const std::string player_name);
 	bool	CanBuild()										{ return(true);		}
+	bool	IsAbandoned()									{ return(abandoned);	}
 	bool	IsAnExile(const std::string player_name);
 	bool	IsDiverting()									{ return(flags.test(DIVERT));	}
 	bool	IsDiverting(const std::string& commod);
 	bool	IsInSystem(const std::string player_name);
 	bool	IsOpen();
 	bool	IsOwner(Player *player);
+	bool	MarkAbandondedSystem();
 	bool	Status_OK()										{ return(name.length() > 0);				}
 
 	void	AddMap(const char *map_name);

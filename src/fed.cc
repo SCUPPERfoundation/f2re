@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-	Copyright (c) Alan Lenton 1985-2013
+	               Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.35";
+const std::string	Fed::version = "1.89.37";
 
 Fed::Fed()
 {
@@ -333,7 +333,7 @@ void	Fed::LoadVariables()
 
 void	Fed::Run()
 {
-	// Do all the things we had to have everything loaded in for
+	// First do all the things we had to have everything loaded in for
 	Game::company_register->LinkShares();
 	Game::company_register->Update();
 	Game::business_register->LinkShares();
@@ -348,6 +348,7 @@ void	Fed::Run()
 	Game::syndicate->ValidateCartelMembers();
 	Game::syndicate->Update();
 	Game::galaxy->LoadDisplayCabinets();
+	Game::galaxy->MarkAbandondedSystems();
 
 	Game::ipc->GetInput();
 }

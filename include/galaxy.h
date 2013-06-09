@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-11
-	All Rights Reserved. No part of this software may be reproduced,
+                Copyright (c) Alan Lenton 1985-2013
+ 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
 	electronic, mechanical, magnetic, optical, manual or otherwise,
@@ -74,6 +74,7 @@ public:
 	void	ListSystems(Player *player,int which_ones);
 	void	LoadDisplayCabinets();
 	void	MapStats();
+	void	MarkAbandondedSystems();
 	void	MoveMobiles();
 	void	PopulateCartels();
 	void	PremiumPriceCheck(Player *player,const Commodity *commodity,int which);

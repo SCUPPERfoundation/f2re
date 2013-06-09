@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-11
-	All Rights Reserved. No part of this software may be reproduced,
+                 Copyright (c) Alan Lenton 1985-2013
+ 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
 	electronic, mechanical, magnetic, optical, manual or otherwise,
@@ -369,6 +369,19 @@ void	Galaxy::MapStats()
 		iter->second->MapStats(map_file);
 	map_file << std::endl;
 	map_file.close();
+}
+
+void	Galaxy::MarkAbandondedSystems()
+{
+	int total = 0;
+	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
+	{
+		if(iter->second->MarkAbandondedSystem())
+			++total;
+	}
+	std::ostringstream	buffer;
+	buffer << total << " star systems have been abandoned";
+	WriteLog(buffer);
 }
 
 void	Galaxy::MoveMobiles()

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-4
+             Copyright (c) Alan Lenton 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -65,7 +65,7 @@ void	ComUnit::Comms(const std::string& text)
 		Process(Game::system->GetMessage("comunit","comms",2));
 		return;
 	}
-	
+
 	if(flags.test(COMMS))
 		Process(Game::system->GetMessage("comunit","comms",1));
 	else
@@ -119,7 +119,7 @@ void	ComUnit::Ignore(const std::string& who)
 			Process(Game::system->GetMessage("comunit","ignore",1));
 			return;
 		}
-		Process(Game::system->GetMessage("comunit","ignore",2));	
+		Process(Game::system->GetMessage("comunit","ignore",2));
 		for(iter = ignore_list.begin();iter != ignore_list.end();iter++)
 		{
 			buffer.str("");
@@ -198,7 +198,7 @@ void	ComUnit::Process(const std::string& text,Player *player)
 			buffer << owner->Name() << " is busy at the moment. Please try later." << std::endl;
 			player->Send(buffer,0,false);	// no sender - make sure it gets through - still need to filter out coms
 			return;
-		}					
+		}
 	}
 
 	std::string	line(text);
@@ -216,7 +216,7 @@ void	ComUnit::Process(const std::string& text,Player *player)
 	else
 		write(owner->Socket(),line.c_str(),line.length());
 }
-	
+
 void	ComUnit::ProcessWidth(std::string& text)
 {
 	int	length = text.length();
@@ -289,12 +289,12 @@ or who is ignoring you, or to yourself!\n");
 
 void	ComUnit::Send(const std::string& text,Player *player,bool can_relay)
 {
-	std::string	line = text;	
+	std::string	line = text;
 	Process(line,player);
 	if(can_relay)
 		DoRelay(text);
 }
-	
+
 void	ComUnit::Send(std::ostringstream& text,Player *player,bool can_relay)
 {
 	std::string	line = text.str();
@@ -322,7 +322,7 @@ void	ComUnit::SpynetNotice(const std::string& text)
 void	ComUnit::StripAnsi(std::string& text)
 {
 	static const char ESC = char(27);
-	
+
 	int 	len = text.length();
 	int 	index, start = 0;
 	bool	done = false;

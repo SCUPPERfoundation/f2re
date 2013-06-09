@@ -14,7 +14,9 @@
 #include <iostream>
 #include <sstream>
 
+
 #include <cstdio>
+#include <ctime>
 
 #include <unistd.h>
 #include <sys/dir.h>
@@ -122,6 +124,8 @@ void	Star::DisplaySystem(Player *player)
 	std::ostringstream	buffer;
 	buffer << "System information for the " << name << " system:\n";
 	buffer << "  Member of the " << cartel << " Cartel\n";
+	if(abandoned)
+		buffer << "  System has been abandoned by its owner!\n";
 	player->Send(buffer);
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->Display(player,false);
@@ -621,4 +625,26 @@ void	Star::Write()
 }
 
 
+bool	Star::MarkAbandondedSystem()
+{
+	Player *owner = Owner();
+	if(owner == 0)
+	{
+		std::ostringstream	buffer;
+		buffer << "***" << name << " system has no owner!***";
+		WriteLog(buffer);
+		abandoned = true;
+	}
+	else
+	{
+		time_t last_time_on = owner->LastTimeOn();
+		time_t now =  std::time(0);
+		long	how_long = std::difftime(now,last_time_on);
+		if(how_long > ABANDONED)
+			abandoned = true;
+		else
+			abandoned = false;
+	}
+	return abandoned;
+}
 
