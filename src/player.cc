@@ -4998,27 +4998,27 @@ void	Player::SpynetReport(Player *player)
 
 	time_t	elapsed = time(0) - last_on;
 	if(elapsed > (ONE_DAY * 1100))
-		buffer << ", but hasn't been spotted since before Diesel started selling her Old Peculiar ale!";
+		buffer << ", but hasn't been spotted since before Diesel started selling her Old Peculiar ale! ";
 	else
 	{
 		if(elapsed > (ONE_DAY * 30))
 		{
 			time_t	num_months = (time(0) - last_on)/(ONE_DAY * 30);
-			buffer << ", but hasn't been seen for " << num_months << ((num_months > 1) ? " months." : " month.");
+			buffer << ", but hasn't been seen for " << num_months << ((num_months > 1) ? " months. " : " month. ");
 		}
 		else
 		{
 			if(elapsed > (ONE_DAY * 7))
 			{
 				time_t	num_weeks = (time(0) - last_on)/(ONE_DAY * 7);
-				buffer << ", but hasn't been seen for " << num_weeks << ((num_weeks > 1) ? " weeks." : " week.");
+				buffer << ", but hasn't been seen for " << num_weeks << ((num_weeks > 1) ? " weeks. " : " week. ");
 			}
 			else
 			{
 				if(elapsed > ONE_DAY)
 				{
 					time_t	num_days = (time(0) - last_on)/(ONE_DAY);
-					buffer << ", but hasn't been seen for " << num_days << ((num_days > 1) ? " days." : " day.");
+					buffer << ", but hasn't been seen for " << num_days << ((num_days > 1) ? " days. " : " day. ");
 				}
 			}
 		}
@@ -6388,28 +6388,33 @@ void	Player::XMLSpynetReportWhenWhere(Player *player)
 	buffer << loc.map_name;
 
 	time_t	elapsed = time(0) - last_on;
-	if(elapsed > (ONE_DAY * 30))
-	{
-		time_t	num_months = (time(0) - last_on)/(ONE_DAY * 30);
-		buffer << ", but hasn't been seen for " << num_months << ((num_months > 1) ? " months" : " month");
-	}
+	if(elapsed > (ONE_DAY * 1100))
+		buffer << ", but hasn't been spotted since before Diesel started selling her Old Peculiar ale! ";
 	else
 	{
-		if(elapsed > (ONE_DAY * 7))
+		if(elapsed > (ONE_DAY * 30))
 		{
-			time_t	num_weeks = (time(0) - last_on)/(ONE_DAY * 7);
-			buffer << ", but hasn't been seen for " << num_weeks << ((num_weeks > 1) ? " weeks" : " week");
+			time_t	num_months = (time(0) - last_on)/(ONE_DAY * 30);
+			buffer << ", but hasn't been seen for " << num_months << ((num_months > 1) ? " months. " : " month. ");
 		}
 		else
 		{
-			if(elapsed > ONE_DAY)
+			if(elapsed > (ONE_DAY * 7))
 			{
-				time_t	num_days = (time(0) - last_on)/(ONE_DAY);
-				buffer << ", but hasn't been seen for " << num_days << ((num_days > 1) ? " days" : " day");
+				time_t	num_weeks = (time(0) - last_on)/(ONE_DAY * 7);
+				buffer << ", but hasn't been seen for " << num_weeks << ((num_weeks > 1) ? " weeks. " : " week. ");
+			}
+			else
+			{
+				if(elapsed > ONE_DAY)
+				{
+					time_t	num_days = (time(0) - last_on)/(ONE_DAY);
+					buffer << ", but hasn't been seen for " << num_days << ((num_days > 1) ? " days. " : " day. ");
+				}
 			}
 		}
 	}
-	buffer << ". ";
+
 	std::string	gender_temp(gender_str2[gender]);
 	gender_temp[0] = std::toupper(gender_temp[0]);
 	if(reward == 0)
