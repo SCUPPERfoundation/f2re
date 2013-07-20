@@ -5020,6 +5020,8 @@ void	Player::SpynetReport(Player *player)
 					time_t	num_days = (time(0) - last_on)/(ONE_DAY);
 					buffer << ", but hasn't been seen for " << num_days << ((num_days > 1) ? " days. " : " day. ");
 				}
+				else
+					buffer << ". ";
 			}
 		}
 	}
@@ -6411,6 +6413,8 @@ void	Player::XMLSpynetReportWhenWhere(Player *player)
 					time_t	num_days = (time(0) - last_on)/(ONE_DAY);
 					buffer << ", but hasn't been seen for " << num_days << ((num_days > 1) ? " days. " : " day. ");
 				}
+				else
+					buffer << ". ";
 			}
 		}
 	}
