@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -214,8 +214,8 @@ void	Cartel::BuildCity(Player *player,const std::string& city_name)
 				player->Send("The cartel doesn't have enough cash available to start building a new city!\n");
 			else
 			{
-				ChangeCash(-build_rec->cost);
-				dock->BuildCity(player,this,city_name);
+				if(dock->BuildCity(player,this,city_name))
+					ChangeCash(-build_rec->cost);
 			}
 		}
 		else

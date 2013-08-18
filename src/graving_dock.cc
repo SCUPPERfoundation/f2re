@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+	Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -98,7 +98,7 @@ bool	GravingDock::AddMaterial(const std::string& the_commod, int amount)
 	return true;
 }
 
-void	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& name_city)
+bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& name_city)
 {
 	static const std::string	building_types[] = { "agri", "mining", "ind", "tech", "leisure", "resource", ""	};
 	static const std::string	build_error("Finish building a size before you start a new one!\n");
@@ -108,14 +108,14 @@ void	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 	{
 		switch(status)
 		{
-			case WAITING:						player->Send("To start a new city build the command is 'build city city_name'\n");	return;
+			case WAITING:						player->Send("To start a new city build the command is 'build city city_name'\n");	return false;
 			case BUILDING_CITY_1:
 			case BUILDING_CITY_2:
 			case BUILDING_CITY_3:
 			case BUILDING_CITY_4:
-			case BUILDING_CITY_5:			player->Send(build_error);																				return;
-			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n");				return;
-			case BUILDING_CITY_WAITING:	BuildNextCityLevel(player,cartel);																	return;
+			case BUILDING_CITY_5:			player->Send(build_error);																				return false;
+			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n");				return false;
+			case BUILDING_CITY_WAITING:	return(BuildNextCityLevel(player,cartel));
 		}
 	}
 
@@ -137,25 +137,32 @@ void	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 	if(c_type != NOT_A_TYPE)
 	{
 		if(status == BUILDING_CITY_WAITING)
-			StartTypeBuild(player,cartel,c_type);
+			return(StartTypeBuild(player,cartel,c_type));
 		else
 		{
 			if(status == WAITING)
 				player->Send("You can't call a city the name of a commodity type - for example 'agri'!\n");
 			else
 				player->Send(build_error);
+			return false;
 		}
 	}
 	else
 	{
 		if(status ==  WAITING)
+		{
 			StartBuildCity(player,cartel,name_city);
+			return true;
+		}
 		else
+		{
 			player->Send(build_error);
+			return false;
+		}
 	}
 }
 
-void	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
+bool	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 {
 	std::ostringstream	buffer;
 	if(city_level < 5)
@@ -165,7 +172,7 @@ void	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 		{
 			buffer << "It costs " << (rec->cost/1000000) << "meg ig to build the city up to size " << (city_level + 1) << "\n";
 			player->Send(buffer);
-			return;
+			return false;
 		}
 
 		cartel->ChangeCash(-rec->cost);
@@ -176,13 +183,16 @@ void	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 		buffer << "The Cartel pay up the " << (rec->cost/1000000) << "meg ig to build the city ";
 		buffer << "up to size " << (city_level + 1) << ", and are notified that work will commence ";
 		buffer << "as soon as all the dockyard mateys are back from the " << (holidays[std::rand() % 7]) << ".\n";
+		player->Send(buffer);
+		return true;
 	}
 	else
 	{
 		buffer << "To complete the city you now need to specify what type of production the city needs to be outfitted for. ";
 		buffer << "the command is 'build city type', where 'type' is one of agri, resource, industrial, tech, or leisure.\n";
+		player->Send(buffer);
+		return false;
 	}
-	player->Send(buffer);
 }
 
 bool	GravingDock::CheckMaterials()
@@ -352,7 +362,7 @@ void	GravingDock::StartBuildCity(Player *player,Cartel* cartel,const std::string
 	player->Send(buffer);
 }
 
-void	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
+bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 {
 	std::ostringstream	buffer;
 	const CityBuildRec *rec = Game::city_build_info->GetBuildRec(CityBuildInfo::CITY_BUILD_AGRI + c_type);
@@ -360,7 +370,7 @@ void	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 	{
 		buffer << "It costs " << (rec->cost/1000000) << "meg ig to fit out your city for " << type_names[c_type + 1] << "\n";
 		player->Send(buffer);
-		return;
+		return false;
 	}
 
 	cartel->ChangeCash(-rec->cost);
@@ -373,6 +383,7 @@ void	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 	buffer << type_names[c_type + 1] << ", and are notified that work will commence as soon as ";
 	buffer << "all the dockyard mateys are back from the " << (holidays[std::rand() % 7]) << ".\n";
 	player->Send(buffer);
+	return true;
 }
 
 void	GravingDock::Update(Cartel *cartel)

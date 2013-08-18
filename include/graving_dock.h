@@ -58,9 +58,10 @@ private:
 
 	bool			build_materials_set;
 
+	bool	BuildNextCityLevel(Player *player,Cartel *cartel);
 	bool	CheckMaterials();
+	bool	StartTypeBuild(Player *player,Cartel* cartel,int c_type);
 
-	void	BuildNextCityLevel(Player *player,Cartel *cartel);
 	void	DisplayCityBuild(Player *player);
 	void	DisplayDockBuild(Player *player);
 	void	LaunchCity(Cartel *cartel);
@@ -68,7 +69,6 @@ private:
 	void	SetCityBuildMaterials();
 	void	SetCityTypeBuildMaterials();
 	void	StartBuildCity(Player *player,Cartel* cartel,const std::string& name_city);
-	void	StartTypeBuild(Player *player,Cartel* cartel,int c_type);
 
 	GravingDock(const GravingDock& rhs);
 	GravingDock& operator=(const GravingDock& rhs);
@@ -84,10 +84,10 @@ public:
 	int 	Status()				{ return status;	}
 
 	bool	AddMaterial(const std::string& the_commod, int amount);
+	bool	BuildCity(Player *player,Cartel* cartel,const std::string& name_city);
 	bool	IsBuildingCity()	{ return(status > WAITING);	}
 	bool	NeedsCommodity(const std::string& the_commod);
 
-	void	BuildCity(Player *player,Cartel* cartel,const std::string& name_city);
 	void	BreakUpCity(const std::string& city_name);
 	void	Display(Player *player);
 	void	SetCityStuff(const std::string& c_name,int c_type,int c_level);

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-2011
+   Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2013
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -31,7 +31,7 @@ const std::string	BuildParser::vocab[] =
 	"defence", "weather", "urban", "surveillance", "fusion", "insurance",
 	"floating", "biolab", "terraform", "genetic", "tachyon", "tquark",
 	"metastudio", "solar", "informer", "leisure", "airport", "longevity",
-	"graving", "city", 
+	"graving", "city",
 	""
 };
 
@@ -78,7 +78,7 @@ void	BuildParser::BuildCity(Player *player,Tokens *tokens,const std::string& lin
 		player->Send("Cartels need a graving dock to build blish cities!\n");
 		return;
 	}
-	
+
 	if(tokens->Size() >= 3)
 	{
 		std::string	city_name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
