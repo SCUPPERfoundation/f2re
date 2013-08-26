@@ -1,0 +1,10 @@
+maps/
+obj/
+objtest/
+.sconsign.dblite
+data/maps.dat.old
+data/maps.tmp
+maps.old/
+maps.tar
+*.autosave
+fed2.creator.user
