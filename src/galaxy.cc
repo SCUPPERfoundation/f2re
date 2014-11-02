@@ -19,10 +19,12 @@
 #include <cstring>
 
 #include <sys/dir.h>
+#include <unistd.h>
 
 #include "cartel.h"
 #include "fedmap.h"
 #include "galactic_parser.h"
+// #include "galaxy_map_parser.h"
 #include "location.h"
 #include "syndicate.h"
 #include "misc.h"
@@ -36,6 +38,7 @@ Galaxy::Galaxy()
 	current = 0;
 
 	std::ostringstream	buffer;
+//----------------------------------------------------------------
 	buffer << HomeDir() << "/data/maps.dat";
 	std::FILE	*file = fopen(buffer.str().c_str(),"r");
 	if(file == 0)
@@ -43,11 +46,23 @@ Galaxy::Galaxy()
 		std::cerr << "Unable to find " << buffer.str() << std::endl;
 		std::exit(EXIT_FAILURE);
 	}
-
 	GalacticParser	*parser = new GalacticParser(this);
 	parser->Parse(file,buffer.str());
-	delete parser;
-	std::fclose(file);
+//----------------------------------------------------------------
+
+/*
+	buffer << HomeDir() << "/maps";
+	if(access(buffer.str().c_str(),F_OK) == -1)
+	{
+		std::cerr << "Unable to find " << buffer.str() << std::endl;
+		std::exit(EXIT_FAILURE);
+	}
+
+	GalaxyMapParser	*parser = new GalaxyMapParser(this,buffer.str());
+	parser->Run();
+*/
+
+delete parser;
 	MapStats();
 }
 

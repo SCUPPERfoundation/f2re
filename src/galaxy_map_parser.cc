@@ -11,8 +11,12 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 #include <cstring>
+
+#include <sys/types.h>
+#include <dirent.h>
 
 #include "galaxy.h"
 #include "misc.h"
@@ -20,10 +24,10 @@
 
 const char	*GalaxyMapParser::el_names[] = { "galaxy", "star", "map", ""	};
 
-GalaxyMapParser::GalaxyMapParser(Galaxy *our_galaxy)
+GalaxyMapParser::GalaxyMapParser(Galaxy *our_galaxy,std::string map_dir)
 {
 	galaxy = our_galaxy;
-	directory[0] = '\0';
+	map_directory = map_dir;
 }
 
 GalaxyMapParser::~GalaxyMapParser()
@@ -58,25 +62,6 @@ void	GalaxyMapParser::MapStart(const char **attrib)
 	galaxy->AddMap(buffer);
 }
 
-void	GalaxyMapParser::StarStart(const char **attrib)
-{
-	const std::string	*name_str = FindAttrib(attrib,"name");
-	if(name_str == 0)
-		return;
-
-	std::string	name = *name_str;
-	const std::string	*dir_str  = FindAttrib(attrib,"directory");
-	if(dir_str == 0)
-		return;
-	std::string dir = *dir_str;
-	std::strncpy(directory,dir.c_str(),MAXNAMLEN);
-	directory[MAXNAMLEN -1] = '\0';
-
-	Star	*star = new Star(name,dir);
-	galaxy->AddStar(star);
-	star->Load();
-}
-
 void	GalaxyMapParser::StartElement(const char *element,const char **attrib)
 {
 	int	which;
@@ -94,3 +79,41 @@ void	GalaxyMapParser::StartElement(const char *element,const char **attrib)
 }
 
 
+/*-------------------- Work in Progress --------------------*/
+
+void	GalaxyMapParser::StarStart(const char **attrib)
+{
+	const std::string	*name_str = FindAttrib(attrib,"name");
+	if(name_str == 0)
+		return;
+
+	std::string	name = *name_str;
+	const std::string	*dir_str  = FindAttrib(attrib,"directory");
+	if(dir_str == 0)
+		return;
+	directory = map_directory + *dir_str;
+/*
+	std::string dir = *dir_str;
+	std::strncpy(directory,dir.c_str(),MAXNAMLEN);
+	directory[MAXNAMLEN -1] = '\0';
+*/
+	Star	*star = new Star(name,directory);
+	galaxy->AddStar(star);
+	star->Load();
+}
+
+void GalaxyMapParser::Run()
+{
+/*
+	struct dirent	*dir_struct;
+	DIR	cur_dir = opendir(map_directory.c_str());
+	while((dir_struct = readdir(cur_dir)) != 0)
+	{
+		if(directory->d_name[0] != '.')	// Skip the dot files
+		{
+			std::ostringstream	file_name;
+			file_name << map_directory << '/' << directory->d_name << "loader.xml";
+			// Needs a file opening here - see gitk for stuff taken out of galaxy.cc
+
+*/
+}

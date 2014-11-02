@@ -53,7 +53,11 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 		return;
 	}
 	std::string	player_name(tokens->Get(4));
-	Player	*target = Game::player_index->FindName(Normalise(player_name));
+	Player	*target = 0;
+	if(player_name == "pto")	// This play managed to get an uncapitalized name!
+		target = Game::player_index->FindName(player_name);
+	else
+		target = Game::player_index->FindName(Normalise(player_name));
 	std::string	title(tokens->GetRestOfLine(line,4,Tokens::PLANET));
 	FedMap	*planet = Game::galaxy->FindMap(title);
 
@@ -301,7 +305,7 @@ void	Admin::Indy(Player *player,Tokens *tokens)
 		player->Send("Can't find that player!\n");
 		return;
 	}
-	
+
 	if(target->Rank() != Player::COMMANDER)
 	{
 		player->Send("Player must be a commander!\n");
@@ -393,7 +397,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 #ifdef FEDTEST
 	if(!((player->Name() == "Hazed") || (player->Name() == "Bella")
 				 || (player->Name() == "Freya") || (player->Name() == "Djentsch")))
-#else	
+#else
 	if(!((player->Name() == "Hazed") || (player->Name() == "Bella")
 				 || (player->Name() == "Freya") || (player->Name() == "Nightdroid")
 				 || (player->Name() == "Buddy")))

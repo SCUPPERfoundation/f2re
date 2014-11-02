@@ -24,9 +24,11 @@ class	GalaxyMapParser : public XMLParser
 private:
 	static const char	*el_names[];
 
-	Galaxy		*galaxy;
-	Star			*current;
-	char			directory[MAXNAMLEN];
+	Galaxy	*galaxy;
+	Star		*current;
+
+	std::string	map_directory;
+	std::string	directory;
 
 	void	EndElement(const char *element);
 	void	MapStart(const char **attrib);
@@ -34,14 +36,16 @@ private:
 	void	StartElement(const char *element,const char **attrib);
 
 public:
-	GalaxyMapParser(Galaxy *our_galaxy);
+	GalaxyMapParser(Galaxy *our_galaxy,std::string map_dir);
 	virtual ~GalaxyMapParser();
+
+	void	Run();
 };
 
 #endif
 
 /*-----------------------------------------------------------------------
-	File Format:
+	File Format for loader.xml:
 
 <?xml version="1.0"?>
 <star name='Cheese' directory='cheese'>
@@ -49,4 +53,4 @@ public:
 	<map name='mousetrap'/>
 	<map name='space'/>
 </star>
------------------------------------------------------------------------
+-----------------------------------------------------------------------*/
