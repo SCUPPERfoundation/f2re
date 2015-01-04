@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-7
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2014
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -21,7 +21,7 @@
 
 const char	*MapParser::el_names[] =
 	{ "fed2-map", "location", "exits", "events", "name", "desc", "vocab", ""	};
-	
+
 MapParser::MapParser(FedMap *f_map)
 {
 	fed_map = f_map;
@@ -45,10 +45,10 @@ void	MapParser::EndElement(const char *element)
 			break;
 	}
 
-	std::string	temp;	
+	std::string	temp;
 	switch(which)
 	{
-		case 1:	
+		case 1:
 					fed_map->AddLocation(current);
 					current = 0;
 					break;

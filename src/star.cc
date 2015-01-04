@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2013
+		Copyright (c) Alan Lenton 1985-2014
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -455,6 +455,29 @@ void	Star::MapStats(std::ofstream&	map_file)
 	map_file << std::endl;
 }
 
+bool	Star::MarkAbandondedSystem()
+{
+	Player *owner = Owner();
+	if(owner == 0)
+	{
+		std::ostringstream	buffer;
+		buffer << "***" << name << " system has no owner!***";
+		WriteLog(buffer);
+		abandoned = true;
+	}
+	else
+	{
+		time_t last_time_on = owner->LastTimeOn();
+		time_t now =  std::time(0);
+		long	how_long = std::difftime(now,last_time_on);
+		if(how_long > ABANDONED)
+			abandoned = true;
+		else
+			abandoned = false;
+	}
+	return abandoned;
+}
+
 void	Star::MoveMobiles(){
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->MoveMobiles();
@@ -522,6 +545,8 @@ void	Star::PremiumPriceCheck(const Commodity *commodity,std::ostringstream& buff
 
 void	Star::ProcessInfrastructure()
 {
+	std::ostringstream buffer;
+	buffer << "Star: " << name;
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->ProcessInfrastructure();
 }
@@ -621,30 +646,63 @@ void	Star::Write()
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
+//	WriteLoaderFile();
 	return;
 }
 
 
-bool	Star::MarkAbandondedSystem()
+/*--------------- Work in Progress for new parser ---------------*/
+
+void	Star::WriteLoaderFile()
 {
-	Player *owner = Owner();
-	if(owner == 0)
+	std::ostringstream	buffer;
+	buffer << HomeDir() << "/maps/" << directory << "/loader.xml";
+	std::ofstream	file(buffer.str().c_str(),std::ios::out);
+	if(!file)
 	{
-		std::ostringstream	buffer;
-		buffer << "***" << name << " system has no owner!***";
+		buffer << "Can't write to file " << HomeDir() << "/maps/" << directory << "/loader.xml";;
 		WriteLog(buffer);
-		abandoned = true;
+		WriteErrLog(buffer.str());
+		return;
 	}
-	else
+
+	file << "<?xml version=\"1.0\"?>\n";
+	file << "<star name='" << name << "' directory='" << directory << "'>\n";
+	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
 	{
-		time_t last_time_on = owner->LastTimeOn();
-		time_t now =  std::time(0);
-		long	how_long = std::difftime(now,last_time_on);
-		if(how_long > ABANDONED)
-			abandoned = true;
-		else
-			abandoned = false;
+		std::string	map_file_name(iter->second->FileName());
+		int index = map_file_name.find_last_of("/") + 1;
+		file << "   <map name='" << map_file_name.substr(index) << "'/>\n";
 	}
-	return abandoned;
+	file << "</star>\n";
 }
 
+/*
+<?xml version="1.0"?>
+<star name='Sol' directory='sol'>
+	<map name='brass'/>
+	<map name='castillo'/>
+	<map name='doris'/>
+	<map name='earth'/>
+	<map name='graveyard'/>
+	<map name='help'/>
+	<map name='hunt'/>
+	<map name='lattice'/>
+	<map name='magellan'/>
+	<map name='magrathea'/>
+	<map name='mars'/>
+	<map name='mercury'/>
+	<map name='moon'/>
+	<map name='paradise'/>
+	<map name='pearl'/>
+	<map name='phobos'/>
+	<map name='rhea'/>
+	<map name='silk'/>
+	<map name='space'/>
+	<map name='starbase1'/>
+	<map name='sumatra'/>
+	<map name='system'/>
+	<map name='titan'/>
+	<map name='venus'/>
+</star>
+*/

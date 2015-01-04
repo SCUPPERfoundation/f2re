@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.39";
+const std::string	Fed::version = "1.89.40";
 
 Fed::Fed()
 {
@@ -181,7 +181,8 @@ Fed::~Fed()
 
 	delete Game::city_build_info;
 	delete Game::syndicate;
-	delete Game::nav_comp;
+	delete Game::nav_comp;WriteLog("EndElement()");
+
 	delete Game::company_register;
 	delete Game::business_register;
 	delete Game::global_player_vars_table;

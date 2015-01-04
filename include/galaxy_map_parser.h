@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2013
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2014
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -22,12 +22,10 @@ class Star;
 class	GalaxyMapParser : public XMLParser
 {
 private:
-	static const char	*el_names[];
-
 	Galaxy	*galaxy;
-	Star		*current;
+	Star		*star;
 
-	std::string	map_directory;
+	std::string	star_directory;
 	std::string	directory;
 
 	void	EndElement(const char *element);
@@ -35,8 +33,10 @@ private:
 	void	StarStart(const char **attrib);
 	void	StartElement(const char *element,const char **attrib);
 
+	void	LoadStarSystem(const std::string& loader_path);
+
 public:
-	GalaxyMapParser(Galaxy *our_galaxy,std::string map_dir);
+	GalaxyMapParser(Galaxy *our_galaxy,const std::string& map_dir);
 	virtual ~GalaxyMapParser();
 
 	void	Run();
@@ -44,7 +44,7 @@ public:
 
 #endif
 
-/*-----------------------------------------------------------------------
+/*--------------------------------------------------------
 	File Format for loader.xml:
 
 <?xml version="1.0"?>
@@ -53,4 +53,18 @@ public:
 	<map name='mousetrap'/>
 	<map name='space'/>
 </star>
------------------------------------------------------------------------*/
+
+Note that 'name' is the map file name, not the planet name
+--------------------------------------------------------*/
+
+// struct dirent
+// {
+// 	ino_t          d_ino;       /* inode number */
+//		off_t          d_off;       /* not an offset; see NOTES */
+// 	unsigned short d_reclen;    /* length of this record */
+//		unsigned char  d_type;      /* type of file; not supported
+//												 by all file system types */
+//		char           d_name[256]; /* filename */
+//	};
+
+//	Read man 3 readdir() and man opendir()

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2014
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -304,7 +304,6 @@ bool	Infrastructure::BuildEnhancement(Player *player,Enhancement *build)
 
 void	Infrastructure::BuildRiot()
 {
-WriteLog("BuildRiot");
 	Player	*player = Game::player_index->FindName(owner_name);
 	if(riots == 0)
 		riots = new Riots(home);
@@ -509,7 +508,6 @@ void	Infrastructure::Demolish(Player *player,const std::string&  building)
 
 void	Infrastructure::DepotRiot()
 {
-WriteLog("depot riot");
 	if(riots == 0)
 		riots = new Riots(home);
 
@@ -705,7 +703,6 @@ int	Infrastructure::EfficiencyBonus(int type) const
 
 void	Infrastructure::EmbezzleRiot()
 {
-WriteLog("EmbezzleRiot");
 	Player	*player = Game::player_index->FindName(owner_name);
 	if(riots == 0)
 		riots = new Riots(home);
@@ -1044,7 +1041,6 @@ void	Infrastructure::Output(Player *player)
 
 void	Infrastructure::PersonalRiot()
 {
-WriteLog("PersonalRiot");
 	Player	*player = Game::player_index->FindName(owner_name);
 	if(riots == 0)
 		riots = new Riots(home);
@@ -1114,10 +1110,13 @@ void	Infrastructure::ProcessInfrastructure(CommodityExchange *commodity_exchange
 {
 	CalculatePopulationAndWorkers();
 	CalculateEfficiency();
+
 	if((economy > AGRICULTURAL) && (economy != BIOLOGICAL))
 		disaffection = CalculateDisaffection();
+
 	if(disaffection > 0)
 		ProcessDisaffection();
+
 	ProcessWorkForce(commodity_exchange);
 }
 
@@ -1439,7 +1438,6 @@ are given the additional capacity to handle interplanetary migrations.\n");
 
 void	Infrastructure::WarehouseRiot()
 {
-WriteLog("WarehouseRiot");
 	if(riots == 0)
 		riots = new Riots(home);
 	int num_wares = warehouse_list.size();
@@ -1572,10 +1570,4 @@ void	Infrastructure::XMLMapInfo(Player *player)
 	std::string	temp("<s-update-infra/>\n");
 	player->Send(temp);
 }
-
-
-
-
-
-
 

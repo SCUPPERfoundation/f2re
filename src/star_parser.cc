@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-10
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -47,7 +47,7 @@ void	StarParser::StartElement(const char *element,const char **attrib)
 		if(std::strcmp(el_names[which],element) == 0)
 			break;
 	}
-	
+
 	switch(which)
 	{
 		case 0:	StartStar(attrib);			break;

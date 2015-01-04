@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-                Copyright (c) Alan Lenton 1985-2013
+                Copyright (c) Alan Lenton 1985-2014
  	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -28,6 +28,8 @@ class	Galaxy
 private:
 	StarIndex	star_index;
 	Star			*current;
+
+	void 			LoadStars(const std::string& galaxy_directory);
 
 public:
 	Galaxy();
@@ -67,7 +69,7 @@ public:
 	void	DisplayExile(Player *player);
 	void	DisplayFleets(Player *player);
 	void	DisplaySystem(Player *player,const std::string& star_title);
-	void	EndStar()				{ current = 0;	}
+	void	EndStar()					{ current = 0;	}
 	void	IncFleet(const std::string& planet_title);
 	void	InformerRingBust();
 	void	LiquidateAllFuturesContracts();
