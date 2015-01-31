@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-15
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -26,6 +26,7 @@ const std::string	BuildPlanet::stock_planet_files[] =		{ "water", "fire", "ice",
 BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string& planet,
 									const std::string& type_name) : player(who)
 {
+
 	if((system.length() > 32) || (system.length() < 3) || (planet.length() > 32) || (planet.length() < 3))
 		throw std::invalid_argument("System and planet names must be three characters or more, and not more than 32 characters.\n");
 	if(!isalpha(system[0]))
@@ -49,10 +50,10 @@ BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string
 	if(!MakeFileRoot(system_file_root))
 		throw std::invalid_argument("There is an invalid character in system name.\n");
 
-	temp = "maps/";
-	temp += planet;
-	planet_file_root = (temp);
-	if(!MakeFileRoot(planet_file_root))
+//	temp = "maps/";
+//	temp += planet;
+	planet_file_name = planet;
+	if(!MakeFileRoot(planet_file_name))
 		throw std::invalid_argument("There is an invalid character in planet name.\n");
 
 	system_type = -1;
@@ -74,7 +75,7 @@ BuildPlanet::~BuildPlanet()
 
 }
 
-
+/*
 bool	BuildPlanet::AddToMapsDatFile()
 {
 	if(std::system("cp data/maps.dat data/maps.dat.old") < 0)
@@ -91,7 +92,7 @@ bool	BuildPlanet::AddToMapsDatFile()
 	std::ostringstream buffer;
 	buffer << "sed s:\"</galaxy>\":\"<star name='" << system_title << "' ";
 	buffer << "directory='" << system_file_root.substr(system_file_root.find_last_of('/') + 1) << "'>";
-	buffer << "<map name='" << planet_file_root.substr(planet_file_root.find_last_of('/') + 1) << "'/><map name='space'/></star>\": ";
+	buffer << "<map name='" << planet_file_name << "'/><map name='space'/></star>\": ";
 	buffer << "< data/maps.tmp > data/maps.dat";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
@@ -111,11 +112,13 @@ bool	BuildPlanet::AddToMapsDatFile()
 
 	return true;
 }
+*/
 
 bool	BuildPlanet::CreateInfFiles()
 {
 	std::ostringstream buffer;
 
+	// space.inf file
 	buffer << "echo \"<?xml version='1.0'?><infrastructure owner='";
 	buffer << player->Name() << "' economy='None' closed='true'>";
 	buffer << "</infrastructure>\" > " << system_file_root << "/space.inf";
@@ -125,14 +128,15 @@ bool	BuildPlanet::CreateInfFiles()
 		return false;
 	}
 
+	// planet_name.inf file
 	buffer.str("");
 	buffer << "echo \"<?xml version='1.0'?><infrastructure owner='";
 	buffer << player->Name() << "' economy='Agricultural' closed='false'>";
 	buffer << "</infrastructure>\" > " << system_file_root << "/";
-	buffer << planet_file_root.substr(planet_file_root.find_last_of('/') + 1) << ".inf";
+	buffer << planet_file_name << ".inf";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create space .inf file.\n");
+		player->Send("Unable to create planet .inf file.\n");
 		return false;
 	}
 
@@ -189,8 +193,10 @@ bool BuildPlanet::Run()
 		return false;
 	if(!FixPermissions())
 		return false;
-	if(!AddToMapsDatFile())
+	if(!CreateLoader())
 		return false;
+//	if(!AddToMapsDatFile())
+//		return false;
 
 	player->Send("Your claim has been registered, and you should be able to visit the planet after the next reset.\n");
 	return true;
@@ -215,7 +221,7 @@ bool	BuildPlanet::SetUpFiles()
 	buffer << " | "; // pipe it through to a new version of sed for the orbit new loc
 	buffer << "sed s:\"to='" << stock_star_titles[system_type] << "." << stock_star_titles[system_type] << "\":"; // find the stock orbit loc
 	buffer << "\"to='" << system_title << "." << system_title << "\": "; // replace it with the new system name
-	buffer << "> " << system_file_root << "/" << planet_file_root.substr(planet_file_root.find_last_of('/') + 1) << ".loc"; // output to new map file
+	buffer << "> " << system_file_root << "/" << planet_file_name << ".loc"; // output to new map file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
 		player->Send("Unable to create planet location file.\n");
@@ -244,7 +250,7 @@ bool	BuildPlanet::SetUpFiles()
 	}
 	buffer.str("");
 	buffer << "cp stock/" << stock_star_files[system_type] << "/" << stock_planet_files[system_type] << ".msg ";
-	buffer << system_file_root << "/" << planet_file_root.substr(planet_file_root.find_last_of('/') + 1) << ".msg";
+	buffer << system_file_root << "/" << planet_file_name << ".msg";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
 		player->Send("Unable to copy planet message file over.\n");
@@ -262,4 +268,47 @@ bool	BuildPlanet::SystemNotInUse()
 		return false;
 }
 
+/* ------------------------ Work in progress ------------------------ */
 
+bool BuildPlanet::CreateLoader()
+{
+	std::ostringstream	buffer;
+	buffer << HomeDir() << "/" << system_file_root << "/loader.xml";
+	std::ofstream	file(buffer.str().c_str(),std::ios::out);
+	if(!file)
+	{
+		buffer << "Can't write to file " << HomeDir() << "/maps/" << system_file_root << "/loader.xml";;
+		WriteLog(buffer);
+		WriteErrLog(buffer.str());
+		return false;
+	}
+
+	file << "<?xml version=\"1.0\"?>\n";
+	file << "<star name='" << system_title << "' directory='";
+	file << system_file_root.substr(system_file_root.find_last_of('/') + 1) << "'>\n";
+	file << "   <map name='" << planet_file_name << "'/>\n";
+	file << "   <map name='space'/>\n";
+	file << "</star>\n";
+	return true;
+}
+
+/*
+<?xml version="1.0"?>
+<star name='Chiswick' directory='   <map name='homefields'/>
+   <map name='space'/>
+</star>
+*/
+
+/*
+	file << "<?xml version=\"1.0\"?>\n";
+	file << "<star name='" << name << "' directory='" << system_file_root << "'>\n";
+	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
+	{
+		std::string	map_file_name(iter->second->FileName());
+		int index = map_file_name.find_last_of("/") + 1;
+		file << "   <map name='" << map_file_name.substr(index) << "'/>\n";
+	}
+
+	file << "</star>\n";
+	return true;
+*/

@@ -57,8 +57,10 @@
 #include "unload.h"
 #include "work.h"
 
+#include "build_planet.h"
+
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.40";
+const std::string	Fed::version = "1.89.41: Read maps.dat/WriteLoader";
 
 Fed::Fed()
 {
@@ -350,7 +352,6 @@ void	Fed::Run()
 	Game::syndicate->Update();
 	Game::galaxy->LoadDisplayCabinets();
 	Game::galaxy->MarkAbandondedSystems();
-
 	Game::ipc->GetInput();
 }
 

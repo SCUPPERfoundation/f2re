@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2014
+		Copyright (c) Alan Lenton 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -44,6 +44,7 @@ Star::Star(const std::string& star_name,const std::string& dir)
 	hosp_map = 0;
 	hosp_loc = Location::INVALID_LOC;
 	cabinet = new DisplayCabinet();
+WriteLog(star_name);
 }
 
 Star::~Star()
@@ -646,7 +647,7 @@ void	Star::Write()
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
-//	WriteLoaderFile();
+	WriteLoaderFile();
 	return;
 }
 

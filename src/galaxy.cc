@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------
-                 Copyright (c) Alan Lenton 1985-2014
- 	All Rights Reserved. No part of this software may be reproduced,
+                 Copyright (c) Alan Lenton 1985-20
+   All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
 	electronic, mechanical, magnetic, optical, manual or otherwise,
@@ -43,7 +43,7 @@ Galaxy::Galaxy()
 	std::ostringstream	buffer;
 
 //----------------------------------------------------------------
-/*	buffer << HomeDir() << "/data/maps.dat";
+	buffer << HomeDir() << "/data/maps.dat";
 	std::FILE	*file = fopen(buffer.str().c_str(),"r");
 	if(file == 0)
 	{
@@ -51,9 +51,9 @@ Galaxy::Galaxy()
 		std::exit(EXIT_FAILURE);
 	}
 	GalacticParser	*parser = new GalacticParser(this);
-	parser->Parse(file,buffer.str());*/
+	parser->Parse(file,buffer.str());
 //----------------------------------------------------------------
-
+/*
 // ---------------------------------------------------------------
 	buffer << HomeDir() << "/maps";
 	if(access(buffer.str().c_str(),F_OK) == -1)
@@ -64,7 +64,7 @@ Galaxy::Galaxy()
 
 	LoadStars(buffer.str());
 // ---------------------------------------------------------------
-
+*/
 	MapStats();
 }
 

@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-12
+		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-15
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -27,12 +27,13 @@ private:
 	std::string	system_title;
 	std::string	planet_title;
 	std::string	system_file_root;
-	std::string	planet_file_root;
+	std::string	planet_file_name;
 
 	int	system_type;
 
-	bool	AddToMapsDatFile();
+//	bool	AddToMapsDatFile();
 	bool	CreateInfFiles();
+	bool	CreateLoader();
 	bool	FixPermissions();
 	bool	MakeFileRoot(std::string& text);
 	bool	PlanetNotInUse();
