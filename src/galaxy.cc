@@ -41,7 +41,7 @@ Galaxy::Galaxy()
 	current = 0;
 
 	std::ostringstream	buffer;
-
+/*
 //----------------------------------------------------------------
 	buffer << HomeDir() << "/data/maps.dat";
 	std::FILE	*file = fopen(buffer.str().c_str(),"r");
@@ -53,7 +53,7 @@ Galaxy::Galaxy()
 	GalacticParser	*parser = new GalacticParser(this);
 	parser->Parse(file,buffer.str());
 //----------------------------------------------------------------
-/*
+*/
 // ---------------------------------------------------------------
 	buffer << HomeDir() << "/maps";
 	if(access(buffer.str().c_str(),F_OK) == -1)
@@ -64,7 +64,7 @@ Galaxy::Galaxy()
 
 	LoadStars(buffer.str());
 // ---------------------------------------------------------------
-*/
+
 	MapStats();
 }
 

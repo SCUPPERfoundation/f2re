@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-	               Copyright (c) Alan Lenton 1985-2013
+	               Copyright (c) Alan Lenton 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -60,7 +60,7 @@
 #include "build_planet.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.41: Read maps.dat/WriteLoader";
+const std::string	Fed::version = "1.89.42: Read Loaders";
 
 Fed::Fed()
 {

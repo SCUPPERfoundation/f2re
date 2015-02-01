@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2012
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -85,7 +85,7 @@ int	main(int argc, char *argv[])
 			}
 		}
 	}
-	
+
 	getrlimit(RLIMIT_CORE,&info);
 	info.rlim_cur = info.rlim_max;
 	setrlimit(RLIMIT_CORE,&info);

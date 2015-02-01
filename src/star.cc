@@ -44,7 +44,6 @@ Star::Star(const std::string& star_name,const std::string& dir)
 	hosp_map = 0;
 	hosp_loc = Location::INVALID_LOC;
 	cabinet = new DisplayCabinet();
-WriteLog(star_name);
 }
 
 Star::~Star()
@@ -647,7 +646,7 @@ void	Star::Write()
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
-	WriteLoaderFile();
+//	WriteLoaderFile(); // NOTE: Only call this if you want to overwrite existing loaders.
 	return;
 }
 
@@ -677,6 +676,9 @@ void	Star::WriteLoaderFile()
 	}
 	file << "</star>\n";
 }
+
+
+/* ----- Sample loader.xml file for the Solar System ----- */
 
 /*
 <?xml version="1.0"?>
