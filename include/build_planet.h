@@ -31,7 +31,6 @@ private:
 
 	int	system_type;
 
-//	bool	AddToMapsDatFile();
 	bool	CreateInfFiles();
 	bool	CreateLoader();
 	bool	FixPermissions();

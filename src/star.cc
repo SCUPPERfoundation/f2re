@@ -646,12 +646,9 @@ void	Star::Write()
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
-//	WriteLoaderFile(); // NOTE: Only call this if you want to overwrite existing loaders.
+//	WriteLoaderFile(); 		// NOTE: Only call this if you want to overwrite existing loaders.
 	return;
 }
-
-
-/*--------------- Work in Progress for new parser ---------------*/
 
 void	Star::WriteLoaderFile()
 {
@@ -678,34 +675,3 @@ void	Star::WriteLoaderFile()
 }
 
 
-/* ----- Sample loader.xml file for the Solar System ----- */
-
-/*
-<?xml version="1.0"?>
-<star name='Sol' directory='sol'>
-	<map name='brass'/>
-	<map name='castillo'/>
-	<map name='doris'/>
-	<map name='earth'/>
-	<map name='graveyard'/>
-	<map name='help'/>
-	<map name='hunt'/>
-	<map name='lattice'/>
-	<map name='magellan'/>
-	<map name='magrathea'/>
-	<map name='mars'/>
-	<map name='mercury'/>
-	<map name='moon'/>
-	<map name='paradise'/>
-	<map name='pearl'/>
-	<map name='phobos'/>
-	<map name='rhea'/>
-	<map name='silk'/>
-	<map name='space'/>
-	<map name='starbase1'/>
-	<map name='sumatra'/>
-	<map name='system'/>
-	<map name='titan'/>
-	<map name='venus'/>
-</star>
-*/

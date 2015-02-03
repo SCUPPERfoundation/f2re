@@ -50,8 +50,6 @@ BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string
 	if(!MakeFileRoot(system_file_root))
 		throw std::invalid_argument("There is an invalid character in system name.\n");
 
-//	temp = "maps/";
-//	temp += planet;
 	planet_file_name = planet;
 	if(!MakeFileRoot(planet_file_name))
 		throw std::invalid_argument("There is an invalid character in planet name.\n");
@@ -74,45 +72,6 @@ BuildPlanet::~BuildPlanet()
 {
 
 }
-
-/*
-bool	BuildPlanet::AddToMapsDatFile()
-{
-	if(std::system("cp data/maps.dat data/maps.dat.old") < 0)
-	{
-		player->Send("Unable to create maps.dat.old.\n");
-		return false;
-	}
-	if(std::system("mv data/maps.dat data/maps.tmp") < 0)
-	{
-		player->Send("Unable to move maps.dat to maps.tmp.\n");
-		return false;
-	}
-
-	std::ostringstream buffer;
-	buffer << "sed s:\"</galaxy>\":\"<star name='" << system_title << "' ";
-	buffer << "directory='" << system_file_root.substr(system_file_root.find_last_of('/') + 1) << "'>";
-	buffer << "<map name='" << planet_file_name << "'/><map name='space'/></star>\": ";
-	buffer << "< data/maps.tmp > data/maps.dat";
-	if(std::system(buffer.str().c_str()) < 0)
-	{
-		player->Send("Unable to add entry to maps.dat.\n");
-		std::system("cp data/maps.dat.old data/maps.dat");
-		return false;
-	}
-
-	if(std::system("echo \"</galaxy>\" >> data/maps.dat") < 0)
-	{
-		player->Send("Unable to complete entry to maps.dat.\n");
-		std::system("cp data/maps.dat.old data/maps.dat");
-		return false;
-	}
-
-	std::system("chmod g+w data/maps.dat");	// make sure I can edit it without having to 'su'
-
-	return true;
-}
-*/
 
 bool	BuildPlanet::CreateInfFiles()
 {
@@ -140,6 +99,28 @@ bool	BuildPlanet::CreateInfFiles()
 		return false;
 	}
 
+	return true;
+}
+
+bool BuildPlanet::CreateLoader()
+{
+	std::ostringstream	buffer;
+	buffer << HomeDir() << "/" << system_file_root << "/loader.xml";
+	std::ofstream	file(buffer.str().c_str(),std::ios::out);
+	if(!file)
+	{
+		buffer << "Can't write to file " << HomeDir() << "/maps/" << system_file_root << "/loader.xml";;
+		WriteLog(buffer);
+		WriteErrLog(buffer.str());
+		return false;
+	}
+
+	file << "<?xml version=\"1.0\"?>\n";
+	file << "<star name='" << system_title << "' directory='";
+	file << system_file_root.substr(system_file_root.find_last_of('/') + 1) << "'>\n";
+	file << "   <map name='" << planet_file_name << "'/>\n";
+	file << "   <map name='space'/>\n";
+	file << "</star>\n";
 	return true;
 }
 
@@ -195,8 +176,6 @@ bool BuildPlanet::Run()
 		return false;
 	if(!CreateLoader())
 		return false;
-//	if(!AddToMapsDatFile())
-//		return false;
 
 	player->Send("Your claim has been registered, and you should be able to visit the planet after the next reset.\n");
 	return true;
@@ -268,47 +247,4 @@ bool	BuildPlanet::SystemNotInUse()
 		return false;
 }
 
-/* ------------------------ Work in progress ------------------------ */
 
-bool BuildPlanet::CreateLoader()
-{
-	std::ostringstream	buffer;
-	buffer << HomeDir() << "/" << system_file_root << "/loader.xml";
-	std::ofstream	file(buffer.str().c_str(),std::ios::out);
-	if(!file)
-	{
-		buffer << "Can't write to file " << HomeDir() << "/maps/" << system_file_root << "/loader.xml";;
-		WriteLog(buffer);
-		WriteErrLog(buffer.str());
-		return false;
-	}
-
-	file << "<?xml version=\"1.0\"?>\n";
-	file << "<star name='" << system_title << "' directory='";
-	file << system_file_root.substr(system_file_root.find_last_of('/') + 1) << "'>\n";
-	file << "   <map name='" << planet_file_name << "'/>\n";
-	file << "   <map name='space'/>\n";
-	file << "</star>\n";
-	return true;
-}
-
-/*
-<?xml version="1.0"?>
-<star name='Chiswick' directory='   <map name='homefields'/>
-   <map name='space'/>
-</star>
-*/
-
-/*
-	file << "<?xml version=\"1.0\"?>\n";
-	file << "<star name='" << name << "' directory='" << system_file_root << "'>\n";
-	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
-	{
-		std::string	map_file_name(iter->second->FileName());
-		int index = map_file_name.find_last_of("/") + 1;
-		file << "   <map name='" << map_file_name.substr(index) << "'/>\n";
-	}
-
-	file << "</star>\n";
-	return true;
-*/

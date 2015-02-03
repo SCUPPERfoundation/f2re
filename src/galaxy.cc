@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------
-                 Copyright (c) Alan Lenton 1985-20
+                 Copyright (c) Alan Lenton 1985-2015
    All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -26,7 +26,6 @@
 
 #include "cartel.h"
 #include "fedmap.h"
-#include "galactic_parser.h"
 #include "galaxy_map_parser.h"
 #include "location.h"
 #include "syndicate.h"
@@ -41,20 +40,6 @@ Galaxy::Galaxy()
 	current = 0;
 
 	std::ostringstream	buffer;
-/*
-//----------------------------------------------------------------
-	buffer << HomeDir() << "/data/maps.dat";
-	std::FILE	*file = fopen(buffer.str().c_str(),"r");
-	if(file == 0)
-	{
-		std::cerr << "Unable to find " << buffer.str() << std::endl;
-		std::exit(EXIT_FAILURE);
-	}
-	GalacticParser	*parser = new GalacticParser(this);
-	parser->Parse(file,buffer.str());
-//----------------------------------------------------------------
-*/
-// ---------------------------------------------------------------
 	buffer << HomeDir() << "/maps";
 	if(access(buffer.str().c_str(),F_OK) == -1)
 	{
@@ -63,8 +48,6 @@ Galaxy::Galaxy()
 	}
 
 	LoadStars(buffer.str());
-// ---------------------------------------------------------------
-
 	MapStats();
 }
 
@@ -375,6 +358,24 @@ void	Galaxy::LoadDisplayCabinets()
 		iter->second->LoadDisplayCabinet();
 }
 
+void Galaxy::LoadStars(const std::string& galaxy_directory)
+{
+	DIR	*galaxy_dir = opendir(galaxy_directory.c_str());	// TODO: Check for null return
+
+	struct dirent	*star_dirent;
+	while((star_dirent = readdir(galaxy_dir)) != 0)
+	{
+		if(star_dirent->d_name[0] != '.')
+		{
+			std::ostringstream	star_directory;
+			star_directory << galaxy_directory << "/" << star_dirent->d_name;
+			GalaxyMapParser	*parser = new GalaxyMapParser(this,star_directory.str());
+			parser->Run();
+			delete parser;
+		}
+	}
+}
+
 void	Galaxy::MapStats()
 {
 	std::ofstream	map_file;
@@ -591,26 +592,5 @@ void	Galaxy::XMLListLinks(Player *player,const std::string& from_star_name)
 	}
 	if(count != 0)
 		player->Send(buffer);
-}
-
-
-/* ------------------------ Work in progress ------------------------ */
-
-void Galaxy::LoadStars(const std::string& galaxy_directory)
-{
-	DIR	*galaxy_dir = opendir(galaxy_directory.c_str());	// TODO: Check for null return
-
-	struct dirent	*star_dirent;
-	while((star_dirent = readdir(galaxy_dir)) != 0)
-	{
-		if(star_dirent->d_name[0] != '.')
-		{
-			std::ostringstream	star_directory;
-			star_directory << galaxy_directory << "/" << star_dirent->d_name;
-			GalaxyMapParser	*parser = new GalaxyMapParser(this,star_directory.str());
-			parser->Run();
-			delete parser;
-		}
-	}
 }
 

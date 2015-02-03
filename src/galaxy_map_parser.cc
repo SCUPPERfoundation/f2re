@@ -1,15 +1,11 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2014
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
 	electronic, mechanical, magnetic, optical, manual or otherwise,
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
-
-/*	NOTE: Rework this to make it step through the 'maps.dat' directory as well
-	as through the star system directiories */
-
 
 #include "galaxy_map_parser.h"
 
@@ -70,6 +66,34 @@ void	GalaxyMapParser::MapStart(const char **attrib)
 	galaxy->AddMap(buffer);
 }
 
+void GalaxyMapParser::Run()
+{
+	DIR	*star_dir = opendir(star_directory.c_str());
+	struct dirent	*map_dirent;
+	bool	has_loader = false;
+
+	// Do it this way because abandoned systems will have no loader.xml file
+	while((map_dirent = readdir(star_dir)) != 0)
+	{
+		std::string	file_name(map_dirent->d_name);
+		if(file_name == "loader.xml")
+		{
+			has_loader = true;
+			std::ostringstream	loader_path;
+			loader_path << star_directory << "/" << file_name;
+			LoadStarSystem(loader_path.str());
+			break;
+		}
+	}
+
+	if(!has_loader)
+	{
+		std::ostringstream logbuf;
+		logbuf << "For info: " << star_directory << " has no loader";
+		WriteErrLog(logbuf.str());
+	}
+}
+
 void	GalaxyMapParser::StarStart(const char **attrib)
 {
 	const std::string	*name_str = FindAttrib(attrib,"name");
@@ -94,34 +118,4 @@ void	GalaxyMapParser::StartElement(const char *element,const char **attrib)
 		MapStart(attrib);
 }
 
-
-/* ------------------------ Work in progress ------------------------ */
-
-void GalaxyMapParser::Run()
-{
-	DIR	*star_dir = opendir(star_directory.c_str());
-	struct dirent	*map_dirent;
-	bool	has_loader = false;
-
-	// Do it this way because abandonned systems will have no loader.xml file
-	while((map_dirent = readdir(star_dir)) != 0)
-	{
-		std::string	file_name(map_dirent->d_name);
-		if(file_name == "loader.xml")
-		{
-			has_loader = true;
-			std::ostringstream	loader_path;
-			loader_path << star_directory << "/" << file_name;
-			LoadStarSystem(loader_path.str());
-			break;
-		}
-	}
-
-	if(!has_loader)	// Uncomment to get a list of derelict planets
-	{
-		std::ostringstream logbuf;
-		logbuf << "For info: " << star_directory << " has no loader";
-		WriteErrLog(logbuf.str());
-	}
-}
 

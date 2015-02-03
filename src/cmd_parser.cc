@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-15
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -316,7 +316,8 @@ name of the business whose shares you are bidding for.\n");
 	}
 
 	Company *company = player->GetCompany();
-	if(company == 0)
+	if(company == 0)//	bool	AddToMapsDatFile();
+
 	{
 		player->Send("You don't seem to have a company that can buy the shares!\n");
 		return;
@@ -340,7 +341,8 @@ name of the business whose shares you are bidding for.\n");
 
 void	CmdParser::Board(Player *player)
 {
-	if((tokens->Size() == 1) || (tokens->Get(1).compare("shuttle") == 0))
+	if((tokens->Size() == 1) || (tokens->Get(1).compare("shuttle") == 0))//	bool	AddToMapsDatFile();
+
 		player->CurrentMap()->BoardShuttle(player);
 	else
 		player->Send(Game::system->GetMessage("cmdparser","board",1));
@@ -367,7 +369,8 @@ void	CmdParser::Broadcast(Player *player,std::string& line)
 }
 
 void	CmdParser::Call(Player *player)
-{
+{//	bool	AddToMapsDatFile();
+
 	static const std::string	no_name("I don't know who you want to call!\n");
 	static const std::string	names[] = { "nightwatch", "staff", "" };
 
@@ -394,7 +397,8 @@ void	CmdParser::CallNightwatch(Player *player)
 		player->Send(Game::system->GetMessage("cmdparser","call",1));
 	else
 	{
-		if(!player->ManFlag(Player::MANAGER) && !player->ManFlag(Player::NAV_FLAG) &&
+		if(!player->ManFlag(Player::MANAGER) && !player->ManFlag(Player::NAV_FLAG) &&//	bool	AddToMapsDatFile();
+
 																	!player->ManFlag(Player::HOST_FLAG))
 		{
 			player->Send(ignore);
@@ -2294,7 +2298,7 @@ void	CmdParser::UnLock(Player *player)
 
 void	CmdParser::UnPost(Player *player)
 {
-	if((tokens->Size() > 1) && (player->IsManagement()))	// try�ng to unpost someone else's post
+	if((tokens->Size() > 1) && (player->IsManagement()))	// trying to unpost someone else's post
 	{
 		std::string	name(tokens->Get(1));
 		Normalise(name);
