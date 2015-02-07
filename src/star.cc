@@ -457,10 +457,11 @@ void	Star::MapStats(std::ofstream&	map_file)
 
 bool	Star::MarkAbandondedSystem()
 {
+	std::ostringstream	buffer;
+
 	Player *owner = Owner();
 	if(owner == 0)
 	{
-		std::ostringstream	buffer;
 		buffer << "***" << name << " system has no owner!***";
 		WriteLog(buffer);
 		abandoned = true;
@@ -471,7 +472,14 @@ bool	Star::MarkAbandondedSystem()
 		time_t now =  std::time(0);
 		long	how_long = std::difftime(now,last_time_on);
 		if(how_long > ABANDONED)
+		{
+			if(how_long >= LONG_GONE)
+			{
+				buffer << "***" << name << " system, owner " << owner->Name() << " is long gone from the game!***";
+				WriteLog(buffer);
+			}
 			abandoned = true;
+		}
 		else
 			abandoned = false;
 	}

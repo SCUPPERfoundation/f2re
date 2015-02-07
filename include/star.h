@@ -31,7 +31,8 @@ class	Star
 
 public:
 	static const int	NAME_SIZE = 48;
-	static const int	ABANDONED = 90*24*60*60;	// 90 days
+	static const int	ABANDONED = 90*24*60*60;	// mark system abandoned if owner is absent over 3 months
+	static const int	LONG_GONE = 1100*24*60*60;	// report owner not on for over 3 years (or thereabouts)
 
 	enum	{ CLOSED, NO_BUILD, DIVERT, MAX_FLAGS	};
 	enum	{ LIST_ALL, LIST_OPEN	};				// used by ListSystem()
