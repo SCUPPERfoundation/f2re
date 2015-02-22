@@ -22,7 +22,7 @@
 #include <unistd.h>
 
 #include "assign.h"
-#include "build_planet.h"
+#include "build_star.h"
 #include	"business.h"
 #include "bus_register.h"
 #include "buy.h"
@@ -90,7 +90,7 @@ const std::string	CmdParser::vocab[] =
 	"retrieve", "retreive", "doff", "carry", "pocket", "clip", "unclip", "assign",	// 167-174
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
-	"undivert", "move", "allocate", "stop", "extend", "hide", "claim",
+	"undivert", "move", "allocate", "stop", "extend", "hide", "claim","colonise",		// 190-198
 	""
 };
 
@@ -552,12 +552,13 @@ void	CmdParser::Claim(Player *player)
 	int	type_index   = tokens->FindIndex("type");
 	int	size = tokens->Size();
 
-		if((size < 7) || (system_index < 0) || (planet_index < system_index) ||
+	if((size < 7) || (system_index < 0) || (planet_index < system_index) ||
 								(type_index < planet_index) || (type_index == (size - 1)))
 	{
 		player->Send(help);
 		return;
 	}
+
 	std::ostringstream	buffer;
 	for(int count = system_index +1;count != planet_index;++count)
 	{
@@ -578,10 +579,10 @@ void	CmdParser::Claim(Player *player)
 
 	std::string	type(tokens->Get(type_index + 1));
 
-	BuildPlanet	*planet_builder;
+	BuildStar	*star_builder;
 	try
 	{
-		planet_builder = new BuildPlanet(player,system,planet,type);
+		star_builder = new BuildStar(player,system,planet,type);
 	}
 	catch(const std::invalid_argument&	except)
 	{
@@ -590,12 +591,12 @@ void	CmdParser::Claim(Player *player)
 		return;
 	}
 
-	if(!planet_builder->Run())
+	if(!star_builder->Run())
 		player->Send("Please report the problem and error message to 'feedback@ibgames.net' - remember to put 'fed2' in the subject line!\n");
 	else
 		player->SetPlanetClaimed();
 
-	delete planet_builder;
+	delete star_builder;
 }
 
 void	CmdParser::Clip(Player *player,std::string& line)
@@ -968,6 +969,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 195:	player->ExtendSystemCabinet();					break;	// 'extend'
 		case 196:	Stash(player,line,true);							break;	// 'hide'
 		case 197:	Claim(player);											break;	// 'claim'
+		case 198:	Colonize(player);										break;	// 'colonize'
 	}
 }
 
@@ -2600,4 +2602,45 @@ void	CmdParser::Zap(Player *player)
 	}
 }
 
+
+/* ---------------------- Work in progress ---------------------- */
+
+void	CmdParser::Colonize(Player *player)
+{
+	static std::string	help("Command is 'colonize planet <name> type <name>\n For more info try 'help colonize' :)\n");
+	if(player->Rank() < Player::MOGUL)
+	{
+		player->Send("You need to be at least a mogul to colonize other planets!\n");
+		return;
+	}
+
+	int	planet_index = tokens->FindIndex("planet");
+	int	type_index   = tokens->FindIndex("type");
+	int	size = tokens->Size();
+
+	if((size < 5) || (type_index < planet_index) || (type_index == (size - 1)))
+	{
+		player->Send(help);
+		return;
+	}
+
+	std::ostringstream	buffer;
+	for(int count = planet_index + 1;count != type_index;++count)
+	{
+		if(count > (planet_index +1))
+			buffer << " ";
+		buffer << tokens->Get(count);
+	}
+	std::string	planet(buffer.str());
+	std::string	type(tokens->Get(type_index + 1));
+
+	Star *star = Game::galaxy->FindByOwner(player);
+	if(star == 0)
+	{
+		player->Send("I can't find your star system! Please notify ibgames. Thank you.\n");
+		return;
+	}
+
+	star->BuildNewPlanet(player,planet,type);
+}
 

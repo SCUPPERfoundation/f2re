@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		            Copyright (c) Alan Lenton 1985-2014
+		            Copyright (c) Alan Lenton 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -35,21 +35,27 @@ public:
 	static const int	LONG_GONE = 1100*24*60*60;	// report owner not on for over 3 years (or thereabouts)
 
 	enum	{ CLOSED, NO_BUILD, DIVERT, MAX_FLAGS	};
-	enum	{ LIST_ALL, LIST_OPEN	};				// used by ListSystem()
+	enum	{ LIST_ALL, LIST_OPEN	};					// used by ListSystem()
 
 private:
 	std::string	name;
 	std::string	directory;
 	std::string	cartel;
-	BlackList	black_list;
+
+	BlackList		black_list;
+	MapIndex			map_index;
+	FedMap			*hosp_map;
+	DisplayCabinet	*cabinet;
+	int				hosp_loc;
+	bool				abandoned;	// owner absent for overthree months
+
 	std::bitset<MAX_FLAGS>	flags;
 
-	MapIndex		map_index;
+	bool	CheckOrbitLocNotInUse(int new_orbit_num);
 
-	FedMap			*hosp_map;
-	int				hosp_loc;
-	DisplayCabinet	*cabinet;
-	bool				abandoned;						// owner absent for overthree months
+	void	BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type);
+	void	BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type);
+	void	BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type);
 
 public:
 	Star(const std::string& star_name,const std::string& dir);
@@ -97,6 +103,7 @@ public:
 	void	AddHosp(FedMap *fed_map,int loc)			{ hosp_map = fed_map; hosp_loc = loc;	}
 	void	AllowBuild()									{ flags.reset(NO_BUILD);					}
 	void	BuildDestruction();
+	void	BuildNewPlanet(Player *player,std::string& planet_name,std::string& type);
 	void	CartelName(const std::string& c_name)	{ cartel = c_name;							}
 	void	CheckCartelCommodityPrices(Player *player,const Commodity *commodity,bool send_intro = false);
 	void	DisallowBuild()								{ flags.set(NO_BUILD);						}

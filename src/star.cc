@@ -654,10 +654,12 @@ void	Star::Write()
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
-//	WriteLoaderFile(); 		// NOTE: Only call this if you want to overwrite existing loaders.
+
 	return;
 }
 
+// Call this at the end of Star::Write() only if you
+// want to overwrite existing loader.xml files.
 void	Star::WriteLoaderFile()
 {
 	std::ostringstream	buffer;
@@ -680,6 +682,137 @@ void	Star::WriteLoaderFile()
 		file << "   <map name='" << map_file_name.substr(index) << "'/>\n";
 	}
 	file << "</star>\n";
+}
+
+
+/* ---------------------- Work in progress ---------------------- */
+
+void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	int num_planets = map_index.size() - 1;
+
+	if((num_planets == 1) && (player->Rank() >= Player::MOGUL))
+	{
+		if(CheckOrbitLocNotInUse(461))
+			BuildSecondPlanet(player,planet_name,type);
+		else
+			player->Send("Sorry, the orbit location needed (461) is already in use!\n");
+		return;
+	}
+
+	if((num_planets == 2) && (player->Rank() >= Player::GENGINEER))
+	{
+		if(CheckOrbitLocNotInUse(397))
+			BuildThirdPlanet(player,planet_name,type);
+		else
+			player->Send("Sorry, the orbit location needed (397) is already in use!\n");
+		return;
+	}
+
+	if((num_planets == 3) && (player->Rank() >= Player::PLUTOCRAT) && CheckOrbitLocNotInUse(459))
+	{
+		BuildFourthPlanet(player,planet_name,type);
+		return;
+	}
+}
+
+bool	Star::CheckOrbitLocNotInUse(int new_orbit_num)
+{
+	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
+	{
+		if(iter->second->FileName() == "space.loc")
+			return(!iter->second->IsALoc(new_orbit_num));
+	}
+	return false;
+}
+
+
+void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, not yet available!\n");
+	// TODO: Fix
+}
+
+void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, not yet available!\n");
+	// TODO: Fix
+}
+
+
+/*
+void	CmdParser::Claim(Player *player)
+{
+	static std::string	help("Command is 'claim system <name> planet <name> type <name>\n For more info try 'help claim' :)\n");
+
+	if(player->Rank() != Player::FINANCIER)
+	{
+		player->Send("You need to be a financier to register a claim to a planet!\n");
+		return;
+	}
+
+	if(player->IsPlanetOwner() || player->HasClaimedPlanet())
+	{
+		player->Send("You have already laid claim to a system and a planet!\n");
+		return;
+	}
+
+	int	system_index = tokens->FindIndex("system");
+	int	planet_index = tokens->FindIndex("planet");
+	int	type_index   = tokens->FindIndex("type");
+	int	size = tokens->Size();
+
+		if((size < 7) || (system_index < 0) || (planet_index < system_index) ||
+								(type_index < planet_index) || (type_index == (size - 1)))
+	{
+		player->Send(help);
+		return;
+	}
+	std::ostringstream	buffer;
+	for(int count = system_index +1;count != planet_index;++count)
+	{
+		if(count > (system_index +1))
+			buffer << " ";
+		buffer << tokens->Get(count);
+	}
+	std::string	system(buffer.str());
+
+	buffer.str("");
+	for(int count = planet_index +1;count != type_index;++count)
+	{
+		if(count > (planet_index +1))
+			buffer << " ";
+		buffer << tokens->Get(count);
+	}
+	std::string	planet(buffer.str());
+
+	std::string	type(tokens->Get(type_index + 1));
+
+	BuildPlanet	*planet_builder;
+	try
+	{
+		planet_builder = new BuildPlanet(player,system,planet,type);
+	}
+	catch(const std::invalid_argument&	except)
+	{
+		player->Send(except.what());
+		player->Send("Enter 'help claim' if you need further information.\n");
+		return;
+	}
+
+	if(!planet_builder->Run())
+		player->Send("Please report the problem and error message to 'feedback@ibgames.net' - remember to put 'fed2' in the subject line!\n");
+	else
+		player->SetPlanetClaimed();
+
+	delete planet_builder;
+}
+*/
+
+void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, not yet available!\n");
+	// TODO: Fix
 }
 
 
