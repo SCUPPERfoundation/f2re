@@ -91,6 +91,7 @@ const std::string	CmdParser::vocab[] =
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
 	"undivert", "move", "allocate", "stop", "extend", "hide", "claim","colonise",		// 190-198
+	"colonize",
 	""
 };
 
@@ -969,7 +970,8 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 195:	player->ExtendSystemCabinet();					break;	// 'extend'
 		case 196:	Stash(player,line,true);							break;	// 'hide'
 		case 197:	Claim(player);											break;	// 'claim'
-		case 198:	Colonize(player);										break;	// 'colonize'
+		case 198:
+		case 199:	Colonize(player);										break;	// 'colonize'
 	}
 }
 

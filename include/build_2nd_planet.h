@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton & Interactive Broadcasting 2003-15
+		Copyright (c) Alan Lenton & Interactive Broadcasting 1985-15
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -7,43 +7,43 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#ifndef BUILDSTAR_H
-#define BUILDSTAR_H
+#ifndef BUILD2NDPLANET
+#define BUILD2NDPLANET
 
 #include <string>
 
 class	Player;
+class Star;
 
-class BuildStar
+class Build2ndPlanet
 {
 private:
-	static const std::string	stock_star_titles[];
+//	static const std::string	stock_star_titles[];
 	static const std::string	stock_star_files[];
 	static const std::string	stock_planet_titles[];
 	static const std::string	stock_planet_files[];
+	static const std::string	orbit_descs[];
 
 	Player		*player;
-	std::string	system_title;
-	std::string	planet_title;
-	std::string	system_file_root;
+	Star			*star;
+	std::string	star_file_name;
 	std::string	planet_file_name;
+	std::string	planet_title;
 
-	int	system_type;
+	int	planet_type_index;
 
-	bool	CreateInfFiles();
-	bool	CreateLoader();
-	bool	FixPermissions();
 	bool	MakeFileRoot(std::string& text);
-	bool	PlanetNotInUse();
-	bool	SetUpFiles();
-	bool	SystemNotInUse();
+	bool	SetUpPlanetFiles();
+	bool	SetUpSpaceFile();
 
+	void	SetPlanetName(const std::string& planet);
+	void	SetPlanetType(const std::string& type_name);
 
 public:
-	BuildStar(Player *who,const std::string& system,const std::string& planet,const std::string& type);
-	~BuildStar();
+	Build2ndPlanet(Player *who,Star *the_star,const std::string& planet,const std::string& type);
+	~Build2ndPlanet();
 
 	bool	Run();
 };
 
-#endif // BUILD_STAR_H
+#endif // BUILD2NDPLANET

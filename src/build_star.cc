@@ -16,7 +16,6 @@
 #include "galaxy.h"
 #include "player.h"
 
-const std::string	BuildStar::map_data("data/maps.dat");
 const std::string	BuildStar::stock_star_titles[] =		{ "Beach", "Furnace", "Iceberg", "Rescue", "Stone", "Sweet", ""};
 const std::string	BuildStar::stock_star_files[] =		{ "beach", "furnace", "iceberg", "rescue", "stone", "sweet", ""};
 const std::string BuildStar::stock_planet_titles[] =	{ "Water", "Fire", "Ice", "Habitat", "Rock", "Candy", ""			};

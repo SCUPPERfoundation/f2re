@@ -21,6 +21,7 @@
 #include <unistd.h>
 #include <sys/dir.h>
 
+#include "build_2nd_planet.h"
 #include "cartel.h"
 #include "display_cabinet.h"
 #include "fedmap.h"
@@ -690,6 +691,13 @@ void	Star::WriteLoaderFile()
 void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& type)
 {
 	int num_planets = map_index.size() - 1;
+
+if(player->Name() == "Bella")	// TODO: Take out before we go live
+{
+	Build2ndPlanet *builder = new Build2ndPlanet(player,this,planet_name,type);
+	builder->Run();
+	return;
+}
 
 	if((num_planets == 1) && (player->Rank() >= Player::MOGUL))
 	{
