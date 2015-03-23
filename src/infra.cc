@@ -275,13 +275,6 @@ int	Infrastructure::BasePopulation()
 	return(population->GetBasePopulation());
 }
 
-void	Infrastructure::Immigrants(int num_workers)
-{
-	population->SetBasePopulation(population->GetBasePopulation() + num_workers);
-	total_workers += num_workers;
-	workers += num_workers;
-}
-
 bool	Infrastructure::BuildEnhancement(Player *player,Enhancement *build)
 {
 	if(!build->IsOK())
@@ -884,6 +877,13 @@ bool	Infrastructure::HasAirportUpgrade()
 		return(true);
 	else
 		return(false);
+}
+
+void	Infrastructure::Immigrants(int num_workers)
+{
+	population->SetBasePopulation(population->GetBasePopulation() + num_workers);
+	total_workers += num_workers;
+	workers += num_workers;
 }
 
 bool	Infrastructure::IncBuild(Player *player,int build_type,Tokens *tokens)
