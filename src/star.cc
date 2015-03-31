@@ -688,6 +688,28 @@ void	Star::WriteLoaderFile()
 
 /* ---------------------- Work in progress ---------------------- */
 
+void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, not yet available!\n");
+	// TODO: Fix
+}
+
+void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, not yet available!\n");
+	// TODO: Fix
+}
+
+bool	Star::CheckOrbitLocNotInUse(int new_orbit_num)
+{
+	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
+	{
+		if(iter->second->FileName() == "space.loc")
+			return(!iter->second->IsALoc(new_orbit_num));
+	}
+	return false;
+}
+
 void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& type)
 {
 	int num_planets = map_index.size() - 1;
@@ -724,24 +746,7 @@ if(player->Name() == "Bella")	// TODO: Take out before we go live
 	}
 }
 
-bool	Star::CheckOrbitLocNotInUse(int new_orbit_num)
-{
-	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
-	{
-		if(iter->second->FileName() == "space.loc")
-			return(!iter->second->IsALoc(new_orbit_num));
-	}
-	return false;
-}
-
-
-void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
-{
-	player->Send("Sorry, not yet available!\n");
-	// TODO: Fix
-}
-
-void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
+void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type)
 {
 	player->Send("Sorry, not yet available!\n");
 	// TODO: Fix
@@ -816,11 +821,5 @@ void	CmdParser::Claim(Player *player)
 	delete planet_builder;
 }
 */
-
-void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type)
-{
-	player->Send("Sorry, not yet available!\n");
-	// TODO: Fix
-}
 
 

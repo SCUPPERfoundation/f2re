@@ -190,7 +190,7 @@ bool	BuildStar::SetUpFiles()
 		player->Send("Unable to creat directory for new system.\n");
 		return false;
 	}
-
+	
 	// planet location file
 	buffer.str("");
 	buffer << "sed s:\"title='" << stock_planet_titles[system_type] << "'\":";	// find the stock planet title

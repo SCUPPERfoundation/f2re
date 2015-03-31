@@ -19,7 +19,7 @@
 #include "player.h"
 #include "star.h"
 
-// const std::string	Build2ndPlanet::stock_star_titles[] =	{ "Beach", "Furnace", "Iceberg", "Rescue", "Stone", "Sweet", ""};
+const std::string	Build2ndPlanet::stock_star_titles[] =		{ "Beach", "Furnace", "Iceberg", "Rescue", "Stone", "Sweet", ""};
 const std::string	Build2ndPlanet::stock_star_files[] =		{ "beach", "furnace", "iceberg", "rescue", "stone", "sweet", ""};
 const std::string Build2ndPlanet::stock_planet_titles[] =	{ "Water", "Fire", "Ice", "Habitat", "Rock", "Candy", ""			};
 const std::string	Build2ndPlanet::stock_planet_files[] =		{ "water", "fire", "ice", "habitat", "rock", "candy", ""			};
@@ -120,30 +120,31 @@ bool	Build2ndPlanet::SetUpPlanetFiles()
 	buffer << "\"title='" << planet_title << "'\": "; // replace with new planet title
 	buffer << " < stock/" << stock_star_files[planet_type_index] << "/" << stock_planet_files[planet_type_index] << ".loc"; //input from stock planet map
 	buffer << " | "; // pipe it in to a new version of sed to replace the old the orbit info with the new
-	buffer << "sed s:\"to='" << stock_star_files[planet_type_index] << "." << stock_star_files[planet_type_index] << ".460\":";
+	buffer << "sed s:\"to='" << stock_star_titles[planet_type_index] << "." << stock_star_titles[planet_type_index] << " Space.460\":";
+	buffer << "\"to='" << star->Name() << "." << star->Name() << " Space.461\": "; // replace it with the new system name
 	buffer << "> " << "maps/" << star->Dir() << "/" << planet_file_name << ".loc"; // output to new .loc file
 
 buffer << "\n"; player->Send(buffer); // TODO: take out before it goes live!
-/*
+
 	if(std::system(buffer.str().c_str()) < 0)
 	{
 		player->Send("Unable to create planet location file!\n");
 		return false;
 	}
-*/
+
 	// .msg file
 	buffer.str("");
 	buffer << "cp stock/" << stock_star_files[planet_type_index] << "/" << stock_planet_files[planet_type_index] << ".msg ";
 	buffer << "maps/" << star->Dir() << "/" << planet_file_name << ".msg";
 
-buffer << "\n"; player->Send(buffer); // TODO: take out before it goes live!
-/*
+// buffer << "\n"; player->Send(buffer); // TODO: take out before it goes live!
+
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create planet location file!\n");
+		player->Send("Unable to create planet message file!\n");
 		return false;
 	}
-*/
+
 	// .inf file
 	buffer.str("");
 	buffer << "echo \"<?xml version='1.0'?><infrastructure owner='";
@@ -151,14 +152,14 @@ buffer << "\n"; player->Send(buffer); // TODO: take out before it goes live!
 	buffer << "</infrastructure>\" > " << star->Dir() << "/";
 	buffer << planet_file_name << ".inf";
 
-buffer << "\n"; player->Send(buffer); // TODO: take out before it goes live!
-/*
+// buffer << "\n"; player->Send(buffer); // TODO: take out before it goes live!
+
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create planet .inf file.\n");
+		player->Send("Unable to create planet information file.\n");
 		return false;
 	}
-*/
+
 	return true;
 }
 
@@ -169,8 +170,4 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 
 	return true;
 }
-
-
-
-
 

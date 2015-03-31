@@ -18,7 +18,7 @@ class Star;
 class Build2ndPlanet
 {
 private:
-//	static const std::string	stock_star_titles[];
+	static const std::string	stock_star_titles[];
 	static const std::string	stock_star_files[];
 	static const std::string	stock_planet_titles[];
 	static const std::string	stock_planet_files[];
