@@ -616,6 +616,13 @@ void	CmdParser::Clip(Player *player,std::string& line)
 
 void	CmdParser::Colonize(Player *player)
 {
+	// TODO: remove when goes out of test
+	if(!player->IsManager())
+	{
+		player->Send("Sorry, this command is not currently available...\n");
+		return;
+	}
+
 	static std::string	help("Command is 'colonize planet <name> type <name>\n For more info try 'help colonize' :)\n");
 	if(player->Rank() < Player::MOGUL)
 	{
