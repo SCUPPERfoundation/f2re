@@ -70,7 +70,6 @@ void GalaxyMapParser::Run()
 {
 	DIR	*star_dir = opendir(star_directory.c_str());
 	struct dirent	*map_dirent;
-	bool	has_loader = false;
 
 	// Do it this way because abandoned systems will have no loader.xml file
 	while((map_dirent = readdir(star_dir)) != 0)
@@ -78,19 +77,11 @@ void GalaxyMapParser::Run()
 		std::string	file_name(map_dirent->d_name);
 		if(file_name == "loader.xml")
 		{
-			has_loader = true;
 			std::ostringstream	loader_path;
 			loader_path << star_directory << "/" << file_name;
 			LoadStarSystem(loader_path.str());
 			break;
 		}
-	}
-
-	if(!has_loader)
-	{
-		std::ostringstream logbuf;
-		logbuf << "For info: " << star_directory << " has no loader";
-		WriteErrLog(logbuf.str());
 	}
 }
 

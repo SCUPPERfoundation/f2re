@@ -614,6 +614,51 @@ void	CmdParser::Clip(Player *player,std::string& line)
 	}
 }
 
+void	CmdParser::Colonize(Player *player)
+{
+	static std::string	help("Command is 'colonize planet <name> type <name>\n For more info try 'help colonize' :)\n");
+	if(player->Rank() < Player::MOGUL)
+	{
+		player->Send("You need to be at least a mogul to colonize other planets!\n");
+		return;
+	}
+
+	if(player->IsPlanetBuilt())
+	{
+		player->Send("Please wait till after the reset to build another planet. Thank you.\n");
+		return;
+	}
+
+	int	planet_index = tokens->FindIndex("planet");
+	int	type_index   = tokens->FindIndex("type");
+	int	size = tokens->Size();
+
+	if((size < 5) || (type_index < planet_index) || (type_index == (size - 1)))
+	{
+		player->Send(help);
+		return;
+	}
+
+	std::ostringstream	buffer;
+	for(int count = planet_index + 1;count != type_index;++count)
+	{
+		if(count > (planet_index +1))
+			buffer << " ";
+		buffer << tokens->Get(count);
+	}
+	std::string	planet(buffer.str());
+	std::string	type(tokens->Get(type_index + 1));
+
+	Star *star = Game::galaxy->FindByOwner(player);
+	if(star == 0)
+	{
+		player->Send("I can't find your star system! Please notify ibgames. Thank you.\n");
+		return;
+	}
+
+	star->BuildNewPlanet(player,planet,type);
+}
+
 void	CmdParser::Com(Player *player,std::string& line)
 {
 	static const std::string	no_comms("You don't have access to the comms. Mail feedback@ibgames.net for more information\n");
@@ -2602,47 +2647,5 @@ void	CmdParser::Zap(Player *player)
 		else
 			Game::player_index->Zap(who,player);
 	}
-}
-
-
-/* ---------------------- Work in progress ---------------------- */
-
-void	CmdParser::Colonize(Player *player)
-{
-	static std::string	help("Command is 'colonize planet <name> type <name>\n For more info try 'help colonize' :)\n");
-	if(player->Rank() < Player::MOGUL)
-	{
-		player->Send("You need to be at least a mogul to colonize other planets!\n");
-		return;
-	}
-
-	int	planet_index = tokens->FindIndex("planet");
-	int	type_index   = tokens->FindIndex("type");
-	int	size = tokens->Size();
-
-	if((size < 5) || (type_index < planet_index) || (type_index == (size - 1)))
-	{
-		player->Send(help);
-		return;
-	}
-
-	std::ostringstream	buffer;
-	for(int count = planet_index + 1;count != type_index;++count)
-	{
-		if(count > (planet_index +1))
-			buffer << " ";
-		buffer << tokens->Get(count);
-	}
-	std::string	planet(buffer.str());
-	std::string	type(tokens->Get(type_index + 1));
-
-	Star *star = Game::galaxy->FindByOwner(player);
-	if(star == 0)
-	{
-		player->Send("I can't find your star system! Please notify ibgames. Thank you.\n");
-		return;
-	}
-
-	star->BuildNewPlanet(player,planet,type);
 }
 

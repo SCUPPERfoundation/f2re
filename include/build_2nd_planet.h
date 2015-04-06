@@ -33,6 +33,7 @@ private:
 	int	planet_type_index;
 
 	bool	MakeFileRoot(std::string& text);
+	bool	SetUpLoader();
 	bool	SetUpPlanetFiles();
 	bool	SetUpSpaceFile();
 
