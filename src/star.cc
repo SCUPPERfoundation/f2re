@@ -21,6 +21,7 @@
 #include <unistd.h>
 #include <sys/dir.h>
 
+#include "build_2nd_planet.h"
 #include "cartel.h"
 #include "display_cabinet.h"
 #include "fedmap.h"
@@ -94,10 +95,57 @@ void	Star::BuildDestruction()
 	}
 }
 
+void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	int num_planets = map_index.size() - 1;
+
+	if((num_planets == 1) && (player->Rank() >= Player::MOGUL))
+	{
+		if(CheckOrbitLocNotInUse(461))
+			BuildSecondPlanet(player,planet_name,type);
+		else
+			player->Send("Sorry, the orbit location needed (461) is already in use!\n");
+		return;
+	}
+
+	if((num_planets == 2) && (player->Rank() >= Player::GENGINEER))
+	{
+		if(CheckOrbitLocNotInUse(397))
+			BuildThirdPlanet(player,planet_name,type);
+		else
+			player->Send("Sorry, the orbit location needed (397) is already in use!\n");
+		return;
+	}
+
+	if((num_planets == 3) && (player->Rank() >= Player::PLUTOCRAT) && CheckOrbitLocNotInUse(459))
+	{
+		// TODO: needs an orbit loc check adding
+		BuildFourthPlanet(player,planet_name,type);
+		return;
+	}
+}
+
+void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	Build2ndPlanet *builder = new Build2ndPlanet(player,this,planet_name,type);
+	builder->Run();
+	delete builder;
+}
+
 void	Star::CheckCartelCommodityPrices(Player *player,const Commodity *commodity,bool send_intro)
 {
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->CheckCartelCommodityPrices(player,commodity,name,send_intro);
+}
+
+bool	Star::CheckOrbitLocNotInUse(int new_orbit_num)
+{
+	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();++iter)
+	{
+		if(iter->second->FileName().find("/space") != std::string::npos)
+			return(!iter->second->IsALoc(new_orbit_num));
+	}
+	return false;
 }
 
 void	Star::DisplayExile(std::ostringstream& buffer)
@@ -472,14 +520,7 @@ bool	Star::MarkAbandondedSystem()
 		time_t now =  std::time(0);
 		long	how_long = std::difftime(now,last_time_on);
 		if(how_long > ABANDONED)
-		{
-			if(how_long >= LONG_GONE)
-			{
-				buffer << "***" << name << " system, owner " << owner->Name() << " is long gone from the game!***";
-				WriteLog(buffer);
-			}
 			abandoned = true;
-		}
 		else
 			abandoned = false;
 	}
@@ -654,10 +695,12 @@ void	Star::Write()
 	buffer << HomeDir() << "/maps/" << directory << "/cabinet.xml";
 	if(cabinet != 0)
 		cabinet->Store(buffer.str());
-//	WriteLoaderFile(); 		// NOTE: Only call this if you want to overwrite existing loaders.
+
 	return;
 }
 
+// Call this at the end of Star::Write() only if you
+// want to overwrite existing loader.xml files.
 void	Star::WriteLoaderFile()
 {
 	std::ostringstream	buffer;
@@ -682,4 +725,18 @@ void	Star::WriteLoaderFile()
 	file << "</star>\n";
 }
 
+
+/* ---------------------- Work in progress ---------------------- */
+
+void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, this facility is not yet available!\n");
+	// TODO: Fix
+}
+
+void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	player->Send("Sorry, this facility is not yet available!\n");
+	// TODO: Fix
+}
 

@@ -7,17 +7,16 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#ifndef BUILDPLANET_H
-#define BUILDPLANET_H
+#ifndef BUILDSTAR_H
+#define BUILDSTAR_H
 
 #include <string>
 
 class	Player;
 
-class BuildPlanet
+class BuildStar
 {
 private:
-	static const std::string	map_data;
 	static const std::string	stock_star_titles[];
 	static const std::string	stock_star_files[];
 	static const std::string	stock_planet_titles[];
@@ -41,10 +40,10 @@ private:
 
 
 public:
-	BuildPlanet(Player *who,const std::string& system,const std::string& planet,const std::string& type);
-	~BuildPlanet();
+	BuildStar(Player *who,const std::string& system,const std::string& planet,const std::string& type);
+	~BuildStar();
 
 	bool	Run();
 };
 
-#endif // BUILD_PLANET_H
+#endif // BUILD_STAR_H

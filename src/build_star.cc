@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "build_planet.h"
+#include "build_star.h"
 
 #include <sstream>
 #include <stdexcept>
@@ -16,14 +16,13 @@
 #include "galaxy.h"
 #include "player.h"
 
-const std::string	BuildPlanet::map_data("data/maps.dat");
-const std::string	BuildPlanet::stock_star_titles[] =		{ "Beach", "Furnace", "Iceberg", "Rescue", "Stone", "Sweet", ""};
-const std::string	BuildPlanet::stock_star_files[] =		{ "beach", "furnace", "iceberg", "sescue", "stone", "sweet", ""};
-const std::string BuildPlanet::stock_planet_titles[] =	{ "Water", "Fire", "Ice", "Habitat", "Rock", "Candy", ""			};
-const std::string	BuildPlanet::stock_planet_files[] =		{ "water", "fire", "ice", "habitat", "rock", "candy", ""			};
+const std::string	BuildStar::stock_star_titles[] =		{ "Beach", "Furnace", "Iceberg", "Rescue", "Stone", "Sweet", ""};
+const std::string	BuildStar::stock_star_files[] =		{ "beach", "furnace", "iceberg", "rescue", "stone", "sweet", ""};
+const std::string BuildStar::stock_planet_titles[] =	{ "Water", "Fire", "Ice", "Habitat", "Rock", "Candy", ""			};
+const std::string	BuildStar::stock_planet_files[] =		{ "water", "fire", "ice", "habitat", "rock", "candy", ""			};
 
 
-BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string& planet,
+BuildStar::BuildStar(Player *who,const std::string& system,const std::string& planet,
 									const std::string& type_name) : player(who)
 {
 
@@ -68,12 +67,12 @@ BuildPlanet::BuildPlanet(Player *who,const std::string& system,const std::string
 		throw std::invalid_argument("Unknown system_type. (Try Beach, Furnace, Iceberg, Rescue, Stone, or Sweet.)\n");
 }
 
-BuildPlanet::~BuildPlanet()
+BuildStar::~BuildStar()
 {
 
 }
 
-bool	BuildPlanet::CreateInfFiles()
+bool	BuildStar::CreateInfFiles()
 {
 	std::ostringstream buffer;
 
@@ -102,7 +101,7 @@ bool	BuildPlanet::CreateInfFiles()
 	return true;
 }
 
-bool BuildPlanet::CreateLoader()
+bool BuildStar::CreateLoader()
 {
 	std::ostringstream	buffer;
 	buffer << HomeDir() << "/" << system_file_root << "/loader.xml";
@@ -124,7 +123,7 @@ bool BuildPlanet::CreateLoader()
 	return true;
 }
 
-bool	BuildPlanet::FixPermissions()
+bool	BuildStar::FixPermissions()
 {
 	std::ostringstream buffer;
 
@@ -138,7 +137,7 @@ bool	BuildPlanet::FixPermissions()
 	return true;
 }
 
-bool	BuildPlanet::MakeFileRoot(std::string& text)
+bool	BuildStar::MakeFileRoot(std::string& text)
 {
 
 	std::ostringstream	buffer;
@@ -158,7 +157,7 @@ bool	BuildPlanet::MakeFileRoot(std::string& text)
 	return true;
 }
 
-bool	BuildPlanet::PlanetNotInUse()
+bool	BuildStar::PlanetNotInUse()
 {
 	if(Game::galaxy->FindMap(planet_title) == 0)
 		return true;
@@ -166,7 +165,7 @@ bool	BuildPlanet::PlanetNotInUse()
 		return false;
 }
 
-bool BuildPlanet::Run()
+bool BuildStar::Run()
 {
 	if(!SetUpFiles())
 		return false;
@@ -181,7 +180,7 @@ bool BuildPlanet::Run()
 	return true;
 }
 
-bool	BuildPlanet::SetUpFiles()
+bool	BuildStar::SetUpFiles()
 {
 	std::ostringstream buffer;
 
@@ -191,7 +190,7 @@ bool	BuildPlanet::SetUpFiles()
 		player->Send("Unable to creat directory for new system.\n");
 		return false;
 	}
-
+	
 	// planet location file
 	buffer.str("");
 	buffer << "sed s:\"title='" << stock_planet_titles[system_type] << "'\":";	// find the stock planet title
@@ -239,7 +238,7 @@ bool	BuildPlanet::SetUpFiles()
 	return true;
 }
 
-bool	BuildPlanet::SystemNotInUse()
+bool	BuildStar::SystemNotInUse()
 {
 	if(Game::galaxy->Find(system_title) == 0)
 		return true;

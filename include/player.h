@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		       Copyright (c) Alan Lenton 1985-2013
+		       Copyright (c) Alan Lenton 1985-2015
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -119,7 +119,8 @@ public:
 
 	enum
 	{
-		EV_TRACE, FROZEN, TAXED, SLITHY2STAT, PLANET_CLAIMED, MAX_TEMP_FLAGS
+		EV_TRACE, FROZEN, TAXED, SLITHY2STAT, PLANET_CLAIMED,
+		PLANET_BUILT, MAX_TEMP_FLAGS
 	};	// temporary flags
 
 	enum
@@ -336,7 +337,6 @@ public:
 	bool	CompanyFlagSet(int which);
 	bool	Die()													{ return(Death(false));	}
 	bool	DisplaySystemCabinetObject(const std::string& obj_name);
-
 	bool	Examine(const std::string& other_name);
 	bool	GenFlagIsSet(int which)							{ return(flags.test(which));				}
 	bool	HasAJob()											{ return(job != 0);		}
@@ -367,6 +367,7 @@ public:
 	bool	IsNavigator()										{ return(man_flags.test(NAV_FLAG));		}
 	bool	IsOnLandingPad();
 	bool	IsPassword(const std::string& pwd);
+	bool	IsPlanetBuilt()									{ return(temp_flags.test(PLANET_BUILT));}
 	bool	IsPlanetOwner();
 	bool	IsStaff()											{ return(man_flags.any());					}
 	bool	IsTechie()											{ return(man_flags.test(TECHIE));		}
@@ -579,6 +580,7 @@ public:
 	void	SetLouie(Louie *the_game)						{ louie = the_game;			}
 	void	SetManFlag(int which)							{ man_flags.set(which);		}
 	void	SetNavFlag(Player *player);
+	void	SetPlanetBuilt()									{ temp_flags.set(PLANET_BUILT);		}
 	void	SetPlanetClaimed()								{ temp_flags.set(PLANET_CLAIMED);	}
 	void	SetSpouse(Player *player)						{ spouse = player->Name();	}
 	void	SetTempFlag(int which)							{ temp_flags.set(which);	}

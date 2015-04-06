@@ -57,10 +57,8 @@
 #include "unload.h"
 #include "work.h"
 
-#include "build_planet.h"
-
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.45";
+const std::string	Fed::version = "1.89.50";
 
 Fed::Fed()
 {
