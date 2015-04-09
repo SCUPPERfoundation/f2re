@@ -255,7 +255,7 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 	std::string	space_loc(orbit_descs[planet_type_index]);
 
 	// insert the new planet's name into the orbit location text
-	unsigned index = space_loc.find('%');
+	std::string::size_type index = space_loc.find('%');
 	if(index == std::string::npos)
 	{
 		player->Send("Error creating orbit location.\n");
