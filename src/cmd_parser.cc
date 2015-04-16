@@ -617,7 +617,12 @@ void	CmdParser::Clip(Player *player,std::string& line)
 void	CmdParser::Colonize(Player *player)
 {
 	// TODO: remove when goes out of test
-	if(!player->IsManager())
+	if((player->Name() == "Fantastic") || (player->Name() == "Lamplight") || (player->Name() == "Pickles") || (player->Name() == "Pugwash")
+		|| (player->Name() == "fantastic") || (player->Name() == "lamplight") || (player->Name() == "pickles") || (player->Name() == "pugwash"))
+	{
+		player->Send("Don't forget to send in the whole log if anything goes wrong!\n");
+	}
+	else
 	{
 		player->Send("Sorry, this command is not currently available...\n");
 		return;

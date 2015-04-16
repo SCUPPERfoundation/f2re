@@ -99,8 +99,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 {
 	int num_planets = map_index.size() - 1;
 
-	if((num_planets == 1) && (player->Rank() >= Player::MOGUL))
+	if(num_planets == 1)
 	{
+		if(player->Rank() < Player::MOGUL)
+		{
+			player->Send("You need to be at least a Mogul to build a second planet!\n");
+			return;
+		}
+
 		if(CheckOrbitLocNotInUse(461))
 			BuildSecondPlanet(player,planet_name,type);
 		else
@@ -108,8 +114,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 		return;
 	}
 
-	if((num_planets == 2) && (player->Rank() >= Player::GENGINEER))
+	if(num_planets == 2)
 	{
+		if(player->Rank() < Player::GENGINEER)
+		{
+			player->Send("You need to be at least a Gengineer to build a third planet!\n");
+			return;
+		}
+
 		if(CheckOrbitLocNotInUse(397))
 			BuildThirdPlanet(player,planet_name,type);
 		else
@@ -117,16 +129,25 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 		return;
 	}
 
-	if((num_planets == 3) && (player->Rank() >= Player::PLUTOCRAT) && CheckOrbitLocNotInUse(459))
+	if(num_planets == 3)
 	{
-		// TODO: needs an orbit loc check adding
-		BuildFourthPlanet(player,planet_name,type);
+		if(player->Rank() < Player::PLUTOCRAT)
+		{
+			player->Send("You need to be at least a Plutocrat to build a fourth planet!\n");
+			return;
+		}
+
+		if(CheckOrbitLocNotInUse(459))
+			BuildFourthPlanet(player,planet_name,type);
+		else
+			player->Send("Sorry, the orbit location needed (459) is already in use!\n");
 		return;
 	}
 }
 
 void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type)
 {
+player->Send("3...\n");
 	Build2ndPlanet *builder = new Build2ndPlanet(player,this,planet_name,type);
 	builder->Run();
 	delete builder;
