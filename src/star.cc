@@ -147,8 +147,13 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 
 void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string& type)
 {
-player->Send("3...\n");
-	Build2ndPlanet *builder = new Build2ndPlanet(player,this,planet_name,type);
+	Build2ndPlanet *builder;
+	try
+	{
+		builder = new Build2ndPlanet(player,this,planet_name,type);
+	}
+	catch(const std::exception& e) { player->Send(e.what()); return; }
+
 	builder->Run();
 	delete builder;
 }

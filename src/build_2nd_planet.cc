@@ -157,7 +157,7 @@ void	Build2ndPlanet::SetPlanetType(const std::string& type_name)
 			return;
 		}
 	}
-	throw std::invalid_argument("Unknown planet type. (Options are: Water, Fire, Ice, Habitat, Rock, and Candy.\n");
+	throw std::invalid_argument("Unknown planet type. (Options are: Water, Fire, Ice, Habitat, Rock, and Candy.)\n");
 }
 
 bool	Build2ndPlanet::SetUpLoader()
