@@ -99,6 +99,12 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 {
 	int num_planets = map_index.size() - 1;
 
+	if(FindLink()->loc_no != 460)
+	{
+		player->Send("The system's link isn't in the correct place to use this command\n");
+		return;
+	}
+
 	if(num_planets == 1)
 	{
 		if(player->Rank() < Player::MOGUL)

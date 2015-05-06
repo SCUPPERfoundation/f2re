@@ -138,7 +138,7 @@ void	Build2ndPlanet::SetPlanetName(const std::string& planet)
 		throw std::invalid_argument("Planet names must start with an alphabetic character\n");
 	planet_title = planet;
 	NormalisePlanetTitle(planet_title);
-	if(Game::galaxy->Find(planet_title) != 0)
+	if(Game::galaxy->FindMap(planet_title) != 0)
 		throw std::invalid_argument("The planet name is already in use!\n");
 
 	planet_file_name = planet;
