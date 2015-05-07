@@ -616,22 +616,8 @@ void	CmdParser::Clip(Player *player,std::string& line)
 
 void	CmdParser::Colonize(Player *player)
 {
-	// TODO: remove when goes out of test
-	if((player->Name() == "Fantastic")    || (player->Name() == "Lamplight") || (player->Name() == "Pickles") || (player->Name() == "Pugwash")
-		|| (player->Name() == "fantastic") || (player->Name() == "lamplight") || (player->Name() == "pickles") || (player->Name() == "pugwash")
-		|| (player->Name() == "Flibberty")  || (player->Name() == "Twinkletoes")
-		|| (player->Name() == "flibberty")  || (player->Name() == "twinkletoes")
-		|| (player->IsManager()))
-	{
-		player->Send("Don't forget to send in the whole log if anything goes wrong!\n");
-	}
-	else
-	{
-		player->Send("Sorry, this command is not currently available...\n");
-		return;
-	}
+	static std::string	help("Command is 'colonize planet <name> type <name>'. For more info try 'help colonize'.\n");
 
-	static std::string	help("Command is 'colonize planet <name> type <name>\n For more info try 'help colonize' :)\n");
 	if(player->Rank() < Player::MOGUL)
 	{
 		player->Send("You need to be at least a mogul to colonize other planets!\n");

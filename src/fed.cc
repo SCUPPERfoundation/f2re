@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.56";
+const std::string	Fed::version = "1.89.60";
 
 Fed::Fed()
 {
@@ -161,17 +161,6 @@ Fed::~Fed()
 {
 	Game::galaxy->LiquidateAllFuturesContracts();	// do this first
 	Game::player_index->WriteGraphSummary();
-
-// only send out letters if it is the production version!
-#ifdef FIREFLY	// TODO: change this when we have a mail program available on the server!
-	WriteLog("Mailing out Logs");
-	std::ostringstream	buffer;
-	buffer << HomeDir() << "/log/usage.log";
-	std::string	file_name(buffer.str());
-	buffer.str("");
-	buffer << "cat " << file_name << " | /bin/mail -s \"Fed2 Usage Log\" fed2-stats@googlegroups.com &";
-	system(buffer.str().c_str());
-#endif
 
 	delete Game::notices;					// delete notices before the review
 	delete Game::review;						// and keep these five lines

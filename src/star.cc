@@ -763,12 +763,12 @@ void	Star::WriteLoaderFile()
 void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
 {
 	player->Send("Sorry, this facility is not yet available!\n");
-	// TODO: Fix
+	// TODO: In due course
 }
 
 void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
 {
 	player->Send("Sorry, this facility is not yet available!\n");
-	// TODO: Fix
+	// TODO: In due course
 }
 
