@@ -278,16 +278,17 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 		return false;
 	}
 
-	// find the map end tag and remove it
 	buffer.str("");
-	buffer << "sed s:\"</fed2-map>\":\"\":";
+	buffer << "sed s:\"<exits\":\"<exits e='461' \":"; // add a new exit
 	buffer << " < maps/" << star->Dir() << "/" << "space.loc.old"; //input file
+	buffer << " | sed s:\"</fed2-map>\":\"\":"; // then find the map end tag and remove it
 	buffer << " > maps/" << star->Dir() << "/" << "space.loc";     //output file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
 		player->Send("Unable to add orbit location file.\n");
 		return false;
 	}
+	buffer << "\n";
 
 	// add the new location description (which includes the </fed2-map> tag) to the file
 	buffer.str("");
