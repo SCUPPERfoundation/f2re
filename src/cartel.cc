@@ -71,13 +71,12 @@ void	Cartel::AddPlayerToWork(Player *player)
 
 int	Cartel::AddRequest(const std::string& mem_name)
 {
-
+	if((Game::syndicate != 0) && Game::syndicate->IsCartelHub(mem_name))
+		return(IS_OWNER);
 	if(Find(mem_name,members) != members.end())
 		return(ALREADY_MEMBER);
 	if(Find(mem_name,pending) != pending.end())
 		return(ADDED);
-	if((Game::syndicate != 0) && Game::syndicate->IsCartelHub(mem_name))
-		return(IS_OWNER);
 
 	if(members.size() < MAX_MEMBERS)
 	{
