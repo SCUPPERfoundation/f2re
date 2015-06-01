@@ -80,7 +80,6 @@ and indulge your appetite.</desc>\n\
       <desc>   Head west for the interstellar link.</desc>\n\
       <exits w='460' no-exit='moves.noexit.1'/>\n\
    </location>\n\n</fed2-map>",
-
 };
 
 
@@ -252,6 +251,10 @@ bool	Build2ndPlanet::SetUpPlanetFiles()
 bool	Build2ndPlanet::SetUpSpaceFile()
 {
 	std::ostringstream	buffer;
+
+	buffer << "\"<desc>   The planet " <<  planet_title << " is to the east</desc><exits\"";
+	std::string additional_desc(buffer.str());
+
 	std::string	space_loc(orbit_descs[planet_type_index]);
 
 	// insert the new planet's name into the orbit location text
@@ -265,6 +268,7 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 
 	// make sure space.loc has group write priviledges
 	// so the file can be manually edited without resorting to 'su'
+	buffer.str("");
 	buffer << "chmod g+w maps/" << star->Dir() << "/" << "space.loc";
 	std::system(buffer.str().c_str()); // we can live with this failing
 
@@ -279,8 +283,9 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 	}
 
 	buffer.str("");
-	buffer << "sed s:\"<exits\":\"<exits e='461' \":"; // add a new exit
+	buffer << "sed s:\"<exits\":" << additional_desc << ":"; // tell the players about the new orbit loc
 	buffer << " < maps/" << star->Dir() << "/" << "space.loc.old"; //input file
+	buffer << " |sed s:\"<exits\":\"<exits e='461' \":"; // add a new exit
 	buffer << " | sed s:\"</fed2-map>\":\"\":"; // then find the map end tag and remove it
 	buffer << " > maps/" << star->Dir() << "/" << "space.loc";     //output file
 	if(std::system(buffer.str().c_str()) < 0)
@@ -288,7 +293,6 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 		player->Send("Unable to add orbit location file.\n");
 		return false;
 	}
-	buffer << "\n";
 
 	// add the new location description (which includes the </fed2-map> tag) to the file
 	buffer.str("");
