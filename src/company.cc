@@ -569,7 +569,7 @@ bool	Company::CanPurchaseBusinessShares(int num_shares,int share_price,const std
 		buffer << "Your bid for " << num_shares << " in ";
 		buffer << share_name << " would take you over the ";
 		buffer << MAX_PORTFOLIO_SIZE << " share limit for your portfolio. ";
-		buffer << "You currently have " << num_shares << " shares in the portfolio.\n";
+		buffer << "You currently have " << TotalShares() << " shares in the portfolio.\n";
 		ceo->Send(buffer);
 		return(false);
 	}
