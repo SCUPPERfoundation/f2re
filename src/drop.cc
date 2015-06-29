@@ -53,7 +53,7 @@ int	Drop::Process(Player *player)
 			buffer.str("");
 			xml_buffer.str("");
 			buffer << "You have dropped " << obj->c_str() << ".\n";
-			if(!player->CommsAPILevel() > 0)
+			if(!(player->CommsAPILevel() > 0))
 				player->Send(buffer);
 			else
 			{

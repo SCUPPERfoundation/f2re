@@ -143,13 +143,13 @@ const std::string&	GlobalPlayerVarsTable::Value(Player *player,
 
 void	GlobalPlayerVarsTable::Write()
 {
-	std::ostringstream	buffer;
-	buffer << HomeDir() << "/data/" << file_name;
-	std::ofstream	file(buffer.str().c_str(),std::ios::out | std::ios::trunc);
+	std::ostringstream	dir_buffer;
+	dir_buffer << HomeDir() << "/data/" << file_name;
+	std::ofstream	file(dir_buffer.str().c_str(),std::ios::out | std::ios::trunc);
 	if(!file)
 	{
 		std::ostringstream	buffer;
-		buffer << "Unable to open file '" << buffer << "' for saving variables table.";
+		buffer << "Unable to open file '" << dir_buffer.str() << "' for saving variables table.";
 		WriteLog(buffer);
 		return;
 	}

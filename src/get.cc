@@ -52,7 +52,7 @@ int	Get::Process(Player *player)
 			buffer.str("");
 			xml_buffer.str("");
 			buffer << "You have picked up " << obj->c_str() << ".\n";
-			if(!player->CommsAPILevel() > 0)
+			if(!(player->CommsAPILevel() > 0))
 				player->Send(buffer);
 			else
 			{
