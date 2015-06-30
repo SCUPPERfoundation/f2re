@@ -398,11 +398,12 @@ void	Player::AdminFlags(Player *player)
 	else
 	{
 		buffer << name << " has the following management flags set:\n";
-		if(man_flags.test(MANAGER))		buffer << "  Manager\n";
-		if(man_flags.test(HOST_FLAG))		buffer << "  Host\n";
-		if(man_flags.test(NAV_FLAG))		buffer << "  Navigator\n";
-		if(man_flags.test(TECHIE))			buffer << "  Techie\n";
-		if(man_flags.test(TECH_MANAGER))	buffer << "  Tech Manager\n";
+		if(man_flags.test(MANAGER))			buffer << "  Manager\n";
+		if(man_flags.test(HOST_FLAG))			buffer << "  Host\n";
+		if(man_flags.test(NAV_FLAG))			buffer << "  Navigator\n";
+		if(man_flags.test(TECHIE))				buffer << "  Techie\n";
+		if(man_flags.test(TECH_MANAGER))		buffer << "  Tech Manager\n";
+		if(temp_flags.test(TESTER))			buffer << "  Tester\n";
 	}
 	if(flags.test(SPONSOR))	buffer << "This player is a game sponsor\n";
 	player->Send(buffer);

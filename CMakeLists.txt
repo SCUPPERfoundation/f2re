@@ -443,5 +443,6 @@ set(SOURCE_FILES
 include_directories(include)
 include_directories(/usr/include/libdb4)
 
-add_executable(fed2d ${SOURCE_FILES})
+add_executable(fed2d ${SOURCE_FILES} )
+target_compile_options(fed2d PRIVATE -O2 -DDEVELOPMENT)
 target_link_libraries(fed2d -L/usr/lib64/libdb4 -lexpat -ldb_cxx -lsqlite3)

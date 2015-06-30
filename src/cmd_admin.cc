@@ -41,6 +41,7 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 	}
 
 	if(tokens->Get(2) == "stat")
+
 	{
 		AddStat(player,tokens);
 		return;
@@ -341,7 +342,7 @@ void	Admin::Help(Player *player)
 		"   ADMIN REPORT account_ID\n",
 		"   ADMIN SAVE player\n",
 		"   ADMIN SET flag player\n",
-		"      flags are: nav, alpha, host, techie, manager, sponsor, \n",
+		"      flags are: nav, alpha, host, techie, manager, sponsor, tester \n",
 		"   ADMIN WHOELSE player\n",
 		"   ADMIN XMLDUMP filename (NOTE: For Alan's use only!)\n",
 		"   ADMIN ZOMBIE number_of_days\n",
@@ -394,14 +395,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		""
 	};
 
-#ifdef FEDTEST
-	if(!((player->Name() == "Hazed") || (player->Name() == "Bella")
-				 || (player->Name() == "Freya") || (player->Name() == "Djentsch")))
-#else
-	if(!((player->Name() == "Hazed") || (player->Name() == "Bella")
-				 || (player->Name() == "Freya") || (player->Name() == "Nightdroid")
-				 || (player->Name() == "Buddy")))
-#endif
+	if(!((player->Name() == "Hazed") || (player->Name() == "Bella") || (player->Name() == "Freya")))
 	{
 		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
@@ -524,7 +518,7 @@ void	Admin::Set(Player *player,Tokens *tokens,const std::string& name,const std:
 {
 	static const std::string	set_cmds[] =
 	{
-		"nav", "alpha", "host", "techie", "manager", "sponsor", "builds",		//  0- 6
+		"nav", "alpha", "host", "techie", "manager", "sponsor", "builds", "tester",	//  0 - 7
 		""
 	};
 
@@ -553,6 +547,7 @@ void	Admin::Set(Player *player,Tokens *tokens,const std::string& name,const std:
 			case 4: 	SetManager(player,tokens,target,which);	break;		// 'manager'
 			case 5:	SetSponsor(player,tokens,target,which);	break;		// 'sponsor'
 			case 6:	SetBuild(player,tokens,target,which);		break;		// 'build'
+			case 7:	SetTester(player,tokens,target);				break;		// 'tester'
 			default:	player->Send(Game::system->GetMessage("cmdparser","adminset",4));
 		}
 		Game::player_index->Save(target,PlayerIndex::NO_OBJECTS);
@@ -654,6 +649,12 @@ void	Admin::SetTechie(Player *player,Tokens *tokens,Player *target,int which)
 		target->ClearManFlag(Player::TECHIE);
 		player->Send(Game::system->GetMessage("admin","settechie",2));
 	}
+}
+
+void	Admin::SetTester(Player *player,Tokens *tokens,Player *target)
+{
+	target->SetTempFlag(Player::TESTER);
+	player->Send("Tester flag set until the end of the current session.\n");
 }
 
 void	Admin::WhoElse(Player *player,Tokens *tokens)

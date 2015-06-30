@@ -120,7 +120,7 @@ public:
 	enum
 	{
 		EV_TRACE, FROZEN, TAXED, SLITHY2STAT, PLANET_CLAIMED,
-		PLANET_BUILT, MAX_TEMP_FLAGS
+		PLANET_BUILT, TESTER, MAX_TEMP_FLAGS
 	};	// temporary flags
 
 	enum
@@ -371,6 +371,7 @@ public:
 	bool	IsPlanetOwner();
 	bool	IsStaff()											{ return(man_flags.any());					}
 	bool	IsTechie()											{ return(man_flags.test(TECHIE));		}
+	bool	IsTester()											{ return(temp_flags.test(TESTER)); 		}
 	bool	IsTracking()										{ return(temp_flags.test(EV_TRACE));	}
 	bool	JobOffer(Player *offerer, Job *job);
 	bool	Jump2Founder(Player *player);

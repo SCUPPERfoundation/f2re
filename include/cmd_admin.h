@@ -41,6 +41,7 @@ private:
 	void	SetNav(Player *player,Tokens *tokens,Player *target,int which);
 	void	SetSponsor(Player *player,Tokens *tokens,Player *target,int which);
 	void	SetTechie(Player *player,Tokens *tokens,Player *target,int which);
+	void	SetTester(Player *player,Tokens *tokens,Player *target);
 	void	WhoElse(Player *player,Tokens *tokens);
 	void	Zombie(Player *player,Tokens *tokens);
 
