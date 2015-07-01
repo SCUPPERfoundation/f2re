@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkgender.h"
+#include "scr_checkgender.h"
 
 #include "event_number.h"
 #include "player.h"

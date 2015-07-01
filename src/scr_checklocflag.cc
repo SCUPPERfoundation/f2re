@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checklocflag.h"
+#include "scr_checklocflag.h"
 
 #include "event_number.h"
 #include "fedmap.h"

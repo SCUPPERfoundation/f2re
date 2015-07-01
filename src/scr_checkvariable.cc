@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkvariable.h"
+#include "scr_checkvariable.h"
 
 #include <sstream>
 

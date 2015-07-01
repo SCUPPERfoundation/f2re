@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkinv.h"
+#include "scr_checkinv.h"
 
 #include "event_number.h"
 #include "fedmap.h"

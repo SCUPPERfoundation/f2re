@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checksize.h"
+#include "scr_checksize.h"
 
 #include "event_number.h"
 #include "fed_object.h"

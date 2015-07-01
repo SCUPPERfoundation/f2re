@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkslithy.h"
+#include "scr_checkslithy.h"
 
 #include "event_number.h"
 #include "player.h"

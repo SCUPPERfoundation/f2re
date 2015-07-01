@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkstat.h"
+#include "scr_checkstat.h"
 
 #include "event_number.h"
 #include "player.h"

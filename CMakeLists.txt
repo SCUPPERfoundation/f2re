@@ -73,17 +73,17 @@ set(SOURCE_FILES
     include/scr_checkak.h
     include/scr_checkflag.h
     include/scr_checkforowner.h
-    include/checkgender.h
-    include/checkinsurance.h
-    include/checkinv.h
-    include/checklastloc.h
-    include/checklocflag.h
-    include/checkmap.h
-    include/checksize.h
-    include/checkslithy.h
-    include/checkstat.h
-    include/checkvariable.h
-    include/clearvariable.h
+    include/scr_checkgender.h
+    include/scr_checkinsurance.h
+    include/scr_checkinv.h
+    include/scr_checklastloc.h
+    include/scr_checklocflag.h
+    include/scr_checkmap.h
+    include/scr_checksize.h
+    include/scr_checkslithy.h
+    include/scr_checkstat.h
+    include/scr_checkvariable.h
+    include/scr_clearvariable.h
     include/cmd_admin.h
     include/cmd_build.h
     include/cmd_expropriate.h
@@ -294,17 +294,17 @@ set(SOURCE_FILES
     src/channel_man.cc
     src/scr_checkflag.cc
     src/scr_checkforowner.cc
-    src/checkgender.cc
-    src/checkinsurance.cc
-    src/checkinv.cc
-    src/checklastloc.cc
-    src/checklocflag.cc
-    src/checkmap.cc
-    src/checksize.cc
-    src/checkslithy.cc
-    src/checkstat.cc
-    src/checkvariable.cc
-    src/clearvariable.cc
+    src/scr_checkgender.cc
+    src/scr_checkinsurance.cc
+    src/scr_checkinv.cc
+    src/scr_checklastloc.cc
+    src/scr_checklocflag.cc
+    src/scr_checkmap.cc
+    src/scr_checksize.cc
+    src/scr_checkslithy.cc
+    src/scr_checkstat.cc
+    src/scr_checkvariable.cc
+    src/scr_clearvariable.cc
     src/cmd_admin.cc
     src/cmd_build.cc
     src/cmd_expropriate.cc
