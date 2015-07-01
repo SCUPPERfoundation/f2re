@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkforowner.h"
+#include "scr_checkforowner.h"
 
 #include "event_number.h"
 #include "fedmap.h"

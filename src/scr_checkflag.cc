@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "checkflag.h"
+#include "scr_checkflag.h"
 
 #include "company.h"
 #include "event_number.h"

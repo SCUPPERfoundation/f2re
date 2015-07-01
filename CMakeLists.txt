@@ -71,8 +71,8 @@ set(SOURCE_FILES
     include/channel.h
     include/channel_man.h
     include/scr_checkak.h
-    include/checkflag.h
-    include/checkforowner.h
+    include/scr_checkflag.h
+    include/scr_checkforowner.h
     include/checkgender.h
     include/checkinsurance.h
     include/checkinv.h
@@ -292,8 +292,8 @@ set(SOURCE_FILES
     src/change.cc
     src/channel.cc
     src/channel_man.cc
-    src/checkflag.cc
-    src/checkforowner.cc
+    src/scr_checkflag.cc
+    src/scr_checkforowner.cc
     src/checkgender.cc
     src/checkinsurance.cc
     src/checkinv.cc
