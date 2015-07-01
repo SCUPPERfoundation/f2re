@@ -18,7 +18,7 @@
 
 #include "scr_announce.h"
 #include "call.h"
-#include "checkak.h"
+#include "scr_checkak.h"
 #include "checkflag.h"
 #include "checkforowner.h"
 #include "checkgender.h"

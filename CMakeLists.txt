@@ -70,7 +70,7 @@ set(SOURCE_FILES
     include/change.h
     include/channel.h
     include/channel_man.h
-    include/checkak.h
+    include/scr_checkak.h
     include/checkflag.h
     include/checkforowner.h
     include/checkgender.h
