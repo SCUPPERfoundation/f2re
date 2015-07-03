@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "setvariable.h"
+#include "scr_setvariable.h"
 
 #include "misc.h"
 #include "player.h"

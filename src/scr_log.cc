@@ -7,35 +7,33 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "display_size.h"
+#include "scr_log.h"
 
-#include <sstream>
+#include <cstring>
 
-#include "fedmap.h"
-#include "fed_object.h"
 #include "misc.h"
 #include "player.h"
 
 
-DisplaySize::DisplaySize(const char **attrib,FedMap *fed_map) : Script(fed_map)
+Log::Log(const char **attrib,FedMap *fed_map) : Script(fed_map)
 {
-	id_name = FindAttribute(attrib,"id-name");
+	text = "";
 }
 
-int	DisplaySize::Process(Player *player)
+Log::~Log()
 {
-	FedObject	*obj = FindObject(player,id_name);
-	if(obj != 0)
-	{
-		std::string	temp(text);
-		std::ostringstream	buffer;
-		buffer << obj->Size();
-		std::string::size_type	index = temp.find("%d");
-		if(index != std::string::npos)
-			temp.replace(index,2,buffer.str());
-		temp += "\n";
-		player->Send(temp);
-	}
+	//
+}
+
+int	Log::Process(Player *player)
+{
+	std::string	final_text(text);
+	InsertName(player,final_text);
+	int len =  final_text.length();
+	if((len > 0) && (final_text[len - 1] == '\n'))
+		final_text[len - 1] = ' ';
+	WriteLog(final_text);
 	return(CONTINUE);
 }
+
 

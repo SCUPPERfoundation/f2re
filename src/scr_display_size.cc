@@ -7,35 +7,35 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "posttoreview.h"
+#include "scr_display_size.h"
+
+#include <sstream>
 
 #include "fedmap.h"
+#include "fed_object.h"
 #include "misc.h"
-#include "review.h"
+#include "player.h"
 
 
-PostToReview::PostToReview(const char **attrib,FedMap *fed_map) : Script(fed_map)
+DisplaySize::DisplaySize(const char **attrib,FedMap *fed_map) : Script(fed_map)
 {
-	text = "";
+	id_name = FindAttribute(attrib,"id-name");
 }
 
-PostToReview::~PostToReview()
+int	DisplaySize::Process(Player *player)
 {
-	//
-}
-
-
-void	PostToReview::AddData(const std::string& data)		
-{ 	
-	text = data + "\n";	
-}
-
-int	PostToReview::Process(Player *player)
-{
-	std::string	final_text(text);
-	InsertName(player,final_text);
-	Game::review->Post(final_text);
+	FedObject	*obj = FindObject(player,id_name);
+	if(obj != 0)
+	{
+		std::string	temp(text);
+		std::ostringstream	buffer;
+		buffer << obj->Size();
+		std::string::size_type	index = temp.find("%d");
+		if(index != std::string::npos)
+			temp.replace(index,2,buffer.str());
+		temp += "\n";
+		player->Send(temp);
+	}
 	return(CONTINUE);
 }
-
 

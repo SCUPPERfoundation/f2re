@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "move.h"
+#include "scr_move.h"
 
 #include <sstream>
 

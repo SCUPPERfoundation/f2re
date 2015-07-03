@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "drop.h"
+#include "scr_drop.h"
 
 #include <sstream>
 

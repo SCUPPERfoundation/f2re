@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "freeze.h"
+#include "scr_freeze.h"
 
 #include "player.h"
 

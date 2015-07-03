@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "percent.h"
+#include "scr_percent.h"
 
 #include <cstdlib>
 

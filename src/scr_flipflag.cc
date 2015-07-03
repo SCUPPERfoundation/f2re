@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "flipflag.h"
+#include "scr_flipflag.h"
 
 #include "company.h"
 #include "inventory.h"

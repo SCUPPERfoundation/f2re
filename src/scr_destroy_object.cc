@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "destroy_object.h"
+#include "scr_destroy_object.h"
 
 #include "fedmap.h"
 #include "inventory.h"

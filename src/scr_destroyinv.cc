@@ -7,24 +7,29 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "release.h"
+#include "scr_destroyinv.h"
 
+#include "inventory.h"
 #include "player.h"
 
-Release::Release(const char **attrib,FedMap *fed_map) : Script(fed_map)
+DestroyInventory::DestroyInventory(const char **attrib,FedMap *fed_map) : Script(fed_map)
+{
+	map_title = FindAttribute(attrib,"title");
+}
+
+DestroyInventory::~DestroyInventory()
 {
 	//
 }
 
-Release::~Release()
-{
-	//
-}
-
-int	Release::Process(Player *player)
+int	DestroyInventory::Process(Player *player)
 {
 	if(player != 0)
-		player->Release();
+	{
+		Inventory *inventory = player->GetInventory();
+		if(inventory != 0)
+			inventory->DestroyInventory(map_title);
+	}
 	return(CONTINUE);
 }
 

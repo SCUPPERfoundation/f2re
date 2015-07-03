@@ -63,7 +63,7 @@ set(SOURCE_FILES
     include/bus_register.h
     include/business.h
     include/buy.h
-    include/call.h
+    include/scr_call.h
     include/cargo.h
     include/cartel.h
     include/category.h
@@ -105,20 +105,19 @@ set(SOURCE_FILES
     include/company.h
     include/company_parser.h
     include/courier.h
-    include/create_object.h
+    include/scr_create_object.h
     include/db_object.h
     include/db_player.h
     include/delay.h
-    include/delayevent.h
+    include/scr_delayevent.h
     include/depot.h
-    include/destroy_object.h
-    include/destroyevent.h
-    include/destroyinv.h
+    include/scr_destroy_object.h
+    include/scr_destroyinv.h
     include/disaffection.h
     include/display.h
     include/display_cabinet.h
-    include/display_size.h
-    include/drop.h
+    include/scr_display_size.h
+    include/scr_drop.h
     include/efficiency.h
     include/enhancement.h
     include/equip_parser.h
@@ -131,14 +130,14 @@ set(SOURCE_FILES
     include/fed.h
     include/fed_object.h
     include/fedmap.h
-    include/flipflag.h
+    include/scr_flipflag.h
     include/forbidden.h
-    include/freeze.h
+    include/scr_freeze.h
     include/futures_contract.h
     include/futures_exchange.h
     include/galaxy.h
     include/galaxy_map_parser.h
-    include/get.h
+    include/scr_get.h
     include/global_player_vars_table.h
     include/graving_dock.h
     include/happenings.h
@@ -150,22 +149,22 @@ set(SOURCE_FILES
     include/loc_rec.h
     include/location.h
     include/locker.h
-    include/log.h
+    include/scr_log.h
     include/login.h
     include/louie.h
     include/mail.h
     include/mail_parser.h
     include/map_parser.h
-    include/match.h
+    include/scr_match.h
     include/md5.h
-    include/message.h
+    include/scr_message.h
     include/misc.h
-    include/move.h
+    include/scr_move.h
     include/msg_number.h
     include/navcomp.h
     include/navparse.h
     include/newbie.h
-    include/nomatch.h
+    include/scr_nomatch.h
     include/notices.h
     include/null_ev_num.h
     include/obj_container.h
@@ -178,17 +177,17 @@ set(SOURCE_FILES
     include/para_store.h
     include/parcels.h
     include/parcels_parser.h
-    include/percent.h
+    include/scr_percent.h
     include/player.h
     include/player_index.h
     include/player_var.h
     include/player_vars_parser.h
     include/player_vars_table.h
     include/population.h
-    include/posttoreview.h
+    include/scr_posttoreview.h
     include/price_check.h
     include/production.h
-    include/release.h
+    include/scr_release.h
     include/review.h
     include/riots.h
     include/role_money_sink.h
@@ -208,7 +207,7 @@ set(SOURCE_FILES
     include/script.h
     include/section.h
     include/sell.h
-    include/setvariable.h
+    include/scr_setvariable.h
     include/share.h
     include/ship.h
     include/ship_builder.h
@@ -285,7 +284,7 @@ set(SOURCE_FILES
     src/bus_register.cc
     src/business.cc
     src/buy.cc
-    src/call.cc
+    src/scr_call.cc
     src/cargo.cc
     src/cartel.cc
     src/category.cc
@@ -326,18 +325,18 @@ set(SOURCE_FILES
     src/company.cc
     src/company_parser.cc
     src/courier.cc
-    src/create_object.cc
+    src/scr_create_object.cc
     src/db_object.cc
     src/delay.cc
-    src/delayevent.cc
+    src/scr_delayevent.cc
     src/depot.cc
-    src/destroy_object.cc
-    src/destroyinv.cc
+    src/scr_destroy_object.cc
+    src/scr_destroyinv.cc
     src/disaffection.cc
     src/display.cc
     src/display_cabinet.cc
-    src/display_size.cc
-    src/drop.cc
+    src/scr_display_size.cc
+    src/scr_drop.cc
     src/efficiency.cc
     src/enhancement.cc
     src/equip_parser.cc
@@ -349,14 +348,14 @@ set(SOURCE_FILES
     src/fed.cc
     src/fed_object.cc
     src/fedmap.cc
-    src/flipflag.cc
+    src/scr_flipflag.cc
     src/forbidden.cc
-    src/freeze.cc
+    src/scr_freeze.cc
     src/futures_contract.cc
     src/futures_exchange.cc
     src/galaxy.cc
     src/galaxy_map_parser.cc
-    src/get.cc
+    src/scr_get.cc
     src/global_player_vars_table.cc
     src/graving_dock.cc
     src/happenings.cc
@@ -367,23 +366,23 @@ set(SOURCE_FILES
     src/ipc.cc
     src/location.cc
     src/locker.cc
-    src/log.cc
+    src/scr_log.cc
     src/login.cc
     src/louie.cc
     src/mail.cc
     src/mail_parser.cc
     src/main.cc
     src/map_parser.cc
-    src/match.cc
+    src/scr_match.cc
     src/md5.cc
-    src/message.cc
+    src/scr_message.cc
     src/misc.cc
-    src/move.cc
+    src/scr_move.cc
     src/msg_number.cc
     src/navcomp.cc
     src/navparse.cc
     src/newbie.cc
-    src/nomatch.cc
+    src/scr_nomatch.cc
     src/notices.cc
     src/null_ev_num.cc
     src/obj_container.cc
@@ -395,17 +394,17 @@ set(SOURCE_FILES
     src/para_store.cc
     src/parcels.cc
     src/parcels_parser.cc
-    src/percent.cc
+    src/scr_percent.cc
     src/player.cc
     src/player_index.cc
     src/player_var.cc
     src/player_vars_parser.cc
     src/player_vars_table.cc
     src/population.cc
-    src/posttoreview.cc
+    src/scr_posttoreview.cc
     src/price_check.cc
     src/production.cc
-    src/release.cc
+    src/scr_release.cc
     src/review.cc
     src/riots.cc
     src/scr_announce.cc
@@ -422,7 +421,7 @@ set(SOURCE_FILES
     src/script.cc
     src/section.cc
     src/sell.cc
-    src/setvariable.cc
+    src/scr_setvariable.cc
     src/share.cc
     src/ship.cc
     src/ship_builder.cc

@@ -1,4 +1,0 @@
-#ifndef DESTROYEVENT_H_
-#define DESTROYEVENT_H_
-
-#endif /*DESTROYEVENT_H_*/

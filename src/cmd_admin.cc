@@ -20,7 +20,7 @@
 #include "global_player_vars_table.h"
 #include "inventory.h"
 #include "misc.h"
-#include "nomatch.h"
+#include "scr_nomatch.h"
 #include "player.h"
 #include "player_index.h"
 #include "tokens.h"

@@ -46,7 +46,7 @@
 #include "misc.h"
 #include "navcomp.h"
 #include "navparse.h"
-#include "nomatch.h"
+#include "scr_nomatch.h"
 #include "notices.h"
 #include "player_index.h"
 #include "player_vars_parser.h"
@@ -58,7 +58,7 @@
 #include "work.h"
 
 const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.68";
+const std::string	Fed::version = "1.89.69";
 
 Fed::Fed()
 {

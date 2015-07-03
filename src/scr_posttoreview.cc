@@ -7,32 +7,34 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "log.h"
+#include "scr_posttoreview.h"
 
-#include <cstring>
-
+#include "fedmap.h"
 #include "misc.h"
-#include "player.h"
+#include "review.h"
 
 
-Log::Log(const char **attrib,FedMap *fed_map) : Script(fed_map)
+PostToReview::PostToReview(const char **attrib,FedMap *fed_map) : Script(fed_map)
 {
 	text = "";
 }
 
-Log::~Log()
+PostToReview::~PostToReview()
 {
 	//
 }
 
-int	Log::Process(Player *player)
+
+void	PostToReview::AddData(const std::string& data)		
+{ 	
+	text = data + "\n";	
+}
+
+int	PostToReview::Process(Player *player)
 {
 	std::string	final_text(text);
 	InsertName(player,final_text);
-	int len =  final_text.length();
-	if((len > 0) && (final_text[len - 1] == '\n'))
-		final_text[len - 1] = ' ';
-	WriteLog(final_text);
+	Game::review->Post(final_text);
 	return(CONTINUE);
 }
 

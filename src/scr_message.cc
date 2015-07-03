@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "message.h"
+#include "scr_message.h"
 
 #include <cstring>
 
