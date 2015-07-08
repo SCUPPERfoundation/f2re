@@ -15,7 +15,6 @@
 class	Fed
 {
 public:
-	// Note that FD_SETSIZE is 1024 for SuSE 9 on Pentium 32 bit
 	static const int	MAX_PLAYERS = 250;
 	static const std::string version;
 
