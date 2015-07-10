@@ -23,6 +23,7 @@
 #include "graving_dock.h"
 #include "mail.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "ship.h"
 #include "star.h"
@@ -194,13 +195,13 @@ void	Cartel::BuildCity(Player *player,const std::string& city_name)
 {
 	if(dock == 0)
 	{
-		player->Send("You don't yet have a functioning graving dock!\n");
+		player->Send("You don't yet have a functioning graving dock!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(dock->Status() == GravingDock::UNDER_CONSTRUCTION)
 	{
-		player->Send("The dockyard mateys haven't finished building the dock yet!\n");
+		player->Send("The dockyard mateys haven't finished building the dock yet!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -210,7 +211,7 @@ void	Cartel::BuildCity(Player *player,const std::string& city_name)
 		if(build_rec != 0)
 		{
 			if(build_rec->cost > cash)
-				player->Send("The cartel doesn't have enough cash available to start building a new city!\n");
+				player->Send("The cartel doesn't have enough cash available to start building a new city!\n",OutputFilter::DEFAULT);
 			else
 			{
 				if(dock->BuildCity(player,this,city_name))
@@ -218,7 +219,7 @@ void	Cartel::BuildCity(Player *player,const std::string& city_name)
 			}
 		}
 		else
-			player->Send("I can't find a record for that build! Please report the problem to feedback...\n");
+			player->Send("I can't find a record for that build! Please report the problem to feedback...\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -228,20 +229,20 @@ void	Cartel::BuildCity(Player *player,const std::string& city_name)
 		return;
 	}
 
-	player->Send("The dockyard mateys haven't finished the current build yet!\n");
+	player->Send("The dockyard mateys haven't finished the current build yet!\n",OutputFilter::DEFAULT);
 }
 
 void	Cartel::BuildGravingDock(Player *player)
 {
 	if(dock != 0)
 	{
-		player->Send("Your cartel already has a graving dock!\n");
+		player->Send("Your cartel already has a graving dock!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if ((cash < 0) && ((cash - GravingInfo::cost) > 0))
 	{
-		player->Send("You receive a stroppy note from the bank manager refusing to extend your overdraft!\n");
+		player->Send("You receive a stroppy note from the bank manager refusing to extend your overdraft!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -271,7 +272,7 @@ void	Cartel::CheckCommodityPrices(Player *player,const std::string& commod_name,
 	const Commodity *commodity = Game::commodities->Find(commod_name);
 	if(commodity == 0)
 	{
-		player->Send(not_commod);
+		player->Send(not_commod,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -325,7 +326,7 @@ Job	*Cartel::CreateTargettedJob(const std::string& commodity,const std::string& 
 	}
 	else
 	{
-		offerer->Send("I'm sorry but I'm unable to offer jobs on your behalf at the moment.\n");
+		offerer->Send("I'm sorry but I'm unable to offer jobs on your behalf at the moment.\n",OutputFilter::DEFAULT);
 		return(0);
 	}
 }
@@ -434,7 +435,7 @@ void	Cartel::DisplayCity(Player *player,const std::string& city_name)
 void	Cartel::DisplayGravingDock(Player *player)
 {
 	if(dock == 0)
-		player->Send("You don't yet have a graving dock!\n");
+		player->Send("You don't yet have a graving dock!\n",OutputFilter::DEFAULT);
 	else
 		dock->Display(player);
 }
@@ -582,10 +583,10 @@ int	Cartel::ProcessRequest(const std::string& mem_name,int command)
 void	Cartel::RejectRequest(Player *plutocrat,const std::string system_name)
 {
 	if(RemoveRequest(system_name) == NOT_FOUND)
-		plutocrat->Send("I can't find a system with that name in the pending membership requests!\n");
+		plutocrat->Send("I can't find a system with that name in the pending membership requests!\n",OutputFilter::DEFAULT);
 	else
 	{
-		plutocrat->Send("Removed from list of pending requests.\n");
+		plutocrat->Send("Removed from list of pending requests.\n",OutputFilter::DEFAULT);
 		Player	*player = Game::galaxy->FindOwner(system_name);
 		if(player != 0)
 		{
@@ -649,12 +650,12 @@ void	Cartel::SendMail(Player *from,const std::string& to_name,const std::string&
 		Player	*to = Game::player_index->FindName(player_name);
 		if(to == 0)
 		{
-			from->Send("I can't find a player of that name!\n");
+			from->Send("I can't find a player of that name!\n",OutputFilter::DEFAULT);
 			return;
 		}
 		if(!PlayerIsCartelMember(player_name))
 		{
-			from->Send("There isn't a player of that name in the cartel!\n");
+			from->Send("There isn't a player of that name in the cartel!\n",OutputFilter::DEFAULT);
 			return;
 		}
 
@@ -705,7 +706,7 @@ void	Cartel::SetCityProduction(Player *player,std::string& city_name,std::string
 
 	if(city->Planet() == "unattached")
 	{
-		player->Send("This city needs to be allocated to a planet before it can start work!\n");
+		player->Send("This city needs to be allocated to a planet before it can start work!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -768,15 +769,15 @@ void	Cartel::XferFunds(Player *player,long num_megs)
 	long amount  = num_megs * 1000000L;
 	if(!player->ChangeCash(-amount))
 	{
-		player->Send("You don't have that much money in your bank account!\n");
+		player->Send("You don't have that much money in your bank account!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(ChangeCash(amount))
-		player->Send("Your cartel finance officer notifies you that the funds have been successfully transfered.\n");
+		player->Send("Your cartel finance officer notifies you that the funds have been successfully transfered.\n",OutputFilter::DEFAULT);
 	else
 	{
-		player->Send("Your cartel finance officer notifies you that the transfer has been blocked by the galactic administration.\n");
+		player->Send("Your cartel finance officer notifies you that the transfer has been blocked by the galactic administration.\n",OutputFilter::DEFAULT);
 		player->ChangeCash(amount);
 	}
 }

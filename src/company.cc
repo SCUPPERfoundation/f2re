@@ -30,6 +30,7 @@
 #include "infra.h"
 #include "mail.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_index.h"
 #include "production.h"
@@ -283,7 +284,7 @@ Share	*Company::BrokerCanSell(Player *player,int amount)
 		}
 		return(broker_holding);
 	}
-	player->Send(no_broker);
+	player->Send(no_broker,OutputFilter::DEFAULT);
 	return(0);
 }
 
@@ -291,7 +292,7 @@ void	Company::BuyDepot()
 {
 	if( cash < 1000000L)
 	{
-		ceo->Send(Game::system->GetMessage("company","buydepot",1));
+		ceo->Send(Game::system->GetMessage("company","buydepot",1),OutputFilter::DEFAULT);
 			return;
 	}
 
@@ -310,7 +311,7 @@ void	Company::BuyFactory(const std::string& where,const Commodity *commodity)
 {
 	if(cash < 2000000L)
 	{
-		ceo->Send(Game::system->GetMessage("company","buyfactory",1));
+		ceo->Send(Game::system->GetMessage("company","buyfactory",1),OutputFilter::DEFAULT);
 		return;
 	}
 	int index = -1;
@@ -324,14 +325,14 @@ void	Company::BuyFactory(const std::string& where,const Commodity *commodity)
 	}
 	if(index < 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","buyfactory",2));
+		ceo->Send(Game::system->GetMessage("company","buyfactory",2),OutputFilter::DEFAULT);
 		return;
 	}
 
 	if((commodity->type == Commodities::BIO) &&
 						(ceo->CurrentMap()->Economy() != Infrastructure::BIOLOGICAL))
 	{
-		ceo->Send(Game::system->GetMessage("company","buyfactory",4));
+		ceo->Send(Game::system->GetMessage("company","buyfactory",4),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -339,7 +340,7 @@ void	Company::BuyFactory(const std::string& where,const Commodity *commodity)
 	ceo->CurrentMap()->AddFactory(factories[index],true);
 	Game::production->Register(factories[index]);
 	CapitalExpenditure(2000000L);
-	ceo->Send(Game::system->GetMessage("company","buyfactory",3));
+	ceo->Send(Game::system->GetMessage("company","buyfactory",3),OutputFilter::DEFAULT);
 	factories[index]->Display(ceo);
 	ceo->CurrentMap()->SaveInfrastructure();
 }
@@ -353,7 +354,7 @@ void	Company::BuyShares(int amount,Player *player)
 
 	if(amount > 100)
 	{
-		player->Send(too_many);
+		player->Send(too_many,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -392,7 +393,7 @@ void	Company::BuyTreasury(int amount)
 
 	if(amount > 100)
 	{
-		ceo->Send(too_many);
+		ceo->Send(too_many,OutputFilter::DEFAULT);
 		return;
 	}
 	long cost = amount * cur_value;
@@ -400,7 +401,7 @@ void	Company::BuyTreasury(int amount)
 	cost += commission;
 	if(cost > cash)
 	{
-		ceo->Send(too_little);
+		ceo->Send(too_little,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -905,7 +906,7 @@ void	Company::Display()
 	buffer << "\n  Accounting Cycles completed at current rank: " << total_cycles << "  Time in Game: " << minutes/60 << " hours.\n";
 	ceo->Send(buffer);
 	if(status == STASIS)
-		ceo->Send(warning);
+		ceo->Send(warning,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	if(flags.any())
@@ -966,12 +967,12 @@ void	Company::Display()
 
 	if(portfolio.size() > 0)
 	{
-		ceo->Send("  Share Portfolio:\n");
+		ceo->Send("  Share Portfolio:\n",OutputFilter::DEFAULT);
 		for(Shareholders::iterator iter = portfolio.begin();iter != portfolio.end();iter++)
 			iter->second->DisplayAsPortfolio(ceo);
 	}
 
-	ceo->Send("  Share Register:\n");
+	ceo->Send("  Share Register:\n",OutputFilter::DEFAULT);
 	for(Shareholders::iterator iter = shareholders.begin();iter != shareholders.end();iter++)
 		iter->second->Display(ceo);
 }
@@ -990,7 +991,7 @@ void	Company::DisplayAccounts(Player *player,int how_many)
 		}
 	}
 	else
-		player->Send(no_accounts);
+		player->Send(no_accounts,OutputFilter::DEFAULT);
 }
 
 void	Company::DisplayFactory(int number)
@@ -1004,12 +1005,12 @@ void	Company::DisplayDepot(const std::string& d_name)
 {
 	FedMap	*fed_map = Game::galaxy->FindMap(d_name);
 	if(fed_map == 0)
-		ceo->Send(Game::system->GetMessage("company","displaydepot",1));
+		ceo->Send(Game::system->GetMessage("company","displaydepot",1),OutputFilter::DEFAULT);
 	else
 	{
 		Depot	*depot =  fed_map->FindDepot(name);
 		if(depot == 0)
-			ceo->Send(Game::system->GetMessage("company","displaydepot",1));
+			ceo->Send(Game::system->GetMessage("company","displaydepot",1),OutputFilter::DEFAULT);
 		else
 			depot->Display(ceo);
 	}
@@ -1050,7 +1051,7 @@ void	Company::DoSharePurchase(Player *player,int amount,Share *purchaser,Share *
 	{
 		if(!player->ChangeCash(-cost))
 		{
-			player->Send(too_little);
+			player->Send(too_little,OutputFilter::DEFAULT);
 			return;
 		}
 	}
@@ -1058,7 +1059,7 @@ void	Company::DoSharePurchase(Player *player,int amount,Share *purchaser,Share *
 	{
 		if(!player->ChangeCompanyCash(-cost))
 		{
-			player->Send(too_little);
+			player->Send(too_little,OutputFilter::DEFAULT);
 			return;
 		}
 		else
@@ -1132,13 +1133,13 @@ void	Company::Fetch(int bay_no)
 	Depot		*depot =  fed_map->FindDepot(name);
 	if(depot == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","fetch",1));
+		ceo->Send(Game::system->GetMessage("company","fetch",1),OutputFilter::DEFAULT);
 		return;
 	}
 	Cargo	*cargo = depot->Retrieve(bay_no);
 	if(cargo == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","fetch",2));
+		ceo->Send(Game::system->GetMessage("company","fetch",2),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1152,7 +1153,7 @@ void	Company::Fetch(int bay_no)
 		ceo->Send(buffer);
 		Ship *ship = ceo->GetShip();
 		if((ship != 0) && ship->AddCargo(cargo,ceo) >= 0)
-			ceo->Send(Game::system->GetMessage("company","fetch",3));
+			ceo->Send(Game::system->GetMessage("company","fetch",3),OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -1233,7 +1234,7 @@ Factory	*Company::Find(int number)
 
 	if((number < 1) || (number >= MAX_FACTORIES) || (factories[number] == 0))
 	{
-		ceo->Send(no_fact);
+		ceo->Send(no_fact,OutputFilter::DEFAULT);
 		return(0);
 	}
 	else
@@ -1262,7 +1263,7 @@ void	Company::Freeze()
 		if(factories[count] != 0)
 			factories[count]->SetWages(0);
 	}
-	ceo->Send(ok);
+	ceo->Send(ok,OutputFilter::DEFAULT);
 	Game::company_register->Write();
 }
 
@@ -1286,13 +1287,13 @@ Section 931, Chapter 82, Para 1,597, Clause 48) only two dividends can be issued
 
 	int	 total_shares = TotalShares();
 	long	cost = total_shares * amount;
-	if(cost > cash)		{ ceo->Send(no_cash);		return;	}
-	if(cost < 0)			{ ceo->Send(negative);		return;	}
+	if(cost > cash)		{ ceo->Send(no_cash,OutputFilter::DEFAULT);		return;	}
+	if(cost < 0)			{ ceo->Send(negative,OutputFilter::DEFAULT);		return;	}
 
 	if(which_type == NORMAL)
 	{
-		if(amount > 2000)		{ ceo->Send(too_much);	return;	}
-		if(++num_divs > 2)	{ ceo->Send(no_div); 		return;	}
+		if(amount > 2000)		{ ceo->Send(too_much,OutputFilter::DEFAULT);	return;	}
+		if(++num_divs > 2)	{ ceo->Send(no_div,OutputFilter::DEFAULT); 	return;	}
 	}
 
 	div += amount;
@@ -1441,7 +1442,7 @@ void	Company::RepairDepot(FedMap *fed_map)
 
 	Depot	*depot = fed_map->FindDepot(name);
 	if(depot == 0)
-		ceo->Send(no_depot);
+		ceo->Send(no_depot,OutputFilter::DEFAULT);
 	else
 		RevenueExpenditure(depot->Repair(ceo,cash));
 }
@@ -1497,18 +1498,18 @@ void	Company::SellBay(int number)
 	Depot *depot = fed_map->FindDepot(name);
 	if(depot == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","sellbay",2));
+		ceo->Send(Game::system->GetMessage("company","sellbay",2),OutputFilter::DEFAULT);
 		return;
 	}
 	if(!fed_map->IsAnExchange(ceo->LocNo()))
 	{
-		ceo->Send(Game::system->GetMessage("company","sellbay",1));
+		ceo->Send(Game::system->GetMessage("company","sellbay",1),OutputFilter::DEFAULT);
 		return;
 	}
 	Cargo	*cargo = depot->Retrieve(number);
 	if(cargo == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","sellbay",3));
+		ceo->Send(Game::system->GetMessage("company","sellbay",3),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1655,7 +1656,7 @@ void	Company::SellPortfolioShares(int amount,const std::string& co_name)
 		}
 		else
 		{
-			ceo->Send("You can't sell shares in a business until is has an IPO!\n");
+			ceo->Send("You can't sell shares in a business until is has an IPO!\n",OutputFilter::DEFAULT);
 			return;
 		}
 	}
@@ -1670,7 +1671,7 @@ void	Company::SellShares(int amount,const std::string& co_name)
 
 	if(amount > 100)
 	{
-		ceo->Send(too_many);
+		ceo->Send(too_many,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1750,7 +1751,7 @@ void	Company::SellTreasury(int amount)
 
 	if(amount > 100)
 	{
-		ceo->Send(too_many);
+		ceo->Send(too_many,OutputFilter::DEFAULT);
 		return;
 	}
 	std::ostringstream	buffer;
@@ -1759,7 +1760,7 @@ void	Company::SellTreasury(int amount)
 	{
 		if(iter->second->Quantity() == 0)
 		{
-			ceo->Send(no_stock);
+			ceo->Send(no_stock,OutputFilter::DEFAULT);
 			return;
 		}
 		if((iter->second->Quantity() - amount) < 0)
@@ -1784,7 +1785,7 @@ void	Company::SellTreasury(int amount)
 		CalculateNewSharePrice(-amount);
 	}
 	else
-		ceo->Send(no_stock);
+		ceo->Send(no_stock,OutputFilter::DEFAULT);
 }
 
 void	Company::SetFactoryCapital(int fact_num,long amount)
@@ -1827,7 +1828,7 @@ void	Company::SetFactoryWages(int fact_num,int amount)
 	static const std::string	error("You cann't set wages if your company is in stasis!\n");
 
 	if(status == STASIS)
-		ceo->Send(error);
+		ceo->Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		Factory	*factory = Find(fact_num);
@@ -1865,7 +1866,7 @@ void	Company::SplitStock()
 	static const std::string	too_many("You already have the maximum number of shares allowed.\n");
 
 	if(NumberOfShares() >= MAX_SPLIT_SHARES)
-		ceo->Send(too_many);
+		ceo->Send(too_many,OutputFilter::DEFAULT);
 	else
 	{
 		for(Shareholders::iterator iter =  shareholders.begin();iter !=  shareholders.end();iter++)
@@ -1879,7 +1880,7 @@ void	Company::SplitStock()
 		div /= 2;
 		cash -= 5000;
 		rev_exp += 5000;
-		ceo->Send("Your company issues a two for one stock split, and pays your brokers 5Kig commission.\n");
+		ceo->Send("Your company issues a two for one stock split, and pays your brokers 5Kig commission.\n",OutputFilter::DEFAULT);
 		std::ostringstream	buffer;
 		buffer << name << " has issued a two for one stock split.\n";
 		Game::financial->Post(buffer);
@@ -1892,8 +1893,8 @@ void	Company::Store(Cargo *cargo)
 	Depot	*depot =  fed_map->FindDepot(name);
 	if(depot == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","store",1));
-		ceo->Send(Game::system->GetMessage("company","store",3));
+		ceo->Send(Game::system->GetMessage("company","store",1),OutputFilter::DEFAULT);
+		ceo->Send(Game::system->GetMessage("company","store",3),OutputFilter::DEFAULT);
 		delete cargo;
 	}
 	else
@@ -1901,8 +1902,8 @@ void	Company::Store(Cargo *cargo)
 		int	bay_num = depot->Store(cargo);
 		if(bay_num == Depot::NO_ROOM)
 		{
-			ceo->Send(Game::system->GetMessage("company","store",2));
-			ceo->Send(Game::system->GetMessage("company","store",3));
+			ceo->Send(Game::system->GetMessage("company","store",2),OutputFilter::DEFAULT);
+			ceo->Send(Game::system->GetMessage("company","store",3),OutputFilter::DEFAULT);
 			delete cargo;
 		}
 		else
@@ -1975,7 +1976,7 @@ void	Company::UnFreeze()
 {
 	if(status == STASIS)
 	{
-		ceo->Send("Your company has started working again!\n");
+		ceo->Send("Your company has started working again!\n",OutputFilter::DEFAULT);
 		status = WORKING;
 	}
 }
@@ -2011,12 +2012,12 @@ void	Company::UpgradeDepot(Depot *depot)
 {
 	if( cash < Depot::UPGRADE_COST)
 	{
-		ceo->Send(Game::system->GetMessage("company","upgradedepot",1));
+		ceo->Send(Game::system->GetMessage("company","upgradedepot",1),OutputFilter::DEFAULT);
 		return;
 	}
 	if(!flags.test(DEPOT_PERMIT) && (depot->CurrentBays() > 21))
 	{
-		ceo->Send("You don't have a permit to upgrade your depots above two stories!\n");
+		ceo->Send("You don't have a permit to upgrade your depots above two stories!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2047,23 +2048,23 @@ efficiency above 105%!\n");
 		return;
 	if(cash < 1000000L)
 	{
-		ceo->Send(Game::system->GetMessage("company","upgradefactory",2));
+		ceo->Send(Game::system->GetMessage("company","upgradefactory",2),OutputFilter::DEFAULT);
 		return;
 	}
 	if(ceo->Rank() < Player::MANUFACTURER)
 	{
-		ceo->Send(no_rank);
+		ceo->Send(no_rank,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!flags.test(FACTORY_PERMIT) && (factory->MaxEfficiency() > 100))
 	{
-		ceo->Send(no_permit);
+		ceo->Send(no_permit,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!factory->Upgrade())
 	{
-		ceo->Send(Game::system->GetMessage("company","upgradefactory",3));
+		ceo->Send(Game::system->GetMessage("company","upgradefactory",3),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2084,25 +2085,25 @@ void	Company::UpgradeStorage(int number)
 		return;
 	if(cash < 250000L)
 	{
-		ceo->Send(Game::system->GetMessage("company","upgradestorage",2));
+		ceo->Send(Game::system->GetMessage("company","upgradestorage",2),OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(ceo->Rank() < Player::MANUFACTURER)
 	{
-		ceo->Send(no_rank);
+		ceo->Send(no_rank,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!flags.test(STORAGE_PERMIT) && (factory->MaxStore() > 150))
 	{
-		ceo->Send(no_permit);
+		ceo->Send(no_permit,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!factory->UpgradeStore())
 	{
-		ceo->Send(Game::system->GetMessage("company","upgradestorage",3));
+		ceo->Send(Game::system->GetMessage("company","upgradestorage",3),OutputFilter::DEFAULT);
 		return;
 	}
 

@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -36,7 +37,7 @@ of an anti-climax, because there isn't really anything to see yet...\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ of an anti-climax, because there isn't really anything to see yet...\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -69,19 +70,19 @@ effect on your planet's production.\n");
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(++total_builds <= 40)
 	{
 		if((total_builds % 4) == 0)
-			player->Send(ok_fourth);
+			player->Send(ok_fourth,OutputFilter::DEFAULT);
 		else
-			player->Send(ok_other);
+			player->Send(ok_other,OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(maxed_out);
+		player->Send(maxed_out,OutputFilter::DEFAULT);
 
 	return(true);
 }

@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ brilliance. You accept it with a modest, self-deprecating, smile.\n");
 	if(CheckPrerequisits(player))
 	{
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 	else
@@ -70,7 +71,7 @@ rioting which wrecks the nearly completed city, and you are forced to abandon yo
 	if(++total_builds > 10)
 	{
 		total_builds = 10;
-		player->Send(too_many);
+		player->Send(too_many,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -81,13 +82,13 @@ rioting which wrecks the nearly completed city, and you are forced to abandon yo
 		}
 
 		if(total_builds > 8)
-			player->Send(success_10);
+			player->Send(success_10,OutputFilter::DEFAULT);
 		else
 		{
 			if(total_builds > 4)
-				player->Send(success_8);
+				player->Send(success_8,OutputFilter::DEFAULT);
 			else
-				player->Send(success_4);
+				player->Send(success_4,OutputFilter::DEFAULT);
 		}
 	}
 	return(true);
@@ -111,7 +112,7 @@ lack the prerequisites to build a floating city!\n");
 	}
 	else
 	{
-		player->Send(no_prerequisits);
+		player->Send(no_prerequisits,OutputFilter::DEFAULT);
 		return(false);
 	}
 }

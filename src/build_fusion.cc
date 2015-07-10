@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -71,14 +72,14 @@ centres of civilization!\n");
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(++total_builds <= 5)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(maxed_out);
+		player->Send(maxed_out,OutputFilter::DEFAULT);
 
 	return(true);
 }

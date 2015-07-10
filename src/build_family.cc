@@ -13,6 +13,7 @@
 
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -39,7 +40,7 @@ Family::Family(FedMap *the_map,Player *player,Tokens *tokens)
 	total_builds = 1;
 	fed_map->AddTotalLabour(10);
 	fed_map->AddLabour(10);
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -55,7 +56,7 @@ bool	Family::Add(Player *player,Tokens *tokens)
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	}
 	else
 	{
