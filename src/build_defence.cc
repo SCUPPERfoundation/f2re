@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -35,7 +36,7 @@ DefenceVessel::DefenceVessel(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if(the_map->Economy() < Infrastructure::TECHNICAL)
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -76,7 +77,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 
 	if((fed_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -125,13 +126,13 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -148,7 +149,7 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 
 bool	DefenceVessel::Demolish(Player *player)
 {
-	player->Send("Considerations of 'defence of the realm' stymie your plans!\n");
+	player->Send("Considerations of 'defence of the realm' stymie your plans!\n",OutputFilter::DEFAULT);
 	return(false);
 }
 

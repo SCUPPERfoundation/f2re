@@ -11,6 +11,7 @@
 
 #include <iomanip>
 #include <sstream>
+#include <output_filter.h>
 
 #include "company.h"
 #include "misc.h"
@@ -120,7 +121,7 @@ void	Accounts::Display(Player *player)
 		buffer << "   No dividend payment has been recorded\n";
 	buffer << "\n*All assets valued at nominal sale prices.\n";
 	player->Send(buffer);	
-	player->Send(dashes);
+	player->Send(dashes,OutputFilter::DEFAULT);
 }
 
 void	Accounts::Ratios(int pe,int pd,int ed)

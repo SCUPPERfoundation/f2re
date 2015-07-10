@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -39,7 +40,7 @@ facilities can only be built on biological level planets.\n");
 
 	if(the_map->Economy() != Infrastructure::BIOLOGICAL)
 	{
-		 player->Send(wrong_level);
+		 player->Send(wrong_level,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -50,7 +51,7 @@ facilities can only be built on biological level planets.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -70,7 +71,7 @@ bool	BioLab::Add(Player *player,Tokens *tokens)
 security biological research lab provokes serious unrest, and you hastily \
 abandon the plans before the unrest turns into rioting!\n");
 	
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -91,10 +92,7 @@ void	BioLab::Display(Player *player)
 bool	BioLab::Riot()
 {
 	fed_map->ReleaseAssets("School",name);
-	if(--total_builds <= 0)
-		return(true);
-	else
-		return(false);
+	return( --total_builds <= 0) ;
 }
 
 void	BioLab::UpdateEfficiency(Efficiency *efficiency)

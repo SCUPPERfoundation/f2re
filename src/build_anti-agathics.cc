@@ -14,6 +14,7 @@
 #include "disaffection.h"
 #include "fedmap.h"
 #include "infra.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -36,7 +37,7 @@ distrust, and protests with banners proclaiming 'Anti-agathics for all, not just
 
 	if((the_map->Economy() < Infrastructure::LEISURE))
 	{
-		 player->Send(too_early);
+		 player->Send(too_early,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ distrust, and protests with banners proclaiming 'Anti-agathics for all, not just
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -63,7 +64,7 @@ some caution by the general populace. Clearly the success or otherwise is going 
 just how comprehensive the coverage proves to be.\n");
 
 	++total_builds;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 

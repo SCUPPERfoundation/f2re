@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -34,7 +35,7 @@ Base::Base(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::INDUSTRIAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -76,7 +77,7 @@ built at Agriculture, Resource, and Industrial levels.\n");
 
 	if((fed_map->Economy() > Infrastructure::INDUSTRIAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -114,13 +115,13 @@ bool	Base::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -144,7 +145,7 @@ bool	Base::Demolish(Player *player)
 	}
 	else
 	{
-		player->Send("Considerations of state security prevent you from carrying out your planned demolition!\n");
+		player->Send("Considerations of state security prevent you from carrying out your planned demolition!\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }

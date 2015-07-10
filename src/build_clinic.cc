@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -56,7 +57,7 @@ Clinic::Clinic(FedMap *the_map,Player *player,Tokens *tokens)
 	hosp_builds = 0;
 	total_builds = 1;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -82,7 +83,7 @@ bool	Clinic::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;		
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -147,7 +148,7 @@ bool	Clinic::RequestResources(Player *player,const std::string& recipient,int qu
 	{
 		if(unused_builds < 2)
 		{
-			player->Send(error);
+			player->Send(error,OutputFilter::DEFAULT);
 			return(false);
 		}
 
@@ -193,10 +194,7 @@ bool	Clinic::Riot()
 		}
 	}
 
-	if(--total_builds <= 0)
-		return(true);
-	else
-		return(false);
+	return( --total_builds <= 0);
 }
 	
 

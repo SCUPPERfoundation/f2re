@@ -1179,7 +1179,7 @@ void	Player::ChangeRace(const std::string& new_race,Player *manager)
 
 	if((gifts == 0) || (gifts->Gifts() < 1))
 	{
-		manager->Send(no_slithy);
+		manager->Send(no_slithy,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1198,7 +1198,7 @@ void	Player::ChangeRace(const std::string& new_race,Player *manager)
 	Game::review->Post(buffer);
 	WriteLog(buffer);
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
-	manager->Send(ok);
+	manager->Send(ok,OutputFilter::DEFAULT);
 }
 
 void	Player::ChangeReward(int amount,bool add)
@@ -2446,7 +2446,7 @@ void	Player::Emote(const std::string& which,Player *recipient)
 	buffer.str("");
 	buffer << name << " has given you" << article << adj[index] << " " << which << "." << std::endl;
 	text =  buffer.str();
-	recipient->Send(text,this);
+	recipient->Send(text,OutputFilter::DEFAULT,this);
 
 	buffer.str("");
 	buffer << name << " has given " << recipient->Name();
@@ -3390,7 +3390,7 @@ bool	Player::Jump2Founder(Player *player)
 	FedMap	*planet = Game::galaxy->FindPlanetByOwner(this);
 	if(planet == 0)
 	{
-		player->Send("Can't find a planet owned by that player.\n");
+		player->Send("Can't find a planet owned by that player.\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -4536,9 +4536,9 @@ void	Player::SecularService(Player *the_spouse)
 	Send(Game::system->GetMessage("player","marry",7));
 	Send(Game::system->GetMessage("player","marry",8));
 	Send(Game::system->GetMessage("player","marry",9));
-	the_spouse->Send(Game::system->GetMessage("player","marry",7));
-	the_spouse->Send(Game::system->GetMessage("player","marry",8));
-	the_spouse->Send(Game::system->GetMessage("player","marry",9));
+	the_spouse->Send(Game::system->GetMessage("player","marry",7),OutputFilter::DEFAULT);
+	the_spouse->Send(Game::system->GetMessage("player","marry",8),OutputFilter::DEFAULT);
+	the_spouse->Send(Game::system->GetMessage("player","marry",9),OutputFilter::DEFAULT);
 	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",10),"",the_spouse);
 	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",11),"",the_spouse);
 	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",12),"",the_spouse);
@@ -4760,7 +4760,7 @@ void	Player::SetFactoryWages(int fact_num,int amount)
 void	Player::SetNavFlag(Player *player)
 {
 	if(!HasAShip())
-		player->Send(Game::system->GetMessage("player","setnavflag",1));
+		player->Send(Game::system->GetMessage("player","setnavflag",1),OutputFilter::DEFAULT);
 	else
 	{
 		man_flags.set(NAV_FLAG);
@@ -4838,7 +4838,7 @@ void	Player::Smile(const std::string& to)
 			buffer << gender_str2[gender] << " flashes you" << ((adj < 19) ? " a " : " an ");
 			buffer << adjectives[adj] << " smile.\n";
 			text = buffer.str();
-			recipient->Send(text,this);
+			recipient->Send(text,OutputFilter::DEFAULT,this);
 		}
 		else
 		{

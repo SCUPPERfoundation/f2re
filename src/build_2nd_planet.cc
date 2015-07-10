@@ -10,15 +10,12 @@
 
 #include <fstream>
 #include <sstream>
-#include <stdexcept>
 
-#include <cctype>
 #include <cstdlib>
-
-// #include <unistd.h>
 
 #include "galaxy.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "star.h"
 
@@ -174,7 +171,7 @@ bool	Build2ndPlanet::SetUpLoader()
 	buffer << " maps/" << star->Dir() << "/" << "loader.xml.old\n";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to back up the loader file.\n");
+		player->Send("Unable to back up the loader file.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -185,7 +182,7 @@ bool	Build2ndPlanet::SetUpLoader()
 	buffer << " > maps/" << star->Dir() << "/" << "loader.xml";     //output file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to remove loader end tag.\n");
+		player->Send("Unable to remove loader end tag.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -195,12 +192,12 @@ bool	Build2ndPlanet::SetUpLoader()
 	std::ofstream loader_file(buffer.str().c_str(),std::ios::out | std::ios::app);
 	if(!loader_file)
 	{
-		player->Send("Unable to open reduced loader file.\n");
+		player->Send("Unable to open reduced loader file.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
 	loader_file << "   <map name='" << planet_file_name << "'/>\n</star>" << std::endl;
-	player->Send("Your new planet will be in the game after the next reset!\n");
+	player->Send("Your new planet will be in the game after the next reset!\n",OutputFilter::DEFAULT);
 	return true;
 }
 
@@ -218,7 +215,7 @@ bool	Build2ndPlanet::SetUpPlanetFiles()
 	buffer << "> " << "maps/" << star->Dir() << "/" << planet_file_name << ".loc"; // output to new .loc file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create planet location file!\n");
+		player->Send("Unable to create planet location file!\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -228,7 +225,7 @@ bool	Build2ndPlanet::SetUpPlanetFiles()
 	buffer << "maps/" << star->Dir() << "/" << planet_file_name << ".msg";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create planet message file!\n");
+		player->Send("Unable to create planet message file!\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -238,7 +235,7 @@ bool	Build2ndPlanet::SetUpPlanetFiles()
 	std::ofstream inf_file(buffer.str().c_str());
 	if(!inf_file)
 	{
-		player->Send("Unable to create planet information file.\n");
+		player->Send("Unable to create planet information file.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 	inf_file << "<?xml version='1.0'?>\n   <infrastructure owner='" << player->Name();
@@ -261,7 +258,7 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 	std::string::size_type index = space_loc.find('%');
 	if(index == std::string::npos)
 	{
-		player->Send("Error creating orbit location.\n");
+		player->Send("Error creating orbit location.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 	space_loc.replace(index,1,planet_title);
@@ -278,7 +275,7 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 	buffer << " maps/" << star->Dir() << "/" << "space.loc.old\n";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to back up the space.loc file.\n");
+		player->Send("Unable to back up the space.loc file.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -290,7 +287,7 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 	buffer << " > maps/" << star->Dir() << "/" << "space.loc";     //output file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to add orbit location file.\n");
+		player->Send("Unable to add orbit location file.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -300,7 +297,7 @@ bool	Build2ndPlanet::SetUpSpaceFile()
 	std::ofstream space_file(buffer.str().c_str(),std::ios::out | std::ios::app);
 	if(!space_file)
 	{
-		player->Send("Unable to open reduced 'space.loc'.\n");
+		player->Send("Unable to open reduced 'space.loc'.\n",OutputFilter::DEFAULT);
 		return false;
 	}
 	space_file << space_loc << std::endl;

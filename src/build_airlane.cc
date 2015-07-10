@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -37,7 +38,7 @@ that some spoilsports immediately start agitating for speed limits on the fast l
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -46,7 +47,7 @@ that some spoilsports immediately start agitating for speed limits on the fast l
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -63,9 +64,9 @@ bool	AirLane::Add(Player *player,Tokens *tokens)
 	static const std::string	no_effect("The new airlane route doesn't really help, the traffic seems to have maxed out.\n");
 
 	if(++total_builds <= 10)
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	else
-		player->Send(no_effect);
+		player->Send(no_effect,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -84,7 +85,7 @@ bool	AirLane::RequestResources(Player *player,const std::string& recipient,int q
 		return(true);
 	else
 	{
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 		return(false);
 	}
 }

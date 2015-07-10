@@ -17,6 +17,7 @@
 #include "infra.h"
 #include "misc.h"
 #include "player.h"
+#include "output_filter.h"
 #include "tokens.h"
 #include "xml_parser.h"
 
@@ -51,7 +52,7 @@ AtmosControl::AtmosControl(FedMap *the_map,Player *player,Tokens *tokens)
 	}
 	total_builds = 1;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -77,7 +78,7 @@ bool	AtmosControl::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;		
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
