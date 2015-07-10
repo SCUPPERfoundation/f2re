@@ -17,6 +17,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -44,7 +45,7 @@ improves the efficiency, and consumption level, of your leisure industries, and 
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -53,12 +54,12 @@ improves the efficiency, and consumption level, of your leisure industries, and 
 		{
 			total_builds = 1;
 			fed_map->AddCategoryConsumptionPoints(Commodities::LEIS,1,true);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
 		{
-			player->Send(no_meta_studio);
+			player->Send(no_meta_studio,OutputFilter::DEFAULT);
 			ok_status = false;
 		}
 	}
@@ -80,10 +81,10 @@ has little further effect.\n");
 	if(++total_builds <= 8)
 	{
 		fed_map->AddCategoryConsumptionPoints(Commodities::LEIS,1,true);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(too_far);
+		player->Send(too_far,OutputFilter::DEFAULT);
 	return(true);
 }
 

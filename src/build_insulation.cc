@@ -14,6 +14,7 @@
 #include "efficiency.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ Insulation::Insulation(FedMap *the_map,Player *player,Tokens *tokens)
 									(fed_map->RequestResources(player,"Oil",name)))
 	{
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 	else
@@ -62,9 +63,9 @@ energy efficiency of your industry meets with little or no success.\n");
 	if((total_builds < 5) || ((total_builds >= 5) && (fed_map->RequestResources(player,"Oil",name))))
 	{
 		if(total_builds < 10)
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 		else
-			player->Send(maxed_out);
+			player->Send(maxed_out,OutputFilter::DEFAULT);
 		total_builds++;
 		return(true);
 	}

@@ -40,7 +40,7 @@ power plant comes on line and its output flows into the power grid\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -49,7 +49,7 @@ power plant comes on line and its output flows into the power grid\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }

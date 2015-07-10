@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -33,7 +34,7 @@ Helio::Helio(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -74,7 +75,7 @@ bool	Helio::Add(Player *player,Tokens *tokens)
 
 	if((fed_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -110,13 +111,13 @@ bool	Helio::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{--total_builds; return(true);
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -143,7 +144,7 @@ bool	Helio::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }

@@ -13,6 +13,7 @@
 
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -44,7 +45,7 @@ Hospital::Hospital(FedMap *the_map,Player *player,Tokens *tokens)
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 	else
@@ -64,7 +65,7 @@ bool	Hospital::Add(Player *player,Tokens *tokens)
 		{
 			fed_map->AddTotalLabour(10);
 			fed_map->AddLabour(10);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			return(true);
 		}
 		else
@@ -109,10 +110,7 @@ bool	Hospital::RequestResources(Player *player,const std::string& recipient,int 
 bool	Hospital::Riot()
 {
 	fed_map->ReleaseAssets("Clinic",name);
-	if(--total_builds <= 0)
-		return(true);
-	else
-		return(false);
+	return( --total_builds <= 0);
 }
 
 void	Hospital::UpdatePopulation(Population *population)
