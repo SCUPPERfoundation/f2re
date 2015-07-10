@@ -23,7 +23,7 @@ public:
 	static const int	NO_TERMWIDTH = -1;
 
 private:
-	enum	{ NOTICE, BUSY, WANT_ANSI, COMMS, WANT_XML, MAX_FLAGS	};		// flag settings
+	enum	{ NOTICE, BUSY, COMMS, WANT_XML, MAX_FLAGS	};		// flag settings
 
 	Player	*owner;								// the com unit's owner
 	int		termwidth;							// width of player terminal
@@ -32,12 +32,10 @@ private:
 	Player	*relay;								// our text is relaying to this person (zero = no relaying)
 	bool	relay_to_channel;						// we are relaying to the current channel
 
-	std::string&	WrapWithXml(std::string& text);
-
 	void	DoRelay(const std::string& text);
 	void	Process(const std::string& text,Player *player = 0);
+	void	Process(const std::string& text,int command,Player *player = 0);
 	void	ProcessWidth(std::string& text);
-	void	StripAnsi(std::string& text);
 
 public:
 	ComUnit(Player *player,int term = NO_TERMWIDTH);
@@ -56,13 +54,13 @@ public:
 	void	Relay();
 	void	Relay(Player *player);
 	void	Send(const std::string& text,Player *player = 0,bool can_relay = true);
+	void	Send(const std::string& text,int command,Player *player = 0,bool can_relay = true);
 	void	Send(std::ostringstream& text,Player *player = 0,bool can_relay = true);
 	void	SetRelayToChannel()		{ relay_to_channel = true; }
 	void	SpynetNotice();
 	void	SpynetNotice(const std::string& text);
 	void	TermWidth(int size)		{ termwidth = size; if(termwidth < 40) termwidth = NO_TERMWIDTH;	}
 	void	UnIgnore(const std::string& who);
-	void	WantAnsi(bool setting);
 	void	WantXml(bool setting)	{ setting ? flags.set(WANT_XML) : flags.reset(WANT_XML);	}
 };
 

@@ -14,10 +14,9 @@
 #include "channel_man.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 
-const int	ComUnit::NO_TERMWIDTH;
 
 ComUnit::ComUnit(Player *player,int term)
 {
@@ -35,7 +34,7 @@ void	ComUnit::ClearRelay()
 	static const std::string	stopped("Your comm unit is no longer relaying your activities.\n");
 
 	if((relay == 0) && !relay_to_channel)
-		Send(no_one);
+		Send(no_one,OutputFilter::DEFAULT);
 	else
 	{
 		Player	*temp = relay;
@@ -47,7 +46,7 @@ void	ComUnit::ClearRelay()
 			temp->Send(buffer);
 		}
 		relay_to_channel = false;
-		Send(stopped);
+		Send(stopped,OutputFilter::DEFAULT);
 	}
 }
 
@@ -76,7 +75,7 @@ void	ComUnit::ComSend(const std::string& text,Player *player)
 {
 	std::string	line = text;
 	if(flags.test(COMMS) && !flags.test(BUSY))
-		Process(line,player);
+		Process(line,OutputFilter::DEFAULT,player);
 }
 
 // used for lost line and log off - sends no messages to exitting player
@@ -202,15 +201,14 @@ void	ComUnit::Process(const std::string& text,Player *player)
 	}
 
 	std::string	line(text);
-	if(!flags.test(WANT_ANSI))
-		StripAnsi(line);
 	if(termwidth != NO_TERMWIDTH)
 		ProcessWidth(line);
 	if(line.length() < 1)
 		return;
 	if(flags.test(WANT_XML) && (line[0] != '<'))
 	{
-		std::string&	xml_line = WrapWithXml(line);
+		OutputFilter filter(OutputFilter::XML,OutputFilter::DEFAULT,line,OutputFilter::NullAttribs);
+		std::string&	xml_line = filter.Process();
 		write(owner->Socket(),xml_line.c_str(),xml_line.length());
 	}
 	else
@@ -271,7 +269,7 @@ void	ComUnit::Relay(Player *player)
 or who is ignoring you, or to yourself!\n");
 
 	if(IsIgnoring(player->Name()) || (player->Name() == owner->Name()) || player->IsIgnoring(owner->Name()))
-		Send(ignore_txt);
+		Send(ignore_txt,OutputFilter::DEFAULT);
 	else
 	{
 		if(relay != 0)
@@ -285,14 +283,6 @@ or who is ignoring you, or to yourself!\n");
 		player->Send(buffer);
 		relay = player;
 	}
-}
-
-void	ComUnit::Send(const std::string& text,Player *player,bool can_relay)
-{
-	std::string	line = text;
-	Process(line,player);
-	if(can_relay)
-		DoRelay(text);
 }
 
 void	ComUnit::Send(std::ostringstream& text,Player *player,bool can_relay)
@@ -319,37 +309,6 @@ void	ComUnit::SpynetNotice(const std::string& text)
 		Process(line);
 }
 
-void	ComUnit::StripAnsi(std::string& text)
-{
-	static const char ESC = char(27);
-
-	int 	len = text.length();
-	int 	index, start = 0;
-	bool	done = false;
-
-	for(int count = 0;count < len;count++)
-	{
-		if(text[count] == ESC)
-		{
-			done = false;
-			start = count;
-			for(index = 1;(index < 11) && (index < len);index++)
-			{
-				if(text[index + count] == 'm')
-				{
-					text.erase(start,index + 1);
-					len = text.length();
-					count--;
-					done = true;
-					break;
-				}
-			}
-			if(!done)	// give up
-				return;
-		}
-	}
-}
-
 void	ComUnit::UnIgnore(const std::string& who)
 {
 	std::string	name(who);
@@ -373,22 +332,54 @@ void	ComUnit::UnIgnore(const std::string& who)
 	Process(text);
 }
 
-void	ComUnit::WantAnsi(bool setting)
+
+/******************* Work in progress *******************/
+
+void	ComUnit::Send(const std::string& text,Player *player,bool can_relay)
 {
-	if(setting)
-		flags.set(WANT_ANSI);
-	else
-		flags.reset(WANT_ANSI);
+	std::string	line = text;
+	Process(line,player);
+	if(can_relay)
+		DoRelay(text);
 }
 
-std::string&	ComUnit::WrapWithXml(std::string& text)
+void	ComUnit::Process(const std::string& text,int command,Player *player)
 {
-	static std::string	xml_line;
-	xml_line = "<s-default>";
-	xml_line += EscapeXML(text);
-	int length = xml_line.length();
-	xml_line.erase(length - 1);
-	xml_line += "</s-default>\n";
-	return(xml_line);
+	std::ostringstream	buffer("");
+	if(player != 0)
+	{
+		std::string name(player->Name());
+		if(IsIgnoring(name))
+			return;	// look later at sending a message back - but watch out for loops
+
+		if(flags.test(BUSY))
+		{
+			buffer << owner->Name() << " is busy at the moment. Please try later." << std::endl;
+			player->Send(buffer,0,false);	// no sender - make sure it gets through - still need to filter out coms
+			return;
+		}
+	}
+
+	std::string	line(text);
+WriteLog(line);
+	if(termwidth != NO_TERMWIDTH)
+		ProcessWidth(line);
+	if(line.length() < 1)
+		return;
+	if(flags.test(WANT_XML))
+	{
+		OutputFilter filter(OutputFilter::XML,command,line,OutputFilter::NullAttribs);
+		filter.Process();
+	}
+	write(owner->Socket(),line.c_str(),line.length());
+WriteLog(line);
+}
+
+void	ComUnit::Send(const std::string& text,int command,Player *player,bool can_relay)
+{
+	std::string	line = text;
+	Process(line,command,player);
+	if(can_relay)
+		DoRelay(text);
 }
 

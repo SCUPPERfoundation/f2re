@@ -870,7 +870,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case  50:
 		case  51:
 		case  52:	Emote(player);											break;	// 47-52 = emote commands
-		case  53:	player->CurrentCartel()->DisplayWork(player);	break;	// 'work'
+		case  53:	player->CurrentCartel()->DisplayWork(player);						break;	// 'work'
 		case  54:	Jobs(player);											break;	// 'jobs'
 		case	55:																			// 'accept'
 		case  56:	Accept(player,line);									break;	// 'ac'
@@ -891,7 +891,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case  71:	Broadcast(player,line);								break;	// 'broadcast'
 		case  72:	UnPost(player);										break;	// 'unpost'
 		case  73:	TermWidth(player);									break;	// 'termwidth'
-		case  74:	WantAnsi(player);										break;	// 'ansi'
+		case  74:	player->Send("ANSI facilities are not currently available\n");		break;	// 'ansi'
 		case  75:	Fed2(player);											break;	// 'fed2'
 		case  76:	player->Time();										break;	//	'time'
 		case  77:																			//	'display'
@@ -2440,20 +2440,6 @@ void	CmdParser::UpgradeStorage(Player *player)
 		player->Send(no_number);
 	else
 		player->UpgradeStorage(std::atoi(tokens->Get(2).c_str()));
-}
-
-void	CmdParser::WantAnsi(Player *player)
-{
-	if(tokens->Get(1).compare("on") == 0)
-	{
-		player->WantAnsi(true);
-		player->Send(Game::system->GetMessage("cmdparser","wantansi",1));
-	}
-	else
-	{
-		player->WantAnsi(false);
-		player->Send(Game::system->GetMessage("cmdparser","wantansi",2));
-	}
 }
 
 void	CmdParser::Wear(Player *player,std::string& line)

@@ -36,7 +36,6 @@
 #include "enhancement.h"
 #include "factory.h"
 #include "fed.h"
-#include "fedmap.h"
 #include "fed_object.h"
 #include "futures_contract.h"
 #include "futures_exchange.h"
@@ -52,6 +51,7 @@
 #include "misc.h"
 #include "navcomp.h"
 #include "player_index.h"
+#include "output_filter.h"
 #include "review.h"
 #include "script.h"
 #include "ship.h"
@@ -67,12 +67,7 @@
 #include "work.h"
 
 const int	Player::MAX_STAT = 150;
-const int	Player::MAX_COUNTERS;
-const int	Player::NAME_SIZE;
-const int	Player::ACCOUNT_SIZE;
-const int	Player::DESC_SIZE;
 const int	Player::NO_FORMAT = -1;
-const int	Player::MAX_TIMERS;
 const int	Player::HAUL_INDEX = 0;		// index to timers used by ranks < Adventurer
 const int	Player::MAX_STARVE = 80;
 const int	Player::UNKNOWN_LOC = -1;
@@ -1365,12 +1360,6 @@ void	Player::Cheat()
 	Game::review->Post(buffer);
 }
 
-void	Player::CheckHolding(const std::string& co_name)
-{
-	if(company != 0)
-		company->CheckHolding(co_name);
-}
-
 void	Player::ClearMood()
 {
 	mood = "";
@@ -2126,8 +2115,6 @@ void	Player::DisplayCompany()
 
 void	Player::DisplayDepot(const std::string& d_name)
 {
-	static const std::string	no_co("You don't have a company or any depots.\n");
-
 	if(company != 0)
 		company->DisplayDepot(d_name);
 	if(business != 0)
@@ -4098,12 +4085,6 @@ void	Player::Relay(Player *player)
 		com_unit->Relay(player);
 }
 
-void	Player::RelayedText(const std::string& text,Player *player)
-{
-	if(com_unit != 0)
-		com_unit->Send(text,player,false);
-}
-
 void	Player::RelayedText(std::ostringstream& text,Player *player)
 {
 	if(com_unit != 0)
@@ -4671,17 +4652,6 @@ void	Player::SellWarehouse()
 		Send(Game::system->GetMessage("player","sellwarehouse",2));
 }
 
-bool	Player::Send(const std::string& text,Player *player,bool can_relay)
-{
-	if(com_unit != 0)
-	{
-		com_unit->Send(text,player,can_relay);
-		return(true);
-	}
-	else
-		return(false);
-}
-
 bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
 {
 	if(com_unit != 0)
@@ -4691,13 +4661,6 @@ bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
 	}
 	else
 		return(false);
-}
-void	Player::SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename)
-{
-	std::ostringstream	buffer("");
-	buffer << "/bin/mail -s " << subject << " " << email << " < " << filename << " &";
-	WriteErrLog(buffer.str());
-	std::system(buffer.str().c_str());
 }
 
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
@@ -5652,7 +5615,7 @@ void	Player::TermWidth(int size)
 void	Player::Time()
 {
 	std::time_t	now = std::time(0);
-	struct std::tm  *date = std::localtime(&now);
+	std::tm  *date = std::localtime(&now);
 
 	std::ostringstream	buffer;
 	buffer << "Local time at the server is: " << std::asctime(date) << Stardate() << "\n";
@@ -5986,11 +5949,6 @@ void	Player::Void()
 			job = 0;
 		}
 	}
-}
-
-void	Player::WantAnsi(bool setting)
-{
-	com_unit->WantAnsi(setting);
 }
 
 const std::string&	Player::Where(std::string& where)
@@ -6507,5 +6465,31 @@ void	Player::Xt(const std::string& msg)
 		Game::channel_manager->Send(this,channel,buffer.str());
 	}
 }
+
+
+/******************* Work in progress *******************/
+
+bool	Player::Send(const std::string& text,Player *player,bool can_relay)
+{
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,player,can_relay);
+		return(true);
+	}
+	else
+		return(false);
+}
+
+bool	Player::Send(const std::string& text,int command,Player *player,bool can_relay)
+{
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,command,player,can_relay);
+		return(true);
+	}
+	else
+		return(false);
+}
+
 
 

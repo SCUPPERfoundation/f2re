@@ -364,14 +364,14 @@ public:
 	bool	IsManagement();
 	bool	IsManager()											{ return(man_flags.test(MANAGER));		}
 	bool	IsMarried();
-	bool	IsNavigator()										{ return(man_flags.test(NAV_FLAG));		}
+	bool	IsNavigator()										{ return(man_flags.test(NAV_FLAG));		}	// Keep - used intermittantly
 	bool	IsOnLandingPad();
 	bool	IsPassword(const std::string& pwd);
 	bool	IsPlanetBuilt()									{ return(temp_flags.test(PLANET_BUILT));}
 	bool	IsPlanetOwner();
 	bool	IsStaff()											{ return(man_flags.any());					}
-	bool	IsTechie()											{ return(man_flags.test(TECHIE));		}
-	bool	IsTester()											{ return(temp_flags.test(TESTER)); 		}
+	bool	IsTechie()											{ return(man_flags.test(TECHIE));		}	// Keep - used intermittantly
+	bool	IsTester()											{ return(temp_flags.test(TESTER)); 		}	// ditto
 	bool	IsTracking()										{ return(temp_flags.test(EV_TRACE));	}
 	bool	JobOffer(Player *offerer, Job *job);
 	bool	Jump2Founder(Player *player);
@@ -382,8 +382,8 @@ public:
 	bool	Move(int direction,bool is_following);
 	bool	RemoveWarehouse(FedMap	*fed_map);
 	bool	Send(const std::string& text,Player *player = 0,bool can_relay = true);
+	bool	Send(const std::string& text,int command,Player *player = 0,bool can_relay = true);
 	bool	Send(std::ostringstream& text,Player *player = 0,bool can_relay = true);
-	bool	Status(int which)									{ return(status_flags.test(which));		}
 	bool	Suicide()											{ return(Death(true));	}
 	bool	TempFlagIsSet(int which)						{ return(temp_flags.test(which));		}
 	bool	TradingAllowed();
@@ -432,16 +432,13 @@ public:
 	void	ChangeTP(int amount);
 	void	ChangeTreasury(int amount);
 	void	Cheat();
-	void	CheckHolding(const std::string& co_name);
 	void	ClearGenFlag(int which)							{ flags.reset(which);	}
 	void	ClearLoan()											{ loan = 1L;				}
-	void	ClearLouie()										{ louie = 0;				}
 	void	ClearManFlag(int which)							{ man_flags.reset(which);	}
 	void	ClearMood();
 	void	ClearRelay();
 	void	ClearShipPurchase()								{ status_flags.reset(BUY_SHIP);			}
 	void	ClearSpouse()										{ spouse = "";				}
-	void	ClearTempFlag(int which)						{ temp_flags.reset(which);	}
 	void	CoCapitalExpOnly(long amount);
 	void	CoCapitalIncOnly(long amount);
 	void	Collect();
@@ -478,7 +475,6 @@ public:
 	void	Divorce();
 	void	DropOff();
 	void	Drop(const std::string& name);
-	void	DumpLedger();
 	void	Emote(const std::string& which,Player *recipient);
 	void	Engineer2Mogul();
 	void	ExtendSystemCabinet();
@@ -519,7 +515,6 @@ public:
 	void	Lock()												{ flags.set(LOCKED);		}
 	void	LogOff();
 	void	Look(int extent);
-	void	ManFlag(int which,bool val)					{ val ? man_flags.set(which) : man_flags.reset(which);	}
 	void	Marry(const std::string& who_name);
 	void	Merchant2Trader();
 	void	Mogul2Technocrat();
@@ -542,7 +537,6 @@ public:
 	void	RejectPendingJob();
 	void	Relay();
 	void	Relay(Player *player);
-	void	RelayedText(const std::string& text,Player *player);
 	void	RelayedText(std::ostringstream& text,Player *player);
 	void	RelayToChannel();
 	void	Release()											{ temp_flags.reset(FROZEN);	}
@@ -567,7 +561,6 @@ public:
 	void	SellFactory(int number);
 	void	SellShares(int amount,const std::string& co_name = "");
 	void	SellTreasury(int amount);
-	void	SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename);
 	void	SendOrMail(std::ostringstream& text,const std::string& sender);
 	void	SendMailTo(std::ostringstream& text,const std::string& sender);
 	void	SendSound(const std::string& sound);
@@ -600,7 +593,6 @@ public:
 	void	StartUp(int comms_level);
 	void	Starve();
 	void	Stash(const std::string& obj_name,bool hidden = false);
-	void	Status(int which,bool val)						{ val ? status_flags.set(which) : status_flags.reset(which);	}
 	void	Store(const Commodity *commodity);
 	void	SwapShip(Ship *new_ship);
 	void	Teleport(const std::string& address);
@@ -622,7 +614,6 @@ public:
 	void	ValidateJobsAK();
 	void	Version();
 	void	Void();
-	void	WantAnsi(bool setting);
 	void	Xfer2Treasury(int num_megs);
 	void	XMLStats();
 	void	Xt(const std::string& msg);

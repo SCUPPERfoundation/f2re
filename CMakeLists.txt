@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(fed2d)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++98")
 
 set(SOURCE_FILES
     include/accounts.h
@@ -171,6 +171,7 @@ set(SOURCE_FILES
     include/obj_list.h
     include/object.h
     include/object_parser.h
+    include/output_filter.h
     include/para_cat.h
     include/para_parser.h
     include/para_section.h
@@ -388,6 +389,7 @@ set(SOURCE_FILES
     src/obj_container.cc
     src/object.cc
     src/object_parser.cc
+    src/output_filter.cc
     src/para_cat.cc
     src/para_parser.cc
     src/para_section.cc
@@ -442,6 +444,6 @@ set(SOURCE_FILES
 include_directories(include)
 include_directories(/usr/include/libdb4)
 
-add_executable(fed2d ${SOURCE_FILES} )
+add_executable(fed2d ${SOURCE_FILES})
 target_compile_options(fed2d PRIVATE -O2 -DDEVELOPMENT)
 target_link_libraries(fed2d -L/usr/lib64/libdb4 -lexpat -ldb_cxx -lsqlite3)
