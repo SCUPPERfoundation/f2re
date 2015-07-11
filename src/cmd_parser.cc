@@ -1118,7 +1118,7 @@ void	CmdParser::Freeze(Player *player)
 void	CmdParser::Full(Player *player)
 {
 	player->Brief(false);
-	player->Send(Game::system->GetMessage("cmdparser","full",1));
+	player->Send(Game::system->GetMessage("cmdparser","full",1),OutputFilter::DEFAULT);
 }
 
 void	CmdParser::Gag(Player *player)
@@ -1530,7 +1530,7 @@ void	CmdParser::Offer(Player *player, std::string& line)
 {
 	if(tokens->Size() < 5)
 	{
-		player->Send("The format is OFFER <PLAYER> JOB <COMMODITY> <WHERE TO>\n,OutputFilter::DEFAULT");
+		player->Send("The format is OFFER <PLAYER> JOB <COMMODITY> <WHERE TO>\n,OutputFilter::DEFAULT",OutputFilter::DEFAULT);
 		return;
 	}
 	if(!player->IsPlanetOwner())

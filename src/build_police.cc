@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ Police::Police(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -53,7 +54,7 @@ Police::~Police()
 
 bool	Police::Add(Player *player,Tokens *tokens)
 {
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }

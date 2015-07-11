@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -37,7 +38,7 @@ accompany the official yacht into the harbor as part of the opening ceremony!\n"
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -46,7 +47,7 @@ accompany the official yacht into the harbor as part of the opening ceremony!\n"
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -65,15 +66,14 @@ bool	Port::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
-	std::ostringstream	buffer;
 	if(total_builds < 5)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(maxed_out);
+		player->Send(maxed_out,OutputFilter::DEFAULT);
 
 	total_builds++;
 	return(true);
@@ -112,6 +112,4 @@ void	Port::XMLDisplay(Player *player)
 	buffer << "<s-build-planet-info info='Ports: " << total_builds << "'/>\n";
 	player->Send(buffer);
 }
-
-
 

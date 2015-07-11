@@ -579,7 +579,7 @@ when you do have a permit.\n");
 	}
 	if(!player->InvFlagIsSet(Inventory::SHIP_PERMIT))
 	{
-		player->Send(no_permit);
+		player->Send(no_permit,OutputFilter::DEFAULT);
 		return(false);
 	}
 

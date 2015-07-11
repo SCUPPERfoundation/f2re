@@ -15,6 +15,7 @@
 #include "commodities.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 
@@ -52,7 +53,7 @@ void	BuildParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 	if(build_type == NO_NOUN)
 	{
-		player->Send("I'm sorry, Dave, I'm afraid I can't do that...\n");
+		player->Send("I'm sorry, Dave, I'm afraid I can't do that...\n",OutputFilter::DEFAULT);
 		return;
 	}
 	switch(build_type)
@@ -70,18 +71,18 @@ void	BuildParser::BuildCity(Player *player,Tokens *tokens,const std::string& lin
 	Cartel *cartel = player->OwnedCartel();
 	if(cartel == 0)
 	{
-		player->Send("Only cartel owners can build blish cities!\n");
+		player->Send("Only cartel owners can build blish cities!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(!cartel->HasAGravingDock())
 	{
-		player->Send("Cartels need a graving dock to build blish cities!\n");
+		player->Send("Cartels need a graving dock to build blish cities!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(tokens->Size() >= 3)
 	{
-		std::string	city_name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
+		std::string	city_name(tokens->GetRestOfLine(line,2,Tokens::PLANET),OutputFilter::DEFAULT);
 		cartel->BuildCity(player,city_name);
 	}
 	else
@@ -93,7 +94,7 @@ void	BuildParser::BuildGravingDock(Player *player)
 {
 	Cartel	*cartel = player->OwnedCartel();
 	if(cartel == 0)
-		player->Send("Only cartel owners can build graving docks!\n");
+		player->Send("Only cartel owners can build graving docks!\n",OutputFilter::DEFAULT);
 	else
 		cartel->BuildGravingDock(player);
 }

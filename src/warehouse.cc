@@ -14,10 +14,8 @@
 
 #include "cargo.h"
 #include "fedmap.h"
+#include "output_filter.h"
 #include "player.h"
-
-const int	Warehouse::NO_ROOM;
-const int	Warehouse::MAX_BAYS;
 
 Warehouse::Warehouse(FedMap *where,const std::string& name)
 {
@@ -73,7 +71,7 @@ void	Warehouse::Display(Player *who_to)
 		}
 	}
 	if(is_empty)
-		who_to->Send(empty);
+		who_to->Send(empty,OutputFilter::DEFAULT);
 }
 
 Cargo	*Warehouse::Retrieve(int bay_no)

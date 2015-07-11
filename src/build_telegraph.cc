@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -34,7 +35,7 @@ Telegraph::Telegraph(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -76,7 +77,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -112,13 +113,13 @@ bool	Telegraph::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -145,7 +146,7 @@ bool	Telegraph::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }

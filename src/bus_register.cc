@@ -15,6 +15,7 @@
 
 #include "business.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -63,10 +64,10 @@ bool	BusinessRegister::BusinessExists(const std::string& name)
 void	BusinessRegister::Display(Player *player)
 {
 	if(name_index.size() != 0)
-		player->Send("Register of Businesses\n");
+		player->Send("Register of Businesses\n",OutputFilter::DEFAULT);
 	else
 	{
-		player->Send("No businesses registered yet\n");
+		player->Send("No businesses registered yet\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -113,7 +114,7 @@ void	BusinessRegister::PublicDisplay(const std::string& name,Player *player)
 {
 	Business	*business = Find(name);
 	if(business == 0)
-		player->Send("I can't find a business with that name!\n");
+		player->Send("I can't find a business with that name!\n",OutputFilter::DEFAULT);
 	else
 		business->PublicDisplay(player);
 }

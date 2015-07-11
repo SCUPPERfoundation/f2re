@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -35,7 +36,7 @@ soon have it under control and crude oil is pumped through to the refineries.\n"
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::INDUSTRIAL) || (economy > Infrastructure::TECHNICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -77,7 +78,7 @@ bool	Oil::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::INDUSTRIAL) || (economy > Infrastructure::TECHNICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -112,13 +113,13 @@ bool	Oil::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -143,7 +144,7 @@ bool	Oil::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }

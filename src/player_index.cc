@@ -30,6 +30,7 @@
 #include "login.h"
 #include "misc.h"
 #include "newbie.h"
+#include "output_filter.h"
 #include "player.h"
 #include	"ship.h"
 #include "review.h"
@@ -105,7 +106,7 @@ void	PlayerIndex::AccountOK(LoginRec *rec)
 void	PlayerIndex::Broadcast(Player *player,std::string mssg)
 {
 	if(player != 0)
-		player->Send(Game::system->GetMessage("playerindex","broadcast",1));
+		player->Send(Game::system->GetMessage("playerindex","broadcast",1),OutputFilter::DEFAULT);
 
 	std::string	text("");
 	if(player != 0)
@@ -119,7 +120,7 @@ void	PlayerIndex::Broadcast(Player *player,std::string mssg)
 	for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
 	{
 		if(iter->second != player)
-			iter->second->Send(text);
+			iter->second->Send(text,OutputFilter::DEFAULT);
 	}
 }
 
@@ -129,7 +130,7 @@ void	PlayerIndex::CallNightWatch(Player *player,Player *target)
 	buffer << player->Name() << " " << Game::system->GetMessage("playerindex","callnightwatch",1);
 	buffer << Game::system->GetMessage("playerindex","callnightwatch",2);
 	target->Send(buffer);
-	player->Send(Game::system->GetMessage("playerindex","callnightwatch",3));
+	player->Send(Game::system->GetMessage("playerindex","callnightwatch",3),OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "A couple of Nightwatch officers appear and size up the situation. ";
 	buffer << "A robot trolley arrives and the sleeping " << target->Name();
@@ -147,13 +148,13 @@ void	PlayerIndex::Com(Player *player,std::string mssg)
 
 	if((player != 0) && !player->CommsAreOn())
 	{
-		player->Send(no_comms);
+		player->Send(no_comms,OutputFilter::DEFAULT);
 		return;
 	}
 
 	std::string	text("");
 	if(player != 0)
-		player->Send(Game::system->GetMessage("playerindex","com",1));
+		player->Send(Game::system->GetMessage("playerindex","com",1),OutputFilter::DEFAULT);
 
 	if(player != 0)
 	{
@@ -230,7 +231,7 @@ void	PlayerIndex::DisplayShipOwners(Player *player,const std::string& reg_name)
 		}
 	}
 	if(total == 0)
-		player->Send("  None\n");
+		player->Send("  None\n",OutputFilter::DEFAULT);
 }
 
 void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& line)
@@ -240,7 +241,7 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 
 	if((tokens->Size() == 1) || !player->IsStaff())
 	{
-		player->Send("Staff currently in the game:\n");
+		player->Send("Staff currently in the game:\n",OutputFilter::DEFAULT);
 
 		for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
 		{
@@ -252,7 +253,7 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 		}
 
 		if(!are_staff)
-			player->Send("I'm sorry, no staff are currently available.\n");
+			player->Send("I'm sorry, no staff are currently available.\n",OutputFilter::DEFAULT);
 		else
 			player->Send(buffer);
 	}
@@ -470,8 +471,8 @@ void	PlayerIndex::LogOff(Player *player)
 	XmlPlayerLeft(player);
 	Ship *ship = player->GetShip();
 	if((ship != 0) && (ship->HasCargo()))
-		player->Send(Game::system->GetMessage("playerindex","logoff",2));
-	player->Send(Game::system->GetMessage("playerindex","logoff",1));
+		player->Send(Game::system->GetMessage("playerindex","logoff",2),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("playerindex","logoff",1),OutputFilter::DEFAULT);
 	player->Offline();
 	player->LogOff();
 	Save(player,PlayerIndex::WITH_OBJECTS);
@@ -531,7 +532,7 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 */
 
 	player->StartUp(0);
-	player->Send(fedterm);
+	player->Send(fedterm,OutputFilter::DEFAULT);
 }
 
 int	PlayerIndex::NumberOfPlayersAtRank(int rank)
@@ -719,7 +720,7 @@ bool	PlayerIndex::SendStaffMssg(const std::string& mssg)
 		if(iter->second->IsStaff())
 		{
 			are_staff = true;
-			iter->second->Send(mssg);
+			iter->second->Send(mssg,OutputFilter::DEFAULT);
 		}
 	}
 	return(are_staff);
@@ -1001,7 +1002,7 @@ void	PlayerIndex::Zap(Player *player,Player *who_by)
 {
 	if(player->ManFlag(Player::MANAGER))
 	{
-		who_by->Send(Game::system->GetMessage("playerindex","zap",1));
+		who_by->Send(Game::system->GetMessage("playerindex","zap",1),OutputFilter::DEFAULT);
 		return;
 	}
 

@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -61,7 +62,7 @@ School::School(FedMap *the_map,Player *player,Tokens *tokens)
 	agri_builds = mining_builds = tech_builds = research_builds = biolab_builds = metastudio_builds = 0;
 	total_builds = 1;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -87,7 +88,7 @@ bool	School::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -212,7 +213,7 @@ bool	School::RequestResources(Player *player,const std::string& recipient,int qu
 	if(recipient == "Metastudio")		status_ok = MetaStudioSchoolsAllocated();
 
 	if(!status_ok)
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 
 	return(status_ok);
 }

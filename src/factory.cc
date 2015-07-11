@@ -11,7 +11,6 @@
 
 #include <iomanip>
 #include <iostream>
-#include <sstream>
 
 #include <cstdlib>
 
@@ -22,17 +21,15 @@
 #include "company.h"
 #include "comp_register.h"
 #include "depot.h"
-#include "factory.h"
 #include "fedmap.h"
 #include "galaxy.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "xml_parser.h"
 
 
 const int	Factory::MIN_WAGE = 40;
-const int	Factory::MAX_WAGE = 1000;
 const int	Factory::MAX_STORAGE = 450;
 const int	Factory::MAX_EFFICIENCY = 150;
 const int	Factory::INTERVALS2CYCLE = 100;
@@ -504,7 +501,7 @@ long	Factory::Repair(Player *player,long cash_available)
 
 	if(efficiency == max_efficiency)
 	{
-		player->Send(no_repair);
+		player->Send(no_repair,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -512,7 +509,7 @@ long	Factory::Repair(Player *player,long cash_available)
 	long cost = 500000 * multiplier;
 	if(cost > cash_available)
 	{
-		player->Send(no_cash);
+		player->Send(no_cash,OutputFilter::DEFAULT);
 		return(0L);
 	}
 

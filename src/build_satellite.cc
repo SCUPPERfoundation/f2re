@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -35,7 +36,7 @@ built at Industrial level and above.\n");
 
 	if(the_map->Economy() < Infrastructure::INDUSTRIAL)
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -77,7 +78,7 @@ built at Industrial level and above.\n");
 
 	if((fed_map->Economy() < Infrastructure::INDUSTRIAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -115,13 +116,13 @@ bool	Satellite::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -139,7 +140,7 @@ bool	Satellite::CheckCommodity(Player *player,Tokens *tokens)
 bool	Satellite::Demolish(Player *player)
 {
 	player->Send("Your proposal nearly incites a mutiny in the defense community, so you \
-hastily withdraw it!\n");
+hastily withdraw it!\n",OutputFilter::DEFAULT);
 	return(false);
 }
 

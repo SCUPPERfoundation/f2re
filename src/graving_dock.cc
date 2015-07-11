@@ -19,6 +19,7 @@
 #include "cartel.h"
 #include "commodities.h"
 #include "galaxy.h"
+#include "output_filter.h"
 #include "player.h"
 #include "review.h"
 #include "star.h"
@@ -108,13 +109,13 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 	{
 		switch(status)
 		{
-			case WAITING:						player->Send("To start a new city build the command is 'build city city_name'\n");	return false;
+			case WAITING:						player->Send("To start a new city build the command is 'build city city_name'\n",OutputFilter::DEFAULT);	return false;
 			case BUILDING_CITY_1:
 			case BUILDING_CITY_2:
 			case BUILDING_CITY_3:
 			case BUILDING_CITY_4:
-			case BUILDING_CITY_5:			player->Send(build_error);																				return false;
-			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n");				return false;
+			case BUILDING_CITY_5:			player->Send(build_error,OutputFilter::DEFAULT);																			return false;
+			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n",OutputFilter::DEFAULT);				return false;
 			case BUILDING_CITY_WAITING:	return(BuildNextCityLevel(player,cartel));
 		}
 	}
@@ -141,9 +142,9 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 		else
 		{
 			if(status == WAITING)
-				player->Send("You can't call a city the name of a commodity type - for example 'agri'!\n");
+				player->Send("You can't call a city the name of a commodity type - for example 'agri'!\n",OutputFilter::DEFAULT);
 			else
-				player->Send(build_error);
+				player->Send(build_error,OutputFilter::DEFAULT);
 			return false;
 		}
 	}
@@ -156,7 +157,7 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 		}
 		else
 		{
-			player->Send(build_error);
+			player->Send(build_error,OutputFilter::DEFAULT);
 			return false;
 		}
 	}
@@ -210,9 +211,9 @@ void	GravingDock::Display(Player *player)
 {
 	switch(status)
 	{
-		case UNDER_CONSTRUCTION:	DisplayDockBuild(player);															break;
-		case WAITING:					player->Send(" Graving Dock\n  Currently awaiting new orders.\n");	break;
-		default:							DisplayCityBuild(player);															break;
+		case UNDER_CONSTRUCTION:	DisplayDockBuild(player);																						break;
+		case WAITING:					player->Send(" Graving Dock\n  Currently awaiting new orders.\n",OutputFilter::DEFAULT);	break;
+		default:							DisplayCityBuild(player);																						break;
 	}
 }
 

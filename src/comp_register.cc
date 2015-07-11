@@ -15,6 +15,7 @@
 
 #include "company.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -64,10 +65,10 @@ bool	CompanyRegister::CompanyExists(const std::string& name)
 void	CompanyRegister::Display(Player *player)
 {
 	if(name_index.size() != 0)
-		player->Send("Register of Companies\n");
+		player->Send("Register of Companies\n",OutputFilter::DEFAULT);
 	else
 	{
-		player->Send("No companies formed yet\n");
+		player->Send("No companies formed yet\n",OutputFilter::DEFAULT);
 		return;
 	}
 

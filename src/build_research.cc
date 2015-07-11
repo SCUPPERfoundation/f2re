@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -39,7 +40,7 @@ built at technical, biological, and leisure levels.\n");
 
 	if(the_map->Economy() < Infrastructure::TECHNICAL)
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -50,7 +51,7 @@ built at technical, biological, and leisure levels.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -71,7 +72,7 @@ research institute. Unfortunately, you are unable to proceed because the \
 general consensus is that one research institute is quite sufficient, \
 and, as a result, you are unable to obtain the necessary funding!\n");
 
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 

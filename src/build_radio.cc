@@ -14,6 +14,7 @@
 #include "disaffection.h"
 #include "fedmap.h"
 #include "infra.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -37,7 +38,7 @@ Radio::Radio(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -46,7 +47,7 @@ Radio::Radio(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -69,14 +70,14 @@ putting out the same mindless crud.\n");
 
 	if((total_builds >= 4) && (fed_map->Economy() == Infrastructure::INDUSTRIAL))
 	{
-		player->Send(limit);
+		player->Send(limit,OutputFilter::DEFAULT);
 		return(false);
 	}
 	
 	if(total_builds < 10)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(over);
+		player->Send(over,OutputFilter::DEFAULT);
 
 	total_builds++;
 	return(true);

@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -36,7 +37,7 @@ the demand far exceeds the exchange's capacity!\n");
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ the demand far exceeds the exchange's capacity!\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -66,7 +67,7 @@ bool	Phone::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -74,12 +75,12 @@ bool	Phone::Add(Player *player,Tokens *tokens)
 	if(++total_builds <= 10)
 	{
 		if((total_builds % 2) == 0)
-			player->Send(ok_even);
+			player->Send(ok_even,OutputFilter::DEFAULT);
 		else
-			player->Send(ok_odd);
+			player->Send(ok_odd,OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(maxed_out);
+		player->Send(maxed_out,OutputFilter::DEFAULT);
 
 	return(true);
 }

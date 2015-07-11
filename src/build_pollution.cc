@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -51,7 +52,7 @@ Pollution::Pollution(FedMap *the_map,Player *player,Tokens *tokens)
 	}	
 	total_builds++;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -71,7 +72,7 @@ bool	Pollution::Add(Player *player,Tokens *tokens)
 	}	
 	total_builds ++;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 

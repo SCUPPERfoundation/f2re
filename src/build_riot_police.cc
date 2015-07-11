@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -36,7 +37,7 @@ commissioning of the first riot police battalion on the planet.\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::RESOURCE)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ commissioning of the first riot police battalion on the planet.\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -64,12 +65,12 @@ bool	RiotPolice::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::RESOURCE)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	total_builds++;
-	player->Send(ok);
+	player->Send(ok,OutputFilter::DEFAULT);
 	return(true);
 }
 

@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -37,7 +38,7 @@ lobby is widely considered to be a master stroke.\n");
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -48,7 +49,7 @@ lobby is widely considered to be a master stroke.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -69,7 +70,7 @@ based on an original design for the legendary Sid Knee Hopera Ouse. Unfortunatel
 the philistines currently holding the purse strings succeed in having the project \
 scrapped on the grounds of cost.\n");
 
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -89,19 +90,13 @@ void	MetaStudio::Display(Player *player)
 
 bool	MetaStudio::RequestResources(Player *player,const std::string& recipient,int quantity)
 {
-	if(recipient == "Leisure")
-		return(true);
-	
-	return(false);
+	return(recipient == "Leisure");
 }
 
 bool	MetaStudio::Riot()
 {
 	fed_map->ReleaseAssets("School",name);
-	if(--total_builds <= 0)
-		return(true);
-	else
-		return(false);
+	return( --total_builds <= 0);
 }
 
 void	MetaStudio::UpdateEfficiency(Efficiency *efficiency)

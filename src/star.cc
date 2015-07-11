@@ -14,8 +14,6 @@
 #include <iostream>
 #include <sstream>
 
-
-#include <cstdio>
 #include <ctime>
 
 #include <unistd.h>
@@ -29,6 +27,7 @@
 #include "infra.h"
 #include "location.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_index.h"
 #include "review.h"
@@ -101,7 +100,7 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 
 	if(FindLink()->loc_no != 460)
 	{
-		player->Send("The system's link isn't in the correct place to use this command\n");
+		player->Send("The system's link isn't in the correct place to use this command\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -109,14 +108,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 	{
 		if(player->Rank() < Player::MOGUL)
 		{
-			player->Send("You need to be at least a Mogul to build a second planet!\n");
+			player->Send("You need to be at least a Mogul to build a second planet!\n",OutputFilter::DEFAULT);
 			return;
 		}
 
 		if(CheckOrbitLocNotInUse(461))
 			BuildSecondPlanet(player,planet_name,type);
 		else
-			player->Send("Sorry, the orbit location needed (461) is already in use!\n");
+			player->Send("Sorry, the orbit location needed (461) is already in use!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -124,14 +123,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 	{
 		if(player->Rank() < Player::GENGINEER)
 		{
-			player->Send("You need to be at least a Gengineer to build a third planet!\n");
+			player->Send("You need to be at least a Gengineer to build a third planet!\n",OutputFilter::DEFAULT);
 			return;
 		}
 
 		if(CheckOrbitLocNotInUse(397))
 			BuildThirdPlanet(player,planet_name,type);
 		else
-			player->Send("Sorry, the orbit location needed (397) is already in use!\n");
+			player->Send("Sorry, the orbit location needed (397) is already in use!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -139,14 +138,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 	{
 		if(player->Rank() < Player::PLUTOCRAT)
 		{
-			player->Send("You need to be at least a Plutocrat to build a fourth planet!\n");
+			player->Send("You need to be at least a Plutocrat to build a fourth planet!\n",OutputFilter::DEFAULT);
 			return;
 		}
 
 		if(CheckOrbitLocNotInUse(459))
 			BuildFourthPlanet(player,planet_name,type);
 		else
-			player->Send("Sorry, the orbit location needed (459) is already in use!\n");
+			player->Send("Sorry, the orbit location needed (459) is already in use!\n",OutputFilter::DEFAULT);
 		return;
 	}
 }
@@ -158,7 +157,7 @@ void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string
 	{
 		builder = new Build2ndPlanet(player,this,planet_name,type);
 	}
-	catch(const std::exception& e) { player->Send(e.what()); return; }
+	catch(const std::exception& e) { player->Send(e.what(),OutputFilter::DEFAULT); return; }
 
 	builder->Run();
 	delete builder;
@@ -251,7 +250,7 @@ void	Star::Exile(Player *player,const std::string& pl_name)
 	if((player_name == "Bella") || (player_name == "Freya") ||
 						(player_name == "Hazed") || (player_name == player->Name()))
 	{
-		player->Send(silly);
+		player->Send(silly,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -762,13 +761,13 @@ void	Star::WriteLoaderFile()
 
 void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
 {
-	player->Send("Sorry, this facility is not yet available!\n");
+	player->Send("Sorry, this facility is not yet available!\n",OutputFilter::DEFAULT);
 	// TODO: In due course
 }
 
 void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
 {
-	player->Send("Sorry, this facility is not yet available!\n");
+	player->Send("Sorry, this facility is not yet available!\n",OutputFilter::DEFAULT);
 	// TODO: In due course
 }
 

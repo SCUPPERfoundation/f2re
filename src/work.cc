@@ -21,6 +21,7 @@
 #include "galaxy.h"
 #include "loc_rec.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "ship.h"
 #include "star.h"
@@ -41,7 +42,7 @@ void	Work::Accept(Player *player,int job_no)
 {
 	JobIndex::iterator iter = job_index.find(job_no);
 	if(iter == job_index.end())
-		player->Send(Game::system->GetMessage("work","accept",1));
+		player->Send(Game::system->GetMessage("work","accept",1),OutputFilter::DEFAULT);
 	else
 	{
 		iter->second->collected = false;
@@ -257,7 +258,7 @@ void	Work::DisplayJob(Player *player,Job *job,Job *pending)
 
 void	Work::DisplayWork(Player *player)
 {
-	player->Send(Game::system->GetMessage("work","displaywork",1));
+	player->Send(Game::system->GetMessage("work","displaywork",1),OutputFilter::DEFAULT);
 	Job	*job;
 	std::ostringstream	buffer("");
 	for(JobIndex::iterator iter = job_index.begin();iter != job_index.end();iter++)
@@ -274,7 +275,7 @@ void	Work::DisplayWork(Player *player)
 		player->Send(buffer);
 	}
 	if(job_index.size() == 0)
-		player->Send("  None available - please try again in a minute or so.\n");
+		player->Send("  None available - please try again in a minute or so.\n",OutputFilter::DEFAULT);
 }
 
 void	Work::ExpireJobs()
@@ -300,7 +301,7 @@ void	Work::NotifyPlayers()
 	{
 		if((*iter)->CurrentCartel() == cartel)
 		{
-			(*iter)->Send(Game::system->GetMessage("work","notifyplayers",1));
+			(*iter)->Send(Game::system->GetMessage("work","notifyplayers",1),OutputFilter::DEFAULT);
 			++iter;
 		}
 		else	// not in this cartel - remove from the list 

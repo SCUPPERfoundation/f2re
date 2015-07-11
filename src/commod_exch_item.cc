@@ -24,6 +24,7 @@
 #include "happenings.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "price_check.h"
 #include "ship.h"
@@ -341,7 +342,7 @@ void	CommodityExchItem::LineDisplay(FedMap *home_map,bool send_intro,Player *pla
 	if((selling_price + buying_price) == 0)
 	{
 		if(player != 0)
-			player->Send("The exchange is not currently trading in this commodity\n");
+			player->Send("The exchange is not currently trading in this commodity\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(selling_price > 0)

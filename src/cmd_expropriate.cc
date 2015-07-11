@@ -112,7 +112,7 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 			player->Send(no_owner,OutputFilter::DEFAULT);
 			return;
 		}
-		if(player == owner,OutputFilter::DEFAULT)
+		if(player == owner)
 		{
 			player->Send(is_owner,OutputFilter::DEFAULT);
 			return;
