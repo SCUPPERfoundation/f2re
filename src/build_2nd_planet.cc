@@ -10,6 +10,7 @@
 
 #include <fstream>
 #include <sstream>
+#include <stdexcept>
 
 #include <cstdlib>
 

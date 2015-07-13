@@ -10,6 +10,8 @@
 #include "build_star.h"
 
 #include <sstream>
+#include <stdexcept>
+
 #include <cstdlib>
 
 #include "galaxy.h"

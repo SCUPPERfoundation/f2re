@@ -13,26 +13,6 @@
 
 AttribList	OutputFilter::NullAttribs; // = { std::make_pair("","") };
 
-std::string& OutputFilter::Process()
-{
-	switch(type)
-	{
-		case JSON:	return text;   	// Not yet implimented
-		case XML:	EscapeXML(text);	break;
-		default:		return text;		// Leave it alone ASCII
-	}
-
-	switch(cmd)
-	{
-		case DEFAULT:	return NoAttrib("default");
-		case EXAMINE:	return NoAttrib("examine");
-		case LOC:		return NoAttrib("loc");
-		case SPYNET:	return NoAttrib("spynet");
-
-		default:			return text;
-	}
-}
-
 std::string&	OutputFilter::EscapeXML(std::string& text)
 {
 	std::ostringstream	buffer;
@@ -63,5 +43,25 @@ std::string&	OutputFilter::NoAttrib(std::string command)
 		text = temp;
 	}
 	return text;
+}
+
+std::string& OutputFilter::Process()
+{
+	switch(type)
+	{
+		case JSON:	return text;   	// Not yet implimented
+		case XML:	EscapeXML(text);	break;
+		default:		return text;		// Leave it alone - ASCII
+	}
+
+	switch(cmd)
+	{
+		case DEFAULT:	return NoAttrib("default");
+		case EXAMINE:	return NoAttrib("examine");
+		case LOC:		return NoAttrib("loc");
+		case SPYNET:	return NoAttrib("spynet");
+
+		default:			return text;
+	}
 }
 
