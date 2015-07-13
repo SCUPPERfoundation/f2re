@@ -10,15 +10,13 @@
 #include "louie.h"
 
 #include <sstream>
-#include <string>
 
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 const int	Louie::NOT_RECEIVED = 0;
-const int	Louie::FIFTEEN_SEC = 15;
-const int	Louie::MAX_GAMBLERS;
 
 Louie::Louie(int the_stake,Player *player)
 {
@@ -177,7 +175,7 @@ void Louie::Join(Player *player)
 			return;
 		}
 	}
-	player->Send(full);
+	player->Send(full,OutputFilter::DEFAULT);
 }
 
 void	Louie::Leave(Player *player)
@@ -188,7 +186,7 @@ void	Louie::Leave(Player *player)
 	{
 		if(gamblers[count].player == player)
 		{
-			player->Send(ok);
+			player->Send(ok,OutputFilter::DEFAULT);
 			gamblers[count].player = 0;
 			gamblers[count].number = NOT_RECEIVED;
 			std::ostringstream	buffer;
@@ -211,7 +209,7 @@ void	Louie::NewNumber(Player *player,int number)
 
 	if(number < 1)
 	{
-		player->Send(wrong);
+		player->Send(wrong,OutputFilter::DEFAULT);
 		return;
 	}
 	
@@ -226,10 +224,10 @@ void	Louie::NewNumber(Player *player,int number)
 				if(ReadyToPlay())
 					CalculateResult();
 				else
-					player->Send(entered);
+					player->Send(entered,OutputFilter::DEFAULT);
 			}
 			else
-				player->Send(no_cash);
+				player->Send(no_cash,OutputFilter::DEFAULT);
 			return;
 		}
 	}

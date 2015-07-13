@@ -13,6 +13,7 @@
 
 #include "misc.h"
 #include "fedmap.h"
+#include "output_filter.h"
 #include "player.h"
 
 const int	Unload::WAITING_TIME = 8;
@@ -25,7 +26,7 @@ void	Unload::AddPlayer(Player *player)
 	rec.player	= player;
 	rec.time_left = WAITING_TIME;
 	unload_list.push_back(rec);
-	player->Send(Game::system->GetMessage("unload","addplayer",1));
+	player->Send(Game::system->GetMessage("unload","addplayer",1),OutputFilter::DEFAULT);
 }
 
 bool	Unload::IsWaiting(Player *player)
@@ -48,7 +49,7 @@ void	Unload::ProcessList()
 			iter = unload_list.erase(iter);
 			if(player->CanUnload())
 			{
-				player->Send(Game::system->GetMessage("unload","processlist",1));
+				player->Send(Game::system->GetMessage("unload","processlist",1),OutputFilter::DEFAULT);
 				player->Deliver();
 			}
 			continue;
@@ -56,7 +57,7 @@ void	Unload::ProcessList()
 		if((*iter).time_left == 3)
 		{
 			if((*iter).player->CanUnload())
-				(*iter).player->Send(Game::system->GetMessage("unload","processlist",2));
+				(*iter).player->Send(Game::system->GetMessage("unload","processlist",2),OutputFilter::DEFAULT);
 			else
 			{
 				iter = unload_list.erase(iter);
@@ -66,7 +67,7 @@ void	Unload::ProcessList()
 		if((*iter).time_left == 6)
 		{
 			if((*iter).player->CanUnload())
-				(*iter).player->Send(Game::system->GetMessage("unload","processlist",3));
+				(*iter).player->Send(Game::system->GetMessage("unload","processlist",3),OutputFilter::DEFAULT);
 			else
 			{
 				iter = unload_list.erase(iter);

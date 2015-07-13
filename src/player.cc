@@ -6491,5 +6491,3 @@ bool	Player::Send(const std::string& text,int command,Player *player,bool can_re
 		return(false);
 }
 
-
-

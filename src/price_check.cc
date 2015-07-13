@@ -54,7 +54,7 @@ void	PriceCheck::ProcessPremium(Player *player,Tokens *tokens)
 	}
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod),OutputFilter::DEFAULT;
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return;
 	}
 

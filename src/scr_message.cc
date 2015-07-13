@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "misc.h"
 #include "msg_number.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -41,13 +42,13 @@ void	Message::ComMessage(Player *player,const std::string& mssg)
 {
 	switch(who)
 	{
-		case	INDIVIDUAL:	player->Send(mssg);													break;
+		case	INDIVIDUAL:	player->Send(mssg,OutputFilter::DEFAULT);						break;
 		case	ROOM:		
 			player->CurrentMap()->RoomSend(0,player,player->LocNo(),mssg,"");			break;
-		case	PARTY:		player->Send(mssg);													break;
+		case	PARTY:		player->Send(mssg,OutputFilter::DEFAULT);						break;
 		case	ROOM_EX:		
 			player->CurrentMap()->RoomSend(player,player,player->LocNo(),mssg,"");	break;
-		case	PARTY_EX:	player->Send(mssg);													break;
+		case	PARTY_EX:	player->Send(mssg,OutputFilter::DEFAULT);						break;
 	}
 }
 

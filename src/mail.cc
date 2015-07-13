@@ -16,6 +16,7 @@
 #include <cstring>
 
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -62,12 +63,12 @@ void	FedMail::Deliver(Player *player)
 	static const std::string	no_mail("You don't have any mail awaiting delivery.\n");
 
 	if(!HasMail(player))
-		player->Send(no_mail);
+		player->Send(no_mail,OutputFilter::DEFAULT);
 	else
 	{
 		Messages::iterator	iter;
 		std::string	name(player->Name());
-		player->Send("-----------------------------\n");
+		player->Send("-----------------------------\n",OutputFilter::DEFAULT);
 		for(iter = messages.lower_bound(name); iter != messages.upper_bound(name);iter++)
 		{
 			Display(player,iter->second);
@@ -82,8 +83,8 @@ void	FedMail::Display(Player *player,FedMssg *mssg)
 	std::ostringstream	buffer;
 	buffer << "Received from " << mssg->from << "\nat GMT/UTC " << std::asctime(std::gmtime(&mssg->sent));
 	player->Send(buffer);
-	player->Send(mssg->body);
-	player->Send("-----------------------------\n");
+	player->Send(mssg->body,OutputFilter::DEFAULT);
+	player->Send("-----------------------------\n",OutputFilter::DEFAULT);
 }
 
 bool	FedMail::HasMail(Player *player)
