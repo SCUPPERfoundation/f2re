@@ -17,15 +17,11 @@
 #include "factory.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "warehouse.h"
 
-const int	Depot::NO_ROOM;
-const int	Depot::INITIAL_BAYS;
-const int	Depot::MAX_BAYS;
 const int	Depot::UPGRADE_BAYS = 10;
-
-const long	Depot::INIT_COST = 1000000L;
 const long	Depot::UPGRADE_COST = 500000L;
 
 Depot::Depot(FedMap *where,const std::string& co_name,int effic,int cur_bays)
@@ -121,7 +117,7 @@ void	Depot::Display(Player *who_to)
 		}
 	}
 	if(is_empty)
-		who_to->Send(empty);
+		who_to->Send(empty,OutputFilter::DEFAULT);
 }
 
 void	Depot::LineDisplay(Player *who_to)
@@ -145,7 +141,7 @@ long	Depot::Repair(Player *ceo,long cash_available)
 
 	if(efficiency == 100)
 	{
-		ceo->Send(no_repair);
+		ceo->Send(no_repair,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -153,7 +149,7 @@ long	Depot::Repair(Player *ceo,long cash_available)
 	long cost = 200000 * multiplier;
 	if(cost > cash_available)
 	{
-		ceo->Send(no_cash);
+		ceo->Send(no_cash,OutputFilter::DEFAULT);
 		return(0L);
 	}
 

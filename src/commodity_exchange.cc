@@ -20,8 +20,6 @@
 #include <cstdlib>
 #include <cstring>
 
-#include <sys/dir.h>
-
 #include "com_ex_graph_parser.h"
 #include "commod_exch_graphs.h"
 #include "commod_exch_item.h"
@@ -30,8 +28,8 @@
 #include "happenings.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "tokens.h"
 
 CommodExchGraphs	*CommodityExchange::graphs = LoadGraphs();
@@ -222,7 +220,7 @@ void	CommodityExchange::CheckPrices(Player *player,const std::string& commodity,
 	if(commod != 0)
 		commod->LineDisplay(0,send_intro,player);
 	else
-		player->Send(not_commod);
+		player->Send(not_commod,OutputFilter::DEFAULT);
 }
 
 void	CommodityExchange::CheckCartelPrices(Player *player,const Commodity *commodity,
@@ -258,7 +256,7 @@ void	CommodityExchange::Display(Player *player,const std::string& commod_grp)
 		group = Commodities::Group2Type(commod_grp);
 		if(group == -1)
 		{
-			player->Send(not_a_group);
+			player->Send(not_a_group,OutputFilter::DEFAULT);
 			return;
 		}
 	}
@@ -288,7 +286,7 @@ void	CommodityExchange::DisplayProduction(Player *player,const std::string& comm
 	int group = Commodities::Group2Type(commod_grp);
 	if(group == -1)
 	{
-		player->Send(not_a_group);
+		player->Send(not_a_group,OutputFilter::DEFAULT);
 		return;
 	}
 

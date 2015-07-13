@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -41,7 +42,7 @@ take place on biological level and above planets.\n");
 
 	if(the_map->Economy() < Infrastructure::BIOLOGICAL)
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -49,7 +50,7 @@ take place on biological level and above planets.\n");
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -65,7 +66,7 @@ bool	Terraform::Add(Player *player,Tokens *tokens)
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		return(true);
 	}
 	else

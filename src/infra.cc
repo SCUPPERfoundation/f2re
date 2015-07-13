@@ -11,7 +11,6 @@
 
 #include <sstream>
 
-#include <cctype>
 #include <cstdlib>
 
 #include "build_agri.h"
@@ -43,6 +42,7 @@
 #include "build_metastudio.h"
 #include "build_mining.h"
 #include "build_oil.h"
+#include "output_filter.h"
 #include "build_pension.h"
 #include "build_phone.h"
 #include "build_police.h"
@@ -78,7 +78,6 @@
 #include "mail.h"
 #include "misc.h"
 #include "player.h"
-#include "player_index.h"
 #include "population.h"
 #include "riots.h"
 #include "review.h"
@@ -209,7 +208,7 @@ std::ostringstream	buffer;
 			{
 				static const std::string	cash("Your treasury has paid out a total of 10,000,000ig to contractors.\n");
 				treasury -= 10000000L;
-				player->Send(cash);
+				player->Send(cash,OutputFilter::DEFAULT);
 				home->SaveCommodityExchange();
 				home->SaveInfrastructure();
 				return(ENH_ADDED);
@@ -279,7 +278,7 @@ bool	Infrastructure::BuildEnhancement(Player *player,Enhancement *build)
 {
 	if(!build->IsOK())
 	{
-		player->Send("I'm sorry, I don't seem to be able to build that at the moment!\n");
+		player->Send("I'm sorry, I don't seem to be able to build that at the moment!\n",OutputFilter::DEFAULT);
 		delete build;
 		return(false);
 	}
@@ -288,7 +287,7 @@ bool	Infrastructure::BuildEnhancement(Player *player,Enhancement *build)
 		AddEnhancement(build);
 		static const std::string	cash("Your treasury has paid out a total of 10,000,000ig to contractors.\n");
 		treasury -= 10000000L;
-		player->Send(cash);
+		player->Send(cash,OutputFilter::DEFAULT);
 		home->SaveCommodityExchange();
 		home->SaveInfrastructure();
 		return(true);
@@ -399,7 +398,7 @@ void	Infrastructure::Close(Player *player)
 		Game::review->Post(buffer);
 	}
 	else
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::Consolidate(Company *company)
@@ -408,7 +407,7 @@ void	Infrastructure::Consolidate(Company *company)
 
 	Depot	*depot = FindDepot(company->Name());
 	if(depot == 0)
-		company->CEO()->Send(error);
+		company->CEO()->Send(error,OutputFilter::DEFAULT);
 	else
 		depot->Consolidate(company->CEO());
 }
@@ -419,7 +418,7 @@ void	Infrastructure::Consolidate(Player *player)
 
 	Warehouse	*warehouse = FindWarehouse(player->Name());
 	if(warehouse == 0)
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 	else
 		warehouse->Consolidate(player);
 }
@@ -430,7 +429,7 @@ void	Infrastructure::Consolidate(Business *business)
 
 	Depot	*depot = FindDepot(business->Name());
 	if(depot == 0)
-		business->CEO()->Send(error);
+		business->CEO()->Send(error,OutputFilter::DEFAULT);
 	else
 		depot->Consolidate(business->CEO());
 }
@@ -496,7 +495,7 @@ void	Infrastructure::Demolish(Player *player,const std::string&  building)
 			return;
 		}
 	}
-	player->Send(no_demolish);
+	player->Send(no_demolish,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::DepotRiot()
@@ -584,7 +583,7 @@ void	Infrastructure::Display(Player *player,bool show_fabric)
 	{
 		if((depot_list.size() + warehouse_list.size() + factories.size()) > 0)
 		{
-			player->Send("Commercial Activities:\n");
+			player->Send("Commercial Activities:\n",OutputFilter::DEFAULT);
 			DisplayWarehouses(player);
 			DisplayDepots(player);
 			DisplayFactories(player);
@@ -669,7 +668,7 @@ void	Infrastructure::DisplayWarehouses(Player *player)
 		player->Send(buffer);
 	}
 	else
-		player->Send("  No warehouses\n");
+		player->Send("  No warehouses\n",OutputFilter::DEFAULT);
 }
 
 int	Infrastructure::EfficiencyBonus(int type) const
@@ -891,7 +890,7 @@ bool	Infrastructure::IncBuild(Player *player,int build_type,Tokens *tokens)
 	static const std::string	no_cash("Your treasury doesn't have the 10,000,000ig it would cost!\n");
 	if(treasury < 10000000L)
 	{
-		player->Send(no_cash);
+		player->Send(no_cash,OutputFilter::DEFAULT);
 		return(false);
 	}
 	switch(build_type)
@@ -946,7 +945,7 @@ bool	Infrastructure::IncBuild(Player *player,int build_type,Tokens *tokens)
 		case	Enhancement::AIRPORT:		return(IncEnhancement<Airport>(player,tokens,"Airport"));
 		case	Enhancement::ANTIAGATHICS:	return(IncEnhancement<AntiAgathics>(player,tokens,"Longevity"));
 	}
-	player->Send("I don't understand what it is you are trying to build!\n");
+	player->Send("I don't understand what it is you are trying to build!\n",OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -1015,7 +1014,7 @@ void	Infrastructure::Open(Player *player)
 		Game::review->Post(buffer);
 	}
 	else
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::Output(Player *player)
@@ -1025,18 +1024,18 @@ void	Infrastructure::Output(Player *player)
 
 	if(player->Name() !=  owner_name)
 	{
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(factories.size() > 0)
 	{
-		player->Send("Factory output survey:\n");
+		player->Send("Factory output survey:\n",OutputFilter::DEFAULT);
 		for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 			(*iter)->Output(player);
 	}
 	else
-		player->Send(none);
+		player->Send(none,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::PersonalRiot()
@@ -1069,12 +1068,12 @@ void	Infrastructure::PODisplay(Player *player)
 
 	if(player->Name() != owner_name)
 	{
-		player->Send(not_owner);
+		player->Send(not_owner,OutputFilter::DEFAULT);
 		return;
 	}
 	if(factories.size() == 0)
 	{
-		player->Send(no_factories);
+		player->Send(no_factories,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1131,7 +1130,7 @@ void	Infrastructure::Promote(Player *player)
 {
 	if((promote >= 0) && (player != 0))
 	{
-		player->Send("Your planet is already scheduled for promotion!\n");
+		player->Send("Your planet is already scheduled for promotion!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1145,7 +1144,7 @@ void	Infrastructure::Promote(Player *player)
 
 	if((promo < 0) && (player != 0))
 	{
-		player->Send("Promotion is not available at this level.\n");
+		player->Send("Promotion is not available at this level.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1155,13 +1154,13 @@ void	Infrastructure::Promote(Player *player)
 		if(economy == LEISURE)
 			promote = 0;
 		if(player != 0)
-			player->Send("Your planet will promote at the next reset.\n");
+			player->Send("Your planet will promote at the next reset.\n",OutputFilter::DEFAULT);
 	}
 	else
 	{
 		if(player != 0)
 		{
-			player->Send("Your planet is not yet ready for promotion!\n");
+			player->Send("Your planet is not yet ready for promotion!\n",OutputFilter::DEFAULT);
 			std::ostringstream	buffer;
 			buffer << "You have " << TotalBuilds() << " builds...\n";
 			player->Send(buffer);
@@ -1193,14 +1192,14 @@ void	Infrastructure::Promote2Leisure(Player *player)
 {
 	if(promote >= 0)
 	{
-		player->Send("Your planet is already scheduled for promotion!\n");
+		player->Send("Your planet is already scheduled for promotion!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(TotalBuilds() >= 265)
 	{
 		promote = LEISURE;
-		player->Send("Your planet will promote at the next reset.\n");
+		player->Send("Your planet will promote at the next reset.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1253,7 +1252,7 @@ bool	Infrastructure::RequestResources(Player *player,const std::string& donor,co
 		if((*iter)->Name() == donor)
 			return((*iter)->RequestResources(player,recipient,quantity));
 	}
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -1323,13 +1322,13 @@ bool	Infrastructure::SetRegistry(Player *player)
 
 	if(flags.test(REGISTRY))
 	{
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 		return(false);
 	}
 	else
 	{
 		flags.set(REGISTRY);
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		return(true);
 	}
 }
@@ -1339,7 +1338,7 @@ void	Infrastructure::SetYardMarkup(Player *player,int amount)
 	static const std::string	error("You're not the owner of this planet!\n");
 
 	if(player->Name() != owner_name)
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		if(amount > 10)
@@ -1423,16 +1422,16 @@ are given the additional capacity to handle interplanetary migrations.\n");
 	Enhancement	*airport = FindEnhancement("Airport");
 	if(airport == 0)
 	{
-		player->Send(no_airport);
+		player->Send(no_airport,OutputFilter::DEFAULT);
 		return(false);
 	}
 	if(airport->Set() == 0)		// generic set - used to set trans global flag here
 	{
-		player->Send(not_enuff);
+		player->Send(not_enuff,OutputFilter::DEFAULT);
 		return(false);
 	}
 
-	player->Send(ok);
+	player->Send(ok,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -1543,10 +1542,10 @@ void	Infrastructure::XferFunds(Player *player,int amount,const std::string& to)
 	NormalisePlanetTitle(to_planet);
 	FedMap	*fed_map = Game::galaxy->FindMap(to_planet);
 
-	if(fed_map == 0)					{	player->Send(err);			return;	}
-	if((amount *= 1000000) < 0)	{	player->Send(negative);		return;	}
-	if( treasury < amount)			{	player->Send(not_enuff);	return;	}
-	if(!fed_map->IsOwner(player))	{	player->Send(not_owner);	return;	}
+	if(fed_map == 0)					{	player->Send(err,OutputFilter::DEFAULT);			return;	}
+	if((amount *= 1000000) < 0)	{	player->Send(negative,OutputFilter::DEFAULT);	return;	}
+	if( treasury < amount)			{	player->Send(not_enuff,OutputFilter::DEFAULT);	return;	}
+	if(!fed_map->IsOwner(player))	{	player->Send(not_owner,OutputFilter::DEFAULT);	return;	}
 
 	treasury -= amount;
 	long	to_balance = fed_map->ChangeTreasury(amount);
@@ -1568,6 +1567,6 @@ void	Infrastructure::XMLMapInfo(Player *player)
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->XMLFactoryInfo(player);
 	std::string	temp("<s-update-infra/>\n");
-	player->Send(temp);
+	player->Send(temp,OutputFilter::DEFAULT);
 }
 

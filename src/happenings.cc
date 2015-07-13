@@ -15,8 +15,8 @@
 
 #include "futures_exchange.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "review.h"
 
 
@@ -40,7 +40,7 @@ void	Happenings::Display(Player *player,const std::string& name)
 	int num_mssgs = old_mssgs.size();
 	if(num_mssgs == 0)
 	{
-		player->Send(nowt);
+		player->Send(nowt,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -83,7 +83,7 @@ void	Happenings::Display(Player *player,const std::string& name)
 	if(buffer.str().length() > 0)
 		player->Send(buffer);
 	if(num_entries == 0)
-		player->Send(nowt);
+		player->Send(nowt,OutputFilter::DEFAULT);
 }
 
 std::pair<int,int>	Happenings::Effect(const std::string& exchange,const std::string& commod)
@@ -171,7 +171,7 @@ void	Happenings::NotifyPlayers(std::string& mssg)
 	{
 		player = Game::player_index->FindCurrent(*iter);
 		if(player != 0)
-			player->Send(mssg);
+			player->Send(mssg,OutputFilter::DEFAULT);
 	}
 }
 

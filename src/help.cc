@@ -15,7 +15,7 @@
 #include "fedmap.h"
 #include "galaxy.h"
 #include "misc.h"
-#include "para_cat.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 
@@ -56,7 +56,7 @@ void	CmdHelp::SendHelp(Player *player,Tokens *tokens,std::string& line)
 	}
 
 	for(int count = 1;count <= size;count++)
-		player->Send(help_map->GetMessage(verb,noun,count));
+		player->Send(help_map->GetMessage(verb,noun,count),OutputFilter::DEFAULT);
 }
 
 void	CmdHelp::WriteHelpFailures()

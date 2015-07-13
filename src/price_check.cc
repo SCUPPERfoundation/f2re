@@ -14,6 +14,7 @@
 #include "galaxy.h"
 #include "inventory.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "star.h"
 #include "tokens.h"
@@ -22,11 +23,11 @@ void	PriceCheck::Process(Player *player,Tokens	*tokens,std::string& line)
 {
 	static const std::string	too_low("You need to be at least a merchant to use the exchange!\n");
 
-	if(player->Rank() < Player::MERCHANT)	{ player->Send(too_low);	return;	}
-	if(tokens->Size() < 3)	{ player->Send(Game::system->GetMessage("cmdparser","checkprice",1));	return;	}
+	if(player->Rank() < Player::MERCHANT)	{ player->Send(too_low,OutputFilter::DEFAULT);	return;	}
+	if(tokens->Size() < 3)	{ player->Send(Game::system->GetMessage("cmdparser","checkprice",1),OutputFilter::DEFAULT);	return;	}
 	if(tokens->Size() > 3)	{ RemotePriceCheck(player,tokens,line);	return;	}
 	const Commodity	*commodity = Game::commodities->Find(tokens->Get(2));
-	if(commodity == 0)		{ player->Send(Game::system->GetMessage("cmdparser","checkprice",2));	return;	}
+	if(commodity == 0)		{ player->Send(Game::system->GetMessage("cmdparser","checkprice",2),OutputFilter::DEFAULT);	return;	}
 
 	if(player->CurrentMap()->IsAnExchange(player->LocNo()))
 		player->CurrentMap()->CheckCommodityPrices(player,commodity);
@@ -43,24 +44,24 @@ void	PriceCheck::ProcessPremium(Player *player,Tokens *tokens)
 
 	if(!player->InvFlagIsSet(Inventory::PRICE_CHECK_PREMIUM))
 	{
-		player->Send(no_premium);
+		player->Send(no_premium,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!player->HasRemoteAccessCert())
 	{
-		player->Send(no_basic);
+		player->Send(no_basic,OutputFilter::DEFAULT);
 		return;
 	}
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod),OutputFilter::DEFAULT;
 		return;
 	}
 
 	const Commodity *commodity = Game::commodities->Find(tokens->Get(2));
 	if(commodity == 0)
 	{
-		player->Send(not_commod);
+		player->Send(not_commod,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -86,7 +87,7 @@ void	PriceCheck::RemotePriceCheck(Player *player,const Commodity *commodity)
 	if(player->HasExtendedPriceCheck())
 		player->CurrentMap()->HomeStarPtr()->RemotePriceCheck(player,commodity);
 	else
-		player->Send(not_exch);
+		player->Send(not_exch,OutputFilter::DEFAULT);
 }
 
 

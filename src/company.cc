@@ -1577,12 +1577,12 @@ void	Company::SellDepot(FedMap *fed_map)
 	}
 
 	if(iter == depot_names.end())
-		ceo->Send(Game::system->GetMessage("company","selldepot",1));
+		ceo->Send(Game::system->GetMessage("company","selldepot",1),OutputFilter::DEFAULT);
 	else
 	{
 		Depot	*depot = fed_map->FindDepot(name);
 		if(depot == 0)
-			ceo->Send(Game::system->GetMessage("company","selldepot",1));
+			ceo->Send(Game::system->GetMessage("company","selldepot",1),OutputFilter::DEFAULT);
 		else
 		{
 			long	sale_price = 500000L;

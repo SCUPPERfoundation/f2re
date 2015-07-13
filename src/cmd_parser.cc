@@ -1643,7 +1643,7 @@ static std::ostringstream	buffer;
 		return;
 	if(cmd == NO_CMD)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1,OutputFilter::DEFAULT));
+		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
 		return;
 	}
 	Execute(player,cmd,line);
@@ -2278,7 +2278,7 @@ void	CmdParser::UnGag(Player *player)
 
 	if(!player->IsManagement())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1,OutputFilter::DEFAULT));
+		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
 		return;
 	}
 	if(tokens->Size() < 2)

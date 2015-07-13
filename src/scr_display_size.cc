@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "fed_object.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -34,7 +35,7 @@ int	DisplaySize::Process(Player *player)
 		if(index != std::string::npos)
 			temp.replace(index,2,buffer.str());
 		temp += "\n";
-		player->Send(temp);
+		player->Send(temp,OutputFilter::DEFAULT);
 	}
 	return(CONTINUE);
 }

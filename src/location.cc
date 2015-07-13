@@ -12,20 +12,12 @@
 #include <iostream>
 #include <sstream>
 
-#include <cctype>
-
 #include "event_number.h"
 #include "fedmap.h"
 #include "misc.h"
 #include "msg_number.h"
+#include "output_filter.h"
 #include "player.h"
-
-const int	Location::MAX_NAME;
-const int	Location::MAX_DESC;
-const int	Location::MAX_MSSG;
-const int	Location::LINE_SIZE;
-const int	Location::INVALID_LOC;
-const int	Location::NO_EXIT;
 
 Location::Location()
 {
@@ -177,12 +169,12 @@ LocRec	*Location::Move(Player *player,FedMap *home_map,int dir)
 		if(no_exit == 0)
 		{
 			if(player->IsInSpace())
-				player->Send(Game::system->GetMessage("location","move",2));
+				player->Send(Game::system->GetMessage("location","move",2),OutputFilter::DEFAULT);
 			else
-				player->Send(Game::system->GetMessage("location","move",1));
+				player->Send(Game::system->GetMessage("location","move",1),OutputFilter::DEFAULT);
 		}
 		else
-			player->Send(no_exit->Find(home_map));
+			player->Send(no_exit->Find(home_map),OutputFilter::DEFAULT);
 		return(0);
 	}
 

@@ -14,16 +14,12 @@
 #include <cstring>
 
 #include "db_player.h"
-#include "fedmap.h"
 #include "fed_object.h"
 #include "galaxy.h"
-#include "locker.h"
-#include "misc.h"
 #include "msg_number.h"
 #include "object.h"
-#include "player.h"
+#include "output_filter.h"
 
-const int	Inventory::MAX_INV_SIZE;
 const int	Inventory::ONE_DAY = 60 * 60 * 24;
 const int	Inventory::ONE_MONTH = ONE_DAY * 31;
 
@@ -118,7 +114,7 @@ void	Inventory::Clip(Player *player,const std::string& obj_name)
 {
 	if(!InvFlagSet(KEYRING))
 	{
-		player->Send("You need to buy a keyring first!\n");
+		player->Send("You need to buy a keyring first!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	
@@ -545,11 +541,11 @@ void	Inventory::Unclip(Player *player)
 		if((*iter)->IsClipped())
 		{
 			(*iter)->ResetFlag(Object::CLIPPED);
-			player->Send("Only a key is now left on the keyring\n");
+			player->Send("Only a key is now left on the keyring\n",OutputFilter::DEFAULT);
 			return;
 		}
 	}
-	player->Send("Nothing to unclip!\n");
+	player->Send("Nothing to unclip!\n",OutputFilter::DEFAULT);
 }
 
 void	Inventory::Wear(Player *player,const std::string& obj_name)

@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -40,7 +41,7 @@ urban regeneration plans are accepted and the first project is completed on sche
 
 	if((the_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -51,7 +52,7 @@ urban regeneration plans are accepted and the first project is completed on sche
 			total_builds = 1;
 			fed_map->AddTotalLabour(20);
 			fed_map->AddLabour(20);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -75,7 +76,7 @@ to make a lot of difference to the state of your economy.\n");
 
 	if((fed_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -86,10 +87,10 @@ to make a lot of difference to the state of your economy.\n");
 		{
 			fed_map->AddTotalLabour(20);
 			fed_map->AddLabour(20);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 		}
 		else
-			player->Send(too_late);
+			player->Send(too_late,OutputFilter::DEFAULT);
 		return(true);
 	}
 	return(false);

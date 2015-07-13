@@ -18,8 +18,8 @@
 #include "futures_contract.h"
 #include "mail.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "xml_parser.h"
 
 const std::string		FuturesExchange::brokers("Messrs Trumble, Cruikshank & Bone");
@@ -326,15 +326,15 @@ void	FuturesExchange::SetUpContract(Player *player,const std::string& commodity_
 		else
 		{
 			if(player->Rank() == Player::FINANCIER)
-				player->Send(no_margin);
+				player->Send(no_margin,OutputFilter::DEFAULT);
 			else
-				player->Send(no_co_margin);
+				player->Send(no_co_margin,OutputFilter::DEFAULT);
 			delete contract;
 			return;
 		}
 	}
 	else
-		player->Send("contract failed\n");
+		player->Send("contract failed\n",OutputFilter::DEFAULT);
 }
 
 void	FuturesExchange::Update(CommodityExchange *spot_mkt,int status)

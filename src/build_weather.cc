@@ -17,6 +17,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -40,7 +41,7 @@ technological levels and above!\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -49,7 +50,7 @@ technological levels and above!\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -73,14 +74,14 @@ technological levels and above!\n");
 	int	economy = fed_map->Economy();
  	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(++total_builds <= 5)
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	else
-		player->Send(over);
+		player->Send(over,OutputFilter::DEFAULT);
 	return(true);
 }
 

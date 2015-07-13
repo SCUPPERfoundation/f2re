@@ -14,14 +14,10 @@
 #include <iostream>
 #include <sstream>
 
-#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 
-#include <sys/types.h>
 #include <sys/dir.h>
-
-#include <dirent.h>
 #include <unistd.h>
 
 #include "cartel.h"
@@ -30,6 +26,7 @@
 #include "location.h"
 #include "syndicate.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_index.h"
 #include "star.h"
@@ -80,14 +77,14 @@ void	Galaxy::BuildDestruction()
 
 void	Galaxy::DisplayFleets(Player *player)
 {
-	player->Send("Merchant fleets registered:\n");
+	player->Send("Merchant fleets registered:\n",OutputFilter::DEFAULT);
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
 		iter->second->DisplayFleets(player);
 }
 
 void	Galaxy::DisplayExile(Player *player)
 {
-	player->Send("Exiles report:\n");
+	player->Send("Exiles report:\n",OutputFilter::DEFAULT);
 	std::ostringstream	buffer;
 	bool	are_exiles = false;
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
@@ -106,7 +103,7 @@ void	Galaxy::DisplayExile(Player *player)
 		are_exiles =true;
 	}
 	if(!are_exiles)
-		player->Send("  No exiles - everyone is being a good boy, girl, or thingie!\n");
+		player->Send("  No exiles - everyone is being a good boy, girl, or thingie!\n",OutputFilter::DEFAULT);
 }
 
 void	Galaxy::DisplaySystem(Player *player,const std::string& star_title)
@@ -117,7 +114,7 @@ void	Galaxy::DisplaySystem(Player *player,const std::string& star_title)
 	NormalisePlanetTitle(title);
 	Star	*star = Find(title);
 	if(star == 0)
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 	else
 		star->DisplaySystem(player);
 }

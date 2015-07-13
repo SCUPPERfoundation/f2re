@@ -14,6 +14,8 @@
 #include "channel.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
+#include "output_filter.h"
 #include "player.h"
 
 ChannelManager::ChannelManager()
@@ -77,16 +79,16 @@ void	ChannelManager::Leave(Player *player,const std::string& name)
 		}
 	}
 	else
-		player->Send(Game::system->GetMessage("channelmanager","leave",1));
+		player->Send(Game::system->GetMessage("channelmanager","leave",1),OutputFilter::DEFAULT);
 }
 
 void	ChannelManager::List(Player *player)
 {
-	static const std::string no_channels("There aren't any channels in use at the moment.\n");
+	static const std::string no_channels("There aren't any channels in use at the moment.\n",OutputFilter::DEFAULT);
 
 	if(channel_index.size() == 0)
 	{
-		player->Send(no_channels);
+		player->Send(no_channels,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -115,7 +117,7 @@ void	ChannelManager::List(Player *player,const std::string& name)
 		channel->List(player);
 	}
 	else
-		player->Send(Game::system->GetMessage("channelmanager","list",1));
+		player->Send(Game::system->GetMessage("channelmanager","list",1),OutputFilter::DEFAULT);
 }
 
 void	ChannelManager::Send(Player *player,const std::string& name,const std::string& text,bool is_relay)
@@ -125,6 +127,6 @@ void	ChannelManager::Send(Player *player,const std::string& name,const std::stri
 	if(channel != 0)
 		channel->Send(player,text,is_relay);
 	else
-		player->Send(Game::system->GetMessage("channelmanager","send",1));
+		player->Send(Game::system->GetMessage("channelmanager","send",1),OutputFilter::DEFAULT);
 }
 

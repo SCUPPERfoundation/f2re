@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -42,7 +43,7 @@ network improves the efficiency of your leisure industries, and spurs new popula
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -50,7 +51,7 @@ network improves the efficiency of your leisure industries, and spurs new popula
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -76,15 +77,15 @@ network has little further effect, the network having reached its optimum size.\
 		{
 			fed_map->AddTotalLabour(10);
 			fed_map->AddLabour(10);
-			player->Send(success1);
+			player->Send(success1,OutputFilter::DEFAULT);
 		}
 		else
-			player->Send(success2);
+			player->Send(success2,OutputFilter::DEFAULT);
 		return(true);
 	}
 	else
 	{
-		player->Send(too_far);
+		player->Send(too_far,OutputFilter::DEFAULT);
 		return(true);
 	}
 }
