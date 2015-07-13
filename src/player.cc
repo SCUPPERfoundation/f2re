@@ -2291,7 +2291,7 @@ bool	Player::DisplaySystemCabinetObject(const std::string& obj_name)
 
 	std::string obj_desc(object->Desc());
 	obj_desc += "\n";
-	Send(obj_desc);
+	Send(obj_desc,OutputFilter::DEFAULT);
 	return true;
 }
 
@@ -2499,7 +2499,7 @@ bool	Player::Examine(const std::string& other_name)
 	FedObject	*obj = inventory->Find(other_name);
 	if(obj != 0)
 	{
-		Send(obj->Desc());
+		Send(obj->Desc(),OutputFilter::DEFAULT);
 		return(true);
 	}
 
@@ -2543,7 +2543,7 @@ void	Player::Fetch(int bay_no)
 {
 	if(ship == 0)
 	{
-		Send(Game::system->GetMessage("player","fetch",1));
+		Send(Game::system->GetMessage("player","fetch",1),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2562,19 +2562,19 @@ void	Player::Fetch(int bay_no)
 	Warehouse *ware = loc.fed_map->FindWarehouse(name);
 	if(ware == 0)
 	{
-		Send(Game::system->GetMessage("player","fetch",2));
+		Send(Game::system->GetMessage("player","fetch",2),OutputFilter::DEFAULT);
 		return;
 	}
 
 	Cargo	*cargo = ware->Retrieve(bay_no);
 	if(cargo == 0)
 	{
-		Send(Game::system->GetMessage("player","fetch",3));
+		Send(Game::system->GetMessage("player","fetch",3),OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(ship->AddCargo(cargo,this) >= 0)
-		Send(Game::system->GetMessage("player","fetch",4));
+		Send(Game::system->GetMessage("player","fetch",4),OutputFilter::DEFAULT);
 }
 
 int	Player::FedTermVersion()
@@ -3593,7 +3593,7 @@ void	Player::Marry(const std::string& who_name)
 	std::ostringstream	buffer;
 	if(player->IsMarried())	// would be spouse already married?
 	{
-		buffer << player->Name() << " is already married!\n",OutputFilter::DEFAULT;
+		buffer << player->Name() << " is already married!\n";
 		Send(buffer);
 		return;
 	}
@@ -4271,7 +4271,7 @@ void	Player::RepairFactory(int factory_num)
 void	Player::Repay(int amount)
 {
 	if(loan == 0)
-		Send(Game::system->GetMessage("player","repay",1,OutputFilter::DEFAULT));
+		Send(Game::system->GetMessage("player","repay",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(amount > cash)
@@ -6112,7 +6112,7 @@ bool	Player::XMLExamine(const std::string& other_name)
 	FedObject	*obj = inventory->Find(other_name);
 	if(obj != 0)
 	{
-		Send(obj->Desc());
+		Send(obj->Desc(),OutputFilter::DEFAULT);
 		return(true);
 	}
 

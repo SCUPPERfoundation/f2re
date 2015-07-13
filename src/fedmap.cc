@@ -973,7 +973,7 @@ bool	FedMap::Examine(Player *player,const std::string& obj_name)
 	if(object == 0)
 		return(false);
 	else
-		player->Send(object->Desc());
+		player->Send(object->Desc(),OutputFilter::DEFAULT);
 	return(true);
 }
 
