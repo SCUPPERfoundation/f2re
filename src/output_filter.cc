@@ -11,7 +11,7 @@
 
 #include <sstream>
 
-AttribList	OutputFilter::NullAttribs; // = { std::make_pair("","") };
+AttribList	OutputFilter::NullAttribs;
 
 std::string&	OutputFilter::EscapeXML(std::string& text)
 {
@@ -39,7 +39,7 @@ std::string&	OutputFilter::NoAttrib(std::string command)
 {
 	if(type == XML)
 	{
-		std::string	temp = "<s-" + command + text + "</s-" + command +">\n";
+		std::string	temp = "<s-" + command + ">" + text + "</s-" + command +">\n";
 		text = temp;
 	}
 	return text;

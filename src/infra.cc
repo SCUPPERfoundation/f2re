@@ -1567,6 +1567,6 @@ void	Infrastructure::XMLMapInfo(Player *player)
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->XMLFactoryInfo(player);
 	std::string	temp("<s-update-infra/>\n");
-	player->Send(temp,OutputFilter::DEFAULT);
+	player->Send(temp);
 }
 

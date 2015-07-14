@@ -15,6 +15,8 @@
 #include <sstream>
 #include <string>
 
+typedef std::list<std::pair<std::string,std::string> >	AttribList;
+
 class	Player;
 
 class ComUnit
@@ -34,7 +36,7 @@ private:
 
 	void	DoRelay(const std::string& text);
 	void	Process(const std::string& text,Player *player = 0);
-	void	Process(const std::string& text,int command,Player *player = 0);
+	void	Process(const std::string& text,int command,AttribList &attributes,Player *player = 0);
 	void	ProcessWidth(std::string& text);
 
 public:

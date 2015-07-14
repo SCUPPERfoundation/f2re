@@ -934,7 +934,7 @@ void	FedMap::DisplaySystemCabinet(Player *player)
 	buffer << "edge of your vision it seems to flicker in an odd fashion.\n";
 	player->Send(buffer);
 	if(player->CommsAPILevel() > 0)
-		player->Send("<s-contents name='cabinet'/>\n",OutputFilter::DEFAULT);
+		player->Send("<s-contents name='cabinet'/>\n");
 }
 
 void	FedMap::DumpObjects()

@@ -75,7 +75,7 @@ void	ComUnit::ComSend(const std::string& text,Player *player)
 {
 	std::string	line = text;
 	if(flags.test(COMMS) && !flags.test(BUSY))
-		Process(line,OutputFilter::DEFAULT,player);
+		Process(line,OutputFilter::DEFAULT,OutputFilter::NullAttribs,player);
 }
 
 // used for lost line and log off - sends no messages to exitting player
@@ -219,7 +219,7 @@ void	ComUnit::ProcessWidth(std::string& text)
 {
 	int	length = text.length();
 	int	start = 0;
-	bool	done = false;
+	bool	done;
 	for(int count = 0;count < length;count++)
 	{
 		if(text[count] == '\n')
@@ -343,7 +343,7 @@ void	ComUnit::Send(const std::string& text,Player *player,bool can_relay)
 		DoRelay(text);
 }
 
-void	ComUnit::Process(const std::string& text,int command,Player *player)
+void	ComUnit::Process(const std::string& text,int command,AttribList &attributes,Player *player)
 {
 	std::ostringstream	buffer("");
 	if(player != 0)
@@ -368,7 +368,7 @@ WriteLog(line);
 		return;
 	if(flags.test(WANT_XML))
 	{
-		OutputFilter filter(OutputFilter::XML,command,line,OutputFilter::NullAttribs);
+		OutputFilter filter(OutputFilter::XML,command,line,attributes);
 		filter.Process();
 	}
 	write(owner->Socket(),line.c_str(),line.length());
@@ -378,7 +378,7 @@ WriteLog(line);
 void	ComUnit::Send(const std::string& text,int command,Player *player,bool can_relay)
 {
 	std::string	line = text;
-	Process(line,command,player);
+	Process(line,command,OutputFilter::NullAttribs,player);
 	if(can_relay)
 		DoRelay(text);
 }
