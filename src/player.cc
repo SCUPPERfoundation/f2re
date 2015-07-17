@@ -4646,17 +4646,6 @@ void	Player::SellWarehouse()
 		Send(Game::system->GetMessage("player","sellwarehouse",2),OutputFilter::DEFAULT);
 }
 
-bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
-{
-	if(com_unit != 0)
-	{
-		com_unit->Send(text,player,can_relay);
-		return(true);
-	}
-	else
-		return(false);
-}
-
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
 {
 	FedMssg	*mssg = new FedMssg;
@@ -6202,25 +6191,21 @@ void	Player::XMLSpynetReport(Player *player)
 void	Player::XMLSpynetReportAssetsFlags(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-spynet>We were able to trace assets to the value of " << cash;
-	buffer << "ig in various bank accounts belonging to this individual.</s-spynet>\n";
-	player->Send(buffer);
-
-	buffer.str("");
-	buffer <<"<s-spynet>   </s-spynet>\n";
-	player->Send(buffer);
+	buffer << "We were able to trace assets to the value of " << cash;
+	buffer << "ig in various bank accounts belonging to this individual.";
+	std::string temp(buffer.str());
+	player->Send(temp,OutputFilter::SPYNET);
 
 	if(flags.test(ALPHA_CREW))
 	{
-		buffer.str("");
-		buffer <<"<s-spynet>Member of the Alpha Crew!</s-spynet>\n";
-		player->Send(buffer);
+		temp = "Member of the Alpha Crew!";
+		player->Send(temp,OutputFilter::SPYNET);
 	}
+
 	if(flags.test(NEWBOD))
 	{
-		buffer.str("");
-		buffer << "<s-spynet>Member of the Magellan Society.</s-spynet>\n";
-		player->Send(buffer);
+		temp = "Member of the Magellan Society.";
+		player->Send(temp,OutputFilter::SPYNET);
 	}
 }
 
@@ -6230,7 +6215,7 @@ void	Player::XMLSpynetReportIntro(Player *player)
 	buffer << "<s-spynet-start name='" << Name() << "' rank='" << rank_str[gender][rank] << "'/>\n";
 	player->Send(buffer);
 	buffer.str("");
-	buffer << "<s-spynet>" << Name() << " is a " << gender_str1[gender] << " " << race << " who ";
+	buffer << Name() << " is a " << gender_str1[gender] << " " << race << " who ";
 	if(games < 50)
 		buffer << "has recently arrived in";
 	else
@@ -6258,24 +6243,28 @@ void	Player::XMLSpynetReportIntro(Player *player)
 			buffer << " took out to buy it";
 		}
 	}
-	buffer << ".</s-spynet>\n";
-	player->Send(buffer);
+	buffer << ".";
+	std::string	line(buffer.str());
+	player->Send(line,OutputFilter::SPYNET);
 }
 
 void	Player::XMLSpynetReportMisc(Player *player)
 {
+	std::string	line;
 	std::ostringstream	buffer;
 	if(company != 0)
 	{
 		buffer.str("");
-		buffer << "<s-spynet>CEO of " << EscapeXML(company->Name()) << "</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "CEO of " << EscapeXML(company->Name());
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 	if(business != 0)
 	{
 		buffer.str("");
-		buffer << "<s-spynet>CEO of " << EscapeXML(business->Name()) << "</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "CEO of " << EscapeXML(business->Name());
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 	if((rank >= FOUNDER) && !IsManager())
 	{
@@ -6283,58 +6272,63 @@ void	Player::XMLSpynetReportMisc(Player *player)
 		if(star != 0)
 		{
 			buffer.str("");
-			buffer << "<s-spynet>Founder of the " << star->Name() << " system.</s-spynet>\n";
-			player->Send(buffer);
+			buffer << "Founder of the " << star->Name() << " system.";
+			line = buffer.str();
+			player->Send(line,OutputFilter::SPYNET);
 			buffer.str("");
-			buffer << "<s-spynet>" << star->Name() << " is a member of the ";
-			buffer << star->CartelName() << " cartel.</s-spynet>\n";
-			player->Send(buffer);
+			buffer << star->Name() << " is a member of the ";
+			buffer << star->CartelName() << " cartel.";
+			line = buffer.str();
+			player->Send(line,OutputFilter::SPYNET);
 		}
 	}
 	int	slithy = gifts->Gifts();
 	if(slithy > 0)
 	{
 		buffer.str("");
-		buffer << "<s-spynet>Possesses the equivalent of " << slithy << " slithy toves.</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "Possesses the equivalent of " << slithy << " slithy toves.";
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 	if(IsMarried())
 	{
 		buffer.str("");
-		buffer << "<s-spynet>Is married to " << spouse << ".</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "Is married to " << spouse << ".";
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 }
 
 void	Player::XMLSpynetReportStaff(Player *player)
 {
+	std::string	line;
 	std::ostringstream	buffer;
-	buffer << "<s-spynet>Teleport address: " << loc.star_name << "." << loc.map_name << "." << loc.loc_no;
+	buffer << "Teleport address: " << loc.star_name << "." << loc.map_name << "." << loc.loc_no;
 	Location *locn = 0;
 	if(loc.fed_map != 0)
 		locn = loc.fed_map->FindLoc(loc.loc_no);
-	if(locn == 0)
-		buffer << "</s-spynet>\n";
-	else
+	if(locn != 0)
 	{
 		buffer << " - ";
 		locn->Description(buffer,Location::GLANCE);
-		buffer << "</s-spynet>\n";
 	}
-	player->Send(buffer);
+	line = buffer.str();
+	player->Send(line,OutputFilter::SPYNET);
+
 	if(IsGagged())
 	{
 		buffer.str("");
-		buffer << "<s-spynet>" << name << " Has no access to the coms channel, or to the message board. ";
-		buffer << "Please refer any player questions to feedback@ibgames.net.</s-spynet>\n";
-		player->Send(buffer);
+		buffer << name << " Has no access to the coms channel, or to the message board. ";
+		buffer << "Please refer any player questions to feedback@ibgames.net.";
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 }
 
 void	Player::XMLSpynetReportWhenWhere(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-spynet>" << name << " was last heard of ";
+	buffer << name << " was last heard of ";
 	if(loc.map_name.find("Space") != std::string::npos)
 		buffer << "in ";
 	else
@@ -6377,8 +6371,8 @@ void	Player::XMLSpynetReportWhenWhere(Player *player)
 		buffer << gender_temp << " is generally considered to be a law abiding citizen.";
 	else
 		buffer << gender_temp << " has a reward of " << reward << " on " << gender_str4 << " head.";
-	buffer << "</s-spynet>\n";
-	player->Send(buffer);
+	std::string line(buffer.str());
+	player->Send(line,OutputFilter::SPYNET);
 }
 
 void	Player::XMLStamina()
@@ -6462,6 +6456,8 @@ void	Player::Xt(const std::string& msg)
 
 /******************* Work in progress *******************/
 
+// TODO: Fuse the XML and non-XML spynet reports
+
 bool	Player::Send(const std::string& text,Player *player,bool can_relay)
 {
 	if(com_unit != 0)
@@ -6478,6 +6474,19 @@ bool	Player::Send(const std::string& text,int command,Player *player,bool can_re
 	if(com_unit != 0)
 	{
 		com_unit->Send(text,command,player,can_relay);
+		return(true);
+	}
+	else
+		return(false);
+}
+
+
+
+bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
+{
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,player,can_relay);
 		return(true);
 	}
 	else

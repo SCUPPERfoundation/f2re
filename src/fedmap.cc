@@ -1733,6 +1733,7 @@ void	FedMap::PlanetPlayerContents(Player *player)
 			if(player->CommsAPILevel() > 0)
 				buffer << "<s-contents name='" << avatar->Name() << "'>";
 			buffer << avatar->MoodAndName() << " is here. ";
+// TODO: fix this before it goes live!
 //			avatar->InventorySummary(buffer);
 			if(avatar->IsMarried())
 				buffer << " " << avatar->Name() << " is wearing a wedding ring.";
@@ -1904,11 +1905,11 @@ int	FedMap::RoomSend(Player *player1,Player *from,int loc_num,const std::string&
 		{
 			total++;
 			if(((*iter)->CommsAPILevel() > 0) && (xml_text != ""))
-				(*iter)->Send(xml_text,OutputFilter::DEFAULT,from);
+				(*iter)->Send(xml_text,from);
 			else
 			{
 				if(text != "")
-					(*iter)->Send(text,OutputFilter::DEFAULT,from);
+					(*iter)->Send(text,from);
 			}
 		}
 	}
@@ -2297,13 +2298,23 @@ void	FedMap::XMLNewMap(Player *player)
 	player->Send(buffer);
 	new_map->SendXMLInfra(player);
 }
-
+/*
 void	FedMap::XMLSend(const std::string& text)
 {
 	for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
 	{
 		if((*iter)->CommsAPILevel() > 0)
 			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
+}
+*/
+
+void	FedMap::XMLSend(const std::string& text)
+{
+	for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
+	{
+		if((*iter)->CommsAPILevel() > 0)
+			(*iter)->Send(text);
 	}
 }
 
