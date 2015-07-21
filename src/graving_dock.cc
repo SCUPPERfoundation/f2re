@@ -103,6 +103,7 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 {
 	static const std::string	building_types[] = { "agri", "mining", "ind", "tech", "leisure", "resource", ""	};
 	static const std::string	build_error("Finish building a size before you start a new one!\n");
+	static const std::string	name_error("City names must start with a letter and contain only alpha-numeric characters!\n");
 	static const int	NOT_A_TYPE = 999;
 
 	if(name_city == "")
@@ -117,6 +118,20 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 			case BUILDING_CITY_5:			player->Send(build_error,OutputFilter::DEFAULT);																			return false;
 			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n",OutputFilter::DEFAULT);				return false;
 			case BUILDING_CITY_WAITING:	return(BuildNextCityLevel(player,cartel));
+		}
+	}
+
+	if(isalpha(name_city[0]) == 0)
+	{
+		player->Send(name_error,OutputFilter::DEFAULT);
+		return false;
+	}
+	for(unsigned int count = 0;count < name_city.length();++count)
+	{
+		if(isalnum(name_city[0]) == 0)
+		{
+			player->Send(name_error,OutputFilter::DEFAULT);
+			return false;
 		}
 	}
 
