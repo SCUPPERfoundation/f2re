@@ -5412,6 +5412,7 @@ location number or planet name.\n",OutputFilter::DEFAULT);
 
 void	Player::TeleportInSystem(const std::string& map_title)
 {
+	hi :)
 	std::ostringstream	buffer;
 	Star *star = loc.fed_map->HomeStarPtr();
 	FedMap *new_map = star->Find(map_title);
