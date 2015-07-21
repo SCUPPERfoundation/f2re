@@ -9,15 +9,12 @@
 
 #include "player_index.h"
 
-#include <fstream>
 #include <iomanip>
 #include <iostream>
-#include <sstream>
+#include <utility>
 
 #include <cstring>
-#include <ctime>
 
-#include <unistd.h>
 #include <db_cxx.h>
 #include <sys/dir.h>
 
@@ -28,11 +25,8 @@
 #include "inventory.h"
 #include "locker.h"
 #include "login.h"
-#include "misc.h"
 #include "newbie.h"
 #include "output_filter.h"
-#include "player.h"
-#include	"ship.h"
 #include "review.h"
 #include "tokens.h"
 #include "xml_dump_load.h"
@@ -54,7 +48,6 @@ PlayerIndex::PlayerIndex(char *file_name)
 	std::ostringstream	buffer;
 	buffer << "There are " << player_index.size() << " players in the database";
 	WriteLog(buffer);
-//	DumpAccounts();		/*********** FIX IT: for test only **********/
 	if(Game::load_billing_info != "")
 	{
 		buffer.str("");
@@ -702,13 +695,19 @@ void	PlayerIndex::SaveTeleporterPlayers()
 
 void	PlayerIndex::SendPlayerInfo(Player *player)
 {
-	std::ostringstream	buffer;
+	std::ostringstream buffer;
 	for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
 	{
+		AttribList	attribs;
+		std::pair<std::string,std::string> attrib0(std::make_pair("name",iter->second->Name()));
+		attribs.push_back(attrib0);
+
 		buffer.str("");
-		buffer << "<s-add-player name='" << iter->second->Name();
-		buffer << "' rank='" << iter->second->Rank() << "'/>\n";
-		player->Send(buffer);
+		buffer << iter->second->Rank();
+		std::pair<std::string,std::string> attrib1(std::make_pair("rank",buffer.str()));
+		attribs.push_back(attrib1);
+
+		player->Send("",OutputFilter::ADD_PLAYER,attribs);
 	}
 }
 
@@ -974,28 +973,20 @@ void	PlayerIndex::WriteGraphSummary()
 
 void	PlayerIndex::XmlPlayerLeft(Player *player)
 {
-	std::string	atom("<s-remove-player name='");
-	atom += player->Name();
-	atom += "'/>\n";
-
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	AttribList	attribs;
+	attribs.push_back(attrib);
 	for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
-	{
-		if(iter->second->CommsAPILevel() > 0)
-			iter->second->Send(atom);
-	}
+		iter->second->Send("",OutputFilter::REMOVE_PLAYER,attribs);
 }
 
 void	PlayerIndex::XmlPlayerStart(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-add-player name='" << player->Name();
-	buffer << "' rank='" << player->Rank() << "'/>\n";
-
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	AttribList	attribs;
+	attribs.push_back(attrib);
 	for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
-	{
-		if(iter->second->CommsAPILevel() > 0)
-			iter->second->Send(buffer);
-	}
+		iter->second->Send("",OutputFilter::ADD_PLAYER,attribs);
 }
 
 void	PlayerIndex::Zap(Player *player,Player *who_by)

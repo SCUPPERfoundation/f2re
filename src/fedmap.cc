@@ -1733,8 +1733,6 @@ void	FedMap::PlanetPlayerContents(Player *player)
 			if(player->CommsAPILevel() > 0)
 				buffer << "<s-contents name='" << avatar->Name() << "'>";
 			buffer << avatar->MoodAndName() << " is here. ";
-// TODO: fix this before it goes live!
-//			avatar->InventorySummary(buffer);
 			if(avatar->IsMarried())
 				buffer << " " << avatar->Name() << " is wearing a wedding ring.";
 			if(player->CommsAPILevel() > 0)

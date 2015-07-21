@@ -39,12 +39,31 @@ std::string&	OutputFilter::NoAttrib(std::string command)
 {
 	if(type == XML)
 	{
-		std::string	temp = "<s-" + command + ">" + text + "</s-" + command +">\n";
+		std::string	temp = "<" + command + ">" + text + "</" + command + ">\n";
 		text = temp;
 	}
 	return text;
 }
 
+std::string&	OutputFilter::Normal(std::string command)
+{
+	static std::ostringstream	temp;
+	temp.str("");
+
+	if(type == XML)
+	{
+		temp << "<" << command << " ";
+		for(AttribList::iterator iter = attribs.begin();iter != attribs.end();++iter)
+			temp << iter->first << "='" << iter->second << "' ";
+		if(text.length() == 0)
+			temp << "/>\n";
+		else
+			temp << ">" << text << "</" << command << ">\n";
+		text = temp.str();
+	}
+
+	return text;
+}
 std::string& OutputFilter::Process()
 {
 	switch(type)
@@ -52,16 +71,19 @@ std::string& OutputFilter::Process()
 		case JSON:	return text;   	// Not yet implimented
 		case XML:	EscapeXML(text);	break;
 		default:		return text;		// Leave it alone - ASCII
+
 	}
 
 	switch(cmd)
 	{
-		case DEFAULT:	return NoAttrib("default");
-		case EXAMINE:	return NoAttrib("examine");
-		case LOC:		return NoAttrib("loc");
-		case SPYNET:	return NoAttrib("spynet");
+		case DEFAULT:			return NoAttrib("s-default");
+		case EXAMINE:			return NoAttrib("s-examine");
+		case LOC:				return NoAttrib("s-loc");
+		case SPYNET:			return NoAttrib("s-spynet");
+		case ADD_PLAYER:		return Normal("s-add-player");
+		case REMOVE_PLAYER:	return Normal("s-remove-player");
 
-		default:			return text;
+		default:				return text;
 	}
 }
 

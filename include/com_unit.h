@@ -57,6 +57,7 @@ public:
 	void	Relay(Player *player);
 	void	Send(const std::string& text,Player *player = 0,bool can_relay = true);
 	void	Send(const std::string& text,int command,Player *player = 0,bool can_relay = true);
+	void	Send(const std::string& text,int command,AttribList &attributes,Player *player = 0,bool can_relay = true);
 	void	Send(std::ostringstream& text,Player *player = 0,bool can_relay = true);
 	void	SetRelayToChannel()		{ relay_to_channel = true; }
 	void	SpynetNotice();

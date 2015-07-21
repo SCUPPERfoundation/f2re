@@ -23,7 +23,7 @@ public:
 	static AttribList	NullAttribs;
 
 	enum	{ ASCII, XML, JSON }; 					// ie, telnet, fedterm, or browser
-	enum	{ DEFAULT, EXAMINE, LOC, SPYNET };	// which server command
+	enum	{ DEFAULT, EXAMINE, LOC, SPYNET, ADD_PLAYER, REMOVE_PLAYER };	// server command enums
 
 private:
 	int type;
@@ -33,6 +33,7 @@ private:
 
 	std::string&	EscapeXML(std::string& text);
 	std::string&	NoAttrib(std::string command);
+	std::string&	Normal(std::string command);
 
 public:
 	OutputFilter(int output, int command, std::string &txt, AttribList &attributes) :

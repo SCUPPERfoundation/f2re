@@ -348,7 +348,7 @@ name, the command will apply to all commodities on the exchange.\n");
 
 void	SetParser::SetStockpile(Player *player,Tokens *tokens,const std::string& line)
 {
-	static const std::string	error("The you haven't given me enough information to make changes to the stockpiles.\n");
+	static const std::string	error("You haven't given me enough information to make changes to the stockpiles.\n");
 	static const std::string	error2("The syntax is 'set stockpile max|min amount commodity_name planet_name.\n \
 Commodity_name and planet name are optional.\n");
 	static const std::string	unknown("That doesn't seem to be either a commodity, or the name of a planet!\n");
@@ -356,6 +356,7 @@ Commodity_name and planet name are optional.\n");
 	if(tokens->Size() < 4)
 	{
 		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error2,OutputFilter::DEFAULT);
 		return;
 	}
 	int level = std::atoi(tokens->Get(3).c_str());

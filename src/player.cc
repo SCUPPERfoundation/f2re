@@ -4646,6 +4646,17 @@ void	Player::SellWarehouse()
 		Send(Game::system->GetMessage("player","sellwarehouse",2),OutputFilter::DEFAULT);
 }
 
+bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
+{
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,player,can_relay);
+		return(true);
+	}
+	else
+		return(false);
+}
+
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
 {
 	FedMssg	*mssg = new FedMssg;
@@ -6480,16 +6491,16 @@ bool	Player::Send(const std::string& text,int command,Player *player,bool can_re
 		return(false);
 }
 
-
-
-bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
+bool	Player::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
 {
 	if(com_unit != 0)
 	{
-		com_unit->Send(text,player,can_relay);
+		com_unit->Send(text,command,attributes,player,can_relay);
 		return(true);
 	}
 	else
 		return(false);
 }
+
+
 
