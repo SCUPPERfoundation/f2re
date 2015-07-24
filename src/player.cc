@@ -2384,9 +2384,11 @@ void	Player::Drop(const std::string& ob_name)
 		std::ostringstream	buffer("");
 		buffer << "You drop " << object->c_str() << "." << std::endl;
 		Send(buffer);
+
 		buffer.str("");
 		buffer << name << " has dropped " << object->c_str() << std::endl;
 		loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
+
 		buffer.str("");
 		buffer << "<s-contents name='" << object->Name() << "'/>\n";
 		loc.fed_map->RoomSend(0,0,loc.loc_no,"",buffer.str());
@@ -5412,7 +5414,6 @@ location number or planet name.\n",OutputFilter::DEFAULT);
 
 void	Player::TeleportInSystem(const std::string& map_title)
 {
-	hi :)
 	std::ostringstream	buffer;
 	Star *star = loc.fed_map->HomeStarPtr();
 	FedMap *new_map = star->Find(map_title);
@@ -6494,13 +6495,16 @@ bool	Player::Send(const std::string& text,int command,Player *player,bool can_re
 
 bool	Player::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
 {
+	if(this == player)
+		return false;
+
 	if(com_unit != 0)
 	{
 		com_unit->Send(text,command,attributes,player,can_relay);
 		return(true);
 	}
 	else
-		return(false);
+		return false ;
 }
 
 

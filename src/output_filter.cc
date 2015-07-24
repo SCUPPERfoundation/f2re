@@ -82,6 +82,7 @@ std::string& OutputFilter::Process()
 		case SPYNET:			return NoAttrib("s-spynet");
 		case ADD_PLAYER:		return Normal("s-add-player");
 		case REMOVE_PLAYER:	return Normal("s-remove-player");
+		case ADD_CONTENTS:	return Normal("s-contents");
 
 		default:				return text;
 	}

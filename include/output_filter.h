@@ -23,7 +23,11 @@ public:
 	static AttribList	NullAttribs;
 
 	enum	{ ASCII, XML, JSON }; 					// ie, telnet, fedterm, or browser
-	enum	{ DEFAULT, EXAMINE, LOC, SPYNET, ADD_PLAYER, REMOVE_PLAYER };	// server command enums
+	enum		// server command enums
+	{
+		DEFAULT, EXAMINE, LOC, SPYNET, ADD_PLAYER, REMOVE_PLAYER,
+		ADD_CONTENTS
+	};
 
 private:
 	int type;

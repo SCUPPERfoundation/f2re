@@ -11,11 +11,8 @@
 
 #include <fstream>
 #include <iomanip>
-#include <iomanip>
 #include <iostream>
 
-#include <cstdio>
-#include <cstdlib>
 #include <cstring>
 
 #include <unistd.h>
@@ -24,7 +21,6 @@
 #include "business.h"
 #include "cartel.h"
 #include "company.h"
-#include "commodities.h"
 #include "commodity_exchange.h"
 #include "commod_exch_item.h"
 #include "commod_exch_parser.h"
@@ -49,7 +45,6 @@
 #include "para_parser.h"
 #include "para_store.h"
 #include "player.h"
-#include "player_index.h"
 #include "review.h"
 #include "script.h"
 #include "ship.h"
@@ -57,9 +52,6 @@
 #include "syndicate.h"
 #include "tokens.h"
 
-const int	FedMap::NAME_SIZE;
-const int	FedMap::WIDTH;
-const int	FedMap::HEIGHT;
 const int	FedMap::NO_PAD = -1;
 const int	FedMap::SOL_START_EXCH_STOCK = 250;
 const int 	FedMap::ONE_HOUR = 60 * 4;	// UpdateExchange() is called every 15 seconds
@@ -290,40 +282,54 @@ void	FedMap::Announce(Player *player,int which_way)
 		AnnounceDeparture(player);
 }
 
-void	FedMap::AnnounceArrival(Object *object,int loc)
-{
-	std::ostringstream	buffer, xml_buffer;
-	xml_buffer << "<s-contents name='" << object->Name() << "'>";
-	xml_buffer << object->c_str(FedObject::UPPER_CASE) << " has just arrived. ";
-	xml_buffer << "</s-contents>\n";
-	buffer << object->c_str(FedObject::UPPER_CASE) << " has just arrived.\n";
-	RoomSend(0,0,loc,buffer.str(),xml_buffer.str());
-}
-
-
 void	FedMap::AnnounceArrival(Player *player)
 {
-	std::ostringstream	buffer, xml_buffer;
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list,player);
+	if(pl_list.empty())
+		return;
+
+	AttribList	attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	attribs.push_back(attrib);
+
+	std::string text;
 	if(player->IsInSpace())
 	{
-		xml_buffer << "<s-contents name='" << player->Name() << "'>";
-		xml_buffer << player->Name() << "'s ship has just entered the sector.";
-		xml_buffer << "</s-contents>\n";
-		buffer << player->Name() << "'s ship has just entered the sector.\n";
+		text += player->Name();
+		text += "'s ship has just entered the sector.\n";
 	}
 	else
 	{
-		xml_buffer << "<s-contents name='" << player->Name() << "'>";
-		xml_buffer << player->MoodAndName() << " has just arrived. ";
+		text += player->MoodAndName();
+		text += " has just arrived. ";
 		if(player->IsMarried())
-			xml_buffer << " " << player->Name() << " is wearing a wedding ring.";
-		xml_buffer << "</s-contents>\n";
-		buffer << player->MoodAndName() << " has just arrived. ";
-		if(player->IsMarried())
-			buffer << " " << player->Name() << " is wearing a wedding ring.";
-		buffer << "\n";
+		{
+			text += player->Name();
+			text += " is wearing a wedding ring.";
+		}
 	}
-	RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
+
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs,player);
+}
+
+void	FedMap::AnnounceArrival(Object *object,int loc)
+{
+	PlayerList pl_list;
+	PlayersInLoc(loc,pl_list);
+	if(pl_list.empty())
+		return;
+
+	AttribList	attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",object->Name()));
+	attribs.push_back(attrib);
+
+	std::string text(object->c_str(FedObject::UPPER_CASE));
+	text += " has just arrived. ";
+
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 }
 
 void	FedMap::AnnounceDeparture(Object *object,int loc)
@@ -356,14 +362,22 @@ void	FedMap::AnnounceDeparture(Player *player)
 	RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
 }
 
+// TODO: Refactor this into the regular AnnounceArrival() for players
 void	FedMap::AnnounceFleeArrival(Player *player)
 {
-	std::ostringstream	buffer, xml_buffer;
-	xml_buffer << "<s-contents name='" << player->Name() << "'>";
-	xml_buffer << player->Name() << "'s ship has just limped into the sector.";
-	xml_buffer << "</s-contents>\n";
-	buffer << player->Name() << "'s ship has just limped into the sector.\n";
-	RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list,player);
+	if(pl_list.empty())
+		return;
+
+	AttribList	attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	attribs.push_back(attrib);
+
+	std::string text(player->Name());
+	text += "'s ship has just limped into the sector.";
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs,player);
 }
 
 void	FedMap::AnnounceFleeDeparture(Player *player)
@@ -382,6 +396,31 @@ void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 	static const std::string	shimmer(" a shimmer of teleportation effect. ");
 	static const std::string	wedding(" is wearing a wedding ring.");
 
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list,player);
+	if(pl_list.empty())
+		return;
+
+	AttribList	attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	attribs.push_back(attrib);
+
+	if(to != -1)
+	{
+		std::string text(player->MoodAndName());
+		text += " has arrived with";
+		text += shimmer;
+		if(player->IsMarried())
+		{
+			text += player->Name();
+			text += wedding;
+		}
+
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs,player);
+	}
+
+	// TODO: Needs fixing when we do 's-remove-contents'
 	std::ostringstream	buffer, xml_buffer;
 	if(from != -1)
 	{
@@ -390,22 +429,6 @@ void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 		xml_buffer << "</s-remove-contents>\n";
 		buffer << player->MoodAndName() << " has left in" << shimmer << "\n";
 		RoomSend(player,0,from,buffer.str(),xml_buffer.str());
-	}
-
-	if(to != -1)
-	{
-		buffer.str("");
-		xml_buffer.str("");
-		xml_buffer << "<s-contents name='" << player->Name() << "'>";
-		xml_buffer << player->MoodAndName() << " has arrived with" << shimmer;
-		if(player->IsMarried())
-			xml_buffer << " " << player->Name() << wedding;
-		xml_buffer << "</s-contents>\n";
-		buffer << player->MoodAndName() << " has arrived with" << shimmer;
-		if(player->IsMarried())
-			buffer << " " << player->Name() << wedding;
-		buffer << "\n";
-		RoomSend(player,0,to,buffer.str(),xml_buffer.str());
 	}
 }
 
@@ -882,18 +905,18 @@ void	FedMap::DisplayObjects(Player *player,int loc_no)
 			}
 		}
 		buffer << "." << std::endl;
-		player->Send(buffer);
+		std::string	text(buffer.str());
+		player->Send(text,OutputFilter::DEFAULT);	// We only want to send one copy of this...
 
+		AttribList attribs;
 		for(iter = inventory.begin();iter != inventory.end();iter++)
 		{
-			if(player->CommsAPILevel() > 0)
+			if((*iter)->IsInLoc(loc_no) && (*iter)->IsVisible(player) && !(*iter)->IsAbstract())
 			{
-				if((*iter)->IsInLoc(loc_no) && (*iter)->IsVisible(player) && !(*iter)->IsAbstract())
-				{
-					buffer.str("");
-					buffer << "<s-contents name='" << (*iter)->Name() << "'/>\n";
-					player->Send(buffer);
-				}
+				attribs.clear();
+				std::pair<std::string,std::string> attrib(std::make_pair("name",(*iter)->Name()));
+				attribs.push_back(attrib);
+				player->Send("",OutputFilter::ADD_CONTENTS,attribs);
 			}
 		}
 	}
@@ -928,13 +951,14 @@ void	FedMap::DisplayProduction(Player *player,const std::string& commod_grp)
 
 void	FedMap::DisplaySystemCabinet(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "Standing at the edge of the landing pad is a system display cabinet. ";
-	buffer << "If you look directly at it you can see it clearly, but when it is at the ";
-	buffer << "edge of your vision it seems to flicker in an odd fashion.\n";
-	player->Send(buffer);
-	if(player->CommsAPILevel() > 0)
-		player->Send("<s-contents name='cabinet'/>\n");
+	std::string text("Standing at the edge of the landing pad is a system display cabinet. \
+If you look directly at it you can see it clearly, but when it is at the \
+edge of your vision it seems to flicker in an odd fashion.\n");
+
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name","cabinet"));
+	attribs.push_back(attrib);
+	player->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 }
 
 void	FedMap::DumpObjects()
@@ -1722,25 +1746,35 @@ const std::string&	FedMap::Owner()
 
 void	FedMap::PlanetPlayerContents(Player *player)
 {
-	PlayerList::iterator	iter;
-	std::ostringstream	buffer;
-	Player	*avatar;
-	for(iter = player_list.begin();iter != player_list.end();iter++)
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list,player);
+	if(pl_list.empty())
+		return;
+
+	AttribList attribs;
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();iter++)
 	{
-		if((player != *iter) && ((*iter)->LocNo() == player->LocNo()))
+		attribs.clear();
+		std::pair<std::string,std::string> attrib(std::make_pair("name",(*iter)->Name()));
+		attribs.push_back(attrib);
+
+		std::string text((*iter)->MoodAndName());
+		text += " is here. ";
+		if((*iter)->IsMarried())
 		{
-			avatar = *iter;
-			if(player->CommsAPILevel() > 0)
-				buffer << "<s-contents name='" << avatar->Name() << "'>";
-			buffer << avatar->MoodAndName() << " is here. ";
-			if(avatar->IsMarried())
-				buffer << " " << avatar->Name() << " is wearing a wedding ring.";
-			if(player->CommsAPILevel() > 0)
-				buffer << "</s-contents>";
-			buffer << "\n";
-			player->Send(buffer);
-			buffer.str("");
+			text += (*iter)->Name();
+			text += " is wearing a wedding ring.";
 		}
+		player->Send(text,OutputFilter::ADD_CONTENTS,attribs);
+	}
+}
+
+void	FedMap::PlayersInLoc(int loc_no,PlayerList& pl_list,Player *leave_out)
+{
+	for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();++iter)
+	{
+		if(((*iter)->LocNo() == loc_no) && (*iter != leave_out))
+			pl_list.push_back(*iter);
 	}
 }
 
@@ -1891,27 +1925,6 @@ void	FedMap::Report()
 bool	FedMap::RequestResources(Player *player,const std::string& donor,const std::string& recipient,int quantity)
 {
 	return(infra->RequestResources(player,donor,recipient,quantity));
-}
-
-int	FedMap::RoomSend(Player *player1,Player *from,int loc_num,const std::string& text,const std::string& xml_text,Player *player2)
-{
-	PlayerList::iterator	iter;
-	int total = 0;
-	for(iter = player_list.begin();iter != player_list.end();iter++)
-	{
-		if(((*iter)->LocNo() == loc_num) && (*iter != player1) && (*iter != player2))
-		{
-			total++;
-			if(((*iter)->CommsAPILevel() > 0) && (xml_text != ""))
-				(*iter)->Send(xml_text,from);
-			else
-			{
-				if(text != "")
-					(*iter)->Send(text,from);
-			}
-		}
-	}
-	return(total);
 }
 
 int	FedMap::RoomXMLSend(Player *player1,Player *from,int loc_num,const std::string& text,Player *player2)
@@ -2100,20 +2113,21 @@ bool	FedMap::SlithyXform(Player *player)
 
 void	FedMap::SpacePlayerContents(Player *player,int total)
 {
-	std::ostringstream	buffer;
-	for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list,player);
+	if(pl_list.empty())
+		return;
+
+	AttribList attribs;
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();iter++)
 	{
-		if((player != *iter) && ((*iter)->LocNo() == player->LocNo()))
-		{
-			if(player->CommsAPILevel() > 0)
-				buffer << "<s-contents name='" << (*iter)->Name() << "'>";
-			buffer << (*iter)->Name() << "'s ship is in the sector";
-			if(player->CommsAPILevel() > 0)
-				buffer << "</s-contents>";
-			buffer << "\n";
-			player->Send(buffer);
-			buffer.str("");
-		}
+		attribs.clear();
+		std::pair<std::string,std::string> attrib(std::make_pair("name",(*iter)->Name()));
+		attribs.push_back(attrib);
+
+		std::string text((*iter)->Name());
+		text += " 's ship is in the sector.";
+		player->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 	}
 }
 
@@ -2330,6 +2344,28 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 }
 
 
+/******************* Work in progress *******************/
+
+int	FedMap::RoomSend(Player *player1,Player *from,int loc_num,const std::string& text,const std::string& xml_text,Player *player2)
+{
+	PlayerList::iterator	iter;
+	int total = 0;
+	for(iter = player_list.begin();iter != player_list.end();iter++)
+	{
+		if(((*iter)->LocNo() == loc_num) && (*iter != player1) && (*iter != player2))
+		{
+			total++;
+			if(((*iter)->CommsAPILevel() > 0) && (xml_text != ""))
+				(*iter)->Send(xml_text,from);
+			else
+			{
+				if(text != "")
+					(*iter)->Send(text,from);
+			}
+		}
+	}
+	return(total);
+}
 
 
 

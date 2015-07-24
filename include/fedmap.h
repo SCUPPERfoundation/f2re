@@ -292,6 +292,7 @@ public:
 	void	Open(Player *player,Tokens *tokens);
 	void	OrbitLoc(const std::string& orbit)			{ orbit_loc = orbit;				}
 	void	Output(Player *player);
+	void	PlayersInLoc(int loc_no,PlayerList& pl_list,Player *leave_out = 0);
 	void	PODisplay(Player *player);
 	void	PremiumPriceCheck(Player *player,const Commodity *commodity);
 	void	PremiumPriceCheck(const Commodity *commodity,std::ostringstream& buffer,int which);

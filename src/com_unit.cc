@@ -379,7 +379,6 @@ void	ComUnit::Process(const std::string& text,int command,AttribList &attributes
 	}
 
 	std::string	line(text);
-WriteLog(line);
 	if((termwidth != NO_TERMWIDTH) && (line.length() > 0))
 		ProcessWidth(line);
 
@@ -389,7 +388,6 @@ WriteLog(line);
 		filter.Process();
 	}
 	write(owner->Socket(),line.c_str(),line.length());
-WriteLog(line);
 }
 
 
