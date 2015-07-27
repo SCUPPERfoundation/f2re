@@ -308,6 +308,7 @@ void	FedMap::AnnounceArrival(Player *player)
 			text += player->Name();
 			text += " is wearing a wedding ring.";
 		}
+		text += "\n";
 	}
 
 	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
@@ -326,7 +327,7 @@ void	FedMap::AnnounceArrival(Object *object,int loc)
 	attribs.push_back(attrib);
 
 	std::string text(object->c_str(FedObject::UPPER_CASE));
-	text += " has just arrived. ";
+	text += " has just arrived.\n";
 
 	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
 		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
@@ -375,7 +376,7 @@ void	FedMap::AnnounceFleeArrival(Player *player)
 	attribs.push_back(attrib);
 
 	std::string text(player->Name());
-	text += "'s ship has just limped into the sector.";
+	text += "'s ship has just limped into the sector.\n";
 	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
 		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs,player);
 }
@@ -415,6 +416,7 @@ void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 			text += player->Name();
 			text += wedding;
 		}
+		text += "\n";
 
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
 			(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs,player);
@@ -1765,6 +1767,7 @@ void	FedMap::PlanetPlayerContents(Player *player)
 			text += (*iter)->Name();
 			text += " is wearing a wedding ring.";
 		}
+		text += "\n";
 		player->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 	}
 }
@@ -2126,7 +2129,7 @@ void	FedMap::SpacePlayerContents(Player *player,int total)
 		attribs.push_back(attrib);
 
 		std::string text((*iter)->Name());
-		text += " 's ship is in the sector.";
+		text += " 's ship is in the sector.\n";
 		player->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 	}
 }
