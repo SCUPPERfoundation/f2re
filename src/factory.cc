@@ -743,14 +743,10 @@ void	Factory::Write(std::ofstream& file)
 
 void	Factory::XMLFactoryInfo(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-add-factory output='" << output << "'/>\n";
-	player->Send(buffer);
-}
-
-void	Factory::XMLFactoryInfo(std::ostringstream& buffer)
-{
-	buffer << "<s-add-factory output='" << output << "'/>\n";
+	AttribList	attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("output",output));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::ADD_FACTORY,attribs);
 }
 
 void	Factory::XMLFactoryRemove(std::ostringstream& buffer)

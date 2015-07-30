@@ -333,34 +333,47 @@ void	FedMap::AnnounceArrival(Object *object,int loc)
 		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 }
 
-void	FedMap::AnnounceDeparture(Object *object,int loc)
-{
-	std::ostringstream	buffer, xml_buffer;
-	xml_buffer << "<s-remove-contents name='" << object->Name() << "'>";
-	xml_buffer << object->c_str(FedObject::UPPER_CASE) << " has left.";
-	xml_buffer << "</s-remove-contents>\n";
-	buffer << object->c_str(FedObject::UPPER_CASE) << " has left.\n";
-	RoomSend(0,0,loc,buffer.str(),xml_buffer.str());
-}
-
 void	FedMap::AnnounceDeparture(Player *player)
 {
-	std::ostringstream	buffer, xml_buffer;
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list,player);
+	if(pl_list.empty())
+		return;
+
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	attribs.push_back(attrib);
+
+	std::string text;
 	if(player->IsInSpace())
 	{
-		xml_buffer << "<s-remove-contents name='" << player->Name() << "'>";
-		xml_buffer << player->Name() << "'s ship has left the sector.";
-		xml_buffer << "</s-remove-contents>\n";
-		buffer << player->Name() << "'s ship has left the sector.\n";
+		text += player->Name();
+		text += "'s ship has left the sector.\n";
 	}
 	else
 	{
-		xml_buffer << "<s-remove-contents name='" << player->Name() << "'>";
-		xml_buffer << player->MoodAndName() << " has left.";
-		xml_buffer << "</s-remove-contents>\n";
-		buffer << player->MoodAndName() << " has left.\n";
+		text += player->MoodAndName();
+		text += " has left.\n";
 	}
-	RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
+}
+
+void	FedMap::AnnounceDeparture(Object *object,int loc)
+{
+	PlayerList pl_list;
+	PlayersInLoc(loc,pl_list);
+	if(pl_list.empty())
+		return;
+
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",object->Name()));
+	attribs.push_back(attrib);
+
+	std::string	text(object->c_str(FedObject::UPPER_CASE));
+	text += " has left.\n";
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
 }
 
 // TODO: Refactor this into the regular AnnounceArrival() for players
@@ -383,22 +396,28 @@ void	FedMap::AnnounceFleeArrival(Player *player)
 
 void	FedMap::AnnounceFleeDeparture(Player *player)
 {
-	std::ostringstream	buffer, xml_buffer;
+	PlayerList pl_list;
+	PlayersInLoc(player->LocNo(),pl_list);
+	if(pl_list.empty())
+		return;
 
-	xml_buffer << "<s-remove-contents name='" << player->Name() << "'>";
-	xml_buffer << player->Name() << "'s ship has fled the sector!";
-	xml_buffer << "</s-remove-contents>\n";
-	buffer << player->Name() << "'s ship has fled the sector!\n";
-	RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
+	attribs.push_back(attrib);
+
+	std::string text(player->Name());
+	text += "'s ship has fled the sector!\n";
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
 }
 
 void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 {
 	static const std::string	shimmer(" a shimmer of teleportation effect. ");
-	static const std::string	wedding(" is wearing a wedding ring.");
+	static const std::string	wedding(" and is wearing a wedding ring.");
 
 	PlayerList pl_list;
-	PlayersInLoc(player->LocNo(),pl_list,player);
+	PlayersInLoc(to,pl_list,player);
 	if(pl_list.empty())
 		return;
 
@@ -406,9 +425,9 @@ void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
 	attribs.push_back(attrib);
 
+	std::string text(player->MoodAndName());
 	if(to != -1)
 	{
-		std::string text(player->MoodAndName());
 		text += " has arrived with";
 		text += shimmer;
 		if(player->IsMarried())
@@ -419,18 +438,22 @@ void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 		text += "\n";
 
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs,player);
+			(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 	}
 
-	// TODO: Needs fixing when we do 's-remove-contents'
-	std::ostringstream	buffer, xml_buffer;
 	if(from != -1)
 	{
-		xml_buffer << "<s-remove-contents name='" << player->Name() << "'>";
-		xml_buffer << player->MoodAndName() << " has left in" << shimmer;
-		xml_buffer << "</s-remove-contents>\n";
-		buffer << player->MoodAndName() << " has left in" << shimmer << "\n";
-		RoomSend(player,0,from,buffer.str(),xml_buffer.str());
+		pl_list.clear();
+		PlayersInLoc(from,pl_list);
+		if(pl_list.empty())
+			return;
+
+		text = player->MoodAndName();
+		text += " has left in";
+		text += shimmer;
+		text += "\n";
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
 	}
 }
 
@@ -1754,7 +1777,7 @@ void	FedMap::PlanetPlayerContents(Player *player)
 		return;
 
 	AttribList attribs;
-	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();iter++)
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
 	{
 		attribs.clear();
 		std::pair<std::string,std::string> attrib(std::make_pair("name",(*iter)->Name()));
@@ -2369,6 +2392,4 @@ int	FedMap::RoomSend(Player *player1,Player *from,int loc_num,const std::string&
 	}
 	return(total);
 }
-
-
 

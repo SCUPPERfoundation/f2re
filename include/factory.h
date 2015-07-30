@@ -119,7 +119,6 @@ public:
 	void	UpdateWorkers(Population *population)	{ return;	} /*************** fix! **************/
 	void	Write(std::ofstream& file);
 	void	XMLFactoryInfo(Player *player);
-	void	XMLFactoryInfo(std::ostringstream& buffer);
 	void	XMLFactoryRemove(std::ostringstream& buffer);
 };
 

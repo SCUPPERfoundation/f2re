@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "fed_object.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -39,29 +40,32 @@ int	Get::Process(Player *player)
 	if(obj != 0)
 	{
 		if(!player->AddObject(obj,false))
-			return(CONTINUE);
+			return CONTINUE ;
 
 		if(!silent)
 		{
-			std::ostringstream	buffer, xml_buffer;
-			buffer << player->Name() << " has picked up " << obj->c_str() << ".\n";
-			xml_buffer << "<s-remove-contents name='" << obj->Name() << "'>";
-			xml_buffer << EscapeXML(buffer.str()) << "</s-remove-contents>\n";
-			player->CurrentMap()->RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
+			AttribList attribs;
+			std::pair<std::string,std::string> attrib(std::make_pair("name",obj->Name()));
+			attribs.push_back(attrib);
 
-			buffer.str("");
-			xml_buffer.str("");
-			buffer << "You have picked up " << obj->c_str() << ".\n";
-			if(!(player->CommsAPILevel() > 0))
-				player->Send(buffer);
-			else
-			{
-				xml_buffer << "<s-remove-contents name='" << obj->Name() << "'>";
-				xml_buffer << EscapeXML(buffer.str()) << "</s-remove-contents>\n";
-				player->Send(xml_buffer);
-			}
+			std::string	text("You have picked up ");
+			text += obj->c_str();
+			text += ".\n";
+			player->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
+
+			PlayerList pl_list;
+			player->CurrentMap()->PlayersInLoc(player->LocNo(),pl_list,player);
+			if(pl_list.empty())
+				return CONTINUE;
+
+			text = player->Name();
+			text += " has picked up ";
+			text += obj->c_str();
+			text += ".\n";
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
 		}
 	}
-	return(CONTINUE);
+	return CONTINUE ;
 }
 

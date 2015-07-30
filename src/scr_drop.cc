@@ -15,6 +15,7 @@
 #include "fed_object.h"
 #include "inventory.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -44,25 +45,27 @@ int	Drop::Process(Player *player)
 		player->CurrentMap()->AddObject(obj);
 		if(!silent)
 		{
-			std::ostringstream	buffer, xml_buffer;
-			buffer << player->Name() << " has dropped " << obj->c_str() << ".\n";
-			xml_buffer << "<s-contents name='" << obj->Name() << "'>";
-			xml_buffer << EscapeXML(buffer.str()) << "</s-contents>\n";
-			player->CurrentMap()->RoomSend(player,0,player->LocNo(),buffer.str(),xml_buffer.str());
+			AttribList attribs;
+			std::pair<std::string,std::string> attrib(std::make_pair("name",obj->Name()));
+			attribs.push_back(attrib);
 
-			buffer.str("");
-			xml_buffer.str("");
-			buffer << "You have dropped " << obj->c_str() << ".\n";
-			if(!(player->CommsAPILevel() > 0))
-				player->Send(buffer);
-			else
+			std::ostringstream	buffer;
+			buffer << "You drop " << obj->c_str() << "." << std::endl;
+			std::string	text(buffer.str());
+			player->Send(text,OutputFilter::ADD_CONTENTS,attribs);
+
+			PlayerList pl_list;
+			loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,player);
+
+			if(!pl_list.empty())
 			{
-				xml_buffer << "<s-contents name='" << obj->Name() << "'>";
-				xml_buffer << EscapeXML(buffer.str()) << "</s-contents>\n";
-				player->Send(xml_buffer);
+				buffer.str("");
+				buffer << player->Name() << " has dropped " << obj->c_str() << std::endl;
+				text = buffer.str();
+				for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+					(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 			}
 		}
 	}
 	return(CONTINUE);
 }
-

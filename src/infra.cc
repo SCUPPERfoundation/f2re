@@ -225,9 +225,16 @@ void	Infrastructure::AddFactory(Factory *factory,bool to_notify)
 	factories.push_back(factory);
 	if(to_notify)
 	{
-		std::ostringstream	buffer;
-		factory->XMLFactoryInfo(buffer);
-		home->XMLSend(buffer.str());
+		const PlayerList& pl_list = home->PlayersOnMap();
+		if(pl_list.empty())
+			return;
+
+		AttribList	attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("output",factory->Output()));
+		attribs.push_back(attrib);
+
+		for(PlayerList::const_iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send("",OutputFilter::ADD_FACTORY,attribs);
 	}
 	AddLabour(-factory->LabourHired());
 }
@@ -456,17 +463,44 @@ bool	Infrastructure::DeleteFactory(Factory *factory)
 		{
 			factories.erase(iter);
 			AddLabour(factory->LabourHired());
-			std::ostringstream	buffer;
-			factory->XMLFactoryRemove(buffer);
-			home->XMLSend(buffer.str());
-			home->XMLSend("<s-update-infra/>\n");
+
+			const PlayerList& pl_list = home->PlayersOnMap();
+			if(!pl_list.empty())
+			{
+				AttribList	attribs;
+				std::pair<std::string,std::string> attrib(std::make_pair("output",factory->Output()));
+				attribs.push_back(attrib);
+
+				for(PlayerList::const_iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+					(*iter)->Send("",OutputFilter::REMOVE_FACTORY,attribs);
+			}
+
 			delete factory;
 			return(true);
 		}
 	}
 	return(false);
 }
+/*
+void	Infrastructure::AddFactory(Factory *factory,bool to_notify)
+{
+	factories.push_back(factory);
+	if(to_notify)
+	{
+		const PlayerList& pl_list = home->PlayersOnMap();
+		if(pl_list.empty())
+			return;
 
+		AttribList	attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("output",factory->Output()));
+		attribs.push_back(attrib);
+
+		for(PlayerList::const_iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send("",OutputFilter::ADD_FACTORY,attribs);
+	}
+	AddLabour(-factory->LabourHired());
+}
+*/
 void	Infrastructure::Demolish(Player *player,const std::string&  building)
 {
 	static const std::string	no_demolish("I can't find one of those on this planet!\n");

@@ -140,9 +140,9 @@ public:
 
 	ParaCat		*FindHelpCat();
 	Player		*FindPlayer(const std::string& pl_name);
-	Player		*RiotDamage(int damaged)							{ return(0);	/*********************** Fix this! ***********************/	}
-
-	Star	*HomeStarPtr()													{ return(home_star);				}
+//	Player		*RiotDamage(int damaged)		{ return 0;					} // TODO: Fix this!
+	const PlayerList&	PlayersOnMap()				{ return player_list;	}
+	Star	*HomeStarPtr()								{ return home_star;		}
 
 	Warehouse	*FindWarehouse(const std::string& pl_name);
 	Warehouse	*NewWarehouse(Player *player);

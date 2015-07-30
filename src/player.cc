@@ -2375,24 +2375,34 @@ void	Player::Drop(const std::string& ob_name)
 
 	FedObject	*object = inventory->RemoveObject(ob_name);
 	if(object == 0)
-		Send(Game::system->GetMessage("player","drop",1),OutputFilter::DEFAULT);
-	else
 	{
-		object->Location(loc);
-		object->ClearInvFlags();
-		loc.fed_map->AddObject(object);
-		std::ostringstream	buffer("");
-		buffer << "You drop " << object->c_str() << "." << std::endl;
-		Send(buffer);
-
-		buffer.str("");
-		buffer << name << " has dropped " << object->c_str() << std::endl;
-		loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
-
-		buffer.str("");
-		buffer << "<s-contents name='" << object->Name() << "'/>\n";
-		loc.fed_map->RoomSend(0,0,loc.loc_no,"",buffer.str());
+		Send(Game::system->GetMessage("player","drop",1),OutputFilter::DEFAULT);
+		return;
 	}
+
+	object->Location(loc);
+	object->ClearInvFlags();
+	loc.fed_map->AddObject(object);
+
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",object->Name()));
+	attribs.push_back(attrib);
+
+	std::ostringstream	buffer;
+	buffer << "You drop " << object->c_str() << "." << std::endl;
+	std::string	text(buffer.str());
+	Send(text,OutputFilter::ADD_CONTENTS,attribs);
+
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(pl_list.empty())
+		return;
+
+	buffer.str("");
+	buffer << name << " has dropped " << object->c_str() << std::endl;
+	text = buffer.str();
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 }
 
 void	Player::DropOff()
@@ -2766,12 +2776,22 @@ void	Player::Get(FedObject	*object)
 			std::ostringstream	buffer("");
 			buffer << "You pick up " << object->c_str() << "." << std::endl;
 			Send(buffer);
-			buffer.str("");
-			buffer << name << " has picked up " << object->c_str() << std::endl;
-			loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
-			buffer.str("");
-			buffer << "<s-remove-contents name='" << object->Name() << "'/>\n";
-			loc.fed_map->RoomSend(0,0,loc.loc_no,"",buffer.str());
+
+			PlayerList pl_list;
+			loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+			if(pl_list.empty())
+				return;
+
+			AttribList attribs;
+			std::pair<std::string,std::string> attrib(std::make_pair("name",object->Name()));
+			attribs.push_back(attrib);
+
+			std::string	text(name);
+			text += " has picked up ";
+			text += object->c_str();
+			text += "\n";
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
 		}
 	}
 }
@@ -5583,23 +5603,36 @@ void	Player::Tell(const std::string& to_name,const std::string& text)
 	norm_name[0] = std::toupper(norm_name[0]);
 	Player	*recipient = Game::player_index->FindCurrent(norm_name);
 
-	std::ostringstream	buffer;
+	std::string	txt;
 	if(recipient == 0)
 	{
-		buffer <<  "I'm sorry, but " << norm_name << " doesn't seem to be in the game at the moment.\n";
-		Send(buffer);
+		txt += norm_name;
+		txt += " doesn't seem to be around at the moment.\n";
+		Send(txt,OutputFilter::DEFAULT);
 	}
 	else
 	{
 		Send(brief,OutputFilter::DEFAULT);
+
+		AttribList	attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("name",name));
+		attribs.push_back(attrib);
+
+		// NOTE: Do this in two parts, otherwise FedTerm screws it up
+		std::ostringstream	buffer;
+		std::string	tb;
 		if(recipient->CommsAPILevel() > 0)
-			buffer <<  "<s-tb name='" << name << "'>" << EscapeXML(text) << "</s-tb>\n";
+		{
+			buffer << text << "\n";
+			tb = buffer.str();
+			recipient->Send(tb,OutputFilter::TIGHT_BEAM,attribs);
+		}
 		else
 		{
-			buffer << "Your comm unit signals a tight beam message from ";
-			buffer << name << ", \"" << text << "\"" << std::endl;
+			buffer << "Your comm unit signals a tight beam message from " << name << ", \"" << text << "\"\n";
+			tb = buffer.str();
+			recipient->Send(tb,OutputFilter::DEFAULT,attribs);
 		}
-		recipient->Send(buffer,this);
 	}
 }
 
@@ -6506,6 +6539,4 @@ bool	Player::Send(const std::string& text,int command,AttribList &attributes,Pla
 	else
 		return false ;
 }
-
-
 

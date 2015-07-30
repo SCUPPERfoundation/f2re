@@ -76,13 +76,17 @@ std::string& OutputFilter::Process()
 
 	switch(cmd)
 	{
-		case DEFAULT:			return NoAttrib("s-default");
-		case EXAMINE:			return NoAttrib("s-examine");
-		case LOC:				return NoAttrib("s-loc");
-		case SPYNET:			return NoAttrib("s-spynet");
-		case ADD_PLAYER:		return Normal("s-add-player");
-		case REMOVE_PLAYER:	return Normal("s-remove-player");
-		case ADD_CONTENTS:	return Normal("s-contents");
+		case DEFAULT:				return NoAttrib("s-default");
+		case EXAMINE:				return NoAttrib("s-examine");
+		case LOC:					return NoAttrib("s-loc");
+		case SPYNET:				return NoAttrib("s-spynet");
+		case ADD_PLAYER:			return Normal("s-add-player");
+		case REMOVE_PLAYER:		return Normal("s-remove-player");
+		case ADD_CONTENTS:		return Normal("s-contents");
+		case REMOVE_CONTENTS:	return Normal("s-remove-contents");
+		case TIGHT_BEAM:			return Normal("s-tb");
+		case ADD_FACTORY:			return Normal("s-add-factory");
+		case REMOVE_FACTORY:		return Normal("s-remove-factory");
 
 		default:				return text;
 	}
