@@ -749,8 +749,3 @@ void	Factory::XMLFactoryInfo(Player *player)
 	player->Send("",OutputFilter::ADD_FACTORY,attribs);
 }
 
-void	Factory::XMLFactoryRemove(std::ostringstream& buffer)
-{
-	buffer << "<s-remove-factory output='" << output << "'/>\n";
-}
-

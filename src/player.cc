@@ -3759,11 +3759,13 @@ bool	Player::Move(int direction,bool is_following)
 		loc.fed_map->ProcessEvent(this,loc.loc_no,Location::INROOM);
 
 		Starve();
-		if((CommsAPILevel() > 0) && loc.fed_map->IsAnExchange(loc.loc_no))
+
+		if(loc.fed_map->IsAnExchange(loc.loc_no))
 		{
-			buffer.str("");
-			buffer << "<s-exchange name='" << loc.fed_map->Title() << "'/>\n";
-			Send(buffer);
+			AttribList attribs;
+			std::pair<std::string,std::string> attrib(std::make_pair("name",loc.fed_map->Title()));
+			attribs.push_back(attrib);
+			Send("",OutputFilter::EXCHANGE,attribs);
 		}
 	}
 	else
@@ -4009,16 +4011,6 @@ void	Player::Ranks(const std::string& which)
 		Send(Game::system->GetMessage("player","ranks",promo + 1),OutputFilter::DEFAULT);
 	else
 		Send("The top rank is plutocrat - you can't get any higher than that!\n",OutputFilter::DEFAULT);
-
-/*
-	if(promo <= 9999)
-	{
-		if(promo < PLUTOCRAT)
-			Send(Game::system->GetMessage("player","ranks",promo + 1));
-		else
-			Send("The promotion requirement from Magnate to Plutocrat has not yet been decided.");
-	}
-*/
 }
 
 void	Player::Read(std::string& text)
@@ -4700,9 +4692,10 @@ void	Player::SendSound(const std::string& sound)
 {
 	if((com_unit != 0) && (CommsAPILevel() > 0))
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-sound name='" << sound << "'/>\n";
-		com_unit->Send(buffer);
+		AttribList attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("name",sound));
+		attribs.push_back(attrib);
+		Send("",OutputFilter::PLAY_SOUND,attribs);
 	}
 }
 

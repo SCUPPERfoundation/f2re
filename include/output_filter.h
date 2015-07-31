@@ -25,9 +25,9 @@ public:
 	enum	{ ASCII, XML, JSON }; 					// ie, telnet, fedterm, or browser
 	enum		// server command enums
 	{
-		DEFAULT, EXAMINE, LOC, SPYNET, ADD_PLAYER, REMOVE_PLAYER,
-		ADD_CONTENTS, REMOVE_CONTENTS, TIGHT_BEAM, ADD_FACTORY,
-		REMOVE_FACTORY
+		DEFAULT, EXAMINE, LOC, SPYNET, ADD_PLAYER, REMOVE_PLAYER, ADD_CONTENTS,
+		REMOVE_CONTENTS, TIGHT_BEAM, ADD_FACTORY, REMOVE_FACTORY, EXCHANGE,
+		PLAY_SOUND, UPDATE_WORKERS, BUILD_PLANET_INFO
 	};
 
 private:
@@ -37,8 +37,8 @@ private:
 	AttribList	&attribs;
 
 	std::string&	EscapeXML(std::string& text);
-	std::string&	NoAttrib(std::string command);
-	std::string&	Normal(std::string command);
+	std::string&	XmlNoAttrib(std::string command);
+	std::string&	XmlNormal(std::string command);
 
 public:
 	OutputFilter(int output, int command, std::string &txt, AttribList &attributes) :

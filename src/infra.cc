@@ -243,9 +243,15 @@ void	Infrastructure::AddLabour(int num_workers)
 {
 	workers += num_workers;
 	std::ostringstream	buffer;
-	buffer << "<s-update-workers workers='" << workers << "'/>\n";
-	home->XMLSend(buffer.str());
-	home->XMLSend("<s-update-infra/>\n");
+	buffer << workers;
+
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("workers",buffer.str()));
+	attribs.push_back(attrib);
+
+	const PlayerList&	pl_list = home->PlayersOnMap();
+	for(PlayerList::const_iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send("",OutputFilter::UPDATE_WORKERS,attribs);
 }
 
 void	Infrastructure::AddWarehouse(Warehouse *warehouse,const std::string& name)
@@ -481,26 +487,7 @@ bool	Infrastructure::DeleteFactory(Factory *factory)
 	}
 	return(false);
 }
-/*
-void	Infrastructure::AddFactory(Factory *factory,bool to_notify)
-{
-	factories.push_back(factory);
-	if(to_notify)
-	{
-		const PlayerList& pl_list = home->PlayersOnMap();
-		if(pl_list.empty())
-			return;
 
-		AttribList	attribs;
-		std::pair<std::string,std::string> attrib(std::make_pair("output",factory->Output()));
-		attribs.push_back(attrib);
-
-		for(PlayerList::const_iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send("",OutputFilter::ADD_FACTORY,attribs);
-	}
-	AddLabour(-factory->LabourHired());
-}
-*/
 void	Infrastructure::Demolish(Player *player,const std::string&  building)
 {
 	static const std::string	no_demolish("I can't find one of those on this planet!\n");

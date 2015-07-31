@@ -35,7 +35,7 @@ std::string&	OutputFilter::EscapeXML(std::string& text)
 	return(text);
 }
 
-std::string&	OutputFilter::NoAttrib(std::string command)
+std::string&	OutputFilter::XmlNoAttrib(std::string command)
 {
 	if(type == XML)
 	{
@@ -45,7 +45,7 @@ std::string&	OutputFilter::NoAttrib(std::string command)
 	return text;
 }
 
-std::string&	OutputFilter::Normal(std::string command)
+std::string&	OutputFilter::XmlNormal(std::string command)
 {
 	static std::ostringstream	temp;
 	temp.str("");
@@ -76,17 +76,21 @@ std::string& OutputFilter::Process()
 
 	switch(cmd)
 	{
-		case DEFAULT:				return NoAttrib("s-default");
-		case EXAMINE:				return NoAttrib("s-examine");
-		case LOC:					return NoAttrib("s-loc");
-		case SPYNET:				return NoAttrib("s-spynet");
-		case ADD_PLAYER:			return Normal("s-add-player");
-		case REMOVE_PLAYER:		return Normal("s-remove-player");
-		case ADD_CONTENTS:		return Normal("s-contents");
-		case REMOVE_CONTENTS:	return Normal("s-remove-contents");
-		case TIGHT_BEAM:			return Normal("s-tb");
-		case ADD_FACTORY:			return Normal("s-add-factory");
-		case REMOVE_FACTORY:		return Normal("s-remove-factory");
+		case DEFAULT:				return XmlNoAttrib("s-default");
+		case EXAMINE:				return XmlNoAttrib("s-examine");
+		case LOC:					return XmlNoAttrib("s-loc");
+		case SPYNET:				return XmlNoAttrib("s-spynet");
+		case ADD_PLAYER:			return XmlNormal("s-add-player");
+		case REMOVE_PLAYER:		return XmlNormal("s-remove-player");
+		case ADD_CONTENTS:		return XmlNormal("s-contents");
+		case REMOVE_CONTENTS:	return XmlNormal("s-remove-contents");
+		case TIGHT_BEAM:			return XmlNormal("s-tb");
+		case ADD_FACTORY:			return XmlNormal("s-add-factory");
+		case REMOVE_FACTORY:		return XmlNormal("s-remove-factory");
+		case EXCHANGE:				return XmlNormal("s-exchange");
+		case PLAY_SOUND:			return XmlNormal("s-sound");
+		case UPDATE_WORKERS:		return XmlNormal("s-update-workers");
+		case BUILD_PLANET_INFO:	return XmlNormal("s-build-planet-info");
 
 		default:				return text;
 	}

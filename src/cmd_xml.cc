@@ -18,7 +18,8 @@
 #include "galaxy.h"
 #include "misc.h"
 #include "player.h"
-#include "player_index.h"
+#include "output_filter.h"
+// #include "player_index.h"
 #include "star.h"
 
 const int	CmdXML::UNKNOWN = 9999;
@@ -62,9 +63,10 @@ void	CmdXML::FedTerm(const char **attrib)
 	FedMap::XMLNewMap(owner	);
 	if(owner->CurrentMap()->IsAnExchange(owner->LocNo()))
 	{
-		std::ostringstream buffer;
-		buffer << "<s-exchange name='" << owner->CurrentMap()->Title() << "'/>\n";
-		owner->Send(buffer);
+		AttribList attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("name",owner->GetLocRec().fed_map->Title()));
+		attribs.push_back(attrib);
+		owner->Send("",OutputFilter::EXCHANGE,attribs);
 	}
 }
 
