@@ -111,8 +111,8 @@ void	MetaStudio::Write(std::ofstream& file)
 
 void	MetaStudio::XMLDisplay(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Media MetaStudio: Built'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info","Media MetaStudio: Built"));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
-

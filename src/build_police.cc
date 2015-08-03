@@ -89,8 +89,11 @@ void	Police::Write(std::ofstream& file)
 void	Police::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Police Stations: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Police Stations: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

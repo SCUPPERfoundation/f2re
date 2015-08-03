@@ -123,8 +123,11 @@ void	Railway::Write(std::ofstream& file)
 void	Railway::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Railway Lines: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Railway Lines: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

@@ -119,9 +119,10 @@ void	MiningSchool::Write(std::ofstream& file)
 
 void	MiningSchool::XMLDisplay(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Mining School: Built'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info","Mining School: Built"));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

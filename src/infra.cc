@@ -1288,8 +1288,11 @@ void	Infrastructure::SendXMLBuildInfo(Player *player)
 	if(total > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-build-planet-info info='Total Infrastructure Builds: " << total << "'/>\n";
-		player->Send(buffer);
+		buffer << "Total Infrastructure Builds: " << total;
+		AttribList attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+		attribs.push_back(attrib);
+		player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 	}
 }
 

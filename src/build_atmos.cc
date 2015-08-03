@@ -155,10 +155,25 @@ bool	AtmosControl::Riot()
 void	AtmosControl::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Atmospheric Control: " << total_builds << "'/>\n";
-	buffer << "<s-build-planet-info info='  General: " << level_builds << "'/>\n";
-	buffer << "<s-build-planet-info info='  Unallocated: " << unused_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Atmospheric Control: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+
+	buffer.str("");
+	attribs.clear();
+	buffer << "  General: " << level_builds;
+	std::pair<std::string,std::string> attrib_gen(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib_gen);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+
+	buffer.str("");
+	attribs.clear();
+	buffer << "  Unallocated: " << unused_builds;
+	std::pair<std::string,std::string> attrib_unused(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib_unused);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

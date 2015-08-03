@@ -13,6 +13,7 @@
 
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -41,7 +42,10 @@ bool	Enhancement::Riot()
 void	Enhancement::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Build display not coded!'/>\n";
-	player->Send(buffer);
+	buffer << "Build Display not coded!: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
