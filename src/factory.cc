@@ -435,12 +435,14 @@ void	Factory::PlanetLineDisplay(std::ostringstream& buffer)
 	buffer << " plant producing " << output <<  std::endl;
 }
 
-void	Factory::PlanetXMLLineDisplay(std::ostringstream& buffer)
+void	Factory::PlanetXMLLineDisplay(Player *player)
 {
-	buffer << "<s-factory-planet-info info='"; 
-	buffer << EscapeXML(owner) << " #" << number << " plant producing " << output <<  "'/>\n";
+	std::ostringstream buffer;
+	buffer << owner << " #" << number << " plant producing " << output;
+	AttribList attribs;
+	attribs.push_back(std::make_pair("info",buffer.str()));
+	player->Send("",OutputFilter::FACTORY_PLANET_INFO,attribs);
 }
-
 
 void	Factory::PODisplay(Player *player)
 {

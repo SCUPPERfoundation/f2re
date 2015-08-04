@@ -1364,7 +1364,11 @@ void	FedMap::LandShuttle(Player *player)
 		new_loc.fed_map->AddPlayer(player);
 		if(player->CommsAPILevel() > 0)
 		{
-			player->Send("<s-player-stats stat='score'/>\n");
+			// Switch stats panel from ship to player stats
+			AttribList attribs;
+			attribs.push_back(std::make_pair("stat","score"));
+			player->Send("",OutputFilter::PLAYER_STATS,attribs);
+
 			player->SendSound("landing");
 		}
 		Game::player_index->Save(player,PlayerIndex::NO_OBJECTS);
@@ -1411,7 +1415,9 @@ void	FedMap::LaunchShuttle(Player *player)
 		new_loc.fed_map->AddPlayer(player);
 		if(player->CommsAPILevel() > 0)
 		{
-			player->Send("<s-ship-stats stat='ship'/>\n");
+			AttribList attribs;
+			attribs.push_back(std::make_pair("stat","ship"));
+			player->Send("",OutputFilter::SHIP_STATS,attribs);
 			player->SendSound("takeoff");
 		}
 		Game::player_index->Save(player,PlayerIndex::NO_OBJECTS);

@@ -1331,11 +1331,7 @@ void	Infrastructure::SendXMLPlanetInfo(Player *player)
 	}
 
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
-	{
-		buffer.str("");
-		(*iter)->PlanetXMLLineDisplay(buffer);
-		player->Send(buffer);
-	}
+		(*iter)->PlanetXMLLineDisplay(player);
 	SendXMLBuildInfo(player);
 }
 

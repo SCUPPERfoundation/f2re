@@ -655,8 +655,15 @@ void	Ship::XMLCargo(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='cargo' max='" << max_hold << "' cur='" << cur_hold << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","cargo"));
+		buffer << max_hold;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_hold;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -665,9 +672,15 @@ void	Ship::XMLComputer(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='computer' max='" << computer.level;
-		buffer << "' cur='" << computer.cur_level << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","computer"));
+		buffer << computer.level;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << computer.cur_level;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -676,8 +689,15 @@ void	Ship::XMLEngines(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='engines' max='" << max_engine << "' cur='" << cur_engine << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","engines"));
+		buffer << max_engine;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_engine;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -686,8 +706,15 @@ void	Ship::XMLFuel(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='fuel' max='" << max_fuel << "' cur='" << cur_fuel << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","fuel"));
+		buffer << max_fuel;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_fuel;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -696,8 +723,15 @@ void	Ship::XMLHull(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='hull' max='" << max_hull << "' cur='" << cur_hull << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","hull"));
+		buffer << max_hull;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_hull;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -705,9 +739,9 @@ void	Ship::XMLNavComp(Player *player)
 {
 	if((player->CommsAPILevel() > 0) && flags.test(NAVCOMP))
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='navcomp'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","navcomp"));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -716,8 +750,15 @@ void	Ship::XMLShields(Player *player)
 	if((player->CommsAPILevel() > 0) && (max_shield > 0))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='shields' max='" << max_shield << "' cur='" << cur_shield << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","shields"));
+		buffer << max_shield;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_shield;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 

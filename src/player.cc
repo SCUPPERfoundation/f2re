@@ -4313,7 +4313,12 @@ void	Player::Repay(int amount)
 		if(loan == 0)
 		{
 			if(CommsAPILevel() > 0)	// XMLLoan() doesn't handle clearing the loan
-				Send("<s-player-stats stat='loan' amount='0'/>\n");
+			{
+				AttribList attribs;
+				attribs.push_back(std::make_pair("stat","loan"));
+				attribs.push_back(std::make_pair("amount","0"));
+				Send("",OutputFilter::PLAYER_STATS,attribs);
+			}
 			Promote();
 		}
 	}
@@ -6037,8 +6042,11 @@ void	Player::XMLAKPoints()
 	if((CommsAPILevel() > 0) && (rank == ADVENTURER))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='ak' amount='" << courier_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","ak"));
+		buffer << courier_pts;
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(courier_pts == -1)
 		courier_pts = 0;
@@ -6049,8 +6057,11 @@ void	Player::XMLCash()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='cash' amount='" << cash << "'/>\n";
-		Send(buffer);
+		buffer << cash;
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","cash"));
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6058,9 +6069,10 @@ void	Player::XMLCustomsCert()
 {
 	if((CommsAPILevel() > 0) && HasCustomsCert())
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='customs-cert'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","customs-cert"));
+		Send("",OutputFilter::SHIP_STATS,attribs);
+
 	}
 }
 
@@ -6088,9 +6100,15 @@ void	Player::XMLDexterity()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='dex' max='" << dexterity[MAXIMUM];
-		buffer << "' cur='" << dexterity[CURRENT] << "'/>\n";
-		Send(buffer);
+
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","dex"));
+		buffer << dexterity[MAXIMUM];
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << dexterity[CURRENT];
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6152,8 +6170,11 @@ void	Player::XMLHaulerPoints()
 	if((CommsAPILevel() > 0) && ((rank == COMMANDER) || (rank == CAPTAIN)))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='hc' amount='" << trader_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","hc"));
+		buffer << trader_pts;
+		std::pair<std::string,std::string> attrib_max(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -1)
 		trader_pts = 0;
@@ -6164,9 +6185,15 @@ void	Player::XMLIntelligence()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='int' max='" << intelligence[MAXIMUM];
-		buffer << "' cur='" << intelligence[CURRENT] << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","int"));
+		buffer << intelligence[MAXIMUM];
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << intelligence[CURRENT];
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6177,8 +6204,12 @@ void	Player::XMLLoan()
 		if(loan > 0L)
 		{
 			std::ostringstream	buffer;
-			buffer << "<s-player-stats stat='loan' amount='" << loan << "'/>\n";
-			Send(buffer);
+			AttribList attribs;
+
+			attribs.push_back(std::make_pair("stat","loan"));
+			buffer << loan;
+			attribs.push_back(std::make_pair("amount",buffer.str()));
+			Send("",OutputFilter::PLAYER_STATS,attribs);
 		}
 	}
 }
@@ -6188,8 +6219,12 @@ void	Player::XMLMerchantPoints()
 	if((CommsAPILevel() > 0) && (rank == MERCHANT))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='merchant' amount='" << trader_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","merchant"));
+		buffer << trader_pts;
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -99999)
 		trader_pts = 0;
@@ -6211,9 +6246,9 @@ void	Player::XMLRank()
 {
 	if(CommsAPILevel() > 0)
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-player-stats rank='" << rank_str[gender][rank] << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("rank",rank_str[gender][rank]));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6419,17 +6454,28 @@ void	Player::XMLStamina()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='sta' max='" << stamina[MAXIMUM];
-		buffer << "' cur='" << stamina[CURRENT] << "'/>\n";
-		Send(buffer);
+
+		AttribList attribs;
+//		std::pair<std::string,std::string> attrib(std::make_pair("stat","sta"));
+		attribs.push_back(std::make_pair("stat","sta"));
+		buffer << stamina[MAXIMUM];
+//		std::pair<std::string,std::string> attrib_max(std::make_pair("max",buffer.str()));
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << stamina[CURRENT];
+//		std::pair<std::string,std::string> attrib_cur(std::make_pair("cur",buffer.str()));
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
 void	Player::XMLStats()
 {
 	std::ostringstream	buffer;
-	buffer << "<s-player-stats name='" << name << "'/>\n";
-	Send(buffer);
+	AttribList attribs;
+	attribs.push_back(std::make_pair("name",name));
+	Send("",OutputFilter::PLAYER_STATS,attribs);
+
 	XMLRank();
 	XMLStamina();
 	XMLStrength();
@@ -6441,9 +6487,10 @@ void	Player::XMLStats()
 
 	if((ship != 0) && (ship->ShipClass() != Ship::UNUSED_SHIP))
 	{
-		buffer.str("");
-		buffer << "<s-ship-stats class='" << ship->ClassName() << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("class",ship->ClassName()));
+		Send("",OutputFilter::SHIP_STATS,attribs);
+
 		ship->XMLFuel(this);
 		ship->XMLHull(this);
 		ship->XMLShields(this);
@@ -6460,9 +6507,18 @@ void	Player::XMLStrength()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='str' max='" << strength[MAXIMUM];
-		buffer << "' cur='" << strength[CURRENT] << "'/>\n";
-		Send(buffer);
+
+		AttribList attribs;
+//		std::pair<std::string,std::string> attrib(std::make_pair("stat","str"));
+		attribs.push_back(std::make_pair("stat","str"));
+		buffer << strength[MAXIMUM];
+//		std::pair<std::string,std::string> attrib_max(std::make_pair("max",buffer.str()));
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << strength[CURRENT];
+//		std::pair<std::string,std::string> attrib_cur(std::make_pair("cur",buffer.str()));
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6471,8 +6527,11 @@ void	Player::XMLTraderPoints()
 	if((CommsAPILevel() > 0) && (rank == TRADER))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='trader' amount='" << trader_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","trader"));
+		buffer << trader_pts;
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -99999)
 		trader_pts = 0;

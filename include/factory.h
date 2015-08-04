@@ -107,7 +107,7 @@ public:
 	void	LineDisplay(std::ostringstream& buffer);
 	void	Output(Player *player);
 	void	PlanetLineDisplay(std::ostringstream& buffer);
-	void	PlanetXMLLineDisplay(std::ostringstream& buffer);
+	void	PlanetXMLLineDisplay(Player *player);
 	void	PODisplay(Player *player);
 	void	Production(const char **attrib);
 	void	Reset();

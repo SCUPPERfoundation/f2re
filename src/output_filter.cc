@@ -54,7 +54,7 @@ std::string&	OutputFilter::XmlNormal(std::string command)
 	{
 		temp << "<" << command << " ";
 		for(AttribList::iterator iter = attribs.begin();iter != attribs.end();++iter)
-			temp << iter->first << "='" << iter->second << "' ";
+			temp << iter->first << "='" << EscapeXML(iter->second) << "' ";
 		if(text.length() == 0)
 			temp << "/>\n";
 		else
@@ -76,23 +76,26 @@ std::string& OutputFilter::Process()
 
 	switch(cmd)
 	{
-		case DEFAULT:				return XmlNoAttrib("s-default");
-		case EXAMINE:				return XmlNoAttrib("s-examine");
-		case LOC:					return XmlNoAttrib("s-loc");
-		case SPYNET:				return XmlNoAttrib("s-spynet");
-		case ADD_PLAYER:			return XmlNormal("s-add-player");
-		case REMOVE_PLAYER:		return XmlNormal("s-remove-player");
-		case ADD_CONTENTS:		return XmlNormal("s-contents");
-		case REMOVE_CONTENTS:	return XmlNormal("s-remove-contents");
-		case TIGHT_BEAM:			return XmlNormal("s-tb");
-		case ADD_FACTORY:			return XmlNormal("s-add-factory");
-		case REMOVE_FACTORY:		return XmlNormal("s-remove-factory");
-		case EXCHANGE:				return XmlNormal("s-exchange");
-		case PLAY_SOUND:			return XmlNormal("s-sound");
-		case UPDATE_WORKERS:		return XmlNormal("s-update-workers");
-		case BUILD_PLANET_INFO:	return XmlNormal("s-build-planet-info");
+		case DEFAULT:					return XmlNoAttrib("s-default");
+		case EXAMINE:					return XmlNoAttrib("s-examine");
+		case LOC:						return XmlNoAttrib("s-loc");
+		case SPYNET:					return XmlNoAttrib("s-spynet");
+		case ADD_PLAYER:				return XmlNormal("s-add-player");
+		case REMOVE_PLAYER:			return XmlNormal("s-remove-player");
+		case ADD_CONTENTS:			return XmlNormal("s-contents");
+		case REMOVE_CONTENTS:		return XmlNormal("s-remove-contents");
+		case TIGHT_BEAM:				return XmlNormal("s-tb");
+		case ADD_FACTORY:				return XmlNormal("s-add-factory");
+		case REMOVE_FACTORY:			return XmlNormal("s-remove-factory");
+		case EXCHANGE:					return XmlNormal("s-exchange");
+		case PLAY_SOUND:				return XmlNormal("s-sound");
+		case UPDATE_WORKERS:			return XmlNormal("s-update-workers");
+		case BUILD_PLANET_INFO:		return XmlNormal("s-build-planet-info");
+		case FACTORY_PLANET_INFO:	return XmlNormal("s-factory-planet-info");
+		case PLAYER_STATS:			return XmlNormal("s-player-stats");
+		case SHIP_STATS:				return XmlNormal("s-ship-stats");
 
-		default:				return text;
+		default:							return text;
 	}
 }
 
