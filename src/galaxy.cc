@@ -534,9 +534,9 @@ void	Galaxy::SendXMLPlanetNames(Player *player,const std::string& star_name)
 			return;
 		}
 	}
-	std::ostringstream	buffer;
-	buffer << "<s-planet-name name='No Planets'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	attribs.push_back(std::make_pair("name","No Planets"));
+	player->Send("",OutputFilter::PLANET_NAME,attribs);
 }
 
 void	Galaxy::UpdateExchanges()
@@ -563,31 +563,24 @@ void	Galaxy::XMLListLinks(Player *player,const std::string& from_star_name)
 	std::string	from_star(from_star_name);
 	NormalisePlanetTitle(from_star);
 	LocRec	*rec = 0;
-	player->Send("<s-jump-links/>\n");
-	int	count = 0;
+	player->Send("",OutputFilter::JUMP_LINKS);
+
 	std::ostringstream	buffer;
+	AttribList attribs;
+
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
 	{
-	 	rec = iter->second->FindLink();
+		rec = iter->second->FindLink();
 		if(rec != 0)
 		{
-			buffer << "<s-link name='" << iter->second->Name() << "' ";
+			attribs.clear();
+			attribs.push_back(std::make_pair("name",iter->second->Name()));
 			if(iter->second->Name() == from_star)
-				buffer << " loc='" << from_star << "' ";
+				attribs.push_back(std::make_pair("loc",from_star));
 			if((rec->fed_map->FileName().find("/space") != std::string::npos) && (!rec->fed_map->IsOpen(0)))
-				buffer << "status='closed'";
-			buffer <<"/>\n";
-
-			if((++count % 5) == 0)
-			{
-				player->Send(buffer);
-				buffer.str("");
-				count = 0;
-			}
-			delete rec;
+				attribs.push_back(std::make_pair("status","closed"));
+			player->Send("",OutputFilter::LINK,attribs);
 		}
 	}
-	if(count != 0)
-		player->Send(buffer);
 }
 

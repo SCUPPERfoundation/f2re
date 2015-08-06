@@ -616,7 +616,7 @@ void	Ship::TransferLocker(Player* player,Ship *new_ship)
 		player->Send("In spite of your close supervision, the stevedores manage to \
 drop your ship's locker while transfering it to your new ship. Fortunately, this \
 blatant attempt to break it open fails leaving some rather surly stevedors \
-unable to get their thieving mits on your stash!\n,OutputFilter::DEFAULT");
+unable to get their thieving mits on your stash!\n",OutputFilter::DEFAULT);
 	}
 }
 
@@ -761,7 +761,6 @@ void	Ship::XMLShields(Player *player)
 		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
-
 
 void	Ship::Repair(Player *player,int action)
 {

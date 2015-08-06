@@ -6456,14 +6456,11 @@ void	Player::XMLStamina()
 		std::ostringstream	buffer;
 
 		AttribList attribs;
-//		std::pair<std::string,std::string> attrib(std::make_pair("stat","sta"));
 		attribs.push_back(std::make_pair("stat","sta"));
 		buffer << stamina[MAXIMUM];
-//		std::pair<std::string,std::string> attrib_max(std::make_pair("max",buffer.str()));
 		attribs.push_back(std::make_pair("max",buffer.str()));
 		buffer.str("");
 		buffer << stamina[CURRENT];
-//		std::pair<std::string,std::string> attrib_cur(std::make_pair("cur",buffer.str()));
 		attribs.push_back(std::make_pair("cur",buffer.str()));
 		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
@@ -6507,16 +6504,13 @@ void	Player::XMLStrength()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-
 		AttribList attribs;
-//		std::pair<std::string,std::string> attrib(std::make_pair("stat","str"));
+
 		attribs.push_back(std::make_pair("stat","str"));
 		buffer << strength[MAXIMUM];
-//		std::pair<std::string,std::string> attrib_max(std::make_pair("max",buffer.str()));
 		attribs.push_back(std::make_pair("max",buffer.str()));
 		buffer.str("");
 		buffer << strength[CURRENT];
-//		std::pair<std::string,std::string> attrib_cur(std::make_pair("cur",buffer.str()));
 		attribs.push_back(std::make_pair("cur",buffer.str()));
 		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}

@@ -669,19 +669,19 @@ void	Star::SendXMLPlanetNames(Player *player)
 							(iter->second->Title() == "Snark")))
 				continue;
 
-			buffer.str("");
-			buffer << "<s-planet-name name='" << iter->second->Title() << "'/>\n";
-			player->Send(buffer);
+			AttribList attribs;
+			attribs.push_back(std::make_pair("name",iter->second->Title()));
+			player->Send("",OutputFilter::PLANET_NAME,attribs);
+
 			num_planets++;
 		}
 	}
 
 	if(num_planets == 0)
 	{
-		buffer.str("");
-		std::ostringstream	buffer;
-		buffer << "<s-planet-name name='No Planets'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("name","No Planets"));
+		player->Send("",OutputFilter::PLANET_NAME,attribs);
 	}
 }
 

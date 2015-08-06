@@ -39,8 +39,16 @@ std::string&	OutputFilter::XmlNoAttrib(std::string command)
 {
 	if(type == XML)
 	{
-		std::string	temp = "<" + command + ">" + text + "</" + command + ">\n";
-		text = temp;
+		if(text != "")
+		{
+			std::string temp = "<" + command + ">" + text + "</" + command + ">\n";
+			text = temp;
+		}
+		else
+		{
+			std::string temp = "<" + command + "/>\n";
+			text = temp;
+ 		}
 	}
 	return text;
 }
@@ -77,7 +85,7 @@ std::string& OutputFilter::Process()
 	switch(cmd)
 	{
 		case DEFAULT:					return XmlNoAttrib("s-default");
-		case EXAMINE:					return XmlNoAttrib("s-examine");
+		case EXAMINE:					return XmlNormal("s-examine");
 		case LOC:						return XmlNoAttrib("s-loc");
 		case SPYNET:					return XmlNoAttrib("s-spynet");
 		case ADD_PLAYER:				return XmlNormal("s-add-player");
@@ -94,6 +102,12 @@ std::string& OutputFilter::Process()
 		case FACTORY_PLANET_INFO:	return XmlNormal("s-factory-planet-info");
 		case PLAYER_STATS:			return XmlNormal("s-player-stats");
 		case SHIP_STATS:				return XmlNormal("s-ship-stats");
+		case NEW_MAP:					return XmlNormal("s-new-map");
+		case PLANET_NAME:				return XmlNormal("s-planet-name");
+		case JUMP_LINKS:				return XmlNoAttrib("s-jump-links");
+		case LINK:						return XmlNormal("s-link");
+		case EXCH_SELL:				return XmlNormal("s-exch-sell");
+		case EXCH_BUY:					return XmlNormal("s-exch-buy");
 
 		default:							return text;
 	}

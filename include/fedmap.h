@@ -171,6 +171,7 @@ public:
 	int	CourierLoc()									{ 	return(courier_locs[std::rand() % courier_locs.size()]);	}
 	int	Economy();
 	int	Efficiency(int type) const;
+	int	ExchangeLoc() const 							{ return comm_exch_loc;			}
 	int	FleetSize();
 	int	LandingPad()									{ return(landing_pad);			}
 	int	LandingPad(const std::string& orbit);

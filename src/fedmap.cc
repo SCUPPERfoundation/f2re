@@ -2336,12 +2336,16 @@ void	FedMap::XferFunds(Player *player,int amount,const std::string& to)
 void	FedMap::XMLNewMap(Player *player)
 {
 	std::ostringstream	buffer;
+	AttribList attribs;
 	FedMap	*new_map = player->CurrentMap();
-	buffer << "<s-new-map system='" << new_map->HomeStar() << "' name='" << new_map->Title();
-	buffer << "' owner='" << new_map->Owner() << "'/>\n";
-	player->Send(buffer);
+
+	attribs.push_back(std::make_pair("system",new_map->HomeStar()));
+	attribs.push_back(std::make_pair("name",new_map->Title()));
+	attribs.push_back(std::make_pair("owner",new_map->Owner()));
+	player->Send("",OutputFilter::NEW_MAP,attribs);
 	new_map->SendXMLInfra(player);
 }
+
 /*
 void	FedMap::XMLSend(const std::string& text)
 {
