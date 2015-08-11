@@ -1290,8 +1290,7 @@ void	Infrastructure::SendXMLBuildInfo(Player *player)
 		std::ostringstream	buffer;
 		buffer << "Total Infrastructure Builds: " << total;
 		AttribList attribs;
-		std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
-		attribs.push_back(attrib);
+		attribs.push_back(std::make_pair("info",buffer.str()));
 		player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 	}
 }
@@ -1299,35 +1298,53 @@ void	Infrastructure::SendXMLBuildInfo(Player *player)
 void	Infrastructure::SendXMLPlanetInfo(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-gen-planet-info name='" << home->Title() << "' ";
-	buffer << "system='" << home->HomeStarPtr()->CartelName() << " Cartel, " << home->HomeStar() <<"' ";
-//	buffer << "system='" << home->HomeStar() << " (" << home->HomeStarPtr()->CartelName() << " cartel)' ";
-	buffer << "owner='" << owner_name <<  "' ";
-	buffer << "economy='" << econ_names[economy] << "' ";
-	buffer << "total-wf='" << total_workers << "' ";
-	buffer << "avail-wf='" << workers << "' ";
-	buffer << "yard='" << yard_markup << "' ";
+	AttribList attribs;
+	attribs.push_back(std::make_pair("name",home->Title()));
+	buffer << home->HomeStarPtr()->CartelName() << " Cartel, " << home->HomeStar() <<"' ";
+	attribs.push_back(std::make_pair("system",buffer.str()));
+	attribs.push_back(std::make_pair("owner",owner_name));
+	attribs.push_back(std::make_pair("economy",econ_names[economy]));
+	buffer.str("");
+	buffer << total_workers;
+	attribs.push_back(std::make_pair("total_wf",buffer.str()));
+	buffer.str("");
+	buffer << workers;
+	attribs.push_back(std::make_pair("avail_wf",buffer.str()));
+	buffer.str("");
+	buffer << yard_markup;
+	attribs.push_back(std::make_pair("yard",buffer.str()));
 	if(player->Rank() >= Player::MERCHANT)
-		buffer << "disaffection='" << disaffection << "' ";
+	{
+		buffer.str("");
+		buffer << disaffection;
+		attribs.push_back(std::make_pair("disaffection",buffer.str()));
+	}
 	if(flags.test(REGISTRY))
-		buffer << "fleet='" << fleet_size << "' ";
+	{
+		buffer.str("");
+		buffer << fleet_size;
+		attribs.push_back(std::make_pair("fleet",buffer.str()));
+	}
 	if(player->Name() == owner_name)
-		buffer << "treasury='" << treasury << "' ";
-	buffer << "/>\n";
-	player->Send(buffer);
+	{
+		buffer.str("");
+		buffer << treasury;
+		attribs.push_back(std::make_pair("treasury",buffer.str()));
+	}
+	player->Send("",OutputFilter::GEN_PLANET_INFO,attribs);
 
 	for(WarehouseList::iterator iter = warehouse_list.begin();iter != warehouse_list.end();iter++)
 	{
-		buffer.str("");
-		buffer << "<s-ware-planet-info name='" << iter->first << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("name",iter->first));
+		player->Send("",OutputFilter::WARE_PLANET_INFO,attribs);
 	}
 
 	for(DepotList::iterator iter = depot_list.begin();iter != depot_list.end();iter++)
 	{
-		buffer.str("");
-		buffer << "<s-depot-planet-info name='" << EscapeXML(iter->first) << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("name",iter->first));
+		player->Send("",OutputFilter::DEPOT_PLANET_INFO,attribs);
 	}
 
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
@@ -1578,15 +1595,24 @@ void	Infrastructure::XferFunds(Player *player,int amount,const std::string& to)
 void	Infrastructure::XMLMapInfo(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-map-info economy='" << econ_names[economy] << "' workers='" << workers;
-	buffer << "' yard='" << yard_markup;
+	AttribList attribs;
+	attribs.push_back(std::make_pair("economy",econ_names[economy]));
+	buffer << workers;
+	attribs.push_back(std::make_pair("workers",buffer.str()));
+	buffer.str("");
+	buffer << yard_markup;
+	attribs.push_back(std::make_pair("yard",buffer.str()));
 	if(flags.test(REGISTRY))
-		buffer << "' fleet='" << fleet_size;
-	buffer << "'/>\n";
-	player->Send(buffer);
+	{
+		buffer.str("");
+		buffer << fleet_size;
+		attribs.push_back(std::make_pair("fleet",buffer.str()));
+	}
+	player->Send("",OutputFilter::MAP_INFO,attribs);
+
+
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->XMLFactoryInfo(player);
-	std::string	temp("<s-update-infra/>\n");
-	player->Send(temp);
+	player->Send("",OutputFilter::UPDATE_INFRA);
 }
 

@@ -103,11 +103,11 @@ void	CmdXML::StartElement(const char *element,const char **attrib)
 {
 	switch(Find(element))
 	{
-		case	 0:	FedTerm(attrib);						break;	// 'c-fedterm'
-		case	 1:	owner->Send("<s-rev-no-op/>\n");	break;	// 'c-rev-no-op'
-		case	 2:	SetCommsLevel(attrib);				break;	// 'c-comms-level'
-		case	 3:	SendPlanetNames(attrib);			break;	// 'c-planets'
-		case	 4:	SendPlanetInfo(attrib);				break;	//	'c-planet-info'
+		case	 0:	FedTerm(attrib);									break;	// 'c-fedterm'
+		case	 1:	owner->Send("",OutputFilter::REV_NO_OP);	break;	// 'c-rev-no-op'
+		case	 2:	SetCommsLevel(attrib);							break;	// 'c-comms-level'
+		case	 3:	SendPlanetNames(attrib);						break;	// 'c-planets'
+		case	 4:	SendPlanetInfo(attrib);							break;	//	'c-planet-info'
 		case	 5:	Game::galaxy->XMLListLinks(owner,owner->CurrentMap()->HomeStarPtr()->Name());	break; // c-send-system-links
 	}
 }

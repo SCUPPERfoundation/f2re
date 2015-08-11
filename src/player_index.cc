@@ -402,7 +402,7 @@ void	PlayerIndex::KeepAlive()
 		for(NameIndex::iterator	iter = current_index.begin();iter != current_index.end();iter++)
 		{
 			if(iter->second->CommsAPILevel() > 0)
-				iter->second->Send("<s-no-op/>\n");
+				iter->second->Send("",OutputFilter::NO_OP);
 		}
 		keep_alive = 0;
 	}

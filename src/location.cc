@@ -317,22 +317,25 @@ void	Location::XMLNewLoc(Player *player,int extent)
 		{ "n", "ne", "e", "se", "s", "sw", "w", "nw", "u", "d", ""	};
 
 	std::ostringstream	buffer;
-	buffer << "<s-new-loc loc-num='" << loc_no << "' name='" << EscapeXML(name) << "'";
+	AttribList attribs;
+	buffer << loc_no;
+	attribs.push_back(std::make_pair("loc-num",buffer.str()));
+	attribs.push_back(std::make_pair("name",name));
 	for(int count = 0;exit_names[count] != "";count++)
 	{
 		if(exits[count] >= 0)
-			buffer << " " << exit_names[count] << "='" << exits[count] << "'";
+		{
+			buffer.str("");
+			buffer << exits[count];
+			attribs.push_back(std::make_pair(exit_names[count],buffer.str()));
+		}
 	}
-	buffer << ">";
 
+	std::string	text;
 	if(((extent == DEFAULT) && !player->WantsBrief()) || (extent == FULL_DESC))
-	{
-		std::string	description(desc.substr(1));
-		buffer << EscapeXML(description);
-	}
+		text = desc.substr(1);
 
-	buffer << "</s-new-loc>\n";
-	player->Send(buffer);
+	player->Send(text,OutputFilter::NEW_LOC,attribs);
 }
 
 

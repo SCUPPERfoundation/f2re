@@ -416,29 +416,29 @@ void	FedMap::AnnounceTpMove(Player *player,int from,int to)
 	static const std::string	shimmer(" a shimmer of teleportation effect. ");
 	static const std::string	wedding(" and is wearing a wedding ring.");
 
-	PlayerList pl_list;
-	PlayersInLoc(to,pl_list,player);
-	if(pl_list.empty())
-		return;
-
 	AttribList	attribs;
 	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
 	attribs.push_back(attrib);
-
 	std::string text(player->MoodAndName());
-	if(to != -1)
-	{
-		text += " has arrived with";
-		text += shimmer;
-		if(player->IsMarried())
-		{
-			text += player->Name();
-			text += wedding;
-		}
-		text += "\n";
 
-		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
+	PlayerList pl_list;
+	PlayersInLoc(to,pl_list,player);
+	if(!pl_list.empty())
+	{
+		if(to != -1)
+		{
+			text += " has arrived with";
+			text += shimmer;
+			if(player->IsMarried())
+			{
+				text += player->Name();
+				text += wedding;
+			}
+			text += "\n";
+
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
+		}
 	}
 
 	if(from != -1)

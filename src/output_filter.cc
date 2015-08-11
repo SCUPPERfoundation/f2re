@@ -11,6 +11,8 @@
 
 #include <sstream>
 
+#include <misc.h>
+
 AttribList	OutputFilter::NullAttribs;
 
 std::string&	OutputFilter::EscapeXML(std::string& text)
@@ -69,6 +71,7 @@ std::string&	OutputFilter::XmlNormal(std::string command)
 			temp << ">" << text << "</" << command << ">\n";
 		text = temp.str();
 	}
+WriteErrLog(text);
 
 	return text;
 }
@@ -108,6 +111,15 @@ std::string& OutputFilter::Process()
 		case LINK:						return XmlNormal("s-link");
 		case EXCH_SELL:				return XmlNormal("s-exch-sell");
 		case EXCH_BUY:					return XmlNormal("s-exch-buy");
+		case GEN_PLANET_INFO:		return XmlNormal("s-gen-planet-info");
+		case WARE_PLANET_INFO:		return XmlNormal("s-ware-planet-info");
+		case DEPOT_PLANET_INFO:		return XmlNormal("s-depot-planet-info");
+		case MAP_INFO:					return XmlNormal("s-map-info");
+		case UPDATE_INFRA:			return XmlNoAttrib("s-update-infra");
+		case NO_OP:						return XmlNoAttrib("s-no-op");
+		case REV_NO_OP:				return XmlNoAttrib("s-rev-no-op");
+		case NEW_LOC:					return XmlNormal("s-new-loc");
+
 
 		default:							return text;
 	}
