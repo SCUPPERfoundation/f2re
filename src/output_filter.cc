@@ -57,6 +57,9 @@ std::string&	OutputFilter::XmlNoAttrib(std::string command)
 
 std::string&	OutputFilter::XmlNormal(std::string command)
 {
+	if(attribs.empty())
+		return(XmlNoAttrib(command));
+
 	static std::ostringstream	temp;
 	temp.str("");
 
@@ -71,10 +74,10 @@ std::string&	OutputFilter::XmlNormal(std::string command)
 			temp << ">" << text << "</" << command << ">\n";
 		text = temp.str();
 	}
-WriteErrLog(text);
 
 	return text;
 }
+
 std::string& OutputFilter::Process()
 {
 	switch(type)
@@ -119,6 +122,9 @@ std::string& OutputFilter::Process()
 		case NO_OP:						return XmlNoAttrib("s-no-op");
 		case REV_NO_OP:				return XmlNoAttrib("s-rev-no-op");
 		case NEW_LOC:					return XmlNormal("s-new-loc");
+		case EXAMINE_START:			return XmlNormal("s-examine-start");
+		case SPYNET_START:			return XmlNormal("s-spynet-start");
+		case FEDTERM:					return XmlNoAttrib("s-fedterm");
 
 
 		default:							return text;

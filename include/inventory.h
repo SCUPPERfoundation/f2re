@@ -19,6 +19,7 @@
 #include <ctime>
 
 #include "obj_container.h"
+#include "player.h"
 
 class FedObject;
 class	DBPlayer;
@@ -65,8 +66,8 @@ private:
 	int	Display2Watcher(Player *player,std::ostringstream& buffer);
 	int	DisplayList(std::ostringstream& buffer);	// returns total objects added
 
-	int	XMLDisplay2Watcher(Player *player,std::ostringstream& buffer);
-	int	XMLDisplayList(std::ostringstream& buffer);
+	int	XMLDisplay2Watcher(Player *player);
+	int	XMLDisplayList(Player *player);
 	int	XMLDisplay(Player *player,std::ostringstream& buff);
 
 
@@ -75,9 +76,9 @@ private:
 	void	DisplayPersonal(std::ostringstream& buffer);
 	void	ProcessTimeCerts();
 
-	void	XMLDisplayCerts(std::ostringstream& buffer);
+//	void	XMLDisplayCerts(std::ostringstream& buffer);
 	void	XMLDisplayKeyring(Player *player,bool self);
-	void	XMLDisplayPersonal(std::ostringstream& buffer);
+	void	XMLDisplayPersonal(Player *player);
 
 public:
 	Inventory(std::string the_owner);

@@ -57,7 +57,7 @@ void	CmdXML::FedTerm(const char **attrib)
 		version = std::atoi(v_str.c_str());
 	}
 
-	owner->Send("<s-fedterm>\n");
+	owner->Send("",OutputFilter::FEDTERM);
 	owner->XMLStats();
 	Game::player_index->SendPlayerInfo(owner);
 	FedMap::XMLNewMap(owner	);

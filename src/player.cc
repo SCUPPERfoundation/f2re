@@ -4665,17 +4665,6 @@ void	Player::SellWarehouse()
 		Send(Game::system->GetMessage("player","sellwarehouse",2),OutputFilter::DEFAULT);
 }
 
-bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
-{
-	if(com_unit != 0)
-	{
-		com_unit->Send(text,player,can_relay);
-		return(true);
-	}
-	else
-		return(false);
-}
-
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
 {
 	FedMssg	*mssg = new FedMssg;
@@ -6078,20 +6067,27 @@ void	Player::XMLCustomsCert()
 
 void	Player::XMLDesc(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-examine>" << desc << "</s-examine>\n";
-	player->Send(buffer);
+	std::string	text(desc);
+	AttribList attribs;
+	player->Send(text,OutputFilter::EXAMINE,attribs);
 
+	std::ostringstream	buffer;
 	inventory->Display(player,buffer);	// note - buffer isn't used
 
 	if(IsMarried())
 	{
-		buffer.str("");
 		if(player == this)
-			buffer << "<s-examine>You are married to " << spouse << "</s-examine>/n";
+		{
+			buffer << "You are married to " << spouse << "/n";
+			text = buffer.str();
+			Send(text,OutputFilter::EXAMINE,attribs);
+		}
 		else
-			buffer << "<s-examine>" << name << " is married to " << spouse << "</s-examine>\n";
-		player->Send(buffer);
+		{
+			buffer << name << " is married to " << spouse << "/n";
+			text = buffer.str();
+			player->Send(text,OutputFilter::EXAMINE,attribs);
+		}
 	}
 }
 
@@ -6116,6 +6112,9 @@ bool	Player::XMLExamine(const std::string& other_name)
 {
 	static const std::string	reflection("You check your reflection in the mirror field of your comm unit.");
 
+	std::string	text;
+	AttribList attribs;
+
 	std::string	caps_name(other_name);
 	Normalise(caps_name);
 	Player		*other = loc.fed_map->FindPlayer(caps_name);
@@ -6124,15 +6123,18 @@ bool	Player::XMLExamine(const std::string& other_name)
 	// Handle examining a player
 	if((other != 0) && (loc.loc_no == other->LocNo()))
 	{
-		buffer << "<s-examine-start name='" << other->Name() << "' rank='" << other->RankStr() << "'/>\n";
-		Send(buffer);
+		attribs.push_back(std::make_pair("name",other->Name()));
+		attribs.push_back(std::make_pair("rank",other->RankStr()));
+		Send("",OutputFilter::EXAMINE_START,attribs);
+
 		other->XMLDesc(this);
 
 		if(this != other)
 		{
 			buffer.str("");
 			buffer << name << " is looking at you.\n";
-			other->Send(buffer);
+			text = buffer.str();
+			other->Send(text,OutputFilter::DEFAULT);
 		}
 		return(true);
 	}
@@ -6142,21 +6144,23 @@ bool	Player::XMLExamine(const std::string& other_name)
 	{
 		if(CommsAPILevel() > 0)
 		{
-			buffer << "<s-examine-start name='" << Name() << "' rank='" << rank_str[gender][rank] << "'/>\n";
-			Send(buffer);
+			attribs.clear();
 			buffer.str("");
-			buffer << "<s-examine>" << reflection << "</s-examine>\n";
-			Send(buffer);
-			buffer.str("");
+			attribs.push_back(std::make_pair("name",Name()));
+			attribs.push_back(std::make_pair("rank",rank_str[gender][rank]));
+			Send("",OutputFilter::EXAMINE_START,attribs);
+
+			attribs.clear();
+			text = reflection;
+			Send(text,OutputFilter::EXAMINE,attribs);
+
 			XMLDesc(this);
-			Send(buffer);
 			return(true);
 		}
 	}
 
-	// see if it's an object in the inventory
 	FedObject	*obj = inventory->Find(other_name);
-	if(obj != 0)
+	if(obj != 0) // object in the inventory
 	{
 		Send(obj->Desc(),OutputFilter::DEFAULT);
 		return(true);
@@ -6286,9 +6290,12 @@ void	Player::XMLSpynetReportAssetsFlags(Player *player)
 void	Player::XMLSpynetReportIntro(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-spynet-start name='" << Name() << "' rank='" << rank_str[gender][rank] << "'/>\n";
-	player->Send(buffer);
-	buffer.str("");
+	AttribList attribs;
+
+	attribs.push_back(std::make_pair("name",Name()));
+	attribs.push_back(std::make_pair("rank",rank_str[gender][rank]));
+	player->Send("",OutputFilter::SPYNET_START,attribs);
+
 	buffer << Name() << " is a " << gender_str1[gender] << " " << race << " who ";
 	if(games < 50)
 		buffer << "has recently arrived in";
@@ -6548,9 +6555,18 @@ void	Player::Xt(const std::string& msg)
 
 /******************* Work in progress *******************/
 
-// TODO: Fuse the XML and non-XML spynet reports
-
 bool	Player::Send(const std::string& text,Player *player,bool can_relay)
+{
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,player,can_relay);
+		return(true);
+	}
+	else
+		return(false);
+}
+
+bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
 {
 	if(com_unit != 0)
 	{
