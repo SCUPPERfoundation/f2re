@@ -385,7 +385,7 @@ public:
 	bool	Send(const std::string& text,Player *player = 0,bool can_relay = true);
 	bool	Send(const std::string& text,int command,Player *player = 0,bool can_relay = true);
 	bool	Send(const std::string& text,int command,AttribList &attributes,Player *player = 0,bool can_relay = true);
-	bool	Send(std::ostringstream& text,Player *player = 0,bool can_relay = true);
+	bool	Send(std::ostringstream& text,int command,Player *player = 0,bool can_relay = true);
 	bool	Suicide()											{ return(Death(true));	}
 	bool	TempFlagIsSet(int which)						{ return(temp_flags.test(which));		}
 	bool	TradingAllowed();

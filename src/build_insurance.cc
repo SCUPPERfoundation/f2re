@@ -75,7 +75,7 @@ void	Insurance::Display(Player *player)
 		buffer << "    Insurance: " << total_builds << " levels\n";
 	else
 		buffer << "    Insurance: 1 level\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Insurance::UpdateDisaffection(Disaffection *discontent)

@@ -68,7 +68,7 @@ void	BioDiversity::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    BioDiversity Projects: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	BioDiversity::UpdateDisaffection(Disaffection *discontent)

@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 // WARNING: Do not mess with the brackets in these functions -
@@ -228,7 +229,7 @@ void	Population::Display(Player *player)
 	buffer << "  Net Population   " << pop << "\n";
 	buffer << "  -------------------------\n";
 
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int 	Population::UpdatePopulation()

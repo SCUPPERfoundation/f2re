@@ -116,7 +116,7 @@ void	NoticeBoard::UnPost(Player *player,const std::string& name)
 		buffer << total << " message located and removed.\n";
 	else
 		buffer << total << " messages located and removed.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	if(man_remove)
 	{

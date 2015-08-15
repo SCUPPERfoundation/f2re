@@ -92,7 +92,7 @@ void	Leisure::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Leisure Mega-Centres: " << total_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Leisure::UpdateDisaffection(Disaffection *discontent)

@@ -82,7 +82,7 @@ void	FedMail::Display(Player *player,FedMssg *mssg)
 {
 	std::ostringstream	buffer;
 	buffer << "Received from " << mssg->from << "\nat GMT/UTC " << std::asctime(std::gmtime(&mssg->sent));
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	player->Send(mssg->body,OutputFilter::DEFAULT);
 	player->Send("-----------------------------\n",OutputFilter::DEFAULT);
 }

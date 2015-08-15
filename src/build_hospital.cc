@@ -75,7 +75,7 @@ bool	Hospital::Add(Player *player,Tokens *tokens)
 			buffer << "from the foundations. Unfortunately, once it opens it becomes ";
 			buffer << "clear that you have hit the law of diminishing returns when it ";
 			buffer << "comes to hospital building on " << fed_map->Title() << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return(true);
 		}
 	}
@@ -94,7 +94,7 @@ void	Hospital::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Hospitals: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Hospital::RequestResources(Player *player,const std::string& recipient,int quantity)

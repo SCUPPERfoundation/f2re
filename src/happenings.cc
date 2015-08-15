@@ -55,13 +55,13 @@ void	Happenings::Display(Player *player,const std::string& name)
 				buffer << *iter;
 				if(buffer.str().length() > 850)
 				{
-					player->Send(buffer);
+					player->Send(buffer,OutputFilter::DEFAULT);
 					buffer.str("");
 				}
 			}
 		}
 		if(buffer.str().length() > 0)
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -75,13 +75,13 @@ void	Happenings::Display(Player *player,const std::string& name)
 			++num_entries;
 			if(buffer.str().length() > 850)
 			{
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				buffer.str("");
 			}
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	if(num_entries == 0)
 		player->Send(nowt,OutputFilter::DEFAULT);
 }

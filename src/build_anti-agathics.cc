@@ -72,7 +72,7 @@ void	AntiAgathics::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Longevity programs: " << total_builds << " launched\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	AntiAgathics::UpdateDisaffection(Disaffection *discontent)

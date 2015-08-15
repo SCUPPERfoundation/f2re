@@ -66,7 +66,7 @@ bool	Family::Add(Player *player,Tokens *tokens)
 		buffer << "difference to the size of your population. Clearly you have ";
 		buffer << "exceeded the ability of family allowance payments to ";
 		buffer << "provide population growth.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	return(true);
 }
@@ -75,7 +75,7 @@ void	Family::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Family Allowances: " << total_builds << " provided\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Family::UpdatePopulation(Population *population)

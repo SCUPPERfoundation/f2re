@@ -63,7 +63,7 @@ Installing a level ");
 		if(computer > player->MaxIntel()/15)
 		{
 			buffer << max_int << player->MaxIntel()/15 << " computer.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			computer = player->MaxIntel()/15;
 		}
 		else
@@ -76,7 +76,7 @@ Installing a level ");
 			else
 			{
 				buffer << "Installing a level " << computer << " computer.\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			}
 		}
 	}
@@ -106,7 +106,7 @@ bool	ShipBuilder::AddFuelTank(std::string& line)
 	cost += (fuel_tank * 50);
 	hold = tonnage;
 	buffer << "Installing " << fuel_tank << " sized fuel tanks.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	
 	status = BUY_CONFIRM;
 	return(DisplayShip());
@@ -151,7 +151,7 @@ fly spaceships larger than the Mammoth class. Please try again.\n");
 			buffer << " class hull plus appropriate drive units.\n";
 			buffer << "Unused tonnage " << tonnage << " tons, cost so far " << cost << "ig.\n";
 			buffer << "Your funds amount to " << player->Cash() << "ig" << std::endl;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			status = BUY_PLATING;
 			DisplayPlating();
 			return;
@@ -176,7 +176,7 @@ void	ShipBuilder::AddJammers(std::string& line)
 		buffer << Game::system->GetMessage("shipbuilder","addjammers",2);
 	if(jammers > 1)
 		buffer << jammers << multi_jammers;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	cost += (jammers * 800);
 	tonnage -= (jammers * 3);
@@ -197,7 +197,7 @@ void	ShipBuilder::AddMagazine(std::string& line)
 	else	
 	{
 		buffer << "Adding a " << magazine << " missile capacity magazine.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		cost += 1000 + (magazine * 100);
 		tonnage -= 40 + magazine;
 	}
@@ -221,7 +221,7 @@ void	ShipBuilder::AddPlating(std::string& line)
 	{
 		hull = Ship::hull_types[ship_class]->capacity/20;
 		buffer << intro << hull << outro << std::endl;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	buffer.str("");
@@ -231,7 +231,7 @@ void	ShipBuilder::AddPlating(std::string& line)
 	else
 		buffer << " - " << hull << " points of extra armour added at a cost of " << hull * 5000 << "ig.";
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	cost += (hull * 5000);
 	tonnage -= (hull * 10);
@@ -253,7 +253,7 @@ void	ShipBuilder::AddPower(std::string& line)
 	
 	std::ostringstream	buffer("");
 	buffer << "Installing " << engines << " capacity power plant.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	cost += 10000 + (engines * 15);
 	tonnage -= 40 + engines/5;
 
@@ -287,7 +287,7 @@ void	ShipBuilder::AddSensors(std::string& line)
 		buffer << Game::system->GetMessage("shipbuilder","addsensors",2);
 	if(sensors > 1)
 		buffer << sensors << multi_sensors;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	cost += (sensors * 10000);
 	tonnage -= (sensors * 2);
@@ -405,7 +405,7 @@ void	ShipBuilder::CurrentStatus()
 	std::ostringstream	buffer("");
 	buffer << "Unused tonnage is " << tonnage << " tons and the cost so far is " << cost << "ig.\n";
 	buffer << "Your available funds amount to " << player->Cash() << "ig" << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayComputers()
@@ -415,7 +415,7 @@ most basic, and level 7 the most complex. You aren't able to handle any computer
 
 	std::ostringstream	buffer("");
 	buffer << intro << player->MaxIntel()/15 << "." << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayFuelTank()
@@ -423,7 +423,7 @@ void	ShipBuilder::DisplayFuelTank()
 	std::ostringstream	buffer("");
 	buffer << "What size fuel tanks would you like? We can install tanks holding a maximum of ";
 	buffer << tonnage - 20 << " units of fuel.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayHulls()
@@ -435,7 +435,7 @@ void	ShipBuilder::DisplayHulls()
 		buffer.str("");
 		buffer << "  " << Ship::hull_types[count]->name << " - ";
 		buffer << Ship::hull_types[count]->capacity << " tons capacity" << std::endl;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	player->Send(Game::system->GetMessage("shipbuilder","displayhulls",2),OutputFilter::DEFAULT);
 }
@@ -448,7 +448,7 @@ void	ShipBuilder::DisplayJammers()
 
 	std::ostringstream	buffer("");
 	buffer << intro << Ship::comp_types[computer]->capacity << middle << sensors << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayMagazine()
@@ -463,7 +463,7 @@ amount the ship can carry is ");
 
 	std::ostringstream	buffer("");
 	buffer << intro << Ship::hull_types[ship_class]->capacity/20 << " points." << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayPower()
@@ -476,7 +476,7 @@ do you want?\n");
 
 	std::ostringstream	buffer("");
 	buffer << intro << min_power << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplaySensors()
@@ -487,7 +487,7 @@ would you like to install?\n");
 
 	std::ostringstream	buffer("");
 	buffer << intro << Ship::comp_types[computer]->capacity << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayShields()
@@ -511,12 +511,12 @@ when you do have a permit.\n");
 	buffer << "  Computer:      " << std::setw(3) << computer << std::endl;
 	buffer << "    Sensors:     " << std::setw(3) << sensors << std::endl;
 	buffer << "    Jammers:     " << std::setw(3) << jammers << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Engines:       " << std::setw(3) << engines << std::endl;
 	buffer << "  Fuel tanks:    " << std::setw(3) << fuel_tank << std::endl;
 	buffer << "  Cargo hold:    " << std::setw(3) << hold << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	ShowWeapons();
 
 	if(fuel_tank < 0)
@@ -532,7 +532,7 @@ when you do have a permit.\n");
 	buffer << cost << ".\n";
 
 	int	markup = player->CurrentMap()->YardMarkup();
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	if(markup != 0)
 	{
 		buffer.str("");
@@ -543,7 +543,7 @@ when you do have a permit.\n");
 			buffer << " levies a surchage of " << markup << "% on all ships built on the planet, ";
 		cost += (cost/100) * markup;
 		buffer << " which brings the cost to " << cost << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	long	trade_in	= 0L;
@@ -560,7 +560,7 @@ when you do have a permit.\n");
 			buffer << "ig. This means you will need to pay " << cost << "ig\n";
 		else
 			buffer << "ig. This means you will get a rebate of " << -cost << "ig\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	buffer.str("");
@@ -614,10 +614,10 @@ void	ShipBuilder::DisplayWeapons()
 		buffer << Game::system->GetMessage("shipbuilder","displayweapons",2);
 	else
 		buffer << multi_hard_pt1 << mnt_pts << multi_hard_pt2;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << available << missile << laser << t_laser << q_laser << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }	
 
 bool	ShipBuilder::Parse(std::string& text)
@@ -685,12 +685,12 @@ void	ShipBuilder::ShowWeapons()
 			break;
 		buffer << "    " << Ship::weapon_types[weapons[count]]->name << std::endl;
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	if(magazine > 0)
 	{
 		buffer.str("");
 		buffer << "  " << "Magazine space for " << magazine << " missiles\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 

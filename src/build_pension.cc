@@ -74,7 +74,7 @@ void	Pension::Display(Player *player)
 		buffer << "    Pensions: " << total_builds << " levels\n";
 	else
 		buffer << "    Pensions: 1 level\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Pension::UpdateDisaffection(Disaffection *discontent)

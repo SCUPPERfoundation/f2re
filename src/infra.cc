@@ -407,7 +407,7 @@ void	Infrastructure::Close(Player *player)
 		status.set(CLOSED);
 		std::ostringstream	buffer;
 		buffer << home->Title() << " is now closed to visitors.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		Game::review->Post(buffer);
 	}
 	else
@@ -511,7 +511,7 @@ void	Infrastructure::Demolish(Player *player,const std::string&  building)
 				std::ostringstream	buffer;
 				buffer << "You demolish the enhancement and realize a total of " << refund;
 				buffer << "ig from the sale of salvaged components and assets.\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			}
 			return;
 		}
@@ -570,7 +570,7 @@ void	Infrastructure::Display(Player *player,bool show_fabric)
 	if(!IsOpen(0))
 		buffer << " - Closed to visitors";
 	buffer << "\n  Cartel: " << home->HomeStarPtr()->CartelName() << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Economy: " << econ_names[economy];
 	if(economy != 0)
@@ -589,7 +589,7 @@ void	Infrastructure::Display(Player *player,bool show_fabric)
 		DisplayDisaffection(buffer);
 		buffer << "\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	if(player->Name() == owner_name)
 	{
@@ -597,7 +597,7 @@ void	Infrastructure::Display(Player *player,bool show_fabric)
 		buffer << "  Treasury: ";
 		MakeNumberString(treasury,buffer);
 		buffer << "ig\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	if(show_fabric)
@@ -618,11 +618,11 @@ void	Infrastructure::DisplayBuilds(Player *player)
 	if(enhancements.size() == 0)
 	{
 		buffer << home->Title() << " - No infrastructure built yet!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	buffer << home->Title() << " - Infrastructure:\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	int total = 0;
 	for(EnhanceList::iterator iter = enhancements.begin();iter != enhancements.end();iter++)
 	{
@@ -631,7 +631,7 @@ void	Infrastructure::DisplayBuilds(Player *player)
 	}
 	buffer.str("");
 	buffer << "   \nTotal infrastructure builds: "<< total << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::DisplayDepots(Player *player)
@@ -644,7 +644,7 @@ void	Infrastructure::DisplayDepots(Player *player)
 			buffer << "    " << iter->first << "\n";
 	}
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::DisplayDisaffection(std::ostringstream& buffer)
@@ -672,7 +672,7 @@ void	Infrastructure::DisplayFactories(Player *player)
 			(*iter)->PlanetLineDisplay(buffer);
 	}
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::DisplayPopulation(Player *player)
@@ -686,7 +686,7 @@ void	Infrastructure::DisplayWarehouses(Player *player)
 	{
 		std::ostringstream	buffer;
 		buffer << "  " << warehouse_list.size() << " warehouses:\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		player->Send("  No warehouses\n",OutputFilter::DEFAULT);
@@ -1031,7 +1031,7 @@ void	Infrastructure::Open(Player *player)
 		status.reset(CLOSED);
 		std::ostringstream	buffer;
 		buffer << home->Title() << " is now open to visitors.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		Game::review->Post(buffer);
 	}
 	else
@@ -1100,7 +1100,7 @@ void	Infrastructure::PODisplay(Player *player)
 
 	std::ostringstream	buffer;
 	buffer << "Factories located on " << home->Title() << ":\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	for(FactoryList::iterator iter = factories.begin();iter != factories.end();iter++)
 		(*iter)->PODisplay(player);
 }
@@ -1184,7 +1184,7 @@ void	Infrastructure::Promote(Player *player)
 			player->Send("Your planet is not yet ready for promotion!\n",OutputFilter::DEFAULT);
 			std::ostringstream	buffer;
 			buffer << "You have " << TotalBuilds() << " builds...\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1227,7 +1227,7 @@ void	Infrastructure::Promote2Leisure(Player *player)
 	std::ostringstream	buffer;
 	buffer << "Your planet is not yet ready for promotion! ";
 	buffer << "You only have " << TotalBuilds() << " builds...\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::ReleaseAssets(const std::string& ask_whom,const std::string& from_whom)
@@ -1396,7 +1396,7 @@ void	Infrastructure::SetYardMarkup(Player *player,int amount)
 				buffer << "below ";
 		}
 		buffer << "the standard rate.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -1407,7 +1407,7 @@ bool	Infrastructure::SlithyXform(Player *player)
 		std::ostringstream buffer;
 		buffer << "You can't use slithies to add to the treasury on " << home->Title();
 		buffer << " for another " << slithy_xform << " days!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	else
@@ -1589,7 +1589,7 @@ void	Infrastructure::XferFunds(Player *player,int amount,const std::string& to)
 	std::ostringstream	buffer;
 	buffer << home->Title() << " treasury: " << treasury << ", ";
 	buffer << fed_map->Title() << " treasury: " << to_balance << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Infrastructure::XMLMapInfo(Player *player)

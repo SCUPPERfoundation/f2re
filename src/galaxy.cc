@@ -92,14 +92,14 @@ void	Galaxy::DisplayExile(Player *player)
 		iter->second->DisplayExile(buffer);
 		if(buffer.str().length() > 512)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			are_exiles = true;
 		}
 	}
 	if(buffer.str().length() > 0)
 	{
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		are_exiles =true;
 	}
 	if(!are_exiles)
@@ -334,19 +334,19 @@ void	Galaxy::ListSystems(Player *player,int which_ones)
 	{
 		if(iter->second->Name() == "Sol") // current sol output is 263 chars...
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 
 		buffer << iter->second->ListSystem(player,which_ones);
 		if(buffer.str().length() > 850)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Galaxy::LoadDisplayCabinets()
@@ -475,13 +475,13 @@ void	Galaxy::PremiumPriceCheck(Player *player,const Commodity *commodity,int whi
 			iter->second->PremiumPriceCheck(commodity,buffer,which);
 			if(buffer.str().length() > 850)
 			{
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				buffer.str("");
 			}
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Galaxy::ProcessInfrastructure()
@@ -555,7 +555,7 @@ void	Galaxy::WhereIs(Player *player,const std::string& planet)
 	}
 	else
 		buffer << "I have no record of a planet called " << planet << ". Perhaps its sun went nova?\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Galaxy::XMLListLinks(Player *player,const std::string& from_star_name)

@@ -12,6 +12,7 @@
 #include <iomanip>
 
 #include "commod_exch_item.h"
+#include "output_filter.h"
 #include "player.h"
 
 Cargo::Cargo(const std::string& the_name,const std::string& the_star,const std::string& the_planet,int the_cost)
@@ -34,7 +35,7 @@ void	Cargo::Display(Player *player)
 	buffer << "    " << std::setw(16) << std::left << name;
 	buffer << "Cost " << std::setw(4) << std::right << cost  << "ig/ton ";
 	buffer << "(Origin " << planet << ", " << star << " system)\n"; 
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Cargo::Display(std::ostringstream& buffer)

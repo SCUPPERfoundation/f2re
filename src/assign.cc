@@ -120,5 +120,5 @@ void	Assign::Process(Player *the_player, Tokens *tokens)
    buffer << "Your senior transportation official informs you that the transfer of ";
    buffer << num_workers << " workers from " << from->Title() << " to " << to->Title();
    buffer << " is now complete.\n";
-   player->Send(buffer);
+   player->Send(buffer,OutputFilter::DEFAULT);
 }

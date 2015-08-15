@@ -87,7 +87,7 @@ void	Radio::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Entertainment Channels: " << total_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 

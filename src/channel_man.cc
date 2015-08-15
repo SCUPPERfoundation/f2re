@@ -56,7 +56,7 @@ void	ChannelManager::Join(Player *player,const std::string& name)
 	}
 	else
 		buffer << "You tune your comm unit to the " << name << " channel.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	channel->Add(player);
 }
 
@@ -67,7 +67,7 @@ void	ChannelManager::Leave(Player *player,const std::string& name)
 	if(channel != 0)
 	{
 		buffer << "You turn off the " << name << " channel.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		channel->Remove(player);
 		if(channel->Size() == 0)
 		{
@@ -97,13 +97,13 @@ void	ChannelManager::List(Player *player)
 	for(ChannelIndex::iterator iter = channel_index.begin();iter != channel_index.end();iter++)
 	{
 		buffer << "\n  '" << iter->first << "'" << std::endl;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 		iter->second->List(player);
 	}
 	buffer.str("");
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ChannelManager::List(Player *player,const std::string& name)
@@ -113,7 +113,7 @@ void	ChannelManager::List(Player *player,const std::string& name)
 	{
 		std::ostringstream	buffer("");
 		buffer << "Channel - " << name << ":\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		channel->List(player);
 	}
 	else

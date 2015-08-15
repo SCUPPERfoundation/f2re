@@ -49,7 +49,7 @@ void	Channel::List(Player *player)
 	std::ostringstream	buffer("");
 	for(Members::iterator iter = members.begin();iter != members.end();iter++)
 		buffer << "    " << (*iter)->FullName() << "" << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Channel::Remove(Player	*player)

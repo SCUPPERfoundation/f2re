@@ -83,7 +83,7 @@ void	Louie::DisplayGame(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "Lucky Louie Game - stake is " << stake << ", pot is " << pot << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	for(int count = 0;count < MAX_GAMBLERS;count++)
 	{
 		if(gamblers[count].player != 0)
@@ -94,7 +94,7 @@ void	Louie::DisplayGame(Player *player)
 				buffer << " - number not yet called\n";
 			else
 				buffer << " - number called\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -163,13 +163,13 @@ void Louie::Join(Player *player)
 				if(gamblers[index].player != 0)
 					buffer << "  " << gamblers[index].player->Name() << "\n";
 			}
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << player->Name() << " has joined your game of Lucky Louie.\n";
 			for(int index = 0;index < MAX_GAMBLERS;index++)
 			{
 				if((gamblers[index].player != 0) && (count != index))
-					gamblers[index].player->Send(buffer);
+					gamblers[index].player->Send(buffer,OutputFilter::DEFAULT);
 			}
 			player->SetLouie(this);
 			return;
@@ -194,7 +194,7 @@ void	Louie::Leave(Player *player)
 			for(int index = 0;index < MAX_GAMBLERS;index++)
 			{
 				if(gamblers[index].player != 0)
-					gamblers[index].player->Send(buffer);
+					gamblers[index].player->Send(buffer,OutputFilter::DEFAULT);
 			}
 			return;
 		}
@@ -264,7 +264,7 @@ void	Louie::SettleUp(Player *winner)
 		{
 			buffer.str("");
 			buffer << "You pocket your winnings - " << pot << "ig\n";
-			winner->Send(buffer);
+			winner->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 		{
@@ -273,7 +273,7 @@ void	Louie::SettleUp(Player *winner)
 				buffer.str("");
 				buffer << "Your winnings take you over the house limit for this session";
 				buffer << " so you pocket only " << winnings << " and the house takes the rest.\n";
-				winner->Send(buffer);
+				winner->Send(buffer,OutputFilter::DEFAULT);
 			}
 			else
 			{
@@ -281,7 +281,7 @@ void	Louie::SettleUp(Player *winner)
 				buffer << "You are already at the house limit, so the house takes the pot - ";
 				buffer << pot << "ig. However, it is generally possible to get a small extension";
 				buffer << " to the house limit by buying all the locals a drink!\n";
-				winner->Send(buffer);
+				winner->Send(buffer,OutputFilter::DEFAULT);
 			}
 		}
 		pot = 0;

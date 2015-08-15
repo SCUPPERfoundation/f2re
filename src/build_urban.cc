@@ -100,7 +100,7 @@ void	Urban::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Urban Regeneration: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Urban::UpdateEfficiency(Efficiency *efficiency)

@@ -263,7 +263,7 @@ void	CommodityExchange::Display(Player *player,const std::string& commod_grp)
 
 	std::ostringstream	buffer;
 	buffer << home_map->Title() << " exchange - " << commod_grp << " products:\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	for(CommodIndex::iterator iter = commod_index.begin();iter != commod_index.end();iter++)
 		iter->second->OwnerDisplay(player,group);
 }
@@ -292,7 +292,7 @@ void	CommodityExchange::DisplayProduction(Player *player,const std::string& comm
 
 	std::ostringstream	buffer;
 	buffer << home_map->Title() << " exchange - " << commod_grp << " production and consumption:\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	for(CommodIndex::iterator iter = commod_index.begin();iter != commod_index.end();iter++)
 		iter->second->DisplayProduction(player,group);
 }

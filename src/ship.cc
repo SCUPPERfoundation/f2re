@@ -316,7 +316,7 @@ void	Ship::DisplayObjects(Player *player)
 	}
 	std::ostringstream	buffer;
 	locker->Display(player,buffer);
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Ship::FlipFlag(Player *player,int which)
@@ -539,12 +539,12 @@ void	Ship::StatusReport(Player *player)
 	std::ostringstream	buffer("");
 	buffer << "Status report for your " << hull_types[ship_class]->name << " class spaceship" << std::endl;
 	buffer << "  Registered in " << registry << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Hull strength:  " << cur_hull << "/" << max_hull << std::endl;
 	buffer << "  Shields:        " << cur_shield << "/" << max_shield << std::endl;
 	buffer << "  Engines:        " << cur_engine << "/" << max_engine << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Computer:" << std::endl;
 	buffer << "    Level:        " << computer.cur_level << "/" << computer.level << std::endl;
@@ -554,7 +554,7 @@ void	Ship::StatusReport(Player *player)
 	buffer << "    Jammers:      " << computer.jammers << std::endl;
 	buffer << "  Cargo space:    " << cur_hold << "/" << max_hold << std::endl;
 	buffer << "  Fuel:           " << cur_fuel << "/" << max_fuel << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	if(magazine > 0)
 		buffer << "  Magazine space: " << (magazine - missiles) << "/" << magazine << std::endl;
@@ -571,12 +571,12 @@ void	Ship::StatusReport(Player *player)
 	}
 	else
 		buffer << "    None" << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	if(manifest.size() > 0)
 	{
 		buffer << "  Cargo carried (75 ton containers):\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 		for(Manifest::iterator iter = manifest.begin();iter != manifest.end();iter++)
 		{
@@ -770,7 +770,7 @@ void	Ship::Repair(Player *player,int action)
 		invoice << "Repair estimate cost breakdown. Valid for 1,000ms only.\n";
 	else
 		invoice << "Invoice for repair. Terms: Payment due 30ms after time of issue.\n";
-	player->Send(invoice);
+	player->Send(invoice,OutputFilter::DEFAULT);
 	invoice.str("");
 
 	cost += ComputerRepair(player,invoice,action);
@@ -782,7 +782,7 @@ void	Ship::Repair(Player *player,int action)
 		invoice << "The sales droid starts preparing the paper work, then looks up and ";
 		invoice << "tells you in a disgusted tone of voice, \"There's nothing wrong with ";
 		invoice << "your ship. Quit wasting my time or I'll bill you for it.\"\n";
-		player->Send(invoice);
+		player->Send(invoice,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -790,7 +790,7 @@ void	Ship::Repair(Player *player,int action)
 		invoice << "Repairing your ship on this planet will cost you a cool " << cost << "ig\n";
 	else
 		invoice << "Total cost: " << cost << "ig\n";
-	player->Send(invoice);
+	player->Send(invoice,OutputFilter::DEFAULT);
 
 	FedMap	*fed_map =  player->CurrentMap();
 	if(registry == fed_map->Title())
@@ -801,14 +801,14 @@ void	Ship::Repair(Player *player,int action)
 			cost -= cost/50;
 			invoice << "However, you are entitled to a GA OutSystem Business Development Subsidy of 2%, ";
 			invoice << "which brings the cost down to " << cost << "ig\n";
-			player->Send(invoice);
+			player->Send(invoice,OutputFilter::DEFAULT);
 		}
 		else
 		{
 			cost -= cost/100;
 			invoice << "However, you are entitled to a GA OutSystem Business Development Subsidy of 1%, ";
 			invoice << "which brings the cost down to " << cost << "ig\n";
-			player->Send(invoice);
+			player->Send(invoice,OutputFilter::DEFAULT);
 		}
 	}
 	if(action == FedMap::BUY)

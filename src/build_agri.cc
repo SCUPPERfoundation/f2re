@@ -90,7 +90,7 @@ void	AgriCollege::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Agricultural College: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	AgriCollege::IsObselete()

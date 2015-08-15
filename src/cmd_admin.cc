@@ -108,7 +108,7 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 	if(ok)
 	{
 		buffer << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		player->Send(no_company,OutputFilter::DEFAULT);
@@ -225,7 +225,7 @@ void	Admin::Change(Player *player,Tokens *tokens)
 	if(target == 0)
 	{
 		buffer << "I can't find an account with the name '" << tokens->Get(3) << "'\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -506,7 +506,7 @@ void	Admin::SavePlayer(Player *player,Tokens *tokens)
 			Game::player_index->Save(target,PlayerIndex::WITH_OBJECTS);
 			std::ostringstream	buffer("");
 			buffer << name << " saved out to disk.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -673,7 +673,7 @@ void	Admin::WhoElse(Player *player,Tokens *tokens)
 			std::ostringstream	buffer;
 			buffer << name << " (IP address "<< target->IPAddress();
 			buffer << ") has the following characters in the game database:\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			if(Game::player_index->FindAllAlts(player,ip) == 0)
 				player->Send("  None!\n",OutputFilter::DEFAULT);
@@ -690,6 +690,6 @@ void	Admin::Zombie(Player *player,Tokens *tokens)
 	std::ostringstream	buffer;
 	buffer << "Number of zombie accounts over " << days << " days old is ";
 	buffer << info.first << " of " << info.second << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 

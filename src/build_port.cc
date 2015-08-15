@@ -83,7 +83,7 @@ void	Port::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Ports: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Port::RequestResources(Player *player,const std::string& recipient,int quantity)

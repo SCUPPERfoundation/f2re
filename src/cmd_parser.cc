@@ -204,7 +204,7 @@ void	CmdParser::Address(Player *player)
 		std::ostringstream	buffer;
 		buffer << "The teleporter address is ";
 		buffer << Teleporter::MakeAddress(address,player->GetLocRec()) << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		player->Send("You don't have a teleporter!\n",OutputFilter::DEFAULT);
@@ -295,7 +295,7 @@ name of the business whose shares you are bidding for.\n");
 	if(business == 0)
 	{
 		buffer << "Sorry, I'm unable to find a business called '" << bus_name << "'!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		player->Send(bid_txt,OutputFilter::DEFAULT);
 		return;
 	}
@@ -337,7 +337,7 @@ name of the business whose shares you are bidding for.\n");
 	buffer << "Your bid for " << num_shares << " shares in " << bus_name;
 	buffer << " has been recorded. The CEO will decide whether to accept";
 	buffer << " the bid, or not, in due course.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	CmdParser::Board(Player *player)
@@ -512,7 +512,7 @@ bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
 		buffer << "The clerk tells you that business names must be between ";
 		buffer << Business::MIN_NAME_SIZE << "and ";
 		buffer << (Business::MAX_NAME_SIZE - 1) << " long!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -521,7 +521,7 @@ bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
 	{
 		buffer << "The clerk shakes its head and informs you that the minimum ";
 		buffer << "price for shares is " << Business::START_MIN_PRICE << "ig.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -802,7 +802,7 @@ void	CmdParser::Examine(Player *player,std::string& line)
 					{
 						std::ostringstream	buffer("");
 						buffer << "I can't find anything called " << tokens->Get(1) << " in the vicinity!" << std::endl;
-						player->Send(buffer);
+						player->Send(buffer,OutputFilter::DEFAULT);
 					}
 				}
 			}
@@ -1145,11 +1145,11 @@ void	CmdParser::Gag(Player *player)
 			target->Gag(true);
 			std::ostringstream	buffer;
 			buffer << "Your ability to send comm messages has been removed by " << player->Name() << "\n";
-			target->Send(buffer);
+			target->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << target->Name() << "'s access to the comms channel has been stopped. ";
 			buffer << "Please mail details and log to feedback@ibgames.com\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << player->Name() << " has blocked " << target->Name() << "'s access to the comms";
 			WriteLog(buffer);
@@ -1327,7 +1327,7 @@ that the link is only open to commanders with at least 50 hauler credits and hig
 				{
 					buffer.str("");
 					buffer << "  " << *iter << "\n";
-					player->Send(buffer);
+					player->Send(buffer,OutputFilter::DEFAULT);
 				}
 				player->Send("    \n",OutputFilter::DEFAULT);
 			}
@@ -1343,12 +1343,12 @@ that the link is only open to commanders with at least 50 hauler credits and hig
 					buffer << "  " << *iter << "\n";
 					if(buffer.str().length() > 850)
 					{
-						player->Send(buffer);
+						player->Send(buffer,OutputFilter::DEFAULT);
 						buffer.str("");
 					}
 				}
 				if(buffer.str().length() > 0)
-					player->Send(buffer);
+					player->Send(buffer,OutputFilter::DEFAULT);
 			}
 		}
 		else
@@ -1449,7 +1449,7 @@ void	CmdParser::Lock(Player *player)
 		if(Game::player_index->FindCurrent(player_name) != 0)
 		{
 			buffer << "You are being locked out of the game by " << player->Name() << "\n";
-			target->Send(buffer);
+			target->Send(buffer,OutputFilter::DEFAULT);
 			Game::player_index->LogOff(target);
 		}
 		else
@@ -1462,7 +1462,7 @@ void	CmdParser::Lock(Player *player)
 		buffer.str("");
 		buffer << "You have locked out " << target->Name() << ". Please e-mail a log and ";
 		buffer << "any other details to fi@ibgames.com now, before you forget.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -1581,7 +1581,7 @@ void	CmdParser::Offer(Player *player, std::string& line)
 		if(price == 0L)
 		{
 			buffer << "There's not enough " << commodity_name << " available to make up a cargo!\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			target->RemoveJobOffer();
 		}
 		else
@@ -1590,10 +1590,10 @@ void	CmdParser::Offer(Player *player, std::string& line)
 			buffer.str("");
 			buffer << " Details of your job offer have been sent to " << target->Name();
 			buffer << ". You should be hearing back from " << target->Name() << " soon.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << player->Name() << " has offered you a job!\n";
-			target->Send(buffer);
+			target->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1726,7 +1726,7 @@ void	CmdParser::PostJob(Player *player,std::string& line)
 		{
 			cartel->RemoveLastJob();
 			buffer << "There's not enough " << commodity << " available to make up a cargo!\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return;
 		}
 
@@ -1736,7 +1736,7 @@ void	CmdParser::PostJob(Player *player,std::string& line)
 		buffer.str("");
 		buffer << "Your job has been posted onto the cartel's work board and you have been ";
 		buffer << "charged " << xfer_cost << "ig.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -1817,7 +1817,7 @@ void	CmdParser::Register(Player *player,std::string& line)
 		buffer << "The clerk tells you that you don't have the funds to ";
 		buffer << "buy the required " << Business::START_PL_SHARES;
 		buffer  << " at " << price << "ig/share.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1838,7 +1838,7 @@ void	CmdParser::Register(Player *player,std::string& line)
 	buffer << "The clerk enters the details into its terminal and scans the result for ";
 	buffer << "a few moments. \"Congratulations\", it tells you. \"Your business registration ";
 	buffer << "has been accepted. You are the CEO of " << name << ".\"\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << player->Name() << " has been appointed CEO of " << name << "\n";
@@ -1912,7 +1912,7 @@ void	CmdParser::Relay(Player *player)
 	{
 		std::ostringstream	buffer("");
 		buffer << "There's no one called " << name << " in the game at the moment.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		player->Relay(recipient);
@@ -2200,7 +2200,7 @@ void	CmdParser::Store(Player *player)
 		{
 			std::ostringstream	buffer("");
 			buffer << "There isn't a commodity called " << tokens->Get(1) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 			player->Store(commodity);
@@ -2246,7 +2246,7 @@ void	CmdParser::TermWidth(Player *player)
 		{
 			std::ostringstream	buffer("");
 			buffer << "Line length set to " << length << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -2295,10 +2295,10 @@ void	CmdParser::UnGag(Player *player)
 			target->Gag(false);
 			std::ostringstream	buffer;
 			buffer << "Your ability to send comm messages has been restored by " << player->Name() << "\n";
-			target->Send(buffer);
+			target->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << target->Name() << "'s access to the comms channel has been restored.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << player->Name() << " has restored " << target->Name() << "'s access to the comms";
 			WriteLog(buffer);
@@ -2340,7 +2340,7 @@ void	CmdParser::UnLock(Player *player)
 			WriteLog(buffer);
 			buffer.str("");
 			buffer << target->Name() << " has been unlocked.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			Game::player_index->Save(target,PlayerIndex::NO_OBJECTS);
 		}
 	}
@@ -2513,7 +2513,7 @@ void	CmdParser::WhoElse(Player *player)
 			std::string	ip(target->IPAddress());
 			std::ostringstream	buffer;
 			buffer << name << " has the following characters in the game at the moment:\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			if(Game::player_index->FindAlts(player,ip) == 0)
 				player->Send("  None!\n",OutputFilter::DEFAULT);
@@ -2629,7 +2629,7 @@ void	CmdParser::Zap(Player *player)
 		{
 			std::ostringstream	buffer;
 			buffer << "I can't find " << tokens->Get(1) << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 			Game::player_index->Zap(who,player);

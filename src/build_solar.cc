@@ -109,7 +109,7 @@ void	Solar::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Solar Collectors: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Solar::UpdateDisaffection(Disaffection *discontent)

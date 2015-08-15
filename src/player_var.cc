@@ -12,6 +12,7 @@
 #include	<sstream>
 
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "xml_parser.h"
 
@@ -84,7 +85,7 @@ void	PlayerVariable::Display(Player *player)
 	if(player == 0)
 		WriteLog(buffer);
 	else
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	PlayerVariable::Update(std::string& key,std::string& value)

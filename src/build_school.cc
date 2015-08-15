@@ -144,7 +144,7 @@ void	School::Display(Player *player)
 	if(biolab_builds > 0)		buffer << "      BioLab feeders: " << biolab_builds << "\n";
 	if(metastudio_builds > 0)	buffer << "      MetaStudio feeders: " << metastudio_builds << "\n";
 	if(unused_builds > 0)		buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	School::LevelUpdate()

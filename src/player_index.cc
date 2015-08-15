@@ -122,13 +122,22 @@ void	PlayerIndex::CallNightWatch(Player *player,Player *target)
 	std::ostringstream	buffer("");
 	buffer << player->Name() << " " << Game::system->GetMessage("playerindex","callnightwatch",1);
 	buffer << Game::system->GetMessage("playerindex","callnightwatch",2);
-	target->Send(buffer);
+	target->Send(buffer,OutputFilter::DEFAULT);
 	player->Send(Game::system->GetMessage("playerindex","callnightwatch",3),OutputFilter::DEFAULT);
+
 	buffer.str("");
 	buffer << "A couple of Nightwatch officers appear and size up the situation. ";
 	buffer << "A robot trolley arrives and the sleeping " << target->Name();
 	buffer << " is bundled onto it and taken off to the nearest dormitory.\n";
-	target->CurrentMap()->RoomSend(target,target,target->LocNo(),buffer.str(),"");
+	std::string	text(buffer.str());
+	PlayerList pl_list;
+	target->CurrentMap()->PlayersInLoc(target->LocNo(),pl_list,target);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
+
 	target->ForcedMove("Sol","Earth",585);
 	buffer.str("");
 	buffer << player->Name() << " has moved " << target->Name() << " to the dormitory.";
@@ -171,7 +180,7 @@ void	PlayerIndex::DisplayAccount(Player *player,const std::string& id)
 	if(target == 0)
 	{
 		buffer << "I can't find any details for an account called '" << id << "'\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -180,7 +189,7 @@ void	PlayerIndex::DisplayAccount(Player *player,const std::string& id)
 	buffer << "  Email:      " << target->Email() << "\n";
 	buffer << "  Last on:    " << target->LastOn() << "\n";
 	buffer << "  IP Address: " << target->IPAddress() << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	PlayerIndex::DisplaySameEmail(Player *player,const std::string& email)
@@ -192,16 +201,16 @@ void	PlayerIndex::DisplaySameEmail(Player *player,const std::string& email)
 	if(upper == lower)
 	{
 		buffer << "I can't find any players with the address " << email << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	buffer << "Players with the email address '" << email << "':\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	for(iter = lower;iter != upper;++iter)
 	{
 		buffer.str("");
 		buffer << iter->second->Name() << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -210,7 +219,7 @@ void	PlayerIndex::DisplayShipOwners(Player *player,const std::string& reg_name)
 	int	total = 0;
 	std::ostringstream	buffer;
 	buffer << "Ship owners registered on " << reg_name << ":\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	Ship	*ship;
 	for(NameIndex::iterator iter = player_index.begin();iter != player_index.end();iter++)
 	{
@@ -220,7 +229,7 @@ void	PlayerIndex::DisplayShipOwners(Player *player,const std::string& reg_name)
 		{
 			total++;
 			buffer << "  " << iter->second->Name() << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 	if(total == 0)
@@ -248,7 +257,7 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 		if(!are_staff)
 			player->Send("I'm sorry, no staff are currently available.\n",OutputFilter::DEFAULT);
 		else
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -260,7 +269,7 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 			if(iter->second->IsStaff() && (iter->second != player))
 			{
 				are_staff = true;
-				iter->second->Send(buffer);
+				iter->second->Send(buffer,OutputFilter::DEFAULT);
 			}
 		}
 
@@ -269,7 +278,7 @@ void	PlayerIndex::DisplayStaff(Player *player,Tokens *tokens,const std::string& 
 			buffer << "You tell the other staff, \"" << mssg << "\"\n";
 		else
 			buffer << "There aren't any other staff available!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -312,7 +321,7 @@ int	PlayerIndex::FindAllAlts(Player *player,const std::string& ip_address)
 		if(iter->second->IPAddress() == ip_address)
 		{
 			buffer << "  " << iter->second->Name() << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			sum++;
 		}
@@ -330,7 +339,7 @@ int	PlayerIndex::FindAlts(Player *player,const std::string& ip_address)
 		if(iter->second->IPAddress() == ip_address)
 		{
 			buffer << "  " << iter->second->Name() << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			sum++;
 		}
@@ -625,7 +634,7 @@ void	PlayerIndex::Qw(Player *player)
 	if((total % 4) != 0)
 		buffer << std::endl;
 	buffer << total << " players" << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	PlayerIndex::ReportSocketError(int sd,int error_number)
@@ -831,7 +840,7 @@ void	PlayerIndex::Who(Player *player,int rank)
 	buffer << total << " players" << std::endl;
 	if(total_navs > 0)
 		buffer << "Navigators are Federation II staff\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	PlayerIndex::WhoIs(Player *player,const std::string& who)
@@ -844,7 +853,7 @@ void	PlayerIndex::WhoIs(Player *player,const std::string& who)
 	if(who_ptr == 0)
 	{
 		buffer << "Can't find a player called '" << who_name << "' in the game's database.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -859,7 +868,7 @@ void	PlayerIndex::WhoIs(Player *player,const std::string& who)
 		if(who_ptr->IsLocked())
 			buffer << "*** Locked out of the game ***" << std::endl;
 		buffer << lines;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -881,7 +890,7 @@ void	PlayerIndex::WhoIsAccount(Player *player,const std::string& who)
 	if(who_ptr == 0)
 	{
 		buffer << "Can't find an account called '" << who << "' in the game's database.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -898,7 +907,7 @@ void	PlayerIndex::WhoIsAccount(Player *player,const std::string& who)
 		if(who_ptr->IsLocked())
 			buffer << "*** Locked out of the game ***" << std::endl;
 		buffer << lines;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -1014,7 +1023,7 @@ void	PlayerIndex::Zap(Player *player,Player *who_by)
 	buffer << "*** " << name << " has been zapped by " << who_by->Name() << " ***";
 	WriteLog(buffer);
 	buffer << std::endl;
-	who_by->Send(buffer);
+	who_by->Send(buffer,OutputFilter::DEFAULT);
 	delete player;
 }
 

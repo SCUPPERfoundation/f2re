@@ -98,7 +98,7 @@ void	AtmosControl::Display(Player *player)
 	buffer << "    Atmospheric Control Unit: " << total_builds << " built\n";
 	buffer << "      General: " << level_builds << "\n";
 	buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	AtmosControl::LevelUpdate()

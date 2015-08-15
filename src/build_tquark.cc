@@ -94,7 +94,7 @@ void	TQuark::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    T-Quark net: " << total_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	TQuark::UpdateEfficiency(Efficiency *efficiency)

@@ -41,7 +41,7 @@ void	CmdHelp::SendHelp(Player *player,Tokens *tokens,std::string& line)
 	if(help_map == 0)
 	{
 		buffer << no_help << verb << "'.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		misses.push_back(line);
 		return;
 	}
@@ -50,7 +50,7 @@ void	CmdHelp::SendHelp(Player *player,Tokens *tokens,std::string& line)
 	if(size == 0)
 	{
 		buffer << no_help << verb << "'.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		misses.push_back(line);
 		return;
 	}

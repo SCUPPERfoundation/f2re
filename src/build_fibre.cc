@@ -91,7 +91,7 @@ void	FibreOptics::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Fibre-optic runs: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	FibreOptics::UpdateEfficiency(Efficiency *efficiency)

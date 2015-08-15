@@ -83,7 +83,7 @@ void	Railway::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " railway";
 	buffer << ((total_builds > 1) ? "s" : "") << " laid\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Railway::IsObselete()

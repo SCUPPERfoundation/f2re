@@ -86,7 +86,7 @@ void	BioLab::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    BioLab " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	BioLab::Riot()

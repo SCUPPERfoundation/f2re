@@ -109,7 +109,7 @@ void	Clinic::Display(Player *player)
 	buffer << "      General: " << level_builds << "\n";
 	buffer << "      Teaching: " << hosp_builds << "\n";
 	buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Clinic::LevelUpdate()

@@ -12,6 +12,7 @@
 #include <sstream>
 
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_vars_table.h"
 
@@ -76,7 +77,7 @@ void	GlobalPlayerVarsTable::Display(Player *player,std::string& var_name,Player 
 		else
 		{
 			buffer << "\n";
-			send_to->Send(buffer);
+			send_to->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -95,7 +96,7 @@ void	GlobalPlayerVarsTable::DisplayAll(Player *player,Player *send_to)
 		else
 		{
 			buffer << "\n";
-			send_to->Send(buffer);
+			send_to->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 };

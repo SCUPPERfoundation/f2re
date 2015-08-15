@@ -4,7 +4,7 @@ project(fed2d)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++98")
 
 set(SOURCE_FILES
-    include/accounts.h
+    include/cmd_accounts.h
     include/assign.h
     include/blish_city.h
     include/blish_info.h
@@ -226,7 +226,7 @@ set(SOURCE_FILES
     include/work.h
     include/xml_dump_load.h
     include/xml_parser.h
-    src/accounts.cc
+    src/cmd_accounts.cc
     src/assign.cc
     src/blish_city.cc
     src/blish_info.cc

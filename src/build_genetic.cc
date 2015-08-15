@@ -110,7 +110,7 @@ void	Genetic::Display(Player *player)
 		buffer << "    Genetic clinics: " << total_builds << " built\n";
 	else
 		buffer << "    Genetic clinic: 1 built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Genetic::UpdateDisaffection(Disaffection *discontent)

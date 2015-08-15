@@ -187,7 +187,7 @@ bool	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 		if(cartel->Cash() < rec->cost)
 		{
 			buffer << "It costs " << (rec->cost/1000000) << "meg ig to build the city up to size " << (city_level + 1) << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return false;
 		}
 
@@ -199,14 +199,14 @@ bool	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 		buffer << "The Cartel pay up the " << (rec->cost/1000000) << "meg ig to build the city ";
 		buffer << "up to size " << (city_level + 1) << ", and are notified that work will commence ";
 		buffer << "as soon as all the dockyard mateys are back from the " << (holidays[std::rand() % 7]) << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return true;
 	}
 	else
 	{
 		buffer << "To complete the city you now need to specify what type of production the city needs to be outfitted for. ";
 		buffer << "the command is 'build city type', where 'type' is one of agri, resource, industrial, tech, or leisure.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return false;
 	}
 }
@@ -245,7 +245,7 @@ void	GravingDock::DisplayCityBuild(Player *player)
 		buffer << "    " << (*iter)->commodity << ": " << (*iter)->quantity_in_stock;
 		buffer << "/" << (*iter)->quantity_needed << "\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	GravingDock::DisplayDockBuild(Player *player)
@@ -260,7 +260,7 @@ void	GravingDock::DisplayDockBuild(Player *player)
 		buffer << "    " << (*iter)->commodity << ": " << (*iter)->quantity_in_stock;
 		buffer << "/" << (*iter)->quantity_needed << "\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 BuildMaterials *GravingDock::FindMaterials(const std::string& commod)
@@ -375,7 +375,7 @@ void	GravingDock::StartBuildCity(Player *player,Cartel* cartel,const std::string
 
 	std::ostringstream	buffer;
 	buffer << "Your cartel pays out " << build_rec->cost/1000000 << " meg ig to have a basic blish city built.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
@@ -385,7 +385,7 @@ bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 	if(cartel->Cash() < rec->cost)
 	{
 		buffer << "It costs " << (rec->cost/1000000) << "meg ig to fit out your city for " << type_names[c_type + 1] << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -398,7 +398,7 @@ bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 	buffer << "The Cartel pay up the " << (rec->cost/1000000) << "meg ig to outfit the city for ";
 	buffer << type_names[c_type + 1] << ", and are notified that work will commence as soon as ";
 	buffer << "all the dockyard mateys are back from the " << (holidays[std::rand() % 7]) << ".\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	return true;
 }
 

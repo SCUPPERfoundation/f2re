@@ -79,7 +79,7 @@ void	RiotPolice::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " battalion";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	RiotPolice::UpdateDisaffection(Disaffection *disaffection)

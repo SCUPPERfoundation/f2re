@@ -96,7 +96,7 @@ void	Inventory::Carry(Player *player,const std::string& obj_name)
 		obj->ResetFlag(Object::WORN);
 		buffer << "You take " << obj->c_str() << " out of your inventory and carry it.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Inventory::ChangeCustomsCert(int num_days)
@@ -138,7 +138,7 @@ void	Inventory::Clip(Player *player,const std::string& obj_name)
 		obj->ResetFlag(Object::WORN);
 		buffer << "You take " << obj->c_str() << " out of your inventory and clip it on your keyring.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Inventory::CreateDBRec(DBPlayer *rec)
@@ -192,7 +192,7 @@ int	Inventory::Display(Player *player,std::ostringstream& buff)
 
 	buffer.str("");
 	DisplayPersonal(buffer);
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	DisplayKeyring(player,true);
 
 	if(Size() > 0)
@@ -200,11 +200,11 @@ int	Inventory::Display(Player *player,std::ostringstream& buff)
 		buffer.str("");
 		buffer << "You have with you:\n";
 		DisplayList(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 		buffer.str("");
 		MakeFluff(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 	}
 
@@ -231,7 +231,7 @@ int	Inventory::DisplayInventory(Player *player)
 	std::ostringstream	buffer;
 
 	DisplayPersonal(buffer);
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	DisplayKeyring(player,true);
 
 	if(Size() > 0)
@@ -239,11 +239,11 @@ int	Inventory::DisplayInventory(Player *player)
 		buffer.str("");
 		buffer << "You have with you:\n";
 		DisplayList(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 		buffer.str("");
 		MakeFluff(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 	}
 
@@ -274,7 +274,7 @@ void	Inventory::DisplayKeyring(Player *player,bool self)
 			}
 		}	
 		buffer << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -354,7 +354,7 @@ int	Inventory::Display2Watcher(Player *player,std::ostringstream& buff)
 
 			buffer << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc();
 			is_wearing = true;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 
@@ -372,7 +372,7 @@ int	Inventory::Display2Watcher(Player *player,std::ostringstream& buff)
 
 			buffer << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc();
 			is_carrying = true;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 
@@ -404,7 +404,7 @@ void	Inventory::Doff(Player *player,const std::string& obj_name)
 			buffer << "You remove the " << obj_name << " and store it out of sight.\n";
 		}
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Inventory::HasTeleporter(int which)
@@ -471,7 +471,7 @@ void	Inventory::Pocket(Player *player,const std::string& obj_name)
 			buffer << "You remove the " << obj_name << " and store it in a convenient pocket.\n";
 		}
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Inventory::ProcessTimeCerts()
@@ -570,7 +570,7 @@ void	Inventory::Wear(Player *player,const std::string& obj_name)
 		obj->SetFlag(Object::WORN);
 		buffer << "You take " << obj->c_str() << " out of your inventory and put it on.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int	Inventory::WeightCarried()

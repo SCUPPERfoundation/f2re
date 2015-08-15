@@ -79,7 +79,7 @@ buildings are rapidly ceasing to be a newsworthy novelty.\n";
 		buffer << "The opening of a new anti-gravity based building is so commonplace on ";
 		buffer << fed_map->Title() << " that it makes little difference to the size ";
 		buffer << "of your population.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	return(true);
 }
@@ -88,7 +88,7 @@ void	AntiGrav::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Anti-grav Buildings: " << total_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	AntiGrav::RequestResources(Player *player,const std::string& recipient,int quantity)

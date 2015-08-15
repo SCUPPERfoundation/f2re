@@ -78,11 +78,11 @@ void	BusinessRegister::Display(Player *player)
 	{
 		++total;
 		buffer << "   " << iter->first << " - CEO: " << iter->second->CEO()->Name() << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 	}
 	buffer << total << " businesses\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 Business	*BusinessRegister::Find(const std::string& name)

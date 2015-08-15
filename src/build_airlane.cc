@@ -74,7 +74,7 @@ void	AirLane::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Airlanes: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	AirLane::RequestResources(Player *player,const std::string& recipient,int quantity)

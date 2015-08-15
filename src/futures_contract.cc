@@ -16,6 +16,7 @@
 #include "futures_exchange.h"
 #include "mail.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_index.h"
 
@@ -88,7 +89,7 @@ int	FuturesContract::MarginCall()
 				buffer << "company's ";
 			buffer << home_map_title << " exchange ";
 			buffer << commod << " futures contract.\n";
-			if(!player->Send(buffer))
+			if(!player->Send(buffer,OutputFilter::DEFAULT))
 			{
 				FedMssg	*mssg =  new FedMssg;
 				mssg->sent = std::time(0);

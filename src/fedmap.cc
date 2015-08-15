@@ -229,7 +229,7 @@ bool	FedMap::AddProduction(Player *player,const std::string& commodity_name,int 
 		else
 		{
 			buffer << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		return false;
 	}
@@ -249,7 +249,7 @@ bool	FedMap::AddProductionPoint(Player *player,const std::string& commodity_name
 		else
 		{
 			buffer << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		return false;
 	}
@@ -868,7 +868,7 @@ void	FedMap::DisplayFleet(Player *player)
 	{
 		std::ostringstream	buffer;
 		buffer << "  " << home_star->Name() << " - "<< title << " - "  << fleet_size << " ships\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -882,12 +882,12 @@ void	FedMap::DisplayFutures(Player *player)
 		if(futures_exchange == 0)
 		{
 			buffer << title << " doesn't trade in futures.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 		{
 			futures_exchange->Display(buffer);
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1639,7 +1639,7 @@ void	FedMap::MaxStock(Player *player,int level,const std::string commod_name)
 		else
 			buffer << "Max stock level for " << commodity_name << " set to " << level << ".\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	FedMap::MinStock(Player *player,int level,const std::string commod_name)
@@ -1674,7 +1674,7 @@ void	FedMap::MinStock(Player *player,int level,const std::string commod_name)
 		else
 			buffer << "Min stock level for " << commodity_name << " set to " << level << ".\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 LocRec	*FedMap::Move(Player *player,int dir)
@@ -1686,7 +1686,7 @@ LocRec	*FedMap::Move(Player *player,int dir)
 		buffer << "Can't find the location your character is in. [" << name << "." << player->LocNo();
 		;
 		buffer << "] Please report problem to 'feedback@ibgames.com', Thank you.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(0);
 	}
 
@@ -1701,7 +1701,7 @@ LocRec	*FedMap::Move(Player *player,int dir)
 			std::ostringstream	buffer("");
 			buffer << "Can't find the location to move to. [Now in " << name << "." << player->LocNo();
 			buffer << "] Please report problem to 'feedback@ibgames.com', Thank you.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return(0);
 		}
 		if(ProcessEvent(player,rec->loc_no,Location::ENTER) < 0)
@@ -2125,7 +2125,7 @@ void	FedMap::SetSpread(Player *player,int amount,const std::string commod_name)
 		else
 			buffer << "Price spread for " << commodity_name << " set to " << amount << "%.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	FedMap::SetTreasury(long amount)
@@ -2257,7 +2257,7 @@ void	FedMap::Version(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "Map version number is: " << version << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	FedMap::Who(Player *player)
@@ -2289,7 +2289,7 @@ void	FedMap::Who(Player *player)
 			buffer << std::endl;
 		}
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	FedMap::Write()

@@ -154,7 +154,7 @@ void	SetParser::SetCartelProperty(Player *player,Tokens *tokens)
 		cartel->ChangeEntranceFee(-amount);
 		buffer << "The joining bonus for the " << cartel->Name() << " cartel is now " << amount << " Megagroats.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	Game::review->Post(buffer);
 }
 
@@ -188,7 +188,7 @@ city_name to commodity_name.\n",OutputFilter::DEFAULT);
 	if(commodity_name == "Unknown")
 	{
 		buffer << "I can't find a commodity called '" << tokens->Get(index + 1) << "'!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -230,7 +230,7 @@ void	SetParser::SetCustoms(Player *player,Tokens *tokens)
 	std::ostringstream	buffer;
 	buffer << "The " << cartel->Name() << " customs duty has been set to ";
 	buffer << cartel->Customs() << "%.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	Game::financial->Post(buffer);
 }
 

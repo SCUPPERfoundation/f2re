@@ -60,11 +60,11 @@ void	ExpParser::ExpropriateDepot(Player *player,Tokens *tokens,const std::string
 		buffer<< company_name << "' depot.\n";
 	else
 		buffer<< company_name << "'s depot.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << player->Name() << " has expropriated your company's depot on " << cur_map->Title() << ".\n";
-	owner->Send(buffer);
+	owner->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
  	if(company_name[company_name.length() - 1] == 's')
@@ -145,11 +145,11 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 	else
 		buffer<< company_name << "'s number ";
 	buffer << fac_num << " factory.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << player->Name() << " has expropriated your company's number " << fac_num << " factory.\n";
-	owner->Send(buffer);
+	owner->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
  	if(company_name[company_name.length() - 1] == 's')

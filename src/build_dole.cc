@@ -79,7 +79,7 @@ void	Dole::Display(Player *player)
 		buffer << "    Unemployment Pay (Dole): " << total_builds << " levels\n";
 	else
 		buffer << "    Unemployment Pay (Dole): 1 level\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Dole::UpdateDisaffection(Disaffection *discontent)

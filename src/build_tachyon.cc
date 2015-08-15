@@ -57,7 +57,7 @@ be built at biological levels, since they need bio-molecular circuit chips.\n");
 				buffer << "Your first tachyon transmission network on the planet lays the ";
 				buffer << "foundations for a far reaching network and encourages the production of ";
 				buffer << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -83,7 +83,7 @@ bool	Tachyon::Add(Player *player,Tokens *tokens)
 	 		buffer << "Your tachyon transmission network is extended further into the outer ";
 			buffer << "reaches of your star system, resulting in an increased production of ";
 			buffer << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return(true);
 		}
 		return(false);
@@ -92,7 +92,7 @@ bool	Tachyon::Add(Player *player,Tokens *tokens)
 	buffer << "Your tachyon transmission network is extended further into your star's ";
 	buffer << "Kuiper belt, but it seems to have little effect on production, since no ";
 	buffer << "one lives there!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -119,7 +119,7 @@ bool	Tachyon::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 		buffer << ", only to leisure commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -146,7 +146,7 @@ void	Tachyon::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " transceiver";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Tachyon::Write(std::ofstream& file)

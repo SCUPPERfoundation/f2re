@@ -57,7 +57,7 @@ Base::Base(FedMap *the_map,Player *player,Tokens *tokens)
 			 	buffer << "Your Planetary Defence Base is completed late, but, to everyone's ";
 				buffer << "surprise, within budget. Its day to day operational requirements ";
 				buffer << "spur the production of " << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -92,7 +92,7 @@ built at Agriculture, Resource, and Industrial levels.\n");
 		 	buffer << "Your Planetary Defence Base is completed late, but, to everyone's ";
 			buffer << "surprise, within budget. Its day to day operational requirements ";
 			buffer << "spur the production of " << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -103,7 +103,7 @@ built at Agriculture, Resource, and Industrial levels.\n");
 	buffer << "scheduled, but within budget. While the planetary defences ";
 	buffer << "are undoubtedly more formidable as a result, the base seems ";
 	buffer << "to have little effect on the planet's overall production!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -130,7 +130,7 @@ bool	Base::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 			buffer << ", only to defence industry commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -153,7 +153,7 @@ void	Base::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Planetary Defence Bases: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Base::Write(std::ofstream& file)

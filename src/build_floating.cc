@@ -121,7 +121,7 @@ void	FloatingCity::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Floating Cities: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	FloatingCity::UpdateDisaffection(Disaffection *discontent)

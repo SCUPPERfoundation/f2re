@@ -13,6 +13,7 @@
 
 #include "event_number.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "global_player_vars_table.h"
 
@@ -40,7 +41,7 @@ int	CheckVariable::Process(Player *player)
 		std::ostringstream	buffer;
 		buffer << "  ***checkvariable: name='" << name << "' key='" << key;
 		buffer << "' check value='" << value << "'/actual value='" << the_value << "'***\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	if(the_value == value)

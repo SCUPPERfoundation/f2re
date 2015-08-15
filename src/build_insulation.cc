@@ -77,7 +77,7 @@ void	Insulation::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Insulation: " << total_builds << " campaigns completed\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Insulation::UpdateEfficiency(Efficiency *efficiency)

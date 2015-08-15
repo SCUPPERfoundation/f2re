@@ -205,7 +205,7 @@ void	Star::DisplaySystem(Player *player)
 	buffer << "  Member of the " << cartel << " Cartel\n";
 	if(abandoned)
 		buffer << "  System has been abandoned by its owner!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->Display(player,false);
 
@@ -215,7 +215,7 @@ void	Star::DisplaySystem(Player *player)
 		buffer << "Exiled players:\n";
 		for(BlackList::iterator iter = black_list.begin();iter != black_list.end();iter++)
 			buffer << "  " << *iter << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -258,13 +258,13 @@ void	Star::Exile(Player *player,const std::string& pl_name)
 	if(!AddExile(player_name))
 	{
 		buffer << player_name << " is already exiled from this system!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	EnforceExile(player_name);
 	buffer << player_name << " has been exiled from the " << name << " system!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	Game::review->Post(buffer);
 
 	Player	*target = Game::player_index->FindName(player_name);
@@ -272,7 +272,7 @@ void	Star::Exile(Player *player,const std::string& pl_name)
 	{
 		buffer.str("");
 		buffer << player->Name() << " has exiled you from the " << name << " system!\n";
-		target->Send(buffer);
+		target->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -591,7 +591,7 @@ void	Star::Pardon(Player *player,const std::string& pl_name)
 	if(!IsAnExile(Normalise(player_name)))
 	{
 		buffer << player_name << " isn't exiled from this system!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -605,7 +605,7 @@ void	Star::Pardon(Player *player,const std::string& pl_name)
 	}
 
 	buffer << player_name << " has been pardoned and can now use the " << name << " system!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	Game::review->Post(buffer);
 
 	Player	*target = Game::player_index->FindName(player_name);
@@ -613,7 +613,7 @@ void	Star::Pardon(Player *player,const std::string& pl_name)
 	{
 		buffer.str("");
 		buffer << player->Name() << " has pardoned you, and you may now visit the " << name << " system!\n";
-		target->Send(buffer);
+		target->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 

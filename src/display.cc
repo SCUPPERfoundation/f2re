@@ -66,7 +66,7 @@ void	Display::DisplayAccounts(Player *player,Tokens *tokens,std::string & line)
 			{
 				std::ostringstream	buffer;
 				buffer << " I can't find a player or company called '" << co_name << "'.\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			}
 			else
 				owner->DisplayAccounts(player);
@@ -111,7 +111,7 @@ void	Display::DisplayCartel(Player *player,Tokens *tokens,std::string & line)
 	{
 		std::ostringstream	buffer;
 		buffer << "I'm sorry, I can't find the information for the '" << cartel_name << "' cartel!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -171,7 +171,7 @@ void	Display::DisplayCEO(Player *player,Tokens *tokens,std::string & line)
 		buffer << "I'm sorry, I can't find " << name << " in the register of businesses or companies!\n";
 	else
 		buffer << "The CEO of " << name << " is " << owner->Name() << ".\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Display::DisplayDepot(Player *player,Tokens *tokens,std::string & line)
@@ -391,7 +391,7 @@ to examine another company's share register.\n");
 		{
 			std::ostringstream	buffer;
 			buffer << " I can't find a player or company called '" << co_name << "'.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 			owner->DisplayShares(player);

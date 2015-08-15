@@ -87,7 +87,7 @@ void	ResearchInst::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Central Research Institute: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	ResearchInst::RequestResources(Player *player,const std::string& recipient,int quantity)

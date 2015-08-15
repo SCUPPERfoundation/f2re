@@ -56,7 +56,7 @@ Helio::Helio(FedMap *the_map,Player *player,Tokens *tokens)
 			 	buffer << "Your network of Heliographs and Signal Towers is extended further ";
 				buffer << "into the hinterland, resulting in an increased production of ";
 				buffer << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -90,7 +90,7 @@ bool	Helio::Add(Player *player,Tokens *tokens)
 		 	buffer << "Your network of Heliographs and Signal Towers is extended further ";
 			buffer << "into the hinterland, resulting in an increased production of ";
 			buffer << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -99,7 +99,7 @@ bool	Helio::Add(Player *player,Tokens *tokens)
 
 	buffer << "Your network of Heliographs and Signal Towers is extended further into ";
 	buffer << "the hinterland, but it seems to have little effect on overall production!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -127,7 +127,7 @@ bool	Helio::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 		buffer << ", only to agricultural and resource commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -154,7 +154,7 @@ void	Helio::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " route";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Helio::Write(std::ofstream& file)

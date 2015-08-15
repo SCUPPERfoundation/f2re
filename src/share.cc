@@ -13,6 +13,7 @@
 
 #include "company.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -27,14 +28,14 @@ void	Share::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    " << owner << ": " << quantity << " shares\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Share::DisplayAsPortfolio(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << quantity << " shares\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Share::Write(std::ofstream& file)

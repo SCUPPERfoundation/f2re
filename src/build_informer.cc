@@ -75,7 +75,7 @@ void	Informer::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " network";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Informer::UpdateDisaffection(Disaffection *disaffection)

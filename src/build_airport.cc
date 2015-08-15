@@ -97,7 +97,7 @@ void	Airport::Display(Player *player)
 	else
 		buffer << "    Intra-Global";
 	buffer << " Airports: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int	Airport::Set(int)

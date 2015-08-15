@@ -73,7 +73,7 @@ bool	Canal::Add(Player *player,Tokens *tokens)
 		buffer << "'s canal system, but it seems to make little difference to ";
 		buffer << "the efficiency of your economy. You seem to have reached a ";
 		buffer << "point where something more efficient is needed to move forward.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	return(true);
 }
@@ -83,7 +83,7 @@ void	Canal::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Canal Systems: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Canal::IsObselete()

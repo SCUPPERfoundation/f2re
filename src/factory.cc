@@ -322,7 +322,7 @@ void	Factory::Display(Player *player)
 	buffer << ((disposal == DEPOT) ? "depot" : "exchange") << " where possible\n";
 	buffer << "    Next batch is " << (intervals * 100)/interval_max << "% complete" << std::endl;
 
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Factory::Dump()
@@ -426,7 +426,7 @@ void	Factory::Output(Player *player)
 	std::ostringstream buffer;
 	buffer << "  " << owner << " #" << number << " plant producing " << output;
 	buffer <<  " - Output to " << ((disposal == DEPOT) ? "depot" : "exchange") << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Factory::PlanetLineDisplay(std::ostringstream& buffer)
@@ -455,7 +455,7 @@ void	Factory::PODisplay(Player *player)
 	else
 		buffer << "mothballed";
 	buffer << "    (Efficiency - " << efficiency << "/" << max_efficiency << ")\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Factory::Production(const char **attrib)
@@ -519,7 +519,7 @@ long	Factory::Repair(Player *player,long cash_available)
 	std::ostringstream	buffer;
 	buffer << "Five percent has been restored to the operating efficiency of factory #";
 	buffer << number << " at a cost of " << 500 * multiplier << "Kig.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	return(cost);
 }
 
@@ -610,7 +610,7 @@ void	Factory::SetStatus(Player *player,const std::string& new_status)
 		else
 			buffer << error;
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 			
 bool	Factory::StoreInDepot(const std::string& co_name,FedMap *fed_map)

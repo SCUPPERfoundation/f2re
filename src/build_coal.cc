@@ -83,7 +83,7 @@ void	Coal::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " mine";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Coal::IsObselete()

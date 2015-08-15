@@ -140,7 +140,7 @@ void	Location::Description(Player *player,int extent)
 			buffer << desc;
 	}
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Location::Dump()

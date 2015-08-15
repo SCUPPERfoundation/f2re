@@ -96,7 +96,7 @@ void	Cartel::AllocateCity(Player *player,std::string& city_name,std::string& pla
 	{
 		buffer << "I'm unable to find a city called '" << city_name;
 		buffer << "' in the " << name << " cartel!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -105,7 +105,7 @@ void	Cartel::AllocateCity(Player *player,std::string& city_name,std::string& pla
 	if(star == 0)
 	{
 		buffer << "I'm unable to find the '" << system << " star system!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -114,7 +114,7 @@ void	Cartel::AllocateCity(Player *player,std::string& city_name,std::string& pla
 	{
 		buffer << "I'm unable to find a planet called '" << planet_name;
 		buffer << "' in the " << system << " star system!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -122,7 +122,7 @@ void	Cartel::AllocateCity(Player *player,std::string& city_name,std::string& pla
 	{
 		buffer << "There is already a City at work in this system. ";
 		buffer << "Star systems can only cope with one working Blish City.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -130,7 +130,7 @@ void	Cartel::AllocateCity(Player *player,std::string& city_name,std::string& pla
 	buffer << "The commodities produced by your city, " << city->Name();
 	buffer << ", will be allocated to the " << planet->Title();
 	buffer << " planet, in the " << system << " star system.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Cartel::AssessDuty(Player *player)
@@ -158,7 +158,7 @@ void	Cartel::AssessDuty(Player *player)
 		{
 			fed_map->ChangeTreasury(-amount_due);
 			buffer << fed_map->Title() << "'s treasury account.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		return;
 	}
@@ -169,7 +169,7 @@ void	Cartel::AssessDuty(Player *player)
 		{
 			company->ChangeCash(-amount_due,true);
 			buffer << "company account.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		return;
 	}
@@ -180,7 +180,7 @@ void	Cartel::AssessDuty(Player *player)
 		{
 			business->ChangeCash(-amount_due,true);
 			buffer << "business account.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 		return;
 	}
@@ -188,7 +188,7 @@ void	Cartel::AssessDuty(Player *player)
 	// Use personal account
 	player->Overdraft(-amount_due);
 	buffer << "personal account.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Cartel::BuildCity(Player *player,const std::string& city_name)
@@ -251,7 +251,7 @@ void	Cartel::BuildGravingDock(Player *player)
 	std::ostringstream	buffer;
 	buffer << "You provide a " << GravingInfo::cost << "ig line of credit to cover the wages and other overheads. ";
 	buffer << "Now all you need to do is to ensure a steady supply of raw materials to the builders...\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Cartel::ChangeCash(long amount)
@@ -318,7 +318,7 @@ Job	*Cartel::CreateTargettedJob(const std::string& commodity,const std::string& 
 		if(!target->JobOffer(offerer,job))
 		{
 			buffer << target->Name() << " is not in a position to accept your work at the moment!\n";
-			offerer->Send(buffer);
+			offerer->Send(buffer,OutputFilter::DEFAULT);
 			delete job;
 			return(0);
 		}
@@ -365,7 +365,7 @@ void	Cartel::Display(Player *player)
 		buffer << "ig";
 	}
 	buffer << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << "   Members:\n";
@@ -374,12 +374,12 @@ void	Cartel::Display(Player *player)
 		buffer << "      " << *iter << "\n";
 		if(buffer.str().length() > 850)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 	if(dock != 0)
 	{
@@ -389,7 +389,7 @@ void	Cartel::Display(Player *player)
 		if((star != 0) && star->IsDiverting())
 			buffer << " - obtaining raw materials";
 		buffer << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	if(cities.size() > 0)
@@ -401,7 +401,7 @@ void	Cartel::Display(Player *player)
 			BlishCity	*city = *iter;
 			buffer << "      " << city->Name() << " (" << city->ProductionType() << "/" << city->SlotsBuilt() << ")\n";
 		}
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	if(player->Name() == owner)
@@ -415,7 +415,7 @@ void	Cartel::Display(Player *player)
 			for(Members::iterator iter = pending.begin();iter != pending.end();++iter)
 				buffer << "      " << *iter << "\n";
 		}
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -426,7 +426,7 @@ void	Cartel::DisplayCity(Player *player,const std::string& city_name)
 	{
 		std::ostringstream	buffer;
 		buffer << "The " << name << " cartel doesn't appear to have a blish city called '" << city_name << "'!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		city->Display(player);
@@ -534,7 +534,7 @@ void	Cartel::MoveCity(Player *player,const std::string& city_name,const std::str
 	if(city == 0)
 	{
 		buffer << "The " << name << " cartel doesn't appear to have a blish city called '" << city_name << "'!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -542,7 +542,7 @@ void	Cartel::MoveCity(Player *player,const std::string& city_name,const std::str
 	if(!SystemIsCartelMember(to_system_name))
 	{
 		buffer << "You can only send cities to systems that are part of the " << name << " cartel!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -593,7 +593,7 @@ void	Cartel::RejectRequest(Player *plutocrat,const std::string system_name)
 			std::ostringstream	buffer;
 			buffer << "Your application to join the " << name << " cartel has been turned down!\n";
 			if(Game::player_index->FindCurrent(player->Name()) != 0)
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			else
 			{
 				FedMssg	*mssg =  new FedMssg;
@@ -664,7 +664,7 @@ void	Cartel::SendMail(Player *from,const std::string& to_name,const std::string&
 		to->SendMailTo(buffer,from->Name());
 		buffer.str("");
 		buffer << "Your mail has been sent to " << to->Name()	<< "\n";
-		from->Send(buffer);
+		from->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -679,7 +679,7 @@ void	Cartel::SendMail(Player *from,const std::string& to_name,const std::string&
 	}
 	buffer.str("");
 	buffer << "Your mail has been sent to all cartel members\n";
-	from->Send(buffer);
+	from->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Cartel::SetCityProduction(Player *player,std::string& city_name,std::string& commodity_name)
@@ -691,7 +691,7 @@ void	Cartel::SetCityProduction(Player *player,std::string& city_name,std::string
 	{
 		buffer << "I'm unable to find a city called '" << city_name;
 		buffer << "' in the " << name << " cartel!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -700,7 +700,7 @@ void	Cartel::SetCityProduction(Player *player,std::string& city_name,std::string
 	if(star == 0)
 	{
 		buffer << "I'm unable to find the '" << system << " star system!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -791,7 +791,7 @@ void	Cartel::StopCityProduction(Player *player,const std::string& city_name,int 
 	{
 		buffer << "I'm unable to find a city called '" << city_name;
 		buffer << "' in the " << name << " cartel!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 

@@ -75,7 +75,7 @@ void	CompanyRegister::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << "Company" << "CEO\n";
 	buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << "-------" << "---\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 
 	CompanyIndex::iterator iter;
@@ -86,16 +86,16 @@ void	CompanyRegister::Display(Player *player)
 		buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << iter->first << iter->second->CEO()->Name() << "\n";
 		if((total % 3) == 0)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 	}
 	if((total % 3) != 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << total << " companies\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 Company	*CompanyRegister::Find(const std::string& name)

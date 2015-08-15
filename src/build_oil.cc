@@ -57,7 +57,7 @@ soon have it under control and crude oil is pumped through to the refineries.\n"
 				std::ostringstream	buffer;
 			 	buffer << "Your drilling/refinery complex comes on-line as planned. Its ";
 				buffer << "output enhances the production of " << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -92,7 +92,7 @@ bool	Oil::Add(Player *player,Tokens *tokens)
 		{
 		 	buffer << "Your drilling/refinery complex come on-line as planned. Its ";
 			buffer << "output enhances the production of " << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -101,7 +101,7 @@ bool	Oil::Add(Player *player,Tokens *tokens)
 
  	buffer << "Your drilling/refinery complex come on-line as planned, but its ";
  	buffer << "start up seems to have little additional effect on production.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -127,7 +127,7 @@ bool	Oil::CheckCommodity(Player *player,Tokens *tokens)
 	if(!Game::commodities->IsType(tokens->Get(2),Commodities::IND))
 	{
 		buffer << "You cannot allocate production to " << tokens->Get(2) << ", only to industrial commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -155,7 +155,7 @@ void	Oil::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " refiner";
 	buffer << ((total_builds == 1) ? "y" : "ies") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Oil::RequestResources(Player *player,const std::string& recipient,int quantity)

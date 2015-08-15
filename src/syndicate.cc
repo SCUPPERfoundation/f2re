@@ -52,7 +52,7 @@ void	Syndicate::Display(Player *player)
 	buffer << "Cartels operating in this galaxy:\n";
 	for(CartelIndex::iterator iter = members.begin();iter != members.end();++iter)
 		buffer << "   " << iter->first << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Syndicate::Expel(Player *owner,const std::string& sys_name)
@@ -80,7 +80,7 @@ void	Syndicate::Expel(Player *owner,const std::string& sys_name)
 	{
 		buffer << sys_name << " has been expelled from the " << cartel->Name() << " cartel!\n";
 		Game::review->Post(buffer);
-		owner->Send(buffer);
+		owner->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	Star	*star = Game::galaxy->Find(sys_name);
@@ -119,7 +119,7 @@ void	Syndicate::Expel(Player *owner,const std::string& sys_name)
 		return;
 
 	if(Game::player_index->FindCurrent(sys_owner->Name()) != 0)
-		sys_owner->Send(buffer);
+		sys_owner->Send(buffer,OutputFilter::DEFAULT);
 	else
 	{
 		FedMssg	*mssg =  new FedMssg;
@@ -290,7 +290,7 @@ planet to make the joining bonus/fee transfer.\n");
 		if(no_bonus_fee)
 			buffer << error;
 		buffer << "\n";
-		new_cartel_owner->Send(buffer);
+		new_cartel_owner->Send(buffer,OutputFilter::DEFAULT);
 
 		buffer.str("");
 		buffer << system_name << " has joined the " << cartel->Name() << " cartel!";

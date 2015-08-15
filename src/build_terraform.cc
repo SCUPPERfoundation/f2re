@@ -75,7 +75,7 @@ bool	Terraform::Add(Player *player,Tokens *tokens)
 		buffer <<"In a surprisingly short space of time more virgin territory is terraformed. ";
 		buffer << "Unfortunately, it becomes clear that you have reached diminishing returns on ";
 		buffer << fed_map->Title() << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(true);
 	}
 }
@@ -84,7 +84,7 @@ void	Terraform::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Terraforming: " << total_builds << " clearances\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Terraform::UpdatePopulation(Population *population)

@@ -43,7 +43,7 @@ void	ComUnit::ClearRelay()
 		{
 			std::ostringstream	buffer("");
 			buffer << owner->Name() << " is no longer relaying activities to you.\n";
-			temp->Send(buffer);
+			temp->Send(buffer,OutputFilter::DEFAULT);
 		}
 		relay_to_channel = false;
 		Send(stopped,OutputFilter::DEFAULT);
@@ -85,7 +85,7 @@ void	ComUnit::DeleteRelay()
 	{
 		std::ostringstream	buffer("");
 		buffer << owner->Name() << " is no longer relaying activities to you.\n";
-		relay->Send(buffer);
+		relay->Send(buffer,OutputFilter::DEFAULT);
 		relay = 0;
 	}
 	relay_to_channel = false;
@@ -248,7 +248,7 @@ or who is ignoring you, or to yourself!\n");
 		buffer.str("");
 		buffer << "Your comm unit beeps with a message, \""<< owner->Name();
 		buffer << " is now relaying everything to your comm unit.\"\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		relay = player;
 	}
 }
