@@ -108,16 +108,25 @@ void	Louie::DisplayResult(int winning_number)
 		FedMap	*fed_map = winner->CurrentMap();
 		int 		loc_no = winner->LocNo();
 
-		
-		fed_map->RoomSend(0,0,loc_no,"Lucky Louie game result:\n","");
+		PlayerList pl_list;
+		fed_map->PlayersInLoc(loc_no,pl_list);
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send("Lucky Louie game result:\n",OutputFilter::DEFAULT);
+//		fed_map->RoomSend(0,0,loc_no,"Lucky Louie game result:\n","");
 		for(int count = 0;count < MAX_GAMBLERS;count++)
 		{
 			buffer << "  " << gamblers[count].player->Name() << "  " << gamblers[count].number << "\n";
-			fed_map->RoomSend(0,0,loc_no,buffer.str(),"");
+			std::string	text(buffer.str());
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+//			fed_map->RoomSend(0,0,loc_no,buffer.str(),"");
 			buffer.str("");
 		}
 		buffer << winner->Name() << " wins this round!\n";
-		fed_map->RoomSend(0,0,loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+//		fed_map->RoomSend(0,0,loc_no,buffer.str(),"");
 
 		SettleUp(winner);
 	}
@@ -127,10 +136,16 @@ void	Louie::DisplayResult(int winning_number)
 		FedMap	*fed_map = player->CurrentMap();
 		int 		loc_no = player->LocNo();
 
+		PlayerList pl_list;
+		fed_map->PlayersInLoc(loc_no,pl_list);
 		buffer << "Everyone chose the same number - " << gamblers[0].number;
 		buffer << " - in this round of Lucky Louie, so a total of ";
 		buffer << pot << "ig stays in the pot for the next round!\n";
-		fed_map->RoomSend(0,0,loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+//		fed_map->RoomSend(0,0,loc_no,buffer.str(),"");
 
 		for(int count = 0;count < MAX_GAMBLERS;count++)
 			gamblers[count].number = 0;

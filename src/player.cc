@@ -312,7 +312,13 @@ void	Player::Act(std::string& text,bool possessive)
 			buffer << name << " " << text << std::endl;
 	}
 	std::string	action(buffer.str());
-	loc.fed_map->RoomSend(0,this,loc.loc_no,action,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(action,OutputFilter::DEFAULT);
+	}
 }
 
 void	Player::AddFuturesContract(FuturesContract *contract)
@@ -340,7 +346,14 @@ bool	Player::AddObject(FedObject *object,bool created)
 		buffer.str("");
 		buffer << "You become aware of " << object->c_str();
 		buffer << " on the floor.\n";
-		loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		PlayerList pl_list;
+		loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 	return(false);
 }
@@ -670,8 +683,17 @@ void	Player::BuyPizza(std::string& text)
 		buffer << text;
 	buffer << std::endl;
 	std::string mssg(buffer.str());
-	int round_size = loc.fed_map->RoomSend(this,this,loc.loc_no,mssg,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(mssg,OutputFilter::DEFAULT);
+	}
+
+	int round_size = pl_list.size();
 	loc.fed_map->ChangeRoomStam(this,loc.loc_no,5);
+
 	buffer.str("");
 	if(text.compare("") == 0)
 		buffer << "You buy everyone in the room a pizza - Capriciosa, with extra moose..";
@@ -682,7 +704,7 @@ void	Player::BuyPizza(std::string& text)
 	if(cash < 0)
 	{
 		cash -= 200;
-		buffer << " A text message from the bank appears on your comm unit screen.";
+		buffer << " A message from the bank appears on your comm unit screen.";
 		buffer << " It says, 'U r ovrdrwn. U hve bn chgd 200ig fr ths msg.'";
 	}
 	buffer << std::endl;
@@ -727,8 +749,17 @@ void	Player::BuyRound(std::string& text)
 		buffer << text;
 	buffer << std::endl;
 	std::string mssg(buffer.str());
-	int round_size = loc.fed_map->RoomSend(this,this,loc.loc_no,mssg,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(mssg,OutputFilter::DEFAULT);
+	}
+
+	int round_size = pl_list.size();
 	loc.fed_map->ChangeRoomStam(this,loc.loc_no,2);
+
 	buffer.str("");
 	if(text.compare("") == 0)
 		buffer << "You buy everyone in the room a pint of Diesel's Old Peculiar strong dark ale.";
@@ -1743,7 +1774,14 @@ bool	Player::Death(bool is_suicide)
 		buffer << "'s ship explodes. As your instruments recover from the overload ";
 		buffer << "and start to register again, you recongise a rescue and recovery ";
 		buffer << "ship working amongst the little that is left." << std::endl;
-		loc.fed_map->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		PlayerList pl_list;
+		loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 	else
 	{
@@ -1752,7 +1790,14 @@ bool	Player::Death(bool is_suicide)
 		buffer << " Within a remarkably short period of time " << gender_str2[gender];
 		buffer << " is connected to a machine festooned with tubes and wires, loaded";
 		buffer << " on to a stretcher and carried away to a hospital." << std::endl;
-		loc.fed_map->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		PlayerList pl_list;
+		loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 
 	buffer.str("");
@@ -2458,7 +2503,17 @@ void	Player::Emote(const std::string& which,Player *recipient)
 	buffer << name << " has given " << recipient->Name();
 	buffer << article << adj[index] << " " << which << "." << std::endl;
 	text =  buffer.str();
-	loc.fed_map->RoomSend(this,this,loc.loc_no,text,"",recipient);
+
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,recipient);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		{
+			if(*iter != this)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
+	}
 }
 
 void	Player::Engineer2Mogul()
@@ -3384,7 +3439,16 @@ void	Player::Jump(const std::string where_to)
 	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << name << "'s spaceship disappears into the hyperspace link in a shower of high energy tachyons.\n";
-	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+	std::string	text(buffer.str());
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
+//	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+
 	FedMap	*from = loc.fed_map;
 	loc.fed_map->RemovePlayer(this);
 	loc.star_name = rec->star_name;
@@ -3395,7 +3459,16 @@ void	Player::Jump(const std::string where_to)
 		loc.fed_map->XMLNewMap(this);
 	buffer.str("");
 	buffer << name << "'s spaceship appears from the hyperspace link in a shower of high energy tachyons.\n";
-	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+	text = buffer.str();
+	pl_list.clear();
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
+//	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+
 	loc.fed_map->AddJumpPlayer(this,from);
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	delete rec;
@@ -4427,7 +4500,13 @@ void	Player::Say(std::string& text)
 	buffer.str("");
 	buffer << name << " " << verb << "s, \"" << text << "\"" << std::endl;
 	conversation = buffer.str();
-	loc.fed_map->RoomSend(this,this,loc.loc_no,conversation,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(conversation,OutputFilter::DEFAULT);
+	}
 }
 
 void	Player::Score()
@@ -4553,9 +4632,21 @@ void	Player::SecularService(Player *the_spouse)
 	the_spouse->Send(Game::system->GetMessage("player","marry",7),OutputFilter::DEFAULT);
 	the_spouse->Send(Game::system->GetMessage("player","marry",8),OutputFilter::DEFAULT);
 	the_spouse->Send(Game::system->GetMessage("player","marry",9),OutputFilter::DEFAULT);
-	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",10),"",the_spouse);
-	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",11),"",the_spouse);
-	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",12),"",the_spouse);
+
+	PlayerList pl_list;
+	CurrentMap()->PlayersInLoc(LocNo(),pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		{
+			if((*iter) != the_spouse)
+			{
+				(*iter)->Send(Game::system->GetMessage("player","marry",10),OutputFilter::DEFAULT);
+				(*iter)->Send(Game::system->GetMessage("player","marry",11),OutputFilter::DEFAULT);
+				(*iter)->Send(Game::system->GetMessage("player","marry",12),OutputFilter::DEFAULT);
+			}
+		}
+	}
 
 	std::ostringstream	buffer;
 	buffer << name << " and " << the_spouse->Name() << " have married on ";
@@ -4664,6 +4755,31 @@ void	Player::SellWarehouse()
 	}
 	else
 		Send(Game::system->GetMessage("player","sellwarehouse",2),OutputFilter::DEFAULT);
+}
+
+bool	Player::Send(const std::string& text,int command,Player *player,bool can_relay)
+{
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,command,player,can_relay);
+		return(true);
+	}
+	else
+		return(false);
+}
+
+bool	Player::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
+{
+	if(this == player)
+		return false;
+
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,command,attributes,player,can_relay);
+		return(true);
+	}
+	else
+		return false ;
 }
 
 bool	Player::Send(std::ostringstream& buffer,int command,Player *player,bool can_relay)
@@ -4819,7 +4935,14 @@ void	Player::Smile()
 	Send(Game::system->GetMessage("player","smile",1),OutputFilter::DEFAULT);
 	std::ostringstream	buffer;
 	buffer << name << " is smiling broadly.\n";
-	loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
+	std::string	text(buffer.str());
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
 }
 
 void	Player::Smile(const std::string& to)
@@ -6563,44 +6686,5 @@ void	Player::Xt(const std::string& msg)
 		buffer << "Your comm unit relays a message from " << name << ", \"" << msg << "\"\n";
 		Game::channel_manager->Send(this,channel,buffer.str());
 	}
-}
-
-
-/******************* Work in progress *******************/
-
-bool	Player::Send(const std::string& text,Player *player,bool can_relay)
-{
-	if(com_unit != 0)
-	{
-		com_unit->Send(text,player,can_relay);
-		return(true);
-	}
-	else
-		return(false);
-}
-
-bool	Player::Send(const std::string& text,int command,Player *player,bool can_relay)
-{
-	if(com_unit != 0)
-	{
-		com_unit->Send(text,command,player,can_relay);
-		return(true);
-	}
-	else
-		return(false);
-}
-
-bool	Player::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
-{
-	if(this == player)
-		return false;
-
-	if(com_unit != 0)
-	{
-		com_unit->Send(text,command,attributes,player,can_relay);
-		return(true);
-	}
-	else
-		return false ;
 }
 

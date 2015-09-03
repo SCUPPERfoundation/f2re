@@ -566,11 +566,22 @@ everything on a hot day, and the location is transformed.\n");
 			text = new_desc;
 		int	loc_no = player->LocNo();
 		FindLoc(loc_no)->AddDesc(text,Location::REPLACE_DESC);
-		RoomSend(0,0,loc_no,ok,"");
+/*
+		PlayerList pl_list;
+		PlayersInLoc(loc_no,pl_list);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
+*/
 		for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
 		{
 			if((*iter)->LocNo() == loc_no)
+			{
+				(*iter)->Send(ok,OutputFilter::DEFAULT);
 				Look(*iter,loc_no,Location::FULL_DESC);
+			}
 		}
 	}
 }
@@ -594,11 +605,13 @@ everything on a hot day, and the location has a new name.\n");
 
 		int	loc_no = player->LocNo();
 		FindLoc(loc_no)->AddName(new_name);
-		RoomSend(0,0,loc_no,ok,"");
 		for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
 		{
 			if((*iter)->LocNo() == loc_no)
+			{
+				(*iter)->Send(ok,OutputFilter::DEFAULT);
 				Look(*iter,loc_no,Location::FULL_DESC);
+			}
 		}
 	}
 }
@@ -699,21 +712,6 @@ feedback@ibgames.com\n");
 		else
 			infra->Close(player);
 	}
-}
-
-void	FedMap::CommodityExchangeSend(const std::string& text)
-{
-	RoomSend(0,0,comm_exch_loc,text,"");
-}
-
-void	FedMap::CommodityExchangeSendSound(const std::string& sound)
-{
-	SendRoomSound(comm_exch_loc,sound);
-}
-
-void	FedMap::CommodityExchangeXMLSend(const std::string& text)
-{
-	RoomXMLSend(0,0,comm_exch_loc,text);
 }
 
 void	FedMap::CompileCourierLocs()
@@ -1959,22 +1957,6 @@ bool	FedMap::RequestResources(Player *player,const std::string& donor,const std:
 	return(infra->RequestResources(player,donor,recipient,quantity));
 }
 
-int	FedMap::RoomXMLSend(Player *player1,Player *from,int loc_num,const std::string& text,Player *player2)
-{
-	PlayerList::iterator	iter;
-	int total = 0;
-	for(iter = player_list.begin();iter != player_list.end();iter++)
-	{
-		if(((*iter)->LocNo() == loc_num) && (*iter != player1) &&
-											(*iter != player2) && ((*iter)->CommsAPILevel() > 0))
-		{
-			total++;
-			(*iter)->Send(text,from);
-		}
-	}
-	return(total);
-}
-
 void	FedMap::RunStartupEvents()
 {
 	for(int count = 1;;count++)
@@ -2346,26 +2328,6 @@ void	FedMap::XMLNewMap(Player *player)
 	new_map->SendXMLInfra(player);
 }
 
-/*
-void	FedMap::XMLSend(const std::string& text)
-{
-	for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
-	{
-		if((*iter)->CommsAPILevel() > 0)
-			(*iter)->Send(text,OutputFilter::DEFAULT);
-	}
-}
-*/
-
-void	FedMap::XMLSend(const std::string& text)
-{
-	for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
-	{
-		if((*iter)->CommsAPILevel() > 0)
-			(*iter)->Send(text);
-	}
-}
-
 int	FedMap::YardMarkup()
 {
 	return(infra->YardMarkup());
@@ -2377,29 +2339,5 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 		return(commodity_exchange->YardPurchase(commodity,amount,buffer,action));
 	else
 		return(0L);
-}
-
-
-/******************* Work in progress *******************/
-
-int	FedMap::RoomSend(Player *player1,Player *from,int loc_num,const std::string& text,const std::string& xml_text,Player *player2)
-{
-	PlayerList::iterator	iter;
-	int total = 0;
-	for(iter = player_list.begin();iter != player_list.end();iter++)
-	{
-		if(((*iter)->LocNo() == loc_num) && (*iter != player1) && (*iter != player2))
-		{
-			total++;
-			if(((*iter)->CommsAPILevel() > 0) && (xml_text != ""))
-				(*iter)->Send(xml_text,from);
-			else
-			{
-				if(text != "")
-					(*iter)->Send(text,from);
-			}
-		}
-	}
-	return(total);
 }
 

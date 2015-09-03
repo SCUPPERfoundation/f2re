@@ -40,15 +40,31 @@ Message::~Message()
 
 void	Message::ComMessage(Player *player,const std::string& mssg)
 {
+	PlayerList pl_list;
+	player->CurrentMap()->PlayersInLoc(player->LocNo(),pl_list);
+
 	switch(who)
 	{
 		case	INDIVIDUAL:	player->Send(mssg,OutputFilter::DEFAULT);						break;
-		case	ROOM:		
-			player->CurrentMap()->RoomSend(0,player,player->LocNo(),mssg,"");			break;
 		case	PARTY:		player->Send(mssg,OutputFilter::DEFAULT);						break;
-		case	ROOM_EX:		
-			player->CurrentMap()->RoomSend(player,player,player->LocNo(),mssg,"");	break;
 		case	PARTY_EX:	player->Send(mssg,OutputFilter::DEFAULT);						break;
+
+		case	ROOM:
+			if(pl_list.empty())
+				break;
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(mssg,OutputFilter::DEFAULT);
+			break;
+
+		case	ROOM_EX:
+			if(pl_list.empty())
+				break;
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			{
+				if((*iter) != player)
+					(*iter)->Send(mssg,OutputFilter::DEFAULT);
+			}
+			break;
 	}
 }
 

@@ -382,7 +382,6 @@ public:
 	bool	MovePlayerToLoc(int loc_num);
 	bool	Move(int direction,bool is_following);
 	bool	RemoveWarehouse(FedMap	*fed_map);
-	bool	Send(const std::string& text,Player *player = 0,bool can_relay = true);
 	bool	Send(const std::string& text,int command,Player *player = 0,bool can_relay = true);
 	bool	Send(const std::string& text,int command,AttribList &attributes,Player *player = 0,bool can_relay = true);
 	bool	Send(std::ostringstream& text,int command,Player *player = 0,bool can_relay = true);
