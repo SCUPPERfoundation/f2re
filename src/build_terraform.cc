@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -41,7 +42,7 @@ take place on biological level and above planets.\n");
 
 	if(the_map->Economy() < Infrastructure::BIOLOGICAL)
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -49,7 +50,7 @@ take place on biological level and above planets.\n");
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -65,7 +66,7 @@ bool	Terraform::Add(Player *player,Tokens *tokens)
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		return(true);
 	}
 	else
@@ -74,7 +75,7 @@ bool	Terraform::Add(Player *player,Tokens *tokens)
 		buffer <<"In a surprisingly short space of time more virgin territory is terraformed. ";
 		buffer << "Unfortunately, it becomes clear that you have reached diminishing returns on ";
 		buffer << fed_map->Title() << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(true);
 	}
 }
@@ -83,7 +84,7 @@ void	Terraform::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Terraforming: " << total_builds << " clearances\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Terraform::UpdatePopulation(Population *population)
@@ -99,7 +100,10 @@ void	Terraform::Write(std::ofstream& file)
 void	Terraform::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Terraforming: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Terraforming: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

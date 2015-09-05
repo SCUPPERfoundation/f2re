@@ -14,14 +14,10 @@
 #include <iostream>
 #include <sstream>
 
-#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 
-#include <sys/types.h>
 #include <sys/dir.h>
-
-#include <dirent.h>
 #include <unistd.h>
 
 #include "cartel.h"
@@ -30,6 +26,7 @@
 #include "location.h"
 #include "syndicate.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_index.h"
 #include "star.h"
@@ -80,14 +77,14 @@ void	Galaxy::BuildDestruction()
 
 void	Galaxy::DisplayFleets(Player *player)
 {
-	player->Send("Merchant fleets registered:\n");
+	player->Send("Merchant fleets registered:\n",OutputFilter::DEFAULT);
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
 		iter->second->DisplayFleets(player);
 }
 
 void	Galaxy::DisplayExile(Player *player)
 {
-	player->Send("Exiles report:\n");
+	player->Send("Exiles report:\n",OutputFilter::DEFAULT);
 	std::ostringstream	buffer;
 	bool	are_exiles = false;
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
@@ -95,18 +92,18 @@ void	Galaxy::DisplayExile(Player *player)
 		iter->second->DisplayExile(buffer);
 		if(buffer.str().length() > 512)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			are_exiles = true;
 		}
 	}
 	if(buffer.str().length() > 0)
 	{
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		are_exiles =true;
 	}
 	if(!are_exiles)
-		player->Send("  No exiles - everyone is being a good boy, girl, or thingie!\n");
+		player->Send("  No exiles - everyone is being a good boy, girl, or thingie!\n",OutputFilter::DEFAULT);
 }
 
 void	Galaxy::DisplaySystem(Player *player,const std::string& star_title)
@@ -117,7 +114,7 @@ void	Galaxy::DisplaySystem(Player *player,const std::string& star_title)
 	NormalisePlanetTitle(title);
 	Star	*star = Find(title);
 	if(star == 0)
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 	else
 		star->DisplaySystem(player);
 }
@@ -337,19 +334,19 @@ void	Galaxy::ListSystems(Player *player,int which_ones)
 	{
 		if(iter->second->Name() == "Sol") // current sol output is 263 chars...
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 
 		buffer << iter->second->ListSystem(player,which_ones);
 		if(buffer.str().length() > 850)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Galaxy::LoadDisplayCabinets()
@@ -478,13 +475,13 @@ void	Galaxy::PremiumPriceCheck(Player *player,const Commodity *commodity,int whi
 			iter->second->PremiumPriceCheck(commodity,buffer,which);
 			if(buffer.str().length() > 850)
 			{
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				buffer.str("");
 			}
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Galaxy::ProcessInfrastructure()
@@ -537,9 +534,9 @@ void	Galaxy::SendXMLPlanetNames(Player *player,const std::string& star_name)
 			return;
 		}
 	}
-	std::ostringstream	buffer;
-	buffer << "<s-planet-name name='No Planets'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	attribs.push_back(std::make_pair("name","No Planets"));
+	player->Send("",OutputFilter::PLANET_NAME,attribs);
 }
 
 void	Galaxy::UpdateExchanges()
@@ -558,7 +555,7 @@ void	Galaxy::WhereIs(Player *player,const std::string& planet)
 	}
 	else
 		buffer << "I have no record of a planet called " << planet << ". Perhaps its sun went nova?\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Galaxy::XMLListLinks(Player *player,const std::string& from_star_name)
@@ -566,31 +563,24 @@ void	Galaxy::XMLListLinks(Player *player,const std::string& from_star_name)
 	std::string	from_star(from_star_name);
 	NormalisePlanetTitle(from_star);
 	LocRec	*rec = 0;
-	player->Send("<s-jump-links/>\n");
-	int	count = 0;
+	player->Send("",OutputFilter::JUMP_LINKS);
+
 	std::ostringstream	buffer;
+	AttribList attribs;
+
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
 	{
-	 	rec = iter->second->FindLink();
+		rec = iter->second->FindLink();
 		if(rec != 0)
 		{
-			buffer << "<s-link name='" << iter->second->Name() << "' ";
+			attribs.clear();
+			attribs.push_back(std::make_pair("name",iter->second->Name()));
 			if(iter->second->Name() == from_star)
-				buffer << " loc='" << from_star << "' ";
+				attribs.push_back(std::make_pair("loc",from_star));
 			if((rec->fed_map->FileName().find("/space") != std::string::npos) && (!rec->fed_map->IsOpen(0)))
-				buffer << "status='closed'";
-			buffer <<"/>\n";
-
-			if((++count % 5) == 0)
-			{
-				player->Send(buffer);
-				buffer.str("");
-				count = 0;
-			}
-			delete rec;
+				attribs.push_back(std::make_pair("status","closed"));
+			player->Send("",OutputFilter::LINK,attribs);
 		}
 	}
-	if(count != 0)
-		player->Send(buffer);
 }
 

@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -36,7 +37,7 @@ ribbon and with a loud hissing of venting steam the first train moves forward on
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ ribbon and with a loud hissing of venting steam the first train moves forward on
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -64,15 +65,14 @@ bool	Railway::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
-	std::ostringstream	buffer;
 	if(total_builds < 5)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(maxed_out);
+		player->Send(maxed_out,OutputFilter::DEFAULT);
 
 	total_builds++;
 	return(true);
@@ -83,7 +83,7 @@ void	Railway::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " railway";
 	buffer << ((total_builds > 1) ? "s" : "") << " laid\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Railway::IsObselete()
@@ -101,7 +101,7 @@ bool	Railway::RequestResources(Player *player,const std::string& recipient,int q
 	{
 		if(total_builds < 2)
 		{
-			player->Send(error);
+			player->Send(error,OutputFilter::DEFAULT);
 			return(false);
 		}
 		else
@@ -123,8 +123,11 @@ void	Railway::Write(std::ofstream& file)
 void	Railway::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Railway Lines: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Railway Lines: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

@@ -11,13 +11,13 @@
 
 #include <iostream>
 
-#include <cctype>
 #include <cstring>
 
 #include "event_number.h"
 #include "fedmap.h"
 #include "msg_number.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 Match::Match(const char **attrib,FedMap *fed_map) : Script(fed_map)
@@ -59,7 +59,7 @@ int	Match::Process(Player *player)
 		{
 			final_text = *mssg;
 			InsertName(player,final_text);
-			player->Send(final_text);
+			player->Send(final_text,OutputFilter::DEFAULT);
 		}
 	}
 	else
@@ -68,7 +68,7 @@ int	Match::Process(Player *player)
 		{
 			std::string	final_text(lo->Find(home));
 			InsertName(player,final_text);
-			player->Send(final_text);
+			player->Send(final_text,OutputFilter::DEFAULT);
 		}
 	}
 	return(STOP);

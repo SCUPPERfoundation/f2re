@@ -13,6 +13,7 @@
 
 #include "fedmap.h"
 #include "galaxy.h"
+#include "output_filter.h"
 #include "player.h"
 #include "ship.h"
 #include "tokens.h"
@@ -40,10 +41,10 @@ void	RepairParser::Process(Player *player,Tokens *tokens,const std::string& line
 {
 	switch(FindNoun(tokens->Get(1)))
 	{
-		case	0:	RepairFactory(player,tokens,line);										break;
-		case	1:	RepairDepot(player,tokens,line);											break;
-		case	2:	RepairShip(player,tokens);													break;
-		default:	player->Send("I don't understand what you want to repair.\n");	break;
+		case	0:	RepairFactory(player,tokens,line);																		break;
+		case	1:	RepairDepot(player,tokens,line);																			break;
+		case	2:	RepairShip(player,tokens);																					break;
+		default:	player->Send("I don't understand what you want to repair.\n",OutputFilter::DEFAULT);	break;
 	}
 }
 
@@ -51,12 +52,12 @@ void	RepairParser::RepairDepot(Player *player,Tokens *tokens,const std::string& 
 {
 	std::string pl_name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
 	if(pl_name == "Index out of bounds!")
-		player->Send("You haven't said which planet the depot is on!\n");
+		player->Send("You haven't said which planet the depot is on!\n",OutputFilter::DEFAULT);
 	else
 	{
 		FedMap *fed_map = Game::galaxy->FindMap(pl_name);
 		if(fed_map == 0)
-			player->Send("I can't find a planet with that name!\n");
+			player->Send("I can't find a planet with that name!\n",OutputFilter::DEFAULT);
 		else
 			player->RepairDepot(fed_map);
 	}
@@ -67,7 +68,7 @@ void	RepairParser::RepairFactory(Player *player,Tokens *tokens,const std::string
 {
 	int factory_num = std::atoi(tokens->Get(2).c_str());
 	if(factory_num <= 0)
-		player->Send("You haven't said what number factory to repair.\n");
+		player->Send("You haven't said what number factory to repair.\n",OutputFilter::DEFAULT);
 	else
 		player->RepairFactory(factory_num);
 	return;
@@ -78,13 +79,13 @@ void	RepairParser::RepairShip(Player *player,Tokens *tokens)
 	Ship	*ship = player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("You don't seem to actually have a ship to repair!\n");
+		player->Send("You don't seem to actually have a ship to repair!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	
 	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
 	{
-		player->Send("You need to be in a repair shop to get repairs to your ship!\n");
+		player->Send("You need to be in a repair shop to get repairs to your ship!\n",OutputFilter::DEFAULT);
 		return;
 	}
 

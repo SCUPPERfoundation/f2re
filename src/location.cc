@@ -12,20 +12,12 @@
 #include <iostream>
 #include <sstream>
 
-#include <cctype>
-
 #include "event_number.h"
 #include "fedmap.h"
 #include "misc.h"
 #include "msg_number.h"
+#include "output_filter.h"
 #include "player.h"
-
-const int	Location::MAX_NAME;
-const int	Location::MAX_DESC;
-const int	Location::MAX_MSSG;
-const int	Location::LINE_SIZE;
-const int	Location::INVALID_LOC;
-const int	Location::NO_EXIT;
 
 Location::Location()
 {
@@ -148,7 +140,7 @@ void	Location::Description(Player *player,int extent)
 			buffer << desc;
 	}
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Location::Dump()
@@ -177,12 +169,12 @@ LocRec	*Location::Move(Player *player,FedMap *home_map,int dir)
 		if(no_exit == 0)
 		{
 			if(player->IsInSpace())
-				player->Send(Game::system->GetMessage("location","move",2));
+				player->Send(Game::system->GetMessage("location","move",2),OutputFilter::DEFAULT);
 			else
-				player->Send(Game::system->GetMessage("location","move",1));
+				player->Send(Game::system->GetMessage("location","move",1),OutputFilter::DEFAULT);
 		}
 		else
-			player->Send(no_exit->Find(home_map));
+			player->Send(no_exit->Find(home_map),OutputFilter::DEFAULT);
 		return(0);
 	}
 
@@ -325,22 +317,25 @@ void	Location::XMLNewLoc(Player *player,int extent)
 		{ "n", "ne", "e", "se", "s", "sw", "w", "nw", "u", "d", ""	};
 
 	std::ostringstream	buffer;
-	buffer << "<s-new-loc loc-num='" << loc_no << "' name='" << EscapeXML(name) << "'";
+	AttribList attribs;
+	buffer << loc_no;
+	attribs.push_back(std::make_pair("loc-num",buffer.str()));
+	attribs.push_back(std::make_pair("name",name));
 	for(int count = 0;exit_names[count] != "";count++)
 	{
 		if(exits[count] >= 0)
-			buffer << " " << exit_names[count] << "='" << exits[count] << "'";
+		{
+			buffer.str("");
+			buffer << exits[count];
+			attribs.push_back(std::make_pair(exit_names[count],buffer.str()));
+		}
 	}
-	buffer << ">";
 
+	std::string	text;
 	if(((extent == DEFAULT) && !player->WantsBrief()) || (extent == FULL_DESC))
-	{
-		std::string	description(desc.substr(1));
-		buffer << EscapeXML(description);
-	}
+		text = desc.substr(1);
 
-	buffer << "</s-new-loc>\n";
-	player->Send(buffer);
+	player->Send(text,OutputFilter::NEW_LOC,attribs);
 }
 
 

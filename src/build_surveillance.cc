@@ -13,6 +13,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -35,7 +36,7 @@ After all, it's important that people know their government is watching over the
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -44,7 +45,7 @@ After all, it's important that people know their government is watching over the
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -65,14 +66,14 @@ that you are reaching the point of diminishing returns for the use of this techn
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(++total_builds <= 10)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(too_many);
+		player->Send(too_many,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -81,7 +82,7 @@ void	Surveillance::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " center";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Surveillance::UpdateDisaffection(Disaffection *disaffection)
@@ -98,7 +99,10 @@ void	Surveillance::Write(std::ofstream& file)
 void	Surveillance::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Surveillance Centers: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Surveillance Centres: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

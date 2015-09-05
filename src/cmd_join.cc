@@ -12,8 +12,8 @@
 #include "cartel.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "star.h"
 #include "syndicate.h"
 #include "tokens.h"
@@ -40,7 +40,7 @@ void	JoinParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case	1:	JoinChannel(player,tokens,line);		break;
 		case	2: JoinLouie(player,tokens);				break;
 		case	3:	JoinCartel(player,tokens,line);		break;
-		default:	player->Send("I don't know what you want to join!\n");	break;
+		default:	player->Send("I don't know what you want to join!\n",OutputFilter::DEFAULT);	break;
 	}
 }
 
@@ -48,28 +48,28 @@ void	JoinParser::JoinCartel(Player *player,Tokens *tokens,const std::string& lin
 {
 	if(tokens->Size() == 2)
 	{
-		player->Send("You haven't said which cartel you want to join!\n");
+		player->Send("You haven't said which cartel you want to join!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(!player->IsPlanetOwner())
 	{
-		player->Send("You can only join your own system to a cartel!\n");
+		player->Send("You can only join your own system to a cartel!\n",OutputFilter::DEFAULT);
 		return;
 	}
 		
 	std::string	name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
 	Cartel	*cartel = Game::syndicate->Find(name);
 	if(cartel == 0)
-		player->Send("I can't find a cartel with that name!\n");
+		player->Send("I can't find a cartel with that name!\n",OutputFilter::DEFAULT);
 	else
 	{
 		int status = cartel->AddRequest(player->CurrentSystem()->Name());
 		switch(status)
 		{
-			case Cartel::ADDED:				player->Send("Your request has been added to the queue\n");				break;
-			case Cartel::CARTEL_FULL:		player->Send("I'm sorry that cartel is already full!\n");				break;
-			case Cartel::ALREADY_MEMBER:	player->Send("You are already a member of that cartel!\n");				break;
-			case Cartel::IS_OWNER:			player->Send("You're already a cartel owner in your own right!\n");	break;
+			case Cartel::ADDED:				player->Send("Your request has been added to the queue\n",OutputFilter::DEFAULT);				break;
+			case Cartel::CARTEL_FULL:		player->Send("I'm sorry that cartel is already full!\n",OutputFilter::DEFAULT);				break;
+			case Cartel::ALREADY_MEMBER:	player->Send("You are already a member of that cartel!\n",OutputFilter::DEFAULT);				break;
+			case Cartel::IS_OWNER:			player->Send("You're already a cartel owner in your own right!\n",OutputFilter::DEFAULT);	break;
 		}
 	}
 }
@@ -77,7 +77,7 @@ void	JoinParser::JoinCartel(Player *player,Tokens *tokens,const std::string& lin
 void	JoinParser::JoinChannel(Player *player,Tokens *tokens,const std::string & line)
 {
 	if(tokens->Size() == 2)
-		player->Send(Game::system->GetMessage("cmdparser","joinchannel",1));
+		player->Send(Game::system->GetMessage("cmdparser","joinchannel",1),OutputFilter::DEFAULT);
 	else
 	{
 		std::string	name(tokens->GetRestOfLine(line,2,Tokens::RAW));
@@ -100,7 +100,7 @@ void	JoinParser::JoinLouie(Player *player,Tokens *tokens)
 		Normalise(name);
 		Player	*who = Game::player_index->FindCurrent(name);
 		if(who == 0)
-			player->Send(not_in_game);
+			player->Send(not_in_game,OutputFilter::DEFAULT);
 		else
 			player->JoinLouie(who);
 }

@@ -9,11 +9,10 @@
 
 #include "cmd_give.h"
 
-#include <cctype>
 #include <cstdlib>
 
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "tokens.h"
 
 void	GiveParser::Process(Player *player,Tokens *tokens,const std::string& line)
@@ -23,13 +22,13 @@ void	GiveParser::Process(Player *player,Tokens *tokens,const std::string& line)
 in the case of money)!\n");
 	static const std::string	who("I can't find the person you want to give to!\n");
 
-	if(tokens->Size() < 2)	{	player->Send(no_name);	return;	}
-	if(tokens->Size() < 3)	{	player->Send(what);		return;	}
+	if(tokens->Size() < 2)	{	player->Send(no_name,OutputFilter::DEFAULT);	return;	}
+	if(tokens->Size() < 3)	{	player->Send(what,OutputFilter::DEFAULT);		return;	}
 
 	std::string	name(tokens->Get(1));
 	Normalise(name);
 	Player *recipient = Game::player_index->FindCurrent(name);
-	if(recipient == 0)	{	player->Send(who);		return;	}
+	if(recipient == 0)	{	player->Send(who,OutputFilter::DEFAULT);		return;	}
 
 	if(std::isdigit(tokens->Get(2)[0]))
 		player->Give(recipient,std::atoi(tokens->Get(2).c_str()));

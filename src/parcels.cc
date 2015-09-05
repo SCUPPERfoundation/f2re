@@ -17,6 +17,7 @@
 #include <sys/dir.h>
 
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "parcels_parser.h"
 
@@ -47,7 +48,7 @@ void	Parcels::Display(Player *player,int index)
 	std::ostringstream	buffer("");
 	buffer << "You examine the " << package_index[index]->name << " entrusted to your care.\n"; 
 	buffer << package_index[index]->desc << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 

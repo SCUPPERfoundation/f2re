@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ Police::Police(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -53,7 +54,7 @@ Police::~Police()
 
 bool	Police::Add(Player *player,Tokens *tokens)
 {
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -62,7 +63,7 @@ void	Police::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Police Stations: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Police::RequestResources(Player *player,const std::string& recipient,int quantity)
@@ -88,8 +89,11 @@ void	Police::Write(std::ofstream& file)
 void	Police::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Police Stations: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Police Stations: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

@@ -23,6 +23,7 @@ doing before you start changing things. You have been warned AL - 23 Jan 2002 */
 #include "fedmap.h"
 #include "inventory.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 ShipBuilder::ShipBuilder(Player *buyer)
@@ -40,7 +41,7 @@ ShipBuilder::ShipBuilder(Player *buyer)
 		;
 
 	magazine = engines = 0;
-	player->Send(Game::system->GetMessage("shipbuilder","constructor",1));
+	player->Send(Game::system->GetMessage("shipbuilder","constructor",1),OutputFilter::DEFAULT);
 	DisplayHulls();
 }
 
@@ -54,7 +55,7 @@ Installing a level ");
 	computer = std::atoi(line.c_str());
 	if(computer < 1)
 	{
-		player->Send(Game::system->GetMessage("shipbuilder","addcomputer",1));
+		player->Send(Game::system->GetMessage("shipbuilder","addcomputer",1),OutputFilter::DEFAULT);
 		computer = 1;
 	}
 	else
@@ -62,20 +63,20 @@ Installing a level ");
 		if(computer > player->MaxIntel()/15)
 		{
 			buffer << max_int << player->MaxIntel()/15 << " computer.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			computer = player->MaxIntel()/15;
 		}
 		else
 		{
 			if(computer > 7)
 			{
-				player->Send(Game::system->GetMessage("shipbuilder","addcomputer",2));
+				player->Send(Game::system->GetMessage("shipbuilder","addcomputer",2),OutputFilter::DEFAULT);
 				computer = 7;
 			}
 			else
 			{
 				buffer << "Installing a level " << computer << " computer.\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			}
 		}
 	}
@@ -97,7 +98,7 @@ bool	ShipBuilder::AddFuelTank(std::string& line)
 	if((tonnage - fuel_tank) < 20)
 	{
 		fuel_tank = tonnage - 20;
-		player->Send(Game::system->GetMessage("shipbuilder","addfueltanks",1));
+		player->Send(Game::system->GetMessage("shipbuilder","addfueltanks",1),OutputFilter::DEFAULT);
 	}
 	
 	std::ostringstream	buffer("");
@@ -105,7 +106,7 @@ bool	ShipBuilder::AddFuelTank(std::string& line)
 	cost += (fuel_tank * 50);
 	hold = tonnage;
 	buffer << "Installing " << fuel_tank << " sized fuel tanks.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	
 	status = BUY_CONFIRM;
 	return(DisplayShip());
@@ -122,21 +123,21 @@ fly spaceships larger than the Mammoth class. Please try again.\n");
 		{
 			if((player->Rank() < Player::MERCHANT) && (count > Hull::DRAGON))
 			{
-				player->Send(Game::system->GetMessage("shipbuilder","addhull",2));
+				player->Send(Game::system->GetMessage("shipbuilder","addhull",2),OutputFilter::DEFAULT);
 				DisplayHulls();
 				return;
 			}
 
 			if((player->Rank() <= Player::TRADER) && (count > Hull::GUARDIAN))
 			{
-				player->Send(Game::system->GetMessage("shipbuilder","addhull",3));
+				player->Send(Game::system->GetMessage("shipbuilder","addhull",3),OutputFilter::DEFAULT);
 				DisplayHulls();
 				return;
 			}
 
 			if((player->Rank() <= Player::INDUSTRIALIST) && (count > Hull::MAMMOTH))
 			{
-				player->Send(mamoth);
+				player->Send(mamoth,OutputFilter::DEFAULT);
 				DisplayHulls();
 				return;
 			}
@@ -150,14 +151,14 @@ fly spaceships larger than the Mammoth class. Please try again.\n");
 			buffer << " class hull plus appropriate drive units.\n";
 			buffer << "Unused tonnage " << tonnage << " tons, cost so far " << cost << "ig.\n";
 			buffer << "Your funds amount to " << player->Cash() << "ig" << std::endl;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			status = BUY_PLATING;
 			DisplayPlating();
 			return;
 		}
 	}
 
-	player->Send(Game::system->GetMessage("shipbuilder","addhull",1));
+	player->Send(Game::system->GetMessage("shipbuilder","addhull",1),OutputFilter::DEFAULT);
 	DisplayHulls();
 }
 
@@ -175,7 +176,7 @@ void	ShipBuilder::AddJammers(std::string& line)
 		buffer << Game::system->GetMessage("shipbuilder","addjammers",2);
 	if(jammers > 1)
 		buffer << jammers << multi_jammers;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	cost += (jammers * 800);
 	tonnage -= (jammers * 3);
@@ -192,11 +193,11 @@ void	ShipBuilder::AddMagazine(std::string& line)
 	if(magazine < 0)
 		magazine = 0;
 	if(magazine == 0)
-		player->Send(Game::system->GetMessage("shipbuilder","addmagazine",1));
+		player->Send(Game::system->GetMessage("shipbuilder","addmagazine",1),OutputFilter::DEFAULT);
 	else	
 	{
 		buffer << "Adding a " << magazine << " missile capacity magazine.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		cost += 1000 + (magazine * 100);
 		tonnage -= 40 + magazine;
 	}
@@ -220,7 +221,7 @@ void	ShipBuilder::AddPlating(std::string& line)
 	{
 		hull = Ship::hull_types[ship_class]->capacity/20;
 		buffer << intro << hull << outro << std::endl;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	buffer.str("");
@@ -230,7 +231,7 @@ void	ShipBuilder::AddPlating(std::string& line)
 	else
 		buffer << " - " << hull << " points of extra armour added at a cost of " << hull * 5000 << "ig.";
 	buffer << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	cost += (hull * 5000);
 	tonnage -= (hull * 10);
@@ -247,12 +248,12 @@ void	ShipBuilder::AddPower(std::string& line)
 	if(engines < min_power)
 	{
 		engines = min_power;
-		player->Send(Game::system->GetMessage("shipbuilder","addpower",1));
+		player->Send(Game::system->GetMessage("shipbuilder","addpower",1),OutputFilter::DEFAULT);
 	}
 	
 	std::ostringstream	buffer("");
 	buffer << "Installing " << engines << " capacity power plant.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	cost += 10000 + (engines * 15);
 	tonnage -= 40 + engines/5;
 
@@ -286,7 +287,7 @@ void	ShipBuilder::AddSensors(std::string& line)
 		buffer << Game::system->GetMessage("shipbuilder","addsensors",2);
 	if(sensors > 1)
 		buffer << sensors << multi_sensors;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	cost += (sensors * 10000);
 	tonnage -= (sensors * 2);
@@ -304,10 +305,10 @@ void	ShipBuilder::AddShields(std::string& line)
 		shield = 10;
 		tonnage -= 10;
 		min_power += 10;
-		player->Send(Game::system->GetMessage("shipbuilder","addshields",1));
+		player->Send(Game::system->GetMessage("shipbuilder","addshields",1),OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(Game::system->GetMessage("shipbuilder","addshields",2));
+		player->Send(Game::system->GetMessage("shipbuilder","addshields",2),OutputFilter::DEFAULT);
 
 	CurrentStatus();
 	status = BUY_COMPUTER;
@@ -319,9 +320,9 @@ void	ShipBuilder::AddWeapons(std::string& line)
 	if(line[0] == 'N')
 	{
 		if(weapons[0] == Ship::NO_WEAPON)
-			player->Send(Game::system->GetMessage("shipbuilder","addweapons",1));
+			player->Send(Game::system->GetMessage("shipbuilder","addweapons",1),OutputFilter::DEFAULT);
 		else
-			player->Send(Game::system->GetMessage("shipbuilder","addweapons",2));
+			player->Send(Game::system->GetMessage("shipbuilder","addweapons",2),OutputFilter::DEFAULT);
 		CurrentStatus();
 		DisplayPower();
 		status = BUY_POWER;
@@ -340,7 +341,7 @@ void	ShipBuilder::AddWeapons(std::string& line)
 				case 'L':	weapons[count] = Weapon::LASER;			break;
 				case 'T':	weapons[count] = Weapon::TWIN_LASER;	break;
 				case 'Q':	weapons[count] = Weapon::QUAD_LASER;	break;
-				default:		player->Send(Game::system->GetMessage("shipbuilder","addweapons",5));
+				default:		player->Send(Game::system->GetMessage("shipbuilder","addweapons",5),OutputFilter::DEFAULT);
 								DisplayWeapons();
 								return;
 			}
@@ -350,7 +351,7 @@ void	ShipBuilder::AddWeapons(std::string& line)
 	
 	if(index >= 0)
 	{
-		player->Send(Game::system->GetMessage("shipbuilder","addweapons",3));
+		player->Send(Game::system->GetMessage("shipbuilder","addweapons",3),OutputFilter::DEFAULT);
 		cost += Ship::weapon_types[weapons[index]]->cost;
 		tonnage -= Ship::weapon_types[weapons[index]]->weight;
 		min_power += Ship::weapon_types[weapons[index]]->power;
@@ -363,7 +364,7 @@ void	ShipBuilder::AddWeapons(std::string& line)
 		}
 		else
 		{
-			player->Send(Game::system->GetMessage("shipbuilder","addweapons",4));
+			player->Send(Game::system->GetMessage("shipbuilder","addweapons",4),OutputFilter::DEFAULT);
 			DisplayWeapons();
 		}
 	}
@@ -404,7 +405,7 @@ void	ShipBuilder::CurrentStatus()
 	std::ostringstream	buffer("");
 	buffer << "Unused tonnage is " << tonnage << " tons and the cost so far is " << cost << "ig.\n";
 	buffer << "Your available funds amount to " << player->Cash() << "ig" << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayComputers()
@@ -414,7 +415,7 @@ most basic, and level 7 the most complex. You aren't able to handle any computer
 
 	std::ostringstream	buffer("");
 	buffer << intro << player->MaxIntel()/15 << "." << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayFuelTank()
@@ -422,21 +423,21 @@ void	ShipBuilder::DisplayFuelTank()
 	std::ostringstream	buffer("");
 	buffer << "What size fuel tanks would you like? We can install tanks holding a maximum of ";
 	buffer << tonnage - 20 << " units of fuel.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayHulls()
 {
-	player->Send(Game::system->GetMessage("shipbuilder","displayhulls",1));
+	player->Send(Game::system->GetMessage("shipbuilder","displayhulls",1),OutputFilter::DEFAULT);
 	std::ostringstream	buffer("");
 	for(int count = 0;count < Hull::MAX_HULL;count++)
 	{
 		buffer.str("");
 		buffer << "  " << Ship::hull_types[count]->name << " - ";
 		buffer << Ship::hull_types[count]->capacity << " tons capacity" << std::endl;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
-	player->Send(Game::system->GetMessage("shipbuilder","displayhulls",2));
+	player->Send(Game::system->GetMessage("shipbuilder","displayhulls",2),OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayJammers()
@@ -447,12 +448,12 @@ void	ShipBuilder::DisplayJammers()
 
 	std::ostringstream	buffer("");
 	buffer << intro << Ship::comp_types[computer]->capacity << middle << sensors << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayMagazine()
 {
-	player->Send(Game::system->GetMessage("shipbuilder","displaymag",1));
+	player->Send(Game::system->GetMessage("shipbuilder","displaymag",1),OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayPlating()
@@ -462,7 +463,7 @@ amount the ship can carry is ");
 
 	std::ostringstream	buffer("");
 	buffer << intro << Ship::hull_types[ship_class]->capacity/20 << " points." << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayPower()
@@ -475,7 +476,7 @@ do you want?\n");
 
 	std::ostringstream	buffer("");
 	buffer << intro << min_power << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplaySensors()
@@ -486,12 +487,12 @@ would you like to install?\n");
 
 	std::ostringstream	buffer("");
 	buffer << intro << Ship::comp_types[computer]->capacity << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	ShipBuilder::DisplayShields()
 {
-	player->Send(Game::system->GetMessage("shipbuilder","displayshields",1));
+	player->Send(Game::system->GetMessage("shipbuilder","displayshields",1),OutputFilter::DEFAULT);
 }
 
 bool	ShipBuilder::DisplayShip()
@@ -503,24 +504,24 @@ he asks. You shake your head, and he shuts off the display with a snap, telling 
 when you do have a permit.\n");
 
 	std::ostringstream	buffer("");
-	player->Send(Game::system->GetMessage("shipbuilder","displayship",1));
+	player->Send(Game::system->GetMessage("shipbuilder","displayship",1),OutputFilter::DEFAULT);
 	buffer << "  " << Ship::hull_types[ship_class]->name <<  " class hull\n";
 	buffer << "  Hull strength: " << std::setw(3) << hull << std::endl;
 	buffer << "  Shields:       " << std::setw(3) << shield << std::endl;
 	buffer << "  Computer:      " << std::setw(3) << computer << std::endl;
 	buffer << "    Sensors:     " << std::setw(3) << sensors << std::endl;
 	buffer << "    Jammers:     " << std::setw(3) << jammers << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Engines:       " << std::setw(3) << engines << std::endl;
 	buffer << "  Fuel tanks:    " << std::setw(3) << fuel_tank << std::endl;
 	buffer << "  Cargo hold:    " << std::setw(3) << hold << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	ShowWeapons();
 
 	if(fuel_tank < 0)
 	{
-		player->Send(rube);
+		player->Send(rube,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -531,7 +532,7 @@ when you do have a permit.\n");
 	buffer << cost << ".\n";
 
 	int	markup = player->CurrentMap()->YardMarkup();
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	if(markup != 0)
 	{
 		buffer.str("");
@@ -542,7 +543,7 @@ when you do have a permit.\n");
 			buffer << " levies a surchage of " << markup << "% on all ships built on the planet, ";
 		cost += (cost/100) * markup;
 		buffer << " which brings the cost to " << cost << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	long	trade_in	= 0L;
@@ -559,7 +560,7 @@ when you do have a permit.\n");
 			buffer << "ig. This means you will need to pay " << cost << "ig\n";
 		else
 			buffer << "ig. This means you will get a rebate of " << -cost << "ig\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	buffer.str("");
@@ -567,22 +568,22 @@ when you do have a permit.\n");
 
 	if(player->HasALoan())
 	{
-		player->Send(Game::system->GetMessage("shipbuilder","displayship",4));
-		player->Send(Game::system->GetMessage("shipbuilder","displayship",2));
+		player->Send(Game::system->GetMessage("shipbuilder","displayship",4),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("shipbuilder","displayship",2),OutputFilter::DEFAULT);
 		return(false);
 	}
 	if(cost > player->Cash())
 	{
-		player->Send(Game::system->GetMessage("shipbuilder","displayship",2));
+		player->Send(Game::system->GetMessage("shipbuilder","displayship",2),OutputFilter::DEFAULT);
 		return(false);
 	}
 	if(!player->InvFlagIsSet(Inventory::SHIP_PERMIT))
 	{
-		player->Send(no_permit);
+		player->Send(no_permit,OutputFilter::DEFAULT);
 		return(false);
 	}
 
-	player->Send(Game::system->GetMessage("shipbuilder","displayship",3));
+	player->Send(Game::system->GetMessage("shipbuilder","displayship",3),OutputFilter::DEFAULT);
 	status = BUY_CONFIRM;
 	return(true);
 }
@@ -602,7 +603,7 @@ void	ShipBuilder::DisplayWeapons()
 	
 	if(mnt_pts == 0)
 	{
-		player->Send(Game::system->GetMessage("shipbuilder","displayweapons",1));
+		player->Send(Game::system->GetMessage("shipbuilder","displayweapons",1),OutputFilter::DEFAULT);
 		DisplayPower();
 		status = BUY_POWER;
 		return;
@@ -613,10 +614,10 @@ void	ShipBuilder::DisplayWeapons()
 		buffer << Game::system->GetMessage("shipbuilder","displayweapons",2);
 	else
 		buffer << multi_hard_pt1 << mnt_pts << multi_hard_pt2;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << available << missile << laser << t_laser << q_laser << outro;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }	
 
 bool	ShipBuilder::Parse(std::string& text)
@@ -656,16 +657,16 @@ bool	ShipBuilder::Parse(std::string& text)
 bool	ShipBuilder::Purchase(std::string& line)
 {
 	if(line[0] != 'Y')
-		player->Send(Game::system->GetMessage("shipbuilder","purchase",1));
+		player->Send(Game::system->GetMessage("shipbuilder","purchase",1),OutputFilter::DEFAULT);
 	else
 	{
 		Ship	*ship = CreateShip();
 		player->ChangeCash(-cost,true);
 		player->CurrentMap()->UpdateCash(cost/20);	// 5% to the planet treasury
 		player->SwapShip(ship);
-		player->Send(Game::system->GetMessage("shipbuilder","purchase",2));
+		player->Send(Game::system->GetMessage("shipbuilder","purchase",2),OutputFilter::DEFAULT);
 	}
-	player->Send(Game::system->GetMessage("shipbuilder","purchase",3));
+	player->Send(Game::system->GetMessage("shipbuilder","purchase",3),OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -676,7 +677,7 @@ void	ShipBuilder::ShowWeapons()
 	if(weapons[0] == Ship::NO_WEAPON)
 		return;
 
-	player->Send(intro);
+	player->Send(intro,OutputFilter::DEFAULT);
 	std::ostringstream	buffer("");
 	for(int count = 0;count < Ship::MAX_HARD_PT;count++)
 	{
@@ -684,12 +685,12 @@ void	ShipBuilder::ShowWeapons()
 			break;
 		buffer << "    " << Ship::weapon_types[weapons[count]]->name << std::endl;
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	if(magazine > 0)
 	{
 		buffer.str("");
 		buffer << "  " << "Magazine space for " << magazine << " missiles\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 

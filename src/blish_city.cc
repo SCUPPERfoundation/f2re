@@ -17,6 +17,7 @@
 #include "commodities.h"
 #include "fedmap.h"
 #include "galaxy.h"
+#include "output_filter.h"
 #include "player.h"
 #include "syndicate.h"
 #include "xml_parser.h"
@@ -132,7 +133,7 @@ void	BlishCity::Display(Player *player)
 				buffer << "Produced " << production_quant[count] << " tons of " << production[count] << "\n";
 		}
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int	BlishCity::GetProduction(const std::string& commodity)
@@ -152,7 +153,7 @@ void	BlishCity::Move(Player *player,const std::string& where_to)
 	if(system == where_to)
 	{
 		buffer << name << " is already in (or moving to) the " << system << "!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -162,7 +163,7 @@ void	BlishCity::Move(Player *player,const std::string& where_to)
 	travel_time_left = 3 + (std::rand() % 3);
 	buffer.str("");
 	buffer << name << " will arrive in the " << system << " system in " << travel_time_left << " days\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	BlishCity::ProductionIsAllowed(const std::string& commod)
@@ -183,7 +184,7 @@ void	BlishCity::SetProduction(Player *player,const std::string& commodity)
 	{
 		buffer << name << " is not equipped to produce " << commodity;
 		buffer << ". It can only handle " << econ_names[econ_level] << " commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -194,13 +195,13 @@ void	BlishCity::SetProduction(Player *player,const std::string& commodity)
 			production[count] = commodity;
 			production_start[count] = RETOOLING;
 			buffer << name << " has started re-tooling to produce " << commodity << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return;
 		}
 	}
 
 	buffer << name << " is already running at full capacity!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	BlishCity::StopProduction(Player *player,int slot_num)
@@ -210,7 +211,7 @@ void	BlishCity::StopProduction(Player *player,int slot_num)
 	if((slot_num < 1) || (slot_num > slots_built))
 	{
 		buffer << "Slot numbers must be between 1 and " << slots_built << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -223,7 +224,7 @@ void	BlishCity::StopProduction(Player *player,int slot_num)
 	}
 	else
 		buffer << name << ": slot number " << slot_num << " isn't currently producing anything!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	BlishCity::Update()

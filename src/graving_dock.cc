@@ -19,6 +19,7 @@
 #include "cartel.h"
 #include "commodities.h"
 #include "galaxy.h"
+#include "output_filter.h"
 #include "player.h"
 #include "review.h"
 #include "star.h"
@@ -102,20 +103,35 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 {
 	static const std::string	building_types[] = { "agri", "mining", "ind", "tech", "leisure", "resource", ""	};
 	static const std::string	build_error("Finish building a size before you start a new one!\n");
+	static const std::string	name_error("City names must start with a letter and contain only alpha-numeric characters!\n");
 	static const int	NOT_A_TYPE = 999;
 
 	if(name_city == "")
 	{
 		switch(status)
 		{
-			case WAITING:						player->Send("To start a new city build the command is 'build city city_name'\n");	return false;
+			case WAITING:						player->Send("To start a new city build the command is 'build city city_name'\n",OutputFilter::DEFAULT);	return false;
 			case BUILDING_CITY_1:
 			case BUILDING_CITY_2:
 			case BUILDING_CITY_3:
 			case BUILDING_CITY_4:
-			case BUILDING_CITY_5:			player->Send(build_error);																				return false;
-			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n");				return false;
+			case BUILDING_CITY_5:			player->Send(build_error,OutputFilter::DEFAULT);																			return false;
+			case BUILDING_CITY_TYPE:		player->Send("You are already working on the final build for a city!\n",OutputFilter::DEFAULT);				return false;
 			case BUILDING_CITY_WAITING:	return(BuildNextCityLevel(player,cartel));
+		}
+	}
+
+	if(isalpha(name_city[0]) == 0)
+	{
+		player->Send(name_error,OutputFilter::DEFAULT);
+		return false;
+	}
+	for(unsigned int count = 0;count < name_city.length();++count)
+	{
+		if(isalnum(name_city[0]) == 0)
+		{
+			player->Send(name_error,OutputFilter::DEFAULT);
+			return false;
 		}
 	}
 
@@ -141,9 +157,9 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 		else
 		{
 			if(status == WAITING)
-				player->Send("You can't call a city the name of a commodity type - for example 'agri'!\n");
+				player->Send("You can't call a city the name of a commodity type - for example 'agri'!\n",OutputFilter::DEFAULT);
 			else
-				player->Send(build_error);
+				player->Send(build_error,OutputFilter::DEFAULT);
 			return false;
 		}
 	}
@@ -156,7 +172,7 @@ bool	GravingDock::BuildCity(Player *player,Cartel* cartel,const std::string& nam
 		}
 		else
 		{
-			player->Send(build_error);
+			player->Send(build_error,OutputFilter::DEFAULT);
 			return false;
 		}
 	}
@@ -171,7 +187,7 @@ bool	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 		if(cartel->Cash() < rec->cost)
 		{
 			buffer << "It costs " << (rec->cost/1000000) << "meg ig to build the city up to size " << (city_level + 1) << "\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return false;
 		}
 
@@ -183,14 +199,14 @@ bool	GravingDock::BuildNextCityLevel(Player *player,Cartel *cartel)
 		buffer << "The Cartel pay up the " << (rec->cost/1000000) << "meg ig to build the city ";
 		buffer << "up to size " << (city_level + 1) << ", and are notified that work will commence ";
 		buffer << "as soon as all the dockyard mateys are back from the " << (holidays[std::rand() % 7]) << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return true;
 	}
 	else
 	{
 		buffer << "To complete the city you now need to specify what type of production the city needs to be outfitted for. ";
 		buffer << "the command is 'build city type', where 'type' is one of agri, resource, industrial, tech, or leisure.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return false;
 	}
 }
@@ -210,9 +226,9 @@ void	GravingDock::Display(Player *player)
 {
 	switch(status)
 	{
-		case UNDER_CONSTRUCTION:	DisplayDockBuild(player);															break;
-		case WAITING:					player->Send(" Graving Dock\n  Currently awaiting new orders.\n");	break;
-		default:							DisplayCityBuild(player);															break;
+		case UNDER_CONSTRUCTION:	DisplayDockBuild(player);																						break;
+		case WAITING:					player->Send(" Graving Dock\n  Currently awaiting new orders.\n",OutputFilter::DEFAULT);	break;
+		default:							DisplayCityBuild(player);																						break;
 	}
 }
 
@@ -229,7 +245,7 @@ void	GravingDock::DisplayCityBuild(Player *player)
 		buffer << "    " << (*iter)->commodity << ": " << (*iter)->quantity_in_stock;
 		buffer << "/" << (*iter)->quantity_needed << "\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	GravingDock::DisplayDockBuild(Player *player)
@@ -244,7 +260,7 @@ void	GravingDock::DisplayDockBuild(Player *player)
 		buffer << "    " << (*iter)->commodity << ": " << (*iter)->quantity_in_stock;
 		buffer << "/" << (*iter)->quantity_needed << "\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 BuildMaterials *GravingDock::FindMaterials(const std::string& commod)
@@ -359,7 +375,7 @@ void	GravingDock::StartBuildCity(Player *player,Cartel* cartel,const std::string
 
 	std::ostringstream	buffer;
 	buffer << "Your cartel pays out " << build_rec->cost/1000000 << " meg ig to have a basic blish city built.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
@@ -369,7 +385,7 @@ bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 	if(cartel->Cash() < rec->cost)
 	{
 		buffer << "It costs " << (rec->cost/1000000) << "meg ig to fit out your city for " << type_names[c_type + 1] << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -382,7 +398,7 @@ bool	GravingDock::StartTypeBuild(Player *player,Cartel* cartel,int c_type)
 	buffer << "The Cartel pay up the " << (rec->cost/1000000) << "meg ig to outfit the city for ";
 	buffer << type_names[c_type + 1] << ", and are notified that work will commence as soon as ";
 	buffer << "all the dockyard mateys are back from the " << (holidays[std::rand() % 7]) << ".\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	return true;
 }
 

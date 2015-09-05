@@ -14,6 +14,7 @@
 #include "disaffection.h"
 #include "fedmap.h"
 #include "infra.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -36,7 +37,7 @@ distrust, and protests with banners proclaiming 'Anti-agathics for all, not just
 
 	if((the_map->Economy() < Infrastructure::LEISURE))
 	{
-		 player->Send(too_early);
+		 player->Send(too_early,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ distrust, and protests with banners proclaiming 'Anti-agathics for all, not just
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -63,7 +64,7 @@ some caution by the general populace. Clearly the success or otherwise is going 
 just how comprehensive the coverage proves to be.\n");
 
 	++total_builds;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -71,7 +72,7 @@ void	AntiAgathics::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Longevity programs: " << total_builds << " launched\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	AntiAgathics::UpdateDisaffection(Disaffection *discontent)
@@ -92,7 +93,10 @@ void	AntiAgathics::Write(std::ofstream& file)
 void	AntiAgathics::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Longevity programs: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Longevity programs: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

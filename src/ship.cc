@@ -27,14 +27,13 @@
 #include "fed_object.h"
 #include "locker.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "player_index.h"
 
-const int	Ship::MAX_HARD_PT;
 const int	Ship::UNUSED_SHIP = -1;
 const int	Ship::MAX_COMP = 7;
 const int	Ship::NO_WEAPON = -1;
-const int	Ship::MAX_REG;
 const unsigned	Ship::MAX_OBJECTS = 75;
 
 
@@ -146,7 +145,7 @@ int	Ship::AddCargo(Cargo *cargo,Player *player)
 {
 	if(cur_hold < CommodityExchItem::CARGO_SIZE)
 	{
-		player->Send(Game::system->GetMessage("ship","addcargo",1));
+		player->Send(Game::system->GetMessage("ship","addcargo",1),OutputFilter::DEFAULT);
 		delete cargo;
 		return(-1);
 	}
@@ -175,7 +174,7 @@ long	Ship::AssessCustomsDuty(int percentage)
 
 void	Ship::Buy(Player *player)
 {
-	player->Send(Game::system->GetMessage("ship","buy",4));
+	player->Send(Game::system->GetMessage("ship","buy",4),OutputFilter::DEFAULT);
 	status = BUY_STARTER;
 }
 
@@ -185,16 +184,16 @@ void	Ship::Buy(Player *player,std::string& line)
 	{
 		if(player->HasALoan())
 		{
-			player->Send(Game::system->GetMessage("shipbuilder","displayship",4));
+			player->Send(Game::system->GetMessage("shipbuilder","displayship",4),OutputFilter::DEFAULT);
 			status = SHIP_CLEAR;
 			player->ClearShipPurchase();
 		}
 		else
 		{
-			player->Send(Game::system->GetMessage("ship","buy",1));
+			player->Send(Game::system->GetMessage("ship","buy",1),OutputFilter::DEFAULT);
 			player->ChangeLoan((player->Rank() == Player::GROUNDHOG) ? 200000 : 400000);
 			SetUpStarterSpecial();
-			player->Send(Game::system->GetMessage("ship","buy",2));
+			player->Send(Game::system->GetMessage("ship","buy",2),OutputFilter::DEFAULT);
 			player->Promote();	// this will also clear the buying ship status
 		}
 	}
@@ -202,7 +201,7 @@ void	Ship::Buy(Player *player,std::string& line)
 	{
 		if(player->Rank() == Player::GROUNDHOG)
 		{
-			player->Send(Game::system->GetMessage("ship","buy",3));
+			player->Send(Game::system->GetMessage("ship","buy",3),OutputFilter::DEFAULT);
 			status = SHIP_CLEAR;
 			player->ClearShipPurchase();
 		}
@@ -219,7 +218,7 @@ void	Ship::BuyFuel(Player *player,int amount)
 		amount = max_fuel - cur_fuel;
 	if(amount == 0)
 	{
-		player->Send(Game::system->GetMessage("ship","buyfuel",1));
+		player->Send(Game::system->GetMessage("ship","buyfuel",1),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -228,13 +227,13 @@ void	Ship::BuyFuel(Player *player,int amount)
 	if(player->IsInSpace())
 	{
 		if(!player->ChangeCash(-amount * 50,true))
-			player->Send(Game::system->GetMessage("ship","buyfuel",2));
+			player->Send(Game::system->GetMessage("ship","buyfuel",2),OutputFilter::DEFAULT);
 		else
 		{
-			player->Send(Game::system->GetMessage("ship","buyfuel",3));
+			player->Send(Game::system->GetMessage("ship","buyfuel",3),OutputFilter::DEFAULT);
 			if(amount > (max_fuel - cur_fuel))
 			{
-				player->Send(Game::system->GetMessage("ship","buyfuel",4));
+				player->Send(Game::system->GetMessage("ship","buyfuel",4),OutputFilter::DEFAULT);
 				cur_fuel = max_fuel;
 				XMLFuel(player);
 			}
@@ -243,7 +242,7 @@ void	Ship::BuyFuel(Player *player,int amount)
 				cur_fuel += amount;
 				buffer << amount << " tons of fuel purchased for " << amount *50 << "ig.\n";
 				text = buffer.str();
-				player->Send(text);
+				player->Send(text,OutputFilter::DEFAULT);
 				XMLFuel(player);
 			}
 		}
@@ -252,12 +251,12 @@ void	Ship::BuyFuel(Player *player,int amount)
 	else
 	{
 		if(!player->ChangeCash(-amount * 10,true))
-			player->Send(Game::system->GetMessage("ship","buyfuel",2));
+			player->Send(Game::system->GetMessage("ship","buyfuel",2),OutputFilter::DEFAULT);
 		else
 		{
 			if(amount > (max_fuel - cur_fuel))
 			{
-				player->Send(Game::system->GetMessage("ship","buyfuel",4));
+				player->Send(Game::system->GetMessage("ship","buyfuel",4),OutputFilter::DEFAULT);
 				cur_fuel = max_fuel;
 			}
 			else
@@ -265,7 +264,7 @@ void	Ship::BuyFuel(Player *player,int amount)
 				cur_fuel += amount;
 				buffer << amount << " tons of fuel purchased for " << amount *10 << "ig.\n";
 				text = buffer.str();
-				player->Send(text);
+				player->Send(text,OutputFilter::DEFAULT);
 				XMLFuel(player);
 			}
 		}
@@ -312,12 +311,12 @@ void	Ship::DisplayObjects(Player *player)
 {
 	if(locker->Size() == 0)
 	{
-		player->Send("You don't have any objects stashed away in your ship's locker!\n");
+		player->Send("You don't have any objects stashed away in your ship's locker!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	std::ostringstream	buffer;
 	locker->Display(player,buffer);
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Ship::FlipFlag(Player *player,int which)
@@ -373,21 +372,21 @@ knocked out your navigation computer.\n");
 	int result = std::rand() % 100;
 	if(result < 2)
 	{
-		player->Send(no_damage);
+		player->Send(no_damage,OutputFilter::DEFAULT);
 		return;
 	}
 
 	int	damage = (cur_engine * (10 + (std::rand() % 40)))/100;
 	cur_engine -= damage;
 	cur_fuel /= 2;
-	player->Send(eng_damage);
+	player->Send(eng_damage,OutputFilter::DEFAULT);
 	if(result < 33)
 	{
 		int shield_damage = (cur_shield * (10 + (std::rand() % 40)))/100;
 		if(shield_damage > 0)
 		{
 			cur_shield -= shield_damage;
-			player->Send(sh_damage);
+			player->Send(sh_damage,OutputFilter::DEFAULT);
 		}
 		if(player->CommsAPILevel() > 0)
 			player->XMLStats();
@@ -399,7 +398,7 @@ knocked out your navigation computer.\n");
 		if(computer.cur_level > 1)
 		{
 			--computer.cur_level;
-			player->Send(comp_damage);
+			player->Send(comp_damage,OutputFilter::DEFAULT);
 		}
 		if(player->CommsAPILevel() > 0)
 			player->XMLStats();
@@ -409,7 +408,7 @@ knocked out your navigation computer.\n");
 	if((result < 70) && (flags.test(NAVCOMP)))
 	{
 		flags.reset(NAVCOMP);
-		player->Send(nav_damage);
+		player->Send(nav_damage,OutputFilter::DEFAULT);
 	}
 	if(player->CommsAPILevel() > 0)
 		player->XMLStats();
@@ -453,11 +452,11 @@ bool	Ship::ReduceFuel(Player *player)
 	int fuel = hull_types[ship_class]->fuel;
 	if(fuel > cur_fuel)
 	{
-		player->Send(Game::system->GetMessage("ship","reducefuel",1));
+		player->Send(Game::system->GetMessage("ship","reducefuel",1),OutputFilter::DEFAULT);
 		return(false);
 	}
 	if((cur_fuel -= fuel) < 10)
-		player->Send(Game::system->GetMessage("ship","reducefuel",2));
+		player->Send(Game::system->GetMessage("ship","reducefuel",2),OutputFilter::DEFAULT);
 	XMLFuel(player);
 	return(true);
 }
@@ -540,12 +539,12 @@ void	Ship::StatusReport(Player *player)
 	std::ostringstream	buffer("");
 	buffer << "Status report for your " << hull_types[ship_class]->name << " class spaceship" << std::endl;
 	buffer << "  Registered in " << registry << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Hull strength:  " << cur_hull << "/" << max_hull << std::endl;
 	buffer << "  Shields:        " << cur_shield << "/" << max_shield << std::endl;
 	buffer << "  Engines:        " << cur_engine << "/" << max_engine << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Computer:" << std::endl;
 	buffer << "    Level:        " << computer.cur_level << "/" << computer.level << std::endl;
@@ -555,7 +554,7 @@ void	Ship::StatusReport(Player *player)
 	buffer << "    Jammers:      " << computer.jammers << std::endl;
 	buffer << "  Cargo space:    " << cur_hold << "/" << max_hold << std::endl;
 	buffer << "  Fuel:           " << cur_fuel << "/" << max_fuel << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	if(magazine > 0)
 		buffer << "  Magazine space: " << (magazine - missiles) << "/" << magazine << std::endl;
@@ -572,12 +571,12 @@ void	Ship::StatusReport(Player *player)
 	}
 	else
 		buffer << "    None" << std::endl;
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	if(manifest.size() > 0)
 	{
 		buffer << "  Cargo carried (75 ton containers):\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 		for(Manifest::iterator iter = manifest.begin();iter != manifest.end();iter++)
 		{
@@ -617,7 +616,7 @@ void	Ship::TransferLocker(Player* player,Ship *new_ship)
 		player->Send("In spite of your close supervision, the stevedores manage to \
 drop your ship's locker while transfering it to your new ship. Fortunately, this \
 blatant attempt to break it open fails leaving some rather surly stevedors \
-unable to get their thieving mits on your stash!\n");
+unable to get their thieving mits on your stash!\n",OutputFilter::DEFAULT);
 	}
 }
 
@@ -656,8 +655,15 @@ void	Ship::XMLCargo(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='cargo' max='" << max_hold << "' cur='" << cur_hold << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","cargo"));
+		buffer << max_hold;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_hold;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -666,9 +672,15 @@ void	Ship::XMLComputer(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='computer' max='" << computer.level;
-		buffer << "' cur='" << computer.cur_level << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","computer"));
+		buffer << computer.level;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << computer.cur_level;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -677,8 +689,15 @@ void	Ship::XMLEngines(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='engines' max='" << max_engine << "' cur='" << cur_engine << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","engines"));
+		buffer << max_engine;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_engine;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -687,8 +706,15 @@ void	Ship::XMLFuel(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='fuel' max='" << max_fuel << "' cur='" << cur_fuel << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","fuel"));
+		buffer << max_fuel;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_fuel;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -697,8 +723,15 @@ void	Ship::XMLHull(Player *player)
 	if(player->CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='hull' max='" << max_hull << "' cur='" << cur_hull << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","hull"));
+		buffer << max_hull;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_hull;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -706,9 +739,9 @@ void	Ship::XMLNavComp(Player *player)
 {
 	if((player->CommsAPILevel() > 0) && flags.test(NAVCOMP))
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='navcomp'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","navcomp"));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
 
@@ -717,11 +750,17 @@ void	Ship::XMLShields(Player *player)
 	if((player->CommsAPILevel() > 0) && (max_shield > 0))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='shields' max='" << max_shield << "' cur='" << cur_shield << "'/>\n";
-		player->Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","shields"));
+		buffer << max_shield;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << cur_shield;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
-
 
 void	Ship::Repair(Player *player,int action)
 {
@@ -731,7 +770,7 @@ void	Ship::Repair(Player *player,int action)
 		invoice << "Repair estimate cost breakdown. Valid for 1,000ms only.\n";
 	else
 		invoice << "Invoice for repair. Terms: Payment due 30ms after time of issue.\n";
-	player->Send(invoice);
+	player->Send(invoice,OutputFilter::DEFAULT);
 	invoice.str("");
 
 	cost += ComputerRepair(player,invoice,action);
@@ -743,7 +782,7 @@ void	Ship::Repair(Player *player,int action)
 		invoice << "The sales droid starts preparing the paper work, then looks up and ";
 		invoice << "tells you in a disgusted tone of voice, \"There's nothing wrong with ";
 		invoice << "your ship. Quit wasting my time or I'll bill you for it.\"\n";
-		player->Send(invoice);
+		player->Send(invoice,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -751,7 +790,7 @@ void	Ship::Repair(Player *player,int action)
 		invoice << "Repairing your ship on this planet will cost you a cool " << cost << "ig\n";
 	else
 		invoice << "Total cost: " << cost << "ig\n";
-	player->Send(invoice);
+	player->Send(invoice,OutputFilter::DEFAULT);
 
 	FedMap	*fed_map =  player->CurrentMap();
 	if(registry == fed_map->Title())
@@ -762,20 +801,20 @@ void	Ship::Repair(Player *player,int action)
 			cost -= cost/50;
 			invoice << "However, you are entitled to a GA OutSystem Business Development Subsidy of 2%, ";
 			invoice << "which brings the cost down to " << cost << "ig\n";
-			player->Send(invoice);
+			player->Send(invoice,OutputFilter::DEFAULT);
 		}
 		else
 		{
 			cost -= cost/100;
 			invoice << "However, you are entitled to a GA OutSystem Business Development Subsidy of 1%, ";
 			invoice << "which brings the cost down to " << cost << "ig\n";
-			player->Send(invoice);
+			player->Send(invoice,OutputFilter::DEFAULT);
 		}
 	}
 	if(action == FedMap::BUY)
 	{
 		player->Overdraft(-cost);
-		player->Send("You watch via the ships's cameras as repair droids swarm over it and complete the repairs.\n");
+		player->Send("You watch via the ships's cameras as repair droids swarm over it and complete the repairs.\n",OutputFilter::DEFAULT);
 		ResetStats(player);
 	}
 }
@@ -789,7 +828,7 @@ long	Ship::ComputerRepair(Player *player,std::ostringstream& buffer,int action)
 	FedMap	*fed_map =  player->CurrentMap();
 	if(!fed_map->HasAnExchange())
 	{
-		player->Send(repair_error);
+		player->Send(repair_error,OutputFilter::DEFAULT);
 		return(0);
 	}
 	long	total = 0L;
@@ -816,7 +855,7 @@ long	Ship::ShieldRepair(Player *player,std::ostringstream& buffer,int action)
 	FedMap	*fed_map =  player->CurrentMap();
 	if(!fed_map->HasAnExchange())
 	{
-		player->Send(repair_error);
+		player->Send(repair_error,OutputFilter::DEFAULT);
 		return(0);
 	}
 	long	total = 0L;
@@ -837,7 +876,7 @@ long	Ship::EngineRepair(Player *player,std::ostringstream& buffer,int action)
 	FedMap	*fed_map =  player->CurrentMap();
 	if(!fed_map->HasAnExchange())
 	{
-		player->Send(repair_error);
+		player->Send(repair_error,OutputFilter::DEFAULT);
 		return(0);
 	}
 	long	total = 0L;

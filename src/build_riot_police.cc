@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -36,7 +37,7 @@ commissioning of the first riot police battalion on the planet.\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::RESOURCE)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ commissioning of the first riot police battalion on the planet.\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -64,12 +65,12 @@ bool	RiotPolice::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::RESOURCE)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	total_builds++;
-	player->Send(ok);
+	player->Send(ok,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -78,7 +79,7 @@ void	RiotPolice::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " battalion";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	RiotPolice::UpdateDisaffection(Disaffection *disaffection)
@@ -99,8 +100,11 @@ void	RiotPolice::Write(std::ofstream& file)
 void	RiotPolice::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Riot Police Btns: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Riot Police Btns: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

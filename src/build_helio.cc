@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -33,7 +34,7 @@ Helio::Helio(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -55,7 +56,7 @@ Helio::Helio(FedMap *the_map,Player *player,Tokens *tokens)
 			 	buffer << "Your network of Heliographs and Signal Towers is extended further ";
 				buffer << "into the hinterland, resulting in an increased production of ";
 				buffer << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -74,7 +75,7 @@ bool	Helio::Add(Player *player,Tokens *tokens)
 
 	if((fed_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -89,7 +90,7 @@ bool	Helio::Add(Player *player,Tokens *tokens)
 		 	buffer << "Your network of Heliographs and Signal Towers is extended further ";
 			buffer << "into the hinterland, resulting in an increased production of ";
 			buffer << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -98,7 +99,7 @@ bool	Helio::Add(Player *player,Tokens *tokens)
 
 	buffer << "Your network of Heliographs and Signal Towers is extended further into ";
 	buffer << "the hinterland, but it seems to have little effect on overall production!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -110,13 +111,13 @@ bool	Helio::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{--total_builds; return(true);
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -126,7 +127,7 @@ bool	Helio::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 		buffer << ", only to agricultural and resource commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -143,7 +144,7 @@ bool	Helio::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -153,7 +154,7 @@ void	Helio::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " route";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Helio::Write(std::ofstream& file)
@@ -164,10 +165,12 @@ void	Helio::Write(std::ofstream& file)
 void	Helio::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='" << name << ": " << total_builds << " route";
-	buffer << ((total_builds > 1) ? "s" : "") << "'/>\n";
-	player->Send(buffer);
+	buffer << name << ": " << total_builds << " route";
+	buffer << ((total_builds > 1) ? "s" : "");
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

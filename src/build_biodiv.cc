@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -38,7 +39,7 @@ BioDiversity::BioDiversity(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -55,9 +56,9 @@ Clearly the public appetite for bio-diversity projects is saturated, and further
 projects are unlikely to have much effect!\n");
 
 	if((total_builds < 5) || ((fed_map->Economy() >= Infrastructure::LEISURE) && total_builds < 8))
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	else
-		player->Send(over);
+		player->Send(over,OutputFilter::DEFAULT);
 
 	total_builds++;
 	return(true);
@@ -67,7 +68,7 @@ void	BioDiversity::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    BioDiversity Projects: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	BioDiversity::UpdateDisaffection(Disaffection *discontent)
@@ -86,9 +87,11 @@ void	BioDiversity::Write(std::ofstream& file)
 void	BioDiversity::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='BioDiversity Projects: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "BioDiversity Projects: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

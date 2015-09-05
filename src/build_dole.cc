@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -39,7 +40,7 @@ Dole::Dole(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -53,7 +54,7 @@ bool	Dole::Add(Player *player,Tokens *tokens)
 {
 	total_builds++;
 	AdjustWorkers();
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -78,7 +79,7 @@ void	Dole::Display(Player *player)
 		buffer << "    Unemployment Pay (Dole): " << total_builds << " levels\n";
 	else
 		buffer << "    Unemployment Pay (Dole): 1 level\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Dole::UpdateDisaffection(Disaffection *discontent)
@@ -99,7 +100,10 @@ void	Dole::Write(std::ofstream& file)
 void	Dole::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Unemployment Pay (Dole): " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Unemployment Pay (Dole): " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

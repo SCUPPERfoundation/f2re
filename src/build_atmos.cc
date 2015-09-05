@@ -17,6 +17,7 @@
 #include "infra.h"
 #include "misc.h"
 #include "player.h"
+#include "output_filter.h"
 #include "tokens.h"
 #include "xml_parser.h"
 
@@ -51,7 +52,7 @@ AtmosControl::AtmosControl(FedMap *the_map,Player *player,Tokens *tokens)
 	}
 	total_builds = 1;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -77,7 +78,7 @@ bool	AtmosControl::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;		
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -97,7 +98,7 @@ void	AtmosControl::Display(Player *player)
 	buffer << "    Atmospheric Control Unit: " << total_builds << " built\n";
 	buffer << "      General: " << level_builds << "\n";
 	buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	AtmosControl::LevelUpdate()
@@ -154,10 +155,25 @@ bool	AtmosControl::Riot()
 void	AtmosControl::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Atmospheric Control: " << total_builds << "'/>\n";
-	buffer << "<s-build-planet-info info='  General: " << level_builds << "'/>\n";
-	buffer << "<s-build-planet-info info='  Unallocated: " << unused_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Atmospheric Control: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+
+	buffer.str("");
+	attribs.clear();
+	buffer << "  General: " << level_builds;
+	std::pair<std::string,std::string> attrib_gen(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib_gen);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+
+	buffer.str("");
+	attribs.clear();
+	buffer << "  Unallocated: " << unused_builds;
+	std::pair<std::string,std::string> attrib_unused(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib_unused);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

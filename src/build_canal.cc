@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ Canal::Canal(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -50,7 +51,7 @@ Canal::Canal(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -64,7 +65,7 @@ Canal::~Canal()
 bool	Canal::Add(Player *player,Tokens *tokens)
 {
 	if(total_builds++ < 5)
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	else
 	{
 		std::ostringstream	buffer;
@@ -72,7 +73,7 @@ bool	Canal::Add(Player *player,Tokens *tokens)
 		buffer << "'s canal system, but it seems to make little difference to ";
 		buffer << "the efficiency of your economy. You seem to have reached a ";
 		buffer << "point where something more efficient is needed to move forward.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	return(true);
 }
@@ -82,7 +83,7 @@ void	Canal::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Canal Systems: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Canal::IsObselete()
@@ -107,9 +108,11 @@ void	Canal::Write(std::ofstream& file)
 void	Canal::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='Canal Systems: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Canal Systems: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

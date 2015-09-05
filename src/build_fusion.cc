@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -39,7 +40,7 @@ power plant comes on line and its output flows into the power grid\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -48,7 +49,7 @@ power plant comes on line and its output flows into the power grid\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -71,14 +72,14 @@ centres of civilization!\n");
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(++total_builds <= 5)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(maxed_out);
+		player->Send(maxed_out,OutputFilter::DEFAULT);
 
 	return(true);
 }
@@ -87,7 +88,7 @@ void	FusionPower::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Fusion Tokamaks: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	FusionPower::RequestResources(Player *player,const std::string& recipient,int quantity)
@@ -113,7 +114,10 @@ void	FusionPower::Write(std::ofstream& file)
 void	FusionPower::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Fusion Tokamaks: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Fusion Tokamks: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

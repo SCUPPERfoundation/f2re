@@ -14,20 +14,16 @@
 #include <cstring>
 
 #include "db_player.h"
-#include "fedmap.h"
 #include "fed_object.h"
 #include "galaxy.h"
-#include "locker.h"
-#include "misc.h"
 #include "msg_number.h"
 #include "object.h"
-#include "player.h"
+#include "output_filter.h"
 
-const int	Inventory::MAX_INV_SIZE;
 const int	Inventory::ONE_DAY = 60 * 60 * 24;
 const int	Inventory::ONE_MONTH = ONE_DAY * 31;
 
-const std::string	Inventory::keyring_desc = " in posession of a multi-dimensional \
+const std::string	Inventory::keyring_desc = " in possession of a multi-dimensional \
 keyring made by the prestigious TenBrane Corp. If you look carefully you can see \
 the glow of the macro-superstring logo.";
 const std::string	Inventory::exec_key_desc = "an executive washroom key. The ornate \
@@ -100,7 +96,7 @@ void	Inventory::Carry(Player *player,const std::string& obj_name)
 		obj->ResetFlag(Object::WORN);
 		buffer << "You take " << obj->c_str() << " out of your inventory and carry it.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Inventory::ChangeCustomsCert(int num_days)
@@ -118,7 +114,7 @@ void	Inventory::Clip(Player *player,const std::string& obj_name)
 {
 	if(!InvFlagSet(KEYRING))
 	{
-		player->Send("You need to buy a keyring first!\n");
+		player->Send("You need to buy a keyring first!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	
@@ -142,7 +138,7 @@ void	Inventory::Clip(Player *player,const std::string& obj_name)
 		obj->ResetFlag(Object::WORN);
 		buffer << "You take " << obj->c_str() << " out of your inventory and clip it on your keyring.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Inventory::CreateDBRec(DBPlayer *rec)
@@ -196,7 +192,7 @@ int	Inventory::Display(Player *player,std::ostringstream& buff)
 
 	buffer.str("");
 	DisplayPersonal(buffer);
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	DisplayKeyring(player,true);
 
 	if(Size() > 0)
@@ -204,11 +200,11 @@ int	Inventory::Display(Player *player,std::ostringstream& buff)
 		buffer.str("");
 		buffer << "You have with you:\n";
 		DisplayList(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 		buffer.str("");
 		MakeFluff(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 	}
 
@@ -235,7 +231,7 @@ int	Inventory::DisplayInventory(Player *player)
 	std::ostringstream	buffer;
 
 	DisplayPersonal(buffer);
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	DisplayKeyring(player,true);
 
 	if(Size() > 0)
@@ -243,11 +239,11 @@ int	Inventory::DisplayInventory(Player *player)
 		buffer.str("");
 		buffer << "You have with you:\n";
 		DisplayList(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 		buffer.str("");
 		MakeFluff(buffer);
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 	}
 
@@ -278,7 +274,7 @@ void	Inventory::DisplayKeyring(Player *player,bool self)
 			}
 		}	
 		buffer << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -358,7 +354,7 @@ int	Inventory::Display2Watcher(Player *player,std::ostringstream& buff)
 
 			buffer << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc();
 			is_wearing = true;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 
@@ -376,7 +372,7 @@ int	Inventory::Display2Watcher(Player *player,std::ostringstream& buff)
 
 			buffer << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc();
 			is_carrying = true;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 
@@ -408,7 +404,7 @@ void	Inventory::Doff(Player *player,const std::string& obj_name)
 			buffer << "You remove the " << obj_name << " and store it out of sight.\n";
 		}
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Inventory::HasTeleporter(int which)
@@ -475,7 +471,7 @@ void	Inventory::Pocket(Player *player,const std::string& obj_name)
 			buffer << "You remove the " << obj_name << " and store it in a convenient pocket.\n";
 		}
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Inventory::ProcessTimeCerts()
@@ -545,11 +541,11 @@ void	Inventory::Unclip(Player *player)
 		if((*iter)->IsClipped())
 		{
 			(*iter)->ResetFlag(Object::CLIPPED);
-			player->Send("Only a key is now left on the keyring\n");
+			player->Send("Only a key is now left on the keyring\n",OutputFilter::DEFAULT);
 			return;
 		}
 	}
-	player->Send("Nothing to unclip!\n");
+	player->Send("Nothing to unclip!\n",OutputFilter::DEFAULT);
 }
 
 void	Inventory::Wear(Player *player,const std::string& obj_name)
@@ -574,7 +570,7 @@ void	Inventory::Wear(Player *player,const std::string& obj_name)
 		obj->SetFlag(Object::WORN);
 		buffer << "You take " << obj->c_str() << " out of your inventory and put it on.\n";
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int	Inventory::WeightCarried()
@@ -588,39 +584,37 @@ int	Inventory::WeightCarried()
 int	Inventory::XMLDisplay(Player *player,std::ostringstream& buff)
 {
 	std::ostringstream buffer;
+	std::string	text;
+	AttribList attribs;
 
 	if(player->Name() != owner)
-		return(XMLDisplay2Watcher(player,buffer));
-
-	XMLDisplayPersonal(buffer);
-	player->Send(buffer);
+		return(XMLDisplay2Watcher(player));
+	XMLDisplayPersonal(player);
 	XMLDisplayKeyring(player,true);
 
 	if(Size() > 0)
 	{
+		text = "You have with you:";
+		player->Send(text,OutputFilter::EXAMINE,attribs);
+		XMLDisplayList(player);
 		buffer.str("");
-		buffer << "<s-examine>You have with you:</s-examine>\n";
-		XMLDisplayList(buffer);
-		player->Send(buffer);
-
-		buffer.str("");
-		buffer << "<s-examine>";
 		MakeFluff(buffer);
-		buffer << "</s-examine>\n";
-		player->Send(buffer);
-		buffer.str("");
+		text = buffer.str();
+		player->Send(text,OutputFilter::EXAMINE,attribs);
 	}
 	return(Size());
 }
 
 void	Inventory::XMLDisplayKeyring(Player *player,bool self)
 {
-	std::ostringstream	buffer;
 	if(inv_flags.test(KEYRING) || inv_flags.test(EXEC_KEY))
 	{
+		std::ostringstream buffer;
+		std::string	text;
+		AttribList attribs;
+
 		if(inv_flags.test(KEYRING))
 		{
-			buffer << "<s-examine>";
 			if(self)
 				buffer << "You are" << keyring_desc;
 			else
@@ -636,34 +630,50 @@ void	Inventory::XMLDisplayKeyring(Player *player,bool self)
 				break;
 			}
 		}
-		buffer << "</s-examine>\n";
-		player->Send(buffer);
+		text = buffer.str();
+		player->Send(text,OutputFilter::EXAMINE,attribs);
 	}
 }
 
-int	Inventory::XMLDisplayList(std::ostringstream& buffer)
+int	Inventory::XMLDisplayList(Player *player)
 {
 	int	size = obj_list.size();
 	if(size == 0)
 		return(0);
+
+	std::ostringstream buffer;
+	std::string	text;
+	AttribList attribs;
+
 	for(ObjList::iterator iter = obj_list.begin();iter != obj_list.end();++iter)
 	{
-		buffer << "<s-examine>   " << (*iter)->c_str();
+		buffer.str("");
+		buffer << "   " << (*iter)->c_str();
 		if((*iter)->IsWorn())
 			buffer << " [wearing]";
 		if((*iter)->IsCarried())
 			buffer << " [carried]";
 		if((*iter)->IsClipped())
 			buffer << " [on keyring]";
-		buffer << "</s-examine>\n";
+		text = buffer.str();
+		player->Send(text,OutputFilter::EXAMINE,attribs);
 	}
-	buffer << "<s-examine>" << size << " objects</s-examine>\n";
+
+	buffer.str("");
+	buffer << size << " objects";
+	text = buffer.str();
+	player->Send(text,OutputFilter::EXAMINE,attribs);
+
 	return(size);
 }
 
-void	Inventory::XMLDisplayPersonal(std::ostringstream& buffer)
+void	Inventory::XMLDisplayPersonal(Player *player)
 {
-	buffer << "<s-examine>" << "You check out your personal kit - ";
+	std::ostringstream buffer;
+	std::string	text;
+	AttribList attribs;
+
+	buffer << "You check out your personal kit - ";
 
 	for(int count = 0;count < MAX_INV_FLAGS;++count)
 	{
@@ -681,7 +691,7 @@ void	Inventory::XMLDisplayPersonal(std::ostringstream& buffer)
 				case	PRICE_CHECK_PREMIUM:
 				case	KEYRING:
 				case	EXEC_KEY:								break;
-				
+
 				case	TP_1:
 					buffer << inv_names[count] << " (";
 					buffer << (31 - (std::time(0) - tp_rental)/ONE_DAY) << " days left),";
@@ -693,51 +703,54 @@ void	Inventory::XMLDisplayPersonal(std::ostringstream& buffer)
 	}
 
 	DisplayCerts(buffer);
-	buffer << " and that seems to be it.</s-examine>\n";
+	buffer << " and that seems to be it.";
+	player->Send(text,OutputFilter::EXAMINE,attribs);
 }
 
-int	Inventory::XMLDisplay2Watcher(Player *player,std::ostringstream& buff)
+int	Inventory::XMLDisplay2Watcher(Player *player)
 {
-	std::ostringstream	buffer;
+	std::ostringstream buffer;
+	std::string	text;
+	AttribList attribs;
 
 	XMLDisplayKeyring(player,false);
 
 	bool	is_wearing = false;
-	buffer << "<s-examine>" << owner << " is wearing";
+	buffer << owner << " is wearing";
 	for(ObjList::iterator iter = obj_list.begin();iter != obj_list.end();++iter)
 	{
 		if((*iter)->IsWorn())
 		{
 			if(!is_wearing)
-				buffer << ":</s-examine>\n";
+				buffer << ":\n";
 			else
 				buffer.str("");
 
-			buffer << "<s-examine> " << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc() << "</s-examine>\n";
+			buffer << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc() << "\n";
 			is_wearing = true;
-			player->Send(buffer);
+			text = buffer.str();
+			player->Send(text,OutputFilter::EXAMINE,attribs);
 		}
 	}
 
 	buffer.str("");
 	bool	is_carrying = false;
-	buffer << "<s-examine>";
 	buffer << owner << " is carrying";
 	for(ObjList::iterator iter = obj_list.begin();iter != obj_list.end();++iter)
 	{
 		if((*iter)->IsCarried())
 		{
 			if(!is_carrying)
-				buffer << ":</s-examine>\n";
+				buffer << ":\n";
 			else
 				buffer.str("");
 
-			buffer << "<s-examine> " << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc() << "</s-examine>\n";
+			buffer << " " << (*iter)->c_str(FedObject::UPPER_CASE) << ". " << (*iter)->Desc() << "\n";
 			is_carrying = true;
-			player->Send(buffer);
+			text = buffer.str();
+			player->Send(text,OutputFilter::EXAMINE,attribs);
 		}
 	}
 
 	return(0);
 }
-

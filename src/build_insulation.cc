@@ -14,6 +14,7 @@
 #include "efficiency.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ Insulation::Insulation(FedMap *the_map,Player *player,Tokens *tokens)
 									(fed_map->RequestResources(player,"Oil",name)))
 	{
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 	else
@@ -62,9 +63,9 @@ energy efficiency of your industry meets with little or no success.\n");
 	if((total_builds < 5) || ((total_builds >= 5) && (fed_map->RequestResources(player,"Oil",name))))
 	{
 		if(total_builds < 10)
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 		else
-			player->Send(maxed_out);
+			player->Send(maxed_out,OutputFilter::DEFAULT);
 		total_builds++;
 		return(true);
 	}
@@ -76,7 +77,7 @@ void	Insulation::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Insulation: " << total_builds << " campaigns completed\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Insulation::UpdateEfficiency(Efficiency *efficiency)
@@ -92,9 +93,11 @@ void	Insulation::Write(std::ofstream& file)
 void	Insulation::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='Insulation Campaigns: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Insulation Campaigns: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

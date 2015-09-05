@@ -15,8 +15,8 @@
 #include "fed_object.h"
 #include "galaxy.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 
 
 Move::Move(const char **attrib,FedMap	*fed_map) : Script(fed_map)
@@ -76,26 +76,42 @@ int	Move::ProcessObjectMove(Player *player)
 			obj->Location(loc);
 			if(!silent)
 			{
-				std::ostringstream	buffer, xml_buffer;
-				buffer << obj->c_str(FedObject::UPPER_CASE);
-				if(obj->IsPlural())
-					buffer << " have disappeared.\n";
-				else
-					buffer << " has disappeared.\n";
-				xml_buffer << "<s-remove-contents name='" << obj->Name() << "'>";
-				xml_buffer << EscapeXML(buffer.str()) << "</s-remove-contents>\n";
-				player->CurrentMap()->RoomSend(0,0,old_loc,buffer.str(),xml_buffer.str());
+				AttribList attribs;
+				std::pair<std::string,std::string> attrib(std::make_pair("name",obj->Name()));
+				attribs.push_back(attrib);
 
-				buffer.str("");
-				xml_buffer.str("");
-				buffer << obj->c_str(FedObject::UPPER_CASE);
-				if(obj->IsPlural())
-					buffer << " have appeared.\n";
-				else
-					buffer << " has appeared.\n";
-				xml_buffer << "<s-contents name='" << obj->Name() << "'>";
-				xml_buffer << EscapeXML(buffer.str()) << "</s-contents>\n";
-				player->CurrentMap()->RoomSend(0,0,loc_num,buffer.str(),xml_buffer.str());
+				PlayerList pl_list;
+				loc.fed_map->PlayersInLoc(old_loc,pl_list);
+
+				std::ostringstream	buffer;
+				std::string text;
+				if(!pl_list.empty())
+				{
+					buffer << obj->c_str(FedObject::UPPER_CASE);
+					if(obj->IsPlural())
+						buffer << " have disappeared.\n";
+					else
+						buffer << " has disappeared.\n";
+					text = buffer.str();
+					for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+						(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
+				}
+
+				pl_list.clear();
+				loc.fed_map->PlayersInLoc(loc_num,pl_list);
+
+				if(!pl_list.empty())
+				{
+					buffer.str("");
+					buffer << obj->c_str(FedObject::UPPER_CASE);
+					if(obj->IsPlural())
+						buffer << " have appeared.\n";
+					else
+						buffer << " has appeared.\n";
+					text = buffer.str();
+					for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+						(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
+				}
 			}
 		}
 	}

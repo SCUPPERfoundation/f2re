@@ -24,6 +24,7 @@
 #include "happenings.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "price_check.h"
 #include "ship.h"
@@ -147,7 +148,7 @@ void	CommodityExchItem::Buy(Player *player,FedMap *exch_map)
 	{
 		buffer.str("");
 		buffer << "This exchange isn't currently selling " << name << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -157,7 +158,7 @@ void	CommodityExchItem::Buy(Player *player,FedMap *exch_map)
 		buffer.str("");
 		buffer << "You can't afford the " << price << "ig it would cost to buy ";
 		buffer << CARGO_SIZE << " tons of "<< name << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	else
@@ -171,7 +172,7 @@ void	CommodityExchItem::Buy(Player *player,FedMap *exch_map)
 		buffer.str("");
 		buffer << "\n" << CARGO_SIZE << " tons of " << name;
 		buffer << " have been purchased at a cost of " << price << "ig and loaded onto your spaceship.\n\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	stock -= CARGO_SIZE;
@@ -209,7 +210,7 @@ void	CommodityExchItem::DisplayProduction(Player *player,int commod_grp)
 		buffer << "  " << name << ": production " << production;
 		buffer << ", consumption " << consumption << " (" << (production - consumption) << "), ";
 		buffer << "efficiency " << efficiency << "%\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -240,7 +241,7 @@ void	CommodityExchItem::DivertTrade(Player *player,const std::string& cartel_nam
 	std::ostringstream	buffer;
 	buffer << "\n" << CARGO_SIZE << " tons of " << name;
 	buffer << " sold for "<< price << "ig\n\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	CommodityExchItem::Dump()
@@ -279,7 +280,7 @@ void	CommodityExchItem::GroupDisplay(Player *player,int commod_grp)
 		}
 		if(buying_price > 0)
 			buffer << name << " Buying 75 tons at " << buying_price << "ig/ton\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		player->SendSound("teletype");
 	}
 }
@@ -304,7 +305,7 @@ void	CommodityExchItem::LineDisplay(Player *player,const std::string& exch_name,
 		buffer << star_name << ": " << exch_name << " is buying 75 tons at " << buying_price << "ig/ton\n";
 	if((selling_price + buying_price) == 0)
 		buffer << star_name << ": " << exch_name << " is not currently trading in this commodity\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	CommodityExchItem::LineDisplay(const std::string& exch_name,
@@ -341,34 +342,93 @@ void	CommodityExchItem::LineDisplay(FedMap *home_map,bool send_intro,Player *pla
 	if((selling_price + buying_price) == 0)
 	{
 		if(player != 0)
-			player->Send("The exchange is not currently trading in this commodity\n");
+			player->Send("The exchange is not currently trading in this commodity\n",OutputFilter::DEFAULT);
 		return;
 	}
+
+	PlayerList	pl_list;
+	if(home_map != 0)
+		home_map->PlayersInLoc(home_map->ExchangeLoc(),pl_list);
+	AttribList attribs;
+	std::string text;
 	if(selling_price > 0)
 	{
-		xml_buffer << "<s-exch-sell name='" << name << "' stock='" << (stock - min_stock);
-		xml_buffer << "' price='" << selling_price << "'/>\n";
+		// FedTerm/Browser version
+		attribs.push_back(std::make_pair("name",name));
+		xml_buffer << (stock - min_stock);
+		attribs.push_back(std::make_pair("stock",xml_buffer.str()));
+		xml_buffer.str("");
+		xml_buffer << (selling_price);
+		attribs.push_back(std::make_pair("price",xml_buffer.str()));
+
+		// ASCII version
 		buffer << "+++ Exchange has " << (stock - min_stock) << " tons for sale +++\n";
 		buffer << "+++ Offer price is " << selling_price << "ig/ton for first 75 tons +++\n";
-	}
-	if(buying_price > 0)
-	{
-		xml_buffer << "<s-exch-buy name='" << name << "' price='" << buying_price << "'/>\n";
-		buffer << "+++ Exchange will buy 75 tons at " << buying_price << "ig/ton +++\n";
+		text = buffer.str();
+
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();iter++)
+		{
+			if((*iter)->CommsAPILevel() > 0)
+			{
+				(*iter)->Send("",OutputFilter::EXCH_SELL,attribs);
+				(*iter)->SendSound("teletype");
+			}
+			else
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
+
+		if(player != 0)	// 'Premium' remote exchange access
+		{
+			if(player->CommsAPILevel() > 0)
+			{
+				player->Send("",OutputFilter::EXCH_SELL,attribs);
+				player->SendSound("teletype");
+			}
+			else
+				player->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 
-	if(home_map != 0)
+	if(buying_price > 0)
 	{
-		home_map->CommodityExchangeXMLSend(xml_buffer.str());
-		home_map->CommodityExchangeSend(buffer.str());
-		home_map->CommodityExchangeSendSound("teletype");
-	}
-	if(player != 0)
-	{
-		if(player->CommsAPILevel() > 0)
-			player->Send(xml_buffer);
-		player->Send(buffer);
-		player->SendSound("teletype");
+		attribs.clear();
+		buffer.str("");
+		xml_buffer.str("");
+
+		// Fedterm/Browser version
+		attribs.push_back(std::make_pair("name",name));
+		xml_buffer << buying_price;
+		attribs.push_back(std::make_pair("price",xml_buffer.str()));
+
+		// ASCII version
+		if((send_intro) && (selling_price == 0))
+			buffer << "+++ The exchange display shows the prices for " << name << " +++\n";
+		buffer << "+++ Exchange will buy 75 tons at " << buying_price << "ig/ton +++\n";
+		text = buffer.str();
+
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();iter++)
+		{
+			if((*iter)->CommsAPILevel() > 0)
+			{
+				(*iter)->Send("",OutputFilter::EXCH_BUY,attribs);
+				if(selling_price == 0)
+					(*iter)->SendSound("teletype");
+			}
+			else
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
+
+		if(player != 0)	// 'Premium' remote exchange access
+		{
+			if(player->CommsAPILevel() > 0)
+			{
+				player->Send("",OutputFilter::EXCH_BUY,attribs);
+				if(selling_price == 0)
+					player->SendSound("teletype");
+			}
+			else
+				player->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 }
 
@@ -398,7 +458,7 @@ void	CommodityExchItem::OwnerDisplay(Player *player,int commod_grp)
 		buffer << "  " << name << ": value " << value << "ig/ton  Spread: " << spread;
 		buffer << "%   Stock: current " << stock << "/min " << min_stock;
 		buffer << "/max " << max_stock << "  Efficiency: " << efficiency << "%\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -431,7 +491,7 @@ void	CommodityExchItem::Sell(Player *player,FedMap *exch_map)
 		buffer << "You don't have any imported " << name << " to sell.\n";
 		buffer << "Please note that goods bought through the exchanges are ";
 		buffer << "bonded and may not be re-imported to their planet of origin\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -443,7 +503,7 @@ void	CommodityExchItem::Sell(Player *player,FedMap *exch_map)
 	{
 		buffer.str("");
 		buffer << "This exchange isn't currently buying " << name << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -462,7 +522,7 @@ void	CommodityExchItem::Sell(Player *player,FedMap *exch_map)
 	buffer.str("");
 	buffer << "\n" << CARGO_SIZE << " tons of " << name;
 	buffer << " sold to the exchange for "<< price << "ig\n\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	UpdateValue();
 	LineDisplay(exch_map,true);
 }

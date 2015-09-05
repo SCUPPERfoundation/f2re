@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -39,7 +40,7 @@ Pension::Pension(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -48,7 +49,7 @@ Pension::Pension(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -62,7 +63,7 @@ Pension::~Pension()
 bool	Pension::Add(Player *player,Tokens *tokens)
 {
 	total_builds++;
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -73,7 +74,7 @@ void	Pension::Display(Player *player)
 		buffer << "    Pensions: " << total_builds << " levels\n";
 	else
 		buffer << "    Pensions: 1 level\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Pension::UpdateDisaffection(Disaffection *discontent)
@@ -92,8 +93,11 @@ void	Pension::Write(std::ofstream& file)
 void	Pension::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Pension level: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Pension level: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

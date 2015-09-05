@@ -14,6 +14,7 @@
 #include "disaffection.h"
 #include "fedmap.h"
 #include "infra.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -37,7 +38,7 @@ Radio::Radio(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -46,7 +47,7 @@ Radio::Radio(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -69,14 +70,14 @@ putting out the same mindless crud.\n");
 
 	if((total_builds >= 4) && (fed_map->Economy() == Infrastructure::INDUSTRIAL))
 	{
-		player->Send(limit);
+		player->Send(limit,OutputFilter::DEFAULT);
 		return(false);
 	}
 	
 	if(total_builds < 10)
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 	else
-		player->Send(over);
+		player->Send(over,OutputFilter::DEFAULT);
 
 	total_builds++;
 	return(true);
@@ -86,7 +87,7 @@ void	Radio::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Entertainment Channels: " << total_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 
@@ -103,8 +104,10 @@ void	Radio::Write(std::ofstream& file)
 void	Radio::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='Radio Channels: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Radio Channels: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

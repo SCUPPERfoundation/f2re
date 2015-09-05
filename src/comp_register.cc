@@ -15,6 +15,7 @@
 
 #include "company.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -64,17 +65,17 @@ bool	CompanyRegister::CompanyExists(const std::string& name)
 void	CompanyRegister::Display(Player *player)
 {
 	if(name_index.size() != 0)
-		player->Send("Register of Companies\n");
+		player->Send("Register of Companies\n",OutputFilter::DEFAULT);
 	else
 	{
-		player->Send("No companies formed yet\n");
+		player->Send("No companies formed yet\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	std::ostringstream	buffer;
 	buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << "Company" << "CEO\n";
 	buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << "-------" << "---\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 
 	CompanyIndex::iterator iter;
@@ -85,16 +86,16 @@ void	CompanyRegister::Display(Player *player)
 		buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << iter->first << iter->second->CEO()->Name() << "\n";
 		if((total % 3) == 0)
 		{
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 		}
 	}
 	if((total % 3) != 0)
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << total << " companies\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 Company	*CompanyRegister::Find(const std::string& name)

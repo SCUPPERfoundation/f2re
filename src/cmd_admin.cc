@@ -10,19 +10,16 @@
 #include "cmd_admin.h"
 
 #include <sstream>
-#include <string>
 #include <utility>
-
-#include <cctype>
 
 #include "fedmap.h"
 #include "galaxy.h"
 #include "global_player_vars_table.h"
 #include "inventory.h"
 #include "misc.h"
-#include "scr_nomatch.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
+#include "scr_nomatch.h"
 #include "tokens.h"
 
 
@@ -36,7 +33,7 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 
 	if(tokens->Size() < 5)
 	{
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -50,7 +47,7 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 	int amount = std::atoi(tokens->Get(3).c_str());
 	if(amount == 0)
 	{
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 		return;
 	}
 	std::string	player_name(tokens->Get(4));
@@ -74,14 +71,14 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 
 	if((which == 3) && (planet == 0))
 	{
-		player->Send(name_error);
+		player->Send(name_error,OutputFilter::DEFAULT);
 		return;
 	}
 	else
 	{
 		if((which < 3) && (target == 0))
 		{
-			player->Send(name_error);
+			player->Send(name_error,OutputFilter::DEFAULT);
 			return;
 		}
 	}
@@ -104,17 +101,17 @@ void	Admin::Add(Player *player,Tokens *tokens,std::string& line)
 					break;
 		case 4:	AddStat(player,tokens);	return;
 
-		default:	player->Send(error);		return;
+		default:	player->Send(error,OutputFilter::DEFAULT);		return;
 	}
 
 	WriteLog(buffer.str() + "by " + player->Name());
 	if(ok)
 	{
 		buffer << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(no_company);
+		player->Send(no_company,OutputFilter::DEFAULT);
 
 	if(target != 0)
 		Game::player_index->Save(target,PlayerIndex::NO_OBJECTS);
@@ -131,7 +128,7 @@ void	Admin::AddStat(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 6)
 	{
-		player->Send(wrong_format);
+		player->Send(wrong_format,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -146,14 +143,14 @@ void	Admin::AddStat(Player *player,Tokens *tokens)
 	}
 	if(stat < 0)
 	{
-		player->Send(wrong_stat);
+		player->Send(wrong_stat,OutputFilter::DEFAULT);
 		return;
 	}
 
 	int amount = std::atoi(tokens->Get(4).c_str());
 	if(amount == 0)
 	{
-		player->Send(wrong_format);
+		player->Send(wrong_format,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -161,7 +158,7 @@ void	Admin::AddStat(Player *player,Tokens *tokens)
 	Player	*target = Game::player_index->FindName(Normalise(player_name));
 	if(target == 0)
 	{
-		player->Send(wrong_name);
+		player->Send(wrong_name,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -184,7 +181,7 @@ void	Admin::AddStat(Player *player,Tokens *tokens)
 						target->ChangeStat(Script::INT,amount,true,true);
 					break;
 	}
-	player->Send("Stat Changed.\n");
+	player->Send("Stat Changed.\n",OutputFilter::DEFAULT);
 }
 
 void	Admin::Alter(Player *player,Tokens *tokens,std::string& line)
@@ -195,7 +192,7 @@ void	Admin::Alter(Player *player,Tokens *tokens,std::string& line)
 
 	if(tokens->Size() < 5)
 	{
-		player->Send(format_error);
+		player->Send(format_error,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -205,21 +202,21 @@ void	Admin::Alter(Player *player,Tokens *tokens,std::string& line)
 		Player	*target = Game::player_index->FindName(Normalise(player_name));
 		if(target == 0)
 		{
-			player->Send(name_error);
+			player->Send(name_error,OutputFilter::DEFAULT);
 			return;
 		}
 		std::string	new_race(tokens->GetRestOfLine(line,4,Tokens::RAW));
 		target->ChangeRace(new_race,player);
 	}
 	else
-		player->Send(stat_error);
+		player->Send(stat_error,OutputFilter::DEFAULT);
 }
 
 void	Admin::Change(Player *player,Tokens *tokens)
 {
 	if(tokens->Size() < 4)
 	{
-		player->Send("Type 'ADMIN HELP' to get the correct format!\n");
+		player->Send("Type 'ADMIN HELP' to get the correct format!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -228,21 +225,21 @@ void	Admin::Change(Player *player,Tokens *tokens)
 	if(target == 0)
 	{
 		buffer << "I can't find an account with the name '" << tokens->Get(3) << "'\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(tokens->Get(2) == "email")
 	{
 		target->UpdateEMail(tokens->Get(4));
-		player->Send("Email address updated.\n");
+		player->Send("Email address updated.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(tokens->Get(2) == "password")
 	{
 		target->UpdatePassword(tokens->Get(4));
-		player->Send("Password updated.\n");
+		player->Send("Password updated.\n",OutputFilter::DEFAULT);
 		return;
 	}
 }
@@ -257,20 +254,20 @@ void	Admin::DeleteVariable(Player *player,Tokens *tokens)
 		std::string	name(tokens->Get(3));
 		std::string	var(tokens->Get(4));
 		Game::global_player_vars_table->Delete(Normalise(name),var);
-		player->Send(result);
+		player->Send(result,OutputFilter::DEFAULT);
 	}
 }
 
 void	Admin::DisplayFlags(Player *player,Tokens *tokens)
 {
 	if(tokens->Size() < 3)
-		player->Send(Game::system->GetMessage("admin","displayflags",1));
+		player->Send(Game::system->GetMessage("admin","displayflags",1),OutputFilter::DEFAULT);
 	else
 	{
 		std::string	name(tokens->Get(2));
 		Player	*target = Game::player_index->FindName(Normalise(name));
 		if(target == 0)
-			player->Send(Game::system->GetMessage("admin","displayflags",2));
+			player->Send(Game::system->GetMessage("admin","displayflags",2),OutputFilter::DEFAULT);
 		else
 			target->AdminFlags(player);
 	}
@@ -282,19 +279,19 @@ void	Admin::Founder(Player *player,Tokens *tokens)
 	Player	*target = Game::player_index->FindName(Normalise(player_name));
 	if(target == 0)
 	{
-		player->Send("Can't find that player!\n");
+		player->Send("Can't find that player!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(target->Rank() != Player::COMMANDER)
 	{
-		player->Send("Player must be a commander!\n");
+		player->Send("Player must be a commander!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(target->Jump2Founder(player))
-		player->Send("Promoted!\n");
+		player->Send("Promoted!\n",OutputFilter::DEFAULT);
 	else
-		player->Send("Unable to process promotion!\n");
+		player->Send("Unable to process promotion!\n",OutputFilter::DEFAULT);
 }
 
 void	Admin::Indy(Player *player,Tokens *tokens)
@@ -303,20 +300,20 @@ void	Admin::Indy(Player *player,Tokens *tokens)
 	Player	*target = Game::player_index->FindName(Normalise(player_name));
 	if(target == 0)
 	{
-		player->Send("Can't find that player!\n");
+		player->Send("Can't find that player!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(target->Rank() != Player::COMMANDER)
 	{
-		player->Send("Player must be a commander!\n");
+		player->Send("Player must be a commander!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(target->Jump2Indy(player))
-		player->Send("Promoted!\n");
+		player->Send("Promoted!\n",OutputFilter::DEFAULT);
 	else
-		player->Send("Unable to process promotion!\n");
+		player->Send("Unable to process promotion!\n",OutputFilter::DEFAULT);
 }
 
 void	Admin::Help(Player *player)
@@ -360,7 +357,7 @@ void	Admin::Help(Player *player)
 	};
 
 	for(int count = 0;lines[count] != "";count++)
-		player->Send(lines[count]);
+		player->Send(lines[count],OutputFilter::DEFAULT);
 }
 
 void	Admin::Merchant(Player *player,Tokens *tokens)
@@ -369,19 +366,19 @@ void	Admin::Merchant(Player *player,Tokens *tokens)
 	Player	*target = Game::player_index->FindName(Normalise(player_name));
 	if(target == 0)
 	{
-		player->Send("Can't find that player!\n");
+		player->Send("Can't find that player!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(target->Rank() != Player::COMMANDER)
 	{
-		player->Send("Player must be a commander!\n");
+		player->Send("Player must be a commander!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(target->Jump2Merchant(player))
-		player->Send("Promoted!\n");
+		player->Send("Promoted!\n",OutputFilter::DEFAULT);
 	else
-		player->Send("Unable to process promotion!\n");
+		player->Send("Unable to process promotion!\n",OutputFilter::DEFAULT);
 }
 
 void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
@@ -397,7 +394,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 
 	if(!((player->Name() == "Hazed") || (player->Name() == "Bella") || (player->Name() == "Freya")))
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1));
+		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -418,7 +415,7 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	 1:	Change(player,tokens);					break;
 		case	 2:
 		case	 3:	if(tokens->Size() < 4)
-							player->Send(Game::system->GetMessage("cmdparser","admin",2));
+							player->Send(Game::system->GetMessage("cmdparser","admin",2),OutputFilter::DEFAULT);
 						else
 							Set(player,tokens,tokens->Get(3),tokens->Get(2),(cmd == 2) ? SET_FLAG : CLEAR_FLAG);
 						break;
@@ -434,10 +431,10 @@ void	Admin::Parse(Player *player,Tokens *tokens,std::string& line)
 		case	13:	Founder(player,tokens);					break;
 		case	14:	Indy(player,tokens);						break;
 		case	15:	Merchant(player,tokens);				break;
-		case	16:	player->Send("Not available\n");		break;
+		case	16:	player->Send("Not available\n",OutputFilter::DEFAULT);				break;
 		case  17:	Zombie(player,tokens);					break;
 		case  18:	Game::player_index->DumpAccounts(tokens->Get(2));						break;
-		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1));		break;
+		default:		player->Send(Game::system->GetMessage("cmdparser","admin",1),OutputFilter::DEFAULT);		break;
 	}
 }
 
@@ -450,44 +447,44 @@ void	Admin::Promote(Player *player,Tokens *tokens)
 	Player	*target = Game::player_index->FindName(Normalise(player_name));
 	if(target == 0)
 	{
-		player->Send("Can't find that player!\n");
+		player->Send("Can't find that player!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	switch(target->Rank())
 	{
 		case Player::COMMANDER:			target->ClearLoan();
-												player->Send(ok);
+												player->Send(ok,OutputFilter::DEFAULT);
 												break;
 		case Player::CAPTAIN:			target->SetTP(1000);
-												player->Send(ok);
+												player->Send(ok,OutputFilter::DEFAULT);
 												break;
 		case Player::ADVENTURER:		target->SetCP(1000);
-												player->Send("Player needs 500K in bank account...\n");
+												player->Send("Player needs 500K in bank account...\n",OutputFilter::DEFAULT);
 												break;
 		case Player::MERCHANT:			target->SetTP(1000);
-												player->Send("Player needs 600K in bank account...\n");
+												player->Send("Player needs 600K in bank account...\n",OutputFilter::DEFAULT);
 												break;
 		case Player::TRADER:				target->SetTP(600);
-												player->Send("Player needs several meg in bank account...\n");
+												player->Send("Player needs several meg in bank account...\n",OutputFilter::DEFAULT);
 												break;
 		case Player::INDUSTRIALIST:	target->SetToManufacturer();
-												player->Send(ok);
+												player->Send(ok,OutputFilter::DEFAULT);
 												break;
 		case Player::MANUFACTURER:		target->SetToFinancier();
-												player->Send(ok);
+												player->Send(ok,OutputFilter::DEFAULT);
 												break;
 		case Player::FINANCIER:			target->Financier2Founder();
-												player->Send(promoted);
+												player->Send(promoted,OutputFilter::DEFAULT);
 												break;
 		case Player::FOUNDER:			target->Founder2Engineer();
-												player->Send(promoted);
+												player->Send(promoted,OutputFilter::DEFAULT);
 												break;
 		case Player::ENGINEER:			target->Engineer2Mogul();
-												player->Send(promoted);
+												player->Send(promoted,OutputFilter::DEFAULT);
 												break;
 		case Player::MOGUL:				target->Mogul2Technocrat();
-												player->Send(promoted);
+												player->Send(promoted,OutputFilter::DEFAULT);
 												break;
 	}
 
@@ -497,19 +494,19 @@ void	Admin::Promote(Player *player,Tokens *tokens)
 void	Admin::SavePlayer(Player *player,Tokens *tokens)
 {
 	if(tokens->Size() < 3)
-		player->Send(Game::system->GetMessage("admin","saveplayer",1));
+		player->Send(Game::system->GetMessage("admin","saveplayer",1),OutputFilter::DEFAULT);
 	else
 	{
 		std::string	name(tokens->Get(2));
 		Player	*target = Game::player_index->FindName(Normalise(name));
 		if(target == 0)
-			player->Send(Game::system->GetMessage("admin","saveplayer",2));
+			player->Send(Game::system->GetMessage("admin","saveplayer",2),OutputFilter::DEFAULT);
 		else
 		{
 			Game::player_index->Save(target,PlayerIndex::WITH_OBJECTS);
 			std::ostringstream	buffer("");
 			buffer << name << " saved out to disk.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -525,7 +522,7 @@ void	Admin::Set(Player *player,Tokens *tokens,const std::string& name,const std:
 	std::string	player_name(name);
 	Player	*target = Game::player_index->FindName(Normalise(player_name));
 	if(target == 0)
-		player->Send(Game::system->GetMessage("cmdparser","adminset",3));
+		player->Send(Game::system->GetMessage("cmdparser","adminset",3),OutputFilter::DEFAULT);
 	else
 	{
 		int	which_flag = 9999;
@@ -548,7 +545,7 @@ void	Admin::Set(Player *player,Tokens *tokens,const std::string& name,const std:
 			case 5:	SetSponsor(player,tokens,target,which);	break;		// 'sponsor'
 			case 6:	SetBuild(player,tokens,target,which);		break;		// 'build'
 			case 7:	SetTester(player,tokens,target);				break;		// 'tester'
-			default:	player->Send(Game::system->GetMessage("cmdparser","adminset",4));
+			default:	player->Send(Game::system->GetMessage("cmdparser","adminset",4),OutputFilter::DEFAULT);
 		}
 		Game::player_index->Save(target,PlayerIndex::NO_OBJECTS);
 	}
@@ -559,12 +556,12 @@ void	Admin::SetAlpha(Player *player,Tokens *tokens,Player *target,int which)
 	if(which == SET_FLAG)
 	{
 		target->SetGenFlag(Player::ALPHA_CREW);
-		player->Send(Game::system->GetMessage("admin","setalpha",1));
+		player->Send(Game::system->GetMessage("admin","setalpha",1),OutputFilter::DEFAULT);
 	}
 	else
 	{
 		target->ClearGenFlag(Player::ALPHA_CREW);
-		player->Send(Game::system->GetMessage("admin","setalpha",2));
+		player->Send(Game::system->GetMessage("admin","setalpha",2),OutputFilter::DEFAULT);
 	}
 }
 
@@ -581,12 +578,12 @@ void	Admin::SetHost(Player *player,Tokens *tokens,Player *target,int which)
 	if(which == SET_FLAG)
 	{
 		target->SetManFlag(Player::HOST_FLAG);
-		player->Send(Game::system->GetMessage("admin","sethost",1));
+		player->Send(Game::system->GetMessage("admin","sethost",1),OutputFilter::DEFAULT);
 	}
 	else
 	{
 		target->ClearManFlag(Player::HOST_FLAG);
-		player->Send(Game::system->GetMessage("admin","sethost",2));
+		player->Send(Game::system->GetMessage("admin","sethost",2),OutputFilter::DEFAULT);
 	}
 }
 
@@ -597,12 +594,12 @@ void	Admin::SetManager(Player *player,Tokens *tokens,Player *target,int which)
 	if(which == SET_FLAG)
 	{
 		target->SetManFlag(Player::MANAGER);
-		player->Send(set);
+		player->Send(set,OutputFilter::DEFAULT);
 	}
 	else
 	{
 		target->ClearManFlag(Player::MANAGER);
-		player->Send(cleared);
+		player->Send(cleared,OutputFilter::DEFAULT);
 	}
 }
 
@@ -611,12 +608,12 @@ void	Admin::SetNav(Player *player,Tokens *tokens,Player *target,int which)
 	if(which == SET_FLAG)
 	{
 		target->SetNavFlag(player);
-		player->Send(Game::system->GetMessage("cmdparser","adminset",2));
+		player->Send(Game::system->GetMessage("cmdparser","adminset",2),OutputFilter::DEFAULT);
 	}
 	else
 	{
 		target->ClearManFlag(Player::NAV_FLAG);
-		player->Send(Game::system->GetMessage("cmdparser","adminset",1));
+		player->Send(Game::system->GetMessage("cmdparser","adminset",1),OutputFilter::DEFAULT);
 	}
 }
 
@@ -628,12 +625,12 @@ void	Admin::SetSponsor(Player *player,Tokens *tokens,Player *target,int which)
 	if(which == SET_FLAG)
 	{
 		target->SetGenFlag(Player::SPONSOR);
-		player->Send(is_set);
+		player->Send(is_set,OutputFilter::DEFAULT);
 	}
 	else
 	{
 		target->ClearGenFlag(Player::SPONSOR);
-		player->Send(is_clear);
+		player->Send(is_clear,OutputFilter::DEFAULT);
 	}
 }
 
@@ -642,19 +639,19 @@ void	Admin::SetTechie(Player *player,Tokens *tokens,Player *target,int which)
 	if(which == SET_FLAG)
 	{
 		target->SetManFlag(Player::TECHIE);
-		player->Send(Game::system->GetMessage("admin","settechie",1));
+		player->Send(Game::system->GetMessage("admin","settechie",1),OutputFilter::DEFAULT);
 	}
 	else
 	{
 		target->ClearManFlag(Player::TECHIE);
-		player->Send(Game::system->GetMessage("admin","settechie",2));
+		player->Send(Game::system->GetMessage("admin","settechie",2),OutputFilter::DEFAULT);
 	}
 }
 
 void	Admin::SetTester(Player *player,Tokens *tokens,Player *target)
 {
 	target->SetTempFlag(Player::TESTER);
-	player->Send("Tester flag set until the end of the current session.\n");
+	player->Send("Tester flag set until the end of the current session.\n",OutputFilter::DEFAULT);
 }
 
 void	Admin::WhoElse(Player *player,Tokens *tokens)
@@ -663,23 +660,23 @@ void	Admin::WhoElse(Player *player,Tokens *tokens)
 	static const std::string	error2("I can't find a player with that name in the game.\n");
 
 	if(tokens->Size() < 3)
-		player->Send(error1);
+		player->Send(error1,OutputFilter::DEFAULT);
 	else
 	{
 		std::string	name(tokens->Get(2));
 		Player	*target = Game::player_index->FindName(Normalise(name));
 		if(target == 0)
-			player->Send(error2);
+			player->Send(error2,OutputFilter::DEFAULT);
 		else
 		{
 			std::string	ip(target->IPAddress());
 			std::ostringstream	buffer;
 			buffer << name << " (IP address "<< target->IPAddress();
 			buffer << ") has the following characters in the game database:\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			if(Game::player_index->FindAllAlts(player,ip) == 0)
-				player->Send("  None!\n");
+				player->Send("  None!\n",OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -693,6 +690,6 @@ void	Admin::Zombie(Player *player,Tokens *tokens)
 	std::ostringstream	buffer;
 	buffer << "Number of zombie accounts over " << days << " days old is ";
 	buffer << info.first << " of " << info.second << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 

@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 Disaffection::Disaffection(Infrastructure *infrastructure) : infra(infrastructure)
@@ -362,7 +363,7 @@ void	Disaffection::Display(Player *player)
 		buffer << "  Disaffection rating   " << dis << "\n";
 	buffer << "  ------------------------------\n";
 
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int Disaffection::Update()

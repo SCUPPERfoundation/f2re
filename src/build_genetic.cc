@@ -14,6 +14,7 @@
 #include "disaffection.h"
 #include "fedmap.h"
 #include "infra.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -37,7 +38,7 @@ willing to be persuaded.\n";
 
 	if((the_map->Economy() < Infrastructure::BIOLOGICAL))
 	{
-		 player->Send(too_early);
+		 player->Send(too_early,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -54,7 +55,7 @@ willing to be persuaded.\n";
 			total_builds = 1;
 			fed_map->AddTotalLabour(10);
 			fed_map->AddLabour(10);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 	}
@@ -81,10 +82,10 @@ has little effect. You already have enough clinics to treat the whole population
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(too_many);
+		player->Send(too_many,OutputFilter::DEFAULT);
 
 	return(true);
 }
@@ -97,7 +98,7 @@ bool	Genetic::CheckHospitals(Player *player)
 		return(true);
 	else
 	{
-		player->Send(fail);
+		player->Send(fail,OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -109,7 +110,7 @@ void	Genetic::Display(Player *player)
 		buffer << "    Genetic clinics: " << total_builds << " built\n";
 	else
 		buffer << "    Genetic clinic: 1 built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Genetic::UpdateDisaffection(Disaffection *discontent)
@@ -136,7 +137,10 @@ void	Genetic::Write(std::ofstream& file)
 void	Genetic::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Genetic clinics: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Genetic clinics: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

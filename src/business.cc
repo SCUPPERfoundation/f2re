@@ -23,6 +23,7 @@
 #include "infra.h"
 #include "mail.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "production.h"
 #include "review.h"
@@ -227,7 +228,7 @@ have some treasury shares to sell!\n");
 	Bid	*bid =  FindBid(bid_num);
 	if(bid == 0)
 	{
-		ceo->Send("I can't find a bid with that number!\n");
+		ceo->Send("I can't find a bid with that number!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -236,27 +237,27 @@ have some treasury shares to sell!\n");
 	if(company == 0)
 	{
 		buffer << "There no longer seems to be a company called " << bid->company_name << "!\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
 		Shareholders::iterator	tr_iter = share_register.find("Treasury");
 		if(tr_iter == share_register.end())
 		{
-			ceo->Send(need_shares);
+			ceo->Send(need_shares,OutputFilter::DEFAULT);
 			return;	// Bid not deleted in this case
 		}
 		Share	*treasury = tr_iter->second;
 		if(treasury->Quantity() <= bid->num_shares)
 		{
-			ceo->Send(need_shares);
+			ceo->Send(need_shares,OutputFilter::DEFAULT);
 			return;	// Bid not deleted in this case
 		}
 
 		if(!company->CanPurchaseBusinessShares(bid->num_shares,bid->price,name))
 		{
 			buffer << bid->company_name << " is no longer in a position to purchase your shares!\n";
-			ceo->Send(buffer);
+			ceo->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 		{
@@ -268,7 +269,7 @@ have some treasury shares to sell!\n");
 				shares = iter->second;
 				if((shares->Quantity() * share_value[CURRENT] + total_cost) > owner_stake/2)
 				{
-					ceo->Send(too_big);
+					ceo->Send(too_big,OutputFilter::DEFAULT);
 					return;	// Bid not deleted in this case
 				}
 				shares->ChangeHolding(bid->num_shares);
@@ -277,7 +278,7 @@ have some treasury shares to sell!\n");
 			{
 				if(total_cost > owner_stake/2)
 				{
-					ceo->Send(too_big);
+					ceo->Send(too_big,OutputFilter::DEFAULT);
 					return;	// Bid not deleted in this case
 				}
 				shares = new Share(name,company->Name(),bid->num_shares);
@@ -301,7 +302,7 @@ have some treasury shares to sell!\n");
 			if(player != 0)
 			{
 				if(Game::player_index->FindCurrent(player->Name()) != 0)	// player is in game - use Send()
-					player->Send(buffer);
+					player->Send(buffer,OutputFilter::DEFAULT);
 				else
 				{
 					FedMssg	*mssg = new FedMssg;
@@ -312,7 +313,7 @@ have some treasury shares to sell!\n");
 					Game::fed_mail->Add(mssg);
 				}
 			}
-			ceo->Send("The shares have been issued, and the bidder has been notified.\n");
+			ceo->Send("The shares have been issued, and the bidder has been notified.\n",OutputFilter::DEFAULT);
 		}
 	}
 	DeleteBid(bid_num);
@@ -326,17 +327,17 @@ of depots you company can cope with!\n");
 
 	if(depots.size() >= static_cast<unsigned>(MAX_DEPOTS))
 	{
-		ceo->Send(size_error);
+		ceo->Send(size_error,OutputFilter::DEFAULT);
 		return;
 	}
 	if(FindDepot(ceo->CurrentMap()->Title()) != 0)
 	{
-		ceo->Send(dup_error);
+		ceo->Send(dup_error,OutputFilter::DEFAULT);
 		return;
 	}
 	if( cash < 1000000L)
 	{
-		ceo->Send(Game::system->GetMessage("company","buydepot",1));
+		ceo->Send(Game::system->GetMessage("company","buydepot",1),OutputFilter::DEFAULT);
 			return;
 	}
 	
@@ -348,14 +349,14 @@ of depots you company can cope with!\n");
 	capital_exp += 1000000L;
 	std::ostringstream	buffer;
 	buffer << name << " has built a depot on " << fed_map->Title() << ".\n";
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Business::BuyFactory(const std::string& where,const Commodity *commodity)
 {
 	if(cash < 2000000L)
 	{
-		ceo->Send(Game::system->GetMessage("company","buyfactory",1));
+		ceo->Send(Game::system->GetMessage("company","buyfactory",1),OutputFilter::DEFAULT);
 		return;
 	}
 	int index = -1;
@@ -369,14 +370,14 @@ void	Business::BuyFactory(const std::string& where,const Commodity *commodity)
 	}
 	if(index < 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","buyfactory",2));
+		ceo->Send(Game::system->GetMessage("company","buyfactory",2),OutputFilter::DEFAULT);
 		return;
 	}
 	
 	if((commodity->type == Commodities::BIO) && 
 						(ceo->CurrentMap()->Economy() != Infrastructure::BIOLOGICAL))
 	{
-		ceo->Send(Game::system->GetMessage("company","buyfactory",4));
+		ceo->Send(Game::system->GetMessage("company","buyfactory",4),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -385,7 +386,7 @@ void	Business::BuyFactory(const std::string& where,const Commodity *commodity)
 	Game::production->Register(factories[index]);
 	cash -= 2000000L;
 	capital_exp += 2000000L;
-	ceo->Send(Game::system->GetMessage("company","buyfactory",3));
+	ceo->Send(Game::system->GetMessage("company","buyfactory",3),OutputFilter::DEFAULT);
 	factories[index]->Display(ceo);
 	ceo->CurrentMap()->SaveInfrastructure();
 }
@@ -521,7 +522,7 @@ void	Business::Display()
 
 	buffer << name << " registered business - CEO " << ceo->Name() << "\n";
 	buffer << "   Status: " << ((status == WORKING) ? "Running" : "Frozen") << "\n";
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 	DisplayPermits();
 
 	buffer.str("");
@@ -546,7 +547,7 @@ void	Business::Display()
 	buffer << "\n   Tax last cycle: ";
 	MakeNumberString(tax,buffer);
 	buffer << "\n   Business has been running for " << total_cycles << " full cycles\n";
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 
 	DisplayFactories();
 	DisplayDepots();
@@ -557,11 +558,11 @@ void	Business::DisplayBids() const
 {
 	if(bids.size() == 0)
 	{
-		ceo->Send("There are no outstanding bids for shares in the company\n");
+		ceo->Send("There are no outstanding bids for shares in the company\n",OutputFilter::DEFAULT);
 		return;
 	}
 	else
-		ceo->Send("Outstanding bids for company shares:\n");
+		ceo->Send("Outstanding bids for company shares:\n",OutputFilter::DEFAULT);
 
 	std::ostringstream	buffer;
 	int num_shares = 0;
@@ -576,25 +577,25 @@ void	Business::DisplayBids() const
 			buffer << " - bid expires in " << days_left << " days\n";
 		else
 			buffer << " expires today\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 		num_shares += bid->num_shares;
 	}
 	buffer.str("");
 	buffer << bids.size() << ((bids.size() == 1) ? " bid" : " bids");
 	buffer << " for a total of " << num_shares << " shares\n";
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Business::DisplayDepot(const std::string& d_name)
 {
 	FedMap	*fed_map = Game::galaxy->FindMap(d_name);
 	if(fed_map == 0)
-		ceo->Send(Game::system->GetMessage("company","displaydepot",1));
+		ceo->Send(Game::system->GetMessage("company","displaydepot",1),OutputFilter::DEFAULT);
 	else
 	{
 		Depot	*depot =  fed_map->FindDepot(name);
 		if(depot == 0)
-			ceo->Send(Game::system->GetMessage("company","displaydepot",1));
+			ceo->Send(Game::system->GetMessage("company","displaydepot",1),OutputFilter::DEFAULT);
 		else
 			depot->Display(ceo);
 	}
@@ -617,7 +618,7 @@ void	Business::DisplayDepots() const
 		else
 			buffer << size << " depots\n";
 	}
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Business::DisplayFactories() const
@@ -645,7 +646,7 @@ void	Business::DisplayFactories() const
 		else
 			buffer << num_facts << " factories\n";
 	}
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Business::DisplayFactory(int number)
@@ -654,7 +655,7 @@ void	Business::DisplayFactory(int number)
 	if(factory != 0)
 		factory->Display(ceo);
 	else
-		ceo->Send("You don't have a factory with that number!\n");
+		ceo->Send("You don't have a factory with that number!\n",OutputFilter::DEFAULT);
 }
 
 void	Business::DisplayPermits() const
@@ -669,7 +670,7 @@ void	Business::DisplayPermits() const
 				buffer << "   " << permit_names[count];
 		}
 		buffer << "\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -684,11 +685,11 @@ void	Business::DisplayShareInf()
 		buffer << iter->second->Quantity() << " shares\n";
 	}
 	std::string	prices;
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "The average value of the shares is " << MakeSharePricesString(prices) << "ig/share\n";
 	buffer << "Your total capital invested in the business is " << owner_stake << "ig.\n";
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 	DisplayBids();
 }
 
@@ -698,14 +699,14 @@ void	Business::Fetch(int bay_no)
 	Depot		*depot =  fed_map->FindDepot(name);
 	if(depot == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","fetch",1));
+		ceo->Send(Game::system->GetMessage("company","fetch",1),OutputFilter::DEFAULT);
 		return;
 	}
 
 	Cargo	*cargo = depot->Retrieve(bay_no);
 	if(cargo == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","fetch",2));
+		ceo->Send(Game::system->GetMessage("company","fetch",2),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -717,16 +718,16 @@ void	Business::Fetch(int bay_no)
 		rev_income += value;
 		buffer << "The sum of " << value;
 		buffer << "ig has been transfered from your account to that of " << name << ".\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 		Ship *ship = ceo->GetShip();
 		if((ship != 0) && ship->AddCargo(cargo,ceo) >= 0)
-			ceo->Send(Game::system->GetMessage("company","fetch",3));
+			ceo->Send(Game::system->GetMessage("company","fetch",3),OutputFilter::DEFAULT);
 	}
 	else
 	{
 		buffer << "You can't afford the " << value;
 		buffer << "ig it would cost to purchase the cargo from " << name << ".\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 		depot->Store(cargo);
 	}
 }
@@ -776,10 +777,10 @@ void	Business::FlushFactory(int fact_num)
 		factory->ClearStorage();
 		std::ostringstream	buffer;
 		buffer << "The storage facilities at factory #" << fact_num << " have been cleared.\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
-		ceo->Send("You don't have a factory with that number!\n");
+		ceo->Send("You don't have a factory with that number!\n",OutputFilter::DEFAULT);
 }
 
 void	Business::Freeze()
@@ -792,14 +793,14 @@ void	Business::Freeze()
 		if(factories[count] != 0)
 			factories[count]->SetWages(0);
 	}
-	ceo->Send(ok);
+	ceo->Send(ok,OutputFilter::DEFAULT);
 	Game::business_register->Write();
 }
 
 void	Business::IpoValuation(int percentage,IpoInfo *ipo_info)
 {
 	if((percentage < -20) || (percentage > 20))
-		ceo->Send("The percentage must be between -20 and 20, inclusive!\n");
+		ceo->Send("The percentage must be between -20 and 20, inclusive!\n",OutputFilter::DEFAULT);
 	else
 	{ 
 		if(book_value == 0L) // Update not run at startup
@@ -829,7 +830,7 @@ void	Business::IpoValuation(int percentage,IpoInfo *ipo_info)
 		buffer << "\n  IPO net capital raised ";
 		MakeNumberString(net_ipo_income, buffer);
 		buffer << "\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -885,7 +886,7 @@ void	Business::PublicDisplay(Player *player)
 
 	buffer << name << " registered business - CEO " << ceo->Name() << "\n";
 	buffer << "   Status: " << ((status == WORKING) ? "Running" : "Frozen") << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << "   Profit last cycle: ";
@@ -901,14 +902,14 @@ void	Business::PublicDisplay(Player *player)
 	buffer << "\n  Average share values: " <<  MakeSharePricesString(prices) << "ig/share\n";
 	buffer << "   Business has been running for " << total_cycles << " full cycles\n";
 	buffer << "   Days left in Accounting Cycle: " << ac_cycle << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Business::RejectBid(int number)
 {
 	Bid	*bid = FindBid(number);
 	if(bid == 0)
-		ceo->Send("No such bid number!\n");
+		ceo->Send("No such bid number!\n",OutputFilter::DEFAULT);
 	else
 	{
 		std::ostringstream	buffer;
@@ -918,7 +919,7 @@ void	Business::RejectBid(int number)
 		if(player != 0)
 		{
 			if(Game::player_index->FindCurrent(player->Name()) != 0)	// player is in game - use Send()
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			else
 			{
 				FedMssg	*mssg = new FedMssg;
@@ -930,7 +931,7 @@ void	Business::RejectBid(int number)
 			}
 		}
 		DeleteBid(number);
-		ceo->Send("You notify the bidder and remove the unwanted bid from your list.\n");
+		ceo->Send("You notify the bidder and remove the unwanted bid from your list.\n",OutputFilter::DEFAULT);
 	}
 }
 
@@ -977,18 +978,18 @@ void	Business::SellBay(int number)
 	Depot *depot = fed_map->FindDepot(name);
 	if(depot == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","sellbay",2));
+		ceo->Send(Game::system->GetMessage("company","sellbay",2),OutputFilter::DEFAULT);
 		return;
 	}
 	if(!fed_map->IsAnExchange(ceo->LocNo()))
 	{
-		ceo->Send(Game::system->GetMessage("company","sellbay",1));
+		ceo->Send(Game::system->GetMessage("company","sellbay",1),OutputFilter::DEFAULT);
 		return;
 	}
 	Cargo	*cargo = depot->Retrieve(number);
 	if(cargo == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","sellbay",3));
+		ceo->Send(Game::system->GetMessage("company","sellbay",3),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1000,7 +1001,7 @@ void	Business::SellBay(int number)
 		buffer << name << ", and you are prevented from selling them on the exchange.\n";
 		buffer << "Please note that goods bought through the exchanges are ";
 		buffer << "bonded and may not be re-imported to their planet of origin\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 		depot->Store(cargo);
 		return;
 	}
@@ -1012,7 +1013,7 @@ void	Business::SellBay(int number)
 		rev_income += sale_price;
 		fed_map->UpdateCash(-sale_price);
 		buffer << "75 tons of " << cargo->Name() << " sold for " << sale_price << "ig.\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -1030,13 +1031,13 @@ void	Business::SellBay(int number)
 				buffer << "There was no profit made from this transaction.\n";
 			if(sale_price < cost_price)
 				buffer << "The loss from this transaction (" << (cost_price - sale_price) << "ig) has been debited from your account.\n";
-			ceo->Send(buffer);
+			ceo->Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 		{
 			buffer << "You can't afford the " << cost_price;
 			buffer << "ig it would cost to purchase the cargo from " << name << ".\n";
-			ceo->Send(buffer);
+			ceo->Send(buffer,OutputFilter::DEFAULT);
 			depot->Store(cargo);
 			return;
 		}		
@@ -1049,7 +1050,7 @@ void	Business::SellDepot(FedMap *fed_map)
 {
 	Depot *depot = FindDepot(fed_map->Title());
 	if(depot == 0)
-		ceo->Send(Game::system->GetMessage("company","selldepot",1));
+		ceo->Send(Game::system->GetMessage("company","selldepot",1),OutputFilter::DEFAULT);
 	else
 	{
 		long	sale_price = 500000L;
@@ -1060,7 +1061,7 @@ void	Business::SellDepot(FedMap *fed_map)
 		DeleteDepot(fed_map);
 		std::ostringstream	buffer;
 		buffer << "Depot on " << fed_map->Title() << " sold for " << sale_price << "ig.\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -1085,13 +1086,13 @@ void	Business::SellFactory(int number)
 		{
 			std::ostringstream	buffer;
 			buffer << "Factory number #" << number << " sold for " << sale_price << "ig.\n";
-			ceo->Send(buffer);
+			ceo->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 	else
 	{
 		if(ceo != 0)
-			ceo->Send("Can't find a factory with that number!\n");
+			ceo->Send("Can't find a factory with that number!\n",OutputFilter::DEFAULT);
 	}
 }
 
@@ -1101,21 +1102,21 @@ long	Business::SellShares(Player *player,int num_shares,int cost)
 	Share	*treasury_holding = FindShareholding("Treasury");
 	if(treasury_holding == 0)
 	{
-		player->Send("The business has no shares left to sell!\n");
+		player->Send("The business has no shares left to sell!\n",OutputFilter::DEFAULT);
 		return(0L);
 	}
 
 	Share	*player_holding = FindShareholding(player->Name());
 	if(player_holding == 0)
 	{
-		player->Send("Can't find a share record for you - please tell feedback about this!\n");
+		player->Send("Can't find a share record for you - please tell feedback about this!\n",OutputFilter::DEFAULT);
 		return(0L);
 	}
 
 	int	player_shares = player_holding->Quantity();
 	if(player_shares >= MAX_PL_SHARES)
 	{
-		player->Send("You already have the maximum allowable number of shares!\n");
+		player->Send("You already have the maximum allowable number of shares!\n",OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -1125,14 +1126,14 @@ long	Business::SellShares(Player *player,int num_shares,int cost)
 	if(available < num_shares)
 	{
 		buffer <<"The treasury only has " << available << " shares available for sale!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
 	if((player_shares + num_shares) > MAX_PL_SHARES)
 	{
 		buffer << "You can only buy another " << (MAX_PL_SHARES - player_shares) << " shares!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(0L);
 	}
 		
@@ -1160,10 +1161,10 @@ void	Business::SetFactoryOutput(int fact_num,const std::string& where)
 		std::ostringstream	buffer;
 		buffer << "Factory number #" << fact_num << " will attempt to dispose of stock to the ";
 		buffer << ((where == "exchange") ? "exchange" : "depot") << " if possible.\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
-		ceo->Send("You don't have a factory with that number!\n");
+		ceo->Send("You don't have a factory with that number!\n",OutputFilter::DEFAULT);
 }
 
 void	Business::SetFactoryStatus(int fact_num,const std::string& new_status)
@@ -1172,7 +1173,7 @@ void	Business::SetFactoryStatus(int fact_num,const std::string& new_status)
 	if(factory != 0)
 		factory->SetStatus(ceo,new_status);
 	else
-		ceo->Send("You don't have a factory with that number!\n");
+		ceo->Send("You don't have a factory with that number!\n",OutputFilter::DEFAULT);
 }
 
 void	Business::SetFactoryWages(int fact_num,int amount)
@@ -1180,7 +1181,7 @@ void	Business::SetFactoryWages(int fact_num,int amount)
 	static const std::string	error("You cann't set wages if your company is in stasis!\n");
 
 	if(status == STASIS)
-		ceo->Send(error);
+		ceo->Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		Factory	*factory = FindFactory(fact_num);
@@ -1190,7 +1191,7 @@ void	Business::SetFactoryWages(int fact_num,int amount)
 			std::ostringstream	buffer;
 			buffer << "The wages for workers in factory #" << fact_num;
 			buffer << " have been set to " << amount << ".\n";
-			ceo->Send(buffer);
+			ceo->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1201,8 +1202,8 @@ void	Business::Store(Cargo *cargo)
 	Depot	*depot =  fed_map->FindDepot(name);
 	if(depot == 0)
 	{
-		ceo->Send(Game::system->GetMessage("company","store",1));
-		ceo->Send(Game::system->GetMessage("company","store",3));
+		ceo->Send(Game::system->GetMessage("company","store",1),OutputFilter::DEFAULT);
+		ceo->Send(Game::system->GetMessage("company","store",3),OutputFilter::DEFAULT);
 		delete cargo;
 	}
 	else
@@ -1210,8 +1211,8 @@ void	Business::Store(Cargo *cargo)
 		int	bay_num = depot->Store(cargo);
 		if(bay_num == Depot::NO_ROOM)
 		{
-			ceo->Send(Game::system->GetMessage("company","store",2));
-			ceo->Send(Game::system->GetMessage("company","store",3));
+			ceo->Send(Game::system->GetMessage("company","store",2),OutputFilter::DEFAULT);
+			ceo->Send(Game::system->GetMessage("company","store",3),OutputFilter::DEFAULT);
 			delete cargo;
 		}
 		else
@@ -1224,7 +1225,7 @@ void	Business::Store(Cargo *cargo)
 			buffer << "Your cargo has been stored in bay number " << bay_num;
 			buffer << ", and the sum of " << value;
 			buffer << "ig has been transfered to your account from " << name << ".\n";
-			ceo->Send(buffer);
+			ceo->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1233,7 +1234,7 @@ void	Business::UnFreeze()
 {
 	if(status == STASIS)
 	{
-		ceo->Send("Your business has started working again!\n");
+		ceo->Send("Your business has started working again!\n",OutputFilter::DEFAULT);
 		status = WORKING;
 	}
 }
@@ -1271,13 +1272,13 @@ void	Business::UpgradeDepot(Depot *depot)
 {
 	if( cash < Depot::UPGRADE_COST)
 	{
-		ceo->Send(Game::system->GetMessage("company","upgradedepot",1));
+		ceo->Send(Game::system->GetMessage("company","upgradedepot",1),OutputFilter::DEFAULT);
 			return;
 	}
 	
 	if(!permits.test(DEPOT_PERMIT) && (depot->CurrentBays() > 21))
 	{
-		ceo->Send("You don't have a permit to upgrade your depots above two stories!\n");
+		ceo->Send("You don't have a permit to upgrade your depots above two stories!\n",OutputFilter::DEFAULT);
 			return;
 	}
 	
@@ -1288,13 +1289,13 @@ void	Business::UpgradeDepot(Depot *depot)
 		cash -= Depot::UPGRADE_COST;
 		capital_exp += Depot::UPGRADE_COST;
 		buffer << name << " has upgraded its " << title << " depot.\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
 		buffer << "No further upgrades are available for " << name;
 		buffer << "'s " << title << " depot.\n";
-		ceo->Send(buffer);
+		ceo->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 

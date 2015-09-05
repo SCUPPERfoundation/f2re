@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/infra.cc" line="490" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
     <generated>
       <config projectName="fed2d" targetName="libdb_cxx-4.8.so" />
@@ -37,6 +40,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="fedmap.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fedmap.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2317" column="20" selection-start-line="2317" selection-start-column="20" selection-end-line="2317" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.cc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/player.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="5688" column="14" selection-start-line="5688" selection-start-column="14" selection-end-line="5688" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/player.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="386" column="0" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="fed.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fed.cc">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,8 +80,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fed.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/include/fed.h">
+      <file leaf-file-name="com_unit.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/com_unit.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.42983565">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -65,22 +98,53 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/include/player.h" />
-        <option value="$PROJECT_DIR$/src/cmd_admin.cc" />
-        <option value="$PROJECT_DIR$/src/player.cc" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/build_police.cc" />
+        <option value="$PROJECT_DIR$/src/build_pollution.cc" />
+        <option value="$PROJECT_DIR$/src/build_radio.cc" />
+        <option value="$PROJECT_DIR$/src/build_railway.cc" />
+        <option value="$PROJECT_DIR$/src/build_research.cc" />
+        <option value="$PROJECT_DIR$/src/build_riot_police.cc" />
+        <option value="$PROJECT_DIR$/src/build_school.cc" />
+        <option value="$PROJECT_DIR$/src/build_solar.cc" />
+        <option value="$PROJECT_DIR$/src/build_surveillance.cc" />
+        <option value="$PROJECT_DIR$/src/build_tech.cc" />
+        <option value="$PROJECT_DIR$/src/build_tachyon.cc" />
+        <option value="$PROJECT_DIR$/src/build_terraform.cc" />
+        <option value="$PROJECT_DIR$/src/build_tquark.cc" />
+        <option value="$PROJECT_DIR$/src/build_urban.cc" />
+        <option value="$PROJECT_DIR$/src/build_weather.cc" />
+        <option value="$PROJECT_DIR$/src/bus_register.cc" />
+        <option value="$PROJECT_DIR$/src/channel.cc" />
+        <option value="$PROJECT_DIR$/src/cmd_accounts.cc" />
+        <option value="$PROJECT_DIR$/src/cmd_expropriate.cc" />
+        <option value="$PROJECT_DIR$/src/com_unit.cc" />
+        <option value="$PROJECT_DIR$/src/cmd_set.cc" />
+        <option value="$PROJECT_DIR$/src/commod_exch_item.cc" />
+        <option value="$PROJECT_DIR$/src/comp_register.cc" />
+        <option value="$PROJECT_DIR$/src/display.cc" />
+        <option value="$PROJECT_DIR$/src/help.cc" />
+        <option value="$PROJECT_DIR$/src/disaffection.cc" />
+        <option value="$PROJECT_DIR$/src/depot.cc" />
+        <option value="$PROJECT_DIR$/src/global_player_vars_table.cc" />
+        <option value="$PROJECT_DIR$/src/event.cc" />
+        <option value="$PROJECT_DIR$/src/futures_contract.cc" />
+        <option value="$PROJECT_DIR$/src/happenings.cc" />
+        <option value="$PROJECT_DIR$/src/location.cc" />
+        <option value="$PROJECT_DIR$/src/mail.cc" />
+        <option value="$PROJECT_DIR$/src/notices.cc" />
+        <option value="$PROJECT_DIR$/src/syndicate.cc" />
+        <option value="$PROJECT_DIR$/src/warehouse.cc" />
+        <option value="$PROJECT_DIR$/src/scr_checkvariable.cc" />
+        <option value="$PROJECT_DIR$/src/parcels.cc" />
+        <option value="$PROJECT_DIR$/src/player_var.cc" />
+        <option value="$PROJECT_DIR$/src/share.cc" />
+        <option value="$PROJECT_DIR$/src/population.cc" />
+        <option value="$PROJECT_DIR$/src/player_index.cc" />
         <option value="$PROJECT_DIR$/src/fed.cc" />
-        <option value="$PROJECT_DIR$/include/accounts.h" />
-        <option value="$PROJECT_DIR$/include/assign.h" />
-        <option value="$PROJECT_DIR$/include/blish_city.h" />
-        <option value="$PROJECT_DIR$/include/build_2nd_planet.h" />
-        <option value="$PROJECT_DIR$/include/build_airlane.h" />
-        <option value="$PROJECT_DIR$/include/cartel.h" />
-        <option value="$PROJECT_DIR$/include/change.h" />
-        <option value="$PROJECT_DIR$/include/channel.h" />
-        <option value="$PROJECT_DIR$/include/cmd_admin.h" />
-        <option value="$PROJECT_DIR$/include/cmd_build.h" />
-        <option value="$PROJECT_DIR$/include/display_cabinet.h" />
+        <option value="$PROJECT_DIR$/src/infra.cc" />
+        <option value="$PROJECT_DIR$/src/scr_message.cc" />
+        <option value="$PROJECT_DIR$/src/scr_announce.cc" />
+        <option value="$PROJECT_DIR$/src/louie.cc" />
         <option value="$PROJECT_DIR$/include/fedmap.h" />
         <option value="$PROJECT_DIR$/include/player_index.h" />
         <option value="$PROJECT_DIR$/include/scr_destroyinv.h" />
@@ -98,6 +162,7 @@
   <component name="NamedScopeManager">
     <order />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
     <option name="x" value="381" />
     <option name="y" value="113" />
@@ -111,10 +176,31 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>C/C++</id>
+          </State>
+          <State>
+            <id>FunctionsC/C++</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralC/C++</id>
+          </State>
+          <State>
+            <id>JSON</id>
+          </State>
+          <State>
+            <id>Type checksC/C++</id>
+          </State>
+          <State>
+            <id>Unused codeC/C++</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>C/C++</id>
+            <id>General</id>
           </State>
         </selected-state>
       </profile-state>
@@ -148,13 +234,13 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
@@ -164,7 +250,7 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
@@ -178,7 +264,7 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fed2d" />
@@ -196,11 +282,17 @@
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C/C++" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.fed2d">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="fed2d" TARGET_NAME="fed2d" CONFIG_NAME="Debug">
@@ -309,312 +401,300 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="16" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/include/build_clinic.h">
+    <entry file="file://$PROJECT_DIR$/src/build_surveillance.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/build_canal.h">
+    <entry file="file://$PROJECT_DIR$/src/build_tech.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/build_biolab.h">
+    <entry file="file://$PROJECT_DIR$/src/build_tachyon.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/build_port.h">
+    <entry file="file://$PROJECT_DIR$/src/build_terraform.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/build_surveillance.h">
+    <entry file="file://$PROJECT_DIR$/src/build_tquark.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cargo.h">
+    <entry file="file://$PROJECT_DIR$/src/build_urban.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cartel.h">
+    <entry file="file://$PROJECT_DIR$/src/build_weather.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/category.h">
+    <entry file="file://$PROJECT_DIR$/src/channel.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/change.h">
+    <entry file="file://$PROJECT_DIR$/src/bus_register.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/channel.h">
+    <entry file="file://$PROJECT_DIR$/src/cmd_accounts.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_admin.h">
+    <entry file="file://$PROJECT_DIR$/src/cmd_expropriate.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/channel_man.h">
+    <entry file="file://$PROJECT_DIR$/src/com_unit.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_build.h">
+    <entry file="file://$PROJECT_DIR$/src/cmd_set.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_set.h">
+    <entry file="file://$PROJECT_DIR$/src/commod_exch_item.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_repair.h">
+    <entry file="file://$PROJECT_DIR$/src/comp_register.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_parser.h">
+    <entry file="file://$PROJECT_DIR$/src/display.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_join.h">
+    <entry file="file://$PROJECT_DIR$/src/help.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_give.h">
+    <entry file="file://$PROJECT_DIR$/src/disaffection.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_expropriate.h">
+    <entry file="file://$PROJECT_DIR$/src/global_player_vars_table.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_xml.h">
+    <entry file="file://$PROJECT_DIR$/src/depot.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/com_ex_graph_parser.h">
+    <entry file="file://$PROJECT_DIR$/src/futures_contract.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/com_unit.h">
+    <entry file="file://$PROJECT_DIR$/src/event.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/commod_exch_graphs.h">
+    <entry file="file://$PROJECT_DIR$/src/happenings.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/commod_exch_item.h">
+    <entry file="file://$PROJECT_DIR$/src/location.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/commod_exch_parser.h">
+    <entry file="file://$PROJECT_DIR$/src/notices.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/commod_parser.h">
+    <entry file="file://$PROJECT_DIR$/src/mail.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/commodities.h">
+    <entry file="file://$PROJECT_DIR$/src/warehouse.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/commodity_exchange.h">
+    <entry file="file://$PROJECT_DIR$/src/syndicate.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/comp_register.h">
+    <entry file="file://$PROJECT_DIR$/src/player_var.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/company.h">
+    <entry file="file://$PROJECT_DIR$/src/parcels.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/company_parser.h">
+    <entry file="file://$PROJECT_DIR$/src/scr_checkvariable.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/courier.h">
+    <entry file="file://$PROJECT_DIR$/src/share.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/db_object.h">
+    <entry file="file://$PROJECT_DIR$/src/population.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/db_player.h">
+    <entry file="file://$PROJECT_DIR$/src/infra.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/delay.h">
+    <entry file="file://$PROJECT_DIR$/src/player_index.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/depot.h">
+    <entry file="file://$PROJECT_DIR$/src/galaxy.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/disaffection.h">
+    <entry file="file://$PROJECT_DIR$/include/scr_announce.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/display.h">
+    <entry file="file://$PROJECT_DIR$/include/scr_message.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/display_cabinet.h">
+    <entry file="file://$PROJECT_DIR$/src/script.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/ev_store.h">
+    <entry file="file://$PROJECT_DIR$/include/script.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/equipment.h">
+    <entry file="file://$PROJECT_DIR$/src/scr_message.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/equip_parser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/enhancement.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/efficiency.h">
+    <entry file="file://$PROJECT_DIR$/src/scr_announce.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -623,48 +703,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/fedmap.h">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/louie.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/com_unit.h">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/player_index.h">
+    <entry file="file://$PROJECT_DIR$/src/output_filter.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.021491783">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/scr_destroyinv.h">
+    <entry file="file://$PROJECT_DIR$/include/output_filter.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_insulation.cc">
+    <entry file="file://$PROJECT_DIR$/include/player.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_agri.cc">
+    <entry file="file://$PROJECT_DIR$/src/fed.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/build_urban.cc">
+    <entry file="file://$PROJECT_DIR$/src/fedmap.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.021491783">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/fed.h">
+    <entry file="file://$PROJECT_DIR$/src/player.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42983565">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />

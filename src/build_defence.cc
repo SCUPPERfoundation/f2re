@@ -16,6 +16,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -35,7 +36,7 @@ DefenceVessel::DefenceVessel(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if(the_map->Economy() < Infrastructure::TECHNICAL)
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -57,7 +58,7 @@ DefenceVessel::DefenceVessel(FedMap *the_map,Player *player,Tokens *tokens)
 			 	buffer << "The launch of the first system defence vessel is a big event, shown on all channels. ";
 				buffer << "The program spurs the development of your defence industries, and increases the ";
 				buffer << "consumption of " << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -76,7 +77,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 
 	if((fed_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -90,7 +91,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 		{
 		 	buffer << "Your system defence program continues to boost defence industry production ";
 			buffer << "and increases the consumption of " << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -102,7 +103,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 		{
 		 	buffer << "Your system defence program is providing dimishing returns on the production ";
 			buffer << "front, but it is stimulating the consumption of " << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -113,7 +114,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 	 	buffer << "Your military advisors suggest that there is little point in continuing the system ";
 		buffer << "defence program, since there are already more than adequate numbers of vessels.\n";
 		total_builds++;
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(true);
 	}
 }
@@ -125,13 +126,13 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -140,7 +141,7 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a consumption point to " << tokens->Get(2);
 			buffer << ", only to defence industry commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -148,7 +149,7 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 
 bool	DefenceVessel::Demolish(Player *player)
 {
-	player->Send("Considerations of 'defence of the realm' stymie your plans!\n");
+	player->Send("Considerations of 'defence of the realm' stymie your plans!\n",OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -156,7 +157,7 @@ void	DefenceVessel::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    System Defence Vessels : " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	DefenceVessel::UpdateEfficiency(Efficiency *efficiency)
@@ -172,8 +173,11 @@ void	DefenceVessel::Write(std::ofstream& file)
 void	DefenceVessel::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='System Defence Vessels: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "System Defence Vessels: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

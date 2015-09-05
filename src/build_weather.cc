@@ -17,6 +17,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -40,7 +41,7 @@ technological levels and above!\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -49,7 +50,7 @@ technological levels and above!\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -73,14 +74,14 @@ technological levels and above!\n");
 	int	economy = fed_map->Economy();
  	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(++total_builds <= 5)
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	else
-		player->Send(over);
+		player->Send(over,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -88,7 +89,7 @@ void	Weather::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Weather Stations: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Weather::RequestResources(Player *player,const std::string& recipient,int quantity)
@@ -119,9 +120,11 @@ void	Weather::Write(std::ofstream& file)
 void	Weather::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='Weather Stations: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Weather Stations: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

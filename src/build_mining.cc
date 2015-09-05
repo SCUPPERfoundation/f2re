@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -40,7 +41,7 @@ MiningSchool::MiningSchool(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -51,7 +52,7 @@ MiningSchool::MiningSchool(FedMap *the_map,Player *player,Tokens *tokens)
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -71,7 +72,7 @@ bool	MiningSchool::Add(Player *player,Tokens *tokens)
 the first School are nothing compared to the furore this time. Eventually, the whole plan to \
 build a second Mining School comes to naught, and no further such institutions are built!\n");
 
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -86,7 +87,7 @@ void	MiningSchool::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Mining School: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	MiningSchool::IsObselete()
@@ -118,9 +119,10 @@ void	MiningSchool::Write(std::ofstream& file)
 
 void	MiningSchool::XMLDisplay(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Mining School: Built'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info","Mining School: Built"));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

@@ -13,6 +13,7 @@
 
 #include "category.h"
 #include "fedmap.h"
+#include "output_filter.h"
 #include "player.h"
 #include "script.h"
 #include "section.h"
@@ -56,7 +57,7 @@ int	Event::Process(Player *player)
 			std::ostringstream	buffer("");
 			buffer << "*** EventTrace " << fed_map->Name() << " - " << cat->Name() << ".";
 			buffer << sect->Name() << "." << number << " ***" << std::endl;
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 

@@ -12,20 +12,14 @@
 #include <iostream>
 #include <sstream>
 
-#include <cctype>
 #include <cstring>
 
 #include <unistd.h>
 
 #include "ipc.h"
 #include "md5.h"
-#include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
-
-const int	Login::MAX_ADDR;
-const int	Login::MAX_USER_NAME;
-const int	Login::MAX_PASSWORD;
 
 
 Login::Login()
@@ -344,7 +338,7 @@ bool	Login::ProcessPassword(int sd,std::string& text,LoginRec *rec)
 					Player	*in_game_player = Game::player_index->FindCurrent(player->Name());
 					if(in_game_player != 0)	// double login!
 					{
-						in_game_player->Send(in_game);	// log off already in game player...
+						in_game_player->Send(in_game,OutputFilter::DEFAULT);	// log off already in game player...
 						Game::player_index->LogOff(in_game_player);
 
 						LostLine(sd);							// ...and delete attempted login

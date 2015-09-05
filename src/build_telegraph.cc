@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -34,7 +35,7 @@ Telegraph::Telegraph(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -56,7 +57,7 @@ Telegraph::Telegraph(FedMap *the_map,Player *player,Tokens *tokens)
 		 		buffer << "Your telegraph network is extended further into ";
 				buffer << "the hinterland, resulting in an increased production of ";
 				buffer << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -76,7 +77,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -91,7 +92,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 		 	buffer << "Your telegraph network is extended further into the ";
 			buffer << "hinterland, resulting in an increased production of ";
 			buffer << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -100,7 +101,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 
 	buffer << "Your telegraph network is extended further into the hinterland, ";
 	buffer << "but it seems to have little effect on any production!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -112,13 +113,13 @@ bool	Telegraph::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -128,7 +129,7 @@ bool	Telegraph::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 		buffer << ", only to resource and industrial commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -145,7 +146,7 @@ bool	Telegraph::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -155,7 +156,7 @@ void	Telegraph::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " route";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Telegraph::Write(std::ofstream& file)
@@ -166,8 +167,11 @@ void	Telegraph::Write(std::ofstream& file)
 void	Telegraph::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Telegraph Lines: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Telegraph Lines: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

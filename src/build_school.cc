@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -61,7 +62,7 @@ School::School(FedMap *the_map,Player *player,Tokens *tokens)
 	agri_builds = mining_builds = tech_builds = research_builds = biolab_builds = metastudio_builds = 0;
 	total_builds = 1;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -87,7 +88,7 @@ bool	School::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;
 
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -143,7 +144,7 @@ void	School::Display(Player *player)
 	if(biolab_builds > 0)		buffer << "      BioLab feeders: " << biolab_builds << "\n";
 	if(metastudio_builds > 0)	buffer << "      MetaStudio feeders: " << metastudio_builds << "\n";
 	if(unused_builds > 0)		buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	School::LevelUpdate()
@@ -212,7 +213,7 @@ bool	School::RequestResources(Player *player,const std::string& recipient,int qu
 	if(recipient == "Metastudio")		status_ok = MetaStudioSchoolsAllocated();
 
 	if(!status_ok)
-		player->Send(error);
+		player->Send(error,OutputFilter::DEFAULT);
 
 	return(status_ok);
 }
@@ -303,19 +304,94 @@ void	School::Write(std::ofstream& file)
 
 void	School::XMLDisplay(Player *player)
 {
-	std::ostringstream	buffer;
 	if(total_builds > 0)
 	{
-		buffer << "<s-build-planet-info info='Schools: " << total_builds << "'/>\n";
-		if(level_builds > 0)			buffer << "<s-build-planet-info info='  General: " << level_builds << "'/>\n";
-		if(agri_builds > 0)			buffer << "<s-build-planet-info info='  Agri College Feeders: " << agri_builds << "'/>\n";
-		if(mining_builds > 0)		buffer << "<s-build-planet-info info='  Mining School feeders: " << mining_builds << "'/>\n";
-		if(tech_builds > 0)			buffer << "<s-build-planet-info info='  Tech Institute feeders: " << tech_builds << "'/>\n";
-		if(research_builds > 0)		buffer << "<s-build-planet-info info='  Research Institute feeders: " << research_builds << "'/>\n";
-		if(biolab_builds > 0)		buffer << "<s-build-planet-info info='  BioLab feeders: " << biolab_builds << "'/>\n";
-		if(metastudio_builds > 0)	buffer << "<s-build-planet-info info='  Media MetaStudio feeders: " << metastudio_builds << "'/>\n";
-		if(unused_builds > 0)		buffer << "<s-build-planet-info info='  Unallocated: " << unused_builds << "'/>\n";
-		player->Send(buffer);
+		std::ostringstream	buffer;
+		buffer << "Schools: " << total_builds;
+		AttribList attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+		attribs.push_back(attrib);
+		player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+
+		if(level_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  General: " << level_builds;
+			std::pair<std::string,std::string> attrib_gen(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_gen);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(agri_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  Agri College feeders: " << agri_builds;
+			std::pair<std::string,std::string> attrib_agri(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_agri);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(mining_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  Mining School feeders: " << mining_builds;
+			std::pair<std::string,std::string> attrib_mine(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_mine);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(tech_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  Tech Institute feeders: " << tech_builds;
+			std::pair<std::string,std::string> attrib_tech(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_tech);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(research_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  Research Institute feeders: " << research_builds;
+			std::pair<std::string,std::string> attrib_res(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_res);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(biolab_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  BioLab feeders: " << biolab_builds;
+			std::pair<std::string,std::string> attrib_bio(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_bio);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(metastudio_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  Media MetaStudio feeders: " << metastudio_builds;
+			std::pair<std::string,std::string> attrib_meta(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_meta);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
+
+		if(unused_builds > 0)
+		{
+			buffer.str("");
+			attribs.clear();
+			buffer << "  Unallocated: " << unused_builds;
+			std::pair<std::string,std::string> attrib_unused(std::make_pair("info",buffer.str()));
+			attribs.push_back(attrib_unused);
+			player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
+		}
 	}
 }
 

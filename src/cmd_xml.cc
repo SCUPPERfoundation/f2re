@@ -18,7 +18,8 @@
 #include "galaxy.h"
 #include "misc.h"
 #include "player.h"
-#include "player_index.h"
+#include "output_filter.h"
+// #include "player_index.h"
 #include "star.h"
 
 const int	CmdXML::UNKNOWN = 9999;
@@ -56,15 +57,16 @@ void	CmdXML::FedTerm(const char **attrib)
 		version = std::atoi(v_str.c_str());
 	}
 
-	owner->Send("<s-fedterm>\n");
+	owner->Send("",OutputFilter::FEDTERM);
 	owner->XMLStats();
 	Game::player_index->SendPlayerInfo(owner);
 	FedMap::XMLNewMap(owner	);
 	if(owner->CurrentMap()->IsAnExchange(owner->LocNo()))
 	{
-		std::ostringstream buffer;
-		buffer << "<s-exchange name='" << owner->CurrentMap()->Title() << "'/>\n";
-		owner->Send(buffer);
+		AttribList attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("name",owner->GetLocRec().fed_map->Title()));
+		attribs.push_back(attrib);
+		owner->Send("",OutputFilter::EXCHANGE,attribs);
 	}
 }
 
@@ -101,11 +103,11 @@ void	CmdXML::StartElement(const char *element,const char **attrib)
 {
 	switch(Find(element))
 	{
-		case	 0:	FedTerm(attrib);						break;	// 'c-fedterm'
-		case	 1:	owner->Send("<s-rev-no-op/>\n");	break;	// 'c-rev-no-op'
-		case	 2:	SetCommsLevel(attrib);				break;	// 'c-comms-level'
-		case	 3:	SendPlanetNames(attrib);			break;	// 'c-planets'
-		case	 4:	SendPlanetInfo(attrib);				break;	//	'c-planet-info'
+		case	 0:	FedTerm(attrib);									break;	// 'c-fedterm'
+		case	 1:	owner->Send("",OutputFilter::REV_NO_OP);	break;	// 'c-rev-no-op'
+		case	 2:	SetCommsLevel(attrib);							break;	// 'c-comms-level'
+		case	 3:	SendPlanetNames(attrib);						break;	// 'c-planets'
+		case	 4:	SendPlanetInfo(attrib);							break;	//	'c-planet-info'
 		case	 5:	Game::galaxy->XMLListLinks(owner,owner->CurrentMap()->HomeStarPtr()->Name());	break; // c-send-system-links
 	}
 }

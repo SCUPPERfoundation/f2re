@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -36,7 +37,7 @@ and hand over the keycards to the members of the lucky family.\n");
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -45,7 +46,7 @@ and hand over the keycards to the members of the lucky family.\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -65,23 +66,23 @@ bool	Housing::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(total_builds < 3)
 	{
 		total_builds++;
-		player->Send(ok);
+		player->Send(ok,OutputFilter::DEFAULT);
 		return(true);
 	}
 
 	if(fed_map->RequestResources(player,"Railway",name))
 	{
 		if(++total_builds <= 6)
-			player->Send(ok);
+			player->Send(ok,OutputFilter::DEFAULT);
 		else
-			player->Send(maxed_out);
+			player->Send(maxed_out,OutputFilter::DEFAULT);
 		return(true);
 	}
 	else
@@ -93,7 +94,7 @@ void	Housing::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " estate";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Housing::IsObselete()
@@ -117,9 +118,11 @@ void	Housing::Write(std::ofstream& file)
 void	Housing::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='Housing Estates: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Housing Estates: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

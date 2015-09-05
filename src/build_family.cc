@@ -13,6 +13,7 @@
 
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -39,7 +40,7 @@ Family::Family(FedMap *the_map,Player *player,Tokens *tokens)
 	total_builds = 1;
 	fed_map->AddTotalLabour(10);
 	fed_map->AddLabour(10);
-	player->Send(success);
+	player->Send(success,OutputFilter::DEFAULT);
 	ok_status = true;
 }
 
@@ -55,7 +56,7 @@ bool	Family::Add(Player *player,Tokens *tokens)
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -65,7 +66,7 @@ bool	Family::Add(Player *player,Tokens *tokens)
 		buffer << "difference to the size of your population. Clearly you have ";
 		buffer << "exceeded the ability of family allowance payments to ";
 		buffer << "provide population growth.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	return(true);
 }
@@ -74,7 +75,7 @@ void	Family::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Family Allowances: " << total_builds << " provided\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Family::UpdatePopulation(Population *population)
@@ -93,7 +94,10 @@ void	Family::Write(std::ofstream& file)
 void	Family::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Family Allowances: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Family Allowances: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

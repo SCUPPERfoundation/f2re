@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -40,7 +41,7 @@ urban regeneration plans are accepted and the first project is completed on sche
 
 	if((the_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -51,7 +52,7 @@ urban regeneration plans are accepted and the first project is completed on sche
 			total_builds = 1;
 			fed_map->AddTotalLabour(20);
 			fed_map->AddLabour(20);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -75,7 +76,7 @@ to make a lot of difference to the state of your economy.\n");
 
 	if((fed_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -86,10 +87,10 @@ to make a lot of difference to the state of your economy.\n");
 		{
 			fed_map->AddTotalLabour(20);
 			fed_map->AddLabour(20);
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 		}
 		else
-			player->Send(too_late);
+			player->Send(too_late,OutputFilter::DEFAULT);
 		return(true);
 	}
 	return(false);
@@ -99,7 +100,7 @@ void	Urban::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Urban Regeneration: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Urban::UpdateEfficiency(Efficiency *efficiency)
@@ -123,6 +124,9 @@ void	Urban::Write(std::ofstream& file)
 void	Urban::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Urban Renewal: " << total_builds << " Built'/>\n";
-	player->Send(buffer);
+	buffer << "Urban Renewal: " << total_builds << " Built";
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }

@@ -15,6 +15,8 @@
 #include "fedmap.h"
 #include "msg_number.h"
 #include "misc.h"
+#include "output_filter.h"
+#include "player.h"
 
 
 Announce::Announce(const char **attrib,FedMap *fed_map) : Script(fed_map)
@@ -57,13 +59,19 @@ void	Announce::MultiMessage(Player *player)
 	{
 		final_text = *mssg;
 		InsertName(player,final_text);
-		home->RoomSend(0,0,loc_no,final_text,"");
+
+		PlayerList pl_list;
+		home->PlayersInLoc(loc_no,pl_list);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(final_text,OutputFilter::DEFAULT);
+		}
 	}
 }
 
 int	Announce::Process(Player *player)
 {
-	std::string	final_text;
 	switch(type)
 	{
 		case	M_SINGLE:	SingleMessage(player);	break;
@@ -77,13 +85,27 @@ void	Announce::SingleMessage(Player *player)
 {
 	std::string	final_text(lo->Find(home));
 	InsertName(player,final_text);
-	home->RoomSend(0,0,loc_no,final_text,"");
+
+	PlayerList pl_list;
+	home->PlayersInLoc(loc_no,pl_list);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(final_text,OutputFilter::DEFAULT);
+	}
 }
 
 void	Announce::TextMessage(Player *player)
 {
 	std::string	final_text(text);
 	InsertName(player,final_text);
-	home->RoomSend(0,0,loc_no,final_text,"");					
+
+	PlayerList pl_list;
+	home->PlayersInLoc(loc_no,pl_list);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(final_text,OutputFilter::DEFAULT);
+	}
 }
 

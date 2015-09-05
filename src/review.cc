@@ -13,10 +13,10 @@
 
 #include <fstream>
 #include <iostream>
-#include <sstream>
 
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 
@@ -53,12 +53,12 @@ void	Review::Post(const std::string& text)
 void	Review::Read(Player *player)
 {
 	std::string temp = name + ":\n";
-	player->Send(temp);
+	player->Send(temp,OutputFilter::DEFAULT);
 	if(entries.size() == 0)
-		player->Send(Game::system->GetMessage("review","read",2));
+		player->Send(Game::system->GetMessage("review","read",2),OutputFilter::DEFAULT);
 	else
 	{
 		for(Entries::iterator iter = entries.begin();iter != entries.end();iter++)
-			player->Send(*iter);
+			player->Send(*iter,OutputFilter::DEFAULT);
 	}
 }

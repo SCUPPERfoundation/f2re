@@ -7,10 +7,11 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "accounts.h"
+#include "cmd_accounts.h"
 
 #include <iomanip>
 #include <sstream>
+#include <output_filter.h>
 
 #include "company.h"
 #include "misc.h"
@@ -119,8 +120,8 @@ void	Accounts::Display(Player *player)
 	else
 		buffer << "   No dividend payment has been recorded\n";
 	buffer << "\n*All assets valued at nominal sale prices.\n";
-	player->Send(buffer);	
-	player->Send(dashes);
+	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(dashes,OutputFilter::DEFAULT);
 }
 
 void	Accounts::Ratios(int pe,int pd,int ed)

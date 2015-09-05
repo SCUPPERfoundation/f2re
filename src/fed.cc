@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include <sstream>
-#include <string>
 
 #include <cstring>
 #include <cstdio>
@@ -19,9 +18,6 @@
 #include <unistd.h>
 
 #include <sys/dir.h>
-#include <sys/resource.h>
-#include <sys/time.h>
-#include <sys/types.h>
 
 #include "blish_info.h"
 #include "bus_parser.h"
@@ -43,7 +39,6 @@
 #include "mail.h"
 #include "mail_parser.h"
 #include "syndicate.h"
-#include "misc.h"
 #include "navcomp.h"
 #include "navparse.h"
 #include "scr_nomatch.h"
@@ -55,10 +50,8 @@
 #include "ship.h"
 #include "syndicate_parser.h"
 #include "unload.h"
-#include "work.h"
 
-const int	Fed::MAX_PLAYERS;
-const std::string	Fed::version = "1.89.69";
+const std::string	Fed::version = "1.89.69s";
 
 Fed::Fed()
 {

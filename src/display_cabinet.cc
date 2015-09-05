@@ -20,11 +20,9 @@
 #include "galaxy.h"
 #include "misc.h"
 #include "object.h"
+#include "output_filter.h"
 #include "player.h"
 
-
-const int	DisplayCabinet::BASE_SIZE;
-const int	DisplayCabinet::SLITHY_SIZE;
 
 const	char		*DisplayCabinet::el_names[] = { "cabinet", "item", ""	};
 
@@ -100,7 +98,7 @@ int	DisplayCabinet::DisplayList(Player *player,std::ostringstream& buffer)
 
 void	DisplayCabinet::ExtensionMssg(Player *player)
 {
-	player->Send(messages[std::rand() % 3]);
+	player->Send(messages[std::rand() % 3],OutputFilter::DEFAULT);
 }
 
 bool	DisplayCabinet::Load(const std::string& directory)

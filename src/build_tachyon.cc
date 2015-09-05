@@ -14,6 +14,7 @@
 #include "commodities.h"
 #include "fedmap.h"
 #include "infra.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -34,7 +35,7 @@ be built at biological levels, since they need bio-molecular circuit chips.\n");
 	int	economy = the_map->Economy();
 	if(economy != Infrastructure::BIOLOGICAL)
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -56,7 +57,7 @@ be built at biological levels, since they need bio-molecular circuit chips.\n");
 				buffer << "Your first tachyon transmission network on the planet lays the ";
 				buffer << "foundations for a far reaching network and encourages the production of ";
 				buffer << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -82,7 +83,7 @@ bool	Tachyon::Add(Player *player,Tokens *tokens)
 	 		buffer << "Your tachyon transmission network is extended further into the outer ";
 			buffer << "reaches of your star system, resulting in an increased production of ";
 			buffer << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			return(true);
 		}
 		return(false);
@@ -91,7 +92,7 @@ bool	Tachyon::Add(Player *player,Tokens *tokens)
 	buffer << "Your tachyon transmission network is extended further into your star's ";
 	buffer << "Kuiper belt, but it seems to have little effect on production, since no ";
 	buffer << "one lives there!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -102,13 +103,13 @@ bool	Tachyon::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -118,7 +119,7 @@ bool	Tachyon::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 		buffer << ", only to leisure commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -135,7 +136,7 @@ bool	Tachyon::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -145,7 +146,7 @@ void	Tachyon::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " transceiver";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Tachyon::Write(std::ofstream& file)
@@ -156,8 +157,11 @@ void	Tachyon::Write(std::ofstream& file)
 void	Tachyon::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Tachyon transceivers: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Tachyon transceivers: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

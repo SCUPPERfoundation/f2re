@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -38,7 +39,7 @@ built at Industrial and Technical levels.\n");
 
 	if(the_map->Economy() < Infrastructure::INDUSTRIAL)
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -49,7 +50,7 @@ built at Industrial and Technical levels.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -69,7 +70,7 @@ bool	TechInst::Add(Player *player,Tokens *tokens)
 Technical Institute. Unfortunately, your plans are blocked because of the \
 expense of maintaining the fancy architecture of the existing Institute!\n");
 
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -84,7 +85,7 @@ void	TechInst::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Tech Institute: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	TechInst::IsObselete()
@@ -116,9 +117,10 @@ void	TechInst::Write(std::ofstream& file)
 
 void	TechInst::XMLDisplay(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Tech Institute: Built'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info","Tech Institute: Built"));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

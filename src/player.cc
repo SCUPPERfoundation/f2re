@@ -11,7 +11,6 @@
 
 #include <iomanip>
 #include <iostream>
-#include <sstream>
 
 #include <cctype>
 #include <climits>
@@ -36,7 +35,6 @@
 #include "enhancement.h"
 #include "factory.h"
 #include "fed.h"
-#include "fedmap.h"
 #include "fed_object.h"
 #include "futures_contract.h"
 #include "futures_exchange.h"
@@ -49,9 +47,9 @@
 #include "louie.h"
 #include "mail.h"
 #include "md5.h"
-#include "misc.h"
 #include "navcomp.h"
 #include "player_index.h"
+#include "output_filter.h"
 #include "review.h"
 #include "script.h"
 #include "ship.h"
@@ -64,15 +62,8 @@
 #include "unload.h"
 #include "global_player_vars_table.h"
 #include "warehouse.h"
-#include "work.h"
 
 const int	Player::MAX_STAT = 150;
-const int	Player::MAX_COUNTERS;
-const int	Player::NAME_SIZE;
-const int	Player::ACCOUNT_SIZE;
-const int	Player::DESC_SIZE;
-const int	Player::NO_FORMAT = -1;
-const int	Player::MAX_TIMERS;
 const int	Player::HAUL_INDEX = 0;		// index to timers used by ranks < Adventurer
 const int	Player::MAX_STARVE = 80;
 const int	Player::UNKNOWN_LOC = -1;
@@ -80,7 +71,6 @@ const int	Player::MAX_GIFT = 1000;
 const int	Player::MAX_TRADER_EXCH_EARNINGS = 1000000;
 
 const unsigned	Player::MAX_FUTURES = 40;	// max size of futures portfolio
-const unsigned	Player::MAX_GROUP = 8;
 
 const long	Player::WAREHOUSE_COST =  650000L;
 const time_t	Player::ONE_DAY = 60 * 60 * 24;
@@ -146,7 +136,6 @@ Player::Player()
 
 Player::Player(LoginRec	*rec)
 {
-//	memset(this,0,sizeof(Player));
 	ib_account = rec->name;
 	std::memcpy(password,rec->digest,MAX_PASSWD);
 	email = rec->email;
@@ -307,7 +296,7 @@ void	Player::AcceptPendingJobOffer()
 	job = pending;
 	job->collected = false;
 	pending = 0;
-	Send("You accept the pending job\n");
+	Send("You accept the pending job\n",OutputFilter::DEFAULT);
 }
 
 void	Player::Act(std::string& text,bool possessive)
@@ -323,7 +312,13 @@ void	Player::Act(std::string& text,bool possessive)
 			buffer << name << " " << text << std::endl;
 	}
 	std::string	action(buffer.str());
-	loc.fed_map->RoomSend(0,this,loc.loc_no,action,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(action,OutputFilter::DEFAULT);
+	}
 }
 
 void	Player::AddFuturesContract(FuturesContract *contract)
@@ -343,7 +338,7 @@ bool	Player::AddObject(FedObject *object,bool created)
 	std::ostringstream	buffer("");
 	buffer << "You can't carry the " << object->Name();
 	buffer << " so it ends up on the floor!\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	if(created)
 	{
 		object->Location(loc);
@@ -351,7 +346,14 @@ bool	Player::AddObject(FedObject *object,bool created)
 		buffer.str("");
 		buffer << "You become aware of " << object->c_str();
 		buffer << " on the floor.\n";
-		loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		PlayerList pl_list;
+		loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 	return(false);
 }
@@ -406,7 +408,7 @@ void	Player::AdminFlags(Player *player)
 		if(temp_flags.test(TESTER))			buffer << "  Tester\n";
 	}
 	if(flags.test(SPONSOR))	buffer << "This player is a game sponsor\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::Adventurer2Merchant()
@@ -444,17 +446,17 @@ void	Player::Akaturi()
 {
 	if (rank != ADVENTURER)
 	{
-		Send(Game::system->GetMessage("player","akaturi",1));
+		Send(Game::system->GetMessage("player","akaturi",1),OutputFilter::DEFAULT);
 		return;
 	}
 	if(task != 0)
 	{
-		Send(Game::system->GetMessage("player","akaturi",2));
+		Send(Game::system->GetMessage("player","akaturi",2),OutputFilter::DEFAULT);
 		return;
 	}
 	if(!loc.fed_map->IsACourier(loc.loc_no))
 	{
-		Send(Game::system->GetMessage("player","akaturi",3));
+		Send(Game::system->GetMessage("player","akaturi",3),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -473,7 +475,7 @@ void	Player::AllowBuilds(Player	*initiator)
 		star->AllowBuild();
 		buffer << "Planet builds now allowed for " << name << ".\n";
 	}
-	initiator->Send(buffer);
+	initiator->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::BlowKiss(Player *recipient)
@@ -481,11 +483,11 @@ void	Player::BlowKiss(Player *recipient)
 	std::ostringstream	buffer("");
 	buffer << recipient->Name() << "'s face appears on your comm screen, and you blow ";
 	buffer << gender_str3[recipient->Gender()] << " a kiss!" << std::endl;
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "Your comm screen lights up with " << name << "'s face, and ";
 	buffer << gender_str2[gender] << " blows you a kiss!" << std::endl;
-	recipient->Send(buffer,this);
+	recipient->Send(buffer,OutputFilter::DEFAULT,this);
 }
 
 void	Player::Build(int build_type,Tokens *tokens)
@@ -508,43 +510,43 @@ is the number of shares and 'yyy' is the price/share.\n");
 
 	if(business == 0)
 	{
-		Send("You don't have a business to invest in!\n");
+		Send("You don't have a business to invest in!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(tokens->Size() < 5)
 	{
-		Send(cmd);
+		Send(cmd,OutputFilter::DEFAULT);
 		return;
 	}
 
 	int	num_shares = std::atoi(tokens->Get(2).c_str());
 	if(num_shares <= 0)
 	{
-		Send("You haven't said how many shares you want!\n");
-		Send(cmd);
+		Send("You haven't said how many shares you want!\n",OutputFilter::DEFAULT);
+		Send(cmd,OutputFilter::DEFAULT);
 		return;
 	}
 
 	int	share_price = std::atoi(tokens->Get(4).c_str());
 	if(share_price <= 0)
 	{
-		Send("You haven't said how much you want to pay for each share!\n");
-		Send(cmd);
+		Send("You haven't said how much you want to pay for each share!\n",OutputFilter::DEFAULT);
+		Send(cmd,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(num_shares < 150)
 	{
-		Send("You must buy at least 150 shares at a time!\n");
+		Send("You must buy at least 150 shares at a time!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	long	cost = num_shares * share_price;
 	if((cost < 0) || (cost > cash))
 	{
-		Send("You don't have enough money to purchase of that many shares!\n");
-		Send(cmd);
+		Send("You don't have enough money to purchase of that many shares!\n",OutputFilter::DEFAULT);
+		Send(cmd,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -555,7 +557,7 @@ is the number of shares and 'yyy' is the price/share.\n");
 		std::ostringstream	buffer;
 		buffer << num_shares << " shares in " << business->Name();
 		buffer << " bought for " << sale_price << "ig\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -563,7 +565,7 @@ void	Player::BuyDepot()
 {
 	if((rank > MANUFACTURER) && !IsStaff())
 	{
-		Send("Financiers and above don't concern themselves with such trivialities!\n");
+		Send("Financiers and above don't concern themselves with such trivialities!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -574,7 +576,7 @@ void	Player::BuyDepot()
 		company_name = business->Name();
 	if(company_name == "x")
 	{
-		Send("Only companies can build depots.\n");
+		Send("Only companies can build depots.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -582,13 +584,13 @@ void	Player::BuyDepot()
 	{
 		std::ostringstream	buffer;
 		buffer << " Your company already has a depot on " << loc.fed_map->Title() << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!loc.fed_map->IsAnExchange(loc.loc_no))
 	{
-		Send("You need to be in the exchange to buy a depot on a planet.\n");
+		Send("You need to be in the exchange to buy a depot on a planet.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -603,32 +605,32 @@ void	Player::BuyFactory(const std::string& commod)
 {
 	if((company == 0) && (business == 0))
 	{
-		Send("Only companies and businesses can build factories.\n");
+		Send("Only companies and businesses can build factories.\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if((rank > MANUFACTURER) && !IsStaff())
 	{
-		Send("Financiers don't concern themselves with such trivialities!\n");
+		Send("Financiers don't concern themselves with such trivialities!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	Star	*star = loc.fed_map->HomeStarPtr();
 	if(star->Name() == "Sol")
 	{
-		Send("Sorry - factories cannot be built on this planet...\n");
+		Send("Sorry - factories cannot be built on this planet...\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	const Commodity	*commodity = Game::commodities->Find(commod);
 	if(commodity == 0)
 	{
-		Send("I don't recognise that commodity name...\n");
+		Send("I don't recognise that commodity name...\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!loc.fed_map->IsAnExchange(loc.loc_no))
 	{
-		Send("You need to be in the exchange to buy a factory on a planet.\n");
+		Send("You need to be in the exchange to buy a factory on a planet.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -645,10 +647,10 @@ void	Player::BuyFood()
 house special pizza, which you attack with gusto!\n");
 
 	if(!CurrentMap()->IsABar(LocNo()))
-		Send(Game::system->GetMessage("cmdparser","buy",2));
+		Send(Game::system->GetMessage("cmdparser","buy",2),OutputFilter::DEFAULT);
 	else
 	{
-		Send(pizza);
+		Send(pizza,OutputFilter::DEFAULT);
 		cash -= 10;
 		XMLCash();
 		ChangeStamina(5,true,true);
@@ -663,12 +665,12 @@ void	Player::BuyFutures(const std::string& commod)
 	if((rank == FINANCIER) || (rank == TRADER))
 	{
 		if(futures_list.size() >= MAX_FUTURES)
-			Send(portfolio_full);
+			Send(portfolio_full,OutputFilter::DEFAULT);
 		else
 			loc.fed_map->BuyFutures(this,commod);
 	}
 	else
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 }
 
 void	Player::BuyPizza(std::string& text)
@@ -681,8 +683,17 @@ void	Player::BuyPizza(std::string& text)
 		buffer << text;
 	buffer << std::endl;
 	std::string mssg(buffer.str());
-	int round_size = loc.fed_map->RoomSend(this,this,loc.loc_no,mssg,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(mssg,OutputFilter::DEFAULT);
+	}
+
+	int round_size = pl_list.size();
 	loc.fed_map->ChangeRoomStam(this,loc.loc_no,5);
+
 	buffer.str("");
 	if(text.compare("") == 0)
 		buffer << "You buy everyone in the room a pizza - Capriciosa, with extra moose..";
@@ -693,12 +704,12 @@ void	Player::BuyPizza(std::string& text)
 	if(cash < 0)
 	{
 		cash -= 200;
-		buffer << " A text message from the bank appears on your comm unit screen.";
+		buffer << " A message from the bank appears on your comm unit screen.";
 		buffer << " It says, 'U r ovrdrwn. U hve bn chgd 200ig fr ths msg.'";
 	}
 	buffer << std::endl;
 	mssg = buffer.str();
-	Send(mssg);
+	Send(mssg,OutputFilter::DEFAULT);
 	XMLCash();
 	ChangeStamina(5,true,true);
 }
@@ -711,18 +722,18 @@ void	Player::BuyPremiumTicker()
 
 	if(InvFlagIsSet(Inventory::PRICE_CHECK_PREMIUM))
 	{
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 		return;
 	}
 	if(AddSlithy() < 5)
 	{
-		Send(no_slithies);
+		Send(no_slithies,OutputFilter::DEFAULT);
 		return;
 	}
 	FlipInvFlag(Inventory::PRICE_CHECK_PREMIUM);
 	AddSlithy(-5);
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
-	Send(ok);
+	Send(ok,OutputFilter::DEFAULT);
 	std::ostringstream buffer;
 	buffer << "SLITHY: " << Name() << " - premium_ticker";
 	WriteLog(buffer);
@@ -738,8 +749,17 @@ void	Player::BuyRound(std::string& text)
 		buffer << text;
 	buffer << std::endl;
 	std::string mssg(buffer.str());
-	int round_size = loc.fed_map->RoomSend(this,this,loc.loc_no,mssg,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(mssg,OutputFilter::DEFAULT);
+	}
+
+	int round_size = pl_list.size();
 	loc.fed_map->ChangeRoomStam(this,loc.loc_no,2);
+
 	buffer.str("");
 	if(text.compare("") == 0)
 		buffer << "You buy everyone in the room a pint of Diesel's Old Peculiar strong dark ale.";
@@ -755,7 +775,7 @@ void	Player::BuyRound(std::string& text)
 	}
 	buffer << std::endl;
 	mssg = buffer.str();
-	Send(mssg);
+	Send(mssg,OutputFilter::DEFAULT);
 	XMLCash();
 	ChangeStamina(2,true,true);
 }
@@ -769,14 +789,14 @@ void	Player::BuyShares(int amount,const std::string& co_name)
 
 	if(rank < MANUFACTURER)
 	{
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(co_name == "")
 	{
 		if(company == 0)
-			Send(no_co);
+			Send(no_co,OutputFilter::DEFAULT);
 		else
 			company->BuyShares(amount);
 	}
@@ -784,13 +804,13 @@ void	Player::BuyShares(int amount,const std::string& co_name)
 	{
 		if(rank != FINANCIER)
 		{
-			Send(not_fin);
+			Send(not_fin,OutputFilter::DEFAULT);
 			return;
 		}
 
 		if(company->TotalPortfolio() > Company::MAX_PORTFOLIO_SIZE)
 		{
-			Send(too_big);
+			Send(too_big,OutputFilter::DEFAULT);
 			return;
 		}
 
@@ -799,7 +819,7 @@ void	Player::BuyShares(int amount,const std::string& co_name)
 		{
 			std::ostringstream	buffer;
 			buffer << "I'm afraid there isn't a company registered with the name '" << co_name << "'\n";
-			Send(buffer);
+			Send(buffer,OutputFilter::DEFAULT);
 		}
 		else
 			target->BuyShares(amount,this);
@@ -810,7 +830,7 @@ void	Player::BuyShip()
 {
 	if(job != 0)
 	{
-		Send(Game::system->GetMessage("player","buyship",1));
+		Send(Game::system->GetMessage("player","buyship",1),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -826,7 +846,7 @@ void	Player::BuyShip()
 			status_flags.reset(BUY_SHIP);
 			delete ship;
 			ship = 0;
-			Send(Game::system->GetMessage("player","buyship",2));
+			Send(Game::system->GetMessage("player","buyship",2),OutputFilter::DEFAULT);
 		}
 	}
 	else
@@ -839,11 +859,11 @@ void	Player::BuyTreasury(int amount)
 	static const std::string	no_co("You don't seem to have a company!\n");
 
 	if(rank < MANUFACTURER)
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 	else
 	{
 		if(company == 0)
-			Send(no_co);
+			Send(no_co,OutputFilter::DEFAULT);
 		else
 			company->BuyTreasury(amount);
 	}
@@ -855,19 +875,19 @@ void	Player::BuyWarehouse()
 
 	if(rank > TRADER)
 	{
-		Send(too_high);
+		Send(too_high,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!inventory->InvFlagSet(Inventory::WARE_PERMIT))
 	{
-		Send(Game::system->GetMessage("player","buywarehouse",1));
+		Send(Game::system->GetMessage("player","buywarehouse",1),OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(cash < WAREHOUSE_COST)
 	{
-		Send(Game::system->GetMessage("player","buywarehouse",2));
+		Send(Game::system->GetMessage("player","buywarehouse",2),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -875,13 +895,13 @@ void	Player::BuyWarehouse()
 	{
 		std::ostringstream	buffer("");
 		buffer << " You already have a warehouse on " << loc.fed_map->Title() << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!loc.fed_map->IsAnExchange(loc.loc_no))
 	{
-		Send(Game::system->GetMessage("player","buywarehouse",3));
+		Send(Game::system->GetMessage("player","buywarehouse",3),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -889,7 +909,7 @@ void	Player::BuyWarehouse()
 	if(warehouse != 0)
 	{
 		cash -= WAREHOUSE_COST;
-		Send(Game::system->GetMessage("player","buywarehouse",4));
+		Send(Game::system->GetMessage("player","buywarehouse",4),OutputFilter::DEFAULT);
 		XMLCash();
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 		loc.fed_map->SaveInfrastructure();
@@ -903,13 +923,13 @@ bool	Player::CanStartBusiness()
 	static const std::string no_points("You need 500 trading points to start a business.\n");
 	static const std::string no_broker("You need a broker to register your business.\n");
 
-	if(rank != TRADER)			{ Send(too_low);		return(false);	}
-	if(business != 0)	{ Send(has_bus);		return(false);	}
-	if(trader_pts < 500)			{ Send(no_points);	return(false);	}
+	if(rank != TRADER)			{ Send(too_low,OutputFilter::DEFAULT);		return(false);	}
+	if(business != 0)				{ Send(has_bus,OutputFilter::DEFAULT);		return(false);	}
+	if(trader_pts < 500)			{ Send(no_points,OutputFilter::DEFAULT);	return(false);	}
 
 	if((loc.star_name != "Sol") || (loc.map_name != "Earth") || (loc.loc_no != 912))
 	{
-		Send(no_broker);
+		Send(no_broker,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -922,13 +942,13 @@ bool	Player::CanStartIPO()
 	static const std::string no_points("You need 500 trading points to launch an IPO.\n");
 	static const std::string no_broker("You need a broker to launch an IPO.\n");
 
-	if(rank < TRADER)		{	Send(too_low);		return(false);	}
-	if(company != 0)		{	Send(has_co);		return(false);	}
-	if(trader_pts < 500)	{	Send(no_points);	return(false);	}
+	if(rank < TRADER)		{	Send(too_low,OutputFilter::DEFAULT);	return(false);	}
+	if(company != 0)		{	Send(has_co,OutputFilter::DEFAULT);		return(false);	}
+	if(trader_pts < 500)	{	Send(no_points,OutputFilter::DEFAULT);	return(false);	}
 
 	if((loc.star_name != "Sol") || (loc.map_name != "Earth") || (loc.loc_no != 912))
 	{
-		Send(no_broker);
+		Send(no_broker,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -940,7 +960,7 @@ bool	Player::CantPayCustomsDues(Star *star)
 
 	if(ship == 0)
 	{
-		Send("Unable to find your ship - please report problem to ibgames\n");
+		Send("Unable to find your ship - please report problem to ibgames\n",OutputFilter::DEFAULT);
 		return true ;
 	}
 
@@ -956,7 +976,7 @@ bool	Player::CantPayCustomsDues(Star *star)
 		FedMap	*fed_map = Game::galaxy->GetPrimaryPlanet(this);
 		if((fed_map != 0) && (fed_map->Balance() <= 0L))
 		{
-			Send(no_cash);
+			Send(no_cash,OutputFilter::DEFAULT);
 			return true;
 		}
 	}
@@ -966,7 +986,7 @@ bool	Player::CantPayCustomsDues(Star *star)
 		Company *company = GetCompany();
 		if((company != 0) && (company->Cash() <= 0L))
 		{
-			Send(no_cash);
+			Send(no_cash,OutputFilter::DEFAULT);
 			return true;
 		}
 	}
@@ -976,7 +996,7 @@ bool	Player::CantPayCustomsDues(Star *star)
 		Business	*business = GetBusiness();
 		if((business != 0) && (business->Cash() <= 0L))
 		{
-			Send(no_cash);
+			Send(no_cash,OutputFilter::DEFAULT);
 			return true;
 		}
 	}
@@ -984,7 +1004,7 @@ bool	Player::CantPayCustomsDues(Star *star)
 	{
 		if(cash <= 0L)
 		{
-			Send(no_cash);
+			Send(no_cash,OutputFilter::DEFAULT);
 			return true;
 		}
 	}
@@ -1025,7 +1045,7 @@ void	Player::CapCash()
 			std::ostringstream	buffer("");
 			buffer << "The Interstellar Revenue Service has audited your accounts and assessed you for ";
 			buffer << tax << "ig excess profits tax.\n";
-			Send(buffer);
+			Send(buffer,OutputFilter::DEFAULT);
 			cash -= tax;
 			XMLCash();
 			temp_flags.set(TAXED);
@@ -1043,10 +1063,10 @@ void	Player::Captain2Adventurer()
 	rank = ADVENTURER;
 	XMLRank();
 	if(gender == FEMALE)
-		Send(Game::system->GetMessage("player","capt2adv",3));
+		Send(Game::system->GetMessage("player","capt2adv",3),OutputFilter::DEFAULT);
 	else
-		Send(Game::system->GetMessage("player","capt2adv",1));
-	Send(Game::system->GetMessage("player","capt2adv",2));
+		Send(Game::system->GetMessage("player","capt2adv",1),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","capt2adv",2),OutputFilter::DEFAULT);
 	CurrentCartel()->RemovePlayerFromWork(this);
 	std::ostringstream	buffer("");
 	buffer << name << " has promoted to adventurer.";
@@ -1066,18 +1086,18 @@ Cruikshank & Bone provide details of the requested spot market prices.\n");
 	Cartel *cartel = CurrentCartel();
 	if(cartel->Name() == "Sol")
 	{
-		Send(not_sol);
+		Send(not_sol,OutputFilter::DEFAULT);
 		return;
 	}
 
 	std::string	commod_name(Commodities::Normalise(commod));
 	if(HasRemoteAccessCert())
 	{
-		Send(intro);
+		Send(intro,OutputFilter::DEFAULT);
 		CurrentCartel()->CheckCommodityPrices(this,commod_name,false);
 	}
 	else
-		Send(no_cert);
+		Send(no_cert,OutputFilter::DEFAULT);
 }
 
 long	Player::CashAvailableForScript()
@@ -1119,7 +1139,7 @@ void	Player::ChangeClothes(std::string& text)
 	}
 	cash -= 10;
 	XMLCash();
-	Send(Game::system->GetMessage("player","changeclothes",1));
+	Send(Game::system->GetMessage("player","changeclothes",1),OutputFilter::DEFAULT);
 }
 
 bool	Player::ChangeCompanyCash(long amount,bool add)
@@ -1184,7 +1204,7 @@ void	Player::ChangeRace(const std::string& new_race,Player *manager)
 
 	if((gifts == 0) || (gifts->Gifts() < 1))
 	{
-		manager->Send(no_slithy);
+		manager->Send(no_slithy,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1203,7 +1223,7 @@ void	Player::ChangeRace(const std::string& new_race,Player *manager)
 	Game::review->Post(buffer);
 	WriteLog(buffer);
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
-	manager->Send(ok);
+	manager->Send(ok,OutputFilter::DEFAULT);
 }
 
 void	Player::ChangeReward(int amount,bool add)
@@ -1353,28 +1373,22 @@ void	Player::ChangeTreasury(int amount)
 
 void	Player::Cheat()
 {
-	Send(Game::system->GetMessage("player","cheat",1));
-	Send(Game::system->GetMessage("player","cheat",2));
-	Send(Game::system->GetMessage("player","cheat",3));
-	Send(Game::system->GetMessage("player","cheat",4));
-	Send(Game::system->GetMessage("player","cheat",5));
-	Send(Game::system->GetMessage("player","cheat",6));
+	Send(Game::system->GetMessage("player","cheat",1),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","cheat",2),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","cheat",3),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","cheat",4),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","cheat",5),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","cheat",6),OutputFilter::DEFAULT);
 
 	std::ostringstream	buffer("");
 	buffer << name << " has been trying to cheat!" << std::endl;
 	Game::review->Post(buffer);
 }
 
-void	Player::CheckHolding(const std::string& co_name)
-{
-	if(company != 0)
-		company->CheckHolding(co_name);
-}
-
 void	Player::ClearMood()
 {
 	mood = "";
-	Send("Mood cleared...\n");
+	Send("Mood cleared...\n",OutputFilter::DEFAULT);
 }
 
 void	Player::ClearRelay()
@@ -1398,11 +1412,11 @@ void	Player::CoCapitalIncOnly(long amount)
 void	Player::Collect()
 {
 	if(job == 0)
-		Send(Game::system->GetMessage("player","collect",1));
+		Send(Game::system->GetMessage("player","collect",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(job->collected)
-			Send(Game::system->GetMessage("player","collect",2));
+			Send(Game::system->GetMessage("player","collect",2),OutputFilter::DEFAULT);
 		else
 		{
 			if((loc.map_name == job->from) && (loc.fed_map->IsACourier(loc.loc_no)))
@@ -1411,7 +1425,7 @@ void	Player::Collect()
 				{
 					timers[HAUL_INDEX] = std::time(0);
 					job->collected = true;
-					Send(Game::system->GetMessage("player","collect",4));
+					Send(Game::system->GetMessage("player","collect",4),OutputFilter::DEFAULT);
 				}
 				else
 				{
@@ -1420,7 +1434,7 @@ void	Player::Collect()
 					buffer << "You have insufficient space in your hold to allow the cargo to be loaded. ";
 					buffer << "The clerk looks very annoyed and you are charged " << fine;
 					buffer << "ig for wasting everyone's time." << std::endl;
-					Send(buffer);
+					Send(buffer,OutputFilter::DEFAULT);
 					Overdraft(-fine);
 					if(job == 0)
 						WriteLog("Duplicate delete in Player::Collect()");
@@ -1429,7 +1443,7 @@ void	Player::Collect()
 				}
 			}
 			else
-				Send(Game::system->GetMessage("player","collect",3));
+				Send(Game::system->GetMessage("player","collect",3),OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1440,7 +1454,7 @@ void	Player::Commander2Captain()
 	{
 		rank = CAPTAIN;
 		XMLRank();
-		Send(Game::system->GetMessage("player","com2capt",1));
+		Send(Game::system->GetMessage("player","com2capt",1),OutputFilter::DEFAULT);
 		std::ostringstream	buffer("");
 		buffer << name << " has promoted to captain.";
 		WriteLog(buffer);
@@ -1566,7 +1580,7 @@ void	Player::Consolidate()
 			if(business != 0)
 				CurrentMap()->Consolidate(business);
 			else
-				Send(no_depot);
+				Send(no_depot,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -1687,14 +1701,14 @@ Cuthbert telling you that you have been given extra time to deliver your cargo.\
 		912, 914, 915, 916, 917, 918, 976, 977, 978, 979, 981, 982
 	};
 
-	Send(customs);
-	Send(agree);
+	Send(customs,OutputFilter::DEFAULT);
+	Send(agree,OutputFilter::DEFAULT);
 	MovePlayerToLoc(loc_table[std::rand() % MAX_CUSTOMS_LOC]);
-	Send(search);
+	Send(search,OutputFilter::DEFAULT);
 	ship->TopUpFuel(this);
 	if((rank < ADVENTURER) && (job != 0))
 	{
-		Send(ac_mssg);
+		Send(ac_mssg,OutputFilter::DEFAULT);
 		job->time_available += 15;
 		job->time_taken = 0;
 	}
@@ -1743,15 +1757,15 @@ bool	Player::Death(bool is_suicide)
 	if(is_suicide)
 	{
 		if(flags.test(SPACE))
-			Send(Game::system->GetMessage("player","suicide",2));
+			Send(Game::system->GetMessage("player","suicide",2),OutputFilter::DEFAULT);
 		else
 		{
-			Send(Game::system->GetMessage("player","suicide",1));
-			Send(Game::system->GetMessage("player","suicide",4));
+			Send(Game::system->GetMessage("player","suicide",1),OutputFilter::DEFAULT);
+			Send(Game::system->GetMessage("player","suicide",4),OutputFilter::DEFAULT);
 		}
 	}
 	else
-		Send(Game::system->GetMessage("player","suicide",4));
+		Send(Game::system->GetMessage("player","suicide",4),OutputFilter::DEFAULT);
 
 	std::ostringstream	buffer;
 	if(flags.test(SPACE))
@@ -1760,7 +1774,14 @@ bool	Player::Death(bool is_suicide)
 		buffer << "'s ship explodes. As your instruments recover from the overload ";
 		buffer << "and start to register again, you recongise a rescue and recovery ";
 		buffer << "ship working amongst the little that is left." << std::endl;
-		loc.fed_map->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		PlayerList pl_list;
+		loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 	else
 	{
@@ -1769,7 +1790,14 @@ bool	Player::Death(bool is_suicide)
 		buffer << " Within a remarkably short period of time " << gender_str2[gender];
 		buffer << " is connected to a machine festooned with tubes and wires, loaded";
 		buffer << " on to a stretcher and carried away to a hospital." << std::endl;
-		loc.fed_map->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+		std::string	text(buffer.str());
+		PlayerList pl_list;
+		loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+		if(!pl_list.empty())
+		{
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
 	}
 
 	buffer.str("");
@@ -1809,11 +1837,11 @@ void	Player::DeclareBankruptcy()
 
 	switch(rank)
 	{
-		case MERCHANT:			DemoteMerchant();					break;
-		case INDUSTRIALIST:	DemoteIndustrialist();			break;
-		case MANUFACTURER:	DemoteManufacturer();			break;
-		case FINANCIER:		DemoteFinancier();				break;
-		default:					Send(too_low);						return;
+		case MERCHANT:			DemoteMerchant();								break;
+		case INDUSTRIALIST:	DemoteIndustrialist();						break;
+		case MANUFACTURER:	DemoteManufacturer();						break;
+		case FINANCIER:		DemoteFinancier();							break;
+		default:					Send(too_low,OutputFilter::DEFAULT);	return;
 	}
 	std::ostringstream	buffer;
 	buffer << name << " has declared bankruptcy - the galactic administration refused to provide a bail-out\n";
@@ -1825,16 +1853,16 @@ void	Player::Deliver()
 	static const std::string	wrong_place("No one here knows anything about a delivery of a cargo of ");
 
 	if(job == 0)
-		Send(Game::system->GetMessage("player","deliver",1));
+		Send(Game::system->GetMessage("player","deliver",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(!job->collected)
-			Send(Game::system->GetMessage("player","deliver",2));
+			Send(Game::system->GetMessage("player","deliver",2),OutputFilter::DEFAULT);
 		else
 		{
 			if(Game::unload->IsWaiting(this))
 			{
-				Send(Game::system->GetMessage("player","deliver",5));
+				Send(Game::system->GetMessage("player","deliver",5),OutputFilter::DEFAULT);
 				return;
 			}
 			std::string	text("");
@@ -1853,12 +1881,12 @@ void	Player::Deliver()
 				int	fee = job->quantity * job->payment;
 				if(job->time_taken > job->time_available)
 				{
-					Send(Game::system->GetMessage("player","deliver",3));
+					Send(Game::system->GetMessage("player","deliver",3),OutputFilter::DEFAULT);
 					fee /= 2;
 				}
 				if(job->time_taken <= (job->time_available *2)/3)
 				{
-					Send(Game::system->GetMessage("player","deliver",4));
+					Send(Game::system->GetMessage("player","deliver",4),OutputFilter::DEFAULT);
 					fee =  (fee * 6)/5;
 				}
 				if(loan > 0)
@@ -1875,7 +1903,7 @@ void	Player::Deliver()
 				buffer << "The clerk checks the scans and smiles. \"All correct, " << FullName() << ",\" ";
 				buffer << "he says, \"and your fee has been transferred to your account.\"" << std::endl;
 				text =  buffer.str();
-				Send(text);
+				Send(text,OutputFilter::DEFAULT);
 				if(job->planet_owned != Work::AUTO_GENERATED)
 					Work::Deliver(job);
 				delete job;
@@ -1889,7 +1917,7 @@ void	Player::Deliver()
 			{
 				buffer << wrong_place << job->commod << "." << std::endl;
 				text = buffer.str();
-				Send(text);
+				Send(text,OutputFilter::DEFAULT);
 			}
 		}
 	}
@@ -1913,10 +1941,10 @@ to restructure your company. This results in your rank being reduced to manufact
 		company->Bankruptcy();
 		rank = MANUFACTURER;
 		XMLRank();
-		Send(bankrupt);
+		Send(bankrupt,OutputFilter::DEFAULT);
 	}
 	else
-		Send(no_co);
+		Send(no_co,OutputFilter::DEFAULT);
 }
 
 void	Player::DemoteIndustrialist()
@@ -1924,7 +1952,7 @@ void	Player::DemoteIndustrialist()
 	static const std::string	alas("Your business has been liquidated. So, alas, ends your less \
 than successful foray into the world of small businesses...\n");
 	if(business == 0)
-		Send("I can't seem to find a business for you!\n");
+		Send("I can't seem to find a business for you!\n",OutputFilter::DEFAULT);
 	else
 	{
 		business->SellAllDepots();
@@ -1937,7 +1965,7 @@ than successful foray into the world of small businesses...\n");
 		trader_pts = 500;
 		courier_pts = -1;
 		XMLPoints();
-		Send(alas);
+		Send(alas,OutputFilter::DEFAULT);
 	}
 }
 
@@ -1954,10 +1982,10 @@ to restructure your company. This results in your rank being reduced to industri
 		company = 0;
 		rank = INDUSTRIALIST;
 		XMLRank();
-		Send(bankrupt);
+		Send(bankrupt,OutputFilter::DEFAULT);
 	}
 	else
-		Send(no_co);
+		Send(no_co,OutputFilter::DEFAULT);
 }
 
 void	Player::DemoteMerchant()
@@ -1966,7 +1994,7 @@ void	Player::DemoteMerchant()
 are declared bankrupt. Your Trading Guild share is sold to cover the debts and the \
 remaining cash - 85,000ig - is credited to your bank account.\n");
 
-	Send(bankrupt);
+	Send(bankrupt,OutputFilter::DEFAULT);
 	cash += 85000L;
 	XMLCash();
 	courier_pts = -1;
@@ -1996,7 +2024,7 @@ void	Player::Desc(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << desc << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	inventory->Display(player,buffer);	// note - buffer isn't used
 
@@ -2007,7 +2035,7 @@ void	Player::Desc(Player *player)
 			buffer << "You are married to " << spouse << ".\n";
 		else
 			buffer << name << " is married to " << spouse << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -2022,7 +2050,7 @@ void	Player::DisallowBuilds(Player	*initiator)
 		star->DisallowBuild();
 		buffer << "Planet builds no longer allowed for " << name << ".\n";
 	}
-	initiator->Send(buffer);
+	initiator->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::DisplayAccounts(Player *player)
@@ -2030,13 +2058,13 @@ void	Player::DisplayAccounts(Player *player)
 	static const std::string	no_co("You don't have a company!\n");
 
 	if((player == 0) && (company == 0))
-		Send(no_co);
+		Send(no_co,OutputFilter::DEFAULT);
 	else
 	{
 		if(player == 0)
 		{
 			if(company == 0)
-				Send(no_co);
+				Send(no_co,OutputFilter::DEFAULT);
 			else
 				company->DisplayAccounts(this);
 		}
@@ -2046,7 +2074,7 @@ void	Player::DisplayAccounts(Player *player)
 			{
 				std::ostringstream	buffer;
 				buffer << name << " doesn't have a company.\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 			}
 			else
 				company->DisplayAccounts(player,5);
@@ -2059,11 +2087,11 @@ void	Player::DisplayAkaturi()
 	static const std::string	no_task("You don't have a contract to display.\n");
 
 	if(task == 0)
-		Send(no_task);
+		Send(no_task,OutputFilter::DEFAULT);
 	else
 	{
 		if(!Game::courier->Display(this,task))
-			Send(no_task);
+			Send(no_task,OutputFilter::DEFAULT);
 	}
 }
 
@@ -2071,7 +2099,7 @@ void	Player::DisplayAllWarehouses()
 {
 	if(warehouse_list.size() == 0)
 	{
-		Send(Game::system->GetMessage("player","displayallware",1));
+		Send(Game::system->GetMessage("player","displayallware",1),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2082,11 +2110,11 @@ void	Player::DisplayAllWarehouses()
 		ware_names = ExtractWareName(*(warehouse_list.begin()));
 		buffer << "You have one warehouse on " << ware_names.second << " in the ";
 		buffer << ware_names.first << " system." << std::endl;
-		Send(buffer.str());
+		Send(buffer.str(),OutputFilter::DEFAULT);
 		return;
 	}
 
-	Send(Game::system->GetMessage("player","displayallware",2));
+	Send(Game::system->GetMessage("player","displayallware",2),OutputFilter::DEFAULT);
 	int 	max_star = std::strlen("Star System");
 	int	max_planet = std::strlen("Planet");
 	int	star_size, planet_size;
@@ -2103,14 +2131,14 @@ void	Player::DisplayAllWarehouses()
 	for(int count = 0;count < max_len;count++)
 		buffer << "-";
 	buffer << std::endl;
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 
 	for(WarehouseNames::iterator iter = warehouse_list.begin();iter !=  warehouse_list.end();iter++)
 	{
 		buffer.str("");
 		ware_names = ExtractWareName(*(iter));
 		buffer << "  " << std::setw(max_star + 2) << std::left << ware_names.first << ware_names.second << std::endl;
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -2119,21 +2147,19 @@ void	Player::DisplayCompany()
 	static const std::string no_co("You don't have a company!\n");
 
 	if(company == 0)
-		Send(no_co);
+		Send(no_co,OutputFilter::DEFAULT);
 	else
 		company->Display();
 }
 
 void	Player::DisplayDepot(const std::string& d_name)
 {
-	static const std::string	no_co("You don't have a company or any depots.\n");
-
 	if(company != 0)
 		company->DisplayDepot(d_name);
 	if(business != 0)
 		business->DisplayDepot(d_name);
 	if((company == 0) && (business == 0))
-		Send("You don't have a business or company, let alone depots!\n");
+		Send("You don't have a business or company, let alone depots!\n",OutputFilter::DEFAULT);
 }
 
 void	Player::DisplayDisaffection()
@@ -2141,7 +2167,7 @@ void	Player::DisplayDisaffection()
 	if(IsPlanetOwner())
 		CurrentMap()->DisplayDisaffection(this);
 	else
-		Send("You don't own this planet!\n");
+		Send("You don't own this planet!\n",OutputFilter::DEFAULT);
 }
 
 void	Player::DisplayFactory(int number)
@@ -2149,7 +2175,7 @@ void	Player::DisplayFactory(int number)
 	static const std::string	error("You don't have a company or business, let alone factories!\n");
 
 	if((company == 0) && (business == 0))
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		if(company != 0)
@@ -2164,7 +2190,7 @@ void	Player::DisplayFutures()
 	static const std::string	no_contracts("You don't have any futures contracts!\n");
 
 	if(futures_list.size() == 0)
-		Send(no_contracts);
+		Send(no_contracts,OutputFilter::DEFAULT);
 	else
 	{
 		std::ostringstream	buffer;
@@ -2172,7 +2198,7 @@ void	Player::DisplayFutures()
 		{
 			buffer.str("");
 			(*iter)->Display(buffer);
-			Send(buffer);
+			Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -2183,7 +2209,7 @@ void	Player::DisplayFutures(const std::string& exch_commod)
 	static const std::string	none_to_display("You don't have any futures contracts of that type.\n");
 
 	if(futures_list.size() == 0)
-		Send(no_contracts);
+		Send(no_contracts,OutputFilter::DEFAULT);
 	else
 	{
 		std::string	commodity_name(exch_commod);
@@ -2202,12 +2228,12 @@ void	Player::DisplayFutures(const std::string& exch_commod)
 				are_no_contracts = false;
 				buffer.str("");
 				(*iter)->Display(buffer);
-				Send(buffer);
+				Send(buffer,OutputFilter::DEFAULT);
 			}
 		}
 
 		if(are_no_contracts)
-			Send(none_to_display);
+			Send(none_to_display,OutputFilter::DEFAULT);
 	}
 }
 
@@ -2219,19 +2245,19 @@ void	Player::DisplayJob()
 		return;
 	}
 	if(rank < ADVENTURER)
-		Send(Game::system->GetMessage("player","displayjob",1));
+		Send(Game::system->GetMessage("player","displayjob",1),OutputFilter::DEFAULT);
 }
 
 void	Player::DisplayLocker()
 {
 	if(ship == 0)
 	{
-		Send("You need to buy a ship first!\n");
+		Send("You need to buy a ship first!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(!IsInSpace())
 	{
-		Send("You need to be in your ship to see what's in the locker!\n");
+		Send("You need to be in your ship to see what's in the locker!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2243,7 +2269,7 @@ void	Player::DisplayLouie()
 	static const std::string	none("You're not currently involved in a game of Lucky Louie!\n");
 
 	if(louie == 0)
-		Send(none);
+		Send(none,OutputFilter::DEFAULT);
 	else
 		louie->DisplayGame(this);
 }
@@ -2253,7 +2279,7 @@ void	Player::DisplayPopulation()
 	if(IsPlanetOwner())
 		CurrentMap()->DisplayPopulation(this);
 	else
-		Send("You don't own this planet!\n");
+		Send("You don't own this planet!\n",OutputFilter::DEFAULT);
 }
 
 void	Player::DisplayShares(Player *player)
@@ -2262,7 +2288,7 @@ void	Player::DisplayShares(Player *player)
 	{
 		std::ostringstream	buffer;
 		buffer << name << " doesn't have a company!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		company->DisplayShareRegister(player);
@@ -2277,22 +2303,22 @@ void	Player::DisplaySystemCabinet()
 			return;
 		if(cabinet->Size() == 0)
 		{
-			Send("The cabinet seems to be empty!\n");
+			Send("The cabinet seems to be empty!\n",OutputFilter::DEFAULT);
 			return;
 		}
 		std::ostringstream	buffer;
 		cabinet->Display(this,buffer);
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		if(IsPlanetOwner())
 		{
 			buffer.str("");
 			buffer << "The cabinet can hold up to " << cabinet->MaxObjects();
 			buffer << " objects, and currently holds " << cabinet->Size() <<  " items.\n";
-			Send(buffer);
+			Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 	else
-		Send("If you wish to examine the system display cabinet, you must be on the landing pad.\n");
+		Send("If you wish to examine the system display cabinet, you must be on the landing pad.\n",OutputFilter::DEFAULT);
 }
 
 bool	Player::DisplaySystemCabinetObject(const std::string& obj_name)
@@ -2310,7 +2336,7 @@ bool	Player::DisplaySystemCabinetObject(const std::string& obj_name)
 
 	std::string obj_desc(object->Desc());
 	obj_desc += "\n";
-	Send(obj_desc);
+	Send(obj_desc,OutputFilter::DEFAULT);
 	return true;
 }
 
@@ -2321,7 +2347,7 @@ void	Player::DisplayWarehouse(const std::string& w_name)
 	if(fed_map == 0)
 	{
 		buffer << "I can't find a planet called " << w_name << std::endl;
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2329,7 +2355,7 @@ void	Player::DisplayWarehouse(const std::string& w_name)
 	if(ware == 0)
 	{
 		buffer << "You don't have a warehouse on " << w_name << std::endl;
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		ware->Display(this);
@@ -2345,23 +2371,23 @@ this to feedback@ibgames.net. Thank you.\n");
 
 	if(CurrentMap()->FindObject("registrar",LocNo()) == 0)
 	{
-		Send(not_reg);
+		Send(not_reg,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!IsMarried())
 	{
-		Send(not_mar);
+		Send(not_mar,OutputFilter::DEFAULT);
 		return;
 	}
 	Player	*player = Game::player_index->FindName(spouse);
 	if(player == 0)
 	{
-		Send(no_sp);
+		Send(no_sp,OutputFilter::DEFAULT);
 		return;
 	}
 	if(Slithys() < 2)
 	{
-		Send(no_slith);
+		Send(no_slith,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2375,10 +2401,10 @@ this to feedback@ibgames.net. Thank you.\n");
 
 	std::ostringstream	buffer;
 	buffer << name << " has divorced you!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "You divorce "<< player->Name() << "!\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << name << " has divorced " << player->Name() << ".\n";
 	Game::review->Post(buffer);
@@ -2388,28 +2414,40 @@ void	Player::Drop(const std::string& ob_name)
 {
 	if(flags.test(SPACE))
 	{
-		Send(Game::system->GetMessage("player","drop",2));
+		Send(Game::system->GetMessage("player","drop",2),OutputFilter::DEFAULT);
 		return;
 	}
 
 	FedObject	*object = inventory->RemoveObject(ob_name);
 	if(object == 0)
-		Send(Game::system->GetMessage("player","drop",1));
-	else
 	{
-		object->Location(loc);
-		object->ClearInvFlags();
-		loc.fed_map->AddObject(object);
-		std::ostringstream	buffer("");
-		buffer << "You drop " << object->c_str() << "." << std::endl;
-		Send(buffer);
-		buffer.str("");
-		buffer << name << " has dropped " << object->c_str() << std::endl;
-		loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
-		buffer.str("");
-		buffer << "<s-contents name='" << object->Name() << "'/>\n";
-		loc.fed_map->RoomSend(0,0,loc.loc_no,"",buffer.str());
+		Send(Game::system->GetMessage("player","drop",1),OutputFilter::DEFAULT);
+		return;
 	}
+
+	object->Location(loc);
+	object->ClearInvFlags();
+	loc.fed_map->AddObject(object);
+
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("name",object->Name()));
+	attribs.push_back(attrib);
+
+	std::ostringstream	buffer;
+	buffer << "You drop " << object->c_str() << "." << std::endl;
+	std::string	text(buffer.str());
+	Send(text,OutputFilter::ADD_CONTENTS,attribs);
+
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(pl_list.empty())
+		return;
+
+	buffer.str("");
+	buffer << name << " has dropped " << object->c_str() << std::endl;
+	text = buffer.str();
+	for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		(*iter)->Send(text,OutputFilter::ADD_CONTENTS,attribs);
 }
 
 void	Player::DropOff()
@@ -2418,15 +2456,15 @@ void	Player::DropOff()
 	static const std::string	something("You hand over the package and receive a receipt for it.\n");
 
 	if((task == 0) || !((loc.loc_no == task->delivery_loc) && (loc.map_name == task->delivery_map)))
-		Send(Game::system->GetMessage("player","dropoff",1));
+		Send(Game::system->GetMessage("player","dropoff",1),OutputFilter::DEFAULT);
 	else
 	{
-		Send(Game::system->GetMessage("player","dropoff",2));
+		Send(Game::system->GetMessage("player","dropoff",2),OutputFilter::DEFAULT);
 		std::ostringstream	buffer("");
 		buffer << "You feed the receipt into your comm unit and there is a beep. A message from ";
 		buffer << "Armstrong Cuthbert Inc tells you that payment of " << task->payment;
 		buffer << "ig has been credited to your account.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		courier_pts++;
 		XMLPoints();
 		ChangeCash(task->payment,true);
@@ -2454,18 +2492,28 @@ void	Player::Emote(const std::string& which,Player *recipient)
 	std::ostringstream	buffer("");
 	buffer << "You give " << recipient->Name() << article << adj[index] << " " << which << "." << std::endl;
 	text =  buffer.str();
-	Send(text,this);
+	Send(text,OutputFilter::DEFAULT,this);
 
 	buffer.str("");
 	buffer << name << " has given you" << article << adj[index] << " " << which << "." << std::endl;
 	text =  buffer.str();
-	recipient->Send(text,this);
+	recipient->Send(text,OutputFilter::DEFAULT,this);
 
 	buffer.str("");
 	buffer << name << " has given " << recipient->Name();
 	buffer << article << adj[index] << " " << which << "." << std::endl;
 	text =  buffer.str();
-	loc.fed_map->RoomSend(this,this,loc.loc_no,text,"",recipient);
+
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,recipient);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		{
+			if(*iter != this)
+				(*iter)->Send(text,OutputFilter::DEFAULT);
+		}
+	}
 }
 
 void	Player::Engineer2Mogul()
@@ -2501,7 +2549,7 @@ bool	Player::Examine(const std::string& other_name)
 		if(this != other)
 		{
 			buffer << name << " is looking at you." << std::endl;
-			other->Send(buffer);
+			other->Send(buffer,OutputFilter::DEFAULT);
 		}
 		return(true);
 	}
@@ -2509,7 +2557,7 @@ bool	Player::Examine(const std::string& other_name)
 	// Wants to examine self
 	if(caps_name.compare("Me") == 0)
 	{
-		Send("You check your reflection in the mirror field of your comm unit.\n");
+		Send("You check your reflection in the mirror field of your comm unit.\n",OutputFilter::DEFAULT);
 		Desc(this);
 		return(true);
 	}
@@ -2518,7 +2566,7 @@ bool	Player::Examine(const std::string& other_name)
 	FedObject	*obj = inventory->Find(other_name);
 	if(obj != 0)
 	{
-		Send(obj->Desc());
+		Send(obj->Desc(),OutputFilter::DEFAULT);
 		return(true);
 	}
 
@@ -2529,14 +2577,14 @@ void	Player::ExtendSystemCabinet()
 {
 	if(gifts->Gifts() < 1)
 	{
-		Send("It costs one slithy to extend your system cabinet!\n");
+		Send("It costs one slithy to extend your system cabinet!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	DisplayCabinet	*cabinet = loc.fed_map->HomeStarPtr()->GetCabinet();
 	if(cabinet == 0)
 	{
-		Send("I can't find the display cabinet. Please report this to feedback@ibgames.com. Thank you.\n");
+		Send("I can't find the display cabinet. Please report this to feedback@ibgames.com. Thank you.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2545,7 +2593,7 @@ void	Player::ExtendSystemCabinet()
 	cabinet->ExtensionMssg(this);
 	std::ostringstream	buffer;
 	buffer << "The display cabinet for this system can now hold " << cabinet->MaxObjects() << " items.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 std::pair<std::string,std::string>	Player::ExtractWareName(const std::string& w_name)
@@ -2562,7 +2610,7 @@ void	Player::Fetch(int bay_no)
 {
 	if(ship == 0)
 	{
-		Send(Game::system->GetMessage("player","fetch",1));
+		Send(Game::system->GetMessage("player","fetch",1),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2581,19 +2629,19 @@ void	Player::Fetch(int bay_no)
 	Warehouse *ware = loc.fed_map->FindWarehouse(name);
 	if(ware == 0)
 	{
-		Send(Game::system->GetMessage("player","fetch",2));
+		Send(Game::system->GetMessage("player","fetch",2),OutputFilter::DEFAULT);
 		return;
 	}
 
 	Cargo	*cargo = ware->Retrieve(bay_no);
 	if(cargo == 0)
 	{
-		Send(Game::system->GetMessage("player","fetch",3));
+		Send(Game::system->GetMessage("player","fetch",3),OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(ship->AddCargo(cargo,this) >= 0)
-		Send(Game::system->GetMessage("player","fetch",4));
+		Send(Game::system->GetMessage("player","fetch",4),OutputFilter::DEFAULT);
 }
 
 int	Player::FedTermVersion()
@@ -2668,7 +2716,7 @@ void	Player::FlushFactory(int factory_no)
 		if(business != 0)
 			business->FlushFactory(factory_no);
 		else
-			Send(error);
+			Send(error,OutputFilter::DEFAULT);
 	}
 }
 
@@ -2709,11 +2757,11 @@ void	Player::FreezeCompany()
 	static const std::string	no_cash("It costs 500,000ig from your personal funds to put your company into stasis.\n");
 
 	if(company == 0)
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		if(cash < 500000L)
-			Send(no_cash);
+			Send(no_cash,OutputFilter::DEFAULT);
 		else
 		{
 			cash -= 500000L;
@@ -2728,11 +2776,11 @@ void	Player::FreezeBusiness()
 	static const std::string	no_cash("It costs 500,000ig from your personal funds to put your business into stasis.\n");
 
 	if(business == 0)
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		if(cash < 500000L)
-			Send(no_cash);
+			Send(no_cash,OutputFilter::DEFAULT);
 		else
 		{
 			cash -= 500000L;
@@ -2766,7 +2814,7 @@ void	Player::Gengineer2Magnate()
 		buffer << name << " has promoted to magnate.";
 		WriteLog(buffer);
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
-		Send("Congratulations on your promotion to Magnate!\n");
+		Send("Congratulations on your promotion to Magnate!\n",OutputFilter::DEFAULT);
 		XMLRank();
 	}
 }
@@ -2774,7 +2822,7 @@ void	Player::Gengineer2Magnate()
 void	Player::Get(FedObject	*object)
 {
 	if(object->Weight() < 0)	// it's a static object
-		Send(Game::system->GetMessage("player","get",1));
+		Send(Game::system->GetMessage("player","get",1),OutputFilter::DEFAULT);
 	else
 	{
 		loc.fed_map->RemoveObject(object);
@@ -2782,13 +2830,23 @@ void	Player::Get(FedObject	*object)
 		{
 			std::ostringstream	buffer("");
 			buffer << "You pick up " << object->c_str() << "." << std::endl;
-			Send(buffer);
-			buffer.str("");
-			buffer << name << " has picked up " << object->c_str() << std::endl;
-			loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
-			buffer.str("");
-			buffer << "<s-remove-contents name='" << object->Name() << "'/>\n";
-			loc.fed_map->RoomSend(0,0,loc.loc_no,"",buffer.str());
+			Send(buffer,OutputFilter::DEFAULT);
+
+			PlayerList pl_list;
+			loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+			if(pl_list.empty())
+				return;
+
+			AttribList attribs;
+			std::pair<std::string,std::string> attrib(std::make_pair("name",object->Name()));
+			attribs.push_back(attrib);
+
+			std::string	text(name);
+			text += " has picked up ";
+			text += object->c_str();
+			text += "\n";
+			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+				(*iter)->Send(text,OutputFilter::REMOVE_CONTENTS,attribs);
 		}
 	}
 }
@@ -2798,7 +2856,7 @@ void	Player::GetEMail()
 	std::ostringstream	buffer("");
 	buffer << "Your registered email address is " << email << "\n";
 	buffer << "To change it use the command 'update email password new_address', where 'password' is your password.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 Inventory	*Player::GetInventory()
@@ -2838,17 +2896,17 @@ void	Player::Give(Player *recipient,int amount)
 
 	if(amount > cash)
 	{
-		Send(insufficient);
+		Send(insufficient,OutputFilter::DEFAULT);
 		return;
 	}
 	if(amount <= 0)
 	{
-		Send(nice_try);
+		Send(nice_try,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!recipient->IsInLoc(loc.fed_map,loc.loc_no))
 	{
-		Send(not_here);
+		Send(not_here,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2867,12 +2925,12 @@ void	Player::Give(Player *recipient,int amount)
 	}
 	else
 		buffer << "You transfer the sum of " << donation <<"ig to " << recipient->Name() << ".\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	if(donation > 0)
 	{
 		buffer.str("");
 		buffer << name << " has given you " << donation << "ig!\n";
-		recipient->Send(buffer);
+		recipient->Send(buffer,OutputFilter::DEFAULT);
 	}
 	cash -= donation;
 	XMLCash();
@@ -2884,7 +2942,7 @@ void	Player::Give(Player *recipient,std::string& obj_name)
 
 	if(!recipient->IsInLoc(loc.fed_map,loc.loc_no))
 	{
-		Send(not_here);
+		Send(not_here,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2893,12 +2951,12 @@ void	Player::Give(Player *recipient,std::string& obj_name)
 	if(obj == 0)
 	{
 		buffer << "You don't seem to be in posession of a " << obj_name << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	buffer << name << " has given you " << obj->c_str() << ".\n";
-	recipient->Send(buffer);
+	recipient->Send(buffer,OutputFilter::DEFAULT);
 
 /************************************* Add it here! *************************************/
 /****** Add what? Must remember to write clearer messsages to self - alan ************/
@@ -2907,7 +2965,7 @@ void	Player::Give(Player *recipient,std::string& obj_name)
 	recipient->AddObject(obj);
 	buffer.str("");
 	buffer << "You hand " << obj->c_str() << " over to " << recipient->Name() << ".\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::GiveSlithy(Player *recipient)
@@ -2917,21 +2975,21 @@ void	Player::GiveSlithy(Player *recipient)
 
 	if(rank == GROUNDHOG)
 	{
-		Send(not_gh);
+		Send(not_gh,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(gifts->Change(-1) < 0)
-		Send(no_gifts);
+		Send(no_gifts,OutputFilter::DEFAULT);
 	else
 	{
 		recipient->AddSlithy(1);
 		std::ostringstream	buffer;
 		buffer << "You give " << recipient->Name() << " the gift of a valuable slithy tove.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 		buffer << Name() << " has given you the gift of a valuable slithy tove!\n";
-		recipient->Send(buffer);
+		recipient->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -2942,10 +3000,10 @@ void	Player::Glance(Player *player_looking)
 	if(IsMarried())
 		buffer << name << " is wearing a wedding ring.";
 	buffer << std::endl;
-	player_looking->Send(buffer);
+	player_looking->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << player_looking->Name() << " sneaks a peek at you.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::Goto(const std::string& destination)
@@ -2957,10 +3015,10 @@ void	Player::Goto(const std::string& destination)
 
 	std::ostringstream	buffer;
 
-	if(ship == 0)								{ Send(no_ship);		return;	}
-	if(!ship->FlagIsSet(Ship::NAVCOMP))	{ Send(no_nav);		return;	}
-	if(!IsInSpace())							{ Send(not_space);	return;	}
-	if(loc.star_name != "Sol")				{ Send(not_sol);		return;	}
+	if(ship == 0)								{ Send(no_ship,OutputFilter::DEFAULT);		return;	}
+	if(!ship->FlagIsSet(Ship::NAVCOMP))	{ Send(no_nav,OutputFilter::DEFAULT);		return;	}
+	if(!IsInSpace())							{ Send(not_space,OutputFilter::DEFAULT);	return;	}
+	if(loc.star_name != "Sol")				{ Send(not_sol,OutputFilter::DEFAULT);		return;	}
 
 	Route	route(Game::nav_comp->Find(loc.loc_no,destination));
 	if(route.size() == 0)
@@ -2972,7 +3030,7 @@ void	Player::Goto(const std::string& destination)
 			buffer << loc_name << std::endl;
 		else
 			buffer << " an unspecified destination!" << std::endl;
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -2992,7 +3050,7 @@ void	Player::GroundHog2Commander()
 		XMLRank();
 		std::ostringstream	buffer("");
 		buffer << "Congratulations on your promotion, Commander " << name << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 		buffer.str("");
 		buffer << name << " has promoted to commander.";
@@ -3059,13 +3117,13 @@ Please report problem to feedback@ibgames.com. Thank you.\n");
 		}
 		else
 		{
-			Send(no_hosp);
+			Send(no_hosp,OutputFilter::DEFAULT);
 			SafeHaven();
 		}
 	}
 	else
 	{
-		Send(no_hosp);
+		Send(no_hosp,OutputFilter::DEFAULT);
 		SafeHaven();
 	}
 
@@ -3081,7 +3139,7 @@ Please report problem to feedback@ibgames.com. Thank you.\n");
 		ship->ResetStats(this);
 	}
 
-	Send(Game::system->GetMessage("player","suicide",3));
+	Send(Game::system->GetMessage("player","suicide",3),OutputFilter::DEFAULT);
 	if(CommsAPILevel() > 0)
 		FedMap::XMLNewMap(this);
 	loc.fed_map->AddPlayer(this);
@@ -3120,7 +3178,7 @@ to congratulate you on your promotion to Manufacturer.\n");
 		WriteLog(buffer);
 		buffer << "\n";
 		Game::review->Post(buffer);
-		Send(congrats);
+		Send(congrats,OutputFilter::DEFAULT);
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	}
 }
@@ -3135,11 +3193,11 @@ void	Player::InitMapPointer()
 void	Player::Insure()
 {
 	if(flags.test(INSURED))
-		Send(Game::system->GetMessage("player","insure",1));
+		Send(Game::system->GetMessage("player","insure",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(!loc.fed_map->IsABroker(loc.loc_no))
-			Send(Game::system->GetMessage("player","insure",2));
+			Send(Game::system->GetMessage("player","insure",2),OutputFilter::DEFAULT);
 		else
 		{
 			std::ostringstream	buffer("");
@@ -3149,7 +3207,7 @@ void	Player::Insure()
 			{
 				buffer << "You don't have " << cost << "ig cash to reinsure yourself." << std::endl;
 				text = buffer.str();
-				Send(text);
+				Send(text,OutputFilter::DEFAULT);
 			}
 			else
 			{
@@ -3158,7 +3216,7 @@ void	Player::Insure()
 				buffer << "You transfer the " << cost << "ig it costs to re-insure yourself. ";
 				buffer << "You are now insured." <<std::endl;
 				text = buffer.str();
-				Send(text);
+				Send(text,OutputFilter::DEFAULT);
 				XMLCash();
 				buffer.str("");
 				buffer << name << " has insured.";
@@ -3283,7 +3341,7 @@ void	Player::IssueDividend(long amount)
 	static const std::string	no_co("You don't have a company!\n");
 
 	if(company == 0)
-		Send(no_co);
+		Send(no_co,OutputFilter::DEFAULT);
 	else
 		company->IssueDividend(amount,Company::NORMAL);
 }
@@ -3313,12 +3371,12 @@ void	Player::JoinLouie(Player *player)
 
 	if(louie != 0)
 	{
-		Send(in_game);
+		Send(in_game,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!IsInLoc(player))
 	{
-		Send(not_in_loc);
+		Send(not_in_loc,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -3336,26 +3394,26 @@ void	Player::Jump(const std::string where_to)
 	if(!IsConnected(pl_name))
 	{
 		buffer << "There isn't a direct link to " << pl_name << " from here.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	LocRec	*rec = Game::galaxy->FindLink(pl_name);
 	if(rec == 0)
 	{
-		Send(wrong_name);
+		Send(wrong_name,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(rec->star_name == loc.star_name)
 	{
 		buffer << "You are already in the " << loc.star_name << " system!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!rec->fed_map->IsOpen(this))
 	{
 		buffer << " I'm afraid the " << rec->star_name << " system is closed to visitors at the moment.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -3366,7 +3424,7 @@ void	Player::Jump(const std::string where_to)
 		{
 			buffer << "Your request to make a hyperspace jump to the " << pl_name;
 			buffer << " system has been denied because they consider you an undesirable element!\n";
-			Send(buffer);
+			Send(buffer,OutputFilter::DEFAULT);
 			return;
 		}
 
@@ -3378,10 +3436,19 @@ void	Player::Jump(const std::string where_to)
 		SetEventTracking(false);
 	buffer << "There is a surge of energy and the universe disappears for a few microseconds ";
 	buffer << "before you find yourself in the " << rec->star_name << " system.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << name << "'s spaceship disappears into the hyperspace link in a shower of high energy tachyons.\n";
-	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+	std::string	text(buffer.str());
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
+//	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+
 	FedMap	*from = loc.fed_map;
 	loc.fed_map->RemovePlayer(this);
 	loc.star_name = rec->star_name;
@@ -3392,7 +3459,16 @@ void	Player::Jump(const std::string where_to)
 		loc.fed_map->XMLNewMap(this);
 	buffer.str("");
 	buffer << name << "'s spaceship appears from the hyperspace link in a shower of high energy tachyons.\n";
-	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+	text = buffer.str();
+	pl_list.clear();
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
+//	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
+
 	loc.fed_map->AddJumpPlayer(this,from);
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	delete rec;
@@ -3403,7 +3479,7 @@ bool	Player::Jump2Founder(Player *player)
 	FedMap	*planet = Game::galaxy->FindPlanetByOwner(this);
 	if(planet == 0)
 	{
-		player->Send("Can't find a planet owned by that player.\n");
+		player->Send("Can't find a planet owned by that player.\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -3445,7 +3521,7 @@ const std::string&	Player::LastOn()
 void	Player::LeaveChannel()
 {
 	if(channel.length() == 0)
-		Send(Game::system->GetMessage("player","leavechannel",1));
+		Send(Game::system->GetMessage("player","leavechannel",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(com_unit != 0)
@@ -3460,7 +3536,7 @@ void	Player::LeaveLouie()
 	static const std::string	wrong("You're not currently playing Lucky Louie!\n");
 
 	if(louie == 0)
-		Send(wrong);
+		Send(wrong,OutputFilter::DEFAULT);
 	else
 	{
 		louie->Leave(this);
@@ -3475,7 +3551,7 @@ void	Player::Liquidate(const std::string&	commod)
 	static const std::string	too_low("You need be at least a Trader to deal in futures.\n");
 	if(rank < TRADER)
 	{
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 		return;
 	}
 	loc.fed_map->LiquidateFutures(this,commod);
@@ -3533,18 +3609,18 @@ void	Player::Magnate2Plutocrat()
 {
 	if(loc.fed_map->TotalBuilds() < 335)
 	{
-		Send("You need 335 builds on your planet before you can promote!\n");
+		Send("You need 335 builds on your planet before you can promote!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(Game::syndicate->NewCartel(this,loc.fed_map->HomeStarPtr()->Name()) == 0)
 	{
-		Send("I'm sorry, we can't set up a cartel for you at the moment :(\n");
+		Send("I'm sorry, we can't set up a cartel for you at the moment :(\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	rank = PLUTOCRAT;
-	Send("Congratulations on reaching the highest rank in Federation 2 - Plutocrat!\n");
+	Send("Congratulations on reaching the highest rank in Federation 2 - Plutocrat!\n",OutputFilter::DEFAULT);
 	XMLRank();
 	std::ostringstream	buffer("");
 	buffer << name << " has been elevated to the ranks of the plutocracy!";
@@ -3590,41 +3666,41 @@ void	Player::Marry(const std::string& who_name)
 	Player *player = CurrentMap()->FindPlayer(pl_name);
 	if(player == 0)	// would be spouse in the game?
 	{
-		Send(Game::system->GetMessage("player","marry",1));
+		Send(Game::system->GetMessage("player","marry",1),OutputFilter::DEFAULT);
 		return;
 	}
 	if(player->LocNo() != LocNo())	// would be spouse in the location?
 	{
-		Send(Game::system->GetMessage("player","marry",2));
+		Send(Game::system->GetMessage("player","marry",2),OutputFilter::DEFAULT);
 		return;
 	}
 	std::string official("registrar");
 	if(CurrentMap()->FindObject(official,LocNo()) == 0)
 	{
-		Send(Game::system->GetMessage("player","marry",3));
+		Send(Game::system->GetMessage("player","marry",3),OutputFilter::DEFAULT);
 		return;
 	}
 	if(Slithys() < 1)	// can they give the gift
 	{
-		Send(Game::system->GetMessage("player","marry",4));
+		Send(Game::system->GetMessage("player","marry",4),OutputFilter::DEFAULT);
 		return;
 	}
 	std::ostringstream	buffer;
 	if(player->IsMarried())	// would be spouse already married?
 	{
 		buffer << player->Name() << " is already married!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	if(IsMarried())	// is player married?
 	{
 		buffer << "You are already married to " << Spouse() << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 	if(player == this)	// trying to marry themselves?
 	{
-		Send(Game::system->GetMessage("player","marry",5));
+		Send(Game::system->GetMessage("player","marry",5),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -3675,13 +3751,13 @@ void	Player::Mood()
 		buffer << "You don't have a mood set!\n";
 	else
 		buffer << "Your mood is '" << mood << "'\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::Mood(const std::string& mood_desc)
 {
 	mood = mood_desc;
-	Send(Game::system->GetMessage("player","mood",1));
+	Send(Game::system->GetMessage("player","mood",1),OutputFilter::DEFAULT);
 	Mood();
 }
 
@@ -3709,7 +3785,7 @@ bool	Player::Move(int direction,bool is_following)
 
 	if(IsFrozen())
 	{
-		Send(frozen);
+		Send(frozen,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -3747,7 +3823,7 @@ bool	Player::Move(int direction,bool is_following)
 		if(is_following)
 		{
 			buffer << "You follow the group and move " << dir_names[direction] << ".\n";
-			Send(buffer);
+			Send(buffer,OutputFilter::DEFAULT);
 		}
 		if(flags.test(BRIEF))
 			loc.fed_map->Look(this,loc.loc_no,Location::GLANCE);
@@ -3756,11 +3832,13 @@ bool	Player::Move(int direction,bool is_following)
 		loc.fed_map->ProcessEvent(this,loc.loc_no,Location::INROOM);
 
 		Starve();
-		if((CommsAPILevel() > 0) && loc.fed_map->IsAnExchange(loc.loc_no))
+
+		if(loc.fed_map->IsAnExchange(loc.loc_no))
 		{
-			buffer.str("");
-			buffer << "<s-exchange name='" << loc.fed_map->Title() << "'/>\n";
-			Send(buffer);
+			AttribList attribs;
+			std::pair<std::string,std::string> attrib(std::make_pair("name",loc.fed_map->Title()));
+			attribs.push_back(attrib);
+			Send("",OutputFilter::EXCHANGE,attribs);
 		}
 	}
 	else
@@ -3832,7 +3910,7 @@ void	Player::Overdraft(long amount)
 	if(cash < 0)
 	{
 		cash -=200L;
-		Send(Game::system->GetMessage("player","overdraft",1));
+		Send(Game::system->GetMessage("player","overdraft",1),OutputFilter::DEFAULT);
 		XMLCash();
 	}
 }
@@ -3875,14 +3953,14 @@ void	Player::Pickup()
 	static const std::string	already("You've already picked up the valuable!\n");
 
 	if((task == 0) || !((loc.loc_no == task->pickup_loc) && (loc.map_name == task->pickup_map)))
-		Send(Game::system->GetMessage("player","pickup",1));
+		Send(Game::system->GetMessage("player","pickup",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(task->collected)
-			Send(Game::system->GetMessage("player","pickup",3));
+			Send(Game::system->GetMessage("player","pickup",3),OutputFilter::DEFAULT);
 		else
 		{
-			Send(Game::system->GetMessage("player","pickup",2));
+			Send(Game::system->GetMessage("player","pickup",2),OutputFilter::DEFAULT);
 			task->collected = true;
 			Game::courier->Display(this,task);
 		}
@@ -3894,7 +3972,7 @@ void	Player::ProcessNumber(int number)
 	static const std::string	wrong("You're not currently playing Lucky Louie!\n");
 
 	if(louie == 0)
-		Send(wrong);
+		Send(wrong,OutputFilter::DEFAULT);
 	else
 		louie->NewNumber(this,number);
 }
@@ -3933,13 +4011,13 @@ void	Player::PromotePlanet()
 
 	if(rank < FOUNDER)
 	{
-		Send(rank_error);
+		Send(rank_error,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!IsPlanetOwner())
 	{
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -3947,7 +4025,7 @@ void	Player::PromotePlanet()
 	{
 		if(CurrentMap()->HomeStarPtr()->NumMaps() < 3)
 		{
-			Send("You need at least two planets in your home system before you can promote!\n");
+			Send("You need at least two planets in your home system before you can promote!\n",OutputFilter::DEFAULT);
 			return;
 		}
 		Magnate2Plutocrat();
@@ -3973,13 +4051,13 @@ void	Player::Ranks(const std::string& which)
 {
 	static const std::string	the_ranks("The ranks in Federation II are:\n");
 
-	Send(the_ranks);
+	Send(the_ranks,OutputFilter::DEFAULT);
 	std::ostringstream	buffer("");
 	for(int count = 0;count < MAX_RANK;count++)
 	{
 		buffer << "   " << std::setw(20) << std::left << rank_str[gender][count++];
 		buffer << std::setw(20) << std::left << rank_str[gender][count] << std::endl;
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 	}
 
@@ -4003,19 +4081,9 @@ void	Player::Ranks(const std::string& which)
 	}
 
 	if(promo < PLUTOCRAT)
-		Send(Game::system->GetMessage("player","ranks",promo + 1));
+		Send(Game::system->GetMessage("player","ranks",promo + 1),OutputFilter::DEFAULT);
 	else
-		Send("The top rank is plutocrat - you can't get any higher than that!\n");
-
-/*
-	if(promo <= 9999)
-	{
-		if(promo < PLUTOCRAT)
-			Send(Game::system->GetMessage("player","ranks",promo + 1));
-		else
-			Send("The promotion requirement from Magnate to Plutocrat has not yet been decided.");
-	}
-*/
+		Send("The top rank is plutocrat - you can't get any higher than that!\n",OutputFilter::DEFAULT);
 }
 
 void	Player::Read(std::string& text)
@@ -4031,7 +4099,8 @@ void	Player::Read(std::string& text)
 		{
 			std::ostringstream	buffer("");
 			buffer <<  ">" << line << std::endl;
-			Send(buffer.str());
+			std::string	txt(buffer.str());
+			Send(txt,OutputFilter::DEFAULT);
 		}
 
 		if(status_flags.test(BUY_SHIP))
@@ -4065,7 +4134,7 @@ void	Player::Read(std::string& text)
 void	Player::RejectPendingJob()
 {
 	if(pending == 0)
-		Send("You don't have a job pending!\n");
+		Send("You don't have a job pending!\n",OutputFilter::DEFAULT);
 	else
 	{
 		FedMap	*from = Game::galaxy->FindMap(pending->from);
@@ -4081,7 +4150,7 @@ void	Player::RejectPendingJob()
 
 			delete pending;
 			pending = 0;
-			Send("The cargo's owner has been notified that you are not taking up the offer.\n");
+			Send("The cargo's owner has been notified that you are not taking up the offer.\n",OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -4098,12 +4167,6 @@ void	Player::Relay(Player *player)
 		com_unit->Relay(player);
 }
 
-void	Player::RelayedText(const std::string& text,Player *player)
-{
-	if(com_unit != 0)
-		com_unit->Send(text,player,false);
-}
-
 void	Player::RelayedText(std::ostringstream& text,Player *player)
 {
 	if(com_unit != 0)
@@ -4115,12 +4178,12 @@ void	Player::RelayToChannel()
 	static const std::string	error("You need to tune to a channel before you can relay to it!\n");
 
 	if(channel.length() == 0)
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		std::ostringstream	buffer("");
 		buffer << "You are now relaying to the " << channel << " channel. Be careful!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		com_unit->SetRelayToChannel();
 	}
 }
@@ -4140,11 +4203,11 @@ void	Player::RemoteHug(Player *recipient)
 	buffer << "A tactile enhanced holo of " << name << " shimmers into existence. ";
 	buffer << "The apparition steps forward, gives you a nice hug and vanishes as abruptly ";
 	buffer << "as it appeared, leaving only a rapidly dispersing patch of mist.\n";
-	recipient->Send(buffer,this);
+	recipient->Send(buffer,OutputFilter::DEFAULT,this);
 	buffer.str("");
 	buffer << "Your comms screen shows a picture of " << recipient->Name();
 	buffer << " being given a nice hug.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::RemotePriceCheck(const std::string& commod,const std::string& exch)
@@ -4167,7 +4230,7 @@ Cruikshank & Bone provide details of the requested spot market prices.\n");
 		return;
 	}
 
-	if(exch_map == 0)		{	Send(no_map);	return;	}
+	if(exch_map == 0)		{	Send(no_map,OutputFilter::DEFAULT);	return;	}
 
 	int commod_grp = Game::commodities->Group2Type(commod);
 	if(commod_grp >= 0)
@@ -4175,28 +4238,28 @@ Cruikshank & Bone provide details of the requested spot market prices.\n");
 		if(inventory->InvFlagSet(Inventory::PRICE_CHECK_UPGRADE))
 			exch_map->CheckGroupPrices(this,commod_grp);
 		else
-			Send(no_upgrade);
+			Send(no_upgrade,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(HasRemoteAccessCert())
 	{
-		Send(intro);
+		Send(intro,OutputFilter::DEFAULT);
 		exch_map->CheckCommodityPrices(this,commod_name,false);
 		return;
 	}
 	if((rank != TRADER) && (rank != FINANCIER))
 	{
-		Send(no_cert);
+		Send(no_cert,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!HasFuturesContract(commod_name,exch_map->Title()))
 	{
-		Send(no_contract);
+		Send(no_contract,OutputFilter::DEFAULT);
 		return;
 	}
 
-	Send(intro);
+	Send(intro,OutputFilter::DEFAULT);
 	exch_map->CheckCommodityPrices(this,commod_name,false);
 }
 
@@ -4247,24 +4310,24 @@ code into your teleporter control box to reset the time remaining to a full mont
 
 	if((loc.map_name != "The Lattice") || (loc.loc_no != 1637))
 	{
-		Send("No one here is selling teleporters!\n");
+		Send("No one here is selling teleporters!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(rank < MERCHANT)
 	{
-		Send("Only merchants and above can rent teleporters.\n");
+		Send("Only merchants and above can rent teleporters.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(gifts->Gifts() <= 0)
-		Send("It costs a slithy a month to rent a teleporter!\n");
+		Send("It costs a slithy a month to rent a teleporter!\n",OutputFilter::DEFAULT);
 	else
 	{
 		if(inventory->HasTeleporter(Inventory::TP_1))
-			Send(renewal);
+			Send(renewal,OutputFilter::DEFAULT);
 		else
-			Send(tp);
+			Send(tp,OutputFilter::DEFAULT);
 		gifts->Change(-1);
 		inventory->SetTpRental();
 		std::ostringstream	buffer;
@@ -4278,7 +4341,7 @@ void	Player::RepairDepot(FedMap *fed_map)
 	static const std::string	too_low("You need to be a manufacturer to repair depots!\n");
 
 	if((rank < MANUFACTURER) || (company == 0))
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 	else
 		company->RepairDepot(fed_map);
 }
@@ -4288,7 +4351,7 @@ void	Player::RepairFactory(int factory_num)
 	static const std::string	too_low("You need to be a manufacturer to repair factories!\n");
 
 	if((rank != MANUFACTURER) || (company == 0))
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 	else
 		company->RepairFactory(factory_num);
 }
@@ -4296,7 +4359,7 @@ void	Player::RepairFactory(int factory_num)
 void	Player::Repay(int amount)
 {
 	if(loan == 0)
-		Send(Game::system->GetMessage("player","repay",1));
+		Send(Game::system->GetMessage("player","repay",1),OutputFilter::DEFAULT);
 	else
 	{
 		if(amount > cash)
@@ -4319,12 +4382,17 @@ void	Player::Repay(int amount)
 			buffer << "You still owe the bank " << loan << "ig.";
 
 		buffer << " You have " << cash << "ig left in the bank." << std::endl;
-		Send(buffer.str());
+		Send(buffer.str(),OutputFilter::DEFAULT);
 
 		if(loan == 0)
 		{
 			if(CommsAPILevel() > 0)	// XMLLoan() doesn't handle clearing the loan
-				Send("<s-player-stats stat='loan' amount='0'/>\n");
+			{
+				AttribList attribs;
+				attribs.push_back(std::make_pair("stat","loan"));
+				attribs.push_back(std::make_pair("amount","0"));
+				Send("",OutputFilter::PLAYER_STATS,attribs);
+			}
 			Promote();
 		}
 	}
@@ -4337,7 +4405,7 @@ void	Player::RequestToJoinLouie(Player *player)
 	if(louie == 0)
 	{
 		buffer << name << " isn't playing Lucky Louie at the moment!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 		louie->Join(player);
@@ -4357,8 +4425,8 @@ void	Player::Retrieve(const std::string& obj_name)
 		return;
 	}
 
-	Send("You can only retrieve items in your ship's locker if you are in your ship.\n");
-	Send("If you wish to retrieve items from the system display cabinet, you must be the planet's' owner, and on the landing pad.\n");
+	Send("You can only retrieve items in your ship's locker if you are in your ship.\n",OutputFilter::DEFAULT);
+	Send("If you wish to retrieve items from the system display cabinet, you must be the planet's' owner, and on the landing pad.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::RetrieveLocker(const std::string& obj_name)
@@ -4366,7 +4434,7 @@ void	Player::RetrieveLocker(const std::string& obj_name)
 	int	weight = ship->ObjectWeight(obj_name);
 	if((inventory->WeightCarried() + weight) > strength[CURRENT]/3)
 	{
-		Send("You're holding too much to be able to carry that as well!\n");
+		Send("You're holding too much to be able to carry that as well!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4376,10 +4444,10 @@ void	Player::RetrieveLocker(const std::string& obj_name)
 		object->Location(FedObject::IN_INVENTORY);
 		object->ResetFlag(FedObject::PRIVATE);
 		inventory->AddObject(object);
-		Send("You move it from the locker into your inventory.\n");
+		Send("You move it from the locker into your inventory.\n",OutputFilter::DEFAULT);
 	}
 	else
-		Send("I can't find one of those in the locker!\n");
+		Send("I can't find one of those in the locker!\n",OutputFilter::DEFAULT);
 }
 
 void	Player::RetrieveSystemCabinet(const std::string& obj_name)
@@ -4387,7 +4455,7 @@ void	Player::RetrieveSystemCabinet(const std::string& obj_name)
 	DisplayCabinet	*cabinet = loc.fed_map->HomeStarPtr()->GetCabinet();
 	if(cabinet == 0)
 	{
-		Send("I can't find the display cabinet. Please report this to feedback@ibgames.com. Thank you.\n");
+		Send("I can't find the display cabinet. Please report this to feedback@ibgames.com. Thank you.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4398,7 +4466,7 @@ void	Player::RetrieveSystemCabinet(const std::string& obj_name)
 
 	if((inventory->WeightCarried() + weight) > strength[CURRENT]/3)
 	{
-		Send("You're holding too much to be able to carry that as well!\n");
+		Send("You're holding too much to be able to carry that as well!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4407,10 +4475,10 @@ void	Player::RetrieveSystemCabinet(const std::string& obj_name)
 	{
 		object->Location(FedObject::IN_INVENTORY);
 		inventory->AddObject(object);
-		Send("You move it from the display cabinet into your inventory.\n");
+		Send("You move it from the display cabinet into your inventory.\n",OutputFilter::DEFAULT);
 	}
 	else
-		Send("I can't find one of those in the cabinet!\n");
+		Send("I can't find one of those in the cabinet!\n",OutputFilter::DEFAULT);
 }
 
 void	Player::SafeHaven()
@@ -4428,11 +4496,17 @@ void	Player::Say(std::string& text)
 	std::ostringstream	buffer("");
 	buffer << "You " << verb << ", \"" << text << "\"" << std::endl;
 	std::string	conversation(buffer.str());
-	Send(conversation);
+	Send(conversation,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << name << " " << verb << "s, \"" << text << "\"" << std::endl;
 	conversation = buffer.str();
-	loc.fed_map->RoomSend(this,this,loc.loc_no,conversation,"");
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(conversation,OutputFilter::DEFAULT);
+	}
 }
 
 void	Player::Score()
@@ -4446,7 +4520,7 @@ void	Player::Score()
 	buffer << rank_str[gender][rank] << " " << name /* << " - " << rank_str[gender][rank]*/ << std::endl;
 	buffer << "  Gender: " << gender_str << "   Race: " << race_str	<< std::endl;
 	text = buffer.str();
-	Send(text);
+	Send(text,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  Bank Balance: " << cash << "\n";
 	if(loan > 0)
@@ -4459,10 +4533,10 @@ void	Player::Score()
 		case MERCHANT:		buffer << "  Merchant Rating: " << trader_pts << std::endl;		break;
 		case TRADER:		buffer << "  Trading Rating: " << trader_pts << std::endl;		break;
 	}
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	gifts->Display(buffer);
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << "  Strength     max: " << std::setw(3) << strength[MAXIMUM]
@@ -4479,7 +4553,7 @@ void	Player::Score()
 		buffer << "You are uninsured. (Cost to reinsure is " << killed * 1000 << "ig)\n" << std::endl;
 	if((ship != 0) && (ship->ShipClass() != Ship::UNUSED_SHIP))
 		buffer << "  Owner of a " << ship->Registry() << " registered, " << ship->ClassName() << " class ship" << std::endl;
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "  You are currently ";
 	if(loc.map_name.find("Space") != std::string::npos)
@@ -4487,28 +4561,28 @@ void	Player::Score()
 	else
 		buffer << "on ";
 	buffer << loc.map_name << " in the " << loc.star_name << " system\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	if(company != 0)
 	{
 		buffer << "  CEO of " << company->Name() << "\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 	if(business != 0)
 	{
 		buffer << "  CEO of " << business->Name() << " registered business\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 
 	buffer.str("");
 	buffer << "  Deaths recorded by insurance company: " << killed << "\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	if(IsStaff())
 	{
 		buffer.str("");
 		buffer << "  Teleport address: " << loc.star_name << "." << loc.map_name << "." << loc.loc_no << "\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -4523,7 +4597,7 @@ but with no result, apart from leaving you feeling exhausted.\n");
 
 	if(IsInSpace())
 	{
-		Send(SpaceMsg);
+		Send(SpaceMsg,OutputFilter::DEFAULT);
 		if(ship != 0)
 		{
 			ship->UseFuel(10);
@@ -4532,7 +4606,7 @@ but with no result, apart from leaving you feeling exhausted.\n");
 	}
 	else
 	{
-		Send(GroundMsg);
+		Send(GroundMsg,OutputFilter::DEFAULT);
 		if(stamina[CURRENT] > 15)
 			stamina[CURRENT] -= 10;
 		else
@@ -4551,16 +4625,28 @@ but with no result, apart from leaving you feeling exhausted.\n");
 
 void	Player::SecularService(Player *the_spouse)
 {
-	Send(Game::system->GetMessage("player","marry",6));
-	Send(Game::system->GetMessage("player","marry",7));
-	Send(Game::system->GetMessage("player","marry",8));
-	Send(Game::system->GetMessage("player","marry",9));
-	the_spouse->Send(Game::system->GetMessage("player","marry",7));
-	the_spouse->Send(Game::system->GetMessage("player","marry",8));
-	the_spouse->Send(Game::system->GetMessage("player","marry",9));
-	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",10),"",the_spouse);
-	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",11),"",the_spouse);
-	CurrentMap()->RoomSend(this,0,LocNo(),Game::system->GetMessage("player","marry",12),"",the_spouse);
+	Send(Game::system->GetMessage("player","marry",6),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","marry",7),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","marry",8),OutputFilter::DEFAULT);
+	Send(Game::system->GetMessage("player","marry",9),OutputFilter::DEFAULT);
+	the_spouse->Send(Game::system->GetMessage("player","marry",7),OutputFilter::DEFAULT);
+	the_spouse->Send(Game::system->GetMessage("player","marry",8),OutputFilter::DEFAULT);
+	the_spouse->Send(Game::system->GetMessage("player","marry",9),OutputFilter::DEFAULT);
+
+	PlayerList pl_list;
+	CurrentMap()->PlayersInLoc(LocNo(),pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+		{
+			if((*iter) != the_spouse)
+			{
+				(*iter)->Send(Game::system->GetMessage("player","marry",10),OutputFilter::DEFAULT);
+				(*iter)->Send(Game::system->GetMessage("player","marry",11),OutputFilter::DEFAULT);
+				(*iter)->Send(Game::system->GetMessage("player","marry",12),OutputFilter::DEFAULT);
+			}
+		}
+	}
 
 	std::ostringstream	buffer;
 	buffer << name << " and " << the_spouse->Name() << " have married on ";
@@ -4587,7 +4673,7 @@ void	Player::SellBay(int number)
 		if(business != 0)
 			business->SellBay(number);
 		else
-			Send(error);
+			Send(error,OutputFilter::DEFAULT);
 	}
 }
 
@@ -4600,7 +4686,7 @@ void	Player::SellDepot(FedMap *fed_map)
 		if(business != 0)
 			business->SellDepot(fed_map);
 		else
-			Send("You don't have a company or business, let alone depots.\n");
+			Send("You don't have a company or business, let alone depots.\n",OutputFilter::DEFAULT);
 	}
 }
 
@@ -4613,7 +4699,7 @@ void	Player::SellFactory(int number)
 		if(business != 0)
 			business->SellFactory(number);
 		else
-			Send("You don't have a business or company, let alone factories.\n");
+			Send("You don't have a business or company, let alone factories.\n",OutputFilter::DEFAULT);
 	}
 }
 
@@ -4623,11 +4709,11 @@ void	Player::SellShares(int amount,const std::string& co_name)
 	static const std::string	no_co("You don't seem to have a company!\n");
 
 	if(rank < MANUFACTURER)
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 	else
 	{
 		if(company == 0)
-			Send(no_co);
+			Send(no_co,OutputFilter::DEFAULT);
 		else
 			company->SellShares(amount,co_name);
 	}
@@ -4639,11 +4725,11 @@ void	Player::SellTreasury(int amount)
 	static const std::string	no_co("You don't seem to have a company!\n");
 
 	if(rank < INDUSTRIALIST)
-		Send(too_low);
+		Send(too_low,OutputFilter::DEFAULT);
 	else
 	{
 		if(company == 0)
-			Send(no_co);
+			Send(no_co,OutputFilter::DEFAULT);
 		else
 			company->SellTreasury(amount);
 	}
@@ -4665,39 +4751,47 @@ void	Player::SellWarehouse()
 		}
 		cash += 250000L;
 		XMLCash();
-		Send(Game::system->GetMessage("player","sellwarehouse",1));
+		Send(Game::system->GetMessage("player","sellwarehouse",1),OutputFilter::DEFAULT);
 	}
 	else
-		Send(Game::system->GetMessage("player","sellwarehouse",2));
+		Send(Game::system->GetMessage("player","sellwarehouse",2),OutputFilter::DEFAULT);
 }
 
-bool	Player::Send(const std::string& text,Player *player,bool can_relay)
+bool	Player::Send(const std::string& text,int command,Player *player,bool can_relay)
 {
 	if(com_unit != 0)
 	{
-		com_unit->Send(text,player,can_relay);
+		com_unit->Send(text,command,player,can_relay);
 		return(true);
 	}
 	else
 		return(false);
 }
 
-bool	Player::Send(std::ostringstream& text,Player *player,bool can_relay)
+bool	Player::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
+{
+	if(this == player)
+		return false;
+
+	if(com_unit != 0)
+	{
+		com_unit->Send(text,command,attributes,player,can_relay);
+		return(true);
+	}
+	else
+		return false ;
+}
+
+bool	Player::Send(std::ostringstream& buffer,int command,Player *player,bool can_relay)
 {
 	if(com_unit != 0)
 	{
-		com_unit->Send(text,player,can_relay);
+		std::string	text(buffer.str());
+		com_unit->Send(text,command,player,can_relay);
 		return(true);
 	}
 	else
 		return(false);
-}
-void	Player::SendEMail(const std::string& reply_to,const std::string& subject,const std::string& filename)
-{
-	std::ostringstream	buffer("");
-	buffer << "/bin/mail -s " << subject << " " << email << " < " << filename << " &";
-	WriteErrLog(buffer.str());
-	std::system(buffer.str().c_str());
 }
 
 void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
@@ -4708,12 +4802,12 @@ void	Player::SendMailTo(std::ostringstream& text,const std::string& sender)
 	mssg->from = sender;
 	mssg->body = text.str();
 	Game::fed_mail->Add(mssg);
-	Send("You have mail waiting\n");
+	Send("You have mail waiting\n",OutputFilter::DEFAULT);
 }
 
 void	Player::SendOrMail(std::ostringstream& text,const std::string& sender)
 {
-	if(!Send(text))
+	if(!Send(text,OutputFilter::DEFAULT))
 		SendMailTo(text,sender);
 }
 
@@ -4721,9 +4815,10 @@ void	Player::SendSound(const std::string& sound)
 {
 	if((com_unit != 0) && (CommsAPILevel() > 0))
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-sound name='" << sound << "'/>\n";
-		com_unit->Send(buffer);
+		AttribList attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("name",sound));
+		attribs.push_back(attrib);
+		Send("",OutputFilter::PLAY_SOUND,attribs);
 	}
 }
 
@@ -4737,23 +4832,23 @@ void	Player::SetEventTracking(bool turn_on)
 		if(turn_on)
 		{
 			temp_flags.set(EV_TRACE);
-			Send(is_on);
+			Send(is_on,OutputFilter::DEFAULT);
 		}
 		else
 		{
 			temp_flags.reset(EV_TRACE);
-			Send(is_off);
+			Send(is_off,OutputFilter::DEFAULT);
 		}
 	}
 	else
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 }
 
 void	Player::SetFactoryOutput(int fact_num,const std::string& where)
 {
 	if(!HasACompany())
 	{
-		Send("You don't have a company, or business, let alone any factories!\n");
+		Send("You don't have a company, or business, let alone any factories!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4770,7 +4865,7 @@ void	Player::SetFactoryStatus(int fact_num,const std::string& new_status)
 {
 	if(!HasACompany())
 	{
-		Send("You don't have a company, or business, let alone any factories!\n");
+		Send("You don't have a company, or business, let alone any factories!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4784,7 +4879,7 @@ void	Player::SetFactoryWages(int fact_num,int amount)
 {
 	if(!HasACompany())
 	{
-		Send("You don't have a company, or business, let alone any factories!\n");
+		Send("You don't have a company, or business, let alone any factories!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4797,7 +4892,7 @@ void	Player::SetFactoryWages(int fact_num,int amount)
 void	Player::SetNavFlag(Player *player)
 {
 	if(!HasAShip())
-		player->Send(Game::system->GetMessage("player","setnavflag",1));
+		player->Send(Game::system->GetMessage("player","setnavflag",1),OutputFilter::DEFAULT);
 	else
 	{
 		man_flags.set(NAV_FLAG);
@@ -4837,10 +4932,17 @@ int	Player::Slithys()
 
 void	Player::Smile()
 {
-	Send(Game::system->GetMessage("player","smile",1));
+	Send(Game::system->GetMessage("player","smile",1),OutputFilter::DEFAULT);
 	std::ostringstream	buffer;
 	buffer << name << " is smiling broadly.\n";
-	loc.fed_map->RoomSend(this,this,loc.loc_no,buffer.str(),"");
+	std::string	text(buffer.str());
+	PlayerList pl_list;
+	loc.fed_map->PlayersInLoc(loc.loc_no,pl_list,this);
+	if(!pl_list.empty())
+	{
+		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
+			(*iter)->Send(text,OutputFilter::DEFAULT);
+	}
 }
 
 void	Player::Smile(const std::string& to)
@@ -4869,28 +4971,28 @@ void	Player::Smile(const std::string& to)
 			buffer << gender_str3[recipient->Gender()] << ((adj < 19) ? " a " : " an ");
 			buffer << adjectives[adj] << " smile.\n";
 			text = buffer.str();
-			Send(text);
+			Send(text,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << "Your comm screen lights up with " << name << "'s face, and ";
 			buffer << gender_str2[gender] << " flashes you" << ((adj < 19) ? " a " : " an ");
 			buffer << adjectives[adj] << " smile.\n";
 			text = buffer.str();
-			recipient->Send(text,this);
+			recipient->Send(text,OutputFilter::DEFAULT,this);
 		}
 		else
 		{
 			buffer << to_whom << " isn't around!\n";
 			text = buffer.str();
-			Send(text);
+			Send(text,OutputFilter::DEFAULT);
 		}
 	}
 	else
 	{
 		buffer << "You give " << recipient->Name() << " a happy smile.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		buffer.str("");
 		buffer << name << " has given you a happy smile.\n";
-		recipient->Send(buffer);
+		recipient->Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -4899,7 +5001,7 @@ void	Player::SplitStock()
 	static const std::string	no_co("You don't have a company!\n");
 
 	if(company == 0)
-		Send(no_co);
+		Send(no_co,OutputFilter::DEFAULT);
 	else
 		company->SplitStock();
 }
@@ -4910,7 +5012,7 @@ void	Player::Sponsor(int slithies)
 	if(slithies > gifts->Gifts())
 	{
 		buffer << "I'm sorry, you only have " << gifts->Gifts() << " slithies available.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -4922,7 +5024,7 @@ void	Player::Sponsor(int slithies)
 	buffer << "real name, both, or as an anonymous donation. As a sponsor you will ";
 	buffer << "have access to the hunting lodge in the wilderness area on Earth. ";
 	buffer << "Thank you again for your donation.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "SPONSOR: " << name << " has donated " << slithies << " slithies to fed2.";
 	WriteLog(buffer.str());
@@ -4988,7 +5090,7 @@ void	Player::SpynetReport(Player *player)
 		buffer << ".\n";
 	}
 	buffer << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "This " << rank_str[gender][rank] << " was last heard of ";
 	if(loc.map_name.find("Space") != std::string::npos)
@@ -5032,31 +5134,31 @@ void	Player::SpynetReport(Player *player)
 		buffer << gender_temp << " has a reward of " << reward << " on " << gender_str4 << " head. ";
 	buffer << "We were able to trace assets to the value of " << cash << "ig in various bank ";
 	buffer << "accounts belonging to this individual.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	if(flags.test(ALPHA_CREW))
 	{
 		buffer.str("");
 		buffer << name << " is a member of the Alpha Crew!\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	if(flags.test(NEWBOD))
 	{
 		buffer.str("");
 		buffer << name << " is a member of the Magellan Society.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	if(company != 0)
 	{
 		buffer.str("");
 		buffer << name << " is CEO of " << company->Name() << "\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	if(business != 0)
 	{
 		buffer.str("");
 		buffer << name << " is CEO of " << business->Name() << " registered business\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	if((rank >= FOUNDER) && !IsManager())
 	{
@@ -5065,10 +5167,10 @@ void	Player::SpynetReport(Player *player)
 		{
 			buffer.str("");
 			buffer << name << " is the founder of the " << star->Name() << " system.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			buffer.str("");
 			buffer << star->Name() << " is a member of the " << star->CartelName() << " cartel.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 	int	slithy = gifts->Gifts();
@@ -5076,13 +5178,13 @@ void	Player::SpynetReport(Player *player)
 	{
 		buffer.str("");
 		buffer << name << " possesses the equivalent of " << slithy << " slithy toves.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	if(IsMarried())
 	{
 		buffer.str("");
 		buffer << name << " is married to " << spouse << ".\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 	}
 	if(player->IsStaff())
 	{
@@ -5098,13 +5200,13 @@ void	Player::SpynetReport(Player *player)
 			buffer << " - ";
 			locn->Description(buffer,Location::GLANCE);
 		}
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		if(IsGagged())
 		{
 			buffer.str("");
-			buffer << name << " Has no access to the coms channel, or to the message board. ";
+			buffer << name << " has no access to the coms channel, or to the message board. ";
 			buffer << "Please refer any player questions to feedback@ibgames.net.\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 }
@@ -5117,17 +5219,17 @@ void	Player::StartLouie(int the_stake)
 
 	if(louie != 0)
 	{
-		Send(already_in);
+		Send(already_in,OutputFilter::DEFAULT);
 		return;
 	}
 	if(!IsInBar())
 	{
-		Send(not_bar);
+		Send(not_bar,OutputFilter::DEFAULT);
 		return;
 	}
 
 	louie = new Louie(the_stake,this);
-	Send(ok);
+	Send(ok,OutputFilter::DEFAULT);
 }
 
 void	Player::StartUp(int comms_level)
@@ -5156,7 +5258,7 @@ saying, 'Knock hard. Life is deaf.'\n");
 	Online();
 	games++;
 	last_on = input_time = std::time(0);
-	Send(start);
+	Send(start,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << "Fed2 server code - version " << Fed::version << "\n";
@@ -5165,7 +5267,7 @@ saying, 'Knock hard. Life is deaf.'\n");
 		Send(buffer);
 #else
 	if(IsStaff())
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 #endif
 
 	loc.fed_map = Game::galaxy->Find(loc.star_name,loc.map_name);
@@ -5178,16 +5280,16 @@ saying, 'Knock hard. Life is deaf.'\n");
 	ValidateJobsAK();
 	CapCash();
 	if(!flags.test(INSURED))
-		Send(insurance);
+		Send(insurance,OutputFilter::DEFAULT);
 	if(company != 0)
 		company->UnFreeze();
 	if(business != 0)
 		business->UnFreeze();
 	if(Game::fed_mail->HasMail(this))
-		Send(has_mail);
+		Send(has_mail,OutputFilter::DEFAULT);
 	buffer.str("");
 	buffer << "Last reset at " << Game::start_up;	// start_up is the result of a ctime() call and contains a <CR>
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::Starve()
@@ -5198,11 +5300,11 @@ void	Player::Starve()
 	if(--starvation  <= 0)
 	{
 		if(stamina[CURRENT] == 1)
-			Send(Game::system->GetMessage("player","starve",1));
+			Send(Game::system->GetMessage("player","starve",1),OutputFilter::DEFAULT);
 		else
 		{
 			if(stamina[CURRENT] < 12)
-				Send(Game::system->GetMessage("player","starve",2));
+				Send(Game::system->GetMessage("player","starve",2),OutputFilter::DEFAULT);
 		}
 		starvation = MAX_STARVE;
 		ChangeStamina(-1,true,true);
@@ -5210,7 +5312,7 @@ void	Player::Starve()
 	else
 	{
 		if((stamina[CURRENT] == 1)	&& (starvation < 20))
-			Send(Game::system->GetMessage("player","starve",3));
+			Send(Game::system->GetMessage("player","starve",3),OutputFilter::DEFAULT);
 	}
 }
 
@@ -5228,15 +5330,15 @@ void	Player::Stash(const std::string& obj_name,bool hidden)
 		return;
 	}
 
-	Send("You can only stash items in your ship's locker if you are in your ship.\n");
-	Send("If you wish to stash stuff in the system display cabinet, you must be the planet's' owner, and on the landing pad.\n");
+	Send("You can only stash items in your ship's locker if you are in your ship.\n",OutputFilter::DEFAULT);
+	Send("If you wish to stash stuff in the system display cabinet, you must be the planet's' owner, and on the landing pad.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::StashLocker(const std::string& obj_name)
 {
 	if(ship->LockerIsFull())
 	{
-		Send("The locker seems to be full!\n");
+		Send("The locker seems to be full!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5249,14 +5351,14 @@ void	Player::StashLocker(const std::string& obj_name)
 														(obj_name[0] == 'o') || (obj_name[0] == 'u'))
 			buffer << "n";
 		buffer << " " << obj_name << " in your inventory!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	object->ClearInvFlags();
 	ship->AddObject(object);
 	buffer << "You place the " << obj_name << " in your ship's locker.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::StashSystemCabinet(const std::string& obj_name,bool hidden)
@@ -5264,13 +5366,13 @@ void	Player::StashSystemCabinet(const std::string& obj_name,bool hidden)
 	DisplayCabinet	*cabinet = loc.fed_map->HomeStarPtr()->GetCabinet();
 	if(cabinet == 0)
 	{
-		Send("I can't find the display cabinet. Please report this to feedback@ibgames.com. Thank you.\n");
+		Send("I can't find the display cabinet. Please report this to feedback@ibgames.com. Thank you.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(cabinet->IsFull())
 	{
-		Send("The the display cabinet seems to be full... You need to purchase extra space!\n");
+		Send("The the display cabinet seems to be full... You need to purchase extra space!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5283,7 +5385,7 @@ void	Player::StashSystemCabinet(const std::string& obj_name,bool hidden)
 														(obj_name[0] == 'o') || (obj_name[0] == 'u'))
 			buffer << "n";
 		buffer << " " << obj_name << " in your inventory!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5292,21 +5394,21 @@ void	Player::StashSystemCabinet(const std::string& obj_name,bool hidden)
 		object->SetFlag(FedObject::PRIVATE);
 	cabinet->AddObject(object);
 	buffer << "You place the " << obj_name << " in your system's display cabinet.\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::Store(const Commodity *commodity)
 {
 	if(ship == 0)
 	{
-		Send(Game::system->GetMessage("player","store",1));
+		Send(Game::system->GetMessage("player","store",1),OutputFilter::DEFAULT);
 		return;
 	}
 
 	Cargo *cargo = ship->XferCargo(this,commodity->name);
 	if(cargo == 0)
 	{
-		Send(Game::system->GetMessage("player","store",2));
+		Send(Game::system->GetMessage("player","store",2),OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5324,13 +5426,13 @@ void	Player::Store(const Commodity *commodity)
 
 	Warehouse *ware = loc.fed_map->FindWarehouse(name);
 	if(ware == 0)
-		Send(Game::system->GetMessage("player","store",3));
+		Send(Game::system->GetMessage("player","store",3),OutputFilter::DEFAULT);
 	else
 	{
 		int	bay_no = ware->Store(cargo);
 		if(bay_no == Warehouse::NO_ROOM)
 		{
-			Send(Game::system->GetMessage("player","store",4));
+			Send(Game::system->GetMessage("player","store",4),OutputFilter::DEFAULT);
 			delete cargo;
 			return;
 		}
@@ -5338,7 +5440,7 @@ void	Player::Store(const Commodity *commodity)
 		std::ostringstream	buffer("");
 		buffer << "Your comm unit beeps and displays a message informing you that your cargo of " ;
 		buffer << commodity->name << " is now stored in warehouse bay "<< bay_no << ".\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -5361,7 +5463,7 @@ void	Player::Technocrat2Gengineer()
 		buffer << name << " has promoted to gengineer.";
 		WriteLog(buffer);
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
-		Send("Congratulations on your promotion to Gengineer!\n");
+		Send("Congratulations on your promotion to Gengineer!\n",OutputFilter::DEFAULT);
 		XMLRank();
 	}
 }
@@ -5371,48 +5473,48 @@ void	Player::Teleport(const std::string& address)
 	/************ NOTE: will need changing when Mk3.1 teleporter come in ***********/
 	if(!inventory->HasTeleporter(Inventory::TP_1))	// check for teleporter
 	{
-		Send("You don't have a teleporter!\n");
+		Send("You don't have a teleporter!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(IsInSpace())	// check to see if they are in space
 	{
-		Send("You can't teleport while you are in your spaceship.\n");
+		Send("You can't teleport while you are in your spaceship.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(temp_flags.test(FROZEN))
 	{
-		Send("You can't teleport now!\n");
+		Send("You can't teleport now!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!loc.fed_map->CanTeleport(loc.loc_no))	// check for no teleport current loc
 	{
-		Send("You are in a teleport shielded location!\n");
+		Send("You are in a teleport shielded location!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!inventory->CanTeleport())	// check for no teleport objects
 	{
-		Send("You are carrying at least one object that interferes with teleport transmissions!\n");
+		Send("You are carrying at least one object that interferes with teleport transmissions!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if((ship != 0) && !(ship->GetLocker()->CanTeleport()))
 	{
-		Send("Your ship is carrying at least one object that interferes with teleport transmissions!\n");
+		Send("Your ship is carrying at least one object that interferes with teleport transmissions!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if((ship != 0) && ship->HasCargo())	// check for cargo
 	{
-		Send("You cannot teleport while your ship is carrying cargo!\n");
+		Send("You cannot teleport while your ship is carrying cargo!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(address.find(" space") != std::string::npos)
 	{
-		Send("Fortunately for you, your teleporter is programmed to stop you teleporting into space!\n");
+		Send("Fortunately for you, your teleporter is programmed to stop you teleporting into space!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5430,7 +5532,7 @@ void	Player::Teleport(const std::string& address)
 	if(rec.loc_no == Teleporter::INVALID_ADDRESS)
 	{
 		Send("The command must be in the form of 'teleport xxx' where 'xxx' is a valid \
-location number or planet name.\n");
+location number or planet name.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5461,14 +5563,14 @@ void	Player::TeleportInSystem(const std::string& map_title)
 	if(new_map == 0)
 	{
 		buffer << "This star system doesn't have a planet called " << map_title << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	int lp_loc = new_map->LandingPad();
 	if(lp_loc == -1)
 	{
-		Send("Error! I can't find the landing pad [1]...");
+		Send("Error! I can't find the landing pad [1]...",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5503,13 +5605,13 @@ from the raw energy of Hilbert space. You are left shaking and feeling weak!\n")
 
 	if(!loc.fed_map->IsALoc(loc_num))
 	{
-		Send(not_a_loc);
+		Send(not_a_loc,OutputFilter::DEFAULT);
 		stamina[CURRENT] -= 5;
 		if(stamina[CURRENT] < 1)
 		{
 			stamina[CURRENT] = 1;
 			starvation = MAX_STARVE/2;
-			Send("You feel so weak you almost collapse on the floor...\n");
+			Send("You feel so weak you almost collapse on the floor...\n",OutputFilter::DEFAULT);
 		}
 		XMLStamina();
 		return;
@@ -5517,7 +5619,7 @@ from the raw energy of Hilbert space. You are left shaking and feeling weak!\n")
 
 	if(!loc.fed_map->CanTeleport(loc_num))
 	{
-		Send("The location you are trying to access is teleport shielded!\n");
+		Send("The location you are trying to access is teleport shielded!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5546,19 +5648,19 @@ experience!\n");
 	{
 		buffer << "I can't find a planet called " << map_title;
 		buffer << " in a star system called " << star_name << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!star->IsOpen())
 	{
-		Send("You can only teleport into open systems.\n");
+		Send("You can only teleport into open systems.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(star->IsAnExile(name))
 	{
-		Send(exile);
+		Send(exile,OutputFilter::DEFAULT);
 		cash -= 100000L;
 		return;
 	}
@@ -5566,7 +5668,7 @@ experience!\n");
 	int lp_loc = new_map->LandingPad();
 	if(lp_loc == -1)
 	{
-		Send("Error! I can't find the landing pad [2]...");
+		Send("Error! I can't find the landing pad [2]...",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5593,7 +5695,7 @@ experience!\n");
 		loc.fed_map->Look(this,loc.loc_no,Location::FULL_DESC);
 	loc.fed_map->ProcessEvent(this,loc.loc_no,Location::INROOM);
 	Send("An officer of the Quarantine and Border Control Authority clears you for \
-entrance, and you are free to proceed.\n");
+entrance, and you are free to proceed.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::TeleportToLp()
@@ -5601,7 +5703,7 @@ void	Player::TeleportToLp()
 	int loc_num = loc.fed_map->LandingPad();
 	if(loc_num == -1)
 	{
-		Send("Error! Can't find the map's landing pad...");
+		Send("Error! Can't find the map's landing pad...",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5624,23 +5726,36 @@ void	Player::Tell(const std::string& to_name,const std::string& text)
 	norm_name[0] = std::toupper(norm_name[0]);
 	Player	*recipient = Game::player_index->FindCurrent(norm_name);
 
-	std::ostringstream	buffer;
+	std::string	txt;
 	if(recipient == 0)
 	{
-		buffer <<  "I'm sorry, but " << norm_name << " doesn't seem to be in the game at the moment.\n";
-		Send(buffer);
+		txt += norm_name;
+		txt += " doesn't seem to be around at the moment.\n";
+		Send(txt,OutputFilter::DEFAULT);
 	}
 	else
 	{
-		Send(brief);
+		Send(brief,OutputFilter::DEFAULT);
+
+		AttribList	attribs;
+		std::pair<std::string,std::string> attrib(std::make_pair("name",name));
+		attribs.push_back(attrib);
+
+		// NOTE: Do this in two parts, otherwise FedTerm screws it up
+		std::ostringstream	buffer;
+		std::string	tb;
 		if(recipient->CommsAPILevel() > 0)
-			buffer <<  "<s-tb name='" << name << "'>" << EscapeXML(text) << "</s-tb>\n";
+		{
+			buffer << text << "\n";
+			tb = buffer.str();
+			recipient->Send(tb,OutputFilter::TIGHT_BEAM,attribs);
+		}
 		else
 		{
-			buffer << "Your comm unit signals a tight beam message from ";
-			buffer << name << ", \"" << text << "\"" << std::endl;
+			buffer << "Your comm unit signals a tight beam message from " << name << ", \"" << text << "\"\n";
+			tb = buffer.str();
+			recipient->Send(tb,OutputFilter::DEFAULT,attribs);
 		}
-		recipient->Send(buffer,this);
 	}
 }
 
@@ -5652,14 +5767,14 @@ void	Player::TermWidth(int size)
 void	Player::Time()
 {
 	std::time_t	now = std::time(0);
-	struct std::tm  *date = std::localtime(&now);
+	std::tm  *date = std::localtime(&now);
 
 	std::ostringstream	buffer;
 	buffer << "Local time at the server is: " << std::asctime(date) << Stardate() << "\n";
 	buffer << "You have been in Federation II for " << (now - last_on)/60 << " minutes.\n";
 	buffer << "The reset takes place daily at about 1pm server time. \n";
 	buffer << "All times shown are approximate!\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 
@@ -5689,7 +5804,7 @@ bool	Player::TradingAllowed()
 {
 	if(!CurrentMap()->IsAnExchange(LocNo()))
 	{
-		Send(Game::system->GetMessage("cmdparser","tradingallowed",1));
+		Send(Game::system->GetMessage("cmdparser","tradingallowed",1),OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -5706,7 +5821,7 @@ bool	Player::TradingAllowed()
 		case GENGINEER:
 		case MAGNATE:
 		case PLUTOCRAT:		return(true);
-		default:					Send("You're not allowed to trade on the commodity exchanges!\n");
+		default:					Send("You're not allowed to trade on the commodity exchanges!\n",OutputFilter::DEFAULT);
 									return(false);
 	}
 }
@@ -5715,8 +5830,7 @@ bool	Player::TraderCanTrade()
 {
 	if(trade_cash > MAX_TRADER_EXCH_EARNINGS)
 	{
-		Send("Your order is rejected, since you have exceeded the daily gross income limit for \
-commodity trading!\n");
+		Send("Your order is rejected, since you have exceeded the daily gross income limit for commodity trading!\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 	else
@@ -5731,13 +5845,13 @@ void	Player::TransformSlithies()
 	static const std::string	error("I'm sorry, but I'm unable to carry that out at the moment.\n");
 
 	std::ostringstream	buffer;
-	if(!IsPlanetOwner())	{	Send(not_owner);	return;	}
-	if(Slithys() < 4)		{	Send(too_few);		return;	}
+	if(!IsPlanetOwner())	{	Send(not_owner,OutputFilter::DEFAULT);	return;	}
+	if(Slithys() < 4)		{	Send(too_few,OutputFilter::DEFAULT);	return;	}
 
 	if(CurrentMap()->SlithyXform(this))
 	{
 		AddSlithy(-4);
-		Send(ok);
+		Send(ok,OutputFilter::DEFAULT);
 		buffer << "SLITHY: " << name << " - slithy_to_treasury";
 		WriteLog(buffer);
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
@@ -5759,14 +5873,14 @@ void	Player::UpdateEMail(const std::string& new_email)
 {
 	if((new_email.find('@') == std::string::npos) || (new_email.find('.') == std::string::npos))
 	{
-		Send("That is not a valid e-mail address!\n");
+		Send("That is not a valid e-mail address!\n",OutputFilter::DEFAULT);
 		return;
 	}
 	email = new_email;
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	std::ostringstream	buffer;
 	buffer << "Your registered email address has been changed to: " << email << "\n";
-	Send(buffer);
+	Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Player::UpdatePassword(const std::string& new_pw)
@@ -5774,7 +5888,7 @@ void	Player::UpdatePassword(const std::string& new_pw)
 	int len = new_pw.size();
 	if((len < 8) || (len > 15))
 	{
-		Send("Passwords must be at least 8 and not more than 15 characters.\n");
+		Send("Passwords must be at least 8 and not more than 15 characters.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5782,7 +5896,7 @@ void	Player::UpdatePassword(const std::string& new_pw)
 	{
 		if(!std::isalnum(new_pw[count]))
 		{
-			Send("Passwords can only contain letters and numbers. Please try again.\n");
+			Send("Passwords can only contain letters and numbers. Please try again.\n",OutputFilter::DEFAULT);
 			return;
 		}
 	}
@@ -5796,7 +5910,7 @@ void	Player::UpdatePassword(const std::string& new_pw)
 	unsigned char *pw_digest = new_password.raw_digest();
 	std::memcpy(password,pw_digest,MAX_PASSWD);
 	Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
-	Send("Your password has been updated.\n");
+	Send("Your password has been updated.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::UpgradeAirport()
@@ -5810,13 +5924,13 @@ the Cult of Gaelaan thanking you for your donation of five slithy toves.\n");
 
 	if(Slithys() < 5)
 	{
-		Send(no_funds);
+		Send(no_funds,OutputFilter::DEFAULT);
 		return;
 	}
 
 	if(!IsPlanetOwner())
 	{
-		Send("This isn't your planet!\n");
+		Send("This isn't your planet!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5826,7 +5940,7 @@ the Cult of Gaelaan thanking you for your donation of five slithy toves.\n");
 		std::ostringstream	buffer;
 		buffer << "SLITHY: " << name << " - Airport Upgrade (5)";
 		WriteLog(buffer);
-		Send(thanks);
+		Send(thanks,OutputFilter::DEFAULT);
 	}
 }
 
@@ -5834,12 +5948,12 @@ void	Player::UpgradeDepot()
 {
 	if(!HasACompany())
 	{
-		Send("Only companies and businesses can upgrade depots.\n");
+		Send("Only companies and businesses can upgrade depots.\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(!loc.fed_map->IsAnExchange(loc.loc_no))
 	{
-		Send("You need to be in the exchange to upgrade a depot.\n");
+		Send("You need to be in the exchange to upgrade a depot.\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5853,7 +5967,7 @@ void	Player::UpgradeDepot()
 	{
 		std::ostringstream	buffer;
 		buffer << " Your enterprise doesn't have a depot on " << loc.fed_map->Title() << "!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -5868,7 +5982,7 @@ void	Player::UpgradeFactory(int number)
 	if(company != 0)
 		company->UpgradeFactory(number);
 	else
-		Send("Only manufacturers and above can upgrade their factories.\n");
+		Send("Only manufacturers and above can upgrade their factories.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::UpgradeStorage(int number)
@@ -5876,7 +5990,7 @@ void	Player::UpgradeStorage(int number)
 	if(company != 0)
 		company->UpgradeStorage(number);
 	else
-		Send("Only manufacturers and above can upgrade their factory storage.\n");
+		Send("Only manufacturers and above can upgrade their factory storage.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::ValidateJobsAK()
@@ -5933,7 +6047,7 @@ void	Player::Version()
 	static const std::string	error("You don't own this planet!\n");
 
 	if(!IsPlanetOwner())
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 	else
 		CurrentMap()->Version(this);
 }
@@ -5943,10 +6057,10 @@ void	Player::Void()
 	if(rank == ADVENTURER)
 	{
 		if(task == 0)
-			Send(Game::system->GetMessage("player","void",1));
+			Send(Game::system->GetMessage("player","void",1),OutputFilter::DEFAULT);
 		else
 		{
-			Send(Game::system->GetMessage("player","void",4));
+			Send(Game::system->GetMessage("player","void",4),OutputFilter::DEFAULT);
 			Overdraft(-10000);
 			courier_pts -= 5;
 			XMLPoints();
@@ -5957,22 +6071,22 @@ void	Player::Void()
 	else
 	{
 		if(job == 0)
-			Send(Game::system->GetMessage("player","void",1));
+			Send(Game::system->GetMessage("player","void",1),OutputFilter::DEFAULT);
 		else
 		{
 			if(job->planet_owned != Work::AUTO_GENERATED)
 			{
-				Send("You can't void a job provided by a player!\n");
+				Send("You can't void a job provided by a player!\n",OutputFilter::DEFAULT);
 				return;
 			}
 			if(Game::unload->IsWaiting(this))
 			{
-				Send(Game::system->GetMessage("player","void",3));
+				Send(Game::system->GetMessage("player","void",3),OutputFilter::DEFAULT);
 				return;
 			}
 			if(job->collected)
 			{
-				Send(Game::system->GetMessage("player","void",2));
+				Send(Game::system->GetMessage("player","void",2),OutputFilter::DEFAULT);
 				ship->UnloadCargo(this,job->quantity);
 			}
 			std::ostringstream	buffer("");
@@ -5980,17 +6094,12 @@ void	Player::Void()
 			buffer << "A terse message appears on your comm screen. It formally notifies you that, ";
 			buffer << "under the terms of your contract, you have been fined the sum of ";
 			buffer << fine << "ig." << std::endl;
-			Send(buffer.str());
+			Send(buffer.str(),OutputFilter::DEFAULT);
 			Overdraft(-fine);
 			delete job;
 			job = 0;
 		}
 	}
-}
-
-void	Player::WantAnsi(bool setting)
-{
-	com_unit->WantAnsi(setting);
 }
 
 const std::string&	Player::Where(std::string& where)
@@ -6008,7 +6117,7 @@ void	Player::Xfer2Treasury(int num_megs)
 
 	if(num_megs <= 0)
 	{
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -6016,7 +6125,7 @@ void	Player::Xfer2Treasury(int num_megs)
 	long	amount = num_megs * 1000000L;
 	if(amount < 0L)
 	{
-		Send(overflow);
+		Send(overflow,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -6024,7 +6133,7 @@ void	Player::Xfer2Treasury(int num_megs)
 	{
 		buffer << "You don't have " << num_megs << " MegaGroats in your bank account, only ";
 		buffer << cash << " ig.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -6036,13 +6145,13 @@ void	Player::Xfer2Treasury(int num_megs)
 		buffer << "You grit your teeth and pay the " << tax << " ig tax to a smirking GA ";
 		buffer << "official, and the remainder, " << xfer << " ig, is transferred to ";
 		buffer << CurrentMap()->Title() << "'s treasury.\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 	else
 	{
 		buffer << CurrentMap()->Title() << " doesn't belong to you. Therefore, you can't ";
 		buffer << "transfer money into its treasury!\n";
-		Send(buffer);
+		Send(buffer,OutputFilter::DEFAULT);
 	}
 }
 
@@ -6058,8 +6167,11 @@ void	Player::XMLAKPoints()
 	if((CommsAPILevel() > 0) && (rank == ADVENTURER))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='ak' amount='" << courier_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","ak"));
+		buffer << courier_pts;
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(courier_pts == -1)
 		courier_pts = 0;
@@ -6070,8 +6182,11 @@ void	Player::XMLCash()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='cash' amount='" << cash << "'/>\n";
-		Send(buffer);
+		buffer << cash;
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","cash"));
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6079,28 +6194,36 @@ void	Player::XMLCustomsCert()
 {
 	if((CommsAPILevel() > 0) && HasCustomsCert())
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-ship-stats stat='customs-cert'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","customs-cert"));
+		Send("",OutputFilter::SHIP_STATS,attribs);
+
 	}
 }
 
 void	Player::XMLDesc(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-examine>" << desc << "</s-examine>\n";
-	player->Send(buffer);
+	std::string	text(desc);
+	AttribList attribs;
+	player->Send(text,OutputFilter::EXAMINE,attribs);
 
+	std::ostringstream	buffer;
 	inventory->Display(player,buffer);	// note - buffer isn't used
 
 	if(IsMarried())
 	{
-		buffer.str("");
 		if(player == this)
-			buffer << "<s-examine>You are married to " << spouse << "</s-examine>/n";
+		{
+			buffer << "You are married to " << spouse << "/n";
+			text = buffer.str();
+			Send(text,OutputFilter::EXAMINE,attribs);
+		}
 		else
-			buffer << "<s-examine>" << name << " is married to " << spouse << "</s-examine>\n";
-		player->Send(buffer);
+		{
+			buffer << name << " is married to " << spouse << "/n";
+			text = buffer.str();
+			player->Send(text,OutputFilter::EXAMINE,attribs);
+		}
 	}
 }
 
@@ -6109,15 +6232,24 @@ void	Player::XMLDexterity()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='dex' max='" << dexterity[MAXIMUM];
-		buffer << "' cur='" << dexterity[CURRENT] << "'/>\n";
-		Send(buffer);
+
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","dex"));
+		buffer << dexterity[MAXIMUM];
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << dexterity[CURRENT];
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
 bool	Player::XMLExamine(const std::string& other_name)
 {
 	static const std::string	reflection("You check your reflection in the mirror field of your comm unit.");
+
+	std::string	text;
+	AttribList attribs;
 
 	std::string	caps_name(other_name);
 	Normalise(caps_name);
@@ -6127,15 +6259,18 @@ bool	Player::XMLExamine(const std::string& other_name)
 	// Handle examining a player
 	if((other != 0) && (loc.loc_no == other->LocNo()))
 	{
-		buffer << "<s-examine-start name='" << other->Name() << "' rank='" << other->RankStr() << "'/>\n";
-		Send(buffer);
+		attribs.push_back(std::make_pair("name",other->Name()));
+		attribs.push_back(std::make_pair("rank",other->RankStr()));
+		Send("",OutputFilter::EXAMINE_START,attribs);
+
 		other->XMLDesc(this);
 
 		if(this != other)
 		{
 			buffer.str("");
 			buffer << name << " is looking at you.\n";
-			other->Send(buffer);
+			text = buffer.str();
+			other->Send(text,OutputFilter::DEFAULT);
 		}
 		return(true);
 	}
@@ -6145,23 +6280,25 @@ bool	Player::XMLExamine(const std::string& other_name)
 	{
 		if(CommsAPILevel() > 0)
 		{
-			buffer << "<s-examine-start name='" << Name() << "' rank='" << rank_str[gender][rank] << "'/>\n";
-			Send(buffer);
+			attribs.clear();
 			buffer.str("");
-			buffer << "<s-examine>" << reflection << "</s-examine>\n";
-			Send(buffer);
-			buffer.str("");
+			attribs.push_back(std::make_pair("name",Name()));
+			attribs.push_back(std::make_pair("rank",rank_str[gender][rank]));
+			Send("",OutputFilter::EXAMINE_START,attribs);
+
+			attribs.clear();
+			text = reflection;
+			Send(text,OutputFilter::EXAMINE,attribs);
+
 			XMLDesc(this);
-			Send(buffer);
 			return(true);
 		}
 	}
 
-	// see if it's an object in the inventory
 	FedObject	*obj = inventory->Find(other_name);
-	if(obj != 0)
+	if(obj != 0) // object in the inventory
 	{
-		Send(obj->Desc());
+		Send(obj->Desc(),OutputFilter::DEFAULT);
 		return(true);
 	}
 
@@ -6173,8 +6310,11 @@ void	Player::XMLHaulerPoints()
 	if((CommsAPILevel() > 0) && ((rank == COMMANDER) || (rank == CAPTAIN)))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='hc' amount='" << trader_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","hc"));
+		buffer << trader_pts;
+		std::pair<std::string,std::string> attrib_max(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -1)
 		trader_pts = 0;
@@ -6185,9 +6325,15 @@ void	Player::XMLIntelligence()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='int' max='" << intelligence[MAXIMUM];
-		buffer << "' cur='" << intelligence[CURRENT] << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","int"));
+		buffer << intelligence[MAXIMUM];
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << intelligence[CURRENT];
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6198,8 +6344,12 @@ void	Player::XMLLoan()
 		if(loan > 0L)
 		{
 			std::ostringstream	buffer;
-			buffer << "<s-player-stats stat='loan' amount='" << loan << "'/>\n";
-			Send(buffer);
+			AttribList attribs;
+
+			attribs.push_back(std::make_pair("stat","loan"));
+			buffer << loan;
+			attribs.push_back(std::make_pair("amount",buffer.str()));
+			Send("",OutputFilter::PLAYER_STATS,attribs);
 		}
 	}
 }
@@ -6209,8 +6359,12 @@ void	Player::XMLMerchantPoints()
 	if((CommsAPILevel() > 0) && (rank == MERCHANT))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='merchant' amount='" << trader_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","merchant"));
+		buffer << trader_pts;
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -99999)
 		trader_pts = 0;
@@ -6232,9 +6386,9 @@ void	Player::XMLRank()
 {
 	if(CommsAPILevel() > 0)
 	{
-		std::ostringstream	buffer;
-		buffer << "<s-player-stats rank='" << rank_str[gender][rank] << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("rank",rank_str[gender][rank]));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6251,35 +6405,34 @@ void	Player::XMLSpynetReport(Player *player)
 void	Player::XMLSpynetReportAssetsFlags(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-spynet>We were able to trace assets to the value of " << cash;
-	buffer << "ig in various bank accounts belonging to this individual.</s-spynet>\n";
-	player->Send(buffer);
-
-	buffer.str("");
-	buffer <<"<s-spynet>   </s-spynet>\n";
-	player->Send(buffer);
+	buffer << "We were able to trace assets to the value of " << cash;
+	buffer << "ig in various bank accounts belonging to this individual.";
+	std::string temp(buffer.str());
+	player->Send(temp,OutputFilter::SPYNET);
 
 	if(flags.test(ALPHA_CREW))
 	{
-		buffer.str("");
-		buffer <<"<s-spynet>Member of the Alpha Crew!</s-spynet>\n";
-		player->Send(buffer);
+		temp = "Member of the Alpha Crew!";
+		player->Send(temp,OutputFilter::SPYNET);
 	}
+
 	if(flags.test(NEWBOD))
 	{
-		buffer.str("");
-		buffer << "<s-spynet>Member of the Magellan Society.</s-spynet>\n";
-		player->Send(buffer);
+		temp = "Member of the Magellan Society.";
+		player->Send(temp,OutputFilter::SPYNET);
 	}
 }
 
 void	Player::XMLSpynetReportIntro(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-spynet-start name='" << Name() << "' rank='" << rank_str[gender][rank] << "'/>\n";
-	player->Send(buffer);
-	buffer.str("");
-	buffer << "<s-spynet>" << Name() << " is a " << gender_str1[gender] << " " << race << " who ";
+	AttribList attribs;
+
+	attribs.push_back(std::make_pair("name",Name()));
+	attribs.push_back(std::make_pair("rank",rank_str[gender][rank]));
+	player->Send("",OutputFilter::SPYNET_START,attribs);
+
+	buffer << Name() << " is a " << gender_str1[gender] << " " << race << " who ";
 	if(games < 50)
 		buffer << "has recently arrived in";
 	else
@@ -6307,24 +6460,28 @@ void	Player::XMLSpynetReportIntro(Player *player)
 			buffer << " took out to buy it";
 		}
 	}
-	buffer << ".</s-spynet>\n";
-	player->Send(buffer);
+	buffer << ".";
+	std::string	line(buffer.str());
+	player->Send(line,OutputFilter::SPYNET);
 }
 
 void	Player::XMLSpynetReportMisc(Player *player)
 {
+	std::string	line;
 	std::ostringstream	buffer;
 	if(company != 0)
 	{
 		buffer.str("");
-		buffer << "<s-spynet>CEO of " << EscapeXML(company->Name()) << "</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "CEO of " << EscapeXML(company->Name());
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 	if(business != 0)
 	{
 		buffer.str("");
-		buffer << "<s-spynet>CEO of " << EscapeXML(business->Name()) << "</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "CEO of " << EscapeXML(business->Name());
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 	if((rank >= FOUNDER) && !IsManager())
 	{
@@ -6332,58 +6489,63 @@ void	Player::XMLSpynetReportMisc(Player *player)
 		if(star != 0)
 		{
 			buffer.str("");
-			buffer << "<s-spynet>Founder of the " << star->Name() << " system.</s-spynet>\n";
-			player->Send(buffer);
+			buffer << "Founder of the " << star->Name() << " system.";
+			line = buffer.str();
+			player->Send(line,OutputFilter::SPYNET);
 			buffer.str("");
-			buffer << "<s-spynet>" << star->Name() << " is a member of the ";
-			buffer << star->CartelName() << " cartel.</s-spynet>\n";
-			player->Send(buffer);
+			buffer << star->Name() << " is a member of the ";
+			buffer << star->CartelName() << " cartel.";
+			line = buffer.str();
+			player->Send(line,OutputFilter::SPYNET);
 		}
 	}
 	int	slithy = gifts->Gifts();
 	if(slithy > 0)
 	{
 		buffer.str("");
-		buffer << "<s-spynet>Possesses the equivalent of " << slithy << " slithy toves.</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "Possesses the equivalent of " << slithy << " slithy toves.";
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 	if(IsMarried())
 	{
 		buffer.str("");
-		buffer << "<s-spynet>Is married to " << spouse << ".</s-spynet>\n";
-		player->Send(buffer);
+		buffer << "Is married to " << spouse << ".";
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 }
 
 void	Player::XMLSpynetReportStaff(Player *player)
 {
+	std::string	line;
 	std::ostringstream	buffer;
-	buffer << "<s-spynet>Teleport address: " << loc.star_name << "." << loc.map_name << "." << loc.loc_no;
+	buffer << "Teleport address: " << loc.star_name << "." << loc.map_name << "." << loc.loc_no;
 	Location *locn = 0;
 	if(loc.fed_map != 0)
 		locn = loc.fed_map->FindLoc(loc.loc_no);
-	if(locn == 0)
-		buffer << "</s-spynet>\n";
-	else
+	if(locn != 0)
 	{
 		buffer << " - ";
 		locn->Description(buffer,Location::GLANCE);
-		buffer << "</s-spynet>\n";
 	}
-	player->Send(buffer);
+	line = buffer.str();
+	player->Send(line,OutputFilter::SPYNET);
+
 	if(IsGagged())
 	{
 		buffer.str("");
-		buffer << "<s-spynet>" << name << " Has no access to the coms channel, or to the message board. ";
-		buffer << "Please refer any player questions to feedback@ibgames.net.</s-spynet>\n";
-		player->Send(buffer);
+		buffer << name << " Has no access to the coms channel, or to the message board. ";
+		buffer << "Please refer any player questions to feedback@ibgames.net.";
+		line = buffer.str();
+		player->Send(line,OutputFilter::SPYNET);
 	}
 }
 
 void	Player::XMLSpynetReportWhenWhere(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-spynet>" << name << " was last heard of ";
+	buffer << name << " was last heard of ";
 	if(loc.map_name.find("Space") != std::string::npos)
 		buffer << "in ";
 	else
@@ -6426,8 +6588,8 @@ void	Player::XMLSpynetReportWhenWhere(Player *player)
 		buffer << gender_temp << " is generally considered to be a law abiding citizen.";
 	else
 		buffer << gender_temp << " has a reward of " << reward << " on " << gender_str4 << " head.";
-	buffer << "</s-spynet>\n";
-	player->Send(buffer);
+	std::string line(buffer.str());
+	player->Send(line,OutputFilter::SPYNET);
 }
 
 void	Player::XMLStamina()
@@ -6435,17 +6597,25 @@ void	Player::XMLStamina()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='sta' max='" << stamina[MAXIMUM];
-		buffer << "' cur='" << stamina[CURRENT] << "'/>\n";
-		Send(buffer);
+
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","sta"));
+		buffer << stamina[MAXIMUM];
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << stamina[CURRENT];
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
 void	Player::XMLStats()
 {
 	std::ostringstream	buffer;
-	buffer << "<s-player-stats name='" << name << "'/>\n";
-	Send(buffer);
+	AttribList attribs;
+	attribs.push_back(std::make_pair("name",name));
+	Send("",OutputFilter::PLAYER_STATS,attribs);
+
 	XMLRank();
 	XMLStamina();
 	XMLStrength();
@@ -6457,9 +6627,10 @@ void	Player::XMLStats()
 
 	if((ship != 0) && (ship->ShipClass() != Ship::UNUSED_SHIP))
 	{
-		buffer.str("");
-		buffer << "<s-ship-stats class='" << ship->ClassName() << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("class",ship->ClassName()));
+		Send("",OutputFilter::SHIP_STATS,attribs);
+
 		ship->XMLFuel(this);
 		ship->XMLHull(this);
 		ship->XMLShields(this);
@@ -6476,9 +6647,15 @@ void	Player::XMLStrength()
 	if(CommsAPILevel() > 0)
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='str' max='" << strength[MAXIMUM];
-		buffer << "' cur='" << strength[CURRENT] << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+
+		attribs.push_back(std::make_pair("stat","str"));
+		buffer << strength[MAXIMUM];
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		buffer.str("");
+		buffer << strength[CURRENT];
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 }
 
@@ -6487,8 +6664,11 @@ void	Player::XMLTraderPoints()
 	if((CommsAPILevel() > 0) && (rank == TRADER))
 	{
 		std::ostringstream	buffer;
-		buffer << "<s-player-stats stat='trader' amount='" << trader_pts << "'/>\n";
-		Send(buffer);
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","trader"));
+		buffer << trader_pts;
+		attribs.push_back(std::make_pair("amount",buffer.str()));
+		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -99999)
 		trader_pts = 0;
@@ -6499,7 +6679,7 @@ void	Player::Xt(const std::string& msg)
 	static const std::string	error("You're not tuned to a channel!\n");
 
 	if(channel.length() == 0)
-		Send(error);
+		Send(error,OutputFilter::DEFAULT);
 	else
 	{
 		std::ostringstream	buffer;
@@ -6507,5 +6687,4 @@ void	Player::Xt(const std::string& msg)
 		Game::channel_manager->Send(this,channel,buffer.str());
 	}
 }
-
 

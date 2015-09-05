@@ -16,10 +16,10 @@
 #include <cstring>
 
 #include "event_number.h"
-#include "fed.h"
 #include "fedmap.h"
 #include "msg_number.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 
 FailList	NoMatch::fail_list;
@@ -64,9 +64,9 @@ void NoMatch::ClearFailures()
 void	NoMatch::ListFailures(Player *player)
 {
 	if(fail_list.size() == 0)
-		player->Send("No nomatch occurences yet\n");
+		player->Send("No nomatch occurences yet\n",OutputFilter::DEFAULT);
 	for(FailList::iterator iter = fail_list.begin();iter != fail_list.end();iter++)
-		player->Send(*iter);
+		player->Send(*iter,OutputFilter::DEFAULT);
 }
 
 int	NoMatch::Process(Player *player)
@@ -86,7 +86,7 @@ int	NoMatch::Process(Player *player)
 		{
 			final_text = *mssg;
 			InsertName(player,final_text);
-			player->Send(final_text);
+			player->Send(final_text,OutputFilter::DEFAULT);
 		}
 	}
 	else
@@ -95,7 +95,7 @@ int	NoMatch::Process(Player *player)
 		{
 			std::string	final_text(lo->Find(home));
 			InsertName(player,final_text);
-			player->Send(final_text);
+			player->Send(final_text,OutputFilter::DEFAULT);
 		}
 	}
 	return(CONTINUE);

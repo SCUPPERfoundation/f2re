@@ -159,7 +159,6 @@ private:
 	void	Upgrade(Player *player);
 	void	UpgradeFactory(Player *player);
 	void	UpgradeStorage(Player *player);
-	void	WantAnsi(Player *player);
 	void	Wear(Player *player,std::string& line);
 	void	WhereIs(Player *player,std::string& line);
 	void	Who(Player *player,std::string& line);

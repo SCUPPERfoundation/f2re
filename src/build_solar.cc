@@ -17,6 +17,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -38,7 +39,7 @@ and you watch from the control room as the electricity starts to flow into the l
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(error);
+		 player->Send(error,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -47,7 +48,7 @@ and you watch from the control room as the electricity starts to flow into the l
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -62,7 +63,7 @@ bool	Solar::Add(Player *player,Tokens *tokens)
 {
 	if((fed_map->Economy() < Infrastructure::LEISURE))
 	{
-		 player->Send("Solar collectors can only be built at leisure levels.\n");
+		 player->Send("Solar collectors can only be built at leisure levels.\n",OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -71,20 +72,20 @@ bool	Solar::Add(Player *player,Tokens *tokens)
 	std::ostringstream	buffer;
 	if(total_builds > 15)
 	{
-		player->Send("Your new solar collector fails to add much to the planet's energy budget.\n");
+		player->Send("Your new solar collector fails to add much to the planet's energy budget.\n",OutputFilter::DEFAULT);
 		return(true);
 	}
 
 	if(total_builds < 8)
 	{
-		player->Send("The new solar collector complex comes on stream on time, within budget.\n");
+		player->Send("The new solar collector complex comes on stream on time, within budget.\n",OutputFilter::DEFAULT);
 		return(true);
 	}
 
 	if(total_builds < 13)
 	{
 		player->Send("The erection of further solar collectors, while providing extra energy, \
-also provokes unhappiness about the overshadowing of urban areas by the massive collectors.\n");
+also provokes unhappiness about the overshadowing of urban areas by the massive collectors.\n",OutputFilter::DEFAULT);
 		return(true);
 	}
 
@@ -92,7 +93,7 @@ also provokes unhappiness about the overshadowing of urban areas by the massive 
 	fed_map->AddCategoryConsumptionPoints(Commodities::LEIS,2,true);
 	player->Send("The installation of orbital solar collect and beam down units is accompanied \
 by outbreaks of mass anxiety and political agitation. in spite of this the energy contiues to \
-flow, although for some reason there is a reported increase in leisure activities.\n");
+flow, although for some reason there is a reported increase in leisure activities.\n",OutputFilter::DEFAULT);
 	return(true);
 }
 
@@ -100,7 +101,7 @@ bool	Solar::Demolish(Player *player)
 {
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 }
 
@@ -108,7 +109,7 @@ void	Solar::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Solar Collectors: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Solar::UpdateDisaffection(Disaffection *discontent)
@@ -135,7 +136,9 @@ void	Solar::Write(std::ofstream& file)
 void	Solar::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Solar Collectors: " << total_builds << " built'/>\n";
-	player->Send(buffer);
+	buffer << "Solar Collectors: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
-

@@ -26,7 +26,6 @@ class	Factory
 {
 public:
 	static const int	MIN_WAGE;			// minimum a factory can pay workers
-	static const int	MAX_WAGE;			// maximum a factory can pay workers
 	static const int	MAX_STORAGE;		// maximum storage available for finished goods
 	static const int	MAX_EFFICIENCY;	//	maximum efficiency available
 	static const int	INTERVALS2CYCLE;	// number of intervals in a factory cycle
@@ -68,13 +67,11 @@ private:
 	bool	CompleteCycle();
 	bool	FetchStock(InputRec& input_rec);
 	bool	StoreInDepot(const std::string& co_name,FedMap *fed_map);
-	bool	UpdateInputs();
 	bool	UpdateInputStock(InputRec& input_rec);
 	bool	UpdateLabour();
 
 	void	DeductInputs();
 	void	Sell(FedMap *fed_map);
-	void	StartProduction();
 
 public:
 	Factory(const std::string& who,int num,const std::string& where,const Commodity *commodity);
@@ -97,7 +94,6 @@ public:
 
 	const std::string&	Output()				{ return(output);				}
 	const std::string&	Owner()				{ return(owner);				}
-	const std::string&	PlanetName()		{ return(planet);				}
 
 	bool	ClearStorage();
 	bool	Upgrade();
@@ -111,7 +107,7 @@ public:
 	void	LineDisplay(std::ostringstream& buffer);
 	void	Output(Player *player);
 	void	PlanetLineDisplay(std::ostringstream& buffer);
-	void	PlanetXMLLineDisplay(std::ostringstream& buffer);
+	void	PlanetXMLLineDisplay(Player *player);
 	void	PODisplay(Player *player);
 	void	Production(const char **attrib);
 	void	Reset();
@@ -123,8 +119,6 @@ public:
 	void	UpdateWorkers(Population *population)	{ return;	} /*************** fix! **************/
 	void	Write(std::ofstream& file);
 	void	XMLFactoryInfo(Player *player);
-	void	XMLFactoryInfo(std::ostringstream& buffer);
-	void	XMLFactoryRemove(std::ostringstream& buffer);
 };
 
 #endif

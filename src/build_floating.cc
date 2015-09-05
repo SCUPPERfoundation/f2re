@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -41,7 +42,7 @@ brilliance. You accept it with a modest, self-deprecating, smile.\n");
 	if(CheckPrerequisits(player))
 	{
 		total_builds = 1;
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 	else
@@ -70,7 +71,7 @@ rioting which wrecks the nearly completed city, and you are forced to abandon yo
 	if(++total_builds > 10)
 	{
 		total_builds = 10;
-		player->Send(too_many);
+		player->Send(too_many,OutputFilter::DEFAULT);
 	}
 	else
 	{
@@ -81,13 +82,13 @@ rioting which wrecks the nearly completed city, and you are forced to abandon yo
 		}
 
 		if(total_builds > 8)
-			player->Send(success_10);
+			player->Send(success_10,OutputFilter::DEFAULT);
 		else
 		{
 			if(total_builds > 4)
-				player->Send(success_8);
+				player->Send(success_8,OutputFilter::DEFAULT);
 			else
-				player->Send(success_4);
+				player->Send(success_4,OutputFilter::DEFAULT);
 		}
 	}
 	return(true);
@@ -111,7 +112,7 @@ lack the prerequisites to build a floating city!\n");
 	}
 	else
 	{
-		player->Send(no_prerequisits);
+		player->Send(no_prerequisits,OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -120,7 +121,7 @@ void	FloatingCity::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Floating Cities: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	FloatingCity::UpdateDisaffection(Disaffection *discontent)
@@ -147,7 +148,10 @@ void	FloatingCity::Write(std::ofstream& file)
 void	FloatingCity::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Floating Cities built: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Canal Systems: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 

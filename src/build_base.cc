@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -34,7 +35,7 @@ Base::Base(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::INDUSTRIAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -56,7 +57,7 @@ Base::Base(FedMap *the_map,Player *player,Tokens *tokens)
 			 	buffer << "Your Planetary Defence Base is completed late, but, to everyone's ";
 				buffer << "surprise, within budget. Its day to day operational requirements ";
 				buffer << "spur the production of " << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -76,7 +77,7 @@ built at Agriculture, Resource, and Industrial levels.\n");
 
 	if((fed_map->Economy() > Infrastructure::INDUSTRIAL))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 return(false);
 	}
 
@@ -91,7 +92,7 @@ built at Agriculture, Resource, and Industrial levels.\n");
 		 	buffer << "Your Planetary Defence Base is completed late, but, to everyone's ";
 			buffer << "surprise, within budget. Its day to day operational requirements ";
 			buffer << "spur the production of " << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -102,7 +103,7 @@ built at Agriculture, Resource, and Industrial levels.\n");
 	buffer << "scheduled, but within budget. While the planetary defences ";
 	buffer << "are undoubtedly more formidable as a result, the base seems ";
 	buffer << "to have little effect on the planet's overall production!\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -114,13 +115,13 @@ bool	Base::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -129,7 +130,7 @@ bool	Base::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 			buffer << ", only to defence industry commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -144,7 +145,7 @@ bool	Base::Demolish(Player *player)
 	}
 	else
 	{
-		player->Send("Considerations of state security prevent you from carrying out your planned demolition!\n");
+		player->Send("Considerations of state security prevent you from carrying out your planned demolition!\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -152,7 +153,7 @@ void	Base::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Planetary Defence Bases: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Base::Write(std::ofstream& file)
@@ -163,8 +164,11 @@ void	Base::Write(std::ofstream& file)
 void	Base::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Planetary Defence Bases: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << "Planetary Defence Bases: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

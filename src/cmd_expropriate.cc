@@ -9,19 +9,17 @@
 
 #include "cmd_expropriate.h"
 
-#include <string>
-
 #include <cstdlib>
 
 #include "business.h"
 #include "bus_register.h"
-#include "commodities.h"
 #include "company.h"
 #include "comp_register.h"
 #include "depot.h"
 #include "factory.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "review.h"
 #include "tokens.h"
@@ -39,18 +37,18 @@ void	ExpParser::ExpropriateDepot(Player *player,Tokens *tokens,const std::string
 	static const std::string	no_owner("I can't find the company owner.\n");
 	static const std::string	is_owner("You can't expropriate your own depots!.\n");
 
-	if(!player->CurrentMap()->IsOwner(player))	{ player->Send(not_owner);		return;	}	
-	if(tokens->Size() < 3)								{ player->Send(no_name);		return;	}
+	if(!player->CurrentMap()->IsOwner(player))	{ player->Send(not_owner,OutputFilter::DEFAULT);	return;	}
+	if(tokens->Size() < 3)								{ player->Send(no_name,OutputFilter::DEFAULT);		return;	}
 
 	std::string	co_name(tokens->GetRestOfLine(line,2,Tokens::COMPANY));
 	Depot	*depot = player->CurrentMap()->FindDepot(co_name);
-	if(depot == 0)											{ player->Send(no_depot);	return;	}
+	if(depot == 0)											{ player->Send(no_depot,OutputFilter::DEFAULT);		return;	}
 
 	Company	*company = Game::company_register->Find(depot->Owner());
-	if(company == 0)										{ player->Send(no_company);	return;	}
+	if(company == 0)										{ player->Send(no_company,OutputFilter::DEFAULT);	return;	}
 	Player	*owner = company->CEO();		
-	if(owner == 0)											{ player->Send(no_owner);		return;	}
-	if(player == owner)									{ player->Send(is_owner);		return;	}
+	if(owner == 0)											{ player->Send(no_owner,OutputFilter::DEFAULT);		return;	}
+	if(player == owner)									{ player->Send(is_owner,OutputFilter::DEFAULT);		return;	}
 
 	FedMap	*cur_map = player->CurrentMap();
 	company->DeleteDepot(cur_map);
@@ -62,11 +60,11 @@ void	ExpParser::ExpropriateDepot(Player *player,Tokens *tokens,const std::string
 		buffer<< company_name << "' depot.\n";
 	else
 		buffer<< company_name << "'s depot.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << player->Name() << " has expropriated your company's depot on " << cur_map->Title() << ".\n";
-	owner->Send(buffer);
+	owner->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
  	if(company_name[company_name.length() - 1] == 's')
@@ -88,14 +86,14 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 //	static const std::string	no_commod("I can't find the commodity being produced.\n");
 	static const std::string	is_owner("You can't expropriate your own factories!.\n");
 
-	if(!player->CurrentMap()->IsOwner(player))	{ player->Send(not_owner);		return;	}	
-	if(!isdigit(tokens->Get(2)[0]))					{ player->Send(not_number);	return;	}
-	if(tokens->Size() < 4)								{ player->Send(no_name);		return;	}
+	if(!player->CurrentMap()->IsOwner(player))	{ player->Send(not_owner,OutputFilter::DEFAULT);	return;	}
+	if(!isdigit(tokens->Get(2)[0]))					{ player->Send(not_number,OutputFilter::DEFAULT);	return;	}
+	if(tokens->Size() < 4)								{ player->Send(no_name,OutputFilter::DEFAULT);		return;	}
 
 	std::string	co_name(tokens->GetRestOfLine(line,3,Tokens::COMPANY));
 	int	fac_num = std::atoi(tokens->Get(2).c_str());
 	Factory	*factory = player->CurrentMap()->FindFactory(co_name,fac_num);
-	if(factory == 0)										{ player->Send(no_factory);	return;	}
+	if(factory == 0)										{ player->Send(no_factory,OutputFilter::DEFAULT);	return;	}
 
 	Company	*company = Game::company_register->Find(factory->Owner());
 	Player	*owner = 0;
@@ -105,18 +103,18 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 		Business	*business = Game::business_register->Find(factory->Owner());
 		if(business == 0)
 		{
-			player->Send(no_company);
+			player->Send(no_company,OutputFilter::DEFAULT);
 			return;
 		}
 		owner = business->CEO();
 		if(owner == 0)
 		{
-			player->Send(no_owner);
+			player->Send(no_owner,OutputFilter::DEFAULT);
 			return;
 		}
 		if(player == owner)
 		{
-			player->Send(is_owner);
+			player->Send(is_owner,OutputFilter::DEFAULT);
 			return;
 		}
 		business->DeleteFactory(std::atoi(tokens->Get(2).c_str()));
@@ -127,12 +125,12 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 		owner = company->CEO();
 		if(owner == 0)
 		{
-			player->Send(no_owner);
+			player->Send(no_owner,OutputFilter::DEFAULT);
 			return;
 		}
 		if(player == owner)
 		{
-			player->Send(is_owner);
+			player->Send(is_owner,OutputFilter::DEFAULT);
 			return;
 		}
 		company->DeleteFactory(std::atoi(tokens->Get(2).c_str()));
@@ -147,11 +145,11 @@ void	ExpParser::ExpropriateFactory(Player *player,Tokens *tokens,const std::stri
 	else
 		buffer<< company_name << "'s number ";
 	buffer << fac_num << " factory.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
 	buffer << player->Name() << " has expropriated your company's number " << fac_num << " factory.\n";
-	owner->Send(buffer);
+	owner->Send(buffer,OutputFilter::DEFAULT);
 
 	buffer.str("");
  	if(company_name[company_name.length() - 1] == 's')
@@ -179,9 +177,9 @@ void	ExpParser::Process(Player *player,Tokens *tokens,const std::string& line)
 	
 	switch(FindNoun(tokens->Get(1)))
 	{
-		case  0:	ExpropriateFactory(player,tokens,line);	break;
-		case  1:	ExpropriateDepot(player,tokens,line);		break;
-		default:	player->Send(error);								break;
+		case  0:	ExpropriateFactory(player,tokens,line);		break;
+		case  1:	ExpropriateDepot(player,tokens,line);			break;
+		default:	player->Send(error,OutputFilter::DEFAULT);	break;
 	}
 }
 

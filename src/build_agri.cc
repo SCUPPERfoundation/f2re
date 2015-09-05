@@ -15,6 +15,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -44,7 +45,7 @@ AgriCollege::AgriCollege(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late);
+		 player->Send(too_late,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -52,7 +53,7 @@ AgriCollege::AgriCollege(FedMap *the_map,Player *player,Tokens *tokens)
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success);
+			player->Send(success,OutputFilter::DEFAULT);
 			ok_status = true;
 		}
 		else
@@ -74,7 +75,7 @@ college, who see the proposed new college as a threat to their position. \
 In the end your plans are blocked by a combination of academic hostility, \
 bureaucratic in-fighting and rumours of corruption.\n");
 
-	player->Send(error);
+	player->Send(error,OutputFilter::DEFAULT);
 	return(false);
 }
 
@@ -89,24 +90,18 @@ void	AgriCollege::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Agricultural College: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	AgriCollege::IsObselete()
 {
-	if(fed_map->Economy() >= Infrastructure::TECHNICAL)
-		return(true);
-	else
-		return(false);
+	return(fed_map->Economy() >= Infrastructure::TECHNICAL);
 }
 
 bool	AgriCollege::Riot()
 {
 	fed_map->ReleaseAssets("School",name);
-	if(--total_builds <= 0)
-		return(true);
-	else
-		return(false);
+	return( --total_builds <= 0);
 }
 
 void	AgriCollege::UpdateEfficiency(Efficiency *efficiency)
@@ -121,15 +116,9 @@ void	AgriCollege::Write(std::ofstream& file)
 
 void	AgriCollege::XMLDisplay(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='Agricultural College: Built'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info","Agricultural College: Built"));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
-
-
-
-
-
-
-	
 

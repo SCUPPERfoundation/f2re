@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "tokens.h"
 #include "xml_parser.h"
@@ -35,7 +36,7 @@ soon have it under control and crude oil is pumped through to the refineries.\n"
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::INDUSTRIAL) || (economy > Infrastructure::TECHNICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		ok_status = false;
 	}
 	else
@@ -56,7 +57,7 @@ soon have it under control and crude oil is pumped through to the refineries.\n"
 				std::ostringstream	buffer;
 			 	buffer << "Your drilling/refinery complex comes on-line as planned. Its ";
 				buffer << "output enhances the production of " << tokens->Get(2) << ".\n";
-				player->Send(buffer);
+				player->Send(buffer,OutputFilter::DEFAULT);
 				ok_status = true;
 			}
 		}
@@ -77,7 +78,7 @@ bool	Oil::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::INDUSTRIAL) || (economy > Infrastructure::TECHNICAL))
 	{
-		player->Send(not_allowed);
+		player->Send(not_allowed,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -91,7 +92,7 @@ bool	Oil::Add(Player *player,Tokens *tokens)
 		{
 		 	buffer << "Your drilling/refinery complex come on-line as planned. Its ";
 			buffer << "output enhances the production of " << tokens->Get(2) << ".\n";
-			player->Send(buffer);
+			player->Send(buffer,OutputFilter::DEFAULT);
 			total_builds++;
 			return(true);
 		}
@@ -100,7 +101,7 @@ bool	Oil::Add(Player *player,Tokens *tokens)
 
  	buffer << "Your drilling/refinery complex come on-line as planned, but its ";
  	buffer << "start up seems to have little additional effect on production.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	total_builds++;
 	return(true);
 }
@@ -112,13 +113,13 @@ bool	Oil::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod);
+		player->Send(no_commod,OutputFilter::DEFAULT);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown);
+		player->Send(unknown,OutputFilter::DEFAULT);
 		return(false);
 	}
 
@@ -126,7 +127,7 @@ bool	Oil::CheckCommodity(Player *player,Tokens *tokens)
 	if(!Game::commodities->IsType(tokens->Get(2),Commodities::IND))
 	{
 		buffer << "You cannot allocate production to " << tokens->Get(2) << ", only to industrial commodities.\n";
-		player->Send(buffer);
+		player->Send(buffer,OutputFilter::DEFAULT);
 		return(false);
 	}
 	return(true);
@@ -143,7 +144,7 @@ bool	Oil::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n");
+issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
 		return(false);
 	}
 }
@@ -154,7 +155,7 @@ void	Oil::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " refiner";
 	buffer << ((total_builds == 1) ? "y" : "ies") << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 bool	Oil::RequestResources(Player *player,const std::string& recipient,int quantity)
@@ -180,10 +181,12 @@ void	Oil::Write(std::ofstream& file)
 void	Oil::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info ";
-	buffer << "info='" << name << ": " << total_builds << " refiner";
+	buffer << name << ": " << total_builds << " refiner";
 	buffer << ((total_builds == 1) ? "y" : "ies") << " built'/>\n";
-	player->Send(buffer);
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

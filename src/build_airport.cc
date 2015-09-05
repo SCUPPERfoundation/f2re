@@ -14,6 +14,7 @@
 #include "fedmap.h"
 #include "infra.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "population.h"
 #include "tokens.h"
@@ -45,7 +46,7 @@ leisure level and above planets.\n");
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_soon);
+		 player->Send(too_soon,OutputFilter::DEFAULT);
 		 ok_status = false;
 	}
 	else
@@ -58,7 +59,7 @@ leisure level and above planets.\n");
 
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 		ok_status = true;
 	}
 }
@@ -80,10 +81,10 @@ is greeted with an outburst of total indifference. You've probably got enough of
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success);
+		player->Send(success,OutputFilter::DEFAULT);
 	}
 	else
-		player->Send(too_many);
+		player->Send(too_many,OutputFilter::DEFAULT);
 	
 	return(true);
 }
@@ -96,7 +97,7 @@ void	Airport::Display(Player *player)
 	else
 		buffer << "    Intra-Global";
 	buffer << " Airports: " << total_builds << " built\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 int	Airport::Set(int)
@@ -125,13 +126,15 @@ void	Airport::Write(std::ofstream& file)
 void	Airport::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
-	buffer << "<s-build-planet-info info='";
 	if(trans_global)
 		buffer << "Trans-Global";
 	else
 		buffer << "Intra-Global";
-	buffer << " Airports: " << total_builds << "'/>\n";
-	player->Send(buffer);
+	buffer << " Airports: " << total_builds;
+	AttribList attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::BUILD_PLANET_INFO,attribs);
 }
 
 

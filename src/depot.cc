@@ -17,15 +17,11 @@
 #include "factory.h"
 #include "fedmap.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
 #include "warehouse.h"
 
-const int	Depot::NO_ROOM;
-const int	Depot::INITIAL_BAYS;
-const int	Depot::MAX_BAYS;
 const int	Depot::UPGRADE_BAYS = 10;
-
-const long	Depot::INIT_COST = 1000000L;
 const long	Depot::UPGRADE_COST = 500000L;
 
 Depot::Depot(FedMap *where,const std::string& co_name,int effic,int cur_bays)
@@ -108,7 +104,7 @@ void	Depot::Display(Player *who_to)
 	buffer << "Location: "<< home->Title() << std::endl;
 	buffer << "  Capacity: " << current_bays - 1 << " cargo bays   Workforce: ";
 	buffer << workers << "   Efficiency: " << efficiency << "%\n";
-	who_to->Send(buffer);
+	who_to->Send(buffer,OutputFilter::DEFAULT);
 	for(int count = 1;count < MAX_BAYS;count++)
 	{
 		buffer.str("");
@@ -117,11 +113,11 @@ void	Depot::Display(Player *who_to)
 			is_empty = false;
 			buffer << "  Bay #" << std::setw(2) << std::right << count;
 			bays[count]->Display(buffer);
-			who_to->Send(buffer);
+			who_to->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
 	if(is_empty)
-		who_to->Send(empty);
+		who_to->Send(empty,OutputFilter::DEFAULT);
 }
 
 void	Depot::LineDisplay(Player *who_to)
@@ -129,7 +125,7 @@ void	Depot::LineDisplay(Player *who_to)
 	std::ostringstream	buffer("");
 	buffer << "      " << home->Title() << " - Capacity: " << current_bays - 1;
 	buffer << " bays (" << BaysUsed() << " in use)  " << efficiency << "% efficiency\n";
-	who_to->Send(buffer);
+	who_to->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Depot::LineDisplay(std::ostringstream&	buffer)
@@ -145,7 +141,7 @@ long	Depot::Repair(Player *ceo,long cash_available)
 
 	if(efficiency == 100)
 	{
-		ceo->Send(no_repair);
+		ceo->Send(no_repair,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -153,7 +149,7 @@ long	Depot::Repair(Player *ceo,long cash_available)
 	long cost = 200000 * multiplier;
 	if(cost > cash_available)
 	{
-		ceo->Send(no_cash);
+		ceo->Send(no_cash,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -161,7 +157,7 @@ long	Depot::Repair(Player *ceo,long cash_available)
 	std::ostringstream	buffer;
 	buffer << "Five percent has been restored to the operating efficiency of the ";
 	buffer << home->Title() << " depot at a cost of " << 200 * multiplier << "Kig.\n";
-	ceo->Send(buffer);
+	ceo->Send(buffer,OutputFilter::DEFAULT);
 	return(cost);
 }
 

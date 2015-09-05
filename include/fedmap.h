@@ -140,9 +140,9 @@ public:
 
 	ParaCat		*FindHelpCat();
 	Player		*FindPlayer(const std::string& pl_name);
-	Player		*RiotDamage(int damaged)							{ return(0);	/*********************** Fix this! ***********************/	}
-
-	Star	*HomeStarPtr()													{ return(home_star);				}
+//	Player		*RiotDamage(int damaged)		{ return 0;					} // TODO: Fix this!
+	const PlayerList&	PlayersOnMap()				{ return player_list;	}
+	Star	*HomeStarPtr()								{ return home_star;		}
 
 	Warehouse	*FindWarehouse(const std::string& pl_name);
 	Warehouse	*NewWarehouse(Player *player);
@@ -171,13 +171,12 @@ public:
 	int	CourierLoc()									{ 	return(courier_locs[std::rand() % courier_locs.size()]);	}
 	int	Economy();
 	int	Efficiency(int type) const;
+	int	ExchangeLoc() const 							{ return comm_exch_loc;			}
 	int	FleetSize();
 	int	LandingPad()									{ return(landing_pad);			}
 	int	LandingPad(const std::string& orbit);
 	int	ProcessEvent(Player *player,int loc_no,int type);
 	int	ProcessEvent(Player *player,Location *locn,int type);
-	int	RoomSend(Player *player1,Player *from,int loc_num,const std::string& text,const std::string& xml_text,Player *player2 = 0);
-	int	RoomXMLSend(Player *player1,Player *from,int loc_num,const std::string& text,Player *player2 = 0);
 	int	SectionSize(const std::string& category,const std::string& section);
 	int	TotalBuilds();
 	int	YardMarkup();
@@ -250,9 +249,6 @@ public:
 	void	CheckCommodityPrices(Player *player,const Commodity *commodity,bool send_intro = true);
 	void	CheckGroupPrices(Player *player,int commod_grp);
 	void	Close(Player *player,Tokens *tokens);
-	void	CommodityExchangeSend(const std::string& text);
-	void	CommodityExchangeSendSound(const std::string& sound);
-	void	CommodityExchangeXMLSend(const std::string& text);
 	void	CompileCourierLocs();
 	void	Consolidate(Company *company);
 	void	Consolidate(Business *company);
@@ -292,6 +288,7 @@ public:
 	void	Open(Player *player,Tokens *tokens);
 	void	OrbitLoc(const std::string& orbit)			{ orbit_loc = orbit;				}
 	void	Output(Player *player);
+	void	PlayersInLoc(int loc_no,PlayerList& pl_list,Player *leave_out = 0);
 	void	PODisplay(Player *player);
 	void	PremiumPriceCheck(Player *player,const Commodity *commodity);
 	void	PremiumPriceCheck(const Commodity *commodity,std::ostringstream& buffer,int which);
@@ -326,7 +323,6 @@ public:
 	void	Version(Player *player);
 	void	Who(Player *player);
 	void	XferFunds(Player *player,int amount,const std::string& to);
-	void	XMLSend(const std::string& text);
 };
 
 #endif

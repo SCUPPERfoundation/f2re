@@ -11,7 +11,6 @@
 
 #include <iomanip>
 #include <iostream>
-#include <sstream>
 
 #include <cstdlib>
 
@@ -22,17 +21,15 @@
 #include "company.h"
 #include "comp_register.h"
 #include "depot.h"
-#include "factory.h"
 #include "fedmap.h"
 #include "galaxy.h"
 #include "misc.h"
+#include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "xml_parser.h"
 
 
 const int	Factory::MIN_WAGE = 40;
-const int	Factory::MAX_WAGE = 1000;
 const int	Factory::MAX_STORAGE = 450;
 const int	Factory::MAX_EFFICIENCY = 150;
 const int	Factory::INTERVALS2CYCLE = 100;
@@ -325,7 +322,7 @@ void	Factory::Display(Player *player)
 	buffer << ((disposal == DEPOT) ? "depot" : "exchange") << " where possible\n";
 	buffer << "    Next batch is " << (intervals * 100)/interval_max << "% complete" << std::endl;
 
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Factory::Dump()
@@ -429,7 +426,7 @@ void	Factory::Output(Player *player)
 	std::ostringstream buffer;
 	buffer << "  " << owner << " #" << number << " plant producing " << output;
 	buffer <<  " - Output to " << ((disposal == DEPOT) ? "depot" : "exchange") << "\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Factory::PlanetLineDisplay(std::ostringstream& buffer)
@@ -438,12 +435,14 @@ void	Factory::PlanetLineDisplay(std::ostringstream& buffer)
 	buffer << " plant producing " << output <<  std::endl;
 }
 
-void	Factory::PlanetXMLLineDisplay(std::ostringstream& buffer)
+void	Factory::PlanetXMLLineDisplay(Player *player)
 {
-	buffer << "<s-factory-planet-info info='"; 
-	buffer << EscapeXML(owner) << " #" << number << " plant producing " << output <<  "'/>\n";
+	std::ostringstream buffer;
+	buffer << owner << " #" << number << " plant producing " << output;
+	AttribList attribs;
+	attribs.push_back(std::make_pair("info",buffer.str()));
+	player->Send("",OutputFilter::FACTORY_PLANET_INFO,attribs);
 }
-
 
 void	Factory::PODisplay(Player *player)
 {
@@ -456,7 +455,7 @@ void	Factory::PODisplay(Player *player)
 	else
 		buffer << "mothballed";
 	buffer << "    (Efficiency - " << efficiency << "/" << max_efficiency << ")\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Factory::Production(const char **attrib)
@@ -504,7 +503,7 @@ long	Factory::Repair(Player *player,long cash_available)
 
 	if(efficiency == max_efficiency)
 	{
-		player->Send(no_repair);
+		player->Send(no_repair,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -512,7 +511,7 @@ long	Factory::Repair(Player *player,long cash_available)
 	long cost = 500000 * multiplier;
 	if(cost > cash_available)
 	{
-		player->Send(no_cash);
+		player->Send(no_cash,OutputFilter::DEFAULT);
 		return(0L);
 	}
 
@@ -520,7 +519,7 @@ long	Factory::Repair(Player *player,long cash_available)
 	std::ostringstream	buffer;
 	buffer << "Five percent has been restored to the operating efficiency of factory #";
 	buffer << number << " at a cost of " << 500 * multiplier << "Kig.\n";
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 	return(cost);
 }
 
@@ -611,7 +610,7 @@ void	Factory::SetStatus(Player *player,const std::string& new_status)
 		else
 			buffer << error;
 	}
-	player->Send(buffer);
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 			
 bool	Factory::StoreInDepot(const std::string& co_name,FedMap *fed_map)
@@ -746,18 +745,9 @@ void	Factory::Write(std::ofstream& file)
 
 void	Factory::XMLFactoryInfo(Player *player)
 {
-	std::ostringstream	buffer;
-	buffer << "<s-add-factory output='" << output << "'/>\n";
-	player->Send(buffer);
-}
-
-void	Factory::XMLFactoryInfo(std::ostringstream& buffer)
-{
-	buffer << "<s-add-factory output='" << output << "'/>\n";
-}
-
-void	Factory::XMLFactoryRemove(std::ostringstream& buffer)
-{
-	buffer << "<s-remove-factory output='" << output << "'/>\n";
+	AttribList	attribs;
+	std::pair<std::string,std::string> attrib(std::make_pair("output",output));
+	attribs.push_back(attrib);
+	player->Send("",OutputFilter::ADD_FACTORY,attribs);
 }
 
