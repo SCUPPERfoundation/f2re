@@ -1306,10 +1306,10 @@ void	Infrastructure::SendXMLPlanetInfo(Player *player)
 	attribs.push_back(std::make_pair("economy",econ_names[economy]));
 	buffer.str("");
 	buffer << total_workers;
-	attribs.push_back(std::make_pair("total_wf",buffer.str()));
+	attribs.push_back(std::make_pair("total-wf",buffer.str()));
 	buffer.str("");
 	buffer << workers;
-	attribs.push_back(std::make_pair("avail_wf",buffer.str()));
+	attribs.push_back(std::make_pair("avail-wf",buffer.str()));
 	buffer.str("");
 	buffer << yard_markup;
 	attribs.push_back(std::make_pair("yard",buffer.str()));
