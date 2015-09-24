@@ -6314,6 +6314,7 @@ void	Player::XMLHaulerPoints()
 		attribs.push_back(std::make_pair("stat","hc"));
 		buffer << trader_pts;
 		std::pair<std::string,std::string> attrib_max(std::make_pair("amount",buffer.str()));
+		attribs.push_back(attrib_max);
 		Send("",OutputFilter::PLAYER_STATS,attribs);
 	}
 	if(trader_pts == -1)
