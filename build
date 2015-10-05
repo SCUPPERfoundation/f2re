@@ -2,7 +2,7 @@
 
 # production version
 scons
-make
+/usr/bin/make
 
 # clear the obj files in the test version
 scons -cf SConstruct.test

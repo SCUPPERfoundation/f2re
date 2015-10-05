@@ -1530,7 +1530,7 @@ void	CmdParser::Offer(Player *player, std::string& line)
 {
 	if(tokens->Size() < 5)
 	{
-		player->Send("The format is OFFER <PLAYER> JOB <COMMODITY> <WHERE TO>\n,OutputFilter::DEFAULT",OutputFilter::DEFAULT);
+		player->Send("The format is OFFER <PLAYER> JOB <COMMODITY> <WHERE TO>\n",OutputFilter::DEFAULT);
 		return;
 	}
 	if(!player->IsPlanetOwner())
