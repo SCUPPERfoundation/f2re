@@ -704,6 +704,7 @@ void	Inventory::XMLDisplayPersonal(Player *player)
 
 	DisplayCerts(buffer);
 	buffer << " and that seems to be it.";
+	text = buffer.str();
 	player->Send(text,OutputFilter::EXAMINE,attribs);
 }
 
