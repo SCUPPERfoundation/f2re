@@ -414,7 +414,7 @@ knocked out your navigation computer.\n");
 		player->XMLStats();
 }
 
-void	Ship::LoadEquipment()
+void	Ship::LoadEquipment()	// static
 {
 	std::ostringstream	buffer;
 	buffer << HomeDir() << "/data/equipment.dat";
@@ -761,6 +761,8 @@ void	Ship::XMLShields(Player *player)
 		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
+
+/* -------------- Repair stuff -------------- */
 
 void	Ship::Repair(Player *player,int action)
 {
