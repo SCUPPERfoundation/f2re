@@ -182,7 +182,7 @@ void	Oil::XMLDisplay(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << name << ": " << total_builds << " refiner";
-	buffer << ((total_builds == 1) ? "y" : "ies") << " built'/>\n";
+	buffer << ((total_builds == 1) ? "y" : "ies") << " built";
 	AttribList attribs;
 	std::pair<std::string,std::string> attrib(std::make_pair("info",buffer.str()));
 	attribs.push_back(attrib);
