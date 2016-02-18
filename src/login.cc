@@ -377,13 +377,13 @@ void	Login::StartText(int sd)
 		std::ostringstream	buffer;
 		buffer << "\n                        Alan Lenton's Federation 2\n";
 		buffer << "                              Serenity Edition\n";
-		buffer << "\n           Copyright (c) 1985-2015 Interactive Broadcasting Ltd\n\n";
+		buffer << "           Copyright (c) 1985-2015 Interactive Broadcasting Ltd\n";
 #ifdef FEDTEST
-		buffer << "                     ***** Federation 2 Test Server *****\n\n";
+		buffer << "                     ***** Federation 2 Test Server *****\n";
 #endif
-		buffer << "                         Welcome to Federation 2\n\n";
+		buffer << "                         Welcome to Federation 2\n";
 		buffer << "If you do not have a Federation 2 account, login with the account name 'new' ";
-		buffer << "(without the quote marks) and you will be taken through setting up an account.\n\n";
+		buffer << "(without the quote marks) and you will be taken through setting up an account.\n";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //		buffer << "Please note that we are not accepting new players at the moment, while we sort ";
 //		buffer << "out some problems caused by moving the game to a new server. We expect to be able ";

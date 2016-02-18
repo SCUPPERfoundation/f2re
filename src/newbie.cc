@@ -220,7 +220,7 @@ than three. Please enter a name:\n");
 	int len = line.length();
 	if(len > 0)
 	{
-		if((len >= 3) && (len < 15))
+		if((len >= 3) && (len <= 15))
 		{
 			player->name = line;
 			int len = player->name.length();
