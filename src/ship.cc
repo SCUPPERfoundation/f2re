@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2015
+		Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+#include <gssapi/gssapi.h>
 
 #include "sys/dir.h"
 
@@ -891,5 +892,29 @@ long	Ship::EngineRepair(Player *player,std::ostringstream& buffer,int action)
 	buffer << "   Labor cost: " << total/10 << "ig\n";
 	total += (total/10L);
 	return(total);
+}
+
+
+/* ---------------------- Work in progress ---------------------- */
+
+void 	Ship::SendManifest(Player *player)
+{
+	std::ostringstream	buffer;
+	AttribList attribs;
+
+	buffer << max_hold;
+	attribs.push_back(std::make_pair("max-hold",buffer.str()));
+	buffer.str("");
+	buffer << cur_hold;
+	attribs.push_back(std::make_pair("cur-hold",buffer.str()));
+	player->Send("",OutputFilter::MANIFEST,attribs);
+
+	if(manifest.size() > 0)
+	{
+		for(Manifest::iterator iter = manifest.begin();iter != manifest.end();iter++)
+		{
+			(*iter)->XMLDisplay(player);
+		}
+	}
 }
 

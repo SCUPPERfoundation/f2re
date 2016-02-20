@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2015
+		Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -37,6 +37,7 @@ public:
 	void	Display(Player *player);
 	void	Display(std::ostringstream& buffer);
 	void	Write(std::ofstream&	file,int indent_size = 0);
+	void	XMLDisplay(Player *player);
 };
 
 #endif

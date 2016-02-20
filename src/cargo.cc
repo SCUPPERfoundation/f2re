@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2015
+		Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -58,4 +58,15 @@ void	Cargo::Write(std::ofstream& file,int indent_size)
 	file << buffer.str() << std::endl;
 }
 
+void	Cargo::XMLDisplay(Player *player)
+{
+	std::ostringstream	buffer;
+	AttribList attribs;
+
+	attribs.push_back(std::make_pair("name",name));
+	buffer << cost;
+	attribs.push_back(std::make_pair("cost",buffer.str()));
+	attribs.push_back(std::make_pair("origin",planet));
+	player->Send("",OutputFilter::CARGO,attribs);
+}
 

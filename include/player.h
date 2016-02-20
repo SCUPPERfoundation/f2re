@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		       Copyright (c) Alan Lenton 1985-2015
+		       Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -564,6 +564,7 @@ public:
 	void	SellTreasury(int amount);
 	void	SendOrMail(std::ostringstream& text,const std::string& sender);
 	void	SendMailTo(std::ostringstream& text,const std::string& sender);
+	void	SendManifest();
 	void	SendSound(const std::string& sound);
 	void	SetCP(int amount)									{ courier_pts = amount;		}
 	void	SetEmail(const std::string& new_email)		{ email = new_email;			}

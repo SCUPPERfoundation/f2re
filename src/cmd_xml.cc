@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2015
+		Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -26,7 +26,7 @@ const int	CmdXML::UNKNOWN = 9999;
 const char	*CmdXML::elements[] =
 {
 	"c-fedterm", "c-rev-no-op", "c-comms-level", "c-planets", "c-planet-info",	//  0-4
-	"c-send-system-links",
+	"c-send-system-links", "c-send-manifest"
 	""
 };
 
@@ -109,6 +109,7 @@ void	CmdXML::StartElement(const char *element,const char **attrib)
 		case	 3:	SendPlanetNames(attrib);						break;	// 'c-planets'
 		case	 4:	SendPlanetInfo(attrib);							break;	//	'c-planet-info'
 		case	 5:	Game::galaxy->XMLListLinks(owner,owner->CurrentMap()->HomeStarPtr()->Name());	break; // c-send-system-links
+		case	 6:	owner->SendManifest();							break;	// 'c-send-manifest'
 	}
 }
 

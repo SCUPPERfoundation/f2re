@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2015
+		Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -377,7 +377,7 @@ void	Login::StartText(int sd)
 		std::ostringstream	buffer;
 		buffer << "\n                        Alan Lenton's Federation 2\n";
 		buffer << "                              Serenity Edition\n";
-		buffer << "           Copyright (c) 1985-2015 Interactive Broadcasting Ltd\n";
+		buffer << "           Copyright (c) 1985-2016 Interactive Broadcasting Ltd\n";
 #ifdef FEDTEST
 		buffer << "                     ***** Federation 2 Test Server *****\n";
 #endif

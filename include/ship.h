@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------
-		Copyright (c) Alan Lenton 1985-2015
+		Copyright (c) Alan Lenton 1985-2016
 	All Rights Reserved. No part of this software may be reproduced,
 	transmitted, transcribed, stored in a retrieval system, or translated
 	into any human or computer language, in any form or by any means,
@@ -135,6 +135,7 @@ public:
 	void	DisplayObjects(Player *player);
 	void	Repair(Player *player,int action);
 	void	ResetStats(Player *player);
+	void 	SendManifest(Player *player);
 	void	SetRegistry(Player *player);
 	void	StatusReport(Player *player);
 	void	TopUpFuel(Player *player);
