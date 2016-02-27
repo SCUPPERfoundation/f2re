@@ -26,7 +26,7 @@ const int	CmdXML::UNKNOWN = 9999;
 const char	*CmdXML::elements[] =
 {
 	"c-fedterm", "c-rev-no-op", "c-comms-level", "c-planets", "c-planet-info",	//  0-4
-	"c-send-system-links", "c-send-manifest"
+	"c-send-system-links", "c-send-manifest",
 	""
 };
 

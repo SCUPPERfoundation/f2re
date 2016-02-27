@@ -311,6 +311,14 @@ void	Location::WriteVocab(std::ofstream& file)
 	}
 }
 
+void	Location::XMLFlags(std::ostringstream& buffer)
+{
+	if(flags.test(SPACE))		buffer << "s";
+	if(flags.test(LINK))			buffer << "l";
+	if(flags.test(PEACE))		buffer << "p";
+	// Add other flags as needed
+}
+
 void	Location::XMLNewLoc(Player *player,int extent)
 {
 	static const std::string exit_names[] =
@@ -321,6 +329,10 @@ void	Location::XMLNewLoc(Player *player,int extent)
 	buffer << loc_no;
 	attribs.push_back(std::make_pair("loc-num",buffer.str()));
 	attribs.push_back(std::make_pair("name",name));
+	buffer.str("");
+	XMLFlags(buffer);
+	if(buffer.str().size() > 0)
+		attribs.push_back(std::make_pair("flags",buffer.str()));
 	for(int count = 0;exit_names[count] != "";count++)
 	{
 		if(exits[count] >= 0)

@@ -4811,6 +4811,12 @@ void	Player::SendOrMail(std::ostringstream& text,const std::string& sender)
 		SendMailTo(text,sender);
 }
 
+void	Player::SendManifest()
+{
+	if(HasAShip())
+		ship->SendManifest(this);
+}
+
 void	Player::SendSound(const std::string& sound)
 {
 	if((com_unit != 0) && (CommsAPILevel() > 0))
@@ -6691,8 +6697,3 @@ void	Player::Xt(const std::string& msg)
 
 /* ---------------------- Work in progress ---------------------- */
 
-void	Player::SendManifest()
-{
-	if(HasAShip())
-		ship->SendManifest(this);
-}

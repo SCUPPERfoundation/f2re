@@ -55,6 +55,8 @@ private:
 	LocVocab		vocab;								// vocabulary specific to this location
 	DisplayCabinet	*cabinet;						// display cabinet for landing pad
 
+	void	XMLFlags(std::ostringstream& buffer);
+
 public:
 	Location();
 	Location(int loc_num);
@@ -76,6 +78,7 @@ public:
 	bool	IsAnExchange()														{ return(flags.test(EXCHANGE));		}
 	bool	IsAHospital()														{ return(flags.test(HOSPITAL));		}
 	bool	IsALink()															{ return(flags.test(LINK));			}
+	bool 	IsAPeaceLoc()														{ return(flags.test(PEACE));			}
 	bool	IsAPickup()															{ return(flags.test(PICKUP));			}
 	bool	IsARepairShop()													{ return(flags.test(REPAIR));			}
 	bool	IsAYard()															{ return(flags.test(SHIPYARD));		}

@@ -16,7 +16,6 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
-#include <gssapi/gssapi.h>
 
 #include "sys/dir.h"
 
