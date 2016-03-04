@@ -504,6 +504,27 @@ FedObject	*Ship::RetrieveObject(const std::string& obj_name)
 	return(locker->RemoveObject(obj_name));
 }
 
+void 	Ship::SendManifest(Player *player)
+{
+	std::ostringstream	buffer;
+	AttribList attribs;
+
+	buffer << max_hold;
+	attribs.push_back(std::make_pair("max-hold",buffer.str()));
+	buffer.str("");
+	buffer << cur_hold;
+	attribs.push_back(std::make_pair("cur-hold",buffer.str()));
+	player->Send("",OutputFilter::MANIFEST,attribs);
+
+	if(manifest.size() > 0)
+	{
+		for(Manifest::iterator iter = manifest.begin();iter != manifest.end();iter++)
+		{
+			(*iter)->XMLDisplay(player);
+		}
+	}
+}
+
 void	Ship::SetRegistry(Player *player)
 {
 	if(player->CurrentMap()->CanRegisterShips())
@@ -681,6 +702,21 @@ void	Ship::XMLComputer(Player *player)
 		buffer << computer.cur_level;
 		attribs.push_back(std::make_pair("cur",buffer.str()));
 		player->Send("",OutputFilter::SHIP_STATS,attribs);
+		player->Send("",OutputFilter::COMP_STATS,attribs);
+
+		buffer.str("");
+		attribs.clear();
+		attribs.push_back(std::make_pair("stat","sensors"));
+		buffer << computer.sensors;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::COMP_STATS,attribs);
+
+		buffer.str("");
+		attribs.clear();
+		attribs.push_back(std::make_pair("stat","jammers"));
+		buffer << computer.jammers;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		player->Send("",OutputFilter::COMP_STATS,attribs);
 	}
 }
 
@@ -742,6 +778,7 @@ void	Ship::XMLNavComp(Player *player)
 		AttribList attribs;
 		attribs.push_back(std::make_pair("stat","navcomp"));
 		player->Send("",OutputFilter::SHIP_STATS,attribs);
+		player->Send("",OutputFilter::COMP_STATS,attribs);
 	}
 }
 
@@ -761,6 +798,67 @@ void	Ship::XMLShields(Player *player)
 		player->Send("",OutputFilter::SHIP_STATS,attribs);
 	}
 }
+
+void 	Ship::XMLStats(Player *player)
+{
+	AttribList attribs;
+	attribs.push_back(std::make_pair("class",ClassName()));
+	player->Send("",OutputFilter::SHIP_STATS,attribs);
+
+	XMLFuel(player);
+	XMLHull(player);
+	XMLShields(player);
+	XMLEngines(player);
+	XMLComputer(player);
+	XMLCargo(player);
+	XMLNavComp(player);
+	XMLWeapons(player);
+}
+
+void	Ship::XMLWeapons(Player *player)
+{
+	std::ostringstream	buffer;
+	AttribList attribs;
+
+	if(magazine > 0)
+	{
+		attribs.push_back(std::make_pair("stat","missiles"));
+		buffer << missiles;
+		attribs.push_back(std::make_pair("cur",buffer.str()));
+		buffer.str("");
+		buffer << magazine;
+		attribs.push_back(std::make_pair("max",buffer.str()));
+		player->Send("",OutputFilter::WEAPON,attribs);
+	}
+
+	if(HasWeapons())
+	{
+		for(int count = 0;count < MAX_HARD_PT;count++)
+		{
+			// TODO: replace the 100 (%) with damage/efficiency when that is oded properly
+			switch(weapons[count].type)
+			{
+				// TODO: replace '100' with 'efficiency' once fighting is in
+				case Weapon::MISSILE_RACK:	XMLWeaponStat(player,100,"rack"); 	break;
+				case Weapon::LASER:			XMLWeaponStat(player,100,"laser");	break;
+				case Weapon::TWIN_LASER:	XMLWeaponStat(player,100,"tl"); 		break;
+				case Weapon::QUAD_LASER:	XMLWeaponStat(player,100,"ql");		break;
+			}
+		}
+	}
+}
+
+void 	Ship::XMLWeaponStat(Player *player,int efficiency,std::string name)
+{
+	std::ostringstream	buffer;
+	AttribList attribs;
+
+	attribs.push_back(std::make_pair("stat",name));
+	buffer << efficiency << "%";
+	attribs.push_back(std::make_pair("cur",buffer.str()));
+	player->Send("",OutputFilter::WEAPON,attribs);
+}
+
 
 /* -------------- Repair stuff -------------- */
 
@@ -895,25 +993,4 @@ long	Ship::EngineRepair(Player *player,std::ostringstream& buffer,int action)
 
 
 /* ---------------------- Work in progress ---------------------- */
-
-void 	Ship::SendManifest(Player *player)
-{
-	std::ostringstream	buffer;
-	AttribList attribs;
-
-	buffer << max_hold;
-	attribs.push_back(std::make_pair("max-hold",buffer.str()));
-	buffer.str("");
-	buffer << cur_hold;
-	attribs.push_back(std::make_pair("cur-hold",buffer.str()));
-	player->Send("",OutputFilter::MANIFEST,attribs);
-
-	if(manifest.size() > 0)
-	{
-		for(Manifest::iterator iter = manifest.begin();iter != manifest.end();iter++)
-		{
-			(*iter)->XMLDisplay(player);
-		}
-	}
-}
 

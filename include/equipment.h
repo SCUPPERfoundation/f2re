@@ -60,7 +60,7 @@ struct	Weapon
 struct	WeaponRec
 {
 	int	type;
-	int	damage;
+	int	damage; // efficiency remaining
 };
 
 #endif

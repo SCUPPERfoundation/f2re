@@ -6634,17 +6634,7 @@ void	Player::XMLStats()
 
 	if((ship != 0) && (ship->ShipClass() != Ship::UNUSED_SHIP))
 	{
-		AttribList attribs;
-		attribs.push_back(std::make_pair("class",ship->ClassName()));
-		Send("",OutputFilter::SHIP_STATS,attribs);
-
-		ship->XMLFuel(this);
-		ship->XMLHull(this);
-		ship->XMLShields(this);
-		ship->XMLEngines(this);
-		ship->XMLComputer(this);
-		ship->XMLCargo(this);
-		ship->XMLNavComp(this);
+		ship->XMLStats(this);
 		XMLCustomsCert();
 	}
 }

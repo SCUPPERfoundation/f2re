@@ -90,6 +90,14 @@ private:
 	long	ShieldRepair(Player *player,std::ostringstream& buffer,int action);
 
 	void	SetUpStarterSpecial();
+	void	XMLCargo(Player *player);
+	void	XMLComputer(Player *player);
+	void	XMLEngines(Player *player);
+	void	XMLHull(Player *player);
+	void	XMLNavComp(Player *player);
+	void	XMLShields(Player *player);
+	void	XMLWeapons(Player *player);
+	void 	XMLWeaponStat(Player *player,int efficiency,std::string name);
 
 public:
 	Ship();
@@ -142,13 +150,8 @@ public:
 	void	TransferLocker(Player* player,Ship *new_ship);
 	void	UnloadCargo(Player *player,int amount);
 	void	UseFuel(int amount);
-	void	XMLCargo(Player *player);
-	void	XMLComputer(Player *player);
-	void	XMLEngines(Player *player);
 	void	XMLFuel(Player *player);
-	void	XMLHull(Player *player);
-	void	XMLNavComp(Player *player);
-	void	XMLShields(Player *player);
+	void 	XMLStats(Player *player);
 };
 
 struct DbShip

@@ -127,6 +127,8 @@ std::string& OutputFilter::Process()
 		case FEDTERM:					return XmlNoAttrib("s-fedterm");
 		case MANIFEST:					return XmlNormal("s-manifest");
 		case CARGO:						return XmlNormal("s-cargo");
+		case WEAPON:					return XmlNormal("s-weapon-stats");
+		case COMP_STATS:				return XmlNormal("s-computer-stats");
 
 		default:							return text;
 	}
