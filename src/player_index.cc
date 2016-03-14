@@ -521,6 +521,7 @@ it from http://www.ibgames.net/fed2/fedterm/index.html\n    \n");
 	desc_index[player->Socket()] = player;
 	std::ostringstream	buffer;
 	buffer << player->Name() << " has started playing Federation II.\n";
+	SendPlayerInfo(player);
 	Game::review->Post(buffer);
 
 /*
