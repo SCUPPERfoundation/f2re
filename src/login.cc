@@ -88,8 +88,6 @@ bool	Login::ProcessName(int sd,std::string& text,LoginRec *rec)
 {
 	const std::string	ac_name_req("\nPlease supply a name for your account (Min 5, max 23 characters, letters and numbers only):\n");
 	const std::string	password_req("Password:\n");
-//	const std::string	already_processing("\n\nI'm sorry, I can't process a new player at the moment, please try again in a couple of minutes. Thank you.\n");
-//	const std::string no_newbies("\n\nI'm sorry, we are not accepting new players at the moment.\n");
 
 
 	std::string	line;
@@ -115,34 +113,37 @@ bool	Login::ProcessNewAcEMail(int sd,std::string& text,LoginRec *rec)
 {
 	const std::string	wrong("\nYou must give a valid e-mail address. Please try again.\nE-mail Address:\n");
 	const std::string	confirming("\nAccount set up. Please wait while we start up your Federation II character.\n");
-	const std::string	sorry("Sorry someone took that name while you were completing the details. Please try again.\n");
+	const std::string	sorry("\nThat account name is already in use. Please re-logon and try again try again. Thank you.\n");
 
 	std::string	line;
 	InputBuffer(rec->input_buffer,text,line);
-
 	int	len = line.length();
 	if(len > 0)
 	{
 		if((line.find('@') != std::string::npos) && (line.length() >= 8))
 		{
-			Player	*player = Game::player_index->FindAccount(rec->name);
-			if(player != 0)
-			{
-				write(sd,sorry.c_str(),sorry.length());
-				rec->name = "";
-				rec->password = "";
-				rec->status = NEW_AC_NAME;
-				return true;
-			}
-			rec->email = line;
-			write(sd,confirming.c_str(),confirming.length());
-
 			len = rec->name.length();
 			for(int count = 0;count < len;count++)
 				rec->name[count] = std::tolower(rec->name[count]);
 			len = rec->password.length();
 			for(int count = 0;count < len;count++)
 				rec->password[count] = std::tolower(rec->password[count]);
+
+			Player	*player = Game::player_index->FindAccount(rec->name);
+			if(player != 0) // Already in use
+			{
+				write(sd,sorry.c_str(),sorry.length());
+				LoginIndex::iterator iter = login_index.find(rec->sd);
+				if(iter != login_index.end())
+				{
+					LoginRec	*rec = iter->second;
+					login_index.erase(iter);
+					delete rec;
+				}
+				return false;
+			}
+			rec->email = line;
+			write(sd,confirming.c_str(),confirming.length());
 
 			Game::player_index->AccountOK(rec);
 			LoginIndex::iterator iter = login_index.find(rec->sd);
@@ -228,7 +229,7 @@ bool	Login::ProcessNewAcPwd(int sd,std::string& text,LoginRec *rec)
 
 bool	Login::ProcessNewAcPwdConf(int sd,std::string& text,LoginRec *rec)
 {
-	const std::string	email_addr("\nPlease provide an e-mail address at which we can contact you -(this address will only be used by ibgames and our credit card processing agency):\n");
+	const std::string	email_addr("\nPlease provide an e-mail address at which we can contact you - (this address will only be used by ibgames and our credit card processing agency):\n");
 	const std::string	wrong("\nYour password and confirmation don't match. Please try again.\nPassword:\n");
 
 	std::string	line;
@@ -384,11 +385,6 @@ void	Login::StartText(int sd)
 		buffer << "                         Welcome to Federation 2\n";
 		buffer << "If you do not have a Federation 2 account, login with the account name 'new' ";
 		buffer << "(without the quote marks) and you will be taken through setting up an account.\n";
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//		buffer << "Please note that we are not accepting new players at the moment, while we sort ";
-//		buffer << "out some problems caused by moving the game to a new server. We expect to be able ";
-//		buffer << "to allow new players in the very near future.\nWe apologise for the inconvenience.\n\n";
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		buffer << "Login:\n";
 		start_text = buffer.str();
 	}
