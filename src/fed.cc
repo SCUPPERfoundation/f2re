@@ -51,7 +51,7 @@
 #include "syndicate_parser.h"
 #include "unload.h"
 
-const std::string	Fed::version = "1.89.79";
+const std::string	Fed::version = "1.89.80";
 
 Fed::Fed()
 {
@@ -163,23 +163,39 @@ Fed::~Fed()
 
 	delete Game::city_build_info;
 	delete Game::syndicate;
-	delete Game::nav_comp;WriteLog("EndElement()");
+	delete Game::nav_comp;
+	WriteLog("0...\n");
 
 	delete Game::company_register;
+	WriteLog("1...\n");
 	delete Game::business_register;
+	WriteLog("2...\n");
 	delete Game::global_player_vars_table;
+	WriteLog("3...\n");
 	delete Game::forbidden;
+	WriteLog("4...\n");
 	delete Game::courier;
+	WriteLog("5...\n");
 	delete Game::channel_manager;
+	WriteLog("6...\n");
 	delete Game::unload;
+	WriteLog("7...\n");
 	delete Game::commodities;
+	WriteLog("8...\n");
 	delete Game::production;
+	WriteLog("9...\n");
 	delete Game::player_index;
+	WriteLog("10...\n");
 	delete Game::galaxy;
+	WriteLog("11...\n");
 	FedMap::ClearDelayList();
+	WriteLog("12...\n");
 	delete Game::parser;
+	WriteLog("13...\n");
 	delete Game::ipc;
+	WriteLog("14...\n");
 	delete Game::db_object;
+	WriteLog("15...\n");
 	delete Game::fed_mail;		// try to keep this last :)
 	WriteLog("Game saved...");
 }

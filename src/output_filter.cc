@@ -129,6 +129,7 @@ std::string& OutputFilter::Process()
 		case CARGO:						return XmlNormal("s-cargo");
 		case WEAPON:					return XmlNormal("s-weapon-stats");
 		case COMP_STATS:				return XmlNormal("s-computer-stats");
+		case MESSAGE:					return XmlNoAttrib("s-message");
 
 		default:							return text;
 	}

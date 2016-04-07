@@ -317,7 +317,12 @@ void	Player::Act(std::string& text,bool possessive)
 	if(!pl_list.empty())
 	{
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send(action,OutputFilter::DEFAULT);
+		{
+			if((*iter)->comms_api_level >= 4)
+				(*iter)->Send(action,OutputFilter::MESSAGE,OutputFilter::NullAttribs);
+			else
+				(*iter)->Send(action,OutputFilter::DEFAULT);
+		}
 	}
 }
 
@@ -3447,7 +3452,6 @@ void	Player::Jump(const std::string where_to)
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
 			(*iter)->Send(text,OutputFilter::DEFAULT);
 	}
-//	CurrentMap()->RoomSend(this,0,loc.loc_no,buffer.str(),"");
 
 	FedMap	*from = loc.fed_map;
 	loc.fed_map->RemovePlayer(this);
@@ -4505,7 +4509,15 @@ void	Player::Say(std::string& text)
 	if(!pl_list.empty())
 	{
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send(conversation,OutputFilter::DEFAULT);
+		{
+			if((*iter)->CommsAPILevel() > 0)
+			{
+				if((*iter)->CommsAPILevel() >= 4)
+					(*iter)->Send(conversation,OutputFilter::MESSAGE,OutputFilter::NullAttribs);
+				else
+					(*iter)->Send(conversation,OutputFilter::DEFAULT);
+			}
+		}
 	}
 }
 
@@ -5752,9 +5764,18 @@ void	Player::Tell(const std::string& to_name,const std::string& text)
 		std::string	tb;
 		if(recipient->CommsAPILevel() > 0)
 		{
-			buffer << text << "\n";
-			tb = buffer.str();
-			recipient->Send(tb,OutputFilter::TIGHT_BEAM,attribs);
+			if(recipient->CommsAPILevel() >= 4)
+			{
+				buffer << "Your comm unit signals a tight beam message from " << name << ", \"" << text << "\"\n";
+				tb = buffer.str();
+				recipient->Send(tb,OutputFilter::MESSAGE,OutputFilter::NullAttribs);
+			}
+			else
+			{
+				buffer << text << "\n";
+				tb = buffer.str();
+				recipient->Send(tb,OutputFilter::TIGHT_BEAM,attribs);
+			}
 		}
 		else
 		{

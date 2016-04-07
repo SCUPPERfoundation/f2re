@@ -73,9 +73,14 @@ void	ComUnit::Comms(const std::string& text)
 
 void	ComUnit::ComSend(const std::string& text,Player *player)
 {
-	std::string	line = text;
+	std::string line = text;
 	if(flags.test(COMMS) && !flags.test(BUSY))
-		Process(line,OutputFilter::DEFAULT,OutputFilter::NullAttribs,player);
+	{
+		if(owner->CommsAPILevel() >= 4)
+			Process(line,OutputFilter::MESSAGE,OutputFilter::NullAttribs,player);
+		else
+			Process(line,OutputFilter::DEFAULT,OutputFilter::NullAttribs,player);
+	}
 }
 
 // used for lost line and log off - sends no messages to exitting player
@@ -183,6 +188,53 @@ bool	ComUnit::IsIgnoring(const std::string& name)
 	return(false);
 }
 
+void	ComUnit::Process(const std::string& text,Player *player)
+{
+	std::ostringstream	buffer("");
+	if(player != 0)
+	{
+		std::string name(player->Name());
+		if(IsIgnoring(name))
+			return;	// look later at sending a message back - but watch out for loops
+	}
+
+	std::string	line(text);
+	if(termwidth != NO_TERMWIDTH)
+		ProcessWidth(line);
+	if(line.length() < 1)
+		return;
+	if(flags.test(WANT_XML) && (line[0] != '<'))
+	{
+		OutputFilter filter(OutputFilter::XML,OutputFilter::DEFAULT,line,OutputFilter::NullAttribs);
+		std::string&	xml_line = filter.Process();
+		write(owner->Socket(),xml_line.c_str(),xml_line.length());
+	}
+	else
+		write(owner->Socket(),line.c_str(),line.length());
+}
+
+void	ComUnit::Process(const std::string& text,int command,AttribList &attributes,Player *player)
+{
+	std::ostringstream	buffer("");
+	if(player != 0)
+	{
+		std::string name(player->Name());
+		if(IsIgnoring(name))
+			return;	// look later at sending a message back - but watch out for loops
+	}
+
+	std::string	line(text);
+	if((termwidth != NO_TERMWIDTH) && (line.length() > 0))
+		ProcessWidth(line);
+
+	if(flags.test(WANT_XML))
+	{
+		OutputFilter filter(OutputFilter::XML,command,line,attributes);
+		filter.Process();
+	}
+	write(owner->Socket(),line.c_str(),line.length());
+}
+
 void	ComUnit::ProcessWidth(std::string& text)
 {
 	int	length = text.length();
@@ -261,6 +313,30 @@ void	ComUnit::Send(std::ostringstream& text,Player *player,bool can_relay)
 		DoRelay(text.str());
 }
 
+void	ComUnit::Send(const std::string& text,Player *player,bool can_relay)
+{
+	std::string	line = text;
+	Process(line,player);
+	if(can_relay)
+		DoRelay(text);
+}
+
+void	ComUnit::Send(const std::string& text,int command,Player *player,bool can_relay)
+{
+	std::string	line = text;
+	Process(line,command,OutputFilter::NullAttribs,player);
+	if(can_relay)
+		DoRelay(text);
+}
+
+void	ComUnit::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
+{
+	std::string	line = text;
+	Process(line,command,attributes);
+	if(can_relay)
+		DoRelay(text);
+}
+
 void	ComUnit::SpynetNotice()
 {
 	flags.flip(NOTICE);
@@ -303,91 +379,5 @@ void	ComUnit::UnIgnore(const std::string& who)
 
 /******************* Work in progress *******************/
 
-void	ComUnit::Send(const std::string& text,Player *player,bool can_relay)
-{
-	std::string	line = text;
-	Process(line,player);
-	if(can_relay)
-		DoRelay(text);
-}
-
-void	ComUnit::Process(const std::string& text,Player *player)
-{
-	std::ostringstream	buffer("");
-	if(player != 0)
-	{
-		std::string name(player->Name());
-		if(IsIgnoring(name))
-			return;	// look later at sending a message back - but watch out for loops
-		/*
-				if(flags.test(BUSY))
-				{
-					buffer << owner->Name() << " is busy at the moment. Please try later." << std::endl;
-					player->Send(buffer,0,false);	// no sender - make sure it gets through - still need to filter out coms
-					return;
-				}
-		*/
-	}
-
-	std::string	line(text);
-	if(termwidth != NO_TERMWIDTH)
-		ProcessWidth(line);
-	if(line.length() < 1)
-		return;
-	if(flags.test(WANT_XML) && (line[0] != '<'))
-	{
-		OutputFilter filter(OutputFilter::XML,OutputFilter::DEFAULT,line,OutputFilter::NullAttribs);
-		std::string&	xml_line = filter.Process();
-		write(owner->Socket(),xml_line.c_str(),xml_line.length());
-	}
-	else
-		write(owner->Socket(),line.c_str(),line.length());
-}
-
-void	ComUnit::Send(const std::string& text,int command,Player *player,bool can_relay)
-{
-	std::string	line = text;
-	Process(line,command,OutputFilter::NullAttribs,player);
-	if(can_relay)
-		DoRelay(text);
-}
-
-void	ComUnit::Send(const std::string& text,int command,AttribList &attributes,Player *player,bool can_relay)
-{
-	std::string	line = text;
-	Process(line,command,attributes);
-	if(can_relay)
-		DoRelay(text);
-}
-
-void	ComUnit::Process(const std::string& text,int command,AttribList &attributes,Player *player)
-{
-	std::ostringstream	buffer("");
-	if(player != 0)
-	{
-		std::string name(player->Name());
-		if(IsIgnoring(name))
-			return;	// look later at sending a message back - but watch out for loops
-/*
-		if(flags.test(BUSY))
-		{
-			buffer << owner->Name() << " is busy at the moment. Please try later." << std::endl;
-			player->Send(buffer,0,false);	// no sender - make sure it gets through - still need to filter out coms
-			return;
-		}
-*/
-	}
-
-	std::string	line(text);
-	if((termwidth != NO_TERMWIDTH) && (line.length() > 0))
-		ProcessWidth(line);
-
-	if(flags.test(WANT_XML))
-	{
-		OutputFilter filter(OutputFilter::XML,command,line,attributes);
-		filter.Process();
-	}
-	write(owner->Socket(),line.c_str(),line.length());
-}
 
 
