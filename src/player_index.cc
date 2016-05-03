@@ -995,6 +995,11 @@ void	PlayerIndex::XmlPlayerStart(Player *player)
 	std::pair<std::string,std::string> attrib(std::make_pair("name",player->Name()));
 	AttribList	attribs;
 	attribs.push_back(attrib);
+
+	std::ostringstream buffer;
+	buffer << player->Rank();
+	std::pair<std::string,std::string> attrib1(std::make_pair("rank",buffer.str()));
+	attribs.push_back(attrib1);
 	for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
 		iter->second->Send("",OutputFilter::ADD_PLAYER,attribs);
 }
