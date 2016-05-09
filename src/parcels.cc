@@ -39,8 +39,10 @@ Parcels::Parcels()
 
 Parcels::~Parcels()
 {
+	WriteLog("4b...\n");
 	for(PackageIndex::iterator iter = package_index.begin();iter != package_index.end();iter++)
 		delete *iter;
+	WriteLog("4c...\n");
 }
 
 void	Parcels::Display(Player *player,int index)

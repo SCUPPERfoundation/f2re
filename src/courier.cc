@@ -30,7 +30,9 @@ Courier::Courier()
 
 Courier::~Courier()
 {
+	WriteLog("4a...\n");
 	delete parcels;
+	WriteLog("4d...\n");
 }
 
 
