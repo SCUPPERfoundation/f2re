@@ -96,6 +96,7 @@ public:
 																						const std::string& star_name);
 	void	PremiumPriceCheck(const Commodity *commodity,const std::string& name,
 										const std::string& star_name,std::ostringstream& buffer,int which);
+	void	RemotePriceCheck(Player *player,const std::string& commodity);
 	void	RemotePriceCheck(Player *player,const Commodity *commodity,const std::string& name,
 																						const std::string& star_name);
 	void	Sell(Player *player,const std::string& commodity);

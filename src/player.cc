@@ -4249,7 +4249,7 @@ Cruikshank & Bone provide details of the requested spot market prices.\n");
 	if(HasRemoteAccessCert())
 	{
 		Send(intro,OutputFilter::DEFAULT);
-		exch_map->CheckCommodityPrices(this,commod_name,false);
+		exch_map->CheckRemoteCommodityPrices(this,commod_name);
 		return;
 	}
 	if((rank != TRADER) && (rank != FINANCIER))

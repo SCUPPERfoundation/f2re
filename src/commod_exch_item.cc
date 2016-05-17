@@ -285,17 +285,13 @@ void	CommodityExchItem::GroupDisplay(Player *player,int commod_grp)
 	}
 }
 
-void	CommodityExchItem::LineDisplay(Player *player,const std::string& exch_name,
-																				const std::string& star_name)
+void	CommodityExchItem::LineDisplay(Player *player,const std::string& exch_name,const std::string& star_name)
 {
-	int selling_price = 0;
-	if(stock >= (min_stock + 75))
-		selling_price = FinalPrice(value,spread,SELL);
-	int buying_price = 0;
-	if(stock <= (max_stock - 75))
-		buying_price = FinalPrice(value,spread,BUY);
-
+	std::pair<int,int>	prices = MakeDisplayPrices();
+	int selling_price(prices.first);
+	int buying_price(prices.second);
 	std::ostringstream	buffer;
+
 	if(selling_price > 0)
 	{
 		buffer << star_name << ": " << exch_name << " is selling " << (stock - min_stock);
@@ -311,12 +307,9 @@ void	CommodityExchItem::LineDisplay(Player *player,const std::string& exch_name,
 void	CommodityExchItem::LineDisplay(const std::string& exch_name,
 									const std::string& star_name,std::ostringstream& buffer,int which)
 {
-	int selling_price = 0;
-	if(stock >= (min_stock + 75))
-		selling_price = FinalPrice(value,spread,SELL);
-	int buying_price = 0;
-	if(stock <= (max_stock - 75))
-		buying_price = FinalPrice(value,spread,BUY);
+	std::pair<int,int>	prices = MakeDisplayPrices();
+	int selling_price(prices.first);
+	int buying_price(prices.second);
 
 	if((selling_price > 0) && (which != PriceCheck::BUY))
 	{
@@ -329,12 +322,9 @@ void	CommodityExchItem::LineDisplay(const std::string& exch_name,
 
 void	CommodityExchItem::LineDisplay(FedMap *home_map,bool send_intro,Player *player)
 {
-	int selling_price = 0;
-	if(stock >= (min_stock + 75))
-		selling_price = FinalPrice(value,spread,SELL);
-	int buying_price = 0;
-	if(stock <= (max_stock - 75))
-		buying_price = FinalPrice(value,spread,BUY);
+	std::pair<int,int>	prices = MakeDisplayPrices();
+	int selling_price(prices.first);
+	int buying_price(prices.second);
 
 	std::ostringstream	buffer,xml_buffer;
 	if(send_intro)
@@ -377,7 +367,7 @@ void	CommodityExchItem::LineDisplay(FedMap *home_map,bool send_intro,Player *pla
 				(*iter)->Send(text,OutputFilter::DEFAULT);
 		}
 
-		if(player != 0)	// 'Premium' remote exchange access
+		if(player != 0)
 		{
 			if(player->CommsAPILevel() > 0)
 			{
@@ -418,8 +408,9 @@ void	CommodityExchItem::LineDisplay(FedMap *home_map,bool send_intro,Player *pla
 				(*iter)->Send(text,OutputFilter::DEFAULT);
 		}
 
-		if(player != 0)	// 'Premium' remote exchange access
+		if(player != 0)
 		{
+
 			if(player->CommsAPILevel() > 0)
 			{
 				player->Send("",OutputFilter::EXCH_BUY,attribs);
@@ -655,4 +646,49 @@ long	CommodityExchItem::YardPurchase(FedMap *exch_map,int amount,std::ostringstr
 }
 
 
+std::pair<int,int>	CommodityExchItem::MakeDisplayPrices()
+{
+	int selling_price = 0;
+	if(stock >= (min_stock + 75))
+		selling_price = FinalPrice(value,spread,SELL);
+	int buying_price = 0;
+	if(stock <= (max_stock - 75))
+		buying_price = FinalPrice(value,spread,BUY);
+ 	return(std::make_pair(selling_price,buying_price));
+}
 
+/*  --------------- Work in progress --------------- */
+
+void	CommodityExchItem::RemoteLineDisplay(Player *player)
+{
+	std::pair<int,int>	prices = MakeDisplayPrices();
+	int selling_price(prices.first);
+	int buying_price(prices.second);
+
+	std::ostringstream	buffer;
+	if((selling_price + buying_price) == 0)
+	{
+		buffer << "That exchange is not currently trading in " << name << "!\n";
+		player->Send(buffer.str(),OutputFilter::DEFAULT);
+		return;
+	}
+
+	buffer.str("");
+	buffer << "+++ The display shows the prices for " << name << " +++\n";
+	player->Send(buffer.str(),OutputFilter::DEFAULT);
+
+	if(selling_price > 0)
+	{
+		buffer.str("");
+		buffer << "+++ Exchange has " << (stock - min_stock) << " tons for sale +++\n";
+		buffer << "+++ Offer price is " << selling_price << "ig/ton for first 75 tons +++\n";
+		player->Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+
+	if(buying_price > 0)
+	{
+		buffer.str("");
+		buffer << "+++ Exchange will buy 75 tons at " << buying_price << "ig/ton +++\n";
+		player->Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+ }

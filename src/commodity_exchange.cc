@@ -191,6 +191,18 @@ void	CommodityExchange::ChangeProduction(const Commodity *commodity,int amount)
 	item->ChangeProduction(amount);
 }
 
+void	CommodityExchange::CheckCartelPrices(Player *player,const Commodity *commodity,
+														  const std::string& star_name,
+														  const std::string& planet_name,
+														  bool send_intro)
+{
+	if(commodity != 0)
+	{
+		CommodityExchItem *commod = Find(commodity->name);
+		commod->LineDisplay(player,planet_name,star_name);
+	}
+}
+
 void	CommodityExchange::CheckGroupPrices(Player *player,int commod_grp)
 {
 	for(CommodIndex::iterator iter = commod_index.begin();iter != commod_index.end();iter++)
@@ -223,17 +235,7 @@ void	CommodityExchange::CheckPrices(Player *player,const std::string& commodity,
 		player->Send(not_commod,OutputFilter::DEFAULT);
 }
 
-void	CommodityExchange::CheckCartelPrices(Player *player,const Commodity *commodity,
-														const std::string& star_name,
-														const std::string& planet_name,
-														bool send_intro)
-{
-	if(commodity != 0)
-	{
-		CommodityExchItem *commod = Find(commodity->name);
-		commod->LineDisplay(player,planet_name,star_name);
-	}
-}
+
 
 void	CommodityExchange::CheckPrices(Player *player,const Commodity *commodity,bool send_intro)
 {
@@ -571,5 +573,18 @@ long	CommodityExchange::YardPurchase(const std::string& commodity,int amount,std
 		return(0L);
 }
 
+/*  --------------- Work in progress --------------- */
 
+void	CommodityExchange::RemotePriceCheck(Player *player,const std::string& commodity)
+{
+	CommodityExchItem *commod = Find(commodity);
+	if(commod != 0)
+		commod->RemoteLineDisplay(player);
+	else
+	{
+		std::ostringstream buffer;
+		buffer << "I can't find a commodity called " << commodity << "!\n";
+		player->Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+}
 

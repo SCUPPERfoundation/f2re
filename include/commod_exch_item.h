@@ -13,6 +13,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <utility>
 
 class	Commodityexchange;
 class	ExchEvent;
@@ -48,6 +49,8 @@ private:
 	int	cycles;			// number of unused cycles available
 	int	part_cycles;	// left over when rounded down, to be carried over to next computation
 	bool	valid;			// true if record is complete
+
+	std::pair<int,int>	MakeDisplayPrices();
 
 public:
 	CommodityExchItem(const std::string&	the_name,int exchange_type);
@@ -87,6 +90,7 @@ public:
 	void	MaxStock(int level);
 	void	MinStock(int level);
 	void	OwnerDisplay(Player *player,int commod_grp);
+	void	RemoteLineDisplay(Player *player);
 	void	Sell(Player *player,FedMap *exch_map);
 	void	SetEfficiency(int bonus)									{ efficiency += bonus;	}
 	void	Spread(int amount);

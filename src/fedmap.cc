@@ -2341,3 +2341,20 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 		return(0L);
 }
 
+/*  --------------- Work in progress --------------- */
+
+void	FedMap::CheckRemoteCommodityPrices(Player *player,const std::string& commodity)
+{
+	if(commodity_exchange != 0)
+		commodity_exchange->RemotePriceCheck(player,commodity);
+	else
+	{
+		std::ostringstream buffer;
+		buffer << name << " has no commodity exchange!\n";
+		player->Send(buffer.str(), OutputFilter::DEFAULT);
+	}
+}
+
+
+
+

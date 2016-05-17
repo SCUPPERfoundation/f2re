@@ -24,10 +24,21 @@ void	PriceCheck::Process(Player *player,Tokens	*tokens,std::string& line)
 	static const std::string	too_low("You need to be at least a merchant to use the exchange!\n");
 
 	if(player->Rank() < Player::MERCHANT)	{ player->Send(too_low,OutputFilter::DEFAULT);	return;	}
-	if(tokens->Size() < 3)	{ player->Send(Game::system->GetMessage("cmdparser","checkprice",1),OutputFilter::DEFAULT);	return;	}
-	if(tokens->Size() > 3)	{ RemotePriceCheck(player,tokens,line);	return;	}
+	if(tokens->Size() < 3)
+	{
+		player->Send(Game::system->GetMessage("cmdparser","checkprice",1),OutputFilter::DEFAULT);	return;
+	}
+
+	if(tokens->Size() > 3)
+	{
+		RemotePriceCheck(player,tokens,line);	return;
+	}
+
 	const Commodity	*commodity = Game::commodities->Find(tokens->Get(2));
-	if(commodity == 0)		{ player->Send(Game::system->GetMessage("cmdparser","checkprice",2),OutputFilter::DEFAULT);	return;	}
+	if(commodity == 0)
+	{
+		player->Send(Game::system->GetMessage("cmdparser","checkprice",2),OutputFilter::DEFAULT);	return;
+	}
 
 	if(player->CurrentMap()->IsAnExchange(player->LocNo()))
 		player->CurrentMap()->CheckCommodityPrices(player,commodity);

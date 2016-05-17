@@ -248,6 +248,7 @@ public:
 	void	CheckCommodityPrices(Player *player,const std::string& commodity,bool send_intro = true);
 	void	CheckCommodityPrices(Player *player,const Commodity *commodity,bool send_intro = true);
 	void	CheckGroupPrices(Player *player,int commod_grp);
+	void	CheckRemoteCommodityPrices(Player *player,const std::string& commodity);
 	void	Close(Player *player,Tokens *tokens);
 	void	CompileCourierLocs();
 	void	Consolidate(Company *company);
