@@ -441,6 +441,19 @@ void	CommodityExchange::RemotePriceCheck(Player *player,const Commodity *commodi
 	}
 }
 
+void	CommodityExchange::RemotePriceCheck(Player *player,const std::string& commodity)
+{
+	CommodityExchItem *commod = Find(commodity);
+	if(commod != 0)
+		commod->RemoteLineDisplay(player);
+	else
+	{
+		std::ostringstream buffer;
+		buffer << "I can't find a commodity called " << commodity << "!\n";
+		player->Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+}
+
 void	CommodityExchange::ReportEvents(const std::string&	who_to)
 {
 	happenings->AddNotification(who_to);
@@ -573,18 +586,4 @@ long	CommodityExchange::YardPurchase(const std::string& commodity,int amount,std
 		return(0L);
 }
 
-/*  --------------- Work in progress --------------- */
-
-void	CommodityExchange::RemotePriceCheck(Player *player,const std::string& commodity)
-{
-	CommodityExchItem *commod = Find(commodity);
-	if(commod != 0)
-		commod->RemoteLineDisplay(player);
-	else
-	{
-		std::ostringstream buffer;
-		buffer << "I can't find a commodity called " << commodity << "!\n";
-		player->Send(buffer.str(),OutputFilter::DEFAULT);
-	}
-}
 

@@ -453,7 +453,41 @@ void	CommodityExchItem::OwnerDisplay(Player *player,int commod_grp)
 	}
 }
 
-long	CommodityExchItem::Sell(FedMap *exch_map)
+ void	CommodityExchItem::RemoteLineDisplay(Player *player)
+ {
+	 std::pair<int,int>	prices = MakeDisplayPrices();
+	 int selling_price(prices.first);
+	 int buying_price(prices.second);
+
+	 std::ostringstream	buffer;
+	 if((selling_price + buying_price) == 0)
+	 {
+		 buffer << "That exchange is not currently trading in " << name << "!\n";
+		 player->Send(buffer.str(),OutputFilter::DEFAULT);
+		 return;
+	 }
+
+	 buffer.str("");
+	 buffer << "+++ The display shows the prices for " << name << " +++\n";
+	 player->Send(buffer.str(),OutputFilter::DEFAULT);
+
+	 if(selling_price > 0)
+	 {
+		 buffer.str("");
+		 buffer << "+++ Exchange has " << (stock - min_stock) << " tons for sale +++\n";
+		 buffer << "+++ Offer price is " << selling_price << "ig/ton for first 75 tons +++\n";
+		 player->Send(buffer.str(),OutputFilter::DEFAULT);
+	 }
+
+	 if(buying_price > 0)
+	 {
+		 buffer.str("");
+		 buffer << "+++ Exchange will buy 75 tons at " << buying_price << "ig/ton +++\n";
+		 player->Send(buffer.str(),OutputFilter::DEFAULT);
+	 }
+ }
+
+ long	CommodityExchItem::Sell(FedMap *exch_map)
 {
 	Star	*star = exch_map->HomeStarPtr();
 	if(star->IsDiverting(name))
@@ -657,38 +691,4 @@ std::pair<int,int>	CommodityExchItem::MakeDisplayPrices()
  	return(std::make_pair(selling_price,buying_price));
 }
 
-/*  --------------- Work in progress --------------- */
 
-void	CommodityExchItem::RemoteLineDisplay(Player *player)
-{
-	std::pair<int,int>	prices = MakeDisplayPrices();
-	int selling_price(prices.first);
-	int buying_price(prices.second);
-
-	std::ostringstream	buffer;
-	if((selling_price + buying_price) == 0)
-	{
-		buffer << "That exchange is not currently trading in " << name << "!\n";
-		player->Send(buffer.str(),OutputFilter::DEFAULT);
-		return;
-	}
-
-	buffer.str("");
-	buffer << "+++ The display shows the prices for " << name << " +++\n";
-	player->Send(buffer.str(),OutputFilter::DEFAULT);
-
-	if(selling_price > 0)
-	{
-		buffer.str("");
-		buffer << "+++ Exchange has " << (stock - min_stock) << " tons for sale +++\n";
-		buffer << "+++ Offer price is " << selling_price << "ig/ton for first 75 tons +++\n";
-		player->Send(buffer.str(),OutputFilter::DEFAULT);
-	}
-
-	if(buying_price > 0)
-	{
-		buffer.str("");
-		buffer << "+++ Exchange will buy 75 tons at " << buying_price << "ig/ton +++\n";
-		player->Send(buffer.str(),OutputFilter::DEFAULT);
-	}
- }

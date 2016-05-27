@@ -4517,6 +4517,8 @@ void	Player::Say(std::string& text)
 				else
 					(*iter)->Send(conversation,OutputFilter::DEFAULT);
 			}
+			else
+				(*iter)->Send(conversation,OutputFilter::DEFAULT);
 		}
 	}
 }

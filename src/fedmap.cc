@@ -691,6 +691,18 @@ void	FedMap::CheckGroupPrices(Player *player,int commod_grp)
 		player->Send(no_exch,OutputFilter::DEFAULT);
 }
 
+void	FedMap::CheckRemoteCommodityPrices(Player *player,const std::string& commodity)
+{
+	if(commodity_exchange != 0)
+		commodity_exchange->RemotePriceCheck(player,commodity);
+	else
+	{
+		std::ostringstream buffer;
+		buffer << name << " has no commodity exchange!\n";
+		player->Send(buffer.str(), OutputFilter::DEFAULT);
+	}
+}
+
 void	FedMap::Close(Player *player,Tokens *tokens)
 {
 	static const std::string	error("Unable to find infrastructure data - please email a report to \
@@ -2340,21 +2352,4 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 	else
 		return(0L);
 }
-
-/*  --------------- Work in progress --------------- */
-
-void	FedMap::CheckRemoteCommodityPrices(Player *player,const std::string& commodity)
-{
-	if(commodity_exchange != 0)
-		commodity_exchange->RemotePriceCheck(player,commodity);
-	else
-	{
-		std::ostringstream buffer;
-		buffer << name << " has no commodity exchange!\n";
-		player->Send(buffer.str(), OutputFilter::DEFAULT);
-	}
-}
-
-
-
 
