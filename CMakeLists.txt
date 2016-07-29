@@ -62,7 +62,7 @@ set(SOURCE_FILES
     include/bus_parser.h
     include/bus_register.h
     include/business.h
-    include/buy.h
+	include/cmd_buy.h
     include/scr_call.h
     include/cargo.h
     include/cartel.h
@@ -284,7 +284,7 @@ set(SOURCE_FILES
     src/bus_parser.cc
     src/bus_register.cc
     src/business.cc
-    src/buy.cc
+	src/cmd_buy.cc
     src/scr_call.cc
     src/cargo.cc
     src/cartel.cc

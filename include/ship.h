@@ -17,7 +17,6 @@
 #include <utility>
 
 #include "equipment.h"
-
 #include "obj_list.h"
 
 class	Cargo;
@@ -47,10 +46,7 @@ private:
 	friend class EquipParser;
 	friend class ShipBuilder;
 
-	enum
-	{
-		SHIP_CLEAR, BUY_STARTER, BUY_CUSTOM
-	};	// purchasing status
+	enum	{ SHIP_CLEAR, BUY_STARTER, BUY_CUSTOM };	// purchasing status
 
 	static const std::string	repair_error;
 
@@ -61,7 +57,12 @@ private:
 	static int				comp_repair_multipliers[];
 	static RawMaterials	comp_repairs[];
 	static RawMaterials	engine_repairs[];
+	static RawMaterials	hull_repairs[];
+	static RawMaterials	laser_repairs[];
+	static RawMaterials	ql_repairs[];
+	static RawMaterials	rack_repairs[];
 	static RawMaterials	shield_repairs[];
+	static RawMaterials	tl_repairs[];
 
 	std::string	registry;
 	int			ship_class;			// eg Hull::HARRIER
@@ -87,7 +88,15 @@ private:
 
 	long	ComputerRepair(Player *player,std::ostringstream& buffer,int action);
 	long	EngineRepair(Player *player,std::ostringstream& buffer,int action);
+	long	HullRepair(Player *player,std::ostringstream& buffer,int action);
+	long	LaserRepair(Player *player,std::ostringstream& buffer,int action);
+	long	QlRepair(Player *player,std::ostringstream& buffer,int action);
+	long	RackRepair(Player *player,std::ostringstream& buffer,int action);
 	long	ShieldRepair(Player *player,std::ostringstream& buffer,int action);
+	long	TlRepair(Player *player,std::ostringstream& buffer,int action);
+
+	long	RepairPlant(Player *player,std::ostringstream& buffer,int action,
+							 const RawMaterials *materials,int repair_size);
 
 	void	SetUpStarterSpecial();
 	void	XMLCargo(Player *player);
@@ -142,7 +151,8 @@ public:
 	void	CreateRec(DBPlayer *pl_rec);
 	void	DisplayObjects(Player *player);
 	void	Repair(Player *player,int action);
-	void	ResetStats(Player *player);
+	void	ResetShipStats(Player *player);
+	void	ResetWeaponStats(Player *player);
 	void 	SendManifest(Player *player);
 	void	SetRegistry(Player *player);
 	void	StatusReport(Player *player);
@@ -152,6 +162,16 @@ public:
 	void	UseFuel(int amount);
 	void	XMLFuel(Player *player);
 	void 	XMLStats(Player *player);
+
+	// For testing/debugging
+	void DamageShields(int amount)		{ if((cur_shield -= amount) < 0) cur_shield = 0; }
+	void DamageEngines(int amount)		{ if((cur_engine -= amount) < 0) cur_engine = 0; }
+	void DamageComputer(int amount)		{ if((computer.cur_level -= amount) < 0) computer.cur_level = 0; }
+	void DamageHull(int amount)			{ if((cur_hull -= amount) < 0) cur_hull = 0; }
+	void DamageMissileRack(int amount);
+	void DamageLaser(int amount);
+	void DamageTL(int amount);
+	void DamageQL(int amount);
 };
 
 struct DbShip

@@ -8,7 +8,7 @@
 
    <location num='396' flags='yr'>
       <name>Docking bay</name>
-      <desc>   The flexible docking bay doors form a tight seal with the airlock of your shuttle, allowing you free access back and forth. Electronic panels on one wall control floating remote cameras which will roam over the surface of your ship; what they see is shown on a viewscreen in front of you. You can check your ship for damage, and instruct the station&apos;s droids to repair or rebuild your ship as necessary.</desc>
+      <desc>   The flexible docking bay doors form a tight seal with the airlock of your shuttle, allowing you free access back and forth. Electronic panels on one wall control floating remote cameras which will roam over the surface of your ship; what they see is shown on a viewscreen in front of you. You can check your ship for efficiency, and instruct the station&apos;s droids to repair or rebuild your ship as necessary.</desc>
       <desc>   The habitat&apos;s control room is to the south.</desc>
       <exits s='460' in='460' no-exit='moves.noexit.1'/>
    </location>

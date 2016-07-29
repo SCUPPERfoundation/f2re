@@ -8,7 +8,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/commodities.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/parcels.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scr_get.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/buy.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_port.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scr_checkslithy.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/mail.cc" isTestSource="false" />
@@ -94,6 +93,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/null_ev_num.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scr_checklocflag.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_mining.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/scr_checkvariable.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_defence.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_fibre.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/unload.cc" isTestSource="false" />
@@ -136,7 +136,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/build_tquark.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_pollution.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/futures_contract.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/scr_checkvariable.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/blish_city.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_dole.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_hospital.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_tachyon.cc" isTestSource="false" />
@@ -213,7 +213,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/scr_checkstat.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/fed.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/display.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/blish_city.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cmd_buy.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scr_checkflag.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_terraform.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_agri.h" isTestSource="false" />
@@ -231,6 +231,7 @@
       <sourceFolder url="file://$MODULE_DIR$/include/object_parser.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/cmd_join.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/para_cat.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/cmd_buy.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_canal.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/factory.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/fed.h" isTestSource="false" />
@@ -338,7 +339,6 @@
       <sourceFolder url="file://$MODULE_DIR$/include/infra_parser.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/syndicate_parser.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/role_money_source.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/include/buy.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/fed_object.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_pension.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_mining.h" isTestSource="false" />

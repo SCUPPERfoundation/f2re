@@ -1719,6 +1719,15 @@ Cuthbert telling you that you have been given extra time to deliver your cargo.\
 	}
 }
 
+void	Player::DamageComputer(int amount)		{ ship->DamageComputer(amount);		}
+void	Player::DamageEngines(int amount)		{ ship->DamageEngines(amount);		}
+void 	Player::DamageHull(int amount)			{ ship->DamageHull(amount);			}
+void 	Player::DamageLaser(int amount)			{ ship->DamageLaser(amount);			}
+void 	Player::DamageMissileRack(int amount)	{ ship->DamageMissileRack(amount);	}
+void 	Player::DamageShields(int amount)		{ ship->DamageShields(amount);		}
+void 	Player::DamageQL(int amount)				{ ship->DamageQL(amount);				}
+void 	Player::DamageTL(int amount)				{ ship->DamageTL(amount);				}
+
 void	Player::DeadDead()
 {
 	Game::player_index->XmlPlayerLeft(this);
@@ -3105,6 +3114,13 @@ bool	Player::HasTeleporter(int which)
 	return(inventory->HasTeleporter(which));
 }
 
+bool 	Player::HasWeapons()
+{
+	if(HasAShip())
+		return(ship->HasWeapons());
+	return false;
+}
+
 void	Player::Hospitalise()
 {
 	static const std::string	no_hosp("Unable to find Hospital - \
@@ -3141,7 +3157,7 @@ Please report problem to feedback@ibgames.com. Thank you.\n");
 			delete job;
 			job = 0;
 		}
-		ship->ResetStats(this);
+		ship->ResetShipStats(this);
 	}
 
 	Send(Game::system->GetMessage("player","suicide",3),OutputFilter::DEFAULT);
@@ -6646,6 +6662,10 @@ void	Player::XMLStats()
 	attribs.push_back(std::make_pair("name",name));
 	Send("",OutputFilter::PLAYER_STATS,attribs);
 
+	attribs.clear();
+	attribs.push_back(std::make_pair("status","begin"));
+	Send("",OutputFilter::FULL_STATS,attribs);
+
 	XMLRank();
 	XMLStamina();
 	XMLStrength();
@@ -6660,6 +6680,10 @@ void	Player::XMLStats()
 		ship->XMLStats(this);
 		XMLCustomsCert();
 	}
+
+	attribs.clear();
+	attribs.push_back(std::make_pair("status","end"));
+	Send("",OutputFilter::FULL_STATS,attribs);
 }
 
 void	Player::XMLStrength()

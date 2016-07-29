@@ -7,7 +7,7 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#include "buy.h"
+#include "cmd_buy.h"
 
 #include <cctype>
 

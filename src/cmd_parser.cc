@@ -25,7 +25,7 @@
 #include "build_star.h"
 #include	"business.h"
 #include "bus_register.h"
-#include "buy.h"
+#include "cmd_buy.h"
 #include "cartel.h"
 #include "change.h"
 #include "channel_man.h"
@@ -91,7 +91,7 @@ const std::string	CmdParser::vocab[] =
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
 	"undivert", "move", "allocate", "stop", "extend", "hide", "claim","colonise",		// 190-198
-	"colonize",
+	"colonize", "damage",
 	""
 };
 
@@ -685,6 +685,55 @@ void	CmdParser::Comms(Player *player)
 		player->Comms(tokens->Get(1));
 }
 
+void	CmdParser::Damage(Player *player,std::string& line)
+{
+	/*
+		if(player->Name() != "Bella")
+		{
+			player->Send("To display ship efficiency use the <STATUS> command!\n",OutputFilter::DEFAULT);
+			return;
+		}
+	*/
+	if(!player->HasAShip())
+	{
+		player->Send("No ship!",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Size() < 2)
+	{
+		player->Send("Damage COMPUTER, ENGINES, SHIELDS, HULL, RACK, LASER, TL, QL or ALL?\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	std::string	equipment(tokens->Get(1));
+
+	if(equipment == "all")
+	{
+		player->DamageComputer(2);
+		player->DamageEngines(2);
+		player->DamageShields(2);
+		player->DamageHull(2);
+
+		player->DamageMissileRack(25);
+		player->DamageLaser(25);
+		player->DamageTL(15);
+		player->DamageQL(15);
+	}
+
+	if(equipment == "shields")		{ player->DamageShields(2);		}
+	if(equipment == "engines")		{ player->DamageEngines(2);		}
+	if(equipment == "computer")	{ player->DamageComputer(2);		}
+	if(equipment == "hull")			{ player->DamageHull(2);			}
+
+	if(equipment == "rack")			{ player->DamageMissileRack(15); }
+	if(equipment == "laser")		{ player->DamageLaser(15);			}
+	if(equipment == "tl")			{ player->DamageTL(15);				}
+	if(equipment == "ql")			{ player->DamageQL(15);				}
+
+	player->Send("Equipment damaged!",OutputFilter::DEFAULT);
+}
+
 void	CmdParser::Declare(Player *player)
 {
 	static const std::string	error("Striking an heroic pose you declare in ringing tones, \"Nothing to declare!.\"\n");
@@ -949,7 +998,6 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 129:	Call(player);											break;	// 'call'
 		case 130:	Marry(player);											break;	//	'marry'
 		case 131:	repair->Process(player,tokens,line);			break;	// 'repair'
-//		case 131:	Repair(player,line);									break;	// 'repair'
 		case 132:	Issue(player);											break;	//	'issue'
 		case 133:	Gag(player);											break;	//	'gag'
 		case 134:	UnGag(player);											break;	//	'ungag'
@@ -1018,6 +1066,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 197:	Claim(player);											break;	// 'claim'
 		case 198:
 		case 199:	Colonize(player);										break;	// 'colonize'
+		case 200:	Damage(player,line);									break;	// 'efficiency' testing only
 	}
 }
 
@@ -2635,4 +2684,5 @@ void	CmdParser::Zap(Player *player)
 			Game::player_index->Zap(who,player);
 	}
 }
+
 

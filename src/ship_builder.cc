@@ -328,7 +328,7 @@ void	ShipBuilder::AddWeapons(std::string& line)
 		status = BUY_POWER;
 		return;
 	}
-		
+WriteLog("0...");
 	int index = -1;
 	for(int count = 0;count < Ship::MAX_HARD_PT;count++)
 	{
@@ -348,14 +348,21 @@ void	ShipBuilder::AddWeapons(std::string& line)
 			break;
 		}
 	}
-	
+
+std::ostringstream buffer;
+buffer << "index = " << index << "\n";
+WriteLog(buffer);
 	if(index >= 0)
 	{
 		player->Send(Game::system->GetMessage("shipbuilder","addweapons",3),OutputFilter::DEFAULT);
+WriteLog("2...");
 		cost += Ship::weapon_types[weapons[index]]->cost;
+WriteLog("3...");
 		tonnage -= Ship::weapon_types[weapons[index]]->weight;
+WriteLog("4...");
 		min_power += Ship::weapon_types[weapons[index]]->power;
-		
+WriteLog("5...");
+
 		if(Ship::hull_types[ship_class]->mount_pts <= (index + 1))
 		{
 			CurrentStatus();
@@ -391,7 +398,7 @@ Ship	*ShipBuilder::CreateShip()
 		else
 		{
 			ship->weapons[count].type = weapons[count];
-			ship->weapons[count].damage = Ship::weapon_types[weapons[count]]->damage;
+			ship->weapons[count].efficiency = 100;
 		}
 	}
 	ship->SetRegistry(player);

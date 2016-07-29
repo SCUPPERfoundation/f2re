@@ -80,6 +80,7 @@ private:
 	void	Com(Player *player,std::string& line);
 	void	Comms(Player *player);
 	void	Colonize(Player *player);
+	void	Damage(Player *player,std::string& line);
 	void	Declare(Player *player);
 	void	Demolish(Player *player);
 	void	Divert(Player *player);

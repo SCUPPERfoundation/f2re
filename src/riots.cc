@@ -44,7 +44,7 @@ FedMssg	*Riots::GetMessage(const std::string& owner)
 
 void	Riots::ReportBuildDamage(Player *player,const std::string& desc)
 {
-	static const std::string	text1(" has suffered serious damage to its ");
+	static const std::string	text1(" has suffered serious efficiency to its ");
 	static const std::string	text2(" infrastructure during rioting against the planetary authorities.\n");
 
 	if(player == 0)

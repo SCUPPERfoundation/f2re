@@ -350,6 +350,7 @@ public:
 	bool	HasFuturesContract(const std::string& commod,const std::string& exch_name);
 	bool	HasRemoteAccessCert();
 	bool	HasTeleporter(int which);
+	bool 	HasWeapons();
 	bool	InvFlagIsSet(int which);
 	bool	IsDead()												{ return(stamina == 0);	}
 	bool	IsFrozen()											{ return(temp_flags.test(FROZEN));		}
@@ -619,6 +620,16 @@ public:
 	void	Xfer2Treasury(int num_megs);
 	void	XMLStats();
 	void	Xt(const std::string& msg);
+
+	// used for testing/debugging
+	void	DamageComputer(int amount);
+	void	DamageEngines(int amount);
+	void	DamageHull(int amount);
+	void 	DamageLaser(int percent);
+	void 	DamageMissileRack(int percent);
+	void 	DamageQL(int percent);
+	void 	DamageShields(int amount);
+	void 	DamageTL(int percent);
 };
 
 #endif

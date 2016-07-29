@@ -182,6 +182,6 @@ void	XmlDumpLoad::DumpTask(DbTask& task,std::ofstream& dump_file)
 void	XmlDumpLoad::DumpWeapons(const WeaponRec *rec,std::ofstream& dump_file)
 {
 	for(int count = 0;count < Ship::MAX_HARD_PT;++count)
-		dump_file << "        <weapon type='" << rec[count].type << "' damage='" << rec[count].damage << "'/>\n";
+		dump_file << "        <weapon type='" << rec[count].type << "' efficiency='" << rec[count].efficiency << "'/>\n";
 }
 
