@@ -971,7 +971,7 @@ void	Ship::Repair(Player *player,int action)
 	}
 	if(action == FedMap::BUY)
 	{
-		player->Overdraft(-cost);
+//		player->Overdraft(-cost);
 		player->Send("You watch via the ship's cameras as repair droids swarm over the damaged areas and complete the repairs.\n",OutputFilter::DEFAULT);
 		ResetShipStats(player);
 		ResetWeaponStats(player);
