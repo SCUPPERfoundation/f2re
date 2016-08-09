@@ -238,7 +238,7 @@ FedMap	*Script::FindMap(Player *player,const std::string& star_name,const std::s
 {
 	if(map_name == "home")
 		return(home);
-	if(map_name == "current");
+	if(map_name == "current")
 		return(player->CurrentMap());
 	return(Game::galaxy->FindByName(star_name,map_name));
 }

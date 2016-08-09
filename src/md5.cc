@@ -222,10 +222,11 @@ unsigned char *MD5::raw_digest(){
 
   uint1 *s = new uint1[16];
 
-  if (!finalized){
-    cerr << "MD5::raw_digest:  Can't get digest if you haven't "<<
-      "finalized the digest!" <<endl;
-    return ( (unsigned char*) "");
+  if (!finalized)
+  {
+	  cerr << "MD5::raw_digest:  Can't get digest if you haven't "<<
+      	"finalized the digest!" << endl;
+    return(reinterpret_cast<unsigned char *>(const_cast<char*>("")));
   }
 
   memcpy(s, digest, 16);

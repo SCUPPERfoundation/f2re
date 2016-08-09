@@ -1310,8 +1310,11 @@ void	Player::ChangeStat(int which,int amount,bool add,bool current)
 		case Script::AK:				AddAK(amount); XMLPoints();								break;
 		case Script::HC:
 		case Script::TC:				ChangeTP(amount);												break;
-		case Script::RANK:			if(amount == TRADER)		Merchant2Trader();
-											if(amount == MERCHANT)	Adventurer2Merchant();		break;
+		case Script::RANK:			if(amount == TRADER)
+												Merchant2Trader();
+											if(amount == MERCHANT)
+												Adventurer2Merchant();
+											break;
 		case Script::C_CASH:			ChangeCompanyCash(amount,add);							break;
 		case Script::CUSTOMS:		inventory->ChangeCustomsCert(10);						break;
 		case Script::KILLED:			if((killed -= 5) < 0)	killed = 0;						break;
