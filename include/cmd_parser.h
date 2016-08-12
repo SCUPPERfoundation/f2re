@@ -11,6 +11,7 @@
 #define CMDPARSER_H
 
 #include <string>
+#include "player.h"
 
 class	Admin;
 class Assign;
@@ -76,6 +77,7 @@ private:
 	void	Check(Player *player,std::string& line);
 	void	CheckPrice(Player *player,std::string& line);
 	void	Claim(Player *player);
+	void 	Clear(Player *player);
 	void	Clip(Player *player,std::string& line);
 	void	Com(Player *player,std::string& line);
 	void	Comms(Player *player);
@@ -145,6 +147,7 @@ private:
 	void	Stash(Player *player,std::string& line,bool hidden = false);
 	void	StopCityProduction(Player *player,std::string& line);
 	void	Store(Player *player);
+	void	Target(Player* player);
 	void	Teleport(Player *player,std::string& line);
 	void	Tell(Player *player,std::string& line);
 	void	TermWidth(Player *player);

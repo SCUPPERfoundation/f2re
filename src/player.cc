@@ -1396,7 +1396,7 @@ void	Player::Cheat()
 void	Player::ClearMood()
 {
 	mood = "";
-	Send("Mood cleared...\n",OutputFilter::DEFAULT);
+	Send("You stop being moody...\n",OutputFilter::DEFAULT);
 }
 
 void	Player::ClearRelay()
@@ -1499,6 +1499,7 @@ void	Player::CommonSetUp()
 	line_length = 80;
 
 	louie = 0;
+	target = "";
 }
 
 void	Player::Comms(const std::string& text)
@@ -6737,3 +6738,86 @@ void	Player::Xt(const std::string& msg)
 
 /* ---------------------- Work in progress ---------------------- */
 
+void	Player::SetTarget(const std::string& target_name)
+{
+	std::ostringstream	buffer;
+
+	std::string	tgt_name(target_name);
+	Normalise(tgt_name);
+
+	if(tgt_name == name)
+	{
+		Send("Don't be silly!\n", OutputFilter::DEFAULT);
+		return;
+	}
+
+ 	if((tgt_name == "Bella") || (tgt_name == "Hazed") || (tgt_name == "Freya"))
+	{
+		Send("In your dreams, sunshine...\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	Player *target_ptr = Game::player_index->FindCurrent(tgt_name);
+	if(target_ptr != 0)
+	{
+		target = target_ptr->Name();
+		buffer.str("");
+		buffer << "*** Computer alert! " << name << " is targetting you! ***\n";
+		target_ptr->Send(buffer.str(),OutputFilter::DEFAULT);
+		buffer.str("");
+		buffer << "*** Target set to " << tgt_name << " ***\n";
+		Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+	else // target currently not in game
+	{
+		target_ptr = Game::player_index->FindName(tgt_name);
+		if(target_ptr != 0)
+		{
+			target = target_ptr->Name();
+			buffer.str("");
+			buffer << "*** Target set to " << tgt_name << " ***\n";
+			Send(buffer.str(),OutputFilter::DEFAULT);
+		}
+		else
+			Send("Unable to find a player with that name - targetting unchanged.\n",OutputFilter::DEFAULT);
+
+	}
+}
+
+void	Player::TargetInfo()
+{
+	if(target == "")
+		Send("No target set!\n",OutputFilter::DEFAULT);
+	else
+	{
+		std::ostringstream	buffer;
+		buffer << "Current target is " << target << ".\n";
+		Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+
+	if(!Game::player_index->ReportTargetsFor(this))
+		Send("No one is targetting you at the moment.\n",OutputFilter::DEFAULT);
+}
+
+void	Player::Clear(const std::string& what)
+{
+	if(what == "target")
+	{
+		if(target == "")
+			Send("You aren't targetting anyone!\n",OutputFilter::DEFAULT);
+		else
+		{
+			Player *target_ptr = Game::player_index->FindCurrent(target);
+			if(target_ptr != 0)
+			{
+				std::ostringstream	buffer;
+				buffer << name << " has stopped targetting you!\n";
+				target_ptr->Send(buffer,OutputFilter::DEFAULT);
+			}
+			target = "";
+			Send("You are no longer targetting anyone!\n",OutputFilter::DEFAULT);
+		}
+	}
+	else
+		ClearMood();
+}

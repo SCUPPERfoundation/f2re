@@ -650,6 +650,24 @@ void	PlayerIndex::ReportSocketError(int sd,int error_number)
 	WriteErrLog(buffer.str());
 }
 
+bool 	PlayerIndex::ReportTargetsFor(Player *player)
+{
+	bool reports_sent = false;
+	std::ostringstream	buffer;
+	std::string	name = player->Name();
+	for(NameIndex::iterator iter = current_index.begin();iter != current_index.end();iter++)
+	{
+		if(iter->second->GetTarget() == name)
+		{
+			reports_sent = true;
+			buffer.str("");
+			buffer << iter->second->Name() << " is targetting you.\n";
+			player->Send(buffer,OutputFilter::DEFAULT);
+		}
+	}
+	return reports_sent;
+}
+
 void	PlayerIndex::Save(Player *player,int which_bits)
 {
 	if(which_bits == WITH_OBJECTS)
@@ -1105,5 +1123,6 @@ bool	PlayerIndex::ProcessBillingLine(std::string& line)
 	return true;
 }
 
-//--------------------------------------------------------------------------------
+
+/* ------------------- Work in progress ------------------- */
 

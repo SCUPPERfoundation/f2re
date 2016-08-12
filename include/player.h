@@ -199,6 +199,7 @@ protected:
 	std::string	spouse;				//	name of player's in-game spouse (ick!)
 
 	Louie			*louie;				// in use if participating in a game of Lucky Louie
+	std::string	target;				// who the player is targetting
 
 	std::pair<std::string,std::string>	ExtractWareName(const std::string& w_name);
 
@@ -214,6 +215,7 @@ protected:
 
 	void	Adventurer2Merchant();
 	void	Captain2Adventurer();
+	void	ClearMood();
 	void	ChangeShares(int amount);
 	void	ChangeStamina(int amount,bool add,bool current);
 	void	ChangeStrDexInt(int *which,int amount,bool add,bool current);
@@ -286,6 +288,7 @@ public:
 	const	std::string&	Conversation()					{ return(conversation);	}
 	const std::string&	Email()							{ return email;			}
 	const std::string&	FullName();
+	const std::string&	GetTarget()						{ return target;			}
 	const std::string&	IBAccount()						{ return(ib_account);	}
 	const std::string&	IPAddress()						{ return(ip_addr);		}
 	const std::string&	LastOn();
@@ -437,7 +440,7 @@ public:
 	void	ClearGenFlag(int which)							{ flags.reset(which);	}
 	void	ClearLoan()											{ loan = 1L;				}
 	void	ClearManFlag(int which)							{ man_flags.reset(which);	}
-	void	ClearMood();
+	void	Clear(const std::string& what);
 	void	ClearRelay();
 	void	ClearShipPurchase()								{ status_flags.reset(BUY_SHIP);			}
 	void	ClearSpouse()										{ spouse = "";				}
@@ -580,6 +583,7 @@ public:
 	void	SetPlanetBuilt()									{ temp_flags.set(PLANET_BUILT);		}
 	void	SetPlanetClaimed()								{ temp_flags.set(PLANET_CLAIMED);	}
 	void	SetSpouse(Player *player)						{ spouse = player->Name();	}
+	void	SetTarget(const std::string& target_name);
 	void	SetTempFlag(int which)							{ temp_flags.set(which);	}
 	void	SetToFinancier();
 	void	SetToManufacturer();
@@ -598,6 +602,7 @@ public:
 	void	Stash(const std::string& obj_name,bool hidden = false);
 	void	Store(const Commodity *commodity);
 	void	SwapShip(Ship *new_ship);
+	void	TargetInfo();
 	void	Teleport(const std::string& address);
 	void	Tell(const std::string& to_name,const std::string& text);
 	void	TermWidth(int size);

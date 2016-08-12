@@ -91,7 +91,7 @@ const std::string	CmdParser::vocab[] =
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
 	"undivert", "move", "allocate", "stop", "extend", "hide", "claim","colonise",		// 190-198
-	"colonize", "damage",
+	"colonize", "damage", "target",
 	""
 };
 
@@ -600,6 +600,14 @@ void	CmdParser::Claim(Player *player)
 	delete star_builder;
 }
 
+void 	CmdParser::Clear(Player *player)
+{
+	if(tokens->Size() < 2)
+		player->Send("You didn't say what you want to clear! (try 'mood' or 'target')\n",OutputFilter::DEFAULT);
+	else
+		player->Clear(tokens->Get(1));
+}
+
 void	CmdParser::Clip(Player *player,std::string& line)
 {
 	static const std::string	error("You haven't said what you want to clip onto a keyring!\n");
@@ -1002,7 +1010,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 133:	Gag(player);											break;	//	'gag'
 		case 134:	UnGag(player);											break;	//	'ungag'
 		case 135:	UnLock(player);										break;	//	'unlock'
-		case 136:	player->ClearMood();									break;	// 'clear'
+		case 136:	Clear(player);													break;	// 'clear'
 		case 137:	Freeze(player);										break;	// 'freeze'
 		case 138:	Start(player);											break;	// 'start'
 		case 139:	player->SplitStock();								break;	// 'split'
@@ -1067,6 +1075,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 198:
 		case 199:	Colonize(player);										break;	// 'colonize'
 		case 200:	Damage(player,line);									break;	// 'efficiency' testing only
+		case 201:	Target(player);										break;	// 'target'
 	}
 }
 
@@ -2256,6 +2265,14 @@ void	CmdParser::Store(Player *player)
 	}
 }
 
+void	CmdParser::Target(Player *player)
+{
+	if(tokens->Size() < 2)
+		player->TargetInfo();
+	else
+		player->SetTarget(tokens->Get(1));
+}
+
 void	CmdParser::Teleport(Player *player,std::string& line)
 {
 	std::string	address;
@@ -2685,4 +2702,5 @@ void	CmdParser::Zap(Player *player)
 	}
 }
 
+/* --------------- Work in Progress --------------- */
 

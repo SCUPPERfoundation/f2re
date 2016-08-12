@@ -81,6 +81,7 @@ public:
 
 	bool	ProcessInput(int sd,std::string& text);
 	bool	ProcessBilling(std::string& input_text);
+	bool 	ReportTargetsFor(Player *player);
 	bool	SendStaffMssg(const std::string& mssg);
 	bool	ValidatePlayerRecord(Player *player);
 
@@ -130,6 +131,7 @@ public:
 	void	UpdateBillingInfo(std::string& input_file);
 	bool	LoadInputFile(std::string& input_file,std::list<std::string>& billing_list);
 	bool	ProcessBillingLine(std::string& line);
+
 };
 
 #endif
