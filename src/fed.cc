@@ -52,7 +52,7 @@
 #include "syndicate_parser.h"
 #include "unload.h"
 
-const std::string	Fed::version = "1.90.04";
+const std::string	Fed::version = "1.90.05";
 
 Fed::Fed()
 {
@@ -349,6 +349,8 @@ void	Fed::Run()
 	Game::syndicate->Update();
 	Game::galaxy->LoadDisplayCabinets();
 	Game::galaxy->MarkAbandondedSystems();
+
+	// Now we can let in the players...
 	Game::ipc->GetInput();
 }
 

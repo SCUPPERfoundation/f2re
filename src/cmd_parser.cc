@@ -20,6 +20,7 @@
 
 #include <signal.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #include "assign.h"
 #include "build_star.h"
@@ -91,7 +92,7 @@ const std::string	CmdParser::vocab[] =
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
 	"undivert", "move", "allocate", "stop", "extend", "hide", "claim","colonise",		// 190-198
-	"colonize", "damage", "target",
+	"colonize", "damage", "target", "remove",
 	""
 };
 
@@ -1076,6 +1077,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 199:	Colonize(player);										break;	// 'colonize'
 		case 200:	Damage(player,line);									break;	// 'efficiency' testing only
 		case 201:	Target(player);										break;	// 'target'
+		case 202:	Remove(player);										break;	// 'remove'
 	}
 }
 
@@ -2704,3 +2706,29 @@ void	CmdParser::Zap(Player *player)
 
 /* --------------- Work in Progress --------------- */
 
+void 	CmdParser::Remove(Player *player)
+{
+	Ship	*ship =  player->GetShip();
+	if(ship == 0)
+	{
+		player->Send("You don't have a ship from which to remove the sensors!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if((tokens->Get(1) == "sensors") || (tokens->Get(2) == "sensors"))
+	{
+		if(tokens->Size() < 3)	// No number - want's to remove them all
+		{
+			ship->RemoveSensors(player,-1);
+			return;
+		}
+
+		int how_many = std::atoi(tokens->Get(1).c_str());
+		if(how_many >= 0)
+			ship->RemoveSensors(player,how_many);
+		else
+			player->Send("The format is XXX sensors, where XXX is the number you want to remove!",OutputFilter::DEFAULT);
+		return;
+	}
+
+}

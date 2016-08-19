@@ -145,6 +145,7 @@ public:
 	void	Buy(Player *player);
 	void	Buy(Player *player,std::string& line);
 	void	BuyFuel(Player *player,int amount);
+	void	BuySensors(Player *player,int amount);
 	void	Flee(Player *player);
 	void	FleeDamage(Player *player);
 	void	FlipFlag(Player *player,int which);
@@ -153,6 +154,7 @@ public:
 	void	Repair(Player *player,int action);
 	void	ResetShipStats(Player *player);
 	void	ResetWeaponStats(Player *player);
+	void 	RemoveSensors(Player *player,int how_many);
 	void 	SendManifest(Player *player);
 	void	SetRegistry(Player *player);
 	void	StatusReport(Player *player);

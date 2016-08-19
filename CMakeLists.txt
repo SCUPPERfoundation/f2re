@@ -284,7 +284,7 @@ set(SOURCE_FILES
     src/bus_parser.cc
     src/bus_register.cc
     src/business.cc
-	src/cmd_buy.cc
+	 src/cmd_buy.cc
     src/scr_call.cc
     src/cargo.cc
     src/cartel.cc

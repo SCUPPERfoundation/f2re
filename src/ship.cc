@@ -1192,4 +1192,81 @@ long	Ship::RepairPlant(Player *player,std::ostringstream& buffer,int action,
 }
 
 
+/* --------------- Work in Progress --------------- */
 
+void	Ship::BuySensors(Player *player,int amount)
+{
+	std::ostringstream	buffer;
+
+	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
+	{
+		player->Send("You need to be in a repair shop to get buy ship sensors!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	int	remaining_capacity = comp_types[computer.cur_level]->capacity - (computer.sensors + computer.jammers);
+	if(remaining_capacity <= 0)
+	{
+		player->Send("Your computer can't handle anymore sensors or jammers!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	int	cost = amount * 10000;
+	if(cost > player->Cash())
+	{
+		buffer.str("");
+		buffer << "You can't afford the " << cost << "Ig it would cost you!\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	int tonnage = amount * 2;
+	if(cur_hold < tonnage)
+	{
+		buffer.str("");
+		buffer << "There isn't enough space to install the sensors. ";
+		buffer << "You need to sell some cargo to provide " << tonnage;
+		buffer << " tons of space to install them!\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	// OK - lets go!
+	computer.sensors += amount;
+	player->ChangeCash(-cost);
+	max_hold -= tonnage;
+	cur_hold -= tonnage;
+	buffer.str("");
+	buffer << amount << " sensors have been installed, at a cost of " << cost;
+	buffer << "Ig. The installation has reduced the total amount of cargo hold";
+	buffer << " space by " << tonnage << " tons to a maximum of " << max_hold << " tons.\n";
+	player->Send(buffer,OutputFilter::DEFAULT);
+	XMLCargo(player);
+}
+
+void 	Ship::RemoveSensors(Player *player,int how_many)
+{
+	if(computer.sensors == 0)
+	{
+		player->Send("Your ship doesn't have any sensors to remove!",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(how_many == -1)	// All of them...
+		how_many = computer.sensors;
+
+	std::ostringstream patter;
+	patter << "A droid looks over your ship's sensors and shakes its head. ";
+	patter << "\"Who sold you this junk, guv?\", it asks. ";
+	patter << "\"As a favour I'll take them off for no charge.\" ";
+	patter << "\"With luck I might be able to get something back for the scrap.\" ";
+	patter << "You acquiesce with bad grace and a work team removes the offending sensors.\n";
+	player->Send(patter,OutputFilter::DEFAULT);
+
+	computer.sensors -= how_many;
+	int tonnage = how_many * 2;
+	max_hold += tonnage;
+	cur_hold += tonnage;
+	XMLCargo(player);
+	XMLComputer(player);
+}

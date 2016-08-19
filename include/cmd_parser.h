@@ -129,6 +129,7 @@ private:
 	void	Reject(Player *player,std::string& line);
 	void	Relay(Player *player);
 	void	RemotePriceCheck(Player *player,std::string& line);
+	void 	Remove(Player *player);
 	void	Repay(Player *player);
 	void	Report(Player *player);
 	void	Reset(Player *player);

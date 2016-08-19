@@ -10,6 +10,7 @@
 #include "cmd_buy.h"
 
 #include <cctype>
+#include <cstdlib>
 
 #include "commodities.h"
 #include "company.h"
@@ -28,7 +29,7 @@ const std::string	BuyParser::vocab[] =
 {
 	"ship", "spaceship", "fuel", "warehouse", "ware", "depot", "futures",	//  0- 6
 	"factory", "food", "round", "pizza", "clothes", "shares", "treasury",	//	 7-13
-	"registry", "premium", 
+	"registry", "premium", "sensors",
 	""
 };
 
@@ -180,6 +181,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case 13:	return(BuyTreasury(player,tokens,line));		// 'treasury'
 		case 14: return(BuyRegistry(player));						// 'registry'
 		case 15: return(player->BuyPremiumTicker());				// 'premium'
+		case 16:	return(BuySensors(player,tokens,line));		// 'sensors'
 	}
 
 	// is the format buy xxx something?
@@ -188,6 +190,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case	2: return(BuyFuel(player,tokens));					// 'fuel'
 		case 12:	return(BuyShares(player,tokens,line));			// 'shares'
 		case 13:	return(BuyTreasury(player,tokens,line));		// 'treasury'
+		case 16:	return(BuySensors(player,tokens,line));		// 'sensors'
 	}
 	
 	// see if they want to buy a commodity
@@ -200,6 +203,28 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 	}
 }
 
+
+/* --------------- Work in Progress --------------- */
+
+void	BuyParser::BuySensors(Player *player,Tokens *tokens,const std::string& line)
+{
+	Ship *ship = player->GetShip();
+	if(ship == 0)
+	{
+		player->Send("Buy a ship before you try to fit it with sensors!",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Size() < 3)
+	{
+		player->Send("You haven't said how many sensors you want to buy!\n", OutputFilter::DEFAULT);
+		return;
+	}
+	if(std::isdigit(tokens->Get(1)[0]) != 0)
+		ship->BuySensors(player,std::atoi(tokens->Get(1).c_str()));
+	else
+		ship->BuySensors(player,std::atoi(tokens->Get(2).c_str()));
+}
 
 
 

@@ -29,6 +29,7 @@ private:
 	void	BuyPizza(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyRegistry(Player *player);
 	void	BuyRound(Player *player,Tokens *tokens,const std::string& line);
+	void	BuySensors(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyShares(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyShip(Player *player);
 	void	BuyTreasury(Player *player,Tokens *tokens,const std::string& line);
