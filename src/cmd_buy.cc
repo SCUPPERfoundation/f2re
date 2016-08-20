@@ -29,7 +29,7 @@ const std::string	BuyParser::vocab[] =
 {
 	"ship", "spaceship", "fuel", "warehouse", "ware", "depot", "futures",	//  0- 6
 	"factory", "food", "round", "pizza", "clothes", "shares", "treasury",	//	 7-13
-	"registry", "premium", "sensors",
+	"registry", "premium", "sensor", "sensors",
 	""
 };
 
@@ -181,7 +181,8 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case 13:	return(BuyTreasury(player,tokens,line));		// 'treasury'
 		case 14: return(BuyRegistry(player));						// 'registry'
 		case 15: return(player->BuyPremiumTicker());				// 'premium'
-		case 16:	return(BuySensors(player,tokens,line));		// 'sensors'
+		case 16:
+		case 17:	return(BuySensors(player,tokens,line));		// 'sensors'
 	}
 
 	// is the format buy xxx something?
@@ -190,7 +191,8 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case	2: return(BuyFuel(player,tokens));					// 'fuel'
 		case 12:	return(BuyShares(player,tokens,line));			// 'shares'
 		case 13:	return(BuyTreasury(player,tokens,line));		// 'treasury'
-		case 16:	return(BuySensors(player,tokens,line));		// 'sensors'
+		case 16:
+		case 17:	return(BuySensors(player,tokens,line));		// 'sensors'
 	}
 	
 	// see if they want to buy a commodity
@@ -225,9 +227,6 @@ void	BuyParser::BuySensors(Player *player,Tokens *tokens,const std::string& line
 	else
 		ship->BuySensors(player,std::atoi(tokens->Get(2).c_str()));
 }
-
-
-
 
 
 

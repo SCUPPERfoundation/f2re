@@ -1200,7 +1200,7 @@ void	Ship::BuySensors(Player *player,int amount)
 
 	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
 	{
-		player->Send("You need to be in a repair shop to get buy ship sensors!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be in a repair shop to buy ship sensors!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1242,13 +1242,14 @@ void	Ship::BuySensors(Player *player,int amount)
 	buffer << " space by " << tonnage << " tons to a maximum of " << max_hold << " tons.\n";
 	player->Send(buffer,OutputFilter::DEFAULT);
 	XMLCargo(player);
+	XMLComputer(player);
 }
 
 void 	Ship::RemoveSensors(Player *player,int how_many)
 {
 	if(computer.sensors == 0)
 	{
-		player->Send("Your ship doesn't have any sensors to remove!",OutputFilter::DEFAULT);
+		player->Send("Your ship doesn't have any sensors to remove!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -1258,8 +1259,8 @@ void 	Ship::RemoveSensors(Player *player,int how_many)
 	std::ostringstream patter;
 	patter << "A droid looks over your ship's sensors and shakes its head. ";
 	patter << "\"Who sold you this junk, guv?\", it asks. ";
-	patter << "\"As a favour I'll take them off for no charge.\" ";
-	patter << "\"With luck I might be able to get something back for the scrap.\" ";
+	patter << "\"As a favour I'll take them off for no charge. ";
+	patter << "With luck I might be able to get something back for the scrap.\" ";
 	patter << "You acquiesce with bad grace and a work team removes the offending sensors.\n";
 	player->Send(patter,OutputFilter::DEFAULT);
 

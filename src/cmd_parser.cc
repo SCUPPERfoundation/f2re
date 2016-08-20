@@ -2715,7 +2715,8 @@ void 	CmdParser::Remove(Player *player)
 		return;
 	}
 
-	if((tokens->Get(1) == "sensors") || (tokens->Get(2) == "sensors"))
+	if((tokens->Get(1) == "sensors") || (tokens->Get(2) == "sensors")
+			|| (tokens->Get(1) == "sensor") || (tokens->Get(2) == "sensor"))
 	{
 		if(tokens->Size() < 3)	// No number - want's to remove them all
 		{
@@ -2731,4 +2732,6 @@ void 	CmdParser::Remove(Player *player)
 		return;
 	}
 
+	player->Send("I don't know what it is you want to remove!\n",OutputFilter::DEFAULT);
 }
+
