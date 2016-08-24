@@ -1984,6 +1984,64 @@ void	CmdParser::RemotePriceCheck(Player *player,std::string& line)
 	player->RemotePriceCheck(tokens->Get(2),exch_name);
 }
 
+void 	CmdParser::Remove(Player *player)
+{
+	Ship	*ship =  player->GetShip();
+	if(ship == 0)
+	{
+		player->Send("You don't have a ship from which to remove sensors or jammers!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
+	{
+		player->Send("You need to be in a repair shop to remove ship sensors or jammers!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	// NOTE: The syntax can be either 'remove jammers/sensors' or 'remove XXX jammers/sensors
+	int removal = BuyParser::UNKNOWN;
+
+	if((tokens->Get(2) == "sensors") || (tokens->Get(2) == "sensor") ||
+		(tokens->Get(1) == "sensors") || (tokens->Get(1) == "sensor"))
+		removal = BuyParser::SENSORS;
+
+	if((tokens->Get(2) == "jammers") || (tokens->Get(2) == "jammer") ||
+		(tokens->Get(1) == "jammers") || (tokens->Get(1) == "jammer"))
+		removal = BuyParser::JAMMERS;
+
+	if(removal == BuyParser::UNKNOWN)
+	{
+		player->Send("I don't know what it is you want to remove!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Size() < 3)	// No number - want's to remove them all
+	{
+		if(removal == BuyParser::SENSORS)
+			ship->RemoveSensors(player,-1);
+		if(removal == BuyParser::JAMMERS)
+			ship->RemoveJammers(player,-1);
+		return;
+	}
+
+	int how_many = std::atoi(tokens->Get(1).c_str());
+	if(how_many == 0)
+	{
+		player->Send("The format is remove XXX sensors/jammers, where XXX is the number you want to remove!",
+						 OutputFilter::DEFAULT);
+		return;
+	}
+	else
+	{
+		if(removal == BuyParser::SENSORS)
+			ship->RemoveSensors(player,how_many);
+		if(removal == BuyParser::JAMMERS)
+			ship->RemoveJammers(player,how_many);
+		return;
+	}
+}
+
 void	CmdParser::Repay(Player *player)
 {
 	int amount = std::atoi(tokens->Get(1).c_str());
@@ -2705,33 +2763,4 @@ void	CmdParser::Zap(Player *player)
 }
 
 /* --------------- Work in Progress --------------- */
-
-void 	CmdParser::Remove(Player *player)
-{
-	Ship	*ship =  player->GetShip();
-	if(ship == 0)
-	{
-		player->Send("You don't have a ship from which to remove the sensors!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if((tokens->Get(1) == "sensors") || (tokens->Get(2) == "sensors")
-			|| (tokens->Get(1) == "sensor") || (tokens->Get(2) == "sensor"))
-	{
-		if(tokens->Size() < 3)	// No number - want's to remove them all
-		{
-			ship->RemoveSensors(player,-1);
-			return;
-		}
-
-		int how_many = std::atoi(tokens->Get(1).c_str());
-		if(how_many >= 0)
-			ship->RemoveSensors(player,how_many);
-		else
-			player->Send("The format is XXX sensors, where XXX is the number you want to remove!",OutputFilter::DEFAULT);
-		return;
-	}
-
-	player->Send("I don't know what it is you want to remove!\n",OutputFilter::DEFAULT);
-}
 

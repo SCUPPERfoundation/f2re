@@ -24,6 +24,7 @@ public:
 	static const int	NOT_FOUND;
 	static const std::string	error;
 	enum	{ RAW, LOWER_CASE, PLANET, COMPANY };		// return formats for GetRestOfLine()
+
 private:
 	TokenArray	token_array;
 

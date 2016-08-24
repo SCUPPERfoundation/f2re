@@ -98,6 +98,8 @@ private:
 	long	RepairPlant(Player *player,std::ostringstream& buffer,int action,
 							 const RawMaterials *materials,int repair_size);
 
+	bool SensorJammerInstallChecks(Player *player,int amount);
+
 	void	SetUpStarterSpecial();
 	void	XMLCargo(Player *player);
 	void	XMLComputer(Player *player);
@@ -145,6 +147,7 @@ public:
 	void	Buy(Player *player);
 	void	Buy(Player *player,std::string& line);
 	void	BuyFuel(Player *player,int amount);
+	void 	BuyJammers(Player *player,int amount);
 	void	BuySensors(Player *player,int amount);
 	void	Flee(Player *player);
 	void	FleeDamage(Player *player);
@@ -154,6 +157,7 @@ public:
 	void	Repair(Player *player,int action);
 	void	ResetShipStats(Player *player);
 	void	ResetWeaponStats(Player *player);
+	void	RemoveJammers(Player *player,int how_many);
 	void 	RemoveSensors(Player *player,int how_many);
 	void 	SendManifest(Player *player);
 	void	SetRegistry(Player *player);

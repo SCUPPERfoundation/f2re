@@ -307,6 +307,48 @@ void	Ship::BuyFuel(Player *player,int amount)
 	}
 }
 
+void	Ship::BuyJammers(Player *player,int amount)
+{
+	std::ostringstream	buffer;
+
+	if(!SensorJammerInstallChecks(player,amount))
+		return;
+
+	// OK - lets go!
+	computer.jammers += amount;
+	player->ChangeCash(-amount * 10000);
+	max_hold -= amount * 2;
+	cur_hold -= amount * 2;
+	buffer.str("");
+	buffer << amount << " jammers have been installed, at a cost of " << (amount * 10000);
+	buffer << "Ig. The installation has reduced the total amount of cargo hold";
+	buffer << " space by " << (amount * 2) << " tons to a maximum of " << max_hold << " tons.\n";
+	player->Send(buffer,OutputFilter::DEFAULT);
+	XMLCargo(player);
+	XMLComputer(player);
+}
+
+void	Ship::BuySensors(Player *player,int amount)
+{
+	std::ostringstream	buffer;
+
+	if(!SensorJammerInstallChecks(player,amount))
+		return;
+
+	// OK - lets go!
+	computer.sensors += amount;
+	player->ChangeCash(-amount * 10000);
+	max_hold -= amount * 2;
+	cur_hold -= amount * 2;
+	buffer.str("");
+	buffer << amount << " sensors have been installed, at a cost of " << (amount * 10000);
+	buffer << "Ig. The installation has reduced the total amount of cargo hold";
+	buffer << " space by " << (amount * 2) << " tons to a maximum of " << max_hold << " tons.\n";
+	player->Send(buffer,OutputFilter::DEFAULT);
+	XMLCargo(player);
+	XMLComputer(player);
+}
+
 void	Ship::CreateRec(DBPlayer *pl_rec)
 {
 	DbShip	*rec = &pl_rec->ship;
@@ -522,6 +564,62 @@ int	Ship::RemoveCargo(Player *player,const std::string& cargo_name,int selling_p
 	return(cur_hold);
 }
 
+void 	Ship::RemoveJammers(Player *player,int how_many)
+{
+	if(computer.jammers == 0)
+	{
+		player->Send("Your ship doesn't have any jammers to remove!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	// All of them...
+	if((how_many == -1) || (how_many > computer.jammers))
+		how_many = computer.jammers;
+
+	std::ostringstream patter;
+	patter << "A droid looks over your ship's jammers and shakes its head. ";
+	patter << "\"Who sold you this junk, guv?\", it asks. ";
+	patter << "\"As a favour I'll take them off for no charge. ";
+	patter << "With luck I might be able to get something back for the scrap.\" ";
+	patter << "You acquiesce with bad grace and a work team removes the offending jammers.\n";
+	player->Send(patter,OutputFilter::DEFAULT);
+
+	computer.jammers -= how_many;
+	int tonnage = how_many * 2;
+	max_hold += tonnage;
+	cur_hold += tonnage;
+	XMLCargo(player);
+	XMLComputer(player);
+}
+
+void 	Ship::RemoveSensors(Player *player,int how_many)
+{
+	if(computer.sensors == 0)
+	{
+		player->Send("Your ship doesn't have any sensors to remove!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	// All of them...
+	if((how_many == -1) || (how_many > computer.sensors))
+		how_many = computer.sensors;
+
+	std::ostringstream patter;
+	patter << "A droid looks over your ship's sensors and shakes its head. ";
+	patter << "\"Who sold you this junk, guv?\", it asks. ";
+	patter << "\"As a favour I'll take them off for no charge. ";
+	patter << "With luck I might be able to get something back for the scrap.\" ";
+	patter << "You acquiesce with bad grace and a work team removes the offending sensors.\n";
+	player->Send(patter,OutputFilter::DEFAULT);
+
+	computer.sensors -= how_many;
+	int tonnage = how_many * 2;
+	max_hold += tonnage;
+	cur_hold += tonnage;
+	XMLCargo(player);
+	XMLComputer(player);
+}
+
 void	Ship::ResetShipStats(Player *player)
 {
 	cur_hull = max_hull;
@@ -568,6 +666,48 @@ void 	Ship::SendManifest(Player *player)
 			(*iter)->XMLDisplay(player);
 		}
 	}
+}
+
+bool Ship::SensorJammerInstallChecks(Player *player,int amount)
+{
+	std::ostringstream	buffer;
+
+	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
+	{
+		player->Send("You need to be in a repair shop to buy ship sensors or jammers!\n",OutputFilter::DEFAULT);
+		return false;
+	}
+
+	if(comp_types[computer.cur_level]->capacity < (computer.sensors + computer.jammers + amount))
+	{
+		buffer.str("");
+		buffer << "Your computer can only handle up to a total of ";
+		buffer << comp_types[computer.cur_level]->capacity << " sensors and jammers!\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return false;
+	}
+
+	int	cost = amount * 10000;
+	if(cost > player->Cash())
+	{
+		buffer.str("");
+		buffer << "You can't afford the " << cost << "Ig it would cost you!\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return false;
+	}
+
+	int tonnage = amount * 2;
+	if(cur_hold < tonnage)
+	{
+		buffer.str("");
+		buffer << "There isn't enough space to install any more sensors or jammers. ";
+		buffer << "You need to sell some cargo to provide " << tonnage;
+		buffer << " tons of space to install them!\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return false;
+	}
+
+	return true;
 }
 
 void	Ship::SetRegistry(Player *player)
@@ -1194,80 +1334,3 @@ long	Ship::RepairPlant(Player *player,std::ostringstream& buffer,int action,
 
 /* --------------- Work in Progress --------------- */
 
-void	Ship::BuySensors(Player *player,int amount)
-{
-	std::ostringstream	buffer;
-
-	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
-	{
-		player->Send("You need to be in a repair shop to buy ship sensors!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	int	remaining_capacity = comp_types[computer.cur_level]->capacity - (computer.sensors + computer.jammers);
-	if(remaining_capacity <= 0)
-	{
-		player->Send("Your computer can't handle anymore sensors or jammers!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	int	cost = amount * 10000;
-	if(cost > player->Cash())
-	{
-		buffer.str("");
-		buffer << "You can't afford the " << cost << "Ig it would cost you!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
-		return;
-	}
-
-	int tonnage = amount * 2;
-	if(cur_hold < tonnage)
-	{
-		buffer.str("");
-		buffer << "There isn't enough space to install the sensors. ";
-		buffer << "You need to sell some cargo to provide " << tonnage;
-		buffer << " tons of space to install them!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
-		return;
-	}
-
-	// OK - lets go!
-	computer.sensors += amount;
-	player->ChangeCash(-cost);
-	max_hold -= tonnage;
-	cur_hold -= tonnage;
-	buffer.str("");
-	buffer << amount << " sensors have been installed, at a cost of " << cost;
-	buffer << "Ig. The installation has reduced the total amount of cargo hold";
-	buffer << " space by " << tonnage << " tons to a maximum of " << max_hold << " tons.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
-	XMLCargo(player);
-	XMLComputer(player);
-}
-
-void 	Ship::RemoveSensors(Player *player,int how_many)
-{
-	if(computer.sensors == 0)
-	{
-		player->Send("Your ship doesn't have any sensors to remove!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(how_many == -1)	// All of them...
-		how_many = computer.sensors;
-
-	std::ostringstream patter;
-	patter << "A droid looks over your ship's sensors and shakes its head. ";
-	patter << "\"Who sold you this junk, guv?\", it asks. ";
-	patter << "\"As a favour I'll take them off for no charge. ";
-	patter << "With luck I might be able to get something back for the scrap.\" ";
-	patter << "You acquiesce with bad grace and a work team removes the offending sensors.\n";
-	player->Send(patter,OutputFilter::DEFAULT);
-
-	computer.sensors -= how_many;
-	int tonnage = how_many * 2;
-	max_hold += tonnage;
-	cur_hold += tonnage;
-	XMLCargo(player);
-	XMLComputer(player);
-}

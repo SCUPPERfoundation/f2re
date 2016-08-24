@@ -17,6 +17,9 @@ class	Tokens;
 
 class	BuyParser
 {
+public:
+	enum { UNKNOWN, SENSORS, JAMMERS };
+
 private:
 	static const std::string	vocab[];
 	static const int	NO_NOUN;
@@ -26,6 +29,7 @@ private:
 	void	BuyFactory(Player *player,Tokens *tokens);
 	void	BuyFuel(Player *player,Tokens *tokens);
 	void	BuyFutures(Player *player,Tokens *tokens);
+	void	BuyJammers(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyPizza(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyRegistry(Player *player);
 	void	BuyRound(Player *player,Tokens *tokens,const std::string& line);
@@ -42,5 +46,4 @@ public:
 };
 
 #endif
-
 
