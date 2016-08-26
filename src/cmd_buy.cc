@@ -226,6 +226,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case 16:
 		case 17:	if(player->CurrentMap()->IsARepairShop(player->LocNo()))
 						return(BuySensors(player,tokens,line));	// 'sensors'
+					break;
 
 		case 18:
 		case 19:	return(BuyJammers(player,tokens,line));		// 'jammers'
@@ -240,8 +241,9 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 		// Only if they are buying ship sensors, not commodity sensors
 		case 16:
-		case 17:if(player->CurrentMap()->IsARepairShop(player->LocNo())) // Only if they are buying ship sensors
+		case 17:	if(player->CurrentMap()->IsARepairShop(player->LocNo())) // Only if they are buying ship sensors
 						return(BuySensors(player,tokens,line));	// 'sensors'
+					break;
 
 		case 18:
 		case 19:	return(BuyJammers(player,tokens,line));		// 'jammers'

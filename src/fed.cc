@@ -52,7 +52,7 @@
 #include "syndicate_parser.h"
 #include "unload.h"
 
-const std::string	Fed::version = "1.90.08";
+const std::string	Fed::version = "1.90.09";
 
 Fed::Fed()
 {
