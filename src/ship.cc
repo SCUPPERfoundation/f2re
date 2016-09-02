@@ -1334,3 +1334,36 @@ long	Ship::RepairPlant(Player *player,std::ostringstream& buffer,int action,
 
 /* --------------- Work in Progress --------------- */
 
+void 	Ship::BuyMissiles(Player *player,int amount)
+{
+	std::ostringstream	buffer;
+	int space_remaining = magazine - missiles;
+	if(amount == -1)
+		amount = space_remaining;
+	if(amount > space_remaining)
+		amount = space_remaining;
+
+	if(amount == 0)
+	{
+		player->Send("You don't have magazine space to store the missiles!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	int total_cost = amount * MISSILE_COST;
+	if(total_cost > player->Cash())
+	{
+		buffer.str("");
+		buffer << "You can't afford it. Missiles cost " << MISSILE_COST << "ig each.\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	missiles += amount;
+	player->ChangeCash(total_cost);
+	buffer.str("");
+	buffer << amount << " misiles purchases, which have been delivered to you ship, ";
+	buffer << " and loaded into its magazine.\n";
+	player->Send(buffer,OutputFilter::DEFAULT);
+	XMLWeapons(player);
+}
+

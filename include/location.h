@@ -31,8 +31,9 @@ public:
 	enum	{ ENTER, NOEXIT, INROOM, SEARCH, MAX_EVENTS	};
 	enum
 	{
-		SPACE, LINK, EXCHANGE, SHIPYARD, REPAIR, HOSPITAL, INSURE,
-		PEACE, BAR, COURIER, UNLIT, CUSTOM, TELEPORT, PICKUP, MAX_FLAGS
+		SPACE, LINK, EXCHANGE, SHIPYARD, REPAIR, HOSPITAL, INSURE, PEACE, BAR,
+		COURIER, UNLIT, CUSTOM, TELEPORT, PICKUP, WEAPONS, FIGHTING,
+		MAX_FLAGS
 	};
 	enum	{ GLANCE, FULL_DESC, DEFAULT };		// used with look/glance
 	enum	{ ADD_DESC, REPLACE_DESC };			// used with AddDesc
@@ -67,21 +68,22 @@ public:
 
 	const std::string&	AsciiOnly(const std::string& text);
 
-	int	Number()																{ return(loc_no);				}
-	int	MobileExit(int dir)												{ if(dir > NW) return(-1); else return(exits[dir]);	}
+	int	Number()							{ return(loc_no);				}
+	int	MobileExit(int dir)			{ if(dir > NW) return(-1); else return(exits[dir]);	}
 
-	bool	CanTeleport()														{ return(!flags.test(TELEPORT));		}
-	bool	FlagIsSet(int which_flag)										{ return(flags.test(which_flag));	}
-	bool	IsABar()																{ return(flags.test(BAR));				}
-	bool	IsABroker()															{ return(flags.test(INSURE));			}
-	bool	IsACourier()														{ return(flags.test(COURIER));		}
-	bool	IsAnExchange()														{ return(flags.test(EXCHANGE));		}
-	bool	IsAHospital()														{ return(flags.test(HOSPITAL));		}
-	bool	IsALink()															{ return(flags.test(LINK));			}
-	bool 	IsAPeaceLoc()														{ return(flags.test(PEACE));			}
-	bool	IsAPickup()															{ return(flags.test(PICKUP));			}
-	bool	IsARepairShop()													{ return(flags.test(REPAIR));			}
-	bool	IsAYard()															{ return(flags.test(SHIPYARD));		}
+	bool	CanTeleport()					{ return(!flags.test(TELEPORT));		}
+	bool	FlagIsSet(int which_flag)	{ return(flags.test(which_flag));	}
+	bool	IsABar()							{ return(flags.test(BAR));				}
+	bool	IsABroker()						{ return(flags.test(INSURE));			}
+	bool	IsACourier()					{ return(flags.test(COURIER));		}
+	bool	IsAnExchange()					{ return(flags.test(EXCHANGE));		}
+	bool	IsAHospital()					{ return(flags.test(HOSPITAL));		}
+	bool	IsALink()						{ return(flags.test(LINK));			}
+	bool 	IsAPeaceLoc()					{ return(flags.test(PEACE));			}
+	bool	IsAPickup()						{ return(flags.test(PICKUP));			}
+	bool	IsARepairShop()				{ return(flags.test(REPAIR));			}
+	bool	IsAYard()						{ return(flags.test(SHIPYARD));		}
+	bool	IsAWeaponsShop()				{ return(flags.test(WEAPONS));			}
 	bool	ProcessVocab(Player *player,const std::string& command);
 
 	void	AddDesc(const std::string& text,int how = ADD_DESC);

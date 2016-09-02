@@ -202,6 +202,7 @@ public:
 	bool	IsALoc(int loc_no);
 	bool	IsAnExchange(int loc_no)					{ return(loc_no == comm_exch_loc);	}
 	bool	IsARepairShop(int loc_no);
+	bool	IsAWeaponsShop(int loc_no);
 	bool	IsAYard(int loc_no);
 	bool	IsOpen(Player *player);
 	bool	IsOwner(Player *player);

@@ -30,6 +30,7 @@ private:
 	void	BuyFuel(Player *player,Tokens *tokens);
 	void	BuyFutures(Player *player,Tokens *tokens);
 	void	BuyJammers(Player *player,Tokens *tokens,const std::string& line);
+	void	BuyMissiles(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyPizza(Player *player,Tokens *tokens,const std::string& line);
 	void	BuyRegistry(Player *player);
 	void	BuyRound(Player *player,Tokens *tokens,const std::string& line);

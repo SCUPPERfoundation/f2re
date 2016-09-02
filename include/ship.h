@@ -38,6 +38,7 @@ public:
 	static const int	MAX_COMP;
 	static const int	NO_WEAPON;
 	static const int	MAX_REG = 16;
+	static const int 	MISSILE_COST = 5000;
 	static const unsigned	MAX_OBJECTS;
 
 	enum	{ NAVCOMP, MAX_FLAGS	};
@@ -119,27 +120,28 @@ public:
 
 	Cargo			*XferCargo(Player* player,const std::string& cargo_name);
 	FedObject	*RetrieveObject(const std::string& obj_name);
-	Locker		*GetLocker()			{ return(locker);			}
+	Locker		*GetLocker()			{ return(locker);	}
 
 	long	AssessCustomsDuty(int percentage);
 	long	TradeInValue();
 
 	int	AddCargo(Cargo *cargo,Player *player);
-	int 	HoldRemaining()				{ return(cur_hold);		}
-	int	MaxCargo()						{ return(max_hold);		}
+	int 	HoldRemaining()				{ return(cur_hold); }
+	int	MaxCargo()						{ return(max_hold); }
 	int	ObjectWeight(const std::string& obj_name);
 	int	RemoveCargo(Player *player,const std::string& cargo_name,int selling_price,const std::string& not_from);
-	int	ShipClass()						{ return(ship_class);	}
+	int	ShipClass()						{ return(ship_class); }
 
-	const std::string& ClassName()	{ return(hull_types[ship_class]->name);	}
-	const std::string& Registry()		{ return(registry);								}
+	const std::string& ClassName()	{ return(hull_types[ship_class]->name); }
+	const std::string& Registry()		{ return(registry); }
 
 	bool	AddCargo(Player *player,int amount);
 	bool	AddObject(FedObject *object);
-	bool	FlagIsSet(int which)			{ return(flags.test(which));	}
-	bool	HasCargo()						{ return(manifest.size() != 0);				}
+	bool	FlagIsSet(int which)			{ return(flags.test(which)); }
+	bool	HasCargo()						{ return(manifest.size() != 0); }
 	bool	HasCargo(const std::string& cargo_name,const std::string& origin);
 	bool	HasFuel()						{ return(cur_fuel > 0);	}
+	bool 	HasMagazine()					{ return(magazine > 0); }
 	bool	HasWeapons();
 	bool	LockerIsFull();
 	bool	ReduceFuel(Player *player);
@@ -148,6 +150,7 @@ public:
 	void	Buy(Player *player,std::string& line);
 	void	BuyFuel(Player *player,int amount);
 	void 	BuyJammers(Player *player,int amount);
+	void 	BuyMissiles(Player *player,int amount);
 	void	BuySensors(Player *player,int amount);
 	void	Flee(Player *player);
 	void	FleeDamage(Player *player);

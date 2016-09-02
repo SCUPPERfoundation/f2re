@@ -1315,6 +1315,15 @@ bool	FedMap::IsARepairShop(int loc_no)
 		return(false);
 }
 
+bool	FedMap::IsAWeaponsShop(int loc_no)
+{
+	LocIndex::iterator	iter = loc_index.find(loc_no);
+	if(iter != loc_index.end())
+		return(iter->second->IsAWeaponsShop());
+	else
+		return(false);
+}
+
 bool	FedMap::IsAYard(int loc_no)
 {
 	LocIndex::iterator	iter = loc_index.find(loc_no);

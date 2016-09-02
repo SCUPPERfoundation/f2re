@@ -90,6 +90,8 @@ void	Location::AddFlags(std::string& text)
 			case 't':	flags.set(TELEPORT);	break;
 			case 'u':	flags.set(UNLIT);		break;
 			case 'y':	flags.set(SHIPYARD);	break;
+			case 'w':	flags.set(WEAPONS);	break;
+			case 'f':	flags.set(FIGHTING);	break;
 		}
 	}
 }

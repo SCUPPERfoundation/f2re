@@ -29,7 +29,8 @@ const std::string	BuyParser::vocab[] =
 {
 	"ship", "spaceship", "fuel", "warehouse", "ware", "depot", "futures",	//  0- 6
 	"factory", "food", "round", "pizza", "clothes", "shares", "treasury",	//	 7-13
-	"registry", "premium", "sensor", "sensors", "jammer", "jammers",
+	"registry", "premium", "sensor", "sensors", "jammer", "jammers",			// 14-19
+	"missiles",
 	""
 };
 
@@ -71,7 +72,7 @@ void	BuyParser::BuyJammers(Player *player,Tokens *tokens,const std::string& line
 	Ship *ship = player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("Buy a ship before you try to fit it with jammers!",OutputFilter::DEFAULT);
+		player->Send("Buy a ship before you try to fit it with jammers!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -142,7 +143,7 @@ void	BuyParser::BuySensors(Player *player,Tokens *tokens,const std::string& line
 	Ship *ship = player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("Buy a ship before you try to fit it with sensors!",OutputFilter::DEFAULT);
+		player->Send("Buy a ship before you try to fit it with sensors!\n",OutputFilter::DEFAULT);
 		return;
 	}
 
@@ -230,6 +231,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 		case 18:
 		case 19:	return(BuyJammers(player,tokens,line));		// 'jammers'
+		case 20:	return(BuyMissiles(player,tokens,line));		// 'missiles'
 	}
 
 	// is the format buy xxx something?
@@ -247,6 +249,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 		case 18:
 		case 19:	return(BuyJammers(player,tokens,line));		// 'jammers'
+		case 20:	return(BuyMissiles(player,tokens,line));		// 'missiles'
 	}
 	
 	// see if they want to buy a commodity
@@ -262,6 +265,36 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 /* --------------- Work in Progress --------------- */
 
+void	BuyParser::BuyMissiles(Player *player,Tokens *tokens,const std::string& line)
+{
+	Ship *ship = player->GetShip();
+	if(ship == 0)
+	{
+		player->Send("Buy a ship before you try to buy missiles!\n",OutputFilter::DEFAULT);
+		return;
+	}
 
+	if(!player->CurrentMap()->IsAWeaponsShop(player->LocNo()))
+	{
+		player->Send("Surprisingly enough, weapons can only be purchased in licensed weapon shops!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(!ship->HasMagazine())
+	{
+		player->Send("Your ship doesn't have a magazine to put missiles into!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	int num_to_buy = 0;
+	if(tokens->Size() < 3)	// Wants to fill the magazine
+		num_to_buy = -1;
+	else
+		num_to_buy = std::atoi(tokens->Get(1).c_str());
+	if(num_to_buy == 0)
+		player->Send("The format is buy XXX missles, where XXX is the number you want to buy!",OutputFilter::DEFAULT);
+	else
+		ship->BuyMissiles(player,num_to_buy);
+}
 
 
