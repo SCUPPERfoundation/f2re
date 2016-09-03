@@ -1359,10 +1359,10 @@ void 	Ship::BuyMissiles(Player *player,int amount)
 	}
 
 	missiles += amount;
-	player->ChangeCash(total_cost);
+	player->ChangeCash(-total_cost);
 	buffer.str("");
-	buffer << amount << " misiles purchases, which have been delivered to you ship, ";
-	buffer << " and loaded into its magazine.\n";
+	buffer << amount << " missiles purchased, and delivered to your ship, ";
+	buffer << "at a cost of "<< total_cost << "ig.\n";
 	player->Send(buffer,OutputFilter::DEFAULT);
 	XMLWeapons(player);
 }

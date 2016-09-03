@@ -30,7 +30,7 @@ const std::string	BuyParser::vocab[] =
 	"ship", "spaceship", "fuel", "warehouse", "ware", "depot", "futures",	//  0- 6
 	"factory", "food", "round", "pizza", "clothes", "shares", "treasury",	//	 7-13
 	"registry", "premium", "sensor", "sensors", "jammer", "jammers",			// 14-19
-	"missiles",
+	"missile", "missiles",
 	""
 };
 
@@ -138,26 +138,6 @@ void	BuyParser::BuyRound(Player *player,Tokens *tokens,const std::string& line)
 	}
 }
 
-void	BuyParser::BuySensors(Player *player,Tokens *tokens,const std::string& line)
-{
-	Ship *ship = player->GetShip();
-	if(ship == 0)
-	{
-		player->Send("Buy a ship before you try to fit it with sensors!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(tokens->Size() < 3)
-	{
-		player->Send("You haven't said how many sensors you want to buy!\n", OutputFilter::DEFAULT);
-		return;
-	}
-	if(std::isdigit(tokens->Get(1)[0]) != 0)
-		ship->BuySensors(player,std::atoi(tokens->Get(1).c_str()));
-	else
-		ship->BuySensors(player,std::atoi(tokens->Get(2).c_str()));
-}
-
 void	BuyParser::BuyShares(Player *player,Tokens *tokens,const std::string& line)
 {
 	if(player->Rank() == Player::INDUSTRIALIST)
@@ -231,7 +211,8 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 		case 18:
 		case 19:	return(BuyJammers(player,tokens,line));		// 'jammers'
-		case 20:	return(BuyMissiles(player,tokens,line));		// 'missiles'
+		case 20:
+		case 21:	return(BuyMissiles(player,tokens,line));		// 'missiles'
 	}
 
 	// is the format buy xxx something?
@@ -249,7 +230,8 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 		case 18:
 		case 19:	return(BuyJammers(player,tokens,line));		// 'jammers'
-		case 20:	return(BuyMissiles(player,tokens,line));		// 'missiles'
+		case 20:
+		case 21:	return(BuyMissiles(player,tokens,line));		// 'missiles'
 	}
 	
 	// see if they want to buy a commodity
@@ -264,6 +246,26 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 
 
 /* --------------- Work in Progress --------------- */
+
+void	BuyParser::BuySensors(Player *player,Tokens *tokens,const std::string& line)
+{
+	Ship *ship = player->GetShip();
+	if(ship == 0)
+	{
+		player->Send("Buy a ship before you try to fit it with sensors!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Size() < 3)
+	{
+		player->Send("You haven't said how many sensors you want to buy!\n", OutputFilter::DEFAULT);
+		return;
+	}
+	if(std::isdigit(tokens->Get(1)[0]) != 0)
+		ship->BuySensors(player,std::atoi(tokens->Get(1).c_str()));
+	else
+		ship->BuySensors(player,std::atoi(tokens->Get(2).c_str()));
+}
 
 void	BuyParser::BuyMissiles(Player *player,Tokens *tokens,const std::string& line)
 {
