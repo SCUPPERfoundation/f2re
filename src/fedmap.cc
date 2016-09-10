@@ -541,6 +541,55 @@ const std::string&	FedMap::CartelName()
 	return(home_star->CartelName());
 }
 
+void	FedMap::ChangeFightFlag(Player *player)
+{
+	static const std::string not_owner("You're not the owner of this star system.\n");
+	static const std::string no_build("You're not allowed to change your system.\n");
+	static const std::string not_allowed("Fighting flags cannot be set on  planet, link, or orbit locations.\n");
+
+	if ((player->Name() != infra->Owner()) && !player->IsManager())
+		player->Send(not_owner, OutputFilter::DEFAULT);
+	else
+	{
+		if (!home_star->CanBuild() && !player->IsManager())
+		{
+			player->Send(no_build, OutputFilter::DEFAULT);
+			return;
+		}
+
+		if(title.find("Space") == std::string::npos) // Space map?
+		{
+			player->Send(not_allowed, OutputFilter::DEFAULT);
+			return;
+		}
+
+		Location *loc = FindLoc(player->LocNo());
+
+		if(loc->IsALink())	// Interstellar link?
+		{
+			player->Send(not_allowed, OutputFilter::DEFAULT);
+			return;
+		}
+
+		// Orbit location?
+		std::ostringstream	buffer;
+		buffer << home_star->Name() << "." << title << "." << player->LocNo();
+		std::string	orbit(buffer.str());
+		LocRec landing_pad;
+		home_star->FindLandingPad(&landing_pad,orbit);
+		if(landing_pad.loc_no != -1)
+		{
+			player->Send(not_allowed, OutputFilter::DEFAULT);
+			return;
+		}
+
+		// OK - it's allowed!
+		if(loc->FlipFlag(Location::FIGHTING))
+			player->Send("Fighting flag set!\n", OutputFilter::DEFAULT);
+		else
+			player->Send("Fighting flag cleared!\n", OutputFilter::DEFAULT);
+	}
+}
 
 void	FedMap::ChangeLocDesc(Player *player,const std::string& new_desc)
 {
@@ -566,15 +615,6 @@ everything on a hot day, and the location is transformed.\n");
 			text = new_desc;
 		int	loc_no = player->LocNo();
 		FindLoc(loc_no)->AddDesc(text,Location::REPLACE_DESC);
-/*
-		PlayerList pl_list;
-		PlayersInLoc(loc_no,pl_list);
-		if(!pl_list.empty())
-		{
-			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-				(*iter)->Send(text,OutputFilter::DEFAULT);
-		}
-*/
 		for(PlayerList::iterator iter = player_list.begin();iter != player_list.end();iter++)
 		{
 			if((*iter)->LocNo() == loc_no)
@@ -588,8 +628,8 @@ everything on a hot day, and the location is transformed.\n");
 
 void	FedMap::ChangeLocName(Player *player,const std::string& new_name)
 {
-	static const std::string	not_owner("You're not the owner of this planet.\n");
-	static const std::string	no_build("You're not allowed to change your planet.\n");
+	static const std::string	not_owner("You're not the owner of this star system.\n");
+	static const std::string	no_build("You're not allowed to change your system.\n");
 	static const std::string	ok("There is a sudden shimmer, as though you were seeing \
 everything on a hot day, and the location has a new name.\n");
 
@@ -2021,7 +2061,7 @@ void	FedMap::SaveInfrastructure()
 
 void	FedMap::SaveMap(Player *player)
 {
-	static const std::string	not_owner("Only the planet's owner can change its maps!\n");
+	static const std::string	not_owner("Only the system's owner can change its maps!\n");
 	static const std::string	error("Unable to save map - please report problem to \
 feedback@ibgames.net - Thank you.\n");
 	static const std::string	ok("Map saved out to disk.\n");
@@ -2361,4 +2401,7 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 	else
 		return(0L);
 }
+
+/* --------------------- Work in progress --------------------- */
+
 

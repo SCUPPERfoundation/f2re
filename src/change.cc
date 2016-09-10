@@ -58,7 +58,8 @@ void	ChangeParser::ChangeName(Player *player,Tokens *tokens,const std::string& l
 
 int ChangeParser::FindNoun(const std::string subject)
 {
-	static const std::string	nouns[] = { "clothes", "name", "desc", ""	};
+	static const std::string	nouns[] =
+	{ "clothes", "name", "desc", "fighting", "" };
 
 	for(int count = 0;nouns[count] != "";count++)
 	{
@@ -74,11 +75,11 @@ void	ChangeParser::Process(Player *player,Tokens *tokens,const std::string& line
 
 	switch(FindNoun(tokens->Get(1)))
 	{
-		case 0: ChangeClothes(player,tokens,line);	return;
-		case 1: ChangeName(player,tokens,line);		return;
-		case 2: ChangeDesc(player,tokens,line);		return;
+		case 0:	ChangeClothes(player,tokens,line);					return;
+		case 1:	ChangeName(player,tokens,line);						return;
+		case 2:	ChangeDesc(player,tokens,line);						return;
+		case 3:	player->CurrentMap()->ChangeFightFlag(player);	return;
 	}
 
 	player->Send(no_noun,OutputFilter::DEFAULT);
 }
-

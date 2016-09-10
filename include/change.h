@@ -22,13 +22,14 @@ private:
 
 	int FindNoun(const std::string subject);
 
+	void	ChangeClothes(Player *player,Tokens *tokens,const std::string& line);
+	void	ChangeDesc(Player *player,Tokens *tokens,const std::string& line);
+	void	ChangeName(Player *player,Tokens *tokens,const std::string& line);
+
 public:
 	ChangeParser()		{	}
 	~ChangeParser()	{	}
 
-	void	ChangeClothes(Player *player,Tokens *tokens,const std::string& line);
-	void	ChangeDesc(Player *player,Tokens *tokens,const std::string& line);
-	void	ChangeName(Player *player,Tokens *tokens,const std::string& line);
 	void	Process(Player *player,Tokens *tokens,const std::string& line);
 };
 

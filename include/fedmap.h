@@ -238,6 +238,7 @@ public:
 	void	BuildDestruction();
 	void	BuyFromCommodExchange(Player *player,const std::string& commodity);
 	void	BuyFutures(Player *player,const std::string& commodity);
+	void	ChangeFightFlag(Player *player);
 	void	ChangeLocDesc(Player *player,const std::string& new_desc);
 	void	ChangeLocName(Player *player,const std::string& new_name);
 	void	ChangeProduction(const Commodity *commodity,int amount);

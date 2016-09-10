@@ -116,6 +116,8 @@ const std::string&	Location::AsciiOnly(const std::string& text)
 void	Location::Description(std::ostringstream& buffer,int extent)
 {
 	buffer << name;
+	if(FlagIsSet(FIGHTING))
+		buffer << " (Not patrolled)";
 	if(extent == FULL_DESC)
 		buffer << desc;
 	buffer << "\n";
@@ -131,6 +133,8 @@ void	Location::Description(Player *player,int extent)
 
 	std::ostringstream	buffer("");
 	buffer << name;
+	if(FlagIsSet(FIGHTING))
+		buffer << " (Not patrolled)";
 	if(extent == DEFAULT)
 	{
 		if(!player->WantsBrief())
@@ -301,6 +305,8 @@ void	Location::WriteFlags(std::ofstream& file)
 	if(flags.test(TELEPORT))	file << "t";
 	if(flags.test(COURIER))		file << "c";
 	if(flags.test(PICKUP))		file << "a";
+	if(flags.test(WEAPONS))		file << "w";
+	if(flags.test(FIGHTING))	file << "f";
 	file << "'";
 }
 
@@ -330,7 +336,11 @@ void	Location::XMLNewLoc(Player *player,int extent)
 	AttribList attribs;
 	buffer << loc_no;
 	attribs.push_back(std::make_pair("loc-num",buffer.str()));
-	attribs.push_back(std::make_pair("name",name));
+	buffer.str("");
+	buffer << name;
+	if(FlagIsSet(FIGHTING))
+		buffer << " (Not patrolled)";
+	attribs.push_back(std::make_pair("name",buffer.str()));
 	buffer.str("");
 	XMLFlags(buffer);
 	if(buffer.str().size() > 0)

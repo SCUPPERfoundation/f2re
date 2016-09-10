@@ -73,6 +73,8 @@ public:
 
 	bool	CanTeleport()					{ return(!flags.test(TELEPORT));		}
 	bool	FlagIsSet(int which_flag)	{ return(flags.test(which_flag));	}
+	bool 	FlipFlag(int which_flag)	{ flags.flip(which_flag);
+												  return(flags.test(which_flag));   }
 	bool	IsABar()							{ return(flags.test(BAR));				}
 	bool	IsABroker()						{ return(flags.test(INSURE));			}
 	bool	IsACourier()					{ return(flags.test(COURIER));		}
@@ -83,7 +85,7 @@ public:
 	bool	IsAPickup()						{ return(flags.test(PICKUP));			}
 	bool	IsARepairShop()				{ return(flags.test(REPAIR));			}
 	bool	IsAYard()						{ return(flags.test(SHIPYARD));		}
-	bool	IsAWeaponsShop()				{ return(flags.test(WEAPONS));			}
+	bool	IsAWeaponsShop()				{ return(flags.test(WEAPONS));		}
 	bool	ProcessVocab(Player *player,const std::string& command);
 
 	void	AddDesc(const std::string& text,int how = ADD_DESC);
