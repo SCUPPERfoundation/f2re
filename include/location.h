@@ -79,11 +79,13 @@ public:
 	bool	IsABroker()						{ return(flags.test(INSURE));			}
 	bool	IsACourier()					{ return(flags.test(COURIER));		}
 	bool	IsAnExchange()					{ return(flags.test(EXCHANGE));		}
+	bool	IsAFightingLoc()				{ return(flags.test(FIGHTING));		}
 	bool	IsAHospital()					{ return(flags.test(HOSPITAL));		}
 	bool	IsALink()						{ return(flags.test(LINK));			}
-	bool 	IsAPeaceLoc()					{ return(flags.test(PEACE));			}
+//	bool 	IsAPeaceLoc()					{ return(flags.test(PEACE));			}
 	bool	IsAPickup()						{ return(flags.test(PICKUP));			}
 	bool	IsARepairShop()				{ return(flags.test(REPAIR));			}
+	bool	IsASpaceLoc()					{ return(flags.test(SPACE));			}
 	bool	IsAYard()						{ return(flags.test(SHIPYARD));		}
 	bool	IsAWeaponsShop()				{ return(flags.test(WEAPONS));		}
 	bool	ProcessVocab(Player *player,const std::string& command);

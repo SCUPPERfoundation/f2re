@@ -6821,3 +6821,66 @@ void	Player::Clear(const std::string& what)
 	else
 		ClearMood();
 }
+
+void	Player::Attack()
+{
+	std::ostringstream	buffer;
+
+	if(target == "")
+	{
+		Send("You haven't set up a target to attack!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	Player *target_ptr = Game::player_index->FindCurrent(target);
+	if(target_ptr == 0)
+	{
+		buffer.str("");
+		buffer << target << " isn't in the game at the moment!\n";
+		Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	FedMap	*fed_map = loc.fed_map;
+	if(!fed_map->IsASpaceLoc(loc.loc_no))
+	{
+		Send("You have to be in space in your ship to attack!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	LocRec	new_loc;
+	if(fed_map->FindLandingPad(this,new_loc))
+	{
+		Send("Starting a fight in planet orbit is a quick way to get killed by the orbital defences!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if((!fed_map->IsAFightingLoc(loc.loc_no)) || loc.fed_map->IsALink(loc.loc_no))
+	{
+		Send("A very large warship appears and it is made clear that fighting is -not- allowed here!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(target_ptr->CurrentMap() != loc.fed_map)
+	{
+		buffer.str("");
+		buffer << target << " is not in " << loc.fed_map->Title() << "\n";
+		Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(target_ptr->GetLocRec().loc_no != loc.loc_no)
+	{
+		buffer.str("");
+		buffer << target_ptr->Name() << " needs to be in the same location as you to be in range!\n";
+		Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	// Hurray! Everything is in the correct place - now fire a missile!
+	buffer.str("");
+	buffer << "KerrrrrPowwww! You are in in a position to fire missiles at ";
+	buffer << target_ptr->Name();
+	buffer << ". But sadly I haven't written the code yet... (It's next - honest guv.)\n";
+	Send(buffer,OutputFilter::DEFAULT);
+}

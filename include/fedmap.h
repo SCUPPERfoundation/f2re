@@ -189,6 +189,7 @@ public:
 	bool	CanTeleport(int loc_no);
 	bool	DeleteWarehouse(Player *player);
 	bool	Examine(Player *player,const std::string& obj_name);
+	bool	FindLandingPad(Player *player,LocRec& new_loc);
 	bool	GengineerPromoAllowed(Player *player);
 	bool	HasACourier()									{ return(has_a_courier);				}
 	bool	HasAnExchange()								{ return(commodity_exchange != 0);	}
@@ -198,10 +199,13 @@ public:
 	bool	IsABar(int loc_no);
 	bool	IsABroker(int loc_no);
 	bool	IsACourier(int loc_no);
+	bool	IsAFightingLoc(int loc_no);
 	bool	IsALandingPad(int loc_no)					{ return(landing_pad == loc_no);		}
+	bool	IsALink(int loc_no);
 	bool	IsALoc(int loc_no);
 	bool	IsAnExchange(int loc_no)					{ return(loc_no == comm_exch_loc);	}
 	bool	IsARepairShop(int loc_no);
+	bool	IsASpaceLoc(int loc_no);
 	bool	IsAWeaponsShop(int loc_no);
 	bool	IsAYard(int loc_no);
 	bool	IsOpen(Player *player);

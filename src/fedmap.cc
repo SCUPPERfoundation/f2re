@@ -1398,40 +1398,30 @@ int	FedMap::LandingPad(const std::string& orbit)
 
 void	FedMap::LandShuttle(Player *player)
 {
-	Star	*star = Game::galaxy->Find(home_star->Name());
-	if(star == 0)
-		player->Send(Game::system->GetMessage("fedmap","landshuttle",2),OutputFilter::DEFAULT);
-	else
+	LocRec	new_loc;
+	if(!FindLandingPad(player,new_loc))
 	{
-		std::ostringstream	buffer;
-		buffer << home_star->Name() << "." << title << "." << player->LocNo();
-		std::string	orbit(buffer.str());
-		LocRec	new_loc;
-		star->FindLandingPad(&new_loc,orbit);
-		if(new_loc.loc_no == -1)
-		{
-			player->Send(Game::system->GetMessage("fedmap","landshuttle",1),OutputFilter::DEFAULT);
-			return;
-		}
-		RemovePlayer(player);
-		player->NewMap(&new_loc);
-		player->ToggleSpace();
-		if(player->CommsAPILevel() > 0)
-			XMLNewMap(player);
-		player->Send(Game::system->GetMessage("fedmap","landshuttle",3),OutputFilter::DEFAULT);
-		player->Send(Game::system->GetMessage("fedmap","landshuttle",4),OutputFilter::DEFAULT);
-		new_loc.fed_map->AddPlayer(player);
-		if(player->CommsAPILevel() > 0)
-		{
-			// Switch stats panel from ship to player stats
-			AttribList attribs;
-			attribs.push_back(std::make_pair("stat","score"));
-			player->Send("",OutputFilter::PLAYER_STATS,attribs);
-
-			player->SendSound("landing");
-		}
-		Game::player_index->Save(player,PlayerIndex::NO_OBJECTS);
+		player->Send(Game::system->GetMessage("fedmap","landshuttle",1),OutputFilter::DEFAULT);
+		return;
 	}
+
+	RemovePlayer(player);
+	player->NewMap(&new_loc);
+	player->ToggleSpace();
+	if(player->CommsAPILevel() > 0)
+		XMLNewMap(player);
+	player->Send(Game::system->GetMessage("fedmap","landshuttle",3),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("fedmap","landshuttle",4),OutputFilter::DEFAULT);
+	new_loc.fed_map->AddPlayer(player);
+	if(player->CommsAPILevel() > 0)
+	{
+		// Switch stats panel from ship to player stats
+		AttribList attribs;
+		attribs.push_back(std::make_pair("stat","score"));
+		player->Send("",OutputFilter::PLAYER_STATS,attribs);
+		player->SendSound("landing");
+	}
+	Game::player_index->Save(player,PlayerIndex::NO_OBJECTS);
 }
 
 void	FedMap::LaunchShuttle(Player *player)
@@ -2404,4 +2394,48 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 
 /* --------------------- Work in progress --------------------- */
 
+bool	FedMap::IsASpaceLoc(int loc_no)
+{
+	Location	*loc = FindLoc(loc_no);
+	if(loc == 0)
+		return false;
+	else
+		return(loc->IsASpaceLoc());
+}
+
+bool	FedMap::IsAFightingLoc(int loc_no)
+{
+	Location	*loc = FindLoc(loc_no);
+	if(loc == 0)
+		return false;
+	else
+		return(loc->IsAFightingLoc());
+}
+
+bool	FedMap::IsALink(int loc_no)
+{
+	Location	*loc = FindLoc(loc_no);
+	if(loc == 0)
+		return false;
+	else
+		return(loc->IsALink());
+}
+
+bool FedMap::FindLandingPad(Player *player,LocRec& new_loc)
+{
+	Star	*star = Game::galaxy->Find(home_star->Name());
+	if(star == 0)
+	{
+		player->Send(Game::system->GetMessage("fedmap", "landshuttle", 2), OutputFilter::DEFAULT);
+		return false;
+	}
+	std::ostringstream buffer;
+	buffer << home_star->Name() << "." << title << "." << player->LocNo();
+	std::string orbit(buffer.str());
+	star->FindLandingPad(&new_loc, orbit);
+	if (new_loc.loc_no != -1)
+		return true;
+	else
+		return false;
+}
 

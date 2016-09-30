@@ -199,7 +199,7 @@ protected:
 	std::string	spouse;				//	name of player's in-game spouse (ick!)
 
 	Louie			*louie;				// in use if participating in a game of Lucky Louie
-	std::string	target;				// who the player is targetting
+	std::string	target;				// who the player is targetting - not saved across sessions
 
 	std::pair<std::string,std::string>	ExtractWareName(const std::string& w_name);
 
@@ -407,6 +407,7 @@ public:
 	void	AdminFlags(Player *player);
 	void	Akaturi();
 	void	AllowBuilds(Player	*initiator);
+	void	Attack();
 	void	BlowKiss(Player *recipient);
 	void	Brief(bool value)									{ value ? flags.set(BRIEF) : flags.reset(BRIEF); }
 	void	Build(int build_type,Tokens *tokens);
@@ -526,7 +527,7 @@ public:
 	void	Mood();
 	void	Mood(const std::string& desc);
 	void	NewCustomsCert();
-	void	NewLocNum(int num)								{ last_loc = loc.loc_no; loc.loc_no = num;	}
+	void	NewLocNum(int num)		{ last_loc = loc.loc_no; loc.loc_no = num;	}
 	void	NewMap(LocRec *rec);
 	void	Offline();
 	void	Online();
