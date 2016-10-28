@@ -30,9 +30,11 @@ the class look somewhat inconsistent until I finish the refactoring. - AL */
 
 #include <ctime>
 
-#include "obj_list.h"
+#include "fight_info.h"
 #include "loc_rec.h"
-#include "player_index.h"
+#include "obj_list.h"
+#include "player_index.h"	// remove this when billing rewritten properly :)
+
 
 class Business;
 class Cargo;
@@ -500,6 +502,7 @@ public:
 	void	Gengineer2Magnate();
 	void	Get(FedObject	*object);
 	void	GetEMail();
+	void	GetFightInfoIn(FightInfoIn& info);
 	void	Give(Player *recipient,int amount);
 	void	Give(Player *recipient,std::string& obj_name);
 	void	GiveSlithy(Player *recipient);
@@ -515,6 +518,7 @@ public:
 	void	JoinChannel(std::string& ch_name);
 	void	JoinLouie(Player *player);
 	void	Jump(const std::string where_to);
+	void	LaunchMissile();
 	void	LeaveChannel();
 	void	LeaveLouie();
 	void	Liquidate(const std::string&	commod);
@@ -523,6 +527,7 @@ public:
 	void	Look(int extent);
 	void	Marry(const std::string& who_name);
 	void	Merchant2Trader();
+	void 	MissileHit(const FightInfoOut& info);
 	void	Mogul2Technocrat();
 	void	Mood();
 	void	Mood(const std::string& desc);
@@ -626,16 +631,6 @@ public:
 	void	Xfer2Treasury(int num_megs);
 	void	XMLStats();
 	void	Xt(const std::string& msg);
-
-	// used for testing/debugging
-	void	DamageComputer(int amount);
-	void	DamageEngines(int amount);
-	void	DamageHull(int amount);
-	void 	DamageLaser(int percent);
-	void 	DamageMissileRack(int percent);
-	void 	DamageQL(int percent);
-	void 	DamageShields(int amount);
-	void 	DamageTL(int percent);
 };
 
 #endif

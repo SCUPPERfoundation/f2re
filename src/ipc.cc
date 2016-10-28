@@ -32,15 +32,10 @@
 #include "misc.h"
 #include "player_index.h"
 
-const int	IPC::BUFFER_SIZE;
-const int	IPC::MAX_ERRORS;
-const int	IPC::ERROR_SIZE;
 int			IPC::ticks = 0;
 
 IPC::IPC(const char *server)
 {
-//	port = billing_port = -1;
-
 	// open listen socket...
 	if((ld = socket(AF_INET,SOCK_STREAM,0)) < 0)
 	{

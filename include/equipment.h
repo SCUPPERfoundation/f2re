@@ -12,6 +12,8 @@
 
 #include <string>
 
+// NOTE: If you change this do -not- add any Fed includes
+
 struct	Computer
 {
 	int	level;				// what level this computer is

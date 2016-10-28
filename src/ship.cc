@@ -25,6 +25,7 @@
 #include "equip_parser.h"
 #include "fedmap.h"
 #include "fed_object.h"
+#include "fight_list.h"
 #include "locker.h"
 #include "misc.h"
 #include "output_filter.h"
@@ -207,6 +208,14 @@ long	Ship::AssessCustomsDuty(int percentage)
 	return(amount_due);
 }
 
+void	Ship::BattleUpdate(Player *player)
+{
+	if(player->CommsAPILevel() > 0)
+		player->XMLStats();
+	else
+		StatusReport(player);
+}
+
 void	Ship::Buy(Player *player)
 {
 	player->Send(Game::system->GetMessage("ship","buy",4),OutputFilter::DEFAULT);
@@ -328,6 +337,39 @@ void	Ship::BuyJammers(Player *player,int amount)
 	XMLComputer(player);
 }
 
+void 	Ship::BuyMissiles(Player *player,int amount)
+{
+	std::ostringstream	buffer;
+	int space_remaining = magazine - missiles;
+	if(amount == -1)
+		amount = space_remaining;
+	if(amount > space_remaining)
+		amount = space_remaining;
+
+	if(amount == 0)
+	{
+		player->Send("You don't have magazine space to store the missiles!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	int total_cost = amount * MISSILE_COST;
+	if(total_cost > player->Cash())
+	{
+		buffer.str("");
+		buffer << "You can't afford it. Missiles cost " << MISSILE_COST << "ig each.\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	missiles += amount;
+	player->ChangeCash(-total_cost);
+	buffer.str("");
+	buffer << amount << " missiles purchased, and delivered to your ship, ";
+	buffer << "at a cost of "<< total_cost << "ig.\n";
+	player->Send(buffer,OutputFilter::DEFAULT);
+	XMLWeapons(player);
+}
+
 void	Ship::BuySensors(Player *player,int amount)
 {
 	std::ostringstream	buffer;
@@ -349,6 +391,33 @@ void	Ship::BuySensors(Player *player,int amount)
 	XMLComputer(player);
 }
 
+long	Ship::ComputerRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	if(computer.level == computer.cur_level)
+		return(0L);
+
+	buffer << "Computer:\n";
+	FedMap	*fed_map =  player->CurrentMap();
+	if(!fed_map->HasAnExchange())
+	{
+		player->Send(repair_error,OutputFilter::DEFAULT);
+		return(0);
+	}
+	long	total = 0L;
+	for(int count = computer.cur_level - 1;comp_repair_multipliers[count] != -1;count++)
+	{
+		buffer << "   ~~~ level " << (count + 1) << "->" << "level " << (count + 2) << " ~~~\n";
+		for(int index = 0;comp_repairs[index].second != 0;index++)
+			total +=	fed_map->YardPurchase(comp_repairs[index].first,
+														comp_repairs[index].second * comp_repair_multipliers[count],buffer,action);
+		if((count + 1) == computer.level)
+			break;
+	}
+	buffer << "   Labor cost: " << total/10 << "ig\n";
+	total += (total/10L);
+
+	return(total);
+}
 void	Ship::CreateRec(DBPlayer *pl_rec)
 {
 	DbShip	*rec = &pl_rec->ship;
@@ -394,6 +463,16 @@ void	Ship::DisplayObjects(Player *player)
 	std::ostringstream	buffer;
 	locker->Display(player,buffer);
 	player->Send(buffer,OutputFilter::DEFAULT);
+}
+
+long	Ship::EngineRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	int	repair_size = max_engine - cur_engine;
+	if(repair_size == 0)
+		return(0L);
+
+	buffer << "Engines:\n";
+	return(RepairPlant(player,buffer,action,engine_repairs,repair_size));
 }
 
 void	Ship::FlipFlag(Player *player,int which)
@@ -491,6 +570,90 @@ knocked out your navigation computer.\n");
 		player->XMLStats();
 }
 
+void	Ship::GetFightInfoIn(FightInfoIn& info)
+{
+	info.engines = cur_engine;
+	info.sensors = computer.sensors;
+	info.jammers = computer.jammers;
+	info.lasers = 0;
+	info.twin_lasers = 0;
+	info.quad_lasers = 0;
+	info.missile_rack = 0;
+	info.defence_laser = false;
+
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		if(weapons[count].efficiency > 0)
+		{
+			switch(weapons[count].type)
+			{
+				case Weapon::MISSILE_RACK:
+					if(weapons[count].efficiency > info.missile_rack)
+						info.missile_rack = weapons[count].efficiency;
+					break;
+				case Weapon::LASER:
+					if(weapons[count].efficiency > info.lasers)
+						info.lasers = weapons[count].efficiency;
+					info.defence_laser = true;
+					break;
+				case Weapon::TWIN_LASER:
+					if (weapons[count].efficiency > info.twin_lasers)
+						info.twin_lasers = weapons[count].efficiency;
+					break;
+
+				case Weapon::QUAD_LASER:
+					if(weapons[count].efficiency > info.quad_lasers)
+						info.quad_lasers = weapons[count].efficiency;
+					break;
+			}
+		}
+	}
+
+}
+
+long	Ship::HullRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	int	repair_size = max_hull - cur_hull;
+	if(repair_size == 0)
+		return(0L);
+
+	buffer << "Hull:\n";
+	return(RepairPlant(player,buffer,action,hull_repairs,repair_size));
+}
+
+long	Ship::LaserRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	long	total_cost = 0L;
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		if(weapons[count].type == Weapon::LASER)
+		{
+			int	repair_percent = (100 - weapons[count].efficiency);
+			int	repair_size =  repair_percent/10;
+			if((repair_percent % 10) > 0)
+				++repair_size;
+			if(repair_size == 0)
+				continue;	// There may be more than one laser
+
+			buffer << "Laser:\n";
+			total_cost += RepairPlant(player,buffer,action,laser_repairs,repair_size);
+		}
+	}
+	return total_cost;
+}
+
+void	Ship::LaunchMissile(Player *player)
+{
+	if(missiles == 0)
+	{
+		player->Send("You don't have any missiles to launch!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(Game::fight_list->Launch(player,0))
+		--missiles;
+}
+
 void	Ship::LoadEquipment()	// static
 {
 	std::ostringstream	buffer;
@@ -515,6 +678,20 @@ bool	Ship::LockerIsFull()
 	return(locker->IsFull());
 }
 
+int	Ship::MissileRackEfficiency()
+{
+	int	efficiency = 0;
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		if(weapons[count].type == Weapon::MISSILE_RACK)
+		{
+			if (weapons[count].efficiency > efficiency)
+				efficiency = weapons[count].efficiency;
+		}
+	}
+	return efficiency;
+}
+
 int	Ship::ObjectWeight(const std::string& obj_name)
 {
 	FedObject	*object = locker->Find(obj_name);
@@ -522,6 +699,48 @@ int	Ship::ObjectWeight(const std::string& obj_name)
 		return(object->Weight());
 	else
 		return(0);
+}
+
+long	Ship::QlRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	long	total_cost = 0L;
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		if(weapons[count].type == Weapon::QUAD_LASER)
+		{
+			int	repair_percent = (100 - weapons[count].efficiency);
+			int	repair_size =  repair_percent/10;
+			if((repair_percent % 10) > 0)
+				++repair_size;
+			if(repair_size == 0)
+				continue;	// There may be more than one twin laser
+
+			buffer << "Quad  Laser:\n";
+			total_cost += RepairPlant(player,buffer,action,ql_repairs,repair_size);
+		}
+	}
+	return total_cost;
+}
+
+long	Ship::RackRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	long	total_cost = 0L;
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		if(weapons[count].type == Weapon::MISSILE_RACK)
+		{
+			int	repair_percent = (100 - weapons[count].efficiency);
+			int	repair_size =  repair_percent/10;
+			if((repair_percent % 10) > 0)
+				++repair_size;
+			if(repair_size == 0)
+				continue;	// There may be more than one missile rack
+
+			buffer << "Missile Rack:\n";
+			total_cost += RepairPlant(player,buffer,action,rack_repairs,repair_size);
+		}
+	}
+	return total_cost;
 }
 
 bool	Ship::ReduceFuel(Player *player)
@@ -618,6 +837,57 @@ void 	Ship::RemoveSensors(Player *player,int how_many)
 	cur_hold += tonnage;
 	XMLCargo(player);
 	XMLComputer(player);
+}
+
+long	Ship::RepairPlant(Player *player,std::ostringstream& buffer,int action,
+								 const RawMaterials *materials,int repair_size)
+{
+	FedMap	*fed_map =  player->CurrentMap();
+	if(!fed_map->HasAnExchange())
+	{
+		player->Send(repair_error,OutputFilter::DEFAULT);
+		return(0L);
+	}
+	long	total = 0L;
+	for(int index = 0;materials[index].second != 0;index++)
+		total += fed_map->YardPurchase(materials[index].first,
+												 materials[index].second * repair_size,buffer,action);
+	buffer << "   Labor cost: " << total/10 << "ig\n";
+	total += (total/10L);
+	return(total);
+}
+
+void	Ship::ReportDamage(Player *player,const std::list<std::string>& damage_list)
+{
+	int	list_size = damage_list.size();
+	std::string	report("Damage Control reports damage to the ");
+
+	std::ostringstream	buffer;
+	buffer << report;
+
+	if(list_size == 1)
+	{
+		buffer <<  *(damage_list.begin()) << ".\n";
+		player->Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	std::list<std::string>::const_iterator	iter;
+	int	count;
+	for(iter = damage_list.begin(),count = 1;iter != damage_list.end();++iter,++count)
+	{
+		buffer << *iter;
+		if(list_size == (count + 1))
+			buffer << " and ";
+		else
+		{
+			if (list_size == count)
+				buffer << ".\n";
+			else
+				buffer << ", ";
+		}
+	}
+	player->Send(buffer,OutputFilter::DEFAULT);
 }
 
 void	Ship::ResetShipStats(Player *player)
@@ -740,6 +1010,16 @@ void	Ship::SetUpStarterSpecial()
 	status = SHIP_CLEAR;
 }
 
+long	Ship::ShieldRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	int	repair_size = max_shield - cur_shield;
+	if(repair_size == 0)
+		return(0L);
+
+	buffer << "Shields:\n";
+	return(RepairPlant(player,buffer,action,shield_repairs,repair_size));
+}
+
 void	Ship::StatusReport(Player *player)
 {
 	std::ostringstream	buffer("");
@@ -792,6 +1072,27 @@ void	Ship::StatusReport(Player *player)
 			(*iter)->Display(player);
 		}
 	}
+}
+
+long	Ship::TlRepair(Player *player,std::ostringstream& buffer,int action)
+{
+	long	total_cost = 0L;
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		if(weapons[count].type == Weapon::TWIN_LASER)
+		{
+			int	repair_percent = (100 - weapons[count].efficiency);
+			int	repair_size =  repair_percent/10;
+			if((repair_percent % 10) > 0)
+				++repair_size;
+			if(repair_size == 0)
+				continue;	// There may be more than one twin laser
+
+			buffer << "Twin Laser:\n";
+			total_cost += RepairPlant(player,buffer,action,tl_repairs,repair_size);
+		}
+	}
+	return total_cost;
 }
 
 void	Ship::TopUpFuel(Player *player)
@@ -1053,7 +1354,7 @@ void 	Ship::XMLWeaponStat(Player *player,int efficiency,std::string name)
 }
 
 
-/* -------------- Repair stuff -------------- */
+/* --------------- Work in Progress --------------- */
 
 void	Ship::Repair(Player *player,int action)
 {
@@ -1119,251 +1420,119 @@ void	Ship::Repair(Player *player,int action)
 	}
 }
 
-long	Ship::ComputerRepair(Player *player,std::ostringstream& buffer,int action)
+bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
 {
-	if(computer.level == computer.cur_level)
-		return(0L);
+	if (!info.has_damage)
+		return false;
 
-	buffer << "Computer:\n";
-	FedMap	*fed_map =  player->CurrentMap();
-	if(!fed_map->HasAnExchange())
+	std::list<std::string> damage_list;
+
+	if((computer.level > 1) && (info.computer_damage > 0))
 	{
-		player->Send(repair_error,OutputFilter::DEFAULT);
-		return(0);
+		if((computer.level -= info.computer_damage) < 1)
+			computer.level = 1;
+		damage_list.push_back("computer");
 	}
-	long	total = 0L;
-	for(int count = computer.cur_level - 1;comp_repair_multipliers[count] != -1;count++)
+	if((computer.sensors > 0) && (info.sensor_damage > 0))
 	{
-		buffer << "   ~~~ level " << (count + 1) << "->" << "level " << (count + 2) << " ~~~\n";
-		for(int index = 0;comp_repairs[index].second != 0;index++)
-			total +=	fed_map->YardPurchase(comp_repairs[index].first,
-					comp_repairs[index].second * comp_repair_multipliers[count],buffer,action);
-		if((count + 1) == computer.level)
-			break;
+		if((computer.sensors -= info.sensor_damage) < 0)
+			computer.sensors = 0;
+		damage_list.push_back("sensors");
 	}
-	buffer << "   Labor cost: " << total/10 << "ig\n";
-	total += (total/10L);
+	if((computer.jammers > 0) && (info.jammer_damage > 0))
+	{
+		if ((computer.jammers -= info.jammer_damage) < 0)
+			computer.jammers = 0;
+		damage_list.push_back("jammers");
+	}
+
+	bool rack_done = false;
+	bool laser_done = false;
+	bool tl_done = false;
+	bool ql_done = false;
+
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		switch(weapons[count].type)
+		{
+			case Weapon::MISSILE_RACK:
+				if((!rack_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.missile_rack_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.missile_rack_damage) < 0)
+							weapons[count].efficiency = 0;
+						rack_done = true;
+						damage_list.push_back("missile rack");
+					}
+				}
+				break;
+
+			case Weapon::LASER:
+				if((!laser_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.laser_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.laser_damage) < 0)
+							weapons[count].efficiency = 0;
+						laser_done = true;
+						damage_list.push_back("laser");
+					}
+				}
+				break;
+
+			case Weapon::TWIN_LASER:
+				if((!tl_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.twin_laser_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.twin_laser_damage) < 0)
+							weapons[count].efficiency = 0;
+						tl_done = true;
+						damage_list.push_back("twin laser");
+					}
+				}
+				break;
+
+			case Weapon::QUAD_LASER:
+				if((!ql_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.quad_laser_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.quad_laser_damage) < 0)
+							weapons[count].efficiency = 0;
+						ql_done = true;
+						damage_list.push_back("quad laser");
+					}
+				}
+				break;
+		}
+	}
+
+	if((cur_shield > 0) && (info.shield_damage > 0))
+	{
+		if ((cur_shield -= info.shield_damage) < 0)
+			cur_shield = 0;
+		damage_list.push_back("shields");
+	}
+	// TODO: Change cur_engine to zero & include in power requirements after test period
+	if((cur_engine > 1) && (info.engine_damage > 0))
+	{
+		if ((cur_engine -= info.engine_damage) < 1)
+			cur_engine = 1;
+		damage_list.push_back("engines");
+	}
+	// TODO: Change to zero & die after test period and move to start of list
+	if((cur_hull > 1) && (info.hull_damage > 0))
+	{
+		if((cur_hull -= info.hull_damage) < 1)
+			cur_hull = 1;
+		damage_list.push_back("hull");
+	}
+
+	if(damage_list.size() > 0)
+		ReportDamage(player,damage_list);
 	
-	return(total);
-}
-
-void Ship::DamageLaser(int amount)
-{
-	for(int count = 0;count < MAX_HARD_PT;count++)
-	{
-		if(weapons[count].type == Weapon::LASER)
-		{
-			weapons[count].efficiency -= amount;
-			if(weapons[count].efficiency < 0)
-				weapons[count].efficiency = 0;
-		}
-	}
-}
-
-void Ship::DamageMissileRack(int amount)
-{
-	for(int count = 0;count < MAX_HARD_PT;count++)
-	{
-		if(weapons[count].type == Weapon::MISSILE_RACK)
-		{
-			weapons[count].efficiency -= amount;
-			if(weapons[count].efficiency < 0)
-				weapons[count].efficiency = 0;
-		}
-	}
-}
-
-void Ship::DamageQL(int amount)
-{
-	for(int count = 0;count < MAX_HARD_PT;count++)
-	{
-		if(weapons[count].type == Weapon::QUAD_LASER)
-		{
-			weapons[count].efficiency -= amount;
-			if(weapons[count].efficiency < 0)
-				weapons[count].efficiency = 0;
-		}
-	}
-}
-
-void Ship::DamageTL(int amount)
-{
-	for(int count = 0;count < MAX_HARD_PT;count++)
-	{
-		if(weapons[count].type == Weapon::TWIN_LASER)
-		{
-			weapons[count].efficiency -= amount;
-			if(weapons[count].efficiency < 0)
-				weapons[count].efficiency = 0;
-		}
-	}
-}
-
-long	Ship::EngineRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	int	repair_size = max_engine - cur_engine;
-	if(repair_size == 0)
-		return(0L);
-
-	buffer << "Engines:\n";
-	return(RepairPlant(player,buffer,action,engine_repairs,repair_size));
-}
-
-long	Ship::HullRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	int	repair_size = max_hull - cur_hull;
-	if(repair_size == 0)
-		return(0L);
-
-	buffer << "Hull:\n";
-	return(RepairPlant(player,buffer,action,hull_repairs,repair_size));
-}
-
-long	Ship::RackRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	long	total_cost = 0L;
-	for(int count = 0;count < MAX_HARD_PT;++count)
-	{
-		if(weapons[count].type == Weapon::MISSILE_RACK)
-		{
-			int	repair_percent = (100 - weapons[count].efficiency);
-			int	repair_size =  repair_percent/10;
-			if((repair_percent % 10) > 0)
-				++repair_size;
-			if(repair_size == 0)
-				continue;	// There may be more than one missile rack
-
-			buffer << "Missile Rack:\n";
-			total_cost += RepairPlant(player,buffer,action,rack_repairs,repair_size);
-		}
-	}
-	return total_cost;
-}
-
-long	Ship::LaserRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	long	total_cost = 0L;
-	for(int count = 0;count < MAX_HARD_PT;++count)
-	{
-		if(weapons[count].type == Weapon::LASER)
-		{
-			int	repair_percent = (100 - weapons[count].efficiency);
-			int	repair_size =  repair_percent/10;
-			if((repair_percent % 10) > 0)
-				++repair_size;
-			if(repair_size == 0)
-				continue;	// There may be more than one laser
-
-			buffer << "Laser:\n";
-			total_cost += RepairPlant(player,buffer,action,laser_repairs,repair_size);
-		}
-	}
-	return total_cost;
-}
-
-long	Ship::ShieldRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	int	repair_size = max_shield - cur_shield;
-	if(repair_size == 0)
-		return(0L);
-
-	buffer << "Shields:\n";
-	return(RepairPlant(player,buffer,action,shield_repairs,repair_size));
-}
-
-long	Ship::TlRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	long	total_cost = 0L;
-	for(int count = 0;count < MAX_HARD_PT;++count)
-	{
-		if(weapons[count].type == Weapon::TWIN_LASER)
-		{
-			int	repair_percent = (100 - weapons[count].efficiency);
-			int	repair_size =  repair_percent/10;
-			if((repair_percent % 10) > 0)
-				++repair_size;
-			if(repair_size == 0)
-				continue;	// There may be more than one twin laser
-
-			buffer << "Twin Laser:\n";
-			total_cost += RepairPlant(player,buffer,action,tl_repairs,repair_size);
-		}
-	}
-	return total_cost;
-}
-
-long	Ship::QlRepair(Player *player,std::ostringstream& buffer,int action)
-{
-	long	total_cost = 0L;
-	for(int count = 0;count < MAX_HARD_PT;++count)
-	{
-		if(weapons[count].type == Weapon::QUAD_LASER)
-		{
-			int	repair_percent = (100 - weapons[count].efficiency);
-			int	repair_size =  repair_percent/10;
-			if((repair_percent % 10) > 0)
-				++repair_size;
-			if(repair_size == 0)
-				continue;	// There may be more than one twin laser
-
-			buffer << "Quad  Laser:\n";
-			total_cost += RepairPlant(player,buffer,action,ql_repairs,repair_size);
-		}
-	}
-	return total_cost;
-}
-
-long	Ship::RepairPlant(Player *player,std::ostringstream& buffer,int action,
-								 const RawMaterials *materials,int repair_size)
-{
-	FedMap	*fed_map =  player->CurrentMap();
-	if(!fed_map->HasAnExchange())
-	{
-		player->Send(repair_error,OutputFilter::DEFAULT);
-		return(0L);
-	}
-	long	total = 0L;
-	for(int index = 0;materials[index].second != 0;index++)
-		total += fed_map->YardPurchase(materials[index].first,
-												 materials[index].second * repair_size,buffer,action);
-	buffer << "   Labor cost: " << total/10 << "ig\n";
-	total += (total/10L);
-	return(total);
-}
-
-
-/* --------------- Work in Progress --------------- */
-
-void 	Ship::BuyMissiles(Player *player,int amount)
-{
-	std::ostringstream	buffer;
-	int space_remaining = magazine - missiles;
-	if(amount == -1)
-		amount = space_remaining;
-	if(amount > space_remaining)
-		amount = space_remaining;
-
-	if(amount == 0)
-	{
-		player->Send("You don't have magazine space to store the missiles!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	int total_cost = amount * MISSILE_COST;
-	if(total_cost > player->Cash())
-	{
-		buffer.str("");
-		buffer << "You can't afford it. Missiles cost " << MISSILE_COST << "ig each.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
-		return;
-	}
-
-	missiles += amount;
-	player->ChangeCash(-total_cost);
-	buffer.str("");
-	buffer << amount << " missiles purchased, and delivered to your ship, ";
-	buffer << "at a cost of "<< total_cost << "ig.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
-	XMLWeapons(player);
+	return true;
 }
 

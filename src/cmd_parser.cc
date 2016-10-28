@@ -696,51 +696,7 @@ void	CmdParser::Comms(Player *player)
 
 void	CmdParser::Damage(Player *player,std::string& line)
 {
-	/*
-		if(player->Name() != "Bella")
-		{
-			player->Send("To display ship efficiency use the <STATUS> command!\n",OutputFilter::DEFAULT);
-			return;
-		}
-	*/
-	if(!player->HasAShip())
-	{
-		player->Send("No ship!",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(tokens->Size() < 2)
-	{
-		player->Send("Damage COMPUTER, ENGINES, SHIELDS, HULL, RACK, LASER, TL, QL or ALL?\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	std::string	equipment(tokens->Get(1));
-
-	if(equipment == "all")
-	{
-		player->DamageComputer(2);
-		player->DamageEngines(2);
-		player->DamageShields(2);
-		player->DamageHull(2);
-
-		player->DamageMissileRack(25);
-		player->DamageLaser(25);
-		player->DamageTL(15);
-		player->DamageQL(15);
-	}
-
-	if(equipment == "shields")		{ player->DamageShields(2);		}
-	if(equipment == "engines")		{ player->DamageEngines(2);		}
-	if(equipment == "computer")	{ player->DamageComputer(2);		}
-	if(equipment == "hull")			{ player->DamageHull(2);			}
-
-	if(equipment == "rack")			{ player->DamageMissileRack(15); }
-	if(equipment == "laser")		{ player->DamageLaser(15);			}
-	if(equipment == "tl")			{ player->DamageTL(15);				}
-	if(equipment == "ql")			{ player->DamageQL(15);				}
-
-	player->Send("Equipment damaged!",OutputFilter::DEFAULT);
+	player->Send("The 'DAMAGE' command is no longer available!\n", OutputFilter::DEFAULT);
 }
 
 void	CmdParser::Declare(Player *player)
@@ -1075,7 +1031,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 197:	Claim(player);											break;	// 'claim'
 		case 198:
 		case 199:	Colonize(player);										break;	// 'colonize'
-		case 200:	Damage(player,line);									break;	// 'efficiency' testing only
+		case 200:	Damage(player,line);									break;	// 'damage' - obsolete
 		case 201:	Target(player);										break;	// 'target'
 		case 202:	Remove(player);										break;	// 'remove'
 		case 203:	player->Attack();										break;	// 'attack
@@ -1428,24 +1384,28 @@ that the link is only open to commanders with at least 50 hauler credits and hig
 void	CmdParser::Launch(Player *player,std::string & line)
 {
 	static const std::string	error("The command is 'launch IPO xx', \
-where xx is a number between -20 and 20 inclusive.\n");
+where xx is a number between -20 and 20 inclusive. Or 'launch missile'\n");
 
-	if((tokens->Size() < 3) || (tokens->Get(1) != "ipo"))
+	if((tokens->Size() == 3) && (tokens->Get(1) == "ipo"))
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		int percentage = tokens->GetSignedNumber(2, line);
+		Business *business = player->GetBusiness();
+		if (business == 0)
+		{
+			player->Send("You need a business to launch an IPO!\n", OutputFilter::DEFAULT);
+			return;
+		}
+
+		Company *company = new Company(business, percentage);
+		player->IpoCleanup(company);
 		return;
 	}
-
-	int percentage = tokens->GetSignedNumber(2,line);
-	Business *business = player->GetBusiness();
-	if(business == 0)
+	if((tokens->Size() == 2) && (tokens->Get(1) == "missile"))
 	{
-		player->Send("You need a business to launch an IPO!\n",OutputFilter::DEFAULT);
+		player->LaunchMissile();
 		return;
 	}
-
-	Company *company = new Company(business,percentage);
-	player->IpoCleanup(company);
+	player->Send(error,OutputFilter::DEFAULT);
 }
 
 void	CmdParser::Leave(Player *player)

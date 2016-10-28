@@ -17,6 +17,7 @@
 #include <utility>
 
 #include "equipment.h"
+#include "fight_info.h"
 #include "obj_list.h"
 
 class	Cargo;
@@ -101,6 +102,7 @@ private:
 
 	bool SensorJammerInstallChecks(Player *player,int amount);
 
+	void	ReportDamage(Player *player,const std::list<std::string>& damage_list);
 	void	SetUpStarterSpecial();
 	void	XMLCargo(Player *player);
 	void	XMLComputer(Player *player);
@@ -126,37 +128,45 @@ public:
 	long	TradeInValue();
 
 	int	AddCargo(Cargo *cargo,Player *player);
-	int 	HoldRemaining()				{ return(cur_hold); }
-	int	MaxCargo()						{ return(max_hold); }
+	int 	HoldRemaining()				{ return cur_hold; }
+	int	MaxCargo()						{ return max_hold; }
+	int	MissileRackEfficiency();
+	int	MissilesRemaining()			{ return missiles;}
 	int	ObjectWeight(const std::string& obj_name);
 	int	RemoveCargo(Player *player,const std::string& cargo_name,int selling_price,const std::string& not_from);
-	int	ShipClass()						{ return(ship_class); }
+	int	ShipClass()						{ return ship_class; }
 
 	const std::string& ClassName()	{ return(hull_types[ship_class]->name); }
-	const std::string& Registry()		{ return(registry); }
+	const std::string& Registry()		{ return registry; }
 
 	bool	AddCargo(Player *player,int amount);
 	bool	AddObject(FedObject *object);
+	bool 	ApplyHit(Player *player,const FightInfoOut& info);
 	bool	FlagIsSet(int which)			{ return(flags.test(which)); }
 	bool	HasCargo()						{ return(manifest.size() != 0); }
 	bool	HasCargo(const std::string& cargo_name,const std::string& origin);
 	bool	HasFuel()						{ return(cur_fuel > 0);	}
 	bool 	HasMagazine()					{ return(magazine > 0); }
+	bool	HasSensorsOrJammers()		{ return((computer.sensors + computer.jammers) != 0); }
 	bool	HasWeapons();
 	bool	LockerIsFull();
 	bool	ReduceFuel(Player *player);
 
+	void	BattleUpdate(Player *player);
 	void	Buy(Player *player);
 	void	Buy(Player *player,std::string& line);
 	void	BuyFuel(Player *player,int amount);
 	void 	BuyJammers(Player *player,int amount);
 	void 	BuyMissiles(Player *player,int amount);
 	void	BuySensors(Player *player,int amount);
+	void	CreateRec(DBPlayer *pl_rec);
+	void	DecrementMissiles()			{ --missiles; }
+	void	DisplayObjects(Player *player);
 	void	Flee(Player *player);
 	void	FleeDamage(Player *player);
 	void	FlipFlag(Player *player,int which);
-	void	CreateRec(DBPlayer *pl_rec);
-	void	DisplayObjects(Player *player);
+	void	GetFightInfoIn(FightInfoIn& info);
+	void	LaunchMissile(Player *player);
 	void	Repair(Player *player,int action);
 	void	ResetShipStats(Player *player);
 	void	ResetWeaponStats(Player *player);
@@ -171,16 +181,6 @@ public:
 	void	UseFuel(int amount);
 	void	XMLFuel(Player *player);
 	void 	XMLStats(Player *player);
-
-	// For testing/debugging
-	void DamageShields(int amount)		{ if((cur_shield -= amount) < 0) cur_shield = 0; }
-	void DamageEngines(int amount)		{ if((cur_engine -= amount) < 0) cur_engine = 0; }
-	void DamageComputer(int amount)		{ if((computer.cur_level -= amount) < 0) computer.cur_level = 0; }
-	void DamageHull(int amount)			{ if((cur_hull -= amount) < 0) cur_hull = 0; }
-	void DamageMissileRack(int amount);
-	void DamageLaser(int amount);
-	void DamageTL(int amount);
-	void DamageQL(int amount);
 };
 
 struct DbShip

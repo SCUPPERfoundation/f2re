@@ -32,6 +32,7 @@
 #include "courier.h"
 #include "db_object.h"
 #include "fedmap.h"
+#include "fight_list.h"
 #include "forbidden.h"
 #include "futures_exchange.h"
 #include "galaxy.h"
@@ -52,7 +53,7 @@
 #include "syndicate_parser.h"
 #include "unload.h"
 
-const std::string	Fed::version = "1.90.13";
+const std::string	Fed::version = "1.90.14";
 
 Fed::Fed()
 {
@@ -148,6 +149,8 @@ Fed::Fed()
 	Game::galaxy->RunStartupEvents();
 	WriteLog("Startup events running");
 
+	Game::fight_list = new FightList;
+
 	WriteLog(dashes);
 }
 
@@ -197,6 +200,8 @@ Fed::~Fed()
 	WriteLog("14...\n");
 	delete Game::db_object;
 	WriteLog("15...\n");
+	delete Game::fight_list;
+	WriteLog("16...");
 	delete Game::fed_mail;		// try to keep this last :)
 	WriteLog("Game saved...");
 }

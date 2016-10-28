@@ -7,21 +7,35 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#ifndef LOCREC_H
-#define LOCREC_H
+#ifndef FIGHTINFO_H
+#define FIGHTINFO_H
 
-#include <string>
+// NOTE: If you change this, do -NOT- add any Fed includes
 
-// NOTE: If you change this do -not- add any Fed includes
-
-class FedMap;
-
-struct LocRec
+struct FightInfoIn
 {
-	std::string	star_name;
-	std::string	map_name;
-	int			loc_no;
-	FedMap		*fed_map;
+	int	engines;
+	int	sensors;
+	int	jammers;
+	int 	lasers;
+	int 	twin_lasers;
+	int 	quad_lasers;
+	int 	missile_rack;
+	bool 	defence_laser;
 };
 
+struct FightInfoOut
+{
+	bool 	has_damage;
+	int 	computer_damage;
+	int	sensor_damage;
+	int	jammer_damage;
+	int 	missile_rack_damage;
+	int 	laser_damage;
+	int 	twin_laser_damage;
+	int 	quad_laser_damage;
+	int 	shield_damage;
+	int 	hull_damage;
+	int 	engine_damage;
+};
 #endif

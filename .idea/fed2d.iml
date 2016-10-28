@@ -8,7 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/commodities.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/parcels.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scr_get.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/build_port.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/fight.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/scr_checkslithy.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/mail.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/locker.cc" isTestSource="false" />
@@ -70,6 +70,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/teleporter.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/player_index.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/md5.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/fight_list.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_genetic.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cmd_accounts.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/infra_parser.cc" isTestSource="false" />
@@ -133,8 +134,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/script.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/notices.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/company_parser.cc" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/build_tquark.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_pollution.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/build_tquark.cc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/build_port.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/futures_contract.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/blish_city.cc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/build_dole.cc" isTestSource="false" />
@@ -246,6 +248,7 @@
       <sourceFolder url="file://$MODULE_DIR$/include/xml_dump_load.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/scr_checklastloc.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/slithy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/fight_list.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_metastudio.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_biolab.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/equipment.h" isTestSource="false" />
@@ -317,6 +320,7 @@
       <sourceFolder url="file://$MODULE_DIR$/include/build_star.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_informer.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_anti_agathics.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/fight.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/section.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/ship_builder.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_tquark.h" isTestSource="false" />
@@ -363,7 +367,7 @@
       <sourceFolder url="file://$MODULE_DIR$/include/build_hospital.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/fedmap.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/ship.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/include/build_genetic.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/louie.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/courier.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/bus_register.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/role_money_sink.h" isTestSource="false" />
@@ -409,8 +413,9 @@
       <sourceFolder url="file://$MODULE_DIR$/include/scr_message.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_leisure.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/scr_checkvariable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/include/louie.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/scr_drop.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/md5.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/build_genetic.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/cmd_give.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/warehouse.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/com_ex_graph_parser.h" isTestSource="false" />
@@ -427,7 +432,6 @@
       <sourceFolder url="file://$MODULE_DIR$/include/build_insurance.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_defence.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/build_railway.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/include/scr_drop.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/scr_release.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/mail.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/scr_freeze.h" isTestSource="false" />
@@ -437,6 +441,7 @@
       <sourceFolder url="file://$MODULE_DIR$/include/msg_number.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/commod_exch_parser.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/commodities.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/fight_info.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/include/scr_changeplayer.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>

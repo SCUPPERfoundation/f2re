@@ -35,6 +35,7 @@
 #include "db_player.h"
 #include "fed.h"
 #include "fedmap.h"
+#include	"fight_list.h"
 #include "galaxy.h"
 #include "global_player_vars_table.h"
 #include "ipc.h"
@@ -62,6 +63,7 @@ namespace Game
 	Fed							*fed = 0;
 	FedMail						*fed_mail = 0;
 	FedMap						*system = 0;
+	FightList					*fight_list = 0;
 	Forbidden					*forbidden = 0;
 	Galaxy						*galaxy = 0;
 	GlobalPlayerVarsTable	*global_player_vars_table = 0;

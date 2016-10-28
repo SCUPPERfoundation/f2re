@@ -27,6 +27,7 @@ class DBObject;
 class	Fed;
 class FedMail;
 class	FedMap;
+class FightList;
 class	Forbidden;
 class	Galaxy;
 class GlobalPlayerVarsTable;
@@ -59,6 +60,7 @@ namespace Game
 	extern Fed							*fed;
 	extern FedMail						*fed_mail;
 	extern FedMap						*system;
+	extern FightList					*fight_list;
 	extern Forbidden					*forbidden;
 	extern Galaxy						*galaxy;
 	extern GlobalPlayerVarsTable	*global_player_vars_table;

@@ -36,6 +36,8 @@
 #include "factory.h"
 #include "fed.h"
 #include "fed_object.h"
+#include "fight.h"
+#include "fight_list.h"
 #include "futures_contract.h"
 #include "futures_exchange.h"
 #include "galaxy.h"
@@ -481,6 +483,84 @@ void	Player::AllowBuilds(Player	*initiator)
 		buffer << "Planet builds now allowed for " << name << ".\n";
 	}
 	initiator->Send(buffer,OutputFilter::DEFAULT);
+}
+
+void	Player::Attack()
+{
+	std::ostringstream	buffer;
+
+	if(target == "")
+	{
+		buffer.str("");
+		Send("You haven't set up a target to attack!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	Player *target_ptr = Game::player_index->FindCurrent(target);
+	if(target_ptr == 0)
+	{
+		buffer.str("");
+		buffer << target << " isn't in the game at the moment!\n";
+		Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	FedMap	*fed_map = loc.fed_map;
+	if(!fed_map->IsASpaceLoc(loc.loc_no))
+	{
+		Send("You have to be in space in your ship to attack!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	LocRec	new_loc;
+	if(fed_map->FindLandingPad(this,new_loc))
+	{
+		Send("Starting a fight in planet orbit is a quick way to get killed by the orbital defences!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if((!fed_map->IsAFightingLoc(loc.loc_no)) || loc.fed_map->IsALink(loc.loc_no))
+	{
+		Send("A very large warship appears and it is made clear that fighting is -not- allowed here!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(target_ptr->CurrentMap() != loc.fed_map)
+	{
+		buffer.str("");
+		buffer << target << " is not in " << loc.fed_map->Title() << "\n";
+		Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(target_ptr->GetLocRec().loc_no != loc.loc_no)
+	{
+		buffer.str("");
+		buffer << target_ptr->Name() << " needs to be in the same location as you to be in range!\n";
+		Send(buffer,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(!Game::fight_list->AddFight(loc,this,target_ptr))
+	{
+		Send("One at a time! You're alread involved in a fight.\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(ship->HasSensorsOrJammers())
+		Send("Your sensors and jammers come online.\n",OutputFilter::DEFAULT);
+	else
+		Send("Your opponents sensors and jammers come online.\n",OutputFilter::DEFAULT);
+	buffer.str("");
+	buffer << name << "'s target sensors have come online and are scanning you\n";
+	target_ptr->Send(buffer,OutputFilter::DEFAULT);
+	if((ship->MissilesRemaining() > 0) && (ship->MissileRackEfficiency() > 0))
+	{
+		if (Game::fight_list->Launch(this, target_ptr))
+			ship->DecrementMissiles();
+	}
+	else
+		Send("You need to 'close range' on your enemy and use your lasers.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::BlowKiss(Player *recipient)
@@ -1393,6 +1473,29 @@ void	Player::Cheat()
 	Game::review->Post(buffer);
 }
 
+void	Player::Clear(const std::string& what)
+{
+	if(what == "target")
+	{
+		if(target == "")
+			Send("You aren't targetting anyone!\n",OutputFilter::DEFAULT);
+		else
+		{
+			Player *target_ptr = Game::player_index->FindCurrent(target);
+			if(target_ptr != 0)
+			{
+				std::ostringstream	buffer;
+				buffer << name << " has stopped targetting you!\n";
+				target_ptr->Send(buffer,OutputFilter::DEFAULT);
+			}
+			target = "";
+			Send("You are no longer targetting anyone!\n",OutputFilter::DEFAULT);
+		}
+	}
+	else
+		ClearMood();
+}
+
 void	Player::ClearMood()
 {
 	mood = "";
@@ -1722,15 +1825,6 @@ Cuthbert telling you that you have been given extra time to deliver your cargo.\
 		job->time_taken = 0;
 	}
 }
-
-void	Player::DamageComputer(int amount)		{ ship->DamageComputer(amount);		}
-void	Player::DamageEngines(int amount)		{ ship->DamageEngines(amount);		}
-void 	Player::DamageHull(int amount)			{ ship->DamageHull(amount);			}
-void 	Player::DamageLaser(int amount)			{ ship->DamageLaser(amount);			}
-void 	Player::DamageMissileRack(int amount)	{ ship->DamageMissileRack(amount);	}
-void 	Player::DamageShields(int amount)		{ ship->DamageShields(amount);		}
-void 	Player::DamageQL(int amount)				{ ship->DamageQL(amount);				}
-void 	Player::DamageTL(int amount)				{ ship->DamageTL(amount);				}
 
 void	Player::DeadDead()
 {
@@ -2877,6 +2971,8 @@ void	Player::GetEMail()
 	Send(buffer,OutputFilter::DEFAULT);
 }
 
+void	Player::GetFightInfoIn(FightInfoIn& info)	{ ship->GetFightInfoIn(info); }
+
 Inventory	*Player::GetInventory()
 {
 	return(inventory);
@@ -3542,6 +3638,8 @@ const std::string&	Player::LastOn()
 	return(when);
 }
 
+void	Player::LaunchMissile()	{ ship->LaunchMissile(this);	}
+
 void	Player::LeaveChannel()
 {
 	if(channel.length() == 0)
@@ -3583,6 +3681,7 @@ void	Player::Liquidate(const std::string&	commod)
 
 void	Player::LogOff()
 {
+	Game::fight_list->DeleteFight(this,FightList::MOVED);
 	com_unit->DeleteRelay();
 	CurrentCartel()->RemovePlayerFromWork(this);
 	loc.fed_map->RemovePlayer(this);
@@ -3753,6 +3852,14 @@ void	Player::Merchant2Trader()
 	}
 }
 
+void 	Player::MissileHit(const FightInfoOut& info)
+{
+	if(!ship->ApplyHit(this,info))
+		Send("Your ship suffers a missile hit, but the damage is insignificant",OutputFilter::DEFAULT);
+	else
+		ship->BattleUpdate(this);
+}
+
 void	Player::Mogul2Technocrat()
 {
 	if(rank < TECHNOCRAT)
@@ -3797,7 +3904,7 @@ const std::string&	Player::MoodAndName()
 	return(mood_name);
 }
 
-// regular moves
+// Regular moves
 bool	Player::Move(int direction,bool is_following)
 {
 	static const std::string	frozen("Unfortunately, you aren't able to move at the moment.\n");
@@ -3864,6 +3971,7 @@ bool	Player::Move(int direction,bool is_following)
 			attribs.push_back(attrib);
 			Send("",OutputFilter::EXCHANGE,attribs);
 		}
+		Game::fight_list->DeleteFight(this,FightList::MOVED);
 	}
 	else
 		last_loc = old_last_loc;
@@ -4952,6 +5060,52 @@ void	Player::SetNavFlag(Player *player)
 	}
 }
 
+void	Player::SetTarget(const std::string& target_name)
+{
+	std::ostringstream	buffer;
+
+	std::string	tgt_name(target_name);
+	Normalise(tgt_name);
+
+	if(tgt_name == name)
+	{
+		Send("Don't be silly!\n", OutputFilter::DEFAULT);
+		return;
+	}
+
+	if((tgt_name == "Bella") || (tgt_name == "Hazed") || (tgt_name == "Freya"))
+	{
+		Send("In your dreams, sunshine...\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	Player *target_ptr = Game::player_index->FindCurrent(tgt_name);
+	if(target_ptr != 0)
+	{
+		target = target_ptr->Name();
+		buffer.str("");
+		buffer << "*** Computer alert! " << name << " is targetting you! ***\n";
+		target_ptr->Send(buffer.str(),OutputFilter::DEFAULT);
+		buffer.str("");
+		buffer << "*** Target set to " << tgt_name << " ***\n";
+		Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+	else // target currently not in game
+	{
+		target_ptr = Game::player_index->FindName(tgt_name);
+		if(target_ptr != 0)
+		{
+			target = target_ptr->Name();
+			buffer.str("");
+			buffer << "*** Target set to " << tgt_name << " ***\n";
+			Send(buffer.str(),OutputFilter::DEFAULT);
+		}
+		else
+			Send("Unable to find a player with that name - targetting unchanged.\n",OutputFilter::DEFAULT);
+
+	}
+}
+
 void	Player::SetToFinancier()
 {
 	trader_pts = courier_pts = 0;
@@ -5489,6 +5643,21 @@ void	Player::SwapShip(Ship *new_ship)
 	ship->TransferLocker(this,new_ship);
 	delete ship;
 	ship = new_ship;
+}
+
+void	Player::TargetInfo()
+{
+	if(target == "")
+		Send("No target set!\n",OutputFilter::DEFAULT);
+	else
+	{
+		std::ostringstream	buffer;
+		buffer << "Current target is " << target << ".\n";
+		Send(buffer.str(),OutputFilter::DEFAULT);
+	}
+
+	if(!Game::player_index->ReportTargetsFor(this))
+		Send("No one is targetting you at the moment.\n",OutputFilter::DEFAULT);
 }
 
 void	Player::Technocrat2Gengineer()
@@ -6736,151 +6905,6 @@ void	Player::Xt(const std::string& msg)
 	}
 }
 
+
 /* ---------------------- Work in progress ---------------------- */
 
-void	Player::SetTarget(const std::string& target_name)
-{
-	std::ostringstream	buffer;
-
-	std::string	tgt_name(target_name);
-	Normalise(tgt_name);
-
-	if(tgt_name == name)
-	{
-		Send("Don't be silly!\n", OutputFilter::DEFAULT);
-		return;
-	}
-
- 	if((tgt_name == "Bella") || (tgt_name == "Hazed") || (tgt_name == "Freya"))
-	{
-		Send("In your dreams, sunshine...\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	Player *target_ptr = Game::player_index->FindCurrent(tgt_name);
-	if(target_ptr != 0)
-	{
-		target = target_ptr->Name();
-		buffer.str("");
-		buffer << "*** Computer alert! " << name << " is targetting you! ***\n";
-		target_ptr->Send(buffer.str(),OutputFilter::DEFAULT);
-		buffer.str("");
-		buffer << "*** Target set to " << tgt_name << " ***\n";
-		Send(buffer.str(),OutputFilter::DEFAULT);
-	}
-	else // target currently not in game
-	{
-		target_ptr = Game::player_index->FindName(tgt_name);
-		if(target_ptr != 0)
-		{
-			target = target_ptr->Name();
-			buffer.str("");
-			buffer << "*** Target set to " << tgt_name << " ***\n";
-			Send(buffer.str(),OutputFilter::DEFAULT);
-		}
-		else
-			Send("Unable to find a player with that name - targetting unchanged.\n",OutputFilter::DEFAULT);
-
-	}
-}
-
-void	Player::TargetInfo()
-{
-	if(target == "")
-		Send("No target set!\n",OutputFilter::DEFAULT);
-	else
-	{
-		std::ostringstream	buffer;
-		buffer << "Current target is " << target << ".\n";
-		Send(buffer.str(),OutputFilter::DEFAULT);
-	}
-
-	if(!Game::player_index->ReportTargetsFor(this))
-		Send("No one is targetting you at the moment.\n",OutputFilter::DEFAULT);
-}
-
-void	Player::Clear(const std::string& what)
-{
-	if(what == "target")
-	{
-		if(target == "")
-			Send("You aren't targetting anyone!\n",OutputFilter::DEFAULT);
-		else
-		{
-			Player *target_ptr = Game::player_index->FindCurrent(target);
-			if(target_ptr != 0)
-			{
-				std::ostringstream	buffer;
-				buffer << name << " has stopped targetting you!\n";
-				target_ptr->Send(buffer,OutputFilter::DEFAULT);
-			}
-			target = "";
-			Send("You are no longer targetting anyone!\n",OutputFilter::DEFAULT);
-		}
-	}
-	else
-		ClearMood();
-}
-
-void	Player::Attack()
-{
-	std::ostringstream	buffer;
-
-	if(target == "")
-	{
-		Send("You haven't set up a target to attack!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	Player *target_ptr = Game::player_index->FindCurrent(target);
-	if(target_ptr == 0)
-	{
-		buffer.str("");
-		buffer << target << " isn't in the game at the moment!\n";
-		Send(buffer,OutputFilter::DEFAULT);
-		return;
-	}
-
-	FedMap	*fed_map = loc.fed_map;
-	if(!fed_map->IsASpaceLoc(loc.loc_no))
-	{
-		Send("You have to be in space in your ship to attack!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	LocRec	new_loc;
-	if(fed_map->FindLandingPad(this,new_loc))
-	{
-		Send("Starting a fight in planet orbit is a quick way to get killed by the orbital defences!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if((!fed_map->IsAFightingLoc(loc.loc_no)) || loc.fed_map->IsALink(loc.loc_no))
-	{
-		Send("A very large warship appears and it is made clear that fighting is -not- allowed here!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(target_ptr->CurrentMap() != loc.fed_map)
-	{
-		buffer.str("");
-		buffer << target << " is not in " << loc.fed_map->Title() << "\n";
-		Send(buffer,OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(target_ptr->GetLocRec().loc_no != loc.loc_no)
-	{
-		buffer.str("");
-		buffer << target_ptr->Name() << " needs to be in the same location as you to be in range!\n";
-		Send(buffer,OutputFilter::DEFAULT);
-		return;
-	}
-
-	// Hurray! Everything is in the correct place - now fire a missile!
-	buffer.str("");
-	buffer << "KerrrrrPowwww! You are in in a position to fire missiles at ";
-	buffer << target_ptr->Name();
-	buffer << ". But sadly I haven't written the code yet... (It's next - honest guv.)\n";
-	Send(buffer,OutputFilter::DEFAULT);
-}
