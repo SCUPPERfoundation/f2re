@@ -255,7 +255,7 @@ public:
 	void	CheckCommodityPrices(Player *player,const Commodity *commodity,bool send_intro = true);
 	void	CheckGroupPrices(Player *player,int commod_grp);
 	void	CheckRemoteCommodityPrices(Player *player,const std::string& commodity);
-	void	Close(Player *player,Tokens *tokens);
+	void	CloseLink(Player *player);
 	void	CompileCourierLocs();
 	void	Consolidate(Company *company);
 	void	Consolidate(Business *company);
@@ -292,7 +292,7 @@ public:
 	void	MinStock(Player *player,int level,const std::string commod_name = "");
 	void	MoveMobile(Object *object,int direction);
 	void	MoveMobiles();
-	void	Open(Player *player,Tokens *tokens);
+	void	OpenLink(Player *player);
 	void	OrbitLoc(const std::string& orbit)			{ orbit_loc = orbit;				}
 	void	Output(Player *player);
 	void	PlayersInLoc(int loc_no,PlayerList& pl_list,Player *leave_out = 0);

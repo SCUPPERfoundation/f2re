@@ -79,6 +79,7 @@ private:
 	void	Claim(Player *player);
 	void 	Clear(Player *player);
 	void	Clip(Player *player,std::string& line);
+	void	Close(Player *player);
 	void	Com(Player *player,std::string& line);
 	void	Comms(Player *player);
 	void	Colonize(Player *player);
@@ -118,6 +119,7 @@ private:
 	void	Mood(Player *player, std::string& line);
 	void	Move(Player *player, std::string& line);
 	void	Offer(Player *player, std::string& line);
+	void	Open(Player *player);
 	void	Pardon(Player *player);
 	void	Pocket(Player *player,std::string& line);
 	void	Post(Player *player,std::string& line);

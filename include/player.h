@@ -447,6 +447,7 @@ public:
 	void	ClearRelay();
 	void	ClearShipPurchase()								{ status_flags.reset(BUY_SHIP);			}
 	void	ClearSpouse()										{ spouse = "";				}
+	void	CloseRange();
 	void	CoCapitalExpOnly(long amount);
 	void	CoCapitalIncOnly(long amount);
 	void	Collect();
@@ -536,6 +537,7 @@ public:
 	void	NewMap(LocRec *rec);
 	void	Offline();
 	void	Online();
+	void	OpenRange();
 	void	Output();
 	void	Overdraft(long amount);
 	void	Pickup();

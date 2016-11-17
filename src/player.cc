@@ -6908,3 +6908,28 @@ void	Player::Xt(const std::string& msg)
 
 /* ---------------------- Work in progress ---------------------- */
 
+void	Player::CloseRange()
+{
+	Fight	*fight = Game::fight_list->FindFight(this,0);
+	if(fight == 0)
+	{
+		Send("You're not currently involved in a fight!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	fight->CloseRange(this);
+}
+
+void	Player::OpenRange()
+{
+	Fight	*fight = Game::fight_list->FindFight(this,0);
+	if(fight == 0)
+	{
+		Send("You're not currently involved in a fight!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	fight->OpenRange(this);
+}
+
+

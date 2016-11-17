@@ -33,8 +33,6 @@ private:
 	std::string		aggressor_name;
 	std::string		victim_name;
 	int		spacing;
-	int		aggressor_moving;
-	int		victim_moving;
 	int 		aggressor_telemetry;
 	int 		victim_telemetry;
 
@@ -55,7 +53,8 @@ public:
 	bool		Participant(Player *att,Player *def);
 
 	void		Flee(Player *player);
-	void		Move(Player *player);
+	void		CloseRange(Player *player);
+	void		OpenRange(Player *player);
 	void		Fire(Player *player, int what);
 };
 

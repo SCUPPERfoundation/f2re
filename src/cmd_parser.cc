@@ -975,8 +975,8 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 141:																			// 'j'
 		case 142:	Jump(player,line);									break;	// 'jump'
 		case 143:	Save(player);											break;	//	'save'
-		case 144:	player->CurrentMap()->Close(player,tokens);	break;	// 'close'
-		case 145:	player->CurrentMap()->Open(player,tokens);	break;	// 'open'
+		case 144:	Close(player);											break;	// 'close'
+		case 145:	Open(player);											break;	// 'open'
 		case 146:	Sponsor(player);										break;	//	'save'
 		case 147:	Exile(player);											break;	//	'exile'
 		case 148:	Pardon(player);										break;	//	'exile'
@@ -2723,5 +2723,55 @@ void	CmdParser::Zap(Player *player)
 	}
 }
 
+
 /* --------------- Work in Progress --------------- */
 
+void	CmdParser::Close(Player *player)
+{
+	static const std::string	info("The command is 'close link' or 'close range' and it must be issued from a space location.\n");
+
+	if(tokens->Size() < 2)
+	{
+		player->Send(info,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Get(1) == "link")
+	{
+		player->CurrentMap()->CloseLink(player);
+		return;
+	}
+
+	if(tokens->Get(1) == "range")
+	{
+		player->CloseRange();
+		return;
+	}
+
+	player->Send(info,OutputFilter::DEFAULT);
+}
+
+void	CmdParser::Open(Player *player)
+{
+	static const std::string	info("The command is 'open link' or 'open range' and it must be issued from a space location.\n");
+
+	if(tokens->Size() < 2)
+	{
+		player->Send(info,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Get(1) == "link")
+	{
+		player->CurrentMap()->OpenLink(player);
+		return;
+	}
+
+	if(tokens->Get(1) == "range")
+	{
+		player->OpenRange();
+		return;
+	}
+
+	player->Send(info,OutputFilter::DEFAULT);
+}

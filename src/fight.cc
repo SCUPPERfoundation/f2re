@@ -27,8 +27,6 @@ Fight::Fight(const LocRec& loc, Player *att, Player *def)
 	victim_name = def->Name();
 
 	spacing = MISSILE_DIST;
-	aggressor_moving = NOT_MOVING;
-	victim_moving = NOT_MOVING;
 	aggressor_telemetry = 0;
 	victim_telemetry = 0;
 }
@@ -156,26 +154,9 @@ bool Fight::Launch(Player *att)
 		}
 	}
 
-	// Are we too close to launch missiles safely?
-	if(attacker == aggressor)
+	if(spacing < INTERMED_DIST_2)	// Are we too close to launch missiles safely?
 	{
-		if(aggressor_moving != NOT_MOVING)
-		{
-			attacker->Send("No spare power available for launch!\n", OutputFilter::DEFAULT);
-			return false;
-		}
-	}
-	else
-	{
-		if(victim_moving != NOT_MOVING)
-		{
-			attacker->Send("No spare power available for launch!\n", OutputFilter::DEFAULT);
-			return false;
-		}
-	}
-	if(spacing < INTERMED_DIST_2)
-	{
-		attacker->Send("Not enough distance to use missiles!\n",OutputFilter::DEFAULT);
+		attacker->Send("You are too use missiles!\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
@@ -241,5 +222,73 @@ bool Fight::Participant(Player *att, Player *def)
 
 /* ---------------------- Work in progress ---------------------- */
 
+void Fight::CloseRange(Player *player)
+{
+	Player	*attacker = player;
+	Player	*defender = 0;
+	if(attacker == aggressor)
+		defender = victim;
+	else
+		defender = aggressor;
 
+	switch(spacing)
+	{
+		case LASER_DIST:
+			player->Send("You are already in laser range!\n",OutputFilter::DEFAULT);
+			return;
+
+		case INTERMED_DIST_1:
+			attacker->Send("You move into laser range.\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved into laser range",OutputFilter::DEFAULT);
+			spacing = LASER_DIST;
+			return;
+
+		case INTERMED_DIST_2:
+			attacker->Send("You move closer to your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved closer!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_1;
+			return;
+
+		case MISSILE_DIST:
+			attacker->Send("You start to move closer to your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has started to move closer!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_2;
+			return;
+	}
+}
+
+void Fight::OpenRange(Player *player)
+{
+	Player	*attacker = player;
+	Player	*defender = 0;
+	if(attacker == aggressor)
+		defender = victim;
+	else
+		defender = aggressor;
+
+	switch(spacing)
+	{
+		case LASER_DIST:
+			attacker->Send("You start to move away from your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has started to move away!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_1;
+			return;
+
+		case INTERMED_DIST_1:
+			attacker->Send("You move further away from your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved further away!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_2;
+			return;
+
+		case INTERMED_DIST_2:
+			attacker->Send("You move into missile range.\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved into missile range",OutputFilter::DEFAULT);
+			spacing = MISSILE_DIST;
+			return;
+
+		case MISSILE_DIST:
+			player->Send("You are already at missile range!\n",OutputFilter::DEFAULT);
+			return;
+	}
+}
 

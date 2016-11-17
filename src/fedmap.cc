@@ -743,29 +743,6 @@ void	FedMap::CheckRemoteCommodityPrices(Player *player,const std::string& commod
 	}
 }
 
-void	FedMap::Close(Player *player,Tokens *tokens)
-{
-	static const std::string	error("Unable to find infrastructure data - please email a report to \
-feedback@ibgames.com\n");
-	static const std::string	info("The command is 'close link' and it must be issued from a space location.\n");
-
-	if(player->Rank() == Player::PLUTOCRAT)
-	{
-		player->Send("Hub systems cannot be closed to traffic, becuase that would close the entire cartel to traffic!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	if((tokens->Get(1) != "link") || !FindLoc(player->LocNo())->FlagIsSet(Location::SPACE))
-		player->Send(info,OutputFilter::DEFAULT);
-	else
-	{
-		if(infra == 0)
-			player->Send(error,OutputFilter::DEFAULT);
-		else
-			infra->Close(player);
-	}
-}
-
 void	FedMap::CompileCourierLocs()
 {
 	for(LocIndex::iterator	iter = loc_index.begin();iter != loc_index.end();iter++)
@@ -1109,6 +1086,24 @@ ParaCat	*FedMap::FindHelpCat()
 	return(paragraphs->FindHelpCat());
 }
 
+bool FedMap::FindLandingPad(Player *player,LocRec& new_loc)
+{
+	Star	*star = Game::galaxy->Find(home_star->Name());
+	if(star == 0)
+	{
+		player->Send(Game::system->GetMessage("fedmap", "landshuttle", 2), OutputFilter::DEFAULT);
+		return false;
+	}
+	std::ostringstream buffer;
+	buffer << home_star->Name() << "." << title << "." << player->LocNo();
+	std::string orbit(buffer.str());
+	star->FindLandingPad(&new_loc, orbit);
+	if (new_loc.loc_no != -1)
+		return true;
+	else
+		return false;
+}
+
 LocRec	*FedMap::FindLink()
 {
 	for(LocIndex::iterator iter = loc_index.begin();iter != loc_index.end();iter++)
@@ -1338,6 +1333,24 @@ bool	FedMap::IsACourier(int loc_no)
 		return(false);
 }
 
+bool	FedMap::IsAFightingLoc(int loc_no)
+{
+	Location	*loc = FindLoc(loc_no);
+	if(loc == 0)
+		return false;
+	else
+		return(loc->IsAFightingLoc());
+}
+
+bool	FedMap::IsALink(int loc_no)
+{
+	Location	*loc = FindLoc(loc_no);
+	if(loc == 0)
+		return false;
+	else
+		return(loc->IsALink());
+}
+
 bool	FedMap::IsALoc(int loc_no)
 {
 	if(loc_index.find(loc_no) != loc_index.end())
@@ -1353,6 +1366,15 @@ bool	FedMap::IsARepairShop(int loc_no)
 		return(iter->second->IsARepairShop());
 	else
 		return(false);
+}
+
+bool	FedMap::IsASpaceLoc(int loc_no)
+{
+	Location	*loc = FindLoc(loc_no);
+	if(loc == 0)
+		return false;
+	else
+		return(loc->IsASpaceLoc());
 }
 
 bool	FedMap::IsAWeaponsShop(int loc_no)
@@ -1786,23 +1808,6 @@ void	FedMap::MoveMobiles()
  Warehouse	*FedMap::NewWarehouse(Player *player)
 {
 	return(infra->NewWarehouse(player));
-}
-
-void	FedMap::Open(Player *player,Tokens *tokens)
-{
-	static const std::string	error("Unable to find infrastructure data - please email a report to \
-feedback@ibgames.com\n");
-	static const std::string	info("The command is 'open link' and it must be issued from a space location.\n");
-
-	if((tokens->Get(1) !=  "link") || !FindLoc(player->LocNo())->FlagIsSet(Location::SPACE))
-		player->Send(info,OutputFilter::DEFAULT);
-	else
-	{
-		if(infra == 0)
-			player->Send(error,OutputFilter::DEFAULT);
-		else
-			infra->Open(player);
-	}
 }
 
 const std::string&	FedMap::OrbitLoc(int landing)
@@ -2394,48 +2399,43 @@ long	FedMap::YardPurchase(const std::string& commodity,int amount,std::ostringst
 
 /* --------------------- Work in progress --------------------- */
 
-bool	FedMap::IsASpaceLoc(int loc_no)
+void	FedMap::CloseLink(Player *player)
 {
-	Location	*loc = FindLoc(loc_no);
-	if(loc == 0)
-		return false;
-	else
-		return(loc->IsASpaceLoc());
-}
+	static const std::string	error("Unable to find infrastructure data - please email a report to \
+feedback@ibgames.com\n");
+	static const std::string	info("The command 'close link' must be issued from a space location.\n");
 
-bool	FedMap::IsAFightingLoc(int loc_no)
-{
-	Location	*loc = FindLoc(loc_no);
-	if(loc == 0)
-		return false;
-	else
-		return(loc->IsAFightingLoc());
-}
-
-bool	FedMap::IsALink(int loc_no)
-{
-	Location	*loc = FindLoc(loc_no);
-	if(loc == 0)
-		return false;
-	else
-		return(loc->IsALink());
-}
-
-bool FedMap::FindLandingPad(Player *player,LocRec& new_loc)
-{
-	Star	*star = Game::galaxy->Find(home_star->Name());
-	if(star == 0)
+	if(player->Rank() == Player::PLUTOCRAT)
 	{
-		player->Send(Game::system->GetMessage("fedmap", "landshuttle", 2), OutputFilter::DEFAULT);
-		return false;
+		player->Send("Hub systems cannot be closed to traffic, becuase that would close the entire cartel to traffic!\n",OutputFilter::DEFAULT);
+		return;
 	}
-	std::ostringstream buffer;
-	buffer << home_star->Name() << "." << title << "." << player->LocNo();
-	std::string orbit(buffer.str());
-	star->FindLandingPad(&new_loc, orbit);
-	if (new_loc.loc_no != -1)
-		return true;
+
+	if(!FindLoc(player->LocNo())->FlagIsSet(Location::SPACE))
+		player->Send(info,OutputFilter::DEFAULT);
 	else
-		return false;
+	{
+		if(infra == 0)
+			player->Send(error,OutputFilter::DEFAULT);
+		else
+			infra->Close(player);
+	}
+}
+
+void	FedMap::OpenLink(Player *player)
+{
+	static const std::string	error("Unable to find infrastructure data - please email a report to \
+feedback@ibgames.com\n");
+	static const std::string	info("The command 'open link' must be issued from a space location.\n");
+
+	if(!FindLoc(player->LocNo())->FlagIsSet(Location::SPACE))
+		player->Send(info,OutputFilter::DEFAULT);
+	else
+	{
+		if(infra == 0)
+			player->Send(error,OutputFilter::DEFAULT);
+		else
+			infra->Open(player);
+	}
 }
 
