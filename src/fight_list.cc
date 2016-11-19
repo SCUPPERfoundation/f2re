@@ -43,11 +43,12 @@ void	FightList::DeleteFight(Player *player,int why)
 		if(other_player != 0)
 		{
 			std::ostringstream buffer;
+			buffer << player->Name();
 			if(why == MOVED)
-				buffer << player->Name() << " has moved out of the sector!\n";
+				buffer << " has moved out of the sector!\n";
 			else
-				buffer << player->Name() << "has died!\n";
-			player->Send(buffer, OutputFilter::DEFAULT);
+				buffer << "has died!\n";
+			other_player->Send(buffer, OutputFilter::DEFAULT);
 		}
 		fights.remove(fight);
 		delete fight;

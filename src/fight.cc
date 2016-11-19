@@ -239,7 +239,7 @@ void Fight::CloseRange(Player *player)
 
 		case INTERMED_DIST_1:
 			attacker->Send("You move into laser range.\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved into laser range",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved into laser range!\n",OutputFilter::DEFAULT);
 			spacing = LASER_DIST;
 			return;
 
@@ -282,7 +282,7 @@ void Fight::OpenRange(Player *player)
 
 		case INTERMED_DIST_2:
 			attacker->Send("You move into missile range.\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved into missile range",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved into missile range!\n",OutputFilter::DEFAULT);
 			spacing = MISSILE_DIST;
 			return;
 
