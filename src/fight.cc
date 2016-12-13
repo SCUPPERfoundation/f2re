@@ -117,6 +117,41 @@ void	Fight::ClearFightInfoOut(FightInfoOut& info)
 	info.engine_damage = 0;
 }
 
+void Fight::CloseRange(Player *player)
+{
+	Player	*attacker = player;
+	Player	*defender = 0;
+	if(attacker == aggressor)
+		defender = victim;
+	else
+		defender = aggressor;
+
+	switch(spacing)
+	{
+		case LASER_DIST:
+			player->Send("You are already in laser range!\n",OutputFilter::DEFAULT);
+			return;
+
+		case INTERMED_DIST_1:
+			attacker->Send("You move into laser range.\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved into laser range!\n",OutputFilter::DEFAULT);
+			spacing = LASER_DIST;
+			return;
+
+		case INTERMED_DIST_2:
+			attacker->Send("You move closer to your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved closer!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_1;
+			return;
+
+		case MISSILE_DIST:
+			attacker->Send("You start to move closer to your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has started to move closer!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_2;
+			return;
+	}
+}
+
 Player *Fight::GetOtherPlayer(Player *player)
 {
 	if (aggressor == player)
@@ -210,53 +245,6 @@ bool Fight::Launch(Player *att)
 	return true;
 }
 
-bool Fight::Participant(Player *att, Player *def)
-{
-	if((att == aggressor) || (att == victim))
-		return true;
-	if((def == aggressor) || (def == victim))
-		return true;
-	return false;
-}
-
-
-/* ---------------------- Work in progress ---------------------- */
-
-void Fight::CloseRange(Player *player)
-{
-	Player	*attacker = player;
-	Player	*defender = 0;
-	if(attacker == aggressor)
-		defender = victim;
-	else
-		defender = aggressor;
-
-	switch(spacing)
-	{
-		case LASER_DIST:
-			player->Send("You are already in laser range!\n",OutputFilter::DEFAULT);
-			return;
-
-		case INTERMED_DIST_1:
-			attacker->Send("You move into laser range.\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved into laser range!\n",OutputFilter::DEFAULT);
-			spacing = LASER_DIST;
-			return;
-
-		case INTERMED_DIST_2:
-			attacker->Send("You move closer to your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved closer!\n",OutputFilter::DEFAULT);
-			spacing = INTERMED_DIST_1;
-			return;
-
-		case MISSILE_DIST:
-			attacker->Send("You start to move closer to your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has started to move closer!\n",OutputFilter::DEFAULT);
-			spacing = INTERMED_DIST_2;
-			return;
-	}
-}
-
 void Fight::OpenRange(Player *player)
 {
 	Player	*attacker = player;
@@ -291,4 +279,16 @@ void Fight::OpenRange(Player *player)
 			return;
 	}
 }
+
+bool Fight::Participant(Player *att, Player *def)
+{
+	if((att == aggressor) || (att == victim))
+		return true;
+	if((def == aggressor) || (def == victim))
+		return true;
+	return false;
+}
+
+
+/* ---------------------- Work in progress ---------------------- */
 

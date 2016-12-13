@@ -19,13 +19,13 @@ class Player;
 // Handler for a single fight - does no updating - just computes the result
 class Fight
 {
+public:
+	enum 	{ LASER_DIST, INTERMED_DIST_1, INTERMED_DIST_2, MISSILE_DIST };
+
 private:
 	static const int MISSILE_BASE_HIT = 50;
 	static const int DEFENCE_LASER_HIT = 15;
 	static const int MAX_TELEMETRY = 5;
-
-	enum 	{ LASER_DIST, INTERMED_DIST_1, INTERMED_DIST_2, MISSILE_DIST };
-	enum	{ CLOSING_IN, MOVING_OUT, NOT_MOVING };
 
 	LocRec	loc_rec;
 	Player	*aggressor;
@@ -49,13 +49,15 @@ public:
 	~Fight()	{	}
 
 	Player	*GetOtherPlayer(Player *player);
+
+	int		Range() { return spacing; }
+
 	bool		Launch(Player *player); // true indicates missile actually launched
 	bool		Participant(Player *att,Player *def);
 
-	void		Flee(Player *player);
 	void		CloseRange(Player *player);
-	void		OpenRange(Player *player);
 	void		Fire(Player *player, int what);
+	void		OpenRange(Player *player);
 };
 
 #endif

@@ -623,6 +623,31 @@ void	CmdParser::Clip(Player *player,std::string& line)
 	}
 }
 
+void	CmdParser::Close(Player *player)
+{
+	static const std::string	info("The command is 'close link' or 'close range' and it must be issued from a space location.\n");
+
+	if(tokens->Size() < 2)
+	{
+		player->Send(info,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Get(1) == "link")
+	{
+		player->CurrentMap()->CloseLink(player);
+		return;
+	}
+
+	if(tokens->Get(1) == "range")
+	{
+		player->CloseRange();
+		return;
+	}
+
+	player->Send(info,OutputFilter::DEFAULT);
+}
+
 void	CmdParser::Colonize(Player *player)
 {
 	static std::string	help("Command is 'colonize planet <name> type <name>'. For more info try 'help colonize'.\n");
@@ -1081,6 +1106,7 @@ void	CmdParser::Flee(Player *player)
 		player->Send("You need to be in your spaceship to flee!\n",OutputFilter::DEFAULT);
 		return;
 	}
+
 	Ship	*ship;
 	if((ship = player->GetShip()) == 0)
 	{
@@ -1617,6 +1643,31 @@ void	CmdParser::Offer(Player *player, std::string& line)
 			target->Send(buffer,OutputFilter::DEFAULT);
 		}
 	}
+}
+
+void	CmdParser::Open(Player *player)
+{
+	static const std::string	info("The command is 'open link' or 'open range' and it must be issued from a space location.\n");
+
+	if(tokens->Size() < 2)
+	{
+		player->Send(info,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(tokens->Get(1) == "link")
+	{
+		player->CurrentMap()->OpenLink(player);
+		return;
+	}
+
+	if(tokens->Get(1) == "range")
+	{
+		player->OpenRange();
+		return;
+	}
+
+	player->Send(info,OutputFilter::DEFAULT);
 }
 
 void	CmdParser::Pardon(Player *player)
@@ -2726,52 +2777,3 @@ void	CmdParser::Zap(Player *player)
 
 /* --------------- Work in Progress --------------- */
 
-void	CmdParser::Close(Player *player)
-{
-	static const std::string	info("The command is 'close link' or 'close range' and it must be issued from a space location.\n");
-
-	if(tokens->Size() < 2)
-	{
-		player->Send(info,OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(tokens->Get(1) == "link")
-	{
-		player->CurrentMap()->CloseLink(player);
-		return;
-	}
-
-	if(tokens->Get(1) == "range")
-	{
-		player->CloseRange();
-		return;
-	}
-
-	player->Send(info,OutputFilter::DEFAULT);
-}
-
-void	CmdParser::Open(Player *player)
-{
-	static const std::string	info("The command is 'open link' or 'open range' and it must be issued from a space location.\n");
-
-	if(tokens->Size() < 2)
-	{
-		player->Send(info,OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(tokens->Get(1) == "link")
-	{
-		player->CurrentMap()->OpenLink(player);
-		return;
-	}
-
-	if(tokens->Get(1) == "range")
-	{
-		player->OpenRange();
-		return;
-	}
-
-	player->Send(info,OutputFilter::DEFAULT);
-}

@@ -16,6 +16,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
+#include <fight.h>
 
 #include "sys/dir.h"
 
@@ -198,6 +199,122 @@ bool	Ship::AddObject(FedObject *object)
 {
 	locker->AddObject(object);
 	return(true);
+}
+
+bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
+{
+	if (!info.has_damage)
+		return false;
+
+	std::list<std::string> damage_list;
+
+	if((computer.level > 1) && (info.computer_damage > 0))
+	{
+		if((computer.level -= info.computer_damage) < 1)
+			computer.level = 1;
+		damage_list.push_back("computer");
+	}
+	if((computer.sensors > 0) && (info.sensor_damage > 0))
+	{
+		if((computer.sensors -= info.sensor_damage) < 0)
+			computer.sensors = 0;
+		damage_list.push_back("sensors");
+	}
+	if((computer.jammers > 0) && (info.jammer_damage > 0))
+	{
+		if ((computer.jammers -= info.jammer_damage) < 0)
+			computer.jammers = 0;
+		damage_list.push_back("jammers");
+	}
+
+	bool rack_done = false;
+	bool laser_done = false;
+	bool tl_done = false;
+	bool ql_done = false;
+
+	for(int count = 0;count < MAX_HARD_PT;++count)
+	{
+		switch(weapons[count].type)
+		{
+			case Weapon::MISSILE_RACK:
+				if((!rack_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.missile_rack_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.missile_rack_damage) < 0)
+							weapons[count].efficiency = 0;
+						rack_done = true;
+						damage_list.push_back("missile rack");
+					}
+				}
+				break;
+
+			case Weapon::LASER:
+				if((!laser_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.laser_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.laser_damage) < 0)
+							weapons[count].efficiency = 0;
+						laser_done = true;
+						damage_list.push_back("laser");
+					}
+				}
+				break;
+
+			case Weapon::TWIN_LASER:
+				if((!tl_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.twin_laser_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.twin_laser_damage) < 0)
+							weapons[count].efficiency = 0;
+						tl_done = true;
+						damage_list.push_back("twin laser");
+					}
+				}
+				break;
+
+			case Weapon::QUAD_LASER:
+				if((!ql_done) && (weapons[count].efficiency > 0))
+				{
+					if (info.quad_laser_damage > 0)
+					{
+						if ((weapons[count].efficiency -= info.quad_laser_damage) < 0)
+							weapons[count].efficiency = 0;
+						ql_done = true;
+						damage_list.push_back("quad laser");
+					}
+				}
+				break;
+		}
+	}
+
+	if((cur_shield > 0) && (info.shield_damage > 0))
+	{
+		if ((cur_shield -= info.shield_damage) < 0)
+			cur_shield = 0;
+		damage_list.push_back("shields");
+	}
+	// TODO: Change cur_engine to zero & include in power requirements after test period
+	if((cur_engine > 1) && (info.engine_damage > 0))
+	{
+		if ((cur_engine -= info.engine_damage) < 1)
+			cur_engine = 1;
+		damage_list.push_back("engines");
+	}
+	// TODO: Change to zero & die after test period and move to start of list
+	if((cur_hull > 1) && (info.hull_damage > 0))
+	{
+		if((cur_hull -= info.hull_damage) < 1)
+			cur_hull = 1;
+		damage_list.push_back("hull");
+	}
+
+	if(damage_list.size() > 0)
+		ReportDamage(player,damage_list);
+
+	return true;
 }
 
 long	Ship::AssessCustomsDuty(int percentage)
@@ -508,6 +625,13 @@ bool	Ship::HasWeapons()
 
 void	Ship::Flee(Player *player)
 {
+	Fight		*fight = Game::fight_list->FindFight(player,0);
+	if((fight != 0) && fight->Range() < Fight::INTERMED_DIST_2)
+	{
+		player->Send("You are too close to your opponent to flee!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
 	FedMap	*fed_map = player->CurrentMap();
 	fed_map->Flee(player);
 }
@@ -837,6 +961,70 @@ void 	Ship::RemoveSensors(Player *player,int how_many)
 	cur_hold += tonnage;
 	XMLCargo(player);
 	XMLComputer(player);
+}
+
+void	Ship::Repair(Player *player,int action)
+{
+	long	cost = 0;
+	std::ostringstream	invoice;
+	if(action == FedMap::PRICE)
+		invoice << "Repair estimate cost breakdown. Valid for 1,000ms only.\n";
+	else
+		invoice << "Invoice for repair. Terms: Payment due 30ms after time of issue.\n";
+	player->Send(invoice,OutputFilter::DEFAULT);
+	invoice.str("");
+
+	cost += ComputerRepair(player,invoice,action);
+	cost += EngineRepair(player,invoice,action);
+	cost += HullRepair(player,invoice,action);
+	cost += LaserRepair(player,invoice,action);
+	cost += RackRepair(player,invoice,action);
+	cost += ShieldRepair(player,invoice,action);
+	cost += TlRepair(player,invoice,action);
+	cost += QlRepair(player,invoice,action);
+
+	if(cost == 0L)
+	{
+		invoice << "The sales droid starts preparing the paper work, then looks up and ";
+		invoice << "tells you in a disgusted tone of voice, \"There's nothing wrong with ";
+		invoice << "your ship. Quit wasting my time or I'll bill you for it.\"\n";
+		player->Send(invoice,OutputFilter::DEFAULT);
+		return;
+	}
+
+	if(action == FedMap::PRICE)
+		invoice << "Repairing your ship on this planet will cost you a cool " << cost << "ig\n";
+	else
+		invoice << "Total cost: " << cost << "ig\n";
+	player->Send(invoice,OutputFilter::DEFAULT);
+
+	FedMap	*fed_map =  player->CurrentMap();
+	if(registry == fed_map->Title())
+	{
+		invoice.str("");
+		if(fed_map->CartelName() != "Sol")
+		{
+			cost -= cost/50;
+			invoice << "However, you are entitled to a GA OutSystem Business Development Subsidy of 2%, ";
+			invoice << "which brings the cost down to " << cost << "ig\n";
+			player->Send(invoice,OutputFilter::DEFAULT);
+		}
+		else
+		{
+			cost -= cost/100;
+			invoice << "However, you are entitled to a GA InSystem Business Development Subsidy of 1%, ";
+			invoice << "which brings the cost down to " << cost << "ig\n";
+			player->Send(invoice,OutputFilter::DEFAULT);
+		}
+	}
+	if(action == FedMap::BUY)
+	{
+//		player->Overdraft(-cost);
+		player->Send("You watch via the ship's cameras as repair droids swarm over the damaged areas and complete the repairs.\n",OutputFilter::DEFAULT);
+		ResetShipStats(player);
+		ResetWeaponStats(player);
+// TODO: Add in payment and check for amount in bank account
+	}
 }
 
 long	Ship::RepairPlant(Player *player,std::ostringstream& buffer,int action,
@@ -1355,184 +1543,4 @@ void 	Ship::XMLWeaponStat(Player *player,int efficiency,std::string name)
 
 
 /* --------------- Work in Progress --------------- */
-
-void	Ship::Repair(Player *player,int action)
-{
-	long	cost = 0;
-	std::ostringstream	invoice;
-	if(action == FedMap::PRICE)
-		invoice << "Repair estimate cost breakdown. Valid for 1,000ms only.\n";
-	else
-		invoice << "Invoice for repair. Terms: Payment due 30ms after time of issue.\n";
-	player->Send(invoice,OutputFilter::DEFAULT);
-	invoice.str("");
-
-	cost += ComputerRepair(player,invoice,action);
-	cost += EngineRepair(player,invoice,action);
-	cost += HullRepair(player,invoice,action);
-	cost += LaserRepair(player,invoice,action);
-	cost += RackRepair(player,invoice,action);
-	cost += ShieldRepair(player,invoice,action);
-	cost += TlRepair(player,invoice,action);
-	cost += QlRepair(player,invoice,action);
-
-	if(cost == 0L)
-	{
-		invoice << "The sales droid starts preparing the paper work, then looks up and ";
-		invoice << "tells you in a disgusted tone of voice, \"There's nothing wrong with ";
-		invoice << "your ship. Quit wasting my time or I'll bill you for it.\"\n";
-		player->Send(invoice,OutputFilter::DEFAULT);
-		return;
-	}
-
-	if(action == FedMap::PRICE)
-		invoice << "Repairing your ship on this planet will cost you a cool " << cost << "ig\n";
-	else
-		invoice << "Total cost: " << cost << "ig\n";
-	player->Send(invoice,OutputFilter::DEFAULT);
-
-	FedMap	*fed_map =  player->CurrentMap();
-	if(registry == fed_map->Title())
-	{
-		invoice.str("");
-		if(fed_map->CartelName() != "Sol")
-		{
-			cost -= cost/50;
-			invoice << "However, you are entitled to a GA OutSystem Business Development Subsidy of 2%, ";
-			invoice << "which brings the cost down to " << cost << "ig\n";
-			player->Send(invoice,OutputFilter::DEFAULT);
-		}
-		else
-		{
-			cost -= cost/100;
-			invoice << "However, you are entitled to a GA InSystem Business Development Subsidy of 1%, ";
-			invoice << "which brings the cost down to " << cost << "ig\n";
-			player->Send(invoice,OutputFilter::DEFAULT);
-		}
-	}
-	if(action == FedMap::BUY)
-	{
-//		player->Overdraft(-cost);
-		player->Send("You watch via the ship's cameras as repair droids swarm over the damaged areas and complete the repairs.\n",OutputFilter::DEFAULT);
-		ResetShipStats(player);
-		ResetWeaponStats(player);
-// TODO: Add in payment and check for amount in bank account
-	}
-}
-
-bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
-{
-	if (!info.has_damage)
-		return false;
-
-	std::list<std::string> damage_list;
-
-	if((computer.level > 1) && (info.computer_damage > 0))
-	{
-		if((computer.level -= info.computer_damage) < 1)
-			computer.level = 1;
-		damage_list.push_back("computer");
-	}
-	if((computer.sensors > 0) && (info.sensor_damage > 0))
-	{
-		if((computer.sensors -= info.sensor_damage) < 0)
-			computer.sensors = 0;
-		damage_list.push_back("sensors");
-	}
-	if((computer.jammers > 0) && (info.jammer_damage > 0))
-	{
-		if ((computer.jammers -= info.jammer_damage) < 0)
-			computer.jammers = 0;
-		damage_list.push_back("jammers");
-	}
-
-	bool rack_done = false;
-	bool laser_done = false;
-	bool tl_done = false;
-	bool ql_done = false;
-
-	for(int count = 0;count < MAX_HARD_PT;++count)
-	{
-		switch(weapons[count].type)
-		{
-			case Weapon::MISSILE_RACK:
-				if((!rack_done) && (weapons[count].efficiency > 0))
-				{
-					if (info.missile_rack_damage > 0)
-					{
-						if ((weapons[count].efficiency -= info.missile_rack_damage) < 0)
-							weapons[count].efficiency = 0;
-						rack_done = true;
-						damage_list.push_back("missile rack");
-					}
-				}
-				break;
-
-			case Weapon::LASER:
-				if((!laser_done) && (weapons[count].efficiency > 0))
-				{
-					if (info.laser_damage > 0)
-					{
-						if ((weapons[count].efficiency -= info.laser_damage) < 0)
-							weapons[count].efficiency = 0;
-						laser_done = true;
-						damage_list.push_back("laser");
-					}
-				}
-				break;
-
-			case Weapon::TWIN_LASER:
-				if((!tl_done) && (weapons[count].efficiency > 0))
-				{
-					if (info.twin_laser_damage > 0)
-					{
-						if ((weapons[count].efficiency -= info.twin_laser_damage) < 0)
-							weapons[count].efficiency = 0;
-						tl_done = true;
-						damage_list.push_back("twin laser");
-					}
-				}
-				break;
-
-			case Weapon::QUAD_LASER:
-				if((!ql_done) && (weapons[count].efficiency > 0))
-				{
-					if (info.quad_laser_damage > 0)
-					{
-						if ((weapons[count].efficiency -= info.quad_laser_damage) < 0)
-							weapons[count].efficiency = 0;
-						ql_done = true;
-						damage_list.push_back("quad laser");
-					}
-				}
-				break;
-		}
-	}
-
-	if((cur_shield > 0) && (info.shield_damage > 0))
-	{
-		if ((cur_shield -= info.shield_damage) < 0)
-			cur_shield = 0;
-		damage_list.push_back("shields");
-	}
-	// TODO: Change cur_engine to zero & include in power requirements after test period
-	if((cur_engine > 1) && (info.engine_damage > 0))
-	{
-		if ((cur_engine -= info.engine_damage) < 1)
-			cur_engine = 1;
-		damage_list.push_back("engines");
-	}
-	// TODO: Change to zero & die after test period and move to start of list
-	if((cur_hull > 1) && (info.hull_damage > 0))
-	{
-		if((cur_hull -= info.hull_damage) < 1)
-			cur_hull = 1;
-		damage_list.push_back("hull");
-	}
-
-	if(damage_list.size() > 0)
-		ReportDamage(player,damage_list);
-	
-	return true;
-}
 
