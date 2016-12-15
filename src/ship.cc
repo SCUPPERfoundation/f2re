@@ -592,37 +592,6 @@ long	Ship::EngineRepair(Player *player,std::ostringstream& buffer,int action)
 	return(RepairPlant(player,buffer,action,engine_repairs,repair_size));
 }
 
-void	Ship::FlipFlag(Player *player,int which)
-{
-	flags.flip(which);
-	if(which == NAVCOMP)
-		XMLNavComp(player);
-}
-
-bool	Ship::HasCargo(const std::string& cargo_name,const std::string& origin)
-{
-	for(Manifest::iterator	iter = manifest.begin();iter != manifest.end();iter++)
-	{
-		if((*iter)->Name() == cargo_name)
-		{
-			const Commodity *commodity = Game::commodities->Find(cargo_name);
-			if(((*iter)->Origin() != origin) || (commodity->cost == (*iter)->Cost()))
-				return(true);
-		}
-	}
-	return(false);
-}
-
-bool	Ship::HasWeapons()
-{
-	for(int count = 0;count < MAX_HARD_PT;count++)
-	{
-		if(weapons[count].type != NO_WEAPON)
-			return(true);
-	}
-	return(false);
-}
-
 void	Ship::Flee(Player *player)
 {
 	Fight		*fight = Game::fight_list->FindFight(player,0);
@@ -694,6 +663,13 @@ knocked out your navigation computer.\n");
 		player->XMLStats();
 }
 
+void	Ship::FlipFlag(Player *player,int which)
+{
+	flags.flip(which);
+	if(which == NAVCOMP)
+		XMLNavComp(player);
+}
+
 void	Ship::GetFightInfoIn(FightInfoIn& info)
 {
 	info.engines = cur_engine;
@@ -733,6 +709,30 @@ void	Ship::GetFightInfoIn(FightInfoIn& info)
 		}
 	}
 
+}
+
+bool	Ship::HasCargo(const std::string& cargo_name,const std::string& origin)
+{
+	for(Manifest::iterator	iter = manifest.begin();iter != manifest.end();iter++)
+	{
+		if((*iter)->Name() == cargo_name)
+		{
+			const Commodity *commodity = Game::commodities->Find(cargo_name);
+			if(((*iter)->Origin() != origin) || (commodity->cost == (*iter)->Cost()))
+				return(true);
+		}
+	}
+	return(false);
+}
+
+bool	Ship::HasWeapons()
+{
+	for(int count = 0;count < MAX_HARD_PT;count++)
+	{
+		if(weapons[count].type != NO_WEAPON)
+			return(true);
+	}
+	return(false);
 }
 
 long	Ship::HullRepair(Player *player,std::ostringstream& buffer,int action)

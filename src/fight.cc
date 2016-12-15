@@ -191,7 +191,7 @@ bool Fight::Launch(Player *att)
 
 	if(spacing < INTERMED_DIST_2)	// Are we too close to launch missiles safely?
 	{
-		attacker->Send("You are too use missiles!\n",OutputFilter::DEFAULT);
+		attacker->Send("You are too close to use missiles!\n",OutputFilter::DEFAULT);
 		return false;
 	}
 
