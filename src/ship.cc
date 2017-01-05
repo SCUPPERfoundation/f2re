@@ -216,14 +216,24 @@ bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
 	}
 	if((computer.sensors > 0) && (info.sensor_damage > 0))
 	{
-		if((computer.sensors -= info.sensor_damage) < 0)
-			computer.sensors = 0;
+		int damage = info.sensor_damage;
+		if(damage > computer.sensors)
+			damage = computer.sensors;
+
+		computer.sensors -= damage;
+		max_hold += (damage * 2);
+		cur_hold += (damage * 2);
 		damage_list.push_back("sensors");
 	}
 	if((computer.jammers > 0) && (info.jammer_damage > 0))
 	{
-		if ((computer.jammers -= info.jammer_damage) < 0)
-			computer.jammers = 0;
+		int damage = info.jammer_damage;
+		if(damage > computer.jammers)
+			damage = computer.jammers;
+
+		computer.jammers -= damage;
+		max_hold += (damage * 2);
+		cur_hold += (damage * 2);
 		damage_list.push_back("jammers");
 	}
 
