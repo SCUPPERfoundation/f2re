@@ -208,10 +208,10 @@ bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
 
 	std::list<std::string> damage_list;
 
-	if((computer.level > 1) && (info.computer_damage > 0))
+	if((computer.cur_level > 1) && (info.computer_damage > 0))
 	{
-		if((computer.level -= info.computer_damage) < 1)
-			computer.level = 1;
+		if((computer.cur_level -= info.computer_damage) < 1)
+			computer.cur_level = 1;
 		damage_list.push_back("computer");
 	}
 	if((computer.sensors > 0) && (info.sensor_damage > 0))
