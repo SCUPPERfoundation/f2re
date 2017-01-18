@@ -93,6 +93,7 @@ void	Fight::CalculateDamage()
 
 void	Fight::ClearFightInfoIn(FightInfoIn& info)
 {
+	info.shields = 0;
 	info.engines = 0;
 	info.sensors = 0;
 	info.jammers = 0;
@@ -160,10 +161,58 @@ Player *Fight::GetOtherPlayer(Player *player)
 		return aggressor;
 }
 
+void Fight::OpenRange(Player *player)
+{
+	Player	*attacker = player;
+	Player	*defender = 0;
+	if(attacker == aggressor)
+		defender = victim;
+	else
+		defender = aggressor;
+
+	switch(spacing)
+	{
+		case LASER_DIST:
+			attacker->Send("You start to move away from your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has started to move away!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_1;
+			return;
+
+		case INTERMED_DIST_1:
+			attacker->Send("You move further away from your opponent...\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved further away!\n",OutputFilter::DEFAULT);
+			spacing = INTERMED_DIST_2;
+			return;
+
+		case INTERMED_DIST_2:
+			attacker->Send("You move into missile range.\n",OutputFilter::DEFAULT);
+			defender->Send("Your opponent has moved into missile range!\n",OutputFilter::DEFAULT);
+			spacing = MISSILE_DIST;
+			return;
+
+		case MISSILE_DIST:
+			player->Send("You are already at missile range!\n",OutputFilter::DEFAULT);
+			return;
+	}
+}
+
+bool Fight::Participant(Player *att, Player *def)
+{
+	if((att == aggressor) || (att == victim))
+		return true;
+	if((def == aggressor) || (def == victim))
+		return true;
+	return false;
+}
+
+
+/* ---------------------- Work in progress ---------------------- */
+
 // NOTE: Launch() uses integer arithmetic. DO NOT mess with the brackets
 bool Fight::Launch(Player *att)
 {
 	att->Send("Launching missile...\n",OutputFilter::DEFAULT);
+
 	// Figure out who is the attacker and who is the defender for this round
 	Player	*attacker = att;
 	Player	*defender = 0;
@@ -223,7 +272,7 @@ bool Fight::Launch(Player *att)
 		CalculateDamage();
 		attacker->Send("Your missile explodes on target!\n",OutputFilter::DEFAULT);
 		defender->Send("Missile hit - checking for damage.\n",OutputFilter::DEFAULT);
-		defender->MissileHit(defender_out);
+		defender->ApplyHit(defender_out);
 	}
 	else
 	{
@@ -245,50 +294,98 @@ bool Fight::Launch(Player *att)
 	return true;
 }
 
-void Fight::OpenRange(Player *player)
+
+void	Fight::Fire(Player *att,int what)
 {
-	Player	*attacker = player;
+	att->Send("Firing...\n",OutputFilter::DEFAULT);
+
+	// Figure out who is the attacker and who is the defender for this round
+	Player	*attacker = att;
 	Player	*defender = 0;
-	if(attacker == aggressor)
-		defender = victim;
-	else
-		defender = aggressor;
-
-	switch(spacing)
+	if(att == aggressor)
 	{
-		case LASER_DIST:
-			attacker->Send("You start to move away from your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has started to move away!\n",OutputFilter::DEFAULT);
-			spacing = INTERMED_DIST_1;
+		defender = victim;
+		if(Game::player_index->FindCurrent(victim_name) == 0)
+		{
+			attacker->Send("Your opponent is no longer in the game!\n",OutputFilter::DEFAULT);
 			return;
-
-		case INTERMED_DIST_1:
-			attacker->Send("You move further away from your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved further away!\n",OutputFilter::DEFAULT);
-			spacing = INTERMED_DIST_2;
-			return;
-
-		case INTERMED_DIST_2:
-			attacker->Send("You move into missile range.\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved into missile range!\n",OutputFilter::DEFAULT);
-			spacing = MISSILE_DIST;
-			return;
-
-		case MISSILE_DIST:
-			player->Send("You are already at missile range!\n",OutputFilter::DEFAULT);
-			return;
+		}
 	}
+	else
+	{
+		defender = aggressor;
+		if(Game::player_index->FindCurrent(aggressor_name) == 0)
+		{
+			attacker->Send("Your opponent is no longer in the game!\n",OutputFilter::DEFAULT);
+			return;
+		}
+	}
+
+	if(spacing != LASER_DIST)	// Are we too close to launch missiles safely?
+	{
+		attacker->Send("You are too far away to use lasers!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	//TODO: Cope with attacker having more than one type of each weapon
+	// OK - it's safe to fire a missile
+	ClearFightInfoIn(attacker_in);
+	attacker->GetFightInfoIn(attacker_in);
+	ClearFightInfoIn(defender_in);
+	defender->GetFightInfoIn(defender_in);
+
+	int	to_hit = LASER_BASE_HIT + (attacker_in.sensors - defender_in.jammers) * 3;
+	int hit_rand = (std::rand() % 100) + 1;
+	if(to_hit >= hit_rand)
+	{
+		int	efficiency= 1;
+		switch(what)
+		{
+			case Weapon::LASER:			efficiency = attacker_in.lasers;			break;
+			case Weapon::TWIN_LASER:	efficiency = attacker_in.twin_lasers;	break;
+			case Weapon::QUAD_LASER:	efficiency = attacker_in.quad_lasers;	break;
+		}
+
+		CalculateDamage();
+		if(defender_out.has_damage)
+		{
+			if(what == Weapon::LASER)
+				efficiency /= 2;
+			if(what == Weapon::QUAD_LASER)
+				efficiency *= 2;
+			efficiency -= (defender_in.shields * 2);
+
+			if(efficiency < 0)
+				efficiency = 1;
+			if(efficiency > 200)
+				efficiency = 200;
+
+			ScaleLaserDamage(efficiency);
+
+			attacker->Send("Your laser strike hits its target!\n",OutputFilter::DEFAULT);
+			defender->Send("Laser strike - checking for damage.\n",OutputFilter::DEFAULT);
+			defender->ApplyHit(defender_out);
+		}
+		else
+		{
+			defender->Send("The target evaded your laser strike...\n",OutputFilter::DEFAULT);
+			attacker->Send("Your evaded your opponent's laser fire...\n",OutputFilter::DEFAULT);
+		}
+
+	}
+
 }
 
-bool Fight::Participant(Player *att, Player *def)
+void	Fight::ScaleLaserDamage(int efficiency)
 {
-	if((att == aggressor) || (att == victim))
-		return true;
-	if((def == aggressor) || (def == victim))
-		return true;
-	return false;
+	defender_out.computer_damage = (defender_out.computer_damage * efficiency)/100;
+	defender_out.sensor_damage = (defender_out.sensor_damage * efficiency)/100;
+	defender_out.jammer_damage = (defender_out.jammer_damage * efficiency)/100;
+	defender_out.missile_rack_damage = (defender_out.missile_rack_damage * efficiency)/100;
+	defender_out.laser_damage = (defender_out.laser_damage * efficiency)/100;
+	defender_out.twin_laser_damage = (defender_out.twin_laser_damage * efficiency)/100;
+	defender_out.quad_laser_damage = (defender_out.quad_laser_damage * efficiency)/100;
+	defender_out.shield_damage = (defender_out.shield_damage * efficiency)/100;
+	defender_out.hull_damage = (defender_out.hull_damage * efficiency)/100;
+	defender_out.engine_damage = (defender_out.engine_damage * efficiency)/100;
 }
-
-
-/* ---------------------- Work in progress ---------------------- */
-

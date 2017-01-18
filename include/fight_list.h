@@ -36,6 +36,7 @@ public:
 	bool	Launch(Player *att,Player *def); // true indicates missile actually launched
 
 	void	DeleteFight(Player *player,int why);
+	void	Fire(Player *att,Player *def,int weapon_type);
 };
 
 #endif

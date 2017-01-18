@@ -14,6 +14,7 @@
 
 struct FightInfoIn
 {
+	int	shields;
 	int	engines;
 	int	sensors;
 	int	jammers;
@@ -38,4 +39,5 @@ struct FightInfoOut
 	int 	hull_damage;
 	int 	engine_damage;
 };
+
 #endif

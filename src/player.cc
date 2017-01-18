@@ -1508,6 +1508,18 @@ void	Player::ClearRelay()
 		com_unit->ClearRelay();
 }
 
+void	Player::CloseRange()
+{
+	Fight	*fight = Game::fight_list->FindFight(this,0);
+	if(fight == 0)
+	{
+		Send("You're not currently involved in a fight!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	fight->CloseRange(this);
+}
+
 void	Player::CoCapitalExpOnly(long amount)
 {
 	if(company != 0)
@@ -3852,10 +3864,10 @@ void	Player::Merchant2Trader()
 	}
 }
 
-void 	Player::MissileHit(const FightInfoOut& info)
+void 	Player::ApplyHit(const FightInfoOut& info)
 {
 	if(!ship->ApplyHit(this,info))
-		Send("Your ship suffers a missile hit, but the damage is insignificant",OutputFilter::DEFAULT);
+		Send("Your ship suffers a hit, but the damage is insignificant",OutputFilter::DEFAULT);
 	else
 		ship->BattleUpdate(this);
 }
@@ -4035,8 +4047,19 @@ void	Player::Output()
 	CurrentMap()->Output(this);
 }
 
-// change player's cash - allowing overdraft
-void	Player::Overdraft(long amount)
+void	Player::OpenRange()
+{
+	Fight	*fight = Game::fight_list->FindFight(this,0);
+	if(fight == 0)
+	{
+		Send("You're not currently involved in a fight!\n",OutputFilter::DEFAULT);
+		return;
+	}
+
+	fight->OpenRange(this);
+}
+
+void	Player::Overdraft(long amount)	// change player's cash - allowing overdraft
 {
 	cash += amount;
 	if(cash < 0)
@@ -6908,28 +6931,7 @@ void	Player::Xt(const std::string& msg)
 
 /* ---------------------- Work in progress ---------------------- */
 
-void	Player::CloseRange()
+void	Player::Fire(int weapon_type)
 {
-	Fight	*fight = Game::fight_list->FindFight(this,0);
-	if(fight == 0)
-	{
-		Send("You're not currently involved in a fight!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	fight->CloseRange(this);
+	ship->Fire(this,weapon_type);
 }
-
-void	Player::OpenRange()
-{
-	Fight	*fight = Game::fight_list->FindFight(this,0);
-	if(fight == 0)
-	{
-		Send("You're not currently involved in a fight!\n",OutputFilter::DEFAULT);
-		return;
-	}
-
-	fight->OpenRange(this);
-}
-
-

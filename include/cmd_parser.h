@@ -96,6 +96,7 @@ private:
 	void	Expel(Player *player,std::string& line);
 	void	Fed2(Player *player);
 	void	Fetch(Player *player);
+	void	Fire(Player *player);
 	void	Flee(Player *player);
 	void	Flush(Player *player);
 	void	Follow(Player *player);

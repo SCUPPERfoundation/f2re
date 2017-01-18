@@ -92,7 +92,7 @@ const std::string	CmdParser::vocab[] =
 	"rent", "address", "tp", "teleport", "register", "quickwho", "bid", "approve",	// 175-182
 	"reject", "reset", "launch", "expel", "offer", "send", "flee", "divert",			// 183-190
 	"undivert", "move", "allocate", "stop", "extend", "hide", "claim","colonise",		// 190-198
-	"colonize", "damage", "target", "remove", "attack",
+	"colonize", "damage", "target", "remove", "attack", "fire",
 	""
 };
 
@@ -1060,6 +1060,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 201:	Target(player);										break;	// 'target'
 		case 202:	Remove(player);										break;	// 'remove'
 		case 203:	player->Attack();										break;	// 'attack
+		case 204:	Fire(player);											break;	// 'fire'
 	}
 }
 
@@ -2776,4 +2777,34 @@ void	CmdParser::Zap(Player *player)
 
 
 /* --------------- Work in Progress --------------- */
+
+void	CmdParser::Fire(Player *player)
+{
+	static const std::string	weapons[] = { "missile", "laser", "tl", "ql", "" };
+	static const int	UNKNOWN_WEAPON = 99;
+
+	if(tokens->Size() < 2)
+	{
+		player->Send("You haven't said what you want to fire ('laser','tl' or 'ql')!\n", OutputFilter::DEFAULT);
+		return;
+	}
+
+	int weapon_type = UNKNOWN_WEAPON;
+	for(int count = 0;weapons[count] != "";++count)
+	{
+		if (weapons[count] == tokens->Get(1))
+		{
+			weapon_type = count;
+			break;
+		}
+	}
+
+	if(weapon_type == UNKNOWN_WEAPON)
+		player->Send("I don't know what you want to fire ('laser','tl' or 'ql')\n", OutputFilter::DEFAULT);
+	else
+		player->Fire(weapon_type);
+}
+
+
+
 

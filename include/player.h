@@ -489,6 +489,7 @@ public:
 	void	ExtendSystemCabinet();
 	void	Fetch(int bay_no);
 	void	Financier2Founder();
+	void	Fire(int weapon_type);
 	void	FlipCompanyFlag(int which);
 	void	FlipInvFlag(int which);
 	void	FlipGenFlag(int which)							{ flags.flip(which);			}
@@ -528,7 +529,7 @@ public:
 	void	Look(int extent);
 	void	Marry(const std::string& who_name);
 	void	Merchant2Trader();
-	void 	MissileHit(const FightInfoOut& info);
+	void 	ApplyHit(const FightInfoOut& info);
 	void	Mogul2Technocrat();
 	void	Mood();
 	void	Mood(const std::string& desc);

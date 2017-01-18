@@ -24,6 +24,7 @@ public:
 
 private:
 	static const int MISSILE_BASE_HIT = 50;
+	static const int LASER_BASE_HIT = 65;
 	static const int DEFENCE_LASER_HIT = 15;
 	static const int MAX_TELEMETRY = 5;
 
@@ -43,6 +44,7 @@ private:
 	void	CalculateDamage();
 	void	ClearFightInfoIn(FightInfoIn& info);
 	void	ClearFightInfoOut(FightInfoOut& info);
+	void	ScaleLaserDamage(int efficiency);
 
 public:
 	Fight(const LocRec& loc, Player *att, Player *def);
@@ -52,11 +54,11 @@ public:
 
 	int		Range() { return spacing; }
 
-	bool		Launch(Player *player); // true indicates missile actually launched
+	bool		Launch(Player *att); // true indicates missile actually launched
 	bool		Participant(Player *att,Player *def);
 
 	void		CloseRange(Player *player);
-	void		Fire(Player *player, int what);
+	void		Fire(Player *att, int what);
 	void		OpenRange(Player *player);
 };
 

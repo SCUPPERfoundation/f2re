@@ -162,6 +162,7 @@ public:
 	void	CreateRec(DBPlayer *pl_rec);
 	void	DecrementMissiles()			{ --missiles; }
 	void	DisplayObjects(Player *player);
+	void	Fire(Player *player,int weapon_type);
 	void	Flee(Player *player);
 	void	FleeDamage(Player *player);
 	void	FlipFlag(Player *player,int which);

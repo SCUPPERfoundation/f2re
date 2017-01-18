@@ -682,6 +682,7 @@ void	Ship::FlipFlag(Player *player,int which)
 
 void	Ship::GetFightInfoIn(FightInfoIn& info)
 {
+	info.shields = cur_shield;
 	info.engines = cur_engine;
 	info.sensors = computer.sensors;
 	info.jammers = computer.jammers;
@@ -1553,4 +1554,13 @@ void 	Ship::XMLWeaponStat(Player *player,int efficiency,std::string name)
 
 
 /* --------------- Work in Progress --------------- */
+
+void	Ship::Fire(Player *player,int weapon_type)
+{
+	if(weapon_type == Weapon::MISSILE_RACK)
+		LaunchMissile(player);
+	else
+		Game::fight_list->Fire(player,0,weapon_type);
+}
+
 

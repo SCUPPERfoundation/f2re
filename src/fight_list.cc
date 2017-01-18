@@ -79,5 +79,14 @@ bool	FightList::Launch(Player *att,Player *def)
 
 /* ---------------------- Work in progress ---------------------- */
 
+void	FightList::Fire(Player *att,Player *def,int weapon_type)
+{
+	Fight *fight = FindFight(att,def);
+	if(fight == 0)
+		att->Send("Your opponent seems to have done a runner...\n",OutputFilter::DEFAULT);
+	else
+		fight->Fire(att,weapon_type);
+}
+
 
 
