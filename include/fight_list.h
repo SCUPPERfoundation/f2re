@@ -33,6 +33,7 @@ public:
 	Fight	*FindFight(Player *att,Player *def);
 
 	bool	AddFight(const LocRec& loc, Player *att, Player *def);
+	bool	CanMove(Player *player);
 	bool	Launch(Player *att,Player *def); // true indicates missile actually launched
 
 	void	DeleteFight(Player *player,int why);

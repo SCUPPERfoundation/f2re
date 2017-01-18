@@ -3939,6 +3939,12 @@ bool	Player::Move(int direction,bool is_following)
 
 	if(IsInSpace())
 	{
+		if(!Game::fight_list->CanMove(this))
+		{
+			Send("You are too closely involved in a fight!\n",OutputFilter::DEFAULT);
+			return false;
+		}
+
 		if(((std::rand() % 100) == 0) && !inventory->HasCustomsCert() &&
 					(loc.loc_no != 1108) && ship->HasFuel() && (loc.fed_map->HomeStar() == "Sol"))
 		{

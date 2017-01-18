@@ -54,6 +54,7 @@ public:
 
 	int		Range() { return spacing; }
 
+	bool		CanMove();
 	bool		Launch(Player *att); // true indicates missile actually launched
 	bool		Participant(Player *att,Player *def);
 

@@ -33,6 +33,15 @@ bool	FightList::AddFight(const LocRec &loc, Player *att, Player *def)
 	return true;
 }
 
+bool	FightList::CanMove(Player *player)
+{
+	Fight	*fight = FindFight(player,0);
+	if(fight != 0)
+		return(fight->CanMove());
+
+	return true;
+}
+
 void	FightList::DeleteFight(Player *player,int why)
 {
 	Fight	*fight = FindFight(player,player);

@@ -91,6 +91,8 @@ void	Fight::CalculateDamage()
 	defender_out.engine_damage = damage;
 }
 
+bool	Fight::CanMove()  { return(spacing == MISSILE_DIST); }
+
 void	Fight::ClearFightInfoIn(FightInfoIn& info)
 {
 	info.shields = 0;
@@ -203,6 +205,20 @@ bool Fight::Participant(Player *att, Player *def)
 	if((def == aggressor) || (def == victim))
 		return true;
 	return false;
+}
+
+void	Fight::ScaleLaserDamage(int efficiency)
+{
+	defender_out.computer_damage = (defender_out.computer_damage * efficiency)/100;
+	defender_out.sensor_damage = (defender_out.sensor_damage * efficiency)/100;
+	defender_out.jammer_damage = (defender_out.jammer_damage * efficiency)/100;
+	defender_out.missile_rack_damage = (defender_out.missile_rack_damage * efficiency)/100;
+	defender_out.laser_damage = (defender_out.laser_damage * efficiency)/100;
+	defender_out.twin_laser_damage = (defender_out.twin_laser_damage * efficiency)/100;
+	defender_out.quad_laser_damage = (defender_out.quad_laser_damage * efficiency)/100;
+	defender_out.shield_damage = (defender_out.shield_damage * efficiency)/100;
+	defender_out.hull_damage = (defender_out.hull_damage * efficiency)/100;
+	defender_out.engine_damage = (defender_out.engine_damage * efficiency)/100;
 }
 
 
@@ -376,16 +392,3 @@ void	Fight::Fire(Player *att,int what)
 
 }
 
-void	Fight::ScaleLaserDamage(int efficiency)
-{
-	defender_out.computer_damage = (defender_out.computer_damage * efficiency)/100;
-	defender_out.sensor_damage = (defender_out.sensor_damage * efficiency)/100;
-	defender_out.jammer_damage = (defender_out.jammer_damage * efficiency)/100;
-	defender_out.missile_rack_damage = (defender_out.missile_rack_damage * efficiency)/100;
-	defender_out.laser_damage = (defender_out.laser_damage * efficiency)/100;
-	defender_out.twin_laser_damage = (defender_out.twin_laser_damage * efficiency)/100;
-	defender_out.quad_laser_damage = (defender_out.quad_laser_damage * efficiency)/100;
-	defender_out.shield_damage = (defender_out.shield_damage * efficiency)/100;
-	defender_out.hull_damage = (defender_out.hull_damage * efficiency)/100;
-	defender_out.engine_damage = (defender_out.engine_damage * efficiency)/100;
-}
