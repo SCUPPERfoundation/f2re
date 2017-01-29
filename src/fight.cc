@@ -344,7 +344,6 @@ void	Fight::Fire(Player *att,int what)
 	}
 
 	//TODO: Cope with attacker having more than one type of each weapon
-	// OK - it's safe to fire a missile
 	ClearFightInfoIn(attacker_in);
 	attacker->GetFightInfoIn(attacker_in);
 	ClearFightInfoIn(defender_in);
@@ -382,13 +381,12 @@ void	Fight::Fire(Player *att,int what)
 			defender->Send("Laser strike - checking for damage.\n",OutputFilter::DEFAULT);
 			defender->ApplyHit(defender_out);
 		}
-		else
-		{
-			defender->Send("The target evaded your laser strike...\n",OutputFilter::DEFAULT);
-			attacker->Send("Your evaded your opponent's laser fire...\n",OutputFilter::DEFAULT);
-		}
-
+		// TODO: handle hit but no damage situation
 	}
-
+	else
+	{
+		attacker->Send("The target evaded your laser strike...\n",OutputFilter::DEFAULT);
+		defender->Send("You evaded your opponent's laser fire...\n",OutputFilter::DEFAULT);
+	}
 }
 
