@@ -42,7 +42,7 @@
           <file leaf-file-name="player.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/player.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
+                <state relative-caret-position="59160">
                   <caret line="3944" column="22" lean-forward="false" selection-start-line="3944" selection-start-column="22" selection-end-line="3944" selection-end-column="22" />
                   <folding />
                 </state>
@@ -62,8 +62,8 @@
           <file leaf-file-name="fight.cc" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/fight.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="553">
-                  <caret line="389" column="4" lean-forward="true" selection-start-line="389" selection-start-column="4" selection-end-line="389" selection-end-column="4" />
+                <state relative-caret-position="786">
+                  <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -72,7 +72,7 @@
           <file leaf-file-name="ship.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ship.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="657">
+                <state relative-caret-position="23490">
                   <caret line="1566" column="0" lean-forward="false" selection-start-line="1566" selection-start-column="0" selection-end-line="1566" selection-end-column="0" />
                   <folding />
                 </state>
@@ -204,8 +204,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="290" />
-    <option name="y" value="132" />
+    <option name="x" value="344" />
+    <option name="y" value="91" />
     <option name="width" value="1571" />
     <option name="height" value="993" />
   </component>
@@ -605,12 +605,14 @@
       <workItem from="1484306507664" duration="25000" />
       <workItem from="1484718355928" duration="4310000" />
       <workItem from="1485503054918" duration="4000" />
-      <workItem from="1485672843210" duration="1387000" />
+      <workItem from="1485672843210" duration="2203000" />
+      <workItem from="1487321906115" duration="32000" />
+      <workItem from="1487321973589" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298843000" />
+    <option name="totallyTimeSpent" value="299728000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,12 +624,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="290" y="132" width="1571" height="993" extended-state="0" />
+    <frame x="344" y="91" width="1571" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14440894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="981" y="95" width="253" height="835" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3378882" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22161572" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18757764" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -635,6 +636,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22161572" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1026,7 +1028,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="59160">
           <caret line="3944" column="22" lean-forward="false" selection-start-line="3944" selection-start-column="22" selection-end-line="3944" selection-end-column="22" />
           <folding />
         </state>
@@ -1036,13 +1038,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
           <caret line="59" column="73" lean-forward="true" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ship.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
+        <state relative-caret-position="23490">
           <caret line="1566" column="0" lean-forward="false" selection-start-line="1566" selection-start-column="0" selection-end-line="1566" selection-end-column="0" />
           <folding />
         </state>
@@ -1050,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fight.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="389" column="4" lean-forward="true" selection-start-line="389" selection-start-column="4" selection-end-line="389" selection-end-column="4" />
+        <state relative-caret-position="786">
+          <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
           <folding />
         </state>
       </provider>
