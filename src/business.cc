@@ -732,6 +732,30 @@ void	Business::Fetch(int bay_no)
 	}
 }
 
+void	Business::FinalPayout()
+{
+   long	payout = cash/NumSharesIssued();
+   for(ShareRegister::const_iterator iter = share_register.begin();iter != share_register.end();++iter)
+   {
+      std::string	player_name = iter->second->Owner();
+      if(player_name != "Treasury")
+      {
+         if(player_name == ceo->Name())
+            ceo->ChangeCash(payout * iter->second->Quantity());
+         else
+         {
+            Player *player = Game::player_index->FindName(player_name);
+            if(player != 0)
+               player->ChangeCompanyCash(payout * iter->second->Quantity());
+         }
+      }
+   }
+
+   std::ostringstream	buffer;
+   buffer << name << " is being liquidated with a final dividend of " << payout << " per share\n";
+   Game::financial->Post(buffer);
+}
+
 Bid	*Business::FindBid(int number)
 {
 	for(Bids::iterator iter = bids.begin();iter != bids.end();++iter)
@@ -1349,26 +1373,3 @@ void	Business::WriteShares(std::ofstream& file)
 		iter->second->Write(file);
 }
 
-void	Business::FinalPayout()
-{
-	long	payout = cash/NumSharesIssued();
-	for(ShareRegister::const_iterator iter = share_register.begin();iter != share_register.end();++iter)
-	{
-		std::string	player_name = iter->second->Owner();
-		if(player_name != "Treasury")
-		{
-			if(player_name == ceo->Name())
-				ceo->ChangeCash(payout * iter->second->Quantity());
-			else
-			{
-				Player *player = Game::player_index->FindName(player_name);
-				if(player != 0)
-					player->ChangeCompanyCash(payout * iter->second->Quantity());
-			}
-		}
-	}
-
-	std::ostringstream	buffer;
-	buffer << name << " is being liquidated with a final dividend of " << payout << " per share\n";
-	Game::financial->Post(buffer);
-}

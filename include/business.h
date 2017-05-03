@@ -186,11 +186,11 @@ public:
 	void	SellFactory(int number);
 	void	SetFactoryOutput(int fact_num,const std::string& where);
 	void	SetFactoryStatus(int fact_num,const std::string& new_status);
+   void	SetFactoryWages(int fact_num,int amount);
 	void	SetPermit(int which)			{ permits.set(which);	}
 	void	Store(Cargo *cargo);
 	void	UnFreeze();
 	void	Update();
-	void	SetFactoryWages(int fact_num,int amount);
 	void	UpgradeDepot(Depot *depot);
 	void	Write(std::ofstream& file);
 };

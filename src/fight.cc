@@ -381,7 +381,11 @@ void	Fight::Fire(Player *att,int what)
 			defender->Send("Laser strike - checking for damage.\n",OutputFilter::DEFAULT);
 			defender->ApplyHit(defender_out);
 		}
-		// TODO: handle hit but no damage situation
+		else // handle hit but no damage situation
+		{
+			attacker->Send("Your laser strike hits its target, but there is no apparent damage.\n",OutputFilter::DEFAULT);
+			defender->Send("Laser strike - but no significant damage caused.\n",OutputFilter::DEFAULT);
+		}
 	}
 	else
 	{

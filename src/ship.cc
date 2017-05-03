@@ -1030,11 +1030,18 @@ void	Ship::Repair(Player *player,int action)
 	}
 	if(action == FedMap::BUY)
 	{
-//		player->Overdraft(-cost);
-		player->Send("You watch via the ship's cameras as repair droids swarm over the damaged areas and complete the repairs.\n",OutputFilter::DEFAULT);
-		ResetShipStats(player);
-		ResetWeaponStats(player);
-// TODO: Add in payment and check for amount in bank account
+		if(player->Cash() < cost)
+		{
+			player->Send("You can't afford the repairs needed!\n",OutputFilter::DEFAULT);
+			player->Send("The sales droid turns his attention to another, richer, customer.\n",OutputFilter::DEFAULT);
+		}
+		else
+		{
+			player->ChangeCash(-cost);
+			player->Send("You watch as droids swarm over the ship and make the repairs.\n",OutputFilter::DEFAULT);
+			ResetShipStats(player);
+			ResetWeaponStats(player);
+		}
 	}
 }
 
