@@ -32,14 +32,14 @@
     <favorites_list name="fed2d" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49962658">
+    <splitter split-orientation="horizontal" split-proportion="0.4906367">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="player.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/player.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30225">
-                  <caret line="2083" column="19" lean-forward="false" selection-start-line="2083" selection-start-column="19" selection-end-line="2083" selection-end-column="19" />
+                <state relative-caret-position="27330">
+                  <caret line="1890" column="0" lean-forward="false" selection-start-line="1890" selection-start-column="0" selection-end-line="1890" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -48,8 +48,8 @@
           <file leaf-file-name="fight_list.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fight_list.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+                <state relative-caret-position="1260">
+                  <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -58,28 +58,20 @@
           <file leaf-file-name="fight.cc" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fight.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5820">
-                  <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="5850">
+                  <caret line="390" column="19" lean-forward="false" selection-start-line="390" selection-start-column="19" selection-end-line="390" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#521#539#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ship.cc" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ship.cc" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ship.cc">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="1035" column="68" lean-forward="false" selection-start-line="1035" selection-start-column="68" selection-end-line="1035" selection-end-column="68" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fed.cc" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/fed.cc">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="86" column="28" lean-forward="false" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+                <state relative-caret-position="-3966">
+                  <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -89,12 +81,14 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="player.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="player.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/player.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="831">
-                  <caret line="462" column="20" lean-forward="false" selection-start-line="462" selection-start-column="20" selection-end-line="462" selection-end-column="20" />
-                  <folding />
+                <state relative-caret-position="720">
+                  <caret line="203" column="18" lean-forward="false" selection-start-line="203" selection-start-column="18" selection-end-line="203" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#1319#1336#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -109,21 +103,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ship.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/include/ship.h">
+          <file leaf-file-name="fight.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/fight.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1035">
-                  <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+                <state relative-caret-position="615">
+                  <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="equipment.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/include/equipment.h">
+          <file leaf-file-name="fight_info.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/fight_info.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+                <state relative-caret-position="405">
+                  <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ship.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/include/ship.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="831">
+                  <caret line="130" column="55" lean-forward="false" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -138,6 +142,11 @@
       <find>flee</find>
       <find>Copyright (c) Alan Lenton 1985-2016</find>
       <find>FinalPayout</find>
+      <find>suicide</find>
+      <find>WriteLog(15...)</find>
+      <find>WriteLog(15...</find>
+      <find>WriteLog15...</find>
+      <find>15...</find>
     </findStrings>
     <replaceStrings>
       <replace>Copyright (c) Alan Lenton 1985-2017</replace>
@@ -164,8 +173,6 @@
         <option value="$PROJECT_DIR$/src/galaxy_map_parser.cc" />
         <option value="$PROJECT_DIR$/src/script.cc" />
         <option value="$PROJECT_DIR$/src/md5.cc" />
-        <option value="$PROJECT_DIR$/include/player_index.h" />
-        <option value="$PROJECT_DIR$/src/player_index.cc" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/tokens.h" />
         <option value="$PROJECT_DIR$/include/cmd_buy.h" />
@@ -184,22 +191,24 @@
         <option value="$PROJECT_DIR$/include/fedmap.h" />
         <option value="$PROJECT_DIR$/src/fedmap.cc" />
         <option value="$PROJECT_DIR$/include/assign.h" />
-        <option value="$PROJECT_DIR$/include/cmd_parser.h" />
         <option value="$PROJECT_DIR$/include/equipment.h" />
         <option value="$PROJECT_DIR$/src/cmd_parser.cc" />
-        <option value="$PROJECT_DIR$/include/ship.h" />
         <option value="$PROJECT_DIR$/include/fight_info.h" />
-        <option value="$PROJECT_DIR$/include/player.h" />
         <option value="$PROJECT_DIR$/include/fight.h" />
         <option value="$PROJECT_DIR$/include/fight_list.h" />
         <option value="$PROJECT_DIR$/src/business.cc" />
         <option value="$PROJECT_DIR$/include/business.h" />
         <option value="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" />
-        <option value="$PROJECT_DIR$/src/player.cc" />
+        <option value="$PROJECT_DIR$/include/ship.h" />
         <option value="$PROJECT_DIR$/src/fight_list.cc" />
+        <option value="$PROJECT_DIR$/src/player_index.cc" />
+        <option value="$PROJECT_DIR$/include/player.h" />
+        <option value="$PROJECT_DIR$/include/cmd_parser.h" />
+        <option value="$PROJECT_DIR$/include/player_index.h" />
         <option value="$PROJECT_DIR$/src/fight.cc" />
-        <option value="$PROJECT_DIR$/src/fed.cc" />
         <option value="$PROJECT_DIR$/src/ship.cc" />
+        <option value="$PROJECT_DIR$/src/player.cc" />
+        <option value="$PROJECT_DIR$/src/fed.cc" />
       </list>
     </option>
   </component>
@@ -211,8 +220,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="260" />
-    <option name="y" value="124" />
+    <option name="x" value="259" />
+    <option name="y" value="128" />
     <option name="width" value="1571" />
     <option name="height" value="993" />
   </component>
@@ -610,12 +619,23 @@
       <workItem from="1493356637948" duration="4326000" />
       <workItem from="1493364491987" duration="644000" />
       <workItem from="1493449804959" duration="65000" />
-      <workItem from="1493805653469" duration="238000" />
+      <workItem from="1493805653469" duration="3748000" />
+      <workItem from="1493876134277" duration="5554000" />
+      <workItem from="1494405248970" duration="1821000" />
+      <workItem from="1494495247609" duration="9000" />
+      <workItem from="1494657742348" duration="2438000" />
+      <workItem from="1494841865464" duration="3396000" />
+      <workItem from="1494915886437" duration="599000" />
+      <workItem from="1495011318648" duration="3266000" />
+      <workItem from="1495089745980" duration="18000" />
+      <workItem from="1495089785088" duration="6661000" />
+      <workItem from="1495266705635" duration="599000" />
+      <workItem from="1496207654109" duration="2201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317022000" />
+    <option name="totallyTimeSpent" value="347094000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,22 +647,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="124" width="1571" height="993" extended-state="0" />
-    <editor active="true" />
+    <frame x="259" y="128" width="1571" height="993" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14696486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="981" y="95" width="253" height="835" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3378882" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22134832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18651685" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22489083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22489083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24944812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25730336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25730336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22134832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -686,6 +705,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/player_index.cc</url>
+          <line>772</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -697,7 +723,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="59" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -776,13 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="89" column="24" lean-forward="false" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/player_index.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -871,41 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player_index.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="852" column="65" lean-forward="true" selection-start-line="852" selection-start-column="65" selection-end-line="852" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fedmap.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33615">
-          <caret line="2241" column="15" lean-forward="false" selection-start-line="2241" selection-start-column="15" selection-end-line="2241" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/fight_info.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/fight.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/cmd_parser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/misc.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -946,9 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="170" column="69" lean-forward="false" selection-start-line="170" selection-start-column="69" selection-end-line="170" selection-end-column="69" />
-          <folding>
-            <element signature="e#521#542#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -970,33 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="831">
           <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-          <folding>
-            <element signature="e#560#577#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cmd_parser.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1132">
-          <caret line="2805" column="0" lean-forward="false" selection-start-line="2805" selection-start-column="0" selection-end-line="2805" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fight_list.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fight.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5820">
-          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,18 +961,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ship.cc">
+    <entry file="file://$PROJECT_DIR$/include/equipment.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="1035" column="68" lean-forward="false" selection-start-line="1035" selection-start-column="68" selection-end-line="1035" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="435">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/player.h">
+    <entry file="file://$PROJECT_DIR$/src/fedmap.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="462" column="20" lean-forward="false" selection-start-line="462" selection-start-column="20" selection-end-line="462" selection-end-column="20" />
+        <state relative-caret-position="490">
+          <caret line="2046" column="0" lean-forward="true" selection-start-line="2046" selection-start-column="0" selection-end-line="2046" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fight_info.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1031,34 +991,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/ship.h">
+    <entry file="file://$PROJECT_DIR$/include/fight.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+        <state relative-caret-position="615">
+          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/equipment.h">
+    <entry file="file://$PROJECT_DIR$/include/player_index.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="1740">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fight_list.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player_index.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11550">
+          <caret line="770" column="1" lean-forward="false" selection-start-line="770" selection-start-column="1" selection-end-line="770" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fight.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5850">
+          <caret line="390" column="19" lean-forward="false" selection-start-line="390" selection-start-column="19" selection-end-line="390" selection-end-column="19" />
+          <folding>
+            <element signature="e#521#539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/player.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="203" column="18" lean-forward="false" selection-start-line="203" selection-start-column="18" selection-end-line="203" selection-end-column="18" />
+          <folding>
+            <element signature="e#1319#1336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cmd_parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="156" column="35" lean-forward="false" selection-start-line="156" selection-start-column="35" selection-end-line="156" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30225">
-          <caret line="2083" column="19" lean-forward="false" selection-start-line="2083" selection-start-column="19" selection-end-line="2083" selection-end-column="19" />
+        <state relative-caret-position="27330">
+          <caret line="1890" column="0" lean-forward="false" selection-start-line="1890" selection-start-column="0" selection-end-line="1890" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cmd_parser.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-339">
+          <caret line="1058" column="39" lean-forward="false" selection-start-line="1058" selection-start-column="39" selection-end-line="1058" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fed.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="86" column="28" lean-forward="false" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+        <state relative-caret-position="165">
+          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ship.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="130" column="55" lean-forward="false" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ship.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3966">
+          <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
           <folding />
         </state>
       </provider>

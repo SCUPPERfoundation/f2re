@@ -59,7 +59,6 @@ private:
 	std::ofstream	graph_file;
 
 	void	LoadIndices();
-	void	Terminate(Player *player,std::string& name);
 
 public:
 	PlayerIndex(char *file_name);
@@ -114,6 +113,7 @@ public:
 	void	SendPlayerInfo(Player *player);
 	void	SpynetNotice(const std::string& text);
 	void	Suicide(Player *player);
+	void	Terminate(Player *player,std::string& name);
 	void	UpdateCompanyTime();
 	void	UpdateFleets();
 	void	UpdateGraph();

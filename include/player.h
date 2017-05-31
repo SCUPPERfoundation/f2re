@@ -207,8 +207,8 @@ protected:
 
 	const std::string&	Verb(const std::string& line);
 
-	bool	Death(bool is_suicide);
 	bool	HasACompany()					{ return((company != 0) || (business != 0));	}
+	bool	Death(bool is_suicide = false);
 	bool	CantPayCustomsDues(Star *star);
 	bool	IsConnected(const std::string where_to);
 	bool	ParseXML(std::string& line);
@@ -334,6 +334,7 @@ public:
 
 	bool	AddObject(FedObject *object,bool created = true);
 	bool	AddObjectToLocker(FedObject *object);
+	bool 	ApplyHit(const FightInfoOut& info);
 	bool	CanStartBusiness();
 	bool	CanStartIPO();
 	bool	CanUnload();
@@ -529,7 +530,6 @@ public:
 	void	Look(int extent);
 	void	Marry(const std::string& who_name);
 	void	Merchant2Trader();
-	void 	ApplyHit(const FightInfoOut& info);
 	void	Mogul2Technocrat();
 	void	Mood();
 	void	Mood(const std::string& desc);

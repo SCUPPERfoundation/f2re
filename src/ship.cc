@@ -208,6 +208,15 @@ bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
 
 	std::list<std::string> damage_list;
 
+	if(info.hull_damage > 0)
+	{
+		if((cur_hull -= info.hull_damage) < 1)
+			cur_hull = 0;
+		damage_list.push_back("hull");
+		if(cur_hull < 1)
+			return true;
+	}
+
 	if((computer.cur_level > 1) && (info.computer_damage > 0))
 	{
 		if((computer.cur_level -= info.computer_damage) < 1)
@@ -306,19 +315,12 @@ bool 	Ship::ApplyHit(Player *player,const FightInfoOut& info)
 			cur_shield = 0;
 		damage_list.push_back("shields");
 	}
-	// TODO: Change cur_engine to zero & include in power requirements after test period
+	// TODO (eventually): Change cur_engine to zero & include in power requirements after test period
 	if((cur_engine > 1) && (info.engine_damage > 0))
 	{
 		if ((cur_engine -= info.engine_damage) < 1)
 			cur_engine = 1;
 		damage_list.push_back("engines");
-	}
-	// TODO: Change to zero & die after test period and move to start of list
-	if((cur_hull > 1) && (info.hull_damage > 0))
-	{
-		if((cur_hull -= info.hull_damage) < 1)
-			cur_hull = 1;
-		damage_list.push_back("hull");
 	}
 
 	if(damage_list.size() > 0)

@@ -128,6 +128,7 @@ public:
 	long	TradeInValue();
 
 	int	AddCargo(Cargo *cargo,Player *player);
+	int	CurrentHull()					{ return cur_hull; }
 	int 	HoldRemaining()				{ return cur_hold; }
 	int	MaxCargo()						{ return max_hold; }
 	int	MissileRackEfficiency();

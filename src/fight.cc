@@ -288,7 +288,12 @@ bool Fight::Launch(Player *att)
 		CalculateDamage();
 		attacker->Send("Your missile explodes on target!\n",OutputFilter::DEFAULT);
 		defender->Send("Missile hit - checking for damage.\n",OutputFilter::DEFAULT);
-		defender->ApplyHit(defender_out);
+		if(defender->ApplyHit(defender_out))
+		{
+			Game::player_index->Terminate(defender,victim_name);
+			attacker->Clear("target");
+			return true;
+		}
 	}
 	else
 	{
@@ -379,7 +384,12 @@ void	Fight::Fire(Player *att,int what)
 
 			attacker->Send("Your laser strike hits its target!\n",OutputFilter::DEFAULT);
 			defender->Send("Laser strike - checking for damage.\n",OutputFilter::DEFAULT);
-			defender->ApplyHit(defender_out);
+			if(defender->ApplyHit(defender_out))
+			{
+				Game::player_index->Terminate(defender,victim_name);
+				attacker->Clear("target");
+				return;
+			}
 		}
 		else // handle hit but no damage situation
 		{

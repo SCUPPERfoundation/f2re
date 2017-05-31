@@ -485,6 +485,20 @@ void	Player::AllowBuilds(Player	*initiator)
 	initiator->Send(buffer,OutputFilter::DEFAULT);
 }
 
+bool 	Player::ApplyHit(const FightInfoOut& info)
+{
+	if(!ship->ApplyHit(this,info))
+		Send("Your ship suffers a hit, but the damage is insignificant",OutputFilter::DEFAULT);
+	else
+	{
+		if(ship->CurrentHull() > 0)
+			ship->BattleUpdate(this);
+		else
+			return(Die());
+	}
+	return false;
+}
+
 void	Player::Attack()
 {
 	std::ostringstream	buffer;
@@ -3862,14 +3876,6 @@ void	Player::Merchant2Trader()
 		WriteLog(buffer);
 		Game::player_index->Save(this,PlayerIndex::NO_OBJECTS);
 	}
-}
-
-void 	Player::ApplyHit(const FightInfoOut& info)
-{
-	if(!ship->ApplyHit(this,info))
-		Send("Your ship suffers a hit, but the damage is insignificant",OutputFilter::DEFAULT);
-	else
-		ship->BattleUpdate(this);
 }
 
 void	Player::Mogul2Technocrat()
