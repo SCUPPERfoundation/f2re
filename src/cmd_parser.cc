@@ -1100,6 +1100,33 @@ void	CmdParser::Fetch(Player *player)
 	player->Fetch(std::atoi(tokens->Get(1).c_str()));
 }
 
+void	CmdParser::Fire(Player *player)
+{
+	static const std::string	weapons[] = { "missile", "laser", "tl", "ql", "" };
+	static const int	UNKNOWN_WEAPON = 99;
+
+	if(tokens->Size() < 2)
+	{
+		player->Send("You haven't said what you want to fire ('laser','tl' or 'ql')!\n", OutputFilter::DEFAULT);
+		return;
+	}
+
+	int weapon_type = UNKNOWN_WEAPON;
+	for(int count = 0;weapons[count] != "";++count)
+	{
+		if (weapons[count] == tokens->Get(1))
+		{
+			weapon_type = count;
+			break;
+		}
+	}
+
+	if(weapon_type == UNKNOWN_WEAPON)
+		player->Send("I don't know what you want to fire ('laser','tl' or 'ql')\n", OutputFilter::DEFAULT);
+	else
+		player->Fire(weapon_type);
+}
+
 void	CmdParser::Flee(Player *player)
 {
 	if(!player->IsInSpace())
@@ -2777,33 +2804,6 @@ void	CmdParser::Zap(Player *player)
 
 
 /* --------------- Work in Progress --------------- */
-
-void	CmdParser::Fire(Player *player)
-{
-	static const std::string	weapons[] = { "missile", "laser", "tl", "ql", "" };
-	static const int	UNKNOWN_WEAPON = 99;
-
-	if(tokens->Size() < 2)
-	{
-		player->Send("You haven't said what you want to fire ('laser','tl' or 'ql')!\n", OutputFilter::DEFAULT);
-		return;
-	}
-
-	int weapon_type = UNKNOWN_WEAPON;
-	for(int count = 0;weapons[count] != "";++count)
-	{
-		if (weapons[count] == tokens->Get(1))
-		{
-			weapon_type = count;
-			break;
-		}
-	}
-
-	if(weapon_type == UNKNOWN_WEAPON)
-		player->Send("I don't know what you want to fire ('laser','tl' or 'ql')\n", OutputFilter::DEFAULT);
-	else
-		player->Fire(weapon_type);
-}
 
 
 

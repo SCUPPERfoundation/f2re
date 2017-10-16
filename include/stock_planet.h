@@ -7,44 +7,56 @@
 	without the express written permission of the copyright holder.
 -----------------------------------------------------------------------*/
 
-#ifndef BUILD2NDPLANET
-#define BUILD2NDPLANET
+#ifndef STOCKPLANET_H
+#define STOCKPLANET_H
 
 #include <string>
 
 class	Player;
 class Star;
 
-class Build2ndPlanet
+class StockPlanet
 {
-private:
+protected:
 	static const std::string	stock_star_titles[];
 	static const std::string	stock_star_files[];
 	static const std::string	stock_planet_titles[];
 	static const std::string	stock_planet_files[];
-	static const std::string	orbit_descs[];
+	static const int				from_loc_nums[];
 
-	Player		*player;
-	Star			*star;
-	std::string	star_file_name;
-	std::string	planet_file_name;
-	std::string	planet_title;
+	Player	*player;
+	Star		*star;
 
-	int	planet_type_index;
+	std::string	stock_name;
+	std::string	new_name;
 
-	bool	MakeFileRoot(std::string& text);
-	bool	SetUpLoader();
-	bool	SetUpPlanetFiles();
-	bool	SetUpSpaceFile();
+	std::string	star_dir;
+	std::string	stock_dir;
 
-	void	SetPlanetName(const std::string& planet);
-	void	SetPlanetType(const std::string& type_name);
+	std::string	new_planet_map;
+	std::string	new_planet_msg;
+	std::string	new_space_map;
+
+	std::string	loader;
+
+	int	stock_index;
+
+	std::string	CapitaliseName(const std::string lc_name);
+	std::string	MakeFileName();
+
+	bool	LoadFiles();
+	bool	LoadLoaderFile();
+	bool	LoadSpaceFiles();
+	bool	LoadStockFiles();
+	bool	MakeStockDirectory();
 
 public:
-	Build2ndPlanet(Player *who,Star *the_star,const std::string& planet,const std::string& type_name);
-	~Build2ndPlanet();
+	StockPlanet(Player *owner,const std::string& stock_planet_name,const std::string& new_planet_name);
+	virtual	~StockPlanet();
 
-	bool	Run();
+	virtual bool Run() = 0;
+
 };
 
-#endif // BUILD2NDPLANET
+#endif
+

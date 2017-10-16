@@ -20,7 +20,7 @@
 #include "fight_info.h"
 #include "obj_list.h"
 
-class	Cargo;
+class   Cargo;
 class DBPlayer;
 class	DbShip;
 class	EquipParser;

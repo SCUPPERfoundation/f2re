@@ -20,6 +20,7 @@
 #include <sys/dir.h>
 
 #include "build_2nd_planet.h"
+#include "build_3rd_planet.h"
 #include "cartel.h"
 #include "display_cabinet.h"
 #include "fedmap.h"
@@ -29,7 +30,6 @@
 #include "misc.h"
 #include "output_filter.h"
 #include "player.h"
-#include "player_index.h"
 #include "review.h"
 #include "star_parser.h"
 #include "syndicate.h"
@@ -96,7 +96,7 @@ void	Star::BuildDestruction()
 
 void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& type)
 {
-	int num_planets = map_index.size() - 1;
+	int  num_planets = map_index.size() - 1;
 
 	if(FindLink()->loc_no != 460)
 	{
@@ -158,6 +158,20 @@ void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string
 		builder = new Build2ndPlanet(player,this,planet_name,type);
 	}
 	catch(const std::exception& e) { player->Send(e.what(),OutputFilter::DEFAULT); return; }
+
+	builder->Run();
+	delete builder;
+}
+
+void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
+{
+	Build3rdPlanet	*builder;
+	try
+	{
+		builder = new Build3rdPlanet(player,type,planet_name);
+	}
+	catch(const std::exception& e) { player->Send(e.what(),OutputFilter::DEFAULT); return; }
+
 
 	builder->Run();
 	delete builder;
@@ -299,7 +313,7 @@ FedMap	*Star::FindByName(const std::string& map_name)
 
 void	Star::FindLandingPad(LocRec *loc,const std::string& orbit)
 {
-	int	loc_no = -1;
+	int	loc_no;
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 	{
 		if((loc_no = iter->second->LandingPad(orbit)) != -1)
@@ -439,15 +453,21 @@ bool	Star::IsInSystem(const std::string player_name)
 
 bool	Star::IsOpen()
 {
-	LocRec	*link = 0;
+	LocRec *link = 0;
 	for(MapIndex::const_iterator iter = map_index.begin();iter != map_index.end();iter++)
 	{
 		if((link = iter->second->FindLink()) != 0)
 			break;
 	}
-	bool is_open = link->fed_map->IsOpen(0);
-	delete link;
-	return(is_open);
+
+	if(link != 0)
+	{
+		bool is_open = link->fed_map->IsOpen(0);
+		delete link;
+		return is_open;
+	}
+	else
+		return false;
 }
 
 bool	Star::IsOwner(Player *player)
@@ -758,12 +778,6 @@ void	Star::WriteLoaderFile()
 
 
 /* ---------------------- Work in progress ---------------------- */
-
-void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string& type)
-{
-	player->Send("Sorry, this facility is not yet available!\n",OutputFilter::DEFAULT);
-	// TODO: In due course
-}
 
 void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
 {

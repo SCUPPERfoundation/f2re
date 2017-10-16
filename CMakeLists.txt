@@ -439,7 +439,7 @@ set(SOURCE_FILES
     src/warehouse.cc
     src/work.cc
     src/xml_dump_load.cc
-    src/xml_parser.cc include/fight.h include/fight_info.h src/fight.cc include/fight_list.h src/fight_list.cc)
+    src/xml_parser.cc include/fight.h include/fight_info.h src/fight.cc include/fight_list.h src/fight_list.cc include/stock_planet.h src/stock_planet.cc include/build_3rd_planet.h src/build_3rd_planet.cc)
 
 include_directories(include)
 include_directories(/usr/include/libdb4)

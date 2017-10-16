@@ -166,7 +166,7 @@ bool	Build2ndPlanet::SetUpLoader()
 	buffer << "chmod g+w maps/" << star->Dir() << "/" << "loader.xml";
 	std::system(buffer.str().c_str()); // we can live with this failing
 
-	// make a backup of the current space.loc file
+	// make a backup of the current loader.xml file
 	buffer.str("");
 	buffer << "cp maps/" << star->Dir() << "/" << "loader.xml";
 	buffer << " maps/" << star->Dir() << "/" << "loader.xml.old\n";

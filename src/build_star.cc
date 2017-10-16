@@ -110,7 +110,8 @@ bool BuildStar::CreateLoader()
 	std::ofstream	file(buffer.str().c_str(),std::ios::out);
 	if(!file)
 	{
-		buffer << "Can't write to file " << HomeDir() << "/maps/" << system_file_root << "/loader.xml";;
+		buffer.str();
+		buffer << "Can't write to file " << HomeDir() << system_file_root << "/loader.xml";
 		WriteLog(buffer);
 		WriteErrLog(buffer.str());
 		return false;
