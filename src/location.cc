@@ -146,7 +146,7 @@ void	Location::Description(Player *player,int extent)
 			buffer << desc;
 	}
 	buffer << std::endl;
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Location::Dump()
@@ -175,12 +175,12 @@ LocRec	*Location::Move(Player *player,FedMap *home_map,int dir)
 		if(no_exit == 0)
 		{
 			if(player->IsInSpace())
-				player->Send(Game::system->GetMessage("location","move",2),OutputFilter::DEFAULT);
+				player->Send(Game::system->GetMessage("location","move",2));
 			else
-				player->Send(Game::system->GetMessage("location","move",1),OutputFilter::DEFAULT);
+				player->Send(Game::system->GetMessage("location","move",1));
 		}
 		else
-			player->Send(no_exit->Find(home_map),OutputFilter::DEFAULT);
+			player->Send(no_exit->Find(home_map));
 		return(0);
 	}
 

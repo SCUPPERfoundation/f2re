@@ -43,7 +43,7 @@ network improves the efficiency of your leisure industries, and spurs new popula
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_soon,OutputFilter::DEFAULT);
+		 player->Send(too_soon);
 		 ok_status = false;
 	}
 	else
@@ -51,7 +51,7 @@ network improves the efficiency of your leisure industries, and spurs new popula
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -77,15 +77,15 @@ network has little further effect, the network having reached its optimum size.\
 		{
 			fed_map->AddTotalLabour(10);
 			fed_map->AddLabour(10);
-			player->Send(success1,OutputFilter::DEFAULT);
+			player->Send(success1);
 		}
 		else
-			player->Send(success2,OutputFilter::DEFAULT);
+			player->Send(success2);
 		return(true);
 	}
 	else
 	{
-		player->Send(too_far,OutputFilter::DEFAULT);
+		player->Send(too_far);
 		return(true);
 	}
 }
@@ -94,7 +94,7 @@ void	TQuark::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    T-Quark net: " << total_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	TQuark::UpdateEfficiency(Efficiency *efficiency)

@@ -39,7 +39,7 @@ void	SetParser::Commodity(Player *player,Tokens *tokens)
 	static const std::string	error2("I don't know what you want to change.\n");
 
 	if(tokens->Size() < 4)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		int level = std::atoi(tokens->Get(3).c_str());
@@ -58,7 +58,7 @@ void	SetParser::Commodity(Player *player,Tokens *tokens)
 		{
 			case	0:	player->CurrentMap()->MaxStock(player,level,tokens->Get(1));	break;
 			case	1:	player->CurrentMap()->MinStock(player,level,tokens->Get(1));	break;
-			default:	player->Send(error2,OutputFilter::DEFAULT);														break;
+			default:	player->Send(error2);														break;
 		}
 	}
 }
@@ -69,7 +69,7 @@ void	SetParser::Exchange(Player *player,Tokens *tokens)
 	static const std::string	error2("I don't know what you want to change.\n");
 
 	if(tokens->Size() < 4)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		int level = std::atoi(tokens->Get(3).c_str());
@@ -88,7 +88,7 @@ void	SetParser::Exchange(Player *player,Tokens *tokens)
 		{
 			case	0:	player->CurrentMap()->MaxStock(player,level,"");	break;
 			case	1:	player->CurrentMap()->MinStock(player,level,"");	break;
-			default:	player->Send(error2,OutputFilter::DEFAULT);			break;
+			default:	player->Send(error2);			break;
 		}
 	}
 }
@@ -125,21 +125,21 @@ void	SetParser::SetCartelProperty(Player *player,Tokens *tokens)
 {
 	if(tokens->Size() < 4)
 	{
-		player->Send("The command to set the joining fee is 'SET CARTEL FEE/BONUS amount'.\n",OutputFilter::DEFAULT);
+		player->Send("The command to set the joining fee is 'SET CARTEL FEE/BONUS amount'.\n");
 		return;
 	}
 
 	Cartel	*cartel = player->OwnedCartel();
 	if(cartel == 0)
 	{
-		player->Send("You don't own a cartel!\n",OutputFilter::DEFAULT);
+		player->Send("You don't own a cartel!\n");
 		return;
 	}
 
 	int	amount = std::atoi(tokens->Get(3).c_str());
 	if(amount > 100)
 	{
-		player->Send("The amount is in megagroats, and cannot exceed 100!\n",OutputFilter::DEFAULT);
+		player->Send("The amount is in megagroats, and cannot exceed 100!\n");
 		return;
 	}
 
@@ -154,7 +154,7 @@ void	SetParser::SetCartelProperty(Player *player,Tokens *tokens)
 		cartel->ChangeEntranceFee(-amount);
 		buffer << "The joining bonus for the " << cartel->Name() << " cartel is now " << amount << " Megagroats.\n";
 	}
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	Game::review->Post(buffer);
 }
 
@@ -163,7 +163,7 @@ void	SetParser::SetCityProduction(Player *player,Tokens *tokens,const std::strin
 	Cartel	*cartel = player->OwnedCartel();
 	if(cartel == 0)
 	{
-		player->Send("You need to be a cartel owner to allocate production to cities!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be a cartel owner to allocate production to cities!\n");
 		return;
 	}
 
@@ -172,7 +172,7 @@ void	SetParser::SetCityProduction(Player *player,Tokens *tokens,const std::strin
 	if((index == Tokens::NOT_FOUND) || (index < 2) || (index == (static_cast<int>(tokens->Size()) - 1)))
 	{
 		player->Send("To allocate production to a city the command is 'set production \
-city_name to commodity_name.\n",OutputFilter::DEFAULT);
+city_name to commodity_name.\n");
 		return;
 	}
 
@@ -188,7 +188,7 @@ city_name to commodity_name.\n",OutputFilter::DEFAULT);
 	if(commodity_name == "Unknown")
 	{
 		buffer << "I can't find a commodity called '" << tokens->Get(index + 1) << "'!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 
@@ -204,25 +204,25 @@ void	SetParser::SetCustoms(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return;
 	}
 	if(player->Rank() < Player::PLUTOCRAT)
 	{
-		player->Send(not_pluto,OutputFilter::DEFAULT);
+		player->Send(not_pluto);
 		return;
 	}
 	Cartel	*cartel = Game::syndicate->Find(player->CurrentMap()->HomeStarPtr()->CartelName());
 	if(cartel->Owner() != player->Name())
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 
 	int	duty = std::atoi(tokens->Get(2).c_str());
 	if((duty < 0) || (duty > 100))
 	{
-		player->Send(too_much,OutputFilter::DEFAULT);
+		player->Send(too_much);
 		return;
 	}
 
@@ -230,7 +230,7 @@ void	SetParser::SetCustoms(Player *player,Tokens *tokens)
 	std::ostringstream	buffer;
 	buffer << "The " << cartel->Name() << " customs duty has been set to ";
 	buffer << cartel->Customs() << "%.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	Game::financial->Post(buffer);
 }
 
@@ -244,7 +244,7 @@ void	SetParser::SetFactory(Player *player,Tokens *tokens)
 		{ "wages", "status", "capital", "output", "" };
 
 	if(tokens->Size() < 5)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		int	fact_num = std::atoi(tokens->Get(2).c_str());
@@ -261,9 +261,9 @@ void	SetParser::SetFactory(Player *player,Tokens *tokens)
 		{
 			case  0:	player->SetFactoryWages(fact_num,std::atoi(tokens->Get(4).c_str()));		break;
 			case  1:	player->SetFactoryStatus(fact_num,tokens->Get(4));								break;
-			case	2:	player->Send(error3,OutputFilter::DEFAULT);										break;
+			case	2:	player->Send(error3);										break;
 			case	3:	player->SetFactoryOutput(fact_num,tokens->Get(4));								break;
-			default:	player->Send(error2,OutputFilter::DEFAULT);										break;
+			default:	player->Send(error2);										break;
 		}
 	}
 }
@@ -278,8 +278,8 @@ name, the command will apply to all commodities on the exchange.\n");
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_spread,OutputFilter::DEFAULT);
-		player->Send(help,OutputFilter::DEFAULT);
+		player->Send(no_spread);
+		player->Send(help);
 		return;
 	}
 
@@ -304,8 +304,8 @@ name, the command will apply to all commodities on the exchange.\n");
 			NormalisePlanetTitle(name);
 			if((fed_map = Game::galaxy->FindMap(name)) == 0)
 			{
-				player->Send(unknown,OutputFilter::DEFAULT);
-				player->Send(help,OutputFilter::DEFAULT);
+				player->Send(unknown);
+				player->Send(help);
 			}
 			else	// Set spread on all commods on another planet
 				fed_map->SetSpread(player,amount);
@@ -341,8 +341,8 @@ name, the command will apply to all commodities on the exchange.\n");
 	}
 
 	// Can't find the map!
-	player->Send(unknown,OutputFilter::DEFAULT);
-	player->Send(help,OutputFilter::DEFAULT);
+	player->Send(unknown);
+	player->Send(help);
 	// Phew!
 }
 
@@ -355,8 +355,8 @@ Commodity_name and planet name are optional.\n");
 
 	if(tokens->Size() < 4)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
-		player->Send(error2,OutputFilter::DEFAULT);
+		player->Send(error);
+		player->Send(error2);
 		return;
 	}
 	int level = std::atoi(tokens->Get(3).c_str());
@@ -373,7 +373,7 @@ Commodity_name and planet name are optional.\n");
 	}
 	if(stockpile_type == NO_NOUN)
 	{
-		player->Send(error2,OutputFilter::DEFAULT);
+		player->Send(error2);
 		return;
 	}
 
@@ -398,7 +398,7 @@ Commodity_name and planet name are optional.\n");
 			std::string	name(tokens->Get(4));
 			if((fed_map = Game::galaxy->FindMap(NormalisePlanetTitle(name))) == 0)
 			{
-				player->Send(unknown,OutputFilter::DEFAULT);
+				player->Send(unknown);
 				return;
 			}
 			else	// Set stockpile on all commods on another planet
@@ -454,7 +454,7 @@ Commodity_name and planet name are optional.\n");
 		return;
 	}
 
-	player->Send(unknown,OutputFilter::DEFAULT);	// Can't find the map!
+	player->Send(unknown);	// Can't find the map!
 }
 
 void	SetParser::SetYardMarkup(Player *player,Tokens *tokens,const std::string& line)
@@ -462,7 +462,7 @@ void	SetParser::SetYardMarkup(Player *player,Tokens *tokens,const std::string& l
 	static const std::string	error("You haven't said what the yard markup/discount is supposed to be!\n");
 
 	if(tokens->Size() < 3)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		int	index =  tokens->GetStart(2);

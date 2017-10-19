@@ -52,7 +52,7 @@ AtmosControl::AtmosControl(FedMap *the_map,Player *player,Tokens *tokens)
 	}
 	total_builds = 1;
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -78,7 +78,7 @@ bool	AtmosControl::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;		
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -98,7 +98,7 @@ void	AtmosControl::Display(Player *player)
 	buffer << "    Atmospheric Control Unit: " << total_builds << " built\n";
 	buffer << "      General: " << level_builds << "\n";
 	buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	AtmosControl::LevelUpdate()

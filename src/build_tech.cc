@@ -39,7 +39,7 @@ built at Industrial and Technical levels.\n");
 
 	if(the_map->Economy() < Infrastructure::INDUSTRIAL)
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 ok_status = false;
 	}
 	else
@@ -50,7 +50,7 @@ built at Industrial and Technical levels.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 		else
@@ -70,7 +70,7 @@ bool	TechInst::Add(Player *player,Tokens *tokens)
 Technical Institute. Unfortunately, your plans are blocked because of the \
 expense of maintaining the fancy architecture of the existing Institute!\n");
 
-	player->Send(error,OutputFilter::DEFAULT);
+	player->Send(error);
 	return(false);
 }
 
@@ -85,7 +85,7 @@ void	TechInst::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Tech Institute: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	TechInst::IsObselete()

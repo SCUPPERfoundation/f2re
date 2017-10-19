@@ -42,7 +42,7 @@ take place on biological level and above planets.\n");
 
 	if(the_map->Economy() < Infrastructure::BIOLOGICAL)
 	{
-		 player->Send(too_soon,OutputFilter::DEFAULT);
+		 player->Send(too_soon);
 		 ok_status = false;
 	}
 	else
@@ -50,7 +50,7 @@ take place on biological level and above planets.\n");
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -66,7 +66,7 @@ bool	Terraform::Add(Player *player,Tokens *tokens)
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		return(true);
 	}
 	else
@@ -75,7 +75,7 @@ bool	Terraform::Add(Player *player,Tokens *tokens)
 		buffer <<"In a surprisingly short space of time more virgin territory is terraformed. ";
 		buffer << "Unfortunately, it becomes clear that you have reached diminishing returns on ";
 		buffer << fed_map->Title() << "\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(true);
 	}
 }
@@ -84,7 +84,7 @@ void	Terraform::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Terraforming: " << total_builds << " clearances\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Terraform::UpdatePopulation(Population *population)

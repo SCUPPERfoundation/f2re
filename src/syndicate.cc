@@ -52,7 +52,7 @@ void	Syndicate::Display(Player *player)
 	buffer << "Cartels operating in this galaxy:\n";
 	for(CartelIndex::iterator iter = members.begin();iter != members.end();++iter)
 		buffer << "   " << iter->first << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Syndicate::Expel(Player *owner,const std::string& sys_name)
@@ -60,27 +60,27 @@ void	Syndicate::Expel(Player *owner,const std::string& sys_name)
 	Cartel	*cartel = FindByOwner(owner->Name());
 	if(cartel == 0)
 	{
-		owner->Send("You don't own a cartel to expel anyone from!\n",OutputFilter::DEFAULT);
+		owner->Send("You don't own a cartel to expel anyone from!\n");
 		return;
 	}
 
 	if(sys_name == cartel->Name())
 	{
-		owner->Send("Dork!\n",OutputFilter::DEFAULT);
+		owner->Send("Dork!\n");
 		return;
 	}
 
 	std::ostringstream	buffer;
 	if(cartel->RemoveMember(sys_name) != Cartel::REMOVED)
 	{
-		owner->Send("Your cartel doesn't have a member with that name!\n",OutputFilter::DEFAULT);
+		owner->Send("Your cartel doesn't have a member with that name!\n");
 		return;
 	}
 	else
 	{
 		buffer << sys_name << " has been expelled from the " << cartel->Name() << " cartel!\n";
 		Game::review->Post(buffer);
-		owner->Send(buffer,OutputFilter::DEFAULT);
+		owner->Send(buffer);
 	}
 
 	Star	*star = Game::galaxy->Find(sys_name);
@@ -119,7 +119,7 @@ void	Syndicate::Expel(Player *owner,const std::string& sys_name)
 		return;
 
 	if(Game::player_index->FindCurrent(sys_owner->Name()) != 0)
-		sys_owner->Send(buffer,OutputFilter::DEFAULT);
+		sys_owner->Send(buffer);
 	else
 	{
 		FedMssg	*mssg =  new FedMssg;
@@ -205,7 +205,7 @@ Cartel	*Syndicate::NewCartel(Player *player,const std::string& cartel_name)
 	}
 	catch(...)
 	{
-		player->Send("Unable to set up cartel: Please report this to 'feedback@ibgames.com'. Thank you.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to set up cartel: Please report this to 'feedback@ibgames.com'. Thank you.\n");
 		return(0);
 	}
 
@@ -241,26 +241,26 @@ planet to make the joining bonus/fee transfer.\n");
 	Cartel *cartel = new_cartel_owner->CurrentCartel();
 	if(cartel->Owner() != new_cartel_owner->Name())
 	{
-		new_cartel_owner->Send("This isn't your cartel!\n",OutputFilter::DEFAULT);
+		new_cartel_owner->Send("This isn't your cartel!\n");
 		return(false);
 	}
 
 	int status = cartel->ProcessRequest(system_name,Cartel::ACCEPT);
 	if(status == Cartel::NOT_FOUND)
 	{
-		new_cartel_owner->Send("I can't find that system in the list of pending requests!\n",OutputFilter::DEFAULT);
+		new_cartel_owner->Send("I can't find that system in the list of pending requests!\n");
 		return(false);
 	}
 	if(status == Cartel::ALREADY_MEMBER)
 	{
-		new_cartel_owner->Send("That system is already a member of your Cartel!\n",OutputFilter::DEFAULT);
+		new_cartel_owner->Send("That system is already a member of your Cartel!\n");
 		return(false);
 	}
 
 	Star	*star = Game::galaxy->Find(system_name);
 	if(star == 0)
 	{
-		new_cartel_owner->Send("I can't find the star system in TransferPlanet(). Please tell feedback about this.Thank you.\n",OutputFilter::DEFAULT);
+		new_cartel_owner->Send("I can't find the star system in TransferPlanet(). Please tell feedback about this.Thank you.\n");
 		return(false);
 	}
 	const std::string& old_cartel_name(star->NewCartel(cartel->Name()));
@@ -290,7 +290,7 @@ planet to make the joining bonus/fee transfer.\n");
 		if(no_bonus_fee)
 			buffer << error;
 		buffer << "\n";
-		new_cartel_owner->Send(buffer,OutputFilter::DEFAULT);
+		new_cartel_owner->Send(buffer);
 
 		buffer.str("");
 		buffer << system_name << " has joined the " << cartel->Name() << " cartel!";
@@ -302,7 +302,7 @@ planet to make the joining bonus/fee transfer.\n");
  	}
 	else
 	{
-		new_cartel_owner->Send("Sorry I can't seem to find a current owner for that system!\n",OutputFilter::DEFAULT);
+		new_cartel_owner->Send("Sorry I can't seem to find a current owner for that system!\n");
 		return(false);
 	}
 }

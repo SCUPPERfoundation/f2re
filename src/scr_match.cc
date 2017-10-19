@@ -59,7 +59,7 @@ int	Match::Process(Player *player)
 		{
 			final_text = *mssg;
 			InsertName(player,final_text);
-			player->Send(final_text,OutputFilter::DEFAULT);
+			player->Send(final_text);
 		}
 	}
 	else
@@ -68,7 +68,7 @@ int	Match::Process(Player *player)
 		{
 			std::string	final_text(lo->Find(home));
 			InsertName(player,final_text);
-			player->Send(final_text,OutputFilter::DEFAULT);
+			player->Send(final_text);
 		}
 	}
 	return(STOP);

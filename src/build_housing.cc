@@ -37,7 +37,7 @@ and hand over the keycards to the members of the lucky family.\n");
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -46,7 +46,7 @@ and hand over the keycards to the members of the lucky family.\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -66,23 +66,23 @@ bool	Housing::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(total_builds < 3)
 	{
 		total_builds++;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		return(true);
 	}
 
 	if(fed_map->RequestResources(player,"Railway",name))
 	{
 		if(++total_builds <= 6)
-			player->Send(ok,OutputFilter::DEFAULT);
+			player->Send(ok);
 		else
-			player->Send(maxed_out,OutputFilter::DEFAULT);
+			player->Send(maxed_out);
 		return(true);
 	}
 	else
@@ -94,7 +94,7 @@ void	Housing::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " estate";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Housing::IsObselete()

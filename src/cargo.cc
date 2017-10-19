@@ -35,7 +35,7 @@ void	Cargo::Display(Player *player)
 	buffer << "    " << std::setw(16) << std::left << name;
 	buffer << "Cost " << std::setw(4) << std::right << cost  << "ig/ton ";
 	buffer << "(Origin " << planet << ", " << star << " system)\n"; 
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Cargo::Display(std::ostringstream& buffer)

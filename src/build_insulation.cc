@@ -42,7 +42,7 @@ Insulation::Insulation(FedMap *the_map,Player *player,Tokens *tokens)
 									(fed_map->RequestResources(player,"Oil",name)))
 	{
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 	else
@@ -63,9 +63,9 @@ energy efficiency of your industry meets with little or no success.\n");
 	if((total_builds < 5) || ((total_builds >= 5) && (fed_map->RequestResources(player,"Oil",name))))
 	{
 		if(total_builds < 10)
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 		else
-			player->Send(maxed_out,OutputFilter::DEFAULT);
+			player->Send(maxed_out);
 		total_builds++;
 		return(true);
 	}
@@ -77,7 +77,7 @@ void	Insulation::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Insulation: " << total_builds << " campaigns completed\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Insulation::UpdateEfficiency(Efficiency *efficiency)

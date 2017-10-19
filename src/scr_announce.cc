@@ -65,7 +65,7 @@ void	Announce::MultiMessage(Player *player)
 		if(!pl_list.empty())
 		{
 			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-				(*iter)->Send(final_text,OutputFilter::DEFAULT);
+				(*iter)->Send(final_text);
 		}
 	}
 }
@@ -91,7 +91,7 @@ void	Announce::SingleMessage(Player *player)
 	if(!pl_list.empty())
 	{
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send(final_text,OutputFilter::DEFAULT);
+			(*iter)->Send(final_text);
 	}
 }
 
@@ -105,7 +105,7 @@ void	Announce::TextMessage(Player *player)
 	if(!pl_list.empty())
 	{
 		for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-			(*iter)->Send(final_text,OutputFilter::DEFAULT);
+			(*iter)->Send(final_text);
 	}
 }
 

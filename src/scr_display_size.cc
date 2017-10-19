@@ -35,7 +35,7 @@ int	DisplaySize::Process(Player *player)
 		if(index != std::string::npos)
 			temp.replace(index,2,buffer.str());
 		temp += "\n";
-		player->Send(temp,OutputFilter::DEFAULT);
+		player->Send(temp);
 	}
 	return(CONTINUE);
 }

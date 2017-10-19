@@ -36,7 +36,7 @@ DefenceVessel::DefenceVessel(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if(the_map->Economy() < Infrastructure::TECHNICAL)
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 ok_status = false;
 	}
 	else
@@ -58,7 +58,7 @@ DefenceVessel::DefenceVessel(FedMap *the_map,Player *player,Tokens *tokens)
 			 	buffer << "The launch of the first system defence vessel is a big event, shown on all channels. ";
 				buffer << "The program spurs the development of your defence industries, and increases the ";
 				buffer << "consumption of " << tokens->Get(2) << ".\n";
-				player->Send(buffer,OutputFilter::DEFAULT);
+				player->Send(buffer);
 				ok_status = true;
 			}
 		}
@@ -77,7 +77,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 
 	if((fed_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 return(false);
 	}
 
@@ -91,7 +91,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 		{
 		 	buffer << "Your system defence program continues to boost defence industry production ";
 			buffer << "and increases the consumption of " << tokens->Get(2) << ".\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			total_builds++;
 			return(true);
 		}
@@ -103,7 +103,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 		{
 		 	buffer << "Your system defence program is providing dimishing returns on the production ";
 			buffer << "front, but it is stimulating the consumption of " << tokens->Get(2) << ".\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			total_builds++;
 			return(true);
 		}
@@ -114,7 +114,7 @@ bool	DefenceVessel::Add(Player *player,Tokens *tokens)
 	 	buffer << "Your military advisors suggest that there is little point in continuing the system ";
 		buffer << "defence program, since there are already more than adequate numbers of vessels.\n";
 		total_builds++;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(true);
 	}
 }
@@ -126,13 +126,13 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 		return(false);
 	}
 
@@ -141,7 +141,7 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a consumption point to " << tokens->Get(2);
 			buffer << ", only to defence industry commodities.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(false);
 	}
 	return(true);
@@ -149,7 +149,7 @@ bool	DefenceVessel::CheckCommodity(Player *player,Tokens *tokens)
 
 bool	DefenceVessel::Demolish(Player *player)
 {
-	player->Send("Considerations of 'defence of the realm' stymie your plans!\n",OutputFilter::DEFAULT);
+	player->Send("Considerations of 'defence of the realm' stymie your plans!\n");
 	return(false);
 }
 
@@ -157,7 +157,7 @@ void	DefenceVessel::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    System Defence Vessels : " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	DefenceVessel::UpdateEfficiency(Efficiency *efficiency)

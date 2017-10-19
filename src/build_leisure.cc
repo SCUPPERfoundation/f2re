@@ -45,7 +45,7 @@ improves the efficiency, and consumption level, of your leisure industries, and 
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_soon,OutputFilter::DEFAULT);
+		 player->Send(too_soon);
 		 ok_status = false;
 	}
 	else
@@ -54,12 +54,12 @@ improves the efficiency, and consumption level, of your leisure industries, and 
 		{
 			total_builds = 1;
 			fed_map->AddCategoryConsumptionPoints(Commodities::LEIS,1,true);
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 		else
 		{
-			player->Send(no_meta_studio,OutputFilter::DEFAULT);
+			player->Send(no_meta_studio);
 			ok_status = false;
 		}
 	}
@@ -81,10 +81,10 @@ has little further effect.\n");
 	if(++total_builds <= 8)
 	{
 		fed_map->AddCategoryConsumptionPoints(Commodities::LEIS,1,true);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	}
 	else
-		player->Send(too_far,OutputFilter::DEFAULT);
+		player->Send(too_far);
 	return(true);
 }
 
@@ -92,7 +92,7 @@ void	Leisure::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Leisure Mega-Centres: " << total_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Leisure::UpdateDisaffection(Disaffection *discontent)

@@ -39,7 +39,7 @@ void	BuyParser::BuyFactory(Player *player,Tokens *tokens)
 {
 	static const std::string	no_commod("You haven't said what you want your new factory to produce!\n");
 	if(tokens->Size() < 3)
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 	else
 		player->BuyFactory(tokens->Get(2));
 }
@@ -48,7 +48,7 @@ void	BuyParser::BuyFuel(Player *player,Tokens *tokens)
 {
 	Ship *ship = player->GetShip();
 	if(ship == 0)
-		player->Send(Game::system->GetMessage("player","buyfuel",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("player","buyfuel",1));
 	else
 	{
 		if(std::isdigit(tokens->Get(1)[0]) != 0)
@@ -62,7 +62,7 @@ void	BuyParser::BuyFutures(Player *player,Tokens *tokens)
 {
 	static const std::string	no_commod("You haven't given a commodity to trade futures in!\n");
 	if(tokens->Size() < 3)
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 	else
 		player->BuyFutures(tokens->Get(2));
 }
@@ -72,7 +72,7 @@ void	BuyParser::BuyJammers(Player *player,Tokens *tokens,const std::string& line
 	Ship *ship = player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("Buy a ship before you try to fit it with jammers!\n",OutputFilter::DEFAULT);
+		player->Send("Buy a ship before you try to fit it with jammers!\n");
 		return;
 	}
 
@@ -90,7 +90,7 @@ void	BuyParser::BuyJammers(Player *player,Tokens *tokens,const std::string& line
 void	BuyParser::BuyPizza(Player *player,Tokens *tokens,const std::string& line)
 {
 	if(!player->CurrentMap()->IsABar(player->LocNo()))
-		player->Send(Game::system->GetMessage("cmdparser","buy",2),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","buy",2));
 	else
 	{
 		std::string	desc;
@@ -107,12 +107,12 @@ void	BuyParser::BuyRegistry(Player *player)
 
 	if(!player->CurrentMap()->IsOwner(player))
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 	if(player->AddSlithy() < 5)
 	{
-		player->Send(no_slithies,OutputFilter::DEFAULT);
+		player->Send(no_slithies);
 		return;
 	}
 	
@@ -128,7 +128,7 @@ void	BuyParser::BuyRegistry(Player *player)
 void	BuyParser::BuyRound(Player *player,Tokens *tokens,const std::string& line)
 {
 	if(!player->CurrentMap()->IsABar(player->LocNo()))
-		player->Send(Game::system->GetMessage("cmdparser","buy",2),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","buy",2));
 	else
 	{
 		std::string	desc;
@@ -158,7 +158,7 @@ void	BuyParser::BuyShares(Player *player,Tokens *tokens,const std::string& line)
 void	BuyParser::BuyShip(Player *player)
 {
 	if(!player->CurrentMap()->IsAYard(player->LocNo()))
-		player->Send(Game::system->GetMessage("cmdparser","buy",3),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","buy",3));
 	else
 		player->BuyShip();
 	return;
@@ -197,7 +197,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 		case  8:	return(player->BuyFood());							// 'food'
 		case  9: return(BuyRound(player,tokens,line));			// 'round'
 		case 10: return(BuyPizza(player,tokens,line));			// 'pizza'
-		case 11: player->Send(Game::system->GetMessage("cmdparser","buy",5),OutputFilter::DEFAULT);	return;	// 'clothes'
+		case 11: player->Send(Game::system->GetMessage("cmdparser","buy",5));	return;	// 'clothes'
 		case 12:	return(BuyShares(player,tokens,line));			// 'shares'
 		case 13:	return(BuyTreasury(player,tokens,line));		// 'treasury'
 		case 14: return(BuyRegistry(player));						// 'registry'
@@ -236,7 +236,7 @@ void	BuyParser::Process(Player *player,Tokens *tokens,const std::string& line)
 	
 	// see if they want to buy a commodity
 	if(Game::commodities->Find(tokens->Get(1)) == 0)
-		player->Send(Game::system->GetMessage("cmdparser","buy",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","buy",1));
 	else
 	{
 		if(player->TradingAllowed())
@@ -252,7 +252,7 @@ void	BuyParser::BuySensors(Player *player,Tokens *tokens,const std::string& line
 	Ship *ship = player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("Buy a ship before you try to fit it with sensors!\n",OutputFilter::DEFAULT);
+		player->Send("Buy a ship before you try to fit it with sensors!\n");
 		return;
 	}
 
@@ -272,19 +272,19 @@ void	BuyParser::BuyMissiles(Player *player,Tokens *tokens,const std::string& lin
 	Ship *ship = player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("Buy a ship before you try to buy missiles!\n",OutputFilter::DEFAULT);
+		player->Send("Buy a ship before you try to buy missiles!\n");
 		return;
 	}
 
 	if(!player->CurrentMap()->IsAWeaponsShop(player->LocNo()))
 	{
-		player->Send("Surprisingly enough, weapons can only be purchased in licensed weapon shops!\n",OutputFilter::DEFAULT);
+		player->Send("Surprisingly enough, weapons can only be purchased in licensed weapon shops!\n");
 		return;
 	}
 
 	if(!ship->HasMagazine())
 	{
-		player->Send("Your ship doesn't have a magazine to put missiles into!\n",OutputFilter::DEFAULT);
+		player->Send("Your ship doesn't have a magazine to put missiles into!\n");
 		return;
 	}
 
@@ -294,7 +294,7 @@ void	BuyParser::BuyMissiles(Player *player,Tokens *tokens,const std::string& lin
 	else
 		num_to_buy = std::atoi(tokens->Get(1).c_str());
 	if(num_to_buy == 0)
-		player->Send("The format is buy XXX missles, where XXX is the number you want to buy!",OutputFilter::DEFAULT);
+		player->Send("The format is buy XXX missles, where XXX is the number you want to buy!");
 	else
 		ship->BuyMissiles(player,num_to_buy);
 }

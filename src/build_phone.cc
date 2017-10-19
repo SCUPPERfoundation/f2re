@@ -37,7 +37,7 @@ the demand far exceeds the exchange's capacity!\n");
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -46,7 +46,7 @@ the demand far exceeds the exchange's capacity!\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -67,7 +67,7 @@ bool	Phone::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
@@ -75,12 +75,12 @@ bool	Phone::Add(Player *player,Tokens *tokens)
 	if(++total_builds <= 10)
 	{
 		if((total_builds % 2) == 0)
-			player->Send(ok_even,OutputFilter::DEFAULT);
+			player->Send(ok_even);
 		else
-			player->Send(ok_odd,OutputFilter::DEFAULT);
+			player->Send(ok_odd);
 	}
 	else
-		player->Send(maxed_out,OutputFilter::DEFAULT);
+		player->Send(maxed_out);
 
 	return(true);
 }
@@ -89,7 +89,7 @@ void	Phone::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Telephone Exchanges: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Phone::UpdateEfficiency(Efficiency *efficiency)

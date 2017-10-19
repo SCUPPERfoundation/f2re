@@ -104,28 +104,28 @@ bool	Courier::Display(Player *player,Task *task)
 	{
 		buffer << "Your task is to pick up a package on " << task->pickup_map;
 		buffer << ". The package can be picked up from:" << std::endl;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		FedMap *fed_map = Game::galaxy->Find("Sol",task->pickup_map);
 		buffer.str("");
 		fed_map->Display(buffer,task->pickup_loc);
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		buffer.str("");
 		buffer << "Delivery details will be provided when you collect the package." << std::endl;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	else
 	{
 		buffer << "You need to take the " << parcels->Name(task->pkg_index);
 		buffer << " entrusted to you to " << task->delivery_map;
 		buffer << ". When you get there you must drop it off at:" << std::endl;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		FedMap *fed_map = Game::galaxy->Find("Sol",task->delivery_map);
 		buffer.str("");
 		fed_map->Display(buffer,task->delivery_loc);
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		buffer.str("");
 		buffer << parcels->Desc(task->pkg_index) << ".\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	return(true);
 }

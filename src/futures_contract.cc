@@ -89,7 +89,7 @@ int	FuturesContract::MarginCall()
 				buffer << "company's ";
 			buffer << home_map_title << " exchange ";
 			buffer << commod << " futures contract.\n";
-			if(!player->Send(buffer,OutputFilter::DEFAULT))
+			if(!player->Send(buffer))
 			{
 				FedMssg	*mssg =  new FedMssg;
 				mssg->sent = std::time(0);

@@ -38,7 +38,7 @@ lobby is widely considered to be a master stroke.\n");
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 ok_status = false;
 	}
 	else
@@ -49,7 +49,7 @@ lobby is widely considered to be a master stroke.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 		else
@@ -70,7 +70,7 @@ based on an original design for the legendary Sid Knee Hopera Ouse. Unfortunatel
 the philistines currently holding the purse strings succeed in having the project \
 scrapped on the grounds of cost.\n");
 
-	player->Send(error,OutputFilter::DEFAULT);
+	player->Send(error);
 	return(false);
 }
 
@@ -85,7 +85,7 @@ void	MetaStudio::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Media MetaStudio: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	MetaStudio::RequestResources(Player *player,const std::string& recipient,int quantity)

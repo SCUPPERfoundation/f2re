@@ -42,7 +42,7 @@ brilliance. You accept it with a modest, self-deprecating, smile.\n");
 	if(CheckPrerequisits(player))
 	{
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 	else
@@ -71,7 +71,7 @@ rioting which wrecks the nearly completed city, and you are forced to abandon yo
 	if(++total_builds > 10)
 	{
 		total_builds = 10;
-		player->Send(too_many,OutputFilter::DEFAULT);
+		player->Send(too_many);
 	}
 	else
 	{
@@ -82,13 +82,13 @@ rioting which wrecks the nearly completed city, and you are forced to abandon yo
 		}
 
 		if(total_builds > 8)
-			player->Send(success_10,OutputFilter::DEFAULT);
+			player->Send(success_10);
 		else
 		{
 			if(total_builds > 4)
-				player->Send(success_8,OutputFilter::DEFAULT);
+				player->Send(success_8);
 			else
-				player->Send(success_4,OutputFilter::DEFAULT);
+				player->Send(success_4);
 		}
 	}
 	return(true);
@@ -112,7 +112,7 @@ lack the prerequisites to build a floating city!\n");
 	}
 	else
 	{
-		player->Send(no_prerequisits,OutputFilter::DEFAULT);
+		player->Send(no_prerequisits);
 		return(false);
 	}
 }
@@ -121,7 +121,7 @@ void	FloatingCity::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Floating Cities: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	FloatingCity::UpdateDisaffection(Disaffection *discontent)

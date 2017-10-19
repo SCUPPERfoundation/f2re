@@ -57,28 +57,28 @@ void	FuturesExchange::BuyContract(Player *player,const std::string& commod)
 	{
 		buffer << "Your brokers, "<< brokers << ", inform you that the exchanges have never traded in ";
 		buffer << commodity_name << ".\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 	if(rec->trading == NO_TRADING)
 	{
 		buffer << "Your brokers, "<< brokers << ", inform you that the exchange isn't trading in ";
 		buffer << commodity_name << " today.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 	if(rec->trading == TRADING_SUSPENDED)
 	{
 		buffer << "Your brokers, "<< brokers << ", inform you that the exchange has suspended trading in ";
 		buffer << commodity_name << " for the time being.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 	if(FindContract(player->Name(),commodity_name) != 0)
 	{
 		buffer << "Your brokers, "<< brokers << ", point out that you can only have one contract in ";
 		buffer << commodity_name << " at this exchange.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 	
@@ -198,7 +198,7 @@ void	FuturesExchange::LiquidateContract(Player *player,const std::string& commod
 	{
 		buffer << brokers << " inform you that you don't have a contract for " << commodity_name; 
 		buffer << " from the " << home_map->Title() << " exchange.\n"; 
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	else
 		LiquidateContract(contract,player);
@@ -263,7 +263,7 @@ void	FuturesExchange::LiquidateNotification(Player *player,FuturesContract *cont
 		buffer << "company's ";
 	buffer << contract->CommodityName() << " futures contract. " << contract->Margin() << "ig (less "; 
 	buffer << commission << "ig commission) paid into your account.\n";
-	if(!player->Send(buffer,OutputFilter::DEFAULT))
+	if(!player->Send(buffer))
 	{
 		FedMssg	*mssg =  new FedMssg;
 		mssg->sent = std::time(0);
@@ -317,7 +317,7 @@ void	FuturesExchange::SetUpContract(Player *player,const std::string& commodity_
 				buffer << "you transfer ";
 			buffer << "the required margin into their client account.\n";
 			contract->Display(buffer);
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			contract_list.push_back(contract);
 			player->AddFuturesContract(contract);
 			if(player->Rank() == Player::FINANCIER)
@@ -326,15 +326,15 @@ void	FuturesExchange::SetUpContract(Player *player,const std::string& commodity_
 		else
 		{
 			if(player->Rank() == Player::FINANCIER)
-				player->Send(no_margin,OutputFilter::DEFAULT);
+				player->Send(no_margin);
 			else
-				player->Send(no_co_margin,OutputFilter::DEFAULT);
+				player->Send(no_co_margin);
 			delete contract;
 			return;
 		}
 	}
 	else
-		player->Send("contract failed\n",OutputFilter::DEFAULT);
+		player->Send("contract failed\n");
 }
 
 void	FuturesExchange::Update(CommodityExchange *spot_mkt,int status)

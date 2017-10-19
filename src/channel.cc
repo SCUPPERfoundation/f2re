@@ -43,13 +43,13 @@ void	Channel::List(Player *player)
 	if((members.size() == 0) && (name.compare("Help") == 0))
 	{
 		std::string	text("    There's no one available in the help channel.\n");
-		player->Send(text,OutputFilter::DEFAULT);
+		player->Send(text);
 	}
 
 	std::ostringstream	buffer("");
 	for(Members::iterator iter = members.begin();iter != members.end();iter++)
 		buffer << "    " << (*iter)->FullName() << "" << std::endl;
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Channel::Remove(Player	*player)
@@ -74,7 +74,7 @@ void	Channel::Send(Player *from,const std::string& text,bool is_relay)
 		if((*iter) == from)
 		{
 			if(!is_relay)
-				from->Send(Game::system->GetMessage("channel","send",1),OutputFilter::DEFAULT);
+				from->Send(Game::system->GetMessage("channel","send",1));
 		}
 		else
 			(*iter)->Send(text,OutputFilter::DEFAULT,from,!is_relay);

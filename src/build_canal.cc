@@ -42,7 +42,7 @@ Canal::Canal(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 ok_status = false;
 	}
 	else
@@ -51,7 +51,7 @@ Canal::Canal(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -65,7 +65,7 @@ Canal::~Canal()
 bool	Canal::Add(Player *player,Tokens *tokens)
 {
 	if(total_builds++ < 5)
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	else
 	{
 		std::ostringstream	buffer;
@@ -73,7 +73,7 @@ bool	Canal::Add(Player *player,Tokens *tokens)
 		buffer << "'s canal system, but it seems to make little difference to ";
 		buffer << "the efficiency of your economy. You seem to have reached a ";
 		buffer << "point where something more efficient is needed to move forward.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	return(true);
 }
@@ -83,7 +83,7 @@ void	Canal::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Canal Systems: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Canal::IsObselete()

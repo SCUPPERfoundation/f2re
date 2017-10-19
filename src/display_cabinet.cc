@@ -98,7 +98,7 @@ int	DisplayCabinet::DisplayList(Player *player,std::ostringstream& buffer)
 
 void	DisplayCabinet::ExtensionMssg(Player *player)
 {
-	player->Send(messages[std::rand() % 3],OutputFilter::DEFAULT);
+	player->Send(messages[std::rand() % 3]);
 }
 
 bool	DisplayCabinet::Load(const std::string& directory)

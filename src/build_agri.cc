@@ -45,7 +45,7 @@ AgriCollege::AgriCollege(FedMap *the_map,Player *player,Tokens *tokens)
 
 	if((the_map->Economy() > Infrastructure::RESOURCE))
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 ok_status = false;
 	}
 	else
@@ -53,7 +53,7 @@ AgriCollege::AgriCollege(FedMap *the_map,Player *player,Tokens *tokens)
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 		else
@@ -75,7 +75,7 @@ college, who see the proposed new college as a threat to their position. \
 In the end your plans are blocked by a combination of academic hostility, \
 bureaucratic in-fighting and rumours of corruption.\n");
 
-	player->Send(error,OutputFilter::DEFAULT);
+	player->Send(error);
 	return(false);
 }
 
@@ -90,7 +90,7 @@ void	AgriCollege::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Agricultural College: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	AgriCollege::IsObselete()

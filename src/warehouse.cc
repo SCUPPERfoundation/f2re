@@ -58,7 +58,7 @@ void	Warehouse::Display(Player *who_to)
 	std::ostringstream	buffer("");
 
 	buffer << "Location: "<< home->Title() << std::endl;
-	who_to->Send(buffer,OutputFilter::DEFAULT);
+	who_to->Send(buffer);
 	for(int count = 1;count < MAX_BAYS;count++)
 	{
 		buffer.str("");
@@ -67,11 +67,11 @@ void	Warehouse::Display(Player *who_to)
 			is_empty = false;
 			buffer << "  Bay #" << std::setw(2) << std::right << count;
 			bays[count]->Display(buffer);
-			who_to->Send(buffer,OutputFilter::DEFAULT);
+			who_to->Send(buffer);
 		}
 	}
 	if(is_empty)
-		who_to->Send(empty,OutputFilter::DEFAULT);
+		who_to->Send(empty);
 }
 
 Cargo	*Warehouse::Retrieve(int bay_no)

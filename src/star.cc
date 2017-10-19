@@ -100,7 +100,7 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 
 	if(FindLink()->loc_no != 460)
 	{
-		player->Send("The system's link isn't in the correct place to use this command\n",OutputFilter::DEFAULT);
+		player->Send("The system's link isn't in the correct place to use this command\n");
 		return;
 	}
 
@@ -108,14 +108,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 	{
 		if(player->Rank() < Player::MOGUL)
 		{
-			player->Send("You need to be at least a Mogul to build a second planet!\n",OutputFilter::DEFAULT);
+			player->Send("You need to be at least a Mogul to build a second planet!\n");
 			return;
 		}
 
 		if(CheckOrbitLocNotInUse(461))
 			BuildSecondPlanet(player,planet_name,type);
 		else
-			player->Send("Sorry, the orbit location needed (461) is already in use!\n",OutputFilter::DEFAULT);
+			player->Send("Sorry, the orbit location needed (461) is already in use!\n");
 		return;
 	}
 
@@ -123,14 +123,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 	{
 		if(player->Rank() < Player::GENGINEER)
 		{
-			player->Send("You need to be at least a Gengineer to build a third planet!\n",OutputFilter::DEFAULT);
+			player->Send("You need to be at least a Gengineer to build a third planet!\n");
 			return;
 		}
 
 		if(CheckOrbitLocNotInUse(397))
 			BuildThirdPlanet(player,planet_name,type);
 		else
-			player->Send("Sorry, the orbit location needed (397) is already in use!\n",OutputFilter::DEFAULT);
+			player->Send("Sorry, the orbit location needed (397) is already in use!\n");
 		return;
 	}
 
@@ -138,14 +138,14 @@ void	Star::BuildNewPlanet(Player *player,std::string& planet_name,std::string& t
 	{
 		if(player->Rank() < Player::PLUTOCRAT)
 		{
-			player->Send("You need to be at least a Plutocrat to build a fourth planet!\n",OutputFilter::DEFAULT);
+			player->Send("You need to be at least a Plutocrat to build a fourth planet!\n");
 			return;
 		}
 
 		if(CheckOrbitLocNotInUse(459))
 			BuildFourthPlanet(player,planet_name,type);
 		else
-			player->Send("Sorry, the orbit location needed (459) is already in use!\n",OutputFilter::DEFAULT);
+			player->Send("Sorry, the orbit location needed (459) is already in use!\n");
 		return;
 	}
 }
@@ -157,7 +157,7 @@ void	Star::BuildSecondPlanet(Player *player,std::string& planet_name,std::string
 	{
 		builder = new Build2ndPlanet(player,this,planet_name,type);
 	}
-	catch(const std::exception& e) { player->Send(e.what(),OutputFilter::DEFAULT); return; }
+	catch(const std::exception& e) { player->Send(e.what()); return; }
 
 	builder->Run();
 	delete builder;
@@ -170,7 +170,7 @@ void	Star::BuildThirdPlanet(Player *player,std::string& planet_name,std::string&
 	{
 		builder = new Build3rdPlanet(player,type,planet_name);
 	}
-	catch(const std::exception& e) { player->Send(e.what(),OutputFilter::DEFAULT); return; }
+	catch(const std::exception& e) { player->Send(e.what()); return; }
 
 
 	builder->Run();
@@ -219,7 +219,7 @@ void	Star::DisplaySystem(Player *player)
 	buffer << "  Member of the " << cartel << " Cartel\n";
 	if(abandoned)
 		buffer << "  System has been abandoned by its owner!\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	for(MapIndex::iterator iter = map_index.begin();iter != map_index.end();iter++)
 		iter->second->Display(player,false);
 
@@ -229,7 +229,7 @@ void	Star::DisplaySystem(Player *player)
 		buffer << "Exiled players:\n";
 		for(BlackList::iterator iter = black_list.begin();iter != black_list.end();iter++)
 			buffer << "  " << *iter << "\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 }
 
@@ -264,7 +264,7 @@ void	Star::Exile(Player *player,const std::string& pl_name)
 	if((player_name == "Bella") || (player_name == "Freya") ||
 						(player_name == "Hazed") || (player_name == player->Name()))
 	{
-		player->Send(silly,OutputFilter::DEFAULT);
+		player->Send(silly);
 		return;
 	}
 
@@ -272,13 +272,13 @@ void	Star::Exile(Player *player,const std::string& pl_name)
 	if(!AddExile(player_name))
 	{
 		buffer << player_name << " is already exiled from this system!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 
 	EnforceExile(player_name);
 	buffer << player_name << " has been exiled from the " << name << " system!\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	Game::review->Post(buffer);
 
 	Player	*target = Game::player_index->FindName(player_name);
@@ -286,7 +286,7 @@ void	Star::Exile(Player *player,const std::string& pl_name)
 	{
 		buffer.str("");
 		buffer << player->Name() << " has exiled you from the " << name << " system!\n";
-		target->Send(buffer,OutputFilter::DEFAULT);
+		target->Send(buffer);
 	}
 }
 
@@ -611,7 +611,7 @@ void	Star::Pardon(Player *player,const std::string& pl_name)
 	if(!IsAnExile(Normalise(player_name)))
 	{
 		buffer << player_name << " isn't exiled from this system!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 
@@ -625,7 +625,7 @@ void	Star::Pardon(Player *player,const std::string& pl_name)
 	}
 
 	buffer << player_name << " has been pardoned and can now use the " << name << " system!\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	Game::review->Post(buffer);
 
 	Player	*target = Game::player_index->FindName(player_name);
@@ -633,7 +633,7 @@ void	Star::Pardon(Player *player,const std::string& pl_name)
 	{
 		buffer.str("");
 		buffer << player->Name() << " has pardoned you, and you may now visit the " << name << " system!\n";
-		target->Send(buffer,OutputFilter::DEFAULT);
+		target->Send(buffer);
 	}
 }
 
@@ -781,7 +781,7 @@ void	Star::WriteLoaderFile()
 
 void	Star::BuildFourthPlanet(Player *player,std::string& planet_name,std::string& type)
 {
-	player->Send("Sorry, this facility is not yet available!\n",OutputFilter::DEFAULT);
+	player->Send("Sorry, this facility is not yet available!\n");
 	// TODO: In due course
 }
 

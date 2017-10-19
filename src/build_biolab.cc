@@ -40,7 +40,7 @@ facilities can only be built on biological level planets.\n");
 
 	if(the_map->Economy() != Infrastructure::BIOLOGICAL)
 	{
-		 player->Send(wrong_level,OutputFilter::DEFAULT);
+		 player->Send(wrong_level);
 		 ok_status = false;
 	}
 	else
@@ -51,7 +51,7 @@ facilities can only be built on biological level planets.\n");
 		if(fed_map->RequestResources(player,"School",name))
 		{
 			total_builds = 1;
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 		else
@@ -71,7 +71,7 @@ bool	BioLab::Add(Player *player,Tokens *tokens)
 security biological research lab provokes serious unrest, and you hastily \
 abandon the plans before the unrest turns into rioting!\n");
 	
-	player->Send(error,OutputFilter::DEFAULT);
+	player->Send(error);
 	return(false);
 }
 
@@ -86,7 +86,7 @@ void	BioLab::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    BioLab " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	BioLab::Riot()

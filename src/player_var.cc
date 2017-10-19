@@ -85,7 +85,7 @@ void	PlayerVariable::Display(Player *player)
 	if(player == 0)
 		WriteLog(buffer);
 	else
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 }
 
 void	PlayerVariable::Update(std::string& key,std::string& value)

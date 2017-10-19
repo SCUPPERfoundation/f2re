@@ -52,7 +52,7 @@ Pollution::Pollution(FedMap *the_map,Player *player,Tokens *tokens)
 	}	
 	total_builds++;
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -72,7 +72,7 @@ bool	Pollution::Add(Player *player,Tokens *tokens)
 	}	
 	total_builds ++;
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -92,7 +92,7 @@ void	Pollution::Display(Player *player)
 	buffer << "    Pollution Control Units: " << total_builds << " built\n";
 	buffer << "      General: " << level_builds << "\n";
 	buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Pollution::LevelUpdate()

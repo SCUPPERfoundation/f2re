@@ -36,7 +36,7 @@ the planet's first informer network.\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::LEISURE)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -45,7 +45,7 @@ the planet's first informer network.\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -64,9 +64,9 @@ in the number of informer networks your secret police employ.\n");
 start to wonder if anyone on the planet is not an informer, and whether it's worth the cost!\n");
 
 	if(++total_builds <= 5)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(too_many,OutputFilter::DEFAULT);
+		player->Send(too_many);
 	return(true);
 }
 
@@ -75,7 +75,7 @@ void	Informer::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " network";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Informer::UpdateDisaffection(Disaffection *disaffection)

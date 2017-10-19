@@ -48,7 +48,7 @@ void	FightList::DeleteFight(Player *player,int why)
 	if(fight != 0)
 	{
 		Player *other_player = fight->GetOtherPlayer(player);
-		player->Send("You leave the fight\n",OutputFilter::DEFAULT);
+		player->Send("You leave the fight\n");
 		if(other_player != 0)
 		{
 			std::ostringstream buffer;
@@ -79,7 +79,7 @@ bool	FightList::Launch(Player *att,Player *def)
 	Fight *fight = FindFight(att,def);
 	if(fight == 0)
 	{
-		att->Send("Your opponent seems to have done a runner...\n",OutputFilter::DEFAULT);
+		att->Send("Your opponent seems to have done a runner...\n");
 		return false;
 	}
 	return(fight->Launch(att));
@@ -92,7 +92,7 @@ void	FightList::Fire(Player *att,Player *def,int weapon_type)
 {
 	Fight *fight = FindFight(att,def);
 	if(fight == 0)
-		att->Send("Your opponent seems to have done a runner...\n",OutputFilter::DEFAULT);
+		att->Send("Your opponent seems to have done a runner...\n");
 	else
 		fight->Fire(att,weapon_type);
 }

@@ -40,7 +40,7 @@ Dole::Dole(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -54,7 +54,7 @@ bool	Dole::Add(Player *player,Tokens *tokens)
 {
 	total_builds++;
 	AdjustWorkers();
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -79,7 +79,7 @@ void	Dole::Display(Player *player)
 		buffer << "    Unemployment Pay (Dole): " << total_builds << " levels\n";
 	else
 		buffer << "    Unemployment Pay (Dole): 1 level\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Dole::UpdateDisaffection(Disaffection *discontent)

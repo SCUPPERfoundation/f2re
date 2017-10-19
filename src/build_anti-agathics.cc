@@ -37,7 +37,7 @@ distrust, and protests with banners proclaiming 'Anti-agathics for all, not just
 
 	if((the_map->Economy() < Infrastructure::LEISURE))
 	{
-		 player->Send(too_early,OutputFilter::DEFAULT);
+		 player->Send(too_early);
 		 ok_status = false;
 	}
 	else
@@ -46,7 +46,7 @@ distrust, and protests with banners proclaiming 'Anti-agathics for all, not just
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -64,7 +64,7 @@ some caution by the general populace. Clearly the success or otherwise is going 
 just how comprehensive the coverage proves to be.\n");
 
 	++total_builds;
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -72,7 +72,7 @@ void	AntiAgathics::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Longevity programs: " << total_builds << " launched\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	AntiAgathics::UpdateDisaffection(Disaffection *discontent)

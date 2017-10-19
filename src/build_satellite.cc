@@ -36,7 +36,7 @@ built at Industrial level and above.\n");
 
 	if(the_map->Economy() < Infrastructure::INDUSTRIAL)
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 ok_status = false;
 	}
 	else
@@ -58,7 +58,7 @@ built at Industrial level and above.\n");
 			 	buffer << "Your new satellite launch and control facility is delayed because of changes in the plans, ";
 				buffer << "but, is eventually completed and places its first satellite in orbit. Its construction ";
 				buffer << "and commissioning requirements spur the production of " << tokens->Get(2) << ".\n";
-				player->Send(buffer,OutputFilter::DEFAULT);
+				player->Send(buffer);
 				ok_status = true;
 			}
 		}
@@ -78,7 +78,7 @@ built at Industrial level and above.\n");
 
 	if((fed_map->Economy() < Infrastructure::INDUSTRIAL))
 	{
-		 player->Send(too_late,OutputFilter::DEFAULT);
+		 player->Send(too_late);
 		 return(false);
 	}
 
@@ -93,7 +93,7 @@ built at Industrial level and above.\n");
 		 	buffer << "Your satellite launch facility is completed on time and ";
 			buffer << "within budget. Its day to day operational requirements ";
 			buffer << "spur the production of " << tokens->Get(2) << ".\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			total_builds++;
 			return(true);
 		}
@@ -104,7 +104,7 @@ built at Industrial level and above.\n");
 	buffer << "scheduled, but within budget. While the planetary defences ";
 	buffer << "are undoubtedly more formidable as a result, the facility seems ";
 	buffer << "to have little effect on the planet's overall production!\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	total_builds++;
 	return(true);
 }
@@ -116,13 +116,13 @@ bool	Satellite::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 		return(false);
 	}
 
@@ -131,7 +131,7 @@ bool	Satellite::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 			buffer << ", only to defence industry commodities.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(false);
 	}
 	return(true);
@@ -140,7 +140,7 @@ bool	Satellite::CheckCommodity(Player *player,Tokens *tokens)
 bool	Satellite::Demolish(Player *player)
 {
 	player->Send("Your proposal nearly incites a mutiny in the defense community, so you \
-hastily withdraw it!\n",OutputFilter::DEFAULT);
+hastily withdraw it!\n");
 	return(false);
 }
 
@@ -148,7 +148,7 @@ void	Satellite::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Satellite Facilities : " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Satellite::Write(std::ofstream& file)

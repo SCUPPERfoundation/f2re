@@ -229,7 +229,7 @@ void	Population::Display(Player *player)
 	buffer << "  Net Population   " << pop << "\n";
 	buffer << "  -------------------------\n";
 
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 int 	Population::UpdatePopulation()

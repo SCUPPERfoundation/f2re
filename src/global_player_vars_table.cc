@@ -77,7 +77,7 @@ void	GlobalPlayerVarsTable::Display(Player *player,std::string& var_name,Player 
 		else
 		{
 			buffer << "\n";
-			send_to->Send(buffer,OutputFilter::DEFAULT);
+			send_to->Send(buffer);
 		}
 	}
 }
@@ -96,7 +96,7 @@ void	GlobalPlayerVarsTable::DisplayAll(Player *player,Player *send_to)
 		else
 		{
 			buffer << "\n";
-			send_to->Send(buffer,OutputFilter::DEFAULT);
+			send_to->Send(buffer);
 		}
 	}
 };

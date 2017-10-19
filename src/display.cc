@@ -66,13 +66,13 @@ void	Display::DisplayAccounts(Player *player,Tokens *tokens,std::string & line)
 			{
 				std::ostringstream	buffer;
 				buffer << " I can't find a player or company called '" << co_name << "'.\n";
-				player->Send(buffer,OutputFilter::DEFAULT);
+				player->Send(buffer);
 			}
 			else
 				owner->DisplayAccounts(player);
 		}
 		else
-			player->Send(wrong_rank,OutputFilter::DEFAULT);
+			player->Send(wrong_rank);
 	}
 }
 
@@ -82,7 +82,7 @@ void	Display::DisplayBusiness(Player *player,Tokens *tokens,std::string & line)
 	{
 		Business	*business = player->GetBusiness();
 		if(business == 0)
-			player->Send("You don't have a business to display!\n",OutputFilter::DEFAULT);
+			player->Send("You don't have a business to display!\n");
 		else
 			business->Display();
 	}
@@ -91,7 +91,7 @@ void	Display::DisplayBusiness(Player *player,Tokens *tokens,std::string & line)
 		if(player->Rank() > Player::TRADER)
 			Game::business_register->PublicDisplay(tokens->GetRestOfLine(line,2,Tokens::COMPANY),player);
 		else
-			player->Send("Only ranks higher than trader can look at business accounts!\n",OutputFilter::DEFAULT);
+			player->Send("Only ranks higher than trader can look at business accounts!\n");
 	}
 }
 
@@ -111,7 +111,7 @@ void	Display::DisplayCartel(Player *player,Tokens *tokens,std::string & line)
 	{
 		std::ostringstream	buffer;
 		buffer << "I'm sorry, I can't find the information for the '" << cartel_name << "' cartel!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 }
 
@@ -131,21 +131,21 @@ void	Display::DisplayCity(Player *player,Tokens *tokens,std::string & line)
 {
 	if(player->Rank() != Player::PLUTOCRAT)
 	{
-		player->Send("Only cartel owners can build, display and control blish cities!\n",OutputFilter::DEFAULT);
+		player->Send("Only cartel owners can build, display and control blish cities!\n");
 		return;
 	}
 
 	Cartel	*cartel = player->OwnedCartel();
 	if(cartel == 0)
 	{
-		player->Send("You don't appear to own a cartel!",OutputFilter::DEFAULT);
+		player->Send("You don't appear to own a cartel!");
 		return;
 	}
 
 	const std::string& city_name = tokens->GetRestOfLine(line,2,Tokens::PLANET);
 	if(city_name == Tokens::error)
 	{
-		player->Send("I need to know the name of the city you want to display!\n",OutputFilter::DEFAULT);
+		player->Send("I need to know the name of the city you want to display!\n");
 		return;
 	}
 
@@ -158,7 +158,7 @@ void	Display::DisplayCEO(Player *player,Tokens *tokens,std::string & line)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return;
 	}
 
@@ -171,7 +171,7 @@ void	Display::DisplayCEO(Player *player,Tokens *tokens,std::string & line)
 		buffer << "I'm sorry, I can't find " << name << " in the register of businesses or companies!\n";
 	else
 		buffer << "The CEO of " << name << " is " << owner->Name() << ".\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Display::DisplayDepot(Player *player,Tokens *tokens,std::string & line)
@@ -179,7 +179,7 @@ void	Display::DisplayDepot(Player *player,Tokens *tokens,std::string & line)
 	static const std::string	no_name("You haven't said which depot you want to display!\n");
 
 	if(tokens->Size() < 3)
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 	else
 	{
 		std::string name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
@@ -210,7 +210,7 @@ void	Display::DisplayExchange(Player *player,Tokens *tokens,std::string & line)
 			NormalisePlanetTitle(name);
 			fed_map = Game::galaxy->FindMap(name);
 			if(fed_map == 0)
-				player->Send(unknown,OutputFilter::DEFAULT);
+				player->Send(unknown);
 			else	// Display all exch commods on a different planet
 				fed_map->DisplayExchange(player,"all");
 		}
@@ -245,7 +245,7 @@ void	Display::DisplayExchange(Player *player,Tokens *tokens,std::string & line)
 	}
 
 	// Can't find the map!
-	player->Send(unknown,OutputFilter::DEFAULT);
+	player->Send(unknown);
 }
 
 void	Display::DisplayFactories(Player *player,Tokens *tokens,std::string & line)
@@ -259,7 +259,7 @@ void	Display::DisplayFactories(Player *player,Tokens *tokens,std::string & line)
 		std::string	name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
 		FedMap	*fed_map = Game::galaxy->FindMap(name);
 		if(fed_map == 0)
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 		else
 			fed_map->PODisplay(player);
 	}
@@ -270,7 +270,7 @@ void	Display::DisplayFactory(Player *player,Tokens *tokens)
 	static const std::string	no_name("You haven't said which factory you want to display!\n");
 
 	if(tokens->Size() < 3)
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 	else
 	{
 		int index =  std::atoi(tokens->Get(2).c_str());
@@ -283,7 +283,7 @@ void	Display::DisplayFutures(Player *player,Tokens *tokens,std::string & line)
 	static const std::string	too_low("Only traders and above can trade on the futures exchange!\n");
 
 	if(player->Rank() < Player::TRADER)
-		player->Send(too_low,OutputFilter::DEFAULT);
+		player->Send(too_low);
 	else
 	{
 		if(tokens->Size() < 3)
@@ -300,7 +300,7 @@ void	Display::DisplayGravingDock(Player *player)
 {
 	Cartel *cartel =  player->OwnedCartel();
 	if(cartel == 0)
-		player->Send("You don't have a graving dock yet!\n",OutputFilter::DEFAULT);
+		player->Send("You don't have a graving dock yet!\n");
 	else
 		cartel->DisplayGravingDock(player);
 }
@@ -316,7 +316,7 @@ void	Display::DisplayInfra(Player *player,Tokens *tokens,std::string & line)
 		std::string name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
 		FedMap	*fed_map = Game::galaxy->FindMap(name);
 		if(fed_map == 0)
-			player->Send(no_planet,OutputFilter::DEFAULT);
+			player->Send(no_planet);
 		else
 			fed_map->DisplayInfra(player);
 	}
@@ -333,7 +333,7 @@ void	Display::DisplayPlanet(Player *player,Tokens *tokens,std::string & line)
 		std::string name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
 		FedMap	*fed_map = Game::galaxy->FindMap(name);
 		if(fed_map == 0)
-			player->Send(no_planet,OutputFilter::DEFAULT);
+			player->Send(no_planet);
 		else
 			fed_map->Display(player);
 	}
@@ -345,7 +345,7 @@ void	Display::DisplayProduction(Player *player,Tokens *tokens,std::string & line
 	static const std::string	unknown("I don't seem to recognise that planet name!\n");
 	if(tokens->Size() < 3)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return;
 	}
 
@@ -360,7 +360,7 @@ void	Display::DisplayProduction(Player *player,Tokens *tokens,std::string & line
 	std::string	name(tokens->GetRestOfLine(line,3,Tokens::PLANET));
 	FedMap	*fed_map = Game::galaxy->FindMap(name);
 	if(fed_map == 0)
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 	else
 		fed_map->DisplayProduction(player,tokens->Get(2));
 }
@@ -373,7 +373,7 @@ to examine another company's share register.\n");
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 		return;
 	}
 
@@ -391,13 +391,13 @@ to examine another company's share register.\n");
 		{
 			std::ostringstream	buffer;
 			buffer << " I can't find a player or company called '" << co_name << "'.\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 		else
 			owner->DisplayShares(player);
 	}
 	else
-		player->Send(wrong_rank,OutputFilter::DEFAULT);
+		player->Send(wrong_rank);
 }
 
 void	Display::DisplayShipOwners(Player *player)
@@ -405,7 +405,7 @@ void	Display::DisplayShipOwners(Player *player)
 	static const std::string	not_owner("You don't own this planet!\n");
 
 	if(!player->IsPlanetOwner())
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 	else
 		Game::player_index->DisplayShipOwners(player,player->CurrentMap()->Title());
 }
@@ -430,12 +430,12 @@ void	Display::DisplayVariables(Player *player,Tokens *tokens)
 
 	if(!(player->IsStaff() || player->IsPlanetOwner()))
 	{
-		player->Send(not_avail,OutputFilter::DEFAULT);
+		player->Send(not_avail);
 		return;
 	}
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 		return;
 	}
 
@@ -448,12 +448,12 @@ void	Display::DisplayVariables(Player *player,Tokens *tokens)
 		target = Game::player_index->FindCurrent(Normalise(target_name));
 		if(target == 0)
 		{
-			player->Send(no_player,OutputFilter::DEFAULT);
+			player->Send(no_player);
 			return;
 		}
 		if(player->CurrentMap() != target->CurrentMap())
 		{
-			player->Send(wrong_map,OutputFilter::DEFAULT);
+			player->Send(wrong_map);
 			return;
 		}
 	}
@@ -481,7 +481,7 @@ void	Display::ListSystems(Player *player,Tokens *tokens)
 void	Display::Parse(Player *player,Tokens *tokens,std::string& line)
 {
 	if(tokens->Size() == 1)
-		player->Send(Game::system->GetMessage("cmdparser","display",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","display",1));
 	else
 	{
 		int index = INT_MAX;
@@ -541,7 +541,7 @@ void	Display::Parse(Player *player,Tokens *tokens,std::string& line)
 			case 40:	DisplayCity(player,tokens,line);								break;
 			case 41:	player->DisplaySystemCabinet();								break;
 
-			default:	player->Send(Game::system->GetMessage("cmdparser","display",2),OutputFilter::DEFAULT);	break;
+			default:	player->Send(Game::system->GetMessage("cmdparser","display",2));	break;
 		}
 	}
 }

@@ -61,7 +61,7 @@ void	SellParser::Process(Player *player,Tokens *tokens,const std::string& line)
 	
 	// see if they want to sell a commodity
 	if(Game::commodities->Find(tokens->Get(1)) == 0)
-		player->Send(Game::system->GetMessage("cmdparser","sell",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","sell",1));
 	else
 	{
 		if(player->TradingAllowed())
@@ -73,7 +73,7 @@ void	SellParser::SellBay(Player *player,Tokens *tokens)
 {
 	static const std::string	error("You haven't said which bay you want to sell!\n");
 	if(tokens->Size() < 3)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 		player->SellBay(std::atoi(tokens->Get(2).c_str()));
 }
@@ -83,13 +83,13 @@ void	SellParser::SellDepot(Player *player,Tokens *tokens,const std::string& line
 	static const std::string	error("You haven't said which depot you want to sell!\n");
 	static const std::string	no_name("I can't find the planet you claim the depot is on!\n");
 	if(tokens->Size() < 3)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		std::string name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
 		FedMap	*fed_map = Game::galaxy->FindMap(name);
 		if(fed_map == 0)
-			player->Send(no_name,OutputFilter::DEFAULT);
+			player->Send(no_name);
 		else
 			player->SellDepot(fed_map);
 	}
@@ -99,7 +99,7 @@ void	SellParser::SellFactory(Player *player,Tokens *tokens)
 {
 	static const std::string	error("You haven't said which factory you want to sell!\n");
 	if(tokens->Size() < 3)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 		player->SellFactory(std::atoi(tokens->Get(2).c_str()));
 }

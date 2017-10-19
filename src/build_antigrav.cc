@@ -39,7 +39,7 @@ reflect on the achievement involved in developing an anti-gravity based technolo
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -50,7 +50,7 @@ reflect on the achievement involved in developing an anti-gravity based technolo
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -71,7 +71,7 @@ buildings are rapidly ceasing to be a newsworthy novelty.\n";
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	}
 	else
 	{
@@ -79,7 +79,7 @@ buildings are rapidly ceasing to be a newsworthy novelty.\n";
 		buffer << "The opening of a new anti-gravity based building is so commonplace on ";
 		buffer << fed_map->Title() << " that it makes little difference to the size ";
 		buffer << "of your population.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	return(true);
 }
@@ -88,7 +88,7 @@ void	AntiGrav::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Anti-grav Buildings: " << total_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	AntiGrav::RequestResources(Player *player,const std::string& recipient,int quantity)
@@ -99,7 +99,7 @@ bool	AntiGrav::RequestResources(Player *player,const std::string& recipient,int 
 		return(true);
 	else
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return(false);
 	}
 }

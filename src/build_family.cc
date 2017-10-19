@@ -40,7 +40,7 @@ Family::Family(FedMap *the_map,Player *player,Tokens *tokens)
 	total_builds = 1;
 	fed_map->AddTotalLabour(10);
 	fed_map->AddLabour(10);
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -56,7 +56,7 @@ bool	Family::Add(Player *player,Tokens *tokens)
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	}
 	else
 	{
@@ -66,7 +66,7 @@ bool	Family::Add(Player *player,Tokens *tokens)
 		buffer << "difference to the size of your population. Clearly you have ";
 		buffer << "exceeded the ability of family allowance payments to ";
 		buffer << "provide population growth.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	return(true);
 }
@@ -75,7 +75,7 @@ void	Family::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Family Allowances: " << total_builds << " provided\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Family::UpdatePopulation(Population *population)

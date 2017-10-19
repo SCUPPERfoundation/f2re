@@ -40,7 +40,7 @@ power plant comes on line and its output flows into the power grid\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -49,7 +49,7 @@ power plant comes on line and its output flows into the power grid\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -72,14 +72,14 @@ centres of civilization!\n");
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(++total_builds <= 5)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(maxed_out,OutputFilter::DEFAULT);
+		player->Send(maxed_out);
 
 	return(true);
 }
@@ -88,7 +88,7 @@ void	FusionPower::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Fusion Tokamaks: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	FusionPower::RequestResources(Player *player,const std::string& recipient,int quantity)

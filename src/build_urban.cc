@@ -41,7 +41,7 @@ urban regeneration plans are accepted and the first project is completed on sche
 
 	if((the_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_soon,OutputFilter::DEFAULT);
+		 player->Send(too_soon);
 		 ok_status = false;
 	}
 	else
@@ -52,7 +52,7 @@ urban regeneration plans are accepted and the first project is completed on sche
 			total_builds = 1;
 			fed_map->AddTotalLabour(20);
 			fed_map->AddLabour(20);
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 		else
@@ -76,7 +76,7 @@ to make a lot of difference to the state of your economy.\n");
 
 	if((fed_map->Economy() < Infrastructure::TECHNICAL))
 	{
-		 player->Send(too_soon,OutputFilter::DEFAULT);
+		 player->Send(too_soon);
 		 return(false);
 	}
 
@@ -87,10 +87,10 @@ to make a lot of difference to the state of your economy.\n");
 		{
 			fed_map->AddTotalLabour(20);
 			fed_map->AddLabour(20);
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 		}
 		else
-			player->Send(too_late,OutputFilter::DEFAULT);
+			player->Send(too_late);
 		return(true);
 	}
 	return(false);
@@ -100,7 +100,7 @@ void	Urban::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Urban Regeneration: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Urban::UpdateEfficiency(Efficiency *efficiency)

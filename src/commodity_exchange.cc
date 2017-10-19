@@ -232,7 +232,7 @@ void	CommodityExchange::CheckPrices(Player *player,const std::string& commodity,
 	if(commod != 0)
 		commod->LineDisplay(0,send_intro,player);
 	else
-		player->Send(not_commod,OutputFilter::DEFAULT);
+		player->Send(not_commod);
 }
 
 
@@ -258,14 +258,14 @@ void	CommodityExchange::Display(Player *player,const std::string& commod_grp)
 		group = Commodities::Group2Type(commod_grp);
 		if(group == -1)
 		{
-			player->Send(not_a_group,OutputFilter::DEFAULT);
+			player->Send(not_a_group);
 			return;
 		}
 	}
 
 	std::ostringstream	buffer;
 	buffer << home_map->Title() << " exchange - " << commod_grp << " products:\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	for(CommodIndex::iterator iter = commod_index.begin();iter != commod_index.end();iter++)
 		iter->second->OwnerDisplay(player,group);
 }
@@ -288,13 +288,13 @@ void	CommodityExchange::DisplayProduction(Player *player,const std::string& comm
 	int group = Commodities::Group2Type(commod_grp);
 	if(group == -1)
 	{
-		player->Send(not_a_group,OutputFilter::DEFAULT);
+		player->Send(not_a_group);
 		return;
 	}
 
 	std::ostringstream	buffer;
 	buffer << home_map->Title() << " exchange - " << commod_grp << " production and consumption:\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	for(CommodIndex::iterator iter = commod_index.begin();iter != commod_index.end();iter++)
 		iter->second->DisplayProduction(player,group);
 }
@@ -450,7 +450,7 @@ void	CommodityExchange::RemotePriceCheck(Player *player,const std::string& commo
 	{
 		std::ostringstream buffer;
 		buffer << "I can't find a commodity called " << commodity << "!\n";
-		player->Send(buffer.str(),OutputFilter::DEFAULT);
+		player->Send(buffer.str());
 	}
 }
 

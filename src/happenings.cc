@@ -40,7 +40,7 @@ void	Happenings::Display(Player *player,const std::string& name)
 	int num_mssgs = old_mssgs.size();
 	if(num_mssgs == 0)
 	{
-		player->Send(nowt,OutputFilter::DEFAULT);
+		player->Send(nowt);
 		return;
 	}
 
@@ -55,13 +55,13 @@ void	Happenings::Display(Player *player,const std::string& name)
 				buffer << *iter;
 				if(buffer.str().length() > 850)
 				{
-					player->Send(buffer,OutputFilter::DEFAULT);
+					player->Send(buffer);
 					buffer.str("");
 				}
 			}
 		}
 		if(buffer.str().length() > 0)
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		return;
 	}
 
@@ -75,15 +75,15 @@ void	Happenings::Display(Player *player,const std::string& name)
 			++num_entries;
 			if(buffer.str().length() > 850)
 			{
-				player->Send(buffer,OutputFilter::DEFAULT);
+				player->Send(buffer);
 				buffer.str("");
 			}
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	if(num_entries == 0)
-		player->Send(nowt,OutputFilter::DEFAULT);
+		player->Send(nowt);
 }
 
 std::pair<int,int>	Happenings::Effect(const std::string& exchange,const std::string& commod)
@@ -171,7 +171,7 @@ void	Happenings::NotifyPlayers(std::string& mssg)
 	{
 		player = Game::player_index->FindCurrent(*iter);
 		if(player != 0)
-			player->Send(mssg,OutputFilter::DEFAULT);
+			player->Send(mssg);
 	}
 }
 

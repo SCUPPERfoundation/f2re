@@ -38,7 +38,7 @@ Radio::Radio(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -47,7 +47,7 @@ Radio::Radio(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -70,14 +70,14 @@ putting out the same mindless crud.\n");
 
 	if((total_builds >= 4) && (fed_map->Economy() == Infrastructure::INDUSTRIAL))
 	{
-		player->Send(limit,OutputFilter::DEFAULT);
+		player->Send(limit);
 		return(false);
 	}
 	
 	if(total_builds < 10)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(over,OutputFilter::DEFAULT);
+		player->Send(over);
 
 	total_builds++;
 	return(true);
@@ -87,7 +87,7 @@ void	Radio::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Entertainment Channels: " << total_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 

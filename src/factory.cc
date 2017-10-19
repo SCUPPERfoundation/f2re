@@ -322,7 +322,7 @@ void	Factory::Display(Player *player)
 	buffer << ((disposal == DEPOT) ? "depot" : "exchange") << " where possible\n";
 	buffer << "    Next batch is " << (intervals * 100)/interval_max << "% complete" << std::endl;
 
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Factory::Dump()
@@ -426,7 +426,7 @@ void	Factory::Output(Player *player)
 	std::ostringstream buffer;
 	buffer << "  " << owner << " #" << number << " plant producing " << output;
 	buffer <<  " - Output to " << ((disposal == DEPOT) ? "depot" : "exchange") << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Factory::PlanetLineDisplay(std::ostringstream& buffer)
@@ -455,7 +455,7 @@ void	Factory::PODisplay(Player *player)
 	else
 		buffer << "mothballed";
 	buffer << "    (Efficiency - " << efficiency << "/" << max_efficiency << ")\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Factory::Production(const char **attrib)
@@ -503,7 +503,7 @@ long	Factory::Repair(Player *player,long cash_available)
 
 	if(efficiency == max_efficiency)
 	{
-		player->Send(no_repair,OutputFilter::DEFAULT);
+		player->Send(no_repair);
 		return(0L);
 	}
 
@@ -511,7 +511,7 @@ long	Factory::Repair(Player *player,long cash_available)
 	long cost = 500000 * multiplier;
 	if(cost > cash_available)
 	{
-		player->Send(no_cash,OutputFilter::DEFAULT);
+		player->Send(no_cash);
 		return(0L);
 	}
 
@@ -519,7 +519,7 @@ long	Factory::Repair(Player *player,long cash_available)
 	std::ostringstream	buffer;
 	buffer << "Five percent has been restored to the operating efficiency of factory #";
 	buffer << number << " at a cost of " << 500 * multiplier << "Kig.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	return(cost);
 }
 
@@ -610,7 +610,7 @@ void	Factory::SetStatus(Player *player,const std::string& new_status)
 		else
 			buffer << error;
 	}
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 			
 bool	Factory::StoreInDepot(const std::string& co_name,FedMap *fed_map)

@@ -63,7 +63,7 @@ void	PlayerVariablesTable::Display(Player *player)
 			iter->second->Display(player);
 	}
 	else
-		player->Send("This player has no variables set!\n",OutputFilter::DEFAULT);
+		player->Send("This player has no variables set!\n");
 }
 
 void	PlayerVariablesTable::Display(Player *player,std::string& var_name)
@@ -72,7 +72,7 @@ void	PlayerVariablesTable::Display(Player *player,std::string& var_name)
 	if(iter != vars_table.end())
 		iter->second->Display(player);
 	else
-		player->Send("I can't find a variable with that name!\n",OutputFilter::DEFAULT);
+		player->Send("I can't find a variable with that name!\n");
 }
 
 PlayerVariable *PlayerVariablesTable::GetPlayerVariable(const std::string& var_name,bool is_temp)

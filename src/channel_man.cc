@@ -56,7 +56,7 @@ void	ChannelManager::Join(Player *player,const std::string& name)
 	}
 	else
 		buffer << "You tune your comm unit to the " << name << " channel.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	channel->Add(player);
 }
 
@@ -67,7 +67,7 @@ void	ChannelManager::Leave(Player *player,const std::string& name)
 	if(channel != 0)
 	{
 		buffer << "You turn off the " << name << " channel.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		channel->Remove(player);
 		if(channel->Size() == 0)
 		{
@@ -79,16 +79,16 @@ void	ChannelManager::Leave(Player *player,const std::string& name)
 		}
 	}
 	else
-		player->Send(Game::system->GetMessage("channelmanager","leave",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("channelmanager","leave",1));
 }
 
 void	ChannelManager::List(Player *player)
 {
-	static const std::string no_channels("There aren't any channels in use at the moment.\n",OutputFilter::DEFAULT);
+	static const std::string no_channels("There aren't any channels in use at the moment.\n");
 
 	if(channel_index.size() == 0)
 	{
-		player->Send(no_channels,OutputFilter::DEFAULT);
+		player->Send(no_channels);
 		return;
 	}
 
@@ -97,13 +97,13 @@ void	ChannelManager::List(Player *player)
 	for(ChannelIndex::iterator iter = channel_index.begin();iter != channel_index.end();iter++)
 	{
 		buffer << "\n  '" << iter->first << "'" << std::endl;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		buffer.str("");
 		iter->second->List(player);
 	}
 	buffer.str("");
 	buffer << std::endl;
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	ChannelManager::List(Player *player,const std::string& name)
@@ -113,11 +113,11 @@ void	ChannelManager::List(Player *player,const std::string& name)
 	{
 		std::ostringstream	buffer("");
 		buffer << "Channel - " << name << ":\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		channel->List(player);
 	}
 	else
-		player->Send(Game::system->GetMessage("channelmanager","list",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("channelmanager","list",1));
 }
 
 void	ChannelManager::Send(Player *player,const std::string& name,const std::string& text,bool is_relay)
@@ -127,6 +127,6 @@ void	ChannelManager::Send(Player *player,const std::string& name,const std::stri
 	if(channel != 0)
 		channel->Send(player,text,is_relay);
 	else
-		player->Send(Game::system->GetMessage("channelmanager","send",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("channelmanager","send",1));
 }
 

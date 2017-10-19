@@ -143,19 +143,19 @@ void	CmdParser::Accept(Player *player,std::string& line)
 
 	if(player->HasAJob())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","accept",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","accept",1));
 		return;
 	}
 
 	if(!player->HasAShip())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","accept",3),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","accept",3));
 		return;
 	}
 
 	if(player->Rank() >= Player::ADVENTURER)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","accept",4),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","accept",4));
 		return;
 	}
 
@@ -167,7 +167,7 @@ void	CmdParser::Accept(Player *player,std::string& line)
 
 	int	job_no = std::atoi(tokens->Get(1).c_str());
 	if(job_no == 0)
-		player->Send(Game::system->GetMessage("cmdparser","accept",2),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","accept",2));
 	else
 		player->CurrentCartel()->AcceptWork(player,job_no);
 }
@@ -177,7 +177,7 @@ bool	CmdParser::AcceptMember(Player *player,std::string& line)
 	std::string	system_name(tokens->GetRestOfLine(line,1,Tokens::PLANET));
 	if(Game::galaxy->Find(system_name) == 0)
 	{
-		player->Send("Can't find a system with that name!\n",OutputFilter::DEFAULT);
+		player->Send("Can't find a system with that name!\n");
 		return(false);
 	}
 	return(Game::syndicate->TransferPlanet(system_name,player));
@@ -194,7 +194,7 @@ void	CmdParser::Act(Player *player,std::string& line)
 			player->Act(mssg,false);
 	}
 	else
-		player->Send(Game::system->GetMessage("cmdparser","act",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","act",1));
 }
 
 void	CmdParser::Address(Player *player)
@@ -205,10 +205,10 @@ void	CmdParser::Address(Player *player)
 		std::ostringstream	buffer;
 		buffer << "The teleporter address is ";
 		buffer << Teleporter::MakeAddress(address,player->GetLocRec()) << "\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	else
-		player->Send("You don't have a teleporter!\n",OutputFilter::DEFAULT);
+		player->Send("You don't have a teleporter!\n");
 }
 
 void	CmdParser::AllocateCity(Player *player,std::string& line)
@@ -216,7 +216,7 @@ void	CmdParser::AllocateCity(Player *player,std::string& line)
 	Cartel	*cartel = player->OwnedCartel();
 	if(cartel == 0)
 	{
-		player->Send("You need to be a cartel owner to allocate cities to a planet!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be a cartel owner to allocate cities to a planet!\n");
 		return;
 	}
 
@@ -225,7 +225,7 @@ void	CmdParser::AllocateCity(Player *player,std::string& line)
 	if((index == Tokens::NOT_FOUND) || (index < 2) || (index == (static_cast<int>(tokens->Size()) - 1)))
 	{
 		player->Send("To allocate a city to a planet in it's current system the command \
-is allocate city_name to planet_name.\n",OutputFilter::DEFAULT);
+is allocate city_name to planet_name.\n");
 		return;
 	}
 
@@ -250,14 +250,14 @@ is allocate city_name to planet_name.\n",OutputFilter::DEFAULT);
 void	CmdParser::AlphaCrew(Player *player)
 {
 	static const std::string	crew("Information is available at http://www.ibgames.net/fed2/galactica/alpha.html\n");
-	player->Send(crew,OutputFilter::DEFAULT);
+	player->Send(crew);
 }
 
 void	CmdParser::Approve(Player *player)
 {
 	if(tokens->Size() < 3)
 	{
-		player->Send("The command syntax is 'approve bid bid_number.\n",OutputFilter::DEFAULT);
+		player->Send("The command syntax is 'approve bid bid_number.\n");
 		return;
 	}
 
@@ -265,7 +265,7 @@ void	CmdParser::Approve(Player *player)
 	Business	*business = player->GetBusiness();
 	if(business == 0)
 	{
-		player->Send("Only business owners can accept bids for shares!\n",OutputFilter::DEFAULT);
+		player->Send("Only business owners can accept bids for shares!\n");
 		return;
 	}
 
@@ -280,13 +280,13 @@ name of the business whose shares you are bidding for.\n");
 
 	if(player->Rank() != Player::FINANCIER)
 	{
-		player->Send("Only financiers can bid for shares!\n",OutputFilter::DEFAULT);
+		player->Send("Only financiers can bid for shares!\n");
 		return;
 	}
 
 	if(tokens->Size() < 7)
 	{
-		player->Send(bid_txt,OutputFilter::DEFAULT);
+		player->Send(bid_txt);
 		return;
 	}
 
@@ -296,24 +296,24 @@ name of the business whose shares you are bidding for.\n");
 	if(business == 0)
 	{
 		buffer << "Sorry, I'm unable to find a business called '" << bus_name << "'!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
-		player->Send(bid_txt,OutputFilter::DEFAULT);
+		player->Send(buffer);
+		player->Send(bid_txt);
 		return;
 	}
 
 	int	num_shares = std::atoi(tokens->Get(1).c_str());
 	if((num_shares <= 0) || (num_shares < 150))
 	{
-		player->Send("The number of shares must be positive and at least 150!\n",OutputFilter::DEFAULT);
-		player->Send(bid_txt,OutputFilter::DEFAULT);
+		player->Send("The number of shares must be positive and at least 150!\n");
+		player->Send(bid_txt);
 		return;
 	}
 
 	int	share_price = std::atoi(tokens->Get(4).c_str());
 	if(share_price <= 0)
 	{
-		player->Send("The share price must be positive!\n",OutputFilter::DEFAULT);
-		player->Send(bid_txt,OutputFilter::DEFAULT);
+		player->Send("The share price must be positive!\n");
+		player->Send(bid_txt);
 		return;
 	}
 
@@ -321,7 +321,7 @@ name of the business whose shares you are bidding for.\n");
 	if(company == 0)//	bool	AddToMapsDatFile();
 
 	{
-		player->Send("You don't seem to have a company that can buy the shares!\n",OutputFilter::DEFAULT);
+		player->Send("You don't seem to have a company that can buy the shares!\n");
 		return;
 	}
 	if(!company->CanPurchaseBusinessShares(num_shares,share_price,bus_name))
@@ -338,7 +338,7 @@ name of the business whose shares you are bidding for.\n");
 	buffer << "Your bid for " << num_shares << " shares in " << bus_name;
 	buffer << " has been recorded. The CEO will decide whether to accept";
 	buffer << " the bid, or not, in due course.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	CmdParser::Board(Player *player)
@@ -347,13 +347,13 @@ void	CmdParser::Board(Player *player)
 
 		player->CurrentMap()->BoardShuttle(player);
 	else
-		player->Send(Game::system->GetMessage("cmdparser","board",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","board",1));
 }
 
 void	CmdParser::Brief(Player *player)
 {
 	player->Brief(true);
-	player->Send(Game::system->GetMessage("cmdparser","brief",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","brief",1));
 }
 
 void	CmdParser::Broadcast(Player *player,std::string& line)
@@ -364,10 +364,10 @@ void	CmdParser::Broadcast(Player *player,std::string& line)
 		if(mssg != "Index out of bounds!")
 			Game::player_index->Broadcast(player,mssg);
 		else
-			player->Send(Game::system->GetMessage("cmdparser","com",1),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","com",1));
 	}
 	else
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 }
 
 void	CmdParser::Call(Player *player)
@@ -387,7 +387,7 @@ void	CmdParser::Call(Player *player)
 	{
 		case 0:	CallNightwatch(player);								break;
 		case 1:	CallStaff(player);									break;
-		default:	player->Send(no_name,OutputFilter::DEFAULT);	break;
+		default:	player->Send(no_name);	break;
 	}
 }
 
@@ -396,21 +396,21 @@ void	CmdParser::CallNightwatch(Player *player)
 	static const std::string	ignore("Nightwatch seem to be ignoring your call.\n");
 
 	if((tokens->Size() < 3) || (tokens->Get(1) != "nightwatch") || (!player->IsStaff()))
-		player->Send(Game::system->GetMessage("cmdparser","call",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","call",1));
 	else
 	{
 		if(!player->ManFlag(Player::MANAGER) && !player->ManFlag(Player::NAV_FLAG) &&//	bool	AddToMapsDatFile();
 
 																	!player->ManFlag(Player::HOST_FLAG))
 		{
-			player->Send(ignore,OutputFilter::DEFAULT);
+			player->Send(ignore);
 			return;
 		}
 		std::string	name(tokens->Get(2));
 		Normalise(name);
 		Player	*target = Game::player_index->FindCurrent(name);
 		if(target == 0)
-			player->Send(Game::system->GetMessage("cmdparser","call",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","call",2));
 		else
 			Game::player_index->CallNightWatch(player,target);
 	}
@@ -425,9 +425,9 @@ void	CmdParser::CallStaff(Player *player)
 	std::ostringstream	buffer;
 	buffer << player->Name() << " at " << 	player->Where(where) << " needs assistance.\n";
 	if(Game::player_index->SendStaffMssg(buffer.str()))
-		player->Send(OK,OutputFilter::DEFAULT);
+		player->Send(OK);
 	else
-		player->Send(no_staff,OutputFilter::DEFAULT);
+		player->Send(no_staff);
 }
 
 void	CmdParser::Cancel(Player *player)
@@ -438,10 +438,10 @@ void	CmdParser::Cancel(Player *player)
 	if(tokens->Get(1) == "events")
 	{
 		CommodityExchange::CancelEventsReports(player->Name());
-		player->Send(reports,OutputFilter::DEFAULT);
+		player->Send(reports);
 	}
 	else
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 }
 
 void	CmdParser::Carry(Player *player,std::string& line)
@@ -449,7 +449,7 @@ void	CmdParser::Carry(Player *player,std::string& line)
 	static const std::string	error("You haven't said what you want to doff!\n");
 
 	if(tokens->Size() < 2)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		std::string	name(tokens->GetRestOfLine(line,1,Tokens::LOWER_CASE));
@@ -462,7 +462,7 @@ void	CmdParser::Check(Player *player,std::string& line)
 {
 	if(tokens->Size() < 2)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","check",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","check",1));
 		return;
 	}
 	if((tokens->Get(1).compare("price") == 0) || (tokens->Get(1).compare("prices") == 0))
@@ -476,7 +476,7 @@ void	CmdParser::Check(Player *player,std::string& line)
 		return;
 	}
 
-	player->Send(Game::system->GetMessage("cmdparser","check",2),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","check",2));
 }
 
 bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
@@ -486,17 +486,17 @@ bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send("You haven't said what you want to register!\n",OutputFilter::DEFAULT);
+		player->Send("You haven't said what you want to register!\n");
 		return(false);
 	}
 	if(tokens->Get(1) != "business")
 	{
-		player->Send("You can only register a business, at the moment!\n",OutputFilter::DEFAULT);
+		player->Send("You can only register a business, at the moment!\n");
 		return(false);
 	}
 	if(tokens->Size() < 4)
 	{
-		player->Send("The command is 'register business share_price company_name'.\n",OutputFilter::DEFAULT);
+		player->Send("The command is 'register business share_price company_name'.\n");
 		return(false);
 	}
 
@@ -505,7 +505,7 @@ bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
 	if((Game::company_register->CompanyExists(name)) ||
 								(Game::business_register->BusinessExists(name)))
 	{
-		player->Send("The clerk checks its computer and tells you that the name is already in use!\n",OutputFilter::DEFAULT);
+		player->Send("The clerk checks its computer and tells you that the name is already in use!\n");
 		return(false);
 	}
 	if((name.length() < Business::MIN_NAME_SIZE) || (name.length() >= Business::MAX_NAME_SIZE))
@@ -513,7 +513,7 @@ bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
 		buffer << "The clerk tells you that business names must be between ";
 		buffer << Business::MIN_NAME_SIZE << "and ";
 		buffer << (Business::MAX_NAME_SIZE - 1) << " long!\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(false);
 	}
 
@@ -522,7 +522,7 @@ bool	CmdParser::CheckBusinessRegistration(Player *player,std::string& line)
 	{
 		buffer << "The clerk shakes its head and informs you that the minimum ";
 		buffer << "price for shares is " << Business::START_MIN_PRICE << "ig.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(false);
 	}
 
@@ -539,13 +539,13 @@ void	CmdParser::Claim(Player *player)
 	static std::string	help("Command is 'claim system <name> planet <name> type <name>\n For more info try 'help claim' :)\n");
 	if(player->Rank() != Player::FINANCIER)
 	{
-		player->Send("You need to be a financier to register a claim to a planet!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be a financier to register a claim to a planet!\n");
 		return;
 	}
 
 	if(player->IsPlanetOwner() || player->HasClaimedPlanet())
 	{
-		player->Send("You have already laid claim to a system and a planet!\n",OutputFilter::DEFAULT);
+		player->Send("You have already laid claim to a system and a planet!\n");
 		return;
 	}
 
@@ -557,7 +557,7 @@ void	CmdParser::Claim(Player *player)
 	if((size < 7) || (system_index < 0) || (planet_index < system_index) ||
 								(type_index < planet_index) || (type_index == (size - 1)))
 	{
-		player->Send(help,OutputFilter::DEFAULT);
+		player->Send(help);
 		return;
 	}
 
@@ -588,13 +588,13 @@ void	CmdParser::Claim(Player *player)
 	}
 	catch(const std::invalid_argument&	except)
 	{
-		player->Send(except.what(),OutputFilter::DEFAULT);
-		player->Send("Enter 'help claim' if you need further information.\n",OutputFilter::DEFAULT);
+		player->Send(except.what());
+		player->Send("Enter 'help claim' if you need further information.\n");
 		return;
 	}
 
 	if(!star_builder->Run())
-		player->Send("Please report the problem and error message to 'feedback@ibgames.net' - remember to put 'fed2' in the subject line!\n",OutputFilter::DEFAULT);
+		player->Send("Please report the problem and error message to 'feedback@ibgames.net' - remember to put 'fed2' in the subject line!\n");
 	else
 		player->SetPlanetClaimed();
 
@@ -604,7 +604,7 @@ void	CmdParser::Claim(Player *player)
 void 	CmdParser::Clear(Player *player)
 {
 	if(tokens->Size() < 2)
-		player->Send("You didn't say what you want to clear! (try 'mood' or 'target')\n",OutputFilter::DEFAULT);
+		player->Send("You didn't say what you want to clear! (try 'mood' or 'target')\n");
 	else
 		player->Clear(tokens->Get(1));
 }
@@ -614,7 +614,7 @@ void	CmdParser::Clip(Player *player,std::string& line)
 	static const std::string	error("You haven't said what you want to clip onto a keyring!\n");
 
 	if(tokens->Size() < 2)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		std::string	name(tokens->GetRestOfLine(line,1,Tokens::LOWER_CASE));
@@ -629,7 +629,7 @@ void	CmdParser::Close(Player *player)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send(info,OutputFilter::DEFAULT);
+		player->Send(info);
 		return;
 	}
 
@@ -645,7 +645,7 @@ void	CmdParser::Close(Player *player)
 		return;
 	}
 
-	player->Send(info,OutputFilter::DEFAULT);
+	player->Send(info);
 }
 
 void	CmdParser::Colonize(Player *player)
@@ -654,13 +654,13 @@ void	CmdParser::Colonize(Player *player)
 
 	if(player->Rank() < Player::MOGUL)
 	{
-		player->Send("You need to be at least a mogul to colonize other planets!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be at least a mogul to colonize other planets!\n");
 		return;
 	}
 
 	if(player->IsPlanetBuilt())
 	{
-		player->Send("Please wait till after the reset to build another planet. Thank you.\n",OutputFilter::DEFAULT);
+		player->Send("Please wait till after the reset to build another planet. Thank you.\n");
 		return;
 	}
 
@@ -670,7 +670,7 @@ void	CmdParser::Colonize(Player *player)
 
 	if((size < 5) || (type_index < planet_index) || (type_index == (size - 1)))
 	{
-		player->Send(help,OutputFilter::DEFAULT);
+		player->Send(help);
 		return;
 	}
 
@@ -687,7 +687,7 @@ void	CmdParser::Colonize(Player *player)
 	Star *star = Game::galaxy->FindByOwner(player);
 	if(star == 0)
 	{
-		player->Send("I can't find your star system! Please notify ibgames. Thank you.\n",OutputFilter::DEFAULT);
+		player->Send("I can't find your star system! Please notify ibgames. Thank you.\n");
 		return;
 	}
 
@@ -702,12 +702,12 @@ void	CmdParser::Com(Player *player,std::string& line)
 	if(mssg != "Index out of bounds!")
 	{
 		if(player->IsGagged())
-			player->Send(no_comms,OutputFilter::DEFAULT);
+			player->Send(no_comms);
 		else
 			Game::player_index->Com(player,mssg);
 	}
 	else
-		player->Send(Game::system->GetMessage("cmdparser","com",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","com",1));
 }
 
 void	CmdParser::Comms(Player *player)
@@ -731,7 +731,7 @@ void	CmdParser::Declare(Player *player)
 	if(tokens->Get(1) == "bankruptcy")
 		player->DeclareBankruptcy();
 	else
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 }
 
 void	CmdParser::Demolish(Player *player)
@@ -739,7 +739,7 @@ void	CmdParser::Demolish(Player *player)
 	static const std::string	what("You haven't said what you want to demolish!\n");
 	if(tokens->Size() < 2)
 	{
-		player->Send(what,OutputFilter::DEFAULT);
+		player->Send(what);
 		return;
 	}
 
@@ -750,14 +750,14 @@ void	CmdParser::Divert(Player *player)
 {
 	if(player->Rank() < Player::PLUTOCRAT)
 	{
-		player->Send("You need to be a cartel owner to use this command!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be a cartel owner to use this command!\n");
 		return;
 	}
 
 	Cartel	*cartel = player->OwnedCartel();
 	Star	*star = Game::galaxy->Find(cartel->Name());
 	star->Divert();
-	player->Send("Any necessary goods are now being diverted to graving dock storage.\n",OutputFilter::DEFAULT);
+	player->Send("Any necessary goods are now being diverted to graving dock storage.\n");
 }
 
 void	CmdParser::Doff(Player *player,std::string& line)
@@ -765,7 +765,7 @@ void	CmdParser::Doff(Player *player,std::string& line)
 	static const std::string	error("You haven't said what you want to stop wearing!\n");
 
 	if(tokens->Size() < 2)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		std::string	name(tokens->GetRestOfLine(line,1,Tokens::LOWER_CASE));
@@ -780,7 +780,7 @@ void	CmdParser::Drop(Player *player,std::string & line)
 	if(name != "Index out of bounds!")
 		player->Drop(name);
 	else
-		player->Send(Game::system->GetMessage("cmdparser","drop",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","drop",1));
 }
 
 void	CmdParser::Emote(Player *player)
@@ -791,7 +791,7 @@ void	CmdParser::Emote(Player *player)
 	{
 		buffer << "You haven't said who you want to " << tokens->Get(0) << "!\n";
 		text = buffer.str();
-		player->Send(text,OutputFilter::DEFAULT);
+		player->Send(text);
 		return;
 	}
 
@@ -818,7 +818,7 @@ void	CmdParser::Emote(Player *player)
 		}
 		buffer << name << " isn't here!\n";
 		text = buffer.str();
-		player->Send(text,OutputFilter::DEFAULT);
+		player->Send(text);
 		return;
 	}
 	player->Emote(tokens->Get(0),recipient);
@@ -841,14 +841,14 @@ void	CmdParser::Examine(Player *player,std::string& line)
 					{
 						std::ostringstream	buffer("");
 						buffer << "I can't find anything called " << tokens->Get(1) << " in the vicinity!" << std::endl;
-						player->Send(buffer,OutputFilter::DEFAULT);
+						player->Send(buffer);
 					}
 				}
 			}
 		}
 	}
 	else
-		player->Send(Game::system->GetMessage("cmdparser","examine",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","examine",1));
 }
 
 void	CmdParser::Execute(Player *player,int cmd, std::string& line)
@@ -930,7 +930,7 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case  71:	Broadcast(player,line);								break;	// 'broadcast'
 		case  72:	UnPost(player);										break;	// 'unpost'
 		case  73:	TermWidth(player);									break;	// 'termwidth'
-		case  74:	player->Send("ANSI facilities are not currently available\n",OutputFilter::DEFAULT);		break;	// 'ansi'
+		case  74:	player->Send("ANSI facilities are not currently available\n");		break;	// 'ansi'
 		case  75:	Fed2(player);											break;	// 'fed2'
 		case  76:	player->Time();										break;	//	'time'
 		case  77:																			//	'display'
@@ -952,14 +952,14 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 
 		case	94:	Get(player,line);										break;	//	'get'
 		case	95:	Drop(player,line);									break;	// 'drop'
-		case	96:	player->Send(Game::system->GetMessage("cmdparser","execute",1),OutputFilter::DEFAULT);	break; // 'land'
-		case	97:	player->Send(Game::system->GetMessage("cmdparser","execute",1),OutputFilter::DEFAULT);	break; // 'orbit'
-		case	98:	player->Send(Game::system->GetMessage("cmdparser","execute",1),OutputFilter::DEFAULT);	break; // 'enter'
-		case	99:	player->Send(Game::system->GetMessage("cmdparser","execute",2),OutputFilter::DEFAULT);	break; // 'load'
-		case 100:	player->Send(Game::system->GetMessage("cmdparser","execute",3),OutputFilter::DEFAULT);	break; // 'unload'
-		case 101:	player->Send(Game::system->GetMessage("cmdparser","execute",4),OutputFilter::DEFAULT);	break; // 'order'
+		case	96:	player->Send(Game::system->GetMessage("cmdparser","execute",1));	break; // 'land'
+		case	97:	player->Send(Game::system->GetMessage("cmdparser","execute",1));	break; // 'orbit'
+		case	98:	player->Send(Game::system->GetMessage("cmdparser","execute",1));	break; // 'enter'
+		case	99:	player->Send(Game::system->GetMessage("cmdparser","execute",2));	break; // 'load'
+		case 100:	player->Send(Game::system->GetMessage("cmdparser","execute",3));	break; // 'unload'
+		case 101:	player->Send(Game::system->GetMessage("cmdparser","execute",4));	break; // 'order'
 		case 102:	sell_parser->Process(player,tokens,line);		break;	// 'sell'
-		case 103:	player->Send(Game::system->GetMessage("cmdparser","execute",5),OutputFilter::DEFAULT);	break; // 'tune'
+		case 103:	player->Send(Game::system->GetMessage("cmdparser","execute",5));	break; // 'tune'
 		case 104:																			// 'ch'
 		case 105:	Check(player,line);									break;	// 'check'
 		case 106:	GeneralHelp(player,line);							break;	// 'help'
@@ -1018,13 +1018,13 @@ void	CmdParser::Execute(Player *player,int cmd, std::string& line)
 		case 159:	player->PromotePlanet();							break;	// 'promote'
 		case 160:	player->Consolidate();								break;	// 'shuffle'
 		case 161:	player->Search();										break;	// 'search'
-		case 162:	player->Send(Game::system->GetMessage("player","calendar",1),OutputFilter::DEFAULT);	break; // 'calendar'
+		case 162:	player->Send(Game::system->GetMessage("player","calendar",1));	break; // 'calendar'
 		case 163:	WhereIs(player,line);								break;
 		case 164:	Demolish(player);										break;	// 'demolish'
 		case 165:	Act(player,line);										break;	// 'acts'
 		case 166:	Stash(player,line);									break;	// 'stash'
 		case 167:	Retrieve(player,line);								break;	// 'retrieve'
-		case 168:	player->Send("   'i' before 'e' except after 'c'\n",OutputFilter::DEFAULT);	break;	// 'retreive'
+		case 168:	player->Send("   'i' before 'e' except after 'c'\n");	break;	// 'retreive'
 		case 169:	Doff(player,line);									break;	// 'doff'
 		case 170:	Carry(player,line);									break;	// 'carry'
 		case 171:	Pocket(player,line);									break;	// 'pocket'
@@ -1084,7 +1084,7 @@ void	CmdParser::Expel(Player *player,std::string& line)
 
 void	CmdParser::Fed2(Player *player)
 {
-	player->Send(Game::system->GetMessage("cmdparser","fed2",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","fed2",1));
 }
 
 void	CmdParser::Fetch(Player *player)
@@ -1093,7 +1093,7 @@ void	CmdParser::Fetch(Player *player)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return;
 	}
 
@@ -1131,14 +1131,14 @@ void	CmdParser::Flee(Player *player)
 {
 	if(!player->IsInSpace())
 	{
-		player->Send("You need to be in your spaceship to flee!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be in your spaceship to flee!\n");
 		return;
 	}
 
 	Ship	*ship;
 	if((ship = player->GetShip()) == 0)
 	{
-		player->Send("You don't have a ship to flee in!\n",OutputFilter::DEFAULT);
+		player->Send("You don't have a ship to flee in!\n");
 		return;
 	}
 	else
@@ -1149,11 +1149,11 @@ void	CmdParser::Flush(Player *player)
 {
 	static const std::string	error("I don't know what you want to flush!\n");
 	if(tokens->Size() < 3)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		if(tokens->Get(1) != "factory")
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 		else
 			player->FlushFactory(std::atoi(tokens->Get(2).c_str()));
 	}
@@ -1161,7 +1161,7 @@ void	CmdParser::Flush(Player *player)
 
 void	CmdParser::Follow(Player *player)
 {
-	player->Send("I'm sorry, that command is no longer available.\n",OutputFilter::DEFAULT);
+	player->Send("I'm sorry, that command is no longer available.\n");
 }
 
 void	CmdParser::Freeze(Player *player)
@@ -1171,7 +1171,7 @@ void	CmdParser::Freeze(Player *player)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return;
 	}
 
@@ -1182,14 +1182,14 @@ void	CmdParser::Freeze(Player *player)
 		if(tokens->Get(1) == "business")
 			player->FreezeBusiness();
 		else
-			player->Send(not_co,OutputFilter::DEFAULT);
+			player->Send(not_co);
 	}
 }
 
 void	CmdParser::Full(Player *player)
 {
 	player->Brief(false);
-	player->Send(Game::system->GetMessage("cmdparser","full",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","full",1));
 }
 
 void	CmdParser::Gag(Player *player)
@@ -1199,28 +1199,28 @@ void	CmdParser::Gag(Player *player)
 
 	if(!player->IsManagement())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
 	}
 	if(tokens->Size() < 2)
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 	else
 	{
 		std::string	name(tokens->Get(1));
 		Normalise(name);
 		Player	*target =  Game::player_index->FindName(name);
 		if(target == 0)
-			player->Send(no_find,OutputFilter::DEFAULT);
+			player->Send(no_find);
 		else
 		{
 			target->Gag(true);
 			std::ostringstream	buffer;
 			buffer << "Your ability to send comm messages has been removed by " << player->Name() << "\n";
-			target->Send(buffer,OutputFilter::DEFAULT);
+			target->Send(buffer);
 			buffer.str("");
 			buffer << target->Name() << "'s access to the comms channel has been stopped. ";
 			buffer << "Please mail details and log to feedback@ibgames.com\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 			buffer << player->Name() << " has blocked " << target->Name() << "'s access to the comms";
 			WriteLog(buffer);
@@ -1232,10 +1232,10 @@ void	CmdParser::GeneralHelp(Player *player,std::string& line)
 {
 	if(tokens->Size() < 2)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","help",1),OutputFilter::DEFAULT);
-		player->Send(Game::system->GetMessage("cmdparser","help",2),OutputFilter::DEFAULT);
-		player->Send(Game::system->GetMessage("cmdparser","help",3),OutputFilter::DEFAULT);
-		player->Send(Game::system->GetMessage("cmdparser","help",4),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","help",1));
+		player->Send(Game::system->GetMessage("cmdparser","help",2));
+		player->Send(Game::system->GetMessage("cmdparser","help",3));
+		player->Send(Game::system->GetMessage("cmdparser","help",4));
 	}
 	else
 		help->SendHelp(player,tokens,line);
@@ -1248,18 +1248,18 @@ void	CmdParser::Get(Player *player,std::string& line)
 	{
 		if((name == "cabinet") && player->IsOnLandingPad())
 		{
-			player->Send("As you reach out the cabinet momentarily flickers out of existence, leaving you empty handed.\n",OutputFilter::DEFAULT);
+			player->Send("As you reach out the cabinet momentarily flickers out of existence, leaving you empty handed.\n");
 			return;
 		}
 
 		FedObject	*object = player->CurrentMap()->FindObject(name,player->LocNo());
 		if(object == 0)
-			player->Send(Game::system->GetMessage("cmdparser","get",1),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","get",1));
 		else
 			player->Get(object);
 	}
 	else
-		player->Send(Game::system->GetMessage("cmdparser","get",2),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","get",2));
 }
 
 int	CmdParser::GetCommand()
@@ -1318,7 +1318,7 @@ void	CmdParser::IPO(Player *player,std::string& line)
 
 	Business *business = player->GetBusiness();
 	if(business == 0)
-		player->Send("You need a business to launch an IPO!\n",OutputFilter::DEFAULT);
+		player->Send("You need a business to launch an IPO!\n");
 	else
 		business->IpoValuation(percentage);
 }
@@ -1344,10 +1344,10 @@ void	CmdParser::Issue(Player *player)
 	static const std::string	no_div("You can only issue a dividend at the moment.\n");
 	static const std::string	no_amount("You need to specify a positive amount to pay out on each share.\n");
 
-	if(tokens->Size() < 2)										{ player->Send(no_spec,OutputFilter::DEFAULT);		return;	}
-	if(tokens->Get(1) != "dividend")							{ player->Send(no_div,OutputFilter::DEFAULT);		return;	}
+	if(tokens->Size() < 2)										{ player->Send(no_spec);		return;	}
+	if(tokens->Get(1) != "dividend")							{ player->Send(no_div);		return;	}
 	long amount = std::atol(tokens->Get(2).c_str());
-	if(amount <= 0)												{ player->Send(no_amount,OutputFilter::DEFAULT);	return;	}
+	if(amount <= 0)												{ player->Send(no_amount);	return;	}
 
 	player->IssueDividend(amount);
 }
@@ -1357,11 +1357,11 @@ void	CmdParser::Jobs(Player *player)
 	if(tokens->Get(1).compare("on") == 0)
 	{
 		if(player->Rank() >= Player::ADVENTURER)
-			player->Send(Game::system->GetMessage("cmdparser","jobs",4),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","jobs",4));
 		else
 		{
 			player->CurrentCartel()->AddPlayerToWork(player);
-			player->Send(Game::system->GetMessage("cmdparser","jobs",1),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","jobs",1));
 		}
 	}
 	else
@@ -1369,10 +1369,10 @@ void	CmdParser::Jobs(Player *player)
 		if(tokens->Get(1).compare("off") == 0)
 		{
 			player->CurrentCartel()->RemovePlayerFromWork(player);
-			player->Send(Game::system->GetMessage("cmdparser","jobs",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","jobs",2));
 		}
 		else
-			player->Send(Game::system->GetMessage("cmdparser","jobs",3),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","jobs",3));
 	}
 }
 
@@ -1383,7 +1383,7 @@ void	CmdParser::Jump(Player *player,std::string& line)
 that the link is only open to commanders with at least 50 hauler credits and higher ranks.\n");
 
 	if(!player->CurrentMap()->FindLoc(player->LocNo())->IsALink())
-		player->Send(no_link,OutputFilter::DEFAULT);
+		player->Send(no_link);
 	else
 	{
 		if(tokens->Size() < 2)
@@ -1393,40 +1393,40 @@ that the link is only open to commanders with at least 50 hauler credits and hig
 			Game::syndicate->GetInterCartelJumpList(player->CurrentMap()->HomeStar(),jump_list);
 			if(jump_list.size() > 0)
 			{
-				player->Send("Inter-Cartel destinations available:\n",OutputFilter::DEFAULT);
+				player->Send("Inter-Cartel destinations available:\n");
 				for(JumpList::iterator iter = jump_list.begin();iter != jump_list.end();++iter)
 				{
 					buffer.str("");
 					buffer << "  " << *iter << "\n";
-					player->Send(buffer,OutputFilter::DEFAULT);
+					player->Send(buffer);
 				}
-				player->Send("    \n",OutputFilter::DEFAULT);
+				player->Send("    \n");
 			}
 
 			jump_list.clear();
 			Game::syndicate->GetLocalJumpList(player->CurrentMap()->HomeStar(),jump_list);
 			if(jump_list.size() > 0)
 			{
-				player->Send("Local destinations available:\n",OutputFilter::DEFAULT);
+				player->Send("Local destinations available:\n");
 				buffer.str("");
 				for(JumpList::iterator iter = jump_list.begin();iter != jump_list.end();++iter)
 				{
 					buffer << "  " << *iter << "\n";
 					if(buffer.str().length() > 850)
 					{
-						player->Send(buffer,OutputFilter::DEFAULT);
+						player->Send(buffer);
 						buffer.str("");
 					}
 				}
 				if(buffer.str().length() > 0)
-					player->Send(buffer,OutputFilter::DEFAULT);
+					player->Send(buffer);
 			}
 		}
 		else
 		{
 			if((player->Rank() == Player::COMMANDER) && (player->TraderJobs() < 50))
 			{
-				player->Send(not_rank,OutputFilter::DEFAULT);
+				player->Send(not_rank);
 				return;
 			}
 			std::string name(tokens->GetRestOfLine(line,1,Tokens::RAW));
@@ -1459,14 +1459,14 @@ where xx is a number between -20 and 20 inclusive. Or 'launch missile'\n");
 		player->LaunchMissile();
 		return;
 	}
-	player->Send(error,OutputFilter::DEFAULT);
+	player->Send(error);
 }
 
 void	CmdParser::Leave(Player *player)
 {
 	if(tokens->Size() == 1)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","leave",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","leave",1));
 		return;
 	}
 	if((tokens->Get(1).compare("ch") == 0) ||
@@ -1482,7 +1482,7 @@ void	CmdParser::Leave(Player *player)
 		return;
 	}
 
-	player->Send(Game::system->GetMessage("cmdparser","leave",2),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","leave",2));
 }
 
 void	CmdParser::Liquidate(Player *player)
@@ -1490,7 +1490,7 @@ void	CmdParser::Liquidate(Player *player)
 	static const std::string	no_commod("You haven't said which futures contract you want to liquidate.\n");
 
 	if(tokens->Size() < 2)
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 	else
 		player->Liquidate(tokens->Get(1));
 }
@@ -1502,12 +1502,12 @@ void	CmdParser::Lock(Player *player)
 
 	if(!player->IsManagement())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
 	}
 
 	if(tokens->Size() < 2)
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 	else
 	{
 		std::string	player_name(tokens->Get(1));
@@ -1515,7 +1515,7 @@ void	CmdParser::Lock(Player *player)
 		Player	*target = Game::player_index->FindName(player_name);
 		if(target == 0)
 		{
-			player->Send(no_find,OutputFilter::DEFAULT);
+			player->Send(no_find);
 			return;
 		}
 
@@ -1524,7 +1524,7 @@ void	CmdParser::Lock(Player *player)
 		if(Game::player_index->FindCurrent(player_name) != 0)
 		{
 			buffer << "You are being locked out of the game by " << player->Name() << "\n";
-			target->Send(buffer,OutputFilter::DEFAULT);
+			target->Send(buffer);
 			Game::player_index->LogOff(target);
 		}
 		else
@@ -1537,7 +1537,7 @@ void	CmdParser::Lock(Player *player)
 		buffer.str("");
 		buffer << "You have locked out " << target->Name() << ". Please e-mail a log and ";
 		buffer << "any other details to fi@ibgames.com now, before you forget.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 }
 
@@ -1547,7 +1547,7 @@ void	CmdParser::Marry(Player *player)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return;
 	}
 
@@ -1571,7 +1571,7 @@ void	CmdParser::Move(Player *player, std::string& line)
 	if(cartel == 0)
 	{
 		player->Send("You need to be a cartel owner to move cities around! (If you are trying to move \
-yourself, use compass diections, eg 'se' - without the quote marks - to go south-east).\n",OutputFilter::DEFAULT);
+yourself, use compass diections, eg 'se' - without the quote marks - to go south-east).\n");
 		return;
 	}
 
@@ -1579,7 +1579,7 @@ yourself, use compass diections, eg 'se' - without the quote marks - to go south
 	int index = static_cast<int>(tokens->FindIndex(the_word));
 	if((index == Tokens::NOT_FOUND) || (index < 2) || (index == (static_cast<int>(tokens->Size()) - 1)))
 	{
-		player->Send("To move a city to a new system the command is move city_name to system_name.\n",OutputFilter::DEFAULT);
+		player->Send("To move a city to a new system the command is move city_name to system_name.\n");
 		return;
 	}
 
@@ -1605,12 +1605,12 @@ void	CmdParser::Offer(Player *player, std::string& line)
 {
 	if(tokens->Size() < 5)
 	{
-		player->Send("The format is OFFER <PLAYER> JOB <COMMODITY> <WHERE TO>\n",OutputFilter::DEFAULT);
+		player->Send("The format is OFFER <PLAYER> JOB <COMMODITY> <WHERE TO>\n");
 		return;
 	}
 	if(!player->IsPlanetOwner())
 	{
-		player->Send("This planet doesn't belong to you!\n",OutputFilter::DEFAULT);
+		player->Send("This planet doesn't belong to you!\n");
 		return;
 	}
 
@@ -1618,31 +1618,31 @@ void	CmdParser::Offer(Player *player, std::string& line)
 	Player	*target = Game::player_index->FindCurrent(Normalise(target_name));
 	if(target == 0)
 	{
-		player->Send("I can't find anyone with that name in the game!\n",OutputFilter::DEFAULT);
+		player->Send("I can't find anyone with that name in the game!\n");
 		return;
 	}
 	std::string	where_to(tokens->GetRestOfLine(line,4,Tokens::PLANET));
 	FedMap	*to_map = Game::galaxy->FindMap(where_to);
 	if(to_map == 0)
 	{
-		player->Send("I can't find a planet with that name!\n",OutputFilter::DEFAULT);
+		player->Send("I can't find a planet with that name!\n");
 		return;
 	}
 	std::string	from(player->CurrentMap()->Title());
 	if(from == where_to)
 	{
-		player->Send("You can only offer jobs that move cargo off-planet!\n",OutputFilter::DEFAULT);
+		player->Send("You can only offer jobs that move cargo off-planet!\n");
 		return;
 	}
 	Cartel	*cartel = player->CurrentCartel();
 	if(cartel->Name() != to_map->HomeStarPtr()->CartelName())
 	{
-		player->Send("You can only offer jobs transporting goods to other planets in the cartel!\n",OutputFilter::DEFAULT);
+		player->Send("You can only offer jobs transporting goods to other planets in the cartel!\n");
 		return;
 	}
 	if(cartel->Name() == "Sol")
 	{
-		player->Send("You can't offer jobs in the Sol cartel!\n",OutputFilter::DEFAULT);
+		player->Send("You can't offer jobs in the Sol cartel!\n");
 		return;
 	}
 
@@ -1656,7 +1656,7 @@ void	CmdParser::Offer(Player *player, std::string& line)
 		if(price == 0L)
 		{
 			buffer << "There's not enough " << commodity_name << " available to make up a cargo!\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			target->RemoveJobOffer();
 		}
 		else
@@ -1665,10 +1665,10 @@ void	CmdParser::Offer(Player *player, std::string& line)
 			buffer.str("");
 			buffer << " Details of your job offer have been sent to " << target->Name();
 			buffer << ". You should be hearing back from " << target->Name() << " soon.\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 			buffer << player->Name() << " has offered you a job!\n";
-			target->Send(buffer,OutputFilter::DEFAULT);
+			target->Send(buffer);
 		}
 	}
 }
@@ -1679,7 +1679,7 @@ void	CmdParser::Open(Player *player)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send(info,OutputFilter::DEFAULT);
+		player->Send(info);
 		return;
 	}
 
@@ -1695,7 +1695,7 @@ void	CmdParser::Open(Player *player)
 		return;
 	}
 
-	player->Send(info,OutputFilter::DEFAULT);
+	player->Send(info);
 }
 
 void	CmdParser::Pardon(Player *player)
@@ -1705,11 +1705,11 @@ void	CmdParser::Pardon(Player *player)
 
 	FedMap	*fed_map = player->CurrentMap();
 	if(fed_map->Owner() != player->Name())
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		if( tokens->Size() < 2)
-			player->Send(no_name,OutputFilter::DEFAULT);
+			player->Send(no_name);
 		else
 			fed_map->HomeStarPtr()->Pardon(player,tokens->Get(1));
 	}
@@ -1743,7 +1743,7 @@ static std::ostringstream	buffer;
 		return;
 	if(cmd == NO_CMD)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
 	}
 	Execute(player,cmd,line);
@@ -1754,7 +1754,7 @@ void	CmdParser::Pocket(Player *player,std::string& line)
 	static const std::string	error("You haven't said what you want to stop carrying!\n");
 
 	if(tokens->Size() < 2)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		std::string	name(tokens->GetRestOfLine(line,1,Tokens::LOWER_CASE));
@@ -1775,7 +1775,7 @@ void	CmdParser::Post(Player *player,std::string& line)
 void	CmdParser::PostJob(Player *player,std::string& line)
 {
 	if(tokens->Size() < 4)
-		player->Send("The format is POST JOB <COMMODITY> <WHERE TO>\n",OutputFilter::DEFAULT);
+		player->Send("The format is POST JOB <COMMODITY> <WHERE TO>\n");
 	else
 	{
 		std::string	commodity(tokens->Get(2));
@@ -1783,39 +1783,39 @@ void	CmdParser::PostJob(Player *player,std::string& line)
 		std::string	from(player->CurrentMap()->Title());
 		if(!player->CurrentMap()->IsOwner(player))
 		{
-			player->Send("This isn't your planet!\n",OutputFilter::DEFAULT);
+			player->Send("This isn't your planet!\n");
 			return;
 		}
 		if(from == where_to)
 		{
-			player->Send("You can only post jobs that transport cargo off-planet!\n",OutputFilter::DEFAULT);
+			player->Send("You can only post jobs that transport cargo off-planet!\n");
 			return;
 		}
 
 		FedMap	*to_map = Game::galaxy->FindMap(where_to);
 		if(to_map == 0)
 		{
-			player->Send("Sorry, but I can't find that planet!\n",OutputFilter::DEFAULT);
+			player->Send("Sorry, but I can't find that planet!\n");
 			return;
 		}
 
 		Cartel	*cartel = player->CurrentCartel();
 		if(cartel->Name() != to_map->HomeStarPtr()->CartelName())
 		{
-			player->Send("You can only post jobs to other planets in the cartel!\n",OutputFilter::DEFAULT);
+			player->Send("You can only post jobs to other planets in the cartel!\n");
 			return;
 		}
 
 		if(cartel->Name() == "Sol")
 		{
-			player->Send("You have to be in a cartel other than Sol to post jobs on the Workboard!\n",OutputFilter::DEFAULT);
+			player->Send("You have to be in a cartel other than Sol to post jobs on the Workboard!\n");
 			return;
 		}
 
 		Job	*job = cartel->CreateOwnerJob(commodity,from,where_to);
 		if(job == 0)
 		{
-			player->Send("Unable to create a new job on the work board for you. The maximum number of jobs on the board is 40.\n",OutputFilter::DEFAULT);
+			player->Send("Unable to create a new job on the work board for you. The maximum number of jobs on the board is 40.\n");
 			return;
 		}
 
@@ -1826,7 +1826,7 @@ void	CmdParser::PostJob(Player *player,std::string& line)
 		{
 			cartel->RemoveLastJob();
 			buffer << "There's not enough " << commodity << " available to make up a cargo!\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			return;
 		}
 
@@ -1836,7 +1836,7 @@ void	CmdParser::PostJob(Player *player,std::string& line)
 		buffer.str("");
 		buffer << "Your job has been posted onto the cartel's work board and you have been ";
 		buffer << "charged " << xfer_cost << "ig.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 }
 
@@ -1845,7 +1845,7 @@ void	CmdParser::PostNotice(Player *player,std::string& line)
 	static const std::string	gagged("You are not allowed to post on the message board. Contact feedback@ibgames.net for details.\n");
 	if(player->IsGagged())
 	{
-		player->Send(gagged,OutputFilter::DEFAULT);
+		player->Send(gagged);
 		return;
 	}
 
@@ -1853,7 +1853,7 @@ void	CmdParser::PostNotice(Player *player,std::string& line)
 	if(mssg != "Index out of bounds!")
 		Game::notices->Post(player,mssg);
 	else
-		player->Send(Game::system->GetMessage("cmdparser","post",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","post",1));
 }
 
 bool	CmdParser::ProcessLocation(Player *player)
@@ -1917,7 +1917,7 @@ void	CmdParser::Register(Player *player,std::string& line)
 		buffer << "The clerk tells you that you don't have the funds to ";
 		buffer << "buy the required " << Business::START_PL_SHARES;
 		buffer  << " at " << price << "ig/share.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return;
 	}
 
@@ -1930,7 +1930,7 @@ void	CmdParser::Register(Player *player,std::string& line)
 	catch(...)
 	{
 		player->ChangeCash(cost);	// rollback
-		player->Send("Unable to create private company. Please report this to <feedback@ibgames.com>. Thank you.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to create private company. Please report this to <feedback@ibgames.com>. Thank you.\n");
 		return;
 	}
 
@@ -1938,7 +1938,7 @@ void	CmdParser::Register(Player *player,std::string& line)
 	buffer << "The clerk enters the details into its terminal and scans the result for ";
 	buffer << "a few moments. \"Congratulations\", it tells you. \"Your business registration ";
 	buffer << "has been accepted. You are the CEO of " << name << ".\"\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 
 	buffer.str("");
 	buffer << player->Name() << " has been appointed CEO of " << name << "\n";
@@ -1955,7 +1955,7 @@ void	CmdParser::Reject(Player *player,std::string& line)
 		Cartel	*cartel = player->OwnedCartel();
 		if(cartel == 0)
 		{
-			player->Send("You don't own a cartel!\n",OutputFilter::DEFAULT);
+			player->Send("You don't own a cartel!\n");
 			return;
 		}
 		cartel->RejectRequest(player,tokens->GetRestOfLine(line,1,Tokens::PLANET));
@@ -1970,7 +1970,7 @@ void	CmdParser::Reject(Player *player,std::string& line)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send("The command syntax is 'reject bid bid_number.\n",OutputFilter::DEFAULT);
+		player->Send("The command syntax is 'reject bid bid_number.\n");
 		return;
 	}
 
@@ -1978,7 +1978,7 @@ void	CmdParser::Reject(Player *player,std::string& line)
 	Business	*business = player->GetBusiness();
 	if(business == 0)
 	{
-		player->Send("Only business owners can accept and reject bids for shares!\n",OutputFilter::DEFAULT);
+		player->Send("Only business owners can accept and reject bids for shares!\n");
 		return;
 	}
 
@@ -2012,7 +2012,7 @@ void	CmdParser::Relay(Player *player)
 	{
 		std::ostringstream	buffer("");
 		buffer << "There's no one called " << name << " in the game at the moment.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	else
 		player->Relay(recipient);
@@ -2029,13 +2029,13 @@ void 	CmdParser::Remove(Player *player)
 	Ship	*ship =  player->GetShip();
 	if(ship == 0)
 	{
-		player->Send("You don't have a ship from which to remove sensors or jammers!\n",OutputFilter::DEFAULT);
+		player->Send("You don't have a ship from which to remove sensors or jammers!\n");
 		return;
 	}
 
 	if(!player->CurrentMap()->IsARepairShop(player->LocNo()))
 	{
-		player->Send("You need to be in a repair shop to remove ship sensors or jammers!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be in a repair shop to remove ship sensors or jammers!\n");
 		return;
 	}
 
@@ -2052,7 +2052,7 @@ void 	CmdParser::Remove(Player *player)
 
 	if(removal == BuyParser::UNKNOWN)
 	{
-		player->Send("I don't know what it is you want to remove!\n",OutputFilter::DEFAULT);
+		player->Send("I don't know what it is you want to remove!\n");
 		return;
 	}
 
@@ -2086,7 +2086,7 @@ void	CmdParser::Repay(Player *player)
 {
 	int amount = std::atoi(tokens->Get(1).c_str());
 	if( amount <= 0)
-		player->Send(Game::system->GetMessage("cmdparser","repay",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","repay",1));
 	else
 		player->Repay(amount);
 }
@@ -2099,10 +2099,10 @@ void	CmdParser::Report(Player *player)
 	if(tokens->Get(1) == "events")
 	{
 		CommodityExchange::ReportEvents(player->Name());
-		player->Send(reports,OutputFilter::DEFAULT);
+		player->Send(reports);
 	}
 	else
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 }
 
 void	CmdParser::Reset(Player *player)
@@ -2115,21 +2115,21 @@ void	CmdParser::Reset(Player *player)
 		buffer << player->Name() << " is resetting the game";
 		WriteLog(buffer);
 		Game::player_index->Com(player,"I'm resetting the game, now!\n");
-		player->Send("OK - shutting down the game...\n",OutputFilter::DEFAULT);
+		player->Send("OK - shutting down the game...\n");
 		raise(SIGTERM);
 	}
 	else
-		player->Send("Sorry the request is in the wrong format\n",OutputFilter::DEFAULT);
+		player->Send("Sorry the request is in the wrong format\n");
     }
     else
-        player->Send("I'm sorry I don't understand you!\n",OutputFilter::DEFAULT);
+        player->Send("I'm sorry I don't understand you!\n");
 }
 
 void	CmdParser::Retrieve(Player *player,std::string& line)
 {
 	if(tokens->Size() < 2)
 	{
-		player->Send("You haven't said what you want to retrieve!\n",OutputFilter::DEFAULT);
+		player->Send("You haven't said what you want to retrieve!\n");
 		return;
 	}
 	std::string	obj_name(tokens->GetRestOfLine(line,1,Tokens::RAW));
@@ -2143,14 +2143,14 @@ void	CmdParser::Save(Player *player)
 	if(tokens->Get(1) == "map")
 		player->CurrentMap()->SaveMap(player);
 	else
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 }
 
 void	CmdParser::Say(Player *player,std::string& line)
 {
 	std::string	mssg(tokens->GetRestOfLine(line,1,Tokens::RAW));
 	if(mssg == "Index out of bounds!")
-		player->Send(Game::system->GetMessage("cmdparser","say",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","say",1));
 	else
 		player->Say(mssg);
 }
@@ -2159,24 +2159,24 @@ void	CmdParser::Send(Player *player,std::string& line)
 {
 	if(player->Rank() < Player::FOUNDER)
 	{
-		player->Send("Only planet owners in non-Sol cartels have a mail system!\n",OutputFilter::DEFAULT);
+		player->Send("Only planet owners in non-Sol cartels have a mail system!\n");
 		return;
 	}
 	if((tokens->Get(1) != "mail") || (tokens->Size() < 4))
 	{
-		player->Send("The command is SEND MAIL <WHO TO> <MESSAGE>\n",OutputFilter::DEFAULT);
+		player->Send("The command is SEND MAIL <WHO TO> <MESSAGE>\n");
 		return;
 	}
 
 	Cartel	*cartel = player->CurrentCartel();
 	if(cartel->Name() =="Sol")
 	{
-		player->Send("There is no mail facility in the Sol cartel, by Galactic Admin decree\n",OutputFilter::DEFAULT);
+		player->Send("There is no mail facility in the Sol cartel, by Galactic Admin decree\n");
 		return;
 	}
 	if(!player->IsPlanetOwner())
 	{
-		player->Send("You don't own this planet!\n",OutputFilter::DEFAULT);
+		player->Send("You don't own this planet!\n");
 		return;
 	}
 
@@ -2194,7 +2194,7 @@ void	CmdParser::ShipStatus(Player *player)
 		player->DisplayJob();
 	}
 	else
-		player->Send(Game::system->GetMessage("player","shipstatus",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("player","shipstatus",1));
 }
 
 
@@ -2214,19 +2214,19 @@ void	CmdParser::Sponsor(Player *player)
 
 	if(tokens->Size() < 2)
 	{
-		player->Send(no_noun,OutputFilter::DEFAULT);
+		player->Send(no_noun);
 		return;
 	}
 	if(!((tokens->Get(1) == "fed") || (tokens->Get(1) == "federation") || (tokens->Get(1) == "fed2")))
 	{
-		player->Send(wrong_noun,OutputFilter::DEFAULT);
+		player->Send(wrong_noun);
 		return;
 	}
 
 	int slithies = std::atoi(tokens->Get(2).c_str());
 	if(slithies <= 0)
 	{
-		player->Send(no_slithies,OutputFilter::DEFAULT);
+		player->Send(no_slithies);
 		return;
 	}
 
@@ -2259,7 +2259,7 @@ void	CmdParser::Spynet(Player *player)
 		return;
 	}
 
-	player->Send(Game::system->GetMessage("cmdparser","spynet",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","spynet",1));
 }
 
 void	CmdParser::SpynetFinancial(Player *player)
@@ -2270,14 +2270,14 @@ void	CmdParser::SpynetFinancial(Player *player)
 void	CmdParser::SpynetReport(Player *player)
 {
 	if(tokens->Size() < 3)
-		player->Send(Game::system->GetMessage("cmdparser","spynetreport",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","spynetreport",1));
 	else
 	{
 		std::string	name(tokens->Get(2));
 		Normalise(name);
 		Player	*target = Game::player_index->FindName(name);
 		if(target == 0)
-			player->Send(Game::system->GetMessage("cmdparser","spynetreport",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","spynetreport",2));
 		else
 			target->SpynetReport(player);
 	}
@@ -2297,19 +2297,19 @@ void	CmdParser::Start(Player *player)
 	{
 		int stake = std::atoi(tokens->Get(2).c_str());
 		if((stake < 1) || (stake > 10))
-			player->Send(the_stake,OutputFilter::DEFAULT);
+			player->Send(the_stake);
 		else
 			player->StartLouie(stake);
 	}
 	else
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 }
 
 void	CmdParser::Stash(Player *player,std::string& line,bool hidden)
 {
 	if(tokens->Size() < 2)
 	{
-		player->Send("You haven't said what you want to stash away!\n",OutputFilter::DEFAULT);
+		player->Send("You haven't said what you want to stash away!\n");
 		return;
 	}
 	std::string	obj_name(tokens->GetRestOfLine(line,1,Tokens::RAW));
@@ -2321,7 +2321,7 @@ void	CmdParser::StopCityProduction(Player *player,std::string& line)
 	Cartel	*cartel = player->OwnedCartel();
 	if(cartel == 0)
 	{
-		player->Send("You need to be a cartel owner to change city production!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be a cartel owner to change city production!\n");
 		return;
 	}
 
@@ -2330,7 +2330,7 @@ void	CmdParser::StopCityProduction(Player *player,std::string& line)
 	int index = static_cast<int>(u_index);
 	if(index < 3)
 	{
-		player->Send("The syntax is 'stop production city_name slot_number\n.",OutputFilter::DEFAULT);
+		player->Send("The syntax is 'stop production city_name slot_number\n.");
 		return;
 	}
 
@@ -2350,7 +2350,7 @@ void	CmdParser::Store(Player *player)
 	static const std::string	error("You haven't said which commodity to store.\n");
 
 	if(tokens->Size() < 2)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		const Commodity	*commodity = Game::commodities->Find(tokens->Get(1));
@@ -2358,7 +2358,7 @@ void	CmdParser::Store(Player *player)
 		{
 			std::ostringstream	buffer("");
 			buffer << "There isn't a commodity called " << tokens->Get(1) << ".\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 		else
 			player->Store(commodity);
@@ -2387,7 +2387,7 @@ void	CmdParser::Tell(Player *player,std::string& line)
 {
 	std::string	mssg(tokens->GetRestOfLine(line,2,Tokens::RAW));
 	if(mssg == "Index out of bounds!")
-		player->Send(Game::system->GetMessage("cmdparser","tell",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","tell",1));
 	else
 	{
 		FedObject	*object = player->CurrentMap()->FindObject(tokens->Get(1),player->LocNo());
@@ -2401,18 +2401,18 @@ void	CmdParser::Tell(Player *player,std::string& line)
 void	CmdParser::TermWidth(Player *player)
 {
 	if(tokens->Size() < 2)
-		player->Send(Game::system->GetMessage("cmdparser","termwidth",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","termwidth",1));
 	else
 	{
 		int length = std::atoi(tokens->Get(1).c_str());
 		player->TermWidth(length);
 		if(length < 40)
-			player->Send(Game::system->GetMessage("cmdparser","termwidth",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","termwidth",2));
 		else
 		{
 			std::ostringstream	buffer("");
 			buffer << "Line length set to " << length << ".\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 	}
 }
@@ -2427,14 +2427,14 @@ void	CmdParser::UnDivert(Player *player)
 {
 	if(player->Rank() < Player::PLUTOCRAT)
 	{
-		player->Send("You need to be a cartel owner to use this command!\n",OutputFilter::DEFAULT);
+		player->Send("You need to be a cartel owner to use this command!\n");
 		return;
 	}
 
 	Cartel	*cartel = player->OwnedCartel();
 	Star	*star = Game::galaxy->Find(cartel->Name());
 	star->UnDivert();
-	player->Send("No further diversions will be made to the graving dock.\n",OutputFilter::DEFAULT);
+	player->Send("No further diversions will be made to the graving dock.\n");
 }
 
 void	CmdParser::UnGag(Player *player)
@@ -2444,27 +2444,27 @@ void	CmdParser::UnGag(Player *player)
 
 	if(!player->IsManagement())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
 	}
 	if(tokens->Size() < 2)
-		player->Send(no_name,OutputFilter::DEFAULT);
+		player->Send(no_name);
 	else
 	{
 		std::string	name(tokens->Get(1));
 		Normalise(name);
 		Player	*target =  Game::player_index->FindName(name);
 		if(target == 0)
-			player->Send(no_find,OutputFilter::DEFAULT);
+			player->Send(no_find);
 		else
 		{
 			target->Gag(false);
 			std::ostringstream	buffer;
 			buffer << "Your ability to send comm messages has been restored by " << player->Name() << "\n";
-			target->Send(buffer,OutputFilter::DEFAULT);
+			target->Send(buffer);
 			buffer.str("");
 			buffer << target->Name() << "'s access to the comms channel has been restored.\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 			buffer << player->Name() << " has restored " << target->Name() << "'s access to the comms";
 			WriteLog(buffer);
@@ -2476,7 +2476,7 @@ void	CmdParser::UnGag(Player *player)
 void	CmdParser::UnIgnore(Player *player)
 {
 	if(tokens->Size() < 2)
-		player->Send(Game::system->GetMessage("cmdparser","unignore",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","unignore",1));
 	else
 		player->UnIgnore(tokens->Get(1));
 }
@@ -2485,19 +2485,19 @@ void	CmdParser::UnLock(Player *player)
 {
 	if(!player->IsManagement())
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
 	}
 
 	if(tokens->Size() < 2)
-		player->Send(Game::system->GetMessage("cmdparser","adminunlock",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","adminunlock",1));
 	else
 	{
 		std::string	player_name(tokens->Get(1));
 		Normalise(player_name);
 		Player	*target = Game::player_index->FindName(player_name);
 		if(target == 0)
-			player->Send(Game::system->GetMessage("cmdparser","adminunlock",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("cmdparser","adminunlock",2));
 		else
 		{
 			target->Unlock();
@@ -2506,7 +2506,7 @@ void	CmdParser::UnLock(Player *player)
 			WriteLog(buffer);
 			buffer.str("");
 			buffer << target->Name() << " has been unlocked.\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			Game::player_index->Save(target,PlayerIndex::NO_OBJECTS);
 		}
 	}
@@ -2528,7 +2528,7 @@ void	CmdParser::Update(Player *player,std::string& line)
 {
 	if(tokens->Size() < 3)
 	{
-		player->Send("Try 'update email <new address>' or 'update password <new password>'\n",OutputFilter::DEFAULT);
+		player->Send("Try 'update email <new address>' or 'update password <new password>'\n");
 		return;
 	}
 
@@ -2544,7 +2544,7 @@ void	CmdParser::Update(Player *player,std::string& line)
 		return;
 	}
 
-	player->Send(Game::system->GetMessage("cmdparser","update",2),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("cmdparser","update",2));
 }
 
 void	CmdParser::UpdateEMail(Player *player,std::string& line)
@@ -2567,7 +2567,7 @@ void	CmdParser::Upgrade(Player *player)
 	static const std::string	not_valid("I don't know what you want to upgrade.\n");
 
 	if(tokens->Size() == 1)
-		player->Send(no_noun,OutputFilter::DEFAULT);
+		player->Send(no_noun);
 	else
 	{
 		int index = INT_MAX;
@@ -2585,7 +2585,7 @@ void	CmdParser::Upgrade(Player *player)
 			case	1: UpgradeFactory(player);									break;
 			case	2: UpgradeStorage(player);									break;
 			case	3: player->UpgradeAirport();								break;
-			default:	player->Send(not_valid,OutputFilter::DEFAULT);	break;
+			default:	player->Send(not_valid);	break;
 		}
 	}
 }
@@ -2594,7 +2594,7 @@ void	CmdParser::UpgradeFactory(Player *player)
 {
 	static const std::string	no_number("You haven't said which factory you want to upgrade!\n");
 	if(tokens->Size() < 3)
-		player->Send(no_number,OutputFilter::DEFAULT);
+		player->Send(no_number);
 	else
 		player->UpgradeFactory(std::atoi(tokens->Get(2).c_str()));
 }
@@ -2603,7 +2603,7 @@ void	CmdParser::UpgradeStorage(Player *player)
 {
 	static const std::string	no_number("You haven't said which factory storage you want to upgrade!\n");
 	if(tokens->Size() < 3)
-		player->Send(no_number,OutputFilter::DEFAULT);
+		player->Send(no_number);
 	else
 		player->UpgradeStorage(std::atoi(tokens->Get(2).c_str()));
 }
@@ -2613,7 +2613,7 @@ void	CmdParser::Wear(Player *player,std::string& line)
 	static const std::string	error("You haven't said what you want to wear!\n");
 
 	if(tokens->Size() < 2)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	else
 	{
 		std::string	name(tokens->GetRestOfLine(line,1,Tokens::LOWER_CASE));
@@ -2626,7 +2626,7 @@ void	CmdParser::WhereIs(Player *player,std::string& line)
 {
 	std::string	planet(tokens->GetRestOfLine(line,1,Tokens::PLANET));
 	if(planet == "Index out of bounds!")
-		player->Send("You haven't said which planet you want to find!\n",OutputFilter::DEFAULT);
+		player->Send("You haven't said which planet you want to find!\n");
 	else
 		Game::galaxy->WhereIs(player,planet);
 }
@@ -2661,28 +2661,28 @@ void	CmdParser::WhoElse(Player *player)
 
 	if(!player->IsStaff())
 	{
-		player->Send("I'm sorry, I don't understand.\n",OutputFilter::DEFAULT);
+		player->Send("I'm sorry, I don't understand.\n");
 		return;
 	}
 
 	if(tokens->Size() < 2)
-		player->Send(error1,OutputFilter::DEFAULT);
+		player->Send(error1);
 	else
 	{
 		std::string	name(tokens->Get(1));
 		Normalise(name);
 		Player	*target = Game::player_index->FindName(name);
 		if(target == 0)
-			player->Send(error2,OutputFilter::DEFAULT);
+			player->Send(error2);
 		else
 		{
 			std::string	ip(target->IPAddress());
 			std::ostringstream	buffer;
 			buffer << name << " has the following characters in the game at the moment:\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 			if(Game::player_index->FindAlts(player,ip) == 0)
-				player->Send("  None!\n",OutputFilter::DEFAULT);
+				player->Send("  None!\n");
 		}
 	}
 }
@@ -2706,14 +2706,14 @@ void	CmdParser::WhoIs(Player *player,std::string& line)
 			else
 			{
 				if(tokens->Size() < 2)
-					player->Send(Game::system->GetMessage("cmdparser","whois",1),OutputFilter::DEFAULT);
+					player->Send(Game::system->GetMessage("cmdparser","whois",1));
 				else
 					Game::player_index->WhoIs(player,tokens->Get(1));
 			}
 		}
 	}
 	else
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 }
 
 void	CmdParser::WriteHelpFailures()
@@ -2725,14 +2725,14 @@ void	CmdParser::Xfer(Player *player,std::string& line)
 {
 	if(tokens->Size() < 2)
 	{
-		player->Send("I don't know what you want to transfer!\n",OutputFilter::DEFAULT);
+		player->Send("I don't know what you want to transfer!\n");
 		return;
 	}
 
 	int	amount = std::atoi(tokens->Get(1).c_str());
 	if((amount > 100) || (amount < 1))
 	{
-		player->Send("The amount to transfer must be between 1 and 100, inclusive.\n",OutputFilter::DEFAULT);
+		player->Send("The amount to transfer must be between 1 and 100, inclusive.\n");
 		return;
 	}
 
@@ -2745,7 +2745,7 @@ void	CmdParser::Xfer(Player *player,std::string& line)
 			Cartel	*cartel = player->OwnedCartel();
 			if(cartel == 0)
 			{
-				player->Send("You don't control a cartel!\n",OutputFilter::DEFAULT);
+				player->Send("You don't control a cartel!\n");
 				return;
 			}
 			else
@@ -2765,7 +2765,7 @@ void	CmdParser::Xt(Player *player,std::string& line)
 	if(mssg != "Index out of bounds!")
 		player->Xt(mssg);
 	else
-		player->Send(Game::system->GetMessage("cmdparser","xxt",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","xxt",1));
 }
 
 void	CmdParser::Zap(Player *player)
@@ -2774,12 +2774,12 @@ void	CmdParser::Zap(Player *player)
 
 	if(!player->ManFlag(Player::MANAGER))
 	{
-		player->Send(Game::system->GetMessage("cmdparser","parse",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","parse",1));
 		return;
 	}
 
 	if(tokens->Size() < 2)
-		player->Send(Game::system->GetMessage("cmdparser","zap",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("cmdparser","zap",1));
 	else
 	{
 		std::string	name(tokens->Get(1));
@@ -2787,7 +2787,7 @@ void	CmdParser::Zap(Player *player)
 		Player	*who = Game::player_index->FindCurrent(name);
 		if(who != 0)
 		{
-			player->Send(in_game,OutputFilter::DEFAULT);
+			player->Send(in_game);
 			return;
 		}
 		who = Game::player_index->FindName(name);
@@ -2795,7 +2795,7 @@ void	CmdParser::Zap(Player *player)
 		{
 			std::ostringstream	buffer;
 			buffer << "I can't find " << tokens->Get(1) << "\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 		else
 			Game::player_index->Zap(who,player);

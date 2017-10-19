@@ -36,7 +36,7 @@ After all, it's important that people know their government is watching over the
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -45,7 +45,7 @@ After all, it's important that people know their government is watching over the
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -66,14 +66,14 @@ that you are reaching the point of diminishing returns for the use of this techn
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::TECHNICAL) || (economy > Infrastructure::BIOLOGICAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(++total_builds <= 10)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(too_many,OutputFilter::DEFAULT);
+		player->Send(too_many);
 	return(true);
 }
 
@@ -82,7 +82,7 @@ void	Surveillance::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " center";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Surveillance::UpdateDisaffection(Disaffection *disaffection)

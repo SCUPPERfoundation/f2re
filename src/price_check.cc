@@ -23,10 +23,10 @@ void	PriceCheck::Process(Player *player,Tokens	*tokens,std::string& line)
 {
 	static const std::string	too_low("You need to be at least a merchant to use the exchange!\n");
 
-	if(player->Rank() < Player::MERCHANT)	{ player->Send(too_low,OutputFilter::DEFAULT);	return;	}
+	if(player->Rank() < Player::MERCHANT)	{ player->Send(too_low);	return;	}
 	if(tokens->Size() < 3)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","checkprice",1),OutputFilter::DEFAULT);	return;
+		player->Send(Game::system->GetMessage("cmdparser","checkprice",1));	return;
 	}
 
 	if(tokens->Size() > 3)
@@ -37,7 +37,7 @@ void	PriceCheck::Process(Player *player,Tokens	*tokens,std::string& line)
 	const Commodity	*commodity = Game::commodities->Find(tokens->Get(2));
 	if(commodity == 0)
 	{
-		player->Send(Game::system->GetMessage("cmdparser","checkprice",2),OutputFilter::DEFAULT);	return;
+		player->Send(Game::system->GetMessage("cmdparser","checkprice",2));	return;
 	}
 
 	if(player->CurrentMap()->IsAnExchange(player->LocNo()))
@@ -55,24 +55,24 @@ void	PriceCheck::ProcessPremium(Player *player,Tokens *tokens)
 
 	if(!player->InvFlagIsSet(Inventory::PRICE_CHECK_PREMIUM))
 	{
-		player->Send(no_premium,OutputFilter::DEFAULT);
+		player->Send(no_premium);
 		return;
 	}
 	if(!player->HasRemoteAccessCert())
 	{
-		player->Send(no_basic,OutputFilter::DEFAULT);
+		player->Send(no_basic);
 		return;
 	}
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 		return;
 	}
 
 	const Commodity *commodity = Game::commodities->Find(tokens->Get(2));
 	if(commodity == 0)
 	{
-		player->Send(not_commod,OutputFilter::DEFAULT);
+		player->Send(not_commod);
 		return;
 	}
 
@@ -98,7 +98,7 @@ void	PriceCheck::RemotePriceCheck(Player *player,const Commodity *commodity)
 	if(player->HasExtendedPriceCheck())
 		player->CurrentMap()->HomeStarPtr()->RemotePriceCheck(player,commodity);
 	else
-		player->Send(not_exch,OutputFilter::DEFAULT);
+		player->Send(not_exch);
 }
 
 

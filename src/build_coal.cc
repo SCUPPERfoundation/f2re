@@ -36,7 +36,7 @@ Coal::Coal(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -45,7 +45,7 @@ Coal::Coal(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -64,15 +64,15 @@ bool	Coal::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	std::ostringstream	buffer;
 	if(total_builds < 5)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(maxed_out,OutputFilter::DEFAULT);
+		player->Send(maxed_out);
 
 	total_builds++;
 	return(true);
@@ -83,7 +83,7 @@ void	Coal::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " mine";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Coal::IsObselete()

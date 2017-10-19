@@ -62,7 +62,7 @@ School::School(FedMap *the_map,Player *player,Tokens *tokens)
 	agri_builds = mining_builds = tech_builds = research_builds = biolab_builds = metastudio_builds = 0;
 	total_builds = 1;
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -88,7 +88,7 @@ bool	School::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -144,7 +144,7 @@ void	School::Display(Player *player)
 	if(biolab_builds > 0)		buffer << "      BioLab feeders: " << biolab_builds << "\n";
 	if(metastudio_builds > 0)	buffer << "      MetaStudio feeders: " << metastudio_builds << "\n";
 	if(unused_builds > 0)		buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	School::LevelUpdate()
@@ -213,7 +213,7 @@ bool	School::RequestResources(Player *player,const std::string& recipient,int qu
 	if(recipient == "Metastudio")		status_ok = MetaStudioSchoolsAllocated();
 
 	if(!status_ok)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 
 	return(status_ok);
 }

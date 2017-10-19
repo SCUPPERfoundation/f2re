@@ -40,7 +40,7 @@ Pension::Pension(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -49,7 +49,7 @@ Pension::Pension(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -63,7 +63,7 @@ Pension::~Pension()
 bool	Pension::Add(Player *player,Tokens *tokens)
 {
 	total_builds++;
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -74,7 +74,7 @@ void	Pension::Display(Player *player)
 		buffer << "    Pensions: " << total_builds << " levels\n";
 	else
 		buffer << "    Pensions: 1 level\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Pension::UpdateDisaffection(Disaffection *discontent)

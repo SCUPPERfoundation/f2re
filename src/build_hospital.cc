@@ -45,7 +45,7 @@ Hospital::Hospital(FedMap *the_map,Player *player,Tokens *tokens)
 		total_builds = 1;
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 	else
@@ -65,7 +65,7 @@ bool	Hospital::Add(Player *player,Tokens *tokens)
 		{
 			fed_map->AddTotalLabour(10);
 			fed_map->AddLabour(10);
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			return(true);
 		}
 		else
@@ -75,7 +75,7 @@ bool	Hospital::Add(Player *player,Tokens *tokens)
 			buffer << "from the foundations. Unfortunately, once it opens it becomes ";
 			buffer << "clear that you have hit the law of diminishing returns when it ";
 			buffer << "comes to hospital building on " << fed_map->Title() << "\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			return(true);
 		}
 	}
@@ -94,7 +94,7 @@ void	Hospital::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Hospitals: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Hospital::RequestResources(Player *player,const std::string& recipient,int quantity)

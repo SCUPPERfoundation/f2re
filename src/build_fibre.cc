@@ -37,7 +37,7 @@ of an anti-climax, because there isn't really anything to see yet...\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -46,7 +46,7 @@ of an anti-climax, because there isn't really anything to see yet...\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -70,19 +70,19 @@ effect on your planet's production.\n");
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(++total_builds <= 40)
 	{
 		if((total_builds % 4) == 0)
-			player->Send(ok_fourth,OutputFilter::DEFAULT);
+			player->Send(ok_fourth);
 		else
-			player->Send(ok_other,OutputFilter::DEFAULT);
+			player->Send(ok_other);
 	}
 	else
-		player->Send(maxed_out,OutputFilter::DEFAULT);
+		player->Send(maxed_out);
 
 	return(true);
 }
@@ -91,7 +91,7 @@ void	FibreOptics::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Fibre-optic runs: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	FibreOptics::UpdateEfficiency(Efficiency *efficiency)

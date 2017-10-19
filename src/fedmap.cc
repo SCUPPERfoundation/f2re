@@ -149,7 +149,7 @@ bool	FedMap::AddConsumptionPoint(Player *player,const std::string& commodity_nam
 	static const std::string	no_exch("There isn't an exchange on this planet!\n");
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return(false);
 	}
 	return(commodity_exchange->AddConsumptionPoint(player,commodity_name,quantity));
@@ -229,7 +229,7 @@ bool	FedMap::AddProduction(Player *player,const std::string& commodity_name,int 
 		else
 		{
 			buffer << "\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 		return false;
 	}
@@ -249,7 +249,7 @@ bool	FedMap::AddProductionPoint(Player *player,const std::string& commodity_name
 		else
 		{
 			buffer << "\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 		return false;
 	}
@@ -474,7 +474,7 @@ void	FedMap::BoardShuttle(Player *player)
 {
 	if(!player->HasAShip())
 	{
-		player->Send(Game::system->GetMessage("fedmap","boardshuttle",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("fedmap","boardshuttle",1));
 		return;
 	}
 
@@ -514,12 +514,12 @@ void	FedMap::BuyFutures(Player *player,const std::string& commodity)
 
 	if(player->LocNo() != comm_exch_loc)
 	{
-		player->Send(not_exch,OutputFilter::DEFAULT);
+		player->Send(not_exch);
 		return;
 	}
 	if(futures_exchange == 0)
 	{
-		player->Send(no_futures,OutputFilter::DEFAULT);
+		player->Send(no_futures);
 		return;
 	}
 
@@ -602,12 +602,12 @@ void	FedMap::ChangeLocDesc(Player *player,const std::string& new_desc)
 everything on a hot day, and the location is transformed.\n");
 
 	if((player->Name() != infra->Owner()) && !player->IsManager())
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 	else
 	{
 		if(!home_star->CanBuild() && !player->IsManager())
 		{
-			player->Send(no_build,OutputFilter::DEFAULT);
+			player->Send(no_build);
 			return;
 		}
 		std::string	text;
@@ -622,7 +622,7 @@ everything on a hot day, and the location is transformed.\n");
 		{
 			if((*iter)->LocNo() == loc_no)
 			{
-				(*iter)->Send(ok,OutputFilter::DEFAULT);
+				(*iter)->Send(ok);
 				Look(*iter,loc_no,Location::FULL_DESC);
 			}
 		}
@@ -637,12 +637,12 @@ void	FedMap::ChangeLocName(Player *player,const std::string& new_name)
 everything on a hot day, and the location has a new name.\n");
 
 	if((player->Name() != infra->Owner()) && !player->IsManager())
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 	else
 	{
 		if(!home_star->CanBuild() && !player->IsManager())
 		{
-			player->Send(no_build,OutputFilter::DEFAULT);
+			player->Send(no_build);
 			return;
 		}
 
@@ -652,7 +652,7 @@ everything on a hot day, and the location has a new name.\n");
 		{
 			if((*iter)->LocNo() == loc_no)
 			{
-				(*iter)->Send(ok,OutputFilter::DEFAULT);
+				(*iter)->Send(ok);
 				Look(*iter,loc_no,Location::FULL_DESC);
 			}
 		}
@@ -731,7 +731,7 @@ void	FedMap::CheckGroupPrices(Player *player,int commod_grp)
 	if(commodity_exchange != 0)
 		commodity_exchange->CheckGroupPrices(player,commod_grp);
 	else
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 }
 
 void	FedMap::CheckRemoteCommodityPrices(Player *player,const std::string& commodity)
@@ -754,16 +754,16 @@ feedback@ibgames.com\n");
 
 	if(player->Rank() == Player::PLUTOCRAT)
 	{
-		player->Send("Hub systems cannot be closed to traffic, becuase that would close the entire cartel to traffic!\n",OutputFilter::DEFAULT);
+		player->Send("Hub systems cannot be closed to traffic, becuase that would close the entire cartel to traffic!\n");
 		return;
 	}
 
 	if(!FindLoc(player->LocNo())->FlagIsSet(Location::SPACE))
-		player->Send(info,OutputFilter::DEFAULT);
+		player->Send(info);
 	else
 	{
 		if(infra == 0)
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 		else
 			infra->Close(player);
 	}
@@ -832,7 +832,7 @@ void	FedMap::Demolish(Player *player,const std::string&  building)
 {
 	static const std::string	not_your_planet("This planet doesn't belong to you!\n");
 	if(!IsOwner(player))
-		player->Send(not_your_planet,OutputFilter::DEFAULT);
+		player->Send(not_your_planet);
 	else
 		infra->Demolish(player,building);
 }
@@ -871,9 +871,9 @@ void	FedMap::Display(Player *player,int loc_no)
 	LocIndex::iterator	iter = loc_index.find(loc_no);
 	if(iter != loc_index.end())
 	{
-		player->Send(lines,OutputFilter::DEFAULT);
+		player->Send(lines);
 		iter->second->Description(player,Location::FULL_DESC);
-		player->Send(lines,OutputFilter::DEFAULT);
+		player->Send(lines);
 	}
 }
 
@@ -901,13 +901,13 @@ void	FedMap::DisplayExchange(Player *player,const std::string& commod_grp)
 
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return;
 	}
 
 	if(!((player->Name() == infra->Owner()) || player->IsManager()))
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 
@@ -921,7 +921,7 @@ void	FedMap::DisplayFleet(Player *player)
 	{
 		std::ostringstream	buffer;
 		buffer << "  " << home_star->Name() << " - "<< title << " - "  << fleet_size << " ships\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 }
 
@@ -935,12 +935,12 @@ void	FedMap::DisplayFutures(Player *player)
 		if(futures_exchange == 0)
 		{
 			buffer << title << " doesn't trade in futures.\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 		else
 		{
 			futures_exchange->Display(buffer);
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 	}
 }
@@ -984,7 +984,7 @@ void	FedMap::DisplayObjects(Player *player,int loc_no)
 		}
 		buffer << "." << std::endl;
 		std::string	text(buffer.str());
-		player->Send(text,OutputFilter::DEFAULT);	// We only want to send one copy of this...
+		player->Send(text);	// We only want to send one copy of this...
 
 		AttribList attribs;
 		for(iter = inventory.begin();iter != inventory.end();iter++)
@@ -1014,13 +1014,13 @@ void	FedMap::DisplayProduction(Player *player,const std::string& commod_grp)
 
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return;
 	}
 
 	if(!((player->Name() == infra->Owner()) || player->IsManager()))
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 
@@ -1075,7 +1075,7 @@ bool	FedMap::Examine(Player *player,const std::string& obj_name)
 	if(object == 0)
 		return(false);
 	else
-		player->Send(object->Desc(),OutputFilter::DEFAULT);
+		player->Send(object->Desc());
 	return(true);
 }
 
@@ -1200,10 +1200,10 @@ systems to reach the safety of the interstellar link!\n");
 	LocRec	*link = FindLink();
 	if(link == 0)
 	{
-		player->Send("Cannot find a link location to flee to! Please contact feedback@ibgames.com\n",OutputFilter::DEFAULT);
+		player->Send("Cannot find a link location to flee to! Please contact feedback@ibgames.com\n");
 		return(0);
 	}
-	player->Send(override,OutputFilter::DEFAULT);
+	player->Send(override);
 	AnnounceFleeDeparture(player);
 	player->NewLocNum(link->loc_no);
 	AnnounceFleeArrival(player);
@@ -1231,7 +1231,7 @@ bool	FedMap::GengineerPromoAllowed(Player *player)
 		return(true);
 	else
 	{
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 		return(false);
 	}
 }
@@ -1281,7 +1281,7 @@ void	FedMap::Glance(Player *player)
 		}
 	}
 	if(!are_others)
-		player->Send(no_others,OutputFilter::DEFAULT);
+		player->Send(no_others);
 }
 
 bool	FedMap::HasAirportUpgrade()
@@ -1306,13 +1306,13 @@ bool	FedMap::IncBuild(Player *player,int build_type,Tokens *tokens)
 
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return(false);
 	}
 
 	if(IsOwner(player))
 		return(infra->IncBuild(player,build_type,tokens));
-	player->Send(error,OutputFilter::DEFAULT);
+	player->Send(error);
 	return(false);
 }
 
@@ -1427,7 +1427,7 @@ bool	FedMap::IsOpen(Player *player)
 	if(infra != 0)
 		return(infra->IsOpen(player));
 	if(player != 0)
-		player->Send(error,OutputFilter::DEFAULT);
+		player->Send(error);
 	return(false);
 }
 
@@ -1449,7 +1449,7 @@ void	FedMap::LandShuttle(Player *player)
 	LocRec	new_loc;
 	if(!FindLandingPad(player,new_loc))
 	{
-		player->Send(Game::system->GetMessage("fedmap","landshuttle",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("fedmap","landshuttle",1));
 		return;
 	}
 
@@ -1458,8 +1458,8 @@ void	FedMap::LandShuttle(Player *player)
 	player->ToggleSpace();
 	if(player->CommsAPILevel() > 0)
 		XMLNewMap(player);
-	player->Send(Game::system->GetMessage("fedmap","landshuttle",3),OutputFilter::DEFAULT);
-	player->Send(Game::system->GetMessage("fedmap","landshuttle",4),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("fedmap","landshuttle",3));
+	player->Send(Game::system->GetMessage("fedmap","landshuttle",4));
 	new_loc.fed_map->AddPlayer(player);
 	if(player->CommsAPILevel() > 0)
 	{
@@ -1475,30 +1475,30 @@ void	FedMap::LandShuttle(Player *player)
 void	FedMap::LaunchShuttle(Player *player)
 {
 	if(player->LocNo() != landing_pad)
-		player->Send(Game::system->GetMessage("fedmap","launchshuttle",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("fedmap","launchshuttle",1));
 	else
 	{
 		if(orbit_loc.length() == 0)
 		{
-			player->Send(Game::system->GetMessage("fedmap","launchshuttle",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("fedmap","launchshuttle",2));
 			return;
 		}
 		LocRec	new_loc;
 		SplitMapAddress(&new_loc,orbit_loc);
 		if(new_loc.loc_no == -1)
 		{
-			player->Send(Game::system->GetMessage("fedmap","launchshuttle",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("fedmap","launchshuttle",2));
 			return;
 		}
 		new_loc.fed_map = Game::galaxy->Find(new_loc.star_name,new_loc.map_name);
 		if(new_loc.fed_map == 0)
 		{
-			player->Send(Game::system->GetMessage("fedmap","launchshuttle",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("fedmap","launchshuttle",2));
 			return;
 		}
 		if(!new_loc.fed_map->IsALoc(new_loc.loc_no))
 		{
-			player->Send(Game::system->GetMessage("fedmap","launchhuttle",2),OutputFilter::DEFAULT);
+			player->Send(Game::system->GetMessage("fedmap","launchhuttle",2));
 			return;
 		}
 
@@ -1507,8 +1507,8 @@ void	FedMap::LaunchShuttle(Player *player)
 		player->ToggleSpace();
 		if(player->CommsAPILevel() > 0)
 			XMLNewMap(player);
-		player->Send(Game::system->GetMessage("fedmap","launchshuttle",3),OutputFilter::DEFAULT);
-		player->Send(Game::system->GetMessage("fedmap","launchshuttle",4),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("fedmap","launchshuttle",3));
+		player->Send(Game::system->GetMessage("fedmap","launchshuttle",4));
 		new_loc.fed_map->AddPlayer(player);
 		if(player->CommsAPILevel() > 0)
 		{
@@ -1534,12 +1534,12 @@ void	FedMap::LiquidateFutures(Player *player,const std::string& commodity)
 
 	if(player->LocNo() != comm_exch_loc)
 	{
-		player->Send(not_exch,OutputFilter::DEFAULT);
+		player->Send(not_exch);
 		return;
 	}
 	if(futures_exchange == 0)
 	{
-		player->Send(no_futures,OutputFilter::DEFAULT);
+		player->Send(no_futures);
 		return;
 	}
 	futures_exchange->LiquidateContract(player,commodity);
@@ -1711,13 +1711,13 @@ void	FedMap::MaxStock(Player *player,int level,const std::string commod_name)
 
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return;
 	}
 
 	if(!((player->Name() == infra->Owner()) || player->IsManager()))
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 
@@ -1736,7 +1736,7 @@ void	FedMap::MaxStock(Player *player,int level,const std::string commod_name)
 		else
 			buffer << "Max stock level for " << commodity_name << " set to " << level << ".\n";
 	}
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	FedMap::MinStock(Player *player,int level,const std::string commod_name)
@@ -1746,13 +1746,13 @@ void	FedMap::MinStock(Player *player,int level,const std::string commod_name)
 
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return;
 	}
 
 	if(!((player->Name() == infra->Owner()) || player->IsManager()))
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 
@@ -1771,7 +1771,7 @@ void	FedMap::MinStock(Player *player,int level,const std::string commod_name)
 		else
 			buffer << "Min stock level for " << commodity_name << " set to " << level << ".\n";
 	}
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 LocRec	*FedMap::Move(Player *player,int dir)
@@ -1783,7 +1783,7 @@ LocRec	*FedMap::Move(Player *player,int dir)
 		buffer << "Can't find the location your character is in. [" << name << "." << player->LocNo();
 		;
 		buffer << "] Please report problem to 'feedback@ibgames.com', Thank you.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(0);
 	}
 
@@ -1798,7 +1798,7 @@ LocRec	*FedMap::Move(Player *player,int dir)
 			std::ostringstream	buffer("");
 			buffer << "Can't find the location to move to. [Now in " << name << "." << player->LocNo();
 			buffer << "] Please report problem to 'feedback@ibgames.com', Thank you.\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			return(0);
 		}
 		if(ProcessEvent(player,rec->loc_no,Location::ENTER) < 0)
@@ -1843,11 +1843,11 @@ feedback@ibgames.com\n");
 	static const std::string	info("The command 'open link' must be issued from a space location.\n");
 
 	if(!FindLoc(player->LocNo())->FlagIsSet(Location::SPACE))
-		player->Send(info,OutputFilter::DEFAULT);
+		player->Send(info);
 	else
 	{
 		if(infra == 0)
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 		else
 			infra->Open(player);
 	}
@@ -1958,7 +1958,7 @@ void	FedMap::Promote(Player *player)
 	if(file_name.find("/space") != std::string::npos)
 	{
 		if(player != 0)
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 	}
 	else
 		infra->Promote(player);
@@ -1976,7 +1976,7 @@ void	FedMap::Promote2Leisure(Player *player)
 	if(file_name.find("/space") != std::string::npos)
 	{
 		if(player != 0)
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 	}
 	else
 		infra->Promote2Leisure(player);
@@ -2105,13 +2105,13 @@ feedback@ibgames.net - Thank you.\n");
 	static const std::string	ok("Map saved out to disk.\n");
 
 	if((player->Name() != infra->Owner()) && !player->IsManager())
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 	else
 	{
 		if(Write())
-			player->Send(ok,OutputFilter::DEFAULT);
+			player->Send(ok);
 		else
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 	}
 }
 
@@ -2181,13 +2181,13 @@ void	FedMap::SetSpread(Player *player,int amount,const std::string commod_name)
 
 	if(commodity_exchange == 0)
 	{
-		player->Send(no_exch,OutputFilter::DEFAULT);
+		player->Send(no_exch);
 		return;
 	}
 
 	if(!((player->Name() == infra->Owner()) || player->IsManager()))
 	{
-		player->Send(not_owner,OutputFilter::DEFAULT);
+		player->Send(not_owner);
 		return;
 	}
 
@@ -2206,7 +2206,7 @@ void	FedMap::SetSpread(Player *player,int amount,const std::string commod_name)
 		else
 			buffer << "Price spread for " << commodity_name << " set to " << amount << "%.\n";
 	}
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	FedMap::SetTreasury(long amount)
@@ -2338,7 +2338,7 @@ void	FedMap::Version(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "Map version number is: " << version << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	FedMap::Who(Player *player)
@@ -2370,7 +2370,7 @@ void	FedMap::Who(Player *player)
 			buffer << std::endl;
 		}
 	}
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	FedMap::Write()
@@ -2409,7 +2409,7 @@ void	FedMap::XferFunds(Player *player,int amount,const std::string& to)
 {
 	static const std::string	not_your_planet("This planet doesn't belong to you!\n");
 	if(!IsOwner(player))
-		player->Send(not_your_planet,OutputFilter::DEFAULT);
+		player->Send(not_your_planet);
 	else
 		infra->XferFunds(player,amount,to);
 }

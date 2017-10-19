@@ -37,7 +37,7 @@ ribbon and with a loud hissing of venting steam the first train moves forward on
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -46,7 +46,7 @@ ribbon and with a loud hissing of venting steam the first train moves forward on
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -65,14 +65,14 @@ bool	Railway::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(total_builds < 5)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(maxed_out,OutputFilter::DEFAULT);
+		player->Send(maxed_out);
 
 	total_builds++;
 	return(true);
@@ -83,7 +83,7 @@ void	Railway::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " railway";
 	buffer << ((total_builds > 1) ? "s" : "") << " laid\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Railway::IsObselete()
@@ -101,7 +101,7 @@ bool	Railway::RequestResources(Player *player,const std::string& recipient,int q
 	{
 		if(total_builds < 2)
 		{
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 			return(false);
 		}
 		else

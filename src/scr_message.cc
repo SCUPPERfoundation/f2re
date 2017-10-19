@@ -45,15 +45,15 @@ void	Message::ComMessage(Player *player,const std::string& mssg)
 
 	switch(who)
 	{
-		case	INDIVIDUAL:	player->Send(mssg,OutputFilter::DEFAULT);						break;
-		case	PARTY:		player->Send(mssg,OutputFilter::DEFAULT);						break;
-		case	PARTY_EX:	player->Send(mssg,OutputFilter::DEFAULT);						break;
+		case	INDIVIDUAL:	player->Send(mssg);						break;
+		case	PARTY:		player->Send(mssg);						break;
+		case	PARTY_EX:	player->Send(mssg);						break;
 
 		case	ROOM:
 			if(pl_list.empty())
 				break;
 			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
-				(*iter)->Send(mssg,OutputFilter::DEFAULT);
+				(*iter)->Send(mssg);
 			break;
 
 		case	ROOM_EX:
@@ -62,7 +62,7 @@ void	Message::ComMessage(Player *player,const std::string& mssg)
 			for(PlayerList::iterator iter = pl_list.begin();iter != pl_list.end();++iter)
 			{
 				if((*iter) != player)
-					(*iter)->Send(mssg,OutputFilter::DEFAULT);
+					(*iter)->Send(mssg);
 			}
 			break;
 	}

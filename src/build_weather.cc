@@ -41,7 +41,7 @@ technological levels and above!\n");
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -50,7 +50,7 @@ technological levels and above!\n");
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -74,14 +74,14 @@ technological levels and above!\n");
 	int	economy = fed_map->Economy();
  	if(economy < Infrastructure::TECHNICAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(++total_builds <= 5)
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	else
-		player->Send(over,OutputFilter::DEFAULT);
+		player->Send(over);
 	return(true);
 }
 
@@ -89,7 +89,7 @@ void	Weather::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Weather Stations: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Weather::RequestResources(Player *player,const std::string& recipient,int quantity)

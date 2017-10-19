@@ -50,7 +50,7 @@ void	Parcels::Display(Player *player,int index)
 	std::ostringstream	buffer("");
 	buffer << "You examine the " << package_index[index]->name << " entrusted to your care.\n"; 
 	buffer << package_index[index]->desc << std::endl;
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 

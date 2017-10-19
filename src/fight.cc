@@ -132,24 +132,24 @@ void Fight::CloseRange(Player *player)
 	switch(spacing)
 	{
 		case LASER_DIST:
-			player->Send("You are already in laser range!\n",OutputFilter::DEFAULT);
+			player->Send("You are already in laser range!\n");
 			return;
 
 		case INTERMED_DIST_1:
-			attacker->Send("You move into laser range.\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved into laser range!\n",OutputFilter::DEFAULT);
+			attacker->Send("You move into laser range.\n");
+			defender->Send("Your opponent has moved into laser range!\n");
 			spacing = LASER_DIST;
 			return;
 
 		case INTERMED_DIST_2:
-			attacker->Send("You move closer to your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved closer!\n",OutputFilter::DEFAULT);
+			attacker->Send("You move closer to your opponent...\n");
+			defender->Send("Your opponent has moved closer!\n");
 			spacing = INTERMED_DIST_1;
 			return;
 
 		case MISSILE_DIST:
-			attacker->Send("You start to move closer to your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has started to move closer!\n",OutputFilter::DEFAULT);
+			attacker->Send("You start to move closer to your opponent...\n");
+			defender->Send("Your opponent has started to move closer!\n");
 			spacing = INTERMED_DIST_2;
 			return;
 	}
@@ -175,25 +175,25 @@ void Fight::OpenRange(Player *player)
 	switch(spacing)
 	{
 		case LASER_DIST:
-			attacker->Send("You start to move away from your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has started to move away!\n",OutputFilter::DEFAULT);
+			attacker->Send("You start to move away from your opponent...\n");
+			defender->Send("Your opponent has started to move away!\n");
 			spacing = INTERMED_DIST_1;
 			return;
 
 		case INTERMED_DIST_1:
-			attacker->Send("You move further away from your opponent...\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved further away!\n",OutputFilter::DEFAULT);
+			attacker->Send("You move further away from your opponent...\n");
+			defender->Send("Your opponent has moved further away!\n");
 			spacing = INTERMED_DIST_2;
 			return;
 
 		case INTERMED_DIST_2:
-			attacker->Send("You move into missile range.\n",OutputFilter::DEFAULT);
-			defender->Send("Your opponent has moved into missile range!\n",OutputFilter::DEFAULT);
+			attacker->Send("You move into missile range.\n");
+			defender->Send("Your opponent has moved into missile range!\n");
 			spacing = MISSILE_DIST;
 			return;
 
 		case MISSILE_DIST:
-			player->Send("You are already at missile range!\n",OutputFilter::DEFAULT);
+			player->Send("You are already at missile range!\n");
 			return;
 	}
 }
@@ -227,7 +227,7 @@ void	Fight::ScaleLaserDamage(int efficiency)
 // NOTE: Launch() uses integer arithmetic. DO NOT mess with the brackets
 bool Fight::Launch(Player *att)
 {
-	att->Send("Launching missile...\n",OutputFilter::DEFAULT);
+	att->Send("Launching missile...\n");
 
 	// Figure out who is the attacker and who is the defender for this round
 	Player	*attacker = att;
@@ -239,7 +239,7 @@ bool Fight::Launch(Player *att)
 		telemetry =  aggressor_telemetry;
 		if(Game::player_index->FindCurrent(victim_name) == 0)
 		{
-			attacker->Send("Your opponent is no longer in the game!\n",OutputFilter::DEFAULT);
+			attacker->Send("Your opponent is no longer in the game!\n");
 			return false;
 		}
 	}
@@ -249,14 +249,14 @@ bool Fight::Launch(Player *att)
 		telemetry =  victim_telemetry;
 		if(Game::player_index->FindCurrent(aggressor_name) == 0)
 		{
-			attacker->Send("Your opponent is no longer in the game!\n",OutputFilter::DEFAULT);
+			attacker->Send("Your opponent is no longer in the game!\n");
 			return false;
 		}
 	}
 
 	if(spacing < INTERMED_DIST_2)	// Are we too close to launch missiles safely?
 	{
-		attacker->Send("You are too close to use missiles!\n",OutputFilter::DEFAULT);
+		attacker->Send("You are too close to use missiles!\n");
 		return false;
 	}
 
@@ -266,7 +266,7 @@ bool Fight::Launch(Player *att)
 	ClearFightInfoIn(defender_in);
 	defender->GetFightInfoIn(defender_in);
 
-	defender->Send("Incoming missile detected!\n",OutputFilter::DEFAULT);
+	defender->Send("Incoming missile detected!\n");
 	int	to_hit = (MISSILE_BASE_HIT * attacker_in.missile_rack)/100;
 	to_hit += (attacker_in.sensors - defender_in.jammers) * 3;
 	to_hit += telemetry;
@@ -279,15 +279,15 @@ bool Fight::Launch(Player *att)
 		{
 			if((std::rand() % 100 + 1) <= (DEFENCE_LASER_HIT * defender_in.lasers)/100)
 			{
-				attacker->Send("Missile destroyed by defence laser!\n",OutputFilter::DEFAULT);
-				defender->Send("Incoming missile destroyed!\n",OutputFilter::DEFAULT);
+				attacker->Send("Missile destroyed by defence laser!\n");
+				defender->Send("Incoming missile destroyed!\n");
 				return true;
 			}
 		}
 
 		CalculateDamage();
-		attacker->Send("Your missile explodes on target!\n",OutputFilter::DEFAULT);
-		defender->Send("Missile hit - checking for damage.\n",OutputFilter::DEFAULT);
+		attacker->Send("Your missile explodes on target!\n");
+		defender->Send("Missile hit - checking for damage.\n");
 		if(defender->ApplyHit(defender_out))
 		{
 			Game::player_index->Terminate(defender,victim_name);
@@ -308,8 +308,8 @@ bool Fight::Launch(Player *att)
 			if(victim_telemetry < 5)
 				++victim_telemetry;
 		}
-		defender->Send("Missile lost lock and missed...\n",OutputFilter::DEFAULT);
-		attacker->Send("Your missile lost its target and missed...\n",OutputFilter::DEFAULT);
+		defender->Send("Missile lost lock and missed...\n");
+		attacker->Send("Your missile lost its target and missed...\n");
 		return true;
 	}
 	return true;
@@ -318,7 +318,7 @@ bool Fight::Launch(Player *att)
 
 void	Fight::Fire(Player *att,int what)
 {
-	att->Send("Firing...\n",OutputFilter::DEFAULT);
+	att->Send("Firing...\n");
 
 	// Figure out who is the attacker and who is the defender for this round
 	Player	*attacker = att;
@@ -328,7 +328,7 @@ void	Fight::Fire(Player *att,int what)
 		defender = victim;
 		if(Game::player_index->FindCurrent(victim_name) == 0)
 		{
-			attacker->Send("Your opponent is no longer in the game!\n",OutputFilter::DEFAULT);
+			attacker->Send("Your opponent is no longer in the game!\n");
 			return;
 		}
 	}
@@ -337,14 +337,14 @@ void	Fight::Fire(Player *att,int what)
 		defender = aggressor;
 		if(Game::player_index->FindCurrent(aggressor_name) == 0)
 		{
-			attacker->Send("Your opponent is no longer in the game!\n",OutputFilter::DEFAULT);
+			attacker->Send("Your opponent is no longer in the game!\n");
 			return;
 		}
 	}
 
 	if(spacing != LASER_DIST)	// Are we too close to launch missiles safely?
 	{
-		attacker->Send("You are too far away to use lasers!\n",OutputFilter::DEFAULT);
+		attacker->Send("You are too far away to use lasers!\n");
 		return;
 	}
 
@@ -382,8 +382,8 @@ void	Fight::Fire(Player *att,int what)
 
 			ScaleLaserDamage(efficiency);
 
-			attacker->Send("Your laser strike hits its target!\n",OutputFilter::DEFAULT);
-			defender->Send("Laser strike - checking for damage.\n",OutputFilter::DEFAULT);
+			attacker->Send("Your laser strike hits its target!\n");
+			defender->Send("Laser strike - checking for damage.\n");
 			if(defender->ApplyHit(defender_out))
 			{
 				Game::player_index->Terminate(defender,victim_name);
@@ -393,14 +393,14 @@ void	Fight::Fire(Player *att,int what)
 		}
 		else // handle hit but no damage situation
 		{
-			attacker->Send("Your laser strike hits its target, but there is no apparent damage.\n",OutputFilter::DEFAULT);
-			defender->Send("Laser strike - but no significant damage caused.\n",OutputFilter::DEFAULT);
+			attacker->Send("Your laser strike hits its target, but there is no apparent damage.\n");
+			defender->Send("Laser strike - but no significant damage caused.\n");
 		}
 	}
 	else
 	{
-		attacker->Send("The target evaded your laser strike...\n",OutputFilter::DEFAULT);
-		defender->Send("You evaded your opponent's laser fire...\n",OutputFilter::DEFAULT);
+		attacker->Send("The target evaded your laser strike...\n");
+		defender->Send("You evaded your opponent's laser fire...\n");
 	}
 }
 

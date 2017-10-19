@@ -22,7 +22,7 @@ void	ChangeParser::ChangeClothes(Player *player,Tokens *tokens,const std::string
 	static const std::string	no_text("You haven't given a new description for your clothes.\n");
 
 	if(tokens->Size() < 3)
-		player->Send(no_text,OutputFilter::DEFAULT);
+		player->Send(no_text);
 	else
 	{
 		std::string	text(tokens->GetRestOfLine(line,2,Tokens::RAW));
@@ -35,7 +35,7 @@ void	ChangeParser::ChangeDesc(Player *player,Tokens *tokens,const std::string& l
 	static const std::string	no_text("You haven't provided a new description for the location.\n");
 
 	if(tokens->Size() < 3)
-		player->Send(no_text,OutputFilter::DEFAULT);
+		player->Send(no_text);
 	else
 	{
 		std::string	text(tokens->GetRestOfLine(line,2,Tokens::RAW));
@@ -48,7 +48,7 @@ void	ChangeParser::ChangeName(Player *player,Tokens *tokens,const std::string& l
 	static const std::string	no_text("You haven't provided a new name for the location.\n");
 
 	if(tokens->Size() < 3)
-		player->Send(no_text,OutputFilter::DEFAULT);
+		player->Send(no_text);
 	else
 	{
 		std::string	text(tokens->GetRestOfLine(line,2,Tokens::RAW));
@@ -81,5 +81,5 @@ void	ChangeParser::Process(Player *player,Tokens *tokens,const std::string& line
 		case 3:	player->CurrentMap()->ChangeFightFlag(player);	return;
 	}
 
-	player->Send(no_noun,OutputFilter::DEFAULT);
+	player->Send(no_noun);
 }

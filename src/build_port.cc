@@ -38,7 +38,7 @@ accompany the official yacht into the harbor as part of the opening ceremony!\n"
 	int	economy = the_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -47,7 +47,7 @@ accompany the official yacht into the harbor as part of the opening ceremony!\n"
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 		ok_status = true;
 	}
 }
@@ -66,14 +66,14 @@ bool	Port::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if(economy < Infrastructure::INDUSTRIAL)
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
 	if(total_builds < 5)
-		player->Send(ok,OutputFilter::DEFAULT);
+		player->Send(ok);
 	else
-		player->Send(maxed_out,OutputFilter::DEFAULT);
+		player->Send(maxed_out);
 
 	total_builds++;
 	return(true);
@@ -83,7 +83,7 @@ void	Port::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Ports: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Port::RequestResources(Player *player,const std::string& recipient,int quantity)

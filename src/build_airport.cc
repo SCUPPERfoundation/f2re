@@ -46,7 +46,7 @@ leisure level and above planets.\n");
 
 	if(the_map->Economy() < Infrastructure::LEISURE)
 	{
-		 player->Send(too_soon,OutputFilter::DEFAULT);
+		 player->Send(too_soon);
 		 ok_status = false;
 	}
 	else
@@ -59,7 +59,7 @@ leisure level and above planets.\n");
 
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -81,10 +81,10 @@ is greeted with an outburst of total indifference. You've probably got enough of
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	}
 	else
-		player->Send(too_many,OutputFilter::DEFAULT);
+		player->Send(too_many);
 	
 	return(true);
 }
@@ -97,7 +97,7 @@ void	Airport::Display(Player *player)
 	else
 		buffer << "    Intra-Global";
 	buffer << " Airports: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 int	Airport::Set(int)

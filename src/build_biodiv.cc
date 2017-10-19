@@ -39,7 +39,7 @@ BioDiversity::BioDiversity(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -56,9 +56,9 @@ Clearly the public appetite for bio-diversity projects is saturated, and further
 projects are unlikely to have much effect!\n");
 
 	if((total_builds < 5) || ((fed_map->Economy() >= Infrastructure::LEISURE) && total_builds < 8))
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	else
-		player->Send(over,OutputFilter::DEFAULT);
+		player->Send(over);
 
 	total_builds++;
 	return(true);
@@ -68,7 +68,7 @@ void	BioDiversity::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    BioDiversity Projects: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	BioDiversity::UpdateDisaffection(Disaffection *discontent)

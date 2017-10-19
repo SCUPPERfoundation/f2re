@@ -64,10 +64,10 @@ bool	BusinessRegister::BusinessExists(const std::string& name)
 void	BusinessRegister::Display(Player *player)
 {
 	if(name_index.size() != 0)
-		player->Send("Register of Businesses\n",OutputFilter::DEFAULT);
+		player->Send("Register of Businesses\n");
 	else
 	{
-		player->Send("No businesses registered yet\n",OutputFilter::DEFAULT);
+		player->Send("No businesses registered yet\n");
 		return;
 	}
 
@@ -78,11 +78,11 @@ void	BusinessRegister::Display(Player *player)
 	{
 		++total;
 		buffer << "   " << iter->first << " - CEO: " << iter->second->CEO()->Name() << "\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		buffer.str("");
 	}
 	buffer << total << " businesses\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 Business	*BusinessRegister::Find(const std::string& name)
@@ -114,7 +114,7 @@ void	BusinessRegister::PublicDisplay(const std::string& name,Player *player)
 {
 	Business	*business = Find(name);
 	if(business == 0)
-		player->Send("I can't find a business with that name!\n",OutputFilter::DEFAULT);
+		player->Send("I can't find a business with that name!\n");
 	else
 		business->PublicDisplay(player);
 }

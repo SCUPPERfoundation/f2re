@@ -65,17 +65,17 @@ bool	CompanyRegister::CompanyExists(const std::string& name)
 void	CompanyRegister::Display(Player *player)
 {
 	if(name_index.size() != 0)
-		player->Send("Register of Companies\n",OutputFilter::DEFAULT);
+		player->Send("Register of Companies\n");
 	else
 	{
-		player->Send("No companies formed yet\n",OutputFilter::DEFAULT);
+		player->Send("No companies formed yet\n");
 		return;
 	}
 
 	std::ostringstream	buffer;
 	buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << "Company" << "CEO\n";
 	buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << "-------" << "---\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	buffer.str("");
 
 	CompanyIndex::iterator iter;
@@ -86,16 +86,16 @@ void	CompanyRegister::Display(Player *player)
 		buffer << "  " << std::setw(Company::NAME_SIZE + 2) << std::left << iter->first << iter->second->CEO()->Name() << "\n";
 		if((total % 3) == 0)
 		{
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 		}
 	}
 	if((total % 3) != 0)
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 
 	buffer.str("");
 	buffer << total << " companies\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 Company	*CompanyRegister::Find(const std::string& name)

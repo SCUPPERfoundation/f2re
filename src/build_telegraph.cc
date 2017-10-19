@@ -35,7 +35,7 @@ Telegraph::Telegraph(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -57,7 +57,7 @@ Telegraph::Telegraph(FedMap *the_map,Player *player,Tokens *tokens)
 		 		buffer << "Your telegraph network is extended further into ";
 				buffer << "the hinterland, resulting in an increased production of ";
 				buffer << tokens->Get(2) << ".\n";
-				player->Send(buffer,OutputFilter::DEFAULT);
+				player->Send(buffer);
 				ok_status = true;
 			}
 		}
@@ -77,7 +77,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 	int	economy = fed_map->Economy();
 	if((economy < Infrastructure::RESOURCE) || (economy > Infrastructure::INDUSTRIAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		return(false);
 	}
 
@@ -92,7 +92,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 		 	buffer << "Your telegraph network is extended further into the ";
 			buffer << "hinterland, resulting in an increased production of ";
 			buffer << tokens->Get(2) << ".\n";
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			total_builds++;
 			return(true);
 		}
@@ -101,7 +101,7 @@ bool	Telegraph::Add(Player *player,Tokens *tokens)
 
 	buffer << "Your telegraph network is extended further into the hinterland, ";
 	buffer << "but it seems to have little effect on any production!\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 	total_builds++;
 	return(true);
 }
@@ -113,13 +113,13 @@ bool	Telegraph::CheckCommodity(Player *player,Tokens *tokens)
 
 	if(tokens->Size() < 3)
 	{
-		player->Send(no_commod,OutputFilter::DEFAULT);
+		player->Send(no_commod);
 		return(false);
 	}
 
 	if(Game::commodities->Find(tokens->Get(2)) == 0)
 	{
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 		return(false);
 	}
 
@@ -129,7 +129,7 @@ bool	Telegraph::CheckCommodity(Player *player,Tokens *tokens)
 	{
 		buffer << "You cannot allocate a production point to " << tokens->Get(2);
 		buffer << ", only to resource and industrial commodities.\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		return(false);
 	}
 	return(true);
@@ -146,7 +146,7 @@ bool	Telegraph::Demolish(Player *player)
 	{
 		player->Send("Unfortunately, the Society for the Preservation of Ancient \
 Artifacts and Relics (SPAAR) manages to persuade the Galactic Administration to \
-issue a preservation order and your plans are frustrated...\n",OutputFilter::DEFAULT);
+issue a preservation order and your plans are frustrated...\n");
 		return(false);
 	}
 }
@@ -156,7 +156,7 @@ void	Telegraph::Display(Player *player)
 	std::ostringstream	buffer;
 	buffer << "    " << name << ": " << total_builds << " route";
 	buffer << ((total_builds > 1) ? "s" : "") << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Telegraph::Write(std::ofstream& file)

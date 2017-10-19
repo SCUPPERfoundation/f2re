@@ -53,12 +53,12 @@ void	Review::Post(const std::string& text)
 void	Review::Read(Player *player)
 {
 	std::string temp = name + ":\n";
-	player->Send(temp,OutputFilter::DEFAULT);
+	player->Send(temp);
 	if(entries.size() == 0)
-		player->Send(Game::system->GetMessage("review","read",2),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("review","read",2));
 	else
 	{
 		for(Entries::iterator iter = entries.begin();iter != entries.end();iter++)
-			player->Send(*iter,OutputFilter::DEFAULT);
+			player->Send(*iter);
 	}
 }

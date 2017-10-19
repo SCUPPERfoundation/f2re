@@ -42,7 +42,7 @@ Police::Police(FedMap *the_map,Player *player,Tokens *tokens)
 	name = tokens->Get(1);
 	name[0] = std::toupper(name[0]);
 	total_builds = 1;
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -54,7 +54,7 @@ Police::~Police()
 
 bool	Police::Add(Player *player,Tokens *tokens)
 {
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	total_builds++;
 	return(true);
 }
@@ -63,7 +63,7 @@ void	Police::Display(Player *player)
 {
 	std::ostringstream	buffer;
 	buffer << "    Police Stations: " << total_builds << " built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 bool	Police::RequestResources(Player *player,const std::string& recipient,int quantity)

@@ -42,7 +42,7 @@ void	Work::Accept(Player *player,int job_no)
 {
 	JobIndex::iterator iter = job_index.find(job_no);
 	if(iter == job_index.end())
-		player->Send(Game::system->GetMessage("work","accept",1),OutputFilter::DEFAULT);
+		player->Send(Game::system->GetMessage("work","accept",1));
 	else
 	{
 		iter->second->collected = false;
@@ -50,7 +50,7 @@ void	Work::Accept(Player *player,int job_no)
 		std::ostringstream	buffer("");
 		buffer << "Your bid is accepted. Please report to the offices of Armstrong Cuthbert, Inc on ";
 		buffer << iter->second->from << " to arrange collection. Thank you." << std::endl;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		job_index.erase(iter);
 	}
 }
@@ -238,7 +238,7 @@ void	Work::DisplayJob(Player *player,Job *job,Job *pending)
 			buffer << "  The cargo is awaiting your collection at " << job->from << "\n";
 		if(job->planet_owned != AUTO_GENERATED)
 			buffer << "  --- This job has been provided by the owner of " << job->from << " ---\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 
 	if(pending != 0)
@@ -252,13 +252,13 @@ void	Work::DisplayJob(Player *player,Job *job,Job *pending)
 		buffer << "  Value of contract is " << pending->payment * pending->quantity << "ig - ";
 		buffer << pending->credits << " hauling credits" << "\n";
 		buffer << "  --- This job has been offered by the owner of " << pending->from << ", type <ACCEPT> to accept it ---\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 }
 
 void	Work::DisplayWork(Player *player)
 {
-	player->Send(Game::system->GetMessage("work","displaywork",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("work","displaywork",1));
 	Job	*job;
 	std::ostringstream	buffer("");
 	for(JobIndex::iterator iter = job_index.begin();iter != job_index.end();iter++)
@@ -272,10 +272,10 @@ void	Work::DisplayWork(Player *player)
 		if(job->planet_owned != AUTO_GENERATED)
 			buffer << " *";
 		buffer << std::endl;
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 	if(job_index.size() == 0)
-		player->Send("  None available - please try again in a minute or so.\n",OutputFilter::DEFAULT);
+		player->Send("  None available - please try again in a minute or so.\n");
 }
 
 void	Work::ExpireJobs()
@@ -301,7 +301,7 @@ void	Work::NotifyPlayers()
 	{
 		if((*iter)->CurrentCartel() == cartel)
 		{
-			(*iter)->Send(Game::system->GetMessage("work","notifyplayers",1),OutputFilter::DEFAULT);
+			(*iter)->Send(Game::system->GetMessage("work","notifyplayers",1));
 			++iter;
 		}
 		else	// not in this cartel - remove from the list 

@@ -41,7 +41,7 @@ int	CheckVariable::Process(Player *player)
 		std::ostringstream	buffer;
 		buffer << "  ***checkvariable: name='" << name << "' key='" << key;
 		buffer << "' check value='" << value << "'/actual value='" << the_value << "'***\n";
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 	}
 
 	if(the_value == value)

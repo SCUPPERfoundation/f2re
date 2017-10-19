@@ -84,7 +84,7 @@ bool	BuildStar::CreateInfFiles()
 	buffer << "</infrastructure>\" > " << system_file_root << "/space.inf";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create space .inf file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to create space .inf file.\n");
 		return false;
 	}
 
@@ -96,7 +96,7 @@ bool	BuildStar::CreateInfFiles()
 	buffer << planet_file_name << ".inf";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create planet .inf file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to create planet .inf file.\n");
 		return false;
 	}
 
@@ -133,7 +133,7 @@ bool	BuildStar::FixPermissions()
 	buffer << "chmod g+w " << system_file_root << "/*";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to set up file permissions.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to set up file permissions.\n");
 		return false;
 	}
 
@@ -179,7 +179,7 @@ bool BuildStar::Run()
 	if(!CreateLoader())
 		return false;
 
-	player->Send("Your claim has been registered, and you should be able to visit the planet after the next reset.\n",OutputFilter::DEFAULT);
+	player->Send("Your claim has been registered, and you should be able to visit the planet after the next reset.\n");
 	return true;
 }
 
@@ -190,7 +190,7 @@ bool	BuildStar::SetUpFiles()
 	buffer << "mkdir " << system_file_root;
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to creat directory for new system.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to creat directory for new system.\n");
 		return false;
 	}
 	
@@ -205,7 +205,7 @@ bool	BuildStar::SetUpFiles()
 	buffer << "> " << system_file_root << "/" << planet_file_name << ".loc"; // output to new map file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create planet location file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to create planet location file.\n");
 		return false;
 	}
 
@@ -217,7 +217,7 @@ bool	BuildStar::SetUpFiles()
 	buffer << "> " << system_file_root << "/space.loc"; // output to new space map file
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to create space location file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to create space location file.\n");
 		return false;
 	}
 
@@ -226,7 +226,7 @@ bool	BuildStar::SetUpFiles()
 	buffer << "cp stock/" << stock_star_files[system_type] << "/space.msg " << system_file_root << "/space.msg";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to copy space message file over.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to copy space message file over.\n");
 		return false;
 	}
 	buffer.str("");
@@ -234,7 +234,7 @@ bool	BuildStar::SetUpFiles()
 	buffer << system_file_root << "/" << planet_file_name << ".msg";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to copy planet message file over.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to copy planet message file over.\n");
 		return false;
 	}
 

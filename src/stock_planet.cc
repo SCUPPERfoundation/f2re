@@ -74,19 +74,19 @@ bool StockPlanet::LoadFiles()
 {
 	if(!LoadStockFiles())
 	{
-		player->Send("I'm sorry, I'm unable to load the stock planet you want to use.\n",OutputFilter::DEFAULT);
+		player->Send("I'm sorry, I'm unable to load the stock planet you want to use.\n");
 		return false;
 	}
 
 	if(!LoadSpaceFiles())
 	{
-		player->Send("I'm sorry, I can't find your existing space files to alter.\n",OutputFilter::DEFAULT);
+		player->Send("I'm sorry, I can't find your existing space files to alter.\n");
 		return false;
 	}
 
 	if(!LoadLoaderFile())
 	{
-		player->Send("I'm sorry, I can't find your system's loader file to add the new planet to.\n",OutputFilter::DEFAULT);
+		player->Send("I'm sorry, I can't find your system's loader file to add the new planet to.\n");
 		return false;
 	}
 
@@ -190,7 +190,7 @@ bool StockPlanet::MakeStockDirectory()
 
 	if(stock_index == -1)
 	{
-		player->Send("I can't find the stock planet you specified!\n",OutputFilter::DEFAULT);
+		player->Send("I can't find the stock planet you specified!\n");
 		return false;
 	}
 

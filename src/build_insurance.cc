@@ -41,7 +41,7 @@ Insurance::Insurance(FedMap *the_map,Player *player,Tokens *tokens)
 	int	economy = the_map->Economy();
 	if((economy < Infrastructure::TECHNICAL))
 	{
-		player->Send(not_allowed,OutputFilter::DEFAULT);
+		player->Send(not_allowed);
 		ok_status = false;
 	}
 	else
@@ -50,7 +50,7 @@ Insurance::Insurance(FedMap *the_map,Player *player,Tokens *tokens)
 		name = tokens->Get(1);
 		name[0] = std::toupper(name[0]);
 		total_builds = 1;
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 		ok_status = true;
 	}
 }
@@ -64,7 +64,7 @@ Insurance::~Insurance()
 bool	Insurance::Add(Player *player,Tokens *tokens)
 {
 	total_builds++;
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -75,7 +75,7 @@ void	Insurance::Display(Player *player)
 		buffer << "    Insurance: " << total_builds << " levels\n";
 	else
 		buffer << "    Insurance: 1 level\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Insurance::UpdateDisaffection(Disaffection *discontent)

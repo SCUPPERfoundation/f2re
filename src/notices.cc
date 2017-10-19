@@ -51,7 +51,7 @@ void	NoticeBoard::Post(Player *player,std::string& text)
 	std::ostringstream	buffer("");
 	buffer << Stardate() << " - " << player->Name() << ": " << text << std::endl;
 	notices.push_back(buffer.str());
-	player->Send(Game::system->GetMessage("notices","post",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("notices","post",1));
 }
 
 void	NoticeBoard::Read(Player *player,unsigned how_many)
@@ -60,15 +60,15 @@ void	NoticeBoard::Read(Player *player,unsigned how_many)
 	
 	if(notices.size() == 0)
 	{
-		player->Send(none,OutputFilter::DEFAULT);
+		player->Send(none);
 		return;
 	}
 	
-	player->Send(Game::system->GetMessage("notices","read",1),OutputFilter::DEFAULT);
+	player->Send(Game::system->GetMessage("notices","read",1));
 	if((how_many == 0) ||  (notices.size() <= how_many))
 	{
 		for(Notices::iterator iter = notices.begin();iter != notices.end();iter++)
-			player->Send(*iter,OutputFilter::DEFAULT);
+			player->Send(*iter);
 	}
 	else
 	{
@@ -78,7 +78,7 @@ void	NoticeBoard::Read(Player *player,unsigned how_many)
 		for(iter = notices.begin();(iter != notices.end());iter++,count++)
 		{
 			if(count >= index)
-				player->Send(*iter,OutputFilter::DEFAULT);
+				player->Send(*iter);
 		}
 	}
 }
@@ -116,7 +116,7 @@ void	NoticeBoard::UnPost(Player *player,const std::string& name)
 		buffer << total << " message located and removed.\n";
 	else
 		buffer << total << " messages located and removed.\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 
 	if(man_remove)
 	{

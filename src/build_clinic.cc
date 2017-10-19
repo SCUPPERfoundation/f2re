@@ -57,7 +57,7 @@ Clinic::Clinic(FedMap *the_map,Player *player,Tokens *tokens)
 	hosp_builds = 0;
 	total_builds = 1;
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	ok_status = true;
 }
 
@@ -83,7 +83,7 @@ bool	Clinic::Add(Player *player,Tokens *tokens)
 	else
 		unused_builds++;		
 
-	player->Send(success,OutputFilter::DEFAULT);
+	player->Send(success);
 	return(true);
 }
 
@@ -109,7 +109,7 @@ void	Clinic::Display(Player *player)
 	buffer << "      General: " << level_builds << "\n";
 	buffer << "      Teaching: " << hosp_builds << "\n";
 	buffer << "      Unallocated: " << unused_builds << "\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Clinic::LevelUpdate()
@@ -148,7 +148,7 @@ bool	Clinic::RequestResources(Player *player,const std::string& recipient,int qu
 	{
 		if(unused_builds < 2)
 		{
-			player->Send(error,OutputFilter::DEFAULT);
+			player->Send(error);
 			return(false);
 		}
 

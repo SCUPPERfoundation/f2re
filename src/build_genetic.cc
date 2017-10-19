@@ -38,7 +38,7 @@ willing to be persuaded.\n";
 
 	if((the_map->Economy() < Infrastructure::BIOLOGICAL))
 	{
-		 player->Send(too_early,OutputFilter::DEFAULT);
+		 player->Send(too_early);
 		 ok_status = false;
 	}
 	else
@@ -55,7 +55,7 @@ willing to be persuaded.\n";
 			total_builds = 1;
 			fed_map->AddTotalLabour(10);
 			fed_map->AddLabour(10);
-			player->Send(success,OutputFilter::DEFAULT);
+			player->Send(success);
 			ok_status = true;
 		}
 	}
@@ -82,10 +82,10 @@ has little effect. You already have enough clinics to treat the whole population
 	{
 		fed_map->AddTotalLabour(10);
 		fed_map->AddLabour(10);
-		player->Send(success,OutputFilter::DEFAULT);
+		player->Send(success);
 	}
 	else
-		player->Send(too_many,OutputFilter::DEFAULT);
+		player->Send(too_many);
 
 	return(true);
 }
@@ -98,7 +98,7 @@ bool	Genetic::CheckHospitals(Player *player)
 		return(true);
 	else
 	{
-		player->Send(fail,OutputFilter::DEFAULT);
+		player->Send(fail);
 		return(false);
 	}
 }
@@ -110,7 +110,7 @@ void	Genetic::Display(Player *player)
 		buffer << "    Genetic clinics: " << total_builds << " built\n";
 	else
 		buffer << "    Genetic clinic: 1 built\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Genetic::UpdateDisaffection(Disaffection *discontent)

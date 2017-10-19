@@ -93,7 +93,7 @@ bool Build3rdPlanet::AddNewOrbitLocation()
 	std::string::size_type link_idx = new_space_map.find("</fed2-map>");
 	if(link_idx == std::string::npos)
 	{
-		player->Send("There is a problem adding the new orbit location(1)!\n",OutputFilter::DEFAULT);
+		player->Send("There is a problem adding the new orbit location(1)!\n");
 		return(false);
 	}
 
@@ -103,7 +103,7 @@ bool Build3rdPlanet::AddNewOrbitLocation()
 	std::string::size_type name_idx = new_space_map.find("%");
 	if(name_idx == std::string::npos)
 	{
-		player->Send("There is a problem with the new orbit location(2)!\n",OutputFilter::DEFAULT);
+		player->Send("There is a problem with the new orbit location(2)!\n");
 		return false;
 	}
 	new_space_map.replace(name_idx,1,CapitaliseName(new_name));
@@ -120,7 +120,7 @@ bool Build3rdPlanet::CommitFiles()
 	std::ofstream	file(file_name.c_str());
 	if(!file)
 	{
-		player->Send("Error writing '.inf' file!\n",OutputFilter::DEFAULT);
+		player->Send("Error writing '.inf' file!\n");
 		return false;
 	}
 	file << new_planet_inf;
@@ -130,7 +130,7 @@ bool Build3rdPlanet::CommitFiles()
 	file.open(file_name.c_str());
 	if(!file)
 	{
-		player->Send("Error writing '.loc' file!\n",OutputFilter::DEFAULT);
+		player->Send("Error writing '.loc' file!\n");
 		return false;
 	}
 	file << new_planet_map;
@@ -140,7 +140,7 @@ bool Build3rdPlanet::CommitFiles()
 	file.open(file_name.c_str());
 	if(!file)
 	{
-		player->Send("Error writing '.msg' file!\n",OutputFilter::DEFAULT);
+		player->Send("Error writing '.msg' file!\n");
 		return false;
 	}
 	file << new_planet_msg;
@@ -152,7 +152,7 @@ bool Build3rdPlanet::CommitFiles()
 	buffer << " maps/" << star->Dir() << "/" << "space.loc.old\n";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to back up the space.loc file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to back up the space.loc file.\n");
 		return false;
 	}
 
@@ -161,7 +161,7 @@ bool Build3rdPlanet::CommitFiles()
 	file.open(file_name.c_str());
 	if(!file)
 	{
-		player->Send("Error writing new 'space.loc' file!\n",OutputFilter::DEFAULT);
+		player->Send("Error writing new 'space.loc' file!\n");
 		return false;
 	}
 	file << new_space_map;
@@ -173,7 +173,7 @@ bool Build3rdPlanet::CommitFiles()
 	buffer << " maps/" << star->Dir() << "/" << "loader.xml.old\n";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to back up the loader file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to back up the loader file.\n");
 		return false;
 	}
 
@@ -182,7 +182,7 @@ bool Build3rdPlanet::CommitFiles()
 	file.open(file_name.c_str());
 	if(!file)
 	{
-		player->Send("Error writing new loader file!\n",OutputFilter::DEFAULT);
+		player->Send("Error writing new loader file!\n");
 		return false;
 	}
 	file << loader;
@@ -199,7 +199,7 @@ bool	Build3rdPlanet::Run()
 	if(!UpdateLoader())				return false;
 	if(!CommitFiles())				return false;
 
-	player->Send("Congratulations! Your newly colonized planet will be available after the next reset.\n",OutputFilter::DEFAULT);
+	player->Send("Congratulations! Your newly colonized planet will be available after the next reset.\n");
 	return true;
 }
 
@@ -214,7 +214,7 @@ bool	Build3rdPlanet::SetUpPlanetFiles()
 	std::string::size_type	start_idx = new_planet_map.find(">",40); // find end of line skipping XML header
 	if(start_idx == std::string::npos)
 	{
-		player->Send("There is a problem with the location file header!\n",OutputFilter::DEFAULT);
+		player->Send("There is a problem with the location file header!\n");
 		return false;
 	}
 	buffer << new_planet_map.substr(++start_idx);
@@ -237,14 +237,14 @@ bool	Build3rdPlanet::UpdateInterstellarLink()
 	std::string::size_type link_idx = new_space_map.find("<location num='460'");
 	if(link_idx == std::string::npos)
 	{
-		player->Send("I can't find your Interstellar Link to add your new planet!\n",OutputFilter::DEFAULT);
+		player->Send("I can't find your Interstellar Link to add your new planet!\n");
 		return false;
 	}
 
 	std::string::size_type exit_idx = new_space_map.find("<exits",link_idx);
 	if(exit_idx == std::string::npos)
 	{
-		player->Send("There is a problem adding a direction to your interstellar link!\n",OutputFilter::DEFAULT);
+		player->Send("There is a problem adding a direction to your interstellar link!\n");
 		return false;
 	}
 	new_space_map.insert(exit_idx + 7,"ne='397' ");
@@ -264,7 +264,7 @@ bool Build3rdPlanet::UpdateLoader()
 	buffer << " maps/" << star->Dir() << "/" << "loader.xml.old\n";
 	if(std::system(buffer.str().c_str()) < 0)
 	{
-		player->Send("Unable to back up the loader file.\n",OutputFilter::DEFAULT);
+		player->Send("Unable to back up the loader file.\n");
 		return false;
 	}
 
@@ -272,7 +272,7 @@ bool Build3rdPlanet::UpdateLoader()
 	unsigned long star_idx(loader.find("</star>"));
 	if(star_idx == std::string::npos)
 	{
-		player->Send("There is a problem updating the loader!\n",OutputFilter::DEFAULT);
+		player->Send("There is a problem updating the loader!\n");
 		return false;
 	}
 

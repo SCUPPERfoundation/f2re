@@ -64,9 +64,9 @@ void NoMatch::ClearFailures()
 void	NoMatch::ListFailures(Player *player)
 {
 	if(fail_list.size() == 0)
-		player->Send("No nomatch occurences yet\n",OutputFilter::DEFAULT);
+		player->Send("No nomatch occurences yet\n");
 	for(FailList::iterator iter = fail_list.begin();iter != fail_list.end();iter++)
-		player->Send(*iter,OutputFilter::DEFAULT);
+		player->Send(*iter);
 }
 
 int	NoMatch::Process(Player *player)
@@ -86,7 +86,7 @@ int	NoMatch::Process(Player *player)
 		{
 			final_text = *mssg;
 			InsertName(player,final_text);
-			player->Send(final_text,OutputFilter::DEFAULT);
+			player->Send(final_text);
 		}
 	}
 	else
@@ -95,7 +95,7 @@ int	NoMatch::Process(Player *player)
 		{
 			std::string	final_text(lo->Find(home));
 			InsertName(player,final_text);
-			player->Send(final_text,OutputFilter::DEFAULT);
+			player->Send(final_text);
 		}
 	}
 	return(CONTINUE);

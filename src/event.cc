@@ -57,7 +57,7 @@ int	Event::Process(Player *player)
 			std::ostringstream	buffer("");
 			buffer << "*** EventTrace " << fed_map->Name() << " - " << cat->Name() << ".";
 			buffer << sect->Name() << "." << number << " ***" << std::endl;
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 		}
 	}
 

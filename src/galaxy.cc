@@ -77,14 +77,14 @@ void	Galaxy::BuildDestruction()
 
 void	Galaxy::DisplayFleets(Player *player)
 {
-	player->Send("Merchant fleets registered:\n",OutputFilter::DEFAULT);
+	player->Send("Merchant fleets registered:\n");
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
 		iter->second->DisplayFleets(player);
 }
 
 void	Galaxy::DisplayExile(Player *player)
 {
-	player->Send("Exiles report:\n",OutputFilter::DEFAULT);
+	player->Send("Exiles report:\n");
 	std::ostringstream	buffer;
 	bool	are_exiles = false;
 	for(StarIndex::iterator iter = star_index.begin();iter != star_index.end();iter++)
@@ -92,18 +92,18 @@ void	Galaxy::DisplayExile(Player *player)
 		iter->second->DisplayExile(buffer);
 		if(buffer.str().length() > 512)
 		{
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 			are_exiles = true;
 		}
 	}
 	if(buffer.str().length() > 0)
 	{
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 		are_exiles =true;
 	}
 	if(!are_exiles)
-		player->Send("  No exiles - everyone is being a good boy, girl, or thingie!\n",OutputFilter::DEFAULT);
+		player->Send("  No exiles - everyone is being a good boy, girl, or thingie!\n");
 }
 
 void	Galaxy::DisplaySystem(Player *player,const std::string& star_title)
@@ -114,7 +114,7 @@ void	Galaxy::DisplaySystem(Player *player,const std::string& star_title)
 	NormalisePlanetTitle(title);
 	Star	*star = Find(title);
 	if(star == 0)
-		player->Send(unknown,OutputFilter::DEFAULT);
+		player->Send(unknown);
 	else
 		star->DisplaySystem(player);
 }
@@ -334,19 +334,19 @@ void	Galaxy::ListSystems(Player *player,int which_ones)
 	{
 		if(iter->second->Name() == "Sol") // current sol output is 263 chars...
 		{
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 		}
 
 		buffer << iter->second->ListSystem(player,which_ones);
 		if(buffer.str().length() > 850)
 		{
-			player->Send(buffer,OutputFilter::DEFAULT);
+			player->Send(buffer);
 			buffer.str("");
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 }
 
 void	Galaxy::LoadDisplayCabinets()
@@ -475,13 +475,13 @@ void	Galaxy::PremiumPriceCheck(Player *player,const Commodity *commodity,int whi
 			iter->second->PremiumPriceCheck(commodity,buffer,which);
 			if(buffer.str().length() > 850)
 			{
-				player->Send(buffer,OutputFilter::DEFAULT);
+				player->Send(buffer);
 				buffer.str("");
 			}
 		}
 	}
 	if(buffer.str().length() > 0)
-		player->Send(buffer,OutputFilter::DEFAULT);
+		player->Send(buffer);
 }
 
 void	Galaxy::ProcessInfrastructure()
@@ -555,7 +555,7 @@ void	Galaxy::WhereIs(Player *player,const std::string& planet)
 	}
 	else
 		buffer << "I have no record of a planet called " << planet << ". Perhaps its sun went nova?\n";
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 void	Galaxy::XMLListLinks(Player *player,const std::string& from_star_name)

@@ -363,7 +363,7 @@ void	Disaffection::Display(Player *player)
 		buffer << "  Disaffection rating   " << dis << "\n";
 	buffer << "  ------------------------------\n";
 
-	player->Send(buffer,OutputFilter::DEFAULT);
+	player->Send(buffer);
 }
 
 int Disaffection::Update()
