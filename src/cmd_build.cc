@@ -83,6 +83,15 @@ void	BuildParser::BuildCity(Player *player,Tokens *tokens,const std::string& lin
 	if(tokens->Size() >= 3)
 	{
 		std::string	city_name(tokens->GetRestOfLine(line,2,Tokens::PLANET));
+		int size = city_name.size();
+		for(int count = 0;count < size;++count)
+		{
+			if(isalnum(city_name[count]) == 0)
+			{
+				player->Send("Blish City names can only have letters and numbers!\n");
+				return;
+			}
+		}
 		cartel->BuildCity(player,city_name);
 	}
 	else
