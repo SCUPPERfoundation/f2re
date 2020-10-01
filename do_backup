@@ -1,0 +1,26 @@
+#!/usr/bin/python
+
+import time
+now = time.time()
+utc = time.gmtime(now)
+today = "%d%02d%02d" % utc[0:3]
+src = "/var/opt/fed2/"
+dest = "/var/opt/fed2/backup/"
+
+import os
+import sys
+import shutil
+
+
+if os.access(dest + "log/fed2.log." + today,os.F_OK):
+	sys.exit()
+else:
+	file_names = ["fed2.log", "err.log", "usage.log"]
+	for x in file_names:
+		shutil.move(src + "log/" + x,dest + "log/" + x + "." + today)
+
+	shutil.rmtree(dest + "maps",1);
+	shutil.copytree(src +"maps",dest +"maps");
+	
+	shutil.rmtree(dest +"data",1);
+	shutil.copytree(src + "data",dest + "data");

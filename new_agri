@@ -1,0 +1,35 @@
+#!/usr/bin/python
+
+# Set up a new agri planet for fed2
+
+import os
+import shutil
+import sys
+
+if len(sys.argv) < 4:
+	print 'usage is new_agri system_filename planet_filename owner_name'
+	sys.exit(1)
+
+dest = '/var/opt/fed2/maps/'+ sys.argv[1];
+
+# copy files to production folder
+os.system("mv " + sys.argv[2] + ".* " + dest)
+os.system("mv space.* " + dest)
+os.chdir(dest)
+
+# creat .inf file for new planet
+print "Creating .inf file for new planet"
+planet_file = file("./" + sys.argv[2] + ".inf","w+")
+planet_file.write('<?xml version="1.0"?>\n')
+planet_file.write("<infrastructure owner='" + sys.argv[3] +"' economy='Agricultural' closed='false'>\n")
+planet_file.write("</infrastructure>\n")
+planet_file.close()
+
+print "Setting permissions"
+os.system("chmod g+w *")
+os.system("chgrp fed2 *")
+
+print "new bio set up: completed"
+os.system("pwd")
+os.system("ls -l")
+

@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="fed2d" targetName="fed2d" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" GENERATION_OPTIONS="-DCMAKE_CXX_COMPILER=/usr/bin/g++" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dcd2089c-448b-431f-b68a-75da0bb16629" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/cmd_admin.cc" afterPath="$PROJECT_DIR$/src/cmd_admin.cc" />
+    </list>
+    <ignored path="fed2d.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FavoritesManager">
+    <favorites_list name="fed2d" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.47847566">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="fed.cc" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/fed.cc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="392">
+                  <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cmd_parser.cc" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/cmd_parser.cc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="13804">
+                  <caret line="1010" column="28" lean-forward="false" selection-start-line="1010" selection-start-column="28" selection-end-line="1010" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cmd_build.cc" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/cmd_build.cc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="284">
+                  <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cartel.cc" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/cartel.cc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2688">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="fed.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/fed.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cmd_parser.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/cmd_parser.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="368">
+                  <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cmd_build.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/include/cmd_build.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>flee</find>
+      <find>Copyright (c) Alan Lenton 1985-2016</find>
+      <find>FinalPayout</find>
+      <find>suicide</find>
+      <find>WriteLog(15...)</find>
+      <find>WriteLog(15...</find>
+      <find>WriteLog15...</find>
+      <find>15...</find>
+      <find>MakeFileRoot</find>
+      <find>directory</find>
+      <find>Sorry, this facility</find>
+      <find>OutputFilter::DEFAULT)</find>
+      <find>,OutputFilter::DEFAULT)</find>
+      <find>BuildParser</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Copyright (c) Alan Lenton 1985-2017</replace>
+      <replace>)</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/tokens.h" />
+        <option value="$PROJECT_DIR$/include/cmd_buy.h" />
+        <option value="$PROJECT_DIR$/src/cmd_buy.cc" />
+        <option value="$PROJECT_DIR$/include/change.h" />
+        <option value="$PROJECT_DIR$/src/change.cc" />
+        <option value="$PROJECT_DIR$/include/star.h" />
+        <option value="$PROJECT_DIR$/src/location.cc" />
+        <option value="$PROJECT_DIR$/include/location.h" />
+        <option value="$PROJECT_DIR$/fight.h" />
+        <option value="$PROJECT_DIR$/include/loc_rec.h" />
+        <option value="$PROJECT_DIR$/src/ipc.cc" />
+        <option value="$PROJECT_DIR$/include/fight_index.h" />
+        <option value="$PROJECT_DIR$/include/misc.h" />
+        <option value="$PROJECT_DIR$/src/misc.cc" />
+        <option value="$PROJECT_DIR$/include/fedmap.h" />
+        <option value="$PROJECT_DIR$/src/fedmap.cc" />
+        <option value="$PROJECT_DIR$/include/assign.h" />
+        <option value="$PROJECT_DIR$/include/equipment.h" />
+        <option value="$PROJECT_DIR$/include/fight_info.h" />
+        <option value="$PROJECT_DIR$/include/fight.h" />
+        <option value="$PROJECT_DIR$/include/fight_list.h" />
+        <option value="$PROJECT_DIR$/src/business.cc" />
+        <option value="$PROJECT_DIR$/include/business.h" />
+        <option value="$PROJECT_DIR$/cmake-build-release/CMakeCache.txt" />
+        <option value="$PROJECT_DIR$/src/fight_list.cc" />
+        <option value="$PROJECT_DIR$/src/player_index.cc" />
+        <option value="$PROJECT_DIR$/include/cmd_parser.h" />
+        <option value="$PROJECT_DIR$/include/player_index.h" />
+        <option value="$PROJECT_DIR$/src/fight.cc" />
+        <option value="$PROJECT_DIR$/src/player.cc" />
+        <option value="$PROJECT_DIR$/src/ship.cc" />
+        <option value="$PROJECT_DIR$/include/ship.h" />
+        <option value="$PROJECT_DIR$/include/build_planet.h.h" />
+        <option value="$PROJECT_DIR$/include/build_planet.h" />
+        <option value="$PROJECT_DIR$/src/build_planet.cc" />
+        <option value="$PROJECT_DIR$/include/Build3rdPlanet.h" />
+        <option value="$PROJECT_DIR$/include/stock_planet_loader.h" />
+        <option value="$PROJECT_DIR$/include/build_2nd_planet.h" />
+        <option value="$PROJECT_DIR$/src/build_star.cc" />
+        <option value="$PROJECT_DIR$/src/cmd_parser.cc" />
+        <option value="$PROJECT_DIR$/include/stock_planet.h" />
+        <option value="$PROJECT_DIR$/src/build_2nd_planet.cc" />
+        <option value="$PROJECT_DIR$/include/build_3rd_planet.h" />
+        <option value="$PROJECT_DIR$/src/stock_planet.cc" />
+        <option value="$PROJECT_DIR$/src/build_3rd_planet.cc" />
+        <option value="$PROJECT_DIR$/src/star.cc" />
+        <option value="$PROJECT_DIR$/src/assign.cc" />
+        <option value="$PROJECT_DIR$/include/player.h" />
+        <option value="$PROJECT_DIR$/src/cmd_build.cc" />
+        <option value="$PROJECT_DIR$/src/fed.cc" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="199" />
+    <option name="y" value="111" />
+    <option name="width" value="1653" />
+    <option name="height" value="993" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>C/C++</id>
+          </State>
+          <State>
+            <id>Data flow analysisC/C++</id>
+          </State>
+          <State>
+            <id>Declaration orderC/C++</id>
+          </State>
+          <State>
+            <id>FunctionsC/C++</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralC/C++</id>
+          </State>
+          <State>
+            <id>JSON</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>Type checksC/C++</id>
+          </State>
+          <State>
+            <id>Unused codeC/C++</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="fed2d" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="fed2d" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fed2d" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="fed2d" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fed2d" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="fed2d" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.splitter.proportion" value="0.27920228" />
+    <property name="last_opened_file_path" value="/var/opt/fed2/stock/beach/water.msg" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.fed2d">
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fed2d" TARGET_NAME="fed2d" CONFIG_NAME="Release" TEST_MODE="SUITE_TEST">
+      <envs />
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fed2d" TARGET_NAME="fed2d" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="fed2d" RUN_TARGET_NAME="fed2d">
+      <envs />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fed2d" TARGET_NAME="fed2d" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="fed2d" RUN_TARGET_NAME="fed2d">
+      <envs />
+    </configuration>
+    <configuration name="fed2d" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fed2d" TARGET_NAME="fed2d" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="fed2d" RUN_TARGET_NAME="fed2d">
+      <envs />
+    </configuration>
+    <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="fed2d" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.fed2d" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Build All" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="3" BundledDictionary0="jetbrains.dic" BundledDictionary1="english.dic" BundledDictionary2="objc.dic" Folders="0" Dictionaries="0" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dcd2089c-448b-431f-b68a-75da0bb16629" name="Default" comment="" />
+      <created>1435339780221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1435339780221</updated>
+      <workItem from="1469259505163" duration="690000" />
+      <workItem from="1469430184026" duration="3770000" />
+      <workItem from="1469603440529" duration="6009000" />
+      <workItem from="1469685209656" duration="833000" />
+      <workItem from="1469774853469" duration="5004000" />
+      <workItem from="1469870098153" duration="1522000" />
+      <workItem from="1470415847417" duration="1938000" />
+      <workItem from="1470759673571" duration="543000" />
+      <workItem from="1470762396990" duration="49000" />
+      <workItem from="1470764883231" duration="1839000" />
+      <workItem from="1470767397509" duration="30000" />
+      <workItem from="1470767572163" duration="14000" />
+      <workItem from="1470814666682" duration="338000" />
+      <workItem from="1470815023067" duration="170000" />
+      <workItem from="1470846664581" duration="38000" />
+      <workItem from="1470846744498" duration="1315000" />
+      <workItem from="1470849372798" duration="3331000" />
+      <workItem from="1470886497440" duration="11954000" />
+      <workItem from="1470993353685" duration="6244000" />
+      <workItem from="1471247320443" duration="9599000" />
+      <workItem from="1471336962485" duration="4599000" />
+      <workItem from="1471415682709" duration="3204000" />
+      <workItem from="1471512786396" duration="598000" />
+      <workItem from="1471600850610" duration="422000" />
+      <workItem from="1471602257193" duration="58000" />
+      <workItem from="1471675253439" duration="3806000" />
+      <workItem from="1471706260789" duration="856000" />
+      <workItem from="1471854560090" duration="1253000" />
+      <workItem from="1471937380642" duration="5836000" />
+      <workItem from="1472016829602" duration="10776000" />
+      <workItem from="1472120399372" duration="1434000" />
+      <workItem from="1472193968278" duration="5056000" />
+      <workItem from="1472397364998" duration="87000" />
+      <workItem from="1472625311194" duration="589000" />
+      <workItem from="1472880751207" duration="2808000" />
+      <workItem from="1473142910577" duration="4217000" />
+      <workItem from="1473153538018" duration="16000" />
+      <workItem from="1473315170609" duration="404000" />
+      <workItem from="1473315613367" duration="5168000" />
+      <workItem from="1473324978799" duration="7000" />
+      <workItem from="1473397077487" duration="7837000" />
+      <workItem from="1473406018771" duration="807000" />
+      <workItem from="1473446227668" duration="559000" />
+      <workItem from="1473486782622" duration="14000" />
+      <workItem from="1473487794535" duration="209000" />
+      <workItem from="1474871851875" duration="181000" />
+      <workItem from="1474872095639" duration="4062000" />
+      <workItem from="1475044375609" duration="5074000" />
+      <workItem from="1475133753396" duration="6028000" />
+      <workItem from="1475215473115" duration="3741000" />
+      <workItem from="1475403595730" duration="315000" />
+      <workItem from="1475474510834" duration="3562000" />
+      <workItem from="1475482470307" duration="3420000" />
+      <workItem from="1475572900119" duration="1324000" />
+      <workItem from="1475656814934" duration="5595000" />
+      <workItem from="1476083076749" duration="7664000" />
+      <workItem from="1476176054078" duration="8065000" />
+      <workItem from="1476340564935" duration="4028000" />
+      <workItem from="1476694873016" duration="6000" />
+      <workItem from="1476695393220" duration="40000" />
+      <workItem from="1476772778054" duration="6222000" />
+      <workItem from="1476855811777" duration="9227000" />
+      <workItem from="1476884576374" duration="5459000" />
+      <workItem from="1477031030043" duration="38000" />
+      <workItem from="1477031114964" duration="7160000" />
+      <workItem from="1477116378141" duration="5067000" />
+      <workItem from="1477123330385" duration="6041000" />
+      <workItem from="1477368525765" duration="9978000" />
+      <workItem from="1477461007092" duration="7574000" />
+      <workItem from="1477548960128" duration="6116000" />
+      <workItem from="1477637945376" duration="2985000" />
+      <workItem from="1478854683925" duration="4088000" />
+      <workItem from="1478947275785" duration="4745000" />
+      <workItem from="1479376389113" duration="2703000" />
+      <workItem from="1479537233800" duration="1847000" />
+      <workItem from="1479981909374" duration="511000" />
+      <workItem from="1479982501365" duration="707000" />
+      <workItem from="1480496651866" duration="1804000" />
+      <workItem from="1480499039382" duration="1278000" />
+      <workItem from="1480501167482" duration="1050000" />
+      <workItem from="1480502390662" duration="810000" />
+      <workItem from="1481608405256" duration="5445000" />
+      <workItem from="1481783921430" duration="961000" />
+      <workItem from="1481784919665" duration="1046000" />
+      <workItem from="1482922303015" duration="4121000" />
+      <workItem from="1483519020797" duration="515000" />
+      <workItem from="1483519587647" duration="3600000" />
+      <workItem from="1483695990515" duration="1861000" />
+      <workItem from="1483956587364" duration="3826000" />
+      <workItem from="1484055160088" duration="3715000" />
+      <workItem from="1484118789485" duration="10870000" />
+      <workItem from="1484210969773" duration="599000" />
+      <workItem from="1484306507664" duration="25000" />
+      <workItem from="1484718355928" duration="4310000" />
+      <workItem from="1485503054918" duration="4000" />
+      <workItem from="1485672843210" duration="2203000" />
+      <workItem from="1487321906115" duration="32000" />
+      <workItem from="1487321973589" duration="37000" />
+      <workItem from="1492423805338" duration="19000" />
+      <workItem from="1492423842415" duration="922000" />
+      <workItem from="1492427557903" duration="25000" />
+      <workItem from="1492427593564" duration="758000" />
+      <workItem from="1492428553557" duration="16000" />
+      <workItem from="1492428587683" duration="3092000" />
+      <workItem from="1492431691037" duration="4737000" />
+      <workItem from="1493203980492" duration="8000" />
+      <workItem from="1493311006469" duration="5000" />
+      <workItem from="1493356637948" duration="4326000" />
+      <workItem from="1493364491987" duration="644000" />
+      <workItem from="1493449804959" duration="65000" />
+      <workItem from="1493805653469" duration="3748000" />
+      <workItem from="1493876134277" duration="5554000" />
+      <workItem from="1494405248970" duration="1821000" />
+      <workItem from="1494495247609" duration="9000" />
+      <workItem from="1494657742348" duration="2438000" />
+      <workItem from="1494841865464" duration="3396000" />
+      <workItem from="1494915886437" duration="599000" />
+      <workItem from="1495011318648" duration="3266000" />
+      <workItem from="1495089745980" duration="18000" />
+      <workItem from="1495089785088" duration="6661000" />
+      <workItem from="1495266705635" duration="599000" />
+      <workItem from="1496207654109" duration="2201000" />
+      <workItem from="1496639976010" duration="1145000" />
+      <workItem from="1501746498502" duration="4105000" />
+      <workItem from="1502096507943" duration="603000" />
+      <workItem from="1502108468137" duration="6000" />
+      <workItem from="1502374586650" duration="64000" />
+      <workItem from="1502374842124" duration="1729000" />
+      <workItem from="1502704165065" duration="5943000" />
+      <workItem from="1502775060931" duration="5119000" />
+      <workItem from="1502780418320" duration="2371000" />
+      <workItem from="1502952694753" duration="4949000" />
+      <workItem from="1503068055629" duration="1965000" />
+      <workItem from="1503127243593" duration="4148000" />
+      <workItem from="1503161648091" duration="906000" />
+      <workItem from="1503164353902" duration="17000" />
+      <workItem from="1503237163139" duration="1064000" />
+      <workItem from="1503298485586" duration="4021000" />
+      <workItem from="1503556360895" duration="896000" />
+      <workItem from="1504086118401" duration="1499000" />
+      <workItem from="1504161691136" duration="3604000" />
+      <workItem from="1504336338446" duration="183000" />
+      <workItem from="1504336548237" duration="4000" />
+      <workItem from="1504336694485" duration="6804000" />
+      <workItem from="1504418480346" duration="5596000" />
+      <workItem from="1504450782543" duration="2429000" />
+      <workItem from="1504509399741" duration="3565000" />
+      <workItem from="1504520093609" duration="3150000" />
+      <workItem from="1504597475623" duration="598000" />
+      <workItem from="1504678741560" duration="11242000" />
+      <workItem from="1504934715089" duration="10930000" />
+      <workItem from="1505118559849" duration="3002000" />
+      <workItem from="1505201101063" duration="3213000" />
+      <workItem from="1505974337521" duration="5276000" />
+      <workItem from="1505991366748" duration="6134000" />
+      <workItem from="1506399839052" duration="6462000" />
+      <workItem from="1506503632399" duration="2625000" />
+      <workItem from="1506917602120" duration="1807000" />
+      <workItem from="1507025233945" duration="40000" />
+      <workItem from="1507025785729" duration="9000" />
+      <workItem from="1507025919003" duration="658000" />
+      <workItem from="1507092650871" duration="9551000" />
+      <workItem from="1507177682319" duration="8412000" />
+      <workItem from="1507372173909" duration="167000" />
+      <workItem from="1507533301421" duration="6308000" />
+      <workItem from="1507645680773" duration="3809000" />
+      <workItem from="1507782837858" duration="4602000" />
+      <workItem from="1507878997676" duration="11567000" />
+      <workItem from="1508132605003" duration="802000" />
+      <workItem from="1508404688294" duration="1148000" />
+      <workItem from="1508904686537" duration="213000" />
+      <workItem from="1508905079062" duration="22000" />
+      <workItem from="1509701676167" duration="702000" />
+      <workItem from="1511621902925" duration="5000" />
+      <workItem from="1512151870184" duration="660000" />
+      <workItem from="1512152858078" duration="31000" />
+      <workItem from="1512152901538" duration="599000" />
+      <workItem from="1512157499792" duration="208000" />
+      <workItem from="1512996314789" duration="114000" />
+      <workItem from="1516804424697" duration="1511000" />
+      <workItem from="1518681115816" duration="3180000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="518586000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="199" y="111" width="1653" height="993" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13964784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="981" y="95" width="253" height="835" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3378882" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22096956" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18651685" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915445" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22489083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24944812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25730336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3378882" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22276622" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18757764" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23201856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14789176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="981" y="95" width="253" height="835" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25155666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24944812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/player_index.cc</url>
+          <line>772</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint suspend="NONE" type="python-exception">
+          <properties exception="BaseException" />
+        </breakpoint>
+        <breakpoint suspend="NONE" type="CidrExceptionBreakpoint">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="66" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/player.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6272">
+          <caret line="448" column="75" lean-forward="true" selection-start-line="448" selection-start-column="75" selection-end-line="448" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/build_planet.h" />
+    <entry file="file://$PROJECT_DIR$/src/build_planet.cc" />
+    <entry file="file://$PROJECT_DIR$/include/Build3rdPlanet.h" />
+    <entry file="file://$PROJECT_DIR$/src/location.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fedmap.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="2046" column="0" lean-forward="false" selection-start-line="2046" selection-start-column="0" selection-end-line="2046" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/player_index.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="60" column="23" lean-forward="true" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player_index.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2426">
+          <caret line="770" column="1" lean-forward="false" selection-start-line="770" selection-start-column="1" selection-end-line="770" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/opt/fed2/stock/beach/loader.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/opt/fed2/stock/beach/space.loc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/opt/fed2/stock/beach/space.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/opt/fed2/stock/beach/water.loc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/opt/fed2/stock/beach/water.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/stock_planet_loader.h" />
+    <entry file="file://$PROJECT_DIR$/include/msg_number.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/para_store.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/xml_parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/misc.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fedmap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4116">
+          <caret line="294" column="32" lean-forward="false" selection-start-line="294" selection-start-column="32" selection-end-line="294" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/location.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="50" lean-forward="false" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/galaxy.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/galaxy.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4691">
+          <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/galaxy_map_parser.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="89" column="2" lean-forward="false" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/galaxy_map_parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-release/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/build_star.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/build_2nd_planet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/star.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/stock_planet.h" />
+    <entry file="file://$PROJECT_DIR$/src/build_2nd_planet.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3934">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="272" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build_star.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1582">
+          <caret line="113" column="89" lean-forward="false" selection-start-line="113" selection-start-column="89" selection-end-line="113" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/build_3rd_planet.h" />
+    <entry file="file://$PROJECT_DIR$/src/build_3rd_planet.cc" />
+    <entry file="file://$PROJECT_DIR$/src/assign.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/star.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="784" column="22" lean-forward="false" selection-start-line="784" selection-start-column="22" selection-end-line="784" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/player.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="395" column="6" lean-forward="false" selection-start-line="395" selection-start-column="6" selection-end-line="395" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stock_planet.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/strtok.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strtok.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/blish_city.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xml_dump_load.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xml_parser.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blish_city.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fed.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cmd_parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/cmd_build.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cmd_parser.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13804">
+          <caret line="1010" column="28" lean-forward="false" selection-start-line="1010" selection-start-column="28" selection-end-line="1010" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cartel.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2688">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cmd_build.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fed.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

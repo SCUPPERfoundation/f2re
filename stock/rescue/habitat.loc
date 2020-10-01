@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<fed2-map title='Habitat' version='1.00' editor='standard' from='396' to='Rescue.Rescue Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   G-plan furniture, folding paper lampshades and brightly covered rugs are stored here.</desc>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Docking bay</name>
+      <desc>   The flexible docking bay doors form a tight seal with the airlock of your shuttle, allowing you free access back and forth. Electronic panels on one wall control floating remote cameras which will roam over the surface of your ship; what they see is shown on a viewscreen in front of you. You can check your ship for efficiency, and instruct the station&apos;s droids to repair or rebuild your ship as necessary.</desc>
+      <desc>   The habitat&apos;s control room is to the south.</desc>
+      <exits s='460' in='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='e'>
+      <name>Remote trading exchange</name>
+      <desc>   Even in emergencies, traders don&apos;t like to be cut off from the markets, so there are facilities here to buy or sell goods with the world below. They might like to think they have turned their back on the Galaxy, but they still need to import and export a certain amount!</desc>
+      <desc>   Trading is all done remotely. As you sell goods, they are moved by steve-droids from the hold of your ship into teleport units; as you buy, the droids unload the &apos;porters and fill your cargo hold.</desc>
+      <desc>   The control room is east.</desc>
+      <exits e='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Control room</name>
+      <desc>   This is the hub of the small space habitat. There&apos;s a mechanical hum and lots of winking lights, as the automated station goes about the business of keeping its systems operational, and providing for the needs of weary visitors.</desc>
+      <desc>   Vending machines sell refreshments to keep weary travelers alive and in good health.</desc>
+      <desc>   A cubbyhole to the west has a remote trading machine; to the east is an autodoc medical unit.</desc>
+      <desc>   Two portholes southeast and southwest will let you look out of the habitat.</desc>
+      <exits n='396' e='461' se='525' sw='523' w='459' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461' flags='hi'>
+      <name>Autodoc medical unit</name>
+      <desc>   The large red cross on this machinery is the universally understood sign showing that it will cure any illness, heal any wounds or broken bones, or failing that will activate your clone and send you off good as new. You will even have pleasant dreams while the autodoc works on you, thanks to the very latest in mood-enhancing anesthetic drugs.</desc>
+      <desc>   A smaller machine will renew lapsed life insurance.</desc>
+      <desc>   The control room is west.</desc>
+      <exits w='460' out='460' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Porthole</name>
+      <desc>   You gaze out of the porthole at the immensity of space, the countless stars twinkling in a hypnotic manner. You find it hard to tear your eyes away. Off to the side you see the interstellar link rotating serenely in space. The habitat&apos;s retro rockets fire occasionally to keep it in position with the link.</desc>
+      <desc>   You can see part of the hull from here. A droid is welding something, patching up a worn spot.</desc>
+      <desc>   There&apos;s an access hatch above you leading to a duct. The control room is northeast.</desc>
+      <exits ne='460' up='587' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>Porthole</name>
+      <desc>   You have a magnificent view of the planet below. You can make out the shape of the continents, and patches of light show you the major cities. No-one knows whether the inhabitants are human or alien, since they have refused all contact with the rest of the Galaxy - this is as close as anyone ever gets.</desc>
+      <desc>   As you watch, a storm brews up over the northern hemisphere, the clouds grow thicker and the planet&apos;s detail is obscured.</desc>
+      <desc>   An access hatch above you leads to a duct. The control room is northwest.</desc>
+      <exits nw='460' up='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Duct</name>
+      <desc>   All space stations or ships have ducts which you can just about crawl through if you really have an urge to, and this is no exception! Wiring runs along the walls, great big bunches of brightly colored wires, probably carrying a very high voltage.</desc>
+      <desc>   The walls are covered with a dirty, greasy film. Not very pleasant!</desc>
+      <desc>   The duct leads east into an open space of some kind. An access hatch leads down.</desc>
+      <exits e='588' down='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='588'>
+      <name>Droid hole</name>
+      <desc>   This is where the habitat&apos;s droids come when they are not working. They line the walls all around you - some almost human-shaped, some just boxes on wheels. The droids here are all powered down and inoperative - asleep, if you like! - but as soon as they are needed the controlling computer will activate them and off they will go to carry out their assigned task.</desc>
+      <desc>   You really shouldn&apos;t be here, you know...</desc>
+      <desc>   Ducts lead east and west.</desc>
+      <exits e='589' w='587' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589'>
+      <name>Duct</name>
+      <desc>   This duct is lined with piping - pipes of all sizes, some so hot to the touch that you burn yourself, others so cold that you almost leave some skin on the pipe. The floor is made up of loose metal grates that clank and rattle every time you move. It would not be a good place to hide!</desc>
+      <desc>   The duct ends in an open space to your west. An access hatch leads down.</desc>
+      <exits w='588' down='525' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

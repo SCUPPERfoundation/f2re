@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<fed2-map title='Water' version='1.00' editor='standard' from='396' to='Beach.Beach Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   Spare sand is kept here. Well you never know, they might run out one day!</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Sunburn clinic</name>
+      <desc>   Caring nurses stand by to rub soothing lotion into the skin of those who have been out in the sun a little too long.</desc>
+      <desc>   Peeping behind a screen you see doctors battling to save the life of someone who drowned. An insurance agent wrings his hands in despair, saying, &apos;Why didn&apos;t he get himself insured? What a tragic waste.&apos; You hope he&apos;s talking about the life, not the money.</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing strip</name>
+      <desc>   The sky is deep blue with a few fluffy white clouds. A cooling sea breeze keeps the temperature to a perfect level. The sun is hot and you look forward to basking on the beach.</desc>
+      <desc>   Young men and women with stunningly attractive, deeply tanned bodies throng around the landing pad, welcoming visitors and directing them to the beach to the southeast, and to white stone buildings north, east and southwest.</desc>
+      <exits n='332' e='397' se='461' sw='459' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Sandy exchange</name>
+      <desc>   The thick stone walls of the building keep it cool, which prevents the trading machinery - and the traders themselves - from overheating. The floor is covered with sand and you wonder why it doesn&apos;t get into the equipment and cause problems.</desc>
+      <desc>   The full range of commodities are bought and sold here, despite the planet being for vacationers. Obviously some people can&apos;t relax properly without a trading console nearby.</desc>
+      <desc>   When you&apos;ve had enough work and want to head to the beach, you can exit by going through the west door.</desc>
+      <exits w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='459' flags='b'>
+      <name>Sunshine bar</name>
+      <desc>   &quot;Welcome, one and all, to the bar where the best cocktails in the whole Galaxy are served,&quot; cries the tanned young bartender. He tosses a cocktail shaker high in the air and catches it behind his back.</desc>
+      <desc>   Small booths in each corner sell tourist goods such as sunhats and snorkels, electronic equipment and weapons. Anyone who forgot their costume (and isn&apos;t lucky enough to have a nano-chameleon suit) can buy one here, from the skimpiest thong to the most demure all-in-one suit.</desc>
+      <desc>   The door in the northeast wall leads back to the landing strip.</desc>
+      <exits ne='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>White Sands beach</name>
+      <desc>  Perfection! The sand is so soft you can&apos;t wait to stretch yourself out and soak up some rays. The beach stretches off into the distance for miles, and you&apos;re sure to find yourself somewhere secluded to rest.</desc>
+      <desc>   If you get too hot, there&apos;s shade to the east in a small rocky cove, or you can head south down to the shore where gently rolling waves break onto the sand.</desc>
+      <desc>   The way back to the landing-pad is northwest.</desc>
+      <exits e='462' s='525' nw='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Cove</name>
+      <desc>   Eroded into the side of a rocky hill by the waves, this secluded cove provides shade from the sun if you need it. The waves surge up the rocks, flinging droplets of spray over you as their foaming white heads break and fall back again.</desc>
+      <desc>   As the waves retreat, they leave pools of water between the rocks. Most are small, but there&apos;s one that is deep enough for you to climb down into the crystal clear water.</desc>
+      <exits w='461' down='526' in='526' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>Shore</name>
+      <desc>   Gently rolling waves break on the shore, their white tops collapsing into frothy bubbles that race up the beach towards you then drain back again. The sand under your feet is wet and cool. Every tenth wave is stronger than the rest, and the water surges far enough to splash against your legs.</desc>
+      <desc>   You can go south into the water for a swim, or north back to the beach.</desc>
+      <exits n='461' s='589' in='589' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='526'>
+      <name>Crystal pool</name>
+      <desc>   You float on the surface of the crystal pool, feeling at peace with yourself and with the rest of the Universe.</desc>
+      <desc>   You see shoals of little silver fishes flitting around the pool, searching for food among the brightly coloured seaplants that waft on the rocks. A large crab scuttles across the base of the pool, then buries himself in the sand.</desc>
+      <desc>   Eventually, you have to return by climbing out of the pool. But for now, you just float.</desc>
+      <exits up='462' out='462' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='589'>
+      <name>In the water</name>
+      <desc>   You can&apos;t really swim here, nor can you stand up in the water. The waves are big enough that they keep knocking you off balance and pulling you around. It&apos;s the most exhilarating feeling, and you feel the cares and stresses of your working life drain away as the water washes over and around you.</desc>
+      <desc>   Now you can see why this planet is considered the ultimate in holiday destinations.</desc>
+      <exits n='525' out='525' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

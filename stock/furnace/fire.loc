@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<fed2-map title='Fire' version='1.00' editor='standard' from='398' to='Furnace.Furnace Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   The intense heat adds such a haze to the air that you cannot see what is stored in here.</desc>
+   </location>
+
+   <location num='334' flags='e'>
+      <name>Commerce dome</name>
+      <desc>   It&apos;s slightly cooler in this dome, apart from the usual sweats brought on by frantic buying and selling of commodities at the small trading screens. Booths lining the walls give you the chance to stock up on any other things you or your ship might need.</desc>
+      <desc>   The exit is south.</desc>
+      <exits s='398' out='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='hi'>
+      <name>Cure-all hospital and insurance</name>
+      <desc>   This dome sees a lot of business, due to the intense heat of the planet. The hospital has a first class burns unit, but can also cope with more general ailments and will sort you out whatever your problem.</desc>
+      <desc>   They can also arrange cloning to insure against accidents.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='398' out='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='398' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   The heat here is intense! The ground is covered with a fine layer of powdery black ash; underneath the ash, the rock is smooth and glassy.</desc>
+      <desc>   You can buy a new ship here, or get your existing ship repaired. Domes to the north, east and west house the planet&apos;s services. South the rest of the planet awaits the brave explorer.</desc>
+      <exits n='334' e='399' s='462' w='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='399' flags='b'>
+      <name>Hotside Bar and Grill</name>
+      <desc>   They don&apos;t need ovens in this bar, if they want to cook food they just put it outside for a moment! Perfect char-grilled steaks in an instant. They do, however, have excellent air conditioning. This dome is the only place on the planet where you feel cool.</desc>
+      <desc>   The bartender is famous for inventing ice that never melts. Try one of his drinks - you&apos;ll like it. When you have had enough, head back to the furnace outside through the west door.</desc>
+      <exits w='398' out='398' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462'>
+      <name>Burning river</name>
+      <desc>   There is running water on this planet, but it&apos;s way above boiling point. Clouds of steam hang above the bubbling water, which looks as if it would boil flesh in an instant.</desc>
+      <desc>   The landing pad is back to the north.</desc>
+      <desc>   Southwest, the river narrows enough for you to jump over it. A pungent burning smell comes from that direction.</desc>
+      <exits n='398' sw='525' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Inside the volcano</name>
+      <desc>   You were right, your suit is keeping you safe from the heat of the molten rock - just. But the intense heat means you can&apos;t see anything except a heat haze, and the strange gases are making you feel light-headed, so maybe a quick exit would be advisable before you pass out and have to suffer the embarrassment of an emergency rescue.</desc>
+      <exits out='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='523'>
+      <name>Lip of the volcano</name>
+      <desc>   You are standing on a small rock ledge right on the edge of the volcano. Inside the crater, liquid fire bubbles and hisses like a devil&apos;s cauldron. Filled with a sense of reckless invulnerability, you wonder what it would be like to jump into that seething mass. Checking the specs of your suit, you think it could probably take the heat...</desc>
+      <exits down='524' in='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Foot of the volcano</name>
+      <desc>   Streams of lava inch their way down the slopes of this erupting mountain. You have to hop from rock to rock to avoid the heat.</desc>
+      <desc>   Above you, the volcano is spitting out fire, and the debris of molten rock and ash rains down all over the planet.</desc>
+      <desc>   Only a fool would venture higher up the slopes of the volcano!</desc>
+      <exits e='525' up='523' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525'>
+      <name>Firejet</name>
+      <desc>   The smell of burning is overpowering here - it seems to come from a hole in the ground. You are about to bend down and peer into it, when a jet of fire shoots out of the hole with a roaring noise. It whooshes high into the sky like a giant bunsen burner, then subsides and vanishes.</desc>
+      <desc>   Northeast is a bubbling hot river. A large volcano towers over you to the west.</desc>
+      <exits ne='462' w='524' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

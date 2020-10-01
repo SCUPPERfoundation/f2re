@@ -1,0 +1,63 @@
+0. Look through, and rewrite if necessary all the new account set up and new player code :(
+
+
+1. Problem with inefficient exchanges
+
+This has been noticed before with resource planets, but today I confirmed it with an Industrial planet. The problem:
+
+If the efficiency on commodities is below 100% (85% is the most common, because of the absence of housing builds)
+AND someone is standing in the exchange THEN production/consumption stops  So, I ask, what is the game doing 
+differently when a player is standing in an exchange, and how does the efficiency play into that? Now, maybe it's 
+not totally stopped, but maybe the inefficiency is amplified to make it appear stopped (like a cycle that would 
+normally take only minutes is amplified to hours)  
+
+I've seen this many times with resource planets, since they are always going to be 85% efficient with most 
+commodities (agricollege bumps it up to 93% for agri commods) So today, I promoted Somnium, and on purpose only 
+built 3 housing instead of 6 before the promotion, thus resulting in having an Industrial planet with 85% 
+efficiency in most commodities. I stood in the exchange for more than an hour, stockpiles that could move, did 
+not move.I stepped out of the exchange, and within a couple minutes stockpiles that could move, moved. And moved 
+again within minutes. 
+
+Case in point: 
+
+Gold, sat at 248 stock on hand for the time i stood in the exchange (over an hour)It's a +48 producer.   In the 
+last 15 minutes, that the exchange has had no one in it,  it has cycled 4 times and has 440 stock on hand now.  
+This is a bug.  It would be really nice if it were fixed. Thanks,Mark  		 	   		  
+
+
+2. We need a proper money class to prevent flip overs from big pos to big neg amounts
+
+
+3. Blish City names
+
+This player says that he accidentally built a third Blish City with the same name as the second one (A Do) and now 
+he can't access it. Is there anything you can do about this?
+
+
+4. Maybe we shoulf use a dictionary for the command parser?
+
+
+5. Command synonym needed
+
+Stardate: 129293:7180 - Oddball: Hazed.  Command list in Star for fitting out a resource city is incorrect...
+should be build city mining
+
+When you do your cleaning up, can you set it so "resource" works as well, please, so it matches every other 
+usage in the game.
+
+
+6. New mobile: Spin doctor
+
+
+7. New mobile:
+
+Carbon-based Activated Tabby
+Schrodinger
+Wave Equation
+Cryptography
+Key Exchange
+Two places at once
+Young's slit experiment
+Get through extremely small appatures, but only when you are not watching
+feline uncertainty principle 
+

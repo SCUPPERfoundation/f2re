@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Furnace Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   There is only one planet in this system, and it is very close to the star. Thankfully your nano-chameleon suit is just as good at keeping out the heat of the sun as it is the cold of deep space!</desc>
+      <desc>   The planet glows deep, bright orange, much of it enveloped in fire. There&apos;s a small terraformed area surrounded by very thick firewalls where you can land your shuttle.</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

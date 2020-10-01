@@ -1,0 +1,11 @@
+# ibgames fed2d installation makefile
+
+BIN=./objtest
+PROD=/var/opt/fed2test
+
+# fed2d executable dependencies
+
+$(PROD)/fed2d: $(BIN)/fed2testd
+	mv $(PROD)/fed2d $(PROD)/fed2d.old
+	cp $(BIN)/fed2testd $(PROD)/fed2d
+

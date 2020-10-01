@@ -1,0 +1,5 @@
+# ibgames fed2d/src SCons file
+
+Import('*')
+
+fed = env.Program(target = 'fed2d',source = Glob('*cc'))

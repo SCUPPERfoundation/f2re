@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<fed2-map title='Rock' version='1.00' editor='standard' from='397' to='Stone.Stone Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   It&apos;s full of rocks. And mud. That&apos;s all.</desc>
+   </location>
+
+   <location num='397' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   The landscape is bleak, nothing but bare, empty rock. It doesn&apos;t even form any interesting shapes; there&apos;s nothing at all to relieve the eye.</desc>
+      <desc>   Next to your shuttle is a small view screen for you to order any ship services you need, install new equipment, replenish your weapons or replace faulty electronics, or if you need to you can buy a completely new ship.</desc>
+      <desc>   The entrance to a cave system leads underground to the south.</desc>
+      <exits s='461' in='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='e'>
+      <name>Rocky trading post</name>
+      <desc>   The planet is inhospitable, and so are the staff and the other traders. Everyone keeps themselves to themselves and they don&apos;t believe in indulging in unnecessary chat. You&apos;ll make no friends here, so just sit down, do your trading and then leave again, as quick as you can.</desc>
+      <desc>   If you need to buy any goods, someone will grudgingly sell you things, if they are available. If you need help, you won&apos;t get it here.</desc>
+      <desc>   The exit is east.</desc>
+      <exits e='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='461'>
+      <name>Cave entrance</name>
+      <desc>   This small cave has tunnels leading off to other caves. The rocky ceiling is low so mind your head. Claustrophics are not advised to visit this planet!</desc>
+      <desc>   A small entrance to the north leads out to the landing pad. A west tunnel leads to the trading exchange, east to the medical facilities, and south to a bar. The southwest tunnel has been partially blocked by a mudslide but you could still get through if you wished.</desc>
+      <exits n='397' e='462' s='525' sw='524' w='460' down='524' out='397' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='462' flags='hi'>
+      <name>Underground Aid</name>
+      <desc>   The medical facilities here not only deal with day to day injuries, but also serve as the base for a scientific team trying to discover why the planet is so inimical to life. So far they&apos;ve had no success at all. The equipment is fairly primitive but adequate. They do have a modern automatic insurance machine so you can ensure any injuries you do sustain are not fatal.</desc>
+      <desc>   The exit is west.</desc>
+      <exits w='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='524'>
+      <name>Mudslide</name>
+      <desc>   The tunnel here is knee-deep in mud that clings to your legs, making it hard to walk. With every step, the mud threatens to sweep you away down to the southwest, towards a rock chimney. Climbing back up to the cave which is northeast isn&apos;t easy either.</desc>
+      <desc>   The mud smells foul, too.</desc>
+      <exits ne='461' sw='587' up='461' down='587' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='525' flags='b'>
+      <name>Troglodyte and Tankard</name>
+      <desc>   This is the only place on this deity-forsaken planet where someone cracks a smile, and even that looks a bit forced. The barkeeper tries to be welcoming and friendly, but he&apos;s not really suited to it.</desc>
+      <desc>   The other patrons sit alone at their tables, determined to ignore everyone else.</desc>
+      <desc>   You can leave the bar by going north.</desc>
+      <exits n='461' out='461' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='587'>
+      <name>Rock chimney</name>
+      <desc>   The tunnel takes a sharp downward turn, becoming almost vertical as it forms a narrow chimney. Whether you&apos;re going up or down, it&apos;s going to be hard and dangerous so take it slowly to avoid slipping.</desc>
+      <desc>   On some worlds, people actually pay to go tunnelling and clambering through rock passages. They&apos;d probably enjoy this.</desc>
+      <desc>   Down below you the tunnel opens out into a large cavern. Above you it levels out into a mud-filled passage.</desc>
+      <exits ne='524' up='524' down='651' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='651'>
+      <name>Cavern</name>
+      <desc>   Stalactites and stalagmites rise up from the floor and down from the ceiling in this vast underground cavern (or is it the other way round?). They form weird shapes that almost - but not quite - look like they mean something. Your footsteps echo around the empty space as the sound bounces off the walls in a most eerie fashion.</desc>
+      <desc>   A steep tunnel leads back up towards the surface, and to the south the cavern floor slopes down towards a mysterious pool.</desc>
+      <exits s='715' up='587' down='715' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='715'>
+      <name>Black pool</name>
+      <desc>   The pool is deep, dark, silent and still. Nothing lives in this liquid, and nothing disturbs its sinister tranquility. Best that you don&apos;t disturb it either. It doesn&apos;t look like water but you don&apos;t think you want to know what it really is!</desc>
+      <desc>   North leads back to the vast open space of the cavern.</desc>
+      <exits n='651' up='651' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

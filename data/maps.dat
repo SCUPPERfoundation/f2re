@@ -1,0 +1,1610 @@
+<?xml version="1.0"?>
+
+<galaxy>
+
+	<star name='Aard' directory='aard'>
+		<map name='bei'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ability' directory='ability'>
+		<map name='immortality'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Abode' directory='abode'>
+		<map name='ourhouse'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Acme' directory='acme'>
+		<map name='flower'/>
+		<map name='occyland'/>
+		<map name='driveup'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Acorn' directory='acorn'>
+		<map name='oak'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Addams' directory='addams'>
+		<map name='mox'/>
+		<map name='outcast'/>
+		<map name='qzar'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Aegean' directory='aegean'>
+		<map name='atlantis'/>
+		<map name='mykonos'/>
+		<map name='rhodes'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Aero' directory='aero'>
+		<map name='electra'/>
+		<map name='flyer'/>
+		<map name='spirit'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Aevum' directory='aevum'>
+		<map name='lascivio'/>
+		<map name='mortuus'/>
+		<map name='pario'/>
+		<map name='somnium'/>
+		<map name='space'/>
+		<map name='victus'/>
+	</star>
+
+	<star name='Alex' directory='alex'>
+		<map name='roblox'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Altura' directory='altura'>
+		<map name='entex'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Aman' directory='aman'>
+		<map name='valinor'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Animation' directory='animation'>
+		<map name='dexterslab'/>
+		<map name='space'/>
+		<map name='toontown'/>
+		<map name='yarnball'/>
+	</star>
+
+	<star name='Ankles' directory='ankles'>
+		<map name='talus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Aqua' directory='aqua'>
+		<map name='compass'/>
+		<map name='sextant'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Aquarius' directory='aquarius'>
+		<map name='ganymede'/>
+		<map name='aquila'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ara' directory='ara'>
+		<map name='chiron'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Arcadia' directory='arcadia'>
+		<map name='asilomar'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Archai' directory='archai'>
+		<map name='gaia'/>
+		<map name='oceania'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Arctica' directory='arctica'>
+		<map name='ice'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ardeliu' directory='ardeliu'>
+		<map name='ardeal'/>
+		<map name='carpathia'/>
+		<map name='castlelab'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Armory' directory='armory'>
+		<map name='duns'/>
+		<map name='smith'/>
+		<map name='wesson'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Arov' directory='arov'>
+		<map name='navarium'/>
+		<map name='arovia'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Arras' directory='arras'>
+		<map name='aldebarr'/>
+		<map name='alphastus'/>
+		<map name='canustus'/>
+		<map name='denebus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Arsenal' directory='arsenal'>
+		<map name='emirates'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ash' directory='ash'>
+		<map name='dust'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Asylum' directory='asylum'>
+		<map name='link'/>
+		<map name='narcissus'/>
+		<map name='sanitaria'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Avalon' directory='avalon'>
+		<map name='camelot'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Avardi' directory='avardi'>
+		<map name='katra'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Axieon' directory='axieon'>
+		<map name='renglor'/>
+		<map name='space'/>
+		<map name='veltier'/>
+	</star>
+
+	<star name='Axion' directory='axion'>
+		<map name='haley'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Azure' directory='azure'>
+		<map name='erigol'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Bezerk' directory='bezerk'>
+		<map name='zerk'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Bloodmoon' directory='bloodmoon'>
+		<map name='dilconia'/>
+		<map name='shadowland'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Blue' directory='blue'>
+		<map name='cheers'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Blue Sun' directory='bluesun'>
+		<map name='miranda'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Bonita' directory='bonita'>
+		<map name='chulavista'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Bowling' directory='bowling'>
+		<map name='duckpin'/>
+		<map name='tenpin'/>
+		<map name='candlepin'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Brains' directory='brains'>
+		<map name='school'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Canine' directory='canine'>
+		<map name='bassetopia'/>
+		<map name='flea'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Carmen' directory='carmen'>
+		<map name='bellaterra'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Casino' directory='casino'>
+		<map name='vagus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cheese' directory='cheese'>
+		<map name='mousetrap'/>
+		<map name='cheeseball'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Centauri' directory='centauri'>
+		<map name='p2x787'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Chicago' directory='chicago'>
+		<map name='newchicago'/>
+		<map name='gary'/>
+		<map name='joliet'/>
+		<map name='space'/>
+		<map name='zion'/>
+	</star>
+
+	<star name='Chips' directory='chips'>
+		<map name='frito'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Chocolate' directory='chocolate'>
+		<map name='caramel'/>
+		<map name='crunchy'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Chrysoberyl' directory='chrysoberyl'>
+		<map name='catseye'/>
+		<map name='hairball'/>
+		<map name='litterbox'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ciel' directory='ciel'>
+		<map name='maji'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Circuit' directory='circuit'>
+		<map name='grandprix'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cloud' directory='cloud'>
+		<map name='cloudbase'/>
+		<map name='cumulus'/>
+		<map name='nimbus'/>
+		<map name='wisp'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Comet' directory='comet'>
+		<map name='halley'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cooper' directory='cooper'>
+		<map name='coopersville'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Coranth' directory='coranth'>
+		<map name='bandan'/>
+		<map name='ragana'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Corsec' directory='corsec'>
+		<map name='dantooine'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Crazy' directory='crazy'>
+		<map name='golf'/>
+		<map name='putt'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Crossroads' directory='crossroads'>
+		<map name='bluesimage'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Crypton' directory='crypton'>
+		<map name='dome'/>
+		<map name='katharon'/>
+		<map name='superland'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cubit' directory='cubit'>
+		<map name='cube'/>
+		<map name='space'/>
+		<map name='triangle'/>
+	</star>
+
+	<star name='Cunicularium' directory='cunicularium'>
+		<map name='cabbage'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cutlass' directory='cutlass'>
+		<map name='jollyrodger'/>
+		<map name='rapier'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cyclide' directory='cyclide'>
+		<map name='thorus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Cygni' directory='cygni'>
+		<map name='tellarprime'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Darkness' directory='darkness'>
+		<map name='vapid'/>
+		<map name='viand'/>
+		<map name='virose'/>
+		<map name='virtual'/>
+		<map name='vivid'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dark Star' directory='darkstar'>
+		<map name='aos3'/>
+		<map name='avalon'/>
+		<map name='space'/>
+		<map name='winterland'/>
+	</star>
+
+	<star name='Demeter' directory='demeter'>
+		<map name='starport_9'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Deos' directory='deos'>
+		<map name='ainokea'/>
+		<map name='altwerkz'/>
+		<map name='deosstation'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dharma' directory='dharma'>
+		<map name='nirvana'/>
+		<map name='nibbana'/>
+		<map name='samsara'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Discontinuity' directory='discontinuity'>
+		<map name='innovation'/>
+		<map name='paradigm'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Distant' directory='distant'>
+		<map name='farpoint'/>
+		<map name='farpointbiolabs'/>
+		<map name='horizon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Diversity' directory='diversity'>
+		<map name='rainbow'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Domina' directory='domina'>
+		<map name='bellum'/>
+		<map name='bellumasteroid'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Draedus' directory='draedus'>
+		<map name='draedusprime'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dragon' directory='dragon'>
+		<map name='bronze'/>
+		<map name='red'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dreich' directory='dreich'>
+		<map name='scotia'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dresden' directory='dresden'>
+		<map name='pilgrim'/>
+		<map name='slaughterhouse5'/>
+		<map name='space'/>
+		<map name='tralfamadore'/>
+		<map name='wildhack'/>
+	</star>
+
+	<star name='Dryland' directory='dryland'>
+		<map name='highland'/>
+		<map name='lowland'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dune' directory='dune'>
+		<map name='prime'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Dyson' directory='dyson'>
+		<map name='spherion'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Eagle Rising' directory='eaglerising'>
+		<map name='warrant2'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Eerie' directory='eerie'>
+		<map name='evil'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Elemecca' directory='elemecca'>
+		<map name='argentia'/>
+		<map name='inluvines'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Elimisto' directory='elimisto'>
+		<map name='kentta'/>
+		<map name='sauterne'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Eloi' directory='eloi'>
+		<map name='cavern'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Empire' directory='empire'>
+		<map name='rome'/>
+		<map name='space'/>
+	</star>
+
+	<star name='End' directory='end'>
+		<map name='darkness'/>
+		<map name='shades'/>
+		<map name='space'/>
+		<map name='starsend'/>
+	</star>
+
+	<star name='Ender' directory='ender'>
+		<map name='battleschool'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Entertainment' directory='entertainment'>
+		<map name='games'/>
+		<map name='movies'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Erg' directory='erg'>
+		<map name='almein'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Eridani' directory='eridani'>
+		<map name='vulcan'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Eriez' directory='eriez'>
+		<map name='dorm'/>
+		<map name='edinboro'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Errinas' directory='errinas'>
+		<map name='cinaed'/>
+		<map name='dennotairn'/>
+		<map name='fionnlagh'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Esperanza' directory='esperanza'>
+		<map name='boston'/>
+		<map name='hope'/>
+		<map name='hopeless'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ether' directory='ether'>
+		<map name='firmament'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Exile' directory='exile'>
+		<map name='asylum'/>
+		<map name='deathrow'/>
+		<map name='prison'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Farm' directory='farm'>
+		<map name='fluffy'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Far Star' directory='farstar'>
+		<map name='smyrno'/>
+		<map name='space'/>
+		<map name='terminus'/>
+	</star>
+
+	<star name='Fatcat' directory='fatcat'>
+		<map name='mizhu'/>
+		<map name='piscin'/>
+		<map name='sinta'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Feet' directory='feet'>
+		<map name='leftfoot'/>
+		<map name='rightfoot'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Fishing' directory='fishing'>
+		<map name='hook'/>
+		<map name='line'/>
+		<map name='sinker'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Food' directory='food'>
+		<map name='drunk'/>
+		<map name='recipe'/>
+		<map name='restaurantrow'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Forgotten' directory='forgotten'>
+		<map name='badlands'/>
+		<map name='hazmatstation'/>
+		<map name='wasteland'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Fowl' directory='fowl'>
+		<map name='kingdom'/>
+		<map name='seasons'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Frag' directory='frag'>
+		<map name='capture'/>
+		<map name='space'/>
+		<map name='urbase'/>
+	</star>
+
+	<star name='Framers' directory='framers'>
+		<map name='space'/>
+		<map name='vernon'/>
+	</star>
+
+	<star name='Framers2' directory='framers2'>
+		<map name='exeter'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Framers3' directory='framers3'>
+		<map name='portsmouth'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Framers4' directory='framers4'>
+		<map name='charlestown'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Framers5' directory='framers5'>
+		<map name='scarborough'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Free' directory='free'>
+		<map name='enterprise'/>
+		<map name='freedom'/>
+		<map name='space'/>
+		<map name='teaparty'/>
+	</star>
+
+	<star name='Fringe' directory='fringe'>
+		<map name='planetalpha'/>
+		<map name='destinystation'/>
+		<map name='hydroponicsstation1'/>
+		<map name='solus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Frontier' directory='frontier'>
+		<map name='boondocks'/>
+		<map name='carson'/>
+		<map name='fremont'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Garr' directory='garr'>
+		<map name='ashten'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Gaul' directory='gaul'>
+		<map name='gervais'/>
+		<map name='lutece'/>
+		<map name='provence'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Georgia' directory='georgia'>
+		<map name='augusta'/>
+		<map name='savannah'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Gephoria' directory='gephoria'>
+		<map name='gforce'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Gliese' directory='gliese'>
+		<map name='crash'/>
+		<map name='valis'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Gliese581' directory='gliese581'>
+		<map name='demeter'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Goldman' directory='goldman'>
+		<map name='florin'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Gough' directory='gough'>
+		<map name='gough_minor'/>
+		<map name='gough_prime'/>
+		<map name='new_gough'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Granite' directory='granite'>
+		<map name='ooops'/>
+		<map name='pebble'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Green String' directory='greenstring'>
+		<map name='portsimian'/>
+		<map name='space'/>
+		<map name='tree'/>
+	</star>
+
+	<star name='Haidec' directory='haidec'>
+		<map name='somma'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Happy' directory='happy'>
+		<map name='smile'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Havefun' directory='havefun'>
+		<map name='bourbonballs'/>
+		<map name='projectm'/>
+		<map name='whiskey'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Hawaii' directory='hawaii'>
+		<map name='oahu'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Hedonism' directory='hedonism'>
+		<map name='indulgence'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Hegemony' directory='hegemony'>
+		<map name='hyperion'/>
+		<map name='space'/>
+		<map name='pacem'/>
+		<map name='tauceti'/>
+	</star>
+
+	<star name='Highlander' directory='highlander'>
+		<map name='caelamaen'/>
+		<map name='ceilidh'/>
+		<map name='feile'/>
+		<map name='space'/>
+		<map name='zephan'/>
+	</star>
+
+	<star name='Hive' directory='hive'>
+		<map name='wasp'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Holiday' directory='holiday'>
+		<map name='fiesta'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Hope' directory='hope'>
+		<map name='stjude'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Horizon' directory='horizon'>
+		<map name='aquea'/>
+		<map name='ibrax'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Iberia' directory='iberia'>
+		<map name='alba_two'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ice' directory='ice'>
+		<map name='arctic'/>
+		<map name='aurora'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Icicle' directory='icicle'>
+		<map name='freeze'/>
+		<map name='summer'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Icom' directory='icom'>
+		<map name='getix'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Insane' directory='insane'>
+		<map name='nuthouse'/>
+		<map name='nutless'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Irony' directory='irony'>
+		<map name='confusion'/>
+		<map name='paradox'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Isolation' directory='isolation'>
+		<map name='recluse'/>
+		<map name='solitude'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Jaguar' directory='jaguar'>
+		<map name='brightstar'/>
+		<map name='costar'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Japan' directory='japan'>
+		<map name='edo'/>
+		<map name='tokyo'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Java' directory='java'>
+		<map name='kona'/>
+		<map name='sludge'/>
+		<map name='space'/>
+		<map name='sulawesi'/>
+	</star>
+
+	<star name='Jenova' directory='jenova'>
+		<map name='midgar'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Joyzee' directory='joyzee'>
+		<map name='newark'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Jungle' directory='jungle'>
+		<map name='lyon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Kaos' directory='kaos'>
+		<map name='dwarka'/>
+		<map name='karnak'/>
+		<map name='pantheon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Kent' directory='kent'>
+		<map name='byroncenter'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Kiddo' directory='kiddo'>
+		<map name='katana'/>
+		<map name='space'/>
+		<map name='tachi'/>
+		<map name='tanto'/>
+	</star>
+
+	<star name='Kothor' directory='kothor'>
+		<map name='nexus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Kreel' directory='kreel'>
+		<map name='raven'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Kuiper' directory='kuiper'>
+		<map name='quaoar'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Kuron' directory='kuron'>
+		<map name='kuronprime'/>
+		<map name='space'/>
+	</star>
+
+	<star name='La Comedia' directory='lacomedia'>
+		<map name='inferno'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Latenight' directory='latenight'>
+		<map name='tonight'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Landings' directory='landings'>
+		<map name='crosswind'/>
+		<map name='deadstick'/>
+		<map name='gavia'/>
+		<map name='space'/>
+		<map name='tailwind'/>
+	</star>
+
+	<star name='Lawful' directory='lawful'>
+		<map name='advocate'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Leporidae' directory='leporidae'>
+		<map name='maroon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Leggs' directory='leggs'>
+		<map name='shins'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Liquor' directory='liquor'>
+		<map name='beer'/>
+		<map name='bourbon'/>
+		<map name='scotch'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Logic' directory='logic'>
+		<map name='genesis'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Looking Glass' directory='lookingglass'>
+		<map name='alice'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Lost' directory='lost'>
+		<map name='bubbles'/>
+		<map name='dryad'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Lunax' directory='lunax'>
+		<map name='lunarian'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Masik' directory='masik'>
+		<map name='norsaq'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Mechadom' directory='mechadom'>
+		<map name='mazinger'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Merit' directory='merit'>
+		<map name='coil'/>
+		<map name='corkscrew'/>
+		<map name='curl'/>
+		<map name='spiral'/>
+		<map name='space'/>
+		<map name='twist'/>
+	</star>
+
+	<star name='Mixed' directory='mixed'>
+		<map name='crispy'/>
+		<map name='frosty'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Modoki' directory='modoki'>
+		<map name='larg'/>
+		<map name='soel'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Mogwai' directory='mogwai'>
+		<map name='gremlins'/>
+		<map name='gremlins2'/>
+		<map name='guerillagremlins'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Mountain' directory='mountain'>
+		<map name='boulder'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Mount Olympus' directory='mountolympus'>
+		<map name='odysseus'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Musa' directory='musa'>
+		<map name='acuminata'/>
+		<map name='ornata'/>
+		<map name='rubra'/>
+		<map name='space'/>
+		<map name='zebrina'/>
+	</star>
+
+	<star name='Nether' directory='nether'>
+		<map name='draenor'/>
+		<map name='outland'/>
+		<map name='palelady'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Newport' directory='newport'>
+		<map name='beechwood'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Nibiru' directory='nibiru'>
+		<map name='xena'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Nitor' directory='nitor'>
+		<map name='pia'/>
+		<map name='luna'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Nobori' directory='nobori'>
+		<map name='northwind'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Oasis' directory='oasis'>
+		<map name='zandzabar'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ohio' directory='ohio'>
+		<map name='mahoning'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ombey' directory='ombey'>
+		<map name='valisk'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Onyx' directory='onyx'>
+		<map name='onyxprime'/>
+		<map name='amora'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Optimal' directory='optimal'>
+		<map name='ceer'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Pacifica' directory='pacifica'>
+		<map name='d1594'/>
+		<map name='helix'/>
+		<map name='numazu'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Parklandia' directory='parklandia'>
+		<map name='parkland'/>
+		<map name='parkland_station'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Pelf' directory='pelf'>
+		<map name='aliment'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Phorbe' directory='phorbe'>
+		<map name='phlax'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Plattner' directory='plattner'>
+		<map name='bond'/>
+		<map name='filby'/>
+		<map name='morlock'/>
+		<map name='moses'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Pond' directory='pond'>
+		<map name='lilypad'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Pyra' directory='pyra'>
+		<map name='bx1'/>
+		<map name='saturnv'/>
+		<map name='space'/>
+		<map name='vostok'/>
+	</star>
+
+	<star name='Quiet' directory='quiet'>
+		<map name='meta'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Racetrack' directory='racetrack'>
+		<map name='gasolinealley'/>
+		<map name='grandstand'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rage' directory='rage'>
+		<map name='phyxius'/>
+		<map name='plotikos'/>
+		<map name='serapis'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rawr' directory='rawr'>
+		<map name='fireye'/>
+		<map name='irontooth'/>
+		<map name='roughscale'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Razor' directory='razor'>
+		<map name='razorsharp'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Relax' directory='relax'>
+		<map name='lighthouse'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Resort' directory='resort'>
+		<map name='majestic'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rica' directory='rica'>
+		<map name='puravida'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rigel' directory='rigel'>
+		<map name='rigel4'/>
+		<map name='space'/>
+	</star>
+
+	<star name='River' directory='river'>
+		<map name='ginnie'/>
+		<map name='ichetucknee'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rock' directory='rock'>
+		<map name='hop'/>
+		<map name='skip'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rubble' directory='rubble'>
+		<map name='diagaga'/>
+		<map name='dottle'/>
+		<map name='dirt'/>
+		<map name='dross'/>
+		<map name='dungeon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Ruby' directory='ruby'>
+		<map name='eidolon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Russia' directory='russia'>
+		<map name='chernobyl'/>
+		<map name='marina'/>
+		<map name='garden'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Rylos' directory='rylos'>
+		<map name='kronos'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Samar' directory='samar'>
+		<map name='aurealis'/>
+		<map name='daedalus'/>
+		<map name='hesperus'/>
+		<map name='space'/>
+		<map name='tama'/>
+	</star>
+
+	<star name='Sarcasm' directory='sarcasm'>
+		<map name='space'/>
+		<map name='trump'/>
+	</star>
+
+	<star name='Secret' directory='secret'>
+		<map name='alec'/>
+		<map name='hugo'/>
+		<map name='lair'/>
+		<map name='space'/>
+		<map name='stavro'/>
+		<map name='white'/>
+	</star>
+
+	<star name='Sensory' directory='sensory'>
+		<map name='flambe'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Serengeti' directory='serengeti'>
+		<map name='masai'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Shadow' directory='shadow'>
+		<map name='amber'/>
+		<map name='chaos'/>
+		<map name='stick'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Shift' directory='shift'>
+		<map name='bob'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Shire' directory='shire'>
+		<map name='arda'/>
+		<map name='hobbiton'/>
+		<map name='longbottom'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Siamese' directory='siamese'>
+		<map name='kittygarden'/>
+		<map name='kittyheaven'/>
+		<map name='kittypallace'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Sicilia' directory='sicilia'>
+		<map name='corleone'/>
+		<map name='palermo'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Sierra' directory='sierra'>
+		<map name='newsiberia'/>
+		<map name='siberianbear'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Sirius' directory='sirius'>
+		<map name='canis'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Sithein' directory='sithein'>
+		<map name='eire'/>
+		<map name='space'/>
+		<map name='tirnanog'/>
+	</star>
+
+	<star name='Slippery' directory='slippery'>
+		<map name='popcorn'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Slither' directory='slither'>
+		<map name='binary'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Snake' directory='snake'>
+		<map name='fox'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Soed' directory='soed'>
+		<map name='aekonia'/>
+		<map name='balsoed'/>
+		<map name='noom'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Sol' directory='sol'>
+		<map name='brass'/>
+		<map name='castillo'/>
+		<map name='doris'/>
+		<map name='earth'/>
+		<map name='graveyard'/>
+		<map name='help'/>
+		<map name='hunt'/>
+		<map name='lattice'/>
+		<map name='magellan'/>
+		<map name='magrathea'/>
+		<map name='mars'/>
+		<map name='mercury'/>
+		<map name='moon'/>
+		<map name='paradise'/>
+		<map name='pearl'/>
+		<map name='phobos'/>
+		<map name='rhea'/>
+		<map name='silk'/>
+		<map name='space'/>
+		<map name='starbase1'/>
+		<map name='sumatra'/>
+		<map name='system'/>
+		<map name='titan'/>
+		<map name='venus'/>
+	</star>
+
+	<star name='Spindle' directory='spindle'>
+		<map name='austin'/>
+		<map name='dallas'/>
+		<map name='labyrinth'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Sports' directory='sports'>
+		<map name='baseball'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Spy' directory='spy'>
+		<map name='brig'/>
+		<map name='covert'/>
+		<map name='overt'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Stalker' directory='stalker'>
+		<map name='tracker'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Starcloud' directory='starcloud'>
+		<map name='glory'/>
+		<map name='pride'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Starfleet' directory='starfleet'>
+		<map name='nome'/>
+		<map name='space'/>
+		<map name='voyager'/>
+	</star>
+
+	<star name='Stars End' directory='starsend'>
+		<map name='space'/>
+		<map name='cinna'/>
+	</star>
+
+	<star name='Starlight' directory='starlight'>
+		<map name='jennabug'/>
+		<map name='jenna'/>
+		<map name='jenna5'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Stash' directory='stash'>
+		<map name='chamomile'/>
+		<map name='butteredrum'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Tachyon' directory='tachyon'>
+		<map name='bosonic'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Talmera' directory='talmera'>
+		<map name='estari'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Tarot' directory='tarot'>
+		<map name='arcanamajor'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Tempus' directory='tempus'>
+		<map name='ribos'/>
+		<map name='alzarius'/>
+		<map name='space'/>
+		<map name='voga'/>
+	</star>
+
+	<star name='Terra' directory='terra'>
+		<map name='railway'/>
+		<map name='wagon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Terran' directory='terran'>
+		<map name='arawn'/>
+		<map name='eris'/>
+		<map name='terra'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Texas' directory='texas'>
+		<map name='newhouston'/>
+		<map name='space'/>
+	</star>
+
+	<star name='The Rift' directory='therift'>
+		<map name='liberty'/>
+		<map name='penance'/>
+		<map name='ritual'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Time' directory='time'>
+		<map name='argos'/>
+		<map name='calufrax'/>
+		<map name='gallifrey'/>
+		<map name='space'/>
+		<map name='sto'/>
+		<map name='tara'/>
+	</star>
+
+	<star name='Topology' directory='topology'>
+		<map name='metric'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Totally' directory='totally'>
+		<map name='awesome'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Tourist Trap' directory='touristtrap'>
+		<map name='countyfair'/>
+		<map name='pitstop'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Transylvania' directory='transylvania'>
+		<map name='fear'/>
+		<map name='halloween'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Tropical Island' directory='tropicalisland'>
+		<map name='beachhouse'/>
+		<map name='beachhouse2'/>
+		<map name='beachhouse3'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Tropics' directory='tropics'>
+		<map name='tropicana'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Truth' directory='truth'>
+		<map name='absolute'/>
+		<map name='undeniable'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Urland' directory='urland'>
+		<map name='dalmazia'/>
+		<map name='elspeth'/>
+		<map name='galen'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Usmc' directory='usmc'>
+		<map name='leathernecks'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vacation' directory='vacation'>
+		<map name='nowhere'/>
+		<map name='somewhere'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Valhalla' directory='valhalla'>
+		<map name='cimmeria'/>
+		<map name='orilla'/>
+		<map name='othala'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vdub' directory='vdub'>
+		<map name='charity'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vector' directory='vector'>
+		<map name='vectorprime'/>
+		<map name='vectron'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vermont' directory='vermont'>
+		<map name='cheddarprime'/>
+		<map name='parmigianocheese'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vinyards' directory='vinyards'>
+		<map name='bordeaux'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Virgin Islands' directory='virginislands'>
+		<map name='stthomas'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vitis' directory='vitis'>
+		<map name='anthesteria'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Volleyball' directory='volleyball'>
+		<map name='molten'/>
+		<map name='wilson'/>
+		<map name='zeerox'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Vortex' directory='vortex'>
+		<map name='leucothea'/>
+		<map name='pharynx'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Washington' directory='washington'>
+		<map name='pentagon'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Weather' directory='weather'>
+		<map name='stormy'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Wellman' directory='wellman'>
+		<map name='angelas'/>
+		<map name='donnas'/>
+		<map name='stevens'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Wit' directory='wit'>
+		<map name='humor'/>
+		<map name='nitwit'/>
+		<map name='reason'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Wow' directory='wow'>
+		<map name='ooh'/>
+		<map name='space'/>
+		<map name='whoo'/>
+	</star>
+
+	<star name='Yarl' directory='yarl'>
+		<map name='mermoon'/>
+		<map name='mersun'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Xingmang' directory='xingmang'>
+		<map name='richu'/>
+		<map name='space'/>
+		<map name='weiyang'/>
+	</star>
+
+	<star name='Xylyss' directory='xylyss'>
+		<map name='esvyrim'/>
+		<map name='naryum'/>
+		<map name='space'/>
+		<map name='velvyn'/>
+		<map name='zalzyran'/>
+	</star>
+
+	<star name='Zen' directory='zen'>
+		<map name='zendra'/>
+		<map name='space'/>
+	</star>
+
+	<star name='Zylon' directory='zylon'>
+		<map name='star7'/>
+		<map name='zylonprime'/>
+		<map name='space'/>
+	</star>
+
+</galaxy>

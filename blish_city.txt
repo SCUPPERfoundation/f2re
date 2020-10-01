@@ -1,0 +1,158 @@
+
+Blish Cities
+
+1. Named after the legendary atomic era writer James Blish, who first popularised
+the concept of spacefaring cities cruising around looking for work. NOTE: if you
+want the word 'City' in the name, you need to include it!
+
+2. Cities have a name, belong to a cartel and can be allocated to any planet in
+the owning cartel.
+
+3. Cities have an economic level, and they can produce commodities within that level.
+
+4. Cities have up to five slots for production, each commodity produced must be
+from their economic level. You can have more than one slot producing the same
+commodity.s
+
+5. Each slot has a capacity of between 8 and 12 inclusive (random) production points.
+
+6. It takes two days to retool for new production if a change is made to any slot.
+During this time production is halted.
+
+7. Cities produce income for the cartel as well as the production for the planet.
+
+8. Very occasionally they will produce exotic commodities/objects for the cartel
+owner (not yet in!)
+
+9. Cities may only be configured by the cartel owner, except that the planet owner
+may also change the production - in which case the cartel owner will be notified.
+(ie the cartel is the owner of the city, but the planet owner is the 'customer')
+
+10. A planet may only employ one Blish city at a time.
+
+
+Building Blish Cities
+
+1. Only one can be built at a time, and only on the cartel's prime planet.
+
+2. To build cities you need a graving dock.
+
+3.	Building Materials:
+
+	Graving Dock:	20 meg 5 days
+
+		Alloys					9,450
+		Clays						6,000
+		Nickel					3,000
+		Xmaetals					4,050
+		Mechparts				1,950
+		Polymers					4,125
+		Droids					1,125
+		Lasers					2,025
+		Nanos						  675
+		Synths					3,000
+		Tools						4,875
+		
+
+	Blish Cities:
+
+	Base:
+		Stage 1:	10 workers	6 meg		1 slot	5 days
+			Alloys				3,975
+			Monopoles			1,200
+			Generators			2,700
+			Droids				3,525
+			Nanos					1,350
+	
+		Stage 2:	10 workers	4 meg		2 slots	2 days
+			Woods					2,025
+			Xmetals				5,100
+			Polymers				4,725
+			Synths				2,100
+			Katydidics			  975
+
+		Stage 3:	12 workers	4 meg		3 slots	2 days
+			Semiconductors		6,825
+			Pharmaceuticals	3,225
+			Controllers			1,050
+			Laboratories		1,800
+			Clinics				2,400
+		
+		Stage 4: 12 workers	5 meg		4 slots	3 days
+			Soya					7,950
+			Clays					3,975
+			Vidicasters			  450
+			Firewalls			  900
+			Libraries			1,125
+
+		Stage 5: 16 workers	6 meg		5 slots	4 days
+			Crystals				1,350
+			Tools					3,825
+			ToxicMunchers		  675
+			Musiks				2,700
+			Simulations			1,275
+--------------------------------
+
+	Plus one of the following:
+	
+	Agri:	2 days work 8 meg
+			Livestock			5,025
+			Soya					8,025
+			Woods					2,025
+			Petros				2,775
+			Mechparts			3,675
+			RNA					1,350
+			Probes				  825
+			Sensamps				1,050
+
+	Resource: 3 days work 10 meg
+			Explosives			6,075
+			Lanzarik				5,925
+			Nitros				4,050
+			AntiMatter			  975
+			Sensors				  375
+
+	Industrial: 4 days work 12 meg
+			Petrochemicals		4,050
+			Radioactives		2,325
+			Alloys				6,975
+			Lasers				2,025
+			Nanos					1,050
+			Synths				1,200
+
+	Technological: 5 days work 14 meg
+			Monopoles			3,000
+			Semiconductors		5,400
+			Xmetals				5,025
+			Pharmaceuticals	2,700
+			Droids				1,125
+			GAs Chips			2,100
+			Tracers				1,875
+
+	Leisure: 6 days work 16 meg
+			Katydidics			2,850
+			Libraries			3,150
+			Sensamps				2,025
+			Studios				4,125
+			Vidicasters			3,975
+			Nanofabrics			2,475
+			Woods					4,650
+			
+	
+
+Notes for alan:
+
+No rioting while being built
+Sort out leaving cartel when have a city
+
+XML format:
+<blish-city name="Flying Dutchman" cartel="Sol" planet="Earth" econ="resource" slots="3">
+	<production commod="xmetals" start="1"/>
+	<production commod="alloys"/>
+	<production commod="crystals"/>
+</blish-city>
+
+Syndicate parser needs to change to handle blish-city stuff
+Blish-city building yard (graving dock) needs coding
+
+

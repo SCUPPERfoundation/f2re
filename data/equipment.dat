@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<equipment>
+
+	<computer level='1' weight='1' power='2' capacity='3' cost='20' repair='10'/>
+	<computer level='2' weight='1' power='2' capacity='6' cost='55' repair='20'/>
+	<computer level='3' weight='2' power='3' capacity='8' cost='80' repair='35'/>
+	<computer level='4' weight='2' power='4' capacity='10' cost='200' repair='70'/>
+	<computer level='5' weight='3' power='6' capacity='12' cost='500' repair='200'/>
+	<computer level='6' weight='3' power='8' capacity='13' cost='1200' repair='650'/>
+	<computer level='7' weight='5' power='10' capacity='15' cost='2500' repair='1300'/>
+
+	<hull name='Harrier' capacity='200' cost='60' mount-pts='0' fuel='1'/>
+	<hull name='Mesa' capacity='400' cost='80' mount-pts='1' fuel='1'/>
+	<hull name='Dragon' capacity='600' cost='150' mount-pts='2' fuel='2'/>
+	<hull name='Guardian' capacity='800' cost='200' mount-pts='2' fuel='3'/>
+	<hull name='Mammoth' capacity='1000' cost='360' mount-pts='3' fuel='4'/>
+	<hull name='Imperial' capacity='1400' cost='700' mount-pts='4' fuel='5'/>
+
+	<weapon name='missile rack' weight='10' cost='8' repair='4' power='0' damage='0'/>
+	<weapon name='laser' weight='6' cost='40' repair='12' power='15' damage='5'/>
+	<weapon name='twin laser' weight='10' cost='75' repair='30' power='35' damage='8'/>
+	<weapon name='quad laser' weight='18' cost='140' repair='80' power='80' damage='12'/>
+
+</equipment>
+

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<fed2-map title='Candy' version='3' editor='standard' from='396' to='Sweet.Sweet Space.460'>
+
+   <location num='0' flags='t'>
+      <name>Storeroom</name>
+      <desc>   This is where the spare chocolate is kept, used to replace that which gets eaten. Yum!</desc>
+   </location>
+
+   <location num='332' flags='hi'>
+      <name>Cookie dough hospital</name>
+      <desc>   This medical building is fashioned out of cookie dough, meaning that the staff don&apos;t have to worry about feeding the patients - those wanting food can just reach out and break a bit off the furniture.</desc>
+      <desc>   The hospital is very quiet... there is so little danger on this planet, but they do a roaring trade in treating tooth decay!</desc>
+      <desc>   Dental problems aren&apos;t usually fatal, but just in case, there&apos;s a slot machine in the corner that dispenses insurance policies.</desc>
+      <desc>   When you are feeling better, you can leave by going south.</desc>
+      <exits s='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='395'>
+      <name>Chocolate road</name>
+      <desc>   The road is made from milk chocolate; the edges of the road are dark, bitter chocolate; and the line in the middle of the road is white chocolate.</desc>
+      <desc>   Several natives of the planet pass by, strolling slowly along, and stopping to eat part of the road as they go. From time to time a droid trundles along, spraying melted chocolate to mend the holes left by the rapacious eaters.</desc>
+      <desc>   The road heads southwest where it runs alongside a river, bubbling with cloudy yellow water. East it goes back to the landing pad.</desc>
+      <exits e='396' sw='458' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='396' flags='yr'>
+      <name>Landing pad</name>
+      <desc>   At first glance, the ground here is made of rocks of differing colours and strengths. But closer examination reveals that the muddy patches are in fact chocolate fudge, and the more solid rock is hard toffee. You cram some into your mouth - yes, the planet is edible!</desc>
+      <desc>   There are buildings surrounding the fudgy landing pad - a cookie dough hospital to the north, a gingerbread exchange to the east, and a candy bar south. A brown road leads west towards a bubbling river.</desc>
+      <exits n='332' e='397' s='460' w='395' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='397' flags='e'>
+      <name>Gingerbread exchange</name>
+      <desc>   Enormous slabs of gingerbread have been maneuvered into position to form the imposing building that houses the trading functions. To show how important the building is, decorative cornices and pillars have been fashioned out of sugar icing.</desc>
+      <desc>   Traders stare at the price screens, munching absently on pieces of candy. Rice paper screens separate off areas selling various goods.</desc>
+      <desc>   The exit back to the landing pad is west.</desc>
+      <exits w='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='458'>
+      <name>Lemonade river</name>
+      <desc>   The road takes a turn to the south here, towards a forest of drooping trees that look something like weeping willows, although they are red in colour. Northeast it heads back towards the landing pad.</desc>
+      <desc>   Alongside the road runs a river. You stop to drink, and realise that the reason the water is cloudy and yellow is that it&apos;s not water - it&apos;s lemonade! Delicious, and very thirst quenching after all the sweeties you&apos;ve been scoffing.</desc>
+      <exits ne='395' s='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='460' flags='b'>
+      <name>Candy Bar</name>
+      <desc>   All the Candy Bar&apos;s beverages are brightly coloured and sweet-tasting. Anyone without a sweet tooth might as well leave now, via the north door.</desc>
+      <desc>   The tables and chairs are all made of hard candy. There&apos;s a drunk on the floor, contentedly licking the furniture. In the corner is an array of indoor plants, including a strawberry shortcake bush and a marzipan palm tree.</desc>
+      <desc>   Rocky tends the bar. He&apos;s an enormously fat man, who gets his name from his habit of putting miniature sticks of rock into the drinks instead of cocktail sticks.</desc>
+      <exits n='396' out='396' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='522'>
+      <name>Licorice forest</name>
+      <desc>   The road moves into the shade of the drooping trees. Now you are close, you can see that the trailing branches are very thin strings of bright red aniseed-tasting licorice. The bark on the tree trunk is thick black licorice, and the branches are scattered with tiny, brightly coloured aniseed balls.</desc>
+      <desc>   Birds have woven nests out of the licorice strings, and clusters of chocolate eggs are waiting to hatch.</desc>
+      <desc>   The road heads south, towards some mountains, and north to a lemonade river.</desc>
+      <exits n='458' s='586' up='586' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='586'>
+      <name>Shortcake foothills</name>
+      <desc>   Rising out of the forest to the north, these rolling hills serve as the foothills of the towering Big Rock Candy Mountain to the south.</desc>
+      <desc>   Soft underfoot, the terrain is made up of spongy cake-like material. A distinct vanilla smell fills the air. Rocks of hard cookies are scattered across the landscape, and gravelly patches turn out to be sugared almonds and chocolate-covered raisins.</desc>
+      <desc>   Around the rocks, small rodents scurry, not having to search far for food. They are sugar mice, of course!</desc>
+      <exits n='522' s='650' up='650' down='522' no-exit='moves.noexit.1'/>
+   </location>
+
+   <location num='650'>
+      <name>Big Rock Candy Mountain</name>
+      <desc>   You climb out of the northern foothills and ascend the giant mountain made out of candy. As you reach the summit, you can see the whole planet laid out below you. In the distance, you see your shuttle on the landing pad, looking like a little cake decoration.</desc>
+      <desc>   The mountain is made from sweet, sugary rock, the kind that is so hard you can break your teeth on it. No wonder the medical facilities here concentrate on dental services.</desc>
+      <desc>   The white coating you saw from space reveals itself to be powdered sugar.</desc>
+      <exits n='586' down='586' no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

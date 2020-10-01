@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<fed2-map title='Beach Space' version='1.00' editor='standard'>
+
+   <location num='460' flags='slp'>
+      <name>Orbit and interstellar link</name>
+      <desc>   You are in orbit around a world famed throughout the length and breadth of the Galaxy for its clear blue waters, its golden beaches, its secluded coves and its exotic cocktails. It&apos;s the ultimate in vacation planets.</desc>
+      <desc>   Put on your swimming costume and rub in the tanning lotion, and don&apos;t forget the shades!</desc>
+      <exits no-exit='moves.noexit.1'/>
+   </location>
+
+</fed2-map>

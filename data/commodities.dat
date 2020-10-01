@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<commodities>
+
+	<commodity name='Cereals' type='agri' cost='270' graph='7'>
+		<type name='agri'/>
+		<type name='bulk'/>
+		<type name='consumer'/>
+		<inputs labour='60' Petrochemicals='10' Mechparts='10' Cereals='10' Textiles='10' />
+	</commodity>
+	<commodity name='Woods' type='agri' cost='700' graph='1'>
+		<type name='agri'/>
+		<type name='bulk'/>
+		<inputs labour='100' LubOils='10' Petrochemicals='20' Mechparts='10' Woods='20' Textiles='10' />
+	</commodity>
+	<commodity name='Hides' type='agri' cost='400' graph='2'>
+		<type name='agri'/>
+		<inputs labour='60' Petrochemicals='10' Mechparts='10' Textiles='10' Meats='10' Livestock='20' />
+	</commodity>
+	<commodity name='Textiles' type='agri' cost='300' graph='3'>
+		<type name='agri'/>
+		<type name='consumer'/>
+		<inputs labour='40' Petrochemicals='10' Woods='10' Textiles='10' Furs='10' />
+	</commodity>
+	<commodity name='Meats' type='agri' cost='410' graph='1'>
+		<type name='agri'/>
+		<type name='consumer'/>
+		<inputs labour='40' Petrochemicals='10' Textiles='10' Meats='10' Livestock='75' />
+	</commodity>
+	<commodity name='Spices' type='agri' cost='650' graph='5'>
+		<type name='agri'/>
+		<inputs labour='80' Petrochemicals='10' Mechparts='10' Woods='10' Textiles='10' Spices='10' Fruit='30' />
+	</commodity>
+	<commodity name='Fruit' type='agri' cost='420' graph='6'>
+		<type name='agri'/>
+		<type name='consumer'/>
+		<inputs labour='90' LubOils='10' Petrochemicals='10' Mechparts='10' Textiles='10' Fruit='10' />
+	</commodity>
+	<commodity name='Soya' type='agri' cost='230' graph='4'>
+		<type name='agri'/>
+		<type name='bulk'/>
+		<type name='sea'/>
+		<inputs labour='40' Petrochemicals='10' Spices='10' Soya='10' />
+	</commodity>
+	<commodity name='Livestock' type='agri' cost='210' graph='1'>
+		<type name='agri'/>
+		<inputs labour='50' Petrochemicals='10' Cereals='20' />
+	</commodity>
+	<commodity name='Furs' type='agri' cost='650' graph='1'>
+		<type name='agri'/>
+		<inputs labour='60' Petrochemicals='10' Mechparts='10' Textiles='20' Livestock='10' />
+	</commodity>
+
+	<commodity name='Radioactives' type='mining' cost='540' graph='4'>
+		<type name='mining'/>
+		<inputs labour='90' Lasers='10' Tools='20' Powerpacks='20' />
+	</commodity>
+	<commodity name='Nickel' type='mining' cost='370' graph='1'>
+		<type name='mining'/>
+		<type name='bulk'/>
+		<type name='sea'/>
+		<inputs labour='80' LubOils='10' Nitros='10' />
+	</commodity>
+	<commodity name='Xmetals' type='mining' cost='480' graph='4'>
+		<type name='mining'/>
+		<type name='defence'/>
+		<type name='sea'/>
+		<inputs labour='100' Lasers='20' Polymers='50' />
+	</commodity>
+	<commodity name='Crystals' type='mining' cost='650' graph='6'>
+		<type name='mining'/>
+		<type name='sea'/>
+		<inputs labour='200' Powerpacks='10' LubOils='20' />
+	</commodity>
+	<commodity name='Alloys' type='mining' cost='180' graph='2'>
+		<type name='mining'/>
+		<type name='energy'/>
+		<inputs labour='90' />
+	</commodity>
+	<commodity name='Gold' type='mining' cost='600' graph='5'>
+		<type name='mining'/>
+		<inputs labour='200' Explosives='30' />
+	</commodity>
+	<commodity name='Monopoles' type='mining' cost='720' graph='7'>
+		<type name='mining'/>
+		<type name='defence'/>
+		<inputs labour='300' Pharmaceuticals='10' Nitros='10' />
+	</commodity>
+	<commodity name='Semiconductors' type='mining' cost='350' graph='6'>
+		<type name='mining'/>
+		<type name='energy'/>
+		<inputs labour='65' Explosives='20' Petrochemicals='20' />
+	</commodity>
+	<commodity name='Clays' type='mining' cost='520' graph='3'>
+		<type name='mining'/>
+		<type name='bulk'/>
+		<inputs labour='120' Mechparts='10' LubOils='15' />
+	</commodity>
+	<commodity name='Petrochemicals' type='mining' cost='400' graph='3'>
+		<type name='mining'/>
+		<type name='sea'/>
+		<inputs labour='50' Pharmaceuticals='10' Petrochemicals='40' />
+	</commodity>
+
+	<commodity name='Generators' type='ind' cost='670' graph='1'>
+		<type name='ind'/>
+		<inputs labour='70' Electros='30' Tools='20' Polymers='10' LubOils='10' Alloys='75' />
+	</commodity>
+	<commodity name='Polymers' type='ind' cost='200' graph='4'>
+		<type name='ind'/>
+		<type name='bulk'/>
+		<type name='energy'/>
+		<inputs labour='20' Petrochemicals='30' Xmetals='10' />
+	</commodity>
+	<commodity name='LubOils' type='ind' cost='560' graph='7'>
+		<type name='ind'/>
+		<inputs labour='10' Petrochemicals='60' ToxicMunchers='20' />
+	</commodity>
+	<commodity name='Pharmaceuticals' type='ind' cost='630' graph='3'>
+		<type name='ind'/>
+		<type name='consumer'/>
+		<inputs labour='20' RNA='75' Xmetals='10' />
+	</commodity>
+	<commodity name='RNA' type='ind' cost='380' graph='5'>
+		<type name='ind'/>
+		<inputs labour='40' Pharmaceuticals='20' Xmetals='20' />
+	</commodity>
+	<commodity name='Propellants' type='ind' cost='260' graph='4'>
+		<type name='ind'/>
+		<inputs labour='10' Petrochemicals='20' Nitros='40' />
+	</commodity>
+	<commodity name='Explosives' type='ind' cost='470' graph='2'>
+		<type name='ind'/>
+		<type name='defence'/>
+		<inputs labour='60' Electros='20' Nitros='50' Nickel='20' />
+	</commodity>
+	<commodity name='LanzariK' type='ind' cost='700' graph='6'>
+		<type name='ind'/>
+		<type name='bulk'/>
+		<inputs labour='50' Polymers='40' Semiconductors='20' Xmetals='50' Alloys='20' />
+	</commodity>
+	<commodity name='Nitros' type='ind' cost='230' graph='7'>
+		<type name='ind'/>
+		<type name='bulk'/>
+		<inputs labour='40' Petrochemicals='30' />
+	</commodity>
+	<commodity name='Munitions' type='ind' cost='250' graph='2'>
+		<type name='ind'/>
+		<type name='defence'/>
+		<inputs labour='20' Explosives='30' Alloys='10' />
+	</commodity>
+	<commodity name='Mechparts' type='ind' cost='420' graph='1'>
+		<type name='ind'/>
+		<type name='energy'/>
+		<inputs labour='20' Tools='10' Alloys='75' Gold='10' />
+	</commodity>
+
+	<commodity name='Nanos' type='tech' cost='550' graph='4'>
+		<type name='tech'/>
+		<inputs labour='5' Nanos='20' Lasers='10' Synths='15' />
+	</commodity>
+	<commodity name='GAsChips' type='tech' cost='450' graph='5'>
+		<type name='tech'/>
+		<type name='defence'/>
+		<type name='energy'/>
+		<inputs labour='60' Petrochemicals='60' Nitros='10' />
+	</commodity>
+	<commodity name='Lasers' type='tech' cost='470' graph='3'>
+		<type name='tech'/>
+		<type name='defence'/>
+		<inputs labour='100' Electros='10' AntiMatter='20' Semiconductors='10' />
+	</commodity>
+	<commodity name='Weapons' type='tech' cost='420' graph='4'>
+		<type name='tech'/>
+		<type name='defence'/>
+		<inputs labour='20' Nickel='50' Alloys='50' />
+	</commodity>
+	<commodity name='Vidicasters' type='tech' cost='380' graph='2'>
+		<type name='tech'/>
+		<inputs labour='50' Electros='50' TQuarks='10' />
+	</commodity>
+	<commodity name='Electros' type='tech' cost='250' graph='7'>
+		<type name='tech'/>
+		<inputs labour='20' Nickel='30' Alloys='20' />
+	</commodity>
+	<commodity name='Tools' type='tech' cost='350' graph='2'>
+		<type name='tech'/>
+		<inputs labour='50' Radioactives='10' Nickel='30' />
+	</commodity>
+	<commodity name='Synths' type='tech' cost='560' graph='6'>
+		<type name='tech'/>
+		<inputs labour='50' GAsChips='50' Clays='20' />
+	</commodity>
+	<commodity name='Droids' type='tech' cost='700' graph='7'>
+		<type name='tech'/>
+		<type name='energy'/>
+		<inputs labour='50' BioChips='50' AntiMatter='20' />
+	</commodity>
+	<commodity name='AntiMatter' type='tech' cost='480' graph='2'>
+		<type name='tech'/>
+		<type name='defence'/>
+		<inputs labour='40' GAsChips='30' Monopoles='20' />
+	</commodity>
+	<commodity name='Powerpacks' type='tech' cost='680' graph='6'>
+		<type name='tech'/>
+		<inputs labour='50' Lasers='30' Radioactives='50' />
+	</commodity>
+	<commodity name='Controllers' type='tech' cost='710' graph='4'>
+		<type name='tech'/>
+		<inputs labour='50' BioChips='50' Electros='40' />
+	</commodity>
+	<commodity name='NanoFabrics' type='tech' cost='850' graph='3'>
+		<type name='tech'/>
+		<type name='consumer'/>
+		<inputs labour='20' Nanos='40' Synths='15' />
+	</commodity>
+	<commodity name='TQuarks' type='tech' cost='835' graph='4'>
+		<type name='tech'/>
+		<type name='energy'/>
+		<inputs labour='30' Lasers='20' Droids='20' />
+	</commodity>
+
+	<commodity name='BioComponents' type='bio' cost='760' graph='3'>
+		<type name='bio'/>
+		<type name='defence'/>
+		<inputs labour='100' RNA='40' Clays='10' Nanos='10' />
+	</commodity>
+	<commodity name='BioChips' type='bio' cost='650' graph='5'>
+		<type name='bio'/>
+		<inputs labour='100' RNA='60' Monopoles='10' />
+	</commodity>
+	<commodity name='Clinics' type='bio' cost='450' graph='5'>
+		<type name='bio'/>
+		<inputs labour='50' Alloys='30' Synths='20' />
+	</commodity>
+	<commodity name='MicroScalpels' type='bio' cost='320' graph='1'>
+		<type name='bio'/>
+		<inputs labour='40' Xmetals='20' Nanos='10' />
+	</commodity>
+	<commodity name='Laboratories' type='bio' cost='470' graph='7'>
+		<type name='bio'/>
+		<inputs labour='55' Alloys='40' Clays='10' />
+	</commodity>
+	<commodity name='Sensors' type='bio' cost='470' graph='6'>
+		<type name='bio'/>
+		<inputs labour='20' Semiconductors='20' Clays='10' Nanos='10' />
+	</commodity>
+	<commodity name='Tracers' type='bio' cost='600' graph='6'>
+		<type name='bio'/>
+		<inputs labour='30' Nanos='30' />
+	</commodity>
+	<commodity name='Probes' type='bio' cost='510' graph='4'>
+		<type name='bio'/>
+		<inputs labour='30' Clays='30' Xmetals='10' />
+	</commodity>
+	<commodity name='ToxicMunchers' type='bio' cost='470' graph='4'>
+		<type name='bio'/>
+		<inputs labour='80' RNA='40' />
+	</commodity>
+	<commodity name='Proteins' type='bio' cost='260' graph='2'>
+		<type name='bio'/>
+		<type name='bulk'/>
+		<type name='sea'/>
+		<type name='consumer'/>
+		<inputs labour='100' Soya='20' />
+	</commodity>
+
+	<commodity name='Hypnotapes' type='leisure' cost='430' graph='4'>
+		<type name='leisure'/>
+		<inputs labour='40' Crystals='30' Gold='10' />
+	</commodity>
+	<commodity name='Studios' type='leisure' cost='390' graph='5'>
+		<type name='leisure'/>
+		<inputs labour='70' Electros='40' TQuarks='10' />
+	</commodity>
+	<commodity name='Sensamps' type='leisure' cost='520' graph='6'>
+		<type name='leisure'/>
+		<type name='consumer'/>
+		<type name='defence'/>
+		<inputs labour='80' Crystals='10' Gold='10' />
+	</commodity>
+	<commodity name='Games' type='leisure' cost='210' graph='4'>
+		<type name='leisure'/>
+		<type name='consumer'/>
+		<type name='sea'/>
+		<inputs labour='30' BioChips='10' Hides='10' />
+	</commodity>
+	<commodity name='Artifacts' type='leisure' cost='730' graph='6'>
+		<type name='leisure'/>
+		<inputs labour='370' />
+	</commodity>
+	<commodity name='Katydidics' type='leisure' cost='610' graph='3'>
+		<type name='leisure'/>
+		<type name='energy'/>
+		<inputs labour='100' AntiMatter='20' Polymers='40' Gold='20' />
+	</commodity>
+	<commodity name='Musiks' type='leisure' cost='470' graph='5'>
+		<type name='leisure'/>
+		<type name='sea'/>
+		<inputs labour='200' Woods='10' Alloys='50' />
+	</commodity>
+	<commodity name='Libraries' type='leisure' cost='680' graph='7'>
+		<type name='leisure'/>
+		<type name='sea'/>
+		<inputs labour='80' Polymers='20' Woods='30' Textiles='40' />
+	</commodity>
+	<commodity name='Holos' type='leisure' cost='260' graph='7'>
+		<type name='leisure'/>
+		<type name='sea'/>
+		<inputs labour='40' BioChips='10' Lasers='10' />
+	</commodity>
+	<commodity name='Univators' type='leisure' cost='570' graph='1'>
+		<type name='leisure'/>
+		<inputs labour='90' Monopoles='10' />
+	</commodity>
+	<commodity name='Simulations' type='leisure' cost='310' graph='4'>
+		<type name='leisure'/>
+		<type name='consumer'/>
+		<inputs labour='50' AntiMatter='20' Gold='10' />
+	</commodity>
+	<commodity name='Firewalls' type='leisure' cost='690' graph='6'>
+		<type name='leisure'/>
+		<type name='defence'/>
+		<inputs labour='150' Semiconductors='20' />
+	</commodity>
+
+</commodities>

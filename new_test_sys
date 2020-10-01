@@ -1,0 +1,68 @@
+#!/usr/bin/python
+
+# Set up a new system and planet for fed2
+
+import os
+import shutil
+import sys
+
+if len(sys.argv) < 4:
+	print 'usage is new_sys system_filename planet_filename owner_name'
+	sys.exit(1)
+
+src = '/home/alan/fed2d/'
+maps = src + 'maps/' + sys.argv[1]
+dest = '/var/opt/fed2test/maps/'+ sys.argv[1];
+
+# create the directories
+print "creating directory for", maps
+os.mkdir(maps)
+
+pwd = os.getcwd()
+os.chdir(src + 'maps')
+
+print "creating directory for", dest
+os.mkdir(dest)
+os.chmod(dest,0775);
+
+# move the new files into the maps directory
+os.system("mv " + src + "space.* " + maps)
+os.system("mv " + src + sys.argv[2] +".* " + maps)
+
+# create Makefile
+print "creating Makefile"
+os.chdir(maps)
+makefile = file("./Makefile","w+")
+makefile.write("# Makefile for the fed2 " + sys.argv[1] + " system\n")
+makefile.write("\nDEST=" + dest + "\n")
+makefile.write("include ../data.mk\n")
+makefile.write("all:$(DEST)/" + sys.argv[2] + ".* $(DEST)/space.* ")
+makefile.close()
+
+# misc activities and copy to destination, 
+# then set permissions on dest files
+os.system("chmod g+w *")
+os.system("cp " + sys.argv[2] + ".* " + dest)
+os.system("cp space.* " + dest)
+os.chdir(dest)
+
+# creat .inf files
+print "creating .inf files"
+space_file = file("./space.inf","w+")
+space_file.write('<?xml version="1.0"?>\n')
+space_file.write("<infrastructure owner='" + sys.argv[3] +"' economy='None' closed='true'>\n")
+space_file.write("</infrastructure>\n")
+space_file.close()
+planet_file = file("./" + sys.argv[2] + ".inf","w+")
+planet_file.write('<?xml version="1.0"?>\n')
+planet_file.write("<infrastructure owner='" + sys.argv[3] +"' economy='Agricultural' closed='false'>\n")
+planet_file.write("</infrastructure>\n")
+planet_file.close()
+
+os.system("chmod g+w *")
+os.system("chgrp fed2 *")
+
+print "new system set up: completed"
+os.system("pwd")
+os.system("ls -l")
+

@@ -1,0 +1,52 @@
+
+Working on:
+	Blish cities/Graving Docks
+		Effect of city builds on disaffection
+		Transfer of workers at end of build
+
+SERVER:
+
+To add:
+	Make sure object inventories (all of them) only get saved if they've changed
+	   sync of SQLite is very slow
+	Rename files so that they are more obvious - eg 'script_xxx', 'cmd_xxx', build_xxx, etc
+	Job pipelining
+	Factory pipelining
+	Cartel Stuff:
+		Spacefleet
+		Planet management computer
+		Stock Exchange
+	Company Bonds
+	Cartel tax rates
+	Cartel levies
+	Xfers from personal accounts to cartel accounts (but not the other way)
+	Ship fighting
+	Customs builds/smuggling
+	Favoured status for cartels
+	Display Cabinets
+
+
+Bugs:
+
+To remove:
+
+To check:
+
+To refactor:
+	Refactor 'accept' to its own class
+	Rename script and command files
+
+
+CLIENT:
+	Rewrite, using Qt for the interface
+	Rewrite using Web browser as interface
+
+
+TOOLS:
+	Tesla:
+	 	createobject/checkinventory/destroyobject/checkmap
+	 	check space - .planet & planet -> space locations
+	Finish rewriting the script editor using Qt
+	Add looping checks to Tesla
+	Location editor Qt based re-write
+

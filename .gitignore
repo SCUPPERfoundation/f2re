@@ -1,0 +1,16 @@
+maps/
+obj/
+objtest/
+.sconsign.dblite
+data/maps.dat.old
+data/maps.tmp
+maps.old/
+maps.tar
+*.autosave
+fed2.creator.user
+temp/
+spikes/
+old_source_files/
+Release/
+cmake-build-debug/
+cmake-build-release/
