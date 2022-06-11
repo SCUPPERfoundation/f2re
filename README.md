@@ -1,4 +1,4 @@
-Federation 2: Teaching Edition
+Federation 2: Research Edition
 ==============================
 
 Setup Guide for Researchers:
@@ -12,6 +12,21 @@ $ make
 Take the proverbial ☕ break.
 It should compile if you have figured out the dependencies you need, like
 we did several weeks ago when we first started testing this...
+
+If you are on macOS, you can use `homebrew` to install BerkeleyDB with:
+```
+$ brew install berkeley-db@4
+```
+
+When complete, homebrew should mention something like:
+```
+For compilers to find berkeley-db@4 you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/berkeley-db@4/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/berkeley-db@4/include"
+```
+You will need to update line 445 and line 449 of `CMakeLists.txt` to
+use these paths. Just setting the environment variables does not seem
+to work.
 
 Now try:
 ```
@@ -28,3 +43,6 @@ Unable to find /$HOME/f2te/maps
 ```
 Then proceed to commit the readme here, while you figure out where to
 download the maps.
+
+Update: The maps are available as a [zip file](http://www.ibgames.net/fed2/workbench/sol/Sol%20Files.zip)
+from the [IB Games website](http://www.ibgames.net/fed2/workbench/sol/index.html)
