@@ -1,0 +1,26 @@
+FROM redhat/ubi9
+#FROM redhat/ubi9 AS builder
+LABEL description="Fed2: Research Edition"
+MAINTAINER <dvd@tennica.net>
+RUN dnf update -y && \ 
+    dnf upgrade -y && \
+    dnf install -y g++ && \
+    dnf install -y cmake && \
+    dnf install -y git && \
+    dnf install -y expat-devel && \
+    dnf install -y sqlite-devel
+    dnf install -y libdb-devel && \
+WORKDIR /usr/src/fed2
+ADD . .
+RUN cmake . && make
+#FROM redhat/ubi9-minimal
+#RUN microdnf update -y && \ 
+    microdnf upgrade -y
+#ARG UNAME=fed2
+#ARG UID=30303
+#ARG GID=30303
+#ARG PORT=30303
+#RUN groupadd -g $GID -o $UNAME && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+#RUN echo "fed2d           30303/tcp" >> /etc/services
+#USER $UNAME
+#EXPOSE $PORT

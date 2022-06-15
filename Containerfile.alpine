@@ -1,0 +1,20 @@
+FROM alpine
+LABEL description="Fed2: Research Edition"
+MAINTAINER <dvd@tennica.net>
+RUN apk add git make cmake g++ linux-headers libc-dev libstdc++ \ 
+    glib-static expat-dev sqlite-dev db-dev
+RUN echo "#include <unistd.h>" > /usr/include/sys/unistd.h
+WORKDIR /usr/src/fed2
+ADD . .
+RUN cmake . && make
+#FROM redhat/ubi9-minimal
+#RUN microdnf update -y && \ 
+    microdnf upgrade -y
+#ARG UNAME=fed2
+#ARG UID=30303
+#ARG GID=30303
+#ARG PORT=30303
+#RUN groupadd -g $GID -o $UNAME && useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+#RUN echo "fed2d           30303/tcp" >> /etc/services
+#USER $UNAME
+#EXPOSE $PORT

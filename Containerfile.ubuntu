@@ -1,0 +1,28 @@
+FROM ubuntu AS builder
+LABEL description="Fed2: Research Edition"
+MAINTAINER <dvd@tennica.net>
+RUN apt update && apt upgrade -y && apt install -y git make cmake g++ \
+    libc-dev libexpat1-dev libsqlite3-dev libdb++-dev
+WORKDIR /usr/src/fed2
+ADD . .
+RUN cmake . && make
+WORKDIR /usr/src/fed2/maps/sol
+RUN git clone https://github.com/SCUPPERfoundation/fed2-maps.git
+FROM ubuntu
+ARG UNAME=fed2
+ARG UID=30303
+ARG GID=30303
+ARG PORT=30303
+RUN apt update && apt upgrade -y && apt install -y libexpat1 libsqlite3-0 \
+    libdb5.3++
+RUN echo "fed2d           ${PORT}/tcp" >> /etc/services
+RUN groupadd -g $GID -o $UNAME && useradd -m -u $UID -g $GID -o \
+    -s /bin/bash $UNAME -d /var/opt/fed2
+USER $UNAME
+EXPOSE $PORT
+WORKDIR /var/opt/fed2/maps/sol
+COPY --from=builder /usr/src/fed2/maps/sol ./
+WORKDIR /var/opt/fed2/data
+COPY --from=builder /usr/src/fed2/data/*.dat /usr/src/fed2/data/*.xml ./
+WORKDIR /var/opt/fed2
+COPY --from=builder /usr/src/fed2/fed2d ./
