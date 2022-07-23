@@ -1,20 +1,22 @@
-FROM ubuntu AS builder
+FROM fedora AS builder
 LABEL description="Fed2: Research Edition"
 MAINTAINER <dvd@tennica.net>
-RUN apt update && apt upgrade -y && apt install -y git make cmake g++ \
-    libc-dev libexpat1-dev libsqlite3-dev libdb++-dev
+RUN dnf update -y && \ 
+    dnf upgrade -y && \
+    dnf install -y g++ cmake git expat-devel sqlite-devel libdb-cxx-devel
 WORKDIR /usr/src/fed2
 ADD . .
 RUN cmake . && make
 WORKDIR /usr/src/fed2/maps/sol
 RUN git clone https://github.com/SCUPPERfoundation/fed2-maps.git .
-FROM ubuntu
+FROM fedora
 ARG UNAME=fed2
 ARG UID=30303
 ARG GID=30303
 ARG PORT=30303
-RUN apt update && apt upgrade -y && apt install -y libexpat1 libsqlite3-0 \
-    libdb5.3++
+RUN dnf update -y && \ 
+    dnf upgrade -y && \
+    dnf install -y expat sqlite libdb-cxx
 RUN echo "fed2d           ${PORT}/tcp" >> /etc/services
 RUN groupadd -g $GID -o $UNAME && useradd -m -u $UID -g $GID -o \
     -s /bin/bash $UNAME -d /var/opt/fed2
