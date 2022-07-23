@@ -1,6 +1,17 @@
 Federation 2: Research Edition
 ==============================
 
+Container Quick Start:
+```
+$ git clone git@github.com:SCUPPERfoundation/f2re.git
+$ podman build -t f2re:latest -f Containerfile.fedora
+$ podman run -p 30303:30303 -it -d f2re:latest
+$ nc localhost 30303
+```
+
+Earlier Notes
+-------------
+
 Setup Guide for Researchers:
 ```
 $ git clone git@github.com:SCUPPERfoundation/f2te.git
