@@ -21,6 +21,17 @@ There are so many Linux distributions. One of them will surely have an
 easy path to portability. Three distros in? So many rabbit holes for such
 a relatively simple C++ codebase with only three dependencies!
 
+As of this writing, both `Containerfile.fedora` and `Containerfile.ubuntu`
+produce functional builds. Based on the commit history, Fedora was Lenton's
+preferred distribution for development. The container strategy gives us the
+Build-Anywhere capability, but container images are still built around a CPU
+architecture.
+
+An image built from macOS arm64 will execute on a Raspberry Pi 4 running
+Fedora. This image will not execute on a cloud-base x86_64 machine.
+
+TODO: Size the rabbit hole of building multi-arch container images.
+
 Fun Links
 ---------
 https://github.com/containers/podman/issues/11541
